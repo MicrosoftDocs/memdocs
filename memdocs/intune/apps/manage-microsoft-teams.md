@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: scottduf
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -131,18 +131,12 @@ Use the following options to configure your notifications on the portal through 
 ### To set the policies in Intune
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. In the left navigation pane, navigate to **Apps > App protection policies**.
-
-   :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-01.png" alt-text="Create the policy" border="true" :::
-
+1. In the left navigation pane, navigate to **Apps** > **Protection**.
 1. Click **Create Policy** and select your desired platform, such as **iOS/iPadOS**.
 1. On the **Basics** page, add details such as **Name** and **Description**. Click **Next**.
 1. On the **Apps** page, click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
 1. On the **Data Protection** page, find the **Org data notifications** setting and select the **Block org Data** option. Set the **Assignments** for the groups of users to include and then create your policy.
-1. Once the app protection policy has been created, go to **Apps** > **App configuration policies** > **Add** > **Managed apps**. 
-
-   :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-03.png" alt-text="app-configuration-policies-at-a-glance" border="true" :::
-
+1. Once the app protection policy has been created, go to **Apps** > **Configuration** > **Create** > **Managed apps**. 
 1. On the **Basics** page, add a **Name** and click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
 1. Under **General configuration settings**, set any of the notification keys to **1** to turn the feature **ON** for chat, channels, all other notifications or any of these combinations. And, set to **0** to turn off the feature. 
 
@@ -156,7 +150,7 @@ Use the following options to configure your notifications on the portal through 
 
 1. Set the **Assignments** for the groups of users to include and then create your policy.
 
-1. Once the policy has been created, go to **Apps** > **App protection policies**. Find your newly created **App protection policy** and check whether the policy has been deployed by reviewing the **Deployed** column. The **Deployed** column should display **Yes** for the created policy. If it displays **No**, refresh the page, and check after 10 minutes.
+1. Once the policy has been created, go to **Apps** > **Protection**. Find your newly created **App protection policy** and check whether the policy has been deployed by reviewing the **Deployed** column. The **Deployed** column should display **Yes** for the created policy. If it displays **No**, refresh the page, and check after 10 minutes.
 
 ### For the notifications to show up on iOS and Android devices
 

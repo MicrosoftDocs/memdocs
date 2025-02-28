@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2024
+ms.date: 02/20/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,7 +31,7 @@ ms.collection:
 
 # Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune
 
-In Microsoft Intune, you can create and use Virtual Private Networks (VPNs) assigned to an app. This feature is called **per-app VPN**. You choose the managed apps that can use your VPN on devices managed by Intune. When you use per-app VPNs, end users automatically connect through the VPN, and get access to organizational resources, such as documents.
+In Microsoft Intune, you can create and use Virtual Private Networks (VPNs) assigned to an app. This feature is called **per-app VPN**. You choose the managed apps that can use your VPN on devices managed by Intune. When you use per-app VPNs, end users automatically connect through the VPN, and get access to organizational resources, like documents.
 
 This feature applies to:
 
@@ -56,7 +56,7 @@ If you have a per-app VPN profile set up for Zscaler, then opening one of the as
 
 ## Prerequisites
 
-- Your VPN vendor can have other requirements for per-app VPN, such as specific hardware or licensing. Be sure to check with their documentation, and meet those prerequisites before setting up per-app VPN in Intune.
+- Your VPN vendor can have other requirements for per-app VPN, like specific hardware or licensing. Be sure to check with their documentation, and meet those prerequisites before setting up per-app VPN in Intune.
 
 - Export the trusted root certificate `.cer` file from your VPN server. You add this file to the trusted certificate profile you create in Intune, described in this article.
 
@@ -69,7 +69,7 @@ If you have a per-app VPN profile set up for Zscaler, then opening one of the as
 
       If the CA presented by the device matches a CA in the Trusted CA list on the VPN server, then the VPN server successfully authenticates the device.
 
-  To prove its identity, the VPN server presents the certificate that must be accepted without a prompt by the device. To confirm the automatic approval of the certificate, you create a trusted certificate profile in Intune (in this article). The Intune trusted certificate profile must include the VPN server's root certificate (`.cer` file) issued by the Certification Authority (CA).
+  To prove its identity, the VPN server presents the certificate to the device. The device must accept the certificate without prompting the user. To confirm the automatic approval of the certificate, you create a trusted certificate profile in Intune (in this article). The Intune trusted certificate profile must include the VPN server's root certificate (`.cer` file) issued by the Certification Authority (CA).
 
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
@@ -78,7 +78,7 @@ If you have a per-app VPN profile set up for Zscaler, then opening one of the as
 Create or choose an existing group in Microsoft Entra ID. This group:
 
 - Must include the users or devices that will use per-app VPN.
-- Will receive all the Intune policies you create.
+- Will receive all the Intune policies you create in this article.
 
 For the steps to create a new group, go to [Add groups to organize users and devices](../fundamentals/groups-add.md).
 
@@ -96,20 +96,22 @@ Import the VPN server's root certificate issued by the CA into an Intune profile
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **iOS/iPadOS trusted certificate VPN profile for entire company**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **iOS/iPadOS trusted certificate profile for myApp**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
 7. In **Configuration settings**, select the folder icon, and browse to your VPN certificate (`.cer` file) that you exported from your VPN administration console.
-8. Select **Next**, and continue creating your profile. For more information, go to [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
+8. Select **Next**, and continue [creating the trusted certificate profile](../protect/certificates-trusted-root.md). You can save the profile and assign it later.
 
     :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png" alt-text="Create a trusted certificate profile for iOS/iPadOS devices in Microsoft Intune and Intune admin center.":::
 
+When you're ready to assign the profile, assign this profile to the group you created in [Step 1 - Create a group for your VPN users](#step-1---create-a-group-for-your-vpn-users) (in this article). When you assign the profile, the users or devices in the group receive the policy the next time they check-in with the Intune service.
+
 ## Step 3 - Create a SCEP or PKCS certificate profile
 
-The trusted root certificate profile you created in [step 2](#step-2---create-a-trusted-certificate-profile) allows the device to automatically trust the VPN Server.
+The [trusted root certificate profile you created in step 2](#step-2---create-a-trusted-certificate-profile) allows the device to automatically trust the VPN Server.
 
-In this step, create the SCEP or PKCS certificate profile in Intune. The SCEP or PKCS certificate provides credentials from the iOS/iPadOS VPN client to the VPN server. The certificate allows the device to silently authenticate without prompting for a username and password.
+In this next step, create the SCEP or PKCS certificate profile in Intune. The SCEP or PKCS certificate provides credentials from the iOS/iPadOS VPN client to the VPN server. The certificate allows the device to silently authenticate without prompting for a username and password.
 
 To configure and assign the client authentication certificate in Intune, go to one of the following articles:
 
@@ -119,6 +121,8 @@ To configure and assign the client authentication certificate in Intune, go to o
 Be sure to configure the certificate for client authentication. You can set client authentication directly in SCEP certificate profiles (**Extended key usage** list > **Client authentication**). For PKCS, set client authentication in the certificate template in the certificate authority (CA).
 
 :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png" alt-text="Create a SCEP certificate profile in Microsoft Intune and Intune admin center. Include the subject name format, key usage, extended key usage, and more.":::
+
+When you're ready to assign the profile, assign this profile to the group you created in [Step 1 - Create a group for your VPN users](#step-1---create-a-group-for-your-vpn-users) (in this article). When you assign the profile, the users or devices in the group receive the policy the next time they check-in with the Intune service.
 
 ## Step 4 - Create a per-app VPN profile
 
@@ -140,7 +144,7 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
     - **Connection type**: Select your VPN client app.
     - **Base VPN**: Configure your settings. [iOS/iPadOS VPN settings](vpn-settings-ios.md) describes all the settings. When using per-app VPN, be sure you configure the following properties as listed:
 
-      - **Authentication method**: Select **Certificates**. 
+      - **Authentication method**: Select **Certificates**.
       - **Authentication certificate**: Select an existing SCEP or PKCS certificate > **OK**.
       - **Split tunneling**: Select **Disable** to force all traffic to use the VPN tunnel when the VPN connection is active. 
 
@@ -152,33 +156,35 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
 
       :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png" alt-text="Screenshot that shows the Automatic VPN set to per-app VPN on iOS/iPadOS devices in Microsoft Intune.":::
 
-5. Select **Next**, and continue creating your profile. For more information, go to [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
+5. Select **Next**, and continue [creating the VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
+
+When you're ready to assign the profile, assign this profile to the group you created in [Step 1 - Create a group for your VPN users](#step-1---create-a-group-for-your-vpn-users) (in this article). When you assign the profile, the users or devices in the group receive the policy the next time they check-in with the Intune service.
 
 ## Step 5 - Associate an app with the VPN profile
 
 After adding your VPN profile, associate the app and Microsoft Entra group to the profile.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps**.
 2. Select an app from the list > **Properties** > **Assignments** > **Edit**.
 3. Go to the **Required** or **Available for enrolled devices** section.
-4. Select **Add group** > Select the group [you created](#step-1---create-a-group-for-your-vpn-users) (in this article) > **Select**.
-5. In **VPNs**, select the per-app VPN profile [you created](#step-4---create-a-per-app-vpn-profile) (in this article).
+4. Select **Add group** > Select the group you created in [Step 1 - Create a group for your VPN users](#step-1---create-a-group-for-your-vpn-users) (in this article) > **Select**.
+5. In **VPNs**, select the per-app VPN profile you created in [Step 4 - Create a per-app VPN profile](#step-4---create-a-per-app-vpn-profile) (in this article).
 
     :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png" alt-text="Two screenshots that show assigning an app to the per-app VPN profile in Microsoft Intune and Intune admin center.":::
 
 6. Select **OK** > **Save**.
 
-When all of the following conditions exist, an association between an app and a profile remains until the user requests a reinstall from the Company Portal app:
+When **all** of the following conditions exist, an association between an app and a profile remains until the user requests a reinstall from the Company Portal app:
 
-- The app was targeted with **available** install intent.
-- The profile and the app are assigned to the same group.
-- The end user requested the app install in the Company Portal app. This request results in the app and profile being installed on the device.
+- The app was targeted with **available** install intent, **and**
+- The profile and the app are assigned to the same group, **and**
+- The end user requested the app install in the Company Portal app. This request results in the app and profile being installed on the device, **and**
 - You remove or change the per-app VPN configuration from the app assignment.
 
-When all of the following conditions exist, an association between an app and a profile is removed during the next device check-in:
+When **all** of the following conditions exist, an association between an app and a profile is removed during the next device check-in:
 
-- The app was targeted with **required** install intent.
-- The profile and the app are assigned to the same group.
+- The app was targeted with **required** install intent, **and**
+- The profile and the app are assigned to the same group, **and**
 - You remove the per-app VPN configuration from the app assignment.
 
 ## Verify the connection on the iOS/iPadOS device
@@ -203,7 +209,7 @@ Verify the zero-touch experience by connecting without having to select the VPN 
 - The user doesn't have to enter credentials.
 - When the user opens one of the associated apps, the user's device is connected to the VPN.
 
-## Resources
+## Related articles
 
 - To review iOS/iPadOS settings, go to [VPN settings for iOS/iPadOS devices in Microsoft Intune](vpn-settings-ios.md).
 - To learn more about VPN setting and Intune, go to [configure VPN settings in Microsoft Intune](vpn-settings-configure.md).

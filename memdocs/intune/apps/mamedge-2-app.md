@@ -63,7 +63,7 @@ Use the following steps to apply the data protection framework.
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Apps** > **App protection policies** > **Create policy** > **Windows**.
+2. Select **Apps** > **Protection** > **Create policy** > **Windows**.
 
 3. On the **Create policy** step, set the following details:
 
@@ -141,7 +141,7 @@ Next, you create a **Level 3** app protection policy for Microsoft Edge from Mic
 
 To create the app protection policy, follow these steps:
 
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App protection policies** > **Create policy**.
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **Protection** > **Create policy**.
 
 2. Select **Create policy** > **Android** or **iOS/iPadOS**. Next, enter the following information:
 

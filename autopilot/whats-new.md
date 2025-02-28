@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
-ms.reviewer: jubaptis
-ms.date: 06/28/2024
+ms.reviewer: madakeva
+ms.date: 02/27/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -31,6 +31,14 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+## Low privileged account for Intune Connector for Active Directory for Hybrid join Windows Autopilot flows
+<!--9544276-->
+Date added: *February 27, 2025*
+
+We've updated the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will continue to work until deprecation in late May 2025.
+
+For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](windows-autopilot-hybrid.md).
 
 ## Update to enrollmentProfileName property for devices deployed via Windows Autopilot for existing devices
 <!--9105086-->
@@ -85,7 +93,7 @@ The 2310 release of Intune adds more clarity to the manual hardware hash upload 
 
 Date added: *October 10, 2023*
 
-Starting in 2310, we're making an update to the self-deployment and pre-provisioning modes for manufacturers that have not opted-in to attesting to removal of Autopilot refurbished devices. Customers using these manufacturers were still subjected to the one-time device-based enrollment block in the self-deployment and pre-provisioning modes. This block means that the device could go through self-deployment or pre-provisioning mode once and then get blocked from doing it again. This behavior could cause problems if the device needed to be reset or redeployed. This change in 2310 enables a button in the Autopilot devices section in Intune to manually unblock those devices. This update only works for OEMs that aren't within the [OEM list](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130) and doesn't work on the **Fix pending** status.
+Starting in 2310, we're making an update to the self-deployment and pre-provisioning modes for manufacturers that have not opted-in to attesting to removal of Autopilot refurbished devices. Customers using these manufacturers were still subjected to the one-time device-based enrollment block in the self-deployment and pre-provisioning modes. This block means that the device could go through self-deployment or pre-provisioning mode once and then get blocked from doing it again. This behavior could cause problems if the device needed to be reset or redeployed. This change in 2310 enables a button in the Autopilot devices section in Intune to manually unblock those devices. This update only works for certain OEMs and doesn't work on the **Fix pending** status. Reach out to your respective OEM to confirm whether this functionality is enabled for your device.
 
 ### How to unblock devices
 

@@ -39,37 +39,44 @@ zone_pivot_groups: atp-baseline-versions
 
 -->
 
-# List of the settings in the Microsoft Defender for Endpoint security baseline in Intune
+# Microsoft Defender for Endpoint security baseline settings reference for Microsoft Intune
 
-This article is a reference for the settings that are available in the different versions of the Microsoft Defender for Endpoint security baseline that you can deploy with Microsoft Intune. Use the tabs to select and view the settings in the most recent baseline version and a few older versions that might still be in use.
+This article is a reference for the settings that are available in the Microsoft Defender for Endpoint security baseline for Microsoft Intune.
 
-For each setting this reference identifies the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, can also set different defaults.
+## About this reference article
 
-When the Intune UI includes a *Learn more* link for a setting, you’ll find that here as well. Use that link to view the settings *policy configuration service provider* (CSP) or relevant content that explains the settings operation.
+Each security baseline is a group of preconfigured Windows settings that help you apply and enforce granular security settings that the relevant security teams recommend. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration settings.
 
-When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that are created prior to the availability of a new version:
+The details that display in this article are based on baseline version you select at the top of the article. For each version, this article displays:
+
+- A list of each setting with its configuration as found in the default instance of that baseline version.
+- When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
+
+When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
-- Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
+- Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
-To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
+To learn more about using security baselines, see:
+- [Use security baselines](../protect/security-baselines.md)
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
+- [Manage security baselines](../protect/security-baselines-configure.md)
 
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
 
 ::: zone pivot="mde-v24h1"
-**Microsoft Defender for Endpoint baseline version 24H1**  
+## Microsoft Defender for Endpoint baseline version 24H1  
 ::: zone-end  
 ::: zone pivot="atp-december-2020"
-**Microsoft Defender for Endpoint baseline for December 2020 - version 6**  
+## Microsoft Defender for Endpoint baseline for December 2020 - version 6 
 ::: zone-end  
 ::: zone pivot="atp-sept-2020"
-**Microsoft Defender for Endpoint baseline for September 2020 - version 5**  
+## Microsoft Defender for Endpoint baseline for September 2020 - version 5 
 ::: zone-end  
 ::: zone pivot="atp-april-2020"
-**Microsoft Defender for Endpoint baseline for April 2020 - version 4**  
+## Microsoft Defender for Endpoint baseline for April 2020 - version 4 
 ::: zone-end  
 ::: zone pivot="atp-march-2020"
-**Microsoft Defender for Endpoint baseline for March 2020 - version 3**  
+## Microsoft Defender for Endpoint baseline for March 2020 - version 3 
 ::: zone-end
 
 The Microsoft Defender for Endpoint baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites).
@@ -78,9 +85,9 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 ::: zone pivot="mde-v24h1"
 
-## Administrative Templates
+### Administrative Templates
 
-### System > Device Installation > Device Installation Restrictions
+#### System > Device Installation > Device Installation Restrictions
 
 - **Prevent installation of devices using drivers that match these device setup classes**  
   Baseline default: *Enabled*  
@@ -92,7 +99,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Also apply to matching devices that are already installed.**  
     Baseline default: *False*  
 
-### Windows Components > BitLocker Drive Encryption
+#### Windows Components > BitLocker Drive Encryption
 
 - **Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later)**  
   Baseline default: *Enabled*  
@@ -107,7 +114,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Select the encryption method for fixed data drives:**  
     Baseline default: *XTS-AES 128-bit (default)*
 
-### Windows Components > BitLocker Drive Encryption > Fixed Data Drives
+#### Windows Components > BitLocker Drive Encryption > Fixed Data Drives
 
 - **Choose how BitLocker-protected fixed drives can be recovered**  
   Baseline default: *Enabled*  
@@ -119,7 +126,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Allow data recovery agent**  
     Baseline default: *True*
 
-  - **Configure storage of BitLocker recovery information to AD DS:**  
+  - **Configure storage of BitLocker recovery information to AD DS**  
     Baseline default: *Backup recovery passwords and key packages*
 
     Value: *Allow 256-bit recovery key*
@@ -144,7 +151,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Select the encryption type: (Device)**  
     Baseline default: *Used Space Only encryption*
 
-### Windows Components > BitLocker Drive Encryption > Operating System Drives
+#### Windows Components > BitLocker Drive Encryption > Operating System Drives
 
 - **Allow devices compliant with InstantGo or HSTI to opt out of pre-boot PIN.**  
   Baseline default: *Disabled*  
@@ -208,7 +215,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Configure TPM startup key:**  
     Baseline default: *Do not allow startup key with TPM*
 
-### Windows Components > BitLocker Drive Encryption > Removable Data Drives
+#### Windows Components > BitLocker Drive Encryption > Removable Data Drives
 
 - **Control use of BitLocker on removable drives**  
   Baseline default: *Enabled*  
@@ -234,7 +241,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Do not allow write access to devices configured in another organization**  
     Baseline default: *False*
 
-### Windows Components > File Explorer
+#### Windows Components > File Explorer
 
 - **Configure Windows Defender SmartScreen**  
   Baseline default: *Enabled*  
@@ -243,7 +250,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Pick one of the following settings: (Device)**  
     Baseline default: *Warn and prevent bypass*
 
-### Windows Components > Internet Explorer
+#### Windows Components > Internet Explorer
 
 - **Prevent bypassing SmartScreen Filter warnings about files that are not commonly downloaded from the Internet**  
   Baseline default: *Enabled*  
@@ -260,7 +267,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   - **Select SmartScreen Filter mode**  
     Baseline default: *On*
 
-## BitLocker
+### BitLocker
 
 - **Allow Warning For Other Disk Encryption**  
   Baseline default: *Enabled*  
@@ -274,7 +281,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#requiredeviceencryption)
 
-## Defender
+### Defender
 
 - **Allow Archive Scanning**  
   Baseline default: *Allowed. Scans the archive files.*  
@@ -464,19 +471,19 @@ This baseline is optimized for physical devices and isn't recommended for use on
   Baseline default: *Send all samples automatically.*  
   [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#submitsamplesconsent)
 
-## Device Guard
+### Device Guard
 
 - **Credential Guard**  
   Baseline default: *(Enabled with UEFI lock) Turns on Credential Guard with UEFI lock.*  
   [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#lsacfgflags)
 
-## Dma Guard
+### Dma Guard
 
 - **Device Enumeration Policy**  
   Baseline default: *Block all (Most restrictive)*  
   [Learn more](/windows/client-management/mdm/policy-csp-dmaguard?WT.mc_id=Portal-fx#deviceenumerationpolicy)
 
-## Firewall
+### Firewall
 
 - **Certificate revocation list verification**  
   Baseline default: *None*  
@@ -620,7 +627,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
   Value: *300*  
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalsaidletime)
 
-## Microsoft Edge
+### Microsoft Edge
 
 - **Configure Microsoft Defender SmartScreen**  
   Baseline default: *Enabled*  
@@ -646,7 +653,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 ::: zone-end
 ::: zone pivot="atp-sept-2020,atp-december-2020"
 
-## Attack Surface Reduction Rules
+### Attack Surface Reduction Rules
 
 Attack surface reduction rules support a merger of settings from different policies, to create a superset of policy for each device. Only the settings that aren't in conflict are merged. Settings that are in conflict are not added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed.
 
@@ -716,7 +723,7 @@ To learn more, see [Attack surface reduction rules](/windows/security/threat-pro
 
 ::: zone pivot="atp-march-2020,atp-april-2020"
 
-## Application Guard
+### Application Guard
 
 For more information, see [WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.
 
@@ -744,7 +751,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 ::: zone-end  
 ::: zone pivot="atp-december-2020,atp-sept-2020,atp-march-2020,atp-april-2020"
 
-## BitLocker
+### BitLocker
 
 ::: zone-end  
 ::: zone pivot="atp-march-2020,atp-april-2020"
@@ -927,7 +934,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 ::: zone pivot="atp-march-2020,atp-april-2020"
 
-## Browser
+### Browser
 
 - **Require SmartScreen for Microsoft Edge**  
   Baseline default: *Yes*  
@@ -941,7 +948,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
   Baseline default: *Yes*  
   [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
-## Data Protection
+### Data Protection
 
 - **Block direct memory access**  
   Baseline default: *Yes*  
@@ -950,13 +957,13 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 ::: zone-end  
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
-## Device Guard
+### Device Guard
 
 - **Turn on credential guard**  
   Baseline default: *Enable with UEFI lock*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=872424)
 
-## Device Installation
+### Device Installation
 
 ::: zone-end  
 ::: zone pivot="atp-march-2020,atp-april-2020"
@@ -1000,7 +1007,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 ::: zone-end  
 ::: zone pivot="atp-sept-2020,atp-december-2020"
 
-## DMA Guard
+### DMA Guard
 
 ::: zone-end  
 ::: zone pivot="atp-sept-2020,atp-december-2020"
@@ -1021,7 +1028,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 <!-- Endpoint Detection and Response is removed as categories beginning with the September 2020 version -->
 
-## Endpoint Detection and Response
+### Endpoint Detection and Response
 
 - **Sample sharing for all files**  
   Baseline default: *Yes*  
@@ -1034,7 +1041,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 ::: zone-end  
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
-## Firewall
+### Firewall
 
 - **Stateful File Transfer Protocol (FTP)**  
   Baseline default: *Disabled*  
@@ -1200,7 +1207,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 ::: zone-end  
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
-## Microsoft Defender
+### Microsoft Defender
 
 ::: zone-end  
 ::: zone pivot="atp-december-2020"
@@ -1591,7 +1598,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 <!-- Microsoft Defender Security Center was removed with the September 2020 baseline -->
 
-## Microsoft Defender Security Center
+### Microsoft Defender Security Center
 
 - **Block users from editing the Exploit Guard protection interface**  
   Baseline default: *Yes*  
@@ -1600,7 +1607,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 ::: zone-end  
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
-## Smart Screen
+### Smart Screen
 
 - **Block users from ignoring SmartScreen warnings**  
   Baseline default: *Yes*  
@@ -1649,7 +1656,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 <!-- Windows Hello for Business was removed with the September 2020 baseline -->
 
-## Windows Hello for Business
+### Windows Hello for Business
 
 For more information, see [PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp) in the Windows documentation.
 

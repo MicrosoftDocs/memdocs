@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 11/04/2024
+ms.date: 02/20/2025
 ms.localizationpriority: high
 ---
 
@@ -31,10 +31,21 @@ ms.localizationpriority: high
 
 ### Android
 
-- For user-based management methods: Android 10.0 and later
-- For userless management methods: Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
-- Android enterprise
-- Android open source project device: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
+**Android 10.0 and later for user-based management methods**. These methods are:
+- Android Enterprise personally owned with a work profile
+- Android Enterprise corporate owned work profile
+- Android Enterprise fully managed
+- Android Open Source Project (AOSP) user-based
+- Android device administrator (Note that [Intune ended support for Android device administrator on devices with GMS in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443)
+
+**Android 8.0 and later for userless management methods**. These methods are:
+- Android Enterprise dedicated
+- AOSP userless
+
+**Additional**
+- Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+)
+- Android open source project devices: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
+
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Linux
@@ -50,7 +61,7 @@ ms.localizationpriority: high
 
 ### Microsoft
 
-- Windows 10/11 (Home, S, Pro, Education, Enterprise, and IoT Enterprise editions)
+- Windows 10/11 (Home, S, Pro, Pro Education, Education, Enterprise, and IoT Enterprise editions)
 - Windows 10/11 Cloud PCs on Windows 365
 
   > [!NOTE]
@@ -58,9 +69,7 @@ ms.localizationpriority: high
   >
   > Some features may not be available on Windows 11. This article lists some [known issues](#windows-11-known-issues). As always, test your policies before broadly deploying them across your devices.
 
-- Windows 10 LTSC 2019/2021 (Enterprise and IoT Enterprise editions)
-
-  For more information about managing devices running Windows 10 LTSC 2019, see [What's new in Windows 10 Enterprise LTSC 2019](/windows/whats-new/ltsc/whats-new-windows-10-2019)
+- Windows 10 LTSC 2019/2021 and Windows 11 LTSC 2024 (Enterprise and IoT Enterprise editions)
   
 - Windows 10 version 1709 (RS3) and later, Windows 8.1 RT, PCs running Windows 8.1 (Sustaining mode)
 

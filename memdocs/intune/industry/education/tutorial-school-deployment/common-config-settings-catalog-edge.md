@@ -106,7 +106,7 @@ To learn more, see:
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - Windows - Microsoft Edge**.
+This will create a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - Windows - Microsoft Edge":::**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
@@ -135,7 +135,7 @@ Content-Type: application/json
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **_MSLearn_Example_CommonEDU - Windows - Microsoft Edge (Optional)**.
+This will create a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - Windows - Microsoft Edge (Optional)":::**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
