@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/11/2024
+ms.date: 02/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
