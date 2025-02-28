@@ -101,6 +101,33 @@ Applies to:
 
 ## Device configuration
 
+### New settings available in the Apple settings catalog <!-- 31056047 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+#### iOS/iPadOS
+
+**Restrictions**:
+- Allow Apple Intelligence Report
+- Allow Default Calling App Modification
+- Allow Default Messaging App Modification
+- Allow Mail Smart Replies
+- Allow Notes Transcription
+- Allow Safari Summary
+
+##### macOS
+
+**Remote Desktop**:
+- Remote Desktop
+
+**Restrictions**:
+- Allow Apple Intelligence Report
+- Allow Mail Smart Replies
+- Allow Notes Transcription
+- Allow Safari Summary
+
 ### Android settings in the Settings Catalog <!-- 26981326 -->
 
 The settings catalog will soon support Android Enterprise and AOSP.
@@ -126,8 +153,6 @@ Applies to:
 ## Device enrollment
 
 ### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
-
-### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 iddraft idready idstaged --> 
 
 You'll soon be able to use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
 
