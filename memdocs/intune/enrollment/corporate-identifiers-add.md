@@ -120,7 +120,7 @@ Android serial numbers aren't guaranteed to be unique or present. Check with you
 To add corporate identifiers for corporate devices running Windows 11, list the manufacturer, model, and serial number for each device as shown in the following example.  
 
 ```
-Microsoft,surface 5,01234567890123   
+MicrosoftCorporation,surface 5,01234567890123   
 Lenovo,thinkpad t14,02234567890123  
 ```
 
