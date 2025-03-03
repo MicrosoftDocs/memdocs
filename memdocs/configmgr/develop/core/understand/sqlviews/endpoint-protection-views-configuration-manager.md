@@ -5,7 +5,7 @@ description: Information about the status of Endpoint Protection clients and mal
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 5f6b3676-b5d8-48f7-92c7-35366169a855
 author: Banreet
 ms.author: banreetkaur
