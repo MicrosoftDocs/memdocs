@@ -5,7 +5,7 @@ description: Landing page for the Configuration Manager software development kit
 ms.date: 08/02/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 7fa4f2f4-6816-43e9-976b-d3a48abebdbc
 author: Banreet
 ms.author: banreetkaur
