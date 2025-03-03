@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/24/2025
-ms.topic: how-to
+ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
