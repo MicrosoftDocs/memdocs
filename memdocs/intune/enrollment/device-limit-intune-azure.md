@@ -9,7 +9,7 @@ author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/14/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
