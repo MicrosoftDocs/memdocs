@@ -5,7 +5,7 @@ description: Learn how to run Configuration Manager setup at a command prompt fo
 ms.date: 02/16/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

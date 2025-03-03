@@ -8,7 +8,7 @@ author: jeffducasse
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/12/2023
-ms.topic: conceptual
+ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high

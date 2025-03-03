@@ -5,7 +5,7 @@ description: Protect device data with full wipe, selective wipe, remote lock, or
 ms.date: 08/14/2018
 ms.subservice: mdm
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

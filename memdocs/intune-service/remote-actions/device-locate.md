@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/11/2024 
+ms.date: 02/28/2025 
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -70,7 +70,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 - Windows Phone
 
 > [!NOTE]
-> The locate device capability (excluding the lost device sound alert) is not supported on GCC High environments.
+> The locate device capability (excluding the lost device sound alert) isn't supported on Government Community Cloud (GCC) High environments.
 
 ## Locate a lost or stolen device
 
@@ -103,15 +103,14 @@ Intune collects information about the last known location of a device every eigh
 
 **About initialization of last known location**:
 
-To support the *last know location* capability for Android dedicated devices, each device receives an initial default entry for **Locate device** which shows a status of **Complete**. This status appears under *Device actions status* when you view the devices Overview page. This default status is a result of the capability being initialized by Intune and doesn't indicate that a locate device action has run.
+To support the *last know location* capability for Android dedicated devices, each device receives an initial default entry for **Locate device** which shows a status of **Complete**. This status appears under *Device actions status* when you view the devices Overview page. This default status is a result of Intune initializing the capability by default, which doesn't mean a locate device action has run.
 
 The date and time of this default status varies:
 
-- Devices enrolled before the capability becomes available reflect the day this capability was enabled for your tenant.
-- Devices you enroll after this capability is available, reflect the time of device enrollment.
+- Devices that are enrolled before the capability becomes available, reflect the day this capability was enabled for your tenant.
+- Devices that you enroll after this capability is available, reflect the time of device enrollment.
 
 Later, this default status updates to reflect the actual date and time that an admin runs the Locate device action for that device.
-
 
 ## Activate lost device sound alert
 

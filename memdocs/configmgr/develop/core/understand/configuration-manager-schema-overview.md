@@ -5,7 +5,7 @@ description: This article discusses the Configuration Manager Schema Overview.
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 694d88c3-c257-4ef4-a5e6-f732b49ce2f9
 author: Banreet
 ms.author: banreetkaur

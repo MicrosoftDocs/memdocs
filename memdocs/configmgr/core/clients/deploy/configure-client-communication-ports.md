@@ -5,7 +5,7 @@ description: Set client communication ports in Configuration Manager.
 ms.date: 04/05/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

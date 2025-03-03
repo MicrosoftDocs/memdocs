@@ -5,7 +5,7 @@ description: Learn about urgent issues that aren't yet fixed in the product or c
 ms.date: 10/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: release-notes
 author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth

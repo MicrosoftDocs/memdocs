@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.date: 12/04/2024
 author: baladelli
 ms.author: baladell

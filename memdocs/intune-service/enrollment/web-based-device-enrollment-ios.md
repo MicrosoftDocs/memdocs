@@ -9,7 +9,7 @@ author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/23/2024
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high

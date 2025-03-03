@@ -5,7 +5,7 @@ description: Learn more information about creating and deploying Windows applica
 ms.date: 12/01/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 manager: apoorvseth
 ms.author: baladell

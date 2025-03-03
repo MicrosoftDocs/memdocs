@@ -12,6 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
+ms.topicc: troubleshooting-general
 ---
 
 # Troubleshoot Windows Defender or Endpoint Protection client

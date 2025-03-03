@@ -5,7 +5,7 @@ description: Use administrator checklists to help you plan a migration strategy 
 ms.date: 12/29/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: checklist
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Plan for managing BitLocker Drive Encryption with Configuration Man
 ms.date: 12/04/2024
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

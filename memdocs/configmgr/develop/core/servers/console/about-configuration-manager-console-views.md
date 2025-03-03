@@ -4,7 +4,7 @@ description: Configuration Manager console views are displayed in the results pa
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: cf102999-d4b1-46c9-a7cb-2af86423f140
 author: Banreet
 ms.author: banreetkaur

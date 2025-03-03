@@ -6,7 +6,7 @@ ms.date: 02/25/2025
 
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby

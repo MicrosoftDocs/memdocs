@@ -5,7 +5,7 @@ description: Learn about core concepts and how compliance settings work
 ms.date: 01/04/2022
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: get-started
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

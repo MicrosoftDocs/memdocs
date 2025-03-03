@@ -5,7 +5,7 @@ titleSuffix: Microsoft Intune
 ms.date: 10/20/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby

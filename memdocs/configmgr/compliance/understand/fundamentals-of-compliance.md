@@ -4,7 +4,7 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 audience: ITPro
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: configuration-manager
 ms.collection: 
  - tier1

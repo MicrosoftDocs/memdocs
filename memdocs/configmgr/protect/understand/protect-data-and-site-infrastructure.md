@@ -5,7 +5,7 @@ description: Learn how to protect your organization's resources from exposure or
 ms.date: 10/05/2021
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

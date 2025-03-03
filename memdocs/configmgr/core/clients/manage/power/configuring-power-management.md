@@ -5,7 +5,7 @@ description: Set up power management in Configuration Manager.
 ms.date: 09/10/2019
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

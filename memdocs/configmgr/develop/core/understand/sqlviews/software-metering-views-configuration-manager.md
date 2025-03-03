@@ -5,7 +5,7 @@ description: Information such as the software metering rules that are created in
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 
 
 ms.assetid: e88c5f27-7ce1-48b3-bf3d-e4e6f5100b19

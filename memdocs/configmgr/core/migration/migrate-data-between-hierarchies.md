@@ -5,7 +5,7 @@ description: Learn how to transfer data from a source hierarchy to a Configurati
 ms.date: 11/05/2018
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

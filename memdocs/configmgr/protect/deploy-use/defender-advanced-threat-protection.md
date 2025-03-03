@@ -5,7 +5,7 @@ description: Learn how to manage and monitor Microsoft Defender for Endpoint, a 
 ms.date: 12/16/2024
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

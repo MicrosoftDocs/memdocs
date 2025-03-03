@@ -5,7 +5,7 @@ description: Learn about Anomaly detection as an advanced feature in Endpoint an
 ms.date: 10/20/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby

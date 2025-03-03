@@ -5,7 +5,7 @@ description: Updates to Configuration Manager include optional features, which y
 ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: baladelli  
 ms.author: baladell
 manager: apoorvseth

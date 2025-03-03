@@ -3,7 +3,7 @@ title: Synchronize Microsoft 365 Apps updates with no Internet connection
 titleSuffix: Configuration Manager
 description: Synchronize Microsoft 365 Apps updates on the top-level software update point that is disconnected from the Internet.
 ms.date: 06/20/2024
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: configuration-manager
 ms.subservice: software-updates
 manager: apoorvseth

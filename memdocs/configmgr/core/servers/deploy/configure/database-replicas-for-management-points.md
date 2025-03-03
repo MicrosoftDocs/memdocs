@@ -5,7 +5,7 @@ description: Use a database replica to reduce the CPU load placed on the site da
 ms.date: 04/27/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

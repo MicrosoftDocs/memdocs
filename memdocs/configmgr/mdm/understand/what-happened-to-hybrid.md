@@ -5,7 +5,7 @@ description: Learn about the deprecation of hybrid mobile device management (MDM
 ms.date: 12/30/2019
 ms.subservice: other
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
