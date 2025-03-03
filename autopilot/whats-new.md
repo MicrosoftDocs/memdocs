@@ -122,7 +122,7 @@ This change affects new primary users of the Autopilot device who are allowed se
 Self-service BitLocker access can continue to work the same if the IT admin performs either:
 
 - A remote Autopilot Reset. For more information, see [Step by step tutorial for Windows Autopilot Reset in Intune](tutorial/reset/autopilot-reset-overview.md), [Reset devices with remote Windows Autopilot Reset](tutorial/reset/remote-autopilot-reset.md), and [Windows Autopilot Reset](windows-autopilot-reset.md).
-- Remove the current primary user or reassign to the new intended primary user before the device is reset or reimaged. For more information, see [Change a device's primary user](/mem/intune/remote-actions/find-primary-user#change-a-devices-primary-user).
+- Remove the current primary user or reassign to the new intended primary user before the device is reset or reimaged. For more information, see [Change a device's primary user](/mem/intune-service/remote-actions/find-primary-user#change-a-devices-primary-user).
 
 If the new primary user is unable to access BitLocker self-service after changing from a previous primary user, then the IT admin should update the primary user in the device properties. The primary user on the device then updates to the new user upon the next check-in.
 
@@ -188,13 +188,13 @@ A new toggle is available in the Enrollment Status Page (ESP) profile that allow
 
 Date added: *March 17, 2023*
 
-The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](/mem/intune-service/enrollment/windows-enrollment-status).
 
 ## Win32 App Supersedence ESP improvements
 
 Date added: *February 10, 2023*
 
-Starting in January 2023, we're currently in the process of rolling out Win32 app supersedence GA, which introduces enhancements to ESP behavior around app tracking and app processing. Specifically, admins might notice a change in app counts. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026) and [Add Win32 app supersedence](/mem/intune/apps/apps-win32-supersedence).
+Starting in January 2023, we're currently in the process of rolling out Win32 app supersedence GA, which introduces enhancements to ESP behavior around app tracking and app processing. Specifically, admins might notice a change in app counts. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026) and [Add Win32 app supersedence](/mem/intune-service/apps/apps-win32-supersedence).
 
 ## Support for Temporary Access Pass
 
@@ -211,7 +211,7 @@ Date added: *September 23, 2022*
 
 Starting with Intune 2209, Intune automatically captures diagnostics when devices experience a failure during the Autopilot process on currently supported versions of Windows. When logs are finished processing on a failed device, they're automatically captured and uploaded to Intune. Diagnostics might include user identifiable information such as user or device name. If the logs aren't available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they're removed.
 
-For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+For more information, see [Collect diagnostics from a Windows device](/mem/intune-service/remote-actions/collect-diagnostics).
 
 ## Updates to Autopilot device targeting infrastructure
 
@@ -231,7 +231,7 @@ Date added: *May 20, 2022*
 
 With the Intune 2205 release, device enrollment in Intune can be configured to enable [co-management](/mem/configmgr/comanage/overview), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](/mem/intune/enrollment/windows-enrollment-status), the device waits for Configuration Manager. The Configuration Manager client is installed, registers with the site, and then applies the production co-management policy. The Autopilot ESP then continues.
+If the device is targeted with an [Autopilot enrollment status page (ESP) policy](/mem/intune-service/enrollment/windows-enrollment-status), the device waits for Configuration Manager. The Configuration Manager client is installed, registers with the site, and then applies the production co-management policy. The Autopilot ESP then continues.
 
 For more information, see [How to enroll to co-management with Autopilot](/mem/configmgr/comanage/autopilot-enrollment).
 
@@ -283,11 +283,11 @@ The following example shows details for **Deployment info**, which includes **Ne
 
 :::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
 
-To enable the diagnostics page, go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
+To enable the diagnostics page, go to the [ESP profile](/mem/intune-service/enrollment/windows-enrollment-status). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
 
 The diagnostics page is currently supported when signing in with a Work or School account during a Windows Autopilot user-driven deployment. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 
 ## Related content
 
-- [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new).
+- [What's new in Microsoft Intune](/mem/intune-service/fundamentals/whats-new).
 - [What's new in Windows client](/windows/whats-new/).

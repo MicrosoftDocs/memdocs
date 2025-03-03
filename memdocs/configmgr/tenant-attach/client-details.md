@@ -38,7 +38,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 The user account accessing tenant attach features within the Microsoft Intune admin center needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
-- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
+- An [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 > [!IMPORTANT]
 > The "Enforce Configuration Manager RBAC for cloud console requests that interact with Configuration Manager" check box does not grant permissions to the user to perform cloud console requests that interact with Configuration Manager unless the user is assigned an Intune role.

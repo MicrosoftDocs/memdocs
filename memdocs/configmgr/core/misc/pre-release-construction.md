@@ -6,8 +6,7 @@ author: Banreet
 ms.date: 01/10/2020
 ms.subservice: other
 ms.service: configuration-manager
-ms.topic: article
-localization_priority: low
+ms.topic: conceptual
 robots: NOINDEX, NOFOLLOW
 ms.localizationpriority: medium
 ms.collection: tier3

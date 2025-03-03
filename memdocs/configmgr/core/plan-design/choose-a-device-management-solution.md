@@ -27,7 +27,7 @@ There are several Microsoft solutions that might work best for you in different 
 - Microsoft Azure provides various solutions from the cloud or on-premises with Azure Arc and Azure Stack that primarily target server management.
 - Microsoft Intune provides cloud management of clients.
 - You can combine Configuration Manager and Intune with co-management.
-- You can use [Security Management for Microsoft Defender for Endpoint (MDE)](../../../intune/protect/mde-security-integration.md) to manage security settings for devices utilizing Microsoft Defender for Endpoint.
+- You can use [Security Management for Microsoft Defender for Endpoint (MDE)](../../../intune-service/protect/mde-security-integration.md) to manage security settings for devices utilizing Microsoft Defender for Endpoint.
 
 Use the following table to help compare these management technologies:
 
@@ -47,7 +47,7 @@ For more information, see the following articles:
 - [What is Virtual Machine Manager?](/system-center/vmm/overview)
 - [Azure Arc products](/azure/)
 - [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview)
-- [Security Management for Microsoft Defender for Endpoint (MDE)](../../../intune/protect/mde-security-integration.md)
+- [Security Management for Microsoft Defender for Endpoint (MDE)](../../../intune-service/protect/mde-security-integration.md)
 
 For more information on the Configuration Manager and Intune solutions, continue to the next section.
 
@@ -76,7 +76,7 @@ For more information, see [Client installation methods](../clients/deploy/plan/c
 
 This options requires utilizing Microsoft Defender for Endpoint on your devices and is intended to provide security management capability in circumstances where Microsoft Intune or Microsoft Configuration Manager are not present. This uses the Microsoft Defender for Endpoint client to communicate directly with Intune and apply security management policy.
 
-For more information, see [Security Management for Microsoft Defender for Endpoint (MDE)](../../../intune/protect/mde-security-integration.md).
+For more information, see [Security Management for Microsoft Defender for Endpoint (MDE)](../../../intune-service/protect/mde-security-integration.md).
 
 ### <a name="bkmk_comanage"></a> Co-management with Microsoft Intune
 
@@ -106,9 +106,9 @@ For more information, see [Manage mobile devices with Configuration Manager and 
 For a complete list of supported platforms, see the following articles:
 
 - [Supported operating systems for clients and devices for Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md)
-- [Intune supported configurations](/mem/intune/fundamentals/supported-devices-browsers)
+- [Intune supported configurations](/mem/intune-service/fundamentals/supported-devices-browsers)
 
-Microsoft recommends using Intune to manage Android, iOS, and Windows 10/11 mobile devices. For more information, see [What is Microsoft Intune?](/mem/intune/fundamentals/what-is-intune).
+Microsoft recommends using Intune to manage Android, iOS, and Windows 10/11 mobile devices. For more information, see [What is Microsoft Intune?](/mem/intune-service/fundamentals/what-is-intune).
 
 ### <a name="bkmk_comp2"></a> Compare solutions by management functionality  
 

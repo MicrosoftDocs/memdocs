@@ -161,7 +161,7 @@ Client management features not related to Windows software update management or 
 > Migrate management of macOS devices to Microsoft Intune:
 >
 > 1. First, uninstall the Configuration Manager client for macOS. For more information, see [Uninstalling the Mac client](../../clients/manage/maintain-mac-clients.md#uninstalling-the-mac-client).
-> 2. Then enroll the device to Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../intune/fundamentals/deployment-guide-platform-macos.md).
+> 2. Then enroll the device to Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../intune-service/fundamentals/deployment-guide-platform-macos.md).
 
 Manage Apple Mac computers with the Configuration Manager client for macOS.
 

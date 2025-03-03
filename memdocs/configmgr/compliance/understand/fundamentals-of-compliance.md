@@ -32,8 +32,8 @@ Configuration Manager leverages other Microsoft services for compliance, includi
 
 Microsoft Intune helps enforce compliance policies and protect organizational data specifically for Intune:
 
-- **Conditional Access**: Ensures only compliant devices and apps managed by Intune can access sensitive data. See [Conditional Access](/mem/intune/protect/conditional-access).
-- **Device Compliance Enforcement**: Enforces device compliance policies to meet organizational security requirements. See [Device Compliance Policies](/mem/intune/protect/device-compliance-get-started).
+- **Conditional Access**: Ensures only compliant devices and apps managed by Intune can access sensitive data. See [Conditional Access](/mem/intune-service/protect/conditional-access).
+- **Device Compliance Enforcement**: Enforces device compliance policies to meet organizational security requirements. See [Device Compliance Policies](/mem/intune-service/protect/device-compliance-get-started).
 
 For more information about Intune compliance capabilities, visit the [Microsoft Intune documentation](/mem/intune).
 > [!NOTE]
