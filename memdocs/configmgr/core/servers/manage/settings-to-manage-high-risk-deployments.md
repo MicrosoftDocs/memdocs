@@ -5,7 +5,7 @@ description: Configure deployment verification site settings in Configuration Ma
 ms.date: 03/10/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

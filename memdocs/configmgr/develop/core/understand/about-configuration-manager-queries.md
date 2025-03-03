@@ -4,7 +4,7 @@ description: Create and run the queries that are accessible in the Configuration
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: e20ee196-8b6b-49c1-98e8-613438ea8279
 author: Banreet
 ms.author: banreetkaur

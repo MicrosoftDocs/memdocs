@@ -12,7 +12,7 @@ ms.date: 03/28/2024
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 73db3070-d033-40fb-a8f1-58b9d198021e
 
 # optional metadata

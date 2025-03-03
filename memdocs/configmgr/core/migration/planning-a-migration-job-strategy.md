@@ -5,7 +5,7 @@ description: Use migration jobs to configure data that you want to migrate to yo
 ms.date: 10/06/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

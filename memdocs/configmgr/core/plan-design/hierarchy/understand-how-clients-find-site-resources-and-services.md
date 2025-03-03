@@ -5,7 +5,7 @@ description: Learn how and when Configuration Manager clients use service locati
 ms.date: 04/05/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

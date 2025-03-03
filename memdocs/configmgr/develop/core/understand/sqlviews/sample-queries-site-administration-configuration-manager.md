@@ -5,7 +5,7 @@ description: Sample queries that show how to join site administration views to o
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 965581db-786b-413e-a444-26533a339642

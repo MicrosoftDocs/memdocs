@@ -5,7 +5,7 @@ description: Implement and configure the necessary dependencies for deploying ap
 ms.date: 08/02/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

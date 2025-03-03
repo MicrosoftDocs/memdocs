@@ -5,7 +5,7 @@ description: Resources to help learn about PowerShell script security.
 ms.date: 10/01/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.author: gokarthi
 author: gowdhamankarthikeyan
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Use Maintenance Windows article provides more information about Con
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: efbb6dc8-cb1c-4513-95a4-eb3a8c3936b2
 author: Banreet
 ms.author: banreetkaur

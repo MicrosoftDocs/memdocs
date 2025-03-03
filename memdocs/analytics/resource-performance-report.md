@@ -5,7 +5,7 @@ description: This article provides an overview of the resource performance repor
 ms.date: 08/19/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby

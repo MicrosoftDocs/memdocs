@@ -6,7 +6,7 @@ author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
 ms.date: 01/31/2020
-ms.topic: conceptual
+ms.topic: integration
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.localizationpriority: medium

@@ -5,7 +5,7 @@ description: Configure a source hierarchy and source sites so you can migrate da
 ms.date: 12/29/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

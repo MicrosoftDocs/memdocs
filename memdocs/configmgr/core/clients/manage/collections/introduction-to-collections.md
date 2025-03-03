@@ -5,7 +5,7 @@ description: Get an introduction to using collections in Configuration Manager.
 ms.date: 12/01/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

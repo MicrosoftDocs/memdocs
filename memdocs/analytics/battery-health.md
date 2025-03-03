@@ -5,7 +5,7 @@ description: Learn about the battery health report as an advanced feature in End
 ms.date: 01/26/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
