@@ -5,7 +5,7 @@ description: Use a dashboard in the console to view information about the health
 ms.date: 12/15/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
