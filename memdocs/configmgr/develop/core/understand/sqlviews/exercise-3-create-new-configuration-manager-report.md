@@ -5,7 +5,7 @@ description: Create a simple report and configure the report properties.
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 16e62994-a1e2-4ee9-bf62-3985ecb1c745

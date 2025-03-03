@@ -7,9 +7,9 @@ metadata:
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
-  ms.reviewer: jubaptis
+  ms.reviewer: madakeva
   manager: aaroncz
-  ms.date: 08/02/2024
+  ms.date: 02/27/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -478,3 +478,15 @@ sections:
           When Windows Autopilot for pre-provisioned deployment is used, the device shows as compliant in Microsoft Entra ID after completing the Technician flow. However, after starting the User flow, the device changes to noncompliant in Microsoft Entra ID. Why did it change from compliant to noncompliant in Microsoft Entra ID?
         answer: |
           Device compliance in Microsoft Entra ID is reset during the User flow. Once the User flow completes, compliance is reevaluated and updated. This behavior is expected.
+
+  - name: Intune Connector for Active Directory
+    questions:
+      - question: |
+          What is the difference between the updated and legacy Intune Connector for Active Directory?
+        answer: |
+          The updated Intune Connector for Active Directory strengths security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts) instead of using the computer account (**SYSTEM**) of the server that runs the Intune Connector for Active Directory.
+
+      - question: |
+          If the administrator installing and configuring the Intune Connector for Active Directory has the permissions outlined in the requirements, do they also have to follow the steps to increase the computer account limit in the OUs?
+        answer: |
+          No. the Intune Connector for Active Directory installer takes care of setting up all of the proper permissions needed by the MSA in the OUs. The steps to increase the computer account limit in the OUs only need to be followed if the administrator installing and configuring the Intune Connector for Active Directory doesn't have the permissions outlined in [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).

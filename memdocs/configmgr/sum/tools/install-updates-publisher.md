@@ -5,7 +5,7 @@ description: Install System Center Updates Publisher in your environment
 ms.date: 10/20/2021
 ms.service: configuration-manager
 ms.subservice: software-updates
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

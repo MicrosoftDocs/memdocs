@@ -5,7 +5,7 @@ description: Get SQL Server version and configuration requirements for hosting a
 ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 author: Baladelli
 ms.author: Baladell
 manager: apoorvseth

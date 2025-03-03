@@ -5,7 +5,7 @@ description: Consider site system servers and site system roles as you plan your
 ms.date: 03/29/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

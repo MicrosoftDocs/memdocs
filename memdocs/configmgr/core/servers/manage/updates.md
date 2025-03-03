@@ -5,7 +5,7 @@ description: Learn about the in-console service method called Updates and Servic
 ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Baladelli    
 ms.author: Baladell
 manager: apoorvseth

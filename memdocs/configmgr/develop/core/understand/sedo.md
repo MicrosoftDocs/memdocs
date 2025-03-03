@@ -4,7 +4,7 @@ ms.date: 09/20/2016
 description: SEDO in SDK provides a mechanism for assigning and unassigning locks to globally replicated SDK provider objects in the context of a site, computer, and user.
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: fd4859e5-3443-47b0-9b07-b41063c8b2aa
 author: Banreet
 ms.author: banreetkaur

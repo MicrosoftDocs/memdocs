@@ -44,7 +44,7 @@ appliesto:
 
       For more information, see [Use cloud groups to manage role assignments in Microsoft Entra ID](/azure/active-directory/roles/groups-concept).
 
-    - **Membership type**: Select how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add).
+    - **Membership type**: Select how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](/mem/intune-service/fundamentals/groups-add).
 
     - **Owners**: Select users that own the group. Owners can also delete this group.
 
@@ -161,4 +161,4 @@ For a detailed tutorial on configuring and assigning a Windows Autopilot deploym
 - [Pre-provision Microsoft Entra hybrid join: Create and assign a pre-provisioned Microsoft Entra hybrid join Autopilot profile](tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md).
 - [Self-deploying mode: Create and assign self-deploying Autopilot profile](tutorial/self-deploying/self-deploying-autopilot-profile.md).
 
-For more information about managing Windows Autopilot devices, see [What is Microsoft Intune device management?](/mem/intune/remote-actions/device-management).
+For more information about managing Windows Autopilot devices, see [What is Microsoft Intune device management?](/mem/intune-service/remote-actions/device-management).
