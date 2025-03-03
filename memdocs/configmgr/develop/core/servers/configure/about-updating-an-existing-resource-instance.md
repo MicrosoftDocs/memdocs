@@ -5,7 +5,7 @@ description: When the Data Discovery Manager, in Configuration Manager, finds an
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 0ccb114a-9666-40f5-a02c-894822f3d359
 author: Banreet
 ms.author: banreetkaur

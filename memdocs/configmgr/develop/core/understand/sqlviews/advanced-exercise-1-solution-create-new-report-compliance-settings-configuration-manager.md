@@ -5,7 +5,7 @@ description: Procedure to create the report in Advanced Exercise 1.
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b9ea9f33-258f-40d9-950c-4d8f06bab460
 author: Banreet
 ms.author: banreetkaur

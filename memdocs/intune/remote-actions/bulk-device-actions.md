@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/23/2022
+ms.date: 02/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -52,7 +52,7 @@ Most actions support up to 100 devices. For specific details of each remote acti
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > **Bulk Device Actions**.
 ![Bulk device actions](./media/bulk-device-actions/bulk-device-actions.png)
-3. On the **Bulk device action** page, select an **OS** and **Device action**. Some device actions have additional options or fields to populate. Choose **Next**.
+3. On the **Bulk device action** page, select an **OS** and **Device action**. Some device actions have more options or fields to populate. Choose **Next**.
 4. On the **Devices** page, select up to maximum number of devices that the action supports > **Next**.
 5. On the **Review + create** page, select **Create**.
 

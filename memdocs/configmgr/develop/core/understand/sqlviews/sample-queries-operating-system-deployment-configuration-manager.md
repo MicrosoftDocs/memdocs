@@ -5,7 +5,7 @@ description: Sample queries that show how to join operating system deployment vi
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: d31a8e79-87a1-4e4d-bcaa-856006b4889a

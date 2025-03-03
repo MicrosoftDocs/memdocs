@@ -9,7 +9,7 @@ author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/01/2024
-ms.topic: conceptual
+ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high

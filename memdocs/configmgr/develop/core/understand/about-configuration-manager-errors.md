@@ -4,7 +4,7 @@ ms.date: 09/20/2016
 description: In Configuration Manager, when a Configuration Manager error occurs it's either a Windows Management Instrumentation (WMI) or an SMS Provider error.
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: a8e24656-4cad-4494-9c01-99ec904b7025
 author: Banreet
 ms.author: banreetkaur

@@ -5,7 +5,7 @@ description: Learn how to monitor and manage clients in Configuration Manager.
 ms.date: 10/01/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

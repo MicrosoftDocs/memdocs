@@ -5,7 +5,7 @@ description: Information about the compliance of devices with regard to a number
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: cf84f727-0993-455b-9184-313bc10a3ce2
 author: Banreet
 ms.author: banreetkaur

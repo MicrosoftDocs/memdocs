@@ -5,7 +5,7 @@ description: Learn how to deploy and then manage your content management infrast
 ms.date: 02/7/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.author: baladell 
 author: BalaDelli
 manager: apoorvseth

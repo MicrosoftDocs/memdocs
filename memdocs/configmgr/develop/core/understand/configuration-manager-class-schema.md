@@ -4,7 +4,7 @@ title: Configuration Manager Class Schema
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 46b88ba8-9802-42fd-995f-308172d64c3b
 author: Banreet
 ms.author: banreetkaur

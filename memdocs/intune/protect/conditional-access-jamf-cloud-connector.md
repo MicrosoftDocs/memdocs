@@ -9,7 +9,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 08/30/2023
-ms.topic: conceptual
+ms.topic: integration
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high

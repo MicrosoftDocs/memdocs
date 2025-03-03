@@ -5,7 +5,7 @@ description: Learn how to use prerequisite checker to identify and fix problems 
 ms.date: 02/16/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

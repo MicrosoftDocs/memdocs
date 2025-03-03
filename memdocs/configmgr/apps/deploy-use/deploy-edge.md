@@ -5,7 +5,7 @@ description: How to deploy and update Microsoft Edge, version 77 and later with 
 ms.date: 05/31/2022
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

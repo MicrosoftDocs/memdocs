@@ -5,7 +5,7 @@ description: Review the Configuration Manager version history, and learn about t
 ms.date: 04/08/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

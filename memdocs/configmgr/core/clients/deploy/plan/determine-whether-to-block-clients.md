@@ -5,7 +5,7 @@ description: Block client access for system security by using Configuration Mana
 ms.date: 04/23/2017
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

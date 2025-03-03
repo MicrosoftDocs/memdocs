@@ -5,7 +5,7 @@ description: Information about the computer hardware scanned on Configuration Ma
 ms.date: 06/03/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8726c91b-de9d-4df0-9eb8-f9f62e109152
 author: banreet
 ms.author: banreetkaur

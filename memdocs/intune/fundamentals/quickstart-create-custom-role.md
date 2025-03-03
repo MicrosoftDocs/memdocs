@@ -8,7 +8,7 @@ author: Smritib17
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/26/2019
 ms.author: smbhardwaj
 ms.assetid: 0b3ac749-4a61-4717-bf08-e0e6a15c3b0a

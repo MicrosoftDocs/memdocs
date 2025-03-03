@@ -5,7 +5,7 @@ description: Make changes or take actions that affect your Configuration Manager
 ms.date: 04/01/2020
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

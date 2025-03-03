@@ -5,7 +5,7 @@ description: Learn the differences between available branches of Configuration M
 ms.date: 11/29/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

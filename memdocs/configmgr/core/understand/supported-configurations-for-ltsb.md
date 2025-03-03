@@ -5,7 +5,7 @@ description: Understand what operating systems and dependent products work with 
 ms.date: 10/11/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Use Configuration Manager to automatically upgrade Windows 11 and W
 ms.date: 09/15/2023
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth

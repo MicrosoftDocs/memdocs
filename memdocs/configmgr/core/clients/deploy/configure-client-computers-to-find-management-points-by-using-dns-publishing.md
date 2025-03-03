@@ -5,7 +5,7 @@ description: Configure Configuration Manager client computers to find management
 ms.date: 04/23/2017
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
