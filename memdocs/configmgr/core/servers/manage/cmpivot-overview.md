@@ -5,7 +5,7 @@ description: Overview of CMPivot in Configuration Manager.
 ms.date: 08/02/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.author: gokarthi
 author: gowdhamankarthikeyan
 manager: apoorvseth

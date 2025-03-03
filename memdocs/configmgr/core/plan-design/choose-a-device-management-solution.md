@@ -5,7 +5,7 @@ description: Learn about the solutions that Microsoft offers for managing PCs, s
 ms.date: 03/30/2023
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

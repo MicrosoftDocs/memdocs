@@ -5,7 +5,7 @@ description: Information about the client status components on Configuration Man
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 9f7f8cc5-8173-4a3d-be97-02c1686a3751
 author: Banreet
 ms.author: banreetkaur

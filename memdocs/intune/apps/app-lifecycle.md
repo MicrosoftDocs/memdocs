@@ -8,7 +8,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 11/18/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium

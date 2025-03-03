@@ -3,7 +3,7 @@ title: Example scenario to deploy and monitor updates
 titleSuffix: Configuration Manager
 description: How to use software updates in Configuration Manager to deploy and monitor monthly software updates.
 ms.date: 10/21/2019
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: configuration-manager
 ms.subservice: software-updates
 author: BalaDelli

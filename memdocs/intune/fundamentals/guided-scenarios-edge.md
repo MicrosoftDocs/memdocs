@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/24/2025
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium

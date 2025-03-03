@@ -5,7 +5,7 @@ description: Plan for on-premises mobile device management to manage mobile devi
 ms.date: 01/09/2020
 ms.subservice: mdm
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

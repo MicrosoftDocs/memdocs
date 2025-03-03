@@ -5,7 +5,7 @@ description: Learn about the methods that you can use to deploy operating system
 ms.date: 08/11/2020
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

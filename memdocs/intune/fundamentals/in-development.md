@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/10/2025
+ms.date: 02/27/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -79,15 +79,6 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
-### VPP token name more easily available in Apps workload<!-- 5479088 -->
-
-You'll soon be able to view a new **VPP token name** column to quickly see the token and app association. This column will be available in the **All apps** list (**Apps** > **All apps**) and the app selection pane for **App configuration policies** (**Apps** > **App configuration policies**). For more information about VPP apps, see [Manage volume-purchased apps and books with Microsoft Intune](../apps/vpp-apps.md).
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
-
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
 Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions. 
@@ -110,63 +101,6 @@ Applies to:
 
 ## Device configuration
 
-### New Default Enforcement device control setting available in the Windows settings catalog<!-- 30253799 -->
-
-The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
-
-There will soon be new settings in the Settings Catalog for Windows 24H2. To see these settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later ** > **Settings catalog** for profile type.
-
-This setting is available in both the settings catalog and the ASR device control template. The Default Enforcement device control setting enables a default enforcement to be applied if:
-
-- There are no policy rules present, or
-- At the end of the policy rules evaluation none were matched.
-
-Applies to:
-
-- Windows
-
-### New settings available in the Apple settings catalog<!-- 30457000 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
-
-#### iOS/iPadOS
-
-**Managed Settings**:
-- Default Applications
-- Wallpaper
-
-**Networking > Domains**:
-- Cross Site Tracking Prevention Relaxed Apps
-
-**Restrictions**:
-- Allowed External Intelligence Workspace IDs
-- Allow Notes Transcription Summary
-- Allow Satellite Connection
-- Allow Visual Intelligence Summary
-
-#### macOS
-
-**Networking > Domains**:
-
-- Cross Site Tracking Prevention Relaxed Apps
-
-**Restrictions**:
-
-- Allow Bookstore
-- Allow Bookstore Erotica
-- Allow Explicit Content
-- Rating Apps
-- Rating Movies
-- Rating Region
-- Rating TV Shows
-
-**System Configuration > File Provider**:
-
-- Management Allows Known Folder Syncing
-- Management Known Folder Syncing Allow List
-
 ### Android settings in the Settings Catalog <!-- 26981326 -->
 
 The settings catalog will soon support Android Enterprise and AOSP.
@@ -186,12 +120,6 @@ Applies to:
 
 - Android Enterprise
 - AOSP
-
-### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
-
-We're updating the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will no longer be available for download but will continue to work until deprecation.
-
-For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
 
 <!-- *********************************************** -->
 

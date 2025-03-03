@@ -5,7 +5,7 @@ description: Read an overview of the discovery process and discovery data record
 ms.date: 02/8/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

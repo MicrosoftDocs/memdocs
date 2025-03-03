@@ -5,7 +5,7 @@ description: An association allows you to logically relate the instances of two 
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 268bb9d1-3058-4c09-8e38-148a51d879f7
 author: Banreet
 ms.author: banreetkaur

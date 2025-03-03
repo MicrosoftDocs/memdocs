@@ -5,7 +5,7 @@ description: See an example scenario for deploying and managing Configuration Ma
 ms.date: 04/23/2017
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

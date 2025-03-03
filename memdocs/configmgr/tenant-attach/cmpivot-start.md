@@ -5,7 +5,7 @@ description: Launch CMPivot for Microsoft Intune tenant attached devices.
 ms.date: 07/11/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

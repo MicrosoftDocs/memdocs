@@ -3,7 +3,7 @@ title: Microsoft Intune tenant attach prerequisites
 titleSuffix: Configuration Manager
 description: Prerequisites for Microsoft Intune tenant attach.
 ms.date: 07/11/2022
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: core-infra
 ms.service: configuration-manager
 manager: apoorvseth

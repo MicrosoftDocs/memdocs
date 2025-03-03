@@ -7,7 +7,7 @@ author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/28/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high

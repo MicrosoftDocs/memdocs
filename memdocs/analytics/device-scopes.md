@@ -5,7 +5,7 @@ description: Learn about Device scopes as an Advanced Analytics feature in Micro
 ms.date: 01/31/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby

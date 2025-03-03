@@ -5,7 +5,7 @@ description: Register a client on the internal network for a unique token or cre
 ms.date: 02/16/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

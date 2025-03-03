@@ -5,7 +5,7 @@ description: Learn about the SMS Provider site system role in Configuration Mana
 ms.date: 10/19/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

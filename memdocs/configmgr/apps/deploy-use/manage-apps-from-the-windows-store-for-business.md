@@ -5,7 +5,7 @@ description: Manage and deploy apps from the Microsoft Store for Business and Ed
 ms.date: 12/01/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 ms.author: baladell
 manager: apoorvseth
