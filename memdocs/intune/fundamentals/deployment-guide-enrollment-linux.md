@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/09/2025
-ms.topic: conceptual
+ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
