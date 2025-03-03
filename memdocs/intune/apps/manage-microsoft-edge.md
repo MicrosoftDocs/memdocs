@@ -317,7 +317,7 @@ Microsoft Edge for Android can be enabled as a kiosk app with the following sett
 |com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode |**true** shows the bottom action bar in kiosk mode <br>**false** (default) hides the bottom bar when kiosk mode is enabled |
 
 > [!NOTE]
-> Kiosk mode isn't supported on iOS devices. However, you may want to use Locked View Mode (MDM policy only) to achieve a similar user experience, where users are unable to navigate to other websites, as the URL address bar becomes read-only in Locked View Mode.
+> Kiosk mode isn't supported on iOS/iPadOS devices. However, you may want to use Locked View Mode (MDM policy only) to achieve a similar user experience, where users are unable to navigate to other websites, as the URL address bar becomes read-only in Locked View Mode.
 
 ### Locked view mode
 
