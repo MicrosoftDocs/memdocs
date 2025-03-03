@@ -5,7 +5,7 @@ description: Automate the creation of a Configuration Manager technical preview 
 ms.date: 06/20/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

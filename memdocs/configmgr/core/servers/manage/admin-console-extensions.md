@@ -5,7 +5,7 @@ description: Learn about managing Configuration Manager console extensions
 ms.date: 12/21/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

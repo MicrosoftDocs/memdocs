@@ -5,7 +5,7 @@ description: Set up Asset Intelligence in Configuration Manager.
 ms.date: 02/22/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

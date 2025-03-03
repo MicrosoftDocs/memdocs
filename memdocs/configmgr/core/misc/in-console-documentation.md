@@ -3,7 +3,7 @@ title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
 ms.date: 10/11/2023
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: other
 ms.service: configuration-manager
 author: Banreet
@@ -37,8 +37,8 @@ For more information, see the following articles: <!--URLs MUST BE ABSOLUTE LINK
 
 For the latest product changes, see the following articles:<!-- 8625956 -->
 
-- [What's new in current branch](/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions#whats-new-in-configuration-manager-incremental-versions?WT.mc_id=configmgr-console)
-- [Technical preview releases](/mem/configmgr/core/get-started/technical-preview?WT.mc_id=configmgr-console)
+- [What's new in current branch](https://learn.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions#whats-new-in-configuration-manager-incremental-versions?WT.mc_id=configmgr-console)
+- [Technical preview releases](https://learn.microsoft.com/mem/configmgr/core/get-started/technical-preview?WT.mc_id=configmgr-console)
 
 ## Recommended
 

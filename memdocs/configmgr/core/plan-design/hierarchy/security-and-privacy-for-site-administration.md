@@ -5,7 +5,7 @@ description: Optimize security and privacy for site administration in Configurat
 ms.date: 04/05/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

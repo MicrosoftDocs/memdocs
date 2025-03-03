@@ -5,7 +5,7 @@ description: Discover how to create and import queries in Configuration Manager.
 ms.date: 04/27/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: gokarthi
 author: gowdhamankarthikeyan
 manager: apoorvseth

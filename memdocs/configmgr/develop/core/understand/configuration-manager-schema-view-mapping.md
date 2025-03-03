@@ -5,7 +5,7 @@ description: Learn how the SQL Server schema of the Configuration Manager site d
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 3a3bee08-602d-40f8-b62b-e2ffe116d103
 author: Banreet
 ms.author: banreetkaur

@@ -9,7 +9,7 @@ ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 06/11/2024
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.collection: tier2
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

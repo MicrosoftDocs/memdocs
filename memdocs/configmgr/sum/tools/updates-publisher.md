@@ -5,7 +5,7 @@ description: Use System Center Updates Publisher to manage custom updates
 ms.date: 10/31/2023
 ms.service: configuration-manager
 ms.subservice: software-updates
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

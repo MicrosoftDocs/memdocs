@@ -4,7 +4,7 @@ description: Result sets of a query contain one or more instances that match the
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: e27f8d92-e7b1-4bde-a75c-8c88f1275829
 author: Banreet
 ms.author: banreetkaur

@@ -6,7 +6,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.date: 07/12/2022
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.localizationpriority: medium
@@ -138,4 +138,4 @@ This report returns the deployment errors at the site and a count of computers t
 
 - [Log files for Software Updates](../../core/plan-design/hierarchy/log-files.md#BKMK_SU_NAPLog)
 
-- [Software Updates management whitepaper](https://www.microsoft.com/download/confirmation.aspx?id=44578)
+- [Software Updates management whitepaper](https://www.microsoft.com/download/details.aspx?id=44578)

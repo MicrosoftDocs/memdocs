@@ -55,7 +55,7 @@ sections:
       - question: |
           Why is there a limit on the number of applications and PowerShell scripts in the Windows Autopilot device preparation policy?
         answer: |
-          We limited the number of applications that can be applied during the out-of-box experience (OOBE) to increase stability and achieve a higher success rate. Looking at our telemetry, almost 90% of all Autopilot deployments are deployed with 10 or less fewer apps. This limit is intended to improve the overall user experience so that users can become more productive quickly. We understand that there are outliers and companies that want to target more during setup. However, for the user-driven approach, we want to use the desktop experience for non-essential applications.
+          We limited the number of applications that can be applied during the out-of-box experience (OOBE) to increase stability and achieve a higher success rate. Looking at our telemetry, almost 90% of all Autopilot deployments are deployed with 10 or fewer apps. This limit is intended to improve the overall user experience so that users can become more productive quickly. We understand that there are outliers and companies that want to target more during setup. However, for the user-driven approach, we want to use the desktop experience for non-essential applications.
 
       - question: |
           Does Windows Autopilot device preparation support deploying both Win32 and line-of-business (LOB) applications in the same deployment?
@@ -109,10 +109,10 @@ sections:
         answer: |
           The following types of applications are supported for use with Windows Autopilot device preparation:
 
-          - [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
-          - [Win32](/mem/intune/apps/apps-win32-prepare).
-          - [Microsoft Store](/mem/intune/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-          - [Microsoft 365](/mem/intune/apps/apps-add-office365).
+          - [Line-of-business (LOB)](/mem/intune-service/apps/lob-apps-windows).
+          - [Win32](/mem/intune-service/apps/apps-win32-prepare).
+          - [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
+          - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
 
       - question: |
           Do devices need to be pre-staged with Windows Autopilot device preparation?

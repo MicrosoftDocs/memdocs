@@ -78,8 +78,6 @@ items:
     href: deploy-use/service-a-server-group.md
   - name: Optimize Windows update delivery
     href: deploy-use/optimize-windows-10-update-delivery.md
-  - name: Manage Express installation files for Windows updates
-    href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
   - name: Manage Surface drivers
     href: deploy-use/surface-drivers.md   
   - name: Integration with Windows Update for Business
