@@ -54,15 +54,15 @@ items:
       - name: Tenant attach data collection
         href: ../tenant-attach/data-collection.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Microsoft Defender Antivirus policy settings
-        href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+        href: ../../intune-service/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Windows Security experience Antivirus policy settings
-        href: ../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+        href: ../../intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Firewall policy settings
-        href: ../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+        href: ../../intune-service/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Endpoint Detection and Response policy settings
-        href: ../../intune/protect/endpoint-security-edr-profile-settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+        href: ../../intune-service/protect/endpoint-security-edr-profile-settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Attack surface reduction policy settings
-        href: ../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+        href: ../../intune-service/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Troubleshoot tenant attach
       items:
       - name: Tenant attach and device actions

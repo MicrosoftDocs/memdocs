@@ -5,7 +5,7 @@ description: Learn about the prerequisites and configuration tasks for working w
 ms.date: 10/06/2016
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

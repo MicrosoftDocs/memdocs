@@ -5,7 +5,7 @@ description: Configure scheduling, throttling, and prestaged content for Configu
 ms.date: 02/6/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

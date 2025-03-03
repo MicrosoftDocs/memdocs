@@ -5,7 +5,7 @@ description: Learn about the BitLocker recovery service in Configuration Manager
 ms.date: 12/01/2021
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: concept-article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

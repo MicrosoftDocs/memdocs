@@ -5,7 +5,7 @@ description: Use Configuration Manager remote connection profiles to enable your
 ms.date: 01/06/2020
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: banreetkaur
 author: banreet
 ms.localizationpriority: medium

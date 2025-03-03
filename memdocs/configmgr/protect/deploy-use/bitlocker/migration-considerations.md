@@ -5,7 +5,7 @@ description: Understand the considerations when migrating from Microsoft BitLock
 ms.date: 12/01/2021
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

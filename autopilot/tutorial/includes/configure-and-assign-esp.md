@@ -136,6 +136,6 @@ To configure and assign the Autopilot Enrollment Status Page (ESP), follow these
 
     > [!NOTE]
     >
-    > **Scope tags** are optional and are a method to control who has access to the ESP configuration. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this screen. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+    > **Scope tags** are optional and are a method to control who has access to the ESP configuration. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this screen. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
 
 1. In the **Review + create** page, verify that the settings are correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.

@@ -5,7 +5,7 @@ titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: fbd5743c-ff78-4890-9e32-5a133c02878c
 author: Banreet
 ms.author: banreetkaur

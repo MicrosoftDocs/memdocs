@@ -18,16 +18,16 @@ highlightedContent:
   items:
     - title: What is Intune?
       itemType: overview
-      url: ./intune/fundamentals/what-is-intune.md
+      url: ./intune-service/fundamentals/what-is-intune.md
     - title: What's new in Intune
       itemType: overview
-      url: ./intune/fundamentals/whats-new.md
+      url: ./intune-service/fundamentals/whats-new.md
     - title: Intune Blog and Community
       itemType: overview
       url: https://aka.ms/IntuneCommunity
     - title: Microsoft Intune Suite add-ons
       itemType: overview
-      url: ./intune/fundamentals/intune-add-ons.md
+      url: ./intune-service/fundamentals/intune-add-ons.md
 
 # productDirectory section (optional)
 productDirectory:
@@ -38,18 +38,18 @@ productDirectory:
     - title: Try and evaluate
       imageSrc: ./media/index/get-started.svg
       links:
-        - url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
+        - url: ./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md
           text: Walkthrough Microsoft Intune admin center
-        - url: ./intune/fundamentals/try-intune-overview.md
+        - url: ./intune-service/fundamentals/try-intune-overview.md
           text: Evaluate and try Intune tasks
 
     # Card
     - title: Plan a migration to Intune
       imageSrc: ./media/index/plan-migrate.svg
       links:
-        - url: ./intune/fundamentals/intune-planning-guide.md
+        - url: ./intune-service/fundamentals/intune-planning-guide.md
           text: Microsoft Intune planning guide
-        - url: ./intune/fundamentals/supported-devices-browsers.md
+        - url: ./intune-service/fundamentals/supported-devices-browsers.md
           text: Supported operating systems and browsers
 
     # Card
@@ -74,7 +74,7 @@ productDirectory:
     - title: Set up Conditional Access with Intune
       imageSrc: ./media/index/conditional-access.svg
       links:
-        - url: ./intune/protect/conditional-access.md
+        - url: ./intune-service/protect/conditional-access.md
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/0/0
           text: View the interactive demo
@@ -83,7 +83,7 @@ productDirectory:
     - title: Update Windows with Intune
       imageSrc: ./media/index/update-windows.svg
       links:
-        - url: ./intune/protect/windows-update-for-business-configure.md
+        - url: ./intune-service/protect/windows-update-for-business-configure.md
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2905/prescriptive-guidance-intune-windows-update-policy/index.html#/0/0
           text: View the interactive demo
@@ -117,10 +117,10 @@ conceptualContent:
         - url: https://aka.ms/Intune_GuidedDemo
           itemType: overview
           text: Interactive demos for Intune
-        - url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md  
+        - url: ./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md  
           itemType: how-to-guide
           text: Walk through the Intune Admin Center
-        - url: ./intune/fundamentals/free-trial-sign-up.md
+        - url: ./intune-service/fundamentals/free-trial-sign-up.md
           itemType: how-to-guide
           text: Sign up for a 30-day trial
         - url: https://techcommunity.microsoft.com/t5/educator-developer-blog/register-for-microsoft-365-and-power-apps-developer-account-with/ba-p/3490280
@@ -135,7 +135,7 @@ conceptualContent:
         links:
         - text: Set up or move to Intune
           itemType: how-to-guide
-          url: ./intune/fundamentals/deployment-guide-intune-setup.md
+          url: ./intune-service/fundamentals/deployment-guide-intune-setup.md
         - text: Get started with cloud-native endpoints
           itemType: how-to-guide        
           url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
@@ -176,7 +176,7 @@ conceptualContent:
           url: ./configmgr/tenant-attach/index.yml
         - text: Add Intune security benefits for Windows devices
           itemType: how-to-guide
-          url: ./intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md
+          url: ./intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md
         - text: Analyze endpoint performance with Intune cloud attachment
           itemType: how-to-guide
           url: ./analytics/enroll-configmgr.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json#bkmk_prereq
@@ -198,15 +198,15 @@ additionalContent:
       # Card
       - title: Microsoft Intune core capabilities
         summary: Manage and protect cloud-connected endpoints across Windows, Android, macOS, iOS, and Linux operating systems.
-        url: ./intune/index.yml
+        url: ./intune-service/index.yml
       # Card
       - title: Device protection overview
         summary: Protect data and devices across Windows, Android, macOS, iOS, and Linux operating systems.
-        url: ./intune/protect/device-protect.md
+        url: ./intune-service/protect/device-protect.md
       # Card
       - title: Microsoft Intune Suite
         summary: Provides mission-critical advanced endpoint management and security capabilities into Microsoft Intune. 
-        url: ./intune/fundamentals/intune-add-ons.md
+        url: ./intune-service/fundamentals/intune-add-ons.md
       # Card
       - title: Microsoft Configuration Manager
         summary: Manage on-premises endpoints, such as Windows PCs and servers, and cloud-connected devices.

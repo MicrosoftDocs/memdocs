@@ -5,7 +5,7 @@ description: Learn about features available in the Technical Preview for Configu
 ms.date: 01/23/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -317,4 +317,4 @@ After you make these configuration changes, you can create a user policy and mov
 
 ## Change to configuring multi-factor authentication for device enrollment
 
-Now that you can set up multi-factor authentication (MFA) for device enrollment in the Azure portal, the MFA option has been removed in the Configuration Manager console. You can find more information on setting up MFA for enrollment [in this Microsoft Intune topic](../../../intune/enrollment/multi-factor-authentication.md).
+Now that you can set up multi-factor authentication (MFA) for device enrollment in the Azure portal, the MFA option has been removed in the Configuration Manager console. You can find more information on setting up MFA for enrollment [in this Microsoft Intune topic](../../../intune-service/enrollment/multi-factor-authentication.md).

@@ -5,7 +5,7 @@ description: Use Configuration Manager to automatically upgrade Windows 11 and W
 ms.date: 09/15/2023
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth
@@ -102,4 +102,4 @@ If the following error appears in **DcmWmiProvider.log** on the client, check th
 
 - [Windows 10 edition upgrade](/windows/deployment/upgrade/windows-10-edition-upgrades)
 
-- [Upgrade Windows 10 editions or switch out of S mode on devices using Microsoft Intune](/mem/intune/configuration/edition-upgrade-configure-windows-10)
+- [Upgrade Windows 10 editions or switch out of S mode on devices using Microsoft Intune](/mem/intune-service/configuration/edition-upgrade-configure-windows-10)

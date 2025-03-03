@@ -5,7 +5,7 @@ description: Learn about Configuration Manager compliance settings by working th
 ms.date: 10/05/2021
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

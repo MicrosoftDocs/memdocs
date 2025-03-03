@@ -5,7 +5,7 @@ description: Get details about changes and new capabilities introduced in versio
 ms.date: 12/03/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth

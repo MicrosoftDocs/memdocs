@@ -4,7 +4,7 @@ ms.date: 09/20/2016
 description: Places restrictions on the width of character fields for schema classes.
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: e5163571-37f5-4dfd-aac6-5bba3ea4c9ea
 author: Banreet
 ms.author: banreetkaur

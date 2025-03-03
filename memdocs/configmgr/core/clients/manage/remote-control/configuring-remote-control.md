@@ -5,7 +5,7 @@ description: Set up remote control in Configuration Manager.
 ms.date: 04/23/2017
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

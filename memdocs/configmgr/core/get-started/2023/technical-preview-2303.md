@@ -5,7 +5,7 @@ description: Learn about new features available in the Configuration Manager tec
 ms.date: 03/17/2023
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth

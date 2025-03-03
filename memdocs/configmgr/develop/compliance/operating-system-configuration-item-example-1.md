@@ -5,7 +5,7 @@ description: Example 1 for Operating System Configuration Item
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: bee6d39d-fbf9-451e-bd3a-0330cc57d910
 author: Banreet
 ms.author: banreetkaur

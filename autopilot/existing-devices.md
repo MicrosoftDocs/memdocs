@@ -52,7 +52,7 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 
 - The [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616) is required for Windows Server 2012/2012 R2 when running the PowerShell commands and scripts that [installs the required modules](#install-required-modules).
 
-- Enrollment restrictions aren't configured to block personal devices. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices). <!-- INADO-27343099 -->
+- Enrollment restrictions aren't configured to block personal devices. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune-service/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices). <!-- INADO-27343099 -->
 
 ## Configure the Enrollment Status Page (optional)
 
@@ -60,9 +60,9 @@ If desired, an [enrollment status page](enrollment-status.md) (ESP) for Autopilo
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Go to **Devices** > **Device onboarding** | **Enrollment**. Make sure **Windows** is selected at the top and then under **Windows Autopilot**, select **Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+1. Go to **Devices** > **Device onboarding** | **Enrollment**. Make sure **Windows** is selected at the top and then under **Windows Autopilot**, select **Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune-service/enrollment/windows-enrollment-status).
 
-1. Go to **Microsoft Entra ID** > **Manage** | **Mobility (MDM and WIP)** > **Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
+1. Go to **Microsoft Entra ID** > **Manage** | **Mobility (MDM and WIP)** > **Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
 
 ## Install required modules
 

@@ -4,7 +4,7 @@ description: Summarizers are summary classes that help you determine the health 
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 99ab10c8-3095-4a73-966e-9c14091341d2
 author: Banreet
 ms.author: banreetkaur
