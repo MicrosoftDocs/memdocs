@@ -5,7 +5,7 @@ description: Get basic information about Configuration Manager sites and hierarc
 ms.date: 12/30/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

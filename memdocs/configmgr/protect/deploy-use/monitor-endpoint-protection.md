@@ -5,7 +5,7 @@ description: Learn how monitor Endpoint Protection in your Configuration Manager
 ms.date: 03/13/2017
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

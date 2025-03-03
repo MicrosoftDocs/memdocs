@@ -5,7 +5,7 @@ description: The RootNodes element is responsible for rendering a node. The Node
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 28814bf8-e339-4b32-85bc-0676d530dcff
 author: Banreet
 ms.author: banreetkaur

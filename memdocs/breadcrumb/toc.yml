@@ -4,12 +4,12 @@ items:
   topicHref: /mem/index
   items:
   - name: Intune service
-    tocHref: /mem/intune/
-    topicHref: /mem/intune/
+    tocHref: /mem/intune-service/
+    topicHref: /mem/intune-service/
     items:
     - name: Intune user help
-      tocHref: /mem/intune/user-help/
-      topicHref: /mem/intune/user-help/
+      tocHref: /mem/intune-service/user-help/
+      topicHref: /mem/intune-service/user-help/
     - name: Endpoint settings management
       tocHref: /defender-endpoint/
       topicHref: /defender-endpoint/

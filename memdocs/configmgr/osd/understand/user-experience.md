@@ -5,7 +5,7 @@ description: Learn about user experiences like the task sequence progress and me
 ms.date: 04/08/2022
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

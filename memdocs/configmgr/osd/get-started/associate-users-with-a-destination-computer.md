@@ -5,7 +5,7 @@ description: Configure Configuration Manager to associate users with destination
 ms.date: 08/17/2018
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Publish Configuration Manager client installation properties to Act
 ms.date: 10/06/2016
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

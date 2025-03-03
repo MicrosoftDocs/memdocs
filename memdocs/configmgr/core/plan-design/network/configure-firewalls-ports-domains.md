@@ -5,7 +5,7 @@ description: Set up firewalls, ports, and domains to prepare for Configuration M
 ms.date: 06/19/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

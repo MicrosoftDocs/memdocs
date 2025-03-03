@@ -5,7 +5,7 @@ description: Extended WMI Query Language (WQL) supports queries that are specifi
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: d9378514-6125-4bbe-b0bf-7e84e688203e
 author: Banreet
 ms.author: banreetkaur

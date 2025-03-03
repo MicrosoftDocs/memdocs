@@ -5,7 +5,7 @@ description: Create task sequence media to deploy an OS to a destination compute
 ms.date: 12/14/2023
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

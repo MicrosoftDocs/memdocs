@@ -33,11 +33,11 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 ### Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). There are some more licensing requirements for Proactive remediations. For more information, see the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune-service/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). There are some more licensing requirements for Proactive remediations. For more information, see the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
 
 ## Endpoint analytics permissions
 
-- The [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) is required to [start gathering data](#bkmk_onboard).
+- The [Intune Service Administrator role](../intune-service/fundamentals/role-based-access-control.md) is required to [start gathering data](#bkmk_onboard).
   - After the admin selects **Start** for gathering data, other read-only roles can view the data.
 
 [!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]

@@ -40,7 +40,7 @@ Device query for multiple devices allows you to gain comprehensive insights abou
   - The Intune Advanced Analytics add-on
   - Microsoft Intune Suite
 
-- For a user to use Device query, you must assign the Managed Devices - Query permission to them and they cannot have a scope tag assigned to them. Alternatively, the user can have either the Global Administrator role or Intune Administrator role.
+-  For a user to use Device query, you must assign the Managed Devices – Query and Organization – Read permissions to them.
 
 - Devices must be Intune managed and corporate owned.
 
@@ -237,7 +237,7 @@ Cpu | where Device.DeviceName == ‘Desktop123”
 
 - A single query can contain a maximum of 3 join operators. Queries with additional joins fail.
 
-- A max of ~500,000 records are returned for a query. Additional rows are truncated and “…” appear after the 500,000th line.  
+- A max of ~50,000 records are returned for a query.  
 
 - A maximum of 10 queries can be submitted per minute. Additional queries will fail.
 

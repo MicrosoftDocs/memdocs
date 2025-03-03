@@ -5,7 +5,7 @@ description: Create a Configuration Manager report that displays hardware invent
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d7e964d3-5c1a-42c5-81fd-57fc833cb55a
 author: Banreet
 ms.author: banreetkaur

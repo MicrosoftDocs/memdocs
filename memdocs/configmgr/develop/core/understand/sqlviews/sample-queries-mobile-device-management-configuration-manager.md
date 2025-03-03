@@ -5,7 +5,7 @@ description: Sample queries that show how to join mobile device management views
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 03f6d6c0-6ef3-4de9-9ae4-a3ad8142ac57

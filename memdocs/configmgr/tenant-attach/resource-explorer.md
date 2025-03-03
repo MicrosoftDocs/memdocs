@@ -3,7 +3,7 @@ title: Tenant attach - Resource explorer the admin center
 titleSuffix: Configuration Manager
 description: View hardware inventory for uploaded Configuration Manager devices using resource explorer in the admin center.
 ms.date: 07/11/2022
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: core-infra
 ms.service: configuration-manager
 manager: apoorvseth
@@ -37,7 +37,7 @@ The user account needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - The **Read Resource** permission for the device's **Collection** in Configuration Manager.
-- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
+- An [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 ## <a name="bkmk_launch"></a> Launch resource explorer
 

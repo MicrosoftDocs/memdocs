@@ -5,7 +5,7 @@ description: Learn about navigating through the Configuration Manager console.
 ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: Baladelli    
 ms.author: Baladell
 manager: apoorvseth

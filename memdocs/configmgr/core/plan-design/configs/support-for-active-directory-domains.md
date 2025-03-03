@@ -5,7 +5,7 @@ description: Learn about the requirements for a Configuration Manager site syste
 ms.date: 10/22/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

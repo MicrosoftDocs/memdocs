@@ -5,7 +5,7 @@ description: Information about the objects that have Wake On LAN enabled.
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 
 
 ms.assetid: c31b2528-de90-4a60-8a99-75990b9ad0ea

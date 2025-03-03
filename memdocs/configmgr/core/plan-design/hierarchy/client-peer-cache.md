@@ -5,7 +5,7 @@ description: Use client peer cache for source locations when deploying content w
 ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 ms.author: baladell
 manager: apoorvseth
