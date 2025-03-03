@@ -5,7 +5,7 @@ description: Create task sequences that aren't for deploying an OS, such as dist
 ms.date: 11/30/2020
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

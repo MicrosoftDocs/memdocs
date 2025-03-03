@@ -5,7 +5,7 @@ description: Understand the supported versions of Configuration Manager, support
 ms.date: 05/7/2018
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

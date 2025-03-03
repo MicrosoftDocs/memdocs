@@ -5,7 +5,7 @@ description: Information about application management views and application mana
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms: "assetid: c424bd2b-f6ea-466c-91ca-c9550d94d9db"
 author: Banreet
 ms.author: banreetkaur

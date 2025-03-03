@@ -3,13 +3,13 @@
 
 title: Add and assign an app
 titleSuffix: Microsoft Intune
-description: In this topic, you will use Microsoft Intune to add and assign an app.
+description: In this article, you'll use Microsoft Intune to add and assign an app.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/07/2024
-ms.topic: conceptual
+ms.date: 02/28/2025
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
@@ -33,7 +33,7 @@ ms.collection:
 
 # Step 8: Add and assign an app
 
-In this topic, you will use Intune to add and assign an app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
+In this article, you'll use Intune to add and assign an app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
@@ -60,14 +60,14 @@ Use the following steps to add an app to Intune:
 5. Confirm the default settings in the **App settings** step and click **Next**.
 6. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 7. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
-13. When you are done, click **Create** to add the app to Intune.
+13. When you're done, click **Create** to add the app to Intune.
 
 ## Assign the app to a group
 
 After you've added an app to Microsoft Intune, you can assign the app to additional groups of users or devices.
 
 > [!NOTE]
-> This evaluation step builds on previous evaluation steps in this series. Please see [prerequisites](quickstart-add-assign-app.md#prerequisites) in this topic for details.
+> This evaluation step builds on previous evaluation steps in this series. See [prerequisites](quickstart-add-assign-app.md#prerequisites) in this article for details.
 
 Use the following steps to assign an app to a group:
 
@@ -84,17 +84,17 @@ You now have assigned the app to an additional group.
 
 End users must install and use the Company Portal app to install an app made available by Intune. You, acting as an end user, can use the following steps to verify that the app is available to the user of the enrolled device.
 
-1. Log in to your enrolled Windows 10 Desktop device.
+1. Sign in to your enrolled Windows 10 Desktop device.
 
     > [!IMPORTANT]
     > The device must be [enrolled with Intune](../enrollment/quickstart-enroll-windows-device.md). Also, you must sign in to the device using an account contained in the group you assigned to the app.
 
 2. From the **Start** menu, open the **Microsoft Store**. Then, find the **Company Portal** app and install it.
 3. Launch the **Company Portal** app.
-4. Click the app that you added using Intune. In this topic you added the **Microsoft 365 Apps** suite.
+4. Click the app that you added using Intune. In this article you added the **Microsoft 365 Apps** suite.
 
     > [!NOTE]
-    > If you did not successfully assign any apps to the Intune user, you will see the following message:
+    > If you did not successfully assign any apps to the Intune user, you'll see the following message:
     > *Your IT administrator did not make any apps available to you.*
 
 5. Click **Install**.
@@ -103,7 +103,7 @@ If your business needs require that you assign the Company Portal app to your wo
 
 ## Next steps
 
-In this topic, you added apps to Intune, assigned the apps to a group, and installed the apps on the enrolled Windows 10 Desktop device. For more information about managing apps in Intune, see [What is Microsoft Intune app management?](app-management.md)
+In this article, you added apps to Intune, assigned the apps to a group, and installed the apps on the enrolled Windows 10 Desktop device. For more information about managing apps in Intune, see [What is Microsoft Intune app management?](app-management.md)
 
 To continue to evaluate Microsoft Intune, go to the next step:
 

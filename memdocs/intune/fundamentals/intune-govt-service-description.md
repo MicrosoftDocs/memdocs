@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/06/2025
-ms.topic: article
+ms.topic: overview
 ms.service: microsoft-intune
 ms.suite: ems
 

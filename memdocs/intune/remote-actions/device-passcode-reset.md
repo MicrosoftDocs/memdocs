@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/18/2023
+ms.date: 02/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -49,7 +49,7 @@ This document discusses both device level passcode reset and work profile passco
 | Android Open Source Project (AOSP) Corporate-owned, user-associated devices | Yes |
 | Android Open Source Project (AOSP) Corporate-owned, userless devices | Yes |
 
-For Android devices, device level passcode reset is only supported on devices running 6.x or earlier, or on Android enterprise devices running in Kiosk mode. This restriction is because Google removed support for resetting an Android 7 device's passcode/password from within a Device Administrator granted app and applies to all MDM vendors.
+For Android devices, device level passcode reset is only supported on devices running 6.x or earlier, or on Android enterprise devices running in Kiosk mode. This restriction is because Google removed support for resetting an Android 7 device's passcode/password from within a Device Administrator granted app and applies to all mobile device management (MDM) vendors.
 
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
@@ -72,8 +72,7 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 3. From the list of devices you manage, select a device, and choose **Reset passcode**.
 
 > [!NOTE]
-> To successfully reset a passcode for the Work Profile of an Android device you must configure the device passcode within device restrictions. Any attempts to reset the passcode without configuration will fail.
-
+> To successfully reset a passcode for the Work Profile of an Android device, you must configure the device passcode within device restrictions. Any attempts to reset the passcode without configuration will fail.
 
 ## Reset Android work profile and Device Owner passcodes
 
@@ -87,20 +86,20 @@ After the reset passcode is selected from the admin center, a temporary passcode
 - Android Enterprise personally-owned work profile
 - Android Enterprise corporate-owned work profile
 
-The temporary passcode must be entered on the device. The temporary passcode for the device will be displayed in the admin center for seven days.
+The temporary passcode must be entered on the device. The temporary passcode for the device is displayed in the admin center for seven days.
 
 ## Remove iOS/iPadOS passcodes
 
-Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device will prompt the user to set a new passcode in Settings.
+Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device prompts the user to set a new passcode in Settings.
 
 > [!IMPORTANT]
-> If the Remove passcode action failed, it's possible that the wrong unlock token is stored in Intune and the device will need to be wiped in order to regain access to it. 
+> If the Remove passcode action fails, Intune might have stored the wrong unlock token, and you need to **Wipe** the device to regain access.
 
 ## Troubleshooting remote lock failures
 
-If the remote lock action failed, validate that the following have been correctly configured:
+If the remote lock action failed, validate that the configuration is correct. Here are some common issues:
 
-- If the remote lock action failed on an Android (AOSP) device, confirm that you have a device passcode policy assigned to the device. If the device does not have a device passcode assigned, the remote lock action will not succeed.
+- If the remote lock action failed on an Android (AOSP) device, confirm that you have a device passcode policy assigned to the device. If the device doesn't have a device passcode assigned, the remote lock action doesn't succeed.
 
 ## Next steps
 

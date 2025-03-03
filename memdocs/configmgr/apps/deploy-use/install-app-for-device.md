@@ -5,7 +5,7 @@ description: Use Configuration Manager to immediately install an application to 
 ms.date: 12/01/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

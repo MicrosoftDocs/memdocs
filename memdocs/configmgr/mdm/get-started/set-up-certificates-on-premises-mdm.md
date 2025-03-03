@@ -5,7 +5,7 @@ description: Set up certificates for trusted communications with on-premises mob
 ms.date: 01/09/2020
 ms.subservice: mdm
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

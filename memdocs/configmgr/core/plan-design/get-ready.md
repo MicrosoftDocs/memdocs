@@ -5,7 +5,7 @@ description: Find topics that will help you plan a Configuration Manager deploym
 ms.date: 10/06/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: medium
