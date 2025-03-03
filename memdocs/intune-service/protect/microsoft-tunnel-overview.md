@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/10/2024
+ms.date: 03/03/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -45,7 +45,7 @@ After you deploy Microsoft Tunnel, you can choose to add [Microsoft Tunnel for M
 
 > [!TIP]
 >
-> Download the Microsoft Tunnel Deployment Guide v2 from the [*Microsoft Download Center*](https://www.microsoft.com/download/details.aspx?id=102274).
+> Download the Microsoft Tunnel Deployment Guide v3 from the [*Microsoft Download Center*](https://www.microsoft.com/download/details.aspx?id=102274).
 
 ## Overview of Microsoft Tunnel
 
