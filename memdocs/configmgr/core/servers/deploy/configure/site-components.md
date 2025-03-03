@@ -5,7 +5,7 @@ description: Learn how to configure site components to modify the behavior of si
 ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
