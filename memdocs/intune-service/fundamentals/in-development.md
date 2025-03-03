@@ -7,13 +7,8 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-<<<<<<< HEAD:memdocs/intune/fundamentals/in-development.md
-ms.date: 03/03/2025
-ms.topic: conceptual
-=======
 ms.date: 02/27/2025
 ms.topic: article
->>>>>>> 79dae15cfeccfcc8a72bec0ac7f521500def94c4:memdocs/intune-service/fundamentals/in-development.md
 ms.service: microsoft-intune
 ms.subservice: fundamentals
  
