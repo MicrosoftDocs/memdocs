@@ -1,4 +1,4 @@
----
+![alt text](image.png)---
 
 title: How to use Microsoft Entra ID to access Intune APIs in Microsoft Graph
 titleSuffix: Microsoft Intune
