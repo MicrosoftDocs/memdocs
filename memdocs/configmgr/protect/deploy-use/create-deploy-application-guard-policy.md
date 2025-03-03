@@ -5,7 +5,7 @@ description: Learn how to create and deploy Microsoft Defender Application Guard
 ms.date: 12/05/2022
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

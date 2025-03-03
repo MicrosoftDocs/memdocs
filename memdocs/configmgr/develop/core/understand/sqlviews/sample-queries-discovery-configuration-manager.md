@@ -5,7 +5,7 @@ description: Sample queries that show how to join discovery views to each other 
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 0a31df14-00b0-4880-b36a-3d60d3108129

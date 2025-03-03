@@ -5,7 +5,7 @@ description: Configure a source hierarchy and gather data from a source site bef
 ms.date: 01/3/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Learn how to plan for the migration of objects between hierarchies 
 ms.date: 01/12/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

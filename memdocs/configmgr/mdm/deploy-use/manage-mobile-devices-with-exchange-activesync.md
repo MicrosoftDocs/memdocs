@@ -5,7 +5,7 @@ description: Manage mobile devices with the Exchange Server connector in Configu
 ms.date: 12/31/2019
 ms.subservice: mdm
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

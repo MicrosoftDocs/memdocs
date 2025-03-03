@@ -5,7 +5,7 @@ description: Windows Script Host-based applications and scripts work in Windows 
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 04ca780f-dd83-43de-b967-bb9f8a05eb3a
 author: Banreet
 ms.author: banreetkaur

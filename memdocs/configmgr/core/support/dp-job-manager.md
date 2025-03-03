@@ -5,7 +5,7 @@ description: Use the DP Job Queue Manager to troubleshoot and manage content dis
 ms.date: 07/30/2018
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.author: baladell 
 author: BalaDelli
 manager: apoorvseth

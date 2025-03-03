@@ -5,7 +5,7 @@ description: Manage certificates and security for System Center Updates Publishe
 ms.date: 04/29/2017
 ms.service: configuration-manager
 ms.subservice: software-updates
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

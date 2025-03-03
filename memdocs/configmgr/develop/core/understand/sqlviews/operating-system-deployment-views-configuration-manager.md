@@ -5,7 +5,7 @@ description: Information about boot image packages, computer association state m
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 
 
 ms.assetid: fee8d7b0-b4c2-4c70-83ff-bc285551ee68

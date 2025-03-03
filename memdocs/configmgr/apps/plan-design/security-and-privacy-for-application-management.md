@@ -5,7 +5,7 @@ description: Guidance and recommendations for security and privacy when managing
 ms.date: 08/10/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

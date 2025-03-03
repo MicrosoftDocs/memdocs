@@ -53,7 +53,7 @@ Clients must trust the CMG server authentication certificate to establish the HT
 
     - Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, if you use Active Directory Certificate Services with group policy. If you issue the CMG server authentication certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to internet-based clients.
 
-      If you plan to [install the Configuration Manager client from Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), you can also use Intune certificate profiles to provision certificates on clients. For more information, see [Configure a certificate profile](../../../../../intune/protect/certificates-configure.md).
+      If you plan to [install the Configuration Manager client from Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), you can also use Intune certificate profiles to provision certificates on clients. For more information, see [Configure a certificate profile](../../../../../intune-service/protect/certificates-configure.md).
 
     - Your organization may have an internal cost to issue certificates, but there are generally no external costs associated with this certificate.
 

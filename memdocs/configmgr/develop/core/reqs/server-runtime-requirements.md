@@ -5,7 +5,7 @@ description: Microsoft Configuration Manager server applications that are develo
 ms.date: 03/14/2017
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 567e9945-ad60-4d10-8f67-edc4b31ee914
 author: Banreet
 ms.author: banreetkaur

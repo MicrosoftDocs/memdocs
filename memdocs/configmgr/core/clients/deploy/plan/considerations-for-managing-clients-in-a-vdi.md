@@ -5,7 +5,7 @@ description: Manage Configuration Manager clients in a virtual desktop infrastru
 ms.date: 08/11/2020
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

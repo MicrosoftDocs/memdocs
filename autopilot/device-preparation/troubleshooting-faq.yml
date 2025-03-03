@@ -60,7 +60,7 @@ sections:
 
           - Verify that a device group is selected in the Windows Autopilot device preparation policy. A Windows Autopilot device preparation policy can be created without selecting a device group. For more information, see [Create a Windows Autopilot device preparation policy](tutorial/user-driven/entra-join-autopilot-policy.md#create-user-driven-microsoft-entra-join-windows-autopilot-device-preparation-policy) and [Create a device group](tutorial/user-driven/entra-join-device-group.md).
 
-          - If using corporate identifiers in Intune, make sure that a corporate identifier is added for the device. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
+          - If using corporate identifiers in Intune, make sure that a corporate identifier is added for the device. For more information, see [Add Windows corporate identifiers](/mem/intune-service/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
           - Verify that Windows automatic Intune enrollment is configured.
 

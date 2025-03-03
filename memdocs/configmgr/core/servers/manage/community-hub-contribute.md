@@ -5,7 +5,7 @@ description: Contribute to the Configuration Manager Community hub
 ms.date: 10/31/2022
 ms.subservice: other
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

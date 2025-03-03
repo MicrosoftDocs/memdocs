@@ -31,7 +31,7 @@ When viewing or synching the timeline from the Microsoft Intune admin center, yo
 **Possible causes:**
 
 - Make sure [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) are configured and the user account accessing tenant attach features from the Microsoft Intune admin center is discovered by both.
-- The user account might need an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. <!--7980141-->
+- The user account might need an [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned. <!--7980141-->
 
 ### <a name="bkmk_403"></a> Unable to get timeline information
 

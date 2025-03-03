@@ -5,7 +5,7 @@ description: Get details about changes and new capabilities introduced in versio
 ms.date: 01/22/2020
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -38,7 +38,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 The following Microsoft management solutions are all now part of the Microsoft Intune family of products:
 
 - [Configuration Manager](/configmgr)
-- [Intune](/mem/intune/fundamentals/account-sign-up)
+- [Intune](/mem/intune-service/fundamentals/account-sign-up)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
 - [Autopilot](/autopilot/enrollment-autopilot)
 - Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)

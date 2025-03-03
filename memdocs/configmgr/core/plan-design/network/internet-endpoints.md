@@ -106,11 +106,11 @@ For more information, see [Configure Azure services for use with Configuration M
 
 ## Co-management
 
-If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
+If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints).
 
 ## Microsoft Store for Business
 
-If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](/mem/intune/fundamentals/intune-endpoints).
+If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](/mem/intune-service/fundamentals/intune-endpoints).
 
 ## Delivery optimization
 

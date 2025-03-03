@@ -9,7 +9,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/08/2025
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice:
 ms.localizationpriority: high
@@ -51,18 +51,18 @@ Managing your endpoints, including cloud-native endpoints, is an important task 
 
 If you don't currently use a mobile device management (MDM) solution, or want to move to a Microsoft solution, then the following articles are good resources:
 
-- [What is Microsoft Intune?](../../intune/fundamentals/what-is-intune.md)
-- [Get started with Microsoft Intune](../../intune/fundamentals/get-started-with-intune.md)
+- [What is Microsoft Intune?](../../intune-service/fundamentals/what-is-intune.md)
+- [Get started with Microsoft Intune](../../intune-service/fundamentals/get-started-with-intune.md)
 
 With the Microsoft Intune family of products and services, you have the following endpoint management options:
 
-- **[Microsoft Intune](../../intune/index.yml)**: Intune is 100% cloud-based, and uses the Intune admin center to manage devices, manage apps on devices, create & deploy policies, review reporting data, and more.
+- **[Microsoft Intune](../../intune-service/index.yml)**: Intune is 100% cloud-based, and uses the Intune admin center to manage devices, manage apps on devices, create & deploy policies, review reporting data, and more.
 
   For more information on using Intune to manage your endpoints, go to:
 
-  - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../intune/fundamentals/what-is-intune.md)
-  - [Deployment guide: Setup or move to Microsoft Intune](../../intune/fundamentals/deployment-guide-intune-setup.md)
-  - [Microsoft Intune planning guide](../../intune/fundamentals/intune-planning-guide.md)
+  - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../intune-service/fundamentals/what-is-intune.md)
+  - [Deployment guide: Setup or move to Microsoft Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md)
+  - [Microsoft Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md)
 
 - **[Microsoft Configuration Manager](../../configmgr/index.yml)**: Configuration Manager uses an on-premises infrastructure, and can manage servers. When you use [co-management](../../configmgr/comanage/overview.md), some workloads use Configuration Manager (on-premises), and some workloads use Microsoft Intune (cloud).
 
@@ -132,7 +132,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   For more information, go to:
 
-  - [Windows 10/11 app deployment using Microsoft Intune](../../intune/apps/apps-windows-10-app-deploy.md)
+  - [Windows 10/11 app deployment using Microsoft Intune](../../intune-service/apps/apps-windows-10-app-deploy.md)
   - [Introduction to app management in Configuration Manager](../../configmgr/apps/understand/introduction-to-application-management.md)
   - [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11)
 
@@ -140,17 +140,17 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   Policy and security management is core in endpoint management. Endpoint policies allow your organization to enforce a specific security baseline and a standard configuration on your managed endpoints. There are many settings you can manage and control on your endpoints. **DO** create policies that only configure what's required in your baseline. **DON'T** create policies that control common user preferences.
 
-  - Traditional policy enforcement using group policy isn't possible with cloud-native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](../../intune/configuration/settings-catalog.md) and [administrative templates](../../intune/configuration/administrative-templates-windows.md).
+  - Traditional policy enforcement using group policy isn't possible with cloud-native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](../../intune-service/configuration/settings-catalog.md) and [administrative templates](../../intune-service/configuration/administrative-templates-windows.md).
 
-    You can reference and analyze existing GPOs using [Group Policy analytics in Intune](../../intune/configuration/group-policy-analytics.md), which allows you to see if settings within your GPOs are supported in the cloud. Group Policy analytics also allows you to create Intune policies from GPOs, if that's the right step for your organization. In general, we recommend that customers implement policies that conform to their requirements, instead of directly migrating existing GPOs to Intune. When you create policies based off your requirements, then you rationalize, optimize, and streamline your Intune policies.
+    You can reference and analyze existing GPOs using [Group Policy analytics in Intune](../../intune-service/configuration/group-policy-analytics.md), which allows you to see if settings within your GPOs are supported in the cloud. Group Policy analytics also allows you to create Intune policies from GPOs, if that's the right step for your organization. In general, we recommend that customers implement policies that conform to their requirements, instead of directly migrating existing GPOs to Intune. When you create policies based off your requirements, then you rationalize, optimize, and streamline your Intune policies.
 
   - If you have existing policies that issue certificates, manage BitLocker, and provide endpoint protection, then you need to create new policies in Intune or Configuration Manager (with a [CMG](../../configmgr/core/clients/manage/cmg/overview.md) and [co-management](../../configmgr/comanage/how-to-prepare-win10.md)).
 
     For more information, go to:
 
-    - [Use certificates for authentication in Microsoft Intune](../../intune/protect/certificates-configure.md)
-    - [Disk encryption policy for endpoint security in Intune](../../intune/protect/endpoint-security-disk-encryption-policy.md)
-    - [Add Endpoint protection settings in Intune](../../intune/protect/endpoint-protection-configure.md)
+    - [Use certificates for authentication in Microsoft Intune](../../intune-service/protect/certificates-configure.md)
+    - [Disk encryption policy for endpoint security in Intune](../../intune-service/protect/endpoint-security-disk-encryption-policy.md)
+    - [Add Endpoint protection settings in Intune](../../intune-service/protect/endpoint-protection-configure.md)
     - [Certificates in Configuration Manager](../../configmgr/core/plan-design/security/certificates-overview.md)
     - [BitLocker management in Configuration Manager](../../configmgr/protect/plan-design/bitlocker-management.md)
     - [Endpoint Protection in Configuration Manager](../../configmgr/protect/deploy-use/endpoint-protection.md)
@@ -163,7 +163,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
     For more information, go to:
 
-    - [Manage Windows 10 and Windows 11 software updates in Intune](../../intune/protect/windows-update-for-business-configure.md)
+    - [Manage Windows 10 and Windows 11 software updates in Intune](../../intune-service/protect/windows-update-for-business-configure.md)
     - [Integrate Configure Manager with Windows Update for Business](../../configmgr/sum/deploy-use/integrate-windows-update-for-business-windows-10.md)
     - [Choose how to manage updates to Microsoft 365 Apps](/deployoffice/choose-how-manage-updates-microsoft-365-apps)
 
@@ -174,7 +174,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
     For more information, go to:
 
-    - [Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune](../../intune/apps/apps-add-office365.md)
+    - [Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune](../../intune-service/apps/apps-add-office365.md)
     - [Management tasks for Configuration Manager apps](../../configmgr/apps/deploy-use/management-tasks-applications.md)
 
 - **Manage user data and settings**
@@ -280,7 +280,7 @@ After you've identified the key workloads and their end-state blockers, then:
 
     For each of the areas in your pilot, the number of items or tasks should be low. This initial pilot helps you create the processes and procedures required for more groups. It also helps create your long term strategy.
 
-    For more guidance and tips, go to the [Microsoft Intune planning guide](../../intune/fundamentals/intune-planning-guide.md). It applies to Intune, but also includes some guidance when using pilot groups and creating rollout plans.
+    For more guidance and tips, go to the [Microsoft Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md). It applies to Intune, but also includes some guidance when using pilot groups and creating rollout plans.
 
 ### ✅ Phase 3: Transition your workloads
 
@@ -366,7 +366,7 @@ If you use Configuration Manager, then cloud attach your environment to Microsof
 
 When you cloud attach, you can remotely manage your client endpoints, co-manage your endpoints with Intune (cloud) and Configuration Manager (on-premises), and access the Intune admin center.
 
-For more specific information, go to [Cloud attach your Configuration Manager environment](../../configmgr/cloud-attach/overview.md) and [Walk through the Microsoft Intune admin center](../../intune/fundamentals/tutorial-walkthrough-endpoint-manager.md).
+For more specific information, go to [Cloud attach your Configuration Manager environment](../../configmgr/cloud-attach/overview.md) and [Walk through the Microsoft Intune admin center](../../intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md).
 
 ### ✅ Phase 4: Create a Microsoft Entra joined proof of concept
 
@@ -415,7 +415,7 @@ This phase transitions new Windows endpoint provisioning to Microsoft Entra join
 
   Before resetting an existing Windows endpoint, be sure to:
 
-  1. [Delete the device in Intune](../../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
+  1. [Delete the device in Intune](../../intune-service/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
   2. [Delete the Windows Autopilot device registration](/autopilot/add-devices).
   3. [Delete the existing Microsoft Entra device object](/entra/identity/devices/manage-stale-devices).
 
@@ -437,7 +437,7 @@ These options aren't necessarily mutually exclusive. You can migrate a subset of
 
 - **Option 1: Start new** (recommended): Intune has many settings to configure and manage your endpoints. You can create a policy, add and configure settings in the policy, and then deploy the policy.
 
-  Many existing group policies include policies that might not apply to cloud-native endpoints. Starting fresh enables an organization to validate and simplify their existing enforced policies, while eliminating legacy, forgotten, or even harmful policies. Intune has built-in templates that group common settings together, like [VPN, Wi-Fi, endpoint protection, and more](../../intune/configuration/device-profiles.md).
+  Many existing group policies include policies that might not apply to cloud-native endpoints. Starting fresh enables an organization to validate and simplify their existing enforced policies, while eliminating legacy, forgotten, or even harmful policies. Intune has built-in templates that group common settings together, like [VPN, Wi-Fi, endpoint protection, and more](../../intune-service/configuration/device-profiles.md).
 
 - **Option 2: Migrate**: This option involves lifting the existing policies and shifting them to the Intune policy engine. It can be cumbersome and time consuming. For example, you may have many existing group policies and there will be differences with settings on-premises vs. in the cloud.
 
@@ -447,23 +447,23 @@ These options aren't necessarily mutually exclusive. You can migrate a subset of
 
 Intune also has built-in features that can help you configure your cloud-native endpoints:
 
-- **[Group Policy analytics](../../intune/configuration/group-policy-analytics.md)**: You can import your GPOs in the Microsoft Intune admin center, and run an analysis on the policies. You can see the policies that exist in Intune, and see the policies that are deprecated.
+- **[Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md)**: You can import your GPOs in the Microsoft Intune admin center, and run an analysis on the policies. You can see the policies that exist in Intune, and see the policies that are deprecated.
 
   If you use GPOs, then using this tool is a valuable first step.
 
-  For more information, go to [Group Policy analytics in Intune](../../intune/configuration/group-policy-analytics.md).
+  For more information, go to [Group Policy analytics in Intune](../../intune-service/configuration/group-policy-analytics.md).
 
-- **[Settings catalog](../../intune/configuration/settings-catalog.md)**: See all the settings available in Intune, and create, configure, & deploy a policy using these settings. [Tasks you can complete using the Settings Catalog in Intune](../../intune/configuration/settings-catalog-common-features.md) may also be a good resource. If you create GPOs, then the settings catalog is a natural transition to cloud-native endpoint configuration.
+- **[Settings catalog](../../intune-service/configuration/settings-catalog.md)**: See all the settings available in Intune, and create, configure, & deploy a policy using these settings. [Tasks you can complete using the Settings Catalog in Intune](../../intune-service/configuration/settings-catalog-common-features.md) may also be a good resource. If you create GPOs, then the settings catalog is a natural transition to cloud-native endpoint configuration.
 
-  When combined with [Group Policy analytics](../../intune/configuration/group-policy-analytics.md), you can deploy the policies you used on-premises to your cloud-native endpoints.
+  When combined with [Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md), you can deploy the policies you used on-premises to your cloud-native endpoints.
 
-  For more information, go to [Settings catalog in Intune](../../intune/configuration/settings-catalog.md).
+  For more information, go to [Settings catalog in Intune](../../intune-service/configuration/settings-catalog.md).
 
-- **[Administrative templates](../../intune/configuration/administrative-templates-windows.md)**: These templates are similar to the ADMX templates used on-premises, and are built in to Intune. You don't download them. These templates include many settings that control features in Microsoft Edge, Internet Explorer, Microsoft Office apps, remote desktop, OneDrive, passwords, PINs, and more.
+- **[Administrative templates](../../intune-service/configuration/administrative-templates-windows.md)**: These templates are similar to the ADMX templates used on-premises, and are built in to Intune. You don't download them. These templates include many settings that control features in Microsoft Edge, Internet Explorer, Microsoft Office apps, remote desktop, OneDrive, passwords, PINs, and more.
 
   If you use administrative templates on-premises, then using them in Intune is a natural transition.
 
-  For more information, go to [Administrative templates in Intune](../../intune/configuration/administrative-templates-windows.md).
+  For more information, go to [Administrative templates in Intune](../../intune-service/configuration/administrative-templates-windows.md).
 
   You can also ingest an existing set of ADMX policies for Win32 and Desktop Bridge apps. For more information, go to:
 
@@ -474,11 +474,11 @@ Intune also has built-in features that can help you configure your cloud-native 
   > [!NOTE]
   > Starting in Windows 10 version 1703, Mobile Device Management (MDM) policy configuration support was expanded to allow access of [selected set of Group Policy administrative templates (ADMX policies)](/windows/client-management/mdm/policies-in-policy-csp-admx-backed) for Windows PCs using the [Policy configuration service provider (CSP)](/windows/client-management/mdm/policy-configuration-service-provider). Configuring ADMX policies in Policy CSP is different from the typical way you configure a traditional MDM policy.
 
-- **[Security baselines](../../intune/protect/security-baselines.md)**: A security baseline is a group of pre-configured Windows settings. They help you apply and enforce granular security settings that are recommended by the security teams. When you create a security baseline, you can also customize each baseline to enforce only the settings you want.
+- **[Security baselines](../../intune-service/protect/security-baselines.md)**: A security baseline is a group of pre-configured Windows settings. They help you apply and enforce granular security settings that are recommended by the security teams. When you create a security baseline, you can also customize each baseline to enforce only the settings you want.
 
   You can create a security baseline for Windows, Microsoft Edge, and more. If you're not sure where to start, or want the security settings recommended by security experts, then look at security baselines.
 
-  For more information, go to [Security baselines in Intune](../../intune/protect/security-baselines.md).
+  For more information, go to [Security baselines in Intune](../../intune-service/protect/security-baselines.md).
 
 ## Use Windows Autopilot to provision new or existing Windows endpoints
 

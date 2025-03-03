@@ -93,8 +93,8 @@ There are hundreds of possible errors. The following table lists the most common
 
 | Error | Description |
 |---------|---------|
-| 2147549183 (0x8000FFFF) | MDM enrollment hasn't been configured yet on Microsoft Entra ID, or the enrollment URL isn't expected.<br><br>[Enable automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment) |
-| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | License of user is in bad state blocking enrollment<br><br>[Assign licenses to users](/mem/intune/fundamentals/licenses-assign) |
+| 2147549183 (0x8000FFFF) | MDM enrollment hasn't been configured yet on Microsoft Entra ID, or the enrollment URL isn't expected.<br><br>[Enable automatic enrollment](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment) |
+| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | License of user is in bad state blocking enrollment<br><br>[Assign licenses to users](/mem/intune-service/fundamentals/licenses-assign) |
 | 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | When trying to automatically enroll to Intune, but the Microsoft Entra configuration isn't fully applied. This issue should be transient, as the device retries after a short time. |
 | 2149056554 (0x‭8018002A‬)<br>&nbsp; | The user canceled the operation<br><br>If MDM enrollment requires multi-factor authentication, and the user hasn't signed in with a supported second factor, Windows displays a toast notification to the user to enroll. If the user doesn't respond to toast notification, this error occurs. This issue should be transient, as Configuration Manager will retry and prompt the user. Users should use multi-factor authentication when they sign in to Windows. Also educate them to expect this behavior, and if prompted, take action. |
 | 2149056532 (0x80180014)<br>MENROLL_E_DEVICENOTSUPPORTED | Mobile device management isn't supported. Check device restrictions. |
