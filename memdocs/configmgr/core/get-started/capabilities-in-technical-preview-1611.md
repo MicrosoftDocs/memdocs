@@ -5,7 +5,7 @@ description: Learn about features available in the Technical Preview for Configu
 ms.date: 01/23/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
