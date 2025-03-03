@@ -5,7 +5,7 @@ description: Learn about certificate profiles in Configuration Manager and their
 ms.date: 03/29/2022
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
