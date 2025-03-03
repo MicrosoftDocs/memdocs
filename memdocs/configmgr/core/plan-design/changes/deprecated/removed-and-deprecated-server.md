@@ -5,7 +5,7 @@ description: Learn about the products and operating systems that Configuration M
 ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Baladelli  
 ms.author: Baladell
 manager: apoorvseth
