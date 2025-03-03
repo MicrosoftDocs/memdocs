@@ -58,7 +58,7 @@ For more information, see the following articles:
 
   - Enrolled to [co-management](how-to-enable.md)
 
-  - Access to [internet endpoints for Intune](../../intune/fundamentals/intune-endpoints.md)
+  - Access to [internet endpoints for Intune](../../intune-service/fundamentals/intune-endpoints.md)
 
 - The user accounts that sign in to these devices require the following configurations:
 
@@ -85,9 +85,9 @@ For more information on client settings, see the following articles:
 
   - If the client apps workload is with Configuration Manager, [create and deploy an application with Configuration Manager](../apps/get-started/create-and-deploy-an-application.md).
 
-  - If the client apps workload is with Intune, you can deploy it via Configuration Manager or [add the Company Portal app by using Microsoft Intune](../../intune/apps/store-apps-company-portal-app.md).
+  - If the client apps workload is with Intune, you can deploy it via Configuration Manager or [add the Company Portal app by using Microsoft Intune](../../intune-service/apps/store-apps-company-portal-app.md).
 
-For more information on branding the Company Portal for your organization, see [How to customize the Intune Company Portal app](../../intune/apps/company-portal-app.md).
+For more information on branding the Company Portal for your organization, see [How to customize the Intune Company Portal app](../../intune-service/apps/company-portal-app.md).
 
 ## Use the Company Portal
 
@@ -152,4 +152,4 @@ Other known issues:
 
 [How to switch Configuration Manager workloads to Intune](how-to-switch-workloads.md)
 
-[How to customize the Intune Company Portal app](../../intune/apps/company-portal-app.md)
+[How to customize the Intune Company Portal app](../../intune-service/apps/company-portal-app.md)

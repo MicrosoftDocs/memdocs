@@ -15,11 +15,11 @@ items:
       topicHref: /mem/
       items:
       - name: Configuration Manager
-        tocHref: /mem/intune/
+        tocHref: /mem/intune-service/
         topicHref: /mem/configmgr/index
         items:
         - name: Tenant attach
-          tocHref: /mem/intune/protect/
+          tocHref: /mem/intune-service/protect/
           topicHref: /mem/configmgr/tenant-attach/index
 
 - name: Docs

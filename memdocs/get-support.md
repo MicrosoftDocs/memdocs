@@ -203,6 +203,6 @@ Selecting either a severity **A** or **Critical** issue limits you to a phone su
 ## Next steps
 
 - [Billing and subscription management support](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
-- [Use the troubleshooting portal to help users at your company](./intune/fundamentals/help-desk-operators.md)
+- [Use the troubleshooting portal to help users at your company](./intune-service/fundamentals/help-desk-operators.md)
 - [Microsoft Intune troubleshooting documentation](/troubleshoot/mem/intune/welcome-intune)
 - [Volume licensing](https://go.microsoft.com/fwlink/p/?LinkID=282015)

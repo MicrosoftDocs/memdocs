@@ -109,10 +109,10 @@ sections:
         answer: |
           The following types of applications are supported for use with Windows Autopilot device preparation:
 
-          - [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
-          - [Win32](/mem/intune/apps/apps-win32-prepare).
-          - [Microsoft Store](/mem/intune/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-          - [Microsoft 365](/mem/intune/apps/apps-add-office365).
+          - [Line-of-business (LOB)](/mem/intune-service/apps/lob-apps-windows).
+          - [Win32](/mem/intune-service/apps/apps-win32-prepare).
+          - [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
+          - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
 
       - question: |
           Do devices need to be pre-staged with Windows Autopilot device preparation?
