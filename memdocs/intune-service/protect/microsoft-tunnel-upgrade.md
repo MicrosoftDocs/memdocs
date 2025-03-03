@@ -129,6 +129,19 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 >
 > Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
 
+### March 3, 2025
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:71714763576d55d4b5a0104e580a33ab9808093d09552bfa3004908612ecb38e
+
+- **serverImageDigest**: sha256:efbad7a7f707885060aceaba60a05a973aa052c3a160ecd6441b1209d9d2cee2
+
+Changes in this release:
+
+- Minor bug fixes
+
+
 ### February 6, 2025
 
 Image hash values:
