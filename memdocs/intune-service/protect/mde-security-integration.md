@@ -286,11 +286,6 @@ To support use with Microsoft Defender security settings management, your polici
 
 ***1*** - This profile is visible in the Defender portal but isn't supported for devices managed only by Microsoft Defender through the Microsoft Defender security settings management scenario. This profile is supported only for devices managed by Intune.
 
-<<<<<<< HEAD:memdocs/intune/protect/mde-security-integration.md
-=======
-***2*** - This profile is visible in the Defender portal. Support of this profile for devices managed only by Microsoft Defender through the Microsoft Defender security settings management scenario is delayed until on or around January 18, 2025. When support for this scenario becomes available, this note will be removed.
-
->>>>>>> 491696ca31026eb63aaeb1246711b3dac98811bc:memdocs/intune-service/protect/mde-security-integration.md
 **Each Intune endpoint security profile** is a discrete group of settings intended for use by security admins who focus on protecting devices in your organization. The following are descriptions of the profiles that are supported by the security settings management scenario:
 
 - **[Antivirus](endpoint-security-antivirus-policy.md)** policies manage the security configurations found in Microsoft Defender for Endpoint.
