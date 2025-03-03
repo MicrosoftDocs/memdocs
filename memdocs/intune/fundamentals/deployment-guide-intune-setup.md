@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/20/2025
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
