@@ -5,7 +5,7 @@ description: Determine the number of site system roles and sites that you'll nee
 ms.date: 04/05/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

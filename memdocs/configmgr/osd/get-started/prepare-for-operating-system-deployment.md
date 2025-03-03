@@ -5,7 +5,7 @@ description: Learn about how to prepare for operating system deployments in Conf
 ms.date: 02/22/2019
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

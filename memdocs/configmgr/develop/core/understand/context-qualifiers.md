@@ -5,7 +5,7 @@ description: Use context qualifiers when you connect to the SMS Provider and wit
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 0b4faf3c-edff-4874-b998-3fc34810cf34
 author: Banreet
 ms.author: banreetkaur

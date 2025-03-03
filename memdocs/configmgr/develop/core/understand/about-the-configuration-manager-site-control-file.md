@@ -4,7 +4,7 @@ description: Site control in Configuration Manager defines the settings for a sp
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 1283e2a3-d4e2-4fba-a6c3-7dcd94598a0d
 author: Banreet
 ms.author: banreetkaur

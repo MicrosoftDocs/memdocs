@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 09/13/2024
+ms.date: 02/21/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -44,13 +44,13 @@ This article provides step-by-step guidance for manual registration. For more in
 
 ## Requirements
 
-- [Intune subscription](/mem/intune/fundamentals/licenses).
-- [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment).
+- [Intune subscription](/mem/intune-service/fundamentals/licenses).
+- [Windows automatic enrollment enabled](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment).
 - [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium).
 
 ## Required permissions
 
-Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. A custom Autopilot device manager role can also be created by using [role-based access control (RBAC)](/mem/intune/fundamentals/role-based-access-control). Autopilot device management requires only that all permissions under **Enrollment programs** are enabled, except for the four token management options.
+Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. A custom Autopilot device manager role can also be created by using [role-based access control (RBAC)](/mem/intune-service/fundamentals/role-based-access-control). Autopilot device management requires only that all permissions under **Enrollment programs** are enabled, except for the four token management options.
 
 > [!NOTE]
 >
@@ -375,6 +375,12 @@ Completely removing a device from a tenant requires the device records in Intune
 1. **ZtdDeviceAlreadyAssigned**: This error occurs when the uploaded hardware hash matches a device that is already registered to the tenant. If this error occurs, search for the serial number corresponding to the duplicate in the CSV file. Then, search for the serial number in the **Windows Autopilot devices** pane in Intune. If the device is already registered, don't import it again. If the device isn't registered, it can be imported again.
 
 1. **ZtdDeviceDuplicated**: This error occurs when there are duplicate hardware hashes in the CSV file. Only one of the duplicates is processed, and the others result in this error. If this error occurs, look for the other duplicates of the same device to see what the actual result was. If a duplicate that was successfully processed is found, the duplicate row from the CSV file can be removed.
+
+1. **InvalidZtdHardwareHash**: This error occurs when one or more fields in the hardware hash are invalid or empty. Both the manufacturer and serial number information need to be included. If they're not, the device can't be registered for Windows Autopilot. To check the serial number and manufacturer information, open a command prompt and run the following command:
+
+      ```cmd
+   wmic baseboard get manufacturer, serialnumber
+   ```
 
 ## Related content
 

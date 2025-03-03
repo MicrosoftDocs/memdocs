@@ -5,7 +5,7 @@ description: Plan for managing BitLocker Drive Encryption with Configuration Man
 ms.date: 12/04/2024
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
@@ -28,7 +28,7 @@ Use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-prem
 For more general information about BitLocker, see [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview). For a comparison of BitLocker deployments and requirements, see the [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
 
 > [!TIP]
-> To manage encryption on co-managed Windows 10 or later devices using the Microsoft Intune cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/mem/intune/protect/endpoint-protection-windows-10#windows-encryption).
+> To manage encryption on co-managed Windows 10 or later devices using the Microsoft Intune cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/mem/intune-service/protect/endpoint-protection-windows-10#windows-encryption).
 
 ## Features
 

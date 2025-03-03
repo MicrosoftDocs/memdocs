@@ -5,7 +5,7 @@ description: Use Resource Explorer to view software inventory in Configuration M
 ms.date: 04/01/2020
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

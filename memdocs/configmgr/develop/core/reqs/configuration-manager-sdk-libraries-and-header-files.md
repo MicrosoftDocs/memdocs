@@ -5,7 +5,7 @@ description: Use Configuration Manager libraries when you write unmanaged applic
 ms.date: 11/18/2021
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

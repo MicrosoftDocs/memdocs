@@ -5,7 +5,7 @@ description: Learn how to enable the download of Endpoint Protection malware def
 ms.date: 11/18/2019
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

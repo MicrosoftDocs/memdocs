@@ -5,7 +5,7 @@ description: Do common Asset Intelligence tasks in Configuration Manager.
 ms.date: 08/30/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Create, edit, and use orchestration groups.
 ms.date: 03/28/2023
 ms.service: configuration-manager
 ms.subservice: software-updates
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

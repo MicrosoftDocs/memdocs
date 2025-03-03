@@ -1,7 +1,7 @@
 ---
 title: Configuration Manager
 ms.date: 10/06/2016
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: other
 ms.service: configuration-manager
 author: Banreet

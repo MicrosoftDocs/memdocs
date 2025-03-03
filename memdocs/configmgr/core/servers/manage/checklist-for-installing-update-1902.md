@@ -5,7 +5,7 @@ description: Learn about actions to take before updating to Configuration Manage
 ms.date: 04/11/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: checklist
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

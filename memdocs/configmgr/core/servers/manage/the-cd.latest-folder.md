@@ -5,7 +5,7 @@ description: Learn about the process that delivers updates to the product from w
 ms.date: 03/24/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

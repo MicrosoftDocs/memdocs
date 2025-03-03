@@ -5,7 +5,7 @@ description: Sample queries that show how to join compliance settings views to e
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: fdf87ece-b625-4c34-8fd7-f056d9cdf8b6
 author: banreet
 ms.author: banreetkaur

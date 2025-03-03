@@ -5,7 +5,7 @@ description: Sample queries that show how to join software updates views to each
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 583e373f-1619-4385-8c86-0484820c6b02

@@ -65,14 +65,14 @@ sections:
       - question: |
           What functionality is available to replace these features?
         answer: |
-          Use Microsoft Intune to deploy resource access profiles. For more information, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../../../intune/configuration/device-profiles.md).
+          Use Microsoft Intune to deploy resource access profiles. For more information, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../../../intune-service/configuration/device-profiles.md).
 
           Use [co-management](../../comanage/overview.md) to enroll Configuration Manager clients to Intune.
 
       - question: |
           What do I do if I'm deploying wi-fi profiles with Configuration Manager?
         answer: |
-          Before you upgrade to Configuration Manager version 2203, [enable co-management](../../comanage/how-to-enable.md), and deploy the same wi-fi profiles with Intune. For more information, see [Add and use Wi-Fi settings on your devices in Microsoft Intune](../../../intune/configuration/wi-fi-settings-configure.md). If you don't take action, the existing wi-fi profiles will persist on devices but are unmanaged.
+          Before you upgrade to Configuration Manager version 2203, [enable co-management](../../comanage/how-to-enable.md), and deploy the same wi-fi profiles with Intune. For more information, see [Add and use Wi-Fi settings on your devices in Microsoft Intune](../../../intune-service/configuration/wi-fi-settings-configure.md). If you don't take action, the existing wi-fi profiles will persist on devices but are unmanaged.
 
       - question: |
           What happens if I don't enable co-management?

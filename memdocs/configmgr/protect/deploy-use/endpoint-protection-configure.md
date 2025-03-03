@@ -5,7 +5,7 @@ description: Learn how to set up Configuration Manager to update and distribute 
 ms.date: 03/22/2018
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

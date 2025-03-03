@@ -5,7 +5,7 @@ description: Sample queries that show how to join the most common client deploym
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 66e102b8-f80c-4dc8-b39c-e2a5a50c74a6

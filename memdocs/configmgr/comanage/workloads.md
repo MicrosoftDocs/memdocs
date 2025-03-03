@@ -6,7 +6,7 @@ author: Baladelli
 ms.author: baladell
 manager: apoorvseth
 ms.date: 12/04/2024
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.localizationpriority: medium
@@ -40,7 +40,7 @@ Co-management supports the following workloads:
 
 Compliance policies define the rules and settings that a device must comply with to be considered compliant by Conditional Access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of Conditional Access. You can add evaluation of custom configuration baselines as a compliance policy assessment rule. For more information, see [Include custom configuration baselines as part of compliance policy assessment](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 
-For more information on the Intune feature, see [Use compliance policies to set rules for devices you manage with Intune](../../intune/protect/device-compliance-get-started.md).
+For more information on the Intune feature, see [Use compliance policies to set rules for devices you manage with Intune](../../intune-service/protect/device-compliance-get-started.md).
 
 ## Windows Update policies
 
@@ -49,7 +49,7 @@ Windows Update for Business policies let you configure deferral policies for Win
 > [!NOTE]
 > To use Windows Autopatch with these devices, this workload needs to be managed by Intune. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
 
-For more information on the Intune feature, see [Manage Windows software updates in Intune](../../intune/protect/windows-update-for-business-configure.md).
+For more information on the Intune feature, see [Manage Windows software updates in Intune](../../intune-service/protect/windows-update-for-business-configure.md).
 
 ## Resource access policies
 
@@ -58,7 +58,7 @@ For more information on the Intune feature, see [Manage Windows software updates
 
 Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices.
 
-For more information on the Intune feature, see [Deploy resource access profiles](../../intune/configuration/device-profiles.md).
+For more information on the Intune feature, see [Deploy resource access profiles](../../intune-service/configuration/device-profiles.md).
 
 > [!NOTE]
 > The resource access workload is also part of device configuration. These policies are managed by Intune when you switch the [Device Configuration](#device-configuration) workload.
@@ -80,7 +80,7 @@ The Endpoint Protection workload includes the Defender suite of protection featu
 - Windows Defender Application Control
 - Windows Defender Security Center
 
-For more information on the Intune feature, see [Windows 10 (and later) settings to protect devices using Intune](../../intune/protect/endpoint-protection-windows-10.md).
+For more information on the Intune feature, see [Windows 10 (and later) settings to protect devices using Intune](../../intune-service/protect/endpoint-protection-windows-10.md).
 
 > [!NOTE]
 > When you switch this workload, the Configuration Manager policies stay on the device until the Intune policies overwrite them. This behavior makes sure that the device still has protection policies during the transition.
@@ -103,7 +103,7 @@ You can still deploy settings from Configuration Manager to co-managed devices e
 
 To use Windows Autopatch with these devices, this workload needs to be managed by Intune. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
 
-For more information on the Intune feature, see [Create a device profile in Microsoft Intune](../../intune/configuration/device-profile-create.md).
+For more information on the Intune feature, see [Create a device profile in Microsoft Intune](../../intune-service/configuration/device-profile-create.md).
 
 > [!NOTE]
 > A policy created from the settings catalog is controlled by the Device Configuration workload slider regardless of the contents of the policy.
@@ -129,13 +129,13 @@ This workload manages Microsoft 365 Apps on co-managed devices.
 
 Updates can be managed using either of the following features:
 
-- [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates](../../intune/configuration/administrative-templates-update-office.md)
+- [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates](../../intune-service/configuration/administrative-templates-update-office.md)
 - [Manage Microsoft 365 Apps with Configuration Manager](../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 > [!NOTE]
 > To use Windows Autopatch with these devices, this workload needs to be managed by Intune. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
 
-For more information on the Intune feature, see [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune/apps/apps-add-office365.md).
+For more information on the Intune feature, see [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune-service/apps/apps-add-office365.md).
 
 ## Client apps
 
@@ -146,7 +146,7 @@ For more information on the Intune feature, see [Add Microsoft 365 apps to Windo
 
 Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10 or later devices. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.
 
-For more information on the Intune feature, see [What is Microsoft Intune app management?](../../intune/apps/app-management.md)
+For more information on the Intune feature, see [What is Microsoft Intune app management?](../../intune-service/apps/app-management.md)
 
 > [!NOTE]
 > In Windows 10 version 1903 and later, PowerShell scripts still run on co-managed devices even if you haven't switched the **Client Apps** workload to Intune.

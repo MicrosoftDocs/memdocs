@@ -5,8 +5,8 @@ description: Use these best practices for software updates in Configuration Mana
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
-ms.date: 09/16/2020
-ms.topic: conceptual
+ms.date: 02/11/2025
+ms.topic: best-practice
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.localizationpriority: medium

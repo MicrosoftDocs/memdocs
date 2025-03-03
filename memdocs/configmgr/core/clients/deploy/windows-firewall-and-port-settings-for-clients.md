@@ -5,7 +5,7 @@ description: Select Windows Firewall and port settings for clients in Configurat
 ms.date: 10/06/2016
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
