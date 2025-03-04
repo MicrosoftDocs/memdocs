@@ -37,7 +37,7 @@ The **Collect diagnostics** remote action lets you collect and download managed 
 > [!NOTE]
 >  Intune App Protection logs are available to download from the diagnostics tab in the **Troubleshooting** pane. However, M365 remote application diagnostics are only available to their specific support engineers.
 >
-> Devices do not have to be managed by MDM (Mobile device mangement) to have Intune app protection or M365 app diagnostics collected, only managed by an Intune app protection policy.
+> Devices don't have to be managed by MDM (Mobile device management) to have Intune app protection or M365 app diagnostics collected, only managed by an Intune app protection policy.
 > 
 > The data is stored in Microsoft support systems and isn't subject to Intune data management policies or protections. Some applications might collect and store data using systems other than Intune.
 
@@ -62,9 +62,9 @@ Applications with support for M365 application diagnostics:
 Requirements to collect diagnostics from an M365 application:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Navigate to **Tenant administration** > **Device diagnostics** > Make sure the 3rd setting is enabled.
+2. Navigate to **Tenant administration** > **Device diagnostics** > Make sure the third setting is enabled.
 3. Create and deploy an Intune App Protection policy to a user, more information [here](../apps/app-protection-policies.md).
-4. Confirm the application has been managed by Intune App Protection policy.  This can be checked locally on the device and/or loading the user into the Intune Troubleshooting Pane and opening the App Protection summary page.
+4. Confirm the application has been managed by Intune App Protection policy. You can check locally on the device and/or by loading the user into the Intune Troubleshooting Pane and opening the App Protection summary page.
 
 To use the *Collect diagnostics* action:
 
@@ -85,9 +85,9 @@ To download diagnostics:
 2. On the **Summary** page, select the **Diagnostics** page and download the diagnostics.
 
 > [!IMPORTANT]
-> Diagnostic uploads exceeding 50 diagnostics or 4MB in diagnostic data cannot be downloaded directly from the Intune portal. For access to larger diagnostic uploads, reach out to [Microsoft Intune support](/mem/get-support). 
+> Diagnostic uploads exceeding 50 diagnostics or 4 MB in diagnostic data can't be downloaded directly from the Intune portal. For access to larger diagnostic uploads, reach out to [Microsoft Intune support](/mem/get-support).
 
-Diagnostics take approximately 30 minutes to be delivered from an end user's device. The user may be required to close and reopen the app if prompted for a pin when opening the app for the diagnostics request to prompt.
+Diagnostics take approximately 30 minutes to be delivered from an end user's device. The user might be required to close and reopen the app if prompted for a pin when opening the app for the diagnostics request to prompt.
 
 ## Collect diagnostics from a Windows device
 
@@ -99,7 +99,7 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 *Collect diagnostics* is also available as a [Bulk device action](../remote-actions/bulk-device-actions.md) that collects diagnostic logs from up to 25 Windows devices at a time.
 
 > [!NOTE]
-> Microsoft personnel may access device diagnostics to assist in troubleshooting and resolving incidents.
+> Microsoft personnel might access device diagnostics to help troubleshooting and resolving incidents.
 
 ### Requirements for Windows devices
 
@@ -114,7 +114,7 @@ The *Collect diagnostics* remote action is supported for:
 - Devices that are online and able to communicate with the service during diagnostics
 
 > [!NOTE]
-> For diagnostics to be able to upload successfully from the client, make sure that the URL for your region is not blocked on the network:
+> For diagnostics to be able to upload successfully from the client, make sure that the URL for your region isn't blocked on the network:
 > - `Europe - lgmsapeweu.blob.core.windows.net`
 > - `Americas - lgmsapewus2.blob.core.windows.net`
 > - `East Asia - lgmsapesea.blob.core.windows.net`
@@ -136,7 +136,7 @@ To use the *Collect diagnostics* action:
 ### Diagnostics collection on Autopilot failure
 <!--1895390-->
 
- For Autopilot diagnostics collection, no additional action is required. Autopilot diagnostics are automatically captured when devices experience a failure as long as the Autopilot automatic capture diagnostic feature is enabled.
+ For Autopilot diagnostics collection, no other action is required. Autopilot diagnostics are automatically captured when devices experience a failure as long as the Autopilot automatic capture diagnostic feature is enabled.
 
 To view the diagnostics collected after an Autopilot failure:
 
@@ -149,14 +149,14 @@ To view the diagnostics collected after an Autopilot failure:
 ### Data collected
 
 <!--1895390-->
-While there's no intent to collect personal data, diagnostics may include user identifiable information such as user or device name.
+While there's no intent to collect personal data, diagnostics might include user identifiable information such as user or device name.
 
-If you've installed [KB5011543](https://support.microsoft.com/topic/march-22-2022-kb5011543-os-builds-19042-1620-19043-1620-and-19044-1620-preview-4fe2d1c0-720f-47fe-9523-75339bc107a1) on Windows 10 or [KB5011563](https://support.microsoft.com/topic/march-28-2022-kb5011563-os-build-22000-593-preview-40df54c9-b5a9-42e5-ae1c-9a33ff91ca91) on Windows 11, the format of the zip file will be simpler including:
+If you install [KB5011543](https://support.microsoft.com/topic/march-22-2022-kb5011543-os-builds-19042-1620-19043-1620-and-19044-1620-preview-4fe2d1c0-720f-47fe-9523-75339bc107a1) on Windows 10 or [KB5011563](https://support.microsoft.com/topic/march-28-2022-kb5011563-os-build-22000-593-preview-40df54c9-b5a9-42e5-ae1c-9a33ff91ca91) on Windows 11, the format of the zip file is simpler including:
 
 - A flattened structure where the logs collected are named to match the data collected
-- When multiple files are collected a folder is created.  
+- When multiple files are collected, a folder is created.  
 
-This list below is the same order as the diagnostic zip.  Each collection contains the following data:
+This following list is the same order as the diagnostic zip. Each collection contains the following data:
 
 Registry Keys:
 
@@ -270,7 +270,7 @@ Autopilot automatic diagnostic capture is enabled by default. You can disable Au
 
 ### Known issues with device diagnostics
 
-Currently there are the two main issues that may cause device diagnostics to fail:
+Currently there are the two main issues that could cause device diagnostics to fail:
 
-1. A timeout may occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde).  These patches contain a fix to the DiagnosticLog CSP that prevents timeout during upload.  After the update installs, make sure to reboot your device.
-2. The device wasn't able to receive the device action within a 24-hour window. If the device is offline or turned off, it may cause a failure.
+1. A time-out could occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde). These patches contain a fix to the DiagnosticLog CSP that prevents time out during upload. After the update installs, make sure to reboot your device.
+2. The device wasn't able to receive the device action within a 24-hour window. If the device is offline or turned off, it could cause a failure.
