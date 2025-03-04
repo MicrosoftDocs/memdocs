@@ -5,7 +5,7 @@ description: Get details about changes and new capabilities introduced in versio
 ms.date: 11/23/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -196,7 +196,7 @@ You can now get a quick view of overall compliance for devices, and the top reas
 
 
 ## Lookout integration for hybrid implementations to protect iOS and Android devices
-Microsoft is integrating with Lookout's mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout's solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using conditional access policies, you can allow or block access to company resources based on the device compliance status.
+Microsoft is integrating with Lookout's mobile threat protection solution to protect iOS and Android mobile devices by detecting malware, risky apps, and more, on devices. Lookout's solution helps you determine the threat level, which is configurable. You can create a compliance policy rule in Configuration Manager to determine device compliance based on the risk assessment by Lookout. Using Conditional Access policies, you can allow or block access to company resources based on the device compliance status.
 
 Users of noncompliant iOS devices will be prompted to enroll. They'll be required to install the Lookout for Work app on their devices, activate the app, and remediate threats reported in the Lookout for Work application to gain access to company data.
 

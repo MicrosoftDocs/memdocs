@@ -3,7 +3,7 @@ title: Tenant attach - BitLocker recovery keys
 titleSuffix: Configuration Manager
 description: View BitLocker recovery keys for tenant-attached devices from the Microsoft Intune admin center.
 ms.date: 01/25/2022
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: core-infra
 ms.service: configuration-manager
 manager: apoorvseth
@@ -39,7 +39,7 @@ The administrative user needs the following permissions:
 
   - **Read BitLocker Recovery Key**
 
-- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user
+- An [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned to the user
 
 ## View recovery keys
 

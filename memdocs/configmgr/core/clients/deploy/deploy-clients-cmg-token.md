@@ -5,7 +5,7 @@ description: Register a client on the internal network for a unique token or cre
 ms.date: 02/16/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
@@ -147,6 +147,9 @@ You can filter or sort on the **Type** column. Identify specific bulk registrati
 ## Token renewal
 
 The client renews its unique, Configuration Manager-issued token once a month, and it's valid for 90 days. A client doesn't need to connect to the internal network to renew its token. As long as the token is still valid, connecting to the site using a CMG is sufficient. If the token isn't renewed within 90 days, the client must directly connect to a management point on an internal network to receive a new token.
+
+> [!NOTE]
+> The token will only renew during the startup of the Configuration Manager Client. Therefore, the SMS Agent Host (CCMExec) Service or the client machine must restart at least every 90 days.
 
 You can't renew a bulk registration token. Once a bulk registration token expires, generate a new one for internet-based device registration using a CMG.
 

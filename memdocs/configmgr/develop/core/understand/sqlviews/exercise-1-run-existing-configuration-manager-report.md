@@ -5,7 +5,7 @@ description: Run an existing Configuration Manager report and review specific re
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 1b64ec8e-3635-492d-9309-b49bb54deb8f

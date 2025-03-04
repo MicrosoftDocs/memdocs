@@ -5,7 +5,7 @@ description: The Configuration Manager client can be programmed by using program
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7114139b-9615-4057-9a60-afa877346b2d
 author: Banreet
 ms.author: banreetkaur

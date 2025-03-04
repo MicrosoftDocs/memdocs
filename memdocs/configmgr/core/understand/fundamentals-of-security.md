@@ -5,12 +5,14 @@ description: Learn about the layers of security in Configuration Manager.
 ms.date: 04/15/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: tier3
+ms.collection: 
+- essentials-security
+- tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 

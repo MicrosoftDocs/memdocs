@@ -2,7 +2,7 @@
 title: What is Endpoint analytics?
 titleSuffix: Microsoft Intune
 description: Overview for Endpoint analytics.
-ms.date: 10/23/2023
+ms.date: 02/28/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: overview
@@ -45,7 +45,7 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
   - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
 - Windows devices must be Microsoft Entra joined or Microsoft Entra hybrid joined. Workplace joined or Microsoft Entra registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
-- The [Intune Service Administrator role](/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
+- The [Intune Service Administrator role](/mem/intune-service/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
   - After the administrator selects **Start** for gathering data, other read-only roles can view the data.
 
 ### <a name="bkmk_cm_prereq"></a> How to enroll devices via Configuration Manager
@@ -57,7 +57,7 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
 
 <!-- ### Remediation scripting requirements
 
-Whether enrolling devices via Intune or Configuration Manager, [**Remediation scripting**](../intune/fundamentals/remediations.md) has the following requirements:
+Whether enrolling devices via Intune or Configuration Manager, [**Remediation scripting**](../intune-service/fundamentals/remediations.md) has the following requirements:
 
 - Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
   - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
@@ -65,7 +65,7 @@ Whether enrolling devices via Intune or Configuration Manager, [**Remediation sc
 
 ## Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune-service/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 <!-- Remediations also requires users of the devices to have one of the following licenses:
 
@@ -81,7 +81,7 @@ Devices enrolled in Endpoint analytics need a valid license for the use of Micro
 
 ### Built-in role permissions
 
-Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md). <!--7567981-->
+Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md). <!--7567981-->
 
 |Role name|Microsoft Entra role|Intune role|Endpoint analytics permissions|
 |---|---|---|---|

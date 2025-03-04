@@ -5,7 +5,7 @@ description: Learn about features available in the Technical Preview version 170
 ms.date: 09/15/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -566,9 +566,9 @@ Setting DisallowCrossProfileCopyPaste to true prevents copy-paste behavior betwe
 3. In the device setting groups to configure, select **Work Profile**, and choose **Next**.
 4. Select the value for **Allow data sharing between work and personal profiles**, and then complete the wizard.
 
-## Device Health Attestation assessment for compliance policies for conditional access
+## Device Health Attestation assessment for compliance policies for Conditional Access
 <!-- 1097546 -->
-Starting with this release you can use Device Health Attestation status as a compliance policy rule for conditional access to company resources.
+Starting with this release you can use Device Health Attestation status as a compliance policy rule for Conditional Access to company resources.
 
 ### Try it out
 Select a Device Health Attestation rule as part of a compliance policy assessment.

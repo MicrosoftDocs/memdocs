@@ -5,7 +5,7 @@ description: Get details about changes and new capabilities introduced in versio
 ms.date: 10/09/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -243,7 +243,7 @@ When this client setting option is enabled, user available applications that req
 
 ### Software Center shows user additional compliance information
 <!-- 1235616 -->
- When using Device Health Attestation status as a compliance policy rule for conditional access to company resources, Software Center now shows the user the Device Health Attestation setting that is not compliant.
+ When using Device Health Attestation status as a compliance policy rule for Conditional Access to company resources, Software Center now shows the user the Device Health Attestation setting that is not compliant.
 
 
  ## Software updates 

@@ -2,12 +2,12 @@
 title: Support for Windows 10
 titleSuffix: Configuration Manager
 description: Learn about the Windows 10 versions that are supported as clients with Configuration Manager.
-ms.date: 03/28/2024
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
-author: PalikaSingh
-ms.author: palsi
+ms.topic: article
+author: Baladelli    
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -44,11 +44,11 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 10 version                         | ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309 | ConfigMgr 2403 |
-|--------------------------------------------|----------------|----------------|----------------|----------------|
-| **22H2**<br>(10.0.19045) <!--2025-05-13--> |  ![Supported](media/green-check.png)  |  ![Supported](media/green-check.png)  |   ![Supported](media/green-check.png) |![Supported](media/green-check.png) | 
-| **21H2**<br>(10.0.19044) <!--06/11/2024--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |  ![Supported](media/green-check.png) |![Supported](media/green-check.png) |  
-| **Enterprise LTSC 2021**<br>(10.0.19044) <!--01/12/2027-->| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | 
+| Windows 10 version                         | ConfigMgr 2309 | ConfigMgr 2403 | Configmgr 2409
+|--------------------------------------------|----------------|----------------|----------------|
+| **22H2**<br>(10.0.19045) <!--2025-05-13--> |  ![Supported](media/green-check.png)  |   ![Supported](media/green-check.png) |![Supported](media/green-check.png) | 
+| **21H2**<br>(10.0.19044) <!--06/11/2024--> |  ![Supported](media/green-check.png) |  ![Supported](media/green-check.png) |![Supported](media/green-check.png) |  
+| **Enterprise LTSC 2021**<br>(10.0.19044) <!--01/12/2027-->| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | 
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 

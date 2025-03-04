@@ -25,7 +25,7 @@ Configuration Manager uses the following Microsoft URL forwarding services throu
 - `https://aka.ms`
 - `https://go.microsoft.com`
 
-Even if they're not explicitly listed in the sections below, you should always allow these endpoints.
+Even if they're not explicitly listed in the following sections, you should always allow these endpoints.
 
 ## Service connection point
 
@@ -58,7 +58,11 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `definitionupdates.microsoft.com`
 
+> [!NOTE]
+> Starting March 2025, the **configmgrbits.azureedge.net** domain migrates to **configmgrbits.cdn.manage.microsoft.com**. No action is required if *.manage.microsoft.com traffic is already allowed.
 - `configmgrbits.azureedge.net`
+
+- `configmgrbits.cdn.manage.microsoft.com`
 
     > [!IMPORTANT]
     > This Azure endpoint only supports TLS 1.2 with specific cipher suites.<!-- 10424111 --> Make sure your environment supports these Azure configurations. For more information, see [Azure Front Door: TLS configuration FAQ](/azure/frontdoor/front-door-faq#tls-configuration).
@@ -102,11 +106,11 @@ For more information, see [Configure Azure services for use with Configuration M
 
 ## Co-management
 
-If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
+If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints).
 
 ## Microsoft Store for Business
 
-If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+If you integrate Configuration Manager with the [Microsoft Store for Business](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), make sure the service connection point and targeted devices can access the cloud service. For more information, see [Microsoft Store for Business proxy configuration](/mem/intune-service/fundamentals/intune-endpoints).
 
 ## Delivery optimization
 
@@ -174,7 +178,7 @@ You might need to add endpoints to a firewall that's between two site systems in
 ## Manage Microsoft 365 Apps
 
 > [!NOTE]
-> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+> On April 21, 2020, Office 365 ProPlus was renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You might still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 If you use Configuration Manager to deploy and update Microsoft 365 Apps for enterprise, allow the following endpoints:
 
@@ -188,20 +192,22 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 
 - `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
 
+- `clients.config.office.net` to retrieve the names of the files needed for a particular Microsoft 365 Apps update. For more information, see [Using the Microsoft 365 Apps file list API](/office/client-developer/shared/manageability-applications-with-the-office-365-click-to-run-installer#using-the-microsoft-365-apps-file-list-api).
+
 Your top-level site server needs access to the following endpoint to download the Microsoft Apps 365 readiness file:
 
 - Starting March 2, 2021: `https://omex.cdn.office.net/mirrored/sccmreadiness/SOT_SCCM_AddinReadiness.CAB`
-   - Location prior to March 2, 2021: `https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
+   - Location before March 2, 2021: `https://contentstorage.osi.office.net/sccmreadinessppe/sot_sccm_addinreadiness.cab`
 
 > [!NOTE]
-> The location of this file is changing *March 2, 2021* <!--edit this, placeholder line-->. For more information, see [Download location change for Microsoft 365 Apps readiness file](https://techcommunity.microsoft.com/t5/configuration-manager-blog/download-location-change-for-microsoft-365-apps-readiness-file/ba-p/2110282).
+> The location of this file is changing *March 2, 2021*.<!--edit this, placeholder line--> For more information, see [Download location change for Microsoft 365 Apps readiness file](https://techcommunity.microsoft.com/t5/configuration-manager-blog/download-location-change-for-microsoft-365-apps-readiness-file/ba-p/2110282).
 
 ## Configuration Manager console
 
 Computers with the Configuration Manager console require access to the following internet endpoints for specific features:
 
 > [!NOTE]
-> For push notifications from Microsoft to show in the console, the service connection point needs access to `configmgrbits.azureedge.net`. It also needs access to this endpoint for [updates and servicing](#updates-and-servicing), so you may have already allowed it.
+> For push notifications from Microsoft to show in the console, the service connection point needs access to `Configmgrbits.cdn.manage.microsoft.com`. It also needs access to this endpoint for [updates and servicing](#updates-and-servicing).
 
 ### In-console feedback
 
@@ -257,7 +263,7 @@ For more information, see [External notifications](../../servers/manage/external
 
 The service connection point needs to communicate with the notification service, for example Azure Logic Apps. The access endpoint for the logic app typically has the following format: `https://*.<RegionName>.logic.azure.com:443`. For example: `https://prod1.westus2.logic.azure.com:443`
 
-To get the access endpoint for the logic app, as well as the associated IP addresses, use the following process:
+To get the access endpoint for the logic app, and the associated IP addresses, use the following process:
 
 1. In the Azure portal, under **Logic Apps**, select the logic app for your notification. For more information, see [Manage logic apps in the Azure portal](/azure/logic-apps/manage-logic-apps-with-azure-portal).
 1. In the app's menu, in the **Settings** section, select **Properties**.
@@ -265,7 +271,7 @@ To get the access endpoint for the logic app, as well as the associated IP addre
 
 ## Microsoft public IP addresses
 
-For more information on the Microsoft IP address ranges, see [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602). These addresses update regularly. There's no granularity by service, any IP address in these ranges could be used.
+For more information on the Microsoft IP address ranges, see [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602). These addresses update regularly. There's no granularity by service; Any IP address in these ranges could be used.
 
 ## Next steps
 

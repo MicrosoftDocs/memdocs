@@ -2,12 +2,12 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 03/28/2024
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
-author: PalikaSingh
-ms.author: palsi
+ms.topic: article
+author: Baladelli
+ms.author: Baladell
 manager: apoorvseth
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz
@@ -46,11 +46,12 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 11 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 11 version                         | ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309 | ConfigMgr 2403 |
-|--------------------------------------------|----------------|----------------|----------------|----------------|
-| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| Windows 11 version                         | ConfigMgr 2309 | ConfigMgr 2403 | ConfigMgr 2409 |
+|--------------------------------------------|----------------|----------------|----------------|
+| **24H2**<br>(10.0.26100) <!--2027-10-12--> | ![Supported](media/red-x.png) | ![Supported](media/red-x.png) | ![Supported](media/green-check.png) |
+| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
 

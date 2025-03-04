@@ -5,7 +5,7 @@ description: Manage and deploy apps from the Microsoft Store for Business and Ed
 ms.date: 12/01/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 ms.author: baladell
 manager: apoorvseth
@@ -29,7 +29,7 @@ The Microsoft Store for Business and Education supports two types of app:
 
 - **Offline**: This type lets you cache apps and licenses to deploy directly within your on-premises network. Devices don't need to connect to the store or have a connection to the internet.
 
-For more information, see the [Microsoft Store for Business and Education overview](/microsoft-store/microsoft-store-for-business-overview).
+For more information, see the [Microsoft Store for Business and Education overview](/mem/configmgr/apps/deploy-use/manage-apps-from-the-windows-store-for-business).
 
 ### Summary of capabilities
 
@@ -64,7 +64,7 @@ Before deploying Microsoft Store for Business and Education apps to devices that
 
 - When the local Administrator account signs in on the device, it can't access Microsoft Store for Business and Education apps.
 
-- Devices need a live internet connection to the Microsoft Store for Business and Education. For more information including proxy configuration, see [Prerequisites](/microsoft-store/prerequisites-microsoft-store-for-business).
+- Devices need a live internet connection to the Microsoft Store for Business and Education. For more information including proxy configuration, see [Prerequisites](/mem/intune-service/apps/store-apps-microsoft).
 
 ## Set up synchronization
 
@@ -72,13 +72,13 @@ When you synchronize the list of Microsoft Store for Business and Education apps
 
 Connect your Configuration Manager site to Microsoft Entra ID and the Microsoft Store for Business and Education. For more information and details of this process, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md). Create a connection to the **Microsoft Store for Business** service.
 
-Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Prerequisites for Microsoft Store for Business and Education - Proxy configuration](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Prerequisites for Microsoft Store for Business and Education - Proxy configuration](/mem/intune-service/apps/store-apps-microsoft).
 
 ### Supplemental information and configuration
 
 On the **App** page of the Azure Services Wizard, first configure the **Azure environment** and **Web app**. Then read the **More Information** section at the bottom of the page. This information includes the following other actions in the Microsoft Store for Business and Education portal:
 
-- Configure Configuration Manager as the store management tool. For more information, see [Configure management provider](/microsoft-store/configure-mdm-provider-microsoft-store-for-business).
+- Configure Configuration Manager as the store management tool. For more information, see [Configure management provider](/windows/client-management/azure-active-directory-integration-with-mdm).
 
 - Enable support for offline licensed apps. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
 

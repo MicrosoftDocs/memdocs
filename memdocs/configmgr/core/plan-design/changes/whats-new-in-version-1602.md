@@ -5,7 +5,7 @@ description: Get details about changes and new capabilities introduced in versio
 ms.date: 12/30/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -108,10 +108,10 @@ You will find these apps in the **Applications** node of the Configuration Manag
  Kiosk mode allows you to lock a device so that only certain features work. For example, you can allow a device to run only one managed app that you specify, or you can disable the volume buttons on a device. These settings might be used for a demonstration model of a device, or a device that is dedicated to performing only one function, such as a point-of-sale device. In Configuration Manager, you can now specify kiosk mode settings for Samsung KNOX Standard devices.  
 
 
-## Conditional access  
+## Conditional Access  
 
-### Conditional access for PCs managed by Configuration Manager  
- Previous to this release, to set up conditional access for a PC, the PC either had to be enrolled in Intune or had to be a domain-joined PC. Beginning with the 1602 update, conditional access for PCs managed by Configuration Manager is supported. For your PCs that are managed by Configuration Manager, you can restrict access to Exchange Online and SharePoint Online only to devices that are compliant with the compliance policies you set.  
+### Conditional Access for PCs managed by Configuration Manager  
+ Previous to this release, to set up Conditional Access for a PC, the PC either had to be enrolled in Intune or had to be a domain-joined PC. Beginning with the 1602 update, Conditional Access for PCs managed by Configuration Manager is supported. For your PCs that are managed by Configuration Manager, you can restrict access to Exchange Online and SharePoint Online only to devices that are compliant with the compliance policies you set.  
 
 
 ### Restricting access based on the health of devices  

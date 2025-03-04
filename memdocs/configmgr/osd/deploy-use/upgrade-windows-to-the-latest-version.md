@@ -2,10 +2,10 @@
 title: Windows in-place upgrade
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to upgrade Windows to a later version.
-ms.date: 06/14/2024
+ms.date: 12/19/2024
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
@@ -44,6 +44,7 @@ Only create OS upgrade packages to upgrade to the following OS versions:
 - Windows Server 2016
 - Windows Server 2019
 - Windows Server 2022<!-- 10200029 -->
+- - Windows Server 2025
 
 ### Original version
 
@@ -67,6 +68,7 @@ For more information, see [Windows client upgrade paths](/windows/deployment/upg
 - An earlier version of Windows Server 2016
 - An earlier version of Windows Server 2019
 - An earlier version of Windows Server 2022
+- An earlier version of Windows Server 2025
 
 For more information about Windows Server supported upgrade paths, see [Windows Server 2016 supported upgrade paths](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016) and [Windows Server Upgrade Center](/windows-server/upgrade/upgrade-overview).
 

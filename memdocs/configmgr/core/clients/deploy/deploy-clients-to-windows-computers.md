@@ -2,12 +2,12 @@
 title: Deploy clients to Windows
 titleSuffix: Configuration Manager
 description: Learn how to deploy the Configuration Manager client to Windows computers.
-ms.date: 09/18/2023
+ms.date: 12/04/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: Baladelli
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -319,7 +319,7 @@ After you install the Configuration Manager client, devices don't unenroll from 
 
 ### Install the Configuration Manager client by using Intune
 
-1. In Intune, [add a Windows line-of-business app](../../../../intune/apps/lob-apps-windows.md) that contains the Configuration Manager client installation file **CCMSetup.msi**. You can find this file in the `\bin\i386` folder of the Configuration Manager installation directory on the site server.
+1. In Intune, [add a Windows line-of-business app](../../../../intune-service/apps/lob-apps-windows.md) that contains the Configuration Manager client installation file **CCMSetup.msi**. You can find this file in the `\bin\i386` folder of the Configuration Manager installation directory on the site server.
 
 2. In the Intune Software Publisher, enter command-line parameters. For example, use this command with a traditional client on an intranet:
 
@@ -328,7 +328,7 @@ After you install the Configuration Manager client, devices don't unenroll from 
     > [!NOTE]
     > For an example of a command to use with a Windows client using Microsoft Entra authentication, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).
 
-3. [Assign the app](../../../../intune/apps/apps-deploy.md) to a group of the enrolled Windows computers.
+3. [Assign the app](../../../../intune-service/apps/apps-deploy.md) to a group of the enrolled Windows computers.
 
 ## <a name="BKMK_ClientImage"></a> OS image installation
 

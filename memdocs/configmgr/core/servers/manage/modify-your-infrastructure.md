@@ -5,7 +5,7 @@ description: Make changes or take actions that affect your Configuration Manager
 ms.date: 04/01/2020
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -79,7 +79,7 @@ For example, you install the Configuration Manager console from a site server th
 
 Each time the Configuration Manager console opens:
 
-- Tt determines the configured language settings for the computer
+- It determines the configured language settings for the computer
 - Verifies whether an associated language pack is available for the Configuration Manager console
 - Opens the console by using the appropriate language pack
 

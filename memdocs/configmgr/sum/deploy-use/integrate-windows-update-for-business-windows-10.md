@@ -6,7 +6,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.date: 10/20/2021
-ms.topic: conceptual
+ms.topic: integration
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.localizationpriority: medium
@@ -21,7 +21,7 @@ ms.collection: tier3
 Windows Update for Business (WUfB) allows you to keep Windows 10 or later devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows computers that use WUfB and WSUS for getting software updates.  
 
 > [!WARNING]
-> If you are using co-management for your devices and you have moved the [Windows Update policies](../../comanage/workloads.md#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](/intune/windows-update-for-business-configure).
+> If you are using co-management for your devices and you have moved the [Windows Update policies](../../comanage/workloads.md#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](/mem/intune-service/protect/windows-update-for-business-configure).
 > - If the Configuration Manager client is still installed on the co-managed device then settings for Cumulative Updates and Feature Updates are managed by Intune. However, third-party patching, if enabled in [**Client Settings**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates), is still managed by Configuration Manager.  
 
  Some Configuration Manager features are no longer available when Configuration Manager clients are configured to receive updates from WU, which includes WUfB or Windows Insiders:  
@@ -35,7 +35,7 @@ Windows Update for Business (WUfB) allows you to keep Windows 10 or later device
 
 - Overall Endpoint Protection reporting for Defender based on update compliance status won't return accurate results because of the missing scan data.  
 
-- Configuration Manager won't be able to deploy Microsoft updates, such as Microsoft 365 Apps, IE, and Visual Studio to clients that are connected to WUfB to receive updates.  
+- Configuration Manager won't be able to deploy or report compliance on Microsoft app updates for clients configured to use WUfB to receive updates. This includes updates for Microsoft 365 Apps, Internet Explorer, Edge, and Visual Studio.
 
 - Configuration Manager can still deploy 3rd party updates that are published to WSUS and managed through Configuration Manager to clients that are connected to WUfB to receive updates. If you don't want any 3rd party updates to be installed on clients connecting to WUfB, then disable the client setting named [Enable software updates on clients](../../core/clients/deploy/about-client-settings.md#software-updates).
 

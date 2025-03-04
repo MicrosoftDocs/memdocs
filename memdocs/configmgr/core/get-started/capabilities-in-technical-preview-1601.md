@@ -5,7 +5,7 @@ description: Learn about features available in the Technical Preview for Configu
 ms.date: 01/23/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ROBOTS: NOINDEX
 manager: apoorvseth
@@ -58,9 +58,9 @@ In the 1601 Technical Preview, we have added support for the following features:
 
 ### Improvements to Conditional Access  
 
--   **Conditional access support for PCs that are managed by Configuration Manager**  
+-   **Conditional Access support for PCs that are managed by Configuration Manager**  
 
-     You can now set conditional access policies for PCs managed by Configuration Manager, which will require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  With this new functionality, you can also register PCs with Microsoft Entra ID through the  compliance policy, and to monitor and report on Microsoft Entra registration.  
+     You can now set Conditional Access policies for PCs managed by Configuration Manager, which will require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  With this new functionality, you can also register PCs with Microsoft Entra ID through the  compliance policy, and to monitor and report on Microsoft Entra registration.  
 
     > [!NOTE]  
     >  Conditional Access is not yet supported on Windows 10.  
@@ -73,7 +73,7 @@ In the 1601 Technical Preview, we have added support for the following features:
 
     -   [Prerequisites for Microsoft Entra auto-registration](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
-    To use the option, you must create a compliance policy in Configuration Manager with specific rules described below, and set a conditional access policy in the Intune console.  Also, to make sure only compliant PCs are allowed access, you must set the Windows PC requirement to **Devices must be compliant** option. Following are the compliant policy rules that are applicable to PCs managed by Configuration Manager.  
+    To use the option, you must create a compliance policy in Configuration Manager with specific rules described below, and set a Conditional Access policy in the Intune console.  Also, to make sure only compliant PCs are allowed access, you must set the Windows PC requirement to **Devices must be compliant** option. Following are the compliant policy rules that are applicable to PCs managed by Configuration Manager.  
 
     -   **Require registration in Microsoft Entra ID:** This rule checks if the user's device is  work place joined to Microsoft Entra ID, and if not, the device is automatically registered in Microsoft Entra ID. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [here](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
@@ -86,7 +86,7 @@ In the 1601 Technical Preview, we have added support for the following features:
 
     End-users who are blocked due to noncompliance will view compliance information in the Software Center and will initiate a new policy evaluation when compliance issues are remediated.  
 
--   **Conditional access with Health Attestation Service** You can now restrict access to email and 0365 services based on the health of the devices as reported by the Health Attestation Service.  Additionally, devices that are managed by Intune are included in the device health reports.  
+-   **Conditional Access with Health Attestation Service** You can now restrict access to email and 0365 services based on the health of the devices as reported by the Health Attestation Service.  Additionally, devices that are managed by Intune are included in the device health reports.  
 
     A new compliance rule has been added to the configuration manager console that  allows you to specify if the devices should be allowed or blocked access based on their health status.  To create this rule, open the **Create Compliance Policy Wizard**,  and add a new rule.  Select the **Reported as health by Health Attestation Service** for the  condition, and set the value to **True**.  This will make sure that only devices that are reported as healthy will have access to your company resources. For details about Health Attestation Service and how the health of the devices is reported in Intune, see [Device Health Attestation](capabilities-in-technical-preview-1512.md#bkmk_devicehealth).  
 

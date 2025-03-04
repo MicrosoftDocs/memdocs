@@ -5,7 +5,7 @@ description: Learn about new features available in the Configuration Manager Tec
 ms.date: 06/27/2018
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -215,7 +215,7 @@ For more information, see the following articles:
 
 - [Co-management for Windows 10 devices](../../comanage/overview.md)  
 
-- [What is Microsoft Intune app management?](/intune/app-management)  
+- [What is Microsoft Intune app management?](/mem/intune-service/apps/app-management)  
 
 
 

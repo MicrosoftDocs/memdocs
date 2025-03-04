@@ -5,7 +5,7 @@ description: Learn about features available in the Technical Preview for Configu
 ms.date: 01/23/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 manager: apoorvseth
 ms.author: banreetkaur
@@ -48,7 +48,7 @@ This article introduces the features that are available in the Technical Preview
  The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image it will install a new Configuration Manager client each time.  
 
 ##  <a name="BKMK_Grace"></a> Grace period for required application deployments  
- In some cases, you might want give users more time to install required application deployments beyond any deadlines you configured. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. However, they can still immediately install the application at any time they want.  
+ In some cases, you might want to give users more time to install required application deployments beyond any deadlines you configured. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. However, they can still immediately install the application at any time they want.  
 
  To help solve this problem, you can now define a **grace period** by deploying Configuration Manager client settings to a collection.  
 
@@ -79,7 +79,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 - On the main page of the **Devices** node (not all columns might be visible by default).  
 
 ##  <a name="BKMK_WSFB"></a> Windows Store for Business apps  
- The [Windows Store for Business](https://www.microsoft.com/business-store) is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
+ The Windows Store for Business is where you can find and purchase apps for your organization, individually or in volume. By connecting the store to Configuration Manager, you can manage volume-purchased apps from the Configuration Manager console, for example:  
 
 - You can synchronize the list of purchased apps with Configuration Manager  
 
@@ -111,7 +111,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 3.  In the Windows Store for Business, configure Configuration Manager as the store management tool.  
 
-    1.  Open [https://businessstore.microsoft.com](https://businessstore.microsoft.com/) and sign-in if prompted.  
+    1.  Open Windows Store for Business and sign-in if prompted.  
 
     2.  Accept the terms of use if necessary.  
 

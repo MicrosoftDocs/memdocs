@@ -5,7 +5,7 @@ description: Understand how Package Transfer Manager in Configuration Manager tr
 ms.date: 02/8/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

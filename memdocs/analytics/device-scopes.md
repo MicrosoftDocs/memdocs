@@ -5,7 +5,7 @@ description: Learn about Device scopes as an Advanced Analytics feature in Micro
 ms.date: 01/31/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 # Device scopes in Endpoint analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
 
 Custom device scopes use Scope tags to slice Endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of your enrolled devices.
 
@@ -31,7 +31,7 @@ Custom device scopes are supported on the following Endpoint analytics reports:
 ## Permissions  
 
 Custom device scopes use Intune Scope tags, hence other permissions are required for some actions.
-To create custom device scopes, a user must have the **Roles/Read** [role permission](../intune/fundamentals/create-custom-role.md#custom-role-permissions) and this permission is in the following built-in roles:
+To create custom device scopes, a user must have the **Roles/Read** [role permission](../intune-service/fundamentals/create-custom-role.md#custom-role-permissions) and this permission is in the following built-in roles:
 
 - Endpoint Security Manager
 
@@ -61,7 +61,7 @@ To create custom device scopes:
 The new custom device scope appears in your list of saved device scopes. By default, custom devices scopes are in the *Off* state. To activate custom device scopes, toggle the **State** setting to *On*. Data processing starts for the selected device scope.  
 
 > [!NOTE]
-> Once activated, custom device scopes can take up to 24 hours to process. During this period, custom device scopes that are still processing will not be usable.
+> Once activated, custom device scopes can take up to 24 hours to process. During this period, custom device scopes that are still processing will not be usable. Additionally, custom device scopes require 10 devices at minimum to populate supported reports, otherwise **Insufficient Data** may show when trying to select a custom scope. 
 
 Only the user who created the custom device scopes or a Global administrator can delete the custom device scopes.
 

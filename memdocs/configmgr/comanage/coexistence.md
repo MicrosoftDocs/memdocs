@@ -5,7 +5,7 @@ description: Learn about using a third-party MDM service with Configuration Mana
 ms.date: 10/05/2021
 ms.subservice: co-management
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
@@ -33,7 +33,7 @@ When the Configuration Manager client detects that a third-party MDM service is 
 - Application management, including legacy packages
 - Software update scanning and installation
 - Endpoint protection, the Windows Defender suite of antimalware protection features
-- Compliance policy for conditional access
+- Compliance policy for Conditional Access
 - Device configuration
 - Office Click-to-Run management
 

@@ -4,6 +4,8 @@ groups:
   title: Security Baselines for Windows 10 and later
   prompt: Choose a version
   pivots:
+    - id: mdm-24h2
+      title: Version 24H2
     - id: mdm-23h2
       title: Version 23H2
     - id: mdm-november-2021
@@ -26,10 +28,12 @@ groups:
   title: Microsoft Edge baseline versions
   prompt: Choose a version
   pivots:
-    - id: edge-v112
-      title: Edge v112 (May 2023)
+    - id: edge-v128
+      title: Edge v128 (January 2025)
     - id: edge-v117
       title: Edge v117 (November 2023)
+    - id: edge-v112
+      title: Edge v112 (May 2023)
 
 - id: edge-baseline-versions
   title: Edge baseline versions

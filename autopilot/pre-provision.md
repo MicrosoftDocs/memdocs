@@ -8,7 +8,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 07/23/2024
+ms.date: 09/13/2024
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -33,7 +33,11 @@ With **Windows Autopilot for pre-provisioned deployment**, the provisioning proc
 
 Pre-provisioned deployments use Microsoft Intune in currently supported versions of Windows. Such deployments build on existing Windows Autopilot [user-driven scenarios](user-driven.md) and support user-driven mode scenarios for both Microsoft Entra joined and Microsoft Entra hybrid joined devices.
 
-## Prerequisites
+## Requirements
+
+> [!IMPORTANT]
+>
+> A device can't automatically re-enroll through Windows Autopilot after an initial deployment with pre-provisioning mode. Instead, delete the device record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the Microsoft Intune admin center, select **Devices** > **All devices** > select the devices to delete > **Delete**. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
 
 In addition to [Windows Autopilot requirements](requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
@@ -82,7 +86,7 @@ The pre-provisioning process applies all device-targeted policies from Intune. T
 
 > [!IMPORTANT]
 >
-> Make sure not to target both Win32 and LOB apps to the same device. If both Win32 and LOB apps need to be targeted to the device, consider using [Windows Autopilot device preparation](device-preparation/overview.md). For more information, see [Add a Windows line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-windows).
+> Make sure not to target both Win32 and LOB apps to the same device. If both Win32 and LOB apps need to be targeted to the device, consider using [Windows Autopilot device preparation](device-preparation/overview.md). For more information, see [Add a Windows line-of-business app to Microsoft Intune](/mem/intune-service/apps/lob-apps-windows).
 
 > [!NOTE]
 >

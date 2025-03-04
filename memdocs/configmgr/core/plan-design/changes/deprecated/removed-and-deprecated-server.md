@@ -2,12 +2,12 @@
 title: Deprecated for site servers
 titleSuffix: Configuration Manager
 description: Learn about the products and operating systems that Configuration Manager no longer supports for site servers and database servers.
-ms.date: 08/02/2021
+ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
-author: Banreet
-ms.author: banreetkaur
+ms.topic: article
+author: Baladelli  
+ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -22,6 +22,12 @@ This article describes products and operating systems that are removed from supp
 
 This information may change in the future. It might not include each deprecated feature, product, or OS.
 
+## Client OS
+
+| Operating systems               | Deprecation first announced | Support removed |
+|---------------------------------|-----------------------------|-----------------|
+| Windows 10 22H2                 | Oct 2021                    | Version 2509    |
+
 ## Server OS
 
 | Operating systems               | Deprecation first announced | Support removed |
@@ -33,6 +39,7 @@ This information may change in the future. It might not include each deprecated 
 
 | SQL Server versions | Deprecation first announced | Support removed |
 |---------------------|-----------------------------|-----------------|
+| Sql Server 2014     | Oct 2024                    | Version 2409    |
 | SQL Server 2012     | July 2021<!-- 10092858 -->  | The first release after July 1, 2022 |
 | SQL Server 2008 R2  | July 2015                   | Version 1702    |
 | SQL Server 2008     | July 2015                   | Version 1511    |

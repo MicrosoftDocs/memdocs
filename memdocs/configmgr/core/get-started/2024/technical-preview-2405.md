@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2405.
 ms.date: 06/07/2024
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth

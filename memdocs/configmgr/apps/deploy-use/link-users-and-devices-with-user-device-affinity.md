@@ -5,7 +5,7 @@ description: Link users and devices with user device affinity and automatically 
 ms.date: 04/05/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 ms.author: baladell
 manager: apoorvseth
@@ -140,4 +140,4 @@ When you disable the client setting to **Automatically configure user device aff
 
 ## Next steps
 
-You can also use Microsoft Intune to find the primary use of an enrolled device. For more information, see [Find the primary user of an Intune device](/intune/find-primary-user) in the Intune documentation.
+You can also use Microsoft Intune to find the primary use of an enrolled device. For more information, see [Find the primary user of an Intune device](/mem/intune-service/remote-actions/find-primary-user) in the Intune documentation.

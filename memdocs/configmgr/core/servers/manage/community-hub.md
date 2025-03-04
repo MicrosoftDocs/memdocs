@@ -5,7 +5,7 @@ description: Enable and use Community hub in Configuration Manager
 ms.date: 06/20/2022
 ms.subservice: other
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -190,7 +190,7 @@ If you delete a downloaded report from the **Monitoring** > **Reports** node, th
 When single sign on with multifactor authentication is used, you may not be able to sign in for the following features when using Configuration Manager 2103 and earlier:
 - Community hub
 - Community hub from CMPivot
-- Custom tabs in Software Center that load a website that's subject to conditional access policies
+- Custom tabs in Software Center that load a website that's subject to Conditional Access policies
 
 ## Next steps
 

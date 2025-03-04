@@ -5,7 +5,7 @@ description: Get recommendations for configuring collections and collection eval
 ms.date: 04/13/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: best-practice
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

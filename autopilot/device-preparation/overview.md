@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 02/04/2025
 ms.topic: overview
 ms.collection:
   - M365-modern-desktop
@@ -38,6 +38,7 @@ This article explores the capabilities of the Windows Autopilot device preparati
 
 ## Requirements
 
+- Windows 11, version 24H2 or later.
 - Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
 - Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later.
 
@@ -73,7 +74,7 @@ New features in Windows Autopilot device preparation include:
   - Deployment time.
     For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
 
-- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune/fundamentals/intune-govt-service-description) environments.
+- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune-service/fundamentals/intune-govt-service-description) environments.
 
 ## Capabilities
 
@@ -130,15 +131,17 @@ For Windows Autopilot device preparation:
 - Only applications and PowerShell scripts selected in the Windows Autopilot device preparation profile are deployed during OOBE. Any additional applications or PowerShell scripts assigned to the device group will be deployed after the Windows Autopilot device preparation deployment is complete.
 - For policies, Windows Autopilot device preparation syncs any policies assigned to the device group. However, Windows Autopilot device preparation doesn't track if the policies are applied during the deployment. The policies might be applied either during the deployment or after the deployment is complete.
 
-For more information, see [Enrollment time grouping in Microsoft Intune](/mem/intune/enrollment/enrollment-time-grouping).
+For more information, see [Enrollment time grouping in Microsoft Intune](/mem/intune-service/enrollment/enrollment-time-grouping).
 
 ### Corporate identifiers for Windows
 
-Windows Autopilot device preparation supports the Intune corporate identifier enrollment feature. Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted devices go through Windows Autopilot device preparation. Corporate identifiers for Windows is optional for Windows Autopilot device preparation. Corporate identifiers for Windows isn't required for a Windows Autopilot device preparation deployment to work. For more information, see:
+Windows Autopilot device preparation supports the Intune corporate identifier enrollment feature. Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted devices go through Windows Autopilot device preparation.
 
-- [Identify devices as corporate-owned](/mem/intune/enrollment/corporate-identifiers-add).
-- [What are enrollment restrictions?](/mem/intune/enrollment/enrollment-restrictions-set).
-- [Create device platform restrictions](/mem/intune/enrollment/create-device-platform-restrictions).
+Windows Autopilot device preparation only requires corporate identifiers for Windows if Intune enrollment restrictions are being used to block personal device enrollments. For more information, see:
+
+- [Identify devices as corporate-owned](/mem/intune-service/enrollment/corporate-identifiers-add).
+- [What are enrollment restrictions?](/mem/intune-service/enrollment/enrollment-restrictions-set).
+- [Create device platform restrictions](/mem/intune-service/enrollment/create-device-platform-restrictions).
 
 ## Tutorial
 

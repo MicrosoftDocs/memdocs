@@ -5,7 +5,7 @@ description: Sample queries that show how to join the most common Endpoint Prote
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: c639ace8-52dd-4e91-92fa-e11e56878bd7

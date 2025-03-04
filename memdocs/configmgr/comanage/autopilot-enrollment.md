@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: gowdhamankarthikeyan
 ms.author: gokarthi
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart,aaroncz,frankroj
 manager: apoorvseth
 ms.collection: tier3
 ---
@@ -27,7 +27,7 @@ Now you can configure co-management settings in Intune, which happens during the
 
 You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune co-management settings policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. You do still specify the command-line parameters. This parameter can optionally include the [PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts) property to specify a task sequence.
 
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../../intune/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager client to be installed. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
+If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../../intune-service/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager client to be installed. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
 
 ## Scenarios
 
@@ -83,12 +83,16 @@ The following components are required to support Autopilot into co-management:
 
 - Windows devices running one of the following versions:
 
-  - Windows 11
+    - Windows 11
 
-> [!NOTE]
-  > For Windows 11 devices, if a device has not been targeted with a co-management settings policy, the management authority will be set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Intune will continue to manage all the co-management workloads. To mitigate this, you must create a co-management settings policy and set **automatically install the Configuration Manager client** to **No** and in Advanced settings, keep default settings for **Override co-management policy and use Intune for all workloads.**
+        For Windows 11 devices, if a device has not been targeted with a co-management settings policy, the management authority will be set to Microsoft Intune during the Autopilot process. Installing the Configuration Manager client as Win32 app doesn't change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads. To set the management authority to Configuration Manager, create a co-management settings policy with the following Advanced settings:<br>
+<br>
+        - **Automatically install the Configuration Manager client.**: **No**
+        - **Override co-management policy and use Intune for all workloads.**: **No**
 
-  - At least Windows 10, version 20H2, with the latest cumulative update
+        For additional information, see [Co-management settings: Windows Autopilot with co-management](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500).
+
+    - A [currently supported](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions-by-servicing-option) version of Windows 10.
 
 - Register the device for Autopilot. For more information, see [Windows Autopilot registration overview](/autopilot/registration-overview).
 
@@ -96,11 +100,11 @@ The following components are required to support Autopilot into co-management:
 
   - User-driven scenario only
 
-- A device group in Intune to which you'll assign the co-management settings policy. For more information, see [Add groups to organize users and devices](../../intune/fundamentals/groups-add.md).
+- A device group in Intune to which you'll assign the co-management settings policy. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
 
   You also need to assign the following profiles to the same device group:
 
-  - [Enrollment status page profile](../../intune/enrollment/windows-enrollment-status.md), with the option to **Show app and profile configuration progress**
+  - [Enrollment status page profile](../../intune-service/enrollment/windows-enrollment-status.md), with the option to **Show app and profile configuration progress**
 
   - [Windows Autopilot deployment profile](/autopilot/profiles)
 
@@ -119,7 +123,7 @@ Use these recommendations for a more successful deployment:
     > [!NOTE]
     > The default timeout for the enrollment status page is 60 minutes. You can adjust this value in that policy, if needed, but a faster process may provide a better user experience.
 
-- Don't use this process with other policy providers like the [Intune management extension](../../intune/apps/intune-management-extension.md), which can cause conflicts. Each provider isn't currently aware of others. Either use the co-management policy for the Configuration Manager provider, or use the Intune management extension provider, not both.
+- Don't use this process with other policy providers like the [Intune management extension](../../intune-service/apps/intune-management-extension.md), which can cause conflicts. Each provider isn't currently aware of others. Either use the co-management policy for the Configuration Manager provider, or use the Intune management extension provider, not both.
 
   - If you need to install apps in a specific order, use the co-management policy. Run a task sequence to install the apps.
 
@@ -127,19 +131,27 @@ Use these recommendations for a more successful deployment:
 
 ## Limitations
 
-Autopilot into co-management currently doesn't support the following functionality:
+- [Windows Autopilot device preparation](/autopilot/device-preparation/overview) policy doesn't support Autopilot into co-management. As a result, attempting to install co-management during the device preparation flow might result in failed deployments.
+  
+ - For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Microsoft Intune during the Windows Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads.
 
-- Microsoft Entra hybrid joined devices - If the device is targeted with co-management settings policy, in Microsoft Entra hybrid join scenario, the autopilot provisioning times out during ESP phase.
+    To change the management authority to Configuration Manager, set the following registry key value:<br>
+<br>
+    - Path: **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server**
+    - Value: **ConfigInfo**
+    - REG_SZ: **2**
+    
+    For more information, see [Co-management settings: Windows Autopilot with co-management](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500).
 
-> [!NOTE]
->
-> For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Intune will continue to manage all the co-management workloads. To mitigate this, along with Configuration Manager client installation, registry value **ConfigInfo** in registry path **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server** must be set to **2** which will set the management authority as Configuration Manager.
+- Autopilot into co-management currently doesn't support the following functionality:
 
-- Autopilot pre-provisioning.
+    - Microsoft Entra hybrid joined devices - If the device is targeted with co-management settings policy, in Microsoft Entra hybrid join scenario, the autopilot provisioning times out during ESP phase.
 
-- Workloads switched to **Pilot Intune** with pilot collections. This functionality is dependent upon collection evaluation, which doesn't happen until after the client is installed and registered. Since the client won't get the correct policy until later in the Autopilot process, it can cause indeterminate behaviors.
+    - Autopilot pre-provisioning.
 
-- Clients that authenticate with PKI certificates. You can't provision the certificate on the device before the Configuration Manager client installs and needs to authenticate to the CMG. Microsoft Entra ID is recommended for client authentication. For more information, see [Plan for CMG client authentication: Microsoft Entra ID](../core/clients/manage/cmg/plan-client-authentication.md#azure-ad).
+    - Workloads switched to **Pilot Intune** with pilot collections. This functionality is dependent upon collection evaluation, which doesn't happen until after the client is installed and registered. Since the client won't get the correct policy until later in the Autopilot process, it can cause indeterminate behaviors.
+
+    - Clients that authenticate with PKI certificates. You can't provision the certificate on the device before the Configuration Manager client installs and needs to authenticate to the CMG. Microsoft Entra ID is recommended for client authentication. For more information, see [Plan for CMG client authentication: Microsoft Entra ID](../core/clients/manage/cmg/plan-client-authentication.md#azure-ad).
 
 ## Configure
 
@@ -159,7 +171,7 @@ Use the following process to configure the co-management policy in Intune:
 
     :::image type="content" source="media/intune-comanage-settings.png" alt-text="Co-management settings in Microsoft Intune.":::
 
-1. On the **Assignments** page, select a target _device_ group. For more information, see [Assign user and device profiles in Microsoft Intune](../../intune/configuration/device-profile-assign.md).
+1. On the **Assignments** page, select a target _device_ group. For more information, see [Assign user and device profiles in Microsoft Intune](../../intune-service/configuration/device-profile-assign.md).
 
 1. On the **Review + create** page, review the settings and create the policy.
 

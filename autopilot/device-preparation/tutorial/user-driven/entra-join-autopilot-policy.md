@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 01/14/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -31,7 +31,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 >
 > - **Step 6: Create Windows Autopilot device preparation policy**
 
-- Step 7: [Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
+- Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 
@@ -71,7 +71,7 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
     > [!NOTE]
     >
-    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
 
 1. In the **Assignments** page, select the **Search by group name..** box, and then either select or search for the user group created in [Step 4: Create a user group](entra-join-user-group.md). Make sure to select the user group created in [Step 4: Create a user group](entra-join-user-group.md) and not the device group created in [Step 3: Create a device group](entra-join-device-group.md). Once the correct user group is selected, select **Next**.
 
@@ -123,10 +123,10 @@ In the **Configuration settings** page:
     >
     > The following types of applications are supported for use with Windows Autopilot device preparation:
     >
-    > - [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
-    > - [Win32](/mem/intune/apps/apps-win32-prepare).
-    > - [Microsoft Store](/mem/intune/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-    > - [Microsoft 365](/mem/intune/apps/apps-add-office365).
+    > - [Line-of-business (LOB)](/mem/intune-service/apps/lob-apps-windows).
+    > - [Win32](/mem/intune-service/apps/apps-win32-prepare).
+    > - [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
+    > - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
     >
     > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 
@@ -172,11 +172,11 @@ In the **Configuration settings** page:
 
 If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
-## Next step: Add Windows corporate identifier to device (optional)
+## Next step: Add Windows corporate identifier to device
 
 > [!div class="nextstepaction"]
-> [Step 7: Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
+> [Step 7: Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
 
 > [!NOTE]
 >
-> Adding a [corporate identifier](../../overview.md#corporate-identifiers-for-windows) to the device is an optional step. If corporate identifiers aren't being used, then the next step is to deploy the device.
+> Windows Autopilot device preparation only requires [corporate identifiers for Windows](../../overview.md#corporate-identifiers-for-windows) if Intune enrollment restrictions are being used to block personal device enrollments. If Intune enrollment restrictions aren't being used to block personal device enrollments, then the next step is to deploy the device.

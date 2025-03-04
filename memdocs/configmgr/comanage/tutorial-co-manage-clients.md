@@ -2,7 +2,7 @@
 title: Tutorial&#58; Enable co-management for existing clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows devices with Configuration Manager.
-ms.date: 03/21/2022
+ms.date: 10/18/2024
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: tutorial
@@ -158,7 +158,7 @@ Automatic enrollment also lets users enroll their Windows 10 or later devices to
     > [!NOTE]
     > Some tenants may not have these options to configure.<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft Intune** is how you configure the MDM app for Microsoft Entra ID. **Microsoft Intune Enrollment** is a specific Microsoft Entra app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](../../intune/enrollment/multi-factor-authentication.md).
+    > **Microsoft Intune** is how you configure the MDM app for Microsoft Entra ID. **Microsoft Intune Enrollment** is a specific Microsoft Entra app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](../../intune-service/enrollment/multi-factor-authentication.md).
 
 5. For MDM user scope, select **All**, and then **Save**.  
 
@@ -169,7 +169,7 @@ With hybrid Microsoft Entra set-up and Configuration Manager client configuratio
 When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so. You may need multiple collections since you can assign a different *Pilot group* for each workload.
 
 > [!NOTE]
-> Since devices are enrolled in the Microsoft Intune service based on its Microsoft Entra device token, and not a user token, only the default [Intune enrollment restriction](../../intune/enrollment/enrollment-restrictions-set.md) will apply to the enrollment. 
+> Since devices are enrolled in the Microsoft Intune service based on its Microsoft Entra device token, and not a user token, only the default [Intune enrollment restriction](../../intune-service/enrollment/enrollment-restrictions-set.md) will apply to the enrollment. 
 
 ### Enable co-management for versions 2111 and later
 
@@ -183,4 +183,4 @@ When you enable co-management, you'll assign a collection as a *Pilot group*. Th
 
 - Review the status of co-managed devices with the [Co-management dashboard](how-to-monitor.md)
 - Start getting [immediate value](quickstarts.md#immediate-value) from co-management
-- Use [conditional access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources
+- Use [Conditional Access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources
