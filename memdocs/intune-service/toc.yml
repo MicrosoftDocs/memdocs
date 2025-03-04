@@ -819,10 +819,6 @@ items:
             displayName: ca
           - name: Common ways to use Conditional Access
             href: ./protect/conditional-access-intune-common-ways-use.md
-          - name: Install Exchange on-premises connector
-            href: ./protect/exchange-connector-install.md
-          - name: Create and assign Conditional Access policy
-            href: ./protect/conditional-access-exchange-create.md
           - name: Device-based Conditional Access policy
             href: ./protect/create-conditional-access-intune.md
           - name: App-based Conditional Access
