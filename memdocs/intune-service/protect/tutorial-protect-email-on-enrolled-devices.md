@@ -115,7 +115,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
 ## Create the Conditional Access policy
 
-Next, use the Microsoft Intune admin center to create a Conditional Access policy. You integrate [Conditional Access with Intune](../protect/conditional-access-exchange-create.md) to help control the devices and apps that can connect to your organizations email and resources.
+Next, use the Microsoft Intune admin center to create a Conditional Access policy. You integrate Conditional Access with Intune to help control the devices and apps that can connect to your organizations email and resources.  
 
 The Conditional Access policy will:
 

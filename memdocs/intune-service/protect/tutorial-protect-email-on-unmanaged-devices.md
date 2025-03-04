@@ -122,7 +122,7 @@ The app protection policy for Outlook is created. Next, you'll set up Conditiona
 
 ## Create Conditional Access policies
 
-Next, use the Microsoft Intune admin center to create two Conditional Access policies to cover all device platforms. You integrate [Conditional Access with Intune](../protect/conditional-access-exchange-create.md) to help control the devices and apps that can connect to your organizations email and resources.
+Next, use the Microsoft Intune admin center to create two Conditional Access policies to cover all device platforms. You integrate Conditional Access with Intune to help control the devices and apps that can connect to your organizations email and resources.
 
 - The first policy requires that Modern Authentication clients use the approved Outlook app and multifactor authentication (MFA). Modern Authentication clients include Outlook for iOS and Outlook for Android.
 

@@ -2,12 +2,12 @@
   "redirections": [
 
     {
-      "source_path": "memdocs/intune/protect/conditional-access-exchange-create.md",
+      "source_path": "memdocs/intune-service/protect/conditional-access-exchange-create.md",
       "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "memdocs/intune/protect/exchange-connector-install.md",
+      "source_path": "memdocs/intune-service/protect/exchange-connector-install.md",
       "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
       "redirect_document_id": false
     },

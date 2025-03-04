@@ -34,7 +34,7 @@ ms.collection:
 
 # Common ways to use Conditional Access with Intune
 
-There are two types of Conditional Access policies you can use with Intune: device-based Conditional Access and app-based Conditional Access. To support each, you'll need to configure the related Intune policies. When the Intune policies are in place and deployed, you can then use Conditional Access to do things like allow or block access to Exchange, control access to your network, or integrate with a Mobile Threat Defense solution.
+There are two types of Conditional Access policies you can use with Intune: device-based Conditional Access and app-based Conditional Access. To support each, you need to configure the related Intune policies. When the Intune policies are in place and deployed, you can then use Conditional Access to do things like allow or block access to Exchange, control access to your network, or integrate with a Mobile Threat Defense solution.
 
 The information in this article can help you understand how to use the Intune mobile *device* compliance capabilities and the Intune mobile *application* management (MAM) capabilities.
 
@@ -56,7 +56,7 @@ Device-based Conditional Access policies for Exchange online and other Microsoft
 - Learn more about [Supported browsers with Conditional Access in Microsoft Entra ID](/azure/active-directory/conditional-access/technical-reference#supported-browsers).
 
 > [!NOTE]
-> When you enable Device Based Access for content that users access from browser apps on their Android personally-owned work profile devices, users that enrolled before January 2021 must enable browser access as follows:
+> When you enable Device Based Access for content that users access from browser apps on their Android personally owned work profile devices, users that enrolled before January 2021 must enable browser access as follows:
 >
 > 1. Launch the **Company Portal** app.
 > 2. Go to the **Settings** page from the menu.
@@ -70,7 +70,7 @@ Device-based Conditional Access policies for Exchange online and other Microsoft
 When you configure Conditional Access in the Microsoft Entra admin center, you have two applications to choose from:
 
 1. **Microsoft Intune** - This application controls access to the Microsoft Intune admin center and data sources. Configure grants/controls on this application when you want to target the Microsoft Intune admin center and data sources.
-2. **Microsoft Intune Enrollment** - This application controls the enrollment workflow. Configure grants/controls on this application when you want to target the enrollment process. For more information, see [Require multi-factor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).
+2. **Microsoft Intune Enrollment** - This application controls the enrollment workflow. Configure grants/controls on this application when you want to target the enrollment process. For more information, see [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).
 
 ## Conditional Access based on network access control
 
@@ -128,13 +128,6 @@ Any device used to access Exchange on-premises is checked for compliance when de
 
 When devices don't meet the conditions set, the end user is guided through the process of enrolling the device to fix the issue that is making the device noncompliant.
 
-> [!NOTE]
-> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA). Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Intune admin center, unless you already use an Exchange connector with your subscription.
->
-> If you have an Exchange Connector set up in your environment, your Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
->
-> Hybrid Modern Authentication provides functionality that was previously provided by the Exchange Connector for Intune: Mapping of a device identity to its Exchange record.  This mapping now happens outside of a configuration you make in Intune or the requirement of the Intune connector to bridge Intune and Exchange. With HMA, the requirement to use the ‘Intune' specific configuration (the connector) has been removed.
-
 ### What's the Intune role?
 
 Intune evaluates and manages the device state.
@@ -150,6 +143,4 @@ Exchange server provides API and infrastructure to move devices to quarantine.
 
 [How to configure Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-[Set up app-based Conditional Access policies](app-based-conditional-access-intune-create.md)
-
-[How to create a Conditional Access policy for Exchange on-premises](conditional-access-exchange-create.md)
+[Set up app-based Conditional Access policies](app-based-conditional-access-intune-create.md) 
