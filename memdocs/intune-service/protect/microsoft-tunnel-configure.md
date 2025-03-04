@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/31/2024
+ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -216,6 +216,59 @@ Trusted root certificates must be added to the Tunnel containers when:
 
 1. Copy the trusted root certificate(s) with .crt extension to /etc/mstunnel/ca-trust
 2. Restart Tunnel containers using "mst-cli server restart" and "mst-cli agent restart"
+
+## Change the Tunnel Servers VPN session timeout
+
+You can use the Microsoft Graph Beta and PowerShell to change the Tunnel Server VPN session timeout. By default, the Tunnel Server VPN session will persist for an hour. You can set a shorter session timeout by using a Windows machine and PowerShell to change the session timeout. 
+
+By default, the Tunnel Server VPN session persists for an hour. You can use the Microsoft Graph Beta and PowerShell to set a shorter session timeout of your choice, for example, five or 10 minutes.
+
+### Prerequisites
+
+Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* on a Windows machine. For more information on this prerequisite, see [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation?view=graph-powershell-1.0) in the PowerShell documentation.
+
+
+### PowerShell commands to change the VPN session timeout
+
+On the Windows machine with the Graph module imported use an admin account to run the following PowerShell commands:
+
+1. Connect to Graph using an account with admin permissions:
+
+   ```powershell
+      Connect-MgGraph -Scopes "DeviceManagementConfiguration.ReadWrite.All"
+   ```
+
+2. List Tunnel configurations and copy the ID of the configuration you want to change:
+
+   ```powershell
+   Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration
+   ```
+
+3. Get the details of the configuration (the *AdvancedSettings* field should be empty):
+
+   ```powershell
+   Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId <id> | Format-List
+   ```
+
+4. Create the new setting with a desired value:
+
+   ```powershell
+   $setting = New-Object -TypeName Microsoft.Graph.Beta.PowerShell.Models.MicrosoftGraphKeyValuePair;  $setting.Name = “session-timeout";  $setting.Value = <integer-in-seconds>
+   ```
+
+5. Update the configuration’s AdvancedSettings:
+
+   ```powershell
+   Update-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId <id> -AdvancedSettings @($setting)
+   ```
+
+6. Verify that the AdvancedSettings has been updated:
+
+   ```powershell
+   Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId <id> | Format-List
+   ```
+
+All servers should receive the new configuration within five minutes of teh change. To verify the setting on a server, inspect `/etc/mstunnel/ocserv.conf` for the updated value.
 
 ## Deploy the Microsoft Tunnel client app
 
