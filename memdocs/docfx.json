@@ -114,23 +114,21 @@
     "dest": "memdocs",
     "markdownEngineName": "markdig",
     "rules": {
-        "docs-link-absolute": {
-            "exclude": [
-                "configmgr/core/misc/in-console-documentation.md"
-            ]
-        },
+      "docs-link-absolute": {
+        "exclude": [
+          "configmgr/core/misc/in-console-documentation.md"
+          ]
+      },
       "sensitive-language-bl":{
         "exclude": [
           "intune-service/configuration/android-pulse-secure-per-app-vpn.md"
           ]
       },
-       "sensitive-language-wl":{
+      "sensitive-language-wl":{
         "exclude": [
-          "intune-service/configuration/android-pulse-secure-per-app-vpn.md",
           "intune-service/configuration/android-pulse-secure-per-app-vpn.md"
           ]
       } 
-      
     }
   }
 }
