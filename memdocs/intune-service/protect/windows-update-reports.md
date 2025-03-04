@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/21/2024
+ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -236,6 +236,7 @@ To use the report:
           - The *end of service* for the selected content was reached and it’s no longer offered by Windows Update. For example, the device might have been added to a deployment after the content’s availability expired, or the content reached its end of service date before it could install on the device.
           - The deployment content has been superseded for the device. This can happen when the device is targeted by another deployment that deploys newer content. For example, one deployment targets the Windows 10 device to install version 2004 and a second deployment targets that same device with version 21H1. In this event, 2004 is superseded by the 21H1 deployment and Windows Update cancels the 2004 deployment to the device.
        - **Removed from Deployment** – The update offer was canceled because it was removed from the Deployment by explicit Administrator action.
+       - **Not Supported** - The update was canceled by Windows Update as the device cannot be found in Azure Entra and is an invalid device. This can happen if the device is not Azure Entra joined or does not have a valid Device ID, Global Device ID.
      - **Offering**:
        - **OfferReady** – The update is currently being offered to the device by Windows Update.
 
