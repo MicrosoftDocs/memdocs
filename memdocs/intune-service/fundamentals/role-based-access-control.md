@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/02/2024
+ms.date: 03/04/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -34,16 +34,12 @@ ms.collection:
 
 Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. By [assigning roles](assign-role.md) to your Intune users, you can limit what they can see and change. Each role has a set of permissions that determine what users with that role can access and change within your organization.
 
-<<<<<<< HEAD:memdocs/intune/fundamentals/role-based-access-control.md
-For initial role creation, your account must have the following permission in Microsoft Entra ID:
-=======
 To create, edit, or assign roles, your account must have one of the following roles in Microsoft Entra ID:
->>>>>>> 62b6a92775a160b793b4b10a6906aa124c666d20:memdocs/intune-service/fundamentals/role-based-access-control.md
 
 - **Global Administrator**
 - **Intune Service Administrator** (also known as **Intune Administrator**)
   or
-- Be assigned an Intune role with Role permissions (recommended to ensure least-permissions) 
+- Be assigned an Intune role with Role permissions (recommended to ensure least-permissions)
 
 ## Roles
 
