@@ -225,7 +225,7 @@ By default, the Tunnel Server VPN session persists for an hour. You can use the 
 
 ### Prerequisites
 
-Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* on a Windows machine. For more information on this prerequisite, see [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation?view=graph-powershell-1.0) in the PowerShell documentation.
+Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* on a Windows machine. For more information on this prerequisite, see [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation) in the PowerShell documentation.
 
 
 ### PowerShell commands to change the VPN session timeout
