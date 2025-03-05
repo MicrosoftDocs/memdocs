@@ -117,7 +117,7 @@ Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device en
 
 1. You can **Show** or **Hide** various screens during device activation. For the most seamless enrollment experience, set all screens to **Hide**.
 
-  |Setting |Description  |
+    |Setting |Description  |
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |**Department Name**    |  Appears when users tap <strong>About Configuration</strong> during activation. |
     | **Department Phone**  | Appears when the user selects the <strong>Need Help</strong> button during activation.                                                          |
@@ -131,7 +131,7 @@ Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device en
     |**Apple Pay** | If enabled, Setup Assistant prompts for this service during activation.                                                                 |
     | **Zoom**  |If enabled, Setup Assistant prompts for this service during activation. |
     | **Siri**|If enabled, Setup Assistant prompts for this service during activation.  |
-    | **Diagnostic Data** |If enabled, Setup Assistant prompts for this service during activation. |
+    | **Diagnostic Data** |If enabled, Setup Assistant prompts for this service during activation. |  
 
 1. Choose **Next**.  
    
