@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/10/2021
+ms.date: 03/05/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -48,7 +48,6 @@ This page lists the following details about each app:
 
 * Name: The name of the app, with a link to the app's details page.
 * Publisher: The name of the developer or company that distributed the app. A publisher is typically a software vendor or your organization.  
-* Date Published: The date that the app was made available to download. Publish date could show an app's initial release or an app's most recent update.
 * Status: The current state of the app on your device, which includes available, installed, and installing. 
 * Category: The app's function or purpose, such as featured, engineering, education, and productivity.  
 
@@ -57,8 +56,8 @@ Company Portal doesn't immediately recognize newly added Windows devices. So bef
 
 1. Sign in to https://portal.manage.microsoft.com/devices.
 2. Select **Devices**.
-3. Under the list of devices, you'll see a message that prompts you to identify your device. Tap the message. 
-4. Select your device on the **What device are you using** screen.   
+3. A message appears onscreen that prompts you to identify your device. Tap the message. 
+4. Select your device.   
 
 ### Search and refine   
 
@@ -73,7 +72,7 @@ Select **Refine** to see filter and sort options. Filter the list to show apps w
 * Publish date, oldest or newest  
 
 ## View installed apps  
-From the menu, select **Installed Apps** to view a list of all apps installed on your device.  
+From the menu, select **Downloads & updates** to view a list of all apps installed on your device.  
 
    ![Screenshot of Company Portal website, Installed Apps page.](./media/manage-apps-cpweb/intune-installed-apps-1907.png)  
 
@@ -83,26 +82,17 @@ This page lists the following details about each app:
 * Name: The name of the app, with a link to the app's details page.
 * Assignment type: How the app is assigned and made available to you. See Available and required apps for more details. Your organization can either make an app available for you to install yourself, or they can require and install an app on your device automatically.  
 * Publisher: The name of the developer or company that distributed the app. A publisher is typically a software vendor or your organization.  
-* Date Published: The date that the app was made available to download. Publish date could show an app's initial release or an app's most recent update.
 * Status: The current installation status of the app on your device. Apps can show as installing, installed, and install failed. Required apps could take up to 10 minutes to show an up-to-date status.  
 
-### Search and refine  
-
-Use the search bar to find apps. Search results are sorted automatically by relevancy.  
-
-   ![Screenshot of Company Portal website, Installed Apps, refine options.](./media/manage-apps-cpweb/intune-installed-refine-1907.png)  
+### Refine  
 
 Select **Refine** to see filter and sort options. Filter the list to show apps with specific criteria, including **Types**, **Publishers**, and **Statuses**. Select **Sort** to rearrange the apps by:
 
 * App name, ascending or descending alphabetically  
-* Publisher name, ascending or descending alphabetically  
-* Publish date, oldest or most recent  
-
-Need additional help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* Publisher name, ascending or descending alphabetically    
 
 ### Available and required apps
 Apps are assigned to you by your organization, and labeled as either available or required. The **Installed apps** page shows which apps you have under the **Assignment Type** column. 
-
 
 * Available apps: These apps are selected by your organization, and are appropriate and useful for work or school. They are optional to install, and are the only apps you'll find in the Company Portal to install. 
 
@@ -111,7 +101,7 @@ Apps are assigned to you by your organization, and labeled as either available o
 Apps are made available to you based on your device type. For example, if you're using the Company Portal website on a Windows device, you'll have access to Windows apps, but not iOS apps.  
 
 ## View app details  
-Select an app on the **Apps** or **Installed apps** page to view its details. You'll be taken to **App details**, where you'll find the app's description and requirements. If an app isn't already installed on your device, you can install it from this page. 
+Select an app on the **Apps** or **Downloads & updates** page to view its details. You'll be taken to **App details**, where you'll find the app's description and requirements. If an app isn't already installed on your device, you can install it from this page. 
 
 
    ![Screenshot of Company Portal website, App details page.](./media/manage-apps-cpweb/intune-app-details-1907.png)  
