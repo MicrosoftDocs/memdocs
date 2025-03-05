@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/01/2020
+ms.date: 03/05/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -38,17 +38,17 @@ ms.collection:
 To retrieve logs via the native Console app, you'll need your iOS device, a USB cable, and a Mac running macOS 10.12 or later.   
 
 1. Connect your iOS device to your Mac with the USB cable. 
-2. On your Mac, press **command + Space** and search for Console. You can also find it in **Applications** > **Utilities** > **Console**.  
-3. On your iOS device, you'll be prompted to trust the computer. Select **Trust**. 
-3. In Console, select your iOS device from the **Devices** list. Console begins to gather your logs. 
-4. From the menu, select **Action** > **Include Info Messages** and **Include Debug Messages**.  
-6. Select **Clear** and remove any search queries you may have in Console.  
-7. Open Company Portal on your iOS device and try to reproduce the problem by repeating the steps or actions you took leading up to the problem.              
-8. In the Console toolbar, select **Edit** > **Select All**, and then select **Edit** > **Copy**. 
-9. Paste the log contents in a text editor. 
-10. From the menu, select **Format** > **Make Plain Text**. 
-11. Save the file as a .log file (Example: Contosologs.log) 
+1. On your Mac, press **command + Space** and search for Console. You can also find it in **Applications** > **Utilities** > **Console**.  
+1. On your iOS device, you'll be prompted to trust the computer. Select **Trust**. 
+1. In Console, select your iOS device from the **Devices** list > **Start**. Console begins to gather your logs. 
+1. In the Console menu, select **Action** > **Include Info Messages** and **Include Debug Messages**.  
+1. Select **Clear** and remove any search queries you may have in Console.  
+1. Open Company Portal on your iOS device and try to reproduce the problem by repeating the steps or actions you took leading up to the problem.              
+1. In the Console menu, select **Edit** > **Select All**, and then select **Edit** > **Copy**. 
+1. Paste the log contents in TextEdit.  
+1. From the menu, select **Format** > **Make Plain Text**. 
+1. Save the file as a .log file. Example: Contosologs.log   
 
 ## Next steps
 
-After you save your file, you can send it to your IT support person as an email attachment. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+After you save your file, you can send it to your IT support person as an email attachment. For contact information, check for helpdesk information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) or app.  
