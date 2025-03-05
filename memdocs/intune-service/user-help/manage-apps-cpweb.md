@@ -72,12 +72,7 @@ Select **Refine** to see filter and sort options. Filter the list to show apps w
 * Publish date, oldest or newest  
 
 ## View installed apps  
-From the menu, select **Downloads & updates** to view a list of all apps installed on your device.  
-
-   ![Screenshot of Company Portal website, Installed Apps page.](./media/manage-apps-cpweb/intune-installed-apps-1907.png)  
-
-
-This page lists the following details about each app:  
+From the menu, select **Downloads & updates** to view a list of all apps installed on your device. This page lists the following details about each app:  
 
 * Name: The name of the app, with a link to the app's details page.
 * Assignment type: How the app is assigned and made available to you. See Available and required apps for more details. Your organization can either make an app available for you to install yourself, or they can require and install an app on your device automatically.  
