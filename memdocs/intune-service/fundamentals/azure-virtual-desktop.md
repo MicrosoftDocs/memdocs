@@ -45,7 +45,7 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
   - [Configuration Manager co-management](/configmgr/comanage/overview).
   - [User self-enrollment via Microsoft Entra join](deployment-guide-enrollment-windows.md#byod-user-enrollment).
 - Microsoft Entra joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
-- Under the same tenant as Intune
+- Under the same tenant as Intune and in the same region. 
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
@@ -56,6 +56,10 @@ Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 or Windo
 ## Limitations
 
 There are some limitations to keep in mind when managing Windows 10 Enterprise remote desktops:
+
+### Enrollment
+
+Cross-regional enrollments are not supported, for example an Azure Virtual Desktop created in Asia cannot be enrolled in a European tenant. 
 
 ### Configuration
 
