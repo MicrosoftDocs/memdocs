@@ -24,7 +24,7 @@ When viewing the ConfigMgr client details, you may run across a common error. Us
 <!--7980141-->
 **Error message:** You don’t have access to view this information. Make sure a proper user role is assigned from Intune.
 
-**Possible cause:** The user account needs an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information and it resolves without intervention after a few minutes.
+**Possible cause:** The user account needs an [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information and it resolves without intervention after a few minutes.
 
 ## <a name="bkmk_noinfo"></a> Unable to get device information
 

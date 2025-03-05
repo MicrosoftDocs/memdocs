@@ -5,7 +5,7 @@ description: Learn about how Microsoft collects and uses data from Configuration
 ms.date: 09/04/2018
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

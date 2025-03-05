@@ -5,7 +5,7 @@ description: Set up a lab for evaluating Configuration Manager with simulated re
 ms.date: 09/26/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: Banreet
 manager: apoorvseth
 ms.author: banreetkaur

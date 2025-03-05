@@ -5,7 +5,7 @@ description: Plan how to wake up clients in Configuration Manager using Wake On 
 ms.date: 04/23/2019
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

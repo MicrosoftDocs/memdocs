@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/11/2025
+ms.date: 02/27/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -60,7 +60,7 @@ Date added: *December 4, 2024*
 In Intune's 2411 release, we've updated the backend infrastructure of the Windows Autopilot deployment report for consistency with other Intune reports. With this change, the Windows Autopilot deployment report and the [AutopilotEvents Microsoft Graph API](/graph/api/resources/intune-troubleshooting-devicemanagementautopilotevent) now return 50 records at a time. To show more than 50 records at a time:
 
 - Use the `skipToken` parameter to get additional pages of data with the AutopilotEvents Graph API.
-- Use the [export API](/mem/intune/fundamentals/reports-export-graph-apis) with `reportName` **AutopilotV1DeploymentStatus** to get all records.
+- Use the [export API](/mem/intune-service/fundamentals/reports-export-graph-apis) with `reportName` **AutopilotV1DeploymentStatus** to get all records.
 
 ### DFCI enrollment fails for Professional editions of Windows 11, version 24H2
 
@@ -89,7 +89,7 @@ The Autopilot deployment report was updated to a new infrastructure that doesn't
 
 Date added: *August 21, 2024*
 
-The know issue of [Kiosk device profiles not auto logging in when auto logon was enabled](#kiosk-device-profile-not-auto-logging-in) was previously reported as fixed. However, there are scenarios where the issue might still occur when using autologon with Kiosks and [Assigned Access](/windows/configuration/assigned-access/overview). If multiple reboots or unexpected reboots occur during the Windows out-of-box experience (OOBE) when initially configuring the Kiosk, the autologon entries in the registry might be deleted. The issue is being investigated.
+The known issue of [Kiosk device profiles not auto logging in when auto logon was enabled](#kiosk-device-profile-not-auto-logging-in) was previously reported as fixed. However, there are scenarios where the issue might still occur when using autologon with Kiosks and [Assigned Access](/windows/configuration/assigned-access/overview). If multiple reboots or unexpected reboots occur during the Windows out-of-box experience (OOBE) when initially configuring the Kiosk, the autologon entries in the registry might be deleted. The issue is being investigated.
 
 The following workarounds are available until the issue is resolved:
 
@@ -298,7 +298,7 @@ Devices are enrolled using Autopilot self-deployment mode or pre-provisioning mo
 To resolve this error, use one of the following work around methods:
 
 - Delete the device record in Intune, and then redeploy the device so that it reruns the Autopilot deployment. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
-- Remove the device enrollment restriction for **Windows (MDM)** personally owned devices. For more information, see [Set enrollment restrictions in Microsoft Intune](/mem/intune/enrollment/enrollment-restrictions-set).<!-- MEMDocs #2748 -->
+- Remove the device enrollment restriction for **Windows (MDM)** personally owned devices. For more information, see [Set enrollment restrictions in Microsoft Intune](/mem/intune-service/enrollment/enrollment-restrictions-set).<!-- MEMDocs #2748 -->
 
 For more information on this issue, see [Troubleshooting Windows Autopilot device import and enrollment](troubleshooting-faq.yml#troubleshooting-windows-autopilot-device-import-and-enrollment).
 

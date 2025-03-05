@@ -5,7 +5,7 @@ description: This article provides an overview of the resource performance repor
 ms.date: 08/19/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
@@ -25,7 +25,7 @@ The insights show not only how much your score can improve by upgrading the CPU 
 
 With a Windows 365 license, you get access to this report for the Cloud PCs in your organization.  
 
-However, the report for physical devices is part of Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+However, the report for physical devices is part of Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Prerequisites
 
@@ -162,7 +162,7 @@ For more information, go to:
 
 - [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
 
-- [Use Intune Suite add-on capabilities](../intune/fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
 
 - [Device scopes](device-scopes.md)
 

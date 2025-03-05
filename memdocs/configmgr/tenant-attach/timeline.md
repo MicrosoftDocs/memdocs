@@ -3,7 +3,7 @@ title: Tenant attach - Device timeline
 titleSuffix: Configuration Manager
 description: View the timeline for Configuration Manager devices from the admin center.
 ms.date: 07/11/2022
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: core-infra
 ms.service: configuration-manager
 manager: apoorvseth
@@ -36,7 +36,7 @@ The user account needs the following permissions:
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - The **Read Resource** permission under **Collection** in Configuration Manager.
 - The **Notify Resource** permission under **Collection** in Configuration Manager. <!--7984188-->
-- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
+- An [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 ## Generate events
 

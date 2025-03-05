@@ -5,7 +5,7 @@ description: You can raise Configuration Manager client status messages in the W
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 4a5c2726-4ad8-4f94-95ba-acc24cc61faa
 author: Banreet
 ms.author: banreetkaur

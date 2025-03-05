@@ -5,7 +5,7 @@ description: Learn how to use Configuration Manager to manage update content to 
 ms.date: 02/11/2025
 ms.service: configuration-manager
 ms.subservice: software-updates
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

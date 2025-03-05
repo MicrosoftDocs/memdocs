@@ -5,7 +5,7 @@ description: Learn about features available in the Technical Preview version 170
 ms.date: 09/28/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -115,18 +115,19 @@ Windows Update client policies let you configure deferral policies for Windows 1
 
 ### Remote actions available in Intune on Azure for co-managed devices
 When a Windows 10 device is enabled for co-management, you have the following remote actions available to you from Intune on Azure:  
-- [Factory reset](/mem/intune/remote-actions/devices-wipe#wipe)
-- [Selective wipe](/mem/intune/apps/apps-selective-wipe)
-- [Delete devices](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
-- [Restart device](/mem/intune/remote-actions/device-restart)
-- [Fresh start](/mem/intune/remote-actions/device-fresh-start)
+- [Factory reset](/mem/intune-service/remote-actions/devices-wipe#wipe)
+- [Selective wipe](/mem/intune-service/apps/apps-selective-wipe)
+- [Delete devices](/mem/intune-service/remote-actions/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
+- [Restart device](/mem/intune-service/remote-actions/device-restart)
+- [Fresh start](/mem/intune-service/remote-actions/device-fresh-start)
 
 ### Prepare Intune for co-management
 Before you switch workloads from Configuration Manager to Intune, create the profiles and policies you need in Intune to ensure your devices continue to be protected.
-You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles.    
-<!-- - [Device compliance policies](/mem/intune/protect/compliance-policy-create-windows)  -->
-- [Windows Update client policies](/mem/intune/protect/windows-update-for-business-configure)  
-- [Device configuration profiles](/mem/intune/configuration/device-profile-create)  
+You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles. 
+
+<!-- - [Device compliance policies](/mem/intune-service/protect/compliance-policy-create-windows)  -->
+- [Windows Update client policies](/mem/intune-service/protect/windows-update-for-business-configure)  
+- [Device configuration profiles](/mem/intune-service/configuration/device-profile-create)  
 
 ### Architectural overview for co-management
 The following diagram provides an architectural overview of co-management and how it fits into existing Configuration and Intune infrastructures.
@@ -156,8 +157,8 @@ For example, if you had the following values:
 
 - **URL of cloud management gateway mutual auth endpoint**: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    
 
-   >[!Note]    
-   >Use the **MutualAuthPath** value in the **vProxy_Roles** SQL view for the **URL of cloud management gateway mutual auth endpoint** value.
+   > [!Note]    
+   > Use the **MutualAuthPath** value in the **vProxy_Roles** SQL view for the **URL of cloud management gateway mutual auth endpoint** value.
 
 - **FQDN of management point (MP)**: sccmmp.corp.contoso.com    
 - **Sitecode**: PS1    
@@ -174,7 +175,7 @@ You would use the following command line:
 ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer"
 
 > [!Tip]
->You can find the command-line parameters for your site by using the following steps:     
+> You can find the command-line parameters for your site by using the following steps:     
 > 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.  
 > 2. On the Home tab, in the Manage group, choose **Configure co-management** to open the Co-management Onboarding Wizard.    
 > 3. On the Subscription page, click **Sign In** and sign in to your Intune tenant, and then click **Next**.    
@@ -184,12 +185,12 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 #### New Windows 10 devices
 For new Windows 10 devices, you can use the Autopilot service to configure the out of box experience, which includes joining the device to AD and Microsoft Entra ID, as well as enrolling the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.  
 1. Enable Autopilot for the new Windows 10 devices. For details, see [Overview of Windows Autopilot](/windows/deployment/windows-10-auto-pilot).  
-2. Configure automatic enrollment in Microsoft Entra ID for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/mem/intune/enrollment/windows-enroll).
+2. Configure automatic enrollment in Microsoft Entra ID for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/mem/intune-service/enrollment/windows-enroll).
 3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Microsoft Entra ID](/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 
 #### Windows 10 devices not enrolled in Intune or a Configuration Manager client
 For Windows 10 devices that are not enrolled in Intune or have the Configuration Manager client, you can use automatic enrollment to enroll the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.
-1. Configure automatic enrollment in Microsoft Entra ID for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/mem/intune/enrollment/windows-enroll).  
+1. Configure automatic enrollment in Microsoft Entra ID for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/mem/intune-service/enrollment/windows-enroll).  
 2. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Microsoft Entra ID](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 #### Windows 10 devices enrolled in Intune

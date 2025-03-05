@@ -5,7 +5,7 @@ description: Learn which Windows versions you can use to host a Configuration Ma
 ms.date: 12/19/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 author: Baladelli
 ms.author: baladell
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Some Configuration Manager object properties are implemented as bit
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: b2e8a746-7b57-4381-87a1-c49d9434811a
 author: Banreet
 ms.author: banreetkaur

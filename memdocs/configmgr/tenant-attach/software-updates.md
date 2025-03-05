@@ -7,7 +7,7 @@ ms.service: configuration-manager
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 ms.manager: apoorvseth
-ms.topic: conceptual
+ms.topic: how-to
 ms.localizationpriority: high
 ---
 # Tenant attach: Software updates in the admin center

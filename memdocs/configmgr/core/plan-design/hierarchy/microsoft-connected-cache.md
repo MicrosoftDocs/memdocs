@@ -5,7 +5,7 @@ description: Use your Configuration Manager distribution point as a local cache 
 ms.date: 06/20/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -121,7 +121,7 @@ Connected Cache with Configuration Manager requires an *on-premises* distributio
 
 - The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. Make sure to also allow the endpoints for delivery optimization. For more information, see [Internet access requirements](../network/internet-endpoints.md).
 
-- For co-managed clients and Intune Win32 apps, allow the distribution point to access the endpoints for that scenario. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../../../intune/fundamentals/intune-endpoints.md#network-requirements-for-powershell-scripts-and-win32-apps).
+- For co-managed clients and Intune Win32 apps, allow the distribution point to access the endpoints for that scenario. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../../../intune-service/fundamentals/intune-endpoints.md#network-requirements-for-powershell-scripts-and-win32-apps).
 
 - Clients technically only need access to the distribution point with the Connected Cache. Although it's best to also give clients access to the internet endpoints for the content, in case they need to fall back to the original source.
 
@@ -248,7 +248,7 @@ For Delivery Optimization peer-to-peer:
 
 - For apps managed in Intune, this feature only supports the Intune Win32 app type.
 
-  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Win32 app management in Microsoft Intune](../../../../intune/apps/apps-win32-app-management.md).
+  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Win32 app management in Microsoft Intune](../../../../intune-service/apps/apps-win32-app-management.md).
 
 - Enable co-management, and switch the **Client apps** workload to **Pilot Intune** or **Intune**. For more information, see the following articles:
 
@@ -264,7 +264,7 @@ For Delivery Optimization peer-to-peer:
 
 When you install a Microsoft Connected Cache on a Configuration Manager distribution point, cloud-managed devices can use the on-premises cache. For example, a device that's managed by Intune, but connects to the on-premises network. As long as the device can communicate with the server, the cache is available to deliver content to these devices.
 
-To configure the device to use the Microsoft Connected Cache, configure the **DOCacheHost** policy. Set it to the FQDN or IP address of the Configuration Manager distribution point. For more information on this policy, see [Policy CSP - DeliveryOptimization](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost). To use Intune to configure this policy, use the **Cache server host names** setting. For more information, see [Delivery Optimization settings for Windows devices in Intune](../../../../intune/configuration/delivery-optimization-settings.md#local-server-caching).
+To configure the device to use the Microsoft Connected Cache, configure the **DOCacheHost** policy. Set it to the FQDN or IP address of the Configuration Manager distribution point. For more information on this policy, see [Policy CSP - DeliveryOptimization](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost). To use Intune to configure this policy, use the **Cache server host names** setting. For more information, see [Delivery Optimization settings for Windows devices in Intune](../../../../intune-service/configuration/delivery-optimization-settings.md#local-server-caching).
 
 When you enable this policy for cloud-managed devices, either type of device can request the server to cache content, and either can download the content. If multiple devices request the same content, no matter their management authority, they download supported and available content from the Microsoft Connected Cache.
 

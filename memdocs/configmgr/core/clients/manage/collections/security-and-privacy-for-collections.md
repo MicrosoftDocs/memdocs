@@ -5,7 +5,7 @@ description: Recommendations for security and privacy with collections in Config
 ms.date: 05/05/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

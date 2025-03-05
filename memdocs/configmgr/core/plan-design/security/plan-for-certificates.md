@@ -5,7 +5,7 @@ description: Plan for the use of PKI digital certificates in Configuration Manag
 ms.date: 03/23/2023
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

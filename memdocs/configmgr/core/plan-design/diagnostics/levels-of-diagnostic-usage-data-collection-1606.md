@@ -5,7 +5,7 @@ description: Learn about the levels of diagnostics and usage data that Configura
 ms.date: 12/29/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

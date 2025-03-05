@@ -5,7 +5,7 @@ description: Learn about the collection evaluation process, types, and triggers.
 ms.date: 06/05/2020
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

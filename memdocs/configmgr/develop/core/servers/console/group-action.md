@@ -4,7 +4,7 @@ title: Configuration Manager Group Action
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 3156b487-c303-47d5-990f-8af010326acd
 author: Banreet
 ms.author: banreetkaur

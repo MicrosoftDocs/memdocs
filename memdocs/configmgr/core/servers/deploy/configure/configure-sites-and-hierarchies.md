@@ -5,7 +5,7 @@ description: Consult this checklist to ensure you consider the most common confi
 ms.date: 07/30/2018
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

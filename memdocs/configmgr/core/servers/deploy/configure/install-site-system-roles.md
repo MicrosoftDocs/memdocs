@@ -5,7 +5,7 @@ description: Add site system roles to an existing or new site system server in t
 ms.date: 04/01/2020
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

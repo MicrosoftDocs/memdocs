@@ -5,7 +5,7 @@ description: Design how to use a cloud management gateway (CMG) in your Configur
 ms.date: 03/11/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

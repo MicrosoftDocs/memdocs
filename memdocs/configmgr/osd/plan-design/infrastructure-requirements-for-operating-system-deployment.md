@@ -5,7 +5,7 @@ description: Learn the external and product dependencies and requirements for OS
 ms.date: 09/08/2021
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

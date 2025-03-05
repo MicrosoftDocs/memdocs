@@ -5,7 +5,7 @@ description: Learn about features available in the Technical Preview for Configu
 ms.date: 02/24/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -240,7 +240,7 @@ For more information about certificates in Configuration Manager, see [Introduct
 
 ## New compliance settings for iOS devices
 
-We've added new settings you can use in your configuration items for iOS devices. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager. If you need help with any of these settings, see [iOS policy settings in Microsoft Intune](../../../intune/configuration/device-restrictions-ios.md).
+We've added new settings you can use in your configuration items for iOS devices. These are settings that previously existed in Microsoft Intune in a standalone configuration, and are now available when you use Intune with Configuration Manager. If you need help with any of these settings, see [iOS policy settings in Microsoft Intune](../../../intune-service/configuration/device-restrictions-ios.md).
 
 - **Sync data from managed apps to iCloud**
 - **Handoff to continue activities on other device**

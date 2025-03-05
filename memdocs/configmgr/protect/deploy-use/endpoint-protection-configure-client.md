@@ -5,7 +5,7 @@ description: Learn how to configure custom client settings for Endpoint Protecti
 ms.date: 07/30/2018
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

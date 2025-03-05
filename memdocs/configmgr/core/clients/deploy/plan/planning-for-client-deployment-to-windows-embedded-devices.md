@@ -5,7 +5,7 @@ description: Plan for client deployment to Windows Embedded devices in Configura
 ms.date: 10/11/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

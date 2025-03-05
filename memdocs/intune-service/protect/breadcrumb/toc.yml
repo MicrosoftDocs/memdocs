@@ -1,0 +1,12 @@
+items:
+- name: Microsoft Intune
+  tocHref: /mem/
+  topicHref: /mem/index
+  items:
+  - name: Intune service
+    tocHref: /mem/intune-service/
+    topicHref: /mem/intune-service/
+    items:
+    - name: Protect
+      tocHref: /mem/intune-service/configuration
+      topicHref: /mem/intune-service/protect/index

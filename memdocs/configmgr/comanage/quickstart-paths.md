@@ -5,7 +5,7 @@ description: Understand the prerequisites for the two primary ways for you to se
 ms.date: 10/05/2021
 ms.subservice: co-management
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

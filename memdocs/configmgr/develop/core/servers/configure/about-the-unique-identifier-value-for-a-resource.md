@@ -5,7 +5,7 @@ description: An optional property that reports inventory data for a resource.
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 1fe1e9f1-daed-4df8-bf32-df7258d9a3fe
 author: Banreet
 ms.author: banreetkaur
