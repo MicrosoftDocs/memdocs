@@ -115,23 +115,7 @@ Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device en
 
 1. Under **Department Phone**, enter a phone number. This number appears when users tap the **Need help** button during activation.
 
-1. You can **Show** or **Hide** various screens during device activation. For the most seamless enrollment experience, set all screens to **Hide**.
-
-    |Setting |Description  |
-    |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    |**Department Name**    |  Appears when users tap <strong>About Configuration</strong> during activation. |
-    | **Department Phone**  | Appears when the user selects the <strong>Need Help</strong> button during activation.                                                          |
-    |**Setup Assistant Options** | The following optional settings can be set up later in the iOS/iPadOS <strong>Settings</strong> menu. |
-    |**Passcode** | Prompt for passcode during activation. Always require a passcode for unsecured devices unless access is controlled in some other manner (like kiosk mode that restricts the device to one app). |
-    |**Location Services**   | If enabled, Setup Assistant prompts for the service during activation. |
-    |**Restore** |If enabled, Setup Assistant prompts for iCloud backup during activation.                                                                 |
-    | **iCloud and Apple ID**  | If enabled, Setup Assistant prompts the user to sign in with an Apple ID, and the Apps & Data screen allows the device to be restored from iCloud backup.                         |
-    | **Terms and Conditions**|If enabled, Setup Assistant prompts users to accept Apple's terms and conditions during activation.|
-    |**Touch ID**|If enabled, Setup Assistant prompts for this service during activation. |
-    |**Apple Pay** | If enabled, Setup Assistant prompts for this service during activation.                                                                 |
-    | **Zoom**  |If enabled, Setup Assistant prompts for this service during activation. |
-    | **Siri**|If enabled, Setup Assistant prompts for this service during activation.  |
-    | **Diagnostic Data** |If enabled, Setup Assistant prompts for this service during activation. |  
+1. You can **Show** or **Hide** various screens during device activation. For the most seamless enrollment experience, set all screens to **Hide**.  
 
 1. Choose **Next**.  
    
