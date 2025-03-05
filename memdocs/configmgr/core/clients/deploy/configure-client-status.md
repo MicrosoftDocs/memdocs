@@ -5,7 +5,7 @@ description: Select client status settings in Configuration Manager.
 ms.date: 07/13/2020
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

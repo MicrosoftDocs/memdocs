@@ -44,13 +44,13 @@ This article provides step-by-step guidance for manual registration. For more in
 
 ## Requirements
 
-- [Intune subscription](/mem/intune/fundamentals/licenses).
-- [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment).
+- [Intune subscription](/mem/intune-service/fundamentals/licenses).
+- [Windows automatic enrollment enabled](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment).
 - [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium).
 
 ## Required permissions
 
-Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. A custom Autopilot device manager role can also be created by using [role-based access control (RBAC)](/mem/intune/fundamentals/role-based-access-control). Autopilot device management requires only that all permissions under **Enrollment programs** are enabled, except for the four token management options.
+Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. A custom Autopilot device manager role can also be created by using [role-based access control (RBAC)](/mem/intune-service/fundamentals/role-based-access-control). Autopilot device management requires only that all permissions under **Enrollment programs** are enabled, except for the four token management options.
 
 > [!NOTE]
 >

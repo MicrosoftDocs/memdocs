@@ -5,7 +5,7 @@ description: Some SMS object properties are implemented as bit fields, where ind
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 3abf009f-13f8-4baf-a548-648777a4e2b1
 author: Banreet
 ms.author: banreetkaur

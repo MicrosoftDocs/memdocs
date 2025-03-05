@@ -5,7 +5,7 @@ description: Review this reference to help you prepare to install a Configuratio
 ms.date: 01/04/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

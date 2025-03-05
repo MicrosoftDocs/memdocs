@@ -3,7 +3,7 @@ title: Get started - Create and deploy endpoint security policies from the admin
 titleSuffix: Configuration Manager
 description: Create and deploy endpoint security policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 03/21/2022
-ms.topic: conceptual
+ms.topic: get-started
 ms.subservice: core-infra
 ms.service: configuration-manager
 manager: apoorvseth
@@ -32,7 +32,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 When you enable collections of devices to work with endpoint security policies from Intune, you're configuring devices in those collections to onboard with Microsoft Defender for Endpoint.
 
-[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](../../intune/protect/includes/make-configmgr-collection-available-edr.md)]
+[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](../../intune-service/protect/includes/make-configmgr-collection-available-edr.md)]
 
 ## Next steps
 

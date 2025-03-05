@@ -5,7 +5,7 @@ description: In Configuration Manager, after a software distribution package has
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 879be718-4ce0-46bc-a2e3-161b97f836a5
 author: Banreet
 ms.author: banreetkaur

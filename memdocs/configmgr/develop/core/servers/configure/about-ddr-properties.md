@@ -5,7 +5,7 @@ description: In Configuration Manager, the architecture for a resource is define
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: ec596c8c-868b-4228-8a3c-5e82d20e6c48
 author: Banreet
 ms.author: banreetkaur

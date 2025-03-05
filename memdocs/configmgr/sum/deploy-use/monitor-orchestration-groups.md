@@ -5,7 +5,7 @@ description: Monitor and reset orchestration groups.
 ms.date: 07/11/2022
 ms.service: configuration-manager
 ms.subservice: software-updates
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

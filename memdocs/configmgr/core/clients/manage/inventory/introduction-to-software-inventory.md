@@ -5,7 +5,7 @@ description: Get an introduction to software inventory in Configuration Manager.
 ms.date: 04/29/2019
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

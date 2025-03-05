@@ -83,6 +83,6 @@ Headings are driven by article context. -->
 
    1. Under **Included groups** > **Groups**, ensure that **All devices** is selected, and then select **Next**.
 
-1. In the **Applicability Rules** page, select **Next**. For this tutorial, applicability rules are being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/mem/intune/configuration/device-profile-create#applicability-rules).
+1. In the **Applicability Rules** page, select **Next**. For this tutorial, applicability rules are being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/mem/intune-service/configuration/device-profile-create#applicability-rules).
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then select **Create** to create the domain join profile.

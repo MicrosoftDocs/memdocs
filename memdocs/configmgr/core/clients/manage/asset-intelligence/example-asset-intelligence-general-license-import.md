@@ -5,7 +5,7 @@ description: Use a sample Asset Intelligence general license file to help import
 ms.date: 02/22/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Learn about scores, baselines, and insights in Endpoint Analytics
 ms.date: 10/23/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
@@ -90,4 +90,4 @@ Use the **Add filter** option on tables to display items that match your criteri
 
 ## Next steps
 
-- Use [Remediations](../intune/fundamentals/remediations.md) to gather more data and take action on devices
+- Use [Remediations](../intune-service/fundamentals/remediations.md) to gather more data and take action on devices
