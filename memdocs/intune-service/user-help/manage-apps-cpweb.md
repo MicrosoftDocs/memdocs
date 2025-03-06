@@ -72,7 +72,7 @@ Select **Refine** to see filter and sort options. Filter the list to show apps w
 * Publish date, oldest or newest  
 
 ## View installed apps  
-From the menu, select **Downloads & updates** to view a list of all apps installed on your device. This page lists the following details about each app:  
+From the menu, select **Downloads & updates** to view all apps installed on your device. This page lists the following details about each app:  
 
 * Name: The name of the app, with a link to the app's details page.
 * Assignment type: How the app is assigned and made available to you. See Available and required apps for more details. Your organization can either make an app available for you to install yourself, or they can require and install an app on your device automatically.  
@@ -87,7 +87,7 @@ Select **Refine** to see filter and sort options. Filter the list to show apps w
 * Publisher name, ascending or descending alphabetically    
 
 ### Available and required apps
-Apps are assigned to you by your organization, and labeled as either available or required. The **Installed apps** page shows which apps you have under the **Assignment Type** column. 
+Apps are assigned to you by your organization, and labeled as either available or required. You can see which apps you have under the **Assignment Type** column. 
 
 * Available apps: These apps are selected by your organization, and are appropriate and useful for work or school. They are optional to install, and are the only apps you'll find in the Company Portal to install. 
 
