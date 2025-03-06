@@ -151,15 +151,15 @@ After the Intune Connector for Active Directory is installed, it will start logg
 
 #### Configure the MSA to allow creating objects in OUs (optional)
 
-By default, MSAs only have access to create computer objects in the **Computers** container. MSAs don't have access to create computer objects in Organizational Units (OUs). To allow the MSA to create objects in OUs, the OUs need to be added to the `ODJConnectorEnrollmentWiazard.exe.config` XML file found in `ODJConnectorEnrollmentWizard` directory where the Intune Connector for Active Directory was installed, normally `C:\Program Files\Microsoft Intune\ODJConnector\`.
+By default, MSAs only have access to create computer objects in the **Computers** container. MSAs don't have access to create computer objects in Organizational Units (OUs). To allow the MSA to create objects in OUs, the OUs need to be added to the `ODJConnectorEnrollmentWizard.exe.config` XML file found in `ODJConnectorEnrollmentWizard` directory where the Intune Connector for Active Directory was installed, normally `C:\Program Files\Microsoft Intune\ODJConnector\`.
 
 To configure the MSA to allow creating objects in OUs, follow these steps:
 
 1. On the server where the Intune Connector for Active Directory is installed, navigate to `ODJConnectorEnrollmentWizard` directory where the Intune Connector for Active Directory was installed, normally `C:\Program Files\Microsoft Intune\ODJConnector\`.
 
-1. In the `ODJConnectorEnrollmentWizard` directory, open the `ODJConnectorEnrollmentWiazard.exe.config` XML file in a text editor, for example, **Notepad**.
+1. In the `ODJConnectorEnrollmentWizard` directory, open the `ODJConnectorEnrollmentWizard.exe.config` XML file in a text editor, for example, **Notepad**.
 
-1. In the `ODJConnectorEnrollmentWiazard.exe.config` XML file, add in any desired OUs that the MSA should have access to create computer objects in. The OU name should be the distinguished name and if applicable, needs to be escaped. The following example is an example XML entry with the OU distinguished name:
+1. In the `ODJConnectorEnrollmentWizard.exe.config` XML file, add in any desired OUs that the MSA should have access to create computer objects in. The OU name should be the distinguished name and if applicable, needs to be escaped. The following example is an example XML entry with the OU distinguished name:
 
     ```xml
       <appSettings>
@@ -179,7 +179,7 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
       </appSettings>
     ```
 
-1. Once all desired OUs are added, save the `ODJConnectorEnrollmentWiazard.exe.config` XML file.
+1. Once all desired OUs are added, save the `ODJConnectorEnrollmentWizard.exe.config` XML file.
 
 1. As an administrator that has appropriate permissions to modify OU permissions, open the **Intune Connector for Active Directory** by navigating to **Intune Connector for Active Directory** > **Intune Connector for Active Directory** from the **Start** menu.
 

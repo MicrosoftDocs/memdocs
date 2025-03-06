@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/02/2024
+ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -47,7 +47,7 @@ This feature applies to:
 
 - The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
 
-- Only a Global administrator or Intune administrator in the Intune admin center can onboard TeamViewer.
+- Users must be assigned the Remote assistance connectors/Read and Remote assistance connectors/Update permissions in the Intune admin center to onboard TeamViewer. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 - Use a supported Intune-managed device:
 
