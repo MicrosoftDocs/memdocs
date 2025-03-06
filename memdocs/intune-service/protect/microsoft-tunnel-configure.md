@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2025
+ms.date: 03/06/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -233,7 +233,7 @@ Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* 
 
 On the Windows machine where you've imported the Graph module, use an admin account to run the following PowerShell commands. 
 
-In the following PowerShell commands, replace variables, which appear similar to `<id>`, with the intended value surrounded by double quotes. For example, if the *ID* from step 2 is equal to *12345-abcde-67890-fghij*, the command line for step 3 would appear as 'Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId "12345-abcde-67890-fghij" | Format-List'
+In the following PowerShell commands, replace variables, which appear similar to `<id>`, with the intended value surrounded by double quotes. For example, if the *ID* from step 2 is equal to *12345-abcde-67890-fghij*, the command line for step 3 would appear as `Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId "12345-abcde-67890-fghij" | Format-List`
 
 1. Connect to Graph using an account with admin permissions:
 

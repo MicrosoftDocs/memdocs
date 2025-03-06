@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/02/2024
+ms.date: 03/04/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -39,12 +39,13 @@ To create, edit, or assign roles, your account must have one of the following ro
 - **Global Administrator**
 - **Intune Service Administrator** (also known as **Intune Administrator**)
   or
-- Be assigned an Intune role with Role permissions (recommended to ensure least-permissions) 
+- Be assigned an Intune role with Role permissions (recommended to ensure least-permissions)
 
 ## Roles
 
 A role defines the set of permissions granted to users assigned to that role.
 You can use both the built-in and custom roles. Built-in roles cover some common Intune scenarios. You can [create your own custom roles](create-custom-role.md) with the exact set of permissions you need. Several Microsoft Entra roles have permissions to Intune.
+
 To see a role in the **Intune admin center**, go to **Tenant administration** > **Roles** > **All roles** > choose a role. You can manage the role on the following pages:
 
 - **Properties**: The name, description, permissions, and scope tags for the role.
@@ -123,12 +124,14 @@ You can assign both custom and built-in roles to your users who are administrato
 To see a role assignment, choose **Intune** > **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > choose an assignment. On the **Properties** page, you can edit:
 
 - **Basics**: The assignments name and description.
+
 - **Members**: All users in the listed Azure security groups have permission to manage the users/devices that are listed in Scope (Groups).
+
 - **Scope (Groups)**: Scope Groups are Microsoft Entra security groups of users or devices or both for which administrators in that role assignment are limited to performing operations on. For example, deployment of a policy or application to a user or remotely locking a device. All users and devices in these Microsoft Entra security groups can be managed by the users in Members.
+
 > [!TIP]
 > Limit access to only specified scope groups by **only** selecting the specific security groups for the assignment.  Do not add "Add all users" and "Add all devices" to ensure assignments cannot target all users or all devices.
 
-- 
 - **[Scope Tags](scope-tags.md)**: Users in Members can see the resources that have the same scope tags.
 
 > [!NOTE]
