@@ -83,7 +83,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 We are introducing a new **Update Substate** in Service-side data. This substate is displayed in the reports for devices that are invalid in Microsoft Entra and is known as **Not supported**.
 
-For more information, see [Use Windows Update for Business reports for Windows Updates](../protect/windows-update-reports#use-the-windows-10-feature-updates-organizational-report.md)
+For more information, see [Use Windows Update for Business reports for Windows Updates](../protect/windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report)
 
 ## Week of February 24, 2025  (Service release 2502)
 
