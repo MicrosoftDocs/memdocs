@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/14/2024
+ms.date: 03/06/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -200,25 +200,25 @@ You can use the following device properties in your managed device filter rules:
   For iOS/iPadOS and macOS devices, use the model, not the product name. Only the model is recognized for Apple devices. For example, for iPhone 8 devices, enter the model as `iPhone 8`.
   
   > [!NOTE]
-  > Older iPad Pro models use the double prime symbol (") instead of inch, which will cause filters to not evaluate correctly if using full string value operators. For these models, use partial value operators to ensure that filters evaluate the model as intended. For example, (device.model -contains "iPad Pro 12.9") and (device.model -contains "(2nd generation)") can be used for devices whose model is iPad Pro (12.9")(2nd generation). 
-  
-    Examples:
+  > Older iPad Pro models use the double prime symbol (`"`) instead of inch. If you use full string value operators, this symbol can cause filters to not evaluate correctly. For these models, use partial value operators to ensure that filters evaluate the model as intended. For example, for iPad Pro (12.9")(2nd generation) model devices, you can use `(device.model -contains "iPad Pro 12.9")` and `(device.model -contains "(2nd generation)")`.
+
+  Examples:
 
   - `(device.model -eq "Surface Book 3")`
-- `(device.model -in ["Surface Book 3", "Surface Book 2"])`
-- `(device.model -startsWith "Surface Book")`
-- `(device.model -startsWith "MacBookPro")`
-- `(device.model -startsWith "iPhone 8")`
+  - `(device.model -in ["Surface Book 3", "Surface Book 2"])`
+  - `(device.model -startsWith "Surface Book")`
+  - `(device.model -startsWith "MacBookPro")`
+  - `(device.model -startsWith "iPhone 8")`
 
     This property applies to:
 
   - Android device administrator
-- Android Enterprise
-- Android (AOSP)
-- iOS/iPadOS
-- macOS
-- Windows 11
-- Windows 10
+  - Android Enterprise
+  - Android (AOSP)
+  - iOS/iPadOS
+  - macOS
+  - Windows 11
+  - Windows 10
 
 - **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter a version value (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
 
