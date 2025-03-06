@@ -59,7 +59,7 @@ There are some limitations to keep in mind when managing Windows 10 Enterprise r
 
 ### Enrollment
 
-Cross-regional enrollments are not supported, for example an Azure Virtual Desktop created in Asia cannot be enrolled in a European tenant. 
+Cross-regional enrollments aren't supported, for example an Azure Virtual Desktop created in Asia can't be enrolled in a European tenant. 
 
 ### Configuration
 
@@ -74,7 +74,7 @@ Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](/w
 
 ### Cloning physical and virtual devices
 
-Intune does not support using a cloned image of a computer that is already enrolled. This includes both physical and virtual devices such as Azure Virtual Desktop (AVD). When device enrollment or identity tokens are replicated between devices, Intune device enrollment or synchronization failures will occur.
+Intune doesn't support using a cloned image of a computer that is already enrolled. This includes both physical and virtual devices such as Azure Virtual Desktop (AVD). When device enrollment or identity tokens are replicated between devices, Intune device enrollment or synchronization failures will occur.
 
 - For more information, see [Mobile device enrollment - Windows Client Management](/windows/client-management/mobile-device-enrollment) and [Certificate authentication device enrollment - Windows Client Management](/windows/client-management/certificate-authentication-device-enrollment).
 - For information on disabling token roaming in AVD, see [Using Azure Virtual Desktop multi-session with Microsoft Intune](azure-virtual-desktop-multi-session.md#prerequisites).
