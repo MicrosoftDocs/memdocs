@@ -41,7 +41,7 @@ In this topic, you'll create a user and then assign the user an Intune license. 
 
 ## Sign in to the Microsoft Intune admin center
 
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](users-add.md#types-of-administrators). If you've created an Intune trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). If you've created an Intune trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create a user
 
