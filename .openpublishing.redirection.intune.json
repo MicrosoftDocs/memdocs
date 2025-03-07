@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/copilot/security-copilot-surface-portal.md",
+      "redirect_url": "/mem/intune-service/copilot/security-copilot-surface-portal",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "memdocs/intune/apps/android-deployment-scenarios-app-protection-work-profiles.md",
       "redirect_url": "/mem/intune-service/apps/android-deployment-scenarios-app-protection-work-profiles",
       "redirect_document_id": false
