@@ -161,6 +161,25 @@ To enable the Intune App SDK, follow these steps:
 
    If the '-o' parameter isn't specified, the input file will be modified in-place. The tool is idempotent, and should be rerun whenever changes to the app's Info.plist or entitlements have been made. You should also download and run the latest version of the tool when updating the Intune SDK, in case Info.plist config requirements have changed in the latest release.
 
+> [!NOTE]
+> If you have a SwiftUI app then you need to ensure that `UISceneConfigurations` dictionary within the `UIApplicationSceneManifest` in the Info.pist file is not missing or empty. Failure to configure this setting could prevent the Intune SDK from protecting your app despite app protection policies being applied successfully.
+> If you do not have a specific value set for the `UISceneConfigurations` then you can use this default configuration:
+   >
+   >  ```xml
+   >  <key>UISceneConfigurations</key>
+   >  <dict>
+   >  <key>UIWindowSceneSessionRoleApplication</key>
+   >  <array>
+   >  <dict>
+   >  <key>UISceneConfigurationName</key>
+   >  <string>Default Configuration</string>
+   >  <key>UISceneDelegateClassName</key>
+   >  <string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+   >  </dict>
+   >  </array>
+   >  </dict>  
+   >  ```
+ 
 ### Xcode Build Settings
 The app should have both "Strip Swift Symbols"(STRIP_SWIFT_SYMBOLS) and "Enable Bitcode"(ENABLE_BITCODE) set to NO.
 
