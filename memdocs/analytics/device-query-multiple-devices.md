@@ -54,6 +54,9 @@ Device query for multiple devices is currently only supported on devices running
 
 To use Device query for multiple devices, navigate to the **Devices** pane and select **Device query**. Then, input a query in the query box using the supported properties and supported operators and select **Run** to execute the query. Results are displayed in the **Results** tab area.
 
+> [!TIP]
+> You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#query-multiple-devices).
+
 For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
 
 ## Supported operators
