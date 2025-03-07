@@ -206,6 +206,48 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
 8. If you're using RHEL 8.4 or later, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
+### Configure Podman to use the proxy to download image updates
+
+After installing the Tunnel Gateway server, you can configure Podman to use the proxy to download (pull) updated images for Podman. This configuration is important to enable future upgrades:
+
+1. On the tunnel server, use a command prompt to run the following command to open an editor for the override file for the Microsoft Tunnel service:
+
+   `systemctl edit --force mstunnel_monitor`  
+
+2. Add the following three lines to the file. Replace each instance of *address* with your proxy DN or address, and then save the file. For example, if the *address* of your proxy is `10.10.10.1`  and available on port `3128`, the first line after [Service] might appear as `Environment=”http_proxy=http//10.10.10.1:3128”` and the following line as `Environment=”https_proxy=http//10.10.10.1:3128”`
+
+   ```
+   [Service]
+   Environment="http_proxy=address"
+   Environment="https_proxy=address"
+   ```
+
+3. Next, run the following at the command prompt:
+
+   `systemctl restart mstunnel_monitor`
+
+4. Finally, run the following at the command prompt to confirm the configuration is successful:
+
+   `systemctl show mstunnel_monitor | grep http_proxy`
+
+   If configuration is successful, the results resemble the following information:
+
+   ```
+   Environment="http_proxy=address:port"
+   Environment="https_proxy=address:port"
+   ```
+
+## Update the proxy server in use by the tunnel server
+
+To change the proxy server configuration that is in use by the Linux host of the tunnel server, use the following procedure:
+
+1. On the tunnel server, edit */etc/mstunnel/env.sh* and specify the new proxy server.
+2. Run `mst-cli install`.
+
+   This command rebuilds the containers with the new proxy server details. During this process, you're asked to verify the contents of */etc/mstunnel/env.sh* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
+
+   To confirm both and complete the configuration, enter **yes**.
+
 ## Add trusted root certificates to Tunnel containers
 
 Trusted root certificates must be added to the Tunnel containers when:
