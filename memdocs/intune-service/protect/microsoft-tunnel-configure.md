@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/31/2024
+ms.date: 03/06/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.collection:
 
 # Configure Microsoft Tunnel for Intune
 
-Microsoft Tunnel Gateway installs to a container on a Linux server that runs either on-premises or in the cloud. Depending on your environment and infrastructure, additional configurations and software like Azure ExpressRoute might be needed.
+Microsoft Tunnel Gateway installs to a container on a Linux server that runs either on-premises or in the cloud. Depending on your environment and infrastructure, other configurations and software like Azure ExpressRoute might be needed.
 
 Before you start the installation, be sure to complete the following tasks:
 
@@ -71,13 +71,14 @@ Use of a *Server configuration* lets you create a configuration a single time an
    - **IP ranges to exclude**
 
    > [!NOTE]
-   > Do not use an IP range that specifies 0.0.0.0 in any of the include or exclude addresses, Tunnel Gateway cannot route traffic when this range is used.
+   > Do not use an IP range that specifies 0.0.0.0 in any of the include or exclude addresses. Tunnel Gateway can't route traffic when this range is used.
 
 5. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
 
    > [!NOTE]
-   > By default, each VPN session will stay active for only 3,600 seconds (one hour) before it disconnects (a new session will be established immediately in case the client is set to use Always On VPN).
-   > However, you can modify the session timeout value along with other server configuration settings using [graph calls (microsoftTunnelConfiguration)](/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration).
+   > By default, each VPN session stays active for only 3,600 seconds (one hour) before it disconnects (a new session is established immediately in case the client is set to use Always On VPN).
+   >
+   > However, you can modify the session timeout value along with other server configuration settings by using [graph calls (microsoftTunnelConfiguration)](/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration) For more information, see [Change the Tunnel Servers VPN session timeout](#change-the-tunnel-servers-vpn-session-timeout) later in this article.
 
 ## Create a Site
 
@@ -141,7 +142,7 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
    > [!IMPORTANT]
    >
-   > If you are installing Tunnel to a [rootless Podman container](#use-a-rootless-podman-container), use the the following modified command-line to start the script: `mst_rootless_mode=1 ./mstunnel-setup`
+   > If you're installing Tunnel to a [rootless Podman container](#use-a-rootless-podman-container), use the following modified command-line to start the script: `mst_rootless_mode=1 ./mstunnel-setup`
 
    To see detailed console output during the tunnel and installation agent enrollment process:
 
@@ -210,12 +211,67 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 Trusted root certificates must be added to the Tunnel containers when:
 
 - The outgoing server traffic requires SSL proxy inspection.
-- The endpoints accessed by the Tunnel containers are not exempt from proxy inspection.
+- The endpoints accessed by the Tunnel containers aren't exempt from proxy inspection.
 
 **Steps:**
 
-1. Copy the trusted root certificate(s) with .crt extension to /etc/mstunnel/ca-trust
+1. Copy the trusted root certificates with .crt extension to `/etc/mstunnel/ca-trust`
 2. Restart Tunnel containers using "mst-cli server restart" and "mst-cli agent restart"
+
+## Change the Tunnel Servers VPN session timeout
+
+You can use the Microsoft Graph Beta and PowerShell to change the Tunnel Server VPN session timeout. By default, the Tunnel Server VPN session will persist for an hour. You can set a shorter session timeout by using a Windows machine and PowerShell to change the session timeout. 
+
+By default, the Tunnel Server VPN session persists for an hour. You can use the Microsoft Graph Beta and PowerShell to set a shorter session timeout of your choice, for example, five or 10 minutes.
+
+### Prerequisites
+
+Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* on a Windows machine. For more information on this prerequisite, see [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation) in the PowerShell documentation.
+
+
+### PowerShell commands to change the VPN session timeout
+
+On the Windows machine where you've imported the Graph module, use an admin account to run the following PowerShell commands. 
+
+In the following PowerShell commands, replace variables, which appear similar to `<id>`, with the intended value surrounded by double quotes. For example, if the *ID* from step 2 is equal to *12345-abcde-67890-fghij*, the command line for step 3 would appear as `Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId "12345-abcde-67890-fghij" | Format-List`
+
+1. Connect to Graph using an account with admin permissions:
+
+   ```powershell
+      Connect-MgGraph -Scopes "DeviceManagementConfiguration.ReadWrite.All"
+   ```
+
+2. List the Tunnel configurations, and then copy the ID of the configuration you want to change:
+
+   ```powershell
+   Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration
+   ```
+
+3. Get the details of the configuration (the *AdvancedSettings* field should be empty):
+
+   ```powershell
+   Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId <id> | Format-List
+   ```
+
+4. Create the new setting with a desired value:
+
+   ```powershell
+   $setting = New-Object -TypeName Microsoft.Graph.Beta.PowerShell.Models.MicrosoftGraphKeyValuePair;  $setting.Name = “session-timeout";  $setting.Value = <integer-in-seconds>
+   ```
+
+5. Update the configuration’s AdvancedSettings:
+
+   ```powershell
+   Update-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId <id> -AdvancedSettings @($setting)
+   ```
+
+6. Verify that the AdvancedSettings is updated:
+
+   ```powershell
+   Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId <id> | Format-List
+   ```
+
+All servers should receive the new configuration within five minutes of the change. To verify the setting on a server, inspect `/etc/mstunnel/ocserv.conf` for the updated value.
 
 ## Deploy the Microsoft Tunnel client app
 
@@ -245,14 +301,14 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
 
    > [!NOTE]
    >
-   > *Android Enterprise dedicated* devices aren't supported by the Microsoft Tunnel.
+   > Microsoft Tunnel doesn't support *Android Enterprise dedicated* devices.
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
 4. For *Connection type* select **Microsoft Tunnel**, and then configure the following details:
 
    - **Base VPN**:
-     - For *Connection name*, specify a name that will display to users.
+     - For *Connection name*, specify a name to display to users.
      - For *Microsoft Tunnel Site*, select the Tunnel site that this VPN profile uses.
 
    - **Per-app VPN**:
@@ -269,13 +325,13 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
 
        > [!NOTE]
        >
-       > Proxy server configurations are not supported with versions of Android prior to version 10. For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
+       > Proxy server configurations aren't supported with versions of Android prior to version 10. For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
 
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
    > [!IMPORTANT]
    >
-   > For Android Enterprise devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as a MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. If you do not intend to use any Defender for Endpoint functionality, including web protection, use [custom settings](microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
+   > For Android Enterprise devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as an MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. If you don't intend to use any Defender for Endpoint functionality, including web protection, use [custom settings](microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
 
 5. On the **Assignments** tab, configure groups that will receive this profile.
 
@@ -292,12 +348,12 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
 4. For *Connection type*, select **Microsoft Tunnel** and then configure the following items:
 
    - **Base VPN**:
-     - For *Connection name*, specify a name that will display to users.
+     - For *Connection name*, specify a name to display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile uses.
 
      > [!NOTE]
      >
-     > When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it is crucial to configure the 'On Demand' rules to activate the 'Disconnect on Sleep' setting effectively. Failing to do so will result in both the Tunnel VPN and Defender VPN being disconnected when the iOS device enters sleep mode, while the VPN is turned on.
+     > When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it's crucial to configure the 'On Demand' rules to activate the 'Disconnect on Sleep' setting effectively. Failure to do so results in both the Tunnel VPN and Defender VPN being disconnected when the iOS device enters sleep mode, while the VPN is turned on.
 
    - **Per-app VPN**:  
      To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, iOS ignores your split tunneling rules.
@@ -313,10 +369,10 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
      Configure proxy server details for your environment.
 
 > [!NOTE]  
-> When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it is crucial to configure the 'On-Demand' rules to activate the 'Disconnect on Sleep' setting effectively. To configure the on-demand rule when configuring the Tunnel VPN profile:
+> When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it's crucial to configure the 'On-Demand' rules to activate the 'Disconnect on Sleep' setting effectively. To configure the on-demand rule when configuring the Tunnel VPN profile:
 >
 > 1. On the Configuration setting page, expand the *On-Demand VPN Rules* section.
-> 2. For *On-demand rules* select **Add** to open the *Add Row* pane.
+> 2. For *On-demand rules*, select **Add** to open the *Add Row* pane.
 > 3. On the *Add Row* pane, set *I want to do the following* to **Connect VPN**, and then for *I want to restrict* select a restriction, like **All domains**.
 > 4. Optionally, you can add a URL to the *But only if this URL probe succeeds* field.
 > 5. Select **Save**.
@@ -329,9 +385,9 @@ When you use a single direct proxy server in your environment, you can use a pro
 
 > [!IMPORTANT]
 >
-> The proxy exclusion list is supported only when you use a single proxy direct proxy server. They are not supported in environments where multiple proxy servers are in use.
+> The proxy exclusion list is supported only when you use a single proxy direct proxy server. They aren't supported in environments where multiple proxy servers are in use.
 
-The proxy exclusion list in the VPN profile supports entry of specific domains that are then excluded from your direct proxy configuration for devices that receive and use the profile.
+The proxy exclusion list in the VPN profile supports entry of specific domains to exclude from your direct proxy configuration for devices that receive and use the profile.
 
 The following are supported formats for exclusion list entries:
 
@@ -386,13 +442,13 @@ Use the following information to configure the custom settings in a VPN profile 
 |-------------------|----------------|------------------|
 | TunnelOnly        | **True** – All Defender for Endpoint functionality is disabled. This setting should be used if you're using the app only for Tunnel capabilities. </br></br> **False** *(default)* - Defender for Endpoint functionality is enabled.   | Determines whether the Defender app is limited to only Microsoft Tunnel, or if the app also supports the full set of Defender for Endpoint capabilities. |
 | WebProtection     | **True** *(default)* – Web Protection is enabled, and users can see the web protection tab in the Defender for Endpoint app. </br></br> **False** – Web Protection is disabled. If a Tunnel VPN profile is deployed, users can only see the Dashboard and Tunnel tabs in the Defender for Endpoint app.  |Determines whether Defender for Endpoint Web Protection (anti-phishing functionality) is enabled for the app. By default, this functionality is on. |
-| AutoOnboard       | **True** – If Web Protection is enabled, the Defender for Endpoint app is automatically granted permissions for adding VPN connections without prompting the user. A "Connect VPN" On-Demand rule is required. For more information about On-Demand rules, see Automatic VPN settings. </br></br> **False** *(default)* – If Web Protection is enabled, the user is prompted to allow the Defender for Endpoint app to add VPN configurations.  | Determines whether Defender for Endpoint Web Protection is enabled without prompting the user to add a VPN connection (because a local VPN is needed for Web Protection functionality). This setting only applies if *WebProtection* is set to **True**.   |
+| AutoOnboard       | **True** – If Web Protection is enabled, the Defender for Endpoint app is automatically granted permissions for adding VPN connections without prompting the user. A "Connect VPN" On-Demand rule is required. For more information about On-Demand rules, see Automatic VPN settings. </br></br> **False** *(default)* – If Web Protection is enabled, the user is prompted to allow the Defender for Endpoint app to add VPN configurations.  | Determines whether Defender for Endpoint Web Protection is enabled without prompting the user to add a VPN connection (because Web Protection functionality requires a local VPN). This setting only applies if *WebProtection* is set to **True**.   |
 
 ## Configure TunnelOnly mode to comply with the European Union Data Boundary
 
 By end of calendar year 2022, all personal data, including customer Content (CC), EUII, EUPI, and Support Data must be stored and processed in the European Union (EU) for EU tenants.
 
-The Microsoft Tunnel VPN feature in Defender for Endpoint is European Union Data Boundary (EUDB) compliant. However, while the Defender for Endpoint threat protection components related to logging are not yet EUDB compliant, Defender for Endpoint is part of the [Data Protection Addendum](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) (DPA) and is compliant with the General Data Protection Regulation (GDPR).
+The Microsoft Tunnel VPN feature in Defender for Endpoint is European Union Data Boundary (EUDB) compliant. However, while the Defender for Endpoint threat protection components related to logging aren't yet EUDB compliant, Defender for Endpoint is part of the [Data Protection Addendum](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) (DPA) and is compliant with the General Data Protection Regulation (GDPR).
 
 In the meantime, Microsoft Tunnel customers with EU tenants can enable *TunnelOnly* mode in the Defender for Endpoint Client app. To configure this, use the following steps:
 
@@ -402,7 +458,7 @@ In the meantime, Microsoft Tunnel customers with EU tenants can enable *TunnelOn
 
 By configuring TunnelOnly mode, all Defender for Endpoint functionality is disabled while Tunnel functionality remains available for use in the app.
 
-Guest accounts and Microsoft Accounts (MSA) that are not specific to your organization's tenant are not supported for cross-tenant access using Microsoft Tunnel VPN. This means that these types of accounts cannot be used to access internal resources securely through the VPN. It is important to keep this limitation in mind when setting up secure access to internal resources using Microsoft Tunnel VPN.
+Guest accounts and Microsoft Accounts (MSA) that aren't specific to your organization's tenant aren't supported for cross-tenant access using Microsoft Tunnel VPN. This means that these types of accounts can't be used to access internal resources securely through the VPN. It's important to keep this limitation in mind when setting up secure access to internal resources using Microsoft Tunnel VPN.
 
 For more information about the EU Data Boundary, see [EU Data Boundary for the Microsoft Cloud | Frequently Asked Questions](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/eu-data-boundary-for-the-microsoft-cloud-frequently-asked/ba-p/2329098) on the Microsoft security and compliance blog.
 
@@ -461,18 +517,18 @@ Use of a rootless Podman container requires your environment meet the following 
 **Supported platform**:
 
 - The Linux server must run Red Hat (RHEL) 8.8 or later.
-- The container must run Podman 4.6.1 or later. *Rootless containers are not supported with Docker*.
+- The container must run Podman 4.6.1 or later. *Rootless containers aren't supported with Docker*.
 
 - The rootless container must be installed under the **/home** folder.
 - The **/home** folder must have a minimum of 10 GB of free space.
 
 **Throughput**:
 
-- The peak throughput should not exceed 230Mbps
+- The peak throughput shouldn't exceed 230Mbps
 
 **Network**:
 
-The following network settings, which are not available in a rootless namespace, must be set in **/etc/sysctl.conf**:
+The following network settings, which aren't available in a rootless namespace, must be set in **/etc/sysctl.conf**:
 
 - `net.core.somaxconn=8192`
 - `net.netfilter.nf_conntrack_acct=1`
