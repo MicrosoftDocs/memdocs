@@ -121,8 +121,8 @@ To confirm the presence of the Update Health Tools on a device:
 - Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Services* or *Add Remove Programs* for **Microsoft Update Health Tools**.
 - As an Admin (or from Intune), run the following PowerShell script:
 
-   ```PowerShell
-# Check for the Microsoft Update Health Service; if found, no remediation is needed.
+```PowerShell
+### Check for the Microsoft Update Health Service; if found, no remediation is needed.
 if (Get-Service -Name "Microsoft Update Health Service" -ErrorAction SilentlyContinue) {
     Write-Host "Microsoft Update Health Service is present."
     Exit 0
@@ -130,7 +130,8 @@ if (Get-Service -Name "Microsoft Update Health Service" -ErrorAction SilentlyCon
     Write-Host "Microsoft Update Health Service is missing."
     Exit 1
 }
-   ```
+```
+
 If the script returns a 1, the device has UHS client. If the script returns a 0, the device doesn't have UHS client.
 
 **Device settings**:
