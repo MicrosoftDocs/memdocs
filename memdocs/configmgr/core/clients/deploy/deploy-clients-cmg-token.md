@@ -30,7 +30,7 @@ Clients initially register for these tokens using one of the following two metho
 
 - Bulk registration
 
-The Configuration Manager client together with the management point manage this token, so there's no OS version dependency. This feature is available for any [supported client OS version](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+The Configuration Manager client together with the management point manage this token, so there's no OS version dependency at client level. This feature is available for any [supported client OS version](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 > [!NOTE]
 > These methods only support device-centric management scenarios.
@@ -43,7 +43,7 @@ Make sure to **Enable clients to use a cloud management gateway** in the **Cloud
 
 This method requires the client to first register with the management point on the internal network. Client registration typically happens right after installation. The management point gives the client a unique token that shows it's using a self-signed certificate. When the client roams onto the internet, to communicate with the CMG it pairs its self-signed certificate with the management point-issued token.
 
-The site enables this behavior by default.
+This behavior is enabled by default on the Hierarchy.
 
 > [!NOTE]
 > With an HTTPS management point, the client needs to first register regardless of internet/intranet management point. The client needs to present a valid PKI-issued certificate, a Microsoft Entra token, or a bulk registration token.
@@ -122,7 +122,7 @@ Use with `/new` parameter to specify the token validity period of the token. Spe
 
 Example: `BulkRegistrationTokenTool.exe /lifetime 4320`
 
-## Bulk registration token management
+### Bulk registration token management
 
 You can see previously created bulk registration tokens and their lifetimes in the Configuration Manager console and block their usage if necessary. The site database doesn't, however, store bulk registration tokens.
 
@@ -143,6 +143,20 @@ You can filter or sort on the **Type** column. Identify specific bulk registrati
 2. Expand **Security**, select the **Certificates** node, and select the bulk registration token to block.
 
 3. On the **Home** tab of the ribbon bar or the right-click context menu, select **Block**. To unblock previously blocked bulk registration tokens, select the **Unblock** action.
+
+## Token Signing
+
+The token the client gets the from the Management Point (when registered internally) or when installed using the Bulk token is signed by the *SMS Token Signing Certificate*. 
+This is a self-signed certificate created by the Certificate Manager component using the **SMS Issuing** root certificate. The Configuration Manager-issued token includes the reference of the SMS Token Signing Certificate, apart from other auth headers when sending a request to the Management Point via the CMG.
+
+While it's not typical that the SMS Issuing or the SMS Token Signing Certificate needs to be renewed, there are some uncertain scenarios that can require the certificate be renewed:
+- Certificate is corrupted
+- SMS issuing certificate is renewed
+- Site operating system upgrade, where a [SHA-1 hash algorithm](/azure/security/fundamentals/ocsp-sha-1-sunset) was used to sign the certificate.
+
+> [!NOTE]
+> If the SMS Token Signing Certificate is renewed, clients using the Configuration Manager-issued token won't be able to authenticate until the new token, signed with the newer certificate, is provided.
+
 
 ## Token renewal
 
