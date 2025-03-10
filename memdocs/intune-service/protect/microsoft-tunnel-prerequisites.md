@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/21/2025
+ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,6 +49,16 @@ The following sections detail the prerequisites for the Microsoft Tunnel, and pr
 
 > [!NOTE]
 > Tunnel and Global Secure Access (GSA) cannot be use simultaneously on the same device.
+
+## Government cloud support
+
+Microsoft Tunnel is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+
+Microsoft Tunnel isn’t supported on Microsoft Azure operated by 21Vianet.
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
 ## Linux server
 

@@ -198,7 +198,7 @@ As part of the [Settings Catalog](../configuration/settings-catalog.md), you'll 
 - **Delay In Days**: Specify the number of days that should pass before a deadline is enforced after a new update is released by Apple.
 - **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
 
-Learn more about configuring managed updates through DDM at [Managed software updates] (../protect/managed-software-updates-ios-macos.md).
+Learn more about configuring managed updates through DDM at [Managed software updates](../protect/managed-software-updates-ios-macos.md).
 
 Applies To:
 
