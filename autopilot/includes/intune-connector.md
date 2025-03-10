@@ -137,7 +137,7 @@ After authenticating, the Intune Connector for Active Directory finishes install
 1. In the **Intune Connector for Active Directory** page:
 
     - Confirm that the server is displayed under **Connector name** and shows as **Active** under **Status**
-    - For the updated Intune Connector for Active Directory, make sure the version is greater than **6.2501.2000.5**.
+    - For the updated Intune Connector for Active Directory, make sure the version is greater than or equal to **6.2501.2000.5**.
 
     If the server isn't displayed, select **Refresh** or navigate away from the page, and then navigate back to the **Intune Connector for Active Directory** page.
 
