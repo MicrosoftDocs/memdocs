@@ -1499,7 +1499,7 @@
       "source_path": "memdocs/intune/enrollment/quickstart-enroll-ios-device.md",
       "redirect_url": "/mem/intune-service/enrollment/quickstart-enroll-ios-device",
       "redirect_document_id": false
-    }
+    },
     {
       "source_path": "memdocs/intune/enrollment/quickstart-enroll-windows-device.md",
       "redirect_url": "/mem/intune-service/enrollment/quickstart-enroll-windows-device",
