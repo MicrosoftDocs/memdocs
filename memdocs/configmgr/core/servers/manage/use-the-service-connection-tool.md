@@ -2,7 +2,7 @@
 title: Service connection tool
 titleSuffix: Configuration Manager
 description: Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information.
-ms.date: 10/17/2023
+ms.date: 03/10/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
@@ -234,7 +234,7 @@ Use during the [Prepare](#prepare) phase on the service connection point to expo
 
 ### -proxyserveruri
 
-An optional parameter with the **-connect** parameter to specify the FQDN of your proxy server. For more information, see [-connect](#-connect).
+An optional parameter with the **-connect** parameter to specify the FQDN of your proxy server. If your proxy requires a port other than 80 and you fail to specify it, or specify the wrong port, the tool may fail and report with a `CAB does not contain telemetry data.` error.<!--12414156--> For more information, see [-connect](#-connect).
 
 ### -proxyusername
 
