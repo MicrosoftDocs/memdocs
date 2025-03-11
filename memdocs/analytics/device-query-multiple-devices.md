@@ -54,17 +54,17 @@ Device query for multiple devices is currently only supported on devices running
 
 To use Device query for multiple devices, navigate to the **Devices** pane and select **Device query**. Then, input a query in the query box using the supported properties and supported operators and select **Run** to execute the query. Results are displayed in the **Results** tab area. If you only want to run part of the query, or if you have multiple queries in the query window and only want to run one, you can highlight the query you want to run and select **Run**. Only that query is run.
 
-You can expand the view on the left side to see all the properties that can be queried. Select any one to populate into your query. You can click and drag the edges of both the left side and the query window to make any adjustments.  
+You can expand the view on the left side to see all the properties that can be queried. Select any one to populate into your query. You can select and drag the edges of both the left side and the query window to make any adjustments.  
 
 For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
 
 ## Sample queries
 
-To help you get started, we've provided a series of sample queries. To access the sample queries expand the **example queries** section under the Getting started page, and select the one you want to add to the query window.  The following section shows the list of sample queries.
+To help you get started, some sample queries are provided in this section. To access the sample queries, expand the **example queries** section under the Getting started page, and select the one you want to add to the query window. The following section shows the list of sample queries.
 
 #### Top processors by Core Count
 
-This query lists the top 5 CPU's sorted by core count.
+This query lists the top five CPUs sorted by core count.
 
 '''kusto
 Cpu| project Device, ProcessorId, Model, Architecture, CpuStatus, ProcessorType, CoreCount, LogicalProcessorCount, Manufacturer, AddressWidth| order by CoreCount asc| take 5
@@ -78,9 +78,9 @@ This query lists devices with unencrypted disks.
 EncryptableVolume| where ProtectionStatus != "PROTECTED"| join LogicalDrive
 '''
 
-#### Arm 64 devices
+#### Arm64 devices
 
-This query lists all devices with an ARM 64 processor.
+This query lists all devices with an ARM64 processor.
 
 '''kusto
 Cpu | where Architecture == "ARM64"
@@ -146,7 +146,7 @@ Table operators can be used to filter, summarize, and transform data streams. Th
 | --- | --- |
 | count | Returns a table with a single record containing the number of records. |
 | distinct | Produces a table with the distinct combination of the provided columns of the input table. |
-| join | Merge the rows of two tables to form a new table by matching row for the same device. Only the join types of innerunique, Leftouter, Fullouter, Rightoutre, and inner are supported. It you type in a join type other than these, they are ignored. Join statements support 'on' syntax if joined with Device or Device.Deviceid. Common syntax for join is LeftEntity \| join [hints] (RightEntity) on Conditions. For more info, see [Join](/kusto/query/join-operator) documentation.|
+| join | Merge the rows of two tables to form a new table by matching row for the same device. Only the join types of innerunique, Leftouter, Fullouter, Rightoutre, and inner are supported. If you type in a join type other than the ones supported, they're ignored. Join statements support 'on' syntax if joined with Device or Device.Deviceid. Common syntax for join is LeftEntity \| join [hints] (RightEntity) on Conditions. For more info, see [Join](/kusto/query/join-operator) documentation.|
 | order by | Sort the rows of the input table into order by one or more columns. |
 | project | Select the columns to include, rename or drop, and insert new computed columns. |
 | take | Return up to the specified number of rows. |
@@ -208,7 +208,7 @@ Scalar functions can be used to perform operations on individual values. The fol
 | ago() | Subtracts the given timespan from the current UTC clock time. |
 | bin() | Rounds values down to a number of datetime multiple of a given bin size. |
 | case() | Evaluates a list of predicates and returns the first result expression whose predicate is satisfied. |
-| datetime_add() | Calculates a new datetime from a specified datepart multiplied by a specified amount, added to a specified datetime. Negative values for the amount parameter are not supported. |
+| datetime_add() | Calculates a new datetime from a specified datepart multiplied by a specified amount, added to a specified datetime. Negative values for the amount parameter aren't supported. |
 | datetime_diff() | Calculates the difference between two datetime values. |
 | iif() | Evaluates the first argument and returns the value of either the second or third arguments depending on whether the predicate evaluated to true (second) or false (third). |
 | indexof() | Reports the zero-based index of the first occurrence of a specified string within the input string. |
@@ -285,7 +285,7 @@ DiskDrive | project Device.DeviceId, Manufacturer
 ```
 
 Although the Device entity that is shown as the first column by default appears as device names using Device by itself in a query parses to Device.DeviceId.  
-This query returns results ordered by the DeviceID, not by DeviceName.:
+This query returns results ordered by the DeviceID, not by DeviceName:
 
 ```kusto
 MemoryInfo | order by Device
@@ -311,9 +311,9 @@ Cpu | where Device.DeviceName == ‘Desktop123”
     Cpu | summarize max(Device) by Manufacturer.
     ```
 
-- When writing queries with a join operator, $left and $right parameters show a red underline under $left and $right. However, the query can still run and returns results as expected.  
+- Queries with a join operator, $left and $right parameters show a red underline under $left and $right. However, the query can still run and returns results as expected.  
 
-- A single query can contain a maximum of 3 join operators. Queries with additional joins fail.
+- A single query can contain a maximum of three join operators. Queries with more joins fail.
 
 - A max of ~50,000 records are returned for a query.  
 
@@ -321,6 +321,6 @@ Cpu | where Device.DeviceName == ‘Desktop123”
 
 - A maximum of 1,000 queries can be submitted per month.
 
-- Negative values for the amounts parameter of the datetime_add() function are not supported.  
+- Negative values for the amounts parameter of the datetime_add() function aren't supported.  
 
-- Referencing a variable that has been summarized by an aggregation function throws an error. Explicitly naming the variable allows the query to succeed again. For example, the query Device | summarize dcount(DeviceId) | order by dcount_DeviceId will fail. Device | summarize DCountDeviceIdRename=dcount(DeviceId) | order by DCountDeviceIdRename will succeed.
+- Referencing a variable that has been summarized by an aggregation function throws an error. Explicitly naming the variable allows the query to succeed again. For example, the query Device | summarize dcount(DeviceId) | order by dcount_DeviceId will fail. Device | summarize DCountDeviceIdRename=dcount(DeviceId) | order by DCountDeviceIdRename succeeds.
