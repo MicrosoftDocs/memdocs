@@ -66,73 +66,73 @@ To help you get started, some sample queries are provided in this section. To ac
 
 This query lists the top five CPUs sorted by core count.
 
-'''kusto
+```kusto
 Cpu| project Device, ProcessorId, Model, Architecture, CpuStatus, ProcessorType, CoreCount, LogicalProcessorCount, Manufacturer, AddressWidth| order by CoreCount asc| take 5
-'''
+```
 
 #### Devices with unprotected disks
 
 This query lists devices with unencrypted disks.
 
-'''kusto
+```kusto
 EncryptableVolume| where ProtectionStatus != "PROTECTED"| join LogicalDrive
-'''
+```
 
 #### Arm64 devices
 
 This query lists all devices with an ARM64 processor.
 
-'''kusto
+```kusto
 Cpu | where Architecture == "ARM64"
-'''
+```
 
 #### Device count by processor architecture
 
 This query provides a summary of devices by CPU architecture.
 
-'''kusto
+```kusto
 Cpu| summarize DeviceCount=count() by Architecture  
-'''
+```
 
 #### Top devices by battery capacity
 
 This query lists the top 10 devices by fully charged battery capacity.
 
-'''kusto
+```kusto
 Battery| project Device, InstanceName, Manufacturer, Model, SerialNumber, CycleCount, DesignedCapacity, FullChargedCapacity, FullChargedCapacityPercent = (FullChargedCapacity*100)/DesignedCapacity| top 10 by FullChargedCapacityPercent asc
-'''
+```
 
 #### Devices memory information
 
 This query lists devices with physical and virtual memory in GB.
 
-'''kusto
+```kusto
 MemoryInfo| project Device, PhysicalMemoryGB = PhysicalMemoryTotalBytes/(1000*1000*1000), VirtuaMemoryGB = VirtualMemoryTotalBytes/(1000*1000*1000) | order by PhysicalMemoryGB asc  
-'''
+```
 
 #### Device count by OS version
 
 This query provides a summary of devices by OS version.
 
-'''kusto
+```kusto
 OsVersion| summarize DevicesCount = count() by OsVersion
-'''
+```
 
 #### Devices Bios Information
 
 This query lists devices based on BIOS manufacturer.
 
-'''kusto
+```kusto
 BiosInfo| where Manufacturer contains "Microsoft"
-'''
+```
 
 #### TPM disabled devices
 
 This query lists devices that have TPM disabled.
 
-'''kusto
+```kusto
 Tpm | where Enabled != true
-'''
+```
 
 ## Supported operators
 
