@@ -152,6 +152,7 @@ Table operators can be used to filter, summarize, and transform data streams. Th
 | take | Return up to the specified number of rows. |
 | top | Returns the first N records sorted by the specified columns. |
 | where | Filter a table to the subset of rows that satisfy a predicate. |
+| Summarize | produces a table that aggregates the contents of the input table. |
 
 ### Scalar operators
 
