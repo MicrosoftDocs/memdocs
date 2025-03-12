@@ -25,6 +25,8 @@ landingContent:
             url: 2409/30195272.md
           - text: KB 30833053 CMG installation update for 2409
             url: 2409/30833053.md
+          - text: KB 30385346 Update rollup for Configuration Manager version 2409
+            url: 2409/30385346.md
   - title: Configuration Manager 2403
     linkLists:
       - linkListType: overview
