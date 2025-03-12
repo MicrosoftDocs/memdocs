@@ -198,7 +198,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 <!-- Microsoft Learn documentation: Intune testing -->
 [Microsoft partner]:https://partner.microsoft.com/business-opportunities/why-microsoft
 [Microsoft CDX tenant creation site]:https://cdx.transform.microsoft.com/my-tenants/create-tenant
-[Set up Intune]:/mem/intune-service/fundamentals/setup-steps
+[Set up Intune]:/mem/intune-service/fundamentals/deployment-plan-setup
 [Create users]:/mem/intune-service/fundamentals/users-add
 [Create groups]:/mem/intune-service/fundamentals/groups-add
 [Assign licenses]:/mem/intune-service/fundamentals/licenses-assign
