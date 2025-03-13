@@ -45,6 +45,10 @@ Typically, your organization decides which method to use. Refer to your organiza
 > [!IMPORTANT]
 > We don't sell any data collected by our service to any third parties for any reason.  
 
+</br>
+
+> [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]  
+
 > [!NOTE]
 > If you tried to access your work email in the Mail app, and received a prompt to get your device managed, you're in the right place. Follow the instructions in this article to regain access to your email and other work resources on your iOS device.   
 
@@ -149,6 +153,24 @@ Initiate enrollment on the Intune Company Portal website. For this process, you 
 
 ## Determine based on user choice  
 
+1. Open the Company Portal app on your personal device and sign in with your work or school account.  
+
+1. On the **Set up access** screen, select **Begin.**   
+
+    ![Example screenshot of Company Portal, "Set up access" screen.](./media/enroll-your-device-in-intune-ios/ios-enrollment-checklist-1909.PNG)  
+
+1. Select your device and enrollment type. Tap **I own this device** since you're using a personal device that you brought from home. Then continue to the next step. 
+
+    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, device type options.](./media/enroll-your-device-in-intune-ios/ios-device-type-1909.PNG)  
+
+1. Choose how to protect the data on your device once it's enrolled.  
+
+    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, enrollment type options.](./media/enroll-your-device-in-intune-ios/ios-enrollment-type-1909.PNG)  
+
+    Your options:  
+
+    * Tap **Secure entire device** to secure all apps and data on the device. Then go to [Account driven user enrollment](enroll-your-device-in-intune-ios.md#account-driven-user-enrollment) to finish setup.
+    * Tap **Secure work-related apps and data only** to secure only the apps and data you access with your work account. Then go to [Device enrollment with Company Portal](enroll-your-device-in-intune-ios.md#sdevice-enrollment-with-company-portal).  
 
 ## IT administrator support  
 If you're an IT administrator and run in to problems while enrolling devices, see [Troubleshooting iOS device enrollment problems in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors). This article lists common errors, their causes, and steps to resolve them.  
