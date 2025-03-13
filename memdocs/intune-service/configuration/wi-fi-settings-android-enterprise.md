@@ -292,6 +292,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+      - When using SCEP or PKCS client certificates for authentication(User Certificate), ensure that the {{UserPrincipalName}} attribute is included in the SAN for user certificates. Without {{UserPrincipalName}} in the SAN, the Wi-Fi profile deployment will fail.
 
     - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel​​.
 
