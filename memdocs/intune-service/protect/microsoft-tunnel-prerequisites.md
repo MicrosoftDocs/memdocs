@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/13/2025
+ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,6 +49,16 @@ The following sections detail the prerequisites for the Microsoft Tunnel, and pr
 
 > [!NOTE]
 > Tunnel and Global Secure Access (GSA) cannot be use simultaneously on the same device.
+
+## Government cloud support
+
+Microsoft Tunnel is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+
+Microsoft Tunnel isn’t supported on Microsoft Azure operated by 21Vianet.
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
 ## Linux server
 
@@ -315,10 +325,10 @@ The following considerations can help you configure the Linux server and your en
 
 ### Configure an outbound proxy for Docker
 
-- If you use an internal proxy, you might need to configure the Linux host to use your proxy server by using environment variables. To use the variables, edit the **/etc/environment** file on the Linux server, and add the following lines:
+- If you use an internal proxy, you might need to configure the Linux host to use your proxy server by using environment variables. To use the variables, edit the **/etc/environment** file on the Linux server, and add the following lines, replacing *address* in each line with the address of your proxy IP *address:port*:
 
-  `http_proxy=[address]`  
-  `https_proxy=[address]`
+  `http_proxy=address`  
+  `https_proxy=address`
 
 - Authenticated proxies aren't supported.
 
@@ -394,45 +404,7 @@ The following details can help you configure an internal proxy when using Podman
 
 ### Configure Podman to use the proxy to download image updates
 
-You can configure Podman to use the proxy to download (pull) updated images for Podman:
-
-1. On the tunnel server, use a command prompt to run the following command to open an editor for the override file for the Microsoft Tunnel service:
-
-   `systemctl edit --force mstunnel_monitor`  
-
-2. Add the following three lines to the file. Replace each instance of *[address]* with your proxy DN or address, and then save the file:
-
-   ```
-   [Service]
-   Environment="http_proxy=[address]"
-   Environment="https_proxy=[address]"
-   ```
-
-3. Next, run the following at the command prompt:
-
-   `systemctl restart mstunnel_monitor`
-
-4. Finally, run the following at the command prompt to confirm the configuration is successful:
-
-   `systemctl show mstunnel_monitor | grep http_proxy`
-
-   If configuration is successful, the results resemble the following information:
-
-   ```
-   Environment="http_proxy=address:port"
-   Environment="https_proxy=address:port"
-   ```
-
-### Update the proxy server in use by the tunnel server
-
-To change the proxy server configuration that is in use by the Linux host of the tunnel server, use the following procedure:
-
-1. On the tunnel server, edit */etc/mstunnel/env.sh* and specify the new proxy server.
-2. Run `mst-cli install`.
-
-   This command rebuilds the containers with the new proxy server details. During this process, you're asked to verify the contents of */etc/mstunnel/env.sh* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
-
-   To confirm both and complete the configuration, enter **yes**.
+You can configure Podman to use the proxy to download (pull) updated images for Podman. This configuration is important for future upgrades. Because it must be configured after the Tunnel Gateway is installed, we mention it here, but have added the configuration guidance to [Configure Podman to use the proxy to download image updates](../protect/microsoft-tunnel-configure.md#configure-podman-to-use-the-proxy-to-download-image-updates) in the *Configure Microsoft Tunnel* article as a task to complete after installing the Tunnel Gateway server.
 
 ## Platforms
 

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2025
+ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -53,6 +53,9 @@ Microsoft Tunnel for MAM on iOS/iPadOS is supported with the following sovereign
 
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
+
+Microsoft Tunnel for MAM on iOS/iPadOS isn’t supported on Microsoft Azure operated by 21Vianet.
+
 
 Microsoft Tunnel for MAM on iOS/iPadOS doesn't support Federal Information Processing Standard (FIPS).
 
