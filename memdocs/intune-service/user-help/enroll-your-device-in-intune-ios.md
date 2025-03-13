@@ -95,9 +95,7 @@ For this process, you need:
 - [Intune Company Portal app](https://apps.apple.com/us/app/intune-company-portal/id719171358)(opens the Apple App Store) 
 - Latest version of the Microsoft Authenticator app
 
-1. Open the Company Portal app, and sign in with your work or school account (example: user@contoso.com).  
-
-1. Sign in to the Company Portal app with your work or school account. Example: jojordan@contoso.com  
+1. Open the Company Portal app, and sign in to the Company Portal app with your work or school account. Example: jojordan@contoso.com  
 
 1. On the **How to set up your device** screen, review the enrollment steps and information about what your organization can see and do on an enrolled device. Then select **Get started**.
 
@@ -149,7 +147,7 @@ Initiate enrollment on the Intune Company Portal website. For this process, you 
 
 1. Sign in to a work app, such as Microsoft Teams, with your work account.  
 
-1. Wait while the app identifies required setting updates. For example, you may be required to update your device's operating system before you can use the app. Check the app you're signed into for pending action items. When you're done making changes, select Recheck.
+1. Wait while the app identifies required setting updates. For example, you may be required to update your device's operating system before you can use the app. Check the app you're signed into for pending action items. When you're done making changes, recheck the device settings.
 
 ## Determine based on user choice  
 
@@ -176,6 +174,6 @@ Initiate enrollment on the Intune Company Portal website. For this process, you 
 If you're an IT administrator and run in to problems while enrolling devices, see [Troubleshooting iOS device enrollment problems in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors). This article lists common errors, their causes, and steps to resolve them.  
 
 ## Next steps  
-Find apps that will help you at work or school. Learn [how apps are made available](use-managed-apps-on-your-device-ios.md) to you through Company Portal.  
+Find apps that help you at work or school. Learn [how apps are made available](use-managed-apps-on-your-device-ios.md) to you through Company Portal.  
 
 Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
