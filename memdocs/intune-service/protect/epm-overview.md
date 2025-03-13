@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/01/2024
+ms.date: 01/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -75,8 +75,8 @@ Endpoint Privilege Management supports the following operating systems:
 > [!IMPORTANT]
 >
 > - Elevation settings policy will show as not applicable for devices that don't run a supported operating system version.
-> - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures. Windows on ARM is not currently supported.
-> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+> - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures. This support includes ARM 64-bit devices.
+> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ## Government cloud support
 
