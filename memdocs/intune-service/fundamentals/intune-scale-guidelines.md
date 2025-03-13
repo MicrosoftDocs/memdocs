@@ -45,6 +45,9 @@ Each local admin can set up groups to suit their organizational needs. The local
 
 - **Local admins**: The local admins are local and focus on policies and profiles for their specific locations; schools, hospitals and so on.
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. Using accounts with lower permissions helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 ## Role based access control
 
 This section briefly describes the different models and proposes guidelines under each model for managing policies, profiles, and apps between the Central team and the local admins. The models are:
@@ -108,7 +111,7 @@ In the devolved model, multiple local admins (children) are managed both by thei
 
 - If there are fewer than 50 children admins, the intermediate local admin team may be granted access by assigning all the children's scope tags to the intermediate local admin teams RBAC role assignment.
 - If there are more than 50 children admins, the intermediate local admin team should be granted their own scope tag to represent the entire collection of children admins they oversee.
-- Newly created policies under the children admin's scope tags must have the intermediate tag added by a global admin role to prevent the intermediate local admin team from losing visibility.
+- Newly created policies under the children admin's scope tags must have the intermediate tag added by a user with an appropriate role to prevent the intermediate local admin team from losing visibility.
 
 ### Hybrid model  
 
