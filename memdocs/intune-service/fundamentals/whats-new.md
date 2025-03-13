@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2025
+ms.date: 03/17/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of March 17, 2025
+
+### Microsoft Intune Suite
+
+#### Endpoint Privilege Manager support for ARM 64-bit devices<!-- 28313554 -->
+ 
+[Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) now supports managing file elevations on devices that run on ARM 64-bit architecture.
+ 
+Applies to:
+ 
+- Windows
+
+
 ## Week of March 03, 2025
 
 ### Monitor and troubleshoot
