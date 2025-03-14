@@ -79,7 +79,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Intune apps
 
-#### Newly available protected apps for Intune<!-- 31070614, 31093579, 31093668, 31187306 wndraft -->
+#### Newly available protected apps for Intune<!-- 31070614, 31093579, 31093668, 31187306 -->
 
 The following protected apps are now available for Microsoft Intune:
 
@@ -89,7 +89,6 @@ The following protected apps are now available for Microsoft Intune:
 - Lemur Pro for Intune by Critigen LLC (iOS)
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
 
 ## Week of March 03, 2025
 
