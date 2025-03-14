@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2025
+ms.date: 03/20/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,22 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of March 17, 2025  (Service release 2503)
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 31070614, 31093579, 31093668, 31187306 wndraft -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- FacilyLife by Apleona GmbH (iOS)
+- Intapp 2.0 by Intapp, Inc. (Andriod)
+- DealCloud by Intapp, Inc. (Andriod)
+- Lemur Pro for Intune by Critigen LLC (iOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+
 ## Week of March 03, 2025
 
 ### Monitor and troubleshoot
