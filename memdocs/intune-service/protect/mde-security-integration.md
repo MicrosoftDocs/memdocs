@@ -334,21 +334,22 @@ In the Microsoft Defender portal, as a security administrator:
 2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
 
    > [!TIP]
-   >
    > Use the proper device tags to test and validate your rollout on a small number of devices.
-   >
+   > 
    > When you deploy to the *All devices* group, any device that falls into the scope configured will automatically be enrolled.
-   >
+   > 
    > While most devices complete enrollment and apply assigned policy within a few minutes, a device can sometimes take up to 24 hours to complete enrollment.
-
+   
+   > [!IMPORTANT]
+   > Dynamic asset rules are not currently supported for this task. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
+   
 3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
 
-   :::image type="content" source="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft Defender portal." lightbox="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" :::
-
+   :::image type="content" source="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft Defender portal." lightbox="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png":::
+   
    > [!TIP]
-   >
    > To ensure your Microsoft Defender portal users have consistent permissions across portals, if not already provided, request that your IT administrator grants them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](../fundamentals/role-based-access-control.md).
-
+   
 ### Configure Intune
 
 In the Microsoft Intune admin center, your account needs permissions equal to Endpoint Security Manager built-in Role based access control (RBAC) role.
@@ -566,4 +567,5 @@ If you previously had a third-party security tool on the machine and are now man
 ## Related content
 
 - [Monitor Defender for Endpoint in Intune](advanced-threat-protection-monitor.md)
+
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
