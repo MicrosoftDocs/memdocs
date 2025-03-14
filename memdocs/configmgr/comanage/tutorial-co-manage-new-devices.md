@@ -90,6 +90,8 @@ About this certificate:
 
 ### Identify a unique name for your cloud management gateway in Azure
 
+we are no longer allowing customers to opt-in for classic cloud services CMG, this area should be updated with VMSS based CMG information for users to understand them easily.
+
 When you request the CMG server authentication certificate, you specify what must be a unique name to identify your cloud service (classic) in Azure. By default, the Azure public cloud uses *cloudapp.net*, and the CMG is hosted within the *cloudapp.net* domain as *\<YourUniqueDnsName>.cloudapp.net*.  
 
 > [!TIP]  
