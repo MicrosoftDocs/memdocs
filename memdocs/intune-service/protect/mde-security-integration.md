@@ -331,7 +331,7 @@ In the Microsoft Defender portal, as a security administrator:
    >
    > If you have the *Manage security settings in Security Center* permission in the Microsoft Defender portal, and are simultaneously enabled to view devices from all Device Groups (no [role-based access control](/microsoft-365/security/defender-endpoint/rbac) limits on your user permissions), you can also perform this action.
 
-1. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
+2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
 
    > [!TIP]
    > Use the proper device tags to test and validate your rollout on a small number of devices.
@@ -341,9 +341,9 @@ In the Microsoft Defender portal, as a security administrator:
    > While most devices complete enrollment and apply assigned policy within a few minutes, a device can sometimes take up to 24 hours to complete enrollment.
    
    > [!IMPORTANT]
-   > Dynamic asset rules are not currently supported for this task. Please refer to [create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules) for more information.
+   > Dynamic asset rules are not currently supported for this task. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
    
-1. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
+3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
 
    :::image type="content" source="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft Defender portal." lightbox="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png":::
    
