@@ -113,7 +113,7 @@ Send Task response message <BgbResponseMessage TimeStamp="2020-01-21T15:43:43Z">
 
 ### <a name="bkmk_noauth"></a> Unauthorized to perform client action
 
-If the admin doesn't have the required permissions in Configuration Manager, you'll see an `Unauthorized` response in the **CMGatewayNotificationWorker.log**.
+If the account that is logged into the Endpoint Admin Center doesn't have the required permissions in Configuration Manager, you'll see an `Unauthorized` response in the **CMGatewayNotificationWorker.log**.
 
 ```text
 Received new notification. Validating basic notification details..
@@ -126,6 +126,11 @@ Ensure the user running the action from the Microsoft Intune admin center has th
 
 
 ## Known issues
+
+### Unhealthy Connector
+When you view the Microsoft Endpoint Configuration Maanger Connector in the Endpoint Admin Center > **Tenant Administration** > **Connectors and tokens** and it is showing as unhealthy or unknown you can delete the connector and this will sometimes resolve the issue. You will need to wait a couple of hours for the connector to be deleted and then a new connector should automatically be created. Do not change any of the Teanant Attach condfiguration in the Configuraton Manager Console.
+
+![image](https://user-images.githubusercontent.com/53306271/208945233-03d2f271-30bb-4b4a-b2e9-f69aeb27e1c4.png)
 
 ### Data synchronization failures
 
