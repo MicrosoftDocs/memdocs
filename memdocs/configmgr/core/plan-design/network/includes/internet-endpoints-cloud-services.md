@@ -50,7 +50,7 @@ The CMG connection point needs access to the following endpoints:
 
 | Type               | Azure public cloud                     | Azure US Government cloud               |
 |--------------------|----------------------------------------|-----------------------------------------|
-| _Service_ name     | `<prefix>.<region>.cloudapp.azure.com` | `<prefix>.usgovcloudapp.net`            |
+| _Service_ name     | `<prefix>.<region>.cloudapp.azure.com` | `<prefix>.<region>.usgovcloudapi.net`            |
 | Storage endpoint 1 | `<prefix>.blob.core.windows.net`       | `<prefix>.blob.core.usgovcloudapi.net`  |
 | Storage endpoint 2 | `<prefix>.table.core.windows.net`      | `<prefix>.table.core.usgovcloudapi.net` |
 | Key vault          | `<prefix>.vault.azure.net`             | `<prefix>.vault.usgovcloudapi.net`      |
