@@ -163,7 +163,6 @@ Both the Device Control template and Settings Catalog support the following opti
 
 - Device Control is enabled
 - Device Control is disabled (Default) 
-- 
 
 Applies to:
 
