@@ -294,4 +294,3 @@ To learn how to add apps for each platform to Intune, see:
 - [Built-in apps](apps-add-built-in.md)
 - [Win32 apps](apps-win32-add.md)
 - [Enterprise App Catalog app (Win32)](apps-add-enterprise-app.md)
-- 
