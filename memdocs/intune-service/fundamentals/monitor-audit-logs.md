@@ -7,7 +7,7 @@ keywords:
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 08/14/2024
+ms.date: 03/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -88,7 +88,7 @@ For more information about this feature, including the prerequisites, go to [sen
 
 ## Use Graph API to retrieve audit events
 
-You can also use Graph API to get one year of audit events. For more information, go to [List auditEvents](/graph/api/intune-auditing-auditevent-list).
+You can also use Graph API to get two years of audit events. For more information, go to [List auditEvents](/graph/api/intune-auditing-auditevent-list).
 
 ## Related articles
 
