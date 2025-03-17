@@ -118,6 +118,18 @@ landingContent:
       - text: Remove device from Company Portal for macOS 
         url: unenroll-your-device-from-intune-macos.md
 
+    # Card (optional)
+  - title: Get apps for work or school  
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Get apps for Android  
+        url: use-managed-apps-on-your-device-android.md 
+      - text: Get apps for iOS
+        url: use-managed-apps-on-your-device-ios.md
+      - text: Manage apps from the Company Portal website
+        url: manage-apps-cpweb.md
+  
   # Card (optional)
   - title: Update device settings 
     linkLists:
