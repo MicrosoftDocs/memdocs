@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2025
+ms.date: 03/17/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of March 17, 2025
+
+### Device management
+
+#### Copilot assistant for device query<!-- 26933762 -->
+You can now use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**. For more information, see [Query with Copilot in device query](../copilot/copilot-intune-overview.md#query-with-copilot-in-device-query).
+
 ## Week of March 03, 2025
 
 ### Monitor and troubleshoot
@@ -163,7 +170,6 @@ Both the Device Control template and Settings Catalog support the following opti
 
 - Device Control is enabled
 - Device Control is disabled (Default) 
-- 
 
 Applies to:
 
