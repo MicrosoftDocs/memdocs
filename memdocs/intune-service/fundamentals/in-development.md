@@ -61,14 +61,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Endpoint Privilege Management support for Arm64<!-- 28313554 -->
-
-You'll soon be able to use [Endpoint Privilege Management](/mem/intune-service/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
-
-Applies to:
-
-- Windows
-
 ### Endpoint Privilege Management elevation rule support for file arguments and parameters<!--28077130 -->
 
 Soon, the file elevation rules for Endpoint Privilege Management (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
