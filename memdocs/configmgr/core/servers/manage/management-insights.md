@@ -197,8 +197,6 @@ For more information on these insights, see [Remediation steps for Configuration
 > [!TIP]
 >
 > If you're already a customer of Microsoft Unified or Microsoft Premier, sign in to the [Services Hub](https://serviceshub.microsoft.com/assessments/) for additional on-demand assessments.
->
-> For more information about Microsoft Services, see [Support Solutions](https://www.microsoft.com/industrysolutions).
 
 ### Deprecated and unsupported features
 
