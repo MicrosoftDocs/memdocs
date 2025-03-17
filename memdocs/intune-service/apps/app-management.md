@@ -91,7 +91,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
 <sup>4</sup> Intune doesn't provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience).<br> 
 <sup>5</sup> LOB for AE are supported, but the apps need to be published privately to Managed Google Play.<br>
-<sup>6</sup> Native iOS feature who takeover the ownership, at the next check-in, of an application published in intune and installed outside of it.
+<sup>6</sup> This native iOS feature allows Intune to take over the ownership of an application originally deployed outside of Intune. This action occurs during the next check-in.
 
 ## Get started
 
