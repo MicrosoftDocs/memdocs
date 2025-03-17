@@ -186,12 +186,6 @@ Platform level targeting of the Device Cleanup rule will help administrators to 
 
 For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
 
-### Copilot assistant for device query<!-- 26933762 -->
-
-You'll soon be able to use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**.
-
-<!-- *********************************************** -->
-
 ## Device security
 
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
