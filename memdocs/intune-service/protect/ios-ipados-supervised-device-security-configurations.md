@@ -163,7 +163,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 Administrators can incorporate the configuration levels within their ring deployment methodology for testing and production use by importing the sample [iOS/iPadOS Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
-1. [Configure app configuration policies](ios-ipados-app-configuration-policies.md)  
-1. [Configure device compliance security policies](ios-ipados-device-compliance-security-configurations.md)   
-1. [Configure device security policies for personal devices](ios-ipados-personal-device-security-configurations.md)  
-<!-- 4. 🡺 **Configure device security policies for supervised devices** (*You are here*)   -->
+1. [Configure app configuration policies](../enrollment/ios-ipados-app-configuration-policies.md)  
+2. [Configure device compliance security policies](ios-ipados-device-compliance-security-configurations.md)   
+3. [Configure device security policies for personal devices](ios-ipados-personal-device-security-configurations.md)  
+4. 🡺 **Configure device security policies for supervised devices** (*You are here*)
