@@ -171,9 +171,6 @@ All other policies report as **Not applicable**.
 > [!NOTE]
 > [Conditional Access for Exchange on-premises](../protect/conditional-access-exchange-create.md) isn't supported for Windows 10 or Windows 11 Enterprise multi-session VMs.
 
-> [!NOTE]
-> Configuration and compliance policies for BitLocker, Secure Boot, and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
-
 ## Endpoint security
 
 You can configure profiles under Endpoint security for multi-session VMs by selecting Platform Windows 10, Windows 11, and Windows Server. If that Platform is not available, the profile is not supported on multi-session VMs.
