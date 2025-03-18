@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/21/2024
+ms.date: 03/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -73,8 +73,8 @@ Use the following information to help you decide which policy type to use.
 | macOS | ✅ | ❌ |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Auto deploy latest update** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ❌ | ✅ |
-| macOS | ❌ | ✅ |
+| iOS/iPadOS | ✅ | ✅ |
+| macOS | ✅ | ✅ |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Downgrade versions** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ❌ | ❌ |
