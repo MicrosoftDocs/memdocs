@@ -136,7 +136,7 @@ Set the app availability and other app assignment properties using the following
       - **Hide all toast notifications**.
     - **Time zone** to **UTC** or **Device time zone**
     - **App availability** to **As soon as possible** or **A specific date and time** and specify your date and time. This date and time specify when the app is downloaded to the user's device.
-    - **App installation deadline** to **As soon as possible** or **A specific date and time** and select your date and time. This date and time specify when the app is installed on the targeted device. When more than one assignment is made for the same user or device, the app installation deadline time is picked based on the earliest time possible.
+    - **App installation deadline** to **As soon as possible** or **A specific date and time** and select your date and time. This date and time specify when the app is installed on the targeted device. When more than one assignment is made for the same user or device, the app installation deadline time is picked based on: 1. A specific deadline wins over earliest time possible; 2. An earlier specific deadline wins over a later specific deadline.
       
       > [!NOTE]
       > If a win32 app is configured with a deadline to install, it will be downloaded but it won't install until the deadline. The Company Portal doesn't provide this level of detail. The Company Portal will show an **Installing** status for the app as soon as it's downloaded. Once the app is installed, the Company Portal will show the app installation status as **Installed**. The time between showing an **Installing** status verses an **Installed** status depends on the configuration for the deadline in Intune.
