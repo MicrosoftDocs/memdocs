@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/23/2025
+ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,6 +31,9 @@ ms.collection:
 # Add users and grant administrative permission to Intune
 
 As an administrator, you can add users directly or synchronize users from your on-premises Active Directory. Once added and enabled, users can enroll devices and access company resources. You can also give users more permissions including *global administrator* and *service administrator* permissions.
+
+Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties. Global Administrator and Intune Service Administrator
+are [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions) and assignment **should be limited**.
 
 ## Add users to Intune
 

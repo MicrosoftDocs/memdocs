@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/copilot/security-copilot-surface-portal.md",
+      "redirect_url": "/mem/intune-service/copilot/security-copilot-surface-portal",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "memdocs/intune/apps/android-deployment-scenarios-app-protection-work-profiles.md",
       "redirect_url": "/mem/intune-service/apps/android-deployment-scenarios-app-protection-work-profiles",
       "redirect_document_id": false
@@ -1483,6 +1488,16 @@
     {
       "source_path": "memdocs/intune/enrollment/multi-factor-authentication.md",
       "redirect_url": "/mem/intune-service/enrollment/multi-factor-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune-service/enrollment/android-enroll.md",
+      "redirect_url": "/mem/intune-service/fundamentals/deployment-guide-enrollment-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/quickstart-enroll-ios-device.md",
+      "redirect_url": "/mem/intune-service/enrollment/quickstart-enroll-ios-device",
       "redirect_document_id": false
     },
     {
