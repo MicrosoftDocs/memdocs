@@ -8,7 +8,7 @@ items:
   - name: KB 30833053 CMG installation update for 2409
     href: 2409/30833053.md
   - name: KB 30385346 Update rollup for version 2409
-    hfref: 2409/30385346.md
+    href: 2409/30385346.md
 - name: Version 2403
   items:
   - name: KB 26186448 Summary of changes in 2403
