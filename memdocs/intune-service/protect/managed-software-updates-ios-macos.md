@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/21/2024
+ms.date: 03/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,6 +87,19 @@ Use the following information to help you decide which policy type to use.
 | **Minimum supported version** | &nbsp; | &nbsp; |
 | iOS/iPadOS | 17.0 and later | - iOS 10.3 (supervised)<br/>- iPadOS 13.0 (supervised) |
 | macOS | 14.0 and later | macOS 12.0 |
+
+### Configure devices to automatically install the latest OS update
+
+You can also use the Software Update Enforce Latest settings in the catalog to create a single policy for devices that you want to stay on the latest OS version, even after a period of delay that you specify in order to test the update.
+
+Using this configuration, you can:
+
+- Automatically enforce a deadline for a new update when released by Apple
+
+- Specify the number of days to delay the update before enforcing it on the device
+
+> [!IMPORTANT]
+> The Install Time setting is configured using the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
 
 ### Precedence
 

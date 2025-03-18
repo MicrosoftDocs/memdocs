@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/01/2024
+ms.date: 03/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -72,13 +72,17 @@ The prerequisites for Remote Help on Windows are:
 - The helper and sharer can be on an enrolled or unenrolled device.
 
 To remotely start a session:
+
 - The helper can be on an enrolled or unenrolled device.
 - The sharer's device needs to be enrolled device with Intune management extension.
   - Intune management extension is required for the remote launch feature and that is supported on Windows 10 and 11. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md)
 
 - Optional Windows updates for higher notification reliability:
+
    - Win 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
    - Win 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
+
+- We do not recommend remotely starting a session to users on azure virtual desktops. For more information, see [How to provide help on an AVD](#provide-help-on-an-avd)
 
 ### Network considerations
 
@@ -115,11 +119,11 @@ Some users may choose to opt out of automatic updates. However, when a new versi
 
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of Remote Help is **5.1.1419.0**
+The most recent version of Remote Help is **5.1.1998.0**
 
 ### Deploy Remote Help as an Enterprise App Catalog app
-The Enterprise App Catalog is a collection of prepackaged Win32 apps that have been designed and prepared by Microsoft to support Intune. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. Remote Help is available in the Enterprise App Catalog. To learn more, see [Add an Enterprise App Catalog app to Microsoft Intune](/mem/intune-service/apps/apps-add-enterprise-app#add-a-windows-catalog-app-win32-to-intune).
 
+The Enterprise App Catalog is a collection of prepackaged Win32 apps that have been designed and prepared by Microsoft to support Intune. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. Remote Help is available in the Enterprise App Catalog. To learn more, see [Add an Enterprise App Catalog app to Microsoft Intune](/mem/intune-service/apps/apps-add-enterprise-app#add-a-windows-catalog-app-win32-to-intune).
 
 ### Deploy Remote Help as a Win32 app
 
@@ -190,7 +194,8 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. 
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app.
+
 #### Request help on an unenrolled device
 
 The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you're trying to receive help, be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
@@ -255,6 +260,20 @@ Now you'll be in a session with the user with the same experience and procedure 
 
 > [!IMPORTANT]
 > During a Remote Help session, when a helper has the Elevation permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for a non-admin sharer, a button will appear on the helper's Remote Help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. When the sharer ends the Remote Help session, they will be shown a dialog box that will warn them that if they continue, they will be logged off. If the helper ends the session, the sharer will not be logged off.
+
+#### Provide help on an AVD
+
+If you are trying to help an Azure Virtual Desktop (AVD) that could have multiple users on the device, you must follow the process described in this section to give help:
+
+Locate the Remote Help app on your device and manually start it. After the Remote Help app opens, you need to sign in to authenticate your organization.
+
+After signing into the app, under **Give help** select **Get a security code**. Remote Help generates a security code that you need to share with the person who has requested assistance active on the AVD. The sharer enters the code in their instance of the Remote Help app to establish a connection to your Remote Help instance.  
+
+>[!NOTE]
+> If you initiate the Remote Help request from Intune, then the notification is delivered to all active users on the Azure Virtual Desktop.
+
+>[!NOTE]
+> The restart option is not available for helpdesk agents remotely helping AVD.
 
 ## Log files
 
@@ -329,7 +348,6 @@ Use the `Disconnect-MgGraph` command to sign out.
 Disconnect-MgGraph
 ```
 
-
 ## Languages Supported
 
 Remote Help is supported in the following languages:
@@ -394,6 +412,7 @@ Microsoft Edge WebView2 is required to use Remote Help. If you get an error mess
 > WebView2 should already be installed if your device is running Windows 11 or has Microsoft Edge.
 
 ## Known Issues
+
 For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service isn't running.
 After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30 minutes after restart), or manually start the service through services.msc.
 For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
@@ -402,11 +421,19 @@ For newly enrolled devices, there's a 1 hour delay before the user's device begi
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
 
+### March 21, 2025
+
+Version: 5.1.1998.0  
+
+- Added support for users on multi-session AVD
+
+- Resolved accessibility bugs
+
 ### June 25, 2024
 
 Version 5.1.1419.0
 
-- Resolve issue where the screen may be blank on first launch. 
+- Resolve issue where the screen may be blank on first launch.
 
 ### March 13, 2024
 
