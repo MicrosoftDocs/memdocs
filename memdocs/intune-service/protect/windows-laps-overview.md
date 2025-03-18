@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/02/2024
+ms.date: 03/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,6 +48,7 @@ Intune support for Windows LAPS includes the following capabilities:
 - **Set password requirements** – Define password requirements including complexity and length for the local administrator account on a device.
 - **Rotate passwords** – With policy you can have devices automatically rotate the local admin account passwords on a schedule. You can also use the Intune admin center to manually rotate the password for a device as a device action.
 - **Backup accounts and passwords** – You can choose to have devices back up their account and password in either Microsoft Entra ID in the cloud, or your on-premises Active Directory. Passwords are stored using strong encryption.
+- **Automatic Account Management** – (Supported on Windows 11 24H2 and later) – Simplify management of the built-in administrator account or a custom account that you specify. [Automatic account management](/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode) options support disabling or enabling the specified account as well as randomization of the account name or prefix. Use of automatic account management also expands LAPS  [account tampering protection](https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-concepts-account-management-modes#account-tampering-protection).
 - **Configure post authenticating actions** – Define actions that a device takes when its local admin account password expires. Actions range from resetting the managed account to use a new secure password, logging off the account, or doing both and then powering down the device. You can also manage how long the device waits after the password expires before taking these actions.
 - **View account details** – Intune administrators with sufficient role-based administrative control (RBAC) permissions can view information about a devices local admin account and its current password. You can also see when that password was last rotated (reset) and when it's next scheduled to rotate.
 - **View reports** – Intune provides reports on password rotation including details about past manual and scheduled password rotation.
