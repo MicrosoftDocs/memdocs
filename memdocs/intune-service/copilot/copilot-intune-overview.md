@@ -7,7 +7,7 @@ keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings cata
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/08/2024
+ms.date: 03/07/2025
 ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
@@ -169,7 +169,11 @@ You can use Copilot to help you create Kusto Query Language (KQL) queries to run
 > [!NOTE]
 > To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. For more information, see [Intune add-ons](../fundamentals/intune-add-ons.md#microsoft-intune-advanced-analytics).
 
-To use this feature in Intune, select a device, select **Device query**, and then select **Query with Copilot**.
+You can use this feature for either an individual device, or for multiple devices.
+
+#### Query a single device
+
+To query a single device in Intune, select a device, select **Device query**, and then select **Query with Copilot**.
 
 When the Copilot window opens, enter your question about the device. If device query supports the properties needed to answer the question, Copilot will generate a KQL query that you can use to get the data that you require.
 
@@ -190,6 +194,25 @@ Here are some example queries you can try:
     > [!NOTE]
     > Copilot can only generate queries for requests related to the properties that are supported by device query. You cannot use this feature to ask Copilot for details about the device beyond what is available in device query.
 For a full list of supported properties in device query, go to [Device query](../../analytics/device-query.md).
+
+#### Query multiple devices
+
+To query data across multiple devices in Intune, select **Devices** > **Device query** > **Query with Copilot**.
+
+When the Copilot window opens, enter your question about the device. If device query supports the properties needed to answer the question, Copilot will generate a KQL query that you can use to get the data that you require.
+
+:::image type="content" source="./media/copilot-intune-overview/copilot-devices-query.png" alt-text="Screenshot that shows the Copilot window for querying multiple devices." lightbox="./media/copilot-intune-overview/copilot-devices-query.png":::
+
+You can select the options that Copilot generates to quickly generate a KQL query, or you can enter your question or request other device data. Once Copilot generates the query, select **Add to editor** to add it to the query editor, or select **Add and run** to add it to the editor and automatically run it. To make a new request, select **Query with Copilot** to display the Copilot pane.
+
+Here are some example queries you can try:
+
+- Which devices have not been encrypted?
+- Show me Windows 11 devices.
+- Which devices have a hot fix?
+- Show me TPM 2.0 devices.
+- Show me devices sorted by manufacturer.
+- Which devices have not been patched in the last 30 days?
 
 ## Related content
 
