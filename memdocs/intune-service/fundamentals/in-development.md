@@ -136,30 +136,6 @@ Applies to:
 
 ## Device management
 
-### New settings for Windows LAPS policy<!-- 30287386 -->
-
-We're updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.
-
-The following new settings will be available:
-
-- AutomaticAccountManagementEnabled
-- AutomaticAccountManagementTarget
-- AutomaticAccountManagementNameOrPrefix
-- AutomaticAccountManagementEnableAccount
-- AutomaticAccountManagementRandomizeName
-- PassphraseLength
-
-The following settings will update to support new options:
-
-- PasswordComplexity
-- PostAuthenticationActions
-
-The settings found in Intune LAPS policy are available from the Windows [LAPS CSP](/windows/client-management/mdm/LAPS-csp).
-
-Applies to:
-
-- Windows
-
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
 Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA helps to mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
