@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2025
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -32,11 +32,13 @@ ms.collection:
 - highpri
 ---
 
-# iOS/iPadOS personal device security configurations
+# iOS/iPadOS personal device security configuration examples
 
-To support the [iOS/iPadOS security configuration framework](../fundamentals/ios-ipados-configuration-framework.md), use the examples in this article to configure increasing levels of iOS/iPad device compliance settings for mobile users using personal devices. The examples include three levels of device security configuration that align with Zero Trust principles. For more information on each policy setting, see [iOS/iPadOS device settings in Microsoft Intune](../configuration/device-restrictions-ios.md).
+In support of the [Microsoft Zero Trust security model](/security/zero-trust/zero-trust-identity-device-access-policies-common), this article provides example configurations you can use with Microsoft Intune to configure iOS/iPad device compliance settings for mobile users using personal devices. These examples include three levels of device security configuration that align with Zero Trust principles.
 
-Work with your security team to evaluate the threat environment, risk appetite, and the effect the different levels and configurations can have on usability. After reviewing and adjusting the examples to meet the needs of your organization, administrators can incorporate them within their ring deployment methodology for testing and production use by importing the sample [iOS/iPadOS Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
+When using these examples, work with your security team to evaluate the threat environment, risk appetite, and the effect the different levels and configurations can have on usability. After reviewing and adjusting the examples to meet the needs of your organization, you can incorporate them within a ring deployment methodology for testing and production use by importing the sample [iOS/iPadOS Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
+
+For more information on each policy setting, see [iOS/iPadOS device settings in Microsoft Intune](../configuration/device-restrictions-ios.md).
 
 ## Personal basic security (Level 1)
 
@@ -118,11 +120,8 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Password | Prevent reuse of previous passwords | 5 | Organizations should update this setting to match their password policy. |
 | Wireless | Block voice dialing while device is locked | Yes |  |
 
-## Next steps
+## Related articles
 
-Administrators can incorporate the configuration levels from this article within their ring deployment methodology for testing and production use by importing the sample [iOS/iPadOS Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples). 
-
-1. [Configure app configuration policies](../enrollment/ios-ipados-app-configuration-policies.md)
-2. [Configure device compliance security policies](ios-ipados-device-compliance-security-configurations.md)
-3. 🡺 **Configure device security policies for personal devices** (*You are here*)
-4. [Configure device security policies for supervised devices](ios-ipados-supervised-device-security-configurations.md)
+- [Configure app configuration policies](../enrollment/ios-ipados-app-configuration-policies.md)
+- [Configure device compliance security policies](../protect/ios-ipados-device-compliance-security-configurations.md)
+- [Configure device security policies for supervised devices](../protect/ios-ipados-supervised-device-security-configurations.md)
