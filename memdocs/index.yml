@@ -182,7 +182,7 @@ conceptualContent:
           url: ./analytics/enroll-configmgr.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json#bkmk_prereq
         - text: Follow the interactive guide to co-managing workloads
           itemType: how-to-guide
-          url: https://www.microsoft.com/en-us/microsoft-365/business-insights-ideas/resources/what-is-endpoint-management?slide=15#/SystemConfig?slide=15
+          url: https://www.microsoft.com/microsoft-365/business-insights-ideas/resources/what-is-endpoint-management?slide=15#/SystemConfig?slide=15
         - text: Read the tutorial for enabling co-management
           itemType: how-to-guide
           url: ./configmgr/comanage/tutorial-co-manage-clients.md
