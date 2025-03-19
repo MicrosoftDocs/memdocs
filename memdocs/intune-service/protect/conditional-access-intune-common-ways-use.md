@@ -4,7 +4,6 @@
 title: Scenarios for using Conditional Access with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Learn how Conditional Access is commonly used with Intune compliance policy for devices and apps
-keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby

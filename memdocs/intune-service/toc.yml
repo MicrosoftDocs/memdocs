@@ -1052,12 +1052,6 @@ items:
               href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting
           - name: Troubleshoot PKCS certificate profiles
             href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles
-          - name: Troubleshoot Exchange connectors
-            items:
-            - name: Troubleshoot Exchange connectors
-              href: /troubleshoot/mem/intune/troubleshoot-exchange-connector
-            - name: Common errors
-              href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-errors
           - name: Troubleshoot BitLocker policies
             href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies
           - name: Troubleshoot Jamf Pro integration
