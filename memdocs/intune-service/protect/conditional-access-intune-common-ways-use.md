@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/13/2025
+ms.date: 03/19/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -110,34 +110,9 @@ Learn more about [Device Management in Microsoft Entra ID](/azure/active-directo
 
 ## App-based Conditional Access
 
-Intune and Microsoft Entra ID work together to make sure only managed apps can access corporate e-mail or other Microsoft 365 services.
+Intune and Microsoft Entra ID work together to make sure only managed apps can access corporate e-mail or other Microsoft 365 services. Learn more about [app-based Conditional Access with Intune](app-based-conditional-access-intune.md).
 
-- Learn more about [app-based Conditional Access with Intune](app-based-conditional-access-intune.md).
 
-## Intune Conditional Access for Exchange on-premises
-
-Conditional Access can be used to allow or block access to **Exchange on-premises** based on the device compliance policies and enrollment state. When Conditional Access is used in combination with a device compliance policy, only compliant devices are allowed access to Exchange on-premises.
-
-You can configure advanced settings in Conditional Access for more granular control such as:
-
-- Allow or block certain platforms.
-
-- Immediately block devices that aren't managed by Intune.
-
-Any device used to access Exchange on-premises is checked for compliance when device compliance and Conditional Access policies are applied.
-
-When devices don't meet the conditions set, the end user is guided through the process of enrolling the device to fix the issue that is making the device noncompliant.
-
-### What's the Intune role?
-
-Intune evaluates and manages the device state.
-
-### What's the Exchange server role?
-
-Exchange server provides API and infrastructure to move devices to quarantine.
-
-> [!IMPORTANT]
-> Keep in mind that the user who's using the device must have a compliance profile and Intune license assigned to them so the device can be evaluated for compliance. If no compliance policy is deployed to the user, the device is treated as compliant and no access restrictions are applied.
 
 ## Next steps
 

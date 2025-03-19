@@ -33,7 +33,7 @@ ms.collection:
 
 # Tutorial: Protect Exchange Online email on managed iOS devices with Microsoft Intune
 
-This tutorial demonstrates how to use Microsoft device compliance policies with Microsoft Entra Conditional Access policy, to allow iOS devices access to Exchange  only when they're managed by Intune and use an approved email app.
+This tutorial demonstrates how to use Microsoft device compliance policies with Microsoft Entra Conditional Access policy, to allow iOS devices access to Exchange only when they're managed by Intune and use an approved email app.
 
 In this tutorial, you'll learn how to:
 
