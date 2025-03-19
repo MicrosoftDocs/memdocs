@@ -41,7 +41,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](fre
 
 ## Sign in to Intune
 
-Sign in to [Intune](https://aka.ms/intuneportal) as a Global Administrator or an Intune Service Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to [Intune](https://aka.ms/intuneportal). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create a custom role
 

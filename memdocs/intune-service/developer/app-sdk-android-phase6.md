@@ -239,7 +239,7 @@ If you're unsure if any of these features apply to your app, revisit [Key Decisi
 
 <!-- Microsoft Learn documentation -->
 [App configuration policies for Microsoft Intune]:/mem/intune-service/apps/app-configuration-policies-overview
-[Enroll Android devices]:/mem/intune-service/enrollment/android-enroll
+[Enroll Android devices]:/mem/intune-service/fundamentals/deployment-guide-enrollment-android
 [application configuration policies for managed Android Enterprise devices]:/mem/intune-service/apps/app-configuration-policies-use-android
 [application configuration policies for managed apps]:/mem/intune-service/apps/app-configuration-policies-managed-app
 [Graph API documentation for MAM Targeted Config]:/graph/api/resources/intune-mam-targetedmanagedappconfiguration

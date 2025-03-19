@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2025
+ms.date: 03/17/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,32 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of March 17, 2025
+
+### Microsoft Intune Suite
+
+#### Endpoint Privilege Manager support for ARM 64-bit devices<!-- 28313554 -->
+ 
+[Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) now supports managing file elevations on devices that run on ARM 64-bit architecture.
+ 
+Applies to:
+ 
+- Windows
+
+### Device management
+
+#### Copilot assistant for device query<!-- 26933762 -->
+You can now use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**. For more information, see [Query with Copilot in device query](../copilot/copilot-intune-overview.md#query-with-copilot-in-device-query).
+
+## Week of March 03, 2025
+
+### Monitor and troubleshoot
+
+#### Updates to the Feature updates report<!--31305861 -->
+
+We are introducing a new **Update Substate** in Service-side data. This substate is displayed in the reports for devices that are invalid in Microsoft Entra and is known as **Not supported**.
+
+For more information, see [Use Windows Update for Business reports for Windows Updates](../protect/windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report)
 
 ## Week of February 24, 2025  (Service release 2502)
 
@@ -154,7 +180,6 @@ Both the Device Control template and Settings Catalog support the following opti
 
 - Device Control is enabled
 - Device Control is disabled (Default) 
-- 
 
 Applies to:
 
