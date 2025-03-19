@@ -84,6 +84,5 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 ## Related articles
 
-- [Configure app configuration policies](../enrollment/ios-ipados-app-configuration-policies.md)
 - [Configure device security policies for personal devices](../protect/ios-ipados-personal-device-security-configurations.md)
 - [Configure device security policies for supervised devices](../protect/ios-ipados-supervised-device-security-configurations.md)
