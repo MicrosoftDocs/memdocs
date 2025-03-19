@@ -265,9 +265,9 @@ Now you'll be in a session with the user with the same experience and procedure 
 
 If you are trying to help an Azure Virtual Desktop (AVD) that could have multiple users on the device, you must follow the process described in this section to give help:
 
-Locate the Remote Help app on your device and manually start it. After the Remote Help app opens, you need to sign in to authenticate your organization.
+1. Locate the Remote Help app on your device and manually start it. After the Remote Help app opens, you need to sign in to authenticate your organization.
 
-After signing into the app, under **Give help** select **Get a security code**. Remote Help generates a security code that you need to share with the person who has requested assistance active on the AVD. The sharer enters the code in their instance of the Remote Help app to establish a connection to your Remote Help instance.  
+2. After signing into the app, under **Give help** select **Get a security code**. Remote Help generates a security code that you'll need to share with the person who has requested assistance active on the AVD. The sharer enters the code in their instance of the Remote Help app to establish a connection to your Remote Help instance.  
 
 >[!NOTE]
 > If you initiate the Remote Help request from Intune, then the notification is delivered to all active users on the Azure Virtual Desktop.
