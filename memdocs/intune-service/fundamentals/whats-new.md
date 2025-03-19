@@ -120,6 +120,16 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 - Allow Notes Transcription
 - Allow Safari Summary
 
+### Microsoft Intune Suite
+
+#### Endpoint Privilege Manager support for ARM 64-bit devices<!-- 28313554 -->
+ 
+[Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) now supports managing file elevations on devices that run on ARM 64-bit architecture.
+ 
+Applies to:
+ 
+- Windows
+
 ### Device management
 
 #### New settings for Windows LAPS policy<!-- 30287386 -->
