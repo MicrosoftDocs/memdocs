@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/01/2024
+ms.date: 03/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -189,7 +189,7 @@ Following are the available cmdlets:
 
 For more information about each cmdlet, review the **readme.txt** file from the *EpmTools* folder on the device.
 
-## Next steps
+## Related articles
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
