@@ -285,6 +285,9 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 - **Hidden network**: Select **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Select **Disable** to show this network in the list of available networks on the device.
 - **EAP type**: Select the Extensible Authentication Protocol (EAP) type used to authenticate secured wireless connections. Your options:
 
+  >[!NOTE]
+  > When using any EAP type (EAP-TLS, PEAP, or EAP-TTLS) and certificates for authentication, it is required to include the user principal name (UPN) in the Subject Alternative Name (SAN) for user and device certificates. If the UPN is not present in the SAN, the Wi-Fi profile deployment will fail.
+
   - **EAP-TLS**: Also enter:  
   
     - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.  
@@ -292,8 +295,6 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
-
-      When using SCEP or PKCS client certificates for authentication (User Certificate), include the `{{UserPrincipalName}}` attribute in the Subject Alternative Name (SAN) for user certificates. If the SAN doesn't have the `{{UserPrincipalName}}` attribute, then the Wi-Fi profile deployment fails.
 
     - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
