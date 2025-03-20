@@ -91,7 +91,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-### Android settings in the Settings Catalog <!-- 26981326 -->
+### Android settings in the Settings Catalog <!-- 31524383 (was 26981326) -->
 
 The settings catalog will soon support Android Enterprise and AOSP.
 
