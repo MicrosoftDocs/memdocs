@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/21/2024
+ms.date: 03/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -73,8 +73,8 @@ Use the following information to help you decide which policy type to use.
 | macOS | ✅ | ❌ |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Auto deploy latest update** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ❌ | ✅ |
-| macOS | ❌ | ✅ |
+| iOS/iPadOS | ✅ | ✅ |
+| macOS | ✅ | ✅ |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Downgrade versions** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ❌ | ❌ |
@@ -103,7 +103,54 @@ Managed software updates have precedence over other policies that configure soft
 2. Update policies (**Devices** > **Update policies for macOS**)
 3. Software updates (**Settings catalog** > **System Updates** > **Software Update**)
 
-## Configure the managed software updates policy
+## Configure the automatic managed software updates policy
+
+You can use the settings catalog to configure a policy that automatically enforces the latest update available for devices, so you don’t have to manually update the target OS version and target date time settings each time that Apple releases a new update.
+
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
+
+3. Enter the following properties and select **Create**:
+
+    - **Platform**: Select **iOS/iPadOS** or **macOS**.
+    - **Profile**: Select **Settings catalog**.
+
+4. In the **Basics** tab, enter the following information, and select **Next**:
+
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later.
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+
+5. In **Configuration settings**, select **Add settings** > expand **Declarative Device Management** > **Software Update Enforce Latest**.
+
+6. Choose **Select all these settings** and then close the settings picker.
+
+    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-updates-enforce-latest.png" alt-text="Screenshot that shows the settings catalog software update enforce latest settings for Apple devices in Microsoft Intune.":::
+
+7. Configure the settings:
+
+    - **Delay in Days**: Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured.
+    - **Install Time**: Specify the local device time for when updates are enforced.
+
+      > [!IMPORTANT]
+      > The Install Time setting is configured using the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
+
+8. Select **Next**.
+
+9. In the **Scope tags** tab (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go to [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+10. Select **Next**.
+
+11. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+    > [!IMPORTANT]
+    > Assignment filters are not supported for DDM-based policies.
+
+12. Select **Next**.
+
+13. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+## Configure the manual managed software updates policy
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -133,19 +180,11 @@ Managed software updates have precedence over other policies that configure soft
       If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
 
    - **Target Date Time**: Select or manually enter the date and the time that specifies when to force the installation of the software update.
-
-     > [!NOTE]
-     > In a future release, the **UTC** text is being removed from the **Target Date Time** setting in the settings catalog UI.
    
-     The **Target Date Time** setting schedules the update using the local timezone of the device. For example, an admin configures an update to install at 2PM. The policy schedules the update to happen at 2PM in the local timezone of devices that receive the policy. 
+     The **Target Date Time** setting schedules the update using the local timezone of the device. For example, an admin configures an update to install at 2PM. The policy schedules the update to happen at 2PM in the local timezone of devices that receive the policy.
 
      - If the user doesn't trigger the software update before this time, then a one-minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
      - If the device is powered off when the deadline is met, when the device powers back on, there's a one hour grace period. When the grace period ends, the device force installs the update and forces a restart.
-
-      > [!IMPORTANT]
-      > If you create a policy using this setting before the January 2024 release, then this setting shows **Invalid Date** for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows **Invalid Date**.
-      > 
-      > To configure a new date and time, you can delete the **Invalid Date** values, and select a new date and time. Or, you can create a new policy. If you create a new policy, to help avoid future confusion, remove the values in the original policy.
 
     - **Target OS Version**: Select or manually enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
