@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2025
+ms.date: 03/20/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -286,7 +286,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 - **EAP type**: Select the Extensible Authentication Protocol (EAP) type used to authenticate secured wireless connections. Your options:
 
   >[!NOTE]
-  > When using any EAP type (EAP-TLS, PEAP, or EAP-TTLS) and certificates for authentication, it is required to include the user principal name (UPN) in the Subject Alternative Name (SAN) for user and device certificates. If the UPN is not present in the SAN, the Wi-Fi profile deployment will fail.
+  > When using any EAP type (EAP-TLS, PEAP, or EAP-TTLS) and certificates for authentication, it's required to include the user principal name (UPN) in the Subject Alternative Name (SAN) for user and device certificates. If the UPN isn't present in the SAN, the Wi-Fi profile deployment fails.
 
   - **EAP-TLS**: Also enter:  
   
@@ -295,6 +295,8 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+
+      For user and device certificates, make sure the certificate's Subject Alternative Name (SAN) includes the user principal name (UPN). If the UPN isn't present in the SAN, then the Wi-Fi profile deployment fails.
 
     - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
@@ -313,6 +315,8 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
+        For user and device certificates, make sure the certificate's Subject Alternative Name (SAN) includes the user principal name (UPN). If the UPN isn't present in the SAN, then the Wi-Fi profile deployment fails.
+
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel​​.
 
   - **PEAP**: Also enter:
@@ -328,6 +332,8 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
           - **Microsoft CHAP Version 2 (MS-CHAP v2)**
 
       - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+
+        For user and device certificates, make sure the certificate's Subject Alternative Name (SAN) includes the user principal name (UPN). If the UPN isn't present in the SAN, then the Wi-Fi profile deployment fails.
 
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel​​.
 
