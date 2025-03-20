@@ -43,7 +43,11 @@ Example synchronization scenario:
 
 ## Prerequisites for Microsoft Entra synchronization
 
-- Integration with Microsoft Entra ID for [cloud management](../../../servers/deploy/configure/azure-services-wizard.md).Option to ** Disable Microsoft Entra authentication for this tenant** under Azure Service for Cloud Management in the console must not be checked as this prevents client registration using Entra ID Authentication.
+- Supported version of Windows 10 or Windows 11 (x64)
+
+- Windows Server OS 2019 and later (Standard or Datacenter)
+
+- Integration with Microsoft Entra ID for [cloud management](../../../servers/deploy/configure/azure-services-wizard.md)
 
 - [Microsoft Entra user discovery](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 
@@ -52,6 +56,9 @@ Example synchronization scenario:
 - Access to the **All Systems** collection
 
 <a name='create-a-group-and-set-the-owner-in-azure-ad'></a>
+
+> [!NOTE]
+> The option to **Disable Microsoft Entra authentication for this tenant**, under Azure Services for Cloud Management in the console, must **not** be checked as this prevents client registration using Entra ID Authentication.<!--8537319-->
 
 ## Create a group and set the owner in Microsoft Entra ID
 
