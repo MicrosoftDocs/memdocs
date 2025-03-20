@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/11/2024
+ms.date: 03/20/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -285,6 +285,9 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 - **Hidden network**: Select **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Select **Disable** to show this network in the list of available networks on the device.
 - **EAP type**: Select the Extensible Authentication Protocol (EAP) type used to authenticate secured wireless connections. Your options:
 
+  >[!NOTE]
+  > When using any EAP type (EAP-TLS, PEAP, or EAP-TTLS) and certificates for authentication, it's required to include the user principal name (UPN) in the Subject Alternative Name (SAN) for user and device certificates. If the UPN isn't present in the SAN, the Wi-Fi profile deployment fails.
+
   - **EAP-TLS**: Also enter:  
   
     - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.  
@@ -293,7 +296,9 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
     - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
-    - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel​​.
+      For user and device certificates, make sure the certificate's Subject Alternative Name (SAN) includes the user principal name (UPN). If the UPN isn't present in the SAN, then the Wi-Fi profile deployment fails.
+
+    - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
   - **EAP-TTLS**: Also enter:
 
@@ -310,6 +315,8 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
+        For user and device certificates, make sure the certificate's Subject Alternative Name (SAN) includes the user principal name (UPN). If the UPN isn't present in the SAN, then the Wi-Fi profile deployment fails.
+
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel​​.
 
   - **PEAP**: Also enter:
@@ -325,6 +332,8 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
           - **Microsoft CHAP Version 2 (MS-CHAP v2)**
 
       - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+
+        For user and device certificates, make sure the certificate's Subject Alternative Name (SAN) includes the user principal name (UPN). If the UPN isn't present in the SAN, then the Wi-Fi profile deployment fails.
 
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel​​.
 
