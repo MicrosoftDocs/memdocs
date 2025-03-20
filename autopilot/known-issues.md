@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/27/2025
+ms.date: 03/20/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -44,10 +44,9 @@ This article describes known issues that can often be resolved with configuratio
 ### Windows Autopilot report incorrectly shows failure even though the deployment was successful
 
 Date added: *February 11, 2025*
-
 Date updated: *March 20, 2025*
 
-The issue has now been resolved.
+This issue is resolved.
 
 The Windows Autopilot report automatically updates deployment status from **In progress** to **Failed** after 4 hours if Intune didn't receive a success or failure status. It's possible that the report didn't receive the latest status from the device before the device is powered off which results in an incorrect **Failed** status, even when the deployment is successful.
 
