@@ -77,10 +77,28 @@ Create the file in JSON format, with the content type set to `application/json`.
 
 The rest of the JSON sample is populated with all of the information you need, including:   
 * Version: The server version is `mdm-byod`.     
-* BaseURL: This URL is the location where the Intune service resides.
+* BaseURL: This URL is the location where the Intune service resides.  
 
 > [!TIP]
-> For more information about the technical requirements for service discovery, see [Implementing the simple authentication user-enrollment flow](https://developer.apple.com/documentation/devicemanagement/user_enrollment/onboarding_users_with_account_sign-in/implementing_the_simple_authentication_user-enrollment_flow) in the Apple Developer documentation. 
+> For more information about the technical requirements for service discovery, see [Implementing the simple authentication user-enrollment flow](https://developer.apple.com/documentation/devicemanagement/user_enrollment/onboarding_users_with_account_sign-in/implementing_the_simple_authentication_user-enrollment_flow) in the Apple Developer documentation.
+
+If the service discovery isn't configured correctly, users receive the following error message:
+
+* Title: Sign-in Failed  
+* Description: Your Apple ID does not support the expected services on this device. Contact your administrator to sign in.  
+
+In order to solve this issue, make sure that your webserver is hosting the service discovery file with the content type set to `application/json`.
+You can validate that by running the following commands:  
+
+```cmd
+   curl -I "https://contoso.com/.well-known/com.apple.remotemanagement"
+   ```
+
+```cmd
+   curl -I "https://contoso.com/.well-known/com.apple.remotemanagement?user-identifier=firstname.surname@contoso.com&model-family=iPhone"
+   ```
+
+Both of these commands should return `Content-Type: application/json`.
 
 ## Best practices   
 We recommend extra configurations to help improve the enrollment experience for device users. This section provides more information about each recommendation.   

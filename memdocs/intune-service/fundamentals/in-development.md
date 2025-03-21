@@ -61,14 +61,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Endpoint Privilege Management support for Arm64<!-- 28313554 -->
-
-You'll soon be able to use [Endpoint Privilege Management](/mem/intune-service/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
-
-Applies to:
-
-- Windows
-
 ### Endpoint Privilege Management elevation rule support for file arguments and parameters<!--28077130 -->
 
 Soon, the file elevation rules for Endpoint Privilege Management (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
@@ -198,7 +190,7 @@ As part of the [Settings Catalog](../configuration/settings-catalog.md), you'll 
 - **Delay In Days**: Specify the number of days that should pass before a deadline is enforced after a new update is released by Apple.
 - **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
 
-Learn more about configuring managed updates through DDM at [Managed software updates] (../protect/managed-software-updates-ios-macos.md).
+Learn more about configuring managed updates through DDM at [Managed software updates](../protect/managed-software-updates-ios-macos.md).
 
 Applies To:
 

@@ -292,12 +292,12 @@
     },
     {
       "source_path": "memdocs/intune/enrollment/ios-ipados-supervised-device-security-configurations.md",
-      "redirect_url": "/mem/intune-service/fundamentals/deployment-guide-enroll",
+      "redirect_url": "/mem/intune-service/protect/ios-ipados-supervised-device-security-configurations",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/enrollment/ios-ipados-personal-device-security-configurations.md",
-      "redirect_url": "/mem/intune-service/fundamentals/deployment-guide-enroll",
+      "redirect_url": "/mem/intune-service/protect/ios-ipados-personal-device-security-configurations",
       "redirect_document_id": false
     },
     {
@@ -307,7 +307,7 @@
     },
     {
       "source_path": "memdocs/intune/enrollment/ios-ipados-device-compliance-security-configurations.md",
-      "redirect_url": "/mem/intune-service/fundamentals/deployment-guide-enroll",
+      "redirect_url": "/mem/intune-service/protect/ios-ipados-device-compliance-security-configurations",
       "redirect_document_id": false
     },
     {
