@@ -64,7 +64,7 @@ Configuration Manager doesn't allow you to configure ports for the following typ
 
 ## Ports used by clients and site systems
 
-The following sections detail the ports that are used for communication in Configuration Manager. The arrows in the section title show the direction of the communication:
+The following sections detail the ports that are used for communication in Configuration Manager. All port requirements are bi-directional. The arrows show the direction that the communication is initiated:
 
 - `-->` Indicates that one computer starts communication and the other computer always responds
 
@@ -127,7 +127,7 @@ For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md)
 |Express updates|--|8005 <sup>[Note 2](#bkmk_note2) Alternate port available</sup><!-- SCCMDocs#2091 -->|
 
 > [!NOTE]
-> Use client settings to configure the alternate port for express updates. For more information, see [Port that clients use to receive requests for delta content](../../clients/deploy/about-client-settings.md#port-that-clients-use-to-receive-requests-for-delta-content).
+> Use client settings to configure the alternate port for delta downloads. For more information, see [Port that clients use to receive requests for delta content](../../clients/deploy/about-client-settings.md#port-that-clients-use-to-receive-requests-for-delta-content).
 
 ### <a name="BKMK_PortsClient-DP2"></a> Client `-->` Distribution point configured for multicast, both standard and pull
 
