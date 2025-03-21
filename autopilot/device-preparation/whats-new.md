@@ -31,6 +31,14 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
+## Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode is in public preview!
+
+Date added: *April 2, 2025*
+
+We've introduced a new flow for Autopilot device preparation which will be used to provision [Windows 365 Frontline in shared mode](/windows-365/enterprise/introduction-windows-365-frontline). Admins can now choose Automatic when creating a device preparation policy to prepare a policy for Cloud PCs, then include that policy in the Cloud PC provisioning policy to ensure it's assigned to all Cloud PCs after they are created. The new Automatic policy allows admins to select up to 10 apps and up to 10 scripts which will be delivered before a user accesses the Cloud PC. Deployments can then be monitored in the Windows Autopilot device preparation deployment report.
+
+With the new mode, admins can make sure their Cloud PCs are secured with required software and scripts before the end user logs in!
+
 ## Diagnostics logs automatically available in Windows Autopilot device preparation deployment status report
 
 Date added: *October 9, 2024*
