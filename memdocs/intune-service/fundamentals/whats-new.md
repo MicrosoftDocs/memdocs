@@ -78,18 +78,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of March 17, 2025 (Service release 2503)
 
-### Intune apps
 
-#### Newly available protected apps for Intune<!-- 31070614, 31093579, 31093668, 31187306 -->
+### Microsoft Intune Suite
 
-The following protected apps are now available for Microsoft Intune:
+#### Endpoint Privilege Manager support for ARM 64-bit devices<!-- 28313554 -->
 
-- FacilyLife by Apleona GmbH (iOS)
-- Intapp 2.0 by Intapp, Inc. (Andriod)
-- DealCloud by Intapp, Inc. (Andriod)
-- Lemur Pro for Intune by Critigen LLC (iOS)
-
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+[Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) now supports managing file elevations on devices that run on ARM 64-bit architecture.
+ 
+Applies to:
+ 
+- Windows
 
 ### Device configuration
 
@@ -120,16 +118,6 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 - Allow Notes Transcription
 - Allow Safari Summary
 
-### Microsoft Intune Suite
-
-#### Endpoint Privilege Manager support for ARM 64-bit devices<!-- 28313554 -->
- 
-[Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) now supports managing file elevations on devices that run on ARM 64-bit architecture.
- 
-Applies to:
- 
-- Windows
-
 ### Device management
 
 #### New settings for Windows LAPS policy<!-- 30287386 -->
@@ -146,6 +134,7 @@ The following new settings are available: *(Each setting name is a link that ope
 - [Passphrase Length](/windows/client-management/mdm/laps-csp#policiespassphraselength)
 
 The following settings have new options available:
+
 - [Password Complexity](/windows/client-management/mdm/laps-csp#policiespasswordcomplexity) – The following are new options available for this setting:
   - Passphrase (long words)
   - Passphrase (short words)
@@ -176,9 +165,33 @@ Applies To:
 - iOS/iPadOS
 - macOS
 
+#### Remote Help supports Azure Virtual Desktop muti-session<!-- 24590822 -->
+
+Remote Help now provides support for multi-session AVD with several users on a single virtual machine. Earlier, Remote Help was supporting Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM).
+
+For more information, see:
+
+- [Remote Help](../fundamentals/remote-help.md)
+- [Remote Help on windows](../fundamentals/remote-help-windows.md)
+- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
+
 #### Copilot assistant for device query<!-- 26933762 -->
 
 You can now use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**. For more information, see [Query with Copilot in device query](../copilot/copilot-intune-overview.md#query-with-copilot-in-device-query).
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 31070614, 31093579, 31093668, 31187306 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- FacilyLife by Apleona GmbH (iOS)
+- Intapp 2.0 by Intapp, Inc. (Andriod)
+- DealCloud by Intapp, Inc. (Andriod)
+- Lemur Pro for Intune by Critigen LLC (iOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
 
 ## Week of March 03, 2025
 
