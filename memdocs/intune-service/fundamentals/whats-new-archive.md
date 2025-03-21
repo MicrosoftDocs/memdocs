@@ -7,7 +7,7 @@ keywords:
 author: dougeby  
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/05/2025
+ms.date: 03/21/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
