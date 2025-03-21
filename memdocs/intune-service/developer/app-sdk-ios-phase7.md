@@ -106,7 +106,3 @@ Since web views D and E display user content and all web views are unmanaged by 
 Because web view E contains links that the user might click on and could use to navigate to arbitrary URLs, we also need to implement the `IntuneMAMWebViewPolicyDelegate` and set it to web view E using `setWebViewPolicyDelegate:forWebViewer:`. In our `isExternalURL:` implementation, we could check incoming URLs and see if they are the same as the URL for the document. If they don't match, then we know it's an external URL and can return `YES`. If they do match, then we know it's an internal URL and can return `NO`.
 
 Implementing and calling these APIs means that managed user or organizational content can't leak to web views A, B, and C. It also means that managed content can't leak to any external URLs that the user might navigate to in E by clicking on links within documents. Managed content will also be protected by preventing the data from web views D and E from leaking outside the app.
-
-## SwiftUI Support
-
-A newly created SwiftUI app supports UIScenes but doesn't have a UISceneDelegate implemented by default. If your app intends to support UIScenes and use the Intune App SDK, then it's required to implement a UISceneDelegate. If it doesn't intend to support UIScenes, the `UIApplicationSceneManifest` (also named "Application Scene Manifest") setting in the app's Info.plist must be removed.
