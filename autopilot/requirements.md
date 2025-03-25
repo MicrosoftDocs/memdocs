@@ -231,9 +231,9 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 - [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline).
 - [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/products/microsoft-365).
 - [Microsoft 365 Enterprise E3 or E5 subscription](https://www.microsoft.com/microsoft-365/enterprise), which include all Windows client, Microsoft 365, and EMS features (Microsoft Entra ID and Intune).
-- [Enterprise Mobility + Security E3 or E5 subscription](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), which include all needed Microsoft Entra ID and Intune features.
+- [Enterprise Mobility + Security E3 or E5 subscription]([https://www.microsoft.com/cloud-platform/enterprise-mobility-security](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security), which include all needed Microsoft Entra ID and Intune features.
 - [Intune for Education subscription](/intune-education/what-is-intune-for-education), which include all needed Microsoft Entra ID and Intune features.
-- [Microsoft Entra ID P1 or P2](https://azure.microsoft.com/services/active-directory/) and [Microsoft Intune subscription](https://www.microsoft.com/cloud-platform/microsoft-intune) or an alternative MDM service.
+- [Microsoft Entra ID P1 or P2](https://azure.microsoft.com/services/active-directory/) and [Microsoft Intune subscription]([https://www.microsoft.com/cloud-platform/microsoft-intune](https://www.microsoft.com/security/business/microsoft-intune-pricing)) or an alternative MDM service.
 
 > [!NOTE]
 >
