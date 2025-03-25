@@ -247,6 +247,7 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-f**|(Optional) `<Path to a plist file specifying arguments.>` Use this flag in front of the [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) file if you choose to use the plist template to specify the rest of the IntuneMAMPackager properties like -i, -o, and -p. See Use a plist to input arguments. |
 |**-dt**|(Optional) Disable collection of Microsoft Intune client telemetry.
 |**-dl**|(Optional) Disable MSAL logs from the INtune logs for applications that have integrated with MSAL and implement their own MSAL logging callback.
+|**-ds**|(Optional) Disable Intune's protections for SFSafariViewController, SFAuthSession, and ASWebAuthenticationSession.
 
 ### Use a plist to input arguments
 
