@@ -6,9 +6,9 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/27/2025
+ms.date: 03/25/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -55,12 +55,12 @@ See the following figure:
 
 - A currently supported version of Windows and a supported UEFI is required.
 - The device manufacturer must have DFCI added to their UEFI firmware in the manufacturing process, or as a firmware update that can be installed. Work with the device vendors to determine the [manufacturers that support DFCI](#oems-that-support-dfci), or the firmware version needed to use DFCI.
-- The device must be managed with Microsoft Intune. For more information, see [Enroll Windows devices in Intune using Windows Autopilot](/mem/intune-service/enrollment/enrollment-autopilot).
+- The device must be managed with Microsoft Intune. For more information, see [Enroll Windows devices in Intune using Windows Autopilot](enrollment-autopilot.md).
 - The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/membership/cloud-solution-provider), or registered directly by the OEM. For Surface devices, Microsoft registration support is available at [Microsoft Devices Autopilot Support](https://support.microsoft.com/supportrequestform/0d8bf192-cab7-6d39-143d-5a17840b9f5f).
 
 > [!IMPORTANT]
 >
-> Devices manually registered for Autopilot (such as by [importing from a CSV file](/mem/intune-service/enrollment/enrollment-autopilot#add-devices)) aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot. When the device is registered, its serial number is displayed in the list of Windows Autopilot devices.
+> Devices manually registered for Autopilot (such as by [importing from a CSV file](enrollment-autopilot.md#add-devices)) aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot. When the device is registered, its serial number is displayed in the list of Windows Autopilot devices.
 
 ## Managing DFCI profile with Windows Autopilot
 
