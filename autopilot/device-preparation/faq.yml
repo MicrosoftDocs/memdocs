@@ -7,9 +7,9 @@ metadata:
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
-  ms.reviewer: jubaptis
+  ms.reviewer: madakeva
   manager: aaroncz
-  ms.date: 11/25/2024
+  ms.date: 04/02/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -132,7 +132,7 @@ sections:
       - question: |
           What makes Windows Autopilot device preparation deployments more consistent and reliable than Windows Autopilot?
         answer: |
-          Windows Autopilot device preparation ensures configurations and apps are delivered in a serialized way, minimizing conflicts. This allows you to deliver Line-of-business and Win32 apps in the same deployment reliably.
+          Windows Autopilot device preparation ensures configurations and apps are delivered in a serialized way, minimizing conflicts. Delivering in a serialized way allows you to deliver Line-of-business and Win32 apps in the same deployment reliably.
           
       - question: |
           How does a user know that a Windows Autopilot device preparation deployment is running on their device?
