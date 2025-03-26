@@ -42,7 +42,7 @@ This feature applies to:
 - iPadOS 13.0 and later (supervised)
 
 > [!TIP]
-> You can use the [Intune settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage software updates with the settings catalog](managed-software-updates-ios-macos.md).
+> You can use the [Intune settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage software updates with the settings catalog](managed-software-updates-ios-macos.md). It is recommended for any iOS devices above 17.0 to use this method instead of Update Policies.
 
 With policies for iOS software updates, you can:
 
