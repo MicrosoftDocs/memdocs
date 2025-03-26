@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Follow these best practices for security for software updates and learn about how Configuration Manager handles privacy information.
 manager: apoorvseth
 ms.date: 09/16/2020
-ms.topic: conceptual
+ms.topic: article
 ms.service: configuration-manager
 ms.subservice: software-updates
 author: BalaDelli

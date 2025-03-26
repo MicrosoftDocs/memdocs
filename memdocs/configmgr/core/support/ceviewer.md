@@ -5,7 +5,7 @@ description: Use the Collection Evaluation Viewer to view and troubleshoot the c
 ms.date: 04/27/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

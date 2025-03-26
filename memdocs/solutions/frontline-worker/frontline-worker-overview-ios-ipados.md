@@ -50,7 +50,7 @@ This article applies to:
 For an overview on FLW devices in Intune, go to [FLW device management in Intune](frontline-worker-overview.md).
 
 > [!NOTE]
-> There are other iOS/iPadOS enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the iOS/iPadOS enrollment options, go to [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../../intune/fundamentals/deployment-guide-enrollment-ios-ipados.md).
+> There are other iOS/iPadOS enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the iOS/iPadOS enrollment options, go to [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../../intune-service/fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
 ## Shared iPad vs Microsoft Entra shared device mode
 
@@ -64,12 +64,12 @@ When using iPad devices for FLW, use the following information to help you decid
 
 Shared iPads are a feature in Intune, and are the recommended and preferred device type for frontline worker devices. These devices are shared among many users, such as in a hospital or school. Each user has their own profile and data, and they can sign in and out of the device.
 
-✅ If the device is an iPad, then use the Shared iPad feature in Intune. For more information on Shared iPads in Intune, go to [Shared iPad devices in Intune](../../intune/enrollment/device-enrollment-shared-ipad.md).
+✅ If the device is an iPad, then use the Shared iPad feature in Intune. For more information on Shared iPads in Intune, go to [Shared iPad devices in Intune](../../intune-service/enrollment/device-enrollment-shared-ipad.md).
 
 ❌ If the device is an iOS device, then use Entra shared device mode. For more information, go to [Microsoft Entra shared device mode for FLW](frontline-worker-overview.md#microsoft-entra-shared-device-mode-for-flw) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).
 
 > [!NOTE]
-> For iPadOS devices, Conditional Access isn't supported for Shared iPad. For more information, go to [Overview of shared device solutions for iOS/iPadOS](../../intune/enrollment/device-enrollment-shared-ios.md).
+> For iPadOS devices, Conditional Access isn't supported for Shared iPad. For more information, go to [Overview of shared device solutions for iOS/iPadOS](../../intune-service/enrollment/device-enrollment-shared-ios.md).
 
 # [Entra shared device mode](#tab/entrasdm)
 
@@ -88,12 +88,12 @@ When to use Entra SDM:
 For end users to have the full sign in/sign out experience, apps must support Entra SDM. For more information on Entra SDM and iOS/iPadOS devices, go to:
 
 - [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices)
-- [Set up automated device enrollment for shared device mode](../../intune/enrollment/automated-device-enrollment-shared-device-mode.md)
+- [Set up automated device enrollment for shared device mode](../../intune-service/enrollment/automated-device-enrollment-shared-device-mode.md)
 
 ---
 
 > [!TIP]
-> For a more detailed comparison of both options, go to [Shared iOS and iPadOS devices](../../intune/enrollment/device-enrollment-shared-ios.md).
+> For a more detailed comparison of both options, go to [Shared iOS and iPadOS devices](../../intune-service/enrollment/device-enrollment-shared-ios.md).
 
 ## Step 1 - Enroll, enable Shared iPad, and choose a temporary session type
 
@@ -127,8 +127,8 @@ The following image shows a sample Shared iPad enrollment policy in Intune that 
 
 For more information on these features, and to get started, go to:
 
-- [Set up automated device enrollment in Intune](../../intune/enrollment/device-enrollment-program-enroll-ios.md)
-- [Set up Shared iPad in Intune](../../intune/enrollment/device-enrollment-shared-ipad.md)
+- [Set up automated device enrollment in Intune](../../intune-service/enrollment/device-enrollment-program-enroll-ios.md)
+- [Set up Shared iPad in Intune](../../intune-service/enrollment/device-enrollment-shared-ipad.md)
 
 ## Step 2 - Home screen layout and device experience
 
@@ -144,14 +144,14 @@ In Intune, you can create device configuration profiles that configure the home 
 
   :::image type="content" source="./media/ios-ipados-device-restrictions-kiosk.png" alt-text="A device restrictions policy with the device settings configured for iOS and iPadOS devices in Microsoft Intune." lightbox="./media/ios-ipados-device-restrictions-kiosk.png":::
 
-  In this policy, you can also create a list of approved apps and hide some system apps. For more information on the settings you can configure, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../../intune/configuration/device-restrictions-ios.md).
+  In this policy, you can also create a list of approved apps and hide some system apps. For more information on the settings you can configure, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-ios.md).
 
-For a list of the Shared iPad settings you can configure, go to [Configure settings for Shared iPads](../../intune/enrollment/device-enrollment-shared-ipad.md#configure-settings-for-shared-ipads).
+For a list of the Shared iPad settings you can configure, go to [Configure settings for Shared iPads](../../intune-service/enrollment/device-enrollment-shared-ipad.md#configure-settings-for-shared-ipads).
 
 For a list of all the device configuration settings, go to:
 
-- [iOS and iPadOS device settings to use common features](../../intune/configuration/ios-device-features-settings.md)
-- [iOS and iPadOS device settings to allow or restrict features](../../intune/configuration/device-restrictions-ios.md)
+- [iOS and iPadOS device settings to use common features](../../intune-service/configuration/ios-device-features-settings.md)
+- [iOS and iPadOS device settings to allow or restrict features](../../intune-service/configuration/device-restrictions-ios.md)
 
 ## Related articles
 

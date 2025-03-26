@@ -5,7 +5,7 @@ description: Get information about how to upgrade clients in Configuration Manag
 ms.date: 07/23/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

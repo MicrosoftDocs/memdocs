@@ -5,7 +5,7 @@ description: Create a lab environment to evaluate Configuration Manager for use 
 ms.date: 02/28/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

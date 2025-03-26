@@ -5,7 +5,7 @@ description: Learn how to implement Endpoint Protection in Configuration Manager
 ms.date: 10/05/2021
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

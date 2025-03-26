@@ -2,7 +2,7 @@
 title: Online Documentation
 titleSuffix: Configuration Manager
 ms.date: 02/17/2021
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: other
 ms.service: configuration-manager
 author: Banreet

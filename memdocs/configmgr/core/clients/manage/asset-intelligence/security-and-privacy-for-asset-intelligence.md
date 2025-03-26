@@ -5,7 +5,7 @@ description: Security guidance and privacy information for Asset Intelligence in
 ms.date: 05/05/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

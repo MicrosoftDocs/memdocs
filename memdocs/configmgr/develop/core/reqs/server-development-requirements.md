@@ -5,7 +5,7 @@ description: The SMS Provider and associated technologies can be programmed by u
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 186d3283-419b-417f-a168-0b7fba5ec628
 author: Banreet
 ms.author: banreetkaur

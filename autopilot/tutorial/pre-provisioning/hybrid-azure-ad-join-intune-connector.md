@@ -5,9 +5,9 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 02/27/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -32,12 +32,12 @@ Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join ste
 > - **Step 2: Install the Intune Connector**
 
 - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
-- Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
+- Step 4: [Register devices as Windows Autopilot devices](hybrid-azure-ad-join-register-device.md)
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
-- Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
-- Step 7: [Create and assign Microsoft Entra hybrid join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
+- Step 6: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
+- Step 7: [Create and assign Microsoft Entra hybrid join Windows Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
-- Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
+- Step 9: [Assign Windows Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 - Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
 - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
@@ -47,17 +47,11 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 >
 > If the Intune Connector is already installed and configured, skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md).
 
-## Install the Intune Connector
+## Install the Intune Connector for Active Directory
 
-[!INCLUDE [Install the Intune Connector](../includes/intune-connector.md)]
+[!INCLUDE [Install the Intune Connector](../../includes/intune-connector.md)]
 
 ## Next step: Increase the computer account limit in the Organizational Unit (OU)
 
 > [!div class="nextstepaction"]
 > [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
-
-## Related content
-
-For more information on the Intune connector, see the following article:
-
-- [Install the Intune Connector](../../windows-autopilot-hybrid.md#install-the-intune-connector).

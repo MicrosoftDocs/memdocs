@@ -5,7 +5,7 @@ description: Sample queries that show how to join some of the most commonly used
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 61c9b4be-4656-413a-8fb1-c6e72d89fbaa

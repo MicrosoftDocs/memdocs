@@ -4,7 +4,7 @@ ms.date: 09/20/2016
 description: In Configuration Manager, the ShowDialog action opens a property sheet or regular dialog box in the console. With the ShowDialog action, you can display existing dialog boxes or extension dialog boxes that you create.
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: f5912944-21ac-40d2-a026-f9b2ea69d9c7
 author: Banreet
 ms.author: banreetkaur

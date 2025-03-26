@@ -5,7 +5,7 @@ description: Learn about what's new in the latest update for Configuration Manag
 ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth

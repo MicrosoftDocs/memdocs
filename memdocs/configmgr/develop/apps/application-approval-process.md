@@ -5,7 +5,7 @@ description: Learn about the application approval process. See scenarios with co
 ms.date: 08/02/2021
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

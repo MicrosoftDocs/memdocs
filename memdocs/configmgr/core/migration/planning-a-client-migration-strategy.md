@@ -5,7 +5,7 @@ description: Learn about the tasks that migrate clients from a source hierarchy 
 ms.date: 12/30/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

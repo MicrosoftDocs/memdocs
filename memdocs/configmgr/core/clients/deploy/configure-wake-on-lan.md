@@ -5,7 +5,7 @@ description: Select Wake On LAN settings in Configuration Manager.
 ms.date: 11/30/2020
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

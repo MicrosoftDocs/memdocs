@@ -5,7 +5,7 @@ description: Learn how to configure Endpoint Protection alerts in Configuration 
 ms.date: 03/23/2017
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Create child configuration items in Configuration Manager.
 ms.date: 05/07/2019
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

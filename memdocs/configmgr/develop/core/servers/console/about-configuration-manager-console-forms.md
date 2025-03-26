@@ -4,7 +4,7 @@ title: Configuration Manager Console Forms
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: fc75e803-b86e-4baa-a2a0-c47d4aedbace
 author: Banreet
 ms.author: banreetkaur

@@ -5,7 +5,7 @@ description: See which considerations you must take into account when you create
 ms.date: 01/05/2022
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 manager: apoorvseth
 ms.author: baladell

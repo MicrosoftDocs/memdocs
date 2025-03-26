@@ -5,7 +5,7 @@ description: Learn how to import PFX files in Configuration Manager to generate 
 ms.date: 11/29/2019
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

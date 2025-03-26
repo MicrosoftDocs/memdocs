@@ -5,7 +5,7 @@ description: Information about Configuration Manager component behavior and data
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 
 
 ms.assetid: 40851148-f8ff-4959-b884-164fec0563e7

@@ -5,7 +5,7 @@ description: About orchestration groups and their prerequisites and limitations.
 ms.date: 12/01/2021
 ms.service: configuration-manager
 ms.subservice: software-updates
-ms.topic: conceptual
+ms.topic: concept-article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

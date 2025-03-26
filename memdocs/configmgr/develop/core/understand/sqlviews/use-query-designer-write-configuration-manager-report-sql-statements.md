@@ -5,7 +5,7 @@ description: Information about using query designer to write report SQL statemen
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 
 
 ms.assetid: 624e2cb1-db83-4e68-b9c1-335f7b3832c7

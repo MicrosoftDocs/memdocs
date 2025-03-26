@@ -5,7 +5,7 @@ description: Optimize security and privacy for content management in Configurati
 ms.date: 07/15/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

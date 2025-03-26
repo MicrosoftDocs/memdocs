@@ -5,7 +5,7 @@ description: Smscstat.dll is a library of 32-bit C APIs for reporting Configurat
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4149481d-d78d-422a-b342-cf7ddcf2962c
 author: Banreet
 ms.author: banreetkaur

@@ -5,7 +5,7 @@ description: Understand how users enroll devices with on-premises mobile device 
 ms.date: 01/13/2020
 ms.subservice: mdm
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

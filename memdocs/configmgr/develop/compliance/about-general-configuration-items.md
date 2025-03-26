@@ -5,7 +5,7 @@ description: Models of settings and objects, which together represent a meaningf
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 68b138f8-d6ba-4e71-a82a-cb2bb224e972
 author: Banreet
 ms.author: banreetkaur

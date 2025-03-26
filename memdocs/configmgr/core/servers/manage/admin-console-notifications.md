@@ -5,7 +5,7 @@ description: Learn about notifications from the Configuration Manager console.
 ms.date: 12/01/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

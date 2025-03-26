@@ -5,7 +5,7 @@ description: Information about the files and their associated products that are 
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 
 
 ms.assetid: 65066949-cce6-4202-b8e7-f4e1014ee470

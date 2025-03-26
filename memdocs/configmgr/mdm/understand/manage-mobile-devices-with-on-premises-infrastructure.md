@@ -5,7 +5,7 @@ description: Learn about on-premises mobile device management (MDM) in Configura
 ms.date: 12/01/2021
 ms.subservice: mdm
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

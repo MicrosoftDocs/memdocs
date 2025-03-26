@@ -5,7 +5,7 @@ description: Share a link to an application in the Software Center in Configurat
 ms.date: 01/11/2022
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

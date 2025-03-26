@@ -5,7 +5,7 @@ description: Information about the tasks involved in migrating to a Configuratio
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 
 
 ms.assetid: 6be79f37-cc77-4ea0-8d1d-7fe8c98d601f

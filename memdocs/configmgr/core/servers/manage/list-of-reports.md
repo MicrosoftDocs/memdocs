@@ -5,7 +5,7 @@ description: Review a list of reports that are supplied with Configuration Manag
 ms.date: 10/01/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.author: gokarthi
 author: gowdhamankarthikeyan
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: See the process by which a site with an online service connection p
 ms.date: 10/06/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.author: gokarthi
 author: gowdhamankarthikeyan
 manager: apoorvseth

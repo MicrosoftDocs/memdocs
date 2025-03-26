@@ -5,7 +5,7 @@ description: Sample queries that show how to join the most common application ma
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: c0d69334-75eb-408c-8828-94898cf134f5

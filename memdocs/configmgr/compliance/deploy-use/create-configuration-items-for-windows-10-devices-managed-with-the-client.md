@@ -5,7 +5,7 @@ description: Use a configuration item to manage settings for Windows 10 or later
 ms.date: 10/05/2021
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

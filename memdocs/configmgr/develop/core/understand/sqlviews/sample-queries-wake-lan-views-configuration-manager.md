@@ -5,7 +5,7 @@ description: Sample queries that show how to join Wake On LAN views to applicati
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 8a1dcdff-9578-447c-b3cf-3c72166bf7cc

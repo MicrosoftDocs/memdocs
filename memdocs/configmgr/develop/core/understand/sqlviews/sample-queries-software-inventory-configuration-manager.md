@@ -5,7 +5,7 @@ description: Sample queries that show how software inventory views can be joined
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: baffc7d9-86a8-4e36-8230-ea4da8cf1f87

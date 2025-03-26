@@ -5,7 +5,7 @@ description: Create a Configuration Manager report that displays the name and de
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 9b87348f-21d1-40ba-9d3d-c56dd7bae60d
 author: Banreet
 ms.author: banreetkaur

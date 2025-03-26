@@ -5,7 +5,7 @@ description: Learn about security and privacy for Configuration Manager clients.
 ms.date: 05/05/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Facilitate instance (or row) level security on core object classes.
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 4f24562b-a8cd-435f-b5d6-8ef4f8cd7e69
 author: Banreet
 ms.author: banreetkaur

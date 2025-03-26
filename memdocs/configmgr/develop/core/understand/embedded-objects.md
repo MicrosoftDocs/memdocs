@@ -5,7 +5,7 @@ description: You cannot use Windows Management Instrumentation (WMI) to enumerat
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 910108e3-1be0-4474-9df6-7d51bc45cf58
 author: Banreet
 ms.author: banreetkaur

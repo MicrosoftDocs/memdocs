@@ -5,7 +5,7 @@ description: Learn how to use Wi-Fi profiles in Configuration Manager to deploy 
 ms.date: 03/29/2022
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

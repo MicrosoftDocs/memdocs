@@ -5,7 +5,7 @@ description: A superset of the Windows Management Instrumentation (WMI) Query La
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: ea9ebb36-8bd7-49ed-a0d5-8dc6dba104d0
 author: Banreet
 ms.author: banreetkaur

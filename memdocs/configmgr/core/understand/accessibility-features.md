@@ -5,7 +5,7 @@ description: Learn about the features that make Configuration Manager accessible
 ms.date: 07/21/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

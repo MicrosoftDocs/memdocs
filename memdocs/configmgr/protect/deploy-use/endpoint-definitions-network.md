@@ -5,7 +5,7 @@ description: Learn how to manually download the latest definition updates from M
 ms.date: 11/18/2019
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

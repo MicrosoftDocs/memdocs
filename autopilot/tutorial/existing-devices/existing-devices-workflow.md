@@ -81,7 +81,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 > [!IMPORTANT]
 >
-> If enrollment restrictions are configured to block personal devices from enrolling, Autopilot for existing devices can't be used. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices).
+> If enrollment restrictions are configured to block personal devices from enrolling, Autopilot for existing devices can't be used. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune-service/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices).
 
 ## Walkthrough
 

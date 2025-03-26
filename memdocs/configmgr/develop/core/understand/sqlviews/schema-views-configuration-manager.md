@@ -5,7 +5,7 @@ description: Information about the schema that can be used when creating reports
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 
 
 ms.assetid: c409ea11-a284-40d2-9a27-9833c876a318

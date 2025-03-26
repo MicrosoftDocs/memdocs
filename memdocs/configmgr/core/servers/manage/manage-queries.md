@@ -5,7 +5,7 @@ description: Learn how to manage your queries. Includes a table for detailed ref
 ms.date: 04/29/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: gokarthi
 author: gowdhamankarthikeyan
 manager: apoorvseth

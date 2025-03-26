@@ -5,7 +5,7 @@ description: Management differences for the LTSB of Configuration Manager.
 ms.date: 03/24/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

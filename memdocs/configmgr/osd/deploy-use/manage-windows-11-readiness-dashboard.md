@@ -5,7 +5,7 @@ description: View the state of Windows 11 readiness dashboard using Configuratio
 ms.date: 09/18/2023
 ms.service: configuration-manager
 ms.subservice: software-updates
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

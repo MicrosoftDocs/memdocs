@@ -5,7 +5,7 @@ description: Bulk-enroll devices in an automated way with on-premises mobile dev
 ms.date: 01/13/2020
 ms.subservice: mdm
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
