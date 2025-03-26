@@ -5,7 +5,7 @@ description: System resource objects, which include any resources that were disc
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3692e025-4c24-4b5e-a4b0-a55039c92b21
 author: Banreet
 ms.author: banreetkaur

@@ -5,7 +5,7 @@ description: Get the prerequisites for Asset Intelligence in Configuration Manag
 ms.date: 02/22/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

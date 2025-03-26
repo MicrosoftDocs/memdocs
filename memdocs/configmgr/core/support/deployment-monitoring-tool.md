@@ -5,7 +5,7 @@ description: Use the Deployment Monitoring Tool to troubleshoot software deploym
 ms.date: 09/24/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.author: baladell 
 author: BalaDelli
 manager: apoorvseth

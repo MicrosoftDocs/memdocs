@@ -5,7 +5,7 @@ description: Get security and privacy information for power management in Config
 ms.date: 04/23/2017
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

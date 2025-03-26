@@ -50,16 +50,16 @@ For applications to install and PowerShell scripts work successfully, they must 
 
 > [!NOTE]
 >
-> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/mem/intune/apps/apps-add) and [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
+> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/mem/intune-service/apps/apps-add) and [Use PowerShell scripts on Windows devices in Intune](/mem/intune-service/apps/intune-management-extension).
 
 ### Applications
 
 The following types of applications are supported for use with Windows Autopilot device preparation:
 
-- [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
-- [Win32](/mem/intune/apps/apps-win32-prepare).
-- [Microsoft Store](/mem/intune/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-- [Microsoft 365](/mem/intune/apps/apps-add-office365).
+- [Line-of-business (LOB)](/mem/intune-service/apps/lob-apps-windows).
+- [Win32](/mem/intune-service/apps/apps-win32-prepare).
+- [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
+- [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
 
 In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 
@@ -138,8 +138,8 @@ To assign the desired PowerShell scripts to the device group created for Windows
 
 ## Related content
 
-- [Add apps to Microsoft Intune](/mem/intune/apps/apps-add).
-- [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
-- [Assign apps to groups with Microsoft Intune](/mem/intune/apps/apps-deploy).
-- [Win32 app management in Microsoft Intune](/mem/intune/apps/apps-win32-app-management).
-- [Add a Windows line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-windows).
+- [Add apps to Microsoft Intune](/mem/intune-service/apps/apps-add).
+- [Use PowerShell scripts on Windows devices in Intune](/mem/intune-service/apps/intune-management-extension).
+- [Assign apps to groups with Microsoft Intune](/mem/intune-service/apps/apps-deploy).
+- [Win32 app management in Microsoft Intune](/mem/intune-service/apps/apps-win32-app-management).
+- [Add a Windows line-of-business app to Microsoft Intune](/mem/intune-service/apps/lob-apps-windows).

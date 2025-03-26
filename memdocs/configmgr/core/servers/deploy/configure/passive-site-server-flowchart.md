@@ -5,7 +5,7 @@ description: A flowchart diagram for how the site server in passive mode is set 
 ms.date: 07/30/2018
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

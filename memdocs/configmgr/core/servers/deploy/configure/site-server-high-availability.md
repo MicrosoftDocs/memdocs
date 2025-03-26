@@ -5,7 +5,7 @@ description: How to configure high availability for the Configuration Manager si
 ms.date: 04/11/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

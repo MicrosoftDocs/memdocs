@@ -5,7 +5,7 @@ description: If lazy properties are retrieved during query operations, they have
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: bc8b9495-845f-4fae-b4bc-ac94e6f091e4
 author: Banreet
 ms.author: banreetkaur

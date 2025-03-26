@@ -5,7 +5,7 @@ description: Learn how to specify custom locations for SQL Server database files
 ms.date: 10/08/2020
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

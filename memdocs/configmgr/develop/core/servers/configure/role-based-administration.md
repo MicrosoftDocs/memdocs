@@ -5,7 +5,7 @@ description: This section provides topics about programmatically managing role-b
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 20486f6b-b4f2-4e4a-9dbb-72fb90067ec0
 author: Banreet
 ms.author: banreetkaur

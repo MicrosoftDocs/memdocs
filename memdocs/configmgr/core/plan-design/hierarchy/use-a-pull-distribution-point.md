@@ -5,7 +5,7 @@ description: Learn about configurations and limitations for using a pull-distrib
 ms.date: 07/15/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

@@ -12,6 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
+ms.topicc: troubleshooting-general
 ---
 
 # Troubleshooting dashboard

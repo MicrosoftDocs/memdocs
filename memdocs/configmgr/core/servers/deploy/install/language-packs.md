@@ -5,7 +5,7 @@ description: Learn about the language support available in Configuration Manager
 ms.date: 04/05/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

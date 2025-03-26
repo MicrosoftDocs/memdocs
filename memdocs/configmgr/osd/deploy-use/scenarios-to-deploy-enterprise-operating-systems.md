@@ -5,7 +5,7 @@ description: Learn about several scenarios to deploy enterprise operating system
 ms.date: 10/01/2021
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

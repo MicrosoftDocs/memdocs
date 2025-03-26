@@ -5,7 +5,7 @@ description: If you're planning to install multiple Configuration Manager sites,
 ms.date: 09/18/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

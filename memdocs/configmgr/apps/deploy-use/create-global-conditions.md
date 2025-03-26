@@ -5,7 +5,7 @@ description: Create global conditions to specify how an application is provided 
 ms.date: 10/06/2016
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 manager: apoorvseth
 ms.author: baladell

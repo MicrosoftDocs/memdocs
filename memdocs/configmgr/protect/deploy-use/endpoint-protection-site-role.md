@@ -5,7 +5,7 @@ description: Learn how to configure Endpoint Protection to manage security and m
 ms.date: 02/14/2017
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

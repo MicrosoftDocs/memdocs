@@ -5,7 +5,7 @@ description: Install and configure the Exchange connector for Configuration Mana
 ms.date: 12/31/2019
 ms.subservice: mdm
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.collection: tier3
 author: gowdhamankarthikeyan
 ms.author: gokarthi

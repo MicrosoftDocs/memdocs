@@ -115,13 +115,13 @@ Enabling co-management itself doesn't require that you onboard your site with Mi
 
 ### Intune
 
-- [Set up Intune](../../intune/fundamentals/deployment-plan-setup.md)
+- [Set up Intune](../../intune-service/fundamentals/deployment-plan-setup.md)
 
-- [Enable Windows automatic enrollment](../../intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
+- [Enable Windows automatic enrollment](../../intune-service/enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
 
 ### Windows
 
-Update your devices to an [Intune supported version of Windows 11 or Windows 10](../../intune/fundamentals/supported-devices-browsers.md). For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#windows-as-a-service).
+Update your devices to an [Intune supported version of Windows 11 or Windows 10](../../intune-service/fundamentals/supported-devices-browsers.md). For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#windows-as-a-service).
 
 ### Permissions and roles
 

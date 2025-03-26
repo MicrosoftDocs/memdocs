@@ -5,7 +5,7 @@ description: Learn how to create and deploy firewall policies for Endpoint Prote
 ms.date: 03/07/2017
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

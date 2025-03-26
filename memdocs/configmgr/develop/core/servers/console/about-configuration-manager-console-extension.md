@@ -4,7 +4,7 @@ title: Configuration Manager Console Extension
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: ebfd3530-07f9-4d58-9e0a-f362c0e6dcd7
 author: Banreet
 ms.author: banreetkaur

@@ -5,7 +5,7 @@ description: Learn about prerequisites for installing the different types of Con
 ms.date: 04/08/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Site size-related performance test results, methodology, and guidan
 author: Banreet
 ms.author: banreetkaur
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 04/13/2021
 ms.localizationpriority: medium
 ms.collection: tier3

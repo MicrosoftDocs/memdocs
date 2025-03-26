@@ -5,7 +5,7 @@ description: The managed SMS Provider library is a .NET Framework library that w
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 18924a3e-0cc3-4aa8-98bc-b6beca182d4e
 author: Banreet
 ms.author: banreetkaur

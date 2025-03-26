@@ -5,7 +5,7 @@ description: Partners that must continue to use a specific deployment technology
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: b12131ec-cbe0-4c93-9729-e78d904a1a11
 author: Banreet
 ms.author: banreetkaur

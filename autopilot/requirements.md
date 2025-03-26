@@ -6,14 +6,14 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 11/25/2024
+ms.date: 03/25/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: article
 ms.custom:
   - CI 116757
   - CSSTroubleshooting
@@ -130,16 +130,13 @@ Microsoft Entra ID validates user credentials. Additionally, the device is joine
 
 ##### Microsoft Intune
 
-Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see the following articles:
-
-- [Intune network configuration requirements and bandwidth](/mem/intune/fundamentals/network-bandwidth-use).
-- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
+Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints).
 
 ##### Autopilot automatic device diagnostics collection
 
 For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network. Diagnostics are available for 28 days before they're removed.
 
-For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+For more information, see [Collect diagnostics from a Windows device](/mem/intune-service/remote-actions/collect-diagnostics).
 
 ##### Windows Update
 
@@ -234,13 +231,13 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 - [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline).
 - [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/products/microsoft-365).
 - [Microsoft 365 Enterprise E3 or E5 subscription](https://www.microsoft.com/microsoft-365/enterprise), which include all Windows client, Microsoft 365, and EMS features (Microsoft Entra ID and Intune).
-- [Enterprise Mobility + Security E3 or E5 subscription](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), which include all needed Microsoft Entra ID and Intune features.
+- [Enterprise Mobility + Security E3 or E5 subscription]([https://www.microsoft.com/cloud-platform/enterprise-mobility-security](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security), which include all needed Microsoft Entra ID and Intune features.
 - [Intune for Education subscription](/intune-education/what-is-intune-for-education), which include all needed Microsoft Entra ID and Intune features.
-- [Microsoft Entra ID P1 or P2](https://azure.microsoft.com/services/active-directory/) and [Microsoft Intune subscription](https://www.microsoft.com/cloud-platform/microsoft-intune) or an alternative MDM service.
+- [Microsoft Entra ID P1 or P2](https://azure.microsoft.com/services/active-directory/) and [Microsoft Intune subscription](https://www.microsoft.com/security/business/microsoft-intune-pricing) or an alternative MDM service.
 
 > [!NOTE]
 >
-> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/mem/intune/fundamentals/licenses-assign).
+> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/mem/intune-service/fundamentals/licenses-assign).
 
 Additionally, the following are also recommended (but not required):
 
@@ -253,7 +250,7 @@ Additionally, the following are also recommended (but not required):
 
 Before Windows Autopilot can be used, some configuration tasks are required to support the common Autopilot scenarios.
 
-- **Configure Microsoft Entra automatic enrollment**. For details when using Microsoft Intune, see [Set up Windows automatic Intune enrollment](tutorial/user-driven/azure-ad-join-automatic-enrollment.md) or [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). If using a different MDM service, contact the vendor for the specific URLs or configuration needed for those services.
+- **Configure Microsoft Entra automatic enrollment**. For details when using Microsoft Intune, see [Set up Windows automatic Intune enrollment](tutorial/user-driven/azure-ad-join-automatic-enrollment.md) or [Enable Windows automatic enrollment](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment). If using a different MDM service, contact the vendor for the specific URLs or configuration needed for those services.
 
 - **The first user that signs in needs to have Microsoft Entra join permissions for some deployment scenarios**. For details, see [Allow users to join devices to Microsoft Entra ID](tutorial/user-driven/azure-ad-join-allow-users-to-join.md). The exception to this requirement is Windows Autopilot self-deployment mode since this method works in a userless context.
 

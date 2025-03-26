@@ -5,7 +5,7 @@ description: Learn how to publish Configuration Manager sites to Active Director
 ms.date: 02/7/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

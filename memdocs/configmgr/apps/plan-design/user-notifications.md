@@ -5,7 +5,7 @@ description: Learn about the configurations to manage notifications to users abo
 ms.date: 10/05/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

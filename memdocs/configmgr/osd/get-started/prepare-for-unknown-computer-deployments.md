@@ -5,7 +5,7 @@ description: Learn how to deploy operating systems to computers that aren't mana
 ms.date: 10/06/2016
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

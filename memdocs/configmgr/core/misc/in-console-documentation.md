@@ -3,7 +3,7 @@ title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
 ms.date: 10/11/2023
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: other
 ms.service: configuration-manager
 author: Banreet

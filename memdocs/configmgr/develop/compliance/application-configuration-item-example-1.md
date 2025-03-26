@@ -5,7 +5,7 @@ description: The Application Configuration Item Instance example determines whet
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: adc63f00-8fcf-4212-910a-26ae9154d574
 author: Banreet
 ms.author: banreetkaur

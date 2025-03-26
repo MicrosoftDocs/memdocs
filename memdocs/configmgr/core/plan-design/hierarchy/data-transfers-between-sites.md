@@ -5,7 +5,7 @@ description: Learn how Configuration Manager moves data between sites, and how y
 ms.date: 08/09/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

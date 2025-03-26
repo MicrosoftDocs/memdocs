@@ -5,7 +5,7 @@ description: Set up hardware inventory for all clients or for a collection in Co
 ms.date: 02/22/2017
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

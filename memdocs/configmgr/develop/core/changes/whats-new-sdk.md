@@ -5,7 +5,7 @@ description: Learn about the latest additions or changes to the Configuration Ma
 ms.date: 12/01/2021
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

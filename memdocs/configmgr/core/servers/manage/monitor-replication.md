@@ -5,7 +5,7 @@ description: Learn how to monitor SQL Server replication in your Configuration M
 ms.date: 04/11/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

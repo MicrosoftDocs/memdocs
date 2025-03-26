@@ -5,7 +5,7 @@ description: When you write queries or compose reports from information that is 
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 3c397b79-1209-4fe3-8c48-b3a4970faba7
 author: Banreet
 ms.author: banreetkaur

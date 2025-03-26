@@ -37,25 +37,25 @@ For more information about the recommended encryption algorithms to use, see [Bi
 
 To make sure the desired BitLocker encryption algorithm is set before automatic encryption occurs for Autopilot devices:
 
-1. Configure the [encryption method settings](/mem/intune/protect/encrypt-devices#create-an-endpoint-security-policy-for-bitlocker) in the Endpoint Security disk encryption policy. The settings are available under **Endpoint Security** > **Disk encryption** > **Create policy** > **Platform** = Windows 10 and later, **Profile type** = BitLocker.
+1. Configure the [encryption method settings](/mem/intune-service/protect/encrypt-devices#create-an-endpoint-security-policy-for-bitlocker) in the Endpoint Security disk encryption policy. The settings are available under **Endpoint Security** > **Disk encryption** > **Create policy** > **Platform** = Windows 10 and later, **Profile type** = BitLocker.
 
-1. [Assign the policy](/mem/intune/configuration/device-profile-assign) to the Autopilot device group. The encryption policy must be assigned to **devices** in the group, not users.
+1. [Assign the policy](/mem/intune-service/configuration/device-profile-assign) to the Autopilot device group. The encryption policy must be assigned to **devices** in the group, not users.
 
 1. Enable the Autopilot [enrollment status page](enrollment-status.md) for these devices. If this feature isn't enabled, the policy doesn't apply before encryption starts.
 
 ## Full disk or used space-only encryption
 
-There are two types of encryption, full disk or used space-only. Configuration of [silent enablement](/mem/intune/protect/encrypt-devices#silently-enable-bitlocker-on-devices) and hardware support for modern standby automatically determines the type of encryption used. The type of encryption used can be enforced by configuring the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) setting. Like the encryption algorithm, BitLocker uses the encryption type when BitLocker is first enabled. For more information on the expected encryption type behavior, see [Manage BitLocker policy](/mem/intune/protect/encrypt-devices#full-disk-vs-used-space-only-encryption).
+There are two types of encryption, full disk or used space-only. Configuration of [silent enablement](/mem/intune-service/protect/encrypt-devices#silently-enable-bitlocker-on-devices) and hardware support for modern standby automatically determines the type of encryption used. The type of encryption used can be enforced by configuring the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) setting. Like the encryption algorithm, BitLocker uses the encryption type when BitLocker is first enabled. For more information on the expected encryption type behavior, see [Manage BitLocker policy](/mem/intune-service/protect/encrypt-devices#full-disk-vs-used-space-only-encryption).
 
 To enforce the type of drive encryption used:
 
-1. Configure the **Enforce drive encryption type on operating system drives** setting within the [settings catalog](/mem/intune/configuration/settings-catalog). This setting is available in the **Administrative Templates > Windows Components > BitLocker Drive Encryption > Operating System Drives** category from the settings picker.
+1. Configure the **Enforce drive encryption type on operating system drives** setting within the [settings catalog](/mem/intune-service/configuration/settings-catalog). This setting is available in the **Administrative Templates > Windows Components > BitLocker Drive Encryption > Operating System Drives** category from the settings picker.
 
-1. [Assign the policy](/mem/intune/configuration/device-profile-assign) to the Autopilot device group. The encryption policy must be assigned to **devices** in the group, not users.
+1. [Assign the policy](/mem/intune-service/configuration/device-profile-assign) to the Autopilot device group. The encryption policy must be assigned to **devices** in the group, not users.
 
 1. Enable the Autopilot [enrollment status page](enrollment-status.md) for these devices. If this feature isn't enabled, the policy doesn't apply before encryption starts.
 
 ## Related content
 
 - [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview).
-- [Manage BitLocker policy for Windows devices with Intune](/mem/intune/protect/encrypt-devices).
+- [Manage BitLocker policy for Windows devices with Intune](/mem/intune-service/protect/encrypt-devices).

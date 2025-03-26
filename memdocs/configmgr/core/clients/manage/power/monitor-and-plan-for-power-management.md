@@ -5,7 +5,7 @@ description: Learn how to monitor and plan for power management in Configuration
 ms.date: 10/06/2016
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

@@ -4,7 +4,7 @@ description: Learn how developing applications and scripts for Microsoft Configu
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: b605e20e-f0cb-44fe-99f8-6e291971aec3
 author: Banreet
 ms.author: banreetkaur

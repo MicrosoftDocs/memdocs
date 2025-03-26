@@ -5,7 +5,7 @@ description: A guide for removing roles, and uninstalling sites and hierarchies
 ms.date: 02/16/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

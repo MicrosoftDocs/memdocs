@@ -5,7 +5,7 @@ description: Get prerequisites for using collections in Configuration Manager.
 ms.date: 02/22/2017
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

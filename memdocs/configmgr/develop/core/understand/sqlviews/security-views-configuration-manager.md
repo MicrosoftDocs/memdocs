@@ -5,7 +5,7 @@ description: Information about the permissions that are granted to users and use
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 
 
 ms.assetid: 29422d6c-2235-4365-a8b5-cde12b48d55b

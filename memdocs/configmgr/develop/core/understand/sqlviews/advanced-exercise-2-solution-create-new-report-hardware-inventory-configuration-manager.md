@@ -5,7 +5,7 @@ description: Create the report for Advanced Exercise 2
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d1b574f9-d765-4f37-a552-bd018ce86224
 author: Banreet
 ms.author: banreetkaur
