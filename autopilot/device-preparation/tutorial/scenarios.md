@@ -5,9 +5,9 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 04/05/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
