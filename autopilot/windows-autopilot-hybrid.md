@@ -96,6 +96,8 @@ Multi-domain support section removed
 
 - The Intune Connector for Active Directory requires the [same endpoints as Intune](/mem/intune-service/fundamentals/intune-endpoints).
 
+---
+
 ## Set up Windows automatic MDM enrollment
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) and select **Microsoft Entra ID**.
