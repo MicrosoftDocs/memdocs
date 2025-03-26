@@ -3,7 +3,7 @@
 
 title: Android Enterprise security configurations for corporate-owned fully managed profiles
 titleSuffix: Microsoft Intune
-description:Review example configurations of basic, enhanced, and high security for devices with Android Enterprise corporate-owned fully managed profiles.
+description: Review example configurations of basic, enhanced, and high security for devices with Android Enterprise corporate-owned fully managed profiles.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -13,7 +13,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.assetid:
 
 # optional metadata
