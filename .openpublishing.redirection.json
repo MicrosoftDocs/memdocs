@@ -127,12 +127,12 @@
     },
     {
       "source_path": "memdocs/intune/enrollment/android-fully-managed-security-settings.md",
-      "redirect_url": "/intune/intune-service/protect/device-restrictions-android-for-work",
+      "redirect_url": "/intune/intune-service/protect/android-fully-managed-security-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/enrollment/android-work-profile-security-settings.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-create-android-for-work",
+      "redirect_url": "/intune/intune-service/protect/android-personally-owned-security-settings",
       "redirect_document_id": false
     },
     {
