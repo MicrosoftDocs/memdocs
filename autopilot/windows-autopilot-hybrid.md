@@ -405,7 +405,7 @@ To uninstall the Intune Connector for Active Directory from the server, select t
     >
     > The legacy **Intune Connector for Active Directory** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d) and should only be used for uninstalls. For new installs, use the [updated Intune Connector for Active Directory](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector-for-active-directory-on-the-server).
 
-
+---
 
 ## Next steps
 
