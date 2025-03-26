@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/04/2025
+ms.date: 04/02/2025
 ms.topic: overview
 ms.collection:
   - M365-modern-desktop
@@ -79,7 +79,7 @@ New features in Windows Autopilot device preparation include:
 
 > [!IMPORTANT]
 >
-> [Windows 365 Frontline in shared mode](/windows-365/enterprise/introduction-windows-365-frontline) is not supported for GCCH and DoD at this time.
+> [Windows 365 Frontline in shared mode](/windows-365/enterprise/introduction-windows-365-frontline) isn't supported for GCCH and DoD at this time.
 
 ## Capabilities
 
