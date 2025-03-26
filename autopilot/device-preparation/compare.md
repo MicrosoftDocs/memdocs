@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/13/2025
+ms.date: 04/02/2025
 ms.topic: overview
 ms.collection:
   - M365-modern-desktop
@@ -48,7 +48,7 @@ In general, the following are some of the major factors when considering between
 | Pre-provisioned scenario | ❌ | ✅ |
 | Self-deploying scenario | ❌ | ✅ |
 | Existing devices scenario | ❌ | ✅ |
-| Automatic deployment scenario | ✅ | ❌ | 
+| Automatic deployment scenario | ✅ | ❌ |
 | Autopilot reset support | ❌ | ✅ |
 | Microsoft Entra join | ✅ | ✅ |
 | Microsoft Entra hybrid join | ❌ | ✅ |
