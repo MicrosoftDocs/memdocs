@@ -47,11 +47,6 @@ Apple's declarative device management (DDM) allows you to install a specific upd
 
 > [!TIP]
 > To learn more about declarative software updates from Apple, go to:
->
-> - [Apple Platform Deployment](https://support.apple.com/guide/deployment/software-update-declarative-configuration-depca14ecd4d/web) (opens Apple's website)
-> - [Apple's session on exploring advances in declarative device management](https://developer.apple.com/videos/play/wwdc2023/10041/) (opens Apple's website)
-> - [The software update configuration in Apple's developer documentation](https://developer.apple.com/documentation/devicemanagement/softwareupdateenforcementspecific#discussion) (opens Apple's website)
-
 ## Managed software updates vs software update policies
 
 On Apple devices in Intune, you can create software update policies or managed software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types.
