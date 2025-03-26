@@ -4,7 +4,7 @@ description: The SMS_ScheduleToken WMI class is an abstract parent class for the
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 030ee838-5a53-45d0-8fd0-d797743d7630
 author: Banreet
 ms.author: banreetkaur

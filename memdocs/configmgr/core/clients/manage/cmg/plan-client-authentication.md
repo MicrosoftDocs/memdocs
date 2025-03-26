@@ -5,7 +5,7 @@ description: Plan for how clients authenticate to the cloud management gateway (
 ms.date: 08/02/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

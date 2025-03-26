@@ -5,7 +5,7 @@ description: Configure software inventory, and exclude folders from software inv
 ms.date: 01/03/2018
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

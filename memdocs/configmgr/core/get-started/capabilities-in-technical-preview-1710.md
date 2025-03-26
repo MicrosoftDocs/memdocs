@@ -5,7 +5,7 @@ description: Learn about features available in the Technical Preview version 171
 ms.date: 11/20/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

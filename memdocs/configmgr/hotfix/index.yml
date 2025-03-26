@@ -1,18 +1,18 @@
 ### YamlMime:Landing
 
 title: Configuration Manager hotfixes and update rollups
-summary: Knowledge Base articles for Microsoft Configuration Manager hotfixes, update rollups, and change list articles for new releases. 
+summary: Knowledge Base articles for Microsoft Configuration Manager hotfixes, update rollups, and summary articles for new releases. 
 
 metadata:
   title: Configuration Manager hotfixes
   titleSuffix: Configuration Manager
-  description: Knowledge Base articles for Microsoft Configuration Manager hotfixes, update rollups, and change list articles for new releases.
+  description: Knowledge Base articles for Microsoft Configuration Manager hotfixes, update rollups, and summary articles for new releases.
   ms.subservice: core-infra
   ms.service: configuration-manager
   ms.topic: landing-page
   author: bhuney
   ms.author: brianhun
-  manager: apoorvseth
+  manager: dougeby
   ms.date: 12/09/2021
   ms.localizationpriority: high
 
@@ -25,6 +25,8 @@ landingContent:
             url: 2409/30195272.md
           - text: KB 30833053 CMG installation update for 2409
             url: 2409/30833053.md
+          - text: KB 30385346 Update rollup for Configuration Manager version 2409
+            url: 2409/30385346.md
   - title: Configuration Manager 2403
     linkLists:
       - linkListType: overview

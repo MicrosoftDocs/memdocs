@@ -5,7 +5,7 @@ description: Verifying the Application Management Extension. Verify the new Depl
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: a93ed163-3b08-4d56-991f-630586f835a7
 author: Banreet
 ms.author: banreetkaur

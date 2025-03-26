@@ -5,7 +5,7 @@ description: Use Resource Explorer to view hardware inventory in Configuration M
 ms.date: 07/30/2018
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

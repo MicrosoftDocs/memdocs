@@ -5,7 +5,7 @@ description: Learn about using package definition files to create packages and p
 ms.date: 07/26/2019
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 manager: apoorvseth
 ms.author: baladell

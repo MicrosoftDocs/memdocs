@@ -7,9 +7,9 @@ metadata:
   ms.localizationpriority: medium
   author: frankroj
   ms.author: frankroj
-  ms.reviewer: jubaptis
+  ms.reviewer: madakeva
   manager: aaroncz
-  ms.date: 11/26/2024
+  ms.date: 02/27/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -89,14 +89,14 @@ sections:
 
           - MDM enrollment issues: Is the device able to [enroll in Microsoft Intune](#troubleshooting-windows-autopilot-device-import-and-enrollment) or non-Microsoft MDM service?
 
-          - Review logs that are automatically collected upon Windows Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics). <!-- MAXADO-1895390 -->
+          - Review logs that are automatically collected upon Windows Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune-service/remote-actions/collect-diagnostics). <!-- MAXADO-1895390 -->
 
       - question: |
           How can additional detailed troubleshooting information be enabled?
         answer: |
           On [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions), the Windows Autopilot diagnostic page can be opened to view additional detailed troubleshooting information about the Windows Autopilot provisioning process. To enable the Windows Autopilot diagnostics page:
 
-          1. Go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status) where the Windows Autopilot diagnostics page needs to be enabled.
+          1. Go to the [ESP profile](/mem/intune-service/enrollment/windows-enrollment-status) where the Windows Autopilot diagnostics page needs to be enabled.
 
           1. Make sure that **Show app and profile configuration progress** is selected to **Yes**.
 
@@ -110,7 +110,7 @@ sections:
 
           > [!NOTE]
           >
-          > - By default diagnostics are automatically collected upon a Windows Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+          > - By default diagnostics are automatically collected upon a Windows Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune-service/remote-actions/collect-diagnostics).
           >
           > - For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network.
 
@@ -166,6 +166,11 @@ sections:
         answer: |
           ETW tracing can be used to get detailed information from Windows Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [Troubleshooting Windows Autopilot](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
+      - question: |
+          Why is the Intune Connector not logging in Event Viewer even though logging is enabled?
+        answer: |
+          The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
+
 
   - name: Troubleshooting Windows Autopilot device import and enrollment
     questions:
@@ -193,7 +198,7 @@ sections:
               1. Select the device that is experiencing the error, and then in the toolbar select **Unblock device**.
 
               1. Redeploy the Windows Autopilot deployment profile.
-              
+
                   > [!NOTE]
                   >
                   > A success message might not display after selecting **Unblock device**, but the device is ready to be used again.
@@ -373,7 +378,7 @@ sections:
       - question: |
           What happens if a user attempts to join more devices to Microsoft Entra ID then allowed?
         answer: |
-          Errors occur if a user exceeds the allowed number of devices they can join. This default limit is 50 devices but can be configured in Microsoft Entra ID. For more information, see [Understand Intune and Microsoft Entra device limit restrictions](/mem/intune/enrollment/device-limit-intune-azure).
+          Errors occur if a user exceeds the allowed number of devices they can join. This default limit is 50 devices but can be configured in Microsoft Entra ID. For more information, see [Understand Intune and Microsoft Entra device limit restrictions](/mem/intune-service/enrollment/device-limit-intune-azure).
 
       - question: |
           Why did deleting a device's object in Microsoft Entra ID cause the device to not be able to join Microsoft Entra ID any longer?
@@ -382,11 +387,11 @@ sections:
 
   - name: Troubleshooting policy conflicts with Windows Autopilot
     questions:
-    
+
       - question: |
           Why is the web sign-in option missing at the Windows sign-in screen after Windows Autopilot pre-provisioning completes?
         answer: |
-            The [Device password policies](/mem/intune/protect/security-baseline-settings-mdm-all#device-lock) in the Security Baseline causes issues after pre-provisioning. To resolve, change the password settings in Security Baseline to **Not Configured** or assign the baseline to a user group.
+            The [Device password policies](/mem/intune-service/protect/security-baseline-settings-mdm-all#device-lock) in the Security Baseline causes issues after pre-provisioning. To resolve, change the password settings in Security Baseline to **Not Configured** or assign the baseline to a user group.
 
       - question: |
           Can policies conflict with Windows Autopilot working correctly?
@@ -409,7 +414,7 @@ sections:
           | **[AppLocker CSP](/windows/client-management/mdm/applocker-csp)** | The AppLocker configuration service provider (CSP) isn't supported in the Enrollment Status Page as it triggers a reboot when a policy is applied or a deletion occurs. |
           |**Device restriction/[Password Policy](/windows/client-management/mdm/devicelock-csp)** | The out-of-box experience (OOBE) or user desktop autologon can fail when a device reboots during the device Enrollment Status Page (ESP). This failure can occur when certain [DeviceLock policies](/windows/client-management/mdm/policy-csp-devicelock) are applied to a device. Such policies can include:<ul><li>Minimum password length and password complexity</li><li>Any similar group policy settings (including any that disable autologon)</li></ul>This possible failure is especially true for kiosk scenarios where passwords are automatically generated. |
           |**Windows Security Baseline/[Administrator elevation prompt behavior](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)<br><br>Windows Security Baseline/[Require admin approval mode for administrators](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)<br><br>Windows Security Baseline / [Enable virtualization based security](/windows/client-management/mdm/policy-csp-deviceguard)** | These policies require a reboot, as a result more prompts might appear when modifying user account control (UAC) settings during the OOBE using the device Enrollment Status Page (ESP). Increased prompts are more likely if the device reboots after policies are applied. To work around this issue, the policies can be targeted to users instead of devices so that they apply later in the process. |
-          | **Device restrictions/Cloud and Storage/[Microsoft Account sign-in assistant](/mem/intune/configuration/device-restrictions-windows-10#cloud-and-storage)** | Setting this policy to "disabled" turns off the Microsoft Sign-in Assistant service (wlidsvc). Windows Autopilot requires this service to get the Windows Autopilot profile. |
+          | **Device restrictions/Cloud and Storage/[Microsoft Account sign-in assistant](/mem/intune-service/configuration/device-restrictions-windows-10#cloud-and-storage)** | Setting this policy to "disabled" turns off the Microsoft Sign-in Assistant service (wlidsvc). Windows Autopilot requires this service to get the Windows Autopilot profile. |
           | **Registry keys that affect Windows Autopilot if a device setting requires a reboot during device ESP** | **Registry key**:<br>If the [AutoAdminLogon](/troubleshoot/windows-server/user-profiles-and-logon/turn-on-automatic-logon) registry key is set to `0` (disabled), this breaks Windows Autopilot.<br><br>**Registry path**:<br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Automatic logon`  |
           | **[MDM wins over Group Policy](/windows/client-management/mdm/policy-csp-controlpolicyconflict)** | This policy allows control of which policy is used when both the MDM policy and its equivalent Group Policy (GP) are set on the device. |
           | **Group Policy Objects (GPOs) that affect Windows Autopilot for [pre-provisioned deployment](pre-provision.md)** | Windows Autopilot pre-provisioning doesn't work when any of the four GPO policy settings listed here are enabled.<br><br>**GPO path**: <br>Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options<br><br>**Policies**:<br>[Interactive logon: Message title for users attempting to log on](/windows/security/threat-protection/security-policy-settings/interactive-logon-message-title-for-users-attempting-to-log-on)<br><br>[Interactive logon: Message text for users attempting to log on](/windows/security/threat-protection/security-policy-settings/interactive-logon-message-text-for-users-attempting-to-log-on)<br><br>[Interactive logon: Require Windows Hello for Business or smart card](/windows/security/threat-protection/security-policy-settings/interactive-logon-require-smart-card)<br><br>[User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode - Prompt for credentials on the secure desktop](/windows/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-administrators-in-admin-approval-mode) |
@@ -424,14 +429,14 @@ sections:
 
           `Another installation is in progress, please try again later.`
 
-          For more information, see [Set up the Enrollment Status Page - Device setup: Apps](/mem/intune/enrollment/windows-enrollment-status#device-setup-apps).
+          For more information, see [Set up the Enrollment Status Page - Device setup: Apps](/mem/intune-service/enrollment/windows-enrollment-status#device-setup-apps).
 
           If mixing LOB and Win32 apps is required, consider using [Windows Autopilot device preparation](device-preparation/overview.md), which doesn't use ESP so therefore supports mixing of LOB and Win32 apps.
 
       - question: |
           During the ESP of a Windows Autopilot deployment, why does the Microsoft 365 Click-to-Run version of Office fail to install the Teams Machine-Wide Installer, or cause other Win32 app MSI based installs to fail?
         answer: |
-          The [Teams Machine-Wide Installer](/microsoftteams/msi-deployment) component of the Microsoft 365 Click-to-Run version of Office includes an MSI installation. ESP doesn't track the Teams Machine-Wide Installer MSI install. Because ESP doesn't track the Teams Machine-Wide Installer MSI install, it can cause a conflict when other Win32 app MSI based installs attempt to install during ESP. MSIs install via **TrustedInstaller** which doesn't allow simultaneous installations. This conflict can cause either the Teams Machine-Wide Installer to fail or other MSI based installs to fail during ESP. For more information, see [Set up the Enrollment Status Page - Device setup: Apps](/mem/intune/enrollment/windows-enrollment-status#device-setup-apps).
+          The [Teams Machine-Wide Installer](/microsoftteams/msi-deployment) component of the Microsoft 365 Click-to-Run version of Office includes an MSI installation. ESP doesn't track the Teams Machine-Wide Installer MSI install. Because ESP doesn't track the Teams Machine-Wide Installer MSI install, it can cause a conflict when other Win32 app MSI based installs attempt to install during ESP. MSIs install via **TrustedInstaller** which doesn't allow simultaneous installations. This conflict can cause either the Teams Machine-Wide Installer to fail or other MSI based installs to fail during ESP. For more information, see [Set up the Enrollment Status Page - Device setup: Apps](/mem/intune-service/enrollment/windows-enrollment-status#device-setup-apps).
 
           This issue might be random and might not always occur. The issue occurs due to a timing issue between the **Teams Machine-Wide Installer** MSI install and other Win32 app MSI installs.
 
@@ -447,10 +452,39 @@ sections:
 
           1. Continue on error for ESP failures. If the problem occurs with this option enabled, some applications including **Teams** might not install. However, ESP continues and doesn't fail.
 
+  - name: Troubleshooting the Intune Connector for Active Directory
+    questions:
+      - question: |
+          Why is the Intune Connector for Active Directory not logging in Event Viewer even though logging is enabled?
+        answer: |
+          The Intune Connector for Active Directory originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector for Active Directory has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
+
+      - question: |
+          Why does uninstalling the Intune Connector for Active Directory through the Settings app not fully remove the application?
+        answer: |
+          The Intune Connector for Active Directory needs to be uninstalled using both the Settings app and the Intune Connector for Active Directory installed executable **ODJConnectorBoostrapper.exe**. When uninstalling the Intune Connector for Active Directory, run **ODJConnectorBoostrapper.exe** and select the **Uninstall** option. The **ODJConnectorBoostrapper.exe** installer version needs to match the version of the connector that's being uninstalled.
+
+      - question: |
+          Why is the error "The MSA account couldn't be granted permission to create computer objects in the following OUs" occurring when installing the Intune Connector for Active Directory?
+        answer: |
+          This error might occur for several different type of failures including:
+
+          - The administrator installing and configuring the Intune Connector for Active Directory doesn't have the required permissions as outlined in the [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
+          - The organization unit (OU) specified in the Intune Connector for Active Directory `ODJConnectorEnrollmentWiazard.exe.config` XML configuration file doesn't exist.
+
+          For detailed information on the error and what caused it, see the `ODJConnectorUI.log` normally located in the folder `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`.
+
+          For more information, see [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector-for-active-directory-on-the-server).
+
+      - question: |
+          Why did enrollments start failing when using the Intune Connector for Active Directory?
+        answer: |
+          Make sure that the Intune Connector for Active Directory is updated to version **6.2501.2000.5** or later and that the legacy version isn't still being used. For more information, see [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
+
 
 additionalContent: |
     ## Related content
 
     - [Windows Autopilot - known issues](known-issues.md).
     - [Collect MDM logs](/windows/client-management/mdm-collect-logs).
-    - [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+    - [Collect diagnostics from a Windows device](/mem/intune-service/remote-actions/collect-diagnostics).

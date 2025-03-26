@@ -5,7 +5,7 @@ description: Configuration Manager uses the User State Migration Tool to capture
 ms.date: 04/05/2021
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

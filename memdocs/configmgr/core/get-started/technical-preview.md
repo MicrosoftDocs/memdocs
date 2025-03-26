@@ -5,7 +5,7 @@ description: Learn about the technical preview branch to test-drive new function
 ms.date: 11/29/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth

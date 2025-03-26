@@ -5,7 +5,7 @@ description: Create configuration items to manage settings for Windows 10 comput
 ms.date: 01/14/2020
 ms.subservice: mdm
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

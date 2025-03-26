@@ -5,7 +5,7 @@ description: Learn about the settings and behaviors for application approval in 
 ms.date: 08/12/2022
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

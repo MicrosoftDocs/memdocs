@@ -5,7 +5,7 @@ description: Learn the basics of programming and automation with the Configurati
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: get-started
 ms.assetid: 7dc6cb76-469e-4e4f-b79b-bb391fd4e758
 author: Banreet
 ms.author: banreetkaur

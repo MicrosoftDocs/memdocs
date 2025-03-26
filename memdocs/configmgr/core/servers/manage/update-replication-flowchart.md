@@ -5,7 +5,7 @@ description: See the process by which an in-console update you select to install
 ms.date: 10/06/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Get details about changes and new capabilities introduced in versio
 ms.date: 06/11/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -417,7 +417,7 @@ The following [features are now deprecated](deprecated/removed-and-deprecated-cm
   - [Windows Hello for Business settings](../../../protect/deploy-use/windows-hello-for-business-settings.md)
   - Email profiles
 
-  This deprecation includes the [co-management resource access workload](../../../comanage/workloads.md#resource-access-policies). Use Microsoft Intune to [deploy resource access profiles](../../../../intune/configuration/device-profiles.md).
+  This deprecation includes the [co-management resource access workload](../../../comanage/workloads.md#resource-access-policies). Use Microsoft Intune to [deploy resource access profiles](../../../../intune-service/configuration/device-profiles.md).
 
 - Sites that allow HTTP client communication. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 

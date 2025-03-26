@@ -5,7 +5,7 @@ description: Use capture-and-build task sequences, manual configuration, or a co
 ms.date: 01/23/2017
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Create configuration baselines in Configuration Manager that you ca
 ms.date: 03/10/2022
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

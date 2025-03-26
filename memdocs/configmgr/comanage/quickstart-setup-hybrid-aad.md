@@ -5,7 +5,7 @@ description: If your environment currently has domain-joined Windows devices, se
 ms.date: 11/08/2021
 ms.subservice: co-management
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

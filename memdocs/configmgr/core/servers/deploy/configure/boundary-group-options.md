@@ -5,7 +5,7 @@ description: Configure boundary group options to control policy and content dist
 ms.date: 04/08/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

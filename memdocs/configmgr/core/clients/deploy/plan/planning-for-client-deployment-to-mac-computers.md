@@ -5,7 +5,7 @@ description: Plan for client deployment to Mac computers in Configuration Manage
 ms.date: 01/05/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

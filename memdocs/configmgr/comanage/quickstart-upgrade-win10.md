@@ -5,7 +5,7 @@ description: Upgrade devices to a supported version of Windows 10 or later, whic
 ms.date: 11/08/2021
 ms.subservice: co-management
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
@@ -26,7 +26,7 @@ In the following video, senior program manager Rob York and product marketing ma
 
 Among other platform advancements, Windows 10 and later supports auto-enrollment. This behavior makes a device automatically enroll to Intune when it joined Microsoft Entra ID.
 
-For more information, see [Enable Windows automatic enrollment](../../intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment).
+For more information, see [Enable Windows automatic enrollment](../../intune-service/enrollment/windows-enroll.md#enable-windows-automatic-enrollment).
 
 ## How to do it
 

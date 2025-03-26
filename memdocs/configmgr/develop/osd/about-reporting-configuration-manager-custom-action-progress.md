@@ -5,7 +5,7 @@ description: A custom action can report progress information that is used to dis
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: e1fe4037-cd2a-416d-afe4-8a2de2ba4f33
 author: Banreet
 ms.author: banreetkaur

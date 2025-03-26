@@ -5,7 +5,7 @@ description: Manage settings for Windows computers and servers with a custom con
 ms.date: 08/12/2022
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

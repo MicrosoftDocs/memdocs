@@ -5,7 +5,7 @@ description: Understand how clients and distribution points behave with boundary
 ms.date: 08/02/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

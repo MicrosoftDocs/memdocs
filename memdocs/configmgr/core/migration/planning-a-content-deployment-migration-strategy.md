@@ -5,7 +5,7 @@ description: Use distribution points to manage content while you migrate data to
 ms.date: 12/30/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

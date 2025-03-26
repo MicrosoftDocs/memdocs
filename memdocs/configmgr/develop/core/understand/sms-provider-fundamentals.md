@@ -5,7 +5,7 @@ description: Use the SMS Provider to access and modify Configuration Manager dat
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: c308fa4a-8d8b-42dc-87ec-f42667e314fd
 author: Banreet
 ms.author: banreetkaur

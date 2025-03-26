@@ -5,7 +5,7 @@ description: Consult this article for details about Configuration Manager site s
 ms.date: 03/29/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

@@ -36,7 +36,7 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 ## Add Windows corporate identifier for devices
 
-Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted Windows devices can be enrolled in Intune. If Intune enrollment restrictions are being used to block personal device enrollments, corporate identifiers need to be uploaded for all devices that are enrolled through Windows Autopilot device preparation before deployment. To add corporate identifier for devices in Intune, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
+Corporate identifiers in Intune allows pre-uploading of Windows device identifiers (serial number, manufacturer, model) and ensures only trusted Windows devices can be enrolled in Intune. If Intune enrollment restrictions are being used to block personal device enrollments, corporate identifiers need to be uploaded for all devices that are enrolled through Windows Autopilot device preparation before deployment. To add corporate identifier for devices in Intune, see [Add Windows corporate identifiers](/mem/intune-service/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
 > [!IMPORTANT]
 >
@@ -44,8 +44,8 @@ Corporate identifiers in Intune allows pre-uploading of Windows device identifie
 
 For more information, see:
 
-- [Identify devices as corporate-owned](/mem/intune/enrollment/corporate-identifiers-add).
-- [What are enrollment restrictions?](/mem/intune/enrollment/enrollment-restrictions-set).
-- [Create device platform restrictions](/mem/intune/enrollment/create-device-platform-restrictions).
+- [Identify devices as corporate-owned](/mem/intune-service/enrollment/corporate-identifiers-add).
+- [What are enrollment restrictions?](/mem/intune-service/enrollment/enrollment-restrictions-set).
+- [Create device platform restrictions](/mem/intune-service/enrollment/create-device-platform-restrictions).
 
 Once the corporate identifier is added for the device, then proceed with deploying the device.

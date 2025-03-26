@@ -5,7 +5,7 @@ description: Learn about the Windows Assessment and Deployment Kit (ADK) version
 ms.date: 12/06/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Baladelli
 ms.author: Baladell
 manager: apoorvseth

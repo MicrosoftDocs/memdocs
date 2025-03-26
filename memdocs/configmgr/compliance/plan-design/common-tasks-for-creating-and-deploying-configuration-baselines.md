@@ -5,7 +5,7 @@ description: Learn about how to create and deploy Configuration Manager configur
 ms.date: 10/05/2021
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

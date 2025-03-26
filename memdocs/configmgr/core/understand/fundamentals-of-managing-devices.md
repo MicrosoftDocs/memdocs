@@ -5,7 +5,7 @@ description: Learn how to use Configuration Manager to manage devices.
 ms.date: 07/26/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

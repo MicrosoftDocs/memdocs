@@ -5,7 +5,7 @@ description: You can view dependency relationships between collections in a grap
 ms.date: 04/08/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 author: gowdhamankarthikeyan
 ms.author: gokarthi

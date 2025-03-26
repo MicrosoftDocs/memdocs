@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # Endpoint analytics data collection
 
-This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. For more information on our data handling policies, see Intune's [Data storage and processing](../intune/protect/privacy-data-store-process.md) and the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location).
+This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. For more information on our data handling policies, see Intune's [Data storage and processing](../intune-service/protect/privacy-data-store-process.md) and the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location).
 
 ## <a name="bkmk_flow"></a>Data flow
 
@@ -22,7 +22,7 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
 [![User experience data flow diagram](media/endpoint-analytics-dataflow.png)](media/endpoint-analytics-dataflow.png#lightbox)
 
-1. An [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) [starts gathering data](enroll-intune.md#bkmk_onboard).
+1. An [Intune Service Administrator role](../intune-service/fundamentals/role-based-access-control.md) [starts gathering data](enroll-intune.md#bkmk_onboard).
 
     - For Intune-managed devices, this step configures the **Intune data collection** policy. By default, this policy is assigned to **All Devices**. You can [change the assignment](settings.md#bkmk_set) at any time to a subset of devices or no devices at all.
 
@@ -41,7 +41,7 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
 ## <a name="bkmk_datacollection"></a> Data collection
 
-Endpoint analytics data collection falls into the [optional](../intune/protect/privacy-data-collect.md#optional-data) category. This section includes some examples of the optional data collected for devices enrolled in endpoint analytics:
+Endpoint analytics data collection falls into the [optional](../intune-service/protect/privacy-data-collect.md#optional-data) category. This section includes some examples of the optional data collected for devices enrolled in endpoint analytics:
 
 - Diagnostic, performance, and usage data tied to a user and/or device
   - **logOnId**
@@ -95,4 +95,4 @@ For more information about related privacy aspects, see the following articles:
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
 - [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
 - [Trust Center](https://www.microsoft.com/trustcenter)
-- [Intune Data storage and processing](../intune/protect/privacy-data-store-process.md)
+- [Intune Data storage and processing](../intune-service/protect/privacy-data-store-process.md)

@@ -24,7 +24,7 @@ The **General** page in **Settings** allows you to see if Intune startup perform
 
 ### <a name="bkmk_profile"></a> Intune data collection policy
 
-To assign this setting to a subset of devices, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information:
+To assign this setting to a subset of devices, [Create a profile](../intune-service/configuration/device-profile-create.md#create-the-profile) with  the following information:
 
 - **Platform**: Select **Windows 10 and later**
 
@@ -42,7 +42,7 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
 
   - **Scope**: Select **Endpoint analytics**. Windows updates scope isn't used by endpoint analytics.
 
-- Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
+- Use the [Scope tags](../intune-service/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune-service/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
 ### Configuration Manager data connector
 

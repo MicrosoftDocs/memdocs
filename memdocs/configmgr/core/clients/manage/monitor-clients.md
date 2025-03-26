@@ -5,7 +5,7 @@ description: Learn how to monitor the health and activity of clients in Configur
 ms.date: 11/15/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

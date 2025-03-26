@@ -5,7 +5,7 @@ description: Maintain visibility of Configuration Manager client health from the
 ms.date: 11/08/2021
 ms.subservice: co-management
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

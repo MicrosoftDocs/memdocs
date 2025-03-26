@@ -5,7 +5,7 @@ description: Learn how to configure Endpoint Protection on a standalone client.
 ms.date: 07/22/2020
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Evaluate the detection method, requirements, and dependencies for a
 ms.date: 10/06/2016
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: baladelli
 manager: apoorvseth
 ms.author: baladell

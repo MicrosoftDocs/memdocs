@@ -5,7 +5,7 @@ description: Plan how the design the cloud management gateway (CMG) for the best
 ms.date: 04/08/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

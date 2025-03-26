@@ -5,7 +5,7 @@ description: Restart notification behavior for various client settings in Config
 ms.date: 09/18/2023
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually.
 author: BalaDelli
 ms.date: 04/27/2021
-ms.topic: conceptual
+ms.topic: article
 ms.service: configuration-manager
 ms.subservice: software-updates
 manager: apoorvseth

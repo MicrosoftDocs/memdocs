@@ -5,7 +5,7 @@ description: The message text for both the Configuration Manager components and 
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: fb0d7f0c-a341-4c41-a84f-16c027433e2d
 author: Banreet
 ms.author: banreetkaur

@@ -5,7 +5,7 @@ description: Modify a Configuration Manager report and then run the modified rep
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 24bde9a6-d05d-428d-b26e-cd8dc1ffe9ba

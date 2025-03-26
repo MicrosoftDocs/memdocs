@@ -5,7 +5,7 @@ description: Learn how to use CMPivot in Configuration Manager to query clients 
 ms.date: 08/27/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.author: gokarthi
 author: gowdhamankarthikeyan
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Learn about operations that are available in Configuration Manager 
 ms.date: 09/20/2017
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: sheetg
 author: sheetg09 
 manager: apoorvseth

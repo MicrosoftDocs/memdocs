@@ -5,7 +5,7 @@ description: Help clients find site systems by using boundary groups to logicall
 ms.date: 08/02/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

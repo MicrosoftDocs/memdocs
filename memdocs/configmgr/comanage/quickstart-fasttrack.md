@@ -5,7 +5,7 @@ description: The FastTrack organization is a large group of Microsoft engineers 
 ms.date: 11/08/2021
 ms.subservice: co-management
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth

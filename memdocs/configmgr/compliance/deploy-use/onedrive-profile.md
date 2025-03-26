@@ -5,7 +5,7 @@ description: Redirect Windows known folders to OneDrive for Business using a One
 ms.date: 10/05/2021
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
