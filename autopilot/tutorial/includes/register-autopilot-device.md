@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/28/2024
+ms.date: 03/25/2025
 ms.localizationpriority: medium
 ---
 
