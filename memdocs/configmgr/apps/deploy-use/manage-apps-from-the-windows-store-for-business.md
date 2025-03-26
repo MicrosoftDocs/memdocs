@@ -5,7 +5,7 @@ description: Manage and deploy apps from the Microsoft Store for Business and Ed
 ms.date: 12/01/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 ms.author: baladell
 manager: apoorvseth
@@ -64,7 +64,7 @@ Before deploying Microsoft Store for Business and Education apps to devices that
 
 - When the local Administrator account signs in on the device, it can't access Microsoft Store for Business and Education apps.
 
-- Devices need a live internet connection to the Microsoft Store for Business and Education. For more information including proxy configuration, see [Prerequisites](/mem/intune/apps/store-apps-microsoft).
+- Devices need a live internet connection to the Microsoft Store for Business and Education. For more information including proxy configuration, see [Prerequisites](/mem/intune-service/apps/store-apps-microsoft).
 
 ## Set up synchronization
 
@@ -72,7 +72,7 @@ When you synchronize the list of Microsoft Store for Business and Education apps
 
 Connect your Configuration Manager site to Microsoft Entra ID and the Microsoft Store for Business and Education. For more information and details of this process, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md). Create a connection to the **Microsoft Store for Business** service.
 
-Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Prerequisites for Microsoft Store for Business and Education - Proxy configuration](/mem/intune/apps/store-apps-microsoft).
+Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Prerequisites for Microsoft Store for Business and Education - Proxy configuration](/mem/intune-service/apps/store-apps-microsoft).
 
 ### Supplemental information and configuration
 

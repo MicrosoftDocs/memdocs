@@ -5,7 +5,7 @@ description: Learn how to use the Microsoft Deployment Toolkit (MDT)
 ms.date: 09/09/2016
 ms.subservice: mdt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

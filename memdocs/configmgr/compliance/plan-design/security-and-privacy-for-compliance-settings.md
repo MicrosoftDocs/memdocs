@@ -5,7 +5,7 @@ description: Learn about the security guidance and recommendations for complianc
 ms.date: 05/05/2021
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

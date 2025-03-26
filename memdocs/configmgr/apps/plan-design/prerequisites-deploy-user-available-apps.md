@@ -5,7 +5,7 @@ description: When you deploy apps as Available to user collections, there are ot
 ms.date: 04/08/2022
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

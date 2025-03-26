@@ -5,7 +5,7 @@ description: Information about the software updates metadata, software update gr
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 
 
 ms.assetid: 1e6741d2-7737-4446-b65f-e6e330c09458

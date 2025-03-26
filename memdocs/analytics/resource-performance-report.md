@@ -5,7 +5,7 @@ description: This article provides an overview of the resource performance repor
 ms.date: 08/19/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
@@ -25,7 +25,7 @@ The insights show not only how much your score can improve by upgrading the CPU 
 
 With a Windows 365 license, you get access to this report for the Cloud PCs in your organization.  
 
-However, the report for physical devices is part of Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+However, the report for physical devices is part of Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Prerequisites
 
@@ -73,7 +73,7 @@ Usage over 50% is considered a spike.
 
 The RAM spike time score (from 0 to 100) is assigned based on the device’s usage duration and the RAM spike time %, which is the percentage of the usage duration in which the device experiences RAM spikes. High usage and spikes indicate a poor experience with the device and result in low scores. Conversely, low spikes indicate a good experience with the device and result in high scores.
 
-**RAM spike time %**: The daily metric trends graph plots the ratio of RAM spike times to total usage time. This RAM spike % data is averaged over a 14-day period ending on the date at the bottom of the graph. Usage over 50% is considered a spike.
+**RAM spike time %**: The daily metric trends graph plots the ratio of RAM spike times to total usage time. This RAM spike % data is averaged over a 14-day period ending on the date at the bottom of the graph. Usage over 75% is considered a spike.
 
  - To improve the performance of RAM in Windows physical devices, you could add more RAM, upgrade to higher-speed RAM, or modify UEFI/BIOS settings to optimize utilization.
 
@@ -162,7 +162,7 @@ For more information, go to:
 
 - [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
 
-- [Use Intune Suite add-on capabilities](../intune/fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
 
 - [Device scopes](device-scopes.md)
 

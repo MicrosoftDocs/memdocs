@@ -5,7 +5,7 @@ description: Item Examples include all of the functionality of general configura
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 4ae63925-e6a8-43a9-b3bc-91d640568a44
 author: Banreet
 ms.author: banreetkaur

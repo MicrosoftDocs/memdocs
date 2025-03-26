@@ -5,7 +5,7 @@ description: Get security best practices and privacy information for migration t
 ms.date: 10/06/2016
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

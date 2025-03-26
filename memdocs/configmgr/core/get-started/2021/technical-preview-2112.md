@@ -5,7 +5,7 @@ description: Learn about new features available in the Configuration Manager tec
 ms.date: 12/10/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

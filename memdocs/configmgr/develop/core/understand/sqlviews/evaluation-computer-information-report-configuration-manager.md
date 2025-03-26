@@ -5,7 +5,7 @@ description: A predefined report in Configuration Manager that combines multiple
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 3c4286f0-b210-4ea3-a58e-342b2f9a98f2
 author: Banreet
 ms.author: banreetkaur

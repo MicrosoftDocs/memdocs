@@ -5,7 +5,7 @@ description: Use the administrator checklist to help you plan for and implement 
 ms.date: 10/06/2016
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: checklist
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

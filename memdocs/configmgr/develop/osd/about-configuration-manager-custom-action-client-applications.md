@@ -5,7 +5,7 @@ description: About custom action client applications.
 ms.date: 10/01/2021
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

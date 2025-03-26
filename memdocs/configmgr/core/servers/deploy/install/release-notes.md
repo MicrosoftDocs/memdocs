@@ -5,7 +5,7 @@ description: Learn about urgent issues that aren't yet fixed in the product or c
 ms.date: 10/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: release-notes
 author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth
@@ -72,7 +72,7 @@ Once the platform update is installed on affected clients, Endpoint Protection p
 
 - [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates#monthly-platform-and-engine-versions)
 - [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/topic/microsoft-defender-update-for-windows-operating-system-installation-images-1c89630b-61ff-00a1-04e2-2d1f3865450d).
-- [Sync devices to get the latest policies and actions with Intune](/mem/intune/remote-actions/device-sync#sync-a-device)
+- [Sync devices to get the latest policies and actions with Intune](/mem/intune-service/remote-actions/device-sync#sync-a-device)
 
 ## Set up and upgrade
 

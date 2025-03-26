@@ -8,7 +8,7 @@ ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
 ms.date: 02/10/2025
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: medium

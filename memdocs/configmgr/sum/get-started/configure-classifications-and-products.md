@@ -6,7 +6,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.date: 06/20/2024
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.localizationpriority: medium

@@ -5,7 +5,7 @@ description: Learn how to install the Power BI sample reports in Configuration M
 ms.date: 11/03/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.author: gokarthi
 author: gowdhamankarthikeyan
 manager: apoorvseth

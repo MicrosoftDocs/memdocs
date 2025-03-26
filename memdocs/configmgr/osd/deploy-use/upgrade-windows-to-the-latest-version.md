@@ -5,7 +5,7 @@ description: Learn how to use Configuration Manager to upgrade Windows to a late
 ms.date: 12/19/2024
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

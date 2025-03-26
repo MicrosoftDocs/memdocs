@@ -5,7 +5,7 @@ description: Create applications with deployment types, detection methods, and r
 ms.date: 10/01/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

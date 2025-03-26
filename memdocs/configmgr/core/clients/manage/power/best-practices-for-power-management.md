@@ -5,7 +5,7 @@ description: Learn Microsoft recommendations for power management in Configurati
 ms.date: 09/10/2019
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

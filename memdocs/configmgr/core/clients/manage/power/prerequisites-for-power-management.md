@@ -5,7 +5,7 @@ description: Get the prerequisites for power management in Configuration Manager
 ms.date: 10/06/2016
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

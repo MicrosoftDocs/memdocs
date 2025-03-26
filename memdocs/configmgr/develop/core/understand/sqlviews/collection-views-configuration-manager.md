@@ -5,7 +5,7 @@ description: Information about the collections, collection rules, and collection
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: fbccfda5-8577-41ba-9e89-ce027e1917e2
 author: Banreet
 ms.author: banreetkaur

@@ -5,7 +5,7 @@ description: Create virtual environments with Microsoft Application Virtualizati
 ms.date: 10/06/2016
 ms.subservice: app-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

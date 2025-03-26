@@ -5,7 +5,7 @@ description: Learn about the methods of installing the Configuration Manager cli
 ms.date: 10/18/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

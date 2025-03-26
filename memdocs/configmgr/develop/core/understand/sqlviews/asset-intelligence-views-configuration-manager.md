@@ -5,7 +5,7 @@ description: Information about software applications that are in use throughout 
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a2ab0d62-4053-4a59-8c5c-613604275909
 author: Banreet
 ms.author: banreetkaur

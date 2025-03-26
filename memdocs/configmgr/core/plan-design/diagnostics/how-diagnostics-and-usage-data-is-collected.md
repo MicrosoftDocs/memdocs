@@ -5,7 +5,7 @@ description: Learn about how Configuration Manager collects diagnostics and usag
 ms.date: 08/10/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

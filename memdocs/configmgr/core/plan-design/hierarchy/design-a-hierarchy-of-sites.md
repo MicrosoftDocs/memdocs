@@ -5,7 +5,7 @@ description: Understand the available topologies and management options for Conf
 ms.date: 10/01/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

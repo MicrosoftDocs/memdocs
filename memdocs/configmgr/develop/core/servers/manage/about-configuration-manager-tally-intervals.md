@@ -4,7 +4,7 @@ ms.date: 09/20/2016
 description: The Configuration Manager is configured with 16 default tally intervals, which are maintained in the site control file shown in the following table.
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 792581fa-e652-4009-a702-91c2aad49904
 author: Banreet
 ms.author: banreetkaur

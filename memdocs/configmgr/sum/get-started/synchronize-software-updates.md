@@ -3,7 +3,7 @@ title: Manage software updates synchronization
 titleSuffix: Configuration Manager
 description: Use these steps to schedule software updates synchronization, manually start software updates synchronization, and monitor software updates synchronization.
 ms.date: 7/25/2023
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: configuration-manager
 ms.subservice: software-updates
 manager: apoorvseth

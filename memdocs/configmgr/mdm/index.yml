@@ -50,10 +50,10 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is Intune?
-            url: /mem/intune/fundamentals/what-is-intune
+            url: /mem/intune-service/fundamentals/what-is-intune
           - text: Device management overview
-            url: /mem/intune/fundamentals/what-is-device-management
+            url: /mem/intune-service/fundamentals/what-is-device-management
       - linkListType: tutorial
         links:
           - text: Walkthrough the Microsoft Intune admin center
-            url: /mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager
+            url: /mem/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager

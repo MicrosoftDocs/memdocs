@@ -5,7 +5,7 @@ description: Learn how to upgrade infrastructure, such as SQL Server and the OS 
 ms.date: 12/19/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 author: baladelli
 ms.author: baladell
 manager: apoorvseth

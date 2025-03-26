@@ -5,7 +5,7 @@ description: The Advertised Programs Client Agent is installed on all clients by
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: 6608e833-5caf-465d-b41d-ddac1371cd67
 author: Banreet
 ms.author: banreetkaur

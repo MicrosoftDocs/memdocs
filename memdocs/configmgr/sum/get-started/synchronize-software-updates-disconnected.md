@@ -3,7 +3,7 @@ title: Synchronize updates with no Internet connection
 titleSuffix: Configuration Manager
 description: Run software updates synchronization on the top-level software update point that is disconnected from the Internet.
 ms.date: 02/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: configuration-manager
 ms.subservice: software-updates
 manager: apoorvseth

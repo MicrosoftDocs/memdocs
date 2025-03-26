@@ -5,7 +5,7 @@ description: The Configuration Manager console architecture is built on the foll
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.assetid: 4248fae0-66fa-44a9-b5bb-0fa23426194a
 author: Banreet
 ms.author: banreetkaur

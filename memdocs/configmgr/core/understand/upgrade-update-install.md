@@ -5,7 +5,7 @@ description: Learn the difference between the terms Install, Update, and Upgrade
 ms.date: 04/30/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: concept-article
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth

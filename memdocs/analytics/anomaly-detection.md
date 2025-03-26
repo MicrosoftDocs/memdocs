@@ -5,7 +5,7 @@ description: Learn about Anomaly detection as an advanced feature in Endpoint an
 ms.date: 10/20/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: article
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
@@ -15,7 +15,7 @@ ms.localizationpriority: high
 # Anomaly Detection in Endpoint analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
 
 This article explains how anomaly detection in Endpoint analytics works as an early warning system.
 
@@ -40,7 +40,7 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 
 ## Prerequisites
 
-- Licensing/Subscriptions: The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+- Licensing/Subscriptions: The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 - Permissions: Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)  
 

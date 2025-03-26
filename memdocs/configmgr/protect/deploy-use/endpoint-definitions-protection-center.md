@@ -5,7 +5,7 @@ description: Configure Configuration Manager clients to download Endpoint Protec
 ms.date: 02/14/2017
 ms.service: configuration-manager
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Information about how to create reports directly from the Configura
 ms.date: 06/03/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 ms: "assetid: 5741ada8-449c-45af-85e1-2e68abf96440"
 author: Banreet
 ms.author: banreetkaur

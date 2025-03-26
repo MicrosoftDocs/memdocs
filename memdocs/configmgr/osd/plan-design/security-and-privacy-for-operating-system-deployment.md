@@ -5,7 +5,7 @@ description: Learn about security and privacy best practices for OS deployment i
 ms.date: 10/06/2016
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: concept-article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

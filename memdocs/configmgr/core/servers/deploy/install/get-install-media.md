@@ -5,7 +5,7 @@ description: Where to find installation media for new Configuration Manager inst
 ms.date: 01/11/2017
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth

@@ -5,7 +5,7 @@ description: Get online and telephone support for Endpoint analytics
 ms.date: 10/23/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
-ms.topic: conceptual
+ms.topic: how-to
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby

@@ -5,7 +5,7 @@ description: Administer a remote Windows client computer by using Configuration 
 ms.date: 10/08/2020
 ms.subservice: client-mgt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

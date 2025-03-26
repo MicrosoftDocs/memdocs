@@ -5,7 +5,7 @@ description: Deploy configuration baselines to define configuration baseline dep
 ms.date: 10/06/2016
 ms.service: configuration-manager
 ms.subservice: compliance
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 author: sheetg09
 manager: apoorvseth
 ms.author: sheetg

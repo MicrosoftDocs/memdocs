@@ -74,7 +74,7 @@ New features in Windows Autopilot device preparation include:
   - Deployment time.
     For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
 
-- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune/fundamentals/intune-govt-service-description) environments.
+- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune-service/fundamentals/intune-govt-service-description) environments.
 
 ## Capabilities
 
@@ -131,7 +131,7 @@ For Windows Autopilot device preparation:
 - Only applications and PowerShell scripts selected in the Windows Autopilot device preparation profile are deployed during OOBE. Any additional applications or PowerShell scripts assigned to the device group will be deployed after the Windows Autopilot device preparation deployment is complete.
 - For policies, Windows Autopilot device preparation syncs any policies assigned to the device group. However, Windows Autopilot device preparation doesn't track if the policies are applied during the deployment. The policies might be applied either during the deployment or after the deployment is complete.
 
-For more information, see [Enrollment time grouping in Microsoft Intune](/mem/intune/enrollment/enrollment-time-grouping).
+For more information, see [Enrollment time grouping in Microsoft Intune](/mem/intune-service/enrollment/enrollment-time-grouping).
 
 ### Corporate identifiers for Windows
 
@@ -139,9 +139,9 @@ Windows Autopilot device preparation supports the Intune corporate identifier en
 
 Windows Autopilot device preparation only requires corporate identifiers for Windows if Intune enrollment restrictions are being used to block personal device enrollments. For more information, see:
 
-- [Identify devices as corporate-owned](/mem/intune/enrollment/corporate-identifiers-add).
-- [What are enrollment restrictions?](/mem/intune/enrollment/enrollment-restrictions-set).
-- [Create device platform restrictions](/mem/intune/enrollment/create-device-platform-restrictions).
+- [Identify devices as corporate-owned](/mem/intune-service/enrollment/corporate-identifiers-add).
+- [What are enrollment restrictions?](/mem/intune-service/enrollment/enrollment-restrictions-set).
+- [Create device platform restrictions](/mem/intune-service/enrollment/create-device-platform-restrictions).
 
 ## Tutorial
 

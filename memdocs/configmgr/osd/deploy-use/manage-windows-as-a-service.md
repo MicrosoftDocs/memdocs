@@ -5,7 +5,7 @@ description: View the state of Windows as a Service (WaaS) using Configuration M
 ms.date: 06/20/2024
 ms.service: configuration-manager
 ms.subservice: software-updates
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

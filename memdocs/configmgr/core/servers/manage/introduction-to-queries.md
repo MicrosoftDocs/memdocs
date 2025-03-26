@@ -5,7 +5,7 @@ description: Create and run queries to locate objects in a Configuration Manager
 ms.date: 05/08/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: article
 ms.author: gokarthi
 author: gowdhamankarthikeyan
 manager: apoorvseth

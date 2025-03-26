@@ -5,7 +5,7 @@ description: Sample queries that show how to join the most common content manage
 ms.date: 04/30/2019
 ms.subservice: sdk
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: how-to
 
 
 ms.assetid: 07c979e1-6e57-464a-9c87-6cfe8036a39b

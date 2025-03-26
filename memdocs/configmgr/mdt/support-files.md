@@ -5,7 +5,7 @@ description: Reference details for Microsoft Deployment Toolkit (MDT) Support Fi
 ms.date: 09/09/2016
 ms.subservice: mdt
 ms.service: configuration-manager
-ms.topic: conceptual
+ms.topic: reference
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth

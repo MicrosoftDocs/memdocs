@@ -5,7 +5,7 @@ description: The Windows PE Peer Cache works in the Windows PE to get content fr
 ms.date: 06/18/2019
 ms.service: configuration-manager
 ms.subservice: osd
-ms.topic: conceptual
+ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
