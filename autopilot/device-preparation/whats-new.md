@@ -31,7 +31,7 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
-## Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode is in public preview!
+## Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode is in public preview
 
 Date added: *April 2, 2025*
 
