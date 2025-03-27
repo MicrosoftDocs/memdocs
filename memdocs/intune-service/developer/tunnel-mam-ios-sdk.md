@@ -7,7 +7,7 @@ keywords:
 author: Brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 03/27/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -34,7 +34,7 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-plan2-suite-note.md)]
 
-The Microsoft Tunnel for MAM iOS SDK developer guide is a resource for developers. It helps developers integrate and configure the SDK into an iOS/iPadOS app. For an overview of the Microsoft Tunnel for MAM, go to [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../protect/microsoft-tunnel-mam-ios.md).
+The Microsoft Tunnel for MAM iOS SDK developer guide is a resource for developers. It helps developers integrate and configure the SDK into an iOS/iPadOS app. For an overview of the Microsoft Tunnel for MAM, see [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../protect/microsoft-tunnel-mam-ios.md).
 
 This guide covers different parts of the integration process in your Xcode app project, including installing the frameworks, configuring the `info.plist` file, build settings, key sharing, and implementing the SDK's delegate methods.
 
@@ -68,9 +68,9 @@ To use the Microsoft Tunnel for MAM iOS SDK, the following prerequisites are req
 
   1. **[Intune App SDK for iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)** (opens a GitHub site): At a minimum, install the 16.1.1 version​.
 
-      At this site, also review the **Microsoft License Terms Intune App SDK for iOS** file.
+   At this site, also review the **Microsoft License Terms Intune App SDK for iOS** file.
 
-      For your records, keep a copy of the license terms. By downloading and using the Microsoft Tunnel for MAM iOS SDK, you agree to the license terms. If you don't accept the license terms, then don't use the software.
+   For your records, keep a copy of the license terms. By downloading and using the Microsoft Tunnel for MAM iOS SDK, you agree to the license terms. If you don't accept the license terms, then don't use the software.
 
   2. **[Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-objc)** (opens a GitHub site): At a minimum, install the 1.2.3​ version.
 
@@ -97,20 +97,20 @@ The following image describes the flow from a managed app that's successfully in
 
 :::image type="content" source="./media/tunnel-mam-ios-sdk/tunnel-for-mam-ios-flow.png" alt-text="Drawing of the Microsoft Tunnel Gateway for MAM on iOS/iPadOS architecture in Microsoft Intune." lightbox="./media/tunnel-mam-ios-sdk/tunnel-for-mam-ios-flow.png":::
 
-0. Upon initial launch of the app, a connection is made using the Microsoft Tunnel for MAM SDK for iOS.  
+0. Upon initial launch of the app, a connection is made using the Microsoft Tunnel for MAM SDK for iOS.
 1. The tunnel gets a device authentication token from Microsoft Entra ID.
 
-    If the device signed in to another MAM enabled app, such as Outlook, Edge, or Microsoft 365 mobile app, then the device may already have a Microsoft Entra authentication token. If a valid authentication token already exists, then the existing token is used.
+   If the device signed in to another MAM enabled app, such as Microsoft Outlook, Microsoft Edge, or Microsoft 365 mobile app, then the device might already have a Microsoft Entra authentication token. If a valid authentication token already exists, then the existing token is used.
 
 2. A TCP Connect happens, which is a TLS Handshake between the token and the tunnel server.
 3. If UDP is enabled on the Microsoft Tunnel Gateway, then a data-channel connection using DTLS is made. If UDP is disabled, then TCP establishes the data channel to Tunnel gateway.
 
-    For more information, go to the TCP and UDP notes in the [Microsoft Tunnel overview - architecture](../protect/microsoft-tunnel-overview.md#architecture).
+   For more information, see the TCP and UDP notes in the [Microsoft Tunnel overview - architecture](../protect/microsoft-tunnel-overview.md#architecture).
 
 4. When the mobile app makes a connection to an on-premises corporate resource:
 
-    1. A Microsoft Tunnel for MAM API requests to connect to the company resource.
-    2. An encrypted web request is created and sent to the corporate resource.
+   1. A Microsoft Tunnel for MAM API requests to connect to the company resource.
+   2. An encrypted web request is created and sent to the corporate resource.
 
 ## Xcode Tasks
 
@@ -131,33 +131,33 @@ To enable the Tunnel for MAM iOS SDK, use the following steps:
 
 1. Download and extract the Tunnel for MAM iOS SDK to a folder on a macOS computer. This task is also listed in the [Prerequisites](#prerequisites).
 
-    Copy the following nine frameworks to the Xcode app project frameworks folder:
+   Copy the following nine frameworks to the Xcode app project frameworks folder:
 
-    - `crypto.xcframework`
-    - `MCPCommon.xcframework`
-    - `MCPCore.xcframework`
-    - `MCPPluginUnencryptedFile.xcframework`
-    - `MicrosoftTunnelApi.xcframework`
-    - `MSTAPNextPluginSecurityOpenssl.xcframework`
-    - `MSTAPNextPluginSwiftSupport.xcframework`
-    - `MSTAPNextPluginVpnMicrosoftTunnel.xcframework`
-    - `ssl.xcframework`
+   - `crypto.xcframework`
+   - `MCPCommon.xcframework`
+   - `MCPCore.xcframework`
+   - `MCPPluginUnencryptedFile.xcframework`
+   - `MicrosoftTunnelApi.xcframework`
+   - `MSTAPNextPluginSecurityOpenssl.xcframework`
+   - `MSTAPNextPluginSwiftSupport.xcframework`
+   - `MSTAPNextPluginVpnMicrosoftTunnel.xcframework`
+   - `ssl.xcframework`
 
 2. In the Xcode project, select your app project > **Add files**. In the following example, files are added to an app project called “Flash Chat”:
 
-    :::image type="content" source="./media/tunnel-mam-ios-sdk/add-files-xcode-project.png" alt-text="Screen that shows how to add files to the app project in Xcode on a macOS device.":::
+   :::image type="content" source="./media/tunnel-mam-ios-sdk/add-files-xcode-project.png" alt-text="Screen that shows how to add files to the app project in Xcode on a macOS device.":::
 
 3. In **PROJECT** > **TARGETS**, select **Build Phases** > **Embed Frameworks**. Add (**+**) all nine frameworks:
 
-    :::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-embed-frameworks-xcode.png" alt-text="Screenshot that shows embedding frameworks in Xcode on a macOS device.":::
+   :::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-embed-frameworks-xcode.png" alt-text="Screenshot that shows embedding frameworks in Xcode on a macOS device.":::
 
-    The following example shows all nine frameworks added:
+   The following example shows all nine frameworks added:
 
-    :::image type="content" source="./media/tunnel-mam-ios-sdk/all-frameworks-embedded-xcode.png" alt-text="Screenshot that shows all the Microsoft Tunnel frameworks embedded in Xcode on a macOS device.":::
+   :::image type="content" source="./media/tunnel-mam-ios-sdk/all-frameworks-embedded-xcode.png" alt-text="Screenshot that shows all the Microsoft Tunnel frameworks embedded in Xcode on a macOS device.":::
 
 4. In **PROJECT** > **TARGETS**, select **Build Phases** > **Link Binary with Libraries**. In the list, only the `MicrosoftTunnelApi.xcframework` framework should be added. If other frameworks are listed, remove them using the minus (**-**):
 
-    :::image type="content" source="./media/tunnel-mam-ios-sdk/remove-frameworks-link-binary-with-libraries-xcode.png" alt-text="Screenshot that shows how to remove frameworks in Link Binary with Libraries in Xcode on a macOS device.":::
+   :::image type="content" source="./media/tunnel-mam-ios-sdk/remove-frameworks-link-binary-with-libraries-xcode.png" alt-text="Screenshot that shows how to remove frameworks in Link Binary with Libraries in Xcode on a macOS device.":::
 
 ### Step 2 - Update the `info.plist` file
 
@@ -170,7 +170,7 @@ In the `info.plist` for the Xcode app project, confirm the following settings:
   1. Go to **PROJECT** > **TARGETS** > **General**.
   2. Select **Identity** > **Bundle Identifier**:
 
-      :::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-general-identity-bundleid.png" alt-text="Screenshot that shows selecting project, targets, general, and identity to add the bundle ID in Xcode on a macOS device." lightbox="./media/tunnel-mam-ios-sdk/project-targets-general-identity-bundleid.png":::
+     :::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-general-identity-bundleid.png" alt-text="Screenshot that shows selecting project, targets, general, and identity to add the bundle ID in Xcode on a macOS device." lightbox="./media/tunnel-mam-ios-sdk/project-targets-general-identity-bundleid.png":::
 
 - **URL Types**: In **PROJECT** > **TARGETS**, select **Info**.
 
@@ -180,26 +180,26 @@ In the `info.plist` for the Xcode app project, confirm the following settings:
 
   1. Using the **Intune App SDK for iOS** ([a required prerequisite](#prerequisites)), create an `info.plist` **Array** property and name it **Queried URL Schemes**.
 
-      Add the string items listed in the [Intune App SDK for iOS developer guide – Step 5](app-sdk-ios-phase5.md). This step creates the Intune MAM SDK URL schemes.
+     Add the string items listed in the step 5 of [Build the SDK into your mobile app](app-sdk-ios-phase3#build-the-sdk-into-your-mobile-app). This step creates the Intune MAM SDK URL schemes.
   
-      The following example shows the info.plist using **Queried URL Schemes**:
+     The following example shows the info.plist using **Queried URL Schemes**:
 
-      :::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-info-queried-url-schemes-xcode.png" alt-text="Screenshot that shows selecting project, targets, info, queried URL schemes values in Xcode on a macOS device." lightbox="./media/tunnel-mam-ios-sdk/project-targets-info-queried-url-schemes-xcode.png":::
+     :::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-info-queried-url-schemes-xcode.png" alt-text="Screenshot that shows selecting project, targets, info, queried URL schemes values in Xcode on a macOS device." lightbox="./media/tunnel-mam-ios-sdk/project-targets-info-queried-url-schemes-xcode.png":::
 
   2. Add the `$(PRODUCT_BUNDLE_IDENTIFIER)` variable.
 
-      The following example shows the `$(PRODUCT_BUNDLE_IDENTIFIER)` variable in **URL Types**:
+     The following example shows the `$(PRODUCT_BUNDLE_IDENTIFIER)` variable in **URL Types**:
 
-      :::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-info-url-types-xcode.png" alt-text="Screenshot that shows selecting project, targets, info, URL types in Xcode on a macOS device." lightbox="./media/tunnel-mam-ios-sdk/project-targets-info-url-types-xcode.png":::
+     :::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-info-url-types-xcode.png" alt-text="Screenshot that shows selecting project, targets, info, URL types in Xcode on a macOS device." lightbox="./media/tunnel-mam-ios-sdk/project-targets-info-url-types-xcode.png":::
 
 - **IntuneMAMSettings**: Confirm the following MSAL settings are configured with the appropriate Microsoft Entra app registration values:
 
   1. Go to **PROJECT** > **TARGETS** > **Info**.
   2. Select **IntuneMAMSettings**. Confirm your settings:
 
-      - `ADALAuthority`: Enter the Microsoft Entra tenant ID, like `https://login.microsoftonline.com/USE_YOUR_ Directory (tenant) ID`.
-      - `ADALClientId`: Enter the application client ID.
-      - `ADALRedirectUri`: Enter `msauth.$(PRODUCT_BUNDLE_IDENTIFIER):/auth`.
+     - `ADALAuthority`: Enter the Microsoft Entra tenant ID, like `https://login.microsoftonline.com/USE_YOUR_ Directory (tenant) ID`.
+     - `ADALClientId`: Enter the application client ID.
+     - `ADALRedirectUri`: Enter `msauth.$(PRODUCT_BUNDLE_IDENTIFIER):/auth`.
 
   When you integrated the **Intune App SDK for iOS** with your app project ([a required prerequisite](#prerequisites)), these settings should have been configured.
 
@@ -219,7 +219,7 @@ In the `info.plist` for the Xcode app project, confirm the following settings:
 
 ### Step 4 - Add keychain sharing
 
-Keychain sharing may or not be present in the app project. If it's not there, add it:
+Keychain sharing might be present in the app project. If it's not there, add it:
 
 1. Go to **PROJECT** > **TARGETS** > **Signing & Capabilities**.
 2. Select **Keychain sharing**.
@@ -231,7 +231,7 @@ Keychain sharing may or not be present in the app project. If it's not there, ad
 
 ✔️ **Use the [`TunnelMAMTestApp2.xcproject`](https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps) sample app**.
 
-Depending on the LOB app and its implementation/intended purpose, the use of the `MicrosoftTunnelApi` may vary. There are some core functionalities to know as you're integrating the SDK with your app:
+Depending on the LOB app and its implementation/intended purpose, the use of the `MicrosoftTunnelApi` can vary. There are some core functionalities to know as you're integrating the SDK with your app:
 
 - All interactions with the Microsoft Tunnel for MAM iOS SDK are handled through a `MicrosoftTunnelAPI` singleton object.
 - The `MicrosoftTunnelAPI` object interacts with the app using a delegate that implements a `MicrosoftTunnelDelegate` interface.  
@@ -261,7 +261,7 @@ The `MicrosoftTunnelAPI` includes the following methods:
 
 - `Disconnect` - Gets the `MicrosoftTunnelAPI` instance and disables network traffic interception. If the API is uninitialized, an error is shown.
 
-- `onTokenRequired` – Optional. If your app already integrates with either `IntuneMAM` or MSAL, you'll need to implement this `onTokenRequired` method. This method uses the `IntuneMAMSettings` and MSAL to get a valid authentication token to connect to the Microsoft Tunnel Gateway.
+- `onTokenRequired` – Optional. If your app already integrates with either `IntuneMAM` or MSAL, you need to implement this `onTokenRequired` method. This method uses the `IntuneMAMSettings` and MSAL to get a valid authentication token to connect to the Microsoft Tunnel Gateway.
 
 - `Logging` – There are some different logging classes, denoted by `k`. For example, `kLoggingClassConnect` creates logging output in the Xcode console. These logging config keys can be added to the delegate config. There are some examples of these logging classes in the [sample apps](#sample-apps).
 
@@ -305,13 +305,13 @@ The developer should:
 
 ## Microsoft Tunnel for Mobile Application Management Privacy information
 
-Your privacy is important to us.  Review the following privacy related online documentation:
+Your privacy is important to us. Review the following privacy related online documentation:
 
 - [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement)
 - [Privacy and personal data in Intune](../protect/privacy-personal-data.md)
 - [Data storage and processing in Intune](../protect/privacy-data-store-process.md)
 
-When integrating the Microsoft Tunnel for MAM iOS SDK into mobile apps, the following data is collected when a developer:
+When the Microsoft Tunnel for MAM iOS SDK integrates into mobile apps, the following data is collected when a developer:
 
 - Enables the Intune MAM telemetry module in the app
 
@@ -327,7 +327,7 @@ When integrating the Microsoft Tunnel for MAM iOS SDK into mobile apps, the foll
 - Admin and account information
   - Intune Tenant ID
   - Microsoft Entra tenant ID
-- Usage measurement:  
+- Usage measurement:
   - VPN initialization
   - VPN connect and disconnect events
 - Error information
@@ -337,11 +337,11 @@ No user identifiable information is collected.
 
 > [!IMPORTANT]
 >
-> As a developer, when integrating the SDK it is important to not include any user identifiable data when using code to address and capture messages in your application.
+> As a developer, when integrating the SDK it's important to not include any user identifiable data when using code to address and capture messages in your application.
 
 ## Known issues
 
-For more known issues, go to the [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../protect/microsoft-tunnel-mam-ios.md#known-issues).
+For more known issues, see the [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../protect/microsoft-tunnel-mam-ios.md#known-issues).
 
 ## Next steps
 
