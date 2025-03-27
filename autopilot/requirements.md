@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 03/25/2025
+ms.date: 03/27/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -30,7 +30,7 @@ appliesto:
 > RSS can be used to notify when requirements are added or updated to this page. For example, the following RSS link includes this article:
 >
 > ``` url
-> https://learn.microsoft.com/en-us/search/?terms=%22The%20list%20of%20requirements%20for%20Windows%20Autopilot%20is%20organized%20into%20four%20different%20categories%22
+> https://learn.microsoft.com/api/search/rss?search=%22The+list+of+requirements+for+Windows+Autopilot+is+organized+into+four+different+categories%22&locale=en-us&%24filter=
 > ```
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
