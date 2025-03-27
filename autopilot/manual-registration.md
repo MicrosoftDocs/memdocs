@@ -88,7 +88,7 @@ For a how to guide on how to register devices with Windows Autopilot, see one of
 - [User-driven Microsoft Entra hybrid join: Register devices as Autopilot devices](tutorial/user-driven/hybrid-azure-ad-join-register-device.md).
 - [Pre-provision Microsoft Entra join: Register devices as Autopilot devices](tutorial/pre-provisioning/azure-ad-join-register-device.md).
 - [Pre-provision Microsoft Entra hybrid join: Register devices as Autopilot devices](tutorial/pre-provisioning/hybrid-azure-ad-join-register-device.md).
-- [Self-deploying mode: Register devices as Autopilot devices](tutorial/self-deploying/self-deploying-register-device).
+- [Self-deploying mode: Register devices as Autopilot devices](tutorial/self-deploying/self-deploying-register-device.md).
 
 ## Related content
 
