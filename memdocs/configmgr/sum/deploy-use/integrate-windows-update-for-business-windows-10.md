@@ -61,7 +61,7 @@ Use the following procedure to identify clients that use Windows Update client p
 <a name="to-identify-clients-that-use-windows-update-for-business"></a>
 
 1. Ensure the Windows Update Agent isn't scanning against WSUS, if it was previously enabled. The following registry key can be used to indicate whether the computer is scanning against WSUS or Windows Update. If the registry key doesn't exist, it's not scanning against WSUS.
-    - **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\UseWUServer**
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\UseWUServer`
 1. There's a new attribute, **UseWUServer**, under the **Windows Update** node in Configuration Manager Resource Explorer.
 1. Create a collection based on the **UseWUServer** attribute for all the computers that use Windows Update client policies for updates and upgrades. You can create a collection based on a query similar to the one below:
 
