@@ -180,7 +180,7 @@ In the `info.plist` for the Xcode app project, confirm the following settings:
 
   1. Using the **Intune App SDK for iOS** ([a required prerequisite](#prerequisites)), create an `info.plist` **Array** property and name it **Queried URL Schemes**.
 
-     Add the string items listed in the step 5 of [Build the SDK into your mobile app](../developer/app-sdk-android-phase3.md#build-the-sdk-into-your-mobile-app). This step creates the Intune MAM SDK URL schemes.
+     Add the string items listed in the step 5 of [Build the SDK into your mobile app](../developer/app-sdk-ios-phase3.md#). This step creates the Intune MAM SDK URL schemes.
   
      The following example shows the info.plist using **Queried URL Schemes**:
 
