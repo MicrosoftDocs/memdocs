@@ -44,7 +44,7 @@ Device query for multiple devices allows you to gain comprehensive insights abou
 
 - Devices must be Intune managed and corporate owned.
 
-- Device query for multiple devices only works on devices that are already collecting device inventory data from an assigned [Properties catalog](https://learn.microsoft.com/intune/intune-service/configuration/properties-catalog) profile. 
+- Device query for multiple devices only works on devices that are already collecting device inventory data from an assigned [Properties catalog](../intune-service/configuration/properties-catalog.md) profile. 
 
 ## Supported platforms
 
