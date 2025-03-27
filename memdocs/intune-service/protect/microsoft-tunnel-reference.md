@@ -187,7 +187,7 @@ Following are environment variables you might want to configure when you install
 ```
 
 | Admin Setting       | Description                           |
-|------------------  -|---------------------------------------|
+|---------------------|---------------------------------------|
 | PolicyName          | The name of the settings policy. You can choose the name. |
 | DisplayName         | The short display name. You can choose the name. |
 | Description         | The description of the policy. You can choose the description. |
