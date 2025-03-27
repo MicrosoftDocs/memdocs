@@ -43,10 +43,10 @@ Windows update rings support [scope tags](../fundamentals/scope-tags.md). You ca
 The following prerequisites must be met to use Windows Update Rings for Windows 10/11 devices in Intune.
 
 - Devices must have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
-  - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)  
+  - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
 
 - Devices must run Windows 10 version 1607 or later, or Windows 11.
-  
+
   > [!NOTE]
   > Although not required to configure Windows Update client policies, if the Microsoft Account Sign-In Assistant (wlidsvc) service is disabled, Windows Update doesn't offer feature updates to devices running Windows 10 1709 or later, or Windows 11. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
 
@@ -65,18 +65,18 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
     For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
 
   - Windows 10/11 Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
-    - [Pause](../protect/windows-10-update-rings.md#pause) of *Feature* updates  
-    - [Feature Update Deferral period (days)](../protect/windows-update-settings.md#update-settings)  
-    - [Set feature update uninstall period (2 - 60 days)](../protect/windows-update-settings.md#update-settings)  
-    - [Enable pre-release builds](../protect/windows-update-settings.md#update-settings), which includes the following build options:   
+    - [Pause](../protect/windows-10-update-rings.md#pause) of *Feature* updates
+    - [Feature Update Deferral period (days)](../protect/windows-update-settings.md#update-settings)
+    - [Set feature update uninstall period (2 - 60 days)](../protect/windows-update-settings.md#update-settings)
+    - [Enable pre-release builds](../protect/windows-update-settings.md#update-settings), which includes the following build options:
       - Windows Insider – Release Preview
-      - Beta Channel  
-      - Dev Channel  
+      - Beta Channel
+      - Dev Channel
     - [Use deadline settings](../protect/windows-update-settings.md#user-experience-settings) for *Feature* updates.
 
 ### Limitations for Workplace Joined devices
 
-Intune Update rings for Windows 10 and later require the use of Windows Update client policies, which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use Windows Update client policies and [Windows Autopatch](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service), which provides for additional capabilities that are not supported for WPJ devices.
+Intune Update rings for Windows 10 and later require the use of Windows Update client policies, which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview), which provides for additional capabilities that are not supported for WPJ devices.
 
 - Driver updates for Windows 10 and later
 - Feature updates for Windows 10 and later
@@ -137,7 +137,7 @@ This view also includes:
   - **Two additional report tiles**: You can select the tiles for the following reports to view additional details:
     - **Device assignment status** – This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
     - **Per setting status** – View the configuration status of each setting for this policy across all devices and users.
-  
+
   For details about this report view, see [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
 
 - **Properties**: View details for each configuration page of the policy, including an option to **Edit** each area of the policy.
@@ -180,7 +180,7 @@ While an update ring is paused, you can select **Resume** to restore feature and
 2. Select from the available options to resume either **Feature** or **Quality** updates, and then select **OK**.
 3. After resuming one update type, you can select Resume again to resume the other update type.
 
-#### Extend  
+#### Extend
 
 While an update ring is paused, you can select **Extend** to reset the pause period for both feature and quality updates for that update ring to 35 days.
 
@@ -190,9 +190,9 @@ While an update ring is paused, you can select **Extend** to reset the pause per
 2. Select from the available options to resume either **Feature** or **Quality** updates, and then select **OK**.
 3. After extending the pause for one update type, you can select Extend again to extend the other update type.
 
-#### Uninstall  
+#### Uninstall
 
-An Intune administrator can use **Uninstall** to uninstall (roll back) the latest *feature* update or the latest *quality* update for an active or paused update ring. After uninstalling one type, you can then uninstall the other type. Intune doesn't support or manage the ability of users to uninstall updates.  
+An Intune administrator can use **Uninstall** to uninstall (roll back) the latest *feature* update or the latest *quality* update for an active or paused update ring. After uninstalling one type, you can then uninstall the other type. Intune doesn't support or manage the ability of users to uninstall updates.
 
 > [!IMPORTANT]
 > When you use the *Uninstall* option, Intune passes the uninstall request to devices immediately.
@@ -240,5 +240,5 @@ There are multiple options to get in-depth reporting for Windows 10/11 updates w
 
 - Use [Windows feature updates in Intune](../protect/windows-10-feature-updates.md)
 - Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
-- Use [Windows update reports](../protect/windows-update-reports.md) for Windows updates  
+- Use [Windows update reports](../protect/windows-update-reports.md) for Windows updates
 - Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution

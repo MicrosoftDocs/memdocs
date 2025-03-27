@@ -32,7 +32,7 @@ ms.collection:
 
 Use rollout options in Microsoft Intune policies for *Feature updates for Windows 10 and later*. With rollout options, you configure schedule options for Windows Update that result in the gradual rollout of updates to devices that receive your policies.
 
-> [!TIP]  
+> [!TIP]
 > The default behavior for Windows Update is to make an update available to an assigned device  right away. This doesn’t mean the update will install right away. Instead, when an update is made available, the device becomes eligible to install it. Before a device can install an available update, the device must connect to Windows Update and scan for updates. When the need for an update is confirmed and the device is eligible, the  Windows Update service then offers the update to that device. After a device completes the update, it is then dependent on user behavior and other settings like Deadline.
 
 You configure rollout options when creating [Feature Updates policy](../protect/windows-10-feature-updates.md) by selecting one of the following options:
@@ -83,11 +83,11 @@ To enable intelligent rollout, you deploy a [settings catalog](../configuration/
 
 ### Likely issue safeguard holds
 
-The Windows Update client policies that you enable, *Allow Windows Update for Business Cloud Processing*, is the same setting that enables the Deployment Service to create a *likely issue* safeguard hold for a device. To learn more, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook) in the documentation for Windows Update for Business reports.
+The Windows Update client policies that you enable, *Allow WUfB Cloud Processing*, is the same setting that enables the Deployment Service to create a *likely issue* safeguard hold for a device. To learn more, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook) in the documentation for Windows Update for Business reports.
 
 As your rollout progresses, the deployment service monitors for unexpected issues. The service uses insights from the Windows ecosystem to create *likely issue* safeguard holds to proactively pause deployments to devices that are likely to encounter an issue. By applying safeguard holds to devices that are likely to have issues with the update, devices and end users are protected from potential productivity affecting issues.
 
-To learn more, see [Manage safeguards using the Windows Autopatch](/graph/windowsupdates-manage-safeguards) in the Graph API documentation for device updates.
+To learn more, see [Manage safeguards using Windows Autopatch](/graph/windowsupdates-manage-safeguards) in the Graph API documentation for device updates.
 
 ### Enable intelligent rollouts
 
@@ -97,9 +97,9 @@ To learn more, see [Manage safeguards using the Windows Autopatch](/graph/window
 
 3. For Platform, select **Windows 10 and later** and then for Profile type, select **Settings catalog**.
 
-4. On the **Configuration settings** page, select **Add settings**, and then on the *Settings picker* page, search for **Allow Windows Update for Business Cloud Processing**.  This setting is in the *System* category. Select the checkbox for this setting and then close the *Settings picker* window to return to the *Configuration settings* page.
+4. On the **Configuration settings** page, select **Add settings**, and then on the *Settings picker* page, search for **Allow WUfB Cloud Processing**.  This setting is in the *System* category. Select the checkbox for this setting and then close the *Settings picker* window to return to the *Configuration settings* page.
 
-5. Set *Allow Windows Update for Business Cloud Processing* to **Enabled**.
+5. Set *Allow WUfB Cloud Processing* to **Enabled**.
 
 6. On the **Assignments** page, assign the profile to the same groups you use for your Feature update profiles, and then complete and *Create* this settings catalog profile, to deploy it.
 
@@ -107,4 +107,4 @@ After the profile deploys, devices that use gradual rollouts for Feature update 
 
 ## Next steps
 
-Configure [Feature Updates policy](../protect/windows-10-feature-updates.md)  
+Configure [Feature Updates policy](../protect/windows-10-feature-updates.md)

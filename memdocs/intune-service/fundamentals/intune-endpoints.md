@@ -2,7 +2,7 @@
 # required metadata
 
 title: Network endpoints for Microsoft Intune
-titleSuffix: 
+titleSuffix:
 description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
 keywords:
 author: Smritib17
@@ -31,13 +31,13 @@ ms.collection:
 - highseo
 ---
 
-# Network endpoints for Microsoft Intune  
+# Network endpoints for Microsoft Intune
 
 This article lists IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments.
 
 As a cloud-only service, Intune doesn't require an on-premises infrastructure such as servers or gateways.
 
-## Access for managed devices  
+## Access for managed devices
 
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
@@ -73,7 +73,7 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 The script provides a convenient method to list and review all services required by Intune and Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.
 
 ## Endpoints
- 
+
 You also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following tables show the service they're tied to, and the list of URLs returned.
 
 The data columns shown in the tables are:
@@ -187,7 +187,7 @@ For more information, see the following resources:
 | 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR>'intunecdnpeasd.manage.microsoft.com'<BR>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com)<br> | **TCP:** 443 |
 
 > [!NOTE]
-> Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store, 
+> Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store,
 Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 
 **Android port information** - Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](deployment-guide-enrollment-android.md).
@@ -293,7 +293,7 @@ The following tables list the ports and services that the Intune client accesses
 |*.manage.microsoft.com <br> manage.microsoft.com <br>|104.46.162.96/27<br>13.67.13.176/28<br>13.67.15.128/27<br>13.69.231.128/28<br>13.69.67.224/28<br>13.70.78.128/28<br>13.70.79.128/27<br>13.74.111.192/27<br>13.77.53.176/28<br>13.86.221.176/28<br>13.89.174.240/28<br>13.89.175.192/28<br>20.189.172.160/27<br>20.189.229.0/25<br>20.191.167.0/25<br>20.37.153.0/24<br>20.37.192.128/25<br>20.38.81.0/24<br>20.41.1.0/24<br>20.42.1.0/24<br>20.42.130.0/24<br>20.42.224.128/25<br>20.43.129.0/24<br>20.44.19.224/27<br>20.192.174.216/29<br>20.192.159.40/29<br>20.204.193.12/30<br>20.204.193.10/31<br>40.119.8.128/25<br>40.67.121.224/27<br>40.70.151.32/28<br>40.71.14.96/28<br>40.74.25.0/24<br>40.78.245.240/28<br>40.78.247.128/27<br>40.79.197.64/27<br>40.79.197.96/28<br>40.80.180.208/28<br>40.80.180.224/27<br>40.80.184.128/25<br>40.82.248.224/28<br>40.82.249.128/25<br>52.150.137.0/25<br>52.162.111.96/28<br>52.168.116.128/27<br>52.182.141.192/27<br>52.236.189.96/27<br>52.240.244.160/27|
 -->
 
-## Network requirements for PowerShell scripts and Win32 apps  
+## Network requirements for PowerShell scripts and Win32 apps
 
 If you are using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [Powershell scripts](../apps/intune-management-extension.md), [Remediations](../fundamentals/remediations.md), [Endpoint analytics](../../analytics/overview.md), [Custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
 
@@ -359,7 +359,7 @@ For details, see the following resource:
 ## Migrating device health attestation compliance policies to Microsoft Azure attestation
 
 If a customer enables any of the Windows 10/11 Compliance policy - Device Health settings, then Windows 11 devices will begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
-However, Windows 10 and GCCH/DOD environments will continue to use the existing Device Health Attestation DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and isn't impacted by this change.  
+However, Windows 10 and GCCH/DOD environments will continue to use the existing Device Health Attestation DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and isn't impacted by this change.
 
 If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they're unable to reach the MAA attestation endpoints for their location.
 
@@ -410,7 +410,7 @@ To find your tenant location navigate to the Intune admin center > **Tenant admi
 ## Windows Autopatch
 <a name="windows-update-for-business-deployment-service"></a>
 
-For more information on the required endpoints for Windows Autopatch, see [Windows Autopatch prerequisites](/windows/deployment/update/deployment-service-prerequisites#required-endpoints).
+For more information on the required endpoints for Windows Autopatch, see [Windows Autopatch prerequisites](/windows/deployment/windows-autopatch/prepare/windows-autopatch-configure-network#required-microsoft-product-endpoints).
 
 ## Endpoint analytics
 
@@ -430,7 +430,7 @@ For communication between clients and the cloud service:
 
 ## Microsoft Intune Endpoint Privilege Management
 
-To support Endpoint Privilege Management, allow the following hostnames on tcp port 443 through your firewall 
+To support Endpoint Privilege Management, allow the following hostnames on tcp port 443 through your firewall
 
 For communication between clients and the cloud service:
 

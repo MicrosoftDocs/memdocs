@@ -7,7 +7,7 @@ author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
 no-loc: [Microsoft, Windows, Autopatch, Autopilot]
-ms.collection: 
+ms.collection:
 - graph-interactive
 ms.service: microsoft-intune
 ms.subservice: education
@@ -85,7 +85,7 @@ To learn more, see [Use the settings catalog to configure settings on Windows, i
 
 | **Category** | **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|---|
-| Windows Update client policies | **:::no-loc text="No update notifications during active hours":::** | Enabled |     | [:::no-loc text="NoUpdateNotificationsDuringActiveHours":::](/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
+| Windows Update For Business | **:::no-loc text="No update notifications during active hours":::** | Enabled |     | [:::no-loc text="NoUpdateNotificationsDuringActiveHours":::](/windows/client-management/mdm/policy-csp-update#noupdatenotificationsduringactivehours) |
 
 ### [:::image type="icon" source="../../../media/icons/graph.svg"::: **Create policy using Graph Explorer**](#tab/graph)
 
