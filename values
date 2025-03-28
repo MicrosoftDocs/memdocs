@@ -1,0 +1,200 @@
+Sub ConfigureSoftwareUpdatePoint(swbemServices,          _  
+                                 swbemContext,           _  
+                                 siteCode,               _  
+                                 newUseProxy,            _   
+                                 newProxyName,           _  
+                                 newProxyServerPort,     _  
+                                 newAnonymousProxyAccess)  
+
+    ' Load site control file and get software update point section.  
+    swbemServices.ExecMethod "SMS_SiteControlFile.Filetype=1,Sitecode=""" & siteCode & """", "Refresh", , , swbemContext  
+
+    Query = "SELECT * FROM SMS_SCI_SysResUse " & _  
+            "WHERE RoleName = 'SMS Software Update Point' " & _  
+            "AND SiteCode = '" & siteCode & "'"  
+
+    Set SCIComponentSet = swbemServices.ExecQuery(Query, ,wbemFlagForwardOnly Or wbemFlagReturnImmediately, swbemContext)  
+
+    ' Only one instance is returned from the query.  
+    For Each SCIComponent In SCIComponentSet  
+
+         ' Display the SUP server name.  
+         wscript.echo "SUP Server: " & SCIComponent.NetworkOSPath                                      
+
+        ' Loop through the array of embedded SMS_EmbeddedProperty instances.  
+        For Each vProperty In SCIComponent.Props  
+
+            ' Setting: UseProxy.  
+            If vProperty.PropertyName = "UseProxy" Then  
+                wscript.echo " "  
+                wscript.echo vProperty.PropertyName  
+                wscript.echo "Current value " &  vProperty.Value                 
+
+                ' Modify the value.  
+                vProperty.Value = newUseProxy  
+                wscript.echo "New value " & newUseProxy  
+            End If  
+
+            ' Setting: ProxyName.  
+            If vProperty.PropertyName = "ProxyName" Then  
+                wscript.echo " "  
+                wscript.echo vProperty.PropertyName  
+                wscript.echo "Current value " &  vProperty.Value2                 
+
+                ' Modify the value.  
+                vProperty.Value2 = newProxyName  
+                wscript.echo "New value " & newProxyName  
+            End If  
+
+            ' Setting: ProxyServerPort.  
+            If vProperty.PropertyName = "ProxyServerPort" Then  
+                wscript.echo " "  
+                wscript.echo vProperty.PropertyName  
+                wscript.echo "Current value " &  vProperty.Value                 
+
+                ' Modify the value.  
+                vProperty.Value = newProxyServerPort  
+                wscript.echo "New value " & newProxyServerPort  
+            End If  
+
+            ' Setting: AnonymousProxyAccess.  
+            If vProperty.PropertyName = "AnonymousProxyAccess" Then  
+                wscript.echo " "  
+                wscript.echo vProperty.PropertyName  
+                wscript.echo "Current value " &  vProperty.Value                 
+
+                ' Modify the value.  
+                vProperty.Value = newAnonymousProxyAccess  
+                wscript.echo "New value " & newAnonymousProxyAccess  
+            End If  
+
+        Next     
+
+             ' Update the component in your copy of the site control file. Get the path  
+             ' to the updated object, which could be used later to retrieve the instance.  
+             Set SCICompPath = SCIComponent.Put_(wbemChangeFlagUpdateOnly, swbemContext)  
+    Next  
+
+    ' Commit the change to the actual site control file.  
+    Set InParams = swbemServices.Get("SMS_SiteControlFile").Methods_("CommitSCF").InParameters.SpawnInstance_  
+    InParams.SiteCode = siteCode  
+    swbemServices.ExecMethod "SMS_SiteControlFile", "CommitSCF", InParams, , swbemContext  
+
+End Sub  
+
+c#
+
+Copy
+
+public void ConfigureSoftwareUpdatePoint(WqlConnectionManager connection,   
+                                    string siteCode,   
+                                    string SUPServerName,   
+                                    string newUseProxy,  
+                                    string newProxyName,  
+                                    string newProxyServerPort,  
+                                    string newAnonymousProxyAccess)  
+{  
+    try  
+    {  
+
+        IResultObject siteDefinition = connection.GetInstance("SMS_SCI_SysResUse.FileType=2,ItemName='[\"Display=\\\\" + SUPServerName + "\\\"]MSWNET:[\"SMS_SITE=" + siteCode + "\"]\\\\" + SUPServerName + "\\,SMS Software Update Point',ItemType='System Resource Usage',SiteCode='" + siteCode + "'");  
+
+        foreach (KeyValuePair<string, IResultObject> kvp in siteDefinition.EmbeddedProperties)  
+        {  
+            // Temporary copy of the embedded properties.  
+            Dictionary<string, IResultObject> embeddedProperties = siteDefinition.EmbeddedProperties;  
+
+            // Setting: UseProxy.  
+            if (kvp.Value.PropertyList["PropertyName"] == "UseProxy")  
+            {  
+                Console.WriteLine();  
+                Console.WriteLine(kvp.Value.PropertyList["PropertyName"]);  
+                Console.WriteLine("Current value: " + embeddedProperties["UseProxy"]["Value"].StringValue);  
+
+                // Change the value by using the newUseProxy value that is passed in.  
+                embeddedProperties["UseProxy"]["Value"].StringValue = newUseProxy;  
+                Console.WriteLine("New value    : " + newUseProxy);  
+            }  
+
+            // Setting: ProxyName.  
+            if (kvp.Value.PropertyList["PropertyName"] == "ProxyName")  
+            {  
+                Console.WriteLine();  
+                Console.WriteLine(kvp.Value.PropertyList["PropertyName"]);  
+                Console.WriteLine("Current value: " + embeddedProperties["ProxyName"]["Value2"].StringValue);  
+
+                // Change the value by using the newProxyName value that is passed in.  
+                embeddedProperties["ProxyName"]["Value2"].StringValue = newProxyName;  
+                Console.WriteLine("New value    : " + newProxyName);  
+            }  
+
+            // Setting: ProxyServerPort.  
+            if (kvp.Value.PropertyList["PropertyName"] == "ProxyServerPort")  
+            {  
+                Console.WriteLine();  
+                Console.WriteLine(kvp.Value.PropertyList["PropertyName"]);  
+                Console.WriteLine("Current value: " + embeddedProperties["ProxyServerPort"]["Value"].StringValue);  
+
+                // Change the value by using the newProxyServerPort value that is passed in.  
+                embeddedProperties["ProxyServerPort"]["Value"].StringValue = newProxyServerPort;  
+                Console.WriteLine("New value    : " + newProxyServerPort);  
+            }  
+
+            // Setting: AnonymousProxyAccess.  
+            if (kvp.Value.PropertyList["PropertyName"] == "AnonymousProxyAccess")  
+            {  
+                Console.WriteLine();  
+                Console.WriteLine(kvp.Value.PropertyList["PropertyName"]);  
+                Console.WriteLine("Current value: " + embeddedProperties["AnonymousProxyAccess"]["Value"].StringValue);  
+
+                // Change the value by using the newAnonymousProxyAccess value that is passed in.  
+                embeddedProperties["AnonymousProxyAccess"]["Value"].StringValue = newAnonymousProxyAccess;  
+                Console.WriteLine("New value    : " + newAnonymousProxyAccess);  
+            }  
+
+            // Store the settings that have changed.  
+            siteDefinition.EmbeddedProperties = embeddedProperties;  
+        }  
+
+        // Save the settings.  
+        siteDefinition.Put();  
+
+    }  
+
+    catch (SmsException ex)  
+    {  
+        Console.WriteLine("Failed. Error: " + ex.InnerException.Message);  
+        throw;  
+    }  
+
+}  
+
+The example method has the following parameters:
+
+Parameter	Type	Description
+connection	- Managed: WqlConnectionManager
+- VBScript: SWbemServices	A valid connection to the SMS Provider.
+swbemContext	- VBScript: SWbemContext	A valid context object. For more information, see How to Add a Configuration Manager Context Qualifier by Using WMI.
+siteCode	- Managed: String
+- VBScript: String	The site code.
+SUPServerName	- Managed: String	The name of the software update point server.
+newUseProxy	- Managed: String
+- VBScript: String	Determines whether to use a proxy server.
+
+Possible values:
+
+"0" = false
+
+"1" = true
+newProxyName	- Managed: String
+- VBScript: String	The proxy server name.
+newProxyServerPort	- Managed: String
+- VBScript: String	The proxy server port.
+newAnonymousProxyAccess	- Managed: String
+- VBScript: String	Determines whether to use credentials to connect to the proxy server. If this value is set to true, then the account used to connect needs to be set in the Configuration Manager 2007 Administrator Console.
+
+Possible values:
+
+"0" = true
+
+"1" = false
