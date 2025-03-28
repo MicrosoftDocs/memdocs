@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/21/2025
+ms.date: 04/01/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -71,23 +71,6 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
-### Microsoft Intune support for Apple AI features<!-- 12792722, 30550110, 30220799 -->
-
-Intune app protection policies will have new standalone settings for Apple AI features (Genmojis, Writing tools, and screen capture). Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, these Apple AI features are blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
-
- For more information, see [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037).
-
-### Additional storage service options when saving org data from Android and iOS apps<!-- 29606862 -->
-
-Intune will provide additional storage services options when saving copies of org data using an app protection policy for Android or iOS. In addition to the existing org data storage options, you will be able to also select **iManage** and **Egnyte** as storage options. You must select these services as exemptions from your block list by setting **Save copies of org data** to **Block**, then selecting the allowed storage services next to the **Allow user to save copies to selected services** setting. Note that this setting does not apply to all applications. 
-
-For more information about data protection using app protection policies, see [iOS app protection policy settings - Data protection](../apps/app-protection-policy-settings-ios.md#data-protection) and [Android app protection policy settings - Data protection](../apps/app-protection-policy-settings-android.md#data-protection).
-
-Applies to:
-
-- Android
-- iOS
-
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
 Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This change allows you to update apps more easily without needing to update those profiles with the latest versions. 
@@ -100,7 +83,7 @@ Applies to:
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
-To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
+To protect organizational data for MAM managed accounts and apps, Intune app protection policies will soon provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
 
 Applies to:
 
@@ -108,9 +91,27 @@ Applies to:
 
 <!-- *********************************************** -->
 
-### Android settings in the Settings Catalog <!-- 31524383 -->
+## Device configuration
 
-The settings catalog will soon support Android Enterprise and Android Open Source Project (AOSP).
+### New settings available in the Apple settings catalog<!-- 31523569 --> 
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There will soon be new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+#### iOS/iPadOS
+
+**Managed Settings**:
+- Idle Reboot Allowed
+
+##### macOS
+
+**Login > Login Window**:
+- Show Input Menu
+
+### Android settings in the Settings Catalog <!-- 31524383 (was 26981326) -->
+
+The settings catalog will soon support Android Enterprise and AOSP.
 
 Currently, to configure Android settings, you use the built-in templates. The settings from these templates are also available in the settings catalog. More settings will continue to be added.
 
@@ -121,7 +122,6 @@ This change:
 - Will be a UI change with no impact on your existing policies. Your existing policies don't change. You'll still be able to create, edit, and assign these policies the same way.
 - Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
 
-In the new settings catalog experience, the management mode associated with the setting will be available in the tooltip. 
 To get started with settings catalog, see [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
 
 Applies to:
@@ -143,7 +143,6 @@ Applies to:
 
 <!-- *********************************************** -->
 
-
 ## Device management
 
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
@@ -163,6 +162,8 @@ Platform level targeting of the Device Cleanup rule will help administrators to 
 
 For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
 
+<!-- *********************************************** -->
+
 ## Device security
 
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
@@ -175,7 +176,7 @@ Applies to:
 
 - Linux
 
-### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!--   -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
 
@@ -195,8 +196,6 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 <!-- ## Role-based access control -->
-
-<!-- *********************************************** -->
 
 <!-- *********************************************** -->
 
