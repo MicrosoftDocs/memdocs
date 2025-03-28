@@ -118,7 +118,7 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
 - **Hide the Windows Security icon from the notification area**  
   CSP: [HideWindowsSecurityNotificationAreaControl](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter)
 
-  For this setting to take effect, the user needs to either sign out and back in, or reboots the computer.
+  For this setting to take effect, the user needs to either sign out and back in, or reboot the computer.
   - **Not configured** (*default*) - The setting returns the client to the default, which is to show the icon.
   - **Yes** - Hide the Windows Security icon from the notification area.
   - **No** - Behavior is the same as *Not configured*.
