@@ -262,6 +262,8 @@ items:
         href: profiles.md
       - name: Deploy Microsoft Entra hybrid joined devices
         href: windows-autopilot-hybrid.md
+      - name: Configure proxy settings for the Intune Connector for Active Directory
+        href: autopilot-hybrid-connector-proxy.md
       - name: BitLocker encryption
         href: bitlocker.md
       - name: DFCI management
