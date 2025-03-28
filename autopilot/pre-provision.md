@@ -4,7 +4,7 @@ description: Windows Autopilot for pre-provisioned deployment.
 ms.service: windows-client
 ms.subservice: autopilot
 ms.localizationpriority: medium
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
