@@ -149,7 +149,7 @@ During enrollment, the device is registered with Microsoft Entra ID and evaluate
 |[Bulk enroll devices](../enrollment/windows-bulk-enroll.md)| Create a provisioning package in Windows Configuration Designer that both joins large numbers of new Windows devices to Microsoft Entra ID and enrolls them in Intune. |
 |[Set up the enrollment status page (ESP)](../enrollment/windows-enrollment-status.md)| Create an enrollment status page profile with custom settings to guide users through device setup and enrollment.   |
 |[Change device ownership label](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you manage the device, and can enable more management and identification capabilities in Intune, or limit them.|
-|[Configure proxy for the Intune Connector for Active Directory](autopilot/autopilot-hybrid-connector-proxy.md)| Configure the Intune Connector for Active Directory to work with your existing outbound proxy servers.   |
+|[Configure proxy for the Intune Connector for Active Directory](/autopilot/autopilot-hybrid-connector-proxy)| Configure the Intune Connector for Active Directory to work with your existing outbound proxy servers.   |
 |[Troubleshoot enrollment problems](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
 
 
