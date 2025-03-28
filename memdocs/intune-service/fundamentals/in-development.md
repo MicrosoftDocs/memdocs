@@ -71,6 +71,23 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
+### Microsoft Intune support for Apple AI features<!-- 12792722, 30550110, 30220799 -->
+
+Intune app protection policies will have new standalone settings for Apple AI features (Genmojis, Writing tools, and screen capture). Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, these Apple AI features are blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
+
+ For more information, see [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037).
+
+### Additional storage service options when saving org data from Android and iOS apps<!-- 29606862 -->
+
+Intune will provide additional storage services options when saving copies of org data using an app protection policy for Android or iOS. In addition to the existing org data storage options, you will be able to also select **iManage** and **Egnyte** as storage options. You must select these services as exemptions from your block list by setting **Save copies of org data** to **Block**, then selecting the allowed storage services next to the **Allow user to save copies to selected services** setting. Note that this setting does not apply to all applications. 
+
+For more information about data protection using app protection policies, see [iOS app protection policy settings - Data protection](../apps/app-protection-policy-settings-ios.md#data-protection) and [Android app protection policy settings - Data protection](../apps/app-protection-policy-settings-android.md#data-protection).
+
+Applies to:
+
+- Android
+- iOS
+
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
 Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This change allows you to update apps more easily without needing to update those profiles with the latest versions. 
@@ -91,9 +108,9 @@ Applies to:
 
 <!-- *********************************************** -->
 
-### Android settings in the Settings Catalog <!-- 31524383 (was 26981326) -->
+### Android settings in the Settings Catalog <!-- 31524383 -->
 
-The settings catalog will soon support Android Enterprise and AOSP.
+The settings catalog will soon support Android Enterprise and Android Open Source Project (AOSP).
 
 Currently, to configure Android settings, you use the built-in templates. The settings from these templates are also available in the settings catalog. More settings will continue to be added.
 
@@ -104,7 +121,8 @@ This change:
 - Will be a UI change with no impact on your existing policies. Your existing policies don't change. You'll still be able to create, edit, and assign these policies the same way.
 - Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
 
-To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
+In the new settings catalog experience, the management mode associated with the setting will be available in the tooltip. 
+To get started with settings catalog, see [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
 
 Applies to:
 
@@ -134,15 +152,6 @@ Intune *access policies* help protect against a compromised administrative accou
 
 For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-### Remote Help supports Azure Virtual Desktop multi-session <!-- 24590822 -->
-
-Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Soon, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
-
-For more information, see:
-
-- [Remote Help](../fundamentals/remote-help.md)
-- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
-
 ###  Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 
 We're adding a feature that will allow a customer to:
@@ -166,7 +175,7 @@ Applies to:
 
 - Linux
 
-### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!--   -->
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
 
