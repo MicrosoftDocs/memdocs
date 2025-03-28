@@ -6,9 +6,9 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 09/13/2024
+ms.date: 03/27/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -82,6 +82,10 @@ Autopilot deployment profiles are used to configure the Autopilot devices. Up to
       > [!IMPORTANT]
       >
       > The default value for the Diagnostic Data setting is set to Full during the out-of-box experience. For more information, see [Windows Diagnostics Data](/windows/privacy/windows-diagnostic-data).
+
+      > [!WARNING]
+      >
+      > When hiding **Privacy settings**, location services are disabled by default. When privacy settings are hidden and location services are needed, use appropriate policies configured in Intune or other MDM solution to enable location services.
 
     - **Hide change account options**: Select **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Microsoft Entra ID](/azure/active-directory/fundamentals/customize-branding).
 
