@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 03/27/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -79,7 +79,17 @@ For more information about device IDs, see the following articles:
 - [Windows Autopilot device guidelines](autopilot-device-guidelines.md).
 - [Add devices to a customer account](/partner-center/autopilot).
 
+## Manually register devices with Windows Autopilot
+
+For a how to guide on how to register devices with Windows Autopilot, see one of the following links:
+
+- [Manually register devices with Windows Autopilot](add-devices.md).
+- [User-driven Microsoft Entra join: Register devices as Autopilot devices](tutorial/user-driven/azure-ad-join-register-device.md).
+- [User-driven Microsoft Entra hybrid join: Register devices as Autopilot devices](tutorial/user-driven/hybrid-azure-ad-join-register-device.md).
+- [Pre-provision Microsoft Entra join: Register devices as Autopilot devices](tutorial/pre-provisioning/azure-ad-join-register-device.md).
+- [Pre-provision Microsoft Entra hybrid join: Register devices as Autopilot devices](tutorial/pre-provisioning/hybrid-azure-ad-join-register-device.md).
+- [Self-deploying mode: Register devices as Autopilot devices](tutorial/self-deploying/self-deploying-register-device.md).
+
 ## Related content
 
 - [Registration overview](registration-overview.md).
-- [Manually register devices with Windows Autopilot](add-devices.md).

@@ -1127,6 +1127,14 @@ items:
           href: ./protect/microsoft-tunnel-reference.md
         - name: Windows update settings
           href: ./protect/windows-update-settings.md
+        - name: Zero Trust security configuration examples
+          items:
+          - name: iOS/iPadOS device compliance
+            href: ./protect/ios-ipados-device-compliance-security-configurations.md
+          - name: iOS/iPadOS personal device security
+            href: ./protect/ios-ipados-personal-device-security-configurations.md
+          - name: iOS/iPadOS supervised device security
+            href: ./protect/ios-ipados-supervised-device-security-configurations.md
         - name: Error codes and descriptions
           items:
           - name: Software update errors

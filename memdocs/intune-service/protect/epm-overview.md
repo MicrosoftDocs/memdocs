@@ -75,8 +75,8 @@ Endpoint Privilege Management supports the following operating systems:
 > [!IMPORTANT]
 >
 > - Elevation settings policy will show as not applicable for devices that don't run a supported operating system version.
-> - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures. This support includes ARM 64-bit devices.
-> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+> - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures. Windows on ARM is not currently supported.
+> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ## Government cloud support
 
@@ -189,7 +189,7 @@ Following are the available cmdlets:
 
 For more information about each cmdlet, review the **readme.txt** file from the *EpmTools* folder on the device.
 
-## Next steps
+## Related articles
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)

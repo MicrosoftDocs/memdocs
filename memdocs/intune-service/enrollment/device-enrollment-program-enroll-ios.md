@@ -54,7 +54,11 @@ The following table shows the features and scenarios supported with automated de
 | Devices are managed by another MDM provider. | ❌ <br/><br/> If you want to fully manage a device in Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are owned by the organization, we recommend enrolling them in Intune. |  
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |  
 
-## Certificates  
+## Certificates
+
+>[!NOTE]
+> The [ACME certificate](../fundamentals/whats-new-archive.md#acme-protocol-support-for-iosipados-and-macos-enrollment) phased rollout for new eligible enrollments has been paused. New enrollments are using the SCEP certificate like before with no changes to the end user experience.
+
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
 Devices that are already enrolled do not get an ACME certificate unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 

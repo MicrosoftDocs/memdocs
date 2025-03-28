@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/27/2025
+ms.date: 03/21/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -91,36 +91,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device configuration
-
-### New settings available in the Apple settings catalog <!-- 31056047 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
-
-#### iOS/iPadOS
-
-**Restrictions**:
-- Allow Apple Intelligence Report
-- Allow Default Calling App Modification
-- Allow Default Messaging App Modification
-- Allow Mail Smart Replies
-- Allow Notes Transcription
-- Allow Safari Summary
-
-##### macOS
-
-**Remote Desktop**:
-- Remote Desktop
-
-**Restrictions**:
-- Allow Apple Intelligence Report
-- Allow Mail Smart Replies
-- Allow Notes Transcription
-- Allow Safari Summary
-
-### Android settings in the Settings Catalog <!-- 26981326 -->
+### Android settings in the Settings Catalog <!-- 31524383 (was 26981326) -->
 
 The settings catalog will soon support Android Enterprise and AOSP.
 
@@ -154,47 +125,8 @@ Applies to:
 
 <!-- *********************************************** -->
 
+
 ## Device management
-
-### New settings for Windows LAPS policy<!-- 30287386 -->
-
-We're updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.
-
-The following new settings will be available:
-
-- AutomaticAccountManagementEnabled
-- AutomaticAccountManagementTarget
-- AutomaticAccountManagementNameOrPrefix
-- AutomaticAccountManagementEnableAccount
-- AutomaticAccountManagementRandomizeName
-- PassphraseLength
-
-The following settings will update to support new options:
-
-- PasswordComplexity
-- PostAuthenticationActions
-
-The settings found in Intune LAPS policy are available from the Windows [LAPS CSP](/windows/client-management/mdm/LAPS-csp).
-
-Applies to:
-
-- Windows
-
-### Configure devices to stay on the latest OS version using declarative device management (DDM)<!-- 28323647 -->
-
-As part of the [Settings Catalog](../configuration/settings-catalog.md), you'll be able to configure devices to automatically update to the latest OS version using DDM. To use these new settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
-
-**Declarative device management > Software Update Enforce Latest**.
-
-- **Enforce Latest Software Update Version**: If true, devices will upgrade to the latest OS version that is available for that device model. This uses the Software Update Enforcement configuration and will force devices to restart and install the update after the deadline passes.
-- **Delay In Days**: Specify the number of days that should pass before a deadline is enforced after a new update is released by Apple.
-- **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
-
-Learn more about configuring managed updates through DDM at [Managed software updates](../protect/managed-software-updates-ios-macos.md).
-
-Applies To:
-
-- iOS/iPadOS
 
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
@@ -222,12 +154,6 @@ Platform level targeting of the Device Cleanup rule will help administrators to 
 
 For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
 
-### Copilot assistant for device query<!-- 26933762 -->
-
-You'll soon be able to use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**.
-
-<!-- *********************************************** -->
-
 ## Device security
 
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
@@ -239,12 +165,6 @@ The template will support settings related to global exclusion settings. Applica
 Applies to:
 
 - Linux
-
-### New Microsoft Tunnel readiness check for auditd package<!-- 28148207 -->
-
-We're updating the [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to detect if the **auditd** package for Linux System Auditing (LSA) is installed on your Linux Server. When this check is in place, the mst-readiness tool will raise a warning if the audit package isn't installed. Auditing isn't a required prerequisite for the Linux Server, but recommended.
-
-For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!--   -->
 
