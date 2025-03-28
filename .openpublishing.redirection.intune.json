@@ -1367,7 +1367,12 @@
     },
     {
       "source_path": "memdocs/intune/enrollment/autopilot-hybrid-connector-proxy.md",
-      "redirect_url": "/intune/intune-service/enrollment/autopilot-hybrid-connector-proxy",
+      "redirect_url": "/autopilot/autopilot-hybrid-connector-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/autopilot-hybrid-connector-proxy",
+      "redirect_url": "/autopilot/autopilot-hybrid-connector-proxy",
       "redirect_document_id": false
     },
     {

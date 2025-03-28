@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: madakeva
-ms.date: 03/26/2025
+ms.date: 03/28/2025
 ms.topic: how-to
 ms.service: windows-client
 ms.subservice: autopilot
@@ -114,7 +114,7 @@ Multi-domain support section removed
 
 ### Configure web proxy settings
 
-If there's a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/mem/intune-service/enrollment/autopilot-hybrid-connector-proxy).
+If there's a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Configure proxy settings for the Intune Connector for Active Directory](autopilot-hybrid-connector-proxy.md).
 
 ## Increase the computer account limit in the Organizational Unit
 
