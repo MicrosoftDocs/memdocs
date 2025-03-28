@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
 ms.date: 10/08/2024
 ms.topic: tutorial
@@ -47,7 +47,7 @@ The Windows Autopilot Reset process automatically keeps the following informatio
 - A provisioning package present on a USB drive when the reset process is started.
 - Microsoft Entra device membership and Intune enrollment information.
 - System Center Endpoint Protection (SCEP) certificates.
-- The device's primary user and owner in Microsoft Entra aren't updated when a local Windows Autopilot Reset is used. 
+- The device's primary user and owner in Microsoft Entra aren't updated when a local Windows Autopilot Reset is used.
 
 ## Windows Autopilot Reset requirements
 
