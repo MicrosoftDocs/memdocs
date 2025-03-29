@@ -64,7 +64,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > [!div class="checklist"]
 >
 > - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
-> - Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
+> - Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
 > - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
 > - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 > - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
