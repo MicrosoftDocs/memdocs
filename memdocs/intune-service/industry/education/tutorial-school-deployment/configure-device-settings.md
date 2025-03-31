@@ -176,7 +176,7 @@ For more information, see [iOS device settings in Intune for Education](/intune-
 
 It is important to keep Windows devices up to date with the latest security updates. You can create Windows Update policies using Intune.
 
-- [What is Windows Update for Business?][WIN-1]
+- [What is Windows Update client policies?][WIN-1]
 - [Manage Windows software updates in Intune][MEM-1]
 
 ### [Intune For Education](#tab/intune-for-education)
@@ -195,7 +195,7 @@ For more information, see [Updates and upgrade][INT-6].
 > [!NOTE]
 > If you require a more complex Windows Update policy, you can create it in Microsoft Intune. For more information:
 >
-> - [What is Windows Update for Business?][WIN-1]
+> - [What is Windows Update client policies?][WIN-1]
 > - [Manage Windows software updates in Intune][MEM-1]
 
 ::: zone-end

@@ -167,7 +167,7 @@ If you want to restrict the objects that administrative users can see and manage
 - Software updates packages
 - Task sequences
 - User data and profiles configuration items
-- Windows Update for Business policies
+- Windows Update client policies
 
 There are also some objects that you can't include in security scopes because they're only secured by security roles. Administrative access to these objects can't be limited to a subset of the available objects. For example, you might have an administrative user who creates boundary groups that are used for a specific site. Because the boundary object doesn't support security scopes, you can't assign this user a security scope that provides access to only the boundaries that might be associated with that site. Because a boundary object can't be associated to a security scope, when you assign a security role that includes access to boundary objects to a user, that user can access every boundary in the hierarchy.
 

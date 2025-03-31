@@ -80,7 +80,7 @@ items:
     href: deploy-use/optimize-windows-10-update-delivery.md
   - name: Manage Surface drivers
     href: deploy-use/surface-drivers.md   
-  - name: Integration with Windows Update for Business
+  - name: Integration with Windows Update client policies
     href: deploy-use/integrate-windows-update-for-business-windows-10.md
   - name: Third-party software updates
     href: deploy-use/third-party-software-updates.md

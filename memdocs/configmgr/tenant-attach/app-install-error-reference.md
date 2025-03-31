@@ -473,7 +473,7 @@ WMI resources:
 
 ### <a name="bkmk_general-wua"></a> General Windows Update Agent troubleshooting tips
 
-The errors for the installation originated from the Windows Update Agent. In many cases, you can attempt to install these updates using the built-in software update management from Configuration Manager, Windows Update for Business, or Microsoft Update. In certain circumstances where it's not feasible to use your regular patching mechanism, the `.msu` package can be installed with the [Windows Update Standalone Installer (wusa.exe)](https://support.microsoft.com/help/934307/description-of-the-windows-update-standalone-installer-in-windows) like an application. Use the [Windows Update logging](/windows/deployment/update/windows-update-logs) and [general troubleshooting tips](#bkmk_general) to help determine the cause of the issue.
+The errors for the installation originated from the Windows Update Agent. In many cases, you can attempt to install these updates using the built-in software update management from Configuration Manager, Windows Update client policies, or Microsoft Update. In certain circumstances where it's not feasible to use your regular patching mechanism, the `.msu` package can be installed with the [Windows Update Standalone Installer (wusa.exe)](https://support.microsoft.com/help/934307/description-of-the-windows-update-standalone-installer-in-windows) like an application. Use the [Windows Update logging](/windows/deployment/update/windows-update-logs) and [general troubleshooting tips](#bkmk_general) to help determine the cause of the issue.
 ### 0x00240006
 
 **Message**: The update to be installed is already installed on the system
