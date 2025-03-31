@@ -163,7 +163,7 @@ You'll be able to use the endpoint security policy for *Device control* (Attack 
 
 - **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
-Applies to the following when you use the *Windows 10, Windows 11, and Windows Server* platform:
+Applies to the following when you use the *Windows* platform:
 
 - Windows 10
 - Windows 11
