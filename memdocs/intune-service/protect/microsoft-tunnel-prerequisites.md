@@ -131,7 +131,7 @@ Set up a Linux based virtual machine or a physical server on which to install th
 
   - For iOS devices, public TLS certificates must be issued from the Root CA and have a maximum expiration date of 398 days. Certificates issued by user-added or administrator added Root CAs can have a maximum expiration date of up to two years (730 days).  For more information about these TLS certificate requirements, see [About upcoming limits on trusted certificates](https://support.apple.com/102028) at support.apple.com.
 
-  - For Android devices, we recommend that public TLS certificates issued from the Root CA have a maximum expiration date of 398 days.git a
+  - For Android devices, we recommend that public TLS certificates issued from the Root CA have a maximum expiration date of 398 days.
 
   - Support of wildcards is limited. For example, **\*.contoso.com** is supported, but **cont\*.com** isn't supported.
 
