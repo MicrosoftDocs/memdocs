@@ -1,6 +1,10 @@
 items:
 - name: Hotfix documentation
   href: index.yml
+- name: Version 2503
+  items:
+  - name: KB 31909343 Summary of changes in 2503
+    href: 2503/31909343.md
 - name: Version 2409
   items:
   - name: KB 30195272 Summary of changes in 2409
