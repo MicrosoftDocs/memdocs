@@ -1,5 +1,16 @@
 {
   "redirections": [
+
+    {
+      "source_path": "memdocs/intune-service/protect/exchange-connector-install.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "memdocs/intune-service/protect/conditional-access-exchange-create.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
     {
       "source_path": "memdocs/intune/enrollment/chrome-enterprise-device-details.md",
       "redirect_url": "/intune/intune-service/remote-actions/chrome-enterprise-device-details",

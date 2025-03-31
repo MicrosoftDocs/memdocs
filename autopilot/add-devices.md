@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/21/2025
+ms.date: 03/27/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -171,6 +171,10 @@ Directly uploading the hardware hash to an MDM service such as Microsoft Intune 
 1. Verify that the hardware hash uploaded successfully and the device is showing as a registered Windows Autopilot device using the instructions in the section [Verify the hardware hash uploaded](#verify-the-hardware-hash-uploaded).
 
 1. For devices undergoing Windows Setup and OOBE, restart the device. The device should pick up the Windows Autopilot profile and OOBE should run through the Windows Autopilot provisioning process.
+
+   > [!NOTE]
+   >
+   > If the device isn't picking up the Windows Autopilot profile after restarting the device, a reset might be necessary. For more information, see [Reset your PC](https://support.microsoft.com/windows/0ef73740-b927-549b-b7c9-e6f2b48d275e#bkmk_reset_steps).
 
 #### Verify the hardware hash uploaded
 
