@@ -12,8 +12,8 @@ ms.date: 07/18/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
+ms.localizationpriority: high 
+ms.assetid:
 
 # optional metadata
  
@@ -39,7 +39,7 @@ In this tutorial, you'll learn how to:
 > [!div class="checklist"]
 >
 > * Create an Intune app protection policy for the Outlook app. You'll limit what the user can do with app data by preventing *Save As* and restricting *cut*, *copy*, and *paste* actions.
-> * Create Microsoft Entra Conditional Access policies that allows only the Outlook app to access company email in Exchange Online. You'll also require multi-factor authentication (MFA) for Modern authentication clients, like Outlook for iOS and Android.
+> * Create Microsoft Entra Conditional Access policies that allows only the Outlook app to access company email in Exchange Online. You'll also require multifactor authentication (MFA) for Modern authentication clients, like Outlook for iOS and Android.
 
 ## Prerequisites
 
@@ -122,7 +122,7 @@ The app protection policy for Outlook is created. Next, you'll set up Conditiona
 
 ## Create Conditional Access policies
 
-Next, use the Microsoft Intune admin center to create two Conditional Access policies to cover all device platforms. You integrate [Conditional Access with Intune](../protect/conditional-access-exchange-create.md) to help control the devices and apps that can connect to your organizations email and resources.
+Next, use the Microsoft Intune admin center to create two Conditional Access policies to cover all device platforms. You integrate Conditional Access with Intune to help control the devices and apps that can connect to your organizations email and resources.
 
 - The first policy requires that Modern Authentication clients use the approved Outlook app and multifactor authentication (MFA). Modern Authentication clients include Outlook for iOS and Outlook for Android.
 

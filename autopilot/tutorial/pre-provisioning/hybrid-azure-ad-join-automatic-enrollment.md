@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
 ms.date: 06/19/2024
 ms.topic: tutorial
@@ -26,7 +26,7 @@ Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join ste
 >
 > - **Step 1: Set up Windows automatic Intune enrollment**
 
-- Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
+- Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
 - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
 - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
@@ -41,7 +41,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 > [!NOTE]
 >
-> If automatic Intune enrollment is already set up, skip this step and move on to [Step 2: Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md).
+> If automatic Intune enrollment is already set up, skip this step and move on to [Step 2: Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md).
 
 ## Set up Windows automatic Intune enrollment
 
@@ -49,10 +49,10 @@ In order for Windows Autopilot to work, devices need to be able to enroll in Int
 
 [!INCLUDE [Set up Windows automatic enrollment](../../includes/automatic-intune-enrollment.md)]
 
-## Next step: Install the Intune Connector
+## Next step: Install the Intune Connector for Active Directory
 
 > [!div class="nextstepaction"]
-> [Step 2: Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
+> [Step 2: Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
 
 ## Related content
 

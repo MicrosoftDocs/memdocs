@@ -30,11 +30,11 @@ Select the tab that corresponds to the version of the Intune Connector for Activ
 
 ### [:::image type="icon" source="/autopilot/images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
 
-Before beginning the installation, make sure that all of the [Intune connector server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
+Before beginning the installation, make sure that all of the [Intune connector for Active Directory server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
 
 > [!TIP]
 >
-> It's preferable, but not required, that the administrator installing and configuring the Intune Connector for Active Directory has appropriate domain rights as documented in [Intune Connector for Active Directory requirements](../windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements). This requirement allows the Intune Connector for Active Directory installer and configuration process to properly set permissions for the MSA on the **Computer** container or OUs where computer objects are created. If the administrator doesn't have these permissions, an administrator that does have the appropriate permissions needs to follow the section [Increase the computer account limit in the Organizational Unit](../windows-autopilot-hybrid.md?tab=updated-connector#increase-the-computer-account-limit-in-the-organizational-unit).
+> It's preferable, but not required, that the administrator installing and configuring the Intune Connector for Active Directory has appropriate domain rights as documented in [Intune Connector for Active Directory requirements](../windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements). This requirement allows the Intune Connector for Active Directory installer and configuration process to properly set permissions for the MSA on the **Computer** container or OUs where computer objects are created. If the administrator doesn't have these permissions, an administrator that does have the appropriate permissions needs to follow the section [Increase the computer account limit in the Organizational Unit (OU)](../windows-autopilot-hybrid.md?tab=updated-connector#increase-the-computer-account-limit-in-the-organizational-unit).
 
 #### Turn off Internet Explorer Enhanced Security Configuration
 
@@ -199,7 +199,7 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
 >
 > However, best practice is to download and install the updated Intune Connector for Active Directory. For more information, select the **Updated Connector** tab instead.
 
-Before beginning the installation, make sure that all of the [Intune connector server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
+Before beginning the installation, make sure that all of the [Intune connector for Active Directory server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
 
 #### Disable Internet Explorer Enhanced Security Configuration
 

@@ -96,7 +96,7 @@ items:
           items:
             - name: Step 1 - Set up Windows automatic Intune enrollment
               href: tutorial/user-driven/hybrid-azure-ad-join-automatic-enrollment.md
-            - name: Step 2 - Install the Intune Connector
+            - name: Step 2 - Install the Intune Connector for Active Directory
               href: tutorial/user-driven/hybrid-azure-ad-join-intune-connector.md
             - name: Step 3 - Increase the computer account limit in the Organizational Unit (OU)
               href: tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit.md
@@ -145,7 +145,7 @@ items:
           items:
             - name: Step 1 - Set up Windows automatic Intune enrollment
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-automatic-enrollment.md
-            - name: Step 2 - Install the Intune Connector
+            - name: Step 2 - Install the Intune Connector for Active Directory
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-intune-connector.md
             - name: Step 3 - Increase the computer account limit in the Organizational Unit (OU)
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-computer-account-limit.md
@@ -262,6 +262,8 @@ items:
         href: profiles.md
       - name: Deploy Microsoft Entra hybrid joined devices
         href: windows-autopilot-hybrid.md
+      - name: Configure proxy settings for the Intune Connector for Active Directory
+        href: autopilot-hybrid-connector-proxy.md
       - name: BitLocker encryption
         href: bitlocker.md
       - name: DFCI management

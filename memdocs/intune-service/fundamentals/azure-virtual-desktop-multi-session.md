@@ -2,7 +2,7 @@
 # required metadata
 
 title: Using Azure Virtual Desktop multi-session with Microsoft Intune
-titleSuffix:
+titleSuffix: Microsoft Intune
 description: Guidelines for using Azure Virtual Desktop multi-session with Microsoft Intune
 keywords:
 author: smritib17
@@ -166,10 +166,7 @@ All other policies report as **Not applicable**.
 > [!IMPORTANT]
 > You'll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren't supported.
 
-[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 or Windows 11 Enterprise multi-session.
-
-> [!NOTE]
-> [Conditional Access for Exchange on-premises](../protect/conditional-access-exchange-create.md) isn't supported for Windows 10 or Windows 11 Enterprise multi-session VMs.
+[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 or Windows 11 Enterprise multi-session. 
 
 ## Endpoint security
 
