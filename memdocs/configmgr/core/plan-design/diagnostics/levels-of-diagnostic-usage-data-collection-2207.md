@@ -177,7 +177,7 @@ For Configuration Manager version 2207, this level includes the following data:
 
 - Basic OS deployment counts of images
 
-- Count of Windows clients that use Windows Update for Business
+- Count of Windows clients that use Windows Update client policies
 
 - Count of operating systems for managed devices and policies set by the Exchange Connector
 
@@ -571,9 +571,9 @@ For Configuration Manager version 2207, this level includes the following data:
 
 - Count of updates that are created and deployed with System Center Update Publisher
 
-- Count of Windows Update for Business policies created and deployed
+- Count of Windows Update client policies created and deployed
 
-- Aggregated statistics of Windows Update for Business configurations
+- Aggregated statistics of Windows Update client policies configurations
 
 - Number of automatic deployment rules that are tied to synchronization
 

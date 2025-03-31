@@ -32,7 +32,7 @@ ms.collection:
 
 Use rollout options in Microsoft Intune policies for *Feature updates for Windows 10 and later*. With rollout options, you configure schedule options for Windows Update that result in the gradual rollout of updates to devices that receive your policies.
 
-> [!TIP]  
+> [!TIP]
 > The default behavior for Windows Update is to make an update available to an assigned device  right away. This doesn’t mean the update will install right away. Instead, when an update is made available, the device becomes eligible to install it. Before a device can install an available update, the device must connect to Windows Update and scan for updates. When the need for an update is confirmed and the device is eligible, the  Windows Update service then offers the update to that device. After a device completes the update, it is then dependent on user behavior and other settings like Deadline.
 
 You configure rollout options when creating [Feature Updates policy](../protect/windows-10-feature-updates.md) by selecting one of the following options:
@@ -77,17 +77,17 @@ The following behaviors apply to the management of offer groups:
 
 To enhance your use of gradual rollouts, you can configure *Intelligent rollouts*.
 
-With intelligent rollouts, the Windows Update for Business Deployment Service uses data that it collects from devices to optimize the device members in the offer groups of your gradual rollout deployments. The first offer group includes the fewest number of devices that have the largest pool of variations in your environment. You can think of this first offer group as a *pilot ring* for the deployment.
+With intelligent rollouts, Windows Autopatch uses data that it collects from devices to optimize the device members in the offer groups of your gradual rollout deployments. The first offer group includes the fewest number of devices that have the largest pool of variations in your environment. You can think of this first offer group as a *pilot ring* for the deployment.
 
-To enable intelligent rollout, you deploy a [settings catalog](../configuration/settings-catalog.md) profile for device configuration to *Allow WUfB Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles. You only need to deploy this profile to a device a single time. The change then applies to all future deployments for that device.
+To enable intelligent rollout, you deploy a [settings catalog](../configuration/settings-catalog.md) profile for device configuration to *Allow Windows Update for Business Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles. You only need to deploy this profile to a device a single time. The change then applies to all future deployments for that device.
 
 ### Likely issue safeguard holds
 
-The Windows Update for Business setting that you enable, *Allow WUfB Cloud Processing*, is the same setting that enables the Deployment Service to create a *likely issue* safeguard hold for a device. To learn more, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook) in the documentation for Windows Update for Business reports.
+The Windows Update client policies that you enable, *Allow WUfB Cloud Processing*, is the same setting that enables the Deployment Service to create a *likely issue* safeguard hold for a device. To learn more, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook) in the documentation for Windows Update for Business reports.
 
 As your rollout progresses, the deployment service monitors for unexpected issues. The service uses insights from the Windows ecosystem to create *likely issue* safeguard holds to proactively pause deployments to devices that are likely to encounter an issue. By applying safeguard holds to devices that are likely to have issues with the update, devices and end users are protected from potential productivity affecting issues.
 
-To learn more, see [Manage safeguards using the Windows Update for Business deployment service](/graph/windowsupdates-manage-safeguards) in the Graph API documentation for device updates.
+To learn more, see [Manage safeguards using Windows Autopatch](/graph/windowsupdates-manage-safeguards) in the Graph API documentation for device updates.
 
 ### Enable intelligent rollouts
 
@@ -107,4 +107,4 @@ After the profile deploys, devices that use gradual rollouts for Feature update 
 
 ## Next steps
 
-Configure [Feature Updates policy](../protect/windows-10-feature-updates.md)  
+Configure [Feature Updates policy](../protect/windows-10-feature-updates.md)
