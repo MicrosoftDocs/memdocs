@@ -307,7 +307,7 @@ This phase is designed to help you build out security settings for your organiza
 - [BitLocker Encryption](#bitlocker-encryption)
 - [Windows Local Administrator Password Solution (LAPS)](#windows-local-administrator-password-solution-laps)
 - [Security baselines](#security-baselines)
-- [Windows Update for Business](#windows-update-for-business)
+- [Windows Update client policies](#windows-update-for-business)
 
 ### Microsoft Defender Antivirus (MDAV)
 
@@ -472,16 +472,17 @@ The following settings in the **Windows security baseline** can cause issues wit
 
 For more information, see [Troubleshooting policy conflicts with Windows Autopilot](/autopilot/troubleshooting-faq#troubleshooting-policy-conflicts-with-windows-autopilot).
 
-### Windows Update for Business
+### Windows Update client policies
+<a name="windows-update-for-business"></a>
 
-*Windows Update for Business* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update for Business can be configured using:
+*Windows Update client policies* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update client policies can be configured using:
 
 - [Windows update rings](../../intune-service/protect/windows-10-update-rings.md)
 - [Windows Feature Updates](../../intune-service/protect/windows-10-feature-updates.md)
 
 For more information, go to:
 
-- [Learn about using Windows Update for Business in Microsoft Intune](../../intune-service/protect/windows-update-for-business-configure.md)
+- [Learn about using Windows Update client policies in Microsoft Intune](../../intune-service/protect/windows-update-for-business-configure.md)
 - [Module 4.2 - Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
 
 If you'd like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](../../configmgr/comanage/overview.md).
