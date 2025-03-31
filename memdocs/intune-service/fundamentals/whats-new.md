@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/21/2025
+ms.date: 03/27/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -76,8 +76,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of March 17, 2025 (Service release 2503)
+## Week of March 24, 2025
 
+### Device security
+
+### New Microsoft Tunnel readiness check for auditd package<!-- 28148207 -->
+
+The [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) now includes a check for the **auditd** package for Linux System Auditing (LSA). The presence of *auditd* is optional and not a required prerequisite by Microsoft Tunnel for the Linux server.
+
+When the mst-readiness tool runs, it now raises a non-blocking  warning if the audit package isn't installed. By default, Red Hat Enterprise Linux versions 7 and later install this package by default. Ubuntu versions of Linux currently require this optional package to be installed.
+
+For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
+
+## Week of March 17, 2025 (Service release 2503)
 
 ### Microsoft Intune Suite
 

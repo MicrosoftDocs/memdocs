@@ -408,14 +408,17 @@ Try to complete the following tasks and then send us **Feedback** from the **Hom
 2. [Synchronize the Microsoft Surface drivers](../../sum/get-started/synchronize-software-updates.md).
 3. [Deploy synchronized Microsoft Surface drivers](../../sum/deploy-use/deploy-software-updates.md)
 
-## Configure Windows Update for Business deferral policies
+## Configure deferral policies with Windows Update client policies
+<a name="configure-windows-update-for-business-deferral-policies"></a>
 <!-- 1290890 -->
-You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
+You can now configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update client policies. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
 
 ### Prerequisites
-Windows 10 devices managed by Windows Update for Business must have Internet connectivity.
+Windows 10 devices managed by Windows Update client policies must have Internet connectivity.
 
-#### To create a Windows Update for Business deferral policy
+#### To create a deferral policy with Windows Update client policies
+<a name="to-create-a-windows-update-for-business-deferral-policy"></a>
+
 1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
 2. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
 3. On the **General** page, provide a name and description for the policy.
@@ -432,11 +435,13 @@ Windows 10 devices managed by Windows Update for Business must have Internet con
 7. Select **Include drivers with Windows Update** to automatically update drivers from Windows Updates. If you clear this setting, driver updates are not downloaded from Windows Updates.
 8. Complete the wizard to create the new deferral policy.
 
-#### To deploy a Windows Update for Business deferral policy
+#### To deploy a deferral policy with Windows Update client policies
+<a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>
+
 1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
 2. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.
 3. Configure the following settings:
-    - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.
+    - **Configuration policy to deploy**: Select the Windows Update client policy that you would like to deploy.
     - **Collection**: Click **Browse** to select the collection where you want to deploy the policy.
     - **Remediate noncompliant rules when supported**: Select to automatically remediate any rules that are noncompliant for Windows Management Instrumentation (WMI), the registry, scripts, and all settings for mobile devices that are enrolled by Configuration Manager.
     - **Allow remediation outside the maintenance window**: If a maintenance window has been configured for the collection to which you are deploying the policy, enable this option to let compliance settings remediate the value outside of the maintenance window. For more information about maintenance windows, see [How to use maintenance windows](../clients/manage/collections/use-maintenance-windows.md).

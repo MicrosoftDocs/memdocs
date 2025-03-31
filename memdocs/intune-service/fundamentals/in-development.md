@@ -134,15 +134,6 @@ Intune *access policies* help protect against a compromised administrative accou
 
 For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-### Remote Help supports Azure Virtual Desktop multi-session <!-- 24590822 -->
-
-Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Soon, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
-
-For more information, see:
-
-- [Remote Help](../fundamentals/remote-help.md)
-- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
-
 ###  Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 
 We're adding a feature that will allow a customer to:
@@ -166,19 +157,13 @@ Applies to:
 
 - Linux
 
-### New Microsoft Tunnel readiness check for auditd package<!-- 28148207 -->
-
-We're updating the [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to detect if the **auditd** package for Linux System Auditing (LSA) is installed on your Linux Server. When this check is in place, the mst-readiness tool will raise a warning if the audit package isn't installed. Auditing isn't a required prerequisite for the Linux Server, but recommended.
-
-For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
-
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!--   -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
 
 - **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
-Applies to the following when you use the *Windows 10, Windows 11, and Windows Server* platform:
+Applies to the following when you use the *Windows* platform:
 
 - Windows 10
 - Windows 11

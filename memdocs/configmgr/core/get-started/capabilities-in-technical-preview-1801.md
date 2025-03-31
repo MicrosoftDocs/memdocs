@@ -87,7 +87,7 @@ If you are using the [co-management](../../comanage/overview.md) capabilities, y
 - **Workload transition**: a bar chart showing the number of devices that you transitioned to Microsoft Intune for the three available workloads: 
    - Compliance Policies
    - Resource Access
-   - Windows Update for Business
+   - Windows Update client policies
 
 ### Prerequisites
 - The computer that runs the Configuration Manager console requires Internet Explorer 9 or later.

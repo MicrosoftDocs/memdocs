@@ -2,7 +2,7 @@
 # required metadata
 
 title: Using Azure Virtual Desktop multi-session with Microsoft Intune
-titleSuffix: 
+titleSuffix: Microsoft Intune
 description: Guidelines for using Azure Virtual Desktop multi-session with Microsoft Intune
 keywords:
 author: smritib17
@@ -34,7 +34,7 @@ ms.collection:
 
 Azure Virtual Desktop multi-session with Microsoft Intune is now generally available.
 
-You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Intune admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you'll be able to use both device-based configuration targeted to devices or user-based configuration targeted to users. 
+You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Intune admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you'll be able to use both device-based configuration targeted to devices or user-based configuration targeted to users.
 
 Windows 10 or Windows 11 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure. It provides the following benefits:
 
@@ -42,7 +42,7 @@ Windows 10 or Windows 11 Enterprise multi-session is a new Remote Desktop Sessio
 - Gives users a familiar Windows 10 or Windows 11 experience.
 - Supports use of existing per-user Microsoft 365 licensing.
 
-You can manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs created in Azure Government Cloud in US Government Community (GCC), GCC High, and DoD. 
+You can manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs created in Azure Government Cloud in US Government Community (GCC), GCC High, and DoD.
 
 > [!IMPORTANT]
 > Microsoft Intune support for Azure Virtual Desktop multi-session is not currently available for Citrix DaaS and VMware Horizon Cloud. Because Intune cannot offer support for Citrix DaaS, review the Citrix documentation, and be aware of Citrix support options for multi-session support. All questions, concerns or help should be directed to Citrix for multi-session support. See [Citrix support](https://docs.citrix.com/en-us/citrix-daas/install-configure/machine-identities/microsoft-intune ).
@@ -121,7 +121,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
     - **Key**: **OS edition**
     - **Operator**: **==**
     - **Value**: **Enterprise multi-session**
-    - Select **Apply**. The filtered list now shows all configuration profile categories that support Windows 10 or Windows 11 Enterprise multi-session. The scope for a policy is shown in parentheses. For user scope it shows as (User) and all the rest are policies with device scope. 
+    - Select **Apply**. The filtered list now shows all configuration profile categories that support Windows 10 or Windows 11 Enterprise multi-session. The scope for a policy is shown in parentheses. For user scope it shows as (User) and all the rest are policies with device scope.
 8. From the filtered list, pick the categories that you want.
     - For each category you pick, select the settings that you want to apply to your new configuration profile.
     - For each setting, select the value that you want for this configuration profile.
@@ -143,21 +143,21 @@ To list supported Administrative Templates, you'll need to use the filter in Set
 
 You can secure your Windows 10 or Windows 11 Enterprise multi-session VMs by configuring compliance policies and Conditional Access policies in the Microsoft Intune admin center. The following compliance policies are supported on Windows 10 or Windows 11 Enterprise multi-session VMs:
 
-- Minimum OS version  
-- Maximum OS version  
-- Valid operating system builds  
-- Simple passwords  
-- Password type  
-- Minimum password length  
-- Password Complexity  
-- Password expiration (days)  
-- Number of previous passwords to prevent reuse  
-- Microsoft Defender Antimalware  
-- Microsoft Defender Antimalware security intelligence up-to-date  
-- Firewall  
+- Minimum OS version
+- Maximum OS version
+- Valid operating system builds
+- Simple passwords
+- Password type
+- Minimum password length
+- Password Complexity
+- Password expiration (days)
+- Number of previous passwords to prevent reuse
+- Microsoft Defender Antimalware
+- Microsoft Defender Antimalware security intelligence up-to-date
+- Firewall
 - Antivirus
 - Antispyware
-- Real-time protection  
+- Real-time protection
 - Microsoft Defender Antimalware minimum version
 - Defender ATP Risk score
 
@@ -166,14 +166,11 @@ All other policies report as **Not applicable**.
 > [!IMPORTANT]
 > You'll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren't supported.
 
-[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 or Windows 11 Enterprise multi-session.
-
-> [!NOTE]
-> [Conditional Access for Exchange on-premises](../protect/conditional-access-exchange-create.md) isn't supported for Windows 10 or Windows 11 Enterprise multi-session VMs.
+[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 or Windows 11 Enterprise multi-session. 
 
 ## Endpoint security
 
-You can configure profiles under Endpoint security for multi-session VMs by selecting Platform Windows 10, Windows 11, and Windows Server. If that Platform is not available, the profile is not supported on multi-session VMs.
+You can configure profiles under Endpoint security for multi-session VMs by selecting Platform Windows. If that Platform is not available, the profile is not supported on multi-session VMs.
 
 For more information, see [Manage device security with endpoint security policies in Microsoft Intune](../protect/endpoint-security-policy.md)
 
@@ -182,7 +179,7 @@ For more information, see [Manage device security with endpoint security policie
 All Windows 10 or Windows 11 apps can be deployed to Windows 10 or Windows 11 Enterprise multi-session with the following restrictions:
 
 - All apps must be configured to install in the system/device context and be targeted to devices. Web apps are always applied in the user context by default so they won't apply to multi-session VMs.
-- All apps must be configured with **Required** or **Uninstall** app assignment intent. The **Available apps** deployment intent isn't supported on multi-session VMs.  
+- All apps must be configured with **Required** or **Uninstall** app assignment intent. The **Available apps** deployment intent isn't supported on multi-session VMs.
 - If a Win32 app configured to install in the system context has dependencies or supersedence relationship on any apps configured to install in the user context, the app won't be installed. To apply to a Windows 10 or Windows 11 Enterprise multi-session VM, create a separate instance of the system context app or make sure all app dependencies are configured to install in the system context.
 - Azure Virtual Desktop RemoteApp and MSIX app attach aren't currently supported in Microsoft Intune.
 
@@ -192,7 +189,8 @@ Scripts configured to run in the system context and assigned to devices are supp
 
 Scripts configured to run in the user context and assigned to users are supported on Windows 10 and Windows 11 Enterprise multi-session. This can be configured under Script settings by setting **Run this script using the logged on credentials** to **Yes**.
 
-## Windows Update for Business
+## Windows Update client policies
+<a name="windows-update-for-business"></a>
 
 You can use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows 10 or Windows 11 Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update for Business* category.
 
@@ -220,7 +218,7 @@ The following Windows 10 or Windows 11 desktop device remote actions aren't supp
 
 ## Retirement
 
-Deleting VMs from Azure will leave orphaned device records in the Microsoft Intune admin center. AVD machines are deleted automatically after 30 days and removed permanently after 60 days. 
+Deleting VMs from Azure will leave orphaned device records in the Microsoft Intune admin center. AVD machines are deleted automatically after 30 days and removed permanently after 60 days.
 For more information, see:
 - [Using Intune device cleanup rules](https://techcommunity.microsoft.com/t5/device-management-in-microsoft/using-intune-device-cleanup-rules-updated-version/ba-p/3760854).
 - [Automatically remove devices with cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules)
