@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Learn about using Windows Update for Business in Microsoft Intune
-description: Manage Windows 10 and Windows 11 software updates by using Intune policy for Update rings for Windows and Windows feature updates for Windows Update for Business settings in Microsoft Intune.
+title: Learn about using Windows Update client policies in Microsoft Intune
+description: Manage Windows 10 and Windows 11 software updates by using Intune policy for Update rings for Windows and Windows feature updates for Windows Update client policies in Microsoft Intune.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -32,9 +32,12 @@ ms.collection:
 
 # Manage Windows 10 and Windows 11 software updates in Intune
 
-Use Microsoft Intune to manage the install of Windows 10/11 software updates from Windows Update for Business.
+Use Microsoft Intune to manage the install of Windows 10/11 software updates from Windows Update client policies.
 
-By using Windows Update for Business, you simplify the update management experience. You don't need to approve individual updates for groups of devices and can manage risk in your environments by configuring an update rollout strategy. With Intune, you can [configure update settings](windows-update-settings.md) on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
+> [!TIP]
+> This feature was formerly known as *Windows Update for Business*.
+
+By using Windows Update client policies, you simplify the update management experience. You don't need to approve individual updates for groups of devices and can manage risk in your environments by configuring an update rollout strategy. With Intune, you can [configure update settings](windows-update-settings.md) on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
 
 Intune stores only the update policy assignments, not the updates themselves. When you save a policy, Intune passes the configuration details to Windows Update, which then determines which of these updates are offered to each device. Devices access Windows Update directly for the updates.
 
@@ -52,13 +55,13 @@ Intune provides the following policy types to manage updates, which you assign t
 
 - **Quality updates for Windows 10 and later**: With Quality updates for Windows 10 and later, also referred to as Expedited updates, you can expedite the install of the most recent Windows 10 and Windows 11 security updates on devices that you manage with Microsoft Intune. Expedited install is accomplished without the need to pause or edit your existing monthly servicing policies. For more information, see [Expedite updates policy](../protect/windows-10-expedite-updates.md).
 
-- **Driver updates for Windows 10 and later**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they're installed. Intune and the Windows Update for Business (WUfB) deployment service (DS) take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](../protect/windows-driver-updates-policy.md).
+- **Driver updates for Windows 10 and later**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they're installed. Intune and the Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](../protect/windows-driver-updates-policy.md).
 
 ## Policy limitations for Workplace Joined devices
 
-Microsoft introduced a cloud service as part of the Windows Update for Business product family, [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). As a cloud service, WUfB ds supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren’t supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) (WUfB) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
+Microsoft introduced a cloud service as part of the Windows Update product family, [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). As a cloud service, Windows Autopatch supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren't supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
 
-The following Intune policy types for Windows Updates use WUfB ds, which prevents their support on WPJ devices:
+The following Intune policy types for Windows Updates use Windows Autopatch, which prevents their support on WPJ devices:
 
 - Driver Updates for Windows 10 and later
 - Feature Updates for Windows 10 and later
@@ -66,7 +69,7 @@ The following Intune policy types for Windows Updates use WUfB ds, which prevent
 
 If you support WPJ devices with Intune, the following information can help you understand the differences in capabilities based on policy type, for both WPJ devices and AADJ devices.
 
-| Capability | WUfB </br> via Update Ring policy | WUfB-ds </br> via Driver, Feature, and Quality update policies|
+| Capability | Windows Update client policies </br> via Update Ring policy | Windows Autopatch </br> via Driver, Feature, and Quality update policies|
 |-|-|-|
 | **WPJ device support**      | Yes                  | No                                           |
 | **AADJ device support**     | Yes                  | Yes                                          |
@@ -75,8 +78,8 @@ If you support WPJ devices with Intune, the following information can help you u
 | **Control which updates to install** |***Feature***:  Yes </br>  - Defer *all* feature updates by specified days</br></br></br>***Quality***: Yes</br>  - Defer *all* quality updates by specified days</br></br>***Drivers***: Yes</br> - *Allow* or *Block* all *Recommended* drivers</br> - No support for *Other* drivers | ***Feature***:  Yes</br> - Manage *individual* updates</br>  - Specify *Start Date* or *Gradual Rollout* start and end dates. </br></br>  ***Quality***: Use Update Ring policies</br></br></br></br> ***Drivers***: Yes</br> - Manage individual *Recommended* and *Other* drivers. </br></br><!-- </br></br> - Recommended drivers: Per-update  *Allow* or  *Pause* of *Recommended* updates</br>  - Optional drivers: Per-update *Allow* or *Pause* of *Optional* updates</br></br>***Expedited Quality***: Yes    -->                 |
 | **Pause Updates** | ***Feature***: </br>  - Pause all updates  </br></br>  ***Quality***: </br>  - Pause all updates </br></br>  ***Drivers***:  </br>  - Block all updates | ***Feature***: </br>  - Pause individual updates</br></br> ***Quality***: </br>  - Pause individual updates</br></br>***Drivers***: </br>  - Pause individual updates                                                                                 |
 | **Expedite Quality Update** | No                   | Yes                                         |
-| **Reports - Summary count of devices**: </br>  - Feature updates</br>  - Quality updates  | WUfB reports | WUfB reports |
-| **Reports – Detailed status**:</br>  - Per Update  | WUfB reports  | Yes, in Intune              |
+| **Reports - Summary count of devices**: </br>  - Feature updates</br>  - Quality updates  | Windows Update for Business reports | Windows Update for Business reports |
+| **Reports – Detailed status**:</br>  - Per Update  | Windows Update for Business reports  | Yes, in Intune              |
 
 ## Move from update ring deferrals to feature updates policy
 
@@ -116,4 +119,4 @@ To learn about report options for Update rings policy and Windows feature update
 - [Use Windows feature updates](../protect/windows-10-feature-updates.md)
 - [Expedite quality updates](../protect/windows-10-expedite-updates.md)
 - [Use Windows driver updates policy](../protect/windows-driver-updates-policy.md)
-- For more information, see [Manage updates using Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) in the Windows documentation.
+- For more information, see [Manage updates using Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) in the Windows documentation.
