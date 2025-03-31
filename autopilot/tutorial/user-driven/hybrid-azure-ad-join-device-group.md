@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
 ms.date: 06/19/2024
 ms.topic: tutorial
@@ -23,7 +23,7 @@ appliesto:
 Autopilot user-driven Microsoft Entra hybrid join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
-- Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
+- Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
 - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
 - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 
