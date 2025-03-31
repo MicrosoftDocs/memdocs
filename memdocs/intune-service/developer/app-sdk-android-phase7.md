@@ -191,7 +191,7 @@ The SDK's default behavior is limited.
 The SDK can't automatically honor the "Block org data" value, which is intended to remove only managed content from notifications.
 For multi-identity apps, the SDK can't determine which notifications contain managed content.
 
-If your app displays notifications, and it is either multi-identity and/or it wishes to honor the "Block org data" value, it must check the notification restriction policy for the account associated with the notification before showing the notification.
+If your app displays notifications, and it's either multi-identity and/or it wishes to honor the "Block org data" value, it must check the notification restriction policy for the account associated with the notification before showing the notification.
 
 To determine if the policy is enforced, make the following call:
 
@@ -372,7 +372,7 @@ For example, if your app uses a custom rendering engine to render the current vi
 `AppPolicy.getIsScreenCaptureAllowed()`.
 
 >[!NOTE]
-> If your app does not contain any custom or third-party screen capture features, you are not required to take any action to restrict screen captures.
+> If your app doesn't contain any custom or third-party screen capture features, you aren't required to take any action to restrict screen captures.
 > Screen capture policy is automatically enforced at the `Window` level for all MAM integrated apps.
 > Any attempts by the OS or another app to capture a `Window` in your app will be blocked as required.
 > For example, if a user attempts to capture your app's screen through Android's built-in screenshot or screen recording features, the capture will be automatically restricted without participation from your app.
@@ -565,7 +565,7 @@ Once you've completed the above, proceed to [Validating App Protection CA] below
 > When the compliance status notification is received, you can display the result or simply finish the activity.
 
 > [!NOTE]
-> `remediateCompliance()` will register the account and attempt enrollment.  Once the main token is acquired, calling `registerAccountForMAM()` is not necessary, but there is no harm in doing so.
+> `remediateCompliance()` will register the account and attempt enrollment.  Once the main token is acquired, calling `registerAccountForMAM()` isn't necessary, but there's no harm in doing so.
 > On the other hand, if the app fails to acquire its token and wishes to remove the user account, it must call `unregisterAccountForMAM()` to remove the account and prevent background enrollment retries.
 
 ## Register for notifications from the SDK
@@ -655,7 +655,7 @@ As with other types of Android receivers, your application has flexibility with 
 - It may create multiple [MAMNotificationReceiver] implementations that each respond to the same notification type. In this case, both must be registered to the same notification type.
 
 > [!TIP]
-> It is safe to block in `MAMNotificationReceiver.onReceive` because its callback is not running on the UI thread.
+> It's safe to block in `MAMNotificationReceiver.onReceive` because its callback isn't running on the UI thread.
 
 ## Custom Themes
 
@@ -698,7 +698,7 @@ Trusted Root Certificates Management provides support for:
 
 Trusted Root Certificates Management allows your app to use trusted root certificates from Intune in combination with certificates from the device.
 
-The API classes [MAMTrustedRootCertsManager] and [MAMCertTrustWebViewClient] use the Intune trusted root certificates delivered via App Configuration Policy as a fallback option if the device’s trusted root certificate stores do not contain the required trusted root certificates to establish a secure connection to on-premise resources. This way, the app can use both device and Intune certificates to verify secure connections and communication with trusted sources.
+The API classes [MAMTrustedRootCertsManager] and [MAMCertTrustWebViewClient] use the Intune trusted root certificates delivered via App Configuration Policy as a fallback option if the device’s trusted root certificate stores don't contain the required trusted root certificates to establish a secure connection to on-premise resources. This way, the app can use both device and Intune certificates to verify secure connections and communication with trusted sources.
 
 To enhance its network security settings, an app can use the Network Security Configuration XML file. Trusted Root Certificates Management respects this extra security by verifying if the app’s Network Security Configuration XML has any of these features:
 
@@ -722,7 +722,7 @@ This class provides the following APIs:
 > [!NOTE]
 > The `oid` parameter is expected to be the Microsoft Entra User ID (OID) for a particular user running the application. In the case the user identifier is unknown beforehand, a value of null can be passed in and MAM will attempt to discover the correct identity from the thread or process in which these APIs are invoked. The identity must be set on the process or thread correctly for MAM to discover the identity. To learn more about setting the active identity on a process or thread visit: [Stage 5: Multi-Identity]
 > [!NOTE]
-> When the `protocol` parameter is not provided, the highest supported SSL/TLS protocol on the platform is used.
+> When the `protocol` parameter isn't provided, the highest supported SSL/TLS protocol on the platform is used.
 
 Here are some examples of using this class.
 
@@ -778,9 +778,9 @@ Response response = okHttpClient.newCall(request).execute();
 
 #### Class MAMCertTrustWebViewClient
 
-This class provides a custom implementation of the Android class `android.webkit.WebViewClient` that provides a way to handle the SSL error `android.net.http.SslError.SSL_UNTRUSTED` in `WebView`. In handling the error, the class uses trusted root certificates that are configured in Intune and received from the MAM service to check the trustworthiness of the host from the target URL that generated the SSL error in `WebView`. If the custom implementation does not handle the SSL error, the default behavior inherited from the superclass will be invoked. When using this class, you should create an instance of it and then call `WebView.setWebViewClient(WebViewClient)` to register it with a `WebView` instance.
+This class provides a custom implementation of the Android class `android.webkit.WebViewClient` that provides a way to handle the SSL error `android.net.http.SslError.SSL_UNTRUSTED` in `WebView`. In handling the error, the class uses trusted root certificates that are configured in Intune and received from the MAM service to check the trustworthiness of the host from the target URL that generated the SSL error in `WebView`. If the custom implementation doesn't handle the SSL error, the default behavior inherited from the superclass will be invoked. When using this class, you should create an instance of it and then call `WebView.setWebViewClient(WebViewClient)` to register it with a `WebView` instance.
 
-Here is an example of using this class.
+Here's an example of using this class.
 
 ##### Example Using WebView
 
@@ -818,11 +818,11 @@ Additionally:
 | Scenario | Preconditions | Steps |
 | - | - | - |
 | Save to, fully allowed | "Save copies of org data" policy set to "Allow" | - Navigate to where your app can save data to OneDrive for Business. <br> - Attempt to save a document to OneDrive for Business, to the same managed account logged into your app. <br> - Confirm the save is allowed. |
-| Save to, exempted | - "Save copies of org data" policy set to "Block" <br> - "Allow user to save copies to selected services" policy set to "OneDrive for Business" only | - Navigate to where your app can save data to OneDrive for Business. <br> - Attempt to save a document to OneDrive for Business, to the same managed account logged into your app. <br> - Confirm the save is allowed. <br> - If your app allows, attempt to save the file to a different cloud storage location and confirm it is blocked. |
-| Save to, blocked | "Save copies of org data" policy set to "Block" | - Navigate to where your app can save data to OneDrive for Business. <br> - Attempt to save a document to OneDrive for Business, to the same managed account logged into your app. <br> - Confirm the save is blocked. <br> - If your app allows, attempt to save the file to a different cloud storage location and confirm it is blocked. |
+| Save to, exempted | - "Save copies of org data" policy set to "Block" <br> - "Allow user to save copies to selected services" policy set to "OneDrive for Business" only | - Navigate to where your app can save data to OneDrive for Business. <br> - Attempt to save a document to OneDrive for Business, to the same managed account logged into your app. <br> - Confirm the save is allowed. <br> - If your app allows, attempt to save the file to a different cloud storage location and confirm it's blocked. |
+| Save to, blocked | "Save copies of org data" policy set to "Block" | - Navigate to where your app can save data to OneDrive for Business. <br> - Attempt to save a document to OneDrive for Business, to the same managed account logged into your app. <br> - Confirm the save is blocked. <br> - If your app allows, attempt to save the file to a different cloud storage location and confirm it's blocked. |
 | Open from, fully allowed | "Open data into Org documents" policy set to "Allow" | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is allowed. |
-| Open from, exempted | - "Open data into Org documents" policy set to "Block" <br> - "Allow users to open data from selected services" policy set to "OneDrive for Business" only | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is allowed. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it is blocked. |
-| Open from, blocked | "Open data into Org documents" policy set to "Block" | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is blocked. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it is blocked. |
+| Open from, exempted | - "Open data into Org documents" policy set to "Block" <br> - "Allow users to open data from selected services" policy set to "OneDrive for Business" only | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is allowed. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it's blocked. |
+| Open from, blocked | "Open data into Org documents" policy set to "Block" | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is blocked. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it's blocked. |
 
 ### Validating notification restrictions
 
