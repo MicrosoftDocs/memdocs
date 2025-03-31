@@ -133,6 +133,11 @@ Applies to:
 
 ## Device enrollment
 
+### Enrollment-time grouping for Android Enterprise corporate devices <!-- 17530981 -->
+
+Soon to be available for Android Enterprise corporate-owned devices, *enrollment time grouping* enables you to assign a static Microsoft Entra group to devices at enrollment time. When a targeted Android device enrolls, it will receive all assigned policies, apps, and settings, typically by the time the user lands on the home screen. Intune admins will be able to configure one static Microsoft Entra group per enrollment profile under the **Device group** tab.
+
+
 ### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
 
 You'll soon be able to use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
