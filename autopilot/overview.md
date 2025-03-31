@@ -54,7 +54,7 @@ When new Windows devices are initially deployed, Windows Autopilot uses the OEM-
 Once deployed, Windows devices can be managed with:
 
 - Microsoft Intune.
-- Windows Update for Business.
+- Windows Update client policies.
 - Microsoft Configuration Manager.
 - Other similar tools from non-Microsoft parties.
 

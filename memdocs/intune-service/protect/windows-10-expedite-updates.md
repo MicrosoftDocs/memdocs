@@ -59,7 +59,7 @@ The actual time required for a device to start an update depends on the device i
 
   If a device doesn't restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](windows-update-settings.md#user-experience-settings).  
+- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](windows-update-settings.md#user-experience-settings).
 
 ## Prerequisites
 
@@ -72,16 +72,16 @@ The following are requirements to qualify for installing expedited quality updat
 
 **Licensing**:
 
-In addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
+In addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Autopatch:
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access E3 or E5
 - Microsoft 365 Business Premium
 
-Beginning in November of 2022, the Windows Update for Business deployment service (WUfB ds) license will be checked and enforced.
+Beginning in November of 2022, the Windows Autopatch license will be checked and enforced.
 
-If you're blocked when creating new policies for capabilities that require WUfB ds and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 **Supported Windows 10/11 versions**:
 
@@ -106,7 +106,7 @@ Only update builds that are generally available are supported. Preview builds, i
 - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-  - Windows Update for Business deployment service
+  - Windows Autopatch
   - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
 
 - Be configured to get Quality Updates directly from the Windows Update service.
@@ -159,7 +159,7 @@ Before you can monitor results and update status for expedited updates, your Int
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for additional capabilities that are not supported for WPJ devices.
+Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for additional capabilities that are not supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
@@ -255,14 +255,14 @@ The following sequence of events provides an example of how two devices, named *
 
 5. Now consider the following results for *Test-1* and *Test-2*, based on when each is turned back on:
 
-   - **Test-1** - On March 12, *Test-1* is powered back on, connects to the network, and receives expedited update notifications:  
+   - **Test-1** - On March 12, *Test-1* is powered back on, connects to the network, and receives expedited update notifications:
      1. Windows Update determines that *Test-1* still needs to expedite the update installation, per policy.
      2. Because the March 9 update supersedes the February update, Windows Update could install the March 9 update.
      3. There's an active deferral for the March update that won't expire until March 14.
 
      **Result**: With the deferral policy for the March update still active and blocking installation of that update, *Device-1* installs the February update as configured in policy.
 
-   - **Test-2** - On March 20, *Test-2* is powered back on, connects to the network, and receives expedited update notifications:  
+   - **Test-2** - On March 20, *Test-2* is powered back on, connects to the network, and receives expedited update notifications:
      1. Windows Update determines that *Test-2* still needs to expedite the update installation, per policy.
      2. Because the March 9 update supersedes the February update, Windows Update could install the March 9 update.
      3. There's no longer an active deferral for the March update.
@@ -312,7 +312,7 @@ This report can help you find devices with alerts or errors and can help you tro
 3. In the list of monitoring reports, scroll to the Software updates section and select **Windows Expedited update failures**.
 
 4. From the list of profiles that is shown on the right side of the page, select a profile to see results.
- 
+
    :::image type="content" alt-text="Example of the device report." source="./media/windows-10-expedite-updates/device-report.png" lightbox="./media/windows-10-expedite-updates/device-report.png":::
 
 ### Update states
