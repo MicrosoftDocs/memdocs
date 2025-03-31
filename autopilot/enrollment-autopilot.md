@@ -3,7 +3,7 @@ title: Create device groups for Windows Autopilot
 description: Learn how to create device groups for Windows Autopilot.
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
 ms.date: 09/13/2024
 ms.topic: how-to
