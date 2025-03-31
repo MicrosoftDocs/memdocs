@@ -58,8 +58,7 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - Count of Windows 10 devices by branch, build, and unique Active Directory forest  
 
-- ***[Removed]*** Count of Windows 10 clients that use Windows Update for Business  
-
+- ***[Removed]*** Count of Windows 10 clients that use Windows Update client policies
 - Database performance metrics: replication processing information, top SQL Server stored procedures by processor, and disk usage
 
 - Distribution point and management point types and basic configuration information: protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, and SSL-enabled
@@ -488,9 +487,9 @@ For Configuration Manager version 2002, this level includes the following data:
 
 - ***[Removed]*** Count of updates that are created and deployed with System Center Update Publisher  
 
-- ***[Removed]*** Count of Windows Update for Business policies created and deployed  
+- ***[Removed]*** Count of Windows Update client policies created and deployed  
 
-- Aggregated statistics of Windows Update for Business configurations  
+- Aggregated statistics of Windows Update client policies configurations  
 
 - ***[Removed]*** Number of automatic deployment rules that are tied to synchronization  
 

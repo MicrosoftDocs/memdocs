@@ -99,7 +99,7 @@ The following settings are useful for devices running Windows Holographic for Bu
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
-> | `./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval` |This setting is available in RS5 (build 17763) and earlier. Starting with 19H1 (build 18362), use [Windows Update for Business](../protect/windows-update-for-business-configure.md).<br/><br/>Integer<br/>0 – Not configured. The device installs all applicable updates.<br/>1 – The device only installs updates that are both applicable and on the Approved Updates list. Set this policy to 1 if IT wants to control the deployment of updates on devices, like when testing is required prior to deployment.|
+> | `./Vendor/MSFT/Policy/Config/Update/RequireUpdateApproval` |This setting is available in RS5 (build 17763) and earlier. Starting with 19H1 (build 18362), use [Windows Update client policies](../protect/windows-update-for-business-configure.md).<br/><br/>Integer<br/>0 – Not configured. The device installs all applicable updates.<br/>1 – The device only installs updates that are both applicable and on the Approved Updates list. Set this policy to 1 if IT wants to control the deployment of updates on devices, like when testing is required prior to deployment.|
 
 ### [ScheduledInstallTime](/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
 
@@ -113,7 +113,7 @@ The following settings are useful for devices running Windows Holographic for Bu
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
-> | `./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl` |This setting is available in RS5 (build 17763) and earlier. Starting with 19H1 (build 18362), use [Windows Update for Business](../protect/windows-update-for-business-configure.md).<br/><br/>String<br/>URL - the device checks for updates from the WSUS server at the specified URL.<br/>Not configured - The device checks for updates from Microsoft Update.|
+> | `./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl` |This setting is available in RS5 (build 17763) and earlier. Starting with 19H1 (build 18362), use [Windows Update client policies](../protect/windows-update-for-business-configure.md).<br/><br/>String<br/>URL - the device checks for updates from the WSUS server at the specified URL.<br/>Not configured - The device checks for updates from Microsoft Update.|
 
 ### [ApprovedUpdates](/windows/client-management/mdm/update-csp)
 

@@ -27,13 +27,13 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-- ContentEnagagementFY24 
+- ContentEnagagementFY24
 - sub-updates
 ---
 
 # Windows Driver update management in Microsoft Intune
 
-With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Intune and the Windows Update for Business (WUfB) deployment service (DS) take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and WUfB-DS sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
+With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Intune and the Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and Windows Autopatch sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
 
 Using Windows driver update policies, you remain in control of which driver updates can install on your devices. You can:
 
@@ -41,8 +41,8 @@ Using Windows driver update policies, you remain in control of which driver upda
 
   Later, when a newer driver update from the OEM is released and identified as the current *recommended* driver update, Intune automatically adds it to the policy and moves the previously recommended driver to the list of other drivers.
 
-  > [!TIP]  
-  > An approved recommended driver update that is moved to the *other drivers* list due to a newer recommended driver update becoming available, remains approved. When a newer recommended and approved driver update is available, WUfB-DS will install only that latest approved version. If the latest approved update version is paused, the deployment service will automatically offer the next most recent and approved update version, which is now on the *other drivers* list. This behavior ensures that the last known-good driver update version that was approved can continue to install on devices, while the more recent recommended version remains paused.
+  > [!TIP]
+  > An approved recommended driver update that is moved to the *other drivers* list due to a newer recommended driver update becoming available, remains approved. When a newer recommended and approved driver update is available, Windows Autopatch will install only that latest approved version. If the latest approved update version is paused, the deployment service will automatically offer the next most recent and approved update version, which is now on the *other drivers* list. This behavior ensures that the last known-good driver update version that was approved can continue to install on devices, while the more recent recommended version remains paused.
 
   With this policy configuration, you can also choose to review the available updates to selectively approve, pause, or decline *any* update that remains available for devices with the policy.
 
@@ -66,7 +66,7 @@ Windows driver update management applies to:
 >
 > [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) is not applicable to GCC and GCC High/DoD cloud environments for WuFB-DS capabilities.
 
-To use Windows Driver Update management, your organization must have the following licenses, subscriptions, and network configurations: 
+To use Windows Driver Update management, your organization must have the following licenses, subscriptions, and network configurations:
 
 ### Subscriptions
 
@@ -76,7 +76,7 @@ To use Windows Driver Update management, your organization must have the followi
 
 **Windows subscriptions and licenses**:
 
-Your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
+Your organization must have one of the following subscriptions that include a license for Windows Autopatch:
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
@@ -85,7 +85,7 @@ Your organization must have one of the following subscriptions that include a li
 
 *Review your subscription details for applicability to Windows 11*.
 
-If you're blocked when creating new policies for capabilities that require WUfB-DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants' licenses meet the WUfB-DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants' licenses meet the Windows Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 ### Device & Edition requirements
 
@@ -98,8 +98,8 @@ Driver updates are supported for the following Windows 10/11 editions:
 - Education
 - Pro for Workstations
 
-> [!NOTE]  
-> **Unsupported versions and editions**:  
+> [!NOTE]
+> **Unsupported versions and editions**:
 > *Windows 10/11 Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, available under the **Windows 10 and later** blade don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
 
 **Devices must**:
@@ -108,7 +108,7 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 - Be enrolled in Intune MDM and be Hybrid AD joined or Microsoft Entra joined.
 
-- Have Telemetry turned on and configured to report a minimum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.  
+- Have Telemetry turned on and configured to report a minimum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.
 
   You can use one of the following Intune device configuration profile paths to configure Telemetry for Windows 10 or Windows 11 devices:
   - **[Device restriction template](../configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
@@ -153,20 +153,20 @@ For more information, see [Role-based access control for Microsoft Intune](../fu
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for other capabilities that aren't supported for WPJ devices.
+Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for other capabilities that aren't supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
 ## Architecture
 
 :::image type="content" source="./media/windows-driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./media/windows-driver-updates-overview/wdum-architecture.png":::
-  
+
 **Windows Driver Update Management architecture**:
 
-1. Microsoft Intune provides the Microsoft Entra IDs and Intune policy settings for devices to WUfB-DS. Intune also provides the list of driver approvals and pause commands to WUfB-DS.
-2. WUfB-DS configures Windows Updates based on the information provided by Intune. Windows Updates provides the applicable driver update inventory per device ID.
+1. Microsoft Intune provides the Microsoft Entra IDs and Intune policy settings for devices to Windows Autopatch. Intune also provides the list of driver approvals and pause commands to Windows Autopatch.
+2. Windows Autopatch configures Windows Updates based on the information provided by Intune. Windows Updates provides the applicable driver update inventory per device ID.
 3. Devices send data to Microsoft so that Windows Update can identify the applicable driver updates for a device during its regular Windows Update scans for updates.  Any approved updates install on the device.
-4. WUfB-DS reports Windows diagnostic data back to Intune for reports.
+4. Windows Autopatch reports Windows diagnostic data back to Intune for reports.
 
 ## Plan for driver updates
 
@@ -196,11 +196,11 @@ For more information about planning deployments, see [Create a deployment plan](
 - No. Driver Updates aren't supported during autopilot at this time.
 
 > [!NOTE]
-> Windows applies critical updates during Autopilot. These updates may include critical driver updates that have not yet been approved by an admin. 
+> Windows applies critical updates during Autopilot. These updates may include critical driver updates that have not yet been approved by an admin.
 
 ### Can I use policy to roll back a driver update?
 
-- No. WUfB doesn't currently support Driver rollback. While rollback could be scripted, there are too many potential variables to provide a useful sample script for doing so. If you must remove a driver, consider manual methods like PowerShell.
+- No. Windows Update client policies don't currently support driver rollback. While rollback could be scripted, there are too many potential variables to provide a useful sample script for doing so. If you must remove a driver, consider manual methods like PowerShell.
 
 To help avoid issues that require rolling back a driver from large numbers of devices, use *deployment rings* to limit driver installation to small initial groups of devices. This approach allows time to evaluate the success or compatibility of a driver before broadly deploying it across your organization.
 
@@ -217,7 +217,7 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 - Because it's not always clear in advance when an OEM releases a new update, or if that update requires a reboot, consider a regular pattern of update reviews.
 
-  - For policies with manual approval, when you approve drivers and set an *approval available date*, you can set that date to an event like the monthly Patch Tuesday, or any other time of your choosing. 
+  - For policies with manual approval, when you approve drivers and set an *approval available date*, you can set that date to an event like the monthly Patch Tuesday, or any other time of your choosing.
   - For policies with automatic approval, you could pause a newly added and then return to approve it. When you reapprove any paused update, you can set an *approval available date*.
 
   To help mitigate this type of recurring challenge, we're evaluating changes that can mitigate the need to manually coordinate driver updates with *Patch Tuesday* updates.
@@ -232,11 +232,11 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
   Installing drivers with older versions than those already present on a device isn't possible through driver update management.
 
-### What is the WUfB-DS synchronization frequency?
+### What is the Windows Autopatch synchronization frequency?
 
-- Intune to WUfB-DS syncs run each day, and you can use the *Sync* option to run a synchronization on demand. The time to complete a synchronization depends on the device information involved but should usually take only a few minutes to complete.
+- Intune to Windows Autopatch syncs run each day, and you can use the *Sync* option to run a synchronization on demand. The time to complete a synchronization depends on the device information involved but should usually take only a few minutes to complete.
 
-  Devices sync with the WUfB-DS service each day when the device runs a Windows Update scan.
+  Devices sync with the Windows Autopatch service each day when the device runs a Windows Update scan.
 
 ### What drivers are available to be managed?
 
@@ -246,7 +246,7 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 - Updates that are published to Windows Update have a requirement to use a Windows mechanism that enables securely updating the firmware or driver without requiring the BIOS/UEFI to be unlocked.
 
-### If a vendor has their own app for scanning and installing driver and firmware updates, is there a delay in update availability between their app and WUfB-DS?
+### If a vendor has their own app for scanning and installing driver and firmware updates, is there a delay in update availability between their app and Windows Autopatch?
 
 - The possibility of a delay depends on the vendor or OEM who determines the availability of their updates. Because driver updates are digitally signed by the same portal before they're published to Windows Updates, driver updates might become available through Windows Update before they become available via the vendors tools.
 
@@ -257,7 +257,7 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 ### How quickly are paused updates actually paused?
 
-- Pause is a best effort, and when an update is paused, WUfB-DS removes the approval. However, devices won't know that an update is paused until it's next scan for updates.
+- Pause is a best effort, and when an update is paused, Windows Autopatch removes the approval. However, devices won't know that an update is paused until it's next scan for updates.
   - If a device hasn't yet scanned for the update, then the paused update isn't offered, and *Pause* works as expected.
   - If a device scans for updates and discovers an update is paused and that the device is in the process of downloading, installing, or waiting to restart, then Windows Update on the device attempts a "best effort" to remove that driver update from being installed. If it can't halt the installation, the update completes its installation.
   - If an update completes its installation before the next scan for updates, nothing happens, and the update remains installed.
@@ -302,7 +302,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
       Configure the **Allow Diagnostic data** setting to **Optional** or **Required** using a domain-based group policy or Intune. For more information on how to complete this task, go to:
 
          - [Use Group Policy to manage diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-group-policy-to-manage-diagnostic-data-collection)
-         
+
          - [Use MDM to manage diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-mdm-to-manage-diagnostic-data-collection)
 
    6. [Optional] Enable device name collection in diagnostic data. For more information on configuration using a domain-based group policy or Intune, see [Diagnostic data requirements](/windows/deployment/update/wufb-reports-prerequisites#diagnostic-data-requirements).
@@ -311,7 +311,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
       > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](../../configmgr/comanage/workloads.md#device-configuration) co-management workload to Intune.
 
    You can move Feature update management to the cloud in Intune by configuring a [Feature update](windows-10-feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
-   
+
    Using Update Ring policies in Intune for Quality or Feature Updates requires you to move the **Windows Update** workload to Intune.
 
 ### Is there a way to set a deadline for drivers?

@@ -123,17 +123,24 @@ Ensure Endpoint Protection is enabled on all desktop and server clients using cl
 
 To configure the percentage at which the alert is generated, expand **Monitoring** > **Alerts** > **All Alerts**, double-click **Antimalware clients out of date** and modify the **Raise alert if percentage of managed clients with an outdated version of the antimalware client is more than** option.
 
-## Compliance assessment for Windows Update for Business updates
-You can now configure a compliance policy update rule to include a Windows Update for Business assessment result as part of the Conditional Access evaluation.
+## Compliance assessment for Windows Update client policy updates
+<a name="compliance-assessment-for-windows-update-for-business-updates"></a>
+
+You can now configure a compliance policy update rule to include an assessment result as part of the Conditional Access evaluation.
+
 > [!IMPORTANT]
-> You must have Windows 10 Insider Preview Build 15019 or later to use compliance assessment for Windows Update for Business updates.
+> You must have Windows 10 Insider Preview Build 15019 or later to use compliance assessment for Windows Update client policy updates.
 
-### Allow Windows Update for Business to manage Windows 10 updates
-To gather compliance assessment information for Windows Update for Business updates, use the following procedure to configure the client agent setting to explicitly allow Windows Update for Business to manage Windows 10 updates.
+### Allow Windows Update client policies to manage Windows 10 updates
+<a name="allow-windows-update-for-business-to-manage-windows-10-updates"></a>
+
+To gather compliance assessment information for Windows Update client policy updates, use the following procedure to configure the client agent setting to explicitly allow Windows Update client policies to manage Windows 10 updates.
 1. In the Configuration Manager console, go to **Administration** > **Client Settings**.
-2. In the properties for the client settings, go to **Software Updates**, and select **Yes** for the **Manage Windows 10 updates with Windows Update for Business** setting.
+2. In the properties for the client settings, go to **Software Updates**, and select **Yes** for the **Manage Windows 10 updates with Windows Update client policies** setting.
 
-### Create a compliance policy for Windows Update for Business assessment
+### Create a compliance policy for Windows Update client policies
+<a name="create-a-compliance-policy-for-windows-update-for-business-assessment"></a>
+
 1. In the Configuration Manager console, go to **Assets and Compliance** > **Compliance Settings** > **Compliance policies**.
 2. Click **Create Compliance Policy** or select an existing compliance policy to modify.
 3. On the General page, provide a name and description, select **Compliance rules for devices managed with the Configuration Manager client**, set the non-compliance severity for reporting, and click **Next**.
