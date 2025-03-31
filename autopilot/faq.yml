@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: madakeva
   manager: aaroncz
-  ms.date: 02/27/2025
+  ms.date: 03/28/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -461,6 +461,8 @@ sections:
           If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Autopilot.
 
           While Autopilot is available in global tenants, users in China can experience poor connectivity and high latency when deploying due to ISP-related issues. If you're experiencing these issues when deploying in the region, contact your local ISP for support.
+
+          For Government Community Cloud High (GCCH) and Department of Defense (DoD) environments, consider using [Windows Autopilot device preparation](device-preparation/overview.md).
 
       - question: |
           Why does TPM provisioning/attestation take longer during the first boot on a device?
