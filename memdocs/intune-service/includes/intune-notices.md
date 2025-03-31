@@ -12,6 +12,27 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Update network endpoints for Windows, Mac and Android AOSP managed devices
+Intune has updated the required CDN endpoints for Windows, Mac and Android Open Source Project (AOSP). If you have configured your firewall to allow *.manage.microsoft.com then no action is required, otherwise, we recommend you review and update your proxy settings by **April 30, 2025**.
+
+#### How does this change affect you or your users?
+
+If you're using Intune to deploy applications and scripts, you'll need to grant access to the updated endpoints for your location. If access to the new endpoints is not granted, users won't be able to install applications or scripts, and certain functionalities may fail. The CDN endpoints are used in the following scenarios:
+
+- Windows: The CDN is used for delivering updates to the Intune management extension which enables scenarios such as Win32 app deployment, PowerShell scripts, Endpoint analytics, and more.
+- Co-managed devices: The CDN providers the official Configuration Manager binaries, including the main technical preview and official releases, hotfixes, push notifications, and more.
+- Mac: The CDN is used for delivering updates to the Intune management agent which is used to deploy macOS PKG apps, DMG apps, shell scripts, and custom attributes.
+- Android AOSP: The CDN is used for delivering applications during device provisioning, such as the Intune Company Portal app, and feature updates.
+
+#### How can you prepare?
+
+Update your firewall rules to include the new CDN endpoints. For the best experience, we recommend using the *.manage.microsoft.com domain. If your proxy or firewall doesn't allow you to create a firewall rule using a domain, update the address as listed: 
+
+- Windows CDN requirements: [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints?tabs=north-america.md#network-requirements-for-powershell-scripts-and-win32-apps)
+- Configuration Manager co-managed devices CDN requirements: [Updates and servicing](https://learn.microsoft.com/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing)
+- Mac CDN requirements: [Network requirements for macOS app and script deployments](../fundamentals/intune-endpoints?tabs=north-america.md#network-requirements-for-macos-app-and-script-deployments)
+- Android AOSP CDN requirements: [Android AOSP dependencies](../fundamentals/intune-endpoints?tabs=north-america.md#android-aosp-dependencies)
+
 ### Plan for Change: New settings for Apple AI features; Genmojis, Writing tools, Screen capture
 
 Today, the Apple AI features for Genmojis, Writing tools, and screen capture are blocked when the app protection policy (APP) "Send Org data to other apps" setting is configured to a value other than "All apps". For more details on the current configuration, app requirements, and the list of current Apple AI controls review the blog: [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037)
