@@ -134,15 +134,6 @@ Intune *access policies* help protect against a compromised administrative accou
 
 For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-### Remote Help supports Azure Virtual Desktop multi-session <!-- 24590822 -->
-
-Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Soon, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
-
-For more information, see:
-
-- [Remote Help](../fundamentals/remote-help.md)
-- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
-
 ###  Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 
 We're adding a feature that will allow a customer to:
