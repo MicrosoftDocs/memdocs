@@ -29,7 +29,7 @@ If you're using Intune to deploy applications and scripts, you'll need to grant 
 Update your firewall rules to include the new CDN endpoints. For the best experience, we recommend using the *.manage.microsoft.com domain. If your proxy or firewall doesn't allow you to create a firewall rule using a domain, update the address as listed: 
 
 - Windows CDN requirements: [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints?tabs=north-america.md#network-requirements-for-powershell-scripts-and-win32-apps)
-- Configuration Manager co-managed devices CDN requirements: [Updates and servicing](https://learn.microsoft.com/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing)
+- Configuration Manager co-managed devices CDN requirements: [Updates and servicing](../configmgr/core/plan-design/network/internet-endpoints.md#updates-and-servicing)
 - Mac CDN requirements: [Network requirements for macOS app and script deployments](../fundamentals/intune-endpoints?tabs=north-america.md#network-requirements-for-macos-app-and-script-deployments)
 - Android AOSP CDN requirements: [Android AOSP dependencies](../fundamentals/intune-endpoints?tabs=north-america.md#android-aosp-dependencies)
 
