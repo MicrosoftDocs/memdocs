@@ -65,7 +65,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Intune connector**](#tab/intune-connector-requirements)
 
-<!-- ### Intune connector server requirements -->
+<!-- ### Intune connector for Active Directory server requirements -->
 
 - The Intune Connector for Active Directory, also known as the Offline Domain Join (ODJ) connector, must be installed on a computer that's running Windows Server 2016 or later with .NET Framework version 4.7.2 or later.
 
@@ -86,7 +86,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 - For the updated Intune Connector for Active Directory, installation needs to be done with an account that has the following domain rights:
 
   - **Required** - Create **msDs-ManagedServiceAccount** objects in the Managed Service Accounts container
-  - **Optional** - Modify permissions in OUs in Active Directory - if the administrator installing the updated Intune Connector for Active Directory doesn't have this right, additional configuration steps are required by an administrator who has these rights. For more information, see the section [Increase the computer account limit in the Organizational Unit](#increase-the-computer-account-limit-in-the-organizational-unit) in this article.
+  - **Optional** - Modify permissions in OUs in Active Directory - if the administrator installing the updated Intune Connector for Active Directory doesn't have this right, additional configuration steps are required by an administrator who has these rights. For more information, see the section [Increase the computer account limit in the Organizational Unit (OU)](#increase-the-computer-account-limit-in-the-organizational-unit) in this article.
 
     These rights allow the Intune Connector for Active Directory install to properly create Managed Service Accounts (MSAs) and set permissions correctly for the OUs that the MSA is adding computers to.
 
@@ -118,7 +118,7 @@ If there's a web proxy in the networking environment, ensure that the Intune Con
 
 ## Increase the computer account limit in the Organizational Unit
 
-[!INCLUDE [Increase the computer account limit in the Organizational Unit](includes/computer-account-limit.md)]
+[!INCLUDE [Increase the computer account limit in the Organizational Unit (OU)](includes/computer-account-limit.md)]
 
 ## Create a device group
 
