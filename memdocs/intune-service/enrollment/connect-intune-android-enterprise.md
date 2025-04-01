@@ -73,9 +73,9 @@ Complete these steps to enable Android Enterprise management options in Microsof
   
 7. On the Google sign-in page, confirm that the prefilled Microsoft Entra account is the account you want to associate with all Android Enterprise management tasks for this tenant. 
 
-  > [!IMPORTANT]
-  > - This account is used to manage the Google Admin account and associated subscriptions, as appropriate. The Microsoft Entra account must have an active mailbox to complete the validation process required by Google.
-  > - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add and remove more administrators, if needed, in the Google admin console.
+> [!IMPORTANT]
+- This account is used to manage the Google Admin account and associated subscriptions, as appropriate. The Microsoft Entra account must have an active mailbox to complete the validation process required by Google.
+> - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add more administrators, if needed, in the Google admin console.
 
 8. Follow the onscreen prompts to finish creating a Google Admin account.  
 
@@ -83,7 +83,7 @@ Complete these steps to enable Android Enterprise management options in Microsof
 
 > [!TIP]
 > To choose a scope tag for your managed Google Play apps, go to **Tenant administration** > **Connectors and tokens** > **Managed Google Play** in the Microsoft Intune admin center.  Then select a scope tag to apply to all newly-approved managed Google Play apps. You must have the following permissions to interact with this area in the admin center and to remove the selected scope tag. Tenant admins, or admins who are in charge of giving admin permissions to others, can go to **Tenant Administration** > **Roles** to edit permissions.   
-   >  - Android Sync - Read
+>  - Android Sync - Read
    >  - Android Sync – UpdateOnBoarding  
 
 ## Disconnect your Android Enterprise administrative account  
