@@ -321,7 +321,7 @@ The following guidance is specific to requirements for the Tunnel for MAM iOS SD
 
 8. To verify that all settings were applied successfully, select **Integration assistant**:
 
-   - For *What application types are you building?* select **Mobile app (Android, iOS, Xamarin, UWP)**.
+   - For *What application types are you building?* select **Mobile app (Android, iOS, UWP)**.
    - Set *Is this application calling APIs?* to **No**, and then select **Evaluate my app registration**.
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/integration-assistant.png" alt-text="Use the app registration Integration assistant to verify settings.":::
@@ -391,7 +391,7 @@ When you already have an app registration, you can choose to update it instead o
 
 5. Select **Integration assistant** to validate the app registration:
 
-   1. For *What application types are you building?* select **Mobile app (Android, iOS, Xamarin, UWP)**
+   1. For *What application types are you building?* select **Mobile app (Android, iOS, UWP)**
    1. Set *Is this application calling APIs?* to **No**, and then select **Evaluate my app registration**.
 
    The results should show a status of *Complete* for both *Recommended configurations* and *Discouraged configurations*.
