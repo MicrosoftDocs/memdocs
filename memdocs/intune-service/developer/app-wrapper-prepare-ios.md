@@ -240,8 +240,8 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-ar**|`<Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
 |**-aa**|(Required for single tenant apps) `<Authority URI of the input app>` i.e `https://login.microsoftonline.com/<tenantID>/` |
 |**-v**| (Optional) Outputs verbose messages to the console. It's recommended to use this flag to debug any errors. |
-|**-e**| (Optional) Use this flag to have the App Wrapping Tool remove missing entitlements as it processes the app. See [Setting app entitlements](#setting-app-entitlements) for more details.|
-|**-xe**| (Optional) Prints information about the iOS extensions in the app and what entitlements are required to use them. See  [Setting app entitlements](#setting-app-entitlements) for more details. |
+|**-e**| (Optional) Use this flag to have the App Wrapping Tool remove missing entitlements as it processes the app. For more information, see [Setting app entitlements](#setting-app-entitlements).|
+|**-xe**| (Optional) Prints information about the iOS extensions in the app and what entitlements are required to use them. For more information, see [Setting app entitlements](#setting-app-entitlements). |
 |**-x**| (Optional) `<An array of paths to extension provisioning profiles>`. Use this if your app needs extension provisioning profiles.|
 |**-b**|(Optional) Use -b without an argument if you want the wrapped output app to have the same bundle version as the input app (not recommended). <br/><br/> Use `-b <custom bundle version>` if you want the wrapped app to have a custom CFBundleVersion. If you choose to specify a custom CFBundleVersion, it's a good idea to increment the native app's CFBundleVersion by the least significant component, like 1.0.0 -> 1.0.1. |
 |**-f**|(Optional) `<Path to a plist file specifying arguments.>` Use this flag in front of the [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) file if you choose to use the plist template to specify the rest of the IntuneMAMPackager properties like -i, -o, and -p. See Use a plist to input arguments. |
@@ -384,23 +384,23 @@ Before wrapping your app, you can grant *[entitlements](https://developer.apple.
 
 1. Enable capabilities in your app:
 
-    a.  In Xcode, go to your app's target, and click **Capabilities**.
+    a. In Xcode, go to your app's target, and click **Capabilities**.
 
-    b.  Turn on the appropriate capabilities. For detailed information about each capability and how to determine the correct values, see [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in the iOS Developer Library.
+    b. Turn on the appropriate capabilities. For detailed information about each capability and how to determine the correct values, see [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in the iOS Developer Library.
 
-    c.  Note any IDs that you created during the process. These may also be referred to as the `AppIdentifierPrefix` values.
+    c. Note any IDs that you created during the process. These may also be referred to as the `AppIdentifierPrefix` values.
 
-    d.  Build and sign your app to be wrapped.
+    d. Build and sign your app to be wrapped.
 
 2. Enable entitlements in your provisioning profile:
 
-    a.  Sign in to the Apple Developer Member Center.
+    a. Sign in to the Apple Developer Member Center.
 
-    b.  Create a provisioning profile for your app. For instructions, see [How to Obtain the Prerequisites for the Intune App Wrapping Tool for iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/).
+    b. Create a provisioning profile for your app. For instructions, see [How to Obtain the Prerequisites for the Intune App Wrapping Tool for iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/).
 
-    c.  In your provisioning profile, enable the same entitlements that you have in your app. You'll need to supply the same IDs (the `AppIdentifierPrefix` values) that you specified during the development of your app. 
+    c. In your provisioning profile, enable the same entitlements that you have in your app. You'll need to supply the same IDs (the `AppIdentifierPrefix` values) that you specified during the development of your app. 
 
-    d.  Finish the provisioning profile wizard and download your file.
+    d. Finish the provisioning profile wizard and download your file.
 
 3. Ensure that you have satisfied all the prerequisites, and then wrap the app.
 
