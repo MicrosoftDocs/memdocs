@@ -76,7 +76,7 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 4.	Once the above changes are completed, run the latest version of the Intune App Wrapping tool. Configure your apps for Microsoft Authentication Library (MSAL): Add the Microsoft Entra application client ID into the command-line parameters with the Intune App Wrapping Tool. For more information, see [Command-line parameters](../developer/app-wrapper-prepare-ios.md#command-line-parameters).
 
    > [!NOTE]
-   > The parameters `-ac` and `-ar` are required parameters. Each app will need a unique set of these parameters. `-aa` is only required for single tenant applications.
+   > The parameters `-ac` and `-ar` are required parameters. Each app needs a unique set of these parameters. `-aa` is only required for single tenant applications.
 
 5.	Deploy the app.
 
@@ -86,13 +86,13 @@ To distribute wrapped apps exclusively to your organization's users, you need an
 
 To learn more about distributing iOS apps internally to your organization's users, read the official guide to [Distributing Apple Developer Enterprise Program Apps](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingEnterpriseProgramApps/DistributingEnterpriseProgramApps.html#//apple_ref/doc/uid/TP40012582-CH33-SW1).
 
-You'll need the following to distribute apps wrapped by Intune:
+You need the following to distribute apps wrapped by Intune:
 
 * A developer account with the Apple Developer Enterprise Program.
 
 * In-house and ad-hoc distribution signing certificate with valid Team Identifier.
 
-  * You'll need the SHA1 hash of the signing certificate as a parameter to the Intune App Wrapping Tool.
+  * You need the SHA1 hash of the signing certificate as a parameter to the Intune App Wrapping Tool.
 
 
 * In-house distribution provisioning profile.
