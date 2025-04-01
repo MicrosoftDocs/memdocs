@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/27/2025
+ms.date: 04/22/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -346,16 +346,22 @@ Use either of the following methods to create new elevation rules, which are add
 
 ### Use file arguments for elevation rules
 
-When you manually configure or edit a [file elevation rule](#windows-elevation-rules-policy), you can add one or more file command lines or arguments to help you control how that file is used, and what it can be used to do when it's run in an elevated context.
+When you manually configure or edit a [file elevation rule](#windows-elevation-rules-policy), you can add one or more file command lines or arguments to help you control how that file is used, and what it can be used to do when it's run in an elevated context. 
 
 For example, you might have an elevation rule for the troubleshooting tool [**dsregcmd**](/entra/identity/devices/troubleshoot-device-dsregcmd) that can be useful for investigating the state of a device in Microsoft Entra ID. To help support this files use for investigation, you can configure the rule with a list of arguments for *dsregcmd* that includes the switches for **/status**, **/listaccounts** and more. However, to prevent a destructive action like unregistering a device you choose to not include* a switch like [**/leave**](/troubleshoot/entra/entra-id/dir-dmns-obj/pending-devices#the-state-of-a-registered-device-is-changed-to-pending). With this configuration, the rule then requires the elevation request include one of the defined switches (*/status, or *listaccounts) before it can be run in the elevated context. At the same time, users can’t accidentally (or with intent) use *dsregcmd* with the */leave* switch, to remove the device from Microsoft Entra ID.
 
 To add one or more arguments to an elevation rule, set **Restrict arguments** to **Allow list**. With this set, you can then select Add and then configure individual command line options. By adding multiple arguments, you provide multiple command lines that are supported by elevation requests.
 
+> [!IMPORTANT]
+> Considerations for file arguments:
+> - EPM uses file argument lists as allow lists, allowing elevation when specified or no arguments are used, and blocking elevation with unspecified arguments.
+> - File arguments are case sensitive; users must match the case exactly as defined in the rules.
+> - Do not define secrets as a file argument.
+
 :::image type="content" source="./media/epm-policies/add-argument.png" alt-text="Screen capture of the UI for configuring command line arguments.":::
 
-> [!IMPORTANT]
-> When an elevation rule includes at least one argument or command line through the argument list, the rule then requires that one of the configured arguments be used. If the file elevation request doesn’t include the exact command line as defined by one of the arguments on the argument list, EPM blocks that rule from running the file in an elevated context.
+
+
 
 ## Reusable settings groups
 
