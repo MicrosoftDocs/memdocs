@@ -150,13 +150,25 @@ Applies to:
 
 ## Device management
 
+### Intune ending support for custom profiles for personally owned work profile devices<!-- 27424084 -->
+
+Starting in April 2025, Intune will no longer support custom profiles for Android Enterprise personally owned work profile devices. After this time:
+
+- Admins won’t be able to create new custom profiles for personally owned work profile devices. However, admins can still view and edit previously created custom profiles.
+
+- Personally-owned work profile devices that currently have a custom profile assigned will not experience any immediate change of functionality. Because these profiles are no longer supported, the functionality set by these profiles may change in the future.
+
+- Intune technical support will no longer support custom profiles for personally owned work profile devices.
+
+All custom policies should be replaced with other policy types. Learn more about [Intune ending support for personally owned work profile custom profiles](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414).
+
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
 Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA helps to mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
 
 For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-###  Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
+### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 
 We're adding a feature that will allow a customer to:
 
@@ -181,7 +193,7 @@ Applies to:
 
 - Linux
 
-### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!--   -->
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
 
