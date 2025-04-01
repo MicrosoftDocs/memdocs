@@ -61,9 +61,9 @@ When a device receives a policy for Feature updates:
 ## Prerequisites
 
 > [!IMPORTANT]
-> This feature is not supported on GCC and GCC High/DoD cloud environments.
+> This feature isn't supported on GCC and GCC High/DoD cloud environments.
 >
-> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) is not applicable to GCC and GCC High/DoD cloud environments for WuFB-DS capabilities.
+> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) isn't applicable to GCC and GCC High/DoD cloud environments for Windows Autopatch capabilities.
 
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 
@@ -152,15 +152,15 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
-- Managed devices that receive feature update policy are automatically enrolled with the [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). The deployment service manages the updates a device receives. Microsoft Intune uses this service and works with your Intune policies for Windows updates to deploy feature updates to devices.
+- Managed devices that receive feature update policy are automatically enrolled with the [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). The service manages the updates a device receives. Microsoft Intune uses this service and works with your Intune policies for Windows updates to deploy feature updates to devices.
 
-  When a device is no longer assigned to any feature update policies, the device remains enrolled in the deployment service. This change allows time to assign the device to a different policy and ensure that in the meantime the device doesn't receive a feature update that wasn't intended.
+  When a device is no longer assigned to any feature update policies, the device remains enrolled in Autopatch. This change allows time to assign the device to a different policy and ensure that in the meantime the device doesn't receive a feature update that wasn't intended.
 
  As a result, when a feature updates policy no longer applies to a device, that device isn't offered any feature update until one of the following happens:
 
   - The device is assigned to a new feature update profile.
-  - The device is unenrolled from Intune, which unenrolls the device from feature update management by the Deployment Service.
-  - You use the Windows Update for [Business deployment service graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
+  - The device is unenrolled from Intune, which unenrolls the device from feature update management by Autopatch.
+  - You use the [Windows Autopatch graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
 
 ## Create and assign Feature updates for Windows 10 and later policy
 
