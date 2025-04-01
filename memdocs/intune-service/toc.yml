@@ -819,10 +819,6 @@ items:
             displayName: ca
           - name: Common ways to use Conditional Access
             href: ./protect/conditional-access-intune-common-ways-use.md
-          - name: Install Exchange on-premises connector
-            href: ./protect/exchange-connector-install.md
-          - name: Create and assign Conditional Access policy
-            href: ./protect/conditional-access-exchange-create.md
           - name: Device-based Conditional Access policy
             href: ./protect/create-conditional-access-intune.md
           - name: App-based Conditional Access
@@ -1012,7 +1008,7 @@ items:
               href: ./protect/software-updates-macos.md
           - name: Windows updates
             items:
-            - name: Use Windows Update for Business
+            - name: Use Windows Update client policies
               href: ./protect/windows-update-for-business-configure.md
             - name: Update rings policy
               href: ./protect/windows-10-update-rings.md
@@ -1056,12 +1052,6 @@ items:
               href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting
           - name: Troubleshoot PKCS certificate profiles
             href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles
-          - name: Troubleshoot Exchange connectors
-            items:
-            - name: Troubleshoot Exchange connectors
-              href: /troubleshoot/mem/intune/troubleshoot-exchange-connector
-            - name: Common errors
-              href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-errors
           - name: Troubleshoot BitLocker policies
             href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies
           - name: Troubleshoot Jamf Pro integration
@@ -1137,6 +1127,14 @@ items:
           href: ./protect/microsoft-tunnel-reference.md
         - name: Windows update settings
           href: ./protect/windows-update-settings.md
+        - name: Zero Trust security configuration examples
+          items:
+          - name: iOS/iPadOS device compliance
+            href: ./protect/ios-ipados-device-compliance-security-configurations.md
+          - name: iOS/iPadOS personal device security
+            href: ./protect/ios-ipados-personal-device-security-configurations.md
+          - name: iOS/iPadOS supervised device security
+            href: ./protect/ios-ipados-supervised-device-security-configurations.md
         - name: Error codes and descriptions
           items:
           - name: Software update errors

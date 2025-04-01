@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 03/28/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -54,7 +54,7 @@ Supported platforms and profiles:
   - Profile: **Exploit Protection(ConfigMgr)(preview)**
   - Profile: **Web Protection (ConfigMgr)(preview)**
 
-- **Windows 10, Windows 11, and Windows Server**: Use this platform for policy you deploy to devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
+- **Windows**: Use this platform for policy you deploy to devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
   - Profile: **Attack Surface Reduction Rules**
 

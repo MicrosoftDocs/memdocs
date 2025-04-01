@@ -6,7 +6,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/16/2024
+ms.date: 03/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -41,6 +41,7 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 
 > [!IMPORTANT]
 > This article describes the capabilities and configuration tasks that are applicable in general for Remote Help across supported platforms. For specific capabilities, prerequisites, and other details based on the platform that you are using, go to:
+
   > - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md)
   > - [Remote Help on Android with Microsoft Intune](remote-help-android.md)
   > - [Remote Help on macOS with Microsoft Intune](remote-help-macOS.md)
@@ -109,6 +110,7 @@ This feature applies to:
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
 - macOS 13, 14, and 15
+- Azure Virtual Desktop
 
 ## Data and privacy
 

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/13/2025
+ms.date: 03/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,6 +49,16 @@ The following sections detail the prerequisites for the Microsoft Tunnel, and pr
 
 > [!NOTE]
 > Tunnel and Global Secure Access (GSA) cannot be use simultaneously on the same device.
+
+## Government cloud support
+
+Microsoft Tunnel is supported with the following sovereign cloud environments:
+
+- U.S. Government Community Cloud (GCC) High
+
+Microsoft Tunnel isn’t supported on Microsoft Azure operated by 21Vianet.
+
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
 ## Linux server
 
@@ -121,7 +131,7 @@ Set up a Linux based virtual machine or a physical server on which to install th
 
   - For iOS devices, public TLS certificates must be issued from the Root CA and have a maximum expiration date of 398 days. Certificates issued by user-added or administrator added Root CAs can have a maximum expiration date of up to two years (730 days).  For more information about these TLS certificate requirements, see [About upcoming limits on trusted certificates](https://support.apple.com/102028) at support.apple.com.
 
-  - For Android devices, we recommend that public TLS certificates issued from the Root CA have a maximum expiration date of 398 days.git a
+  - For Android devices, we recommend that public TLS certificates issued from the Root CA have a maximum expiration date of 398 days.
 
   - Support of wildcards is limited. For example, **\*.contoso.com** is supported, but **cont\*.com** isn't supported.
 
@@ -210,6 +220,8 @@ For more information, see [Configuring container networking with Podman](https:/
 ### Linux system auditing
 
 Linux system auditing can help identify security-relevant information or security violations on a Linux server that hosts Microsoft Tunnel. Linux system auditing is recommended for Microsoft Tunnel, but not required. To use system auditing, a Linux server must have the **auditd** package installed to `/etc/audit/auditd.conf`.
+
+Each time you run [mst-readiness tool](#run-the-readiness-tool), the tool might display a warning that indicates that *auditd* is missing. To enable auditing of tunnel specific directories, make sure to install the auditd package prior to running mstunnel-setup.
 
 Details on how to implement auditing depend on the Linux platform you use:
 
@@ -315,10 +327,10 @@ The following considerations can help you configure the Linux server and your en
 
 ### Configure an outbound proxy for Docker
 
-- If you use an internal proxy, you might need to configure the Linux host to use your proxy server by using environment variables. To use the variables, edit the **/etc/environment** file on the Linux server, and add the following lines:
+- If you use an internal proxy, you might need to configure the Linux host to use your proxy server by using environment variables. To use the variables, edit the **/etc/environment** file on the Linux server, and add the following lines, replacing *address* in each line with the address of your proxy IP *address:port*:
 
-  `http_proxy=[address]`  
-  `https_proxy=[address]`
+  `http_proxy=address`  
+  `https_proxy=address`
 
 - Authenticated proxies aren't supported.
 
@@ -394,45 +406,7 @@ The following details can help you configure an internal proxy when using Podman
 
 ### Configure Podman to use the proxy to download image updates
 
-You can configure Podman to use the proxy to download (pull) updated images for Podman:
-
-1. On the tunnel server, use a command prompt to run the following command to open an editor for the override file for the Microsoft Tunnel service:
-
-   `systemctl edit --force mstunnel_monitor`  
-
-2. Add the following three lines to the file. Replace each instance of *[address]* with your proxy DN or address, and then save the file:
-
-   ```
-   [Service]
-   Environment="http_proxy=[address]"
-   Environment="https_proxy=[address]"
-   ```
-
-3. Next, run the following at the command prompt:
-
-   `systemctl restart mstunnel_monitor`
-
-4. Finally, run the following at the command prompt to confirm the configuration is successful:
-
-   `systemctl show mstunnel_monitor | grep http_proxy`
-
-   If configuration is successful, the results resemble the following information:
-
-   ```
-   Environment="http_proxy=address:port"
-   Environment="https_proxy=address:port"
-   ```
-
-### Update the proxy server in use by the tunnel server
-
-To change the proxy server configuration that is in use by the Linux host of the tunnel server, use the following procedure:
-
-1. On the tunnel server, edit */etc/mstunnel/env.sh* and specify the new proxy server.
-2. Run `mst-cli install`.
-
-   This command rebuilds the containers with the new proxy server details. During this process, you're asked to verify the contents of */etc/mstunnel/env.sh* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
-
-   To confirm both and complete the configuration, enter **yes**.
+You can configure Podman to use the proxy to download (pull) updated images for Podman. This configuration is important for future upgrades. Because it must be configured after the Tunnel Gateway is installed, we mention it here, but have added the configuration guidance to [Configure Podman to use the proxy to download image updates](../protect/microsoft-tunnel-configure.md#configure-podman-to-use-the-proxy-to-download-image-updates) in the *Configure Microsoft Tunnel* article as a task to complete after installing the Tunnel Gateway server.
 
 ## Platforms
 
@@ -521,6 +495,12 @@ To use the readiness tool:
    The script prompts you to use a different machine with a web browser, which you use to authenticate to Microsoft Entra ID and to Intune. The tool reports success or an error.
 
 For more information about this tool, see [Reference for mst-cli](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
+
+### Manually install auditd for Linux system auditing
+
+The readiness tool checks for the presence of the *auditd* package for Linux system auditing. Because *auditd* is optional and not required, the readiness script will return a warning when this package isn't detected.
+
+*Auditd* is installed by default by RHEL 7 and later versions, but might not be installed by default by Ubuntu distributions. When not present you can manually install it on the Linux server. For information on how to manually install installing this, see [Linux system auditing](#linux-system-auditing) earlier in this article.
 
 ### Manually load ip_tables
 

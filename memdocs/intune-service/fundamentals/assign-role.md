@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/07/2023
+ms.date: 09/03/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -35,8 +35,10 @@ You can assign a [built-in](role-based-access-control.md#built-in-roles) or [cus
 
 To create, edit, or assign roles, your account must have one of the following permissions in Microsoft Entra ID:
 
-- **Global Administrator**
-- **Intune Service Administrator**
+- Global Administrator
+- Intune Service Administrator
+
+For information about role and assignment, see [Role Based Access Control](role-based-access-control.md).
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles**.
 
@@ -61,5 +63,6 @@ To create, edit, or assign roles, your account must have one of the following pe
     > When you create scope groups and assign a scope tag, you can only target groups that are listed in the Scope (Groups) of your role assignment.
 
 ## Next steps
+
 - [Learn more about role-based access control in Intune](role-based-access-control.md)
 - [Create a custom role](create-custom-role.md)

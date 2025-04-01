@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/27/2025
+ms.date: 03/21/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,14 +61,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Endpoint Privilege Management support for Arm64<!-- 28313554 -->
-
-You'll soon be able to use [Endpoint Privilege Management](/mem/intune-service/protect/epm-overview) (EPM) file elevations on devices that run on Arm64 architecture.
-
-Applies to:
-
-- Windows
-
 ### Endpoint Privilege Management elevation rule support for file arguments and parameters<!--28077130 -->
 
 Soon, the file elevation rules for Endpoint Privilege Management (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
@@ -81,7 +73,7 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
-Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions. 
+Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This change allows you to update apps more easily without needing to update those profiles with the latest versions. 
 
 For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
 
@@ -99,9 +91,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device configuration
-
-### Android settings in the Settings Catalog <!-- 26981326 -->
+### Android settings in the Settings Catalog <!-- 31524383 (was 26981326) -->
 
 The settings catalog will soon support Android Enterprise and AOSP.
 
@@ -111,7 +101,7 @@ In the Intune admin center, when you create a device configuration profile, you 
 
 This change:
 
-- Will be a UI change with no impact on your existing policies. Your existing policies won't change. You'll still be able to create, edit, and assign these policies the same way.
+- Will be a UI change with no impact on your existing policies. Your existing policies don't change. You'll still be able to create, edit, and assign these policies the same way.
 - Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
 
 To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
@@ -123,66 +113,26 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!--  ## Device enrollment  -->
+## Device enrollment
 
-<!-- *********************************************** -->
+### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
 
-## Device management
-
-### New settings for Windows LAPS policy<!-- 30287386 -->
-
-We're updating Intunes policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) by adding new settings and updating some existing settings. Use of [LAPS](/windows-server/identity/laps/laps-overview) which is a Windows built-in solution can help you secure the built-in local administrator account that is present on each Windows device.
-
-The new settings will include the following:
-
-- AutomaticAccountManagementEnabled
-- AutomaticAccountManagementTarget
-- AutomaticAccountManagementNameOrPrefix
-- AutomaticAccountManagementEnableAccount
-- AutomaticAccountManagementRandomizeName
-- PassphraseLength
-
-The following settings will update to support new options:
-
-- PasswordComplexity
-- PostAuthenticationActions
-
-The settings found in Intune LAPS policy are available from the Windows [LAPS CSP](/windows/client-management/mdm/LAPS-csp).
+You'll soon be able to use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
 
 Applies to:
 
-- Windows
+- Android
 
-### Configure devices to stay on the latest OS version using declarative device management (DDM)<!-- 28323647 -->
+<!-- *********************************************** -->
 
-As part of the [Settings Catalog](../configuration/settings-catalog.md), you'll be able to configure devices to automatically update to the latest OS version using DDM. To use these new settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
 
-**Declarative device management > Software Update Enforce Latest**.
-
-- **Enforce Latest Software Update Version**: If true, devices will upgrade to the latest OS version that is available for that device model. This uses the Software Update Enforcement configuration and will force devices to restart and install the update after the deadline passes.
-- **Delay In Days**: Specify the number of days that should pass before a deadline is enforced after a new update is released by Apple.
-- **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
-
-Learn more about configuring managed updates through DDM at [Managed software updates] (../protect/managed-software-updates-ios-macos.md).
-
-Applies To:
-
-- iOS/iPadOS
+## Device management
 
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
 Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA helps to mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
 
 For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
-
-### Remote Help supports Azure Virtual Desktop multi-session <!-- 24590822 -->
-
-Currently, Remote Help supports Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM). Soon, Remote Help will enable support for multi-session AVD with several users on a single virtual machine.
-
-For more information, see:
-
-- [Remote Help](../fundamentals/remote-help.md)
-- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
 ###  Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 
@@ -194,12 +144,6 @@ We're adding a feature that will allow a customer to:
 Platform level targeting of the Device Cleanup rule will help administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
 
 For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
-
-### Copilot assistant for device query<!-- 26933762 -->
-
-You'll soon be able to use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**.
-
-<!-- *********************************************** -->
 
 ## Device security
 
@@ -213,19 +157,13 @@ Applies to:
 
 - Linux
 
-### New Microsoft Tunnel readiness check for auditd package<!-- 28148207 -->
-
-We're updating the [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to detect if the **auditd** package for Linux System Auditing (LSA) is installed on your Linux Server. When this check is in place, the mst-readiness tool will raise a warning if the audit package isn't installed. Auditing isn't a required prerequisite for the Linux Server, but recommended.
-
-For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
-
-### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!--   -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
 
 - **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
-Applies to the following when you use the *Windows 10, Windows 11, and Windows Server* platform:
+Applies to the following when you use the *Windows* platform:
 
 - Windows 10
 - Windows 11
@@ -244,7 +182,11 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-<!-- ## Tenant administration -->
+## Tenant administration
+
+### Updates to Intune admin center home page<!-- 25914324 -->
+
+Microsoft Intune admin center's home page will be updated to include additional links to interactive demos, documentation, and training.
 
 <!-- *********************************************** -->
 

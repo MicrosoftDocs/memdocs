@@ -74,7 +74,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 > [!NOTE]
 >
-> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform that is now named more simply as *Windows*.
+> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform.
 >
 > The *Windows* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
 >

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 03/27/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,7 +35,7 @@ ms.reviewer: laarrizz
 View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 and later in Microsoft Intune.
 
 > [!NOTE]  
-> This article details the settings you can find in Microsoft Defender Antivirus and Microsoft Defender Antivirus Exclusions profiles created before April 5, 2022, for the *Windows 10 and later* platform for endpoint security Antivirus policy. On April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+> This article details the settings you can find in Microsoft Defender Antivirus and Microsoft Defender Antivirus Exclusions profiles created before April 5, 2022, for the *Windows 10 and later* platform for endpoint security Antivirus policy. On April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 >

@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 03/25/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop

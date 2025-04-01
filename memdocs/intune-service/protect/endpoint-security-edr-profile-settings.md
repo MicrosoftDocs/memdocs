@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2024
+ms.date: 03/28/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,7 +35,7 @@ ms.reviewer: mattcall
 >
 > The information in this article applies only to the settings in the Endpoint detection and response profile for the *Windows 10 and later* platform for endpoint security Endpoint detection and response policy.
 >
-> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform that is now named more simply as *Windows*. Although you can no longer create a new instance of this older profile, you can continue to edit and use an existing instances of this profile. The settings details in this article apply only to the deprecated profiles.
+> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform. Although you can no longer create a new instance of this older profile, you can continue to edit and use an existing instances of this profile. The settings details in this article apply only to the deprecated profiles.
 
 View the settings you can configure in profiles for [Endpoint detection and response policy](../protect/endpoint-security-edr-policy.md) in the endpoint security node of Intune.
 
@@ -46,10 +46,10 @@ Applies to:
 
 Supported platforms and profiles:
 
-- **Windows 10 and later**: Use this platform for policy you deploy to Windows 10 and Windows 11 devices managed with Intune.
+- **Windows**: Use this platform for policy you deploy to Windows 10 and Windows 11 devices managed with Intune.
   - Profile: **Endpoint detection and response (MDM)**
 
-- **Windows 10, Windows 11, and Windows Server (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.
+- **Windows (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.
   - Profile: **Endpoint detection and response (ConfigMgr)**
 
 ## Endpoint detection and response (MDM)

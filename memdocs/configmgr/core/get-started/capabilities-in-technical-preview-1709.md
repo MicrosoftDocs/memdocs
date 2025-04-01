@@ -108,8 +108,10 @@ After you enable co-management, Configuration Manager continues to manage all wo
 #### Compliance policies
 Compliance policies define the rules and settings that a device must comply with to be considered compliant by Conditional Access policies. You can also use compliance policies to monitor and remediate compliance issues with devices independently of Conditional Access.
 
-#### Windows Update for Business policies
-Windows Update for Business policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business. For details, see [Configure Windows Update for Business deferral policies](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
+#### Windows Update client policies
+<a name="windows-update-for-business-policies"></a>
+
+Windows Update client policies let you configure deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update client policies. For details, see [Configure deferral policies with Windows Update client policies](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies).  
 
 ### Remote actions available in Intune on Azure for co-managed devices
 When a Windows 10 device is enabled for co-management, you have the following remote actions available to you from Intune on Azure:  
@@ -121,9 +123,10 @@ When a Windows 10 device is enabled for co-management, you have the following re
 
 ### Prepare Intune for co-management
 Before you switch workloads from Configuration Manager to Intune, create the profiles and policies you need in Intune to ensure your devices continue to be protected.
-You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles.    
+You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles. 
+
 <!-- - [Device compliance policies](/mem/intune-service/protect/compliance-policy-create-windows)  -->
-- [Windows Update for Business policies](/mem/intune-service/protect/windows-update-for-business-configure)  
+- [Windows Update client policies](/mem/intune-service/protect/windows-update-for-business-configure)  
 - [Device configuration profiles](/mem/intune-service/configuration/device-profile-create)  
 
 ### Architectural overview for co-management
@@ -154,8 +157,8 @@ For example, if you had the following values:
 
 - **URL of cloud management gateway mutual auth endpoint**: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    
 
-   >[!Note]    
-   >Use the **MutualAuthPath** value in the **vProxy_Roles** SQL view for the **URL of cloud management gateway mutual auth endpoint** value.
+   > [!Note]    
+   > Use the **MutualAuthPath** value in the **vProxy_Roles** SQL view for the **URL of cloud management gateway mutual auth endpoint** value.
 
 - **FQDN of management point (MP)**: sccmmp.corp.contoso.com    
 - **Sitecode**: PS1    
@@ -172,7 +175,7 @@ You would use the following command line:
 ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer"
 
 > [!Tip]
->You can find the command-line parameters for your site by using the following steps:     
+> You can find the command-line parameters for your site by using the following steps:     
 > 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.  
 > 2. On the Home tab, in the Manage group, choose **Configure co-management** to open the Co-management Onboarding Wizard.    
 > 3. On the Subscription page, click **Sign In** and sign in to your Intune tenant, and then click **Next**.    

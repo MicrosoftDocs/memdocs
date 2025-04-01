@@ -50,7 +50,8 @@ Possible configurations are:
 
 ## Set MDM authority to Intune
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority. If the orange banner is not visible, you can navigate directly to the MDM Authority settings to configure the [MDM authority](https://intune.microsoft.com/#view/Microsoft_Intune_Enrollment/ChooseMDMAuthorityBlade).
+
 2. Under **Mobile Device Management Authority**, choose your MDM authority from the following options:
 
     - **Intune MDM Authority**

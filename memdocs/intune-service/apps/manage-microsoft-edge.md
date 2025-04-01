@@ -491,7 +491,6 @@ Organizations can configure a search provider for users. To configure a search p
 ### Copilot
 
 > [!NOTE]
-> As of version 128, Copilot for work or school accounts has been deprecated. Therefore, the following policies will no longer be valid in version 128.
 > If you want to block access to the web version of Copilot, copilot.microsoft.com, you can use policy AllowListURLs or BlockListURLs.
 
 Copilot is available on Microsoft Edge for iOS and Android. Users can start Copilot by clicking on Copilot button in bottom bar. 
