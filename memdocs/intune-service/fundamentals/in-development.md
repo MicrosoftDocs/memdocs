@@ -175,7 +175,7 @@ Applies to:
 
 - Linux
 
-### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!--   -->
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
 
