@@ -64,9 +64,9 @@ The actual time required for a device to start an update depends on the device i
 ## Prerequisites
 
 > [!IMPORTANT]
-> This feature is not supported on GCC and GCC High/DoD cloud environments.
+> This feature isn't supported on GCC and GCC High/DoD cloud environments.
 >
-> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) is not applicable to GCC and GCC High/DoD cloud environments for WuFB-DS capabilities.
+> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) isn't applicable to GCC and GCC High/DoD cloud environments for Windows Autopatch capabilities.
 
 The following are requirements to qualify for installing expedited quality updates with Intune:
 
