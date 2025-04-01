@@ -32,7 +32,7 @@ ms.collection:
 # Get started with the Microsoft Intune App SDK
 
 > [!IMPORTANT]
-> Xamarin support has ended for all Xamarin SDKs including Xamarin.Forms, Intune App SDK Xamarin Bindings, and related Microsoft Tunnel support. For more information, see [Enable your iOS or Android app for app protection policy](../developer/app-sdk-get-started.md#enable-your-ios-or-android-app-for-app-protection-policy).
+> Xamarin support has ended as of May 1, 2024 for all Xamarin SDKs including Xamarin.Forms, Intune App SDK Xamarin Bindings, and related Microsoft Tunnel support. Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) and [.NET Multi-platform App UI](/dotnet/maui) documentation. For Intune support on the Android platform, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android) and [.NET for Android documentation](/dotnet/android/). For Intune support on the iOS platform, see [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS) and [.NET for iOS](/dotnet/ios/).
 
 This guide will help you quickly enable your mobile app to support app protection policies with Microsoft Intune. You may find it useful to first understand the benefits of the Intune App SDK, as explained in the [Intune App SDK overview](app-sdk.md).
 
@@ -94,9 +94,6 @@ If your app builds with [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.
 It's a good idea to sign up for a GitHub account that you can use to fork and pull from our repositories. GitHub lets developers communicate with our product team, open issues and receive quick responses, view release notes, and provide feedback to Microsoft. For questions on the Intune App SDK GitHub, contact msintuneappsdk@microsoft.com.
 
 ## Enable your iOS or Android app for app protection policy
-
-> [!IMPORTANT]
-> Xamarin support has ended as of May 1, 2024 for all Xamarin SDKs including Xamarin.Forms and Intune App SDK Xamarin Bindings. Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) and [.NET Multi-platform App UI](/dotnet/maui) documentation. For Intune support on the Android platform, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android) and [.NET for Android documentation](/dotnet/android/). For Intune support on the iOS platform, see [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS) and [.NET for iOS](/dotnet/ios/).
 
 You'll need one of the following developer guides to help you integrate the Intune App SDK into your app:
 
