@@ -91,24 +91,6 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device configuration
-
-### New settings available in the Apple settings catalog<!-- 31523569 --> 
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There will soon be new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
-
-#### iOS/iPadOS
-
-**Managed Settings**:
-- Idle Reboot Allowed
-
-##### macOS
-
-**Login > Login Window**:
-- Show Input Menu
-
 ### Android settings in the Settings Catalog <!-- 31524383 (was 26981326) -->
 
 The settings catalog will soon support Android Enterprise and AOSP.
@@ -122,7 +104,7 @@ This change:
 - Will be a UI change with no impact on your existing policies. Your existing policies don't change. You'll still be able to create, edit, and assign these policies the same way.
 - Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
 
-To get started with settings catalog, see [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
+To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
 
 Applies to:
 
@@ -156,7 +138,7 @@ Starting in April 2025, Intune will no longer support custom profiles for Androi
 
 - Admins won’t be able to create new custom profiles for personally owned work profile devices. However, admins can still view and edit previously created custom profiles.
 
-- Personally-owned work profile devices that currently have a custom profile assigned will not experience any immediate change of functionality. Because these profiles are no longer supported, the functionality set by these profiles may change in the future.
+- Personally-owned work profile devices that currently have a custom profile assigned won't experience any immediate change of functionality. Because these profiles are no longer supported, the functionality set by these profiles might change in the future.
 
 - Intune technical support will no longer support custom profiles for personally owned work profile devices.
 
@@ -175,7 +157,7 @@ We're adding a feature that will allow a customer to:
 - Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
 - Configure a different RBAC permission and assign the permission to different RBAC roles
 
-Platform level targeting of the Device Cleanup rule will help administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
+Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
 
 For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
 
@@ -193,13 +175,13 @@ Applies to:
 
 - Linux
 
-### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!--   -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
 
 - **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
-Applies to the following when you use the *Windows 10, Windows 11, and Windows Server* platform:
+Applies to the following when you use the *Windows* platform:
 
 - Windows 10
 - Windows 11
