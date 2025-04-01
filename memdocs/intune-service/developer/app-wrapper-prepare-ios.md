@@ -136,7 +136,7 @@ You'll need the following to distribute apps wrapped by Intune:
    ![Select In-House and Ad Hoc certificate](./media/app-wrapper-prepare-ios/iOS-signing-cert-3.png)
 
    >[!NOTE]
-   >If do not plan to distribute the app, and only want to test it internally, you can use an iOS App Development certificate instead of a certificate for Production. If you use a development certificate, make sure the mobile provisioning profile references the devices on which the app will be installed.
+   >If you don't plan to distribute the app, and only want to test it internally, you can use an iOS App Development certificate instead of a certificate for Production. If you use a development certificate, make sure the mobile provisioning profile references the devices on which the app will be installed.
 
 7. Click **Next** at the bottom of the page.
 
@@ -246,7 +246,7 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-b**|(Optional) Use -b without an argument if you want the wrapped output app to have the same bundle version as the input app (not recommended). <br/><br/> Use `-b <custom bundle version>` if you want the wrapped app to have a custom CFBundleVersion. If you choose to specify a custom CFBundleVersion, it's a good idea to increment the native app's CFBundleVersion by the least significant component, like 1.0.0 -> 1.0.1. |
 |**-f**|(Optional) `<Path to a plist file specifying arguments.>` Use this flag in front of the [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) file if you choose to use the plist template to specify the rest of the IntuneMAMPackager properties like -i, -o, and -p. See Use a plist to input arguments. |
 |**-dt**|(Optional) Disable collection of Microsoft Intune client telemetry.
-|**-dl**|(Optional) Disable MSAL logs from the INtune logs for applications that have integrated with MSAL and implement their own MSAL logging callback.
+|**-dl**|(Optional) Disable MSAL logs from the Intune logs for applications that have integrated with MSAL and implement their own MSAL logging callback.
 |**-ds**|(Optional) Disable Intune's protections for SFSafariViewController, SFAuthSession, and ASWebAuthenticationSession.
 
 ### Use a plist to input arguments
