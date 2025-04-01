@@ -1,12 +1,12 @@
 {
   "redirections": [
     {
-      "source_path": "memdocs/intune/intune-service/developer/mam-tunnel-ios-xamarin-bindings.md",
+      "source_path": "memdocs/intune-service/developer/mam-tunnel-ios-xamarin-bindings.md",
       "redirect_url": "/intune/intune-service/developer/app-sdk-get-started",
       "redirect_document_id": false
     },
     {
-      "source_path": "memdocs/intune/intune-service/developer/app-sdk-xamarin.md",
+      "source_path": "memdocs/intune-service/developer/app-sdk-xamarin.md",
       "redirect_url": "/intune/intune-service/developer/app-sdk-get-started",
       "redirect_document_id": false
     },
