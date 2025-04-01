@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/14/2024
+ms.date: 04/01/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -30,6 +30,9 @@ ms.collection:
 ---
 
 # Get started with the Microsoft Intune App SDK
+
+> [!IMPORTANT]
+> Xamarin support has ended for all Xamarin SDKs including Xamarin.Forms, Intune App SDK Xamarin Bindings, and related Microsoft Tunnel support. For more information, see [Enable your iOS or Android app for app protection policy](../developer/app-sdk-get-started.md#enable-your-ios-or-android-app-for-app-protection-policy).
 
 This guide will help you quickly enable your mobile app to support app protection policies with Microsoft Intune. You may find it useful to first understand the benefits of the Intune App SDK, as explained in the [Intune App SDK overview](app-sdk.md).
 
@@ -92,18 +95,20 @@ It's a good idea to sign up for a GitHub account that you can use to fork and pu
 
 ## Enable your iOS or Android app for app protection policy
 
+> [!IMPORTANT]
+> Xamarin support has ended as of May 1, 2024 for all Xamarin SDKs including Xamarin.Forms and Intune App SDK Xamarin Bindings. Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) and [.NET Multi-platform App UI](/dotnet/maui) documentation. For Intune support on the Android platform, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android) and [.NET for Android documentation](/dotnet/android/). For Intune support on the iOS platform, see [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS) and [.NET for iOS](/dotnet/ios/).
+
 You'll need one of the following developer guides to help you integrate the Intune App SDK into your app:
 
 * **[Intune App SDK for iOS Developer Guide](app-sdk-ios-phase1.md)**: This document will walk you step-by-step through enabling your native iOS app with the Intune App SDK.
 
 * **[Intune App SDK for Android Developer Guide](../developer/app-sdk-android-phase1.md)**: This document will walk you step-by-step through enabling your native Android app with the Intune App SDK.
 
-* **[Intune App SDK Xamarin Bindings guide](app-sdk-xamarin.md)**: This document will help you build iOS and Android apps using Xamarin for Intune app protection policies.
-
 > [!IMPORTANT]
-> Intune regularly releases updates to the [Intune App SDK](https://github.com/msintuneappsdk). We recommend subscribing to the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
+> Intune regularly releases updates to the [Intune App SDK](https://github.com/msintuneappsdk). We recommend subscribing to the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
 > 
 > Plan to take mandatory Intune App SDK updates prior to every major OS release to ensure your app continues to run smoothly as OS updates can cause breaking changes. If you do not update to the latest version prior to a major OS release, you may run the risk of encountering a breaking change and/or being unable to apply app protection policies to your app.
+
 
 ## Enable your iOS or Android app for app based Conditional Access
 
