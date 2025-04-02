@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/28/2024
+ms.date: 04/02/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: chmaguir
+ms.reviewer: grwilson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -77,7 +77,26 @@ You must create an enrollment profile so that you can enroll your dedicated devi
     - **Token type**: Choose the type of token you want to use to enroll dedicated devices.
         - **Corporate-owned dedicated device (default)**: This token enrolls devices as a standard Android Enterprise dedicated device. These devices require no user credentials at any point. This is the default token type that dedicated devices will enroll with unless updated by Admin at time of token creation.
         - **Corporate-owned dedicated device with Microsoft Entra ID shared mode**: This token enrolls devices as a standard Android Enterprise dedicated device and, during enrollment, deploys Microsoft's Authenticator app configured into Microsoft Entra shared device mode. With this option, users can achieve single sign-in and single sign-out across apps on the device that are integrated with the Microsoft Entra Microsoft Authentication Library and global sign-in/sign-out calls. 
-    - **Token expiration date**: Enter the date you want the token to expire, up to 65 years in the future. The token expires on the selected date at 12:59:59 PM in the time zone it was created. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD` 
+    - **Token expiration date**: Enter the date you want the token to expire, up to 65 years in the future. The token expires on the selected date at 12:59:59 PM in the time zone it was created. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD`  
+
+    - **Naming Template**: The default behavior names devices using properties of the device,such as enrollment type, device ID and time of enrollment (example: *AndroidForWork_01/01/2025_12:00 PM*). To create a custom naming template:  
+
+         1. Under **Apply device name template**, choose **Yes**.  
+
+         2. Enter the naming template you want to apply to the devices. Names can contain letters, numbers, and hyphens. 
+         
+         You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
+
+         - {{SERIAL}} for the device's serial number.  
+         - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
+         - {{DEVICETYPE}} for the device type. Example: AndroidForWork  
+         - {{ENROLLEDDATETIME}} for the date and time of enrollment.  
+         - {{UPNPREFIX}} for the user's first name. Example: John, when device is user affiliated. 
+         - {{USERNAME}} for the user's username when the device is user affiliated. Example: John Doe  
+         - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
+         
+         Edits you make to the naming template only apply to new enrollments.  
+
 7. Select **Next** to continue to **Scope tags**.    
 8.  Optionally, apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md). 
 9. Select **Next** to continue to **Review + create**.  

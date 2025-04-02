@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/28/2024
+ms.date: 04/02/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -90,6 +90,24 @@ You must create an enrollment profile so that users can enroll corporate-owned w
       - **Corporate-owned with work profile, via staging**  
 
     - **Token expiration date**: Only available with the staging token. Enter the date you want the token to expire, up to 65 years in the future. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD` The token expires on the selected date at 12:59:59 PM in the time zone it was created.   
+
+    - **Naming Template**: The default behavior names devices using properties of the device,such as enrollment type, device ID and time of enrollment (example: *AndroidForWork_01/01/2025_12:00 PM*). To create a custom naming template:  
+
+       1. Under **Apply device name template**, choose **Yes**.  
+
+       2. Enter the naming template you want to apply to the devices. Names can contain letters, numbers, and hyphens.  
+
+         You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
+
+        - {{SERIAL}} for the device's serial number.  
+        - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
+        - {{DEVICETYPE}} for the device type. Example: AndroidForWork  
+        - {{ENROLLEDDATETIME}} for the date and time of enrollment.  
+        - {{UPNPREFIX}} for the user's first name. Example: John, when device is user affiliated.  
+        - {{USERNAME}} for the user's username when the device is user affiliated. Example: John Doe  
+        - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
+
+         Edits you make to the naming template only apply to new enrollments.  
 
 8. Select **Next** to continue to **Scope tags**.  
 
