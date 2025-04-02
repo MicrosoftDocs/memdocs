@@ -100,7 +100,7 @@ To make sure both the desired BitLocker encryption algorithm and the encryption 
 1. Configure and assign an [Enrollment Status page (ESP)](enrollment-status.md) for the Windows Autopilot device. If an ESP isn't enabled, the BitLocker policy doesn't apply before encryption starts. For more information, see one of the following articles:
 
    - [Windows Autopilot Enrollment Status Page](enrollment-status.md).
-   - [User-driven Microsoft Entra join: Configure and assign the Enrollment Status Page (ESP)](tutorial/user-driven/azure-ad-join-esp#configure-and-assign-the-enrollment-status-page-esp.md).
+   - [User-driven Microsoft Entra join: Configure and assign the Enrollment Status Page (ESP)](tutorial/user-driven/azure-ad-join-esp.md).
    - [User-driven Microsoft Entra hybrid join: Configure and assign the Enrollment Status Page (ESP)](tutorial/user-driven/hybrid-azure-ad-join-esp.md).
    - [Pre-provision Microsoft Entra join: Configure and assign the Enrollment Status Page (ESP)](tutorial/pre-provisioning/azure-ad-join-esp.md).
    - [Pre-provision Microsoft Entra hybrid join: Configure and assign the Enrollment Status Page (ESP)](tutorial/pre-provisioning/hybrid-azure-ad-join-esp.md).
