@@ -69,7 +69,7 @@ To make sure both the desired BitLocker encryption algorithm and the encryption 
 
      1. For **Choose drive encryption method and cipher strength**, select **Enabled**.
 
-     1. For each of the drive types (Fixed data drives, Operating system drive, Removable data drives),select the desired encryption method and cipher from the drop-down menu. The default for each type is **XTS-AES 128-bit**.
+     1. For each of the drive types (Fixed data drives, Operating system drive, Removable data drives), select the desired encryption method and cipher from the drop-down menu. The default for each type is **XTS-AES 128-bit**.
 
    - **Encryption type**
 
