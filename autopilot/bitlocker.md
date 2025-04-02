@@ -59,43 +59,41 @@ To make sure both the desired BitLocker encryption algorithm and the encryption 
 
    1. Select the **Create** button.
 
-1. In the **Create Policy** screen:
+1. In the **Basics** page of the **Create Policy** screen, enter a **Name** and optional **Description**, and then select the **Next** button.
 
-   1. In the **Basics** page, enter a **Name** and optional **Description**, and then select the **Next** button.
+1. In the **Configuration settings** page, configure the various BitLocker settings as desired, including the **Encryption method and cipher** and **Encryption type** settings:
 
-   1. In the **Configuration settings** page, configure the various BitLocker settings as desired, including the **Encryption method and cipher** and **Encryption type** settings:
+   - **Encryption method and cipher**
 
-      - **Encryption method and cipher**
+     1. Expand the **BitLocker Drive Encryption** section.
 
-        1. Expand the **BitLocker Drive Encryption** section.
+     1. For **Choose drive encryption method and cipher strength**, select **Enabled**.
 
-        1. For **Choose drive encryption method and cipher strength**, select **Enabled**.
+     1. For each of the drive types (Fixed data drives, Operating system drive, Removable data drives),select the desired encryption method and cipher from the drop-down menu. The default for each type is **XTS-AES 128-bit**.
 
-        1. For each of the drive types (Fixed data drives, Operating system drive, Removable data drives),select the desired encryption method and cipher from the drop-down menu. The default for each type is **XTS-AES 128-bit**.
+   - **Encryption type**
 
-      - **Encryption type**
+     1. Expand the **Operating System Drives** section.
 
-        1. Expand the **Operating System Drives** section.
+     1. For **Enforce drive encryption type on operating system drives**, select **Enabled**.
 
-        1. For **Enforce drive encryption type on operating system drives**, select **Enabled**.
+     1. For **Select the drive encryption type**, select the desired encryption type, either **Full encryption** or **Used Space Only encryption**, from the drop-down menu. The default is **Allow user to choose**.
 
-        1. For **Select the drive encryption type**, select the desired encryption type, either **Full encryption** or **Used Space Only encryption**, from the drop-down menu. The default is **Allow user to choose**.
+    Once all BitLocker settings are configured as desired, select the **Next** button.
 
-      Once all BitLocker settings are configured as desired, select the **Next** button.
+1. In the **Scope tags** page, select the **Next** button.
 
-   1. In the **Scope tags** page, select the **Next** button.
+    > [!NOTE]
+    >
+    > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
 
-        > [!NOTE]
-        >
-        > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
+1. In the **Assignments** page, use the **Search by group name...** search box to find and add the Windows Autopilot device group. Once the  Windows Autopilot device group is added and is listed under **Group**, make sure **Target type** is set to **Include**, and then select the **Next** button. For more information about assigning a policy, see [Assign policies in Microsoft Intune](/mem/intune-service/configuration/device-profile-assign).
 
-   1. In the **Assignments** page, use the **Search by group name...** search box to find and add the Windows Autopilot device group. Once the  Windows Autopilot device group is added and is listed under **Group**, make sure **Target type** is set to **Include**, and then select the **Next** button. For more information about assigning a policy, see [Assign policies in Microsoft Intune](/mem/intune-service/configuration/device-profile-assign).
+    > [!IMPORTANT]
+    >
+    > Make sure that the Windows Autopilot device group selected in this step is a device group and not a user group.
 
-        > [!IMPORTANT]
-        >
-        > Make sure that the Windows Autopilot device group selected in this step is a device group and not a user group.
-
-   1. In the **Review + create** page, review the settings to verify they're configured as desired, and then select the **Save** button.
+1. In the **Review + create** page, review the settings to verify they're configured as desired, and then select the **Save** button.
 
 1. Configure and assign an [Enrollment Status page (ESP)](enrollment-status.md) for the Windows Autopilot device. If an ESP isn't enabled, the BitLocker policy doesn't apply before encryption starts. For more information, see one of the following articles:
 
