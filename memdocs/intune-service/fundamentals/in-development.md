@@ -165,7 +165,7 @@ For more information, see [device cleanup rules](../remote-actions/devices-wipe.
 
 ## Device security
 
-### Vulnerability Remediation Agent for Intune (public preview)<!-- 30277408 iddraft idready idstaged  -->
+### Vulnerability Remediation Agent for Intune (public preview)<!-- 30277408 -->
 
 As a public preview, we’re working on the Vulnerability Remediation Agent for Security Copilot. When run, this agent will use data from Microsoft Defender Vulnerability Management to identify and then provide remediation guidance for vulnerabilities on your managed devices. You run and access the agents results from within the Intune admin center where you’ll see suggestions prioritized by the agent for remediation. Each suggestion includes key information such as: associated CVEs, severity, exploitability, affected systems, organizational exposure, business impact and remediation guidance.
 
