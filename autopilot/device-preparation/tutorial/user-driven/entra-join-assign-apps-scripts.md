@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 01/14/2025
+ms.date: 04/01/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -103,7 +103,7 @@ To assign the desired PowerShell scripts to the device group created for Windows
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **manage devices**, select **Scripts and remediations**.
+1. In the **Devices | Overview** screen, expand **Manage devices**, and then select **Scripts and remediations**.
 
 1. In the **Devices | Scripts and remediations** screen:
 

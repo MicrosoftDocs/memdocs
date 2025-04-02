@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2025
+ms.date: 04/01/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -167,7 +167,7 @@ However, there are some limitations to be aware of, such as:
 
 Any app that has been integrated with the [Intune SDK](../developer/app-sdk.md) or wrapped by the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md) can be managed using Intune app protection policies. See the official list of [Microsoft Intune protected apps](apps-supported-intune-apps.md) that have been built using these tools and are available for public use.
 
-The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we don't provide explicit guidance or plugins for app developers using anything other than our supported platforms.
+The Intune SDK development team actively tests and maintains support for apps built with the native Android and iOS/iPadOS (Obj-C, Swift) platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we don't provide explicit guidance or plugins for app developers using anything other than our supported platforms.
 
 ## End-user requirements to use app protection policies
 

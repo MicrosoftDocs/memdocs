@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/21/2025
+ms.date: 03/31/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -58,7 +58,7 @@ Also, Intune prefills the requirements that devices must meet before the app is 
 - Minimum OS required
 
 > [!IMPORTANT]
-> Microsoft recommends using the pre-populated fields containing specific commands and rules, however you can modify the pre-populated fields if needed.
+> Microsoft recommends using the prepopulated fields containing specific commands and rules, however you can modify the prepopulated fields if needed.
 
 You can also configure app specific rules used to detect the presence of the Enterprise App Catalog app. You can choose to either manually configure the detection rules or use a custom script to detect the presence of the app before installing the app.
 
@@ -73,9 +73,9 @@ The Enterprise App Catalog includes apps that self update. Intune ensures the ap
 
 ### How can I request to add an application to the Enterprise App Catalog?
 
-We have added a new category to the [Microsoft Feedback Portal](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472) that allows you to submit application requests, suggest changes, and share any other feedback about Enterprise application management. We recommend you filter the feedback portal under **Categories** by selecting **Enterprise App Management (Intune add-on)** to successfully route your requests and feedback.
+We added a category to the [Microsoft Feedback Portal](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472) that allows you to submit application requests, suggest changes, and share any other feedback about Enterprise application management. We recommend you filter the feedback portal under **Categories** by selecting **Enterprise App Management (Intune add-on)** to successfully route your requests and feedback.
 
-To request adding an application to the Enterprise app catalog use the [Microsoft Feedback Portal](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472). The feedback portal will also give Microsoft the ability to communicate with you on the status of your request and other communication about your request.
+To request adding an application to the Enterprise app catalog use the [Microsoft Feedback Portal](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472). The feedback portal gives Microsoft the ability to communicate with you on the status of your request and other communication about your request.
 
 Include the following details when requesting to add an application:
 - Application publisher
@@ -83,12 +83,12 @@ Include the following details when requesting to add an application:
 - Download URL
 
 > [!IMPORTANT]
-> Enterprise application management does not support the addition of applications that are behind a paywall or login screen.
+> Enterprise application management doesn't support the addition of applications that are behind a paywall or sign in screen.
 
 You can also upvote an application previously submitted by someone else. Applications with large numbers of votes receive the most consideration and effort to be added to the catalog. However, priority depends on complexity of the applications mechanics.
 
 > [!IMPORTANT]
-> Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprise App Catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise App Catalog. Microsoft does not offer or assume any Service Level Agreement (SLA) or timeline with regard to adding an app to the Enterprise App Catalog.
+> Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprise App Catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise App Catalog. Microsoft doesn't offer or assume any Service Level Agreement (SLA) or timeline regarding adding an app to the Enterprise App Catalog.
 
 ### Where are the devices downloading the app content from?
 
@@ -96,7 +96,7 @@ Microsoft hosts the applications in Microsoft storage accessible through `*.mana
 
 ### Is Microsoft providing security around any of the content provided in the Enterprise App Catalog?
 
-Microsoft does not assert compliance or authorizations for apps distributed via Intune. Customers are responsible for ensuring that apps meet their requirements.
+Microsoft doesn't assert compliance or authorizations for apps distributed via Intune. Customers are responsible for ensuring that apps meet their requirements.
 
 ### What app installer types are in the Enterprise App Catalog?
 
@@ -120,7 +120,7 @@ Graph API is planned to be available soon.
 
 ### Will Enterprise catalog apps automatically update to a new version when a new version is available in the Enterprise app catalog?
 
-Updates are shown in Monitor report under Enterprise App Catalog apps with updates. The updates won't be applied automatically. You still need to go in and create a new app with supersedence relationship.
+Updates are shown in Monitor report under Enterprise App Catalog apps with updates. The updates aren't applied automatically. You still need to go in and create a new app with supersedence relationship.
 
 ### Can you get licensed applications from this catalog?
 
@@ -130,7 +130,7 @@ Yes. You can get licensed applications from the Enterprise App Catalog, although
 
 Yes. Enterprise App Management can be purchased as a standalone SKU or as part of the Microsoft Intune Suite.
 
-### Can Enterprise App Management be leveraged with Microsoft Configuration Manager?
+### Can Enterprise App Management be used with Microsoft Configuration Manager?
 
 Enterprise App Management is only provided by Microsoft Intune. Configuration Manager doesn't directly support Enterprise App Management apps, however co-managed clients can get Enterprise App Catalog apps when targeted from Microsoft Intune.
 
@@ -140,7 +140,7 @@ No. Enterprise App Catalog apps are directly installed by the Intune management 
 
 ### How do I update my Enterprise App Catalog app?
 
-For applications that don’t update themselves, you can view the upgrades that are available for the EAM app via supersedence.
+For applications that don’t update themselves, you can view the upgrades that are available for the Enterprise App Management (EAM) app via supersedence.
 
 ### After several hours, what can I do if my app continues to show that it isn't ready and that the requested content is still being prepared?
 
@@ -156,612 +156,612 @@ Yes, the Managed Apps report provides a report of apps on a specific device that
 There are various applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see [Add a Windows catalog app (Win32) to Intune](../apps/apps-add-enterprise-app.md#add-a-windows-catalog-app-win32-to-intune).
 
 > [!NOTE]
-> Additional apps will be available on an on-going basis in the Enterprise App Catalog.
+> Additional apps will be available on an ongoing basis in the Enterprise App Catalog.
 
 The following table of Enterprise Apps is available within Intune:
 
 | Apps |
 |---|
-| 3CX Desktop App |
-| 3CXPhone for Windows |
-| 3DxWare 10 |
-| 4K Video Downloader |
-| 4K Video Downloader+ |
-| 7-Zip |
-| Able2Extract Professional |
-| ActiveState Software Komodo Edit |
-| Adobe AIR |
-| AIMP |
-| Air Explorer |
-| Aircall for desktop |
-| AirParrot 2 |
-| Akiflow |
-| Allway Sync |
-| Altova XMLSpy Enterprise 2023 |
-| Amazon AWS Command Line Interface |
-| Amazon AWS Tools for Windows |
-| Amazon AWS VPN Client |
-| Amazon Corretto JDK 11 |
-| Amazon Corretto JDK 15 |
-| Amazon Corretto JDK 16 |
-| Amazon Corretto JDK 17 |
-| Amazon Corretto JDK 18 |
-| Amazon Corretto JDK 19 |
-| Amazon Kindle |
-| Amazon Redshift ODBC driver |
-| Amazon WorkSpaces |
-| Android Studio 2022 |
-| Android Studio 3 |
-| Android Studio 4 |
-| App Dynamic AirServer Universal |
-| Apple iTunes |
-| Aptakube |
-| Araxis Merge |
-| ArcticLine Software Jet Screenshot |
-| Arduino IDE |
-| Articulate 360 |
-| ASUS Remote Drive |
-| Atlassian Companion |
-| Audacity |
-| Autodesk Access |
-| Autodesk Identity Manager |
-| Autodesk Single Signon Component |
-| AVer Information A+ Suite |
-| AWS SAM command line interface |
-| AWS Session Manager Plugin |
-| AxCrypt |
-| Azure Functions Core Tools |
-| Bambu Studio |
-| Beam Studio |
-| Belgium e-ID viewer |
-| Beyond Compare |
-| Beyond Identity |
-| Blender |
-| BlueJeans 2 |
-| Box CLI |
-| Box Drive |
-| Brady Workstation |
-| Bridge Designer 2016 |
-| BrightAuthor connected |
-| Bulk Crap Uninstaller |
-| Bullzip PDF to Word |
-| BurnAware Free |
-| Burp Suite Community Edition |
-| Burp Suite Professional Edition |
-| Bytello Share |
-| Calibrite Profiler |
-| Camtasia Studio 2018 |
-| Camtasia Studio 2019 |
-| Caphyon Advanced Installer |
-| Capture One 20 |
-| Capture One 22 |
-| Causasoft ExhibitManager |
-| Charles |
-| Chatbox |
-| Chef Workstation for Windows |
-| Cisco Jabber 14 |
-| Cisco JVDI Agent 12 |
-| Cisco JVDI Agent 14 |
-| Cisco Webex Meetings |
-| Cisco WebEx Recorder and Player |
-| Cisco WebEx Recording Editor |
-| Cisco Webex Teams |
-| Citrix Receiver |
-| Citrix Workspace app |
-| Citrix Workspace app LTSR |
-| Class |
-| Classic Shell |
-| ClassPoint |
-| Clevershare |
-| ClockAssist |
-| Clockify |
-| Cloud Drive Mapper |
-| CloudCompare |
-| Cloudflare WARP |
-| CMake |
-| Colour Contrast Analyser |
-| CPU-Z |
-| Creative Force Kelvin |
-| Creative Force Triad |
-| Cryptomator |
-| Cube Browser |
-| CutePDF Writer |
-| Dane Prairie Systems Win2PDF |
-| DataGrip 1.0 |
-| DAX Studio |
-| DB Browser for SQLite |
-| DBeaver Community |
-| DBeaver Enterprise |
-| DBeaver Lite |
-| DBeaver Ultimate |
-| DbVisualizer |
-| Defraggler |
-| Delinea Connection Manager |
-| Dell Command Update |
-| Dell Command Update (Windows Universal Application) |
-| Dell Display Manager |
-| Dell EMC System Update |
-| Dell Peripheral Manager |
-| Devolutions Launcher |
-| Devolutions Remote Desktop Manager |
-| Devolutions Remote Desktop Manager Agent |
-| Devolutions Workspace |
-| DevPod |
-| Directory Opus |
-| DisplayLink Dock Driver |
-| Ditto Connect |
-| dnGrep |
-| Docker Desktop |
-| draw.io Desktop |
-| dRofus |
-| Eclipse Temurin JDK with Hotspot 11 (LTS) |
-| Eclipse Temurin JDK with Hotspot 12 |
-| Eclipse Temurin JDK with Hotspot 15 |
-| Eclipse Temurin JDK with Hotspot 16 |
-| Eclipse Temurin JDK with Hotspot 17 (LTS) |
-| Eclipse Temurin JDK with Hotspot 18 |
-| Eclipse Temurin JDK with Hotspot 19 |
-| Eclipse Temurin JDK with Hotspot 20 |
-| Eclipse Temurin JDK with Hotspot 21 |
-| Eclipse Temurin JDK with Hotspot 22 |
-| Eclipse Temurin JDK with Hotspot 23 |
-| Eclipse Temurin JRE with Hotspot 11 (LTS) |
-| Eclipse Temurin JRE with Hotspot 12 |
-| Eclipse Temurin JRE with Hotspot 15 |
-| Eclipse Temurin JRE with Hotspot 16 |
-| Eclipse Temurin JRE with Hotspot 17 (LTS) |
-| Eclipse Temurin JRE with Hotspot 18 |
-| Eclipse Temurin JRE with Hotspot 19 |
-| Eclipse Temurin JRE with Hotspot 20 |
-| Eclipse Temurin JRE with Hotspot 22 |
-| Eclipse Temurin JRE with Hotspot 23 |
-| Egnyte Connect Desktop App |
-| Egnyte WebEdit |
-| Elevate UC |
-| Endnote 20 |
-| Endnote X8 |
-| Endnote X9 |
-| ESET Endpoint Antivirus V10 |
-| ESET Endpoint Antivirus V12 |
-| ESET Endpoint Security V12 |
-| Evernote |
-| FactSet Workstation |
-| FastPictureViewer Professional |
-| FastStone Soft Capture |
-| FastStone Soft Photo Resizer |
-| FileZilla |
-| FlashFXP |
-| FlexWhere for Desktop |
-| Fortify |
-| Foxit PDF Editor 11 |
-| Foxit PDF Editor 12 |
-| Foxit PDF Editor Pro 11 |
-| Foxit PDF Reader |
-| Foxit PhantomPDF 10 |
-| Foxit PhantomPDF Pro 10 |
-| Free Countdown Timer |
-| Front Desktop |
-| Fuzzy Lookup Add-In For Excel |
-| FXHOME HitFilm Express |
-| Gadwin ScreenRecorder |
-| Garden Gnome Package Viewer |
-| General Workings Streamlabs OBS |
-| Genesys Cloud |
-| GeoGebra 5 |
-| Geomilieu |
-| Gephi |
-| GIMP |
-| Git |
-| GitHub CLI |
-| GnuPG VS-Desktop |
-| GoAnywhere OpenPGP Studio |
-| GoLand 2021.1 |
-| GoLand 2022.2 |
-| GoodSync 12 |
-| GoodSync Personal |
-| Google Ads Editor |
-| Google Backup and Sync |
-| Google Chrome for Business |
-| Google Chrome Remote Desktop Host |
-| Google Drive |
-| Google Drive File Stream |
-| Google Go Programming Language 1.16 |
-| Google Go Programming Language 1.17 |
-| Google Go Programming Language 1.18 |
-| Google Go Programming Language 1.19 |
-| Google Go Programming Language 1.20 |
-| Google Go Programming Language 1.21 |
-| Google Go Programming Language 1.22 |
-| GoTo Connect |
-| Gpg4win |
-| GraphDB Desktop |
-| grepWin |
-| gsudo |
-| Hanword HWP document converter for Microsoft Word 2016 |
-| HashTools |
-| HeidiSQL |
-| Horizon Collaborate |
-| HP Client Management Script Library |
-| HP Prime Virtual Calculator |
-| Huddle Desktop |
-| HWMonitor |
-| IAP Desktop |
-| Ibis Calculeren voor Bouw |
-| IBM Aspera Connect |
-| IBM Semeru Runtime Open Edition JDK 11 (LTS) |
-| IBM Semeru Runtime Open Edition JDK 16 |
-| IBM Semeru Runtime Open Edition JDK 17 (LTS) |
-| IBM Semeru Runtime Open Edition JDK 18 |
-| IBM Semeru Runtime Open Edition JDK 20 |
-| IBM Semeru Runtime Open Edition JDK 22 |
-| IBM Semeru Runtime Open Edition JRE 11 (LTS) |
-| IBM Semeru Runtime Open Edition JRE 17 (LTS) |
-| IBM Semeru Runtime Open Edition JRE 18 |
-| IBM Semeru Runtime Open Edition JRE 19 |
-| IBM Semeru Runtime Open Edition JRE 20 |
-| IBM Semeru Runtime Open Edition JRE 22 |
-| IcedTea-Web |
-| iMazing Converter |
-| ImpExpPro |
-| Inkscape |
-| Install4j |
-| Intermedia Unite |
-| IrfanView |
-| IronPython |
-| IsoBuster |
-| JAM Software TreeSize Free |
-| Joplin |
-| JProfiler |
-| KeePass Password Safe (Classic Edition) |
-| KeePassXC |
-| Keeper |
-| KeeWeb |
-| Kerio Connect |
-| KeyShot Studio |
-| KeyStore Explorer |
-| Kobo |
-| Konnekt |
-| Kotobee Author |
-| Kreya |
-| Krisp |
-| Krita |
-| Lansweeper |
-| Laserbox basic |
-| LastPass |
-| LEGO Education SPIKE |
-| Lenovo Quick Clean |
-| Lens Desktop |
-| Liquit Workspace Agent 3 |
-| Logi Tune |
-| Logitech Bolt |
-| Logitech Options |
-| Logitech Presentation |
-| LogMeIn Client |
-| LogMeIn GoToMeeting IT Installer |
-| LogMeIn GoToMeeting multi-build Installer |
-| LogMeIn Hamachi |
-| LogMeIn Host |
-| LogMeIn RemotelyAnywhere |
-| LucaNet.Excel-Add-In |
-| LucidLink Classic |
-| Luna Modeler |
-| Macrobond |
-| Macrobond Viewer |
-| Mail Viewer |
-| Malwarebytes |
-| MariaDB Server 10.2 |
-| MariaDB Server 10.3 |
-| MariaDB Server 10.4 |
-| MariaDB Server 10.5 |
-| MariaDB Server 10.6 |
-| MariaDB Server 10.7 |
-| MariaDB Server 10.9 |
-| Mattermost Desktop |
-| Maxcut |
-| MAXQDA 2020 Reader |
-| Memento Desktop Edition |
-| Mendeley Desktop |
-| Mendeley Reference Manager |
-| Meta Quest Developer Hub |
-| Meta Spark Player |
-| Microsoft Access Database Engine 2016 |
-| Microsoft Active Directory Rights Management Service Client |
-| Microsoft Analysis Management Objects |
-| Microsoft Analysis Services ADOMD.NET |
-| Microsoft Analysis Services OLE DB Provider |
-| Microsoft Azure CLI |
-| Microsoft Azure Connected Machine Agent |
-| Microsoft Azure Data Studio |
-| Microsoft Azure PowerShell |
-| Microsoft Azure Storage Explorer |
-| Microsoft Bot Framework Composer |
-| Microsoft Defender for Endpoint plug-in for WSL |
-| Microsoft ODBC Driver 13 for SQL Server |
-| Microsoft ODBC Driver 17 for SQL Server |
-| Microsoft OLE DB Driver 18 for SQL Server |
-| Microsoft Power BI Desktop |
-| Microsoft PowerToys |
-| Microsoft Remote Desktop WebRTC Redirector |
-| Microsoft Remote Help |
-| Microsoft Skype TX |
-| Microsoft SQL Server 2012 Native Client |
-| Microsoft SQL Server 2014 Express LocalDB |
-| Microsoft SQL Server 2016 Report Builder |
-| Microsoft SQL Server 2017 Express Advanced Edition |
-| Microsoft SQL Server 2017 for Microsoft Windows Latest Cumulative Update |
-| Microsoft Surface Data Eraser |
-| Microsoft Surface Diagnostic Toolkit for Business |
-| Microsoft System CLR Types for SQL Server 2014 |
-| Microsoft Universal Print Connector |
-| Microsoft Visio 2016 Viewer |
-| Microsoft Visual C++ 2012 Redistributable |
-| Microsoft Visual C++ 2015-2022 Redistributable |
-| Microsoft Visual Studio 2010 Tools for Office Runtime |
-| Microsoft Visual Studio 2022 Enterprise |
-| Microsoft Visual Studio 2022 Professional |
-| Microsoft Visual Studio Code |
-| Microsoft Visual Studio Team Explorer 2022 |
-| Microsoft Windows Admin Center |
-| Microsoft Windows Assessment and Deployment Kit (ADK) for Windows 10 update 1607 |
-| Microsoft Windows Assessment and Deployment Kit (ADK) for Windows 10 update 1803 |
-| Microsoft Windows Assessment and Deployment Kit (ADK) for Windows 10 update 2004 |
-| Microsoft Windows Assessment and Deployment Kit (ADK) for Windows 11 |
-| Microsoft Windows PE add-on for ADK for Windows 11 |
-| monday |
-| MongoDB Compass |
-| MongoDB Compass Isolated Edition |
-| MongoDB Compass Readonly Edition |
-| MOOS Project Viewer |
-| Morphic |
-| Mozilla Firefox |
-| Mozilla Firefox ESR 102 |
-| Mozilla Firefox ESR 115 |
-| Mozilla FrontMotion Firefox Community Edition ESR |
-| Mozilla SeaMonkey |
-| Mozilla Thunderbird |
-| mPollux DigiSign Client |
-| MSEndpointMgr Intune Debug Toolkit |
-| MSIX Core |
-| MuseScore 3 |
-| MuseScore Studio 4 |
-| Nagstamon |
-| Nessus Agent 10 |
-| NetBird |
-| NetSetMan |
-| NETworkManager |
-| New Relic Infrastructure Agent |
-| Nextcloud |
-| NextivaONE |
-| Nitro Pro 11 |
-| Nitro Pro 13 (Retail) |
-| Node.js 15 |
-| Node.js 17 |
-| Node.js 18 LTS |
-| Node.js 19 |
-| Node.js 20 LTS |
-| Node.js 21 |
-| Node.js 22 LTS |
-| NordLayer |
-| NVIDIA GeForce Experience |
-| NVivo 12 |
-| NVivo 13 |
-| Obsidian |
-| OnSIP |
-| OpenAudible |
-| OpenDNS Umbrella Roaming Client |
-| OpenJDK 11 |
-| OpenJDK 16 |
-| OpenJDK 17 |
-| OpenJDK 21 |
-| OpenShot Video Editor |
-| OpenVPN |
-| OpenVPN Connect |
-| OpenWebStart |
-| Oracle Java SE Development Kit 17 |
-| Oracle Java SE Development Kit 23 |
-| ownCloud Desktop Client |
-| Pandoc |
-| PaperCut MF |
-| PaperCut Mobility Print |
-| PaperCut NG |
-| Paperpile |
-| Parallels Client 18 |
-| Parallels Client 19 |
-| Password Safe 3 |
-| Path Copy Copy |
-| PDF Studio |
-| PDF Studio Viewer |
-| PDF24 Creator |
-| PDFCreator |
-| PDFgear |
-| PDFsam Basic |
-| PDFsam Visual |
-| PDF-Tools |
-| PDF-XChange PRO |
-| PeaZip |
-| PerformanceTest |
-| Pexip Infinity Connect |
-| PL SQL Developer 15 |
-| PlanGrid |
-| Plex Media Player |
-| Plex Media Server |
-| Poll Everywhere |
-| Poly Lens Desktop App |
-| Power BI ALM Toolkit |
-| Preform |
-| PrinterLogic Printer Installer Client |
-| Private Internet Access |
-| Project Plan 365 |
-| Project Viewer 365 |
-| Proton VPN |
-| PRTG Desktop |
-| PSPad |
-| Putty |
-| PuTTY CAC |
-| Python 3.10 |
-| Python 3.11 |
-| Python 3.12 |
-| Python 3.13 |
-| Python 3.7 |
-| Python 3.8 |
-| Python 3.9 |
-| QNAP Qsync |
-| R for Windows |
-| Rancher Desktop |
-| Raspberry Pi Imager |
-| RBTools |
-| Red Hat OpenJDK |
-| Red Hat OpenJDK JRE |
-| Remote Ripple |
-| RenderDoc |
-| REV Hardware Client |
-| RingCentral App |
-| RingCentral Phone |
-| Rocket.Chat |
-| Royal TS 5 |
-| RStudio 1.4 |
-| RustDesk |
-| RVTools |
-| Saola Animate |
-| ScaleFT |
-| Screen InStyle |
-| ScreenBeam Conference |
-| ScreenCloud Player |
-| ScreenToGif |
-| SelfGuide Recorder |
-| SharePoint Online Management Shell |
-| Shotcut |
-| SideQuest |
-| Signiant App |
-| Simplenote |
-| Skillbrains LightShot |
-| Slido |
-| SmartFTP Client |
-| Smartsheet desktop app |
-| Snagit 2018 |
-| Snagit 2019 |
-| Snagit 2020 |
-| Snagit 2021 |
-| Snagit 2023 |
-| Snagit 2024 |
-| Snapform Viewer |
-| Snapmaker Luban |
-| SoapUI |
-| Softerra LDAP Administrator |
-| Softerra LDAP Browser |
-| Softland doPDF |
-| SolarWinds Orion SDK |
-| SonicWall Connect Tunnel |
-| SonicWall NetExtender |
-| South River Technologies WebDrive |
-| Spectrometry |
-| Squirrels Reflector 3 |
-| Squirrels Reflector 4 |
-| SRWare Iron |
-| Stellarium |
-| Storyboarder |
-| Striata Reader |
-| SURF eduVPN Client |
-| SURFdrive |
-| Symphony Desktop Application |
-| SyncBackFree |
-| Synology Cloud Station Backup |
-| Synology Drive Client |
-| Synology Evidence Integrity Authenticator |
-| Sysprogs SmarTTY |
-| Tabular Editor 2 |
-| Tailscale |
-| TDP SecureAnyBox Launcher |
-| TeamDrive |
-| TeamSpeak client |
-| TeamViewer Host |
-| Teracopy for Windows |
-| TGRMN Software Bulk Rename Utility |
-| The Document Foundation LibreOffice 24 |
-| The Document Foundation LibreOffice 24 Help Pack |
-| Thycotic Application Control Agent |
-| Thycotic Directory Services Agent |
-| Tidio |
-| TightVNC |
-| TI-SmartView CE-T |
-| TortoiseGit |
-| TortoiseSVN |
-| TortoiseSVN ipv6 |
-| Trimble Connect |
-| TSPrint Client |
-| Turbo Studio |
-| Turbo.net Desktop |
-| TurboVNC |
-| Typora |
-| UEStudio |
-| UltraCompare |
-| UltraFinder |
-| UltraFTP |
-| UltraMon |
-| UltraVNC |
-| Unity Hub |
-| UNIVERGE BLUE CONNECT |
-| UrBackup Client |
-| Vagrant |
-| VariCAD |
-| VariCAD Viewer |
-| VeraCrypt |
-| VideoScribe |
-| Visual Paradigm Project Viewer |
-| VMware Horizon View Client 3.5 |
-| VMware Horizon View Client 5.4 |
-| voidtools Everything |
-| voidtools Everything Lite |
-| VSCodium |
-| Waterfox Classic |
-| Western Digital Dashboard |
-| Wildix Collaboration |
-| Win10Pcap |
-| WinDirStat |
-| Windows 10 Codec Pack |
-| WinMerge |
-| WireGuard |
-| WizTree |
-| Wrike |
-| XMind 2020 |
-| XMind 2021 |
-| XMind 2022 |
-| XnSoft XnConvert |
-| XnSoft XnShell |
-| XnSoft XnView Extended |
-| XnSoft XnView Minimal |
-| XnSoft XnView MP |
-| XnSoft XnView Standard |
-| Yubico PIV Tool |
-| YubiKey Manager CLI |
-| Zeal |
-| Zello |
-| Zivver Office Plugin |
-| Zoom Player Max |
-| Zoom Plugin for Skype for Business |
-| Zoom Plugin for Windows Virtual Desktop Client |
-| Zorus Archon Agent |
-| Zscaler Client Connector 3.6 |
-| Zscaler Client Connector 3.9 |
-| Zscaler Client Connector 4.0 |
-| Zscaler Client Connector 4.1 |
-| Zscaler Client Connector 4.3 |
-| Zscaler Client Connector for VDI |
-| Zulip |
-| Zulu JDK 10 (STS) |
-| Zulu JDK 11 (LTS) |
-| Zulu JDK 12 (STS) |
-| Zulu JDK 13 (MTS) |
-| Zulu JDK 15 (MTS) |
-| Zulu JDK 16 (STS) |
-| Zulu JDK 17 (LTS) |
-| Zulu JDK 18 (STS) |
-| Zulu JDK 20 (STS) |
-| Zulu JRE 11 (LTS) |
-| Zulu JRE 12 (STS) |
-| Zulu JRE 13 (MTS) |
-| Zulu JRE 15 (MTS) |
-| Zulu JRE 17 (LTS) |
+| :::no-loc text="3CX Desktop App":::|
+| :::no-loc text="3CXPhone for Windows":::|
+| :::no-loc text="3DxWare 10":::|
+| :::no-loc text="4K Video Downloader":::|
+| :::no-loc text="4K Video Downloader+":::|
+| :::no-loc text="7-Zip":::|
+| :::no-loc text="Able2Extract Professional":::|
+| :::no-loc text="ActiveState Software Komodo Edit":::|
+| :::no-loc text="Adobe AIR":::|
+| :::no-loc text="AIMP":::|
+| :::no-loc text="Air Explorer":::|
+| :::no-loc text="Aircall for desktop":::|
+| :::no-loc text="AirParrot 2":::|
+| :::no-loc text="Akiflow":::|
+| :::no-loc text="Allway Sync":::|
+| :::no-loc text="Altova XMLSpy Enterprise 2023":::|
+| :::no-loc text="Amazon AWS Command Line Interface":::|
+| :::no-loc text="Amazon AWS Tools for Windows":::|
+| :::no-loc text="Amazon AWS VPN Client":::|
+| :::no-loc text="Amazon Corretto JDK 11":::|
+| :::no-loc text="Amazon Corretto JDK 15":::|
+| :::no-loc text="Amazon Corretto JDK 16":::|
+| :::no-loc text="Amazon Corretto JDK 17":::|
+| :::no-loc text="Amazon Corretto JDK 18":::|
+| :::no-loc text="Amazon Corretto JDK 19":::|
+| :::no-loc text="Amazon Kindle":::|
+| :::no-loc text="Amazon Redshift ODBC driver":::|
+| :::no-loc text="Amazon WorkSpaces":::|
+| :::no-loc text="Android Studio 2022":::|
+| :::no-loc text="Android Studio 3":::|
+| :::no-loc text="Android Studio 4":::|
+| :::no-loc text="App Dynamic AirServer Universal":::|
+| :::no-loc text="Apple iTunes":::|
+| :::no-loc text="Aptakube":::|
+| :::no-loc text="Araxis Merge":::|
+| :::no-loc text="ArcticLine Software Jet Screenshot":::|
+| :::no-loc text="Arduino IDE":::|
+| :::no-loc text="Articulate 360":::|
+| :::no-loc text="ASUS Remote Drive":::|
+| :::no-loc text="Atlassian Companion":::|
+| :::no-loc text="Audacity":::|
+| :::no-loc text="Autodesk Access":::|
+| :::no-loc text="Autodesk Identity Manager":::|
+| :::no-loc text="Autodesk Single Signon Component":::|
+| :::no-loc text="AVer Information A+ Suite":::|
+| :::no-loc text="AWS SAM command line interface":::|
+| :::no-loc text="AWS Session Manager Plugin":::|
+| :::no-loc text="AxCrypt":::|
+| :::no-loc text="Azure Functions Core Tools":::|
+| :::no-loc text="Bambu Studio":::|
+| :::no-loc text="Beam Studio":::|
+| :::no-loc text="Belgium e-ID viewer":::|
+| :::no-loc text="Beyond Compare":::|
+| :::no-loc text="Beyond Identity":::|
+| :::no-loc text="Blender":::|
+| :::no-loc text="BlueJeans 2":::|
+| :::no-loc text="Box CLI":::|
+| :::no-loc text="Box Drive":::|
+| :::no-loc text="Brady Workstation":::|
+| :::no-loc text="Bridge Designer 2016":::|
+| :::no-loc text="BrightAuthor connected":::|
+| :::no-loc text="Bulk Crap Uninstaller":::|
+| :::no-loc text="Bullzip PDF to Word":::|
+| :::no-loc text="BurnAware Free":::|
+| :::no-loc text="Burp Suite Community Edition":::|
+| :::no-loc text="Burp Suite Professional Edition":::|
+| :::no-loc text="Bytello Share":::|
+| :::no-loc text="Calibrite Profiler":::|
+| :::no-loc text="Camtasia Studio 2018":::|
+| :::no-loc text="Camtasia Studio 2019":::|
+| :::no-loc text="Caphyon Advanced Installer":::|
+| :::no-loc text="Capture One 20":::|
+| :::no-loc text="Capture One 22":::|
+| :::no-loc text="Causasoft ExhibitManager":::|
+| :::no-loc text="Charles":::|
+| :::no-loc text="Chatbox":::|
+| :::no-loc text="Chef Workstation for Windows":::|
+| :::no-loc text="Cisco Jabber 14":::|
+| :::no-loc text="Cisco JVDI Agent 12":::|
+| :::no-loc text="Cisco JVDI Agent 14":::|
+| :::no-loc text="Cisco Webex Meetings":::|
+| :::no-loc text="Cisco WebEx Recorder and Player":::|
+| :::no-loc text="Cisco WebEx Recording Editor":::|
+| :::no-loc text="Cisco Webex Teams":::|
+| :::no-loc text="Citrix Receiver":::|
+| :::no-loc text="Citrix Workspace app":::|
+| :::no-loc text="Citrix Workspace app LTSR":::|
+| :::no-loc text="Class":::|
+| :::no-loc text="Classic Shell":::|
+| :::no-loc text="ClassPoint":::|
+| :::no-loc text="Clevershare":::|
+| :::no-loc text="ClockAssist":::|
+| :::no-loc text="Clockify":::|
+| :::no-loc text="Cloud Drive Mapper":::|
+| :::no-loc text="CloudCompare":::|
+| :::no-loc text="Cloudflare WARP":::|
+| :::no-loc text="CMake":::|
+| :::no-loc text="Colour Contrast Analyser":::|
+| :::no-loc text="CPU-Z":::|
+| :::no-loc text="Creative Force Kelvin":::|
+| :::no-loc text="Creative Force Triad":::|
+| :::no-loc text="Cryptomator":::|
+| :::no-loc text="Cube Browser":::|
+| :::no-loc text="CutePDF Writer":::|
+| :::no-loc text="Dane Prairie Systems Win2PDF":::|
+| :::no-loc text="DataGrip 1.0":::|
+| :::no-loc text="DAX Studio":::|
+| :::no-loc text="DB Browser for SQLite":::|
+| :::no-loc text="DBeaver Community":::|
+| :::no-loc text="DBeaver Enterprise":::|
+| :::no-loc text="DBeaver Lite":::|
+| :::no-loc text="DBeaver Ultimate":::|
+| :::no-loc text="DbVisualizer":::|
+| :::no-loc text="Defraggler":::|
+| :::no-loc text="Delinea Connection Manager":::|
+| :::no-loc text="Dell Command Update":::|
+| :::no-loc text="Dell Command Update (Windows Universal Application)":::|
+| :::no-loc text="Dell Display Manager":::|
+| :::no-loc text="Dell EMC System Update":::|
+| :::no-loc text="Dell Peripheral Manager":::|
+| :::no-loc text="Devolutions Launcher":::|
+| :::no-loc text="Devolutions Remote Desktop Manager":::|
+| :::no-loc text="Devolutions Remote Desktop Manager Agent":::|
+| :::no-loc text="Devolutions Workspace":::|
+| :::no-loc text="DevPod":::|
+| :::no-loc text="Directory Opus":::|
+| :::no-loc text="DisplayLink Dock Driver":::|
+| :::no-loc text="Ditto Connect":::|
+| :::no-loc text="dnGrep":::|
+| :::no-loc text="Docker Desktop":::|
+| :::no-loc text="draw.io Desktop":::|
+| :::no-loc text="dRofus":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 11 (LTS)":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 12":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 15":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 16":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 17 (LTS)":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 18":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 19":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 20":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 21":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 22":::|
+| :::no-loc text="Eclipse Temurin JDK with Hotspot 23":::|
+| :::no-loc text="Eclipse Temurin JRE with Hotspot 11 (LTS)":::|
+| :::no-loc text="Eclipse Temurin JRE with Hotspot 12":::|
+| :::no-loc text="Eclipse Temurin JRE with Hotspot 15":::|
+| :::no-loc text="Eclipse Temurin JRE with Hotspot 16":::|
+| :::no-loc text="Eclipse Temurin JRE with Hotspot 17 (LTS)":::|
+| :::no-loc text="Eclipse Temurin JRE with Hotspot 18":::|
+| :::no-loc text="Eclipse Temurin JRE with Hotspot 19":::|
+| :::no-loc text="Eclipse Temurin JRE with Hotspot 20":::|
+| :::no-loc text="Eclipse Temurin JRE with Hotspot 22":::|
+| :::no-loc text="Eclipse Temurin JRE with Hotspot 23":::|
+| :::no-loc text="Egnyte Connect Desktop App":::|
+| :::no-loc text="Egnyte WebEdit":::|
+| :::no-loc text="Elevate UC":::|
+| :::no-loc text="Endnote 20":::|
+| :::no-loc text="Endnote X8":::|
+| :::no-loc text="Endnote X9":::|
+| :::no-loc text="ESET Endpoint Antivirus V10":::|
+| :::no-loc text="ESET Endpoint Antivirus V12":::|
+| :::no-loc text="ESET Endpoint Security V12":::|
+| :::no-loc text="Evernote":::|
+| :::no-loc text="FactSet Workstation":::|
+| :::no-loc text="FastPictureViewer Professional":::|
+| :::no-loc text="FastStone Soft Capture":::|
+| :::no-loc text="FastStone Soft Photo Resizer":::|
+| :::no-loc text="FileZilla":::|
+| :::no-loc text="FlashFXP":::|
+| :::no-loc text="FlexWhere for Desktop":::|
+| :::no-loc text="Fortify":::|
+| :::no-loc text="Foxit PDF Editor 11":::|
+| :::no-loc text="Foxit PDF Editor 12":::|
+| :::no-loc text="Foxit PDF Editor Pro 11":::|
+| :::no-loc text="Foxit PDF Reader":::|
+| :::no-loc text="Foxit PhantomPDF 10":::|
+| :::no-loc text="Foxit PhantomPDF Pro 10":::|
+| :::no-loc text="Free Countdown Timer":::|
+| :::no-loc text="Front Desktop":::|
+| :::no-loc text="Fuzzy Lookup Add-In For Excel":::|
+| :::no-loc text="FXHOME HitFilm Express":::|
+| :::no-loc text="Gadwin ScreenRecorder":::|
+| :::no-loc text="Garden Gnome Package Viewer":::|
+| :::no-loc text="General Workings Streamlabs OBS":::|
+| :::no-loc text="Genesys Cloud":::|
+| :::no-loc text="GeoGebra 5":::|
+| :::no-loc text="Geomilieu":::|
+| :::no-loc text="Gephi":::|
+| :::no-loc text="GIMP":::|
+| :::no-loc text="Git":::|
+| :::no-loc text="GitHub CLI":::|
+| :::no-loc text="GnuPG VS-Desktop":::|
+| :::no-loc text="GoAnywhere OpenPGP Studio":::|
+| :::no-loc text="GoLand 2021.1":::|
+| :::no-loc text="GoLand 2022.2":::|
+| :::no-loc text="GoodSync 12":::|
+| :::no-loc text="GoodSync Personal":::|
+| :::no-loc text="Google Ads Editor":::|
+| :::no-loc text="Google Backup and Sync":::|
+| :::no-loc text="Google Chrome for Business":::|
+| :::no-loc text="Google Chrome Remote Desktop Host":::|
+| :::no-loc text="Google Drive":::|
+| :::no-loc text="Google Drive File Stream":::|
+| :::no-loc text="Google Go Programming Language 1.16":::|
+| :::no-loc text="Google Go Programming Language 1.17":::|
+| :::no-loc text="Google Go Programming Language 1.18":::|
+| :::no-loc text="Google Go Programming Language 1.19":::|
+| :::no-loc text="Google Go Programming Language 1.20":::|
+| :::no-loc text="Google Go Programming Language 1.21":::|
+| :::no-loc text="Google Go Programming Language 1.22":::|
+| :::no-loc text="GoTo Connect":::|
+| :::no-loc text="Gpg4win":::|
+| :::no-loc text="GraphDB Desktop":::|
+| :::no-loc text="grepWin":::|
+| :::no-loc text="gsudo":::|
+| :::no-loc text="Hanword HWP document converter for Microsoft Word 2016":::|
+| :::no-loc text="HashTools":::|
+| :::no-loc text="HeidiSQL":::|
+| :::no-loc text="Horizon Collaborate":::|
+| :::no-loc text="HP Client Management Script Library":::|
+| :::no-loc text="HP Prime Virtual Calculator":::|
+| :::no-loc text="Huddle Desktop":::|
+| :::no-loc text="HWMonitor":::|
+| :::no-loc text="IAP Desktop":::|
+| :::no-loc text="Ibis Calculeren voor Bouw":::|
+| :::no-loc text="IBM Aspera Connect":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JDK 11 (LTS)":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JDK 16":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JDK 17 (LTS)":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JDK 18":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JDK 20":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JDK 22":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JRE 11 (LTS)":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JRE 17 (LTS)":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JRE 18":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JRE 19":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JRE 20":::|
+| :::no-loc text="IBM Semeru Runtime Open Edition JRE 22":::|
+| :::no-loc text="IcedTea-Web":::|
+| :::no-loc text="iMazing Converter":::|
+| :::no-loc text="ImpExpPro":::|
+| :::no-loc text="Inkscape":::|
+| :::no-loc text="Install4j":::|
+| :::no-loc text="Intermedia Unite":::|
+| :::no-loc text="IrfanView":::|
+| :::no-loc text="IronPython":::|
+| :::no-loc text="IsoBuster":::|
+| :::no-loc text="JAM Software TreeSize Free":::|
+| :::no-loc text="Joplin":::|
+| :::no-loc text="JProfiler":::|
+| :::no-loc text="KeePass Password Safe (Classic Edition)":::|
+| :::no-loc text="KeePassXC":::|
+| :::no-loc text="Keeper":::|
+| :::no-loc text="KeeWeb":::|
+| :::no-loc text="Kerio Connect":::|
+| :::no-loc text="KeyShot Studio":::|
+| :::no-loc text="KeyStore Explorer":::|
+| :::no-loc text="Kobo":::|
+| :::no-loc text="Konnekt":::|
+| :::no-loc text="Kotobee Author":::|
+| :::no-loc text="Kreya":::|
+| :::no-loc text="Krisp":::|
+| :::no-loc text="Krita":::|
+| :::no-loc text="Lansweeper":::|
+| :::no-loc text="Laserbox basic":::|
+| :::no-loc text="LastPass":::|
+| :::no-loc text="LEGO Education SPIKE":::|
+| :::no-loc text="Lenovo Quick Clean":::|
+| :::no-loc text="Lens Desktop":::|
+| :::no-loc text="Liquit Workspace Agent 3":::|
+| :::no-loc text="Logi Tune":::|
+| :::no-loc text="Logitech Bolt":::|
+| :::no-loc text="Logitech Options":::|
+| :::no-loc text="Logitech Presentation":::|
+| :::no-loc text="LogMeIn Client":::|
+| :::no-loc text="LogMeIn GoToMeeting IT Installer":::|
+| :::no-loc text="LogMeIn GoToMeeting multi-build Installer":::|
+| :::no-loc text="LogMeIn Hamachi":::|
+| :::no-loc text="LogMeIn Host":::|
+| :::no-loc text="LogMeIn RemotelyAnywhere":::|
+| :::no-loc text="LucaNet.Excel-Add-In":::|
+| :::no-loc text="LucidLink Classic":::|
+| :::no-loc text="Luna Modeler":::|
+| :::no-loc text="Macrobond":::|
+| :::no-loc text="Macrobond Viewer":::|
+| :::no-loc text="Mail Viewer":::|
+| :::no-loc text="Malwarebytes":::|
+| :::no-loc text="MariaDB Server 10.2":::|
+| :::no-loc text="MariaDB Server 10.3":::|
+| :::no-loc text="MariaDB Server 10.4":::|
+| :::no-loc text="MariaDB Server 10.5":::|
+| :::no-loc text="MariaDB Server 10.6":::|
+| :::no-loc text="MariaDB Server 10.7":::|
+| :::no-loc text="MariaDB Server 10.9":::|
+| :::no-loc text="Mattermost Desktop":::|
+| :::no-loc text="Maxcut":::|
+| :::no-loc text="MAXQDA 2020 Reader":::|
+| :::no-loc text="Memento Desktop Edition":::|
+| :::no-loc text="Mendeley Desktop":::|
+| :::no-loc text="Mendeley Reference Manager":::|
+| :::no-loc text="Meta Quest Developer Hub":::|
+| :::no-loc text="Meta Spark Player":::|
+| :::no-loc text="Microsoft Access Database Engine 2016":::|
+| :::no-loc text="Microsoft Active Directory Rights Management Service Client":::|
+| :::no-loc text="Microsoft Analysis Management Objects":::|
+| :::no-loc text="Microsoft Analysis Services ADOMD.NET":::|
+| :::no-loc text="Microsoft Analysis Services OLE DB Provider":::|
+| :::no-loc text="Microsoft Azure CLI":::|
+| :::no-loc text="Microsoft Azure Connected Machine Agent":::|
+| :::no-loc text="Microsoft Azure Data Studio":::|
+| :::no-loc text="Microsoft Azure PowerShell":::|
+| :::no-loc text="Microsoft Azure Storage Explorer":::|
+| :::no-loc text="Microsoft Bot Framework Composer":::|
+| :::no-loc text="Microsoft Defender for Endpoint plug-in for WSL":::|
+| :::no-loc text="Microsoft ODBC Driver 13 for SQL Server":::|
+| :::no-loc text="Microsoft ODBC Driver 17 for SQL Server":::|
+| :::no-loc text="Microsoft OLE DB Driver 18 for SQL Server":::|
+| :::no-loc text="Microsoft Power BI Desktop":::|
+| :::no-loc text="Microsoft PowerToys":::|
+| :::no-loc text="Microsoft Remote Desktop WebRTC Redirector":::|
+| :::no-loc text="Microsoft Remote Help":::|
+| :::no-loc text="Microsoft Skype TX":::|
+| :::no-loc text="Microsoft SQL Server 2012 Native Client":::|
+| :::no-loc text="Microsoft SQL Server 2014 Express LocalDB":::|
+| :::no-loc text="Microsoft SQL Server 2016 Report Builder":::|
+| :::no-loc text="Microsoft SQL Server 2017 Express Advanced Edition":::|
+| :::no-loc text="Microsoft SQL Server 2017 for Microsoft Windows Latest Cumulative Update":::|
+| :::no-loc text="Microsoft Surface Data Eraser":::|
+| :::no-loc text="Microsoft Surface Diagnostic Toolkit for Business":::|
+| :::no-loc text="Microsoft System CLR Types for SQL Server 2014":::|
+| :::no-loc text="Microsoft Universal Print Connector":::|
+| :::no-loc text="Microsoft Visio 2016 Viewer":::|
+| :::no-loc text="Microsoft Visual C++ 2012 Redistributable":::|
+| :::no-loc text="Microsoft Visual C++ 2015-2022 Redistributable":::|
+| :::no-loc text="Microsoft Visual Studio 2010 Tools for Office Runtime":::|
+| :::no-loc text="Microsoft Visual Studio 2022 Enterprise":::|
+| :::no-loc text="Microsoft Visual Studio 2022 Professional":::|
+| :::no-loc text="Microsoft Visual Studio Code":::|
+| :::no-loc text="Microsoft Visual Studio Team Explorer 2022":::|
+| :::no-loc text="Microsoft Windows Admin Center":::|
+| :::no-loc text="Microsoft Windows Assessment and Deployment Kit (ADK) for Windows 10 update 1607":::|
+| :::no-loc text="Microsoft Windows Assessment and Deployment Kit (ADK) for Windows 10 update 1803":::|
+| :::no-loc text="Microsoft Windows Assessment and Deployment Kit (ADK) for Windows 10 update 2004":::|
+| :::no-loc text="Microsoft Windows Assessment and Deployment Kit (ADK) for Windows 11":::|
+| :::no-loc text="Microsoft Windows PE add-on for ADK for Windows 11":::|
+| :::no-loc text="monday":::|
+| :::no-loc text="MongoDB Compass":::|
+| :::no-loc text="MongoDB Compass Isolated Edition":::|
+| :::no-loc text="MongoDB Compass Readonly Edition":::|
+| :::no-loc text="MOOS Project Viewer":::|
+| :::no-loc text="Morphic":::|
+| :::no-loc text="Mozilla Firefox":::|
+| :::no-loc text="Mozilla Firefox ESR 102":::|
+| :::no-loc text="Mozilla Firefox ESR 115":::|
+| :::no-loc text="Mozilla FrontMotion Firefox Community Edition ESR":::|
+| :::no-loc text="Mozilla SeaMonkey":::|
+| :::no-loc text="Mozilla Thunderbird":::|
+| :::no-loc text="mPollux DigiSign Client":::|
+| :::no-loc text="MSEndpointMgr Intune Debug Toolkit":::|
+| :::no-loc text="MSIX Core":::|
+| :::no-loc text="MuseScore 3":::|
+| :::no-loc text="MuseScore Studio 4":::|
+| :::no-loc text="Nagstamon":::|
+| :::no-loc text="Nessus Agent 10":::|
+| :::no-loc text="NetBird":::|
+| :::no-loc text="NetSetMan":::|
+| :::no-loc text="NETworkManager":::|
+| :::no-loc text="New Relic Infrastructure Agent":::|
+| :::no-loc text="Nextcloud":::|
+| :::no-loc text="NextivaONE":::|
+| :::no-loc text="Nitro Pro 11":::|
+| :::no-loc text="Nitro Pro 13 (Retail)":::|
+| :::no-loc text="Node.js 15":::|
+| :::no-loc text="Node.js 17":::|
+| :::no-loc text="Node.js 18 LTS":::|
+| :::no-loc text="Node.js 19":::|
+| :::no-loc text="Node.js 20 LTS":::|
+| :::no-loc text="Node.js 21":::|
+| :::no-loc text="Node.js 22 LTS":::|
+| :::no-loc text="NordLayer":::|
+| :::no-loc text="NVIDIA GeForce Experience":::|
+| :::no-loc text="NVivo 12":::|
+| :::no-loc text="NVivo 13":::|
+| :::no-loc text="Obsidian":::|
+| :::no-loc text="OnSIP":::|
+| :::no-loc text="OpenAudible":::|
+| :::no-loc text="OpenDNS Umbrella Roaming Client":::|
+| :::no-loc text="OpenJDK 11":::|
+| :::no-loc text="OpenJDK 16":::|
+| :::no-loc text="OpenJDK 17":::|
+| :::no-loc text="OpenJDK 21":::|
+| :::no-loc text="OpenShot Video Editor":::|
+| :::no-loc text="OpenVPN":::|
+| :::no-loc text="OpenVPN Connect":::|
+| :::no-loc text="OpenWebStart":::|
+| :::no-loc text="Oracle Java SE Development Kit 17":::|
+| :::no-loc text="Oracle Java SE Development Kit 23":::|
+| :::no-loc text="ownCloud Desktop Client":::|
+| :::no-loc text="Pandoc":::|
+| :::no-loc text="PaperCut MF":::|
+| :::no-loc text="PaperCut Mobility Print":::|
+| :::no-loc text="PaperCut NG":::|
+| :::no-loc text="Paperpile":::|
+| :::no-loc text="Parallels Client 18":::|
+| :::no-loc text="Parallels Client 19":::|
+| :::no-loc text="Password Safe 3":::|
+| :::no-loc text="Path Copy Copy":::|
+| :::no-loc text="PDF Studio":::|
+| :::no-loc text="PDF Studio Viewer":::|
+| :::no-loc text="PDF24 Creator":::|
+| :::no-loc text="PDFCreator":::|
+| :::no-loc text="PDFgear":::|
+| :::no-loc text="PDFsam Basic":::|
+| :::no-loc text="PDFsam Visual":::|
+| :::no-loc text="PDF-Tools":::|
+| :::no-loc text="PDF-XChange PRO":::|
+| :::no-loc text="PeaZip":::|
+| :::no-loc text="PerformanceTest":::|
+| :::no-loc text="Pexip Infinity Connect":::|
+| :::no-loc text="PL SQL Developer 15":::|
+| :::no-loc text="PlanGrid":::|
+| :::no-loc text="Plex Media Player":::|
+| :::no-loc text="Plex Media Server":::|
+| :::no-loc text="Poll Everywhere":::|
+| :::no-loc text="Poly Lens Desktop App":::|
+| :::no-loc text="Power BI ALM Toolkit":::|
+| :::no-loc text="Preform":::|
+| :::no-loc text="PrinterLogic Printer Installer Client":::|
+| :::no-loc text="Private Internet Access":::|
+| :::no-loc text="Project Plan 365":::|
+| :::no-loc text="Project Viewer 365":::|
+| :::no-loc text="Proton VPN":::|
+| :::no-loc text="PRTG Desktop":::|
+| :::no-loc text="PSPad":::|
+| :::no-loc text="Putty":::|
+| :::no-loc text="PuTTY CAC":::|
+| :::no-loc text="Python 3.10":::|
+| :::no-loc text="Python 3.11":::|
+| :::no-loc text="Python 3.12":::|
+| :::no-loc text="Python 3.13":::|
+| :::no-loc text="Python 3.7":::|
+| :::no-loc text="Python 3.8":::|
+| :::no-loc text="Python 3.9":::|
+| :::no-loc text="QNAP Qsync":::|
+| :::no-loc text="R for Windows":::|
+| :::no-loc text="Rancher Desktop":::|
+| :::no-loc text="Raspberry Pi Imager":::|
+| :::no-loc text="RBTools":::|
+| :::no-loc text="Red Hat OpenJDK":::|
+| :::no-loc text="Red Hat OpenJDK JRE":::|
+| :::no-loc text="Remote Ripple":::|
+| :::no-loc text="RenderDoc":::|
+| :::no-loc text="REV Hardware Client":::|
+| :::no-loc text="RingCentral App":::|
+| :::no-loc text="RingCentral Phone":::|
+| :::no-loc text="Rocket.Chat":::|
+| :::no-loc text="Royal TS 5":::|
+| :::no-loc text="RStudio 1.4":::|
+| :::no-loc text="RustDesk":::|
+| :::no-loc text="RVTools":::|
+| :::no-loc text="Saola Animate":::|
+| :::no-loc text="ScaleFT":::|
+| :::no-loc text="Screen InStyle":::|
+| :::no-loc text="ScreenBeam Conference":::|
+| :::no-loc text="ScreenCloud Player":::|
+| :::no-loc text="ScreenToGif":::|
+| :::no-loc text="SelfGuide Recorder":::|
+| :::no-loc text="SharePoint Online Management Shell":::|
+| :::no-loc text="Shotcut":::|
+| :::no-loc text="SideQuest":::|
+| :::no-loc text="Signiant App":::|
+| :::no-loc text="Simplenote":::|
+| :::no-loc text="Skillbrains LightShot":::|
+| :::no-loc text="Slido":::|
+| :::no-loc text="SmartFTP Client":::|
+| :::no-loc text="Smartsheet desktop app":::|
+| :::no-loc text="Snagit 2018":::|
+| :::no-loc text="Snagit 2019":::|
+| :::no-loc text="Snagit 2020":::|
+| :::no-loc text="Snagit 2021":::|
+| :::no-loc text="Snagit 2023":::|
+| :::no-loc text="Snagit 2024":::|
+| :::no-loc text="Snapform Viewer":::|
+| :::no-loc text="Snapmaker Luban":::|
+| :::no-loc text="SoapUI":::|
+| :::no-loc text="Softerra LDAP Administrator":::|
+| :::no-loc text="Softerra LDAP Browser":::|
+| :::no-loc text="Softland doPDF":::|
+| :::no-loc text="SolarWinds Orion SDK":::|
+| :::no-loc text="SonicWall Connect Tunnel":::|
+| :::no-loc text="SonicWall NetExtender":::|
+| :::no-loc text="South River Technologies WebDrive":::|
+| :::no-loc text="Spectrometry":::|
+| :::no-loc text="Squirrels Reflector 3":::|
+| :::no-loc text="Squirrels Reflector 4":::|
+| :::no-loc text="SRWare Iron":::|
+| :::no-loc text="Stellarium":::|
+| :::no-loc text="Storyboarder":::|
+| :::no-loc text="Striata Reader":::|
+| :::no-loc text="SURF eduVPN Client":::|
+| :::no-loc text="SURFdrive":::|
+| :::no-loc text="Symphony Desktop Application":::|
+| :::no-loc text="SyncBackFree":::|
+| :::no-loc text="Synology Cloud Station Backup":::|
+| :::no-loc text="Synology Drive Client":::|
+| :::no-loc text="Synology Evidence Integrity Authenticator":::|
+| :::no-loc text="Sysprogs SmarTTY":::|
+| :::no-loc text="Tabular Editor 2":::|
+| :::no-loc text="Tailscale":::|
+| :::no-loc text="TDP SecureAnyBox Launcher":::|
+| :::no-loc text="TeamDrive":::|
+| :::no-loc text="TeamSpeak client":::|
+| :::no-loc text="TeamViewer Host":::|
+| :::no-loc text="Teracopy for Windows":::|
+| :::no-loc text="TGRMN Software Bulk Rename Utility":::|
+| :::no-loc text="The Document Foundation LibreOffice 24":::|
+| :::no-loc text="The Document Foundation LibreOffice 24 Help Pack":::|
+| :::no-loc text="Thycotic Application Control Agent":::|
+| :::no-loc text="Thycotic Directory Services Agent":::|
+| :::no-loc text="Tidio":::|
+| :::no-loc text="TightVNC":::|
+| :::no-loc text="TI-SmartView CE-T":::|
+| :::no-loc text="TortoiseGit":::|
+| :::no-loc text="TortoiseSVN":::|
+| :::no-loc text="TortoiseSVN ipv6":::|
+| :::no-loc text="Trimble Connect":::|
+| :::no-loc text="TSPrint Client":::|
+| :::no-loc text="Turbo Studio":::|
+| :::no-loc text="Turbo.net Desktop":::|
+| :::no-loc text="TurboVNC":::|
+| :::no-loc text="Typora":::|
+| :::no-loc text="UEStudio":::|
+| :::no-loc text="UltraCompare":::|
+| :::no-loc text="UltraFinder":::|
+| :::no-loc text="UltraFTP":::|
+| :::no-loc text="UltraMon":::|
+| :::no-loc text="UltraVNC":::|
+| :::no-loc text="Unity Hub":::|
+| :::no-loc text="UNIVERGE BLUE CONNECT":::|
+| :::no-loc text="UrBackup Client":::|
+| :::no-loc text="Vagrant":::|
+| :::no-loc text="VariCAD":::|
+| :::no-loc text="VariCAD Viewer":::|
+| :::no-loc text="VeraCrypt":::|
+| :::no-loc text="VideoScribe":::|
+| :::no-loc text="Visual Paradigm Project Viewer":::|
+| :::no-loc text="VMware Horizon View Client 3.5":::|
+| :::no-loc text="VMware Horizon View Client 5.4":::|
+| :::no-loc text="voidtools Everything":::|
+| :::no-loc text="voidtools Everything Lite":::|
+| :::no-loc text="VSCodium":::|
+| :::no-loc text="Waterfox Classic":::|
+| :::no-loc text="Western Digital Dashboard":::|
+| :::no-loc text="Wildix Collaboration":::|
+| :::no-loc text="Win10Pcap":::|
+| :::no-loc text="WinDirStat":::|
+| :::no-loc text="Windows 10 Codec Pack":::|
+| :::no-loc text="WinMerge":::|
+| :::no-loc text="WireGuard":::|
+| :::no-loc text="WizTree":::|
+| :::no-loc text="Wrike":::|
+| :::no-loc text="XMind 2020":::|
+| :::no-loc text="XMind 2021":::|
+| :::no-loc text="XMind 2022":::|
+| :::no-loc text="XnSoft XnConvert":::|
+| :::no-loc text="XnSoft XnShell":::|
+| :::no-loc text="XnSoft XnView Extended":::|
+| :::no-loc text="XnSoft XnView Minimal":::|
+| :::no-loc text="XnSoft XnView MP":::|
+| :::no-loc text="XnSoft XnView Standard":::|
+| :::no-loc text="Yubico PIV Tool":::|
+| :::no-loc text="YubiKey Manager CLI":::|
+| :::no-loc text="Zeal":::|
+| :::no-loc text="Zello":::|
+| :::no-loc text="Zivver Office Plugin":::|
+| :::no-loc text="Zoom Player Max":::|
+| :::no-loc text="Zoom Plugin for Skype for Business":::|
+| :::no-loc text="Zoom Plugin for Windows Virtual Desktop Client":::|
+| :::no-loc text="Zorus Archon Agent":::|
+| :::no-loc text="Zscaler Client Connector 3.6":::|
+| :::no-loc text="Zscaler Client Connector 3.9":::|
+| :::no-loc text="Zscaler Client Connector 4.0":::|
+| :::no-loc text="Zscaler Client Connector 4.1":::|
+| :::no-loc text="Zscaler Client Connector 4.3":::|
+| :::no-loc text="Zscaler Client Connector for VDI":::|
+| :::no-loc text="Zulip":::|
+| :::no-loc text="Zulu JDK 10 (STS)":::|
+| :::no-loc text="Zulu JDK 11 (LTS)":::|
+| :::no-loc text="Zulu JDK 12 (STS)":::|
+| :::no-loc text="Zulu JDK 13 (MTS)":::|
+| :::no-loc text="Zulu JDK 15 (MTS)":::|
+| :::no-loc text="Zulu JDK 16 (STS)":::|
+| :::no-loc text="Zulu JDK 17 (LTS)":::|
+| :::no-loc text="Zulu JDK 18 (STS)":::|
+| :::no-loc text="Zulu JDK 20 (STS)":::|
+| :::no-loc text="Zulu JRE 11 (LTS)":::|
+| :::no-loc text="Zulu JRE 12 (STS)":::|
+| :::no-loc text="Zulu JRE 13 (MTS)":::|
+| :::no-loc text="Zulu JRE 15 (MTS)":::|
+| :::no-loc text="Zulu JRE 17 (LTS)":::|
 
 ## Next steps
 

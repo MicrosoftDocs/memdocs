@@ -69,7 +69,7 @@ With policies for iOS software updates, you can:
 ## Configure the update policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Update policies for iOS/iPadOS** > **Create profile**.
+2. Select **Devices** > **Apple updates** > **iOS/iPadOS update policies** > **Create profile**.
 3. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.
 4. On the **Update policy settings** tab, configure the following options:
 
