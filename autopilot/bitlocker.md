@@ -1,5 +1,5 @@
 ---
-title: Setting the BitLocker encryption algorithm for Autopilot devices
+title: Setting the BitLocker encryption algorithm for Windows Autopilot devices
 description: Microsoft Intune provides a comprehensive set of configuration options to manage BitLocker on Windows devices.
 ms.service: windows-client
 ms.subservice: autopilot
@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Setting the BitLocker encryption algorithm for Autopilot devices
+# Setting the BitLocker encryption algorithm for Windows Autopilot devices
 
 BitLocker [automatically encrypts](/windows-hardware/design/device-experiences/oem-bitlocker#bitlocker-automatic-device-encryption) internal drives during the out-of-box experience (OOBE) for devices that support [Modern Standby](/windows-hardware/design/device-experiences/modern-standby) or meet the [Hardware Security Testability Specification (HSTI)](/windows-hardware/test/hlk/testref/hardware-security-testability-specification). By default, BitLocker uses XTS-AES 128-bit used space only for automatic encryption.
 
@@ -26,7 +26,7 @@ With Windows Autopilot, BitLocker encryption settings can be configured to apply
 
 ## Encryption algorithm
 
-BitLocker uses the specified BitLocker encryption algorithm when BitLocker is first enabled. During Autopilot, BitLocker will be enabled after the device setup portion of the [enrollment status page](enrollment-status.md). The following encryption algorithms are available:
+BitLocker uses the specified BitLocker encryption algorithm when BitLocker is first enabled. During Windows Autopilot, BitLocker will be enabled after the device setup portion of the [enrollment status page](enrollment-status.md). The following encryption algorithms are available:
 
 - AES-CBC 128-bit.
 - AES-CBC 256-bit.
@@ -71,13 +71,7 @@ To make sure both the desired BitLocker encryption algorithm and the encryption 
 
         1. For **Choose drive encryption method and cipher strength**, select **Enabled**.
 
-        1. For each of the drive types:
-
-            - Fixed data drives
-            - Operating system drive
-            - Removable data drives
-
-          select the desired encryption method and cipher from the drop-down menu. The default for each type is **XTS-AES 128-bit**.
+        1. For each of the drive types (Fixed data drives, Operating system drive, Removable data drives),select the desired encryption method and cipher from the drop-down menu. The default for each type is **XTS-AES 128-bit**.
 
       - **Encryption type**
 
@@ -101,16 +95,16 @@ To make sure both the desired BitLocker encryption algorithm and the encryption 
         >
         > Make sure that the Windows Autopilot device group selected in this step is a device group and not a user group.
 
-   1. In the **Review + create** page, review the settings to verify they are configured as desired, and then select the **Save** button.
+   1. In the **Review + create** page, review the settings to verify they're configured as desired, and then select the **Save** button.
 
 1. Configure and assign an [Enrollment Status page (ESP)](enrollment-status.md) for the Windows Autopilot device. If an ESP isn't enabled, the BitLocker policy doesn't apply before encryption starts. For more information, see one of the following articles:
 
    - [Windows Autopilot Enrollment Status Page](enrollment-status.md).
-   - [User-driven Microsoft Entra join: Configure and assign the Enrollment Status Page (ESP)](/tutorial/user-driven/azure-ad-join-esp#configure-and-assign-the-enrollment-status-page-esp.md).
-   - [User-driven Microsoft Entra hybrid join: Configure and assign the Enrollment Status Page (ESP)](/tutorial/user-driven/hybrid-azure-ad-join-esp.md).
-   - [Pre-provision Microsoft Entra join: Configure and assign the Enrollment Status Page (ESP)](/tutorial/pre-provisioning/azure-ad-join-esp.md).
-   - [Pre-provision Microsoft Entra hybrid join: Configure and assign the Enrollment Status Page (ESP)](/tutorial/pre-provisioning/hybrid-azure-ad-join-esp.md).
-   - [Self-deploying mode: Configure and assign the Enrollment Status Page (ESP)](/tutorial/self-deploying/self-deploying-esp.md).
+   - [User-driven Microsoft Entra join: Configure and assign the Enrollment Status Page (ESP)](tutorial/user-driven/azure-ad-join-esp#configure-and-assign-the-enrollment-status-page-esp.md).
+   - [User-driven Microsoft Entra hybrid join: Configure and assign the Enrollment Status Page (ESP)](tutorial/user-driven/hybrid-azure-ad-join-esp.md).
+   - [Pre-provision Microsoft Entra join: Configure and assign the Enrollment Status Page (ESP)](tutorial/pre-provisioning/azure-ad-join-esp.md).
+   - [Pre-provision Microsoft Entra hybrid join: Configure and assign the Enrollment Status Page (ESP)](tutorial/pre-provisioning/hybrid-azure-ad-join-esp.md).
+   - [Self-deploying mode: Configure and assign the Enrollment Status Page (ESP)](tutorial/self-deploying/self-deploying-esp.md).
 
 ## Related content
 
