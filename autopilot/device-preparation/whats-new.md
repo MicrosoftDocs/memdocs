@@ -39,6 +39,10 @@ We've introduced a new flow for Windows Autopilot device preparation which can b
 
 With the new mode, admins can make sure their Cloud PCs are secured with required software and scripts before the end user logs in!
 
+> [!NOTE]
+>
+> After release, it might take a few days for new the new Windows 365 Windows Autopilot device preparation feature to appear in the Microsoft Intune console.
+
 ## Diagnostics logs automatically available in Windows Autopilot device preparation deployment status report
 
 Date added: *October 9, 2024*
