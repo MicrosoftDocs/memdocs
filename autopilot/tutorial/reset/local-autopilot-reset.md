@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 04/01/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -38,7 +38,7 @@ To create a configuration profile that sets the **DisableAutomaticReDeploymentCr
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
-1. In the **Devices | Overview** screen, under **Manage devices**, select **Configuration**.
+1. In the **Devices | Overview** screen, expand **Manage devices**, and then select **Configuration**.
 
 1. In the **Devices | Configuration** screen:
 

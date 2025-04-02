@@ -83,9 +83,9 @@ To enable intelligent rollout, you deploy a [settings catalog](../configuration/
 
 ### Likely issue safeguard holds
 
-The Windows Update client policies that you enable, *Allow WUfB Cloud Processing*, is the same setting that enables the Deployment Service to create a *likely issue* safeguard hold for a device. To learn more, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook) in the documentation for Windows Update for Business reports.
+The Windows Update client policies that you enable, *Allow WUfB Cloud Processing*, is the same setting that enables Autopatch to create a *likely issue* safeguard hold for a device. To learn more, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook) in the documentation for Windows Update for Business reports.
 
-As your rollout progresses, the deployment service monitors for unexpected issues. The service uses insights from the Windows ecosystem to create *likely issue* safeguard holds to proactively pause deployments to devices that are likely to encounter an issue. By applying safeguard holds to devices that are likely to have issues with the update, devices and end users are protected from potential productivity affecting issues.
+As your rollout progresses, Autopatch monitors for unexpected issues. The service uses insights from the Windows ecosystem to create *likely issue* safeguard holds to proactively pause deployments to devices that are likely to encounter an issue. By applying safeguard holds to devices that are likely to have issues with the update, devices and end users are protected from potential productivity affecting issues.
 
 To learn more, see [Manage safeguards using Windows Autopatch](/graph/windowsupdates-manage-safeguards) in the Graph API documentation for device updates.
 

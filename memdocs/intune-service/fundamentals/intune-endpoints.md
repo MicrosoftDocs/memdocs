@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/24/2025
+ms.date: 04/01/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -125,13 +125,6 @@ ID |Desc |Category |ER |Addresses |Ports|Notes|
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443|
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443|
 
-### Windows update for Business deployment service
-
-ID |Desc |Category |ER |Addresses |Ports|Notes|
--- |-- |-----|--- | --------------| --------------------------------|------------|
-181 | MEM - Remote Help Feature| Default<BR>Required | False |`devicelistenerprod.microsoft.com`<BR>`devicelistenerprod.eudb.microsoft.com`<BR>`login.windows.net`<BR>`payloadprod*.blob.core.windows.net`<BR> | **TCP:** 443|
-187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443|
-
 ### Intune dependencies
 
 In this section, the following tables list the Intune dependencies and the ports and services that the Intune client accesses.
@@ -208,7 +201,7 @@ ID |Desc |Category |ER |Addresses |Ports|
 
 For more information, go to [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2).
 
-<!-- Older table. Will be removed soon after all the other new tables are finalized. This may take until April 2024
+<!-- Older table. Will be removed soon after all the other new tables are finalized. This table is for reference only
 You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following table is the list of URLs returned, and the service they're tied to. When you run the script, the URL list in the script output can be different then the URLs in the following table. At a minimum, make sure you include the URLs in the following table.
 
 |FQDN    |Associated Service      |
@@ -322,7 +315,7 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 ## Microsoft Store
 
-Managed Windows devices using the Microsoft Store – either to acquire, install, or update apps – need access to these endpoints on tcp ports 80 and 443 through your firewall.
+Managed Windows devices that use the Microsoft Store either to acquire, install, or update apps need access to these endpoints on tcp ports 80 and 443 through your firewall.
 
 **Microsoft Store API (AppInstallManager):**
 
@@ -408,6 +401,7 @@ To find your tenant location navigate to the Intune admin center > **Tenant admi
 ---
 
 ## Windows Autopatch
+
 <a name="windows-update-for-business-deployment-service"></a>
 
 For more information on the required endpoints for Windows Autopatch, see [Windows Autopatch prerequisites](/windows/deployment/windows-autopatch/prepare/windows-autopatch-configure-network#required-microsoft-product-endpoints).
