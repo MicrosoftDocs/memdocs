@@ -185,7 +185,7 @@ Following are the available cmdlets:
 - **Get-DeclaredConfigurationAnalysis**: Retrieves a list of WinDC documents of type MSFTPolicies and checks if the policy is already present in Epm Agent (Processed column).
 - **Get-ElevationRules**: Query the EpmAgent lookup functionality and retrieves rules given lookup and target. Lookup is supported for FileName and CertificatePayload.
 - **Get-ClientSettings**: Process all existing client settings policies to display the effective client settings used by the EPM Agent.
-- **Get-FileAttributes**: Retrieves File Attributes for a .exe file and extracts its Publisher and CA certificates to a set location that can be used to populate Elevation Rule Properties for a particular application.
+- **Get-FileAttributes**: Retrieves File Attributes for an .exe file and extracts its Publisher and CA certificates to a set location that can be used to populate Elevation Rule Properties for a particular application.
 
 For more information about each cmdlet, review the **readme.txt** file from the *EpmTools* folder on the device.
 
