@@ -59,16 +59,16 @@ The following steps are needed to configure and then perform a Windows Autopilot
 >
 > - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 > - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
-> - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
+> - Step 3: [Register devices as Windows Autopilot devices](azure-ad-join-register-device.md)
 > - Step 4: [Create a device group](azure-ad-join-device-group.md)
-> - Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
-> - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
-> - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+> - Step 5: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
+> - Step 6: [Create and assign Windows Autopilot profile](azure-ad-join-autopilot-profile.md)
+> - Step 7: [Assign Windows Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 > - Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
 > [!NOTE]
 >
-> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps might make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step might make more sense in a production environment.
+> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps might make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Windows Autopilot devices** step might make more sense in a production environment.
 
 ## Walkthrough
 

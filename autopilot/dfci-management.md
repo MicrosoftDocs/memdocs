@@ -20,7 +20,7 @@ appliesto:
 
 # Device Firmware Configuration Interface (DFCI) Management
 
-With Windows Autopilot Deployment and Intune, Unified Extensible Firmware Interface (UEFI) settings can be managed after the device is enrolled. UEFI settings can be managed by using the Device Firmware Configuration Interface (DFCI). DFCI [enables Windows to pass management commands](/windows/client-management/mdm/uefi-csp) from Intune to UEFI for Autopilot deployed devices. This capability allows limiting end user's control over BIOS settings. For example, the boot options can be locked down to prevent users from booting up another OS, such as one that doesn't have the same security features.
+With Windows Autopilot Deployment and Intune, Unified Extensible Firmware Interface (UEFI) settings can be managed after the device is enrolled. UEFI settings can be managed by using the Device Firmware Configuration Interface (DFCI). DFCI [enables Windows to pass management commands](/windows/client-management/mdm/uefi-csp) from Intune to UEFI for Windows Autopilot deployed devices. This capability allows limiting end user's control over BIOS settings. For example, the boot options can be locked down to prevent users from booting up another OS, such as one that doesn't have the same security features.
 
 If a user reinstalls a previous Windows version, installs a separate OS, or formats the hard drive, they can't override DFCI management. This feature can also prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI password security. This layer of security blocks local users from accessing managed settings from the device's UEFI menus.
 
@@ -28,10 +28,10 @@ For an overview of DFCI benefits, scenarios, and requirements, see [Device Firmw
 
 > [!IMPORTANT]
 >
-> A device automatically enrolls in DFCI management during Autopilot provisioning when the following actions occur:
+> A device automatically enrolls in DFCI management during Windows Autopilot provisioning when the following actions occur:
 >
 > - The OEM enables the device for DFCI.
-> - The device is registered for Autopilot via the OEM or a Cloud Solution Partner (CSP) in Partner Center.
+> - The device is registered for Windows Autopilot via the OEM or a Cloud Solution Partner (CSP) in Partner Center.
 >
 > Enrollment in DFCI management triggers an additional reboot during the out-of-box experience (OOBE).
 
@@ -60,13 +60,13 @@ See the following figure:
 
 > [!IMPORTANT]
 >
-> Devices manually registered for Autopilot (such as by [importing from a CSV file](enrollment-autopilot.md#add-devices)) aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot. When the device is registered, its serial number is displayed in the list of Windows Autopilot devices.
+> Devices manually registered for Windows Autopilot (such as by [importing from a CSV file](enrollment-autopilot.md#add-devices)) aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot. When the device is registered, its serial number is displayed in the list of Windows Autopilot devices.
 
 ## Managing DFCI profile with Windows Autopilot
 
 There are four basic steps in managing DFCI profile with Windows Autopilot:
 
-1. Create an Autopilot Profile
+1. Create a Windows Autopilot Profile
 1. Create an Enrollment status page profile
 1. Create a DFCI profile
 1. Assign the profiles

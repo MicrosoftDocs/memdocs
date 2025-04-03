@@ -2,10 +2,10 @@
 # required metadata
 
 title: Using Azure Virtual Desktop single-session with Microsoft Intune
-titleSuffix: 
-description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Intune. 
+titleSuffix:
+description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Intune.
 keywords:
-author: Smritib17  
+author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/13/2025
@@ -13,7 +13,7 @@ ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 
+ms.assetid:
 
 # optional metadata
 
@@ -45,7 +45,7 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
   - [Configuration Manager co-management](/configmgr/comanage/overview).
   - [User self-enrollment via Microsoft Entra join](deployment-guide-enrollment-windows.md#byod-user-enrollment).
 - Microsoft Entra joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
-- Under the same tenant as Intune and in the same region. 
+- Under the same tenant as Intune and in the same region.
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
@@ -59,7 +59,7 @@ There are some limitations to keep in mind when managing Windows 10 Enterprise r
 
 ### Enrollment
 
-Cross-regional enrollments aren't supported, for example an Azure Virtual Desktop created in Asia can't be enrolled in a European tenant. 
+Cross-regional enrollments aren't supported, for example an Azure Virtual Desktop created in Asia can't be enrolled in a European tenant.
 
 ### Configuration
 
@@ -84,7 +84,7 @@ Intune doesn't support using a cloned image of a computer that is already enroll
 
 The following Windows 10 desktop device remote actions aren't supported/recommended for Azure Virtual Desktop VMs:
 
-- Autopilot reset
+- Windows Autopilot reset
 - BitLocker key rotation
 - Fresh Start
 - Remote lock

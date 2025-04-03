@@ -3,7 +3,7 @@
 
 title: Plan Education device enrollment
 titleSuffix: Intune for Education
-description: Plan enrollment for Education devices in Intune.  
+description: Plan enrollment for Education devices in Intune.
 keywords:
 author: scottbreenmsft
 ms.author: scbree
@@ -39,24 +39,24 @@ There are three main methods for joining Windows devices to Microsoft Entra ID a
 
 ### Provisioning package overview
 
-A provisioning package (.ppkg) is a file that contains configuration settings, and is used to quickly and efficiently configure Windows client devices without installing a new image. This method ensures that school devices have a standard set of apps and settings when students start using them. For more information, see [Provisioning packages overview](/windows/configuration/provisioning-packages/provisioning-packages).  
+A provisioning package (.ppkg) is a file that contains configuration settings, and is used to quickly and efficiently configure Windows client devices without installing a new image. This method ensures that school devices have a standard set of apps and settings when students start using them. For more information, see [Provisioning packages overview](/windows/configuration/provisioning-packages/provisioning-packages).
 
 > [!TIP]
-> Even if you're using custom OS images to configure the initial apps and settings, you can use provisioning packages or Autopilot for the sole purpose of enrolling devices in Microsoft Intune.  
+> Even if you're using custom OS images to configure the initial apps and settings, you can use provisioning packages or Windows Autopilot for the sole purpose of enrolling devices in Microsoft Intune.
 
 You can use *Windows Configuration Designer* or the *Set up School PCs app* to create provisioning packages. Both tools guide you through how-to to create the package. For more information, see:
 
 - [What is Set up School PCs?](/education/windows/use-set-up-school-pcs-app)
 - [Windows Configuration Designer](/windows/configuration/provisioning-packages/provisioning-install-icd)
-- [Bulk enrollment for Windows devices](/mem/intune-service/enrollment/windows-bulk-enroll)  
+- [Bulk enrollment for Windows devices](/mem/intune-service/enrollment/windows-bulk-enroll)
 
 After you create the provisioning package (PPKG) you can copy it to one or more USB drives, insert them into devices and power them on to start the provisioning process.
 
-Devices continue to sync in the background after provisioning. Track provisioning progress on the Enrollment Status Page to ensure all required mobile device management policies and apps are delivered before student use. See the following table for more best practices.  
+Devices continue to sync in the background after provisioning. Track provisioning progress on the Enrollment Status Page to ensure all required mobile device management policies and apps are delivered before student use. See the following table for more best practices.
 
 |Scenario | Considerations |
 |---------|---------|
-| You need to reuse or troubleshoot a device. | To set up and enroll those devices again, you have to reapply the provisioning package. Alternatively, you can use Windows Autopilot Reset, which retains Microsoft Intune enrollment and reapplies existing provisioning packages to the devices. You don't need to register devices with Autopilot to use Windows Autopilot Reset.|
+| You need to reuse or troubleshoot a device. | To set up and enroll those devices again, you have to reapply the provisioning package. Alternatively, you can use Windows Autopilot Reset, which retains Microsoft Intune enrollment and reapplies existing provisioning packages to the devices. You don't need to register devices with Windows Autopilot to use Windows Autopilot Reset.|
 | You want to bulk enroll devices into Microsoft Intune.| Remember that the bulk enrollment token expires 180 days after you create it. To continue using the same provisioning package, update the token before it expires. After the token expires, you must update the token or create a new provisioning package. |
 |You want to provision more than one device at a time. | Copy the provisioning package to multiple USB flash drives. |
 
@@ -64,24 +64,24 @@ Devices continue to sync in the background after provisioning. Track provisionin
 
 Windows Autopilot is a collection of technologies you can use to simplify the setup and configuration of new school devices. With this method, there's no need for imaging. To set up your devices with Windows Autopilot:
 
-- Register the device with Autopilot in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or [Partner center](https://partner.microsoft.com/dashboard/home).
-- Create and assign an Autopilot deployment profile, Enrollment Status Page (ESP) profile, apps, and policies.
+- Register the device with Windows Autopilot in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or [Partner center](https://partner.microsoft.com/dashboard/home).
+- Create and assign a Windows  Autopilot deployment profile, Enrollment Status Page (ESP) profile, apps, and policies.
 
 #### [Intune](#tab/intune)
 
-For instructions on how to configure Autopilot, see [Windows Autopilot](/autopilot).
+For instructions on how to configure Windows Autopilot, see [Windows Autopilot](/autopilot).
 
 #### [Intune for Education](#tab/intune-for-education)
 
-For instructions on how to configure Autopilot in Intune for Education, see [Windows Autopilot Setup](/intune-education/windows-autopilot-setup).
+For instructions on how to configure Windows Autopilot in Intune for Education, see [Windows Autopilot Setup](/intune-education/windows-autopilot-setup).
 
-See the following table for more best practices.  
+See the following table for more best practices.
 
 |Scenario | Considerations |
 |---------|---------|
 |You want to provision more than one device at a time. | Make sure you have a reliable internet connection at your enrollment site while using Windows Autopilot, especially if you're enrolling more than one device at the same time. |
 |You want to reduce set-up time for students and teachers. | Use Windows Autopilot for pre-provisioning deployments which allows IT admins, Microsoft partners, or an OEM to preinstall apps and policies. For more information, see [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision#prerequisites). |
-| You want to use custom OS images to configure initial apps and settings| Ensure that the device is left in the out-of-box-experience. Alternatively, you can [pre-provision Autopilot devices](/autopilot/pre-provision), which is a similar approach that lets you, a Microsoft partner, or OEM provider preinstall apps and policies.  |
+| You want to use custom OS images to configure initial apps and settings| Ensure that the device is left in the out-of-box-experience. Alternatively, you can [pre-provision Windows Autopilot devices](/autopilot/pre-provision), which is a similar approach that lets you, a Microsoft partner, or OEM provider preinstall apps and policies.  |
 
 ::: zone-end
 
@@ -104,7 +104,7 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 
 **Windows Autopilot** and **provisioning packages** are usually the most efficient Windows enrollment methods for school environments.
 
-The following table provides more information about the features supported by each Windows provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (✔️) means that the provisioning method supports the feature or capability. An **X** (❌) means that the provisioning method doesn't support it.  
+The following table provides more information about the features supported by each Windows provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (✔️) means that the provisioning method supports the feature or capability. An **X** (❌) means that the provisioning method doesn't support it.
 
 | Configuration need | Provisioning package | Windows Autopilot  |
 |---------|---------|---------|
@@ -125,7 +125,7 @@ The following table provides more information about the features supported by ea
 **Automated Device Enrollment** is usually the most efficient iOS enrollment method
 for school environments.
 
-The following table provides more information about the features supported by each iOS provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (✔️) means that the provisioning method supports the feature or capability. An **X** (❌) means that the provisioning method doesn't support it.  
+The following table provides more information about the features supported by each iOS provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (✔️) means that the provisioning method supports the feature or capability. An **X** (❌) means that the provisioning method doesn't support it.
 
 |Configuration need | Company Portal | Automated Device Enrollment | Apple Configurator |
 |---------|---------|---------|---------|

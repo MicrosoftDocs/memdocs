@@ -75,7 +75,7 @@ For more information, see [Cortana voice support](/windows-hardware/customize/de
 
 ### BitLocker encryption
 
-With Windows Autopilot, BitLocker encryption settings can be configured to apply before automatic encryption is started. For more information, see [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
+With Windows Autopilot, BitLocker encryption settings can be configured to apply before automatic encryption is started. For more information, see [Setting the BitLocker encryption algorithm for Windows Autopilot devices](bitlocker.md).
 
 ## Related content
 

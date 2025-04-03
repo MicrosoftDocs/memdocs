@@ -18,24 +18,24 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Self-deploying mode: Create and assign self-deploying Autopilot profile
+# Self-deploying mode: Create and assign self-deploying Windows Autopilot profile
 
 Autopilot self-deploying mode steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](self-deploying-automatic-enrollment.md)
-- Step 2: [Register devices as Autopilot devices](self-deploying-register-device.md)
+- Step 2: [Register devices as Windows Autopilot devices](self-deploying-register-device.md)
 - Step 3: [Create a device group](self-deploying-device-group.md)
-- Step 4: [Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
+- Step 4: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
 
 > [!div class="checklist"]
 >
-> - **Step 5: Create and assign Autopilot profile**
+> - **Step 5: Create and assign Windows Autopilot profile**
 
 - Step 6: [Deploy the device](self-deploying-deploy-device.md)
 
 For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md#workflow).
 
-## Create and assign self-deploying Autopilot profile
+## Create and assign self-deploying Windows Autopilot profile
 
 The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 

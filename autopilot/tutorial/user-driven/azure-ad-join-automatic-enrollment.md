@@ -26,11 +26,11 @@ Autopilot user-driven Microsoft Entra join steps:
 > - **Step 1: Set up Windows automatic Intune enrollment**
 
 - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
-- Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
+- Step 3: [Register devices as Windows Autopilot devices](azure-ad-join-register-device.md)
 - Step 4: [Create a device group](azure-ad-join-device-group.md)
-- Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
-- Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
-- Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+- Step 5: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
+- Step 6: [Create and assign Windows Autopilot profile](azure-ad-join-autopilot-profile.md)
+- Step 7: [Assign Windows Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 - Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
 For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow).

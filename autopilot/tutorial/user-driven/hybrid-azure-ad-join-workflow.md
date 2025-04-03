@@ -66,17 +66,17 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 > - Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
 > - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
-> - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
+> - Step 4: [Register devices as Windows Autopilot devices](hybrid-azure-ad-join-register-device.md)
 > - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
-> - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
-> - Step 7: [Create and assign Microsoft Entra hybrid join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
+> - Step 6: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
+> - Step 7: [Create and assign Microsoft Entra hybrid join Windows Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 > - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
-> - Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
+> - Step 9: [Assign Windows Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 > - Step 10: [Deploy the device](hybrid-azure-ad-join-deploy-device.md)
 
 > [!NOTE]
 >
-> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps might make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step might make more sense in a production environment.
+> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps might make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Windows Autopilot devices** step might make more sense in a production environment.
 
 ## Walkthrough
 

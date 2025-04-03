@@ -18,26 +18,26 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# User-driven Microsoft Entra join: Create and assign user-driven Microsoft Entra join Autopilot profile
+# User-driven Microsoft Entra join: Create and assign user-driven Microsoft Entra join Windows Autopilot profile
 
 Autopilot user-driven Microsoft Entra join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
-- Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
+- Step 3: [Register devices as Windows Autopilot devices](azure-ad-join-register-device.md)
 - Step 4: [Create a device group](azure-ad-join-device-group.md)
-- Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
+- Step 5: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
 
 > [!div class="checklist"]
 >
-> - **Step 6: Create and assign Autopilot profile**
+> - **Step 6: Create and assign Windows Autopilot profile**
 
-- Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+- Step 7: [Assign Windows Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 - Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
 For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow).
 
-## Create and assign user-driven Microsoft Entra join Autopilot profile
+## Create and assign user-driven Microsoft Entra join Windows Autopilot profile
 
 The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 
@@ -98,10 +98,10 @@ To create a user-driven Microsoft Entra join Autopilot profile, follow these ste
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
 
-## Next step: Assign Autopilot device to a user (optional)
+## Next step: Assign Windows Autopilot device to a user (optional)
 
 > [!div class="nextstepaction"]
-> [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+> [Step 7: Assign Windows Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
 If a user isn't being assigned to the device, then skip to **[Step 8: Deploy the device](azure-ad-join-deploy-device.md)**.
 

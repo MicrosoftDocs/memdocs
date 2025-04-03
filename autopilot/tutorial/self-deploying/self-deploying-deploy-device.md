@@ -23,10 +23,10 @@ appliesto:
 Autopilot self-deploying mode steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](self-deploying-automatic-enrollment.md)
-- Step 2: [Register devices as Autopilot devices](self-deploying-register-device.md)
+- Step 2: [Register devices as Windows Autopilot devices](self-deploying-register-device.md)
 - Step 3: [Create a device group](self-deploying-device-group.md)
-- Step 4: [Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
-- Step 5: [Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
+- Step 4: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
+- Step 5: [Create and assign Windows Autopilot profile](self-deploying-autopilot-profile.md)
 
 > [!div class="checklist"]
 >
@@ -70,6 +70,6 @@ To start the Windows Autopilot deployment process on the device, acquire a devic
 
   However, for testing purposes, assigning at least one policy and at least one application to users is still recommended.
 
-- Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](self-deploying-autopilot-profile.md) step, the **Keyboard** screen might appear at the start of the deployment.
+- Depending on how the Autopilot profile was configured at the [Create and assign Windows Autopilot profile](self-deploying-autopilot-profile.md) step, the **Keyboard** screen might appear at the start of the deployment.
 
 [!INCLUDE [Tips ESP progress](../includes/tips-esp-progress.md)]

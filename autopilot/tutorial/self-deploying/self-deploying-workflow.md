@@ -54,15 +54,15 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > [!div class="checklist"]
 >
 > - Step 1: [Set up Windows automatic Intune enrollment](self-deploying-automatic-enrollment.md)
-> - Step 2: [Register devices as Autopilot devices](self-deploying-register-device.md)
+> - Step 2: [Register devices as Windows Autopilot devices](self-deploying-register-device.md)
 > - Step 3: [Create a device group](self-deploying-device-group.md)
-> - Step 4: [Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
-> - Step 5: [Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
+> - Step 4: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
+> - Step 5: [Create and assign Windows Autopilot profile](self-deploying-autopilot-profile.md)
 > - Step 6: [Deploy the device](self-deploying-deploy-device.md)
 
 > [!NOTE]
 >
-> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps might make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step might make more sense in a production environment.
+> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps might make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Windows Autopilot devices** step might make more sense in a production environment.
 
 ## Walkthrough
 
