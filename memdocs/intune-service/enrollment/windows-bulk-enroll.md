@@ -54,7 +54,7 @@ For more information about these roles, see [Microsoft Entra built-in roles](/en
 - Devices must be running Windows 11 or Windows 10 Creator update (build 1709) or later.   
 - Enable [Windows automatic enrollment](windows-enroll.md#enable-windows-automatic-enrollment).  
 
-Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (AppID 00000014-0000-0000-c000-000000000000) is present in your Microsoft Entra tenant. In a command line, use the `Get-AzureADServicePrincipal` command to check for the [service principal](/entra/identity-platform/developer-glossary#service-principal-object). Without the service principal, Windows Configuration Designer can't retrieve the bulk enrollment token, which results in an error. 
+Additionally, ensure that the service principal for Microsoft.Azure.SyncFabric (AppID 00000014-0000-0000-c000-000000000000) is present in your Microsoft Entra tenant. In a command line, use the `Get-MgServicePrincipal -Filter "AppId eq '00000014-0000-0000-c000-000000000000'"` command to check for the [service principal](/entra/identity-platform/developer-glossary#service-principal-object). Without the service principal, Windows Configuration Designer can't retrieve the bulk enrollment token, which results in an error. To register the service principal, use the `New-MgServicePrincipal -AppId "00000014-0000-0000-c000-000000000000"` command.
 
 ## Create a provisioning package
 
