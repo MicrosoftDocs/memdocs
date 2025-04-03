@@ -44,7 +44,7 @@ In addition to [Windows Autopilot requirements](requirements.md), Windows Autopi
 - A currently supported version of Windows.
 - Windows Pro, Enterprise, or Education editions.
 - An Intune subscription.
-- Physical devices that support Trusted Platform Module (TPM) 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Windows Autopilot self-Deploying mode and Windows Autopilot pre-provisioning in [Networking requirements](requirements.md?tabs=networking#windows-autopilot-self-deploying-mode-and-autopilot-pre-provisioning).
+- Physical devices that support Trusted Platform Module (TPM) 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Windows Autopilot self-Deploying mode and Windows Autopilot pre-provisioning in [Networking requirements](requirements.md?tabs=networking#windows-autopilot-self-deploying-mode-and-windows-autopilot-pre-provisioning).
 - Network connectivity. Using wireless connectivity requires selecting region, language and keyboard before being able to connect and start provisioning.
 - An enrollment status page (ESP) profile must be targeted to the device.
 
