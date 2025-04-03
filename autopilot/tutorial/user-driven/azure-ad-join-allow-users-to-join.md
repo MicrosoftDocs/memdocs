@@ -20,7 +20,7 @@ appliesto:
 
 # User-driven Microsoft Entra join: Allow users to join devices to Microsoft Entra ID
 
-Autopilot user-driven Microsoft Entra join steps:
+Windows Autopilot user-driven Microsoft Entra join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 

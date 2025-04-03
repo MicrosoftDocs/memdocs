@@ -21,7 +21,7 @@ appliesto:
 
 # User-driven Microsoft Entra hybrid join: Deploy the device
 
-Autopilot user-driven Microsoft Entra hybrid join steps:
+Windows Autopilot user-driven Microsoft Entra hybrid join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
@@ -41,17 +41,17 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 ## Deploy the device
 
-Once all of the configurations for the Windows Autopilot user-driven Microsoft Entra hybrid join deployment are completed in Intune and in Microsoft Entra ID, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
+Once all of the configurations for the Windows Autopilot user-driven Microsoft Entra hybrid join deployment are completed in Intune and in Microsoft Entra ID, the next step is to start the Windows Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Windows Autopilot deployment to a device group that the device is a member of.
 
 > [!IMPORTANT]
 >
 > The Microsoft Entra hybrid join process requires connectivity to both the Internet and a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as a VPN that has connectivity to a domain controller is required.
 
-To start the Autopilot deployment process on the device, acquire a device that is part of the device group created in the previous [Create a device group](hybrid-azure-ad-join-device-group.md) step. Once the device is acquired, follow these steps:
+To start the Windows Autopilot deployment process on the device, acquire a device that is part of the device group created in the previous [Create a device group](hybrid-azure-ad-join-device-group.md) step. Once the device is acquired, follow these steps:
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-4. Once the Autopilot process begins, the Microsoft Entra sign-in page appears. At the Microsoft Entra sign-in page, if a user was assigned to the device, their username might be pre-populated in this screen. Enter the Microsoft Entra credentials for the user.
+4. Once the Windows Autopilot process begins, the Microsoft Entra sign-in page appears. At the Microsoft Entra sign-in page, if a user was assigned to the device, their username might be pre-populated in this screen. Enter the Microsoft Entra credentials for the user.
 
    If on-premises domain end-user credentials are different from Microsoft Entra end-user credentials, make sure that **Microsoft Entra end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
 
@@ -89,7 +89,7 @@ To start the Autopilot deployment process on the device, acquire a device that i
 
       > [!NOTE]
       >
-      > Under certain circumstances, the Microsoft Entra sign-in and subsequent pages might not appear and the end-user might be automatically signed into Microsoft Entra ID. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Microsoft Entra ID, then the Autopilot deployment will proceed on to the next step automatically.
+      > Under certain circumstances, the Microsoft Entra sign-in and subsequent pages might not appear and the end-user might be automatically signed into Microsoft Entra ID. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Microsoft Entra ID, then the Windows Autopilot deployment will proceed on to the next step automatically.
 
 9. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign-on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
 

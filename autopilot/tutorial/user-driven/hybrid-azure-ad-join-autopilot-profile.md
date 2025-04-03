@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Microsoft Entra hybrid join - Step 7 of 10 - Create and assign user-driven Microsoft Entra hybrid join Autopilot profile
-description: How to - Windows Autopilot user-driven Microsoft Entra hybrid join - Step 7 of 10 - Create and assign user-driven Microsoft Entra hybrid join Autopilot profile.
+title: Windows Autopilot user-driven Microsoft Entra hybrid join - Step 7 of 10 - Create and assign user-driven Microsoft Entra hybrid join Windows Autopilot profile
+description: How to - Windows Autopilot user-driven Microsoft Entra hybrid join - Step 7 of 10 - Create and assign user-driven Microsoft Entra hybrid join Windows Autopilot profile.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -20,7 +20,7 @@ appliesto:
 
 # User-driven Microsoft Entra hybrid join: Create and assign user-driven Microsoft Entra hybrid join Windows Autopilot profile
 
-Autopilot user-driven Microsoft Entra hybrid join steps:
+Windows Autopilot user-driven Microsoft Entra hybrid join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
@@ -41,17 +41,17 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 ## Create and assign user-driven Microsoft Entra hybrid join Windows Autopilot profile
 
-The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
+The Windows Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 
-When an admin creates an Autopilot profile for the user-driven scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
+When an admin creates a Windows Autopilot profile for the user-driven scenario, devices with this Windows Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
-The difference between a Microsoft Entra join and a Microsoft Entra hybrid join is that the Microsoft Entra hybrid join scenario joins both an on-premises domain and Microsoft Entra ID during Autopilot. The user-driven Microsoft Entra join scenario only joins Microsoft Entra ID during Autopilot.
+The difference between a Microsoft Entra join and a Microsoft Entra hybrid join is that the Microsoft Entra hybrid join scenario joins both an on-premises domain and Microsoft Entra ID during Windows Autopilot. The user-driven Microsoft Entra join scenario only joins Microsoft Entra ID during Windows Autopilot.
 
 > [!TIP]
 >
-> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot doesn't use unattend.xml files.
+> For Configuration Manager admins, the Windows Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Windows Autopilot doesn't use unattend.xml files.
 
-To create a user-driven Microsoft Entra hybrid join Autopilot profile, follow these steps:
+To create a user-driven Microsoft Entra hybrid join Windows Autopilot profile, follow these steps:
 
 [!INCLUDE [Windows Autopilot profiles before steps](../includes/autopilot-profile-steps-before.md)]
 
@@ -89,28 +89,28 @@ To create a user-driven Microsoft Entra hybrid join Autopilot profile, follow th
 
       > [!NOTE]
       >
-      > If the language/region and keyboard screens are set to hidden, they might still be displayed if there's no network connectivity at the start of the Windows Autopilot deployment. When there's no network connectivity at the start of the deployment, the Windows Autopilot profile, where the settings to hide these screens is defined, hasn't downloaded yet. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
+      > If the language/region and keyboard screens are set to hidden, they might still be displayed if there's no network connectivity at the start of the Windows Autopilot deployment. When there's no network connectivity at the start of the deployment, the Windows Autopilot profile, where the settings to hide these screens is defined, hasn't downloaded yet. Once network connectivity is established, the Windows Autopilot profile is downloaded and any additional screen settings should work as expected.
 
-[!INCLUDE [Autopilot profiles after steps](../includes/autopilot-profile-steps-after.md)]
+[!INCLUDE [Windows Autopilot profiles after steps](../includes/autopilot-profile-steps-after.md)]
 
-## Verify device has an Autopilot profile assigned to it
+## Verify device has a Windows Autopilot profile assigned to it
 
-[!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
+[!INCLUDE [How to verify a device has a Windows Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
 
 ## Off-premises/Internet scenarios and VPN connectivity
 
-Windows Autopilot user-driven Microsoft Entra hybrid join supports off-premises/Internet scenarios where direct connectivity to Active directory and domain controllers isn't available. However, an off-premises/Internet scenario doesn't eliminate the need for connectivity to Active Directory and a domain controller during the domain join. In an off-premises/Internet scenario, connectivity to Active Directory and a domain controller can be established via a VPN connection during the Autopilot process.
+Windows Autopilot user-driven Microsoft Entra hybrid join supports off-premises/Internet scenarios where direct connectivity to Active directory and domain controllers isn't available. However, an off-premises/Internet scenario doesn't eliminate the need for connectivity to Active Directory and a domain controller during the domain join. In an off-premises/Internet scenario, connectivity to Active Directory and a domain controller can be established via a VPN connection during the Windows Autopilot process.
 
-For off-premises/Internet scenarios requiring VPN connectivity, the only change in the Autopilot profile would be in the setting **Skip AD connectivity check**. In the [Create and assign user-driven Microsoft Entra hybrid join Autopilot profile](#create-and-assign-user-driven-microsoft-entra-hybrid-join-windows-autopilot-profile) section, the **Skip AD connectivity check** setting should be set to **Yes** instead of to **No**. Setting this option to **Yes** prevents the deployment from failing since there's no direct connectivity to Active Directory and domain controllers until the VPN connection is established.
+For off-premises/Internet scenarios requiring VPN connectivity, the only change in the Windows Autopilot profile would be in the setting **Skip AD connectivity check**. In the [Create and assign user-driven Microsoft Entra hybrid join Windows Autopilot profile](#create-and-assign-user-driven-microsoft-entra-hybrid-join-windows-autopilot-profile) section, the **Skip AD connectivity check** setting should be set to **Yes** instead of to **No**. Setting this option to **Yes** prevents the deployment from failing since there's no direct connectivity to Active Directory and domain controllers until the VPN connection is established.
 
-In addition to changing the **Skip AD connectivity check** setting to **Yes** in the Autopilot profile, VPN support also relies on the following requirements:
+In addition to changing the **Skip AD connectivity check** setting to **Yes** in the Windows Autopilot profile, VPN support also relies on the following requirements:
 
 - The VPN solution can be deployed and installed with Intune.
 - The VPN solution needs to support one of the following options:
   - Lets the user manually establish a VPN connection from the Windows sign-in screen.
   - Automatically establishes a VPN connection as needed.
 
-The VPN solution would need to be installed and configured via Intune during the Autopilot process. Configuration would need to include deploying any required device certificates if needed by the VPN solution. Once the VPN solution is installed and configured on the device, the VPN connection can be established, either automatically or manually by the user, at which point the domain join can occur. For more information and support on VPN solutions during Windows Autopilot, consult the respective VPN vendor.
+The VPN solution would need to be installed and configured via Intune during the Windows Autopilot process. Configuration would need to include deploying any required device certificates if needed by the VPN solution. Once the VPN solution is installed and configured on the device, the VPN connection can be established, either automatically or manually by the user, at which point the domain join can occur. For more information and support on VPN solutions during Windows Autopilot, consult the respective VPN vendor.
 
 > [!NOTE]
 >
@@ -126,6 +126,6 @@ The VPN solution would need to be installed and configured via Intune during the
 
 ## Related content
 
-[!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]
+[!INCLUDE [More information Windows Autopilot profile](../includes/more-info-autopilot-profile.md)]
 - [User-driven mode for Microsoft Entra hybrid join with VPN support](../../user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join-with-vpn-support).
 - [VPNs](../../windows-autopilot-hybrid.md#vpns).

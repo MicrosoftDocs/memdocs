@@ -22,11 +22,11 @@ appliesto:
 
 > [!IMPORTANT]
 >
-> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Windows Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
 This step by step tutorial guides through using Intune to perform a Windows Autopilot for pre-provisioned deployment scenario when the devices are also joined to an on-premises domain, also known as Microsoft Entra hybrid join.
 
-The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot for pre-provisioned deployment Microsoft Entra hybrid join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
+The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
 Before beginning, refer to the [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to make sure all requirements are met for joining on-premises AD devices to Microsoft Entra ID.
 
@@ -36,7 +36,7 @@ Before beginning, refer to the [Plan your Microsoft Entra hybrid join implementa
 
 ## Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview
 
-Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join is an Autopilot solution that automates the configuration of Windows on a new device. The device is normally delivered directly from one of the following sources to the end user:
+Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join is a Windows Autopilot solution that automates the configuration of Windows on a new device. The device is normally delivered directly from one of the following sources to the end user:
 
 - IT department.
 - OEM.
@@ -65,13 +65,13 @@ Windows Autopilot for pre-provisioned deployment consists of two phases:
 - Device ESP phase: Windows is configured and applications and policies assigned to the device are applied.
 - User ESP phase: End-user signs into the device for the first time using on-premises domain credentials and applications and policies assigned to the user are applied.
 
-Once the Windows Autopilot for pre-provisioned deployment is complete, the device is ready for the end-user to use. The Autopilot deployment prompts the end-user to sign out of the device. Once the device is signed out, the end-user can sign back in with their on-premises domain credentials and begin to use the device.
+Once the Windows Autopilot for pre-provisioned deployment is complete, the device is ready for the end-user to use. The Windows Autopilot deployment prompts the end-user to sign out of the device. Once the device is signed out, the end-user can sign back in with their on-premises domain credentials and begin to use the device.
 
 ## Differences between Windows Autopilot user-driven deployment and Windows Autopilot for pre-provisioned deployment
 
 The main difference between Windows Autopilot user-driven deployment and Windows Autopilot for pre-provisioned deployment is:
 
-- Windows Autopilot user-driven deployment: Both the Device ESP phase and the User ESP phase occur when the end-user goes through the Autopilot deployment after turning on the device for the first time.
+- Windows Autopilot user-driven deployment: Both the Device ESP phase and the User ESP phase occur when the end-user goes through the Windows Autopilot deployment after turning on the device for the first time.
 
 - Windows Autopilot for pre-provisioned deployment: Device ESP phase and user ESP phase are split and occur at two different points in time.
 

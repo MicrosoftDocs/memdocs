@@ -16,7 +16,7 @@ pre-provisioning/hybrid-azure-ad-join-technician-flow.md
 
 Headings are driven by article context. -->
 
-Once all of the configurations for Windows Autopilot for pre-provisioned deployment are completed in Intune and in Microsoft Entra ID, the next step is to start the Windows Autopilot deployment process on the device. For Windows Autopilot for pre-provisioned deployment, the Autopilot process is split into two different phases that run at two different points in time by two different sets of individuals:
+Once all of the configurations for Windows Autopilot for pre-provisioned deployment are completed in Intune and in Microsoft Entra ID, the next step is to start the Windows Autopilot deployment process on the device. For Windows Autopilot for pre-provisioned deployment, the Windows Autopilot process is split into two different phases that run at two different points in time by two different sets of individuals:
 
 - The first phase is known as the **technician flow** and is normally run by the IT department, OEM, or reseller.
 - The second phase is known as the **user flow** and is normally run by the end-user.

@@ -20,7 +20,7 @@ appliesto:
 
 # User-driven Microsoft Entra hybrid join: Create and assign a domain join profile
 
-Autopilot user-driven Microsoft Entra hybrid join steps:
+Windows Autopilot user-driven Microsoft Entra hybrid join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
@@ -41,7 +41,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 > [!NOTE]
 >
-> If a domain join profile is already created with the desired settings and assignments, move on to the [Next step: Assign Windows Autopilot device to a user (optional)](#next-step-assign-autopilot-device-to-a-user-optional) section.
+> If a domain join profile is already created with the desired settings and assignments, move on to the [Next step: Assign Windows Autopilot device to a user (optional)](#next-step-assign-windows-autopilot-device-to-a-user-optional) section.
 
 ## Create and assign a domain join profile
 

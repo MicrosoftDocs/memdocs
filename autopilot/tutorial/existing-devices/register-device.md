@@ -40,7 +40,7 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Register device for Windows Autopilot
 
-Running the Windows Autopilot for existing devices task sequence and the Windows Autopilot deployment on a device doesn't automatically register the device for Windows Autopilot. The Windows Autopilot profile JSON makes the Windows Autopilot deployment available to the device and allows the device to run that particular Windows Autopilot deployment, but it doesn't register the device for Windows Autopilot. If the device ever undergoes a reset, when it runs Windows Setup and the out-of-box experience (OOBE) for the first time after the reset, it won't run the Windows Autopilot deployment again even though it has previously run an Windows Autopilot deployment.
+Running the Windows Autopilot for existing devices task sequence and the Windows Autopilot deployment on a device doesn't automatically register the device for Windows Autopilot. The Windows Autopilot profile JSON makes the Windows Autopilot deployment available to the device and allows the device to run that particular Windows Autopilot deployment, but it doesn't register the device for Windows Autopilot. If the device ever undergoes a reset, when it runs Windows Setup and the out-of-box experience (OOBE) for the first time after the reset, it won't run the Windows Autopilot deployment again even though it has previously run a Windows Autopilot deployment.
 
 To ensure that the device can run a Windows Autopilot deployment after a reset, the device must be registered for Windows Autopilot. The device can be registered as a Windows Autopilot device by using one of the following methods:
 

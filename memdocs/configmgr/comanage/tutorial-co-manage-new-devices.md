@@ -47,7 +47,7 @@ In this tutorial, you will:
 - Microsoft Intune subscription, with Intune configured to [auto-enroll devices](tutorial-co-manage-clients.md#configure-auto-enrollment-of-devices-to-intune).
 
   > [!TIP]
-  > An Enterprise Mobility + Security subscription [free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial) includes both Microsoft Entra ID P1 or P2 and Microsoft Intune.
+  > An Enterprise Mobility + Security subscription free trial includes both Microsoft Entra ID P1 or P2 and Microsoft Intune.
   >
   > You no longer need to purchase and assign individual Intune or Enterprise Mobility + Security licenses to your users. For more information, see [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-the-microsoft-intune-family-of-products-).
 

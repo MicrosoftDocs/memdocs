@@ -20,7 +20,7 @@ appliesto:
 
 # Self-deploying mode: Register devices as Windows Autopilot devices
 
-Autopilot self-deploying mode steps:
+Windows Autopilot self-deploying mode steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](self-deploying-automatic-enrollment.md)
 
@@ -41,7 +41,7 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 ## Register devices as Windows Autopilot devices
 
-[!INCLUDE [How to register a device as an Autopilot device in Intune](../includes/register-autopilot-device.md)]
+[!INCLUDE [How to register a device as a Windows Autopilot device in Intune](../includes/register-autopilot-device.md)]
 
 ## Next step: Create a device group
 
@@ -50,4 +50,4 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 ## Related content
 
-[!INCLUDE [More information register Autopilot device](../includes/more-info-register-device.md)]
+[!INCLUDE [More information register Windows Autopilot device](../includes/more-info-register-device.md)]

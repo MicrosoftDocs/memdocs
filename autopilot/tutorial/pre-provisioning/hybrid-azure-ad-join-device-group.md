@@ -42,7 +42,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 > [!NOTE]
 >
-> If device groups are already created, skip this step and move on to [Step 6: Configure and assign Windows Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md). However, if deploying multiple different Autopilot scenarios to different devices, separate device groups are required for each Autopilot scenario.
+> If device groups are already created, skip this step and move on to [Step 6: Configure and assign Windows Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md). However, if deploying multiple different Windows Autopilot scenarios to different devices, separate device groups are required for each Windows Autopilot scenario.
 
 ## Create a device group
 

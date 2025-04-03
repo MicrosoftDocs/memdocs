@@ -20,7 +20,7 @@ appliesto:
 
 # Self-deploying mode: Set up Windows automatic Intune enrollment
 
-Autopilot self-deploying mode steps:
+Windows  self-deploying mode steps:
 
 > [!div class="checklist"]
 >

@@ -20,7 +20,7 @@ appliesto:
 
 # User-driven Microsoft Entra join: Assign Windows Autopilot device to a user (optional)
 
-Autopilot user-driven Microsoft Entra join steps:
+Windows Autopilot user-driven Microsoft Entra join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
@@ -39,11 +39,11 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 ## Assign Windows Autopilot device to a user (optional)
 
-[!INCLUDE [How to assign an Autopilot device to a user](../includes/assign-autopilot-device-to-user.md)]
+[!INCLUDE [How to assign a Windows Autopilot device to a user](../includes/assign-autopilot-device-to-user.md)]
 
-## Assigning Autopilot device to a user via hardware hash CSV file
+## Assigning Windows Autopilot device to a user via hardware hash CSV file
 
-[!INCLUDE [How to assign an Autopilot device to a user via hardware hash CSV file](../includes/assign-autopilot-device-to-user-via-csv.md)]
+[!INCLUDE [How to assign a Windows Autopilot device to a user via hardware hash CSV file](../includes/assign-autopilot-device-to-user-via-csv.md)]
 
 ## Next step: Deploy the device
 
@@ -52,6 +52,6 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra join workfl
 
 ## Related content
 
-For more information on assigning a user to an Autopilot device, see the following article:
+For more information on assigning a user to a Windows Autopilot device, see the following article:
 
-- [Assign a user to a specific Autopilot device](../../enrollment-autopilot.md#assign-a-user-to-a-specific-windows-autopilot-device).
+- [Assign a user to a specific Windows Autopilot device](../../enrollment-autopilot.md#assign-a-user-to-a-specific-windows-autopilot-device).

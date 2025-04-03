@@ -388,4 +388,4 @@ Completely removing a device from a tenant requires the device records in Intune
 
 ## Related content
 
-- [Create device groups](enrollment-autopilot.md) to apply Autopilot deployment profiles.
+- [Create device groups](enrollment-autopilot.md) to apply Windows Autopilot deployment profiles.

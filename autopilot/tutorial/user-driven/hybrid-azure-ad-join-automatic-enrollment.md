@@ -20,7 +20,7 @@ appliesto:
 
 # User-driven Microsoft Entra hybrid join: Set up Windows automatic Intune enrollment
 
-Autopilot user-driven Microsoft Entra hybrid join steps:
+Windows Autopilot user-driven Microsoft Entra hybrid join steps:
 > [!div class="checklist"]
 >
 > - **Step 1: Set up Windows automatic Intune enrollment**

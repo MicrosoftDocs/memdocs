@@ -203,7 +203,7 @@ Some of these services also need to check certificate revocation lists (CRLs) fo
 
 The device can be Microsoft Entra hybrid joined. The computer should be on the internal network for Microsoft Entra hybrid join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-microsoft-entra-hybrid-join).
 
-##### Windows Autopilot self-deploying mode and Autopilot pre-provisioning
+##### Windows Autopilot self-deploying mode and Windows Autopilot pre-provisioning
 
 The TPM attestation process requires access to a set of HTTPS URLs, which are unique for each TPM provider. Ensure access to this URL pattern: `*.microsoftaik.azure.net`.
 

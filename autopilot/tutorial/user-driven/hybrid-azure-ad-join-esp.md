@@ -20,7 +20,7 @@ appliesto:
 
 # User-driven Microsoft Entra hybrid join: Configure and assign the Enrollment Status Page (ESP)
 
-Autopilot user-driven Microsoft Entra hybrid join steps:
+Windows Autopilot user-driven Microsoft Entra hybrid join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
@@ -47,7 +47,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 [!INCLUDE [How to configure and assign an Enrollment Status Page (ESP) in Intune](../includes/configure-and-assign-esp.md)]
 
-## Next step: Create and assign user-driven Microsoft Entra hybrid join Autopilot profile
+## Next step: Create and assign user-driven Microsoft Entra hybrid join Windows Autopilot profile
 
 > [!div class="nextstepaction"]
 > [Step 7: Create and assign Microsoft Entra hybrid join Windows Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)

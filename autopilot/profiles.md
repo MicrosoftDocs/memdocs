@@ -193,11 +193,11 @@ If a group is assigned to multiple Windows Autopilot profiles, the device would 
 
 1. When the Windows Autopilot deployment profile screen opens, the date the Windows Autopilot deployment profile was created is displayed under **Essentials** and next to **Created**.
 
-## Autopilot deployments report
+## Windows Autopilot deployments report
 
 Details on each device deployed through Windows Autopilot can be seen through a report. To see the report, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Windows Autopilot deployment status**. The data is available for 30 days after deployment.
 
-This report is in preview. Only new Intune enrollment events trigger device deployment records. Deployments that don't trigger a new Intune enrollment don't appear in this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot pre-provisioning.
+This report is in preview. Only new Intune enrollment events trigger device deployment records. Deployments that don't trigger a new Intune enrollment don't appear in this report. This case includes any kind of reset that maintains enrollment and the user portion of Windows Autopilot pre-provisioning.
 
 ## Windows Autopilot profile tutorials
 

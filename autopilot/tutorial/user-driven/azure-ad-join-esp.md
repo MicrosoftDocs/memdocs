@@ -20,7 +20,7 @@ appliesto:
 
 # User-driven Microsoft Entra join: Configure and assign the Enrollment Status Page (ESP)
 
-Autopilot user-driven Microsoft Entra join steps:
+Windows Autopilot user-driven Microsoft Entra join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)

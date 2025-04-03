@@ -188,7 +188,7 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. In the Create Package and Program Wizard, enter the following details for the package:
 
-    - *Name*: **Autopilot for existing devices config**
+    - *Name*: **Windows Autopilot for existing devices config**
     - Select **This package contains source files**
     - *Source folder*: Specify the UNC network path that contains the `AutopilotConfigurationFile.json` file
 
@@ -210,7 +210,7 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. In the Create Device Collection Wizard, enter the following **General** details:
 
-    - *Name*: **Autopilot for existing devices collection**
+    - *Name*: **Windows Autopilot for existing devices collection**
     - *Comment*: Add an optional comment to further describe the collection
     - *Limiting collection*: **All Systems** or if desired, an alternate collection.
 
@@ -238,7 +238,7 @@ For more information, see [How to create collections in Configuration Manager](/
 
 1. In the **Task sequence information** page, specify the following information:
 
-    - A name for the task sequence. For example, **Autopilot for existing devices**.
+    - A name for the task sequence. For example, **Windows Autopilot for existing devices**.
     - Optionally add a description to better describe the task sequence.
     - Select a boot image. For more information on supported boot image versions, see [Support for the Windows ADK in Configuration Manager](/mem/configmgr/core/plan-design/configs/support-for-windows-adk).
 
@@ -294,7 +294,7 @@ To make sure the user's data is backed up before the Windows upgrade, use OneDri
 
 Next distribute all content required for the task sequence to distribution points.
 
-1. Select the **Autopilot for existing devices** task sequence, and in the ribbon select **Distribute Content**.
+1. Select the **Windows Autopilot for existing devices** task sequence, and in the ribbon select **Distribute Content**.
 
 1. On the **Specify the content destination** page, select **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
 
@@ -306,15 +306,15 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
 ## Deploy the Windows Autopilot task sequence
 
-1. Select the **Autopilot for existing devices** task sequence, and in the ribbon select **Deploy**.
+1. Select the **Windows Autopilot for existing devices** task sequence, and in the ribbon select **Deploy**.
 
 1. In the Deploy Software Wizard, specify the following details:
 
     - **General**
 
-      - *Task Sequence*: **Autopilot for existing devices**
+      - *Task Sequence*: **Windows Autopilot for existing devices**
 
-      - *Collection*: **Autopilot for existing devices collection**
+      - *Collection*: **Windows Autopilot for existing devices collection**
 
     - **Deployment Settings**
 
@@ -346,7 +346,7 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
 1. On the target Windows device, go to the **Start** menu, enter `Software Center`, and open it.
 
-1. In the Software Library, under **Operating Systems**, select **Autopilot for existing devices**, and then select **Install**.
+1. In the Software Library, under **Operating Systems**, select **Windows Autopilot for existing devices**, and then select **Install**.
 
 The task sequence runs and does the following actions:
 
@@ -370,7 +370,7 @@ The task sequence runs and does the following actions:
 
 Devices provisioned with Windows Autopilot only receive the guided OOBE Windows Autopilot experience on first boot.
 
-After Windows is updated on an existing device, make sure to register the device so it has the Windows Autopilot experience when the PC resets. Automatic registration can be enabled for a device by using the **Convert all targeted devices to Autopilot** setting in the Windows Autopilot profile that is assigned to a group that the device is a member of. For more information, see [Create an Autopilot deployment profile](profiles.md#create-a-windows-autopilot-deployment-profile).
+After Windows is updated on an existing device, make sure to register the device so it has the Windows Autopilot experience when the PC resets. Automatic registration can be enabled for a device by using the **Convert all targeted devices to Autopilot** setting in the Windows Autopilot profile that is assigned to a group that the device is a member of. For more information, see [Create a Windows Autopilot deployment profile](profiles.md#create-a-windows-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
 

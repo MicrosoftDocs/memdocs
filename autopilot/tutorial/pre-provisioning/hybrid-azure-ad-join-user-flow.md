@@ -49,7 +49,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-4. Once the Autopilot process begins, the Enrollment Status Page (ESP) appears. The ESP displays progress during the provisioning process across three phases:
+4. Once the Windows Autopilot process begins, the Enrollment Status Page (ESP) appears. The ESP displays progress during the provisioning process across three phases:
 
    - **Device preparation** (Device ESP)
    - **Device setup** (Device ESP)
@@ -82,7 +82,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
       > [!NOTE]
       >
-      > Under certain circumstances, the Microsoft Entra sign-in page might not appear and the end-user might be automatically signed into Microsoft Entra ID. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Microsoft Entra ID, then the Autopilot deployment will proceed on to the next step automatically.
+      > Under certain circumstances, the Microsoft Entra sign-in page might not appear and the end-user might be automatically signed into Microsoft Entra ID. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Microsoft Entra ID, then the Windows Autopilot deployment will proceed on to the next step automatically.
 
 7. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign-on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
 

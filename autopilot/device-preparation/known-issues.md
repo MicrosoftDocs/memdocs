@@ -101,7 +101,7 @@ Security group membership failures can be prevented by following these steps, en
 Date added: *July 8, 2024* <br>
 Date updated: *July 23, 2024*
 
-Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
+Windows Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
 
 As a workaround, customers can manually set the time zone in OOBE via Windows PowerShell until the issue is resolved:
 

@@ -67,7 +67,7 @@ To create the Windows Autopilot for existing devices task sequence in Configurat
 
    1. In the **Specify task sequence information** page:
 
-      1. Next to **Name**, enter an identifiable name for the Windows Autopilot scenario for the task sequence. For example, **Autopilot user-driven Microsoft Entra join**.
+      1. Next to **Name**, enter an identifiable name for the Windows Autopilot scenario for the task sequence. For example, **Windows Autopilot user-driven Microsoft Entra join**.
 
       1. Next to **Description**, enter a description for the Windows Autopilot scenario for the task sequence.
 
@@ -202,7 +202,7 @@ To resolve the issue, the **Prepare Windows for Capture** task needs to be remov
 
 ## Related content
 
-For more information on creating an Windows Autopilot task sequence in Configuration Manager, see the following articles:
+For more information on creating a Windows Autopilot task sequence in Configuration Manager, see the following articles:
 
 - [Create a task sequence](../../existing-devices.md#create-a-task-sequence).
 - [Windows System Preparation Tool (Sysprep)](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).

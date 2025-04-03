@@ -42,11 +42,11 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 > [!NOTE]
 >
-> If devices are already registered as Autopilot devices, skip this step and move on to  [Step 5: Create a device group](hybrid-azure-ad-join-device-group.md).
+> If devices are already registered as Windows Autopilot devices, skip this step and move on to  [Step 5: Create a device group](hybrid-azure-ad-join-device-group.md).
 
 ## Register devices as Windows Autopilot devices
 
-[!INCLUDE [How to register a device as an Autopilot device in Intune](../includes/register-autopilot-device.md)]
+[!INCLUDE [How to register a device as a Windows Autopilot device in Intune](../includes/register-autopilot-device.md)]
 
 ## Next step: Create a device group
 
@@ -55,4 +55,4 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 ## Related content
 
-[!INCLUDE [More information register Autopilot device](../includes/more-info-register-device.md)]
+[!INCLUDE [More information register Windows Autopilot device](../includes/more-info-register-device.md)]

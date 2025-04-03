@@ -20,7 +20,7 @@ appliesto:
 
 # User-driven Microsoft Entra hybrid join: Register devices as Windows Autopilot devices
 
-Autopilot user-driven Microsoft Entra hybrid join steps:
+Windows Autopilot user-driven Microsoft Entra hybrid join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
@@ -45,7 +45,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 ## Register devices as Windows Autopilot devices
 
-[!INCLUDE [How to register a device as an Autopilot device in Intune](../includes/register-autopilot-device.md)]
+[!INCLUDE [How to register a device as a Windows Autopilot device in Intune](../includes/register-autopilot-device.md)]
 
 ## Next step: Create a device group
 
@@ -54,4 +54,4 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 ## Related content
 
-[!INCLUDE [More information register Autopilot device](../includes/more-info-register-device.md)]
+[!INCLUDE [More information register Windows Autopilot device](../includes/more-info-register-device.md)]

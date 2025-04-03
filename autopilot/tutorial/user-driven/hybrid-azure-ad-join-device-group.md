@@ -20,7 +20,7 @@ appliesto:
 
 # User-driven Microsoft Entra hybrid join: Create a device group
 
-Autopilot user-driven Microsoft Entra hybrid join steps:
+Windows Autopilot user-driven Microsoft Entra hybrid join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
@@ -41,7 +41,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 > [!NOTE]
 >
-> If device groups from are already created, skip this step and move on to [Step 6: Configure and assign Windows Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md). However, if deploying multiple and/or different Autopilot scenarios to different devices, separate device groups are required for each Windows Autopilot scenario.
+> If device groups from are already created, skip this step and move on to [Step 6: Configure and assign Windows Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md). However, if deploying multiple and/or different Windows Autopilot scenarios to different devices, separate device groups are required for each Windows Autopilot scenario.
 
 ## Create a device group
 

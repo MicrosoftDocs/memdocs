@@ -240,7 +240,7 @@ The end user experience depends on the Windows Autopilot deployment option you c
 - **Existing devices**: Your users must do the following steps:
 
   1. Open the **Software Center** app, and select **Operating systems**.
-  2. Select **Autopilot for existing devices** > **Install**. Content downloads, the drives are formatted, and Windows client OS installs.
+  2. Select **Windows Autopilot for existing devices** > **Install**. Content downloads, the drives are formatted, and Windows client OS installs.
 
       This step can take some time, and users must wait.
 

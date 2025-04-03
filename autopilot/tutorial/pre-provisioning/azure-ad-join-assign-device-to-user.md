@@ -40,7 +40,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 ## Assign Windows Autopilot device to a user (optional)
 
-[!INCLUDE [How to assign an Windows Autopilot device to a user](../includes/assign-autopilot-device-to-user.md)]
+[!INCLUDE [How to assign a Windows Autopilot device to a user](../includes/assign-autopilot-device-to-user.md)]
 
 ## Assigning Windows Autopilot device to a user via hardware hash CSV file
 

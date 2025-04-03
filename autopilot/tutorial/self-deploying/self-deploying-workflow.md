@@ -22,15 +22,15 @@ appliesto:
 
 This step by step tutorial guides through using Intune to perform a Windows Autopilot self-deploying mode scenario.
 
-The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot self-deploying mode deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
+The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Windows Autopilot self-deploying mode deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
 Before beginning, refer to the [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all requirements are met for joining devices to Microsoft Entra ID.
 
 ## Windows Autopilot self-deploying mode overview
 
-Windows Autopilot self-deploying mode is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller to the end-user. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. Windows Autopilot self-deploying mode is designed for kiosk like devices or devices shared by multiple users. For this reason, Windows Autopilot self-deploying mode doesn't support assigning users to the device. Additionally, Windows Autopilot self-deploying mode only supports Microsoft Entra join. It doesn't support Microsoft Entra hybrid join.
+Windows Autopilot self-deploying mode is a Windows Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller to the end-user. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. Windows Autopilot self-deploying mode is designed for kiosk like devices or devices shared by multiple users. For this reason, Windows Autopilot self-deploying mode doesn't support assigning users to the device. Additionally, Windows Autopilot self-deploying mode only supports Microsoft Entra join. It doesn't support Microsoft Entra hybrid join.
 
-The main advantage of Windows Autopilot self-deploying mode over other Autopilot deployments methods is that it minimizes the interaction needed during the initial deployment of the device. Interactions are minimized because there's no single user assigned to the device. After first powering on the device, usually the only interactions needed, if any, are:
+The main advantage of Windows Autopilot self-deploying mode over other Windows Autopilot deployments methods is that it minimizes the interaction needed during the initial deployment of the device. Interactions are minimized because there's no single user assigned to the device. After first powering on the device, usually the only interactions needed, if any, are:
 
 - In certain scenarios, selecting the language, locale, and keyboard layout.
 - Connecting to a wireless network if the device isn't connected to a wired network.
