@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/19/2024
+ms.date: 04/01/2025
 ms.localizationpriority: medium
 ---
 
@@ -20,7 +20,7 @@ Headings are driven by article context. -->
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
-1. In the **Devices | Overview** screen, under **Manage devices**, select **Configuration**.
+1. In the **Devices | Overview** screen, expand **Manage devices**, and then select **Configuration**.
 
 1. In the **Devices | Configuration** screen:
 

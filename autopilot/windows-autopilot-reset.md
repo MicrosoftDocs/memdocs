@@ -6,7 +6,7 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
 ms.date: 10/09/2024
 ms.collection:
@@ -78,7 +78,7 @@ The policy can be set using one of these methods:
 
   - When Intune is used, a new device configuration profile can be created with the following settings:
 
-    - **Platform** = **Windows 10 or later**.
+    - **Platform** = **Windows 10 and later**.
     - **Profile type** = **Device restrictions**.
     - **Category** = **General**.
     - **Autopilot Reset** = **Allow**. Deploy this setting to all devices where a local reset should be permitted.

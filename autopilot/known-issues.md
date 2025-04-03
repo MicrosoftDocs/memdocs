@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/27/2025
+ms.date: 03/20/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -44,6 +44,9 @@ This article describes known issues that can often be resolved with configuratio
 ### Windows Autopilot report incorrectly shows failure even though the deployment was successful
 
 Date added: *February 11, 2025*
+Date updated: *March 20, 2025*
+
+This issue is resolved.
 
 The Windows Autopilot report automatically updates deployment status from **In progress** to **Failed** after 4 hours if Intune didn't receive a success or failure status. It's possible that the report didn't receive the latest status from the device before the device is powered off which results in an incorrect **Failed** status, even when the deployment is successful.
 
@@ -265,7 +268,7 @@ To resolve the issue, make sure the virtual machine is configured with a minimum
 
 Date added: *February 19, 2022*
 
-When a proxy server is used with the ODJConnector service, the memory file can get too large when processing requests resulting in impacts to performance. The current workaround for this issue is to restart the ODJConnectSvc.exe service.
+When a proxy server is used with the Intune Connector for Active Directory (ODJConnector) service, the memory file can get too large when processing requests resulting in impacts to performance. The current workaround for this issue is to restart the ODJConnectSvc.exe service.
 
 ### Reset button causes pre-provisioning to fail on retry
 
@@ -306,9 +309,9 @@ For more information on this issue, see [Troubleshooting Windows Autopilot devic
 
 In a Windows Autopilot user-driven Microsoft Entra joined environment, a user can be pre-assigned to a device. If the user is a cloud-native Microsoft Entra account, the username is enforced and the user is only asked for their password. There's no way to sign in with another user ID. However, when ADFS is used, the username assignment isn't enforced. A different user than the one assigned can sign in on the device.
 
-### Intune connector is inactive but still appears in the Intune Connectors
+### Intune Connector for Active Directory is inactive but still appears in the Intune Connector for Active Directory page
 
-Inactive Intune connectors will be automatically cleaned up after 30 days of inactivity without admin interaction.
+Inactive Intune Connectors for Active Directory will be automatically cleaned up after 30 days of inactivity without admin interaction.
 
 ### Autopilot sign-in page displays HTML tags from company branding settings
 

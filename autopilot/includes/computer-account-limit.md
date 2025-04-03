@@ -128,7 +128,7 @@ To increase the computer account limit in the Organizational Unit (OU) that comp
 
 1. In the **Object Types** window, select the **Computers** check box, and then select **OK**. The other items in this window can be left at their default.
 
-1. In the **Select Users, Computers, or Groups** window, under the **Enter the object names to select** box, enter the name of the computer where the Intune Connector for Active Directory was installed during the **Install the Intune Connector** step.
+1. In the **Select Users, Computers, or Groups** window, under the **Enter the object names to select** box, enter the name of the computer where the Intune Connector for Active Directory was installed during the **Install the Intune Connector for Active Directory** step.
 
 1. Select **Check Names** to validate the entry. Once the entry is validated, select **OK**.
 
