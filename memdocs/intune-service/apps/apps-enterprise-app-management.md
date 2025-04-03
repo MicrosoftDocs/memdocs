@@ -120,7 +120,7 @@ You can use Microsoft's Graph API to work with applications in Enterprise App Ca
 
 ### Will Enterprise catalog apps automatically update to a new version when a new version is available in the Enterprise app catalog?
 
-Updates are shown in Monitor report under Enterprise App Catalog apps with updates. The updates aren't applied automatically. You still need to go in and create a new app with supersedence relationship.
+Updates are shown in Intune by selecting **Apps** > **Enterprise App Catalog apps with updates**. The updates aren't applied automatically. You still need to go in and create a new app with supersedence relationship.
 
 ### Can you get licensed applications from this catalog?
 
