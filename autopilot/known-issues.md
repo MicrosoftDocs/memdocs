@@ -41,9 +41,16 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Setting up keyboard automatically does not accurately update keyboard language
+
+Date added: *April 3, 2025*
+
+It is possible that the Autopilot profile setting which enables automatic configuration of the keyboard language based on the **Language (Region)** fails to apply during provisioning due to a known OS issue. There is no timeline for resolving this issue at this time.
+
 ### Windows Autopilot report incorrectly shows failure even though the deployment was successful
 
 Date added: *February 11, 2025*
+
 Date updated: *March 20, 2025*
 
 This issue is resolved.
