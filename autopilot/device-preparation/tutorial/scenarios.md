@@ -5,9 +5,9 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 04/02/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -24,7 +24,8 @@ The following table summarizes the scenarios that are available in Windows Autop
 
 | **Scenario** | **Purpose** | **Description** |
 | --- | --- | --- |
-| **Windows Autopilot device preparation user-driven mode** | Device for a single user | User runs deployment |
+| **Windows Autopilot device preparation user-driven mode** | Set up device for a single user | User runs deployment |
+| **Windows Autopilot device preparation automatic mode** | Set up Windows 365 Frontline in shared mode | Device preparation policy is configured in the Cloud PC provisioning policy and deployment runs automatically after Cloud PCs are created |
 
 > [!NOTE]
 >

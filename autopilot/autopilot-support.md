@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.date: 08/02/2024
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
 ms.collection:
   - M365-modern-desktop
