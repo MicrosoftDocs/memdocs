@@ -1,5 +1,5 @@
 {:allowed-branchname-matches ["main" "release-.*"]
- :allowed-filename-matches ["(?i)memdocs/(?:(?!configmgr/mdt/use-the-mdt.md))" "windows-365" "autopilot"]}
+ :allowed-filename-matches ["(?i)intune/(?:(?!configmgr/mdt/use-the-mdt.md))" "windows-365" "autopilot"]}
 
  :use-gh-statuses true
  
