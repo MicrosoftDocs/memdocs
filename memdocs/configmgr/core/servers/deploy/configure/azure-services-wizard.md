@@ -39,13 +39,6 @@ Configure the following Azure services using this wizard:
 
   - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Log Analytics Connector**: [Connect to Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm). Sync collection data to Log Analytics.  
-
-    > [!IMPORTANT]
-    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. This feature was deprecated in November 2020. It's removed from Configuration Manager in version 2107. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features).<!-- 9649296 -->
-
-- **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Get store apps for your organization that you can deploy with Configuration Manager.  
-
 - **Administration Service Management**: When configuring Azure Services, for enhanced security you can select Administration Service Management option. Selecting this option allows administrators to segment their admin privileges between [cloud management](../../../clients/manage/cmg/overview.md) and [administration service](../../../../develop/adminservice/overview.md). By enabling this option, access is restricted to only administration service endpoints. Configuration Management clients will authenticate to the site using Microsoft Entra ID. *(version 2207 or later)*
     > [!NOTE]
     > Only CMG VMSS customers can enable administrative service management option. This option is not applicable for classic CMG customers. 
@@ -67,8 +60,6 @@ The following table lists details about each of the services.
 |Service  |Tenants  |Clouds  |Web app  |Native app  |Actions  |
 |---------|---------|---------|---------|---------|---------|
 |Cloud management with<br>Microsoft Entra discovery | Multiple | Public, Private | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | Import, Create |
-|Log Analytics Connector | One | Public, Private | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import |
-|Microsoft Store for<br>Business | One | Public | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import, Create |
 
 <a name='about-azure-ad-apps'></a>
 
@@ -93,16 +84,14 @@ For more information about Azure apps, start with the following articles:
 
 After you decide the service to which you want to connect, refer to the table in [Service details](#service-details). This table provides information you need to complete the Azure Service Wizard. Have a discussion in advance with your Microsoft Entra administrator. Decide which of the following actions to take:
 
-- Manually create the apps in advance in the Azure portal. Then import the app details into Configuration Manager.  
+- Use Configuration Manager to directly create the apps in Microsoft Entra ID (Recommended). To collect the necessary data from Microsoft Entra ID, review the information in the other sections of this article.
 
     > [!TIP]
     > For more information specific to cloud management, see [Manually register Microsoft Entra apps for the cloud management gateway](../../../clients/manage/cmg/manually-register-azure-ad-apps.md).
 
-- Use Configuration Manager to directly create the apps in Microsoft Entra ID. To collect the necessary data from Microsoft Entra ID, review the information in the other sections of this article.  
+- Manually create the apps in advance in the Azure portal. Then import the app details into Configuration Manager.
 
 Some services require the Microsoft Entra apps to have specific permissions. Review the information for each service to determine any required permissions. For example, before you can import a web app, an Azure administrator must first create it in the [Azure portal](https://portal.azure.com).
-
-When configuring the Log Analytics Connector, give your newly registered web app *contributor* permission on the resource group that contains the relevant workspace. This permission allows Configuration Manager to access that workspace. When assigning the permission, search for the name of the app registration in the **Add users** area of the Azure portal. This process is the same as when [providing Configuration Manager with permissions to Log Analytics](/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). An Azure administrator must assign these permissions before you import the app into Configuration Manager.
 
 ## Start the Azure Services wizard
 
