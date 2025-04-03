@@ -187,15 +187,15 @@ This is an example of `in-line code`.
 
 ### Static Image
 
-:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This is the alt text.":::
+:::image type="content" source="intune/media/docs-github-edit.png" alt-text="This is the alt text.":::
 
 ### Image with lightbox
 
-:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This is the alt text." lightbox="memdocs/media/docs-github-edit.png":::
+:::image type="content" source="intune/media/docs-github-edit.png" alt-text="This is the alt text." lightbox="intune/media/docs-github-edit.png":::
 
 ### Animated gif
 
-:::image type="content" source="memdocs/media/docs-filter-toc.gif" alt-text="This is the alt text.":::
+:::image type="content" source="intune/media/docs-filter-toc.gif" alt-text="This is the alt text.":::
 
 ## Alerts
 

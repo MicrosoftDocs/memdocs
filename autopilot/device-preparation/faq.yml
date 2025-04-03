@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: madakeva
   manager: aaroncz
-  ms.date: 04/02/2025
+  ms.date: 04/03/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -45,7 +45,7 @@ sections:
       - question: |
           What scenarios does Windows Autopilot device preparation support?
         answer: |
-          Currently Windows Autopilot device preparation supports the user-driven scenario for physical devices and automatic deployment for Windows 365 Frontline for shared devices.
+          Currently Windows Autopilot device preparation supports the user-driven scenario for physical devices and automatic deployment for Windows 365 Frontline for shared devices (in preview).
 
       - question: |
           What about the other Windows Autopilot scenarios like pre-provisioning and self-deploying mode?
