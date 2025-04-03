@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2025
+ms.date: 04/03/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -112,15 +112,15 @@ No SLA is currently available.
 
 ### How many applications are in the catalog?
 
-The catalog has over 400+ available applications in the Enterprise App Catalog. More apps are available on an ongoing basis.
+For a complete list of applications, see [Apps available in the Enterprise App Catalog](../apps/apps-enterprise-app-management.md#apps-available-in-the-enterprise-app-catalog).
 
 ### How can working with the applications in Enterprise App Catalog be automated?
 
-Graph API is planned to be available soon.
+You can use Microsoft's Graph API to work with applications in Enterprise App Catalog. For more information, see [Working with Intune in Microsoft Graph](/graph/api/resources/intune-graph-overview).
 
 ### Will Enterprise catalog apps automatically update to a new version when a new version is available in the Enterprise app catalog?
 
-Updates are shown in Monitor report under Enterprise App Catalog apps with updates. The updates aren't applied automatically. You still need to go in and create a new app with supersedence relationship.
+Updates are shown in Intune by selecting **Apps** > **Enterprise App Catalog apps with updates**. The updates aren't applied automatically. You still need to go in and create a new app with supersedence relationship.
 
 ### Can you get licensed applications from this catalog?
 
