@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/21/2025
+ms.date: 04/01/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -71,6 +71,12 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ## App management
 
+### Microsoft Intune support for Apple AI features<!-- 12792722, 30550110, 30220799 -->
+
+Intune app protection policies will have new standalone settings for Apple AI features (Genmojis, Writing tools, and screen capture). Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, these Apple AI features are blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
+
+For more information, see [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037).
+
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
 Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This change allows you to update apps more easily without needing to update those profiles with the latest versions. 
@@ -83,7 +89,7 @@ Applies to:
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
-To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
+To protect organizational data for MAM managed accounts and apps, Intune app protection policies will soon provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
 
 Applies to:
 
@@ -115,6 +121,11 @@ Applies to:
 
 ## Device enrollment
 
+### Enrollment-time grouping for Android Enterprise corporate devices <!-- 17530981 -->
+
+Soon to be available for Android Enterprise corporate-owned devices, *enrollment time grouping* enables you to assign a static Microsoft Entra group to devices at enrollment time. When a targeted Android device enrolls, it will receive all assigned policies, apps, and settings, typically by the time the user lands on the home screen. Intune admins will be able to configure one static Microsoft Entra group per enrollment profile under the **Device group** tab.
+
+
 ### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
 
 You'll soon be able to use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
@@ -125,8 +136,19 @@ Applies to:
 
 <!-- *********************************************** -->
 
-
 ## Device management
+
+### Intune ending support for custom profiles for personally owned work profile devices<!-- 27424084 -->
+
+Starting in April 2025, Intune will no longer support custom profiles for Android Enterprise personally owned work profile devices. After this time:
+
+- Admins won’t be able to create new custom profiles for personally owned work profile devices. However, admins can still view and edit previously created custom profiles.
+
+- Personally-owned work profile devices that currently have a custom profile assigned won't experience any immediate change of functionality. Because these profiles are no longer supported, the functionality set by these profiles might change in the future.
+
+- Intune technical support will no longer support custom profiles for personally owned work profile devices.
+
+All custom policies should be replaced with other policy types. Learn more about [Intune ending support for personally owned work profile custom profiles](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414).
 
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
@@ -134,16 +156,18 @@ Intune *access policies* help protect against a compromised administrative accou
 
 For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-###  Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
+### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 
 We're adding a feature that will allow a customer to:
 
 - Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
 - Configure a different RBAC permission and assign the permission to different RBAC roles
 
-Platform level targeting of the Device Cleanup rule will help administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
+Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
 
 For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
+
+<!-- *********************************************** -->
 
 ## Device security
 
@@ -157,7 +181,7 @@ Applies to:
 
 - Linux
 
-### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!--   -->
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
 
@@ -177,8 +201,6 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 <!-- ## Role-based access control -->
-
-<!-- *********************************************** -->
 
 <!-- *********************************************** -->
 
