@@ -171,23 +171,6 @@ For more information, see [device cleanup rules](../remote-actions/devices-wipe.
 
 ## Device security
 
-### Vulnerability Remediation Agent for Intune (public preview)<!-- 30277408 -->
-
-As a public preview, we’re working on the Vulnerability Remediation Agent for Security Copilot. When run, this agent will use data from Microsoft Defender Vulnerability Management to identify and then provide remediation guidance for vulnerabilities on your managed devices. You run and access the agents results from within the Intune admin center where you’ll see suggestions prioritized by the agent for remediation. Each suggestion includes key information such as: associated CVEs, severity, exploitability, affected systems, organizational exposure, business impact and remediation guidance.
-
-This information empowers you with a current assessment of potential risk to your environment and guidance to help you decide which risk to address first.
-
-The agent has the following prerequisites:
-
-- Microsoft Security Copilot
-- Intune integration with Microsoft Defender for Endpoint
-
-For more information about the capabilities this agent will bring together, see the following content:
-
-- [What is Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Security Copilot in Microsoft Intune](../copilot/security-copilot.md)
-- Microsoft Intune blog: [Stay ahead of evolving threats with the latest AI in Intune](https://techcommunity.microsoft.com/blog/microsoftintuneblog/stay-ahead-of-evolving-threats-with-the-latest-ai-in-intune/4395079)
-
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
 
 We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.

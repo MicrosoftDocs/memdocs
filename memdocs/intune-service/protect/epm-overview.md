@@ -75,7 +75,7 @@ Endpoint Privilege Management supports the following operating systems:
 > [!IMPORTANT]
 >
 > - Elevation settings policy will show as not applicable for devices that don't run a supported operating system version.
-> - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures. Windows on ARM is not currently supported.
+> - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures. This includes devices running Windows on Arm64.
 > - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ## Government cloud support
@@ -185,7 +185,7 @@ Following are the available cmdlets:
 - **Get-DeclaredConfigurationAnalysis**: Retrieves a list of WinDC documents of type MSFTPolicies and checks if the policy is already present in Epm Agent (Processed column).
 - **Get-ElevationRules**: Query the EpmAgent lookup functionality and retrieves rules given lookup and target. Lookup is supported for FileName and CertificatePayload.
 - **Get-ClientSettings**: Process all existing client settings policies to display the effective client settings used by the EPM Agent.
-- **Get-FileAttributes**: Retrieves File Attributes for a .exe file and extracts its Publisher and CA certificates to a set location that can be used to populate Elevation Rule Properties for a particular application.
+- **Get-FileAttributes**: Retrieves File Attributes for an .exe file and extracts its Publisher and CA certificates to a set location that can be used to populate Elevation Rule Properties for a particular application.
 
 For more information about each cmdlet, review the **readme.txt** file from the *EpmTools* folder on the device.
 
