@@ -240,19 +240,19 @@ Always include alt text for accessibility, and always end it with a period.
 
 ### Static Image
 
-:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This sentence is the alt text.":::
+:::image type="content" source="intune/media/docs-github-edit.png" alt-text="This sentence is the alt text.":::
 
 ### Image with lightbox
 
-:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This sentence is the alt text." lightbox="memdocs/media/docs-github-edit.png":::
+:::image type="content" source="intune/media/docs-github-edit.png" alt-text="This sentence is the alt text." lightbox="intune/media/docs-github-edit.png":::
 
 ### Animated gif
 
-:::image type="content" source="memdocs/media/docs-filter-toc.gif" alt-text="This sentence is the alt text.":::
+:::image type="content" source="intune/media/docs-filter-toc.gif" alt-text="This sentence is the alt text.":::
 
 ### Linked Image
 
-[![Alt text for linked image.](memdocs/media/docs-github-edit.png)](https://azure.microsoft.com)
+[![Alt text for linked image.](intune/media/docs-github-edit.png)](https://azure.microsoft.com)
 
 ## Alerts
 
