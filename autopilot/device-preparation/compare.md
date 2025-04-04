@@ -49,7 +49,7 @@ In general, the following are some of the major factors when considering between
 | Self-deploying scenario | ❌ | ✅ |
 | Existing devices scenario | ❌ | ✅ |
 | Automatic deployment scenario | ✅ | ❌ |
-| Autopilot reset support | ❌ | ✅ |
+| Windows Autopilot reset support | ❌ | ✅ |
 | Microsoft Entra join | ✅ | ✅ |
 | Microsoft Entra hybrid join | ❌ | ✅ |
 | [Windows Autopilot Reset](../tutorial/reset/autopilot-reset-overview.md) | ❌ | ✅ |
@@ -66,7 +66,7 @@ In general, the following are some of the major factors when considering between
 | [HoloLens](/hololens/hololens2-autopilot) support | ❌ | ✅ |
 | [Teams Meeting Room](/microsoftteams/rooms/autopilot-autologin) support | ❌ | ✅ |
 | Device Firmware Configuration Interface<br>([DFCI](../dfci-management.md)) Management support | ❌ | ✅ |
-| [Autopilot into co-management](/mem/configmgr/comanage/autopilot-enrollment) | ❌ | ✅ |
+| [Windows Autopilot into co-management](/mem/configmgr/comanage/autopilot-enrollment) | ❌ | ✅ |
 
 ## Using Windows Autopilot device preparation and Windows Autopilot concurrently
 

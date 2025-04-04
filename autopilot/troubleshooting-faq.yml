@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: madakeva
   manager: aaroncz
-  ms.date: 02/27/2025
+  ms.date: 04/04/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -480,6 +480,21 @@ sections:
           Why did enrollments start failing when using the Intune Connector for Active Directory?
         answer: |
           Make sure that the Intune Connector for Active Directory is updated to version **6.2501.2000.5** or later and that the legacy version isn't still being used. For more information, see [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
+
+      - question: |
+          Why are the errors "Navigation to the webpage was canceled" or "Can't connect securely to this page" occurring while setting up theIntune Connector for Active Directory?
+        answer: |
+          This error might occur for several different type of issues including:
+
+          - The server where the administrator is installing and configuring the Intune Connector for Active Directory doesn't have the required internet access or required Intune URLs aren't allowed. For more information, see the following articles:<br>
+          <br>
+            - [Windows Autopilot requirements - Windows Autopilot Deployment Service](requirements.md?tabs=networking#windows-autopilot-deployment-service).
+            - [Intune core service](/intune/intune-service/fundamentals/intune-endpoints#endpoints).
+            - [Windows Autopilot dependencies](/intune/intune-service/fundamentals/intune-endpoints#windows-autopilot-dependencies).
+
+          - Server is sending network request via TLS 1.0 or 1.1 because PKCS Cryptography is disabled. To resolve the issue, on the server hosting the Intune Connector for Active Directory, delete the registry key value specified in the following command by running the command from an elevated command prompt:
+
+            `reg.exe delete "HKLM\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS" /v Enabled /f`
 
 
 additionalContent: |

@@ -112,7 +112,7 @@ Windows Autopilot device preparation also improves the user experience in the fo
 
 Windows Autopilot device preparation offers near real-time status updates on deployments. Windows Autopilot device preparation monitoring includes application and PowerShell script status information, allowing for improved troubleshooting and reporting. Deployment monitoring includes the following features:
 
-- Easily track which devices went through Autopilot.
+- Easily track which devices that went through Windows Autopilot device preparation.
 - Track status and deployment phase for each device in near real-time.
 - Each device has the following details in the monitoring report:
   - Device details.
