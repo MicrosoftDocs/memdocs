@@ -167,9 +167,9 @@ sections:
           ETW tracing can be used to get detailed information from Windows Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [Troubleshooting Windows Autopilot](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
       - question: |
-          Why is the Intune Connector not logging in Event Viewer even though logging is enabled?
+          Why is the Intune Connector for Active Directory not logging in Event Viewer even though logging is enabled?
         answer: |
-          The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
+          The Intune Connector for Active Directory originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector for Active Directory has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
 
 
   - name: Troubleshooting Windows Autopilot device import and enrollment

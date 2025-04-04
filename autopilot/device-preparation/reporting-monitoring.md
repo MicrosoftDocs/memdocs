@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 06/03/2024
+ms.date: 04/02/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -40,7 +40,10 @@ To access Windows Autopilot device preparation reports and monitor deployments i
     - **Device name** - the name given to the device during the deployment. Selecting this item goes to the deployment details for the device.
     - **Enrollment date** - the date and time that the device enrolled.
     - **Deployment status** - displays the current status of the deployment on the device. During deployment, the status shows **In progress**. Once deployment is complete, it shows the final outcome of the deployment as either **Success** or **Failed**.
-    - **Phase** - shows the last reported phase that the deployment is at.
+    - **Phase** - shows the last reported phase that the deployment is at. Options include:
+      - **Policy installation** - represents the initial setup and line-of-business apps installation.
+      - **Script installation** - tracks scripts.
+      - **App installation** - tracks Win32 and Microsoft Store apps.
     - **Serial number** - the hardware serial number of the device.
     - **Deployment time** - the amount of time that the deployment took during the out-of-box experience (OOBE) to complete. If the deployment isn't complete, it shows **In progress**.
     - **UPN** - the user that signed into the device during OOBE and that the Windows Autopilot device preparation policy was assigned to.

@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
 ms.date: 06/19/2024
 ms.topic: tutorial
@@ -23,18 +23,18 @@ appliesto:
 Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
-- Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
+- Step 2: [Install the Intune Connector for Active Directory](hybrid-azure-ad-join-intune-connector.md)
 - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
-- Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
+- Step 4: [Register devices as Windows Autopilot devices](hybrid-azure-ad-join-register-device.md)
 
 > [!div class="checklist"]
 >
 > - **Step 5: Create a device group**
 
-- Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
-- Step 7: [Create and assign Microsoft Entra hybrid join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
+- Step 6: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
+- Step 7: [Create and assign Microsoft Entra hybrid join Windows Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
-- Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
+- Step 9: [Assign Windows Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 - Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
 - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
@@ -42,7 +42,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 > [!NOTE]
 >
-> If device groups are already created, skip this step and move on to [Step 6: Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md). However, if deploying multiple different Autopilot scenarios to different devices, separate device groups are required for each Autopilot scenario.
+> If device groups are already created, skip this step and move on to [Step 6: Configure and assign Windows Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md). However, if deploying multiple different Windows Autopilot scenarios to different devices, separate device groups are required for each Windows Autopilot scenario.
 
 ## Create a device group
 
@@ -53,7 +53,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 ## Next step: Configure and assign the Enrollment Status Page (ESP)
 
 > [!div class="nextstepaction"]
-> [Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
+> [Step 5: Configure and assign Windows Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
 
 ## Related content
 

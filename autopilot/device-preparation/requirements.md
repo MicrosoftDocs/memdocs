@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 01/24/2025
+ms.date: 04/02/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -29,7 +29,7 @@ appliesto:
 > RSS can be used to notify when requirements are added or updated to this page. For example, the following RSS link includes this article:
 >
 > ``` url
-> https://learn.microsoft.com/en-us/search/?terms=%22Software%2C%20Networking%2C%20Licensing%2C%20Configuration%2C%20and%20RBAC%20requirements%20for%20Windows%20Autopilot%20device%22
+> https://learn.microsoft.com/api/search/rss?search=%22Software%2C+Networking%2C+Licensing%2C+Configuration%2C+and+RBAC+requirements+for+Windows+Autopilot+device%22&locale=en-us&%24filter=
 > ```
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed another supported locale. For example, `&locale=es-es`.
@@ -54,14 +54,21 @@ Windows Autopilot device preparation depends on specific features available in W
 
 #### Windows 11
 
-- Windows 11, version 24H2 or later
+- Windows 11, version 24H2 or later.
 - Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
 - Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
 
 > [!IMPORTANT]
 >
 > - Verify with OEMs that devices shipped from the OEM have the minimum required update installed.
-> - If installing Windows from installation media, verify that the media has the minimum required update installed. Updated Windows installation media with the latest cumulative update already installed is available at the [Volume Licensing Service Center (VLSC)](https://www.microsoft.com/licensing/ServiceCenter/Default.aspx).
+> - If installing Windows from installation media, verify that the media has the minimum required update installed. Updated Windows installation media with the latest cumulative update already installed is available in the [Microsoft M365 admin center](https://admin.microsoft.com/adminportal/home#/subscriptions/vlnew).
+
+#### Windows 365 Cloud PCs
+
+- Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/en-us/topic/february-25-2025-kb5052093-os-build-26100-3323-preview-053856ea-f984-4bdb-866c-5f356f5a451b) or later.
+- Windows 11, version 23H2 with [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) or later.
+- Windows 11, version 22H2 with [KB5044380](https://support.microsoft.com/en-us/topic/october-22-2024-kb5044380-os-builds-22621-4391-and-22631-4391-preview-9a8db86a-815d-470a-be95-1aa2ad1feb05) or later.
+
 
 The following editions are supported:
 
@@ -112,10 +119,7 @@ Microsoft Entra ID validates user credentials. Additionally, the device is joine
 
 #### Microsoft Intune
 
-Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see the following articles:
-
-- [Intune network configuration requirements and bandwidth](/mem/intune-service/fundamentals/network-bandwidth-use).
-- [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints).
+Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints).
 
 #### Windows Autopilot device preparation automatic device diagnostics collection
 
@@ -138,7 +142,7 @@ Windows Autopilot device preparation contacts the [Delivery Optimization](/windo
 - Office Updates.
 - Intune Win32 Applications.
 
-If the Delivery Optimization Service is inaccessible, the Autopilot process still continues with Delivery Optimization downloads from the cloud without peer-to-peer.
+If the Delivery Optimization Service is inaccessible, the Windows Autopilot process still continues with Delivery Optimization downloads from the cloud without peer-to-peer.
 
 #### Network Time Protocol (NTP) sync
 
@@ -170,7 +174,7 @@ If the WNS services aren't available, the Windows Autopilot device preparation p
 
 Applications in the Microsoft Store can be pushed to the device by triggering them via Intune or other MDM service. App updates and additional applications might also be needed when the user first logs in. For more information, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-intune-integration-with-the-microsoft-store-on-windows/ba-p/3585077) and [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286).
 
-If the Microsoft Store isn't accessible, the Autopilot process still continues without Microsoft Store applications.
+If the Microsoft Store isn't accessible, the Windows Autopilot process still continues without Microsoft Store applications.
 
 #### Microsoft 365
 
@@ -196,9 +200,9 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 - [Microsoft 365 F1 or F3 subscription](https://www.microsoft.com/microsoft-365/enterprise/firstline).
 - [Microsoft 365 Academic A1, A3, or A5 subscription](https://www.microsoft.com/education/products/microsoft-365).
 - [Microsoft 365 Enterprise E3 or E5 subscription](https://www.microsoft.com/microsoft-365/enterprise), which include all Windows client, Microsoft 365, and EMS features (Microsoft Entra ID and Intune).
-- [Enterprise Mobility + Security E3 or E5 subscription](https://www.microsoft.com/cloud-platform/enterprise-mobility-security), which include all needed Microsoft Entra ID and Intune features.
+- Enterprise Mobility + Security E3 or E5 subscription, which include all needed Microsoft Entra ID and Intune features.
 - [Intune for Education subscription](/intune-education/what-is-intune-for-education), which include all needed Microsoft Entra ID and Intune features.
-- [Microsoft Entra ID P1 or P2](https://azure.microsoft.com/services/active-directory/) and [Microsoft Intune subscription](https://www.microsoft.com/cloud-platform/microsoft-intune) or an alternative MDM service.
+- [Microsoft Entra ID P1 or P2](https://azure.microsoft.com/services/active-directory/) and [Microsoft Intune subscription](https://www.microsoft.com/security/business/microsoft-intune-pricing) or an alternative MDM service.
 
 > [!NOTE]
 >
@@ -213,7 +217,7 @@ Additionally, the following are also recommended, but not required:
 
 ### Configuration requirements
 
-Before Windows Autopilot device preparation can be used, some configuration tasks are required to support the common Autopilot scenarios.
+Before Windows Autopilot device preparation can be used, some configuration tasks are required to support the common Windows Autopilot device preparation scenarios.
 
 - **Configure Microsoft Entra automatic enrollment**. For Microsoft Intune, see [Set up Windows automatic Intune enrollment](tutorial/user-driven/entra-join-automatic-enrollment.md) and [Enable Windows automatic enrollment](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment) for details. If using a different mobile device management (MDM) service, contact the vendor for the specific URLs or configuration needed for those services.
 
@@ -223,7 +227,7 @@ The following configurations are optional but recommended. They aren't required:
 
 - **Automatically step up from Windows Pro to Windows Enterprise**. For more information, see [Windows Subscription Activation](/windows/deployment/windows-subscription-activation).
 
-There are no additional hardware requirements to use Autopilot, beyond the hardware requirements to run Windows. For more information, see:
+There are no additional hardware requirements to use Windows Autopilot device preparation, beyond the hardware requirements to run Windows. For more information, see:
 
 - [Find Windows 11 specs, features, and computer requirements](https://www.microsoft.com/windows/windows-11-specifications).
 - [Windows minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview).

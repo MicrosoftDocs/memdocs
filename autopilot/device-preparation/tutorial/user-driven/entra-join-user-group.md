@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
 ms.date: 01/14/2025
 ms.topic: tutorial
@@ -37,7 +37,7 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 > [!NOTE]
 >
-> The user group created in this step is specific to Windows Autopilot device preparation. Microsoft recommends creating a user group specifically for use with Windows Autopilot device preparation instead of reusing existing user groups used in other Autopilot scenarios.
+> The user group created in this step is specific to Windows Autopilot device preparation. Microsoft recommends creating a user group specifically for use with Windows Autopilot device preparation instead of reusing existing user groups used in other Windows Autopilot scenarios.
 
 ## Create a user group
 
