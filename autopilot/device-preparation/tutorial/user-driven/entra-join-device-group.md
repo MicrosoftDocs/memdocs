@@ -54,7 +54,7 @@ Windows Autopilot device preparation uses a device group as part of the Windows 
 
 To create an assigned security device group for use with Windows Autopilot device preparation, follow these steps:
 
-[!INCLUDE [How to create a device group in Intune](../../../includes/create-assigned-device-group.md)]
+[!INCLUDE [How to Create an assigned device group in Intune](../../../includes/create-assigned-device-group.md)]
 
 ## Next step: Create a user group
 
