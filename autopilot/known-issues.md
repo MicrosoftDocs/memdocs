@@ -41,9 +41,15 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### TPM attestation isn't working for TPMs which use high-range RSA 3072EK
+
+Date added: *April 4, 2025*
+
+Platforms with TPMs which use high-range RSA 3072EK may fail TPM attestation which impacts pre-provisioning and self-deploying flows. The issue is being investigated.
+
 ### Setting up keyboard automatically does not accurately update keyboard language
 
-Date added: *April 3, 2025*
+Date added: *April 4, 2025*
 
 It is possible that the Autopilot profile setting which enables automatic configuration of the keyboard language based on the **Language (Region)** fails to apply during provisioning due to a known OS issue. There is no timeline for resolving this issue at this time.
 
