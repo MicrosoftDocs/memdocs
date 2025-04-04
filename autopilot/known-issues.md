@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 03/20/2025
+ms.date: 04/04/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -41,9 +41,22 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### TPM attestation isn't working for TPMs which use high-range RSA 3072EK
+
+Date added: *April 4, 2025*
+
+Platforms with TPMs which use high-range RSA 3072EK might fail TPM attestation. This failure impacts Windows Autopilot pre-provisioning and Windows Autopilot self-deploying flows. The issue is being investigated.
+
+### Setting up keyboard automatically doesn't accurately update keyboard language
+
+Date added: *April 4, 2025*
+
+The Windows Autopilot profile setting which enables automatic configuration of the keyboard language based on the **Language (Region)** setting might fail to apply during provisioning due to a known OS issue. There's no timeline for resolving this issue at this time.
+
 ### Windows Autopilot report incorrectly shows failure even though the deployment was successful
 
 Date added: *February 11, 2025*
+
 Date updated: *March 20, 2025*
 
 This issue is resolved.
