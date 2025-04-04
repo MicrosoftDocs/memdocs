@@ -55,7 +55,7 @@ sections:
       - question: |
           Why is there a limit on the number of applications and PowerShell scripts in the Windows Autopilot device preparation policy?
         answer: |
-          We limited the number of applications that can be applied during the out-of-box experience (OOBE) to increase stability and achieve a higher success rate. Looking at our telemetry, almost 90% of all Autopilot deployments are deployed with 10 or fewer apps. This limit is intended to improve the overall user experience so that users can become more productive quickly. We understand that there are outliers and companies that want to target more during setup. However, for the user-driven approach, we want to use the desktop experience for non-essential applications.
+          We limited the number of applications that can be applied during the out-of-box experience (OOBE) to increase stability and achieve a higher success rate. Looking at our telemetry, almost 90% of all Windows Autopilot deployments are deployed with 10 or fewer apps. This limit is intended to improve the overall user experience so that users can become more productive quickly. We understand that there are outliers and companies that want to target more during setup. However, for the user-driven approach, we want to use the desktop experience for non-essential applications.
 
       - question: |
           Does Windows Autopilot device preparation support deploying both Win32 and line-of-business (LOB) applications in the same deployment?
@@ -133,7 +133,7 @@ sections:
           What makes Windows Autopilot device preparation deployments more consistent and reliable than Windows Autopilot?
         answer: |
           Windows Autopilot device preparation ensures configurations and apps are delivered in a serialized way, minimizing conflicts. Delivering in a serialized way allows you to deliver Line-of-business and Win32 apps in the same deployment reliably.
-          
+
       - question: |
           How does a user know that a Windows Autopilot device preparation deployment is running on their device?
         answer: |

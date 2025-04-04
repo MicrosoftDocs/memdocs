@@ -6,7 +6,7 @@ ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
 ms.manager: dougeby
-appliesto: 
+appliesto:
   - ✅ <b>Surface devices</b>
 ms.service: microsoft-intune
 ms.subservice: education
@@ -18,7 +18,7 @@ Microsoft Surface devices offer advanced management functionalities, including t
 
 ## Manage device firmware for Surface devices
 
-Surface devices use a Unified Extensible Firmware Interface (UEFI) setting that allows you to enable or disable built-in hardware components, protect UEFI settings from being changed, and adjust device boot configuration. With [Device Firmware Configuration Interface profiles built into Intune][INT-1], Surface UEFI management extends the modern management capabilities to the hardware level. Windows can pass management commands from Intune to UEFI for Autopilot-deployed devices.
+Surface devices use a Unified Extensible Firmware Interface (UEFI) setting that allows you to enable or disable built-in hardware components, protect UEFI settings from being changed, and adjust device boot configuration. With [Device Firmware Configuration Interface profiles built into Intune][INT-1], Surface UEFI management extends the modern management capabilities to the hardware level. Windows can pass management commands from Intune to UEFI for Windows Autopilot-deployed devices.
 
 DFCI supports zero-touch provisioning, eliminates BIOS passwords, and provides control of security settings for boot options, cameras and microphones, built-in peripherals, and more. For more information, see [Manage DFCI on Surface devices][SURF-1] and [Manage DFCI with Windows Autopilot][MEM-1], which includes a list of requirements to use DFCI.
 

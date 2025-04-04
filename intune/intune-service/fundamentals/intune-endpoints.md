@@ -70,7 +70,7 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
 ```
 
-The script provides a convenient method to list and review all services required by Intune and Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.
+The script provides a convenient method to list and review all services required by Intune and Windows Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.
 
 ## Endpoints
 
@@ -105,15 +105,15 @@ ID |Desc |Category |ER |Addresses |Ports
 189 | Dependency - Feature Deployment| Default<BR>Required | False |`config.edge.skype.com`<BR> | **TCP:** 443|
 192 | Organizational messages| Default<BR>Required | False | `fd.api.orgmsg.microsoft.com`<BR>`ris.prod.api.personalization.ideas.microsoft.com`<BR>`contentauthassetscdn-prod.azureedge.net`<BR>`contentauthassetscdn-prodeur.azureedge.net`<BR>`contentauthrafcontentcdn-prod.azureedge.net`<BR>`contentauthrafcontentcdn-prodeur.azureedge.net`<BR> | **TCP:** 443|
 
-### Autopilot dependencies
+### Windows Autopilot dependencies
 
 ID |Desc |Category |ER |Addresses |Ports|
 -- |-- |-----|--- |--------------|--------------------------------|
-164 | Autopilot - Windows Update| Default<BR>Required | False | `*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`adl.windows.com`<BR> | **TCP:** 80, 443|
-165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` |**UDP:** 123|
-169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
-173 | Autopilot - Third party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
-182 | Autopilot - Diagnostics upload | Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR>`lgmsapewus2.blob.core.windows.net`<BR>`lgmsapesea.blob.core.windows.net`<BR>`lgmsapeaus.blob.core.windows.net`<BR>`lgmsapeind.blob.core.windows.net`<BR> | **TCP:** 443|
+164 | Windows Autopilot - Windows Update| Default<BR>Required | False | `*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`adl.windows.com`<BR> | **TCP:** 80, 443|
+165 | Windows Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` |**UDP:** 123|
+169 | Windows Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
+173 | Windows Autopilot - Third party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
+182 | Windows Autopilot - Diagnostics upload | Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR>`lgmsapewus2.blob.core.windows.net`<BR>`lgmsapesea.blob.core.windows.net`<BR>`lgmsapeaus.blob.core.windows.net`<BR>`lgmsapeind.blob.core.windows.net`<BR> | **TCP:** 443|
 
 ### Remote Help
 
@@ -245,9 +245,9 @@ You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. F
 |swdd02-mscdn.azureedge.net| Scripts & Win32 Apps |
 |swdin01-mscdn.azureedge.net| Scripts & Win32 Apps |
 |swdin02-mscdn.azureedge.net| Scripts & Win32 Apps |
-|ekcert.spserv.microsoft.com| Autopilot Self-deploy |
-|ekop.intel.com| Autopilot Self-deploy |
-|ftpm.amd.com| Autopilot Self-deploy |
+|ekcert.spserv.microsoft.com| Windows Autopilot Self-deploy |
+|ekop.intel.com| Windows Autopilot Self-deploy |
+|ftpm.amd.com| Windows Autopilot Self-deploy |
 |*.itunes.apple.com| Apple Device Management |
 |*.mzstatic.com| Apple Device Management |
 |*.phobos.apple.com| Apple Device Management |
@@ -447,4 +447,3 @@ For more information, see the [Overview of Endpoint Privilege Management](../pro
 [Other endpoints not included in the Office 365 IP Address and URL Web service](/microsoft-365/enterprise/additional-office365-ip-addresses-and-urls)
 
 [Managing Office 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints)
-

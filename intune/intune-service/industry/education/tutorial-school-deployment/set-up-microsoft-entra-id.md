@@ -129,7 +129,7 @@ For more information, see [Group-based licensing using Microsoft Entra admin cen
 
 ✅ Customize your tenant branding
 
-Configuring your school branding enables a more familiar Autopilot experience to students and teachers. With a custom school branding, you can define a custom logo and a welcome message, which is visible during the Windows out-of-box experience (OOBE).
+Configuring your school branding enables a more familiar Windows Autopilot experience to students and teachers. With a custom school branding, you can define a custom logo and a welcome message, which is visible during the Windows out-of-box experience (OOBE).
 
 To configure your school's branding:
 

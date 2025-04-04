@@ -20,6 +20,6 @@ user-driven/hybrid-azure-ad-join-autopilot-profile.md
 
 Headings are driven by article context. -->
 
-For more information on configuring Autopilot profiles, see the following articles:
+For more information on configuring Windows Autopilot profiles, see the following articles:
 
-- [Configure Autopilot profiles](/autopilot/profiles).
+- [Configure Windows Autopilot profiles](/autopilot/profiles).
