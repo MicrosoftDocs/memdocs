@@ -56,6 +56,6 @@ items:
   - name: Endpoint analytics
     tocHref: /intune/analytics/
     topicHref: /intune/analytics/
-  - name: Autopilot
+  - name: Windows Autopilot
     tocHref: /autopilot/
     topicHref: /autopilot/

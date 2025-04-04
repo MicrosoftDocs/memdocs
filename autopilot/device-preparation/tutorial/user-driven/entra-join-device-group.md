@@ -37,7 +37,7 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 > [!NOTE]
 >
-> The device group created in this step is specific to Windows Autopilot device preparation. Microsoft recommends creating a device group specifically for use with Windows Autopilot device preparation instead of reusing existing device groups used in other Autopilot scenarios.
+> The device group created in this step is specific to Windows Autopilot device preparation. Microsoft recommends creating a device group specifically for use with Windows Autopilot device preparation instead of reusing existing device groups used in other Windows Autopilot scenarios.
 
 ## Create a device group
 
