@@ -487,7 +487,7 @@ sections:
           This error might occur for several different type of issues including:
 
           - The server where the administrator is installing and configuring the Intune Connector for Active Directory doesn't have the required internet access or required Intune URLs aren't allowed. For more information, see the following articles:<br>
-
+          <br>
             - [Windows Autopilot requirements - Windows Autopilot Deployment Service](requirements.md?tabs=networking#windows-autopilot-deployment-service).
             - [Intune core service](/intune/intune-service/fundamentals/intune-endpoints#endpoints).
             - [Windows Autopilot dependencies](/intune/intune-service/fundamentals/intune-endpoints#windows-autopilot-dependencies).
