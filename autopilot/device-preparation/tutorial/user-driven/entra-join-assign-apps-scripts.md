@@ -23,7 +23,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
-- Step 3: [Create a device group](entra-join-device-group.md)
+- Step 3: [Create an assigned device group](entra-join-device-group.md)
 - Step 4: [Create a user group](entra-join-user-group.md)
 
 > [!div class="checklist"]
