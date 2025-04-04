@@ -38,7 +38,7 @@ For example, let's say a Seattle regional office admin has the Policy and Profil
 1. Create a scope tag called Seattle.
 2. Create a role assignment for the Policy and Profile Manager role with:
     - Members (Groups) = A security group named Seattle IT admins. All admins in this group have  permission to manage policies and profiles for users/devices in the Scope (Groups).
-    - Scope (Groups) = A security group named Seattle users. All users/devices in this group can have their profiles and policies managed by the admins in the Members (Groups). 
+    - Scope (Groups) = A security group named Seattle users. All users/devices in this group can have their profiles and policies managed by the admins in the Members (Groups).
     - Scope (Tags) = Seattle. Admins in the Member (Groups) can see Intune objects that also have the Seattle scope tag.
 3. Add the Seattle scope tag to policies and profiles that you want admins in Members (Groups) to have access to.
 4. Add the Seattle scope tag to devices that you want visible to admins in the Members (Groups).
@@ -99,7 +99,7 @@ When working with scope tags, remember these details:
 - You can assign scope tags to an Intune object type if the tenant can have multiple versions of that object (such as role assignments or apps).
   The following Intune objects are exceptions to this rule and don't currently support scope tags:
   - Corp Device Identifiers
-  - Autopilot Devices
+  - Windows Autopilot Devices
   - Device compliance locations
   - Jamf devices
 - Volume Purchase Program (VPP) apps and ebooks associated with the VPP token inherit the scope tags assigned to the associated VPP token.

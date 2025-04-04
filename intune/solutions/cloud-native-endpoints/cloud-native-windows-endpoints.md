@@ -280,7 +280,7 @@ To build your first cloud-native Windows endpoint, use the same virtual machine 
 
 1. Resume (or reset if necessary) your Windows PC to the Out of Box Experience (OOBE).
    > [!NOTE]
-   > If you're prompted to choose setup for personal or an organization, then the Autopilot process hasn't triggered. In that situation, restart the device and ensure it has internet access. If it still doesn't work, try resetting the PC or reinstalling Windows.
+   > If you're prompted to choose setup for personal or an organization, then the Windows Autopilot process hasn't triggered. In that situation, restart the device and ensure it has internet access. If it still doesn't work, try resetting the PC or reinstalling Windows.
 
 2. Sign in with Microsoft Entra credentials (*UPN* or *AzureAD\username*).
 3. The enrollment status page shows the status of the device configuration.

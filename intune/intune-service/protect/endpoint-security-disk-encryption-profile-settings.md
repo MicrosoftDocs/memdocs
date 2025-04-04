@@ -58,7 +58,7 @@ Supported platforms and profiles:
 
 ### Encryption
 
-**Enable FileVault**  
+**Enable FileVault**
 
 - **Not configured** (*default*)
 - **Yes** - Enable Full Disk Encryption using XTS-AES 128 with FileVault on devices that run macOS 10.13 and later. FileVault is enabled when the user signs off of the device.
@@ -68,27 +68,27 @@ Supported platforms and profiles:
   - **Recovery key type**
     *Personal key* recovery keys are created for devices. Configure the following settings for the personal key:
 
-    - **Personal recovery key rotation**  
+    - **Personal recovery key rotation**
       Specify how frequently the personal recovery key for a device will rotate. You can select the default of **Not configured**, or a value of **1** to **12** months.
-    - **Escrow location description of personal recovery key**  
+    - **Escrow location description of personal recovery key**
       Specify a short message to the user that explains how they can retrieve their personal recovery key. The user sees this message on their sign in screen when prompted to enter their personal recovery key if a password is forgotten.
 
-  - **Number of times allowed to bypass**  
+  - **Number of times allowed to bypass**
     Set the number of times a user can ignore prompts to enable FileVault before FileVault is required for the user to sign in.
     - **Not configured** (*default*) - Encryption on the device is required before the next sign-in is allowed.
     - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.
     - **No limit, always prompt** - The user is prompted to enable FileVault, but encryption is never required.
 
-  - **Allow deferral until sign out**  
+  - **Allow deferral until sign out**
     - **Not configured** (*default*)
-    - **Yes** - Defer the prompt to enable FileVault until the user signs out.  
+    - **Yes** - Defer the prompt to enable FileVault until the user signs out.
 
-  - **Disable prompt at sign out**  
+  - **Disable prompt at sign out**
     Prevent the prompt to the user that requests they enable FileVault when they sign out. When set to Disable, the prompt at sign-out is disabled and instead, the user is prompted when they sign in.
     - **Not configured** (*default*)
     - **Yes** - Disable the prompt to enable FileVault that appears at sign-out.
 
-  - **Hide recovery key**  
+  - **Hide recovery key**
      Hide the personal recovery key from the user of the macOS device during encryption. After the disk is encrypted, a user can use any device to view their personal recovery key through the Intune Company Portal website, or company portal app on a supported platform.
     - **Not configured** (*default*)
     - **Yes** - Hide the personal recovery key during device encryption.
@@ -105,17 +105,17 @@ Supported platforms and profiles:
 
 ### BitLocker – Base Settings
 
-- **Enable full disk encryption for OS and fixed data drives**  
+- **Enable full disk encryption for OS and fixed data drives**
   CSP: [BitLocker - RequireDeviceEncryption](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
 
   If the drive was encrypted before this policy applied, no extra action is taken. If the encryption method and options match that of this policy, configuration should return success. If an in-place BitLocker configuration option doesn't match this policy, configuration will likely return an error.
-  
+
   To apply this policy to a disk already encrypted, decrypt the drive and reapply the MDM policy. Windows default is to not require BitLocker drive encryption. However, on Microsoft Entra join and Microsoft Account (MSA) registration/login automatic encryption can apply enabling BitLocker at XTS-AES 128-bit encryption.
 
   - **Not configured** (*default*) - No BitLocker enforcement takes place.
   - **Yes** - Enforce use of BitLocker.
 
-- **Require storage cards to be encrypted (mobile only)**  
+- **Require storage cards to be encrypted (mobile only)**
   CSP: [BitLocker - RequireStorageCardEncryption](/windows/client-management/mdm/bitlocker-csp#requirestoragecardencryption)
 
   This setting only applies to Windows Mobile and Mobile Enterprise SKU devices.
@@ -125,7 +125,7 @@ Supported platforms and profiles:
   > [!NOTE]
   > Support for [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ended in August of 2020.
 
-- **Hide prompt about third-party encryption**  
+- **Hide prompt about third-party encryption**
   CSP: [BitLocker - AllowWarningForOtherDiskEncryption](/windows/client-management/mdm/bitlocker-csp#allowwarningforotherdiskencryption)
 
   If BitLocker is enabled on a system that's already encrypted by a third-party encryption product, it might render the device unusable. Data loss can occur and you might need to reinstall Windows. It's highly suggested to never enable BitLocker on a device that has third-party encryption installed or enabled.
@@ -139,14 +139,14 @@ Supported platforms and profiles:
 
   When set to *Yes*, you can then configure the following setting:
 
-  - **Allow standard users to enable encryption during Autopilot**  
+  - **Allow standard users to enable encryption during Autopilot**
     CSP: [BitLocker - AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp)
     - **Not configured** (*default*) – The setting is left as client default, which is to require local admin access to enable BitLocker.
     - **Yes** - During Microsoft Entra join silent enable scenarios, users don't need to be local administrators to enable BitLocker.
 
-    For non-silent enablement and Autopilot scenarios, the user must be a local admin to complete the BitLocker setup wizard.
+    For non-silent enablement and Windows Autopilot scenarios, the user must be a local admin to complete the BitLocker setup wizard.
 
-- **Configure client-driven recovery password rotation**  
+- **Configure client-driven recovery password rotation**
   CSP: [BitLocker - ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)
 
   Add Work Account (AWA, formally Workplace Joined) devices aren't supported for key rotation.
@@ -157,10 +157,10 @@ Supported platforms and profiles:
 
 ### BitLocker - Fixed Drive Settings
 
-- **BitLocker fixed drive policy**  
+- **BitLocker fixed drive policy**
   CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
-  - **Fixed drive recovery**  
+  - **Fixed drive recovery**
     CSP: [BitLocker - FixedDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrecoveryoptions)
 
     Control how BitLocker-protected fixed data-drives are recovered in the absence of the required startup key information.
@@ -170,7 +170,7 @@ Supported platforms and profiles:
 
     When set to *Configure* the following settings are available:
 
-    - **User creation of recovery key**  
+    - **User creation of recovery key**
       - **Blocked** (*default*)
       - **Required**
       - **Allowed**
@@ -183,7 +183,7 @@ Supported platforms and profiles:
       - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Microsoft Entra ID fails. This can result in no recovery information being stored externally.
       - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Microsoft Entra.
 
-    - **User creation of recovery password**  
+    - **User creation of recovery password**
       - **Blocked** (*default*)
       - **Required**
       - **Allowed**
@@ -193,22 +193,22 @@ Supported platforms and profiles:
       - **Yes** - Block the end user from choosing extra recovery options such as printing recovery keys during the BitLocker setup wizard.
 
     - **Enable BitLocker after recovery information to store**
-      - **Not configured** (*default*)  
+      - **Not configured** (*default*)
       - **Yes** - By setting this to *Yes*, BitLocker recovery information will be saved to Active Directory Domain Services.
 
     - **Block the use of certificate-based data recovery agent (DRA)**
       - **Not configured** (*default*) - Allow the use of DRA to be set up. Setting up DRA requires an enterprise PKI and Group Policy Objects to deploy the DRA agent and certificates.
       - **Yes** - Block the ability to use Data Recovery Agent (DRA) to recover BitLocker enabled drives.
 
-  - **Block write access to fixed data-drives not protected by BitLocker**  
-    CSP: [BitLocker - FixedDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrequireencryption)  
+  - **Block write access to fixed data-drives not protected by BitLocker**
+    CSP: [BitLocker - FixedDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrequireencryption)
     This setting is available when *BitLocker fixed drive policy* is set to *Configure*.
 
     - **Not configured** (*default*) - Data can be written to non-encrypted fixed drives.
     - **Yes** - Windows won't allow any data to be written to fixed drives that aren't BitLocker protected. If a fixed drive isn't encrypted, the user will need to complete the BitLocker setup wizard for the drive before write access is granted.
 
-  - **Configure encryption method for fixed data-drives**  
-    CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)  
+  - **Configure encryption method for fixed data-drives**
+    CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
     Configure the encryption method and cipher strength for fixed data-drives disks. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
 
@@ -220,15 +220,15 @@ Supported platforms and profiles:
 
 ### BitLocker - OS Drive Settings
 
-- **BitLocker system drive policy**  
+- **BitLocker system drive policy**
   CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
-  - **Configure** (*default*)  
+  - **Configure** (*default*)
   - **Not configured**
 
   When set to *Configure* you can configure the following settings:
 
-  - **Startup authentication required**  
+  - **Startup authentication required**
     CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
     - **Not configured** (*default*)
@@ -236,7 +236,7 @@ Supported platforms and profiles:
 
     When set to *Yes* you can configure the following settings:
 
-    - **Compatible TPM startup**  
+    - **Compatible TPM startup**
       CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
       It's recommended to require a TPM for BitLocker. This setting only applies when first enabling BitLocker and has no effect if BitLocker is already enabled.
@@ -245,34 +245,34 @@ Supported platforms and profiles:
       - **Required** - BitLocker enables only if a TPM is present and usable.
       - **Allowed** - BitLocker uses the TPM if it's present.
 
-    - **Compatible TPM startup PIN**  
+    - **Compatible TPM startup PIN**
       CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
       - **Blocked** (*default*) - Block the use of a PIN.
       - **Required** - Require a PIN and TPM be present to enable BitLocker.
       - **Allowed** - BitLocker uses the TPM if it's present and allows a startup PIN to be configured by the user.
 
-      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Autopilot) won't be successful when user interaction is required.
+      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Windows Autopilot) won't be successful when user interaction is required.
 
-    - **Compatible TPM startup key**  
+    - **Compatible TPM startup key**
       CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
       - **Blocked** (*default*) - Block the use of startup keys.
       - **Required** - Require a startup key and TPM be present to enable BitLocker.
       - **Allowed** - BitLocker uses the TPM if it's present and allows a startup key (such as a USB drive) be present to unlock the drives.
 
-      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Autopilot) won't be successful when user interaction is required.
+      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Windows Autopilot) won't be successful when user interaction is required.
 
-    - **Compatible TPM startup key and PIN**  
+    - **Compatible TPM startup key and PIN**
       CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
       - **Blocked** (*default*) - Block the use of a startup key and PIN combination.
       - **Required** - Require BitLocker have a startup key and PIN present to become enabled.
       - **Allowed** - BitLocker uses the TPM if it's present and allows a startup key) and PIN combination.
 
-      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Autopilot) won't be successful when user interaction is required.
+      For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Windows Autopilot) won't be successful when user interaction is required.
 
-    - **Disable BitLocker on devices where TPM is incompatible**  
+    - **Disable BitLocker on devices where TPM is incompatible**
     CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
       If no TPM is present, BitLocker requires a password or USB drive for startup.
@@ -282,7 +282,7 @@ Supported platforms and profiles:
       - **Not configured** (*default*)
       - **Yes** - Block BitLocker from being configured without a compatible TPM chip.
 
-    - **Enable preboot recovery message and url**  
+    - **Enable preboot recovery message and url**
       CSP: [BitLocker - SystemDrivesRecoveryMessage](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoverymessage)configure
 
       - **Not configured** (*default*) – Use the default BitLocker pre-boot recovery information.
@@ -290,21 +290,21 @@ Supported platforms and profiles:
 
       When set to *Yes* you can configure the following settings:
 
-      - **Preboot recovery message**  
+      - **Preboot recovery message**
         Specify a custom pre-boot recovery message.
 
-      - **Preboot recovery url**  
+      - **Preboot recovery url**
         Specify a custom pre-boot recovery URL.
 
-    - **System drive recovery**  
+    - **System drive recovery**
       CSP: [BitLocker - SystemDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoveryoptions)
 
-      - **Not configured** (*default*)  
+      - **Not configured** (*default*)
       - **Configure** - Enable the configuration of additional settings.
 
       When set to *Configure* the following settings are available:
 
-      - **User creation of recovery key**  
+      - **User creation of recovery key**
         - **Blocked** (*default*)
         - **Required**
         - **Allowed**
@@ -317,7 +317,7 @@ Supported platforms and profiles:
         - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Microsoft Entra ID fails. This can result in no recovery information being stored externally.
         - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Microsoft Entra.
 
-      - **User creation of recovery password**  
+      - **User creation of recovery password**
         - **Blocked** (*default*)
         - **Required**
         - **Allowed**
@@ -327,14 +327,14 @@ Supported platforms and profiles:
         - **Yes** - Block the end user from choosing extra recovery options such as printing recovery keys during the BitLocker setup wizard.
 
       - **Enable BitLocker after recovery information to store**
-        - **Not configured** (*default*)  
+        - **Not configured** (*default*)
         - **Yes** - By setting this to *Yes*, BitLocker recovery information will be saved to Active Directory Domain Services.
 
       - **Block the use of certificate-based data recovery agent (DRA)**
         - **Not configured** (*default*) - Allow the use of DRA to be set up. Setting up DRA requires an enterprise PKI and Group Policy Objects to deploy the DRA agent and certificates.
         - **Yes** - Block the ability to use Data Recovery Agent (DRA) to recover BitLocker enabled drives.
 
-    - **Minimum PIN length**  
+    - **Minimum PIN length**
       CSP: [BitLocker - SystemDrivesMinimumPINLength](/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
 
       Specify the minimum startup PIN length when TPM + PIN is required during BitLocker enablement. The PIN length must be between 4 and 20 digits.
@@ -343,7 +343,7 @@ Supported platforms and profiles:
 
       This setting only applies when first enabling BitLocker and has no effect if BitLocker is already enabled.
 
-  - **Configure encryption method for Operating System drives**  
+  - **Configure encryption method for Operating System drives**
    CSP: [BitLocker - EncryptionMethodByDriveType]( https://go.microsoft.com/fwlink/?linkid=872526)
 
     Configure the encryption method and cipher strength for OS drives. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
@@ -356,15 +356,15 @@ Supported platforms and profiles:
 
 ### BitLocker - Removable Drive Settings
 
-- **BitLocker removable drive policy**  
+- **BitLocker removable drive policy**
   CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
-  - **Not configured** (*default*)  
+  - **Not configured** (*default*)
   - **Configure**
 
   When set to *Configure* you can configure the following settings.
 
-  - **Configure encryption method for removable data-drives**  
+  - **Configure encryption method for removable data-drives**
     CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
     Select the desired encryption method for removable data-drives disks.
@@ -375,13 +375,13 @@ Supported platforms and profiles:
     - **AES 128bit XTS**
     - **AES 256bit XTS**
 
-  - **Block write access to removable data-drives not protected by BitLocker**  
+  - **Block write access to removable data-drives not protected by BitLocker**
     CSP: [BitLocker - RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
 
     - **Not configured** (*default*) - Data can be written to non-encrypted removable drives.
     - **Yes** - Windows doesn’t allow data to be written to removable drives that aren't BitLocker protected. If an inserted removable drive isn't encrypted, the user must complete the BitLocker setup wizard before write access is granted to drive.
 
-  - **Block write access to devices configured in another organization**  
+  - **Block write access to devices configured in another organization**
     CSP: [BitLocker - RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
 
     - **Not configured** (*default*) - Any BitLocker encrypted drive can be used.

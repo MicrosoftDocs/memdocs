@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage approved apps for Windows devices with App Control for Business policy and Managed Installers in Microsoft Intune | Microsoft Docs
-description: Use App Control for Business policies and a managed installer to manage which apps are approved to run on Windows devices that you manage with Microsoft Intune. 
+description: Use App Control for Business policies and a managed installer to manage which apps are approved to run on Windows devices that you manage with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -189,7 +189,7 @@ For more information, see [Allow apps installed by a managed installer](/windows
 > To avoid this issue, we recommend removing any RuleCollection defined as **NotConfigured** with an empty rule set from your existing AppLocker policy if it is currently in place.
 
 - Managed Installer can enable stopped or disabled App-Locker Policies (on targeted PCs) enforced from GPO.
-  
+
 ### Remove the Intune Management Extension as a managed installer
 
 Should you need to, you can stop configuring the Intune Management Extension as a managed installer for your tenant. This requires you to turn off the managed installer policy. After the policy is turned off, you can choose to use additional clean-up actions.
@@ -386,7 +386,7 @@ On the **Managed Installer** tab, you can view the status, success count, and er
 :::image type="content" source="./media/endpoint-security-app-control-policy/view-managed-installer-policy.png" alt-text="This screen capture shows a view of the managed installer policy Overview page." lightbox="./media/endpoint-security-app-control-policy/view-managed-installer-policy.png":::
 
 Select the policy name to open its Overview page, where you can view the following information:
-  
+
 - **Device status**, a static count of success vs errors.
 
 - **Device status trend**, a historical chart that displays a timeline and count of devices in each detail category.
@@ -395,7 +395,7 @@ Report details include:
 
 - Succeeded - Devices that successfully applied the policy.
 - Error - Devices with errors.
-- New devices – New devices identifies devices that have recently applied the policy. 
+- New devices – New devices identifies devices that have recently applied the policy.
 
   :::image type="content" source="./media/endpoint-security-app-control-policy/managed-installer-policy-overview.png" alt-text="This screen capture shows the managed installer Overview." lightbox="./media/endpoint-security-app-control-policy/managed-installer-policy-overview.png":::
 
@@ -408,7 +408,7 @@ While viewing the policy details, you can select **Device status** (below *Monit
 - OS version
 - Managed installer status (*Succeeded* or *Error*)
 
-It can take several minutes for the device-based view of the policy details to update after the device actually receives the policy. 
+It can take several minutes for the device-based view of the policy details to update after the device actually receives the policy.
 
 ### App Control for Business
 
@@ -464,13 +464,13 @@ If setting Configuration Manager as the Managed Installer is desired, you can al
 
 ### What considerations should I have for Entra Hybrid Join (HAADJ) devices within my organization that want to use Managed Installer?
 
-Entra hybrid join devices require connectivity to an on-premises Domain Controller (DC) to apply Group Policies including the Managed Installer policy (through AppLocker). Without DC connectivity, especially during Autopilot provisioning, Managed Installer policy won't successfully apply. Consider:
+Entra hybrid join devices require connectivity to an on-premises Domain Controller (DC) to apply Group Policies including the Managed Installer policy (through AppLocker). Without DC connectivity, especially during Windows Autopilot provisioning, Managed Installer policy won't successfully apply. Consider:
 
-1. Use Autopilot with Entra join instead. See our recommendation for [which Entra join option](../../solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md#which-option-is-right-for-your-organization) to choose for more information.
+1. Use Windows Autopilot with Entra join instead. See our recommendation for [which Entra join option](../../solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md#which-option-is-right-for-your-organization) to choose for more information.
 
 2. For Entra hybrid join, choose one or both of the following:
-   - Use device provisioning methods that provide DC connectivity at the time of app install as Autopilot might not work here.
-   - Deploy apps after the Autopilot provisioning is complete, so that DC connectivity is established at the time of app install and Managed Installer policy can apply.
+   - Use device provisioning methods that provide DC connectivity at the time of app install as Windows Autopilot might not work here.
+   - Deploy apps after the Windows Autopilot provisioning is complete, so that DC connectivity is established at the time of app install and Managed Installer policy can apply.
 
 ## Next Steps
 

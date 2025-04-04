@@ -45,7 +45,7 @@ Select the appropriate tab to see the relevant requirements:
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **General**](#tab/general-requirements)
 
 - Successfully configured the [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify the device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
-- If [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) is configured as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
+- If [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) is configured as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Windows Autopilot devices is included in the sync scope.
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Device enrollment**](#tab/device-enrollemnt-requirements)
 
@@ -160,7 +160,7 @@ Select one of the following ways to enroll Windows Autopilot devices.
 
 1. Assign the profile to a group that contains the members that need to be automatically registered with Windows Autopilot.
 
-For more information, see [Create an Autopilot deployment profile](profiles.md).
+For more information, see [Configure Windows Autopilot profiles](profiles.md).
 
 ### Register Windows Autopilot devices that aren't enrolled
 
@@ -240,7 +240,7 @@ Windows Autopilot deployment profiles are used to configure the Windows Autopilo
 
 1. In the **Create profile** screen, on the **Basics** page, enter a **Name** and optional **Description**.
 
-1. If all devices in the assigned groups should automatically register to Windows Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Windows Autopilot devices in assigned groups register with the Windows Autopilot deployment service. Personally owned devices aren't registered to Windows Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Windows Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Windows Autopilot deployment service. Instead the devices need to be directly deleted. For more information, see [Delete Autopilot devices](add-devices.md#delete-autopilot-devices).
+1. If all devices in the assigned groups should automatically register to Windows Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Windows Autopilot devices in assigned groups register with the Windows Autopilot deployment service. Personally owned devices aren't registered to Windows Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Windows Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Windows Autopilot deployment service. Instead the devices need to be directly deleted. For more information, see [Delete Windows Autopilot devices](add-devices.md#delete-windows-autopilot-devices).
 
 1. Select **Next**.
 

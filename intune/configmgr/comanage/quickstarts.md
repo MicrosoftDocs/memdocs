@@ -11,7 +11,7 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # Cloud connecting with co-management
@@ -38,7 +38,7 @@ In the following video, Microsoft corporate vice president Brad Anderson introdu
 | <a name="bkmk_remote"></a>**Remote actions from Intune** | Run remote actions from Intune for co-managed devices. For example, wipe and reset a device and maintain enrollment and account. | [![Thumbnail of remote actions video.](media/thumbnail-remote-action.png)](quickstart-remote-actions.md) |
 | <a name="bkmk_client-health"></a>**Configuration Manager client health** | Maintain visibility of Configuration Manager client health from the Microsoft Intune admin center. | [![Thumbnail of client health video.](media/thumbnail-client-health.png)](quickstart-client-health.md) |
 | <a name="bkmk_hybrid-aad"></a>**Microsoft Entra ID** | With Microsoft Entra ID you can take advantage of improved productivity for your users and security for your resources, across both cloud and on-prem environments. | [![Thumbnail of hybrid Microsoft Entra video.](media/thumbnail-azure-ad.png)](quickstart-hybrid-aad.md) |
-| <a name="bkmk_autopilot"></a>**Windows Autopilot** | Reduce time, resources, and complexity associated with deploying, managing, and retiring or recycling devices. Autopilot also creates a better experience for end users. | [![Thumbnail of Windows Autopilot video.](media/thumbnail-autopilot.png)](quickstart-autopilot.md) |
+| <a name="bkmk_autopilot"></a>**Windows Autopilot** | Reduce time, resources, and complexity associated with deploying, managing, and retiring or recycling devices. Windows Autopilot also creates a better experience for end users. | [![Thumbnail of Windows Autopilot video.](media/thumbnail-autopilot.png)](quickstart-autopilot.md) |
 
 ## Getting started
 
