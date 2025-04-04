@@ -65,7 +65,7 @@ items:
   - name: Tutorial
     items:
 
-      - name: Autopilot scenarios
+      - name: Windows Autopilot scenarios
         href: tutorial/autopilot-scenarios.md
 
       - name: Windows Autopilot user-driven mode
@@ -78,15 +78,15 @@ items:
               href: tutorial/user-driven/azure-ad-join-automatic-enrollment.md
             - name: Step 2 - Allow users to join devices to Microsoft Entra ID
               href: tutorial/user-driven/azure-ad-join-allow-users-to-join.md
-            - name: Step 3 - Register devices as Autopilot devices
+            - name: Step 3 - Register devices as Windows Autopilot devices
               href: tutorial/user-driven/azure-ad-join-register-device.md
             - name: Step 4 - Create a device group
               href: tutorial/user-driven/azure-ad-join-device-group.md
-            - name: Step 5 - Configure and assign Autopilot Enrollment Status Page (ESP)
+            - name: Step 5 - Configure and assign Windows Autopilot Enrollment Status Page (ESP)
               href: tutorial/user-driven/azure-ad-join-esp.md
-            - name: Step 6 - Create and assign Autopilot profile
+            - name: Step 6 - Create and assign Windows Autopilot profile
               href: tutorial/user-driven/azure-ad-join-autopilot-profile.md
-            - name: Step 7 - Assign Autopilot device to a user (optional)
+            - name: Step 7 - Assign Windows Autopilot device to a user (optional)
               href: tutorial/user-driven/azure-ad-join-assign-device-to-user.md
             - name: Step 8 - Deploy the device
               href: tutorial/user-driven/azure-ad-join-deploy-device.md
@@ -100,17 +100,17 @@ items:
               href: tutorial/user-driven/hybrid-azure-ad-join-intune-connector.md
             - name: Step 3 - Increase the computer account limit in the Organizational Unit (OU)
               href: tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit.md
-            - name: Step 4 - Register devices as Autopilot devices
+            - name: Step 4 - Register devices as Windows Autopilot devices
               href: tutorial/user-driven/hybrid-azure-ad-join-register-device.md
             - name: Step 5 - Create a device group
               href: tutorial/user-driven/hybrid-azure-ad-join-device-group.md
-            - name: Step 6 - Configure and assign Autopilot Enrollment Status Page (ESP)
+            - name: Step 6 - Configure and assign Windows Autopilot Enrollment Status Page (ESP)
               href: tutorial/user-driven/hybrid-azure-ad-join-esp.md
-            - name: Step 7 - Create and assign Autopilot profile
+            - name: Step 7 - Create and assign Windows Autopilot profile
               href: tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile.md
             - name: Step 8 - Configure and assign domain join profile
               href: tutorial/user-driven/hybrid-azure-ad-join-domain-join-profile.md
-            - name: Step 9 - Assign Autopilot device to a user (optional)
+            - name: Step 9 - Assign Windows Autopilot device to a user (optional)
               href: tutorial/user-driven/hybrid-azure-ad-join-assign-device-to-user.md
             - name: Step 10 - Deploy the device
               href: tutorial/user-driven/hybrid-azure-ad-join-deploy-device.md
@@ -125,15 +125,15 @@ items:
               href: tutorial/pre-provisioning/azure-ad-join-automatic-enrollment.md
             - name: Step 2 - Allow users to join devices to Microsoft Entra ID
               href: tutorial/pre-provisioning/azure-ad-join-allow-users-to-join.md
-            - name: Step 3 - Register devices as Autopilot devices
+            - name: Step 3 - Register devices as Windows Autopilot devices
               href: tutorial/pre-provisioning/azure-ad-join-register-device.md
             - name: Step 4 - Create a device group
               href: tutorial/pre-provisioning/azure-ad-join-device-group.md
-            - name: Step 5 - Configure and assign Autopilot Enrollment Status Page (ESP)
+            - name: Step 5 - Configure and assign Windows Autopilot Enrollment Status Page (ESP)
               href: tutorial/pre-provisioning/azure-ad-join-esp.md
-            - name: Step 6 - Create and assign Autopilot profile
+            - name: Step 6 - Create and assign Windows Autopilot profile
               href: tutorial/pre-provisioning/azure-ad-join-autopilot-profile.md
-            - name: Step 7 - Assign Autopilot device to a user (optional)
+            - name: Step 7 - Assign Windows Autopilot device to a user (optional)
               href: tutorial/pre-provisioning/azure-ad-join-assign-device-to-user.md
             - name: Step 8 - Technician flow
               href: tutorial/pre-provisioning/azure-ad-join-technician-flow.md
@@ -149,17 +149,17 @@ items:
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-intune-connector.md
             - name: Step 3 - Increase the computer account limit in the Organizational Unit (OU)
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-computer-account-limit.md
-            - name: Step 4 - Register devices as Autopilot devices
+            - name: Step 4 - Register devices as Windows Autopilot devices
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-register-device.md
             - name: Step 5 - Create a device group
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-device-group.md
-            - name: Step 6 - Configure and assign Autopilot Enrollment Status Page (ESP)
+            - name: Step 6 - Configure and assign Windows Autopilot Enrollment Status Page (ESP)
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-esp.md
-            - name: Step 7 - Create and assign Autopilot profile
+            - name: Step 7 - Create and assign Windows Autopilot profile
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md
             - name: Step 8 - Configure and assign domain join profile
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md
-            - name: Step 9 - Assign Autopilot device to a user (optional)
+            - name: Step 9 - Assign Windows Autopilot device to a user (optional)
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-assign-device-to-user.md
             - name: Step 10 - Technician flow
               href: tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow.md
@@ -172,13 +172,13 @@ items:
           href: tutorial/self-deploying/self-deploying-workflow.md
         - name: Step 1 - Set up Windows automatic Intune enrollment
           href: tutorial/self-deploying/self-deploying-automatic-enrollment.md
-        - name: Step 2 - Register devices as Autopilot devices
+        - name: Step 2 - Register devices as Windows Autopilot devices
           href: tutorial/self-deploying/self-deploying-register-device.md
         - name: Step 3 - Create a device group
           href: tutorial/self-deploying/self-deploying-device-group.md
-        - name: Step 4 - Configure and assign Autopilot Enrollment Status Page (ESP)
+        - name: Step 4 - Configure and assign Windows Autopilot Enrollment Status Page (ESP)
           href: tutorial/self-deploying/self-deploying-esp.md
-        - name: Step 5 - Create and assign Autopilot profile
+        - name: Step 5 - Create and assign Windows Autopilot profile
           href: tutorial/self-deploying/self-deploying-autopilot-profile.md
         - name: Step 6 - Deploy the device
           href: tutorial/self-deploying/self-deploying-deploy-device.md
@@ -189,21 +189,21 @@ items:
           href: tutorial/existing-devices/existing-devices-workflow.md
         - name: Step 1 - Set up a Windows Autopilot profile
           href: tutorial/existing-devices/setup-autopilot-profile.md
-        - name: Step 2 - Install required modules to obtain Autopilot profile(s) from Intune
+        - name: Step 2 - Install required modules to obtain Windows Autopilot profile(s) from Intune
           href: tutorial/existing-devices/install-modules.md
-        - name: Step 3 - Create JSON file for Autopilot profile(s)
+        - name: Step 3 - Create JSON file for Windows Autopilot profile(s)
           href: tutorial/existing-devices/create-json-file.md
         - name: Step 4 - Create and distribute package for JSON file in Configuration Manager
           href: tutorial/existing-devices/create-json-package.md
-        - name: Step 5 - Create Autopilot task sequence in Configuration Manager
+        - name: Step 5 - Create Windows Autopilot task sequence in Configuration Manager
           href: tutorial/existing-devices/create-autopilot-task-sequence.md
         - name: Step 6 - Create collection in Configuration Manager
           href: tutorial/existing-devices/create-collection.md
-        - name: Step 7 - Deploy Autopilot task sequence to collection in Configuration Manager
+        - name: Step 7 - Deploy Windows Autopilot task sequence to collection in Configuration Manager
           href: tutorial/existing-devices/deploy-autopilot-task-sequence.md
         - name: Step 8 - Speed up the deployment process (optional)
           href: tutorial/existing-devices/speed-up-deployment.md
-        - name: Step 9 - Run Autopilot task sequence on device
+        - name: Step 9 - Run Windows Autopilot task sequence on device
           href: tutorial/existing-devices/run-autopilot-task-sequence.md
         - name: Step 10 - Register device for Windows Autopilot
           href: tutorial/existing-devices/register-device.md
