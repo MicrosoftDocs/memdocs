@@ -85,17 +85,17 @@ In the **Configuration settings** page:
 
 1. Expand the **Out-of-box experience settings** section by selecting it.
 
-   1. **Minutes allowed before showing installation error** - enter the number of minutes allowed before failing a deployment.
+   1. **Minutes allowed before showing installation error** - Enter the number of minutes allowed before failing a deployment.
 
       The value entered is for the whole deployment and not for an individual application install or PowerShell script. The acceptable value is an integer between 15 and 720.
 
-   1. **Custom error message** - enter a custom message to display to the end-user if the deployment fails.
+   1. **Custom error message** - Enter a custom message to display to the end-user if the deployment fails.
 
-   1. **Allow users to skip setup after multiple attempts** - select either **Yes** or **No** as desired by toggling the switch.
+   1. **Allow users to skip setup after multiple attempts** - Select either **Yes** or **No** as desired by toggling the switch.
 
       Normally after a deployment failure, a **Retry** button is displayed allowing the end-user to retry the deployment. Setting this option as **Yes** also adds a **Continue anyway** button that allows the deployment to just fail, signs the end-user in, and lets them continue to the desktop.
 
-   1. **Show link to diagnostics** - select either **Yes** or **No** as desired by toggling the switch.
+   1. **Show link to diagnostics** - Select either **Yes** or **No** as desired by toggling the switch.
 
       If there's a deployment failure, setting this option to **Yes** displays a link at the deployment failure page allowing the end-user to retrieve diagnostic logs.
 
@@ -132,13 +132,13 @@ In the **Configuration settings** page:
 
 1. Expand the **Deployment settings** section by selecting it:
 
-   1. **Deployment mode** - select **User-driven** in the drop-down menu.
+   1. **Deployment mode** - Select **User-driven** in the drop-down menu.
 
-   1. **Deployment type** - select **Single user** in the drop-down menu.
+   1. **Deployment type** - Select **Single user** in the drop-down menu.
 
-   1. **Join type** - select **Microsoft Entra joined** in the drop-down menu.
+   1. **Join type** - Select **Microsoft Entra joined** in the drop-down menu.
 
-   1. **User account type** - select either **Standard User** or **Administrator** as desired by toggling the switch.
+   1. **User account type** - Select either **Standard User** or **Administrator** as desired by toggling the switch.
 
     > [!IMPORTANT]
     >
