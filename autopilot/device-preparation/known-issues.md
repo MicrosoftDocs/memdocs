@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/05/2025
+ms.date: 04/04/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -127,7 +127,7 @@ There's a known issue that the Windows Autopilot device preparation policy shows
 - An assigned device security group was properly added to the policy.
 - The **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** is the owner of the device security group specified in the policy.
 
-The issue is being investigated. As a workaround, create a new assigned device security group with the **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner, and then assign the new device group to the Windows Autopilot device preparation policy. For more information on creating the assigned device group, see [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+The issue is being investigated. As a workaround, create a new assigned device security group with the **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner, and then assign the new device group to the Windows Autopilot device preparation policy. For more information on creating the assigned device group, see [Create an assigned device group](tutorial/user-driven/entra-join-device-group.md#create-an-assigned-device-group).
 
 **This issue was resolved in July 2024.**
 
