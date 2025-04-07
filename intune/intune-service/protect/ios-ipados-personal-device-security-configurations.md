@@ -3,7 +3,7 @@
 
 title: iOS/iPadOS personal device security configurations
 titleSuffix: Microsoft Intune
-description: Learn the settings suggested for iOS/iPadOS personal device basic and high security.
+description: Review example personal device security configurations of basic, enhanced, and high security for iOS devices.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -39,7 +39,7 @@ When using these examples, work with your security team to evaluate the threat e
 
 For more information on each policy setting, see [iOS/iPadOS device settings in Microsoft Intune](../configuration/device-restrictions-ios.md).
 
-## Personal basic security (Level 1)
+## Personal basic security (level 1)
 
 Level 1 is the recommended minimum security configuration for iOS/iPadOS personal devices where users access work or school data.
 
@@ -69,11 +69,11 @@ The following table lists only configured settings. Settings not listed in the t
 | Password | Maximum minutes after screen lock before password is required | 5 | Organizations should update this setting to match their password policy. |
 | Password | Maximum minutes of inactivity until screen locks  | 5 | Organizations should update this setting to match their password policy. |
 
-## Personal enhanced security (Level 2)
+## Personal enhanced security (level 2)
 
 Level 2 is the recommended configuration for personal devices where users access more sensitive information. These devices are a natural target in enterprises today. These settings don't assume a large staff of highly skilled security personnel. Therefore, they should be accessible to most enterprise organizations. This configuration is applicable to most mobile users accessing work or school data on a device.
 
-This configuration expands upon the configuration in Level 1 by enacting data sharing controls.
+This configuration expands upon the configuration in level 1 by enacting data sharing controls.
 
 The level 2 settings include all the policy settings recommended for level 1. However, the settings listed in the following table include only those settings that are added or changed. These settings can have a slightly higher impact to users or to applications. They enforce a level of security more appropriate for risks facing users with access to sensitive information on mobile devices.
 
@@ -91,14 +91,16 @@ The level 2 settings include all the policy settings recommended for level 1. Ho
 | Cloud Storage | Block notes and highlights sync for enterprise books | Yes |  |
 | General | Block sending diagnostic and usage data to Apple | Yes |  |
 
-## Personal high security (Level 3)
+## Personal high security (level 3)
 
 Level 3 is the recommended configuration for both:
 
 - Organizations with large and sophisticated security organizations.
-- Specific users and groups who are uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries.
+- Specific users and groups who are uniquely targeted by adversaries. 
 
-This configuration expands upon Level 2 by:
+Such organizations are typically targeted by well-funded and sophisticated adversaries.
+
+This configuration expands upon level 2 by:
 
 - Enacting stronger password policies.
 - Disabling device functionality (for example, screenshots and screen recordings).

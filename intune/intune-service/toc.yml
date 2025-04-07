@@ -1129,6 +1129,10 @@ items:
           href: ./protect/windows-update-settings.md
         - name: Zero Trust security configuration examples
           items:
+          - name: Android fully managed compliance and security
+            href: ./protect/android-fully-managed-security-configurations.md
+          - name: Android personally-owned compliance and security
+            href: ./protect/android-personally-owned-security-configurations.md
           - name: iOS/iPadOS device compliance
             href: ./protect/ios-ipados-device-compliance-security-configurations.md
           - name: iOS/iPadOS personal device security
