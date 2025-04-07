@@ -553,7 +553,7 @@ You can use the **./mst-cli** command-line tool to update the TLS certificate on
 1. Copy the certificate file to **/etc/mstunnel/private/site.pfx**
 2. Run: `mst-cli import_cert`
 3. Run: `mst-cli server restart`
-command
+
 **PEM**:
 
 1. Copy the new certificate to **/etc/mstunnel/certs/site.crt**
