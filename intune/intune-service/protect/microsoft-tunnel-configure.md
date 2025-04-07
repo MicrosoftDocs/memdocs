@@ -508,7 +508,7 @@ For more information about the EU Data Boundary, see [EU Data Boundary for the M
 
 Linux system auditing can help identify security-relevant information or security violations on a Linux server that hosts Microsoft Tunnel. Linux system auditing is recommended for Microsoft Tunnel, but not required. To use system auditing, a Linux server must have the optional package for *auditd* installed to `/etc/audit/auditd.conf`.
 
-If you you've already installed a Tunnel Server on Linux and auditd is missing, use the information in the following procedure to install it. For information about installing auditd on a Linux server *before* you install Microsoft Tunnel, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#manually-install-auditd-for-linux-system-auditing) in Microsoft Tunnel prerequisites.
+If you you've already installed a Tunnel Server on Linux and auditd is missing, use the information in the following procedure to install it. For information about installing auditd on a Linux server *before* you install Microsoft Tunnel, see [Manually install auditd for Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#manually-install-auditd-for-linux-system-auditing) in Microsoft Tunnel prerequisites.
 
 ### Install auditd on a Tunnel server
 
