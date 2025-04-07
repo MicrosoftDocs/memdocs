@@ -75,7 +75,7 @@ Complete these steps to enable Android Enterprise management options in Microsof
 
 > [!IMPORTANT]
 - This account is used to manage the Google Admin account and associated subscriptions, as appropriate. The Microsoft Entra account must have an active mailbox to complete the validation process required by Google.
-> - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add more administrators, if needed, in the Google admin console.
+> - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add and remove more administrators, if needed, in the Google admin console. Google recommends having at least 2 owners to an enterprise for redundancy. 
 
 8. Follow the onscreen prompts to finish creating a Google Admin account.  
 
