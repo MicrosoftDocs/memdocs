@@ -1,12 +1,12 @@
 ## Enable Windows automatic enrollment  
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).     
-1. Go to **Devices** > **Enrollment**.     
+1. Go to **Devices**.
+1. Expand **Device onboarding** and select  **Enrollment**.     
 1. Go to the **Windows** tab. Then select **Automatic Enrollment**.  
 
    > [!NOTE]
    >  Automatic MDM enrollment is a premium Microsoft Entra feature available for Microsoft Entra ID Premium subscribers. If you can't see the automatic enrollment settings, select **Automatic MDM enrollment is available only for Microsoft Entra ID Premium subscribers** to activate a free trial.   
-1. Select **Microsoft Intune**.   
-1. Configure the **MDM user scope**. This setting enables automatic MDM enrollment for Microsoft Entra users so that you can manage their devices in Intune.
+1. Configure the **MDM user scope** for Microsoft Intune. This setting enables automatic MDM enrollment for Microsoft Entra users so that you can manage their devices in Intune.
 
    > [!div class="mx-imgBorder"]
    > ![Screenshot shows the Microsoft Entra MDM user scope.](../enrollment/media/windows-enroll/auto-enroll-scope.png)
