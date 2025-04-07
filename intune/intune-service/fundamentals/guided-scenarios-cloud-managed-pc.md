@@ -1,5 +1,5 @@
 ---
-title: Guided scenario - Cloud-managed Modern Desktop 
+title: Guided scenario - Cloud-managed Modern Desktop
 titleSuffix: Microsoft Intune
 description: Learn about the guided scenario to set up and configure a basic Modern Desktop from the Microsoft 365 Device Management portal.
 keywords:
@@ -92,8 +92,8 @@ The final step allows you to review a summary of the settings you configured. On
         - Set to **All** or,
         - Set to **Some**. Also add the user group created by this guided scenario.
 3. Follow the appropriate steps on the device to join it to Microsoft Entra ID based on the following:
-    - With Autopilot. For more information, see [Windows Autopilot user-driven mode](/windows/deployment/windows-autopilot/user-driven).
-    - Without Autopilot: For more information, see [Join a Windows 10 device to Microsoft Entra ID during the first-run experience](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+    - With Windows Autopilot. For more information, see [Windows Autopilot user-driven mode](/windows/deployment/windows-autopilot/user-driven).
+    - Without Windows Autopilot: For more information, see [Join a Windows 10 device to Microsoft Entra ID during the first-run experience](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ### What happens when I click Deploy?
 The user and device will be added to new security groups. They'll also be configured with Intune-recommended settings for security and productivity at work or school. After the user joins the device to Microsoft Entra ID, additional apps and settings will be added to the device. To learn more about these additional configurations, see [Quickstart: Enroll your Windows 10 device](../enrollment/quickstart-enroll-windows-device.md).
@@ -102,26 +102,26 @@ The user and device will be added to new security groups. They'll also be config
 
 ### Register device with Windows Autopilot (Optional)
 
-You can optionally choose to use a registered Autopilot device. For Autopilot, this guided scenario will assign an Autopilot deployment profile and enrollment status page profile. The Autopilot deployment profile will be configured as follows:
+You can optionally choose to use a registered Windows Autopilot device. For Windows Autopilot, this guided scenario will assign a Windows Autopilot deployment profile and enrollment status page profile. The Windows Autopilot deployment profile will be configured as follows:
 
 - User-driven mode – that is, require the end user to enter username and password during Windows setup.
 - Microsoft Entra join.
 - Customize Windows setup:
   - Hide the Microsoft Software licensing terms screen
-  - Hide Privacy settings 
+  - Hide Privacy settings
   - Create the user's local profile without local admin privileges
   - Hide the Change Account options on the corporate sign-in page
 
-The Enrollment status page will be configured to be enabled only for Autopilot devices and won't block waiting for all apps to be installed.
+The Enrollment status page will be configured to be enabled only for Windows Autopilot devices and won't block waiting for all apps to be installed.
 
-The guided scenario will also assign the user to the selected Autopilot device for a personalized setup experience.
+The guided scenario will also assign the user to the selected Windows Autopilot device for a personalized setup experience.
 
 #### Post-requisites
 
 Once the user joins the device to Microsoft Entra ID, the following configurations will be applied to the device:
 
 1. Microsoft 365 Apps will be automatically installed on the Cloud-managed PC. It includes the applications that you're familiar with, including Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business, and Word. You can use these applications to connect with Microsoft 365 services such as SharePoint Online, Exchange Online, and Skype for Business Online. Microsoft 365 Apps is updated regularly with new features, unlike nonsubscription versions of Office. For a list of new features, see What's new in Microsoft 365.
-2. Windows security baselines will be installed on the Cloud-managed PC. If you have setup Microsoft Defender for Endpoint, the guided scenario will also configure baseline settings for Defender. Defender for Endpoint provides a new post-breach layer of protection to the Windows 10 security stack. With a combination of client technology built into Windows 10 and a robust cloud service, it will help detect threats that have made it past other defenses. 
+2. Windows security baselines will be installed on the Cloud-managed PC. If you have setup Microsoft Defender for Endpoint, the guided scenario will also configure baseline settings for Defender. Defender for Endpoint provides a new post-breach layer of protection to the Windows 10 security stack. With a combination of client technology built into Windows 10 and a robust cloud service, it will help detect threats that have made it past other defenses.
 
 ## Next steps
 

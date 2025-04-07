@@ -46,7 +46,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 > [!NOTE]
 > Some settings are only available on specific Windows editions, such as Enterprise. To see the supported editions, refer to the [policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider) (opens another Microsoft web site).
->  
+>
 > In a Windows 10/11 device restrictions profile, most configurable settings are deployed at the device level using device groups. Policies deployed to user groups apply to targeted users. The policies also apply to users who have an Intune license, and users that sign in to that device.
 
 ## Before you begin
@@ -73,7 +73,7 @@ These settings use the [ApplicationManagement policy CSP](/windows/client-manage
   - **Allow**: Allows developer mode and sideloading apps.
 
   [Enable your device for development](/windows/uwp/get-started/enable-your-device-for-development) has more information on this feature.
-  
+
   [ApplicationManagement/AllowAllTrustedApps CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
 - **Shared user app data**: Choose **Allow** to share application data between different users on the same device and with other instances of that app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent sharing data with other users and other instances of the same app.
@@ -104,10 +104,10 @@ These settings use the [ApplicationManagement policy CSP](/windows/client-manage
 
   Your options:
 
-  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow users to install apps from places other than the Microsoft Store, including apps defined in other policy settings.  
-  - **Anywhere**: Turns off app recommendations, and allows users to install apps from any location.  
+  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow users to install apps from places other than the Microsoft Store, including apps defined in other policy settings.
+  - **Anywhere**: Turns off app recommendations, and allows users to install apps from any location.
   - **Store Only**: Intent is to prevent malicious content from affecting your user devices when downloading executable content from the internet. When users try to install apps from the internet, the installation is blocked. Users see a message recommending they download apps from the Microsoft Store.
-  - **Recommendations**: When installing an app from the web that's available in the Microsoft Store, users see a message recommending they download it from the store.  
+  - **Recommendations**: When installing an app from the web that's available in the Microsoft Store, users see a message recommending they download it from the store.
   - **Prefer Store**: Warns users when they install apps from places other than the Microsoft Store.
 
   [SmartScreen/EnableAppInstallControl CSP](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
@@ -176,7 +176,7 @@ These settings use the [accounts policy CSP](/windows/client-management/mdm/poli
 
 > [!IMPORTANT]
 >
-> Blocking or disabling these Microsoft account settings can impact enrollment scenarios that require users to sign in to Microsoft Entra ID. For example, you're using [Autopilot pre-provisioned](/autopilot/pre-provision). Typically, users are shown a Microsoft Entra sign-in window. When these settings are set to **Block** or **Disable**, the Microsoft Entra sign-in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+> Blocking or disabling these Microsoft account settings can impact enrollment scenarios that require users to sign in to Microsoft Entra ID. For example, you're using [Windows Autopilot pre-provisioned](/autopilot/pre-provision). Typically, users are shown a Microsoft Entra sign-in window. When these settings are set to **Block** or **Disable**, the Microsoft Entra sign-in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 - **Microsoft account**: **Block** prevents users from associating a Microsoft account with the device. **Block** may also affect some enrollment scenarios that rely on users to complete the enrollment process. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and using a Microsoft account.
 - **Non-Microsoft account**: **Block** prevents users from adding non-Microsoft accounts using the user interface. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add email accounts that aren't associated with a Microsoft account.
@@ -185,7 +185,7 @@ These settings use the [accounts policy CSP](/windows/client-management/mdm/poli
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow users to start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service.
   - **Disabled**: Sets the Microsoft Sign-in Assistant service (wlidsvc) to Disabled, and prevents users from manually starting it.
 
-      **Disable** may also affect some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [Autopilot pre-provisioned](/autopilot/pre-provision). Typically, users are shown a Microsoft Entra sign-in window. When set to **Disable**, the Microsoft Entra sign-in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+      **Disable** may also affect some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [Windows Autopilot pre-provisioned](/autopilot/pre-provision). Typically, users are shown a Microsoft Entra sign-in window. When set to **Disable**, the Microsoft Entra sign-in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 ## Cloud Printer
 
@@ -219,12 +219,12 @@ These settings use the [EnterpriseCloudPrint policy CSP](/windows/client-managem
       [Settings policy CSP](/windows/client-management/mdm/policy-csp-settings)
 
   - **Gaming**: When set to **Block**, this setting:
-  
-    - Prevents access to the **Settings** app > **Gaming** area on the device. 
+
+    - Prevents access to the **Settings** app > **Gaming** area on the device.
     - On Windows 11 22H2 and later, it hides the **Settings** app > **System** > **Notifications** area on the device. Specifically, it adds the `ms-settings:quietmomentsgame` page to the [Settings/PageVisibilityList CSP](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist).
 
     When set to **Not configured** (default), Intune doesn't change or update this setting.
-    
+
   - **Ease of Access**: **Block** prevents access to the Ease of Access area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
   - **Privacy**: **Block** prevents access to the Privacy area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
   - **Update and Security**: **Block** prevents access to the Update & Security area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
@@ -247,7 +247,7 @@ You can also **Import** a .csv file with the list of apps.
 
 ## General
 
-These settings use the [experience policy CSP](/windows/client-management/mdm/policy-csp-experience), which also lists the supported Windows editions. 
+These settings use the [experience policy CSP](/windows/client-management/mdm/policy-csp-experience), which also lists the supported Windows editions.
 
 - **Screen capture** (mobile only): **Block** prevents users from getting screenshots on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Copy and paste (mobile only)**: **Block** prevents users from using copy-and-paste between apps on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
@@ -376,11 +376,11 @@ The available settings change depending on what you choose. Your options:
 This device restrictions profile is directly related to the kiosk profile you create using the [Windows kiosk settings](kiosk-settings-windows.md). To summarize:
 
 1. Create the [Windows kiosk settings](kiosk-settings-windows.md) profile to run the device in kiosk mode. Select Microsoft Edge as the application and set the Microsoft Edge Kiosk Mode in the Kiosk profile.
-2. Create the device restrictions profile described in this article, and configure specific features and settings allowed in Microsoft Edge. Be sure to choose the same Microsoft Edge kiosk mode type as selected in your kiosk profile ([Windows kiosk settings](kiosk-settings-windows.md)). 
+2. Create the device restrictions profile described in this article, and configure specific features and settings allowed in Microsoft Edge. Be sure to choose the same Microsoft Edge kiosk mode type as selected in your kiosk profile ([Windows kiosk settings](kiosk-settings-windows.md)).
 
     [Supported kiosk mode settings](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) is a great resource.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Be sure to assign this Microsoft Edge profile to the same devices as your kiosk profile ([Windows kiosk settings](kiosk-settings-windows.md)).
 
 [ConfigureKioskMode CSP](/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
@@ -415,7 +415,7 @@ This device restrictions profile is directly related to the kiosk profile you cr
 - **Enterprise mode site list location** (Desktop only): Enter the URL that points to the XML file containing a list of web sites that open in Enterprise mode. Users can't change this list. For example, enter `https://www.contoso.com/sites.xml`.
 - **Message when opening sites in Internet Explorer**: Use this setting to configure Microsoft Edge to show a notification before a site opens in Internet Explorer 11. Your options:
   - **Don't show message**: The OS default behavior is used, which may not show a message.
-  - **Show message that site is opened in Internet Explorer 11**: Show the message when opening sites in IE. Sites open in IE. 
+  - **Show message that site is opened in Internet Explorer 11**: Show the message when opening sites in IE. Sites open in IE.
   - **Show message with option to open sites in Microsoft Edge**: Show the message when opening sites in Microsoft Edge. The message includes a **Keep going in Microsoft Edge** link so users can choose Microsoft Edge instead of IE.
 
   > [!IMPORTANT]
@@ -462,7 +462,7 @@ This device restrictions profile is directly related to the kiosk profile you cr
   - **Block only third party cookies**: Third party or partner cookies aren't stored on the device.
 - **Allow Autofill in forms**: **Yes** (default) allows users to change autocomplete settings in the browser, and populate form fields automatically. **No** disables the Autofill feature in Microsoft Edge.
 - **Send do-not-track headers**: **Yes** sends do-not-track headers to websites requesting tracking info (recommended). **No** (default) doesn't send headers that allow websites to track the user. Users can configure this setting.
-- **Show WebRTC localhost IP address**: **Yes** (default) allows users' localhost IP address to be shown when making phone calls using this protocol. **No** prevents users' localhost IP address from being shown. 
+- **Show WebRTC localhost IP address**: **Yes** (default) allows users' localhost IP address to be shown when making phone calls using this protocol. **No** prevents users' localhost IP address from being shown.
 - **Allow live tile data collection**: **Yes** (default) allows Microsoft Edge to collect information from Live Tiles pinned to the start menu. **No** prevents collecting this information, which may provide users with a limited experience.
 - **User can override certificate errors**: **Yes** (default) allows users to access websites that have Secure Sockets Layer/Transport Layer Security (SSL/TLS) errors. **No** (recommended for increased security) prevents users from accessing websites with SSL or TLS errors.
 
@@ -488,7 +488,7 @@ These settings use the [NetworkProxy policy CSP](/windows/client-management/mdm/
 
 - **Automatically detect proxy settings**: **Block** disables devices from automatically detecting a proxy auto config (PAC) script. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might enable this feature, and devices try to find the path to a PAC script.
 
-  When set to **Block**, the **ProxySettingsPerUser** setting is automatically set to `0`.  
+  When set to **Block**, the **ProxySettingsPerUser** setting is automatically set to `0`.
 
 - **Use proxy script**: Choose **Allow** to enter a path to your PAC script to configure the proxy server. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not let you enter the URL to a PAC script.
   - **Setup script address URL**: Enter the URL of a PAC script you want to use to configure the proxy server.
@@ -514,9 +514,9 @@ These settings use the [DeviceLock policy CSP](/windows/client-management/mdm/po
     [DeviceLock/AlphanumericDevicePasswordRequired CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
 
   - **Minimum password length**: Enter the minimum number of characters required, from 4-16. For example, enter `6` to require at least six characters in the password length. By default, the OS might set it to `4`.
-  
+
     [DeviceLock/MinDevicePasswordLength CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordlength)
-  
+
     > [!IMPORTANT]
     > When the password requirement is changed on a Windows desktop, users are impacted the next time they sign in, as that's when devices goes from idle to active. Users with passwords that meet the requirement are still prompted to change their passwords.
 
@@ -747,7 +747,7 @@ These settings use the [search policy CSP](/windows/client-management/mdm/policy
 
 ## Start
 
-These settings use the [start policy CSP](/windows/client-management/mdm/policy-csp-start), which also lists the supported Windows editions.  
+These settings use the [start policy CSP](/windows/client-management/mdm/policy-csp-start), which also lists the supported Windows editions.
 
 > [!NOTE]
 > Management capabilities to deliver customized Start and Taskbar experiences are currently limited on Windows 11. For more information, see [Supported configuration service provider (CSP) policies for Windows 11 Start menu](/windows/configuration/supported-csp-start-menu-layout-windows).
@@ -1014,9 +1014,9 @@ These settings use the [defender policy CSP](/windows/client-management/mdm/poli
   - **Not configured** (default): Intune doesn't change or update this setting. The operating system default may check for updates every 8 hours.
   - **Do not check**: Defender doesn't check for new security intelligence updates.
   - **1-24**: `1` checks every hour, `2` checks every two hours, `24` checks every day, and so on.
-  
+
   [Defender/SignatureUpdateInterval CSP](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
-  
+
 - **Monitor file and program activity**: Allows Defender to monitor file and program activity on devices. Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting. The operating system default may monitor all files.
@@ -1027,7 +1027,7 @@ These settings use the [defender policy CSP](/windows/client-management/mdm/poli
 
   [Defender/RealTimeScanDirection CSP](/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
 
-- **Days before deleting quarantined malware**: Continue tracking resolved malware for the number of days you enter so you can manually check previously affected devices. 
+- **Days before deleting quarantined malware**: Continue tracking resolved malware for the number of days you enter so you can manually check previously affected devices.
 
   If you don't configure this setting, or set it to `0` days, malware stays in the Quarantine folder, and isn't automatically removed. When set to `90`, quarantine items are stored for 90 days on the system, and then removed.
 
@@ -1036,7 +1036,7 @@ These settings use the [defender policy CSP](/windows/client-management/mdm/poli
 - **CPU usage limit during a scan**: Limit the amount of CPU that scans are allowed to use, from `0` to `100` percent. By default, the OS might set it to 50%.
 
   [Defender/AvgCPULoadFactor CSP](/windows/client-management/mdm/policy-csp-defender#avgcpuloadfactor)
-  
+
 - **Scan archive files**: **Enable** turns on Defender so it scans archive files, such as Zip or Cab files. Users can't turn off this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn on this scanning, and allow users to change it.
 
   If you enable the setting, and then change it back to **Not configured**, then Intune leaves the setting in its previously configured state.
@@ -1069,7 +1069,7 @@ These settings use the [defender policy CSP](/windows/client-management/mdm/poli
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS turns on this feature, and allows users to change it.
 
-  If you enable the setting, and then change it back to **Not configured**, then Intune leaves the setting in its previously configured state. 
+  If you enable the setting, and then change it back to **Not configured**, then Intune leaves the setting in its previously configured state.
 
   During a quick scan, mapped network drives may still be scanned.
 
@@ -1087,7 +1087,7 @@ These settings use the [defender policy CSP](/windows/client-management/mdm/poli
 
   [Defender/AllowScanningNetworkFiles CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
-- **Cloud protection**: **Enable** turns on the Microsoft Active Protection Service to receive information about malware activity from devices that you manage. Users can't change this setting. 
+- **Cloud protection**: **Enable** turns on the Microsoft Active Protection Service to receive information about malware activity from devices that you manage. Users can't change this setting.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS allows the Microsoft Active Protection Service to receive information, and allows users to change this setting.
 
@@ -1124,18 +1124,18 @@ These settings use the [defender policy CSP](/windows/client-management/mdm/poli
     - **Time scheduled**: Choose the hour to run the scan.
 
   > [!TIP]
-  > This setting may conflict with the **Time to perform a daily quick scan** setting. Some recommendations:  
+  > This setting may conflict with the **Time to perform a daily quick scan** setting. Some recommendations:
   >
   > - If you want to schedule a daily quick scan, and a weekly full scan, then:
   >   1. Configure the **Time to perform a daily quick scan** setting.
   >   2. Configure the **Type of system scan to perform** to do a full scan.
-  > 
+  >
   > - If you only want one quick scan daily (no full scan), then use either setting: **Time to perform a daily quick scan** or **Type of system scan to perform**. For example, to run a quick scan every Tuesday at 6 AM, configure the **Type of system scan to perform** setting.
-  > 
+  >
   > - Don't configure the **Time to perform a daily quick scan** setting simultaneously with the **Type of system scan to perform** set to **Quick scan**. These settings may conflict, and a scan may not run.
 
-  [Defender/ScanParameter CSP](/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
-  [Defender/ScheduleScanDay CSP](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
+  [Defender/ScanParameter CSP](/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)
+  [Defender/ScheduleScanDay CSP](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
   [Defender/ScheduleScanTime CSP](/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
 
 - **Detect potentially unwanted applications**: This feature identifies and blocks potentially unwanted applications (PUA) from downloading and installing in your network. These applications aren't considered viruses, malware, or other types of threats. But, they can run actions on endpoints that might affect their performance or use. Choose the level of protection when Windows detects PUAs. Your options:
@@ -1147,7 +1147,7 @@ These settings use the [defender policy CSP](/windows/client-management/mdm/poli
 
   In **Endpoint Security** > **Antivirus** > **Microsoft Defender Antivirus** > **Remediation**, this setting is called **Action to take on potentially unwanted applications**.
 
-  For more information about potentially unwanted apps, see [Detect and block potentially unwanted applications](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus). 
+  For more information about potentially unwanted apps, see [Detect and block potentially unwanted applications](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
 
   [Defender/PUAProtection CSP](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
@@ -1164,7 +1164,7 @@ These settings use the [defender policy CSP](/windows/client-management/mdm/poli
 - **Actions on detected malware threats**: Select **Enable** to choose the actions you want Defender to take for each threat level it detects: low, moderate, high, and severe. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let Microsoft Defender choose the best option.
 
   When set to **Enable**, select the action:
-  
+
   - **Clean**
   - **Quarantine**
   - **Remove**
@@ -1254,9 +1254,9 @@ These settings use the [power policy CSP](/windows/client-management/mdm/policy-
   - **Sleep**: The device goes into sleep mode. The computer is still on, and opened apps and files are stored in random access memory (RAM).
   - **Hibernate**: The device goes into hibernate mode. Opened apps and files are stored on the hard disk, and the device turns off.
   - **Shutdown**: The device shuts down. Opened apps and files are closed without saving.
-  
+
     [Power/SelectLidCloseActionPluggedIn CSP](/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactionpluggedin)
-  
+
 - **Power button**: When the device is plugged in, choose what happens when the Power button is selected. Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting.

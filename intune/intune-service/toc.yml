@@ -189,8 +189,8 @@ items:
     - name: Intune plugin in Security Copilot
       href: ./copilot/security-copilot.md
     - name: Copilot in Surface Management Portal
-      displayName: ai, copilot, surface, models, fleet, warranty    
-      href: ./copilot/security-copilot-surface-portal.md    
+      displayName: ai, copilot, surface, models, fleet, warranty
+      href: ./copilot/security-copilot-surface-portal.md
 
   - name: Endpoint analytics
     items:
@@ -235,7 +235,7 @@ items:
       - name: Device query
         href: ../analytics/device-query.md
       - name: Device query for multiple devices
-        href: ../analytics/device-query-multiple-devices.md        
+        href: ../analytics/device-query-multiple-devices.md
       - name: Data platform schema
         href: ../analytics/data-platform-schema.md
       - name: Battery health
@@ -531,7 +531,7 @@ items:
                     href: ./apps/apps-win32-deploy-update-package.md
               - name: Add specific apps
                 items:
-                - name: Company Portal app - Autopilot
+                - name: Company Portal app - Windows Autopilot
                   href: ./apps/store-apps-company-portal-autopilot.md
                 - name: Company Portal app - Download
                   href: ./apps/store-apps-company-portal-app.md
@@ -652,7 +652,7 @@ items:
               - name: Review app protection logs
                 href: ./apps/app-protection-policy-settings-log.md
             - name: Policies for Microsoft 365 apps
-              href: ./apps/app-office-policies.md 
+              href: ./apps/app-office-policies.md
             - name: Quiet time policies
               href: ./apps/apps-quiet-time-policies.md
             - name: Troubleshoot
@@ -1674,11 +1674,11 @@ items:
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
         - name: Enrollment solutions
           items:
-          - name: Set up enrollment with Apple Configurator  
+          - name: Set up enrollment with Apple Configurator
             items:
-            - name: Enroll corporate-owned devices  
+            - name: Enroll corporate-owned devices
               href: ./enrollment/apple-configurator-enroll-ios.md
-            - name: Enroll corporate-owned, userless devices  
+            - name: Enroll corporate-owned, userless devices
               href: ./enrollment/apple-corporate-owned-userless-enroll.md
           - name: Set up Apple Automated Device Enrollment
             items:

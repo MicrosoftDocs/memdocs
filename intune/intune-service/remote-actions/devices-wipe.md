@@ -56,7 +56,7 @@ The **Wipe** device action restores a device to its factory default settings. Th
 
 > [!IMPORTANT]
 >
-> The Wipe action doesn't remove the Autopilot registration from the device. To remove the Autopilot registration from the device, see [Deregister from Autopilot using Intune](/autopilot/registration-overview#deregister-from-autopilot-using-intune)
+> The Wipe action doesn't remove the Windows Autopilot registration from the device. To remove the Windows Autopilot registration from the device, see [Deregister from Windows Autopilot using Intune](/autopilot/registration-overview#deregister-from-autopilot-using-intune)
 
 The **Retain enrollment state and user account** option is only available for Windows 10 version 1709 or later.
 
@@ -118,7 +118,7 @@ If the device is on and connected, the **Retire** action propagates across all d
 
 ### Effect of the **Retire** action on data that remains on the device
 
-When you use the **Retire** device action, the user's personal data is not removed from the device.  
+When you use the **Retire** device action, the user's personal data is not removed from the device.
 
 The following tables describe what data is removed, and the effect of the **Retire** action on data that remains on the device after company data is removed.
 
@@ -186,7 +186,7 @@ Removing company data from an Android personally owned work profile device remov
 |Microsoft Entra unjoin|No.|No.|The Microsoft Entra ID record is removed.|
 
 > [!IMPORTANT]
-> Windows devices that are not registered in the Windows Autopilot Service, upon being deleted or retired from Intune are removed from Microsoft Entra ID. Before performing these commands consider backing up the Bitlocker Recovery Key and/or a local administrator user account credentials. On the other hand, although Autopilot registered devices leave Microsoft Entra ID, their computer object is retained alongside their properties (e.g. Windows LAPS, Bitlocker Recovery Key, Entra ID groups memberships).
+> Windows devices that are not registered in the Windows Autopilot Service, upon being deleted or retired from Intune are removed from Microsoft Entra ID. Before performing these commands consider backing up the BitLocker Recovery Key and/or a local administrator user account credentials. On the other hand, although Windows Autopilot registered devices leave Microsoft Entra ID, their computer object is retained alongside their properties (e.g. Windows LAPS, BitLocker Recovery Key, Entra ID groups memberships).
 
 > [!NOTE]
 > For Windows 10 devices that join Microsoft Entra ID during initial Setup (OOBE), the retire command will remove all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) to login as a local admin and regain access to the user's local data.
@@ -202,7 +202,7 @@ Device owners can manually unenroll their devices as explained in the following 
 - [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md)
 
 > [!TIP]
-> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Microsoft Entra ID records. To remove record of the Intune device, sign in to Microsoft Intune and delete the device manually, or wait for your device cleanup rules to take effect. You must also manually delete the Microsoft Entra ID record, if applicable, because the cleanups rule will not remove it.  
+> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Microsoft Entra ID records. To remove record of the Intune device, sign in to Microsoft Intune and delete the device manually, or wait for your device cleanup rules to take effect. You must also manually delete the Microsoft Entra ID record, if applicable, because the cleanups rule will not remove it.
 
 ## Delete devices from the Intune admin center
 

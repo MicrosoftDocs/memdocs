@@ -30,7 +30,7 @@ Windows Autopilot Reset takes the device back to a business-ready state, allowin
 
 The Windows Autopilot Reset process removes or resets the following information from the existing device:
 
-- The device's primary user is removed when a remote Windows Autopilot Reset is used. The next user who signs in after the Windows Autopilot Reset will be set as the primary user. Shared devices will remain shared after the remote Autopilot Reset.
+- The device's primary user is removed when a remote Windows Autopilot Reset is used. The next user who signs in after the Windows Autopilot Reset will be set as the primary user. Shared devices will remain shared after the remote Windows Autopilot Reset.
 - The device's owner in Microsoft Entra is removed when a remote Windows Autopilot Reset is used. The next user who signs in after the Windows Autopilot Reset will be set as the owner.
 - Removes personal files, apps, and settings.
 - Reapplies a device's original settings.
@@ -75,7 +75,7 @@ Windows Autopilot Reset works by using the [push-button reset](/windows-hardware
 
 ## Walkthrough
 
-Both local Windows Autopilot Reset and remote Windows Autopilot Reset require a minimal number of steps to implement. Unlike other Autopilot scenarios, instructions with multiple steps aren't needed. Select the desired Windows Autopilot Reset scenario for instructions on how to implement the scenario:
+Both local Windows Autopilot Reset and remote Windows Autopilot Reset require a minimal number of steps to implement. Unlike other Windows Autopilot scenarios, instructions with multiple steps aren't needed. Select the desired Windows Autopilot Reset scenario for instructions on how to implement the scenario:
 
 > [!div class="nextstepaction"]
 > [Local Windows Autopilot Reset](local-autopilot-reset.md)

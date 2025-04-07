@@ -3,9 +3,9 @@
 
 title: Device query in Microsoft Intune
 description: Learn how to gain on-demand information about the state of your devices using device query.
-keywords: 
+keywords:
 ms.author: smbhardwaj
-author: smritib17 
+author: smritib17
 manager: dougeby
 ms.date: 08/01/2024
 ms.topic: how-to
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: Elizabeth cox 
+ms.reviewer: Elizabeth cox
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -44,7 +44,7 @@ Device query allows you to quickly gain on-demand information about the state of
 
 - You cannot opt out of cloud notifications (WNS)
 
-- For a user to use Device query, you must assign the **Managed Devices** - **Query** permission to them.  
+- For a user to use Device query, you must assign the **Managed Devices** - **Query** permission to them.
 
 - To use Device query, devices must be Intune managed and corporate owned.
 
@@ -75,13 +75,13 @@ Use the Intune remote device actions in Single device query to help you manage y
 
 The available device actions depend on the device configuration. Not all actions are available for all devices.
 
-For a complete list of what can be done on your devices, in the Intune admin center, select Devices > All devices, and select a specific device. The available device actions are shown at the top. 
+For a complete list of what can be done on your devices, in the Intune admin center, select Devices > All devices, and select a specific device. The available device actions are shown at the top.
 
 The following list includes supported device actions:
 
 |Action|Description|
 |---|---|
-|[Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|Restores a device to its original settings and removes personal files, apps, and settings.|
+|[Windows Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|Restores a device to its original settings and removes personal files, apps, and settings.|
 |[BitLocker key rotation](../intune-service/protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)|Changes the BitLocker recovery key for a device and uploads the new key to Intune.|
 |[Collect diagnostics](../intune-service/remote-actions/collect-diagnostics.md)|Collects diagnostic logs from a device and uploads the logs to Intune.|
 |[Delete](../intune-service/remote-actions/devices-wipe.md)|Removes a device from Intune management, any company data is removed, and the device is retired.|
@@ -100,7 +100,7 @@ The following list includes supported device actions:
 |[Microsoft PIN reset service](/windows/security/identity-protection/hello-for-business/pin-reset)|Microsoft PIN reset service enables your users to recover a forgotten Windows Hello for Business PIN, and how to configure it.|
 |[Wipe](../intune/remote-actions/devices-wipe.md#wipe)|This action restores a device to its factory settings and removes all data and settings.|
 
-## Supported Operators  
+## Supported Operators 
 
 Device query supports only a subset of the operators supported in the Kusto Query Language (KQL). The following operators are currently supported:
 
@@ -241,15 +241,15 @@ Device query supports the following entities. To learn more about what propertie
 
 ## Known limitations
 
-- The result string of any query is limited to 128kb characters. If the result of your query is longer than 128kb characters, the result is truncated. An error message informs you about how many rows are truncated.  
+- The result string of any query is limited to 128kb characters. If the result of your query is longer than 128kb characters, the result is truncated. An error message informs you about how many rows are truncated.
 
-- You can only send 15 queries a minute. If you run into a **query limit exceeded** error, wait for a minute and try again.  
+- You can only send 15 queries a minute. If you run into a **query limit exceeded** error, wait for a minute and try again.
 
 - Query inputs have a length limit of 2048 characters. If you encounter a *query too long* error, then refine your query to have fewer characters and try again.
 
 - The now() scalar function doesn't support the offset parameter.
 
-- The !like operator is not supported. 
+- The !like operator is not supported.
 
 - The input window auto-recommends double quotes when only single quotes are supported on the following operators:
   - contains
@@ -262,11 +262,11 @@ Device query supports the following entities. To learn more about what propertie
 
 - The WindowsRegistry entity fails to return 64-bit shared registry keys.
 
-- The WindowsRegistry entity fails to return binary ValueData.  
+- The WindowsRegistry entity fails to return binary ValueData.
 
 - If you’re querying devices that are running on Windows 10, they must be on a minimum quality version.
 
-  - If running Windows 10 21H2, ensure that it's running version 10.0.19044.3393.  
+  - If running Windows 10 21H2, ensure that it's running version 10.0.19044.3393.
 
   - If running Windows 10 22H2, ensure that it's running version 10.0.19045.3393.
 
