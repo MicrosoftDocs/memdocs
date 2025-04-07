@@ -57,7 +57,7 @@ If you can't install and register clients on the internal network, create a bulk
 
 To create a bulk registration token for use during client installation on internet-based devices, complete the following actions:
 
-1. Sign in to the top-level site server in the hierarchy with local administrator privileges.
+1. Sign in to the top-level site server in the hierarchy with an account that is a 'Full Administrator' in Configuration Manager and is part of the local Administrators group on the server.
 
 1. Open a command prompt as an administrator.
 
