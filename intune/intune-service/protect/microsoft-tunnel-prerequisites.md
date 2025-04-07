@@ -500,7 +500,7 @@ For more information about this tool, see [Reference for mst-cli](../protect/mic
 
 The readiness tool checks for the presence of the *auditd* package for Linux system auditing. Because *auditd* is optional and not required, the readiness script will return a warning when this package isn't detected.
 
-*Auditd* is installed by default by RHEL 7 and later versions, but might not be installed by default by Ubuntu distributions. When not present you can manually install it on the Linux server. For information on how to manually install installing this, see [Linux system auditing](#linux-system-auditing) earlier in this article.
+*Auditd* is installed by default by RHEL 7 and later versions, but might not be installed by default by Ubuntu distributions. When not present you can manually install it on the Linux server. For information on how to manually install this, see [Linux system auditing](#linux-system-auditing) earlier in this article.
 
 ### Manually load ip_tables
 
