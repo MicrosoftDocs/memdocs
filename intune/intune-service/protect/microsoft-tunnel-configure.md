@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/06/2025
+ms.date: 04/07/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -204,7 +204,7 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
 7. After the installation script finishes, you can navigate in Microsoft Intune admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
 
-8. If you're using RHEL 8.4 or later, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
+8. If you're using Red Hat Enterprise Linux (RHEL) 8.4 or later, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
 ### Configure Podman to use the proxy to download image updates
 
@@ -503,6 +503,34 @@ By configuring TunnelOnly mode, all Defender for Endpoint functionality is disab
 Guest accounts and Microsoft Accounts (MSA) that aren't specific to your organization's tenant aren't supported for cross-tenant access using Microsoft Tunnel VPN. This means that these types of accounts can't be used to access internal resources securely through the VPN. It's important to keep this limitation in mind when setting up secure access to internal resources using Microsoft Tunnel VPN.
 
 For more information about the EU Data Boundary, see [EU Data Boundary for the Microsoft Cloud | Frequently Asked Questions](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/eu-data-boundary-for-the-microsoft-cloud-frequently-asked/ba-p/2329098) on the Microsoft security and compliance blog.
+
+## Install Linux system auditing after installing the Tunnel server
+
+Linux system auditing can help identify security-relevant information or security violations on a Linux server that hosts Microsoft Tunnel. Linux system auditing is recommended for Microsoft Tunnel, but not required. To use system auditing, a Linux server must have the optional package for *auditd* installed to `/etc/audit/auditd.conf`.
+
+If you you've already installed a Tunnel Server on Linux and auditd is missing, use the information in the following procedure to install it. For information about installing auditd on a Linux server *before* you install Microsoft Tunnel, see [Manually install auditd for Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#manually-install-auditd-for-linux-system-auditing) in Microsoft Tunnel prerequisites.
+
+### Install auditd on a Tunnel server
+
+When Microsoft Tunnel server is already installed on a Linux server, you can use the [mst-cli command-line tool](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) and the following steps to install *auditd*.
+
+Before you start the install procedure, use the following link to download the **mst.rules** file from Microsoft: [https://aka.ms/TunnelAuditdRules](https://aka.ms/TunnelAuditdRules). *(The link downloads a small text file named mst.rules.)*
+
+1. Install the auditd library and plugins. Run the following command on the Linux server: 
+
+   - Ubuntu: `sudo apt install auditd audispd-plugins`
+   - RHEL:  `sudo dnf install audit audit-libs audispd-plugins` *(By default, RHEL should already have auditd installed.)*
+
+2. Copy the Tunnel mst.rules auditd rules to the Linux server:
+
+   - Copy the mst.rules file to your server, and then run the following command to move them to the correct folder: `sudo cp /path/to/mst.rules /etc/audit/rules.d`
+
+3. To load the new auditd rules, run the following command: `sudo augenrules --load`
+
+4. Validate that the new rules are applied. Run `sudo auditctl -l'
+
+The logs are saved in `/var/log/audit/audit.log`. You can use the `sudo ausearch` command to search that log.  For example, `sudo ausearch -f TARGET_DIRECTORY`.
+
 
 ## Upgrade Microsoft Tunnel
 

@@ -38,7 +38,7 @@ You can also read:
 
 - [**Important notices**](#notices)
 - [Past releases](whats-new-archive.md) in the What's new archive
-- Information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)
+- Information about [how Intune service updates are released](intune-service-servicing-information.md)
 
 > [!NOTE]
 > Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) can take up to three days to roll out and will be in the following order:
