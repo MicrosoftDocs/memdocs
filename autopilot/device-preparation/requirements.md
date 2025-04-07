@@ -142,7 +142,7 @@ Windows Autopilot device preparation contacts the [Delivery Optimization](/windo
 - Office Updates.
 - Intune Win32 Applications.
 
-If the Delivery Optimization Service is inaccessible, the Autopilot process still continues with Delivery Optimization downloads from the cloud without peer-to-peer.
+If the Delivery Optimization Service is inaccessible, the Windows Autopilot process still continues with Delivery Optimization downloads from the cloud without peer-to-peer.
 
 #### Network Time Protocol (NTP) sync
 
@@ -174,7 +174,7 @@ If the WNS services aren't available, the Windows Autopilot device preparation p
 
 Applications in the Microsoft Store can be pushed to the device by triggering them via Intune or other MDM service. App updates and additional applications might also be needed when the user first logs in. For more information, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-intune-integration-with-the-microsoft-store-on-windows/ba-p/3585077) and [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286).
 
-If the Microsoft Store isn't accessible, the Autopilot process still continues without Microsoft Store applications.
+If the Microsoft Store isn't accessible, the Windows Autopilot process still continues without Microsoft Store applications.
 
 #### Microsoft 365
 
@@ -217,7 +217,7 @@ Additionally, the following are also recommended, but not required:
 
 ### Configuration requirements
 
-Before Windows Autopilot device preparation can be used, some configuration tasks are required to support the common Autopilot scenarios.
+Before Windows Autopilot device preparation can be used, some configuration tasks are required to support the common Windows Autopilot device preparation scenarios.
 
 - **Configure Microsoft Entra automatic enrollment**. For Microsoft Intune, see [Set up Windows automatic Intune enrollment](tutorial/user-driven/entra-join-automatic-enrollment.md) and [Enable Windows automatic enrollment](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment) for details. If using a different mobile device management (MDM) service, contact the vendor for the specific URLs or configuration needed for those services.
 
@@ -227,7 +227,7 @@ The following configurations are optional but recommended. They aren't required:
 
 - **Automatically step up from Windows Pro to Windows Enterprise**. For more information, see [Windows Subscription Activation](/windows/deployment/windows-subscription-activation).
 
-There are no additional hardware requirements to use Autopilot, beyond the hardware requirements to run Windows. For more information, see:
+There are no additional hardware requirements to use Windows Autopilot device preparation, beyond the hardware requirements to run Windows. For more information, see:
 
 - [Find Windows 11 specs, features, and computer requirements](https://www.microsoft.com/windows/windows-11-specifications).
 - [Windows minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview).

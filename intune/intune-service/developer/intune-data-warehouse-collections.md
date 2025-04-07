@@ -1,9 +1,9 @@
 ---
 # required metadata
 title:  Intune Data Warehouse Collections
-titleSuffix: Microsoft Intune 
+titleSuffix: Microsoft Intune
 description: The Intune Data Warehouse collections provide details related to the Data Warehouse API.
-keywords: 
+keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
@@ -30,7 +30,7 @@ ms.collection:
 
 # Intune Data Warehouse Collections
 
-The following Intune Data Warehouse collections provides the properties, descriptions, and examples for v1.0 collections of the Data Warehouse API entities. 
+The following Intune Data Warehouse collections provides the properties, descriptions, and examples for v1.0 collections of the Data Warehouse API entities.
 
 ## appRevisions
 The **appRevision** entity lists all the versions of apps.
@@ -174,8 +174,8 @@ The **DeviceConfigurationProfileDeviceActivity** entity lists the number of devi
 | error     | Number of unique Devices in error state.                                                      | 10       |
 | failed    | Number of unique Devices in failed state.                                                     | 2        |
 
-## deviceConfigurationProfileUserActivities 
-The **DeviceConfigurationProfileUserActivity** entity lists the number of users in the succeeded, pending, failed, or error state per day. The number reflects the Device configuration profiles assigned to the entity. For example, if a user is in the succeeded state for all their assigned policies, it moves up the succeeded counter by one for that day. If a user has two profiles assigned to them, one in the succeeded state and the other is in an error state, the user in the error state is counted. The **DeviceConfigurationProfileUserActivity** entity lists how many users are in which state on a given day over the last 30 days. 
+## deviceConfigurationProfileUserActivities
+The **DeviceConfigurationProfileUserActivity** entity lists the number of users in the succeeded, pending, failed, or error state per day. The number reflects the Device configuration profiles assigned to the entity. For example, if a user is in the succeeded state for all their assigned policies, it moves up the succeeded counter by one for that day. If a user has two profiles assigned to them, one in the succeeded state and the other is in an error state, the user in the error state is counted. The **DeviceConfigurationProfileUserActivity** entity lists how many users are in which state on a given day over the last 30 days.
 
 | Property  | Description  | Example  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
@@ -205,7 +205,7 @@ The **DeviceConfigurationProfileUserActivity** entity lists the number of users 
 
 
 ## deviceRegistrationStates
-The **DeviceRegistrationState** entity represents the registration type referenced by other data warehouse collections. 
+The **DeviceRegistrationState** entity represents the registration type referenced by other data warehouse collections.
 
 |           Property          |                                     Description                                     |
 |-----------------------------|-------------------------------------------------------------------------------------|
@@ -326,10 +326,10 @@ The **deviceEnrollmentType** entity indicates how a device was enrolled. The enr
 | 6                | WindowsBulkUserless                | Windows 10 Bulk enrollment through   ICD with certificate.                               |
 | 7                | WindowsAutoEnrollment              | Windows 10 automatic enrollment.   (Add work account)                                    |
 | 8                | WindowsBulkAzureDomainJoin         | Windows 10 bulk Microsoft Entra join.                                                           |
-| 9                | WindowsCoManagement                | Windows 10 co-management triggered   by Autopilot or Group Policy.                       |
+| 9                | WindowsCoManagement                | Windows 10 co-management triggered   by Windows Autopilot or Group Policy.                       |
 | 10               | WindowsAzureADJoinsUsingDeviceAuth | Windows 10 Microsoft Entra join using   Device Auth.                                            |
 
-## enrollmentActivities 
+## enrollmentActivities
 The **EnrollmentActivity** entity indicates the activity of a device enrollment.
 
 | Property                      | Description                                                               |
@@ -343,7 +343,7 @@ The **EnrollmentActivity** entity indicates the activity of a device enrollment.
 | osVersion                     | The operating system version of the device.                               |
 | count                         | Total count of enrollment activities matching the classifications above.  |
 
-## enrollmentEventStatuses 
+## enrollmentEventStatuses
 The **EnrollmentEventStatus** entity indicates the result of a device enrollment.
 
 | Property                   | Description                                                                       |
@@ -359,8 +359,8 @@ The **EnrollmentEventStatus** entity indicates the result of a device enrollment
 | Failed                     | A failed device enrollment             |
 | Not Available              | The enrollment status is unavailable.  |
 
-## enrollmentFailureCategories 
-The **EnrollmentFailureCategory** entity indicates why a device enrollment failed. 
+## enrollmentFailureCategories
+The **EnrollmentFailureCategory** entity indicates why a device enrollment failed.
 
 | Property                       | Description                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
@@ -386,8 +386,8 @@ The **EnrollmentFailureCategory** entity indicates why a device enrollment faile
 | ClientDisconnected              | Client timed out or enrollment was aborted by end user.                                                        |
 | UserAbandonment                 | Enrollment was abandoned by end user. (End user started onboarding but failed to complete it in timely manner)  |
 
-## enrollmentFailureReasons  
-The **EnrollmentFailureReason** entity indicates a more detailed reason for a device enrollment failure within a given failure category.  
+## enrollmentFailureReasons
+The **EnrollmentFailureReason** entity indicates a more detailed reason for a device enrollment failure within a given failure category.
 
 | Property                     | Description                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
@@ -484,9 +484,9 @@ The **MamApplicationInstance** entity lists managed Mobile Application Managemen
 
 ## MamCheckins
 
-The **MamCheckin** entity represents data gathered when a Mobile Application Management (MAM) app instance has checked in with the Intune Service. 
+The **MamCheckin** entity represents data gathered when a Mobile Application Management (MAM) app instance has checked in with the Intune Service.
 
-> [!Note]  
+> [!Note]
 > When an app instance checks in multiple times a day, the data warehouse stores it as single check-in.
 
 | Property | Description | Example |
@@ -602,8 +602,8 @@ The **ownerType** entity indicates whether a device is corporate, personally own
 | ownerTypeKey  | Unique identifier of the owner type in the data warehouse   - surrogate key.                                                                                                       |                            |
 | ownerTypeName | Represents the owner type of the devices:  Corporate  -   Device is enterprise owned.  Personal -   Device is personally owned (BYOD).   Unknown  -   No information on this device. | Corporate   Personal Unknown |
 
-> [!Note]  
-> For the `ownerTypeName` filter in AzureAD when creating Dynamic Groups for devices, you need to set the value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> [!Note]
+> For the `ownerTypeName` filter in AzureAD when creating Dynamic Groups for devices, you need to set the value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
 ## policies
 The **Policy** entity lists device configuration profiles, app configuration profiles, and compliance policies. You can assign the policies with Mobile Device Management (MDM) to a group in your enterprise.
@@ -727,7 +727,7 @@ A **userTermsAndConditionsAcceptance** entity represents the acceptance status o
 |    acceptedDateTimeUTC    |    The time that the user accepted these terms and   conditions    |    8/23/2018 4:01:34 AM    |
 |    lastModifiedDateTimeUTC    |    The last time that this entry was modified.     |    8/23/2018 4:01:34 AM    |
 
-## vppProgramTypes 
+## vppProgramTypes
 The **vppProgramType** entity lists possible VPP program types for an app.
 
 |      Property      |          Description         |

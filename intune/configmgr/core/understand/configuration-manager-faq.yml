@@ -32,7 +32,7 @@ sections:
           - [Configuration Manager](../../index.yml)
           - [Intune](../../../intune-service/index.yml)
           - [Endpoint analytics](../../../analytics/index.yml)
-          - [Autopilot](/autopilot/enrollment-autopilot/)
+          - [Windows Autopilot](/autopilot/enrollment-autopilot/)
 
       - question: |
           What things change in Configuration Manager and the Microsoft Intune family of products?

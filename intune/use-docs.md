@@ -1,10 +1,10 @@
 ---
 title: How to use Microsoft Intune documentation
-titleSuffix: 
-description: Learn how to search, provide feedback about, and contribute to Microsoft Intune product family documentation. This documentation also covers Configuration Manager, Intune, Endpoint analytics, and Autopilot.
+titleSuffix:
+description: Learn how to search, provide feedback about, and contribute to Microsoft Intune product family documentation. This documentation also covers Configuration Manager, Intune, Endpoint analytics, and Windows Autopilot.
 ms.date: 11/11/2021
 ms.service: microsoft-intune
-ms.subservice: 
+ms.subservice:
 ms.topic: how-to
 ms.localizationpriority: high
 author: Smritib17
@@ -15,7 +15,7 @@ ms.collection: highpri
 
 # How to use Microsoft Intune documentation
 
-This article provides resources and tips for using the Microsoft Intune product family documentation library. It applies to Configuration Manager, Microsoft Intune, Endpoint analytics, and Autopilot, and covers the following areas:
+This article provides resources and tips for using the Microsoft Intune product family documentation library. It applies to Configuration Manager, Microsoft Intune, Endpoint analytics, and Windows Autopilot, and covers the following areas:
 
 - How to search
 - Submitting doc bugs, enhancements, questions, and new ideas

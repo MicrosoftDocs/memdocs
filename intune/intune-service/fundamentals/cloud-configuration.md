@@ -12,7 +12,7 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 
+ms.assetid:
 
 # optional metadata
 
@@ -72,7 +72,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 
 - Creates a Windows Autopilot enrollment profile that automatically enrolls devices in Microsoft Intune.
 
-  For information on creating your own Windows Autopilot profile, go to [Configure Autopilot profiles](/autopilot/profiles).
+  For information on creating your own Windows Autopilot profile, go to [Configure Windows Autopilot profiles](/autopilot/profiles).
 
 - Turns on and configures the Windows Autopilot enrollment status page (ESP). This page shows users the enrollment progress.
 
