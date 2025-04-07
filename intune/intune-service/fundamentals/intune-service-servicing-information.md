@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/20/2025
+ms.date: 04/07/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,7 +66,7 @@ Keeping up to date about releases and changes is an important part of your Intun
   Content is published at the end of the current sprint, which is when the UI updates start deploying to the Microsoft Intune admin center.
 
 - **[In development for Microsoft Intune](in-development.md)**: Learn more about what features are in development for Microsoft Intune. This article is updated regularly with upcoming features and changes.
-- **[Microsoft 365 Message center](/microsoft-365/admin/manage/message-center)**: When the service update finishes deploying, a message is posted in the **Message center**. Or, you can view the same messages in the Message center at `portal.office.com`. Service APIs pull only the Microsoft Intune messages from Microsoft 365 into the Microsoft Intune admin center.
+- **[Microsoft 365 Message center](/microsoft-365/admin/manage/message-center)**: When the service update finishes deploying, a message is posted in the **Message center**. Or, you can view the same messages in the Message center at `admin.microsoft.com`. Service APIs pull only the Microsoft Intune messages from Microsoft 365 into the Microsoft Intune admin center.
 - **[Microsoft Intune tenant status](tenant-status.md)**: This message center is a centralized hub where you can view current information and communications about the Intune service and your tenant status.
 
   To see the hub, use the following steps:
@@ -98,3 +98,4 @@ The following resources can help you understand privacy and personal data in Int
 
 - [Get started with Microsoft Intune](get-started-with-intune.md)
 - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
+- [Staying up to date on Intune new features, service changes, and service health](https://aka.ms/Intune/ServiceChangeBlog) *- Blog*
