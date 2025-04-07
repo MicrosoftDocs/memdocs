@@ -98,4 +98,4 @@ The following resources can help you understand privacy and personal data in Int
 
 - [Get started with Microsoft Intune](get-started-with-intune.md)
 - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
-- [Staying up to date on Intune new features, service changes, and service health](aka.ms/Intune/ServiceChangeBlog) *- Blog*
+- [Staying up to date on Intune new features, service changes, and service health](https://aka.ms/Intune/ServiceChangeBlog) *- Blog*
