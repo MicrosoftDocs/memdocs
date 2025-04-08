@@ -41,6 +41,17 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Known issues with the Intune Connector for AD version 6.2501.2000.5:
+
+Date added: *April 7, 2025*
+
+The following issues are under active investigation:
+
+- Error **MSA account <accountName> is not valid** when signing in: This occurs when the connector successfully creates the MSA but fails to retrieve the data from the domain controller. It can be caused by various issues, including replication delays between domain controllers in single domain, or when the user account exists in a different domain to the connector machine. 
+- Error **Failed to create a managed service account - Element not found**.
+- Error **Cannot start service ODJConnectorSvc on computer '.'. ---> System.ComponentModel.Win32Exception: The service did not start due to a logon failure** after the MSA has been created: This occurs when the service can not run as the MSA. This can be caused by various issues, including group or local policy restricting **Log on as a service** privileges. 
+- Error **System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.** 
+
 ### TPM attestation isn't working for TPMs which use high-range RSA 3072EK
 
 Date added: *April 4, 2025*
