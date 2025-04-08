@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/07/2024
+ms.date: 04/07/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,11 +33,11 @@ ms.collection:
 
 # Manage policy for Windows Driver updates with Microsoft Intune
 
-This article can help you use Microsoft Intune to create and manage Windows Driver updates policies for your Windows 10 and Windows 11 devices. These policies allow you to view the list of available driver updates that are applicable to the devices targeted by the policy, approve updates for deployment, or pause the deployment of individual updates. When driver updates are approved, Intune sends the assignments to Windows Update, which manages the update installation on devices based on the policy configuration.
+This article can help you use Microsoft Intune to create and manage Windows Driver updates policies for your Windows 10 and Windows 11 devices. These policies let you view the available driver updates for devices targeted by policy, approve updates for deployment, or pause the deployment of individual updates. When driver updates are approved, Intune sends the assignments to Windows Update, which manages the update installation on devices based on the policy configuration.
 
-Before you create and deploy driver update policies, take time to review the Windows driver update prerequisites, consider a constructing a driver update deployment plan, and review the frequently asked questions for Driver updates. These subjects are available in the [Windows Driver updates overview article](../protect/windows-driver-updates-overview.md#prerequisites).
+Before creating and deploying driver update policies, review the Windows driver update prerequisites, plan the deployment, and check the frequently asked questions. These subjects are available in the [Windows Driver updates overview article](../protect/windows-driver-updates-overview.md#prerequisites).
 
-After you create driver update policies, plan to review them regularly for newly added driver updates. *Recommended* driver updates that are added to policies that support automatic approvals start to deploy without any intervention. However, any other new updates added to your policies won't install until an admin manually approves them.
+After you create driver update policies, plan to review them regularly for newly added driver updates. *Recommended* driver updates that are added to policies that support automatic approvals start to deploy without any intervention. However, any other new updates added to your policies aren't installed until an admin manually approves them.
 
 Applies to:
 
@@ -46,15 +46,15 @@ Applies to:
 
 ## Create Windows driver update policies
 
-Use the following procedure as a guide to create policies to manage driver updates for groups of devices.
+Use this procedure to create policies for managing driver updates for groups of devices.
 
 > [!IMPORTANT]  
-> Policies for Windows update rings, and policies that use the settings catalog, can include configurations that can block the installation of Windows driver updates. To ensure driver updates are not blocked, review your policies for the following configurations:
+> Policies for Windows update rings and policies that use the settings catalog can include configurations that block the installation of Windows driver updates. To ensure driver updates aren't blocked, review your policies for configurations that can block the installation.
 >
 > - Windows update ring policy: Ensure the *Windows driver* setting is set to *Allow*.
 > - Settings catalog policy: In the *Windows Update client policies* category, ensure that *Exclude WU Drivers in Quality Update* is set to *Allow Windows Update drivers*.
 >
-> By default, both settings use a configuration that will *allow* Windows driver updates.
+> By default, both settings use a configuration that *allow* Windows driver updates.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Driver updates** tab, and select **Create profile**.
 
@@ -100,7 +100,7 @@ Use the following procedure as a guide to create policies to manage driver updat
 Over time, the list of driver updates available in a Windows driver update policy can change. The following events can introduce changes to the available driver updates:
 
 - **Device assignments**: If the device assignment for a policy changes, the driver updates that are available through the policy can change to reflect the devices now assigned to the policy. Changing device assignments can add driver updates or new versions of updates to the policy and remove updates from the policy when they no longer apply to any device assigned to that policy.
-- **Driver updates age out**: Once all applicable devices have installed a driver update version, that version is no longer applicable to install on a device with that policy, and the update is removed from the policies driver lists.
+- **Driver updates age out**: After all applicable devices install a driver update version, that version is no longer applicable to install on a device with that policy, and the update is removed from the policies driver lists.
 - **New driver update versions are available**: When an OEM releases a driver update version that supersedes a driver update found in a policy, the new update is added to that policy.
 
   - For policies with automatic approval:
@@ -110,18 +110,18 @@ Over time, the list of driver updates available in a Windows driver update polic
 
   - For policies with manual approvals, all new driver updates are added to the policy with a status of *Needs review*. This status applies to updates added to both the *recommended drivers* and *other drivers* lists. An admin must approve all updates in a manual approval policy before they can deploy to devices.
 
-  When you're viewing the list of Windows driver update policies, any policies that have new driver updates that require manual approval display a yellow warning icon and a count of driver updates 'to review'. This warning appears in the *Drivers to review* column of the policy list. To learn more about managing driver updates, see [Identify policies with newly added driver updates](#identify-policies-with-newly-added-driver-updates) in this article.
+  When viewing the list of Windows driver update policies, policies with new driver updates that need manual approval show a yellow warning icon and a count of updates 'to review'. This warning appears in the *Drivers to review* column of the policy list. To learn more about managing driver updates, see [Identify policies with newly added driver updates](#identify-policies-with-newly-added-driver-updates) in this article.
 
-Plan to periodically review your device driver update policies to identify policies that have had new drivers added.
+Plan to periodically review your device driver update policies to identify policies with new drivers added.
 
 For more information on manually approving updates, see [Manage the status of driver updates](#manage-the-status-of-driver-updates) later in this article.
 
 ### Identify policies with newly added driver updates
 
-When you review the list of driver update policies in the admin center, you can identify policies that have had new drivers added to them by reviewing the **Drivers to review** column for indications of new updates that need review.
+When you review the list of driver update policies in the admin center, you can identify policies with new drivers added to them by reviewing the **Drivers to review** column for indications of new updates that need review.
 
 > [!NOTE]  
-> An exception to this is new *recommended driver* updates that are added to a policy set for automatic approval. Recommended driver updates that are the newest or latest recommended driver update are added to the policy and approved automatically, and never have their status set to *Needs review*.
+> An exception is new *recommended driver* updates that are added to a policy set for automatic approval. Recommended driver updates that are the newest or latest are added to the policy and approved automatically, and their status is never set to *Needs review*.
 
 To look for policies that have new driver updates pending a review, in the admin center go to **Devices** > **Manage updates** > **Windows 10 and later updates** > **Driver Updates** tab.
 
@@ -143,7 +143,7 @@ While viewing the Windows driver update policy list, you can view details about 
 You can use the *driver list* to review the driver updates that Windows Autopatch identifies as applicable for one or more devices that receive that policy. From the list, you can view and manage the approval status of each update.
 
 > [!TIP]  
-> The driver list is not a record of the driver versions currently installed on devices assigned to the policy. Instead, it is a list of driver updates identified by and collected by Windows Autopatch, which can be installed on devices to upgrade their existing drivers to a newer version. Intune does not collect an inventory of installed drivers.
+> The driver list isn't a record of the driver versions currently installed on devices assigned to the policy. Instead, it's a list of driver updates identified by and collected by Windows Autopatch, which can be installed on devices to upgrade their existing drivers to a newer version. Intune doesn't collect an inventory of installed drivers.
 
 The driver list is divided into two tabs:
 
@@ -230,7 +230,7 @@ On the *Manage driver* pane, you can:
 - **Approved** – This status identifies an update that is approved for installation on applicable devices.
 
   > [!TIP]  
-  > Windows Update will only install a driver update on a device if the updates version is newer than the version of the driver that's currently on the device. Consequently, there is no risk of a policy installing an older version of a driver and downgrading a device's driver version.
+  > Windows Update will only install a driver update on a device if the updates version is newer than the version of the driver that's currently on the device. So, there's no risk of a policy installing an older version of a driver and downgrading a device's driver version.
 
   The following rules apply to the setting of Approved for an update:
 
@@ -241,7 +241,7 @@ On the *Manage driver* pane, you can:
   - **Policies with manual approval**: For policies that require manual approval, you must edit the policy and manage new updates to configure them as *Approved*. Once set to Approved, you can configure a setting called **Make available in Windows Update**. Here, you must specify a date that indicates when the update is available for installation on applicable devices. If you leave this field blank, the update is approved for installation on devices immediately.
 
   > [!IMPORTANT]  
-  > Any time a driver update's status is manually changed to *Approved*, the availability of that update (which is when Windows Update will begin to deploy it to devices) is defined by the date you assign for **Make available in Windows Update**.
+  > Any time a driver update's status is manually changed to *Approved*, the availability of that update (which is when Windows Update begins to deploy it to devices) is defined by the date you assign for **Make available in Windows Update**.
   >
   > This behavior applies when manually setting an update as *Approved* in policies with manual approval, and in policies with automatic approval. In policies with automatic approval, this includes the manual approval of an update on the *other updates* list, or when reapproving a recommended update that was paused.
 
@@ -249,11 +249,11 @@ On the *Manage driver* pane, you can:
 
   When you pause the most recent version of an approved update, Windows Update no longer makes that update available to devices the next time they scan for updates. However, if the policy has an earlier update version for the same driver that remains approved, Windows Update begins to install that older version on applicable devices.
 
-  Consider the following scenario: You have a policy with automatic approvals, for which the recommended update for the device's printer is *version 3*. This driver update is successful on all devices where it has been installed and has been available for longer than the policies new driver deferral period.
+  Consider the following scenario: You have a policy with automatic approvals, for which the recommended update for the device's printer is *version 3*. This driver update is successful on all devices where it's installed and has been available for longer than the policies new driver deferral period.
 
   - Before all devices install the *version 3* update, a newer version of the update is released, which is *version 4*. The new driver update version 4 is a recommended driver, which is automatically approved in the policy.
 
-  - When version 4 becomes the new recommended driver, the version 3 update is moved to the *other drivers* list but remains approved. Because version 4 is the newest version, this policy will deploy version 4 to devices, and begins to do so when the policies deferral period for new drivers ends. Until that deferral period is reached to allow deployment of version 4, the previous update version that remains approved continues to deploy to devices.
+  - When version 4 becomes the new recommended driver, the version 3 update is moved to the *other drivers* list but remains approved. Because version 4 is the newest version, this policy deploys version 4 to devices, and begins to do so when the policies deferral period for new drivers ends. Until that deferral period is reached to allow deployment of version 4, the previous update version that remains approved continues to deploy to devices.
 
   - Later, you choose to pause the version 4 update. Windows Update stops deploying version 4 immediately and starts to deploy version 3 to devices that don't yet have the driver update version 3 or later version. This deployment happens because version 3 remains approved and is now the latest approved version of the print driver in the policy. Deployment of version 3 doesn't need to wait for a deferral period to end as it was previously approved for longer than the policies' current deferral configuration.
 
@@ -285,7 +285,7 @@ The displayed list includes drivers that are able to be approved. For example, d
 8. In the **Review +Save** tab, you can review and save the changes you made.
 
 > [!NOTE]
-> You can't mix actions. For example, you cannot *Pause* and *Approve* a set in one action. You must go through each action separately.
+> You can't mix actions. For example, you can't *Pause* and *Approve* a set in one action. You must go through each action separately.
 
 #### Benefits of bulk driver updates
 
