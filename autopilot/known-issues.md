@@ -41,8 +41,6 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
-## Known issues
-
 ### Known issues with the Intune Connector for AD version 6.2501.2000.5
 
 Date added: *April 8, 2025*
