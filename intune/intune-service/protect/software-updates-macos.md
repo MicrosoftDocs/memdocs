@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 04/07/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,7 @@ This feature applies to:
 - macOS 12 and later (supervised)
 
   > [!NOTE]
-  > Prior to the macOS 12.5 release, devices may download and install additional updates before installing the latest update.
+  > Before the macOS 12.5 release, devices would download and install more updates before installing the latest update.
 
 > [!TIP]
 > You can use the [Intune settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage software updates with the settings catalog](managed-software-updates-ios-macos.md).
@@ -123,7 +123,7 @@ By default, devices check in with Intune about every 8 hours. If an update is av
    If you don't configure times to start or end, the configuration results in no restriction and updates can be installed at any time.
 
    > [!TIP]  
-   > You can deploy a settings catalog policy to hide an update from device users for a period of time on your supervised macOS devices. For more informtaion see the following section [Delay visibility of updates](#delay-visibility-of-updates).
+   > You can deploy a settings catalog policy to hide an update from device users for a specified period of time on your supervised macOS devices. For more information, see the following section [Delay visibility of updates](#delay-visibility-of-updates).
 
    <!-- 
    > You can configure settings in a [Settings Catalog](../protect/software-updates-ios.md#delay-visibility-of-software-updates) policy to hide an update from device users for a period of time on your supervised macOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
@@ -145,13 +145,13 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 8. On the **Review + create** tab, review the settings, and then select **Create** when ready to save your macOS update policy. Your new policy is displayed in the list of update policies for macOS.
 
 > [!NOTE]  
-> Apple MDM doesn't allow you to force a device to install updates by a certain time or date. You can't use Intune software update policies to downgrade the OS version on a device.
+> Apple Mobile Device Management (MDM) doesn't allow you to force a device to install updates by a certain time or date. You can't use Intune software update policies to downgrade the OS version on a device.
 
 ## Delay visibility of updates
 
 When you use update policies for macOS, you might want to hide updates from users of supervised macOS devices for a specified time period. For this task, use a settings catalog policy for macOS devices that configures update restriction periods.
 
-A restriction period can give you time to test an update before it's made available to users to install. After the restriction period ends, the update becomes visible to users, and they can choose to install it if your update policies don't install it first.
+A restriction period gives you time to test an update before users can install it. After the restriction period ends, the update becomes visible to users, and they can choose to install it if your update policies don't install it first.
 
 If you use device restrictions to hide an update, review your software update policies to ensure they don't schedule the installation of that update before the restriction period ends. Software update policies install updates per their schedule regardless of the update being hidden or visible to the device user.
 
@@ -175,7 +175,7 @@ You can edit an existing policy, including changing the restricted times:
 3. After introducing a change, select **Review + save** > **Save** to save your edits.
 
 > [!NOTE]  
-> If the **Start time** and **End time** are both set to 12 AM, Intune does not check for restrictions on when to install updates. This means that any configurations you have for **Select times to prevent update installations** are ignored, and updates can install at any time.
+> If the **Start time** and **End time** are both set to 12 AM, Intune doesn't check for restrictions on when to install updates. Any configurations you have for **Select times to prevent update installations** are ignored, and updates can install at any time.
 
 ## Configure more macOS software update settings using the Settings Catalog
 
@@ -217,7 +217,7 @@ The Software Update category contains the following settings that can be used to
 
 In the Microsoft Intune admin center, go to **Devices** > **Monitor** > **Installation status for macOS devices**.
 
-Intune displays a list of supervised macOS devices that are targeted by an update policy. The list doesn't include devices that are up-to-date and healthy because macOS devices only return information about installation failures.
+Intune lists supervised macOS devices targeted by an update policy. The list doesn't include devices that are up-to-date and healthy because macOS devices only return information about installation failures.
 
 For each device on the list, the Installation Status displays the error that the device returns. To view the list of potential installation status values, on the *Installation status  for macOS devices* page, select **Filters** and then expand the drop-down list for *Installation Status*.
 
