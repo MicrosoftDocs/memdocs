@@ -354,7 +354,7 @@ To add one or more arguments to an elevation rule, set **Restrict arguments** to
 
 > [!IMPORTANT]
 > Considerations for file arguments:
-> - EPM uses file argument lists as allow lists, allowing elevation when specified or no arguments are used, and blocking elevation with unspecified arguments.
+> - EPM uses file argument lists as allow lists, allowing elevation when no arguments are used, or only the specified arguments are used, and blocking elevation if any arguments are used which are not found in the specified arguments.
 > - File arguments are case sensitive; users must match the case exactly as defined in the rules.
 > - Do not define secrets as a file argument.
 
