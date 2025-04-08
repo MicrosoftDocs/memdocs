@@ -4,7 +4,7 @@ description: include file
 author: dougeby  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 4/1/2025
+ms.date: 4/8/2025
 ms.author: dougeby
 manager: dougeby
 ms.custom: include file
@@ -17,7 +17,7 @@ These notices provide important information that can help you prepare for future
 As part of Microsoft’s Secure Future Initiative, we recently released an update to the Intune Connector for Active Directory to use a Managed Service Account instead of a local SYSTEM account for deploying Microsoft Entra hybrid joined devices with Windows Autopilot. The new connector aims to enhance security by reducing unnecessary privileges and permissions associated with the local SYSTEM account.
  
 > [!IMPORTANT]
-> In late May 2025, we'll remove the old connector which uses the local SYSTEM account. At that point, we will stop accepting enrollments from the old connector. For more details, refer to the blog: [Microsoft Intune Connector for Active Directory security update](https://aka.ms/Intune-connector-blog)
+> At the end of June 2025, we'll remove the old connector which uses the local SYSTEM account. At that point, we will stop accepting enrollments from the old connector. For more details, refer to the blog: [Microsoft Intune Connector for Active Directory security update](https://aka.ms/Intune-connector-blog)
 
 #### How does this change affect you or your users?
 
