@@ -39,7 +39,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
+| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](data-collection.md) to the Intune data collection endpoint. |
 
 ### Licensing prerequisites
 
