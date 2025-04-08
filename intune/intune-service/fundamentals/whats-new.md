@@ -627,7 +627,7 @@ Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, *
 - Microsoft Teams
 - Microsoft Word
 
-For more information, see [Plan for Change: Specific app configuration values will be automatically sent to specific apps](../fundamentals/whats-new.md#plan-for-change-specific-app-configuration-values-will-be-automatically-sent-to-specific-apps) and Intune [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
+For more information, see Intune [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
 
 #### Additional installation error reporting for LOB apps on AOSP devices<!-- 27157460 -->
 
