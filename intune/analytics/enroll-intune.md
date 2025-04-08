@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Intune devices
 titleSuffix: Microsoft Intune
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
-ms.date: 10/23/2023
+ms.date: 04/07/2025
 ms.subservice: desktop-analytics
 ms.service: configuration-manager
 ms.topic: quickstart
@@ -39,7 +39,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](data-collection.md#bkmk_datacollection) to the Intune data collection endpoint. |
+| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](data-collection.md) to the Intune data collection endpoint. |
 
 ### Licensing prerequisites
 
