@@ -49,7 +49,7 @@ Enrollment time grouping is supported on devices provisioned via:
 
 * [Windows Autopilot device preparation](/autopilot/device-preparation/overview)  
 
-* Android Enterprise  
+* [Android Enterprise](../fundamentals/deployment-guide-enrollment-android.md)  
 
 For Windows Autopilot, you must have permissions to create and modify Windows Autopilot device preparation policies. To configure Microsoft Entra groups in an enrollment profile, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center. 
 
@@ -66,7 +66,9 @@ Lastly, the designated group should be configured as scope group for the admin t
 
 ## Step 1: Create Microsoft Entra security group  
 
-Create a Microsoft Entra static security group for use in enrollment profiles. To configure enrollment time grouping, you must add the Intune Provisioning Client as an owner of the security group. You don't need to add devices or users to this group right now. For more information and steps for Windows 11, see [Windows Autopilot - Create a device group](/autopilot/device-preparation/tutorial/user-driven/entra-join-device-group#create-a-device-group) or for Android Enterprise, see <INSERT NEW ANDROID URL HERE>.   
+Create a static Microsoft Entra security group for use in enrollment profiles. To configure enrollment time grouping, you must add the Intune Provisioning Client as an owner of the security group. You don't need to add devices or users to this group right now. 
+
+The following procedure describes how to create a security group in the Microsoft Intune admin center. For more information and steps specific to Windows 11, see [Windows Autopilot - Create a device group](/autopilot/device-preparation/tutorial/user-driven/entra-join-device-group#create-a-device-group).    
 
 >[!NOTE]
 >>- In some tenants, the service principal might have the name **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the AppID of the service principal is **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct service principal.
