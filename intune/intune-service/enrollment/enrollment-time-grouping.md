@@ -33,7 +33,7 @@ ms.collection:
 
 # Enrollment time grouping in Microsoft Intune        
 
-**Applies to:
+**Applies to:**
 * Windows 11 
 * Android  
 
@@ -70,10 +70,6 @@ Create a static Microsoft Entra security group for use in enrollment profiles. T
 
 The following procedure describes how to create a security group in the Microsoft Intune admin center. For more information and steps specific to Windows 11, see [Windows Autopilot - Create a device group](/autopilot/device-preparation/tutorial/user-driven/entra-join-device-group#create-a-device-group).    
 
->[!NOTE]
->>- In some tenants, the service principal might have the name **Intune Autopilot ConfidentialClient** instead of **Intune Provisioning Client**. As long as the AppID of the service principal is **f1346770-5b25-470b-88bd-d5744ab7952c**, it's the correct service principal.
->- If the Intune Provisioning Client or Intune Autopilot ConfidentialClient service principal with AppId **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available in the list of objects or when searching, see [Adding the Intune Provisioning Client service principal](/autopilot/device-preparation/tutorial/user-driven/entra-join-device-group) for next steps.  
-    
 After you configure enrollment time grouping in the enrollment profile, you can come back to this security group to add and remove devices. Any Intune administrator with the appropriate security group permissions can edit the security group.  
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
