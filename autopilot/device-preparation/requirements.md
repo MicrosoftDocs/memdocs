@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 03/27/2025
+ms.date: 04/02/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -62,6 +62,13 @@ Windows Autopilot device preparation depends on specific features available in W
 >
 > - Verify with OEMs that devices shipped from the OEM have the minimum required update installed.
 > - If installing Windows from installation media, verify that the media has the minimum required update installed. Updated Windows installation media with the latest cumulative update already installed is available in the [Microsoft M365 admin center](https://admin.microsoft.com/adminportal/home#/subscriptions/vlnew).
+
+#### Windows 365 Cloud PCs
+
+- Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/en-us/topic/february-25-2025-kb5052093-os-build-26100-3323-preview-053856ea-f984-4bdb-866c-5f356f5a451b) or later.
+- Windows 11, version 23H2 with [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) or later.
+- Windows 11, version 22H2 with [KB5044380](https://support.microsoft.com/en-us/topic/october-22-2024-kb5044380-os-builds-22621-4391-and-22631-4391-preview-9a8db86a-815d-470a-be95-1aa2ad1feb05) or later.
+
 
 The following editions are supported:
 
@@ -135,7 +142,7 @@ Windows Autopilot device preparation contacts the [Delivery Optimization](/windo
 - Office Updates.
 - Intune Win32 Applications.
 
-If the Delivery Optimization Service is inaccessible, the Autopilot process still continues with Delivery Optimization downloads from the cloud without peer-to-peer.
+If the Delivery Optimization Service is inaccessible, the Windows Autopilot process still continues with Delivery Optimization downloads from the cloud without peer-to-peer.
 
 #### Network Time Protocol (NTP) sync
 
@@ -167,7 +174,7 @@ If the WNS services aren't available, the Windows Autopilot device preparation p
 
 Applications in the Microsoft Store can be pushed to the device by triggering them via Intune or other MDM service. App updates and additional applications might also be needed when the user first logs in. For more information, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-intune-integration-with-the-microsoft-store-on-windows/ba-p/3585077) and [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286).
 
-If the Microsoft Store isn't accessible, the Autopilot process still continues without Microsoft Store applications.
+If the Microsoft Store isn't accessible, the Windows Autopilot process still continues without Microsoft Store applications.
 
 #### Microsoft 365
 
@@ -210,7 +217,7 @@ Additionally, the following are also recommended, but not required:
 
 ### Configuration requirements
 
-Before Windows Autopilot device preparation can be used, some configuration tasks are required to support the common Autopilot scenarios.
+Before Windows Autopilot device preparation can be used, some configuration tasks are required to support the common Windows Autopilot device preparation scenarios.
 
 - **Configure Microsoft Entra automatic enrollment**. For Microsoft Intune, see [Set up Windows automatic Intune enrollment](tutorial/user-driven/entra-join-automatic-enrollment.md) and [Enable Windows automatic enrollment](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment) for details. If using a different mobile device management (MDM) service, contact the vendor for the specific URLs or configuration needed for those services.
 
@@ -220,7 +227,7 @@ The following configurations are optional but recommended. They aren't required:
 
 - **Automatically step up from Windows Pro to Windows Enterprise**. For more information, see [Windows Subscription Activation](/windows/deployment/windows-subscription-activation).
 
-There are no additional hardware requirements to use Autopilot, beyond the hardware requirements to run Windows. For more information, see:
+There are no additional hardware requirements to use Windows Autopilot device preparation, beyond the hardware requirements to run Windows. For more information, see:
 
 - [Find Windows 11 specs, features, and computer requirements](https://www.microsoft.com/windows/windows-11-specifications).
 - [Windows minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview).
