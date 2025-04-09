@@ -37,7 +37,7 @@ Enroll a Linux device in Microsoft Intune to get secure access to work or school
 
 Enrollment is supported on the following versions of Linux:
 
-* Ubuntu Desktop 24.04, 22.04 or 20.04 LTS (physical, Azure VM or Hyper-V machine with x86/64 CPUs)  
+* Ubuntu Desktop 24.04, 22.04 or 20.04 LTS (physical, Azure VM, or Hyper-V machine with x86/64 CPUs)  
 * RedHat Enterprise Linux 8  
 * RedHat Enterprise Linux 9
 
