@@ -155,6 +155,21 @@ After you configure third-party device compliance partners and enroll devices wi
 
 Sign in to the Azure portal and go to **Microsoft Entra ID** > **Devices** > [**All devices**](https://portal.azure.com/#blade/Microsoft_AAD_Devices/DevicesMenuBlade/Devices/menuId/).
 
+## Best practices for migrating devices from 3rd party MDM to Intune MDM
+
+When migrating devices from 3rd party MDM providers to a full Intune stack, we recommend you take the following cleanup actions:
+
+1. Initiate a retirement action from the 3rd party MDM service before the device is enrolled with Intune MDM. This will notify Intune to perform the necessary cleanup tasks in our 3rd party integration services.
+> [!NOTE]
+> Removing the 3rd party MDM profile locally on a device is not sufficient to trigger Intune's cleanup tasks.
+
+2. Confirm that devices retired from the 3rd party MDM are appear in the Microsoft Entral portal with "None" listed in the "MDM" Column. At this point, devices can be newly enrolled with Intune MDM.
+
+3. After all your devices have been migrated to Intune via the steps above, we recommend you take the final step of disabling the Intune connection in your 3rd party MDM provider's admin console. If that is not an option, you can also disable the connection console by going to Tenant administration > Connectors and tokens > Device compliance partner, selecting the device compliance partner you want to disable, then toggling the connection to "Off".
+
+> [!NOTE]
+> If devices have not been through the above cleanup tasks and and is showing as enrolled in Intune, Intune will enforce the Intune compliance policies and statuses and ignore the 3rd party policies.
+
 ## Next steps
 
 Use the documentation from your third-party partner to create compliance policies for devices.
