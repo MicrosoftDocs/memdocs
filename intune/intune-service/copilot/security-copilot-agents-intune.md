@@ -30,7 +30,7 @@ Microsoft Security Copilot agents are available in Microsoft Intune.
 ## Agent terminology
 
 | Field | Description |
-| ----- | ----------- |
+|-------|-------------|
 | Trigger | An event or condition that tells an agentic system to initiate an action or series of actions. |
 | Permissions | The level of authorization an AI agent is given by an admin during configuration that enables it to access specific information or carry out its tasks. |
 | Identity | The credentials that the agent will use when it runs. |
