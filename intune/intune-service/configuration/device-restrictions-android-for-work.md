@@ -236,7 +236,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 ## Device experience
 
-Use these settings to configure a kiosk-style experience on your dedicated or fully managed devices, or to customize the home screen experiences on your fully managed devices.  If you’re not sure which experience to configure, the diagram below can help you decide on the right option for your devices. If you’re still uncertain, see [Selecting a home screen experience for your Android Enterprise corporate-owned devices](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess). 
+Use these settings to configure a kiosk-style experience on your dedicated or fully managed devices, or to customize the home screen experiences on your fully managed devices.  If you’re not sure which experience to configure, the diagram below can help you decide on the right option for your devices. If you’re still uncertain, see [Selecting a home screen experience for your Android Enterprise corporate-owned devices](https://techcommunity.microsoft.com/blog/intunecustomersuccess/selecting-a-home-screen-experience-for-your-android-enterprise-corporate-owned-d/4224924). 
 
 **Device experience type**: Select a device experience type to start configuring Microsoft Launcher or the Microsoft Managed Home Screen on your devices. Your options:
 

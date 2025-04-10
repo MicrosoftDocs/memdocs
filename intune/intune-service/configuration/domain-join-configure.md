@@ -38,9 +38,9 @@ This feature applies to:
 - Windows 11
 - Windows 10
 - Microsoft Entra hybrid joined devices
-- Hybrid deployment with Autopilot + Intune
+- Hybrid deployment with Windows Autopilot + Intune
 
-This article shows you how to create a domain join profile for a hybrid Autopilot deployment. You can also see the available settings.
+This article shows you how to create a domain join profile for a hybrid Windows Autopilot deployment. You can also see the available settings.
 
 ## Prerequisites
 

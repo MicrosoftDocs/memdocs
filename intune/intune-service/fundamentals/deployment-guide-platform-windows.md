@@ -80,7 +80,7 @@ Use Intune endpoint security features to configure device security and to manage
 |[Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md)|When you integrate Intune with Microsoft Defender for Endpoint, you not only help prevent security breaches, but you can take advantage of Microsoft Defender for Endpoints Threat & Vulnerability Management (TVM) and use Intune to remediate endpoint weakness identified by TVM.|
 |[Manage BitLocker policy](../protect/encrypt-devices.md)| Ensure that devices are encrypted upon enrollment by creating a policy that configures BitLocker on managed devices. |
 |[Manage security baseline profiles](../protect/security-baselines-configure.md)| Use the security baselines in Intune to help you secure and protect your users and devices. A security baseline includes the best practices and recommendations for settings that impact security.  |
-|[Use Windows Update client policies for software updates](/windows/deployment/update/waas-configure-wufb)|Configure a Windows Update rollout strategy with Windows Update client policies. This article introduces you to the policy types you can use to manage Windows 10/11 software updates, and how to transition from update ring deferrals to a feature updates policy. |   
+|[Use Windows Update client policies for software updates](/windows/deployment/update/waas-configure-wufb)|Configure a Windows Update rollout strategy with Windows Update client policies. This article introduces you to the policy types you can use to manage Windows 10/11 software updates, and how to transition from update ring deferrals to a feature updates policy. |
 
 
 ## Step 5: Configure device settings
@@ -130,7 +130,7 @@ As you set up apps and app policies, think about your organization's requirement
 |[Add line-of-business apps ](../apps/lob-apps-windows.md)|Add Windows line-of-business (LOB) apps to Intune and assign to groups.|
 |[Add Microsoft Edge](../apps/apps-windows-edge.md) | Add and assign Microsoft Edge for Windows. |
 |[Add Intune Company Portal app from Microsoft Store ](../apps/store-apps-company-portal-app.md)|Manually add and assign the Intune Company Portal app as a required app.    |
-|[Add Intune Company Portal app for Autopilot ](../apps/store-apps-company-portal-autopilot.md)|Add the Company Portal app to devices provisioned by Windows Autopilot. |
+|[Add Intune Company Portal app for Windows Autopilot ](../apps/store-apps-company-portal-autopilot.md)|Add the Company Portal app to devices provisioned by Windows Autopilot. |
 |[Add Microsoft 365 apps](../apps/apps-add-office365.md) |Add Microsoft 365 Apps for enterprise. |
 |[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|
 |[Include and exclude app assignments ](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.|

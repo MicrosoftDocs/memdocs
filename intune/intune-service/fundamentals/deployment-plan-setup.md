@@ -7,7 +7,7 @@ description: Step 1 for deploying or setting up Intune. The starting point is to
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/29/2024
+ms.date: 04/07/2025
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune
 ms.subservice: fundamentals

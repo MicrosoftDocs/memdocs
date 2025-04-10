@@ -209,15 +209,15 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices in to Windows Autopilot. This step joins the devices to Microsoft Entra ID. For more specific information, go to [Windows Autopilot registration overview](/autopilot/registration-overview) and [Manual registration overview](/autopilot/manual-registration).
 
-- Create an Autopilot deployment profile. For more specific information, go to [Create an Autopilot deployment profile](/autopilot/profiles#create-an-autopilot-deployment-profile).
+- Create a Windows Autopilot deployment profile. For more specific information, go to [Create a Windows Autopilot deployment profile](/autopilot/profiles#create-a-windows-autopilot-deployment-profile).
 
   When you create the profile, you also:
 
-  - Configure the out-of-box deployment user experience, including [user driven](/autopilot/user-driven), [pre-provision](/autopilot/pre-provision), and more. For more specific information, go to [Configure Autopilot profiles](/autopilot/profiles).
+  - Configure the out-of-box deployment user experience, including [user driven](/autopilot/user-driven), [pre-provision](/autopilot/pre-provision), and more. For more specific information, go to [Configure Windows Autopilot profiles](/autopilot/profiles).
 
   - Configure startup behaviors, like disabling the local administrator, and skipping the EULA.
 
-  - Assign the Autopilot deployment profile to your Microsoft Entra security groups. You can also exclude security groups.
+  - Assign the Windows Autopilot deployment profile to your Microsoft Entra security groups. You can also exclude security groups.
 
   - For Microsoft Entra hybrid joined devices, you register the devices, create the deployment profile, and assign the profile. You'll also install the Intune Connector for Active Directory. This connector communicates between on-premises Active Directory and Microsoft Entra ID.
 
@@ -240,7 +240,7 @@ The end user experience depends on the Windows Autopilot deployment option you c
 - **Existing devices**: Your users must do the following steps:
 
   1. Open the **Software Center** app, and select **Operating systems**.
-  2. Select **Autopilot for existing devices** > **Install**. Content downloads, the drives are formatted, and Windows client OS installs.
+  2. Select **Windows Autopilot for existing devices** > **Install**. Content downloads, the drives are formatted, and Windows client OS installs.
 
       This step can take some time, and users must wait.
 

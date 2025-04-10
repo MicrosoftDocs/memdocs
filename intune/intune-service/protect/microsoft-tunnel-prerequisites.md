@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/27/2025
+ms.date: 04/07/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -500,7 +500,11 @@ For more information about this tool, see [Reference for mst-cli](../protect/mic
 
 The readiness tool checks for the presence of the *auditd* package for Linux system auditing. Because *auditd* is optional and not required, the readiness script will return a warning when this package isn't detected.
 
-*Auditd* is installed by default by RHEL 7 and later versions, but might not be installed by default by Ubuntu distributions. When not present you can manually install it on the Linux server. For information on how to manually install installing this, see [Linux system auditing](#linux-system-auditing) earlier in this article.
+*Auditd* is installed by default by RHEL 7 and later versions, but might not be installed by default by Ubuntu distributions. When not present you can manually install it on the Linux server. 
+
+For information on how to manually install this before installing Tunnel server, see [Linux system auditing](#linux-system-auditing) earlier in this article.
+
+To install auditd after installing Microsoft Tunnel, see [Install Linux system auditing after installing the Tunnel server](../protect/microsoft-tunnel-configure.md#install-linux-system-auditing-after-installing-the-tunnel-server) in Configure Micrfosoft Tunnel. 
 
 ### Manually load ip_tables
 

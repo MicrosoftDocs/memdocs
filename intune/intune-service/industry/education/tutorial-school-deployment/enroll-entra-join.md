@@ -23,7 +23,7 @@ With this process, no advance preparation is needed:
 1. The device joins Microsoft Entra ID and automatically enroll in Intune. All settings defined in Intune are applied to the device.
 
 > [!IMPORTANT]
-> If you configured enrollment restrictions in Intune blocking personal Windows devices, this process will not complete. You will need to use a different enrollment method, or ensure that the devices are registered in Autopilot.
+> If you configured enrollment restrictions in Intune blocking personal Windows devices, this process will not complete. You will need to use a different enrollment method, or ensure that the devices are registered in Windows Autopilot.
 
 :::image type="content" source="./images/win11-login-screen.png" alt-text="Windows 11 login screen" border="false":::
 

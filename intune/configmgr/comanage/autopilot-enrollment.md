@@ -1,5 +1,5 @@
 ---
-title: How to enroll with Autopilot
+title: How to enroll with Windows Autopilot
 titleSuffix: Configuration Manager
 description: Enable clients to enroll with co-management when they provision with Windows Autopilot.
 ms.date: 05/18/2022
@@ -14,34 +14,34 @@ manager: apoorvseth
 ms.collection: tier3
 ---
 
-# How to enroll with Autopilot
+# How to enroll with Windows Autopilot
 
 <!-- Intune 11300628 -->
 
 When you use [Windows Autopilot](/autopilot/overview) to provision a device, it first joins Microsoft Entra and enrolls in Microsoft Intune. Previously, if the intended end-state of the device was co-management, the experience was difficult because the installation of the Configuration Manager client as a Win32 app introduces component timing and policy delays.
 
-Now you can configure co-management settings in Intune, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. This feature and its functionality are referred to as Autopilot into co-management.
+Now you can configure co-management settings in Intune, which happens during the Windows Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. This feature and its functionality are referred to as Windows Autopilot into co-management.
 
 > [!NOTE]
-> While it is still possible to enable co-management on Windows devices during Autopilot without the Autopilot into co-management feature, the documentation, guidance, and requirements below are specific to this feature alone and do not apply specifically to any other method.
+> While it is still possible to enable co-management on Windows devices during Windows Autopilot without the Windows Autopilot into co-management feature, the documentation, guidance, and requirements below are specific to this feature alone and do not apply specifically to any other method.
 
 You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune co-management settings policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. You do still specify the command-line parameters. This parameter can optionally include the [PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts) property to specify a task sequence.
 
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../../intune-service/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager client to be installed. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
+If the device is targeted with an [Windows Autopilot enrollment status page (ESP) policy](../../intune-service/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager client to be installed. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Windows Autopilot ESP continues.
 
 ## Scenarios
 
 The following scenarios are several common ones that this feature supports:
 
-- Use the Microsoft Intune family of products to configure devices to your organizational standards. You want to combine modern provisioning with Autopilot, cloud-attached management with co-management, and existing investments in Configuration Manager task sequences and app deployments.
+- Use the Microsoft Intune family of products to configure devices to your organizational standards. You want to combine modern provisioning with Windows Autopilot, cloud-attached management with co-management, and existing investments in Configuration Manager task sequences and app deployments.
 
-- Install apps in a specific sequence during the Autopilot enrollment status page process.
+- Install apps in a specific sequence during the Windows Autopilot enrollment status page process.
 
 - Override the co-management policy and use Intune for all workloads. You want devices to get all policies from Intune, but still have the Configuration Manager client for emergency use.
 
 ## Process
 
-When you use this policy, the following actions happen on the device during Autopilot provisioning:
+When you use this policy, the following actions happen on the device during Windows Autopilot provisioning:
 
 1. When the device enrolls into Intune, the service checks if the device is assigned a co-management settings policy.
 
@@ -70,7 +70,7 @@ When you use this policy, the following actions happen on the device during Auto
 
     - If necessary, the task sequence can restart the device and return to the enrollment status page afterwards.
 
-    - Once the task sequence successfully completes, the Autopilot provisioning process continues on the enrollment status page.
+    - Once the task sequence successfully completes, the Windows Autopilot provisioning process continues on the enrollment status page.
 
         :::image type="content" source="media/esp-device-setup-complete.png" alt-text="Enrollment status page, Device Setup complete.":::
 
@@ -79,22 +79,22 @@ When you use this policy, the following actions happen on the device during Auto
 
 ## Requirements
 
-The following components are required to support Autopilot into co-management:
+The following components are required to support Windows Autopilot into co-management:
 
 - Windows devices running one of the following versions:
 
-    - Windows 11
+  - Windows 11
 
-        For Windows 11 devices, if a device has not been targeted with a co-management settings policy, the management authority will be set to Microsoft Intune during the Autopilot process. Installing the Configuration Manager client as Win32 app doesn't change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads. To set the management authority to Configuration Manager, create a co-management settings policy with the following Advanced settings:<br>
+    For Windows 11 devices, if a device has not been targeted with a co-management settings policy, the management authority will be set to Microsoft Intune during the Windows Autopilot process. Installing the Configuration Manager client as Win32 app doesn't change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads. To set the management authority to Configuration Manager, create a co-management settings policy with the following Advanced settings:<br>
 <br>
-        - **Automatically install the Configuration Manager client.**: **No**
-        - **Override co-management policy and use Intune for all workloads.**: **No**
+    - **Automatically install the Configuration Manager client.**: **No**
+    - **Override co-management policy and use Intune for all workloads.**: **No**
 
-        For additional information, see [Co-management settings: Windows Autopilot with co-management](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500).
+    For additional information, see [Co-management settings: Windows Autopilot with co-management](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500).
 
     - A [currently supported](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions-by-servicing-option) version of Windows 10.
 
-- Register the device for Autopilot. For more information, see [Windows Autopilot registration overview](/autopilot/registration-overview).
+- Register the device for Windows Autopilot. For more information, see [Windows Autopilot registration overview](/autopilot/registration-overview).
 
   - Microsoft Entra joined only
 
@@ -131,27 +131,27 @@ Use these recommendations for a more successful deployment:
 
 ## Limitations
 
-- [Windows Autopilot device preparation](/autopilot/device-preparation/overview) policy doesn't support Autopilot into co-management. As a result, attempting to install co-management during the device preparation flow might result in failed deployments.
-  
- - For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Microsoft Intune during the Windows Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads.
+- [Windows Autopilot device preparation](/autopilot/device-preparation/overview) policy doesn't support Windows Autopilot into co-management. As a result, attempting to install co-management during the device preparation flow might result in failed deployments.
+
+  - For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Microsoft Intune during the Windows Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads.
 
     To change the management authority to Configuration Manager, set the following registry key value:<br>
 <br>
     - Path: **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server**
     - Value: **ConfigInfo**
     - REG_SZ: **2**
-    
+
     For more information, see [Co-management settings: Windows Autopilot with co-management](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500).
 
-- Autopilot into co-management currently doesn't support the following functionality:
+- Windows Autopilot into co-management currently doesn't support the following functionality:
 
-    - Microsoft Entra hybrid joined devices - If the device is targeted with co-management settings policy, in Microsoft Entra hybrid join scenario, the autopilot provisioning times out during ESP phase.
+  - Microsoft Entra hybrid joined devices - If the device is targeted with co-management settings policy, in Microsoft Entra hybrid join scenario, the Windows Autopilot provisioning times out during ESP phase.
 
-    - Autopilot pre-provisioning.
+  - Windows Autopilot pre-provisioning.
 
-    - Workloads switched to **Pilot Intune** with pilot collections. This functionality is dependent upon collection evaluation, which doesn't happen until after the client is installed and registered. Since the client won't get the correct policy until later in the Autopilot process, it can cause indeterminate behaviors.
+  - Workloads switched to **Pilot Intune** with pilot collections. This functionality is dependent upon collection evaluation, which doesn't happen until after the client is installed and registered. Since the client won't get the correct policy until later in the Windows Autopilot process, it can cause indeterminate behaviors.
 
-    - Clients that authenticate with PKI certificates. You can't provision the certificate on the device before the Configuration Manager client installs and needs to authenticate to the CMG. Microsoft Entra ID is recommended for client authentication. For more information, see [Plan for CMG client authentication: Microsoft Entra ID](../core/clients/manage/cmg/plan-client-authentication.md#azure-ad).
+  - Clients that authenticate with PKI certificates. You can't provision the certificate on the device before the Configuration Manager client installs and needs to authenticate to the CMG. Microsoft Entra ID is recommended for client authentication. For more information, see [Plan for CMG client authentication: Microsoft Entra ID](../core/clients/manage/cmg/plan-client-authentication.md#azure-ad).
 
 ## Configure
 
@@ -183,13 +183,13 @@ Use the following process to configure the co-management policy in Intune:
 By default, the device waits for and uses the workload assignments from the Configuration Manager co-management policy. In the **Advanced** area of this policy, you can select **Yes** to override the co-management policy and use Intune for all workloads. Use this option for devices that are primarily cloud-managed with Intune policies, but you need the Configuration Manager client for certain apps. Even when Intune is the authority for the **Client apps** workload, a co-managed device can still get apps from Configuration Manager. For more information, see [Workloads: Client apps](workloads.md#client-apps) and [Use the Company Portal app on co-managed devices](company-portal.md).
 
 > [!WARNING]
-> Don't change this setting after device provisioning. It will apply to existing devices in the assigned group, not just new devices running the Autopilot process. Because of policy synchronization timing, the behavior of the policy change is non-deterministic, thus should be avoided.
+> Don't change this setting after device provisioning. It will apply to existing devices in the assigned group, not just new devices running the Windows Autopilot process. Because of policy synchronization timing, the behavior of the policy change is non-deterministic, thus should be avoided.
 
 ## Troubleshoot
 
-The first step when you troubleshoot issues with this process is to make sure that you're using Autopilot into co-management in a supported scenario. For more information, see [Requirements](#requirements).
+The first step when you troubleshoot issues with this process is to make sure that you're using Windows Autopilot into co-management in a supported scenario. For more information, see [Requirements](#requirements).
 
-Next, collect logs. Press **Shift** + **F10** during the Autopilot out-of-box experience (OOBE) to open a command prompt. Then run the MDM diagnostics tool, for example: `%windir%\system32\mdmdiagnosticstool.exe -area Autopilot;DeviceEnrollment -cab %temp%\autopilot-logs.cab`
+Next, collect logs. Press **Shift** + **F10** during the Windows Autopilot out-of-box experience (OOBE) to open a command prompt. Then run the MDM diagnostics tool, for example: `%windir%\system32\mdmdiagnosticstool.exe -area Autopilot;DeviceEnrollment -cab %temp%\autopilot-logs.cab`
 
 > [!NOTE]
 > This tool doesn't collect Configuration Manager CCMSetup and client logs. Manually gather them from the device. By default, these logs are in the following directories:
@@ -204,13 +204,13 @@ Investigate how the enrollment status page failed while waiting for Configuratio
 - The **Device setup** phase fails while waiting on the task sequence to complete. For more information, see [The task sequence doesn't complete](#the-task-sequence-doesnt-complete).
 
 > [!TIP]
-> For more information on troubleshooting Autopilot, see [Troubleshooting Windows Autopilot overview](/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview).
+> For more information on troubleshooting Windows Autopilot, see [Troubleshooting Windows Autopilot overview](/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview).
 
 ### The client installation doesn't complete
 
 The enrollment status page tracks the client installation during the **Device preparation** phase while **Preparing your device for mobile management**. If you see the error code `0x800705b4` during this phase, it timed out while trying to install the client. The enrollment status page default timeout is 60 minutes.
 
-:::image type="content" source="media/device-preparation-error.png" alt-text="Autopilot enrollment status page, Device Preparation error 800705b4.":::
+:::image type="content" source="media/device-preparation-error.png" alt-text="Windows Autopilot enrollment status page, Device Preparation error 800705b4.":::
 
 1. In the `autopilot-logs.cab` file from the diagnostic tool, find the **Shell-Core** logs. You may see an entry similar to the following event:
 
@@ -250,7 +250,7 @@ The enrollment status page tracks the client installation during the **Device pr
 
 The enrollment status page tracks the task sequence as an app during the **Device setup** phase. If the task sequence doesn't complete successfully, the **Device setup** section shows an error for **Apps**.
 
-:::image type="content" source="media/device-setup-error.png" alt-text="Autopilot enrollment status page, Device Setup error for Apps.":::
+:::image type="content" source="media/device-setup-error.png" alt-text="Windows Autopilot enrollment status page, Device Setup error for Apps.":::
 
 1. In the `autopilot-logs.cab` file from the diagnostic tool, find the **Shell-Core** logs. You may see an entry similar to the following event:
 

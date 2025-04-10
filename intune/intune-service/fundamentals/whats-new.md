@@ -38,7 +38,7 @@ You can also read:
 
 - [**Important notices**](#notices)
 - [Past releases](whats-new-archive.md) in the What's new archive
-- Information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)
+- Information about [how Intune service updates are released](intune-service-servicing-information.md)
 
 > [!NOTE]
 > Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) can take up to three days to roll out and will be in the following order:
@@ -95,9 +95,9 @@ For more information on *auditd* and how to install it on your Microsoft Tunnel 
 #### Endpoint Privilege Manager support for ARM 64-bit devices<!-- 28313554 -->
 
 [Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) now supports managing file elevations on devices that run on ARM 64-bit architecture.
- 
+
 Applies to:
- 
+
 - Windows
 
 ### Device configuration
@@ -138,7 +138,7 @@ Intune policies for [Windows Local Administrator Password Solution (LAPS)](../pr
 The following new settings are available: *(Each setting name is a link that opens the CSP documentation for that setting.)*
 
 - [Automatic Account Management Enable Account](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementenableaccount)
-- [Automatic Account Management Enabled](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementenabled)  
+- [Automatic Account Management Enabled](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementenabled)
 - [Automatic Account Management Name Or Prefix](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementnameorprefix)
 - [Automatic Account Management Randomize Name](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementrandomizename)
 - [Automatic Account Management Target](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementtarget)
@@ -166,7 +166,7 @@ As part of the [Settings Catalog](../configuration/settings-catalog.md), you can
 **Declarative device management > Software Update Enforce Latest**.
 
 - **Enforce Latest Software Update Version**: If true, devices will upgrade to the latest OS version that is available for that device model. This uses the Software Update Enforcement configuration and will force devices to restart and install the update after the deadline passes.
-- **Delay In Days**: Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured. 
+- **Delay In Days**: Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured.
 - **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
 
 Learn more about configuring managed updates through DDM at [Managed software updates](../protect/managed-software-updates-ios-macos.md).
@@ -230,7 +230,7 @@ Applies to:
 ### Device configuration
 
 #### New Windows AI settings available in the Windows settings catalog<!-- 30339749 -->
- 
+
 The Settings Catalog lists all the settings you can configure in a device policy, and all in one place.
 
 There are new settings in the Settings Catalog for Windows. To see these settings, in the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** > **Settings catalog** for profile type.
@@ -247,15 +247,15 @@ Applies to:
 
 - Windows
 
-#### Low privileged account for Intune Connector for Active Directory for Hybrid join Autopilot flows<!-- 28662823 -->
+#### Low privileged account for Intune Connector for Active Directory for Hybrid join Windows Autopilot flows<!-- 28662823 -->
 
-We've updated the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will no longer be available for download but will continue to work until deprecation in late May 2025.
+We've updated the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will continue to work until deprecation in late May 2025.
 
 For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
 
 #### Managed Home Screen QR Code Authentication in public preview<!-- 25348926 -->
 
-Managed Home Screen for Android devices natively supports QR Code Authentication in Microsoft Entra ID. Authentication involves both a QR code and PIN. This capability eliminates the need for users to enter and re-enter long UPNs and alphanumeric passwords. For more information, see [Sign in to Microsoft Teams or Managed Home Screen (MHS) with QR code](/entra/identity/authentication/how-to-authentication-qr-code#sign-in-to-microsoft-teams-or-managed-home-screen-mhs-with-qr-code).  
+Managed Home Screen for Android devices natively supports QR Code Authentication in Microsoft Entra ID. Authentication involves both a QR code and PIN. This capability eliminates the need for users to enter and re-enter long UPNs and alphanumeric passwords. For more information, see [Sign in to Microsoft Teams or Managed Home Screen (MHS) with QR code](/entra/identity/authentication/how-to-authentication-qr-code#sign-in-to-microsoft-teams-or-managed-home-screen-mhs-with-qr-code).
 
 Applies to:
 
@@ -285,13 +285,13 @@ You can now use Intune to manage the configuration of the Microsoft Defender CSP
 
 You can use the following two Microsoft Intune options to configure DeviceControlEnabled. With both options, the setting appears as **Device Control Enabled**, and is found in the *Defender* category:
 
-- Configure a [**Device Control** template](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), which is a profile for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy.  
+- Configure a [**Device Control** template](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), which is a profile for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy.
 - Configure a [**Settings Catalog** profile](../configuration/settings-catalog.md#create-the-policy) for Windows.
 
 Both the Device Control template and Settings Catalog support the following options for *Device Control Enabled*:
 
 - Device Control is enabled
-- Device Control is disabled (Default) 
+- Device Control is disabled (Default)
 
 Applies to:
 
@@ -303,7 +303,7 @@ You can now use Intune to manage the configuration of the Microsoft Defender CSP
 
 You can use the following two Microsoft Intune options to configure DefaultEnforcement. With both options, the setting appears as **Default Enforcement**, and is found in the *Defender* category:
 
-- Configure a [**Device Control** template](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), which is a profile for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy.  
+- Configure a [**Device Control** template](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), which is a profile for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy.
 - Configure a [**Settings Catalog** profile](../configuration/settings-catalog.md#create-the-policy) for Windows.
 
 Both the Device Control template and Settings Catalog support the following options for *Default Enforcement*:
@@ -409,7 +409,7 @@ Applies to:
 ## Week of February 5, 2025  (Service release 2501)
 
 ### Microsoft Intune Suite
- 
+
 #### Use Microsoft Security Copilot with Endpoint Privilege Manager to help identify potential elevation risks<!-- 27265509 -->
 
 When your Azure Tenant is licensed for Microsoft Security Copilot, you can now use Security Copilot to help you investigate Endpoint Privilege Manager (EPM) file elevation requests from within the EPM [support approved](../protect/epm-support-approved.md#use-microsoft-security-copilot-to-analyze-file-elevation-requests) work flow.
@@ -457,7 +457,7 @@ You can now deploy the Intune security baseline for **Microsoft Edge version 128
 For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
 Applies to:
- 
+
 - Windows
 
 ### Intune apps
@@ -478,10 +478,10 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 You can now deploy two distinct instances of the security baseline for HoloLens 2. These baselines represent Microsoft’s best practice guidelines and experience from deploying and supporting HoloLens 2 devices to customers across various industries. The two baselines instances:
 
-- **Standard Security Baseline for HoloLens 2**:  
+- **Standard Security Baseline for HoloLens 2**:
   The standard security baseline for HoloLens 2 represents the recommendations for configuring security settings that are applicable to all types of customers irrespective of HoloLens 2 use case scenarios. [View the default configuration of settings in the standard security baseline](../protect/security-baseline-hololens2-standard.md).
 
-- **Advanced Security Baseline for HoloLens 2**:  
+- **Advanced Security Baseline for HoloLens 2**:
   The advanced security baseline for HoloLens 2 represents the recommendations for configuring security settings for the customers who have strict security controls of their environment and require stringent security policies to be applied to any device used in their environment. [View the default configuration of settings in the advanced security baseline](../protect/security-baseline-hololens2-advanced.md).
 
 To learn more about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
@@ -503,7 +503,7 @@ Support Assistant is now available in Intune. It leverages AI to enhance your he
 ### Device enrollment
 
 #### Intune ends support for Android device administrator on devices with access to Google Mobile Services<!-- 24563742 -->
-As of December 31, 2024, Microsoft Intune no longer supports Android device administrator management on devices with access to Google Mobile Services (GMS). This change comes after Google deprecated Android device administrator management and ceased support. Intune support and help documentation remains for devices without access to GMS running Android 15 or earlier, and Microsoft Teams devices migrating to Android Open Source Project (AOSP) management. For more information about how this change impacts your tenant, see [Intune ending support for Android device administrator on devices with GMS access in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443). 
+As of December 31, 2024, Microsoft Intune no longer supports Android device administrator management on devices with access to Google Mobile Services (GMS). This change comes after Google deprecated Android device administrator management and ceased support. Intune support and help documentation remains for devices without access to GMS running Android 15 or earlier, and Microsoft Teams devices migrating to Android Open Source Project (AOSP) management. For more information about how this change impacts your tenant, see [Intune ending support for Android device administrator on devices with GMS access in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443).
 
 
 ## Week of December 16, 2024 (Service release 2412)
@@ -521,7 +521,7 @@ For more information about customizing the Company Portal and Intune apps, see [
 #### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint<!-- 13204113 -->
 
 You can now manage the Microsoft Defender for Endpoint CSP setting for [tamper protection](/windows/client-management/mdm/defender-csp) on unenrolled devices you manage as part of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
- 
+
 With this support, tamper protection configurations from *Windows Security Experience* profiles for *Antivirus* policies now apply to all devices instead of only to those that are enrolled with Intune.
 
 ### Device configuration
@@ -532,7 +532,7 @@ Customers cannot create new Administrative Templates configuration profile throu
 
 However, customers can now use the Settings Catalog for creating new **Administrative Templates** configuration profile by navigating to **Devices > Configuration > Create > New policy > Windows 10 and later > Settings Catalog**.
 
-There are no changes in the following UI experiences: 
+There are no changes in the following UI experiences:
 
 - Editing an existing Administrative template.
 - Deleting an existing Administrative template.
@@ -549,9 +549,9 @@ Applies to:
 
 #### More Wi-Fi configurations are now available for personally-owned work profile devices<!-- 28331156 -->
 
-Intune Wi-Fi configuration profiles for Android Enterprise personally-owned work profile devices now support configuration of pre-shared keys and proxy settings. 
+Intune Wi-Fi configuration profiles for Android Enterprise personally-owned work profile devices now support configuration of pre-shared keys and proxy settings.
 
-You can find these settings in the admin console in **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**. Set **Platform** to Android Enterprise and then in the **Personally-Owned Work Profile** section, select Wi-Fi and then select the **Create** button. 
+You can find these settings in the admin console in **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**. Set **Platform** to Android Enterprise and then in the **Personally-Owned Work Profile** section, select Wi-Fi and then select the **Create** button.
 
 In the **Configuration settings** tab, when you select Basic Wi-Fi type, several new options are available:
 
@@ -627,7 +627,7 @@ Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, *
 - Microsoft Teams
 - Microsoft Word
 
-For more information, see [Plan for Change: Specific app configuration values will be automatically sent to specific apps](../fundamentals/whats-new.md#plan-for-change-specific-app-configuration-values-will-be-automatically-sent-to-specific-apps) and Intune [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
+For more information, see Intune [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
 
 #### Additional installation error reporting for LOB apps on AOSP devices<!-- 27157460 -->
 
@@ -641,7 +641,7 @@ Applies to:
 
 #### Microsoft Teams app protection on VisionOS devices (preview)<!-- 29913431 -->
 
-Microsoft Intune app protection policies (APP) are now supported on the Microsoft Teams app on VisionOS devices. 
+Microsoft Intune app protection policies (APP) are now supported on the Microsoft Teams app on VisionOS devices.
 
 To learn more about how to target policies to VisionOS devices, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties) for more information about filters for managed app properties.
 
@@ -682,7 +682,7 @@ Applies to:
 
 Intune now supports *Windows Autopilot device preparation* policy for [Intune operated by 21Vianet in China](../fundamentals/china.md) cloud. Customers with tenants located in China can now use *Windows Autopilot device preparation* with Intune to provision devices.
 
-For information about this Autopilot support, see the following in the Autopilot documentation:
+For information about this Windows Autopilot device preparation support, see the following in the Windows Autopilot device preparation documentation:
 
 - Overview: [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview)
 - Tutorial: [Windows Autopilot device preparation scenarios](/autopilot/device-preparation/tutorial/scenarios)

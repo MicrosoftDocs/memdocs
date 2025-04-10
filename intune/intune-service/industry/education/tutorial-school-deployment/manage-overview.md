@@ -81,7 +81,7 @@ Here are the steps for generating reports in Intune for Education:
     - Application inventory
     - Settings errors
     - Windows Defender
-    - Autopilot deployment
+    - Windows Autopilot deployment
 1. If needed, use the search box to find specific devices, applications, and settings.
 1. To download a report, select **Download**. The report downloads a comma-separated value (CSV) file, which you can view and modify in a spreadsheet app like Microsoft Excel.
     :::image type="content" source="./images/inventory-reporting.png" alt-text="Reporting options available in Intune for Education when selecting the reports blade" border="true":::

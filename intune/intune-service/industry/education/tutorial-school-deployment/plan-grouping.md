@@ -53,8 +53,8 @@ The following table provides guidance about which Windows device grouping option
 
 | Enrollment type | Behavior | Best grouping options |
 | --- | --- | --- |
-| Autopilot user driven | Fastest application during enrollment | ✔️ *Device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ *User dynamic group*✔️ Assigned groups |
-| Autopilot self-deploying mode | Fastest application during enrollment | ✔️ *Device dynamic group* based on [an Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ Assigned groups |
+| Windows Autopilot user driven | Fastest application during enrollment | ✔️ *Device dynamic group* based on [a Windows Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ *User dynamic group*✔️ Assigned groups |
+| Windows Autopilot self-deploying mode | Fastest application during enrollment | ✔️ *Device dynamic group* based on [a Windows Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ Assigned groups |
 | All enrollment types | Fastest application during enrollment | ✔️ *All devices* group</br>✔️ *All devices* group with a filter |
 | All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes |
 
@@ -107,26 +107,26 @@ This section includes targeting methods commonly seen in Education organizations
 
 ::: zone pivot="windows"
 
-### Autopilot
+### Windows Autopilot
 
-When devices are imported into Autopilot, they include the manufacturer and model of the device. A group tag can also be added to each device imported. The group tag can be used to create groups for targeting. Some customers use group tags to create groups for different autopilot profiles, to target different apps or profiles and also for assigning scope tags for role-based access control.
+When devices are imported into Windows Autopilot, they include the manufacturer and model of the device. A group tag can also be added to each device imported. The group tag can be used to create groups for targeting. Some customers use group tags to create groups for different autopilot profiles, to target different apps or profiles and also for assigning scope tags for role-based access control.
 
-This table contains common groups used for devices that are enrolled using Autopilot.
+This table contains common groups used for devices that are enrolled using Windows Autopilot.
 
 | Name | Type | Query |
 | --- | --- | --- |
 | All Windows devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") |
-| All Autopilot devices | Dynamic membership rules | (device.devicePhysicalIDs -any _ -startsWith \"[ZTDId]\") |
-| All non-Autopilot devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") -and (device.deviceOwnership -eq \"Company\") -and -not(device.devicePhysicalIds -any (_ -startsWith \"[ZTDId]\")) |
-| All Autopilot Student devices | Dynamic membership rules | (device.devicePhysicalIds -any (_ -eq \"[OrderID]:*`Student`*\")) |
+| All Windows Autopilot devices | Dynamic membership rules | (device.devicePhysicalIDs -any _ -startsWith \"[ZTDId]\") |
+| All non-Windows Autopilot devices | Dynamic membership rules | (device.deviceOSType -startsWith \"Windows\") -and (device.deviceOwnership -eq \"Company\") -and -not(device.devicePhysicalIds -any (_ -startsWith \"[ZTDId]\")) |
+| All Windows Autopilot Student devices | Dynamic membership rules | (device.devicePhysicalIds -any (_ -eq \"[OrderID]:*`Student`*\")) |
 
 > [!NOTE]
-> The "All Autopilot Student devices" group example is assuming the Autopilot Group Tag is set to "Student". You could use another Group Tag and update the membership rule accordingly.
+> The "All Windows Autopilot Student devices" group example is assuming the Windows Autopilot Group Tag is set to "Student". You could use another Group Tag and update the membership rule accordingly.
 
 > [!NOTE]
 >
 > - If you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
-> - If you use Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
+> - If you use Windows Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
 > - On Windows, apps and policies can also be targeted at user groups. However, the majority of apps and policies on Windows devices are device-based. As a result, each user of a Windows device receives device-based apps and policies assigned to any previous user of the device - unless the new user has different configurations for settings previously applied.
 
 ### Provisioning packages

@@ -3,7 +3,7 @@
 
 title: iOS/iPadOS device compliance security configurations
 titleSuffix: Microsoft Intune
-description: Learn the settings suggested for iOS/iPadOS device basic and high security.
+description: Review example device compliance configurations of basic, enhanced, and high security for iOS devices.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -40,7 +40,7 @@ When using these examples, work with your security team to evaluate the threat e
 > [!Note]
 > Due to the limited number of settings available for device compliance, there is no basic security (level 1) offering.
 
-## Enhanced security (Level 2)
+## Enhanced security (level 2)
 
 Level 2 is the recommended minimum security configuration for iOS/iPadOS devices where users access work or school data. This configuration is applicable to most mobile users accessing work or school data on a device.
 
@@ -58,20 +58,22 @@ The following table lists only configured settings. Settings not listed in the t
 | System Security | Maximum minutes of inactivity until screen locks | 5 | Organizations should update this setting to match their password policy. |
 | Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../protect/actions-for-noncompliance.md). |
 
-## High security (Level 3)
+## High security (level 3)
 
 Level 3 is the recommended configuration for both:
 
 - Organizations with large and sophisticated security organizations.
-- Specific users and groups who might be uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries.
+- Specific users and groups who might be uniquely targeted by adversaries. 
 
-This configuration expands upon Level 2 by:
+Such organizations are typically targeted by well-funded and sophisticated adversaries.
+
+This configuration expands upon level 2 by:
 
 - Increasing the minimum operating system version.
 - Ensuring that the device is compliant by enforcing the most secure Microsoft Defender for Endpoint or mobile threat defense level.
 - Enacting stronger password policies.
 
-The policy settings enforced in level 3 include all the policy settings recommended for level 1. The settings listed in the following table include only those that are added or changed. These settings can have significant impact to users or applications. They enforce a level of security more appropriate for risks facing targeted organizations. 
+The policy settings enforced in level 3 include all the policy settings recommended for level 2. The settings listed in the following table include only those that are added or changed. These settings can have significant impact to users or applications. They enforce a level of security more appropriate for risks facing targeted organizations. 
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |

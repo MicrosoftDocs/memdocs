@@ -2,7 +2,7 @@
 title: Startup performance in Endpoint Analytics
 titleSuffix: Microsoft Intune
 description: Get details about device startup performance in Endpoint Analytics
-ms.date: 10/23/2023
+ms.date: 04/08/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: article
@@ -30,7 +30,7 @@ For devices enrolled via Intune, Startup performance insights are only available
 For devices that don't meet the above criteria, you're able to [enroll via Configuration Manager](enroll-configmgr.md).
 
 > [!IMPORTANT]
-> Client devices require a restart to fully enable all analytics. <!--7698085--> The retention period for device boot and sign-in events is 29 days. If a device has not uploaded a boot or sign-in event in the past 29 days, it will not appear in the Startup performance report.
+> Client devices require a restart to fully enable all analytics. <!--7698085--> The retention period for device boot and sign-in events is 29 days. If a device hasn't uploaded a boot or sign-in event in the past 29 days, it does not appear in the Startup performance report.
 
 ## <a name="bkmk_score"></a> Startup score
 
@@ -39,7 +39,7 @@ For devices that don't meet the above criteria, you're able to [enroll via Confi
 [![Endpoint analytics startup performance page](media/startup-performance.png)](media/startup-performance.png#lightbox)
 
 > [!NOTE]
-> If you are not seeing startup performance data from all your devices, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
+> If you aren't seeing startup performance data from all your devices, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#bkmk_enrollment_tshooter).
 
 ## Insights
 
@@ -63,7 +63,7 @@ While there are many articles on how to optimize Group Policies performance, you
 
 Startup performance provides an insight on the number of devices with slow boot or sign-in times. A boot score or sign-in score of "0" means it's slow. Clicking through takes you to the devices view. The devices are sorted by core boot time or core sign-in time respectively, so you can see affected devices for further troubleshooting.
 
-Select a particular device, to see its boot and sign-in history. The history helps you determine if the issue was a regression and when it might have occurred.
+Select a particular device, to see its boot and sign-in history. The history helps you determine if the issue was a regression and when it occurred.
 
 ## <a name="bkmk_report"></a> Reporting tabs
 
@@ -74,7 +74,7 @@ The **Startup performance** page has reporting tabs that provide support for the
   > [!Note]
   > In the **Device performance** tabs of Endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
 
-- **Startup processes**. Startup processes can negatively affect user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab shows you which processes are impacting the sign-in "time to responsive desktop" phase and keeps the CPU above 50% after the desktop has rendered. The table only lists processes that affect a minimum of 10 devices in your tenant. When you review the startup processes, the following data calculations are displayed:
+- **Startup processes**. Startup processes can negatively affect user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab shows you which processes are impacting the sign-in "time to responsive desktop" phase and keeps the CPU above 50% after the desktop is rendered. The table only lists processes that affect a minimum of 10 devices in your tenant. When you review the startup processes, the following data calculations are displayed:
   - **Device count**: The count of devices that experienced a delay to a responsive desktop from the process.
   - **Median delay**: The median delay time of the process for the counted devices.
   - **Total delay**: The sum of the delays for all of the counted devices.

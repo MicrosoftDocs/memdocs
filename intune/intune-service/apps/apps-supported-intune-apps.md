@@ -108,8 +108,6 @@ The below apps support the core Intune App Protection Policy settings.
 
 |App|Platform|[Core App Protection Policy settings](app-protection-policy.md)|[App configuration](app-configuration-policies-overview.md)|
 |--- |--- |:-: |--- |
-|Dynamics 365 Remote Assist|[Android](https://play.google.com/store/apps/details?id=com.microsoft.ramobile)|✔|No settings|
-|Dynamics 365 Remote Assist|[iOS](https://apps.apple.com/us/app/dynamics-365-remote-assist/id1470512565)|✔|No settings|
 |Dynamics 365 Sales|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone.sales)|✔|No settings|
 |Dynamics 365 Sales|[iOS](https://apps.apple.com/app/dynamics-365-sales/id1485578688)|✔|No settings|
 |Dynamics 365 for phone|[iOS](https://apps.apple.com/us/app/dynamics-365-for-phones/id1003997947)|✔|No settings|
