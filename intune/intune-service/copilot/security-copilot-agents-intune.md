@@ -35,7 +35,7 @@ Microsoft Security Copilot agents are available in Microsoft Intune.
 | Permissions | The level of authorization an AI agent is given by an admin during configuration that enables it to access specific information or carry out its tasks. |
 | Identity | The credentials that the agent will use when it runs. |
 | Plugins | A component that extends what an agent can do by giving it access to capabilities in first- and third-party services and public websites through APIs. |
- 
+
 ## Available agents
 
 - [Vulnerability Remediation Agent in Microsoft Intune](../protect/vulnerability-remediation-agent.md)
