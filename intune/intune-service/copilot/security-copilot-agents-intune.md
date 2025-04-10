@@ -40,7 +40,7 @@ Microsoft Security Copilot agents are available in Microsoft Intune.
 
 - [Vulnerability Remediation Agent in Microsoft Intune](../protect/vulnerability-remediation-agent.md)
 
-## Vulnerability Remediation Agent in Microsoft Intune
+### Vulnerability Remediation Agent in Microsoft Intune
 
 <!-- *Placeholder: Description of agent with use-case in focus. Ideally, this section will focus on what the user will get out of the agent. For example, for the Threat Intelligence briefing agent, customers will get an analysis of all the latest threat intelligence tailored to their industry, company, and geolocation, and recommendations on how to mitigate it* -->
 
@@ -53,23 +53,23 @@ The Vulnerability Remediation Agent in Intune uses data from [Microsoft Defender
 
 Use of this Copilot Agent by your security team can reduce the time it takes to investigate, identify, and remediate threats from hours to only a few minutes.
 
-### Trigger
+#### Trigger
 
 *Placeholder: An event or condition that tells an agentic system to initiate an action or series of actions.*
 
-### Permissions
+#### Permissions
 
 *Placeholder: The level of authorization an AI agent is given by an admin during configuration that enables it to access specific information or carry out its tasks.*
 
-### Identity
+#### Identity
 *Placeholder: Identity that the agent will use to run. Definition still in discussion.*
 
-### Products
+#### Products
 *Placeholder: If there are other products needed for the agent to run.*
 
-### Plugins
+#### Plugins
 *Placeholder: A component that extends what an agent can do by giving it access to capabilities in first- and third-party services and public websites through APIs.*
 
-### Role-based access 
+#### Role-based access 
 *Placeholder: Who can see the agent's results and manage it.*
 
