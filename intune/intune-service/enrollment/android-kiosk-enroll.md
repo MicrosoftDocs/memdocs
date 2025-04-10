@@ -79,7 +79,7 @@ You must create an enrollment profile so that you can enroll your dedicated devi
         - **Corporate-owned dedicated device with Microsoft Entra ID shared mode**: This token enrolls devices as a standard Android Enterprise dedicated device and, during enrollment, deploys Microsoft's Authenticator app configured into Microsoft Entra shared device mode. With this option, users can achieve single sign-in and single sign-out across apps on the device that are integrated with the Microsoft Entra Microsoft Authentication Library and global sign-in/sign-out calls. 
     - **Token expiration date**: Enter the date you want the token to expire, up to 65 years in the future. The token expires on the selected date at 12:59:59 PM in the time zone it was created. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD`  
 
-    - **Naming Template**: The default behavior names devices using properties of the device,such as enrollment type, device ID, and time of enrollment. Example: *AndroidForWork_01/01/2025_12:00 PM*   
+    - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidForWork_01/01/2025_12:00 PM*   
     
        To create a custom naming template:  
 
