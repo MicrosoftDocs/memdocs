@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/08/2024
+ms.date: 04/10/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -60,7 +60,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 - **Office version** - Choose whether you want to assign the 32-bit or 64-bit version of Office. You can install the 32-bit version on both 32-bit and 64-bit devices, but you can install the 64-bit version on 64-bit devices only.
 - **Remove MSI from end-user devices** - Choose whether you want to remove pre-existing Office .MSI apps from end-user devices. The installation won't succeed if there are pre-existing .MSI apps on end-user devices. The apps to be uninstalled aren't limited to the apps selected for installation in **Configure App Suite**, as it will remove all Office (MSI) apps from the end user device. For more information, see [Remove existing MSI versions of Office when upgrading to Microsoft 365 Apps](/deployoffice/upgrade-from-msi-version). When Intune reinstalls Office on your end user's machines, end users will automatically get the same language packs that they had with previous .MSI Office installations.
 - If devices are provisioned using Windows Autopilot and you intend to deploy Microsoft 365 Apps as a tracked app during the enrollment status page (ESP) process, it's recommended to deploy Microsoft 365 Apps as a Win32 app. Unlike Win32 apps in Intune, the installation of the **Microsoft 365 Apps(Windows 10 and later)** app type isn't managed by the Intune Management Extension (IME). Installing a **Microsoft 365 Apps** app during ESP could create an installation concurrency issue, where the **Microsoft 365 Apps** app begins installing while there's an ongoing installation of a Win32 app (also tracked during ESP), which will cause the ESP to fail.
-- When configuring settings for Microsoft 365 apps using the Intune [settings catalog](/intune/intune-service/configuration/settings-catalog), ensure that there are no conflicts with settings configured in a Microsoft 365 Apps deployment as described below such as Update Channel and version, as these conflicts may lead to unexpected behavior, including app reinstallation.
+- When configuring settings for Microsoft 365 apps using the Intune [settings catalog](/intune/intune-service/configuration/settings-catalog), ensure that there are no conflicts with settings configured in a Microsoft 365 Apps deployment as described below, such as Update Channel and version, as these conflicts may lead to unexpected behavior, including app reinstallation.
 
 ## Select Microsoft 365 Apps
 
