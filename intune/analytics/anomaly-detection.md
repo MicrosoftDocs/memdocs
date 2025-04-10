@@ -2,7 +2,7 @@
 title: Anomaly detection in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about Anomaly detection as an advanced feature in Endpoint analytics
-ms.date: 10/20/2023
+ms.date: 04/07/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: article
@@ -25,15 +25,15 @@ Administrators can rely on anomaly detection to learn about user experience impa
 
 ## Overview
 
-With anomaly detection, you can detect potential problems in a system before they become a serious issue. Traditionally, support teams have limited visibility into potential problems.
+With anomaly detection, you can detect potential problems in a system before they become a serious issue. Traditionally, support teams had limited visibility into potential problems.
 
-- often, they only get a subset of the issues reported/ escalated through the support channel, which isn't truly representative of everything going on in your organization.  
+- The support channel is only able to report or escalate a subset of the issues. This report isn't truly representative of everything going on in your organization.  
 
-- they must spend countless hours reviewing custom dashboards trying to identify the root cause, troubleshoot, create custom alerts, change thresholds, and tweak parameters.  
+- The support channel spends countless hours reviewing custom dashboards trying to identify the root cause, troubleshoot, create custom alerts, change thresholds, and tweak parameters.  
 
 Anomaly detection aims at addressing these problems by enabling IT admins with critical information.
 
-In addition to detecting anomalies, you can view device correlation groups to explore potential root causes for medium and high severity anomalies. These device cohorts allow you to view patterns identified among devices. We have taken a proactive approach to device management by also identifying devices "at risk" in those cohorts. These are the devices that fall under the identified patterns with high confidence but haven't seen those anomalies yet.
+In addition to detecting anomalies, you can view device correlation groups to explore potential root causes for medium and high severity anomalies. These device cohorts allow you to view patterns identified among devices. We took a proactive approach to device management by also identifying devices 'at risk' in those cohorts. These 'at risk' devices fall under the identified patterns with high confidence but don't see those anomalies yet.
 
 > [!NOTE]
 > Device cohorts are only identified for medium and high severity anomalies.
@@ -57,7 +57,7 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 
    :::image type="content" source="media/anomaly-detection/details-of-anomaly.png" lightbox="media/anomaly-detection/details-of-anomaly.png" alt-text="This is a screenshot of details displayed when you select an anomaly displayed in the Anomaly tab ":::
 
-6. Select a device correlation group from the list for a detailed view of the devices' common factors. Devices are correlated based on one or more shared attributes such as app version, driver update, OS version and device model. You can see the number of devices currently affected by the anomaly and devices at risk of experiencing the anomaly. The prevalence rate also shows you the percentage of affected devices from an anomaly that are members of a correlation group.
+6. Select a device correlation group from the list for a detailed view of the devices' common factors. Devices are correlated based on one or more shared attributes such as app version, driver update, OS version, and device model. You can see the number of devices currently affected by the anomaly and devices at risk of experiencing the anomaly. The prevalence rate also shows you the percentage of affected devices from an anomaly that are members of a correlation group.
 
    :::image type="content" source="media/anomaly-detection/select-corelation-group.png" lightbox="media/anomaly-detection/select-corelation-group.png" alt-text="This is a screenshot showing Device correlation groups":::
 

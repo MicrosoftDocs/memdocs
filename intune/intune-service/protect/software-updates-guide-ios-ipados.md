@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/30/2024
+ms.date: 04/07/2025
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -87,7 +87,7 @@ Using Intune policies, you can also force users to update their devices:
 
 - If devices are configured with a PIN, then to start the software update, you must enter the PIN. Entering the PIN typically isn't an issue for information worker 1:1 devices.
 
-  When planning for updates on kiosks, factory floor or userless scenarios, you might need to adjust your processes to accommodate for the PIN behavior.
+  When planning for updates on kiosks, factory floor, or userless scenarios, you might need to adjust your processes to accommodate for the PIN behavior.
 
 ### ✅ Use the built-in settings
 
@@ -109,7 +109,7 @@ To manage updates, Apple has the following options:
 
 - **Software update deferral policies**
 
-  These MDM policies hide updates for up to 90 days. They prevent users from manually updating their device to a version that hasn't been approved. This feature doesn't control when the updates are applied.
+  These MDM policies hide updates for up to 90 days. They prevent users from manually updating their device to a version that isn't approved. This feature doesn't control when the updates are applied.
 
   These settings are configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md).
 
@@ -121,7 +121,7 @@ All policy times use Coordinated Universal Time (UTC). The device's local timezo
 
 To minimize the number of policies you have to create and manage, create a configuration that supports many time zones. Don't create a separate policy for each time zone.
 
-For example, in the United States, there are four primary time zones: Pacific (UTC-8), Mountain (UTC-7), Central (UTC-6) and Eastern (UTC-5). You can create separate policies for each time zone. Or, create one or two policies that achieve the same result.
+For example, in the United States, there are four primary time zones: Pacific (UTC-8), Mountain (UTC-7), Central (UTC-6), and Eastern (UTC-5). You can create separate policies for each time zone. Or, create one or two policies that achieve the same result.
 
 ### ✅ Be careful with version settings
 
