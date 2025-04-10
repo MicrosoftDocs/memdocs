@@ -207,4 +207,4 @@ Follow these general guidelines when you contribute:
 
 - Blog and tweet (or whatever) about your contributions, frequently!
 
-(This list was borrowed from the [.NET contributing guide](https://learn.microsoft.com/contribute/content/dotnet/dotnet-contribute).)
+(This list was borrowed from the [.NET contributing guide](/contribute/content/dotnet/dotnet-contribute).)
