@@ -165,7 +165,7 @@ When you migrate devices from 3rd party MDM providers to a full Intune stack, we
 
 2. Confirm that devices retired from the 3rd party MDM appear in Microsoft Entra ID with **None** listed in the **MDM** column. At this point, you devices can be newly enrolled with Intune MDM.
 
-3. After all of your devices have been migrated to Intune via the steps above, disable the Intune connection in your 3rd party MDM provider's admin console. If that isn't an option, you can also disable the connection console in the Microsoft Intune admin center. 
+3. After all of your devices have been migrated to Intune via steps 1 and 2, disable the Intune connection in your 3rd party MDM provider's admin console. If that isn't an option, you can also disable the connection console in the Microsoft Intune admin center. 
    1. Go to **Tenant administration** > **Connectors and tokens** > **Device compliance partner**. 
    1. Select the device compliance partner you want to disable. 
    1. Toggle the connection to **Off**.  
