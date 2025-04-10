@@ -2,7 +2,7 @@
 title: Get support for Endpoint analytics
 titleSuffix: Microsoft Intune
 description: Get online and telephone support for Endpoint analytics
-ms.date: 10/23/2023
+ms.date: 04/10/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: how-to
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # Get support for Endpoint analytics
 
-Microsoft provides global technical, pre-sales, billing, and subscription support for Endpoint analytics. Support is available both online and by phone for paid and trial subscriptions. Online technical support is available in English and Japanese. Phone support and online billing support are available in additional languages.
+Microsoft provides global technical, pre-sales, billing, and subscription support for Endpoint analytics. Support is available both online and by phone for paid and trial subscriptions. Online technical support is available in English and Japanese. Phone support and online billing support are available in other languages too.
 
 Before contacting Microsoft Support, first review the following articles:
 
