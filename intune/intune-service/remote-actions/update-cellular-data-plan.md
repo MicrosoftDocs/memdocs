@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/29/2021
+ms.date: 05/10/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -48,7 +48,7 @@ For more information about devices that support eSIM, see the Apple support arti
     ![Screenshot of updating cellular data plan](./media/update-cellular-data-plan/update-cellular-data-plan.png)
 3. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
 
-When the command is successfully applied and the data plan is activated:
+After the command is successfully applied and the data plan is activated:
 
 - Cellular data starts working.
 - The active cellular data plan is listed in the cellular section of the **Settings** app on the device.
