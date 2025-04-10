@@ -91,7 +91,9 @@ You must create an enrollment profile so that users can enroll corporate-owned w
 
     - **Token expiration date**: Only available with the staging token. Enter the date you want the token to expire, up to 65 years in the future. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD` The token expires on the selected date at 12:59:59 PM in the time zone it was created.   
 
-    - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID and time of enrollment (example: *AndroidForWork_01/01/2025_12:00 PM*). To create a custom naming template:  
+    - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidForWork_01/01/2025_12:00 PM*  
+    
+        To create a custom naming template:  
 
        1. Under **Apply device name template**, choose **Yes**.  
 
