@@ -115,7 +115,7 @@ Your configuration now appears on the Partner compliance management page.
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management**, and then select the partner configuration you want to modify. Configurations are ordered by platform type.
+2. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management**, and then select the partner configuration you want to modify. Configurations appear by platform type.
 
 3. On the partner configuration **Overview** page, select **Properties** to open the Properties page where you can edit the assignments.
 
@@ -165,13 +165,13 @@ When you migrate devices from 3rd party MDM providers to a full Intune stack, we
 
 2. Confirm that devices retired from the 3rd party MDM appear in Microsoft Entra ID with **None** listed in the **MDM** column. At this point, you devices can be newly enrolled with Intune MDM.
 
-3. After all of your devices have been migrated to Intune via the steps above, disable the Intune connection in your 3rd party MDM provider's admin console. If that is not an option, you can also disable the connection console in the Microsoft Intune admin center. 
+3. After all of your devices have been migrated to Intune via the steps above, disable the Intune connection in your 3rd party MDM provider's admin console. If that isn't an option, you can also disable the connection console in the Microsoft Intune admin center. 
    1. Go to **Tenant administration** > **Connectors and tokens** > **Device compliance partner**. 
    1. Select the device compliance partner you want to disable. 
    1. Toggle the connection to **Off**.  
 
 > [!NOTE]
-> If devices have not been through the cleanup tasks and they're showing as enrolled in Intune, Intune enforces Intune compliance policies and statuses and ignores the 3rd party policies.
+> If devices haven't been through the cleanup tasks and they're showing as enrolled in Intune, Intune enforces Intune compliance policies and statuses and ignores the 3rd party policies.
 
 ## Next steps
 
