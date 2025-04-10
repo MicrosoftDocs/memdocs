@@ -2,7 +2,7 @@
 title: Troubleshooting Endpoint analytics
 titleSuffix: Microsoft Intune
 description: Instructions for troubleshooting Endpoint analytics.
-ms.date: 10/23/2023
+ms.date: 04/10/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: troubleshooting
@@ -21,30 +21,30 @@ The following sections can be used to help in troubleshooting issues you might c
 
 ### Custom client settings might incorrectly indicate Endpoint analytics data collection is enabled
 
-When you enable Endpoint analytics data upload in Configuration Manager, data collection is automatically enabled in your hierarchy's default client settings. Afterwards, any pre-existing custom [client settings](../configmgr/core/clients/deploy/about-client-settings.md#computer-agent) that include the **Computer Agent** group of settings may appear to have the **Enable Endpoint analytics data collection** set to **Yes** in the Configuration Manager console, but this setting may not have been deployed to targeted devices.
+When you enable Endpoint analytics data upload in Configuration Manager, data collection is automatically enabled in your hierarchy's default client settings. Afterwards, any pre-existing custom [client settings](../configmgr/core/clients/deploy/about-client-settings.md#computer-agent) that include the **Computer Agent** group of settings might appear to have the **Enable Endpoint analytics data collection** set to **Yes** in the Configuration Manager console, but this setting might not have been deployed to targeted devices.
 
 **Impacted devices:**
-This issue impacts custom client settings objects that include the **Computer Agent** group of settings and were created and deployed prior to onboarding to Endpoint analytics. If you view Resultant Client Settings for devices targeted by such a custom client setting, you may find that Endpoint analytics data collection isn't enabled.
+This issue impacts custom client settings objects that include the **Computer Agent** group of settings and were created and deployed before onboarding to Endpoint analytics. If you view Resultant Client Settings for devices targeted by such a custom client setting, you might find that Endpoint analytics data collection isn't enabled.
 
 **Mitigation:**
 To properly configure devices governed by custom client settings for Endpoint analytics, manually set the **Enable Endpoint analytics data collection** setting to **No** and select **OK** to close the settings. Then, reopen the custom client settings and change the **Enable Endpoint analytics data collection** setting back to **Yes** and select **OK**. This change forces the custom client settings to update on targeted devices.
 
 ### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
-Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running Windows 10 version 1903 or later Enterprise, Education, or Pro. Long-term servicing channel (LTSC) isn't supported.
+Customers might see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running Windows 10 version 1903 or later Enterprise, Education, or Pro. Long-term servicing channel (LTSC) isn't supported.
 
 - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
 - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).<!--8392089, 8389021-->
 
 ### Hardware inventory fails to process
 <!--7535675-->
-Sometimes hardware inventory for devices fails to process after enabling endpoint analytics. Errors similar to the one shown here may be seen in the Dataldr.log file:
+Sometimes hardware inventory for devices fails to process after enabling endpoint analytics. Errors similar to the one shown here might be seen in the Dataldr.log file:
 
 ```console
 Begin transaction: Machine=<machine>
 *** [23000][2627][Microsoft][SQL Server Native Client 11.0][SQL Server]Violation of PRIMARY KEY constraint 'BROWSER_USAGE_HIST_PK'. Cannot insert duplicate key in object 'dbo.BROWSER_USAGE_HIST'. The duplicate key value is (XXXX, Y). : dbo.dBROWSER_USAGE_DATA
 ERROR - SQL Error in
-ERROR - is NOT retyrable.
+ERROR - is NOT retryable.
 Rollback transaction: XXXX
 ```
 
@@ -67,16 +67,16 @@ First, ensure devices meet the prerequisites:
 For Intune or co-managed devices configured with the Intune data collection policy:
 
 1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices.
-1. Look for devices that haven't been successfully configured for data collection. You can also see this information in the profiles overview page.
-   - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. For more information, see the [Error code -2016281112](#bkmk_2016281112) section.
-1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](data-collection.md#bkmk_flow)
-1. If your device has been successfully configured for data collection, has later restarted, and after 25 hours you're still not seeing it, then the device might not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
+1. Look for devices that aren't successfully configured for data collection. You can also see this information in the profiles overview page.
+   - There's a known issue where customers might see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. For more information, see the [Error code -2016281112](#bkmk_2016281112) section.
+1. Devices that are successfully configured for data collection must be restarted after data collection is enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](data-collection.md#bkmk_flow)
+1. If your device is successfully configured for data collection, restarted, and after 25 hours you're still not seeing it, then the device might not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
 
 For Configuration Manager-managed devices:
 
 1. Ensure all devices you want to see performance data are [enrolled](enroll-configmgr.md#bkmk_cm_enroll).
 1. Check if the data upload from Configuration Manager to the Gateway Service was successful by looking at the error messages on the **UXAnalyticsUploadWorker.log** file on the site system hosting Service Connection Point role.
-1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client setting. Find the overriding client settings and enable endpoint analytics on it.
+1. Check if an admin has custom overrides for client settings. In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client setting. Find the overriding client settings and enable endpoint analytics on it.
 1. Check if missing client devices are sending data to the site server by reviewing the **SensorEndpoint.log** file located in `C:\Windows\CCM\Logs\` on client devices. Look for *Message sent* messages.
 1. Check and resolve any errors occurring during processing of the boot events by reviewing the **SensorManagedProvider.log** file located in `C:\Windows\CCM\Logs\` on client devices.
 1. Client devices require a restart to fully enable all analytics. <!--7698085-->
@@ -146,7 +146,7 @@ We recommend using Intune to enroll eligible co-managed devices. Devices that do
 
 ### Will my Endpoint analytics data migrate if I move my Intune tenant to a different tenant location?
 
-If you migrate your Intune tenant to a different location, all data in your Endpoint analytics solution at the time of the migration will be lost. Because endpoints report into Endpoint analytics continuously, all events that occur post-migration automatically upload into your new tenant location and reports begin to repopulate, assuming devices remain properly enrolled.
+If you migrate your Intune tenant to a different location, all data in your Endpoint analytics solution at the time of the migration is lost. Because endpoints report into Endpoint analytics continuously, all events that occur post-migration automatically upload into your new tenant location and reports begin to repopulate, assuming devices remain properly enrolled.
 
 ### Why are the scripts exiting with a code of 1?
 
