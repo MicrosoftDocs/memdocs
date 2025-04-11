@@ -448,7 +448,7 @@ It can be helpful to explore [Advanced Hunting, which is a feature in Microsoft 
 
 ### What do I do with the old Application Control policy from my Attack surface reduction policy
 
-You might notice instances of the Application Control policy in the Intune UI under **Endpoint Security** > **Attach Surface Reduction** or under **Devices** > **Manage devices** > **Configuration**. These will be deprecated in a future release.
+You might notice instances of the Application Control policy in the Intune UI under **Endpoint Security** > **Attack Surface Reduction** or under **Devices** > **Manage devices** > **Configuration**. These will be deprecated in a future release.
 
 ### What if I have multiple base or supplemental policies on the same device?
 
