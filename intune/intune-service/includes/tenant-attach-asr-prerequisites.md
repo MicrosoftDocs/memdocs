@@ -17,7 +17,7 @@ Manage [attack surface reduction settings for Configuration Manager devices](../
 
 **Policy path**:
 
-- Endpoint security > Attach surface reduction > Windows (ConfigMgr)
+- Endpoint security > Attack surface reduction > Windows (ConfigMgr)
 
 **Profiles**:
 
