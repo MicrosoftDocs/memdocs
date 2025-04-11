@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/12/2025
+ms.date: 04/11/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -134,13 +134,11 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 Image hash values:
 
 - **agentImageDigest**:  sha256:f98d0f013fc4d9108f31c24f0b1d8c67c4ff4988e233e5aa89e51cf766aae678
-- **serverImageDigest**: sha256:3fdbc2b5be0824f63c48e50a02990d3803280957a40576f1375cd5e0f48667c6 
+- **serverImageDigest**: sha256:3fdbc2b5be0824f63c48e50a02990d3803280957a40576f1375cd5e0f48667c6
 
 Changes in this release:
 
 - Minor bug fixes
-
-  
 
 ### March 25, 2025
 
@@ -155,7 +153,6 @@ Changes in this release:
 - Added a new auditing feature for the tunnel server that uses the AuditD package to apply audit rules and monitor tunnel related directories and files for changes
 - Package update/minor bug fixes
 
-
 ### March 19, 2025
 
 Image hash values:
@@ -168,7 +165,6 @@ Changes in this release:
 
 - Major bug fix
 
-
 ### March 3, 2025
 
 Image hash values:
@@ -180,7 +176,6 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
-
 
 ### February 6, 2025
 
