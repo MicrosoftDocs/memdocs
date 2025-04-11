@@ -717,6 +717,29 @@ Organizations can enable NTLM credential caching for particular web sites. For t
 |com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2` <br>`http://app.contoso.com/|https://expenses.contoso.com` <br><br>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list). |
 |com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO |Number of hours to cache credentials, default is 720 hours |
 
+#### Manage the Edge startup web page option
+Organizations can manage the Edge startup web page option by setting the default to either 'Continue browsing where I left off' or 'Always start with a fresh new tab.'
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.RestoreBrowsingOption |**0**: (default) no configure<br> **1**: Continue browsing where I left off<br> **2**: Always Start with a Fresh New Tab |
+
+#### Manage managed browser token interactive mode
+Organizations can configure whether to turn on or off the managed browser token interactive mode.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.EnableInteractiveModeForWebSSO |**false**: (default) disable<br> **true**: enable |
+
+### Manage Desktop View in Mobile
+This policy determines the default view mode for websites. And allows Organizations to specify a list of site URL patterns that will always open in desktop or mobile view.
+
+|Key  |Value  |
+|:---------|:---------|
+|DefaultDesktopSiteSetting | **1**: All websites will open in desktop view by default.<br> **2**: (default) All websites will open in mobile view by default.|
+|DesktopSiteForceForUrls |Specify a list of site URL patterns that will always open in desktop view. If the policy is not configured, the default behavior defined by "DefaultDesktopSiteSetting" will apply. For detailed information on valid URL patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322.|
+|MobileSiteForceForUrls |Specify a list of site URL patterns that will always open in mobile view. If the policy is not configured, the default behavior defined by "DefaultDesktopSiteSetting" will apply. For detailed information on valid URL patterns, please see https://go.microsoft.com/fwlink/?linkid=2095322.|
+
 ## Additional app configuration for managed devices
 
 The following policies, originally configurable through app configuration policy for managed apps, is now available through managed devices app configuration policy. When using policies for managed apps, users must sign into Microsoft Edge. When using policies for managed devices, users aren't required to sign into Edge to apply the policies.
