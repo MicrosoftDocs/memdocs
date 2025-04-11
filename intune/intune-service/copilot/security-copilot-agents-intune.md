@@ -37,8 +37,9 @@ Microsoft Security Copilot agents are available in Microsoft Intune.
 | Plugins | A component that extends what an agent can do by giving it access to capabilities in first- and third-party services and public websites through APIs. |
 
 ## Available agents
+<!-- will become a link when the article is available: - [Vulnerability Remediation Agent in Microsoft Intune](../protect/vulnerability-remediation-agent.md) -->
 
-- [Vulnerability Remediation Agent in Microsoft Intune](../protect/vulnerability-remediation-agent.md)
+- Vulnerability Remediation Agent in Microsoft Intune
 
 ### Vulnerability Remediation Agent in Microsoft Intune
 
