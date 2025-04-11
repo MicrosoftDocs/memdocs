@@ -3,12 +3,12 @@
 
 title: Pause Config Refresh
 titleSuffix: Microsoft Intune
-description: Learn how Config Refresh can be paused for a configurable period of time, after which it's automatically re-enabled, or can be turned back on manually at any time by an IT administrator.
+description: Learn how Config Refresh can be paused for a configurable period of time, after which it's automatically re-enabled, or can be manually turned back on at any time by an IT administrator.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/12/2024
+ms.date: 04/10/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -50,7 +50,7 @@ Complete the following steps to Pause Config Refresh for a configurable period o
 
 3. From the list of devices you manage, select a device, and choose **Pause Config Refresh**.
 
-4. Specify the number of minutes to pause Config Refresh in the **Time period to Pause Config Refresh**. The maximum is 1440 minutes (24 hours).
+4. Specify the number of minutes to pause Config Refresh in the **Time period to Pause Config Refresh**. The maximum is 1,440 minutes (24 hours).
 
 5. Select **Pause**.
 
