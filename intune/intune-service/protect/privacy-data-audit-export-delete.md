@@ -8,7 +8,7 @@ keywords: GDPR, personal data, privacy
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/07/2023
+ms.date: 04/10/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ ms.collection:
 - sub-data-privacy
 ---
 
-# Audit, export, or delete personal data in Intune
+# Audit export or delete personal data in Intune
 
 Intune admins can use audit logs to track activities surrounding personal data. Admins can also export and delete personal data.
 
@@ -86,7 +86,7 @@ The **Retire** action removes Intune provisioned data like company applications,
 
 ### BIOS passwords
 
-If Intune has configured a BIOS password for the device as part of BIOS configuration management, the BIOS password will remain on the device until explicitly removed. BIOS passwords could be removed by editing the **BIOS configuration and other settings** policy, or locally on the device by changing the existing password.
+If Intune has configured a BIOS password for the device as part of BIOS configuration management, the BIOS password remains on the device until explicitly removed. BIOS passwords could be removed by editing the **BIOS configuration and other settings** policy, or locally on the device by changing the existing password.
 
 ### Delete a tenant from Microsoft Intune
 

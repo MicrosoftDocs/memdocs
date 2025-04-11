@@ -7,7 +7,7 @@ keywords:
 author: Smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/10/2023
+ms.date: 04/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -44,7 +44,7 @@ You have two ways to manage software updates on android:
     > [!NOTE]
     > [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../fundamentals/intune-add-ons.md) is required.
     >
-    > If Zebra updated the available firmware list in the last 24 hours, the list of firmware available may take up to 24 hours to populate.
+    > If Zebra updated the available firmware list in the last 24 hours, then the list of firmware available might take up to 24 hours to populate.
 
 - If FOTA isn't available you can use Device restrictions profiles, which work for all OEMs.
 
@@ -60,7 +60,7 @@ A FOTA update can include software and security patches, feature updates, and ot
 
 In the context of FOTA, a deployment is an update policy that includes instructions about the firmware update to be deployed to devices and other update-related settings. For example, Schedule type, and charging requirements.
 
-In addition, Microsoft Intune supports FOTA update management for supported devices from the following manufacturers. Manufacturer-specific FOTA support may offer more controls beyond what Device restrictions profiles offer.  
+In addition, Microsoft Intune supports FOTA update management for supported devices from the following manufacturers. Manufacturer-specific FOTA support might offer more controls beyond what Device restrictions profiles offer.  
 
 - **Zebra**: Go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md). 
 - **Samsung**: Go to [Samsung E-FOTA Update Management with Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/samsung-e-fota-update-management-with-microsoft-endpoint-manager/ba-p/2002552)
