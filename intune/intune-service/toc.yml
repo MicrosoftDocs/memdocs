@@ -192,10 +192,7 @@ items:
       displayName: ai, copilot, surface, models, fleet, warranty
       href: ./copilot/security-copilot-surface-portal.md
     - name: Security Copilot agents in Microsoft Intune
-      items: 
-      - name: Vulnerability Remediation Agent
-        href: ./copilot/security-copilot-agents-intune.md
-
+      href: ./copilot/security-copilot-agents-intune.md
   - name: Endpoint analytics
     items:
     - name: Overview
