@@ -82,7 +82,7 @@ After you configure enrollment time grouping in the enrollment profile, you can 
 
     1. **Group type**: Select **Security**.
 
-    1. **Group name**: Enter a name for the device group, such as **Android Enterprise device group**.  
+    1. **Group name**: Enter a name for the device group. Example: *Shared inventory devices*  
 
     1. **Group description**: Enter a description for the device group.  
 
@@ -102,7 +102,7 @@ After you configure enrollment time grouping in the enrollment profile, you can 
            >
            > - If the **Intune Provisioning Client** or **Intune Autopilot ConfidentialClient** service principal with AppId of **f1346770-5b25-470b-88bd-d5744ab7952c** isn't available either in the list of objects or when searching, see [Adding the Intune Provisioning Client service principal](/autopilot/device-preparation/tutorial/user-driven/entra-join-device-group#adding-the-intune-provisioning-client-service-principal) for next steps.  
 
-       1. Once **Intune Provisioning Client** is selected as the owner, select **Select**.
+       1. Choose **Select**.  
 
     1. Select **Create** to finish creating the assigned device group.  
 
