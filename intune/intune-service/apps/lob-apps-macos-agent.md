@@ -57,7 +57,7 @@ On a managed Mac that has the agent installed, open **Company Portal**, select t
 
 ## How to fix the agent when it has become unresponsive?
 
-When agent is unresponsive, you can fix it by opening the **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process restarts immediately, which will initiate a check-in with Intune.
+When the agent is unresponsive, you can fix it by opening the **Terminal**, and then run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process restarts immediately, which will initiate a check-in with Intune.
 
 ## When is the agent removed?
 
