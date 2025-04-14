@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2025
+ms.date: 04/14/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -69,10 +69,15 @@ There are three categories of policy settings: *Data relocation*, *Access requir
 | <ul><ul>**Allow users to open data from selected services** | Select the application storage services that users can open data from. All other services are blocked. Selecting no services will prevent users from opening data from external locations.<br>**Note:** This control is designed to work on data that is outside of the corporate container.<br><br>Supported services:<ul><li>OneDrive for Business</li><li>SharePoint Online</li><li>Camera</li><li>Photo Library</li></ul> **Note:** Camera doesn't include Photos or Photo Gallery access. When selecting **Photo Library** in the **Allow users to open data from selected services** setting within Intune, you can allow managed accounts to allow *incoming* data from their device's photo library to their managed apps. | **All selected**  |
 | **Restrict cut, copy and paste between other apps** | Specify when cut, copy, and paste actions can be used with this app. Select from: <ul><li>**Blocked**:  Don't allow cut, copy, and paste actions between this app and any other app.</li><li>**Policy managed apps**: Allow cut, copy, and paste actions between this app and other policy-managed apps.</li><li>**Policy managed with paste in**: Allow cut or copy between this app and other policy-managed apps. Allow data from any app to be pasted into this app.</li><li>**Any app**: No restrictions for cut, copy, and paste to and from this app.</ul> | **Any app** |
 | <ul>**Cut and copy character limit for any app** | Specify the number of characters that may be cut or copied from Org data and accounts.  This will allow sharing of the specified number of characters to any application, including unmanaged apps, regardless of the **Restrict cut, copy, and paste with other apps** setting.<p>Default Value = 0<p>**Note**: *Requires app to have Intune SDK version 9.0.14 or later.* | **0** |
+| **Screen capture** | Choose **Block** to prevent screen capture of work or school data. If you leave this setting as **Allow**, the default value, users are able to screen capture all Org data and share without restrictions.<p>**Note:** For more information about supported screen capture scenarios, see [Data protection](../apps/app-protection-policy-settings-ios.md#data-protection). | **Allow** |
+| **Writing Tools** | Choose **Block** to prevent use of Writing Tools for work or school data. If you leave this setting as **Allow**, the default value, users are able to share org data to Writing Tools. | **Allow** |
+| **Genmoji** | Choose **Block** to prevent use of Genmoji for work or school data. If you leave this setting as **Allow**, the default value, users are able to share org data to the Genmoji generator. | **Allow** |
 | **Third party keyboards** | Choose **Block** to prevent the use of third-party keyboards in managed applications.<p>When this setting is enabled, the user receives a one-time message stating that the use of third-party keyboards is blocked. This message appears the first time a user interacts with organizational data that requires the use of a keyboard. Only the standard iOS/iPadOS keyboard is available while using managed applications, and all other keyboard options are disabled. This setting will affect both the organization and personal accounts of multi-identity applications. This setting doesn't affect the use of third-party keyboards in unmanaged applications.<p>**Note:** This feature requires the app to use Intune SDK version 12.0.16 or later. Apps with SDK versions from 8.0.14 to, and including, 12.0.15, won't have this feature correctly apply for multi-identity apps. For more details, see [Known issue: Third party keyboards aren't blocked in iOS/iPadOS for personal accounts](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Updated-Known-issue-Third-party-keyboards-are-not-blocked-in-iOS/ba-p/339486). | **Allow** |
 
 > [!NOTE]
 > An app protection policy is required with IntuneMAMUPN for managed devices. This applies for any setting that requires enrolled devices as well.
+> 
+> You can allow Apple AI features (Genmojis, writing tools, and screen capture) to be used with your Intune managed apps by setting the **Send Org data to other apps** setting of your app protection policy to **All apps**. Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. If you choose to block Apple AI features, you can set the **Send Org data to other apps** setting to a value other than **All apps**.
 
 ### Encryption
 | Setting | How to use | Default value |

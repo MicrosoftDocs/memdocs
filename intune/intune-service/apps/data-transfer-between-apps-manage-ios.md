@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2024
+ms.date: 04/14/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -40,6 +40,9 @@ To help protect company data, restrict file transfers to only the apps that you 
 - Deploy and manage the apps through iOS device management, which requires devices to enroll in a Mobile Device Management (MDM) solution. The apps you deploy can be *policy managed apps* or other iOS managed apps.
 
 The **Open-in management** feature for enrolled iOS devices can limit file transfers between iOS managed apps. Set *Open-in management* restrictions using an app protection policy that sets **Send org data to other apps** to the **Policy managed apps with Open-In/Share filtering** value and then deploy the policy using Intune.  When a user installs the deployed app, the restrictions you set are applied based on the assigned policy.
+
+> [!NOTE]
+> You can allow Apple AI features (Genmojis, writing tools, and screen capture) to be used with your Intune managed apps by setting the **Send Org data to other apps** setting of your app protection policy to **All apps**. Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. If you choose to block Apple AI features, you can set the **Send Org data to other apps** setting to a value other than **All apps**.
 
 ## Use Open-in management to protect iOS apps and data
 Use App protection policies with the iOS **Open-in management** feature to protect company data in the following ways:
