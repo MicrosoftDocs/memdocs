@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/12/2024
+ms.date: 04/14/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -55,9 +55,9 @@ On a managed Mac that has the agent installed, open **Company Portal**, select t
 > [!NOTE]
 > The **Sync** action for devices in Microsoft Intune admin center initiates an MDM check-in and does not force an agent check-in.
 
-## How to fix it when the agent has become unresponsive?
+## How to fix the agent when it has become unresponsive?
 
-When agent is not responsive, fix by opening **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process restarts immediately, which will initiate a check-in with Intune.
+When agent is unresponsive, you can fix it by opening the **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process restarts immediately, which will initiate a check-in with Intune.
 
 ## When is the agent removed?
 
