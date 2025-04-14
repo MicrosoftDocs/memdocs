@@ -99,6 +99,17 @@ Use the steps in this section for any of the following upgrade scenarios:
 
 - If you're upgrading the primary site server, then [run a site reset](modify-your-infrastructure.md#bkmk_reset).
 
+- If the WSUS server is remote from the Site Server, the **Windows Server Update Services Tools** must be removed and reinstalled.
+  - Remove the Windows Server Update Services Tools
+  ```
+  Uninstall-WindowsFeature -Name  UpdateServices-RSAT
+  ```
+
+  - Install the Windows Server Update Services Tools
+  ```
+  Install-WindowsFeature -Name  UpdateServices-RSAT
+  ```
+
 #### Known issue for remote Configuration Manager consoles
 
 After you upgrade the site server, or an instance of the SMS Provider, you can't connect with the Configuration Manager console. To work around this problem, manually restore permissions for the **SMS Admins** group in WMI. Permissions must be set on the site server, and on each remote server that hosts an instance of the SMS Provider:
