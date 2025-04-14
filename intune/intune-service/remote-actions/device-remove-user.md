@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/10/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -32,7 +32,7 @@ ms.collection:
 
 # Remove a user from a shared iOS/iPadOS device
 
-The **Remove user** action deletes a user that you select from the local cache on a shared iPad device. The iPad device must be set up to manage the iOS/iPadOS Classroom app by using an [iOS/iPadOS education profile](../fundamentals/education-settings-configure-ios.md). 
+The **Remove user** action deletes a user that you select from the local cache on a shared iPad device. The iPad device must be set up to manage the iOS/iPadOS Classroom app by using an [iOS/iPadOS education profile](../fundamentals/education-settings-configure-ios.md).
 
 ## Supported platforms
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/30/2025
+ms.date: 04/10/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -166,8 +166,10 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the status bar, and disable notifications on the status bar.
   - **Show system information in device's status bar**: Users can see system information on the status bar. Users can't see or receive notifications from the status bar.
   - **Show system notifications and information in device's status bar**: Users can see the system information, and receive notifications from the status bar. To see notifications, enable the device home button using the **Enabled system navigation features** setting.
+
+    On kiosk devices, if you don't want notification sounds or vibration, then don't enable this setting. If you want notification sounds or vibration, then enable this setting.
  
-    When a device is enrolled and using the Managed Home Screen app, enabling **System notifications** allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.   
+    When a device is enrolled and using the Managed Home Screen app, enabling **System notifications** allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.
 
   This setting applies to:
 
@@ -236,7 +238,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 ## Device experience
 
-Use these settings to configure a kiosk-style experience on your dedicated or fully managed devices, or to customize the home screen experiences on your fully managed devices.  If you’re not sure which experience to configure, the diagram below can help you decide on the right option for your devices. If you’re still uncertain, see [Selecting a home screen experience for your Android Enterprise corporate-owned devices](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess). 
+Use these settings to configure a kiosk-style experience on your dedicated or fully managed devices, or to customize the home screen experiences on your fully managed devices.  If you’re not sure which experience to configure, the diagram below can help you decide on the right option for your devices. If you’re still uncertain, see [Selecting a home screen experience for your Android Enterprise corporate-owned devices](https://techcommunity.microsoft.com/blog/intunecustomersuccess/selecting-a-home-screen-experience-for-your-android-enterprise-corporate-owned-d/4224924). 
 
 **Device experience type**: Select a device experience type to start configuring Microsoft Launcher or the Microsoft Managed Home Screen on your devices. Your options:
 
