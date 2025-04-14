@@ -83,10 +83,8 @@ To create a new enrollment profile:
 
 1. Select **Next** to continue to **Device group**.  
 1. Optionally, select where to group devices at enrollment time. Select **Search by group name**. Then find and select a device group. For information about how to create a device group to use for grouping, see [Set up enrollment time grouping](enrollment-time-grouping.md).  
-   [>!TIP]
+   >[!TIP]
    > Be sure to select a device group, not a user group. 
-   [>!TIP]
-   > Be sure to select a device group, not a user group.  
 1. Select **Next** to continue to **Scope tags**.  
 1. Apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. Scope tags are optional. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).  
 1. Select **Next** to continue to **Review + create**.    

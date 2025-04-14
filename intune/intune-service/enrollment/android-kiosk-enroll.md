@@ -80,7 +80,7 @@ You must create an enrollment profile so that you can enroll your dedicated devi
     - **Token expiration date**: Enter the date you want the token to expire, up to 65 years in the future. The token expires on the selected date at 12:59:59 PM in the time zone it was created. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD` 
 1. Select **Next** to continue to **Device group**.  
 1. Optionally, select where to group devices at enrollment time. Select **Search by group name**. Then find and select a device group. For information about how to create a device group to use for grouping, see [Set up enrollment time grouping](enrollment-time-grouping.md).  
-   [>!TIP]
+   >[!TIP]
    > Be sure to select a device group, not a user group.  
 7. Select **Next** to continue to **Scope tags**.    
 8.  Optionally, apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md). 
