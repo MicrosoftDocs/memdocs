@@ -76,8 +76,6 @@ There are three categories of policy settings: *Data relocation*, *Access requir
 
 > [!NOTE]
 > An app protection policy is required with IntuneMAMUPN for managed devices. This applies for any setting that requires enrolled devices as well.
-> 
-> You can allow Apple AI features (Genmojis, writing tools, and screen capture) to be used with your Intune managed apps by setting the **Send Org data to other apps** setting of your app protection policy to **All apps**. Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. If you choose to block Apple AI features, you can set the **Send Org data to other apps** setting to a value other than **All apps**.
 
 ### Encryption
 | Setting | How to use | Default value |
