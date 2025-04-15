@@ -60,7 +60,7 @@ The Vulnerability Remediation Agent runs manually, on demand.
 
 The agent requires the following products:
 
-- [Microsoft Intune Plan 1 subscription](https://www.microsoft.com/en-us/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) - *core Intune capabilities*.
+- [Microsoft Intune Plan 1 subscription](https://www.microsoft.com/en-us/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) - *Provides the core Intune capabilities*.
 - [Microsoft Intune Suite](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) - *Intune Plan 2 and standalone add-ons are not sufficient for this prerequisite.*
 - [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) - *Security Copilot must share a Tenant with Intune.*
 - [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) - *Defender for Endpoint must be integrated with Intune.*
