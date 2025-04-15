@@ -129,7 +129,9 @@ You can add one static Microsoft Entra security group per enrollment profile. As
    - Android Enterprise dedicated: [Set up Intune enrollment of Android Enterprise dedicated devices](/intune/intune-service/enrollment/android-kiosk-enroll) 
       
    - Android Enterprise fully managed: [Set up enrollment for Android Enterprise fully managed devices](/intune/intune-service/enrollment/android-fully-managed-enroll)
-      
+
+    >[!TIP]
+    > Enrollment time grouping isn't supported with the staging token. If you're configuring a profile for use with enrollment time grouping, use the corporate-owned, fully managed (default) token.
 After you save the profile, you can return to it at any time to edit group settings. Updates you make to the group settings don't apply to devices already enrolled with the profile. If you remove a device from the group, Microsoft Intune reevaluates policy configurations and forces the device to check in to obtain new configurations. 
 
 ## Step 3: Enroll devices  
