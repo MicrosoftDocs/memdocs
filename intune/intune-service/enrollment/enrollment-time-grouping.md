@@ -53,7 +53,13 @@ Enrollment time grouping is supported on devices provisioned via:
 
 For Windows Autopilot, you must have permissions to create and modify Windows Autopilot device preparation policies. To configure Microsoft Entra groups in an enrollment profile, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center. 
 
-For Android Enterprise, you must have permissions to create and modify Android Enterprise enrollment profiles. To configure Microsoft Entra groups in an Android enrollment profile, you must have the *enrollment time device membership assignment for Android Enterprise* permission. This permission is available for custom roles, under the __Android Enterprise__ category in the Microsoft Intune admin center. 
+For Android Enterprise, you must have permissions to create and modify Android Enterprise enrollment profiles. To configure Microsoft Entra groups in an Android enrollment profile, you must have the *enrollment time device membership assignment for Android Enterprise* permission. This permission is available for custom roles, under the __Android Enterprise__ category in the Microsoft Intune admin center. Enrollment time grouping is supported with the following enrollment profiles:
+
+* Android Enterprise fully managed  
+
+* Android Enterprise corporate-owned work profile  
+
+* Android Enterprise dedicated  
 
 >[!TIP]
 > For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control.md#custom-roles).  
