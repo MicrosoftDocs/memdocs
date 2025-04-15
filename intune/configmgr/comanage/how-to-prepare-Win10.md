@@ -11,7 +11,7 @@ ms.subservice: co-management
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart,aaroncz,frankroj
 ---
 
 # How to prepare internet-based devices for co-management
@@ -20,14 +20,14 @@ This article focuses on the second path to co-management, for new internet-based
 
 ## Windows Autopilot
 
-For new Windows devices, use the Autopilot service to configure the out of box experience (OOBE). This process includes joining the device to Microsoft Entra ID, enrolling the device in Intune, installing the Configuration Manager client, and configuring co-management.
+For new Windows devices, use the Windows Autopilot service to configure the out of box experience (OOBE). This process includes joining the device to Microsoft Entra ID, enrolling the device in Intune, installing the Configuration Manager client, and configuring co-management.
 
-For more information, see [How to enroll with Autopilot](autopilot-enrollment.md).
+For more information, see [How to enroll with Windows Autopilot](autopilot-enrollment.md).
 
 > [!NOTE]
 > As we talk with our customers that are using Microsoft Intune to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and Microsoft Entra hybrid joined devices. Many customers confuse these two topics. Co-management is a management option, while Microsoft Entra ID is an identity option. For more information, see [Understanding hybrid Microsoft Entra ID and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify Microsoft Entra hybrid join and co-management, how they work together, but aren't the same thing.
 >
-> You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for Microsoft Entra hybrid join. This limitation is due to the identity change of the device during the Microsoft Entra hybrid join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
+> You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for Microsoft Entra hybrid join. This limitation is due to the identity change of the device during the Microsoft Entra hybrid join process. Deploy the Configuration Manager client after the Windows Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
 
 ### Gather information from Configuration Manager
 
@@ -43,16 +43,16 @@ Use Configuration Manager to collect and report the device information required 
 
 For more information, see [Manually register devices with Windows Autopilot](/autopilot/add-devices).
 
-### Autopilot for existing devices
+### Windows Autopilot for existing devices
 <!--1358333-->
 
-_Windows Autopilot for existing devices_ allows you to reimage and provision a Windows devices for [Windows Autopilot user-driven mode](/autopilot/user-driven) using a single, native Configuration Manager task sequence.
+*Windows Autopilot for existing devices* allows you to reimage and provision a Windows devices for [Windows Autopilot user-driven mode](/autopilot/user-driven) using a single, native Configuration Manager task sequence.
 
 For more information, see [Windows Autopilot for existing devices](/autopilot/existing-devices).
 
 ## Install the Configuration Manager client
 
-You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune enrollment policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. For more information, see [How to enroll with Autopilot](autopilot-enrollment.md).<!-- Intune 11300628 -->
+You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune enrollment policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. For more information, see [How to enroll with Windows Autopilot](autopilot-enrollment.md).<!-- Intune 11300628 -->
 
 You do still specify the Configuration Manager client command-line parameters in Intune.
 
@@ -112,6 +112,6 @@ For more information, see [Client installation properties](../core/clients/deplo
 
 ## Next steps
 
-[How to enroll with Autopilot](autopilot-enrollment.md)
+[How to enroll with Windows Autopilot](autopilot-enrollment.md)
 
 [Switch workloads to Intune](how-to-switch-workloads.md)

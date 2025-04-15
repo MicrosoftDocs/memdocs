@@ -23,7 +23,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
-- Step 3: [Create a device group](entra-join-device-group.md)
+- Step 3: [Create an assigned device group](entra-join-device-group.md)
 - Step 4: [Create a user group](entra-join-user-group.md)
 
 > [!div class="checklist"]
@@ -46,7 +46,7 @@ The applications and PowerShell scripts specified should be the essential applic
 
 Any applications installed or PowerShell scripts that run during a Windows Autopilot device preparation deployment should be configured to install in the **System** context since the applications are installed and the PowerShell scripts ran during OOBE when no user is signed in.
 
-For applications to install and PowerShell scripts work successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create a device group](entra-join-device-group.md).
+For applications to install and PowerShell scripts work successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](entra-join-device-group.md).
 
 > [!NOTE]
 >

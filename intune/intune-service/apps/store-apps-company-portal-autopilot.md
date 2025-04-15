@@ -13,7 +13,7 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
-ms.assetid: 
+ms.assetid:
 
 # optional metadata
 
@@ -38,7 +38,7 @@ To manage devices and install apps, your users can optionally use the Company Po
 
 ## Prerequisites
 
-You can choose to install the **Company Portal** app using the steps below. The Company Portal app will be installed in device context (also known as system-context) when assigned to the Autopilot group and will be installed on the device before the user logs in. 
+You can choose to install the **Company Portal** app using the steps below. The Company Portal app will be installed in device context (also known as system-context) when assigned to the Windows Autopilot group and will be installed on the device before the user logs in.
 
 ## Create and Assign the Company Portal app
 

@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,aaroncz
 ---
 
 # About client installation parameters and properties in Configuration Manager
@@ -206,7 +206,7 @@ Example for when you use the cloud management gateway URL: `ccmsetup.exe /mp:htt
 > When specifying the URL of a cloud management gateway for the `/mp` parameter, it must start with `https://`.
 
 > [!NOTE]
-> 
+>
 > The /mp command-line parameter doesn't specify the management point used by the Configuration Manager client once it is installed. To specify the initial management point used by the Configuration Manager client once it is installed, use the [SMSMP](#smsmp) client.msi property. To specify a list of management points for the Configuration Manager client to use once it is installed, use the [SMSMPLIST](#smsmplist) client.msi property.
 
 ### `/NoCRLCheck`
@@ -362,7 +362,7 @@ Specifies the Microsoft Entra tenant identifier. Configuration Manager links to 
 
 Example: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
-<!-- 
+<!--
 ### AADTENANTNAME
 
 Specifies the Azure AD tenant name. This tenant is linked to Configuration Manager when you [configure Azure services](../../servers/deploy/configure/azure-services-wizard.md) for Cloud Management. To obtain the value for this property, use the following steps:
@@ -764,7 +764,7 @@ Specifies whether the client can use Windows Internet Name Service (WINS) to fin
 
 Use the **NOWINS** value for this setting. This value is the most secure setting for this property. It prevents clients from finding a management point in WINS. When you use this setting, clients must have an alternative method to locate a management point on the intranet. For example, Active Directory Domain Services or DNS publishing. For more information about this process, see [How clients find site resources and services](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).
 
-Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
+Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`
 -->
 
 ### `SMSMP`
@@ -833,7 +833,7 @@ This property forces CCMSetup to send a location request to the management point
 
 - Pre-production clients. A newly installed client uses the production baseline because it can't evaluate the pre-production collection until the client is installed. In that scenario, after the client is installed and it evaluates policy, it will later upgrade to the pre-production client version. Use this property so that the device immediately installs the latest version of the client.
 
-    This scenario also includes when using [Autopilot into co-management](../../../comanage/autopilot-enrollment.md). Use this property to make sure the newly provisioned Autopilot device uses the pre-production client version right away.
+    This scenario also includes when using [Windows Autopilot into co-management](../../../comanage/autopilot-enrollment.md). Use this property to make sure the newly provisioned Windows Autopilot device uses the pre-production client version right away.
 
 - Pull distribution points. Allow pull distribution points to install the latest client version even if it's not in the pre-production collection. This action makes sure that the client version on the pull distribution point is the same as the distribution point binaries. If these versions aren't the same, it may cause issues.
 

@@ -7,7 +7,7 @@ author: yegor-a
 ms.author: egorabr
 ms.manager: dougeby
 no-loc: [Microsoft, Windows, Autopatch, Autopilot]
-ms.collection: 
+ms.collection:
 - graph-interactive
 ms.service: microsoft-intune
 ms.subservice: education
@@ -64,7 +64,7 @@ Commonly applied device restrictions in education.
 | Camera |**:::no-loc text="Allow Camera":::** | Allowed | | [:::no-loc text="Camera/AllowCamera":::](/windows/client-management/mdm/policy-csp-camera#allowcamera) |
 | Connectivity |**:::no-loc text="Allow Bluetooth":::** | Allow Bluetooth. The radio in the Bluetooth control panel will be functional and the user will be able to turn Bluetooth on. | | [:::no-loc text="Connectivity/AllowBluetooth":::](/windows/client-management/mdm/policy-csp-connectivity#allowbluetooth) |
 | Connectivity |**:::no-loc text="Allow Cellular Data Roaming":::** | Do not allow cellular data roaming. The user cannot turn it on. This value is not supported in Windows 10, version 1511. | | [:::no-loc text="Connectivity/AllowCellularDataRoaming":::](/windows/client-management/mdm/policy-csp-connectivity#allowcellulardataroaming) |
-| Credential Providers |**:::no-loc text="Disable Automatic Re Deployment Credentials":::** | Disabled | Enables local Autopilot Reset | [:::no-loc text="CredentialProviders/DisableAutomaticReDeploymentCredentials":::](/en-us/windows/client-management/mdm/policy-csp-credentialproviders#disableautomaticredeploymentcredentials) |
+| Credential Providers |**:::no-loc text="Disable Automatic Re Deployment Credentials":::** | Disabled | Enables local Windows Autopilot Reset | [:::no-loc text="CredentialProviders/DisableAutomaticReDeploymentCredentials":::](/en-us/windows/client-management/mdm/policy-csp-credentialproviders#disableautomaticredeploymentcredentials) |
 | Experience |**:::no-loc text="Allow Cortana":::** | Block | | [:::no-loc text="Experience/AllowCortana":::](/windows/client-management/mdm/policy-csp-experience#allowcortana) |
 | Experience |**:::no-loc text="Allow Manual MDM Unenrollment":::** | Block | Block the user from deleting the workplace account using the workplace control panel. | [:::no-loc text="Experience/AllowManualMDMUnenrollment":::](/windows/client-management/mdm/policy-csp-experience#allowmanualmdmunenrollment) |
 | Experience |**:::no-loc text="Allow Windows Spotlight (User)":::** | Block | Turn off Windows spotlight on lock screen, Windows Tips, Microsoft consumer features and other related features. | [:::no-loc text="Experience/AllowWindowsSpotlight":::](/windows/client-management/mdm/policy-csp-experience#allowwindowsspotlight) |

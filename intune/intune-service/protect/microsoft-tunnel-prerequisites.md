@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/27/2025
+ms.date: 04/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -78,6 +78,7 @@ Set up a Linux based virtual machine or a physical server on which to install th
   | Red Hat (RHEL) 9.2  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1 *(default)*   | Support ends May 2025.This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Red Hat (RHEL) 9.3  | Podman 4.6.1. *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
    | Red Hat (RHEL) 9.4  | Podman 4.9.4-rhel *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
+  | Red Hat (RHEL) 9.5  | Podman 5.2.2 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
   | Ubuntu 22.04           | Docker CE               |                    |
   | Ubuntu 24.04           | Docker CE               |                    |
 
@@ -500,7 +501,11 @@ For more information about this tool, see [Reference for mst-cli](../protect/mic
 
 The readiness tool checks for the presence of the *auditd* package for Linux system auditing. Because *auditd* is optional and not required, the readiness script will return a warning when this package isn't detected.
 
-*Auditd* is installed by default by RHEL 7 and later versions, but might not be installed by default by Ubuntu distributions. When not present you can manually install it on the Linux server. For information on how to manually install installing this, see [Linux system auditing](#linux-system-auditing) earlier in this article.
+*Auditd* is installed by default by RHEL 7 and later versions, but might not be installed by default by Ubuntu distributions. When not present you can manually install it on the Linux server. 
+
+For information on how to manually install this before installing Tunnel server, see [Linux system auditing](#linux-system-auditing) earlier in this article.
+
+To install auditd after installing Microsoft Tunnel, see [Install Linux system auditing after installing the Tunnel server](../protect/microsoft-tunnel-configure.md#install-linux-system-auditing-after-installing-the-tunnel-server) in Configure Micrfosoft Tunnel. 
 
 ### Manually load ip_tables
 

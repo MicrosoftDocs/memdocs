@@ -191,12 +191,12 @@ For more information about planning deployments, see [Create a deployment plan](
 
 - No. Driver Updates aren't currently supported with Assignment Filters.
 
-### Can I apply driver updates policy during Autopilot?
+### Can I apply driver updates policy during Windows Autopilot?
 
 - No. Driver Updates aren't supported during autopilot at this time.
 
 > [!NOTE]
-> Windows applies critical updates during Autopilot. These updates may include critical driver updates that have not yet been approved by an admin.
+> Windows applies critical updates during Windows Autopilot. These updates may include critical driver updates that have not yet been approved by an admin.
 
 ### Can I use policy to roll back a driver update?
 

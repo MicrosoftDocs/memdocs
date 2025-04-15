@@ -2,7 +2,7 @@
 title: Scores, baselines, and insights in Endpoint Analytics
 titleSuffix: Microsoft Intune
 description: Learn about scores, baselines, and insights in Endpoint Analytics
-ms.date: 10/23/2023
+ms.date: 04/07/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: article
