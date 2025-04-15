@@ -25,8 +25,8 @@ audience: ITPro
 # Microsoft Security Copilot agents in Microsoft Intune
 
 Microsoft Security Copilot agents are available in Microsoft Intune.
-<!-- There are various agents you can use in Intune to help you .... -->
 
+<!-- 
 ## Agent terminology
 
 | Field | Description |
@@ -35,28 +35,19 @@ Microsoft Security Copilot agents are available in Microsoft Intune.
 | Permissions | The level of authorization an AI agent is given by an admin during configuration that enables it to access specific information or carry out its tasks. |
 | Identity | The credentials that the agent will use when it runs. |
 | Plugins | A component that extends what an agent can do by giving it access to capabilities in first- and third-party services and public websites through APIs. |
+-->
 
 ## Available agents
-<!-- will become a link when the article is available: - [Vulnerability Remediation Agent in Microsoft Intune](../protect/vulnerability-remediation-agent.md) -->
-
-- Vulnerability Remediation Agent in Microsoft Intune
 
 ### Vulnerability Remediation Agent in Microsoft Intune
 
-<!-- *Placeholder: Description of agent with use-case in focus. Ideally, this section will focus on what the user will get out of the agent. For example, for the Threat Intelligence briefing agent, customers will get an analysis of all the latest threat intelligence tailored to their industry, company, and geolocation, and recommendations on how to mitigate it* -->
-
-The Vulnerability Remediation Agent in Intune uses data from [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) to identify the individual Common Vulnerabilities and Exposures (CVEs) on your managed devices and provides prioritized remediation guidance for those threats. For each identified CVE threat, the agent includes the following information:
-
-- Severity
-- Exploitability
-- Affected systems
-- Organizational exposure
+The Vulnerability Remediation Agent in Intune uses data from [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) to identify the individual Common Vulnerabilities and Exposures (CVEs) on your managed devices. The results are prioritized for remediation and include step-by-step instructions to guide you in using Intune to remediate the threat. Use of this Copilot Agent by your security team can help you reduce the time it takes to investigate, identify, and remediate threats from hours to only a few minutes.
 
 Use of this Copilot Agent by your security team can reduce the time it takes to investigate, identify, and remediate threats from hours to only a few minutes.
 
 #### Trigger
 
-*Placeholder: An event or condition that tells an agentic system to initiate an action or series of actions.*
+The Vulnerability Remediation Agent runs manually, on demand.
 
 #### Permissions
 
@@ -66,10 +57,20 @@ Use of this Copilot Agent by your security team can reduce the time it takes to 
 *Placeholder: Identity that the agent will use to run. Definition still in discussion.*
 
 #### Products
-*Placeholder: If there are other products needed for the agent to run.*
+
+The agent requires the following products:
+
+- [Microsoft Intune Plan 1 subscription](https://www.microsoft.com/en-us/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) - *core Intune capabilities*.
+- [Microsoft Intune Suite](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) - *Intune Plan 2 and standalone add-ons are not sufficient for this prerequisite.*
+- [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) - *Security Copilot must share a Tenant with Intune.*
+- [Microsoft Defender for Endpoint](../intune-service/protect/advanced-threat-protection.md) - *Defender for Endpoint must be integrated with Intune.*
+- [Microsoft Defender Vulnerability Management](../intune-service/protect/advanced-threat-protection.md) *Available as part of Defender for Endpoint Plan 2, or as an add-on to Defender for Endpoint Plan 1.*
+
 
 #### Plugins
-*Placeholder: A component that extends what an agent can do by giving it access to capabilities in first- and third-party services and public websites through APIs.*
+
+- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
 #### Role-based access 
 *Placeholder: Who can see the agent's results and manage it.*
