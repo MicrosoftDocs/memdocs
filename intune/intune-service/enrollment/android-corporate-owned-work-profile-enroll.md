@@ -87,7 +87,10 @@ You must create an enrollment profile so that users can enroll corporate-owned w
 
       - **Corporate-owned with work profile (default)**
         
-      - **Corporate-owned with work profile, via staging**  
+      - **Corporate-owned with work profile, via staging**    
+    
+      >[!TIP]
+      > Enrollment time grouping isn't supported with the staging token. If you're configuring a profile for use with enrollment time grouping, use the corporate-owned, fully managed (default) token.
 
     - **Token expiration date**: Only available with the staging token. Enter the date you want the token to expire, up to 65 years in the future. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD` The token expires on the selected date at 12:59:59 PM in the time zone it was created.   
 1. Select **Next** to continue to **Device group**.  
