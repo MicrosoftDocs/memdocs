@@ -54,7 +54,8 @@ The Vulnerability Remediation Agent runs manually, on demand.
 *Placeholder: The level of authorization an AI agent is given by an admin during configuration that enables it to access specific information or carry out its tasks.*
 
 #### Identity
-*Placeholder: Identity that the agent will use to run. Definition still in discussion.*
+
+The agent runs in the context of the administrator who manually starts the agent.
 
 #### Products
 
@@ -69,6 +70,7 @@ The agent requires the following products:
 
 #### Plugins
 
+- Microsoft Intune
 - [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
