@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/23/2024
+ms.date: 04/15/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,7 +40,7 @@ When you configure device features using configuration profile, you can help you
 
 You can create profiles for different devices and different platforms, including Android, iOS/iPadOS, macOS, and Windows. There are some configuration settings that are unique to each platform. It's also common to have many device profiles for each platform, ranging from antivirus settings to custom settings.
 
-When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups. 
+When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups.
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
