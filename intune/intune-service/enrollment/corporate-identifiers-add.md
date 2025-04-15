@@ -7,7 +7,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/08/2024
+ms.date: 04/11/2025
 ms.topic: how-to
 # optional metadata
 
@@ -235,7 +235,7 @@ To edit a device's identification after enrollment, change its ownership setting
 
 When you change a device's ownership type from *corporate* to *personal*, Intune deletes all app information previously collected from that device within seven days. If applicable, Intune also deletes the phone number on record. Intune still collects the inventory of apps installed by the IT admin on the device, and a partial phone number.
 
-When you change the ownership of an iOS/iPad or Android device from *personal* to *corporate*, a push notification is sent through the Company Portal app to inform the device user of the change. To configure push notifications, go to **Tenant administration** > **Customization**. For more information, see [Company Portal - Configuration](../apps/company-portal-app.md#configuration).
+When you change the ownership of an iOS/iPad or Android device from *personal* to *corporate*, a push notification is sent through the Company Portal app to inform the device user of the change.  
 
 ## Block personal devices
 

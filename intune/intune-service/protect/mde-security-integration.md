@@ -552,11 +552,13 @@ Security settings management is supported on domain controllers. To manage secur
 > - If configuration of domain controllers is enabled in your tenant, make sure to review all Windows policies to make sure you're not unintentionally targeting Microsoft Entra device groups that contain domain controllers. To minimize risk to productivity, firewall policies aren't supported on domain controllers.
 > - We recommend reviewing all policies targeted to domain controllers before unenrolling those devices. Make any required configurations first, and then unenroll your domain controllers. Defender for Endpoint configuration is maintained on each device after the device is unenrolled.
 
-### PowerShell restrict mode
+### Microsoft Defender for Endpoint and PowerShell
 
-PowerShell needs to be enabled.
+Some Microsoft Defender for Endpoint client functions use PowerShell. For example, Live Response can execute custom scripts from an approved library. These functions run in an instance of PowerShell executed by the Defender for Endpoint client.  
 
-Security settings management doesn't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
+Troubleshooting device issues is more difficult if administrators are blocked from executing PowerShell. Performance and communications problems can be diagnosed more easily with PowerShell scripts. 
+
+Microsoft Defender for Endpoint security settings management will not work for a device that has PowerShell configured to run in *Constrained Language Mode*. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 
 ### Managing security through Defender for Endpoint if you were previously using a third-party security tool
 

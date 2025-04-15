@@ -2,7 +2,7 @@
 title: Device scopes in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about Device scopes as an Advanced Analytics feature in Microsoft Intune
-ms.date: 01/31/2024
+ms.date: 04/10/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: article
@@ -42,7 +42,7 @@ To create custom device scopes, a user must have the **Roles/Read** [role permis
 - Intune Role Administrator  
 
 > [!NOTE]
-> After custom device scopes are created, they can be used by other users who have access to Endpoint analytics.
+> After custom device scopes are created, other users with access to Endpoint analytics can use them.
 
 ## Create and manage custom device scopes
 
@@ -61,7 +61,7 @@ To create custom device scopes:
 The new custom device scope appears in your list of saved device scopes. By default, custom devices scopes are in the *Off* state. To activate custom device scopes, toggle the **State** setting to *On*. Data processing starts for the selected device scope.  
 
 > [!NOTE]
-> Once activated, custom device scopes can take up to 24 hours to process. During this period, custom device scopes that are still processing will not be usable. Additionally, custom device scopes require 10 devices at minimum to populate supported reports, otherwise **Insufficient Data** may show when trying to select a custom scope. 
+> Once activated, custom device scopes can take up to 24 hours to process. During this period, custom device scopes that are still processing are not usable. Additionally, custom device scopes require 10 devices at minimum to populate supported reports. Otherwise **Insufficient Data** might show when trying to select a custom scope.
 
 Only the user who created the custom device scopes or a Global administrator can delete the custom device scopes.
 
@@ -73,7 +73,7 @@ To delete custom device scopes:
 4. Select **Yes** to confirm.
 
 > [!IMPORTANT]
-> If a custom device scope is associated with a Scope tag that gets deleted from your tenant, the custom device scope will no longer function. You will see an error message in the **Manage device scopes** menu. Edit the impacted device scope to use a valid Scope tag or delete it to clear the error.
+> If a custom device scope is associated with a Scope tag that gets deleted from your tenant, the custom device scope will no longer function. You see an error message in the **Manage device scopes** menu. Edit the impacted device scope to use a valid Scope tag or delete it to clear the error.
 
 ## Using custom device scopes
 
