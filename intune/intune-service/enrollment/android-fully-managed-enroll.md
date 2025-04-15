@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/16/2024
+ms.date: 04/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -78,9 +78,16 @@ To create a new enrollment profile:
       - **Corporate-owned, fully managed (default)**
         
       - **Corporate-owned, fully managed, via staging**  
+      
+      >[!TIP]
+      > Enrollment time grouping isn't supported with the staging token. If you're configuring a profile for use with enrollment time grouping, use the corporate-owned, fully managed (default) token. 
 
     - **Token expiration date**: Only available with the staging token. Enter the date you want the token to expire, up to 65 years in the future. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD` The token expires on the selected date at 12:59:59 PM in the time zone it was created.   
 
+1. Select **Next** to continue to **Device group**.  
+1. Optionally, select where to group devices at enrollment time. Select **Search by group name**. Then find and select a static Microsoft Entra device group. For information about how to create a device group to use for grouping, see [Set up enrollment time grouping](enrollment-time-grouping.md).  
+   >[!TIP]
+   > Be sure to select a device group, not a user group. 
 1. Select **Next** to continue to **Scope tags**.  
 1. Apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. Scope tags are optional. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).  
 1. Select **Next** to continue to **Review + create**.    
