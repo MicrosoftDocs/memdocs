@@ -35,6 +35,7 @@ Microsoft Intune includes many built-in settings to control different features o
 This feature applies to:
 
 - Android device administrator
+- Android Enterprise personally owned devices with a work profile
 - iOS/iPadOS
 - macOS
 - Windows 10/11
@@ -56,6 +57,7 @@ This article shows you how to create a custom device configuration profile in In
     - **Platform**: Choose the platform of your devices. Your options:
 
         - **Android device administrator**
+        - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
         - **Windows 10 and later**
@@ -73,6 +75,7 @@ This article shows you how to create a custom device configuration profile in In
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
     - [Android device administrator](custom-settings-android.md)
+    - [Android Enterprise](custom-settings-android-for-work.md)
     - [iOS/iPadOS](custom-settings-ios.md)
     - [macOS](custom-settings-macos.md)
     - [Windows 10/11](custom-settings-windows-10.md)

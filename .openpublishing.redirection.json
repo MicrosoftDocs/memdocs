@@ -2499,11 +2499,6 @@
       "source_path": "intune/intune/protect/data-outside-protect.md",
       "redirect_url": "/information-protection/get-started/infoprotect-quick-start-tutorial",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/configuration/custom-settings-android-for-work.md",
-      "redirect_url": "https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414",
-      "redirect_document_id": false
     }
   ]
 }
