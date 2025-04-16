@@ -1493,9 +1493,6 @@ items:
             href: ./configuration/wired-network-settings-windows.md
         - name: Windows Holographic for Business
           items:
-          - name: Custom (OMA-URI)
-            displayName: oma uri, windows holographic, hololens
-            href: ./configuration/custom-settings-windows-holographic.md
           - name: Device restrictions
             displayName: windows holographic, hololens
             href: ./configuration/device-restrictions-windows-holographic.md
