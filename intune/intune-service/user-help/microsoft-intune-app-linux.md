@@ -152,3 +152,14 @@ Run the following commands to uninstall the Microsoft Intune app and remove loca
    sudo rm -rf /etc/opt/microsoft/mdatp
    sudo rm -rf /opt/microsoft/mdatp
    ```  
+### Install Microsoft Intune app for Fedora 42 and above
+
+Prior to Fedora 42, the above instructions for RedHat Enterprise Linux could be used to install Microsoft Intune on Fedora Linux.
+
+As of Fedora 42, the java-11-openjdk package has been deprecated and Fedora recomends using the [adoptium-temurin-java-repository](https://fedoraproject.org/wiki/Changes/ThirdPartyLegacyJdks#adoptium-temurin-java-repository) instead to provide the required java package for microsoft-intune.
+
+1. Enable the adoptium-temurin-java-repository
+    ```bash
+    sudo dnf install  adoptium-temurin-java-repository
+    ```
+2. Continue installing using the RedHat Enterprise Linux instructions.
