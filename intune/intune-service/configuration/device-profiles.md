@@ -314,6 +314,8 @@ This feature supports:
 
 - iOS/iPadOS
 - macOS
+- Android Enterprise
+- Android (AOSP)
 - Windows 11
 - Windows 10
 
