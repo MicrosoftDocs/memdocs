@@ -47,7 +47,7 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 
 > [!TIP]
 > As a companion to this article, see our [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314425) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.  
-> 
+
 ## Remote Help capabilities and requirements
 
 The Remote Help app supports the following capabilities in general across the supported platforms.
