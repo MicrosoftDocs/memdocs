@@ -26,8 +26,8 @@ ms.custom: intune-enduser
 ms.collection:
 - tier2
 ---
-  
-# Install mobile threat defense app  
+
+  # Install mobile threat defense app  
 
 **Applies to:**
 * iOS/iPadOS
