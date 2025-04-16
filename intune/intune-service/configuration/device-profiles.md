@@ -104,7 +104,6 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
-- Android Enterprise
 - iOS/iPadOS
 - macOS
 - Windows 11
