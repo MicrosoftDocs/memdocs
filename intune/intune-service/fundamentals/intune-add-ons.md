@@ -56,6 +56,9 @@ The following table provides a list of add-on capabilities and associated Intune
 |Firmware-over-the-air update| |✅  |✅  |
 |Specialized devices management| |✅ |✅ |
 
+> [!TIP]
+> As a companion to this article, see our [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314425) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the [Intune Suite‎ add-ons guide ](https://go.microsoft.com/fwlink/?linkid=2314706)in the Microsoft 365 admin center.  
+
 ### Microsoft Intune Endpoint Privilege Management
 
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
