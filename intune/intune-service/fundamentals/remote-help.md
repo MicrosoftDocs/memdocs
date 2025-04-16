@@ -1,5 +1,4 @@
 ---
-
 title: Use Remote Help to assist users authenticated by your organization. 
 description: With the Remote Help app, provide remote assistance to authenticated users who also run the Remote Help app.
 keywords:
@@ -28,8 +27,8 @@ ms.collection:
 - highpri
 - highseo
 ---
- 
-# Use Remote Help with Microsoft Intune
+
+ # Use Remote Help with Microsoft Intune
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
@@ -42,10 +41,13 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 > [!IMPORTANT]
 > This article describes the capabilities and configuration tasks that are applicable in general for Remote Help across supported platforms. For specific capabilities, prerequisites, and other details based on the platform that you are using, go to:
 
-  > - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md)
-  > - [Remote Help on Android with Microsoft Intune](remote-help-android.md)
-  > - [Remote Help on macOS with Microsoft Intune](remote-help-macOS.md)
+> - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md)
+> - [Remote Help on Android with Microsoft Intune](remote-help-android.md)
+> - [Remote Help on macOS with Microsoft Intune](remote-help-macOS.md)
 
+> [!TIP]
+> As a companion to this article, see our [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314416) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the Intune Suite‎ add-ons guide in the Microsoft 365 admin center.  
+> 
 ## Remote Help capabilities and requirements
 
 The Remote Help app supports the following capabilities in general across the supported platforms.
@@ -76,7 +78,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 General prerequisites that apply to Remote Help:
 
-  - [Intune subscription](../fundamentals/licenses.md)
+- [Intune subscription](../fundamentals/licenses.md)
   - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.
   - [Supported platforms and devices](#supported-platforms-and-devices)
 
