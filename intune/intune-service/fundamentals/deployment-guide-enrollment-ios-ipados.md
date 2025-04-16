@@ -41,7 +41,7 @@ Personal and organization-owned devices can be enrolled in Intune. Once they're 
 This article provides enrollment recommendations and includes an overview of the administrator and user tasks for each iOS/iPadOS option.
 
 > [!TIP]
-> As a companion to this article, see our [Manage and secure iOS and iPadOS devices](As a companion to this article, see our Manage and secure iOS and iPadOS devices guide to review best practices, learn to configure managed and unmanaged app protection policies, and validate and manage app data. For a customized experience based on your environment, you can access the Manage and secure iOS and iPadOS devices guide in the Microsoft 365 admin center.  ) guide to review best practices, learn to configure managed and unmanaged app protection policies, and validate and manage app data. For a customized experience based on your environment, you can access the [Manage and secure iOS and iPadOS devices](https://go.microsoft.com/fwlink/?linkid=2313884) guide in the Microsoft 365 admin center.  
+> As a companion to this article, see our [Manage and secure iOS and iPadOS devices guide](https://go.microsoft.com/fwlink/?linkid=2314413) to review best practices, learn to configure managed and unmanaged app protection policies, and validate and manage app data. For a customized experience based on your environment, you can access the [Manage and secure iOS and iPadOS devices guide](https://go.microsoft.com/fwlink/?linkid=2313884) in the Microsoft 365 admin center.  
 
 There's also a visual guide of the different enrollment options for each platform:
 
