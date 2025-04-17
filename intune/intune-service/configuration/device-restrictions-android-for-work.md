@@ -30,9 +30,18 @@ ms.collection:
 - highseo
 ---
 
-# Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune
+# Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Templates in Intune
 
-This article describes the different settings you can control and restrict on Android Enterprise devices owned by your organization. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+This article describes the different settings you can control and restrict on Android Enterprise devices owned by your organization using Templates. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+
+Settings can be configured either through **Templates** or **Settings catalog**. For more information on **Settings catalog**, go to [Settings catalog](settings-catalog.md).
+
+The settings outlined below can be found as **Templates** under **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Templates**. 
+
+> [!NOTE]
+>
+>- If you can't find a setting in **Templates**, select **Settings catalog**. The settings catalog is a list of the settings you can configure for corporate-owned Android Enterprise devices. It includes additional settings that you can configure that are not available under **Templates**.
+>- If you can't find a setting in **Settings catalog**, check **Templates**.
 
 This feature applies to:
 
@@ -47,7 +56,20 @@ This feature applies to:
 
 ## Before you begin
 
-Create an [Android device restrictions configuration profile](device-restrictions-configure.md).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+3. Enter the following properties:
+
+    - **Platform**: Select **Android (AOSP)**.
+    - **Profile type**: Select **Templates**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
+    - **Name**: Name your profiles so you can easily identify them later.
+    - **Description**: This setting is optional but recommended.
+
+6. Select **Next**. 
 
 ## Fully managed, dedicated, and corporate-owned work profile
 
