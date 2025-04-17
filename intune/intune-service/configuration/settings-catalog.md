@@ -91,7 +91,7 @@ You create the policy by using the settings catalog profile type.
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **iOS/iPadOS**, **macOS**, or **Windows 10 and later**.
+    - **Platform**: Select **iOS/iPadOS**, **macOS**, **Android Enterprise**, **Android (AOSP)**, or **Windows 10 and later**.
     - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.

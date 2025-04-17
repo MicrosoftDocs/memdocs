@@ -1342,6 +1342,9 @@ items:
         - name: Apple
           displayName: ios, ipados, macos
           href: ./configuration/apple-settings-catalog-configurations.md
+        - name: Android
+          displayName: Android
+          href: ./configuration/settings-catalog-android.md  
 
       - name: Device Configuration template settings lists
         items:
