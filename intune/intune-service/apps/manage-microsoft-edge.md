@@ -737,8 +737,8 @@ This policy determines the default view mode for websites. Organizations can spe
 |Key  |Value  |
 |:---------|:---------|
 |DefaultDesktopSiteSetting | **1**: All websites will open in desktop view by default.<br> **2**: (default) All websites will open in mobile view by default.|
-|DesktopSiteForceForUrls |Specify a list of site URL patterns that will always open in desktop view. If the policy is not configured, the default behavior defined by "DefaultDesktopSiteSetting" will apply. For more information about valid URL patterns, please see [Filter format for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322).|
-|MobileSiteForceForUrls |Specify a list of site URL patterns that will always open in mobile view. If the policy is not configured, the default behavior defined by "DefaultDesktopSiteSetting" will apply. For more information about valid URL patterns, please see [Filter format for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322).|
+|DesktopSiteForceForUrls |Specify a list of site URL patterns that will always open in desktop view. If the policy is not configured, the default behavior defined by "DefaultDesktopSiteSetting" will apply. For more information about valid URL patterns, please see [Filter format for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322). |
+|MobileSiteForceForUrls |Specify a list of site URL patterns that will always open in mobile view. If the policy is not configured, the default behavior defined by "DefaultDesktopSiteSetting" will apply. For more information about valid URL patterns, please see [Filter format for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322). |
 
 ## Additional app configuration for managed devices
 
