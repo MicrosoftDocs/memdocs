@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 04/08/2025
+ms.date: 04/17/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -59,9 +59,9 @@ The following issues are under active investigation:
 
 - **Error `Cannot start service ODJConnectorSvc on computer '.'. ---> System.ComponentModel.Win32Exception: The service did not start due to a logon failure` after the MSA is created.**
 
-  This error occurs when the service can't run as the MSA. The service not being able to run as the MSA can be caused by various issues, including group or local policy restricting **Log on as a service** privileges. See [Troubleshooting FAQ](/autopilot/troubleshooting-faq?branch=main) for details on how to mitigate.
+  This error occurs when the service can't run as the MSA. The service not being able to run as the MSA can be caused by various issues, including group or local policy restricting **Log on as a service** privileges. For more information on how to mitigate, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#troubleshooting-the-intune-connector-for-active-directory).
   
-- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** See [Troubleshooting FAQ](/autopilot/troubleshooting-faq?branch=main) for details on how to mitigate.
+- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** For more information on how to mitigate, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#troubleshooting-the-intune-connector-for-active-directory).
 
 ### TPM attestation isn't working for TPMs which use high-range RSA 3072EK
 
