@@ -472,9 +472,22 @@ sections:
           - The administrator installing and configuring the Intune Connector for Active Directory doesn't have the required permissions as outlined in the [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
           - The organization unit (OU) specified in the Intune Connector for Active Directory `ODJConnectorEnrollmentWiazard.exe.config` XML configuration file doesn't exist.
 
-          For detailed information on the error and what caused it, see the `ODJConnectorUI.log` normally located in the folder `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`.
+          For detailed information on the error and what caused it, see the `ODJConnectorUI.log` normally located in the folder `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`. If you see an error **`System.AggregateException: One or more errors occurred. ---> System.DirectoryServices.DirectoryServicesCOMException: A constraint violation occurred.`** in the log file, follow the steps to [Increase the computer account limit in the Organizational Unit] (https://learn.microsoft.com/en-us/autopilot/tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit?tabs=updated-connector).
 
           For more information, see [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector-for-active-directory-on-the-server).
+
+      - question: |
+          Why is the error "Cannot start service ODJConnectorSvc on computer '.'" occurring when setting up the Intune Connector for Active Directory?
+        answer: |
+          This error might occur for several reasons including:
+
+          - The domain has more than one domain controller with a replication latency policy. The MSA was created in one of the domain controllers but the search happened against another domain controller. Wait until replication has completed in accordance with your policy or manually sync, then open the connector and choose **Configure MSA**.
+          - A group policy is configured that does not allow services to be started as a non-privileged account. Make sure the MSA account has [**Log on as a service** privileges granted] (https://learn.microsoft.com/en-us/system-center/scom/enable-service-logon?view=sc-om-2025#enable-service-log-on-permission-for-run-as-accounts)
+
+      - question: |
+          Why is the error "Microsoft Edge can't read and write to its data directory" occurring?
+         answer: |
+          This error indicates that the user needs read/write permissions to the listed directory.  See [Manage user data folders](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/user-data-folder?tabs=win32) for details on how to grant these permissions.
 
       - question: |
           Why did enrollments start failing when using the Intune Connector for Active Directory?
