@@ -60,7 +60,7 @@ This feature applies to:
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **Android (AOSP)**.
+    - **Platform**: Select **Android Enterprise**.
     - **Profile type**: Select **Templates**.
 
 4. Select **Create**.
