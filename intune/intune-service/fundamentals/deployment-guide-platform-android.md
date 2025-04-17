@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2024
+ms.date: 04/15/2025
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune
 ms.subservice: fundamentals
