@@ -126,7 +126,7 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
   - Remote tasks: **Rotate Local Admin Password**
 
     > [!IMPORTANT]
-    > The *Remote tasks* action of **Rotate Local Admin Password** can only be assigned through use of a [custom Intune role](../fundamentals/create-custom-role.md). This permission isn't available from any Intune built-in role or from either the Entra ID built in roles for Intune Administrator or Global Admin.
+    > The *Remote tasks* action of **Rotate Local Admin Password** is not included by any Intune built-in role or the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../fundamentals/create-custom-role.md) to assign this permission to users who should have this capability.
 
 - **Retrieve local Administrator password** – To view password details, your account must have one of the following Microsoft Entra permissions:
 
