@@ -1377,9 +1377,6 @@ items:
             href: ./configuration/wi-fi-settings-android-aosp.md
         - name: Android Enterprise
           items:
-          - name: Custom (OMA-URI)
-            displayName: oma uri, byod, work profile, android, android enterprise, ae
-            href: ./configuration/custom-settings-android-for-work.md
           - name: Device restrictions - organization-owned devices
             displayName: cope, cobo, cosu, android, android enterprise, ae
             href: ./configuration/device-restrictions-android-for-work.md
