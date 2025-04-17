@@ -90,7 +90,7 @@ For devices that meet the prerequisites, the Intune management extension is inst
 - [Remediations](../fundamentals/remediations.md)
 - [Discovery scripts for custom compliance](../protect/compliance-custom-script.md)
 - [Win32 apps](../apps/apps-win32-add.md)
-- [Endpoint analytics](../analytics/settings.md)
+- [Endpoint analytics](../../analytics/settings.md)
 - [Remote Help](../fundamentals/remote-help-windows.md)
 - [Managed Installers in Intune](../protect/endpoint-security-app-control-policy.md)
 - [Update Windows BIOS using configuration MDM policy](../configuration/bios-configuration.md)

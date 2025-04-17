@@ -115,35 +115,35 @@ Intune management extension installs automatically when a PowerShell script app 
 
 ### Scenario - Failure to run script
 
-        8 AM
-        
-        - Check in
-        - Run script **ConfigScript01**
-        - Script fails
-        
-        9AM
-        
-        - Check in
-        - Run script **ConfigScript01**
-        - Script fails (retry count = 1)
-        
-        10 AM
-        
-        - Check in
-        - Run script **ConfigScript01**
-        - Script fails (retry count = 2)
-          
-        11 AM
-        
-        - Check in
-        - Run script **ConfigScript01**
-        - Script fails (retry count = 3)
-        
-        12 PM
-        
-        - Check in
-        - No additional attempts are made to run **ConfigScript01**script.
-        - If no additional changes are made to the script, then no additional attempts are made to run the script.
+**8 AM**
+
+- Check in
+- Run script **ConfigScript01**
+- Script fails
+
+**9AM**
+
+- Check in
+- Run script **ConfigScript01**
+- Script fails (retry count = 1)
+
+**10 AM**
+
+- Check in
+- Run script **ConfigScript01**
+- Script fails (retry count = 2)
+  
+**11 AM**
+
+- Check in
+- Run script **ConfigScript01**
+- Script fails (retry count = 3)
+
+**12 PM**
+
+- Check in
+- No additional attempts are made to run **ConfigScript01**script.
+- If no additional changes are made to the script, then no additional attempts are made to run the script.
 
 ## Monitor run status
 
@@ -175,7 +175,7 @@ In **PowerShell scripts**, right-click the script, and select **Delete**.
 - Be sure devices are [joined to Microsoft Entra ID](/azure/active-directory/user-help/user-help-join-device-on-network). Devices that are only joined to your workplace or organization ([registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID) won't receive the scripts.
 - Confirm the Intune management extension is downloaded to `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
 - Scripts don't run on Surface Hubs or Windows 10 in S mode.
-- Review the logs for any errors. See [Intune management extension logs](#intune-management-extension-logs) (in this article).
+- Review the logs for any errors. See [Intune management extension logs](#../apps/intune-management-extension.md#intune-management-extension-logs) (in this article).
 - For possible permission issues, be sure the properties of the PowerShell script are set to `Run this script using the logged on credentials`. Also check that the signed in user has the appropriate permissions to run the script.
 
 - To isolate scripting problems, you can:
