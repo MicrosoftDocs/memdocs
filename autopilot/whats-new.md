@@ -34,7 +34,7 @@ appliesto:
 
 ## Updated build for the low privileged account for Intune Connector for Active Directory
 
-Date added: *April 17, 2025*
+Date added: *April 18, 2025*
 
 We've updated the low-privileged Intune Connector for Active Directory build. New in build **6.2504.2001.8:**
 
