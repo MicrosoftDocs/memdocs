@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: madakeva
-ms.date: 02/27/2025
+ms.date: 04/17/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -40,8 +40,8 @@ We've updated the low-privileged Intune Connector for Active Directory build. Ne
 
 - Updated the sign in page to use WebView2, built on Edge, instead of WebBrowser.
 - **Error `MSA account <accountName> is not valid`** when signing in has been fixed.
-- **Error `Cannot start service ODJConnectorSvc on computer '.'`** can now be mitigated. See [Troubleshooting FAQ](/autopilot/troubleshooting-faq?branch=main) for details.
-- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** can now be mitigated. See [Troubleshooting FAQ](/autopilot/troubleshooting-faq?branch=main) for details.
+- **Error `Cannot start service ODJConnectorSvc on computer '.'`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq).
+- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq).
 
 Download and install the latest version to get these changes.
 
