@@ -32,11 +32,25 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
+## Updated build for the low privileged account for Intune Connector for Active Directory
+
+Date added: *April 17, 2025*
+
+We've updated the low-privileged Intune Connector for Active Directory build. New in build **6.2504.2001.8:**
+
+- Updated the sign in page to use WebView2, built on Edge, instead of WebBrowser.
+- **Error `MSA account <accountName> is not valid`** when signing in has been fixed.
+- **Error `Cannot start service ODJConnectorSvc on computer '.'`** can now be mitigated by following the steps in the [Troubleshooting FAQ](/autopilot/troubleshooting-faq?branch=main)
+
+- **Error `MSA account <accountName> is not valid`**
+
+Download and install the latest version to get these changes.
+
 ## Low privileged account for Intune Connector for Active Directory for Hybrid join Windows Autopilot flows
 <!--9544276-->
 Date added: *February 27, 2025*
 
-We've updated the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will continue to work until deprecation in late May 2025.
+We've updated the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will continue to work until deprecation in late June 2025.
 
 For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](windows-autopilot-hybrid.md).
 
