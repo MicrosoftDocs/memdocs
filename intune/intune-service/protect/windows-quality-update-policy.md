@@ -25,7 +25,7 @@ Hotpatch is an extension of Windows Update and requires Autopatch to create and 
 
 - Hotpatch updates streamline the installation process and enhance compliance efficiency.
 - No changes are required to your existing update ring configurations. Your existing ring configurations are honored alongside Hotpatch policies.
-- The [Hotpatch quality update report](../monitor/windows-autopatch-hotpatch-quality-update-report.md) provides a per policy level view of the current update statuses for all devices that receive Hotpatch updates.
+- The [Hotpatch quality update report](/windows/deployment/windows-autopatch/monitor/windows-autopatch-hotpatch-quality-update-report) provides a per policy level view of the current update statuses for all devices that receive Hotpatch updates.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ To prepare a device to receive Hotpatch updates, configure the following operati
 VBS must be turned on for a device to be offered Hotpatch updates. For information on how to set and detect if VBS is enabled, see [Virtualization-based Security (VBS)](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity?tabs=security).
 
 > [!NOTE]
-> Devices might be temporarily ineligible because they don't have VBS enabled or aren't currently on the latest baseline release. To ensure that all your Windows devices are configured properly to be eligible for hotpatch updates, see [Troubleshoot hotpatch updates](#troubleshoot-hotpatch-updates).
+> Devices might be temporarily ineligible because they don't have VBS enabled or aren't currently on the latest baseline release. To ensure that all your Windows devices are configured properly to be eligible for hotpatch updates, see [Troubleshoot hotpatch updates](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates).
 
 ### Arm 64 devices must disable compiled hybrid PE usage (CHPE) (Arm 64 CPU Only)
 
