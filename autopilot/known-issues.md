@@ -45,19 +45,23 @@ This article describes known issues that can often be resolved with configuratio
 
 Date added: *April 8, 2025*
 
+Date updated: *April 18, 2025*
+
 The following issues are under active investigation:
 
 - **Error `MSA account <accountName> is not valid` when signing in.**
-  
-  This error occurs when the connector successfully creates the MSA but fails to retrieve the data from the domain controller. Various issues can cause the error, including replication delays between domain controllers in single domain, or when the user account exists in a different domain to the connector machine.
 
+  This error occurs when the connector successfully creates the MSA but fails to retrieve the data from the domain controller. Various issues can cause the error, including replication delays between domain controllers in single domain, or when the user account exists in a different domain to the connector machine.
+  
+  This issue is resolved in build **6.2504.2001.8.**
+  
 - **Error `Failed to create a managed service account - Element not found`.**
 
 - **Error `Cannot start service ODJConnectorSvc on computer '.'. ---> System.ComponentModel.Win32Exception: The service did not start due to a logon failure` after the MSA is created.**
-  
-  This error occurs when the service can't run as the MSA. The service not being able to run as the MSA can be caused by various issues, including group or local policy restricting **Log on as a service** privileges.
 
-- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`**
+  This error occurs when the service can't run as the MSA. The service not being able to run as the MSA can be caused by various issues, including group or local policy restricting **Log on as a service** privileges. See [Troubleshooting FAQ](/autopilot/troubleshooting-faq?branch=main) for details on how to mitigate.
+  
+- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** See [Troubleshooting FAQ](/autopilot/troubleshooting-faq?branch=main) for details on how to mitigate.
 
 ### TPM attestation isn't working for TPMs which use high-range RSA 3072EK
 
