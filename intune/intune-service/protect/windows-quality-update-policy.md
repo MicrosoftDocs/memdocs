@@ -50,7 +50,7 @@ VBS must be turned on for a device to be offered Hotpatch updates. For informati
 ### Arm 64 devices must disable compiled hybrid PE usage (CHPE) (Arm 64 CPU Only)
 
 > [!IMPORTANT]
-> **Arm 64 device support is in public preview**. Learn more about the preview [here](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates)
+> **Arm 64 device support is in public preview**.
 
 To ensure all the Hotpatch updates are applied, you must set the **Compiled Hybrid Portable Executable** (CHPE) disable flag and restart the device to disable CHPE usage. You only need to set this flag one time. The registry setting remains applied through updates.
 
