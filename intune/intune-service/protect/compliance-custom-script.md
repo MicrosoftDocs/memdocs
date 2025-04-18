@@ -74,7 +74,7 @@ $hash = @{ Manufacturer = $WMI_ComputerSystem.Manufacturer; BiosVersion = $WMI_B
 return $hash | ConvertTo-Json -Compress
 ```
 
-Following is an example of the output of the sample script fro Windows:
+Following is an example of the output of the sample script for Windows:
 
 ```powershell
 {"BiosVersion":"1.24","Manufacturer":"Microsoft Corporation","TPMChipPresent":true}
