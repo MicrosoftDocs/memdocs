@@ -1014,6 +1014,8 @@ items:
               href: ./protect/windows-10-update-rings.md
             - name: Feature updates policy
               href: ./protect/windows-10-feature-updates.md
+            - name: Windows quality updates policy
+              href: ./protect/windows-quality-update-policy.md  
             - name: Expedite updates policy
               href: ./protect/windows-10-expedite-updates.md
             - name: Windows driver updates
