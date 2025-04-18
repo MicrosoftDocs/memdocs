@@ -119,7 +119,7 @@ Microsoft Entra ID validates user credentials. Additionally, the device is joine
 
 #### Microsoft Intune
 
-Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints).
+Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints), including the [Network requirements for PowerShell scripts and Win32 apps](/intune/intune-service/fundamentals/intune-endpoints?branch=main&tabs=north-america).
 
 #### Windows Autopilot device preparation automatic device diagnostics collection
 
