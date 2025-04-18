@@ -2,7 +2,7 @@
 title: Enhanced device timeline in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about Enhanced device timeline as an Advanced Analytics feature in Intune
-ms.date: 01/26/2024
+ms.date: 04/10/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: article
@@ -28,7 +28,7 @@ You can search by event name or details. Select the **Add filter** button to cho
 Currently, the enhanced device timeline contains app crash, app unresponsive, device boot, device logon, and anomaly detected events. The end-to-end latency is generally under 24 hours.  
 
 > [!NOTE]
-> In some cases, end-to-end latency may exceed 24 hours when event details are not able to upload from the client right away. This is most common for events such as restarts and stop errors when the device does not immediately reboot after the shut down or stop error event. In this case, the event details will upload at the next available opportunity, and the event will appear on the timeline with a timestamp equal to the time the event occurred.
+> In some cases, end-to-end latency might exceed 24 hours when event details aren't able to upload from the client right away. Events such as restarts and stop errors experience this when the device doesn't immediately reboot after the shut-down or stop error event. In this case, the event details are uploaded at the next available opportunity, and the event appears on the timeline with a timestamp equal to the time the event occurred.
 
 > [!NOTE]
 > Event timestamps are localized according to the time zone of the logged on Intune user.  

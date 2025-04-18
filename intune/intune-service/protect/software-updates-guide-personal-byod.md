@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/12/2023
+ms.date: 04/07/2025
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune

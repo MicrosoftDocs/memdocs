@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/30/2025
+ms.date: 04/15/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,9 +30,18 @@ ms.collection:
 - highseo
 ---
 
-# Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune
+# Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Templates in Intune
 
-This article describes the different settings you can control and restrict on Android Enterprise devices owned by your organization. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+This article describes the different settings you can control and restrict on Android Enterprise devices owned by your organization using Templates. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+
+Settings can be configured either through **Templates** or **Settings catalog**. For more information on **Settings catalog**, go to [Settings catalog](settings-catalog.md).
+
+The settings outlined below can be found as **Templates** under **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Templates**. 
+
+> [!NOTE]
+>
+>- If you can't find a setting in **Templates**, select **Settings catalog**. The settings catalog is a list of the settings you can configure for corporate-owned Android Enterprise devices. It includes additional settings that you can configure that are not available under **Templates**.
+>- If you can't find a setting in **Settings catalog**, check **Templates**.
 
 This feature applies to:
 
@@ -47,7 +56,20 @@ This feature applies to:
 
 ## Before you begin
 
-Create an [Android device restrictions configuration profile](device-restrictions-configure.md).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+3. Enter the following properties:
+
+    - **Platform**: Select **Android Enterprise**.
+    - **Profile type**: Select **Templates**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
+    - **Name**: Name your profiles so you can easily identify them later.
+    - **Description**: This setting is optional but recommended.
+
+6. Select **Next**. 
 
 ## Fully managed, dedicated, and corporate-owned work profile
 
@@ -166,8 +188,10 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the status bar, and disable notifications on the status bar.
   - **Show system information in device's status bar**: Users can see system information on the status bar. Users can't see or receive notifications from the status bar.
   - **Show system notifications and information in device's status bar**: Users can see the system information, and receive notifications from the status bar. To see notifications, enable the device home button using the **Enabled system navigation features** setting.
+
+    On kiosk devices, if you don't want notification sounds or vibration, then don't enable this setting. If you want notification sounds or vibration, then enable this setting.
  
-    When a device is enrolled and using the Managed Home Screen app, enabling **System notifications** allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.   
+    When a device is enrolled and using the Managed Home Screen app, enabling **System notifications** allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.
 
   This setting applies to:
 
@@ -236,7 +260,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 ## Device experience
 
-Use these settings to configure a kiosk-style experience on your dedicated or fully managed devices, or to customize the home screen experiences on your fully managed devices.  If you’re not sure which experience to configure, the diagram below can help you decide on the right option for your devices. If you’re still uncertain, see [Selecting a home screen experience for your Android Enterprise corporate-owned devices](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess). 
+Use these settings to configure a kiosk-style experience on your dedicated or fully managed devices, or to customize the home screen experiences on your fully managed devices.  If you’re not sure which experience to configure, the diagram below can help you decide on the right option for your devices. If you’re still uncertain, see [Selecting a home screen experience for your Android Enterprise corporate-owned devices](https://techcommunity.microsoft.com/blog/intunecustomersuccess/selecting-a-home-screen-experience-for-your-android-enterprise-corporate-owned-d/4224924). 
 
 **Device experience type**: Select a device experience type to start configuring Microsoft Launcher or the Microsoft Managed Home Screen on your devices. Your options:
 

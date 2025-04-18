@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/19/2023
+ms.date: 04/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -36,7 +36,7 @@ ms.collection:
 
 Remote Help is an add-on application that works with Intune and enables your support staff to remotely connect to a user's device. Remote Help is available on multiple platforms including Android.
 
-During the session, you can view the device's display via screen sharing and if permitted by the device user, take full control to directly make configurations or take actions on the device. Remote Help for Android also supports unattended control allowing you to take full control of the device without needing user interaction on the device. This is helpful in cases like digital signage or for devices that need to be accessed during maintenance windows when no operators are on site.
+During the session, you can view the device's display via screen sharing and if permitted by the device user, take full control to directly make configurations or take actions on the device. Remote Help for Android also supports unattended control allowing you to take full control of the device without needing user interaction on the device. This feature is helpful in cases like digital signage or for devices that need to be accessed during maintenance windows when no operators are on site.
 
 In this article, we refer to the users who provide help as *helpers*, and devices that receive help as *sharers* as they share their session with the helper.
 
@@ -48,7 +48,7 @@ In this article, we refer to the users who provide help as *helpers*, and device
 
 The Remote Help app supports the following capabilities on Android:
 
-- **Screen sharing**: View of the remote screen. To minimize impact on end user privacy, this option is recommended unless full control is necessary.
+- **Screen sharing**: View of the remote screen. To minimize the effect on end user privacy, this option is recommended unless full control is necessary.
 
 - **Full control**: Full control of the remote device.
 
@@ -111,7 +111,7 @@ To set up Remote Help for Android, you need to complete the following steps:
 
 1. Using Managed Google Play, add the [Remote Help app from Microsoft](https://play.google.com/store/apps/details?id=com.microsoft.intune.remotehelp).
 
-2. On devices that you want to use Remote Help, assign the app as **Required**.  This setting allows automatic installation of the app on those devices.
+2. On devices that you want to use Remote Help, assign the app as **Required**. This setting allows automatic installation of the app on those devices.
 
 ### Grant permissions
 
@@ -122,7 +122,7 @@ To protect user privacy on the device, both the Android OS and device OEMs requi
 The Remote Help app requires Camera permissions.
 
 > [!NOTE]
-> Remote Help does not store camera input. These permissions are only used to initiate a remote help session between the device and the Intune service.  
+> Remote Help doesn't store camera input. These permissions are only used to initiate a remote help session between the device and the Intune service.  
 
 You can autogrant them through app configuration policy:
 
@@ -153,7 +153,7 @@ If you're planning to use Remote Help on a device running on Android 11, you nee
 *Zebra OEMConfig Powered by MX* is a new version of the OEMConfig app released in May 2023.
 
 > [!NOTE]
-> On Android 11, the new OEM Config schema (Zebra OEMConfig powered by MX) doesn't work if the BSP version is HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04. You must upgrade to a later BSP to use the new OEMConfig app. For instructions on updating supported Zebra devices with Intune, see [ Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
+> On Android 11, the new OEM Config schema (Zebra OEMConfig powered by MX) doesn't work if the BSP version is HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04. You must upgrade to a later BSP to use the new OEMConfig app. For instructions on updating supported Zebra devices with Intune, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
 
 Use OEMConfig to deploy the following settings on devices that you want to use Remote Help with:
 
@@ -164,23 +164,22 @@ Use OEMConfig to deploy the following settings on devices that you want to use R
   | Package Name | com.microsoft.intune.remotehelp  |
   | Package Signing Certificate | ```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``` |
 
-2. For the package you just created, under **Package > Permissions**, add a new permission as follows:
+2.For the package you created, under **Package > Permissions**, add a new permission as follows:
   
   | Key                      | Value                                           |
   |-----------------------------------|-----------------------------------------------|
   | Name| System Alert Window  |
   | State | Grant  |
 
-3. For the package created in step 1, under **Package** > **Allowed Services**, add two allowed services:
+3.For the package created in step 1, under **Package** > **Allowed Services**, add two allowed services:
 
 - One allowed service with a Service Identifier of `com.zebra.eventinjectionservice`  
 
 - Another allowed service with a Service Identifier of `com.zebra.remotedisplayservice`  
 
-
 ##### Instructions for Legacy Zebra OEMConfig
 
-When using Legacy Zebra OEMConfig, OEMConfig profiles are applied as one-off actions, not persistent policy states. Make sure to deploy the OEMConfig profile after the Remote Help app is installed on the device. Also, if you uninstall and reinstall the Remote Help app on the device, you'll need to re-apply these OEMConfig settings after the app is reinstalled. You can create a new OEMConfig profile and assign it to the device, or edit the previously created OEMConfig profile.
+When you use Legacy Zebra OEMConfig the OEMConfig profiles are applied as one-off actions, not persistent policy states. Make sure to deploy the OEMConfig profile after the Remote Help app is installed on the device. Also, if you uninstall and reinstall the Remote Help app on the device, you'll need to re-apply these OEMConfig settings after the app is reinstalled. You can create a new OEMConfig profile and assign it to the device, or edit the previously created OEMConfig profile.
 
 Use OEMConfig to deploy the following settings on devices that you want to use Remote Help:
 
@@ -196,7 +195,7 @@ Use OEMConfig to deploy the following settings on devices that you want to use R
 > [!NOTE]
 > The OEMConfig setting requires version MX 10.4 and higher on the device. For devices running a lower MX version, the display overlay permission must be manually granted to the Remote Help app. Contact Zebra for specific steps on your device or refer to the setup instructions for this permission on Samsung devices.
 
-2. In a separate transaction step, under Service Access Configuration, create the following details:
+2.In a separate transaction step, under Service Access Configuration, create the following details:
   
   | Name                      | Description                                           |
   |-----------------------------------|-----------------------------------------------|
@@ -207,7 +206,7 @@ Use OEMConfig to deploy the following settings on devices that you want to use R
   | Allow Caller Package | com.microsoft.intune.remotehelp |
   | Allow Caller Signature | ```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```|
 
-3. In another transaction step, under Service Access Configuration, configure the following details:  
+3.In another transaction step, under Service Access Configuration, configure the following details:  
   
   | Name                      | Description                                           |
   |-----------------------------------|-----------------------------------------------|
@@ -231,9 +230,9 @@ In this section:
 ##### Display overlay permission
 
 > [!IMPORTANT]
-> If the device is running in kiosk mode, the Settings app (which is where the permission is granted) needs to be designated as a system app so that it can launch. See [Granting overlay permissions to Managed Home Screen for Android Enterprise dedicated devices](https://techcommunity.microsoft.com/t5/intune-customer-success/granting-overlay-permissions-to-managed-home-screen-for-android/ba-p/3247041) for detailed instructions.
+> If the device is in kiosk mode, designate the Settings app as a system app so it can launch. See [Granting overlay permissions to Managed Home Screen for Android Enterprise dedicated devices](https://techcommunity.microsoft.com/t5/intune-customer-success/granting-overlay-permissions-to-managed-home-screen-for-android/ba-p/3247041) for detailed instructions.
 
-The Remote Help app needs the **Display over other apps** or **Appear on top** permission to display the Remote Help session UI. To grant this permission, create an OEMConfig profile that configures the permissions in the OEMConfig app. 
+The Remote Help app needs the **Display over other apps** or **Appear on top** permission to display the Remote Help session UI. To grant this permission, create an OEMConfig profile that configures the permissions in the OEMConfig app.
 
 ##### Knox KLMS Agent consent
 
@@ -244,8 +243,9 @@ On some devices, the user also needs to agree to Samsung's KLMS Agent terms and 
 2. Agree to the terms and conditions and tap **Confirm**.  
 
 > [!NOTE]
+>
 > - On Knox 2.8-3.7 (inclusive) this consent is revoked if the Remote Help app is uninstalled.
-> - In some cases, if the user has already agreed to KLMS license terms earlier (they were requested by another app), then the prompt may not be displayed.  
+> - If the user agreed to KLMS license terms through another app, the prompt might not appear.  
 
 ## Using Remote Help for Android
 
@@ -261,12 +261,12 @@ On some devices, the user also needs to agree to Samsung's KLMS Agent terms and 
 
 4. During the session, the sharer device displays a floating **End Session** button. This button can be repositioned on the screen. Tap the button to end the session from the sharer device.
 
-5. During a control session, use the buttons on the menu bar, keyboard or mouse input to interact with the sharer device. You can also long-press on the Power button in the menu bar to simulate a long press. This can be useful, for example, to open the power options menu on some devices.
+5. During a control session, use the buttons on the menu bar, keyboard, or mouse input to interact with the sharer device. You can also long-press on the Power button in the menu bar to simulate a long press. For example, to open the power options menu on some devices.
 
 6. At the end of the session, select **Leave** to end the session from the admin console.
 
 > [!NOTE]
-> On Android 13 devices, the device unlock UI (the PIN entry pad, or the pattern dot grid) cannot be displayed remotely. To unlock the device, you can still use keyboard input to enter a passcode. This is a security measure added by Android, not Remote Help, to protect the end user from a passcode or unlock pattern being captured if the device is unlocked while screen sharing.
+> On Android 13 devices, the device unlock UI (the PIN entry pad, or the pattern dot grid) can't be displayed remotely. To unlock the device, you can still use keyboard input to enter a passcode. Android added this feature as a security measure to protect the end user from a passcode or unlock pattern being captured if the device is unlocked while screen sharing.
 
 ## Next steps
 
