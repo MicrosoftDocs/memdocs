@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2025
+ms.date: 04/16/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -104,7 +104,6 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
-- Android Enterprise
 - iOS/iPadOS
 - macOS
 - Windows 11
