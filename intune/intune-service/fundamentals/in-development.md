@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/01/2025
+ms.date: 04/24/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,23 +59,11 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-## Microsoft Intune Suite
-
-### Endpoint Privilege Management elevation rule support for file arguments and parameters<!--28077130 -->
-
-Soon, the file elevation rules for Endpoint Privilege Management (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
-
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
+<!-- ## Microsoft Intune Suite  -->
 
 <!-- ***********************************************-->
 
 ## App management
-
-### Microsoft Intune support for Apple AI features<!-- 12792722, 30550110, 30220799 -->
-
-Intune app protection policies will have new standalone settings for Apple AI features (Genmojis, Writing tools, and screen capture). Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, these Apple AI features are blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
-
-For more information, see [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037).
 
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
@@ -97,25 +85,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-### Android settings in the Settings Catalog <!-- 31524383 (was 26981326) -->
-
-The settings catalog will soon support Android Enterprise and AOSP.
-
-Currently, to configure Android settings, you use the built-in templates. The settings from these templates are also available in the settings catalog. More settings will continue to be added.
-
-In the Intune admin center, when you create a device configuration profile, you select the **Profile Type** (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > select your **Platform** > **Profile Type**). All the profile types are moved to **Profile Type** > **Templates**.
-
-This change:
-
-- Will be a UI change with no impact on your existing policies. Your existing policies don't change. You'll still be able to create, edit, and assign these policies the same way.
-- Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
-
-To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
-
-Applies to:
-
-- Android Enterprise
-- AOSP
+<!-- ## Device configuration -->
 
 <!-- *********************************************** -->
 
@@ -124,7 +94,6 @@ Applies to:
 ### Enrollment-time grouping for Android Enterprise corporate devices <!-- 17530981 -->
 
 Soon to be available for Android Enterprise corporate-owned devices, *enrollment time grouping* enables you to assign a static Microsoft Entra group to devices at enrollment time. When a targeted Android device enrolls, it will receive all assigned policies, apps, and settings, typically by the time the user lands on the home screen. Intune admins will be able to configure one static Microsoft Entra group per enrollment profile under the **Device group** tab.
-
 
 ### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
 
@@ -204,11 +173,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Tenant administration
-
-### Updates to Intune admin center home page<!-- 25914324 -->
-
-Microsoft Intune admin center's home page will be updated to include additional links to interactive demos, documentation, and training.
+<!-- ## Tenant administration -->
 
 <!-- *********************************************** -->
 
