@@ -9,4 +9,4 @@ items:
     items:
     - name: Protect
       tocHref: /mem/intune-service/configuration
-      topicHref: /mem/intune-service/protect/index
+      topicHref: /mem/intune-service/

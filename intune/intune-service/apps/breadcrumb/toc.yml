@@ -9,7 +9,7 @@ items:
     items:
     - name: Apps
       tocHref: /mem/intune-service/fundamentals/
-      topicHref: /mem/intune-service/apps/
+      topicHref: /mem/intune-service/
     - name: Apps
       tocHref: /mem/intune-service/protect/
-      topicHref: /mem/intune-service/apps/
+      topicHref: /mem/intune-service/

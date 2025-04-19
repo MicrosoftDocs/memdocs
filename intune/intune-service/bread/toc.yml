@@ -46,17 +46,17 @@ items:
         topicHref: /mem/intune-service/
 
       - name: Enrollment
-        tocHref: /mem/intune-service/enrollment/
-        topicHref: /mem/intune-service/enrollment/
+        tocHref: /mem/intune-service/
+        topicHref: /mem/intune-service/
       - name: Remote actions
-        tocHref: /mem/intune-service/remote-actions/
-        topicHref: /mem/intune-service/remote-actions/
+        tocHref: /mem/intune-service/
+        topicHref: /mem/intune-service/
       - name: Configuration
-        tocHref: /mem/intune-service/configuration/
-        topicHref: /mem/intune-service/configuration/
+        tocHref: /mem/intune-service/
+        topicHref: /mem/intune-service/
       - name: Protect
-        tocHref: /mem/intune-service/protect/
-        topicHref: /mem/intune-service/protect/
+        tocHref: /mem/intune-service/
+        topicHref: /mem/intune-service/
       - name: Developer
-        tocHref: /mem/intune-service/developer/
-        topicHref: /mem/intune-service/developer/
+        tocHref: /mem/intune-service/
+        topicHref: /mem/intune-service/
