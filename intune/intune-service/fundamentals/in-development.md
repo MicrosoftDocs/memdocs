@@ -89,35 +89,10 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### Enrollment-time grouping for Android Enterprise corporate devices <!-- 17530981 -->
-
-Soon to be available for Android Enterprise corporate-owned devices, *enrollment time grouping* enables you to assign a static Microsoft Entra group to devices at enrollment time. When a targeted Android device enrolls, it will receive all assigned policies, apps, and settings, typically by the time the user lands on the home screen. Intune admins will be able to configure one static Microsoft Entra group per enrollment profile under the **Device group** tab.
-
-### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
-
-You'll soon be able to use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
-
-Applies to:
-
-- Android
 
 <!-- *********************************************** -->
 
 ## Device management
-
-### Intune ending support for custom profiles for personally owned work profile devices<!-- 27424084 -->
-
-Starting in April 2025, Intune will no longer support custom profiles for Android Enterprise personally owned work profile devices. After this time:
-
-- Admins won’t be able to create new custom profiles for personally owned work profile devices. However, admins can still view and edit previously created custom profiles.
-
-- Personally-owned work profile devices that currently have a custom profile assigned won't experience any immediate change of functionality. Because these profiles are no longer supported, the functionality set by these profiles might change in the future.
-
-- Intune technical support will no longer support custom profiles for personally owned work profile devices.
-
-All custom policies should be replaced with other policy types. Learn more about [Intune ending support for personally owned work profile custom profiles](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414).
 
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 

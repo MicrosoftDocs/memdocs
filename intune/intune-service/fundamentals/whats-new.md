@@ -147,6 +147,38 @@ Applies to:
 - Android Enterprise
 - AOSP
 
+### Device enrollment
+
+#### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
+
+You can use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template is available to configure in the enrollment profile. It can contain a combination of custom text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username. For more information, see:
+
+ - [Android Enterprise corporate-owned devices with work profile](../enrollment/android-corporate-owned-work-profile-enroll.md#create-an-enrollment-profile)  
+ - [Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md#create-an-enrollment-profile)  
+ - [Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md#step-2-create-new-enrollment-profile)  
+
+Applies to:
+
+- Android
+
+#### Enrollment-time grouping for Android Enterprise corporate devices <!-- 17530981  -->
+
+Now available for Android Enterprise corporate-owned devices, *enrollment time grouping* enables you to assign a static Microsoft Entra group to devices at enrollment time. When a targeted Android device enrolls, it receives all assigned policies, apps, and settings, typically by the time the user lands on the home screen. You can configure one static Microsoft Entra group per enrollment profile under the **Device group** tab in the Microsoft Intune admin center. For more information, see [Enrollment time grouping](../enrollment/enrollment-time-grouping.md).
+
+### Device management
+
+#### Intune ending support for custom profiles for personally owned work profile devices<!-- 27424084 -->
+
+Starting in April 2025, Intune no longer supports custom profiles for Android Enterprise personally owned work profile devices. With this end of support:
+
+- Admins won’t be able to create new custom profiles for personally owned work profile devices. However, admins can still view and edit previously created custom profiles.
+
+- Personally-owned work profile devices that currently have a custom profile assigned won't experience any immediate change of functionality. Because these profiles are no longer supported, the functionality set by these profiles might change in the future.
+
+- Intune technical support no longer supports custom profiles for personally owned work profile devices.
+
+All custom policies should be replaced with other policy types. Learn more about [Intune ending support for personally owned work profile custom profiles](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414)
+
 ### Intune apps
 
 #### Newly available protected apps for Intune<!-- 31436626, 31437166, 31494251 -->
