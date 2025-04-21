@@ -33,7 +33,7 @@ ms.collection:
 
 # Intune management extension for Windows
 
-The Intune Management Extension (IME) is installer agent. The management extension enhances Windows device management (MDM). The Intune management extension supplements the standard Windows MDM feature by enabling advanced device management capabilities.
+The Intune Management Extension (IME) is an installer agent. The management extension enhances Windows device management (MDM). The Intune management extension supplements the standard Windows MDM feature by enabling advanced device management capabilities.
 
 > [!NOTE]
 > For information about PowerShell scripts, see [Use PowerShell scripts on Windows 10/11 devices in Intune](../apps/powershell-scripts.md).
