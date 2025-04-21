@@ -487,7 +487,8 @@ sections:
         answer: |
           This error might occur for several reasons including:
 
-          - The domain has more than one domain controller with a replication latency policy. The MSA was created in one of the domain controllers but the search happened against another domain controller. Wait until replication has completed in accordance with your policy or manually sync, then open the connector and choose **Configure MSA**.
+          - The domain has more than one domain controller with a replication latency policy. The MSA was created in one of the domain controllers but the search happened against another domain controller. Wait until replication has completed in accordance with your policy or manually sync. Once the replication is complete, then open the connector and choose **Configure MSA**.
+          
           - A group policy is configured that doesn't allow services to be started as a non-privileged account. Make sure the MSA account has **Log on as a service** privileges granted. For example, see this instance with Operations Manager to [Enable service logon](/system-center/scom/enable-service-logon#enable-service-log-on-permission-for-run-as-accounts).
 
       - question: |
