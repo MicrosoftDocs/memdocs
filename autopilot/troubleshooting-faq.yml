@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: madakeva
   manager: aaroncz
-  ms.date: 04/17/2025
+  ms.date: 04/21/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -472,7 +472,13 @@ sections:
           - The administrator installing and configuring the Intune Connector for Active Directory doesn't have the required permissions as outlined in the [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
           - The organization unit (OU) specified in the Intune Connector for Active Directory `ODJConnectorEnrollmentWiazard.exe.config` XML configuration file doesn't exist.
 
-          For detailed information on the error and what caused it, see the `ODJConnectorUI.log` normally located in the folder `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`. If you see an error **`System.AggregateException: One or more errors occurred. ---> System.DirectoryServices.DirectoryServicesCOMException: A constraint violation occurred.`** in the log file, follow the steps to [Increase the computer account limit in the Organizational Unit](tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit.md?tabs=updated-connector).
+          For detailed information on the error and what caused it, see the `ODJConnectorUI.log` normally located in the following folder:
+          
+          `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`
+          
+          Follow the steps to [Increase the computer account limit in the Organizational Unit](tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit.md?tabs=updated-connector) if the following error appears in the `ODJConnectorUI.log`:
+          
+          **`System.AggregateException: One or more errors occurred. ---> System.DirectoryServices.DirectoryServicesCOMException: A constraint violation occurred.`**
 
           For more information, see [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector-for-active-directory-on-the-server).
 
