@@ -1421,6 +1421,10 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   Baseline default: *If you set this setting to 1, all files and directories that are excluded from real-time protection using contextual exclusions are scanned during a quick scan.*  
   [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationquickscanincludeexclusions)
 
+- **Enable Dynamic Signature Dropped Event Reporting**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#enabledynamicsignaturedroppedeventreporting)
+
 ### Device Guard
 
 - **Configure System Guard Launch**  
@@ -1551,33 +1555,37 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
 
 ### Lanman Server
 
-- **Audit Client Does Not Support Encryption** - *(Added in April 2025)*  
+- **Audit Client Does Not Support Encryption**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#auditclientdoesnotsupportencryption)    
 
-- **Audit Client Does Not Support Signing** - *(Added in April 2025)*  
+- **Audit Client Does Not Support Signing**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#auditclientdoesnotsupportsigning)    
 
-- **Audit Insecure Guest Logon** - *(Added in April 2025)*  
+- **Audit Insecure Guest Logon**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#auditinsecureguestlogon)     
 
-- **Auth Rate Limiter Delay In Ms** - *(Added in April 2025)*  
+- **Auth Rate Limiter Delay In Ms**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#authratelimiterdelayinms)   
 
-- **Enable Auth Rate Limiter** - *(Added in April 2025)*  
+- **Enable Auth Rate Limiter**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#enableauthratelimiter)    
 
-- **Max SMB 2 Dialect** - *(Added in April 2025)*  
+- **Max SMB 2 Dialect**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#maxsmb2dialect)
 
-- **Min SMB 2 Dialect** - *(Added in April 2025)*  
+- **Min SMB 2 Dialect**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#minsmb2dialect)
+
+- **Enable Mailslots**  
+  Baseline default: *Disabled*
+  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#enablemailslots)  
 
 ### Lanman Workstation
 
@@ -1585,29 +1593,33 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#enableinsecureguestlogons)
 
-- **Audit Insecure Guest Logon** - *(Added in April 2025)*  
+- **Audit Insecure Guest Logon**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#auditinsecureguestlogon)
 
-- **Audit Server Does Not Support Encryption** - *(Added in April 2025)*  
+- **Audit Server Does Not Support Encryption**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#auditserverdoesnotsupportencryption)
 
-- **Audit Server Does Not Support Signing** - *(Added in April 2025)*  
+- **Audit Server Does Not Support Signing**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#auditserverdoesnotsupportsigning)
  
-- **Max SMB 2 Dialect** - *(Added in April 2025)*  
+- **Max SMB 2 Dialect**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#maxsmb2dialect)
 
-- **Min SMB 2 Dialect** - *(Added in April 2025)*  
+- **Min SMB 2 Dialect**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#minsmb2dialect)
 
-- **Require Encryption** - *(Added in April 2025)*  
+- **Require Encryption**  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#requireencryption)
+
+- **Enable Mailslots**  
+  Baseline default: *Disabled*
+  [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation#enablemailslots)
 
 ### Local Policies Security Options
   <!-- UI Links add - in place of url which uses _ -->
