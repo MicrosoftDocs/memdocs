@@ -1584,7 +1584,7 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#minsmb2dialect)
 
 - **Enable Mailslots**  
-  Baseline default: *Disabled*
+  Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#enablemailslots)  
 
 ### Lanman Workstation
@@ -1618,7 +1618,7 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#requireencryption)
 
 - **Enable Mailslots**  
-  Baseline default: *Disabled*
+  Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation#enablemailslots)
 
 ### Local Policies Security Options
