@@ -1577,7 +1577,7 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
 
 - **Min SMB 2 Dialect** - *(Added in April 2025)*  
   Baseline default: *Not configured*  
-  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#minsmb2dialect)     
+  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#minsmb2dialect)
 
 ### Lanman Workstation
 
@@ -1599,8 +1599,8 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
  
 - **Max SMB 2 Dialect** - *(Added in April 2025)*  
   Baseline default: *Not configured*  
-  [Learn more](/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#maxsmb2dialect)
- 
+  [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#maxsmb2dialect)
+
 - **Min SMB 2 Dialect** - *(Added in April 2025)*  
   Baseline default: *Not configured*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#minsmb2dialect)
