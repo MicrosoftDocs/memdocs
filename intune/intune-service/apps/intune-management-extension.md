@@ -77,7 +77,6 @@ The Intune management extension has the following prerequisites. Once they're me
     - [What is co-management](/configmgr/comanage/overview)
     - [Client apps workload](/configmgr/comanage/workloads#client-apps)
     - [How to switch Configuration Manager workloads to Intune](/configmgr/comanage/how-to-switch-workloads)
-- Scripts deployed to clients running the Intune management extension will fail to run if the device's system clock is exceedingly out of date by months or years. Once the system clock is brought up to date, script will run as expected.  
 
 > [!NOTE]
 > For information about using Window 10/11 VMs, see [Using Windows 10/11 virtual machines with Intune](../fundamentals/windows-10-virtual-machines.md).
@@ -102,9 +101,8 @@ The agent is installed at `C:\ProgramData\Microsoft\IntuneManagementExtension\
 
 ### Intune management extension functionality 
 
-- The IME silently authenticates with Intune services before checking in to receive assigned shell scripts for the Windows device. 
-- The IME receives assigned shell scripts and runs the scripts based on the configured schedule, retry attempts, notification settings, and other settings set by the admin. 
-- The IME checks for new or updated scripts with Intune services usually every 8 hours. This check-in process is independent of the MDM check-in. 
+- The IME silently authenticates with Intune services before checking in to receive assigned installations for the Windows device. 
+- The IME checks for new or updated installations with Intune services usually every 8 hours. This check-in process is independent of the MDM check-in. 
 
 ### Manually initiate an Intune management IME check-in from a Windows device
 

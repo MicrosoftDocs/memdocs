@@ -63,7 +63,7 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
 
 ## Prerequisites
 
-Intune management extension installs automatically when a PowerShell script app is assigned to the user or device. For more information, see [Intune management extension for Windows](../apps/intune-management-extension.md). 
+- Intune management extension installs automatically when a PowerShell script app is assigned to the user or device. For more information, see [Intune management extension for Windows](../apps/intune-management-extension.md).
 
 > [!IMPORTANT]
 > Scripts deployed to clients running the Intune management extension will fail to run if the device's system clock is exceedingly out of date by months or years. Once the system clock is brought up to date, script will run as expected.
