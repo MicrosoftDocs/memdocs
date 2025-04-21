@@ -150,18 +150,20 @@ IME logs on the client machine are typically in `C:\ProgramData\Microsoft\Intune
 
 In addition, you can use the log file *AppWorkload.log* to help troubleshoot and analyze Win32 app management events on the client. This log file contains all logging information related to app deployment activities conducted by the IME.
 
-IME log related files:
+### IME log files
 
-**IntuneManagementExtension.log**: This is the main log file. It contains all the IME check-ins, policy requests, policy processing and reporting activities. 
-**AgentExecutor.log**: This file tracks PowerShell script executions (deployed by Intune). 
-**AppActionProcessor.log**: This file tracks detection and applicability checks actions for assigned apps 
-**AppWorkload.log**:  This file helps troubleshoot and analyze Win32 app deployment activities. 
-**ClientCertCheck.log**: This file tracks device client certificate checks 
-**ClientHealth.log**: This file tracks the health of the Intune management extension. 
-**DeviceHealthMonitoring.log**: This file tracks the health of hardware readiness, device inventory and other data collectors.  
-**HealthScripts.log**: This file tracks the health of remediations that run on a regular schedule 
-**Sensor.log**: This file tracks the health of the Endpoint analytics data collector, including boot performance, app reliability and more. 
-**Win32AppInventory.log**:** This file tracks the health of the app inventory collector. 
+| Log file | Description |
+|---|---|
+| IntuneManagementExtension.log | This is the main log file. It contains all the IME check-ins,   policy requests, policy processing and reporting activities.  |
+| AgentExecutor.log | This file tracks PowerShell script executions (deployed by   Intune).  |
+| AppActionProcessor.log | This file tracks detection and applicability checks actions   for assigned apps. |
+| AppWorkload.log | This file helps troubleshoot and analyze Win32 app deployment   activities.  |
+| ClientCertCheck.log | This file tracks device client certificate checks.  |
+| ClientHealth.log | This file tracks the health of the Intune management   extension.  |
+| DeviceHealthMonitoring.log | This file tracks the health of hardware readiness, device   inventory and other data collectors.   |
+| HealthScripts.log | This file tracks the health of remediations that run on a   regular schedule.  |
+| Sensor.log | This file tracks the health of the Endpoint analytics data   collector, including boot performance, app reliability and more.  |
+| Win32AppInventory.log | This file tracks the health of the app inventory   collector.  |
 
 ## Next steps
 
