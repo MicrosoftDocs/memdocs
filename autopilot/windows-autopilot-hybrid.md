@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: madakeva
-ms.date: 03/28/2025
+ms.date: 04/21/2025
 ms.topic: how-to
 ms.service: windows-client
 ms.subservice: autopilot

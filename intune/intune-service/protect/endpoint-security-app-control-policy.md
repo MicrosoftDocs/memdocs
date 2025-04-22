@@ -214,7 +214,7 @@ As an optional clean-up step, you can run a script to remove the Intune Manageme
 
 3. Restart the Intune Management Extension service for the above changes to take effect.
 
-To run this script, you can use Intune to run [PowerShell scripts](../apps/intune-management-extension.md), or other methods of your choice.
+To run this script, you can use Intune to run [PowerShell scripts](../apps/powershell-scripts.md), or other methods of your choice.
 
 #### Remove all AppLocker policies from a device (optional)
 
@@ -226,7 +226,7 @@ To remove *all* Windows AppLocker policies from a device, you can use the **CatC
 
 3. Restart the Intune Management Extension service for the above changes to take effect.
 
-To run this script, you can use Intune to run [PowerShell scripts](../apps/intune-management-extension.md), or other methods of your choice.
+To run this script, you can use Intune to run [PowerShell scripts](../apps/powershell-scripts.md), or other methods of your choice.
 
 ## Get started with App Control for Business policies
 
