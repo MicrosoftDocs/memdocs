@@ -107,4 +107,3 @@ This article shows you how to create a custom profile for Android DA devices.
 ## Related articles
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Create a [custom profile on Android Enterprise devices](custom-settings-android-for-work.md).
