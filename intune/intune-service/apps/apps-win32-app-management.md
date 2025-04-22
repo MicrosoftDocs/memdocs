@@ -5,7 +5,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2025
+ms.date: 04/22/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -166,7 +166,7 @@ If needed, you can suppress showing user notifications per app assignment. Follo
 
 ## App relationship viewer
 
-By selecting a Win32 in Intune, you'll be able to view which apps are directed contented to the selected app. You can view the child apps that the selected app. Child apps are designated as dependent applications and superseded applications. The apps in the view are clickable and can be navigated to directly from the selected app. 
+By selecting a Win32 app in Intune, you'll be able to view which apps are directed connected to the selected app. These connected apps are child apps. Child apps are designated as dependent applications and superseded applications. The apps in the view are clickable and can be navigated to directly from the selected app.
 
 The relationship viewer is available for two app types:
 - Windows app (Win32)
@@ -180,6 +180,11 @@ To view an app using the relationship viewer:
 4. From the app pane, select **Relationship viewer**.
 
 ![Screenshot of the Relationship viewer.](./media/apps-win32-app-management/relationship-viewer.png)
+
+For related information, see the following resources:
+- [Add Win32 app supersedence](../apps/apps-win32-supersedence.md)
+- [App relationship viewer](../apps/apps-win32-app-management.md#app-relationship-viewer)
+- [Microsoft Intune Enterprise Application Management](../apps/apps-enterprise-app-management.md)
 
 ## Next steps
 
