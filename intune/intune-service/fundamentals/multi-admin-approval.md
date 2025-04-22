@@ -40,7 +40,7 @@ When any account in the Tenant is used to make a change to a resource that’s p
 Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
-- Scripts – Applies to deploying scripts to devices that run [Windows](../apps/intune-management-extension.md).
+- Scripts – Applies to deploying scripts to devices that run [Windows](../apps/powershell-scripts.md).
 - Access Policies - Applies to creating or managing multiple administrative approval policies.
 
 ## Prerequisites for access policies and approvers

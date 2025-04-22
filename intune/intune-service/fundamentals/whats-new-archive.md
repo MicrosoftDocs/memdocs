@@ -3550,7 +3550,7 @@ Applies to:
 
 - Windows 10 and later (excluding Windows 10 Home)
 
-For more information about using Windows PowerShell scripts in Intune, see [Use PowerShell scripts on Windows 10/11 devices in Intune](../apps/intune-management-extension.md).
+For more information about using Windows PowerShell scripts in Intune, see [Use PowerShell scripts on Windows 10/11 devices in Intune](../apps/powershell-scripts.md).
 
 ### Device configuration
 
@@ -5426,7 +5426,7 @@ Approvers can also reject requests. The individual requesting a change and the a
 Access policies are supported for the following resources:
 
 - **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
-- **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
+- **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/powershell-scripts.md).
 
 For more information, see [Use Access policies to require multiple administrative approval](multi-admin-approval.md).
 
