@@ -1614,7 +1614,7 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#minsmb2dialect)
 
 - **Require Encryption**  
-  Baseline default: *NDisabled*  
+  Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#requireencryption)
 
 - **Enable Mailslots**  
