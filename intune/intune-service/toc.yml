@@ -496,6 +496,8 @@ items:
                   href: ./apps/lob-apps-ios.md
                 - name: Windows LOB apps
                   href: ./apps/lob-apps-windows.md
+                - name: Intune management extension for Windows
+                  href: ./apps/intune-management-extension.md                  
                 - name: Enterprise App Management
                   items:
                   - name: Enterprise App Management overview
@@ -544,7 +546,7 @@ items:
                 - name: Microsoft Defender for Endpoint for macOS
                   href: ./apps/apps-advanced-threat-protection-macos.md
               - name: PowerShell scripts
-                href: ./apps/intune-management-extension.md
+                href: ./apps/powershell-scripts.md
               - name: macOS shell scripts
                 href: ./apps/macos-shell-scripts.md
               - name: Get the app bundle ID
