@@ -164,6 +164,23 @@ Set the app availability and other app assignment properties using the following
 
 If needed, you can suppress showing user notifications per app assignment. Follow the steps above and choose either **Show toast notifications for computer restarts** or **Hide all toast notifications** for the **End user notifications** option in the **Edit assignment** pane based on the level of notification suppression that you require.
 
+## App relationship viewer
+
+By selecting a Win32 in Intune, you'll be able to view which apps are directed contented to the selected app. You can view the child apps that the selected app. Child apps are designated as dependent applications and superseded applications. The apps in the view are clickable and can be navigated to directly from the selected app. 
+
+The relationship viewer is available for two app types:
+- Windows app (Win32)
+- Windows catalog app (Win32)
+
+To view an app using the relationship viewer:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All Apps** or **Apps** > **Windows**.
+3. Select an app from the list with **Windows app (Win32)** or **Windows catalog app (Win32)** as the **Type**.
+4. From the app pane, select **Relationship viewer**.
+
+![Screenshot of the Relationship viewer.](./media/apps-win32-app-management/relationship-viewer.png)
+
 ## Next steps
 
 - For more information about adding apps to Intune, see [Add apps to Microsoft Intune](apps-add.md).
