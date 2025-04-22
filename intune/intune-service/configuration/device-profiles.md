@@ -336,7 +336,7 @@ On Linux devices, you can [add existing Bash scripts](../configuration/device-pr
 
 On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md), and then deploy these scripts to your macOS devices.
 
-On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/intune-management-extension.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/powershell-scripts.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
 
 This feature supports:
 
