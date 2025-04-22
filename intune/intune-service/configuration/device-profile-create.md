@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2024
+ms.date: 04/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,7 +43,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
   For more information, go to [Security baselines](../protect/security-baselines.md).
 
-- **Settings catalog**: On your Apple and Windows devices, you can use the settings catalog to configure device features and settings. The settings catalog has all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings.
+- **Settings catalog**: On your Apple, Android, and Windows devices, you can use the settings catalog to configure device features and settings. The settings catalog has all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings.
 
   For more information, go to [Settings catalog](settings-catalog.md).
 
@@ -111,6 +111,7 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Preference file (macOS)](preference-file-settings-macos.md)
 - [SCEP certificate](../protect/certificates-scep-configure.md)
 - [Secure assessment (Education) (Windows)](education-settings-configure.md)
+- [Settings catalog](settings-catalog.md)
 - [Shared multi-user device (Windows)](shared-user-device-settings.md)
 - [Trusted certificate](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
