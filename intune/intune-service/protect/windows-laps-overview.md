@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/18/2025
+ms.date: 04/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -124,6 +124,9 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
   - Managed devices: **Read**
   - Organization: **Read**
   - Remote tasks: **Rotate Local Admin Password**
+
+    > [!IMPORTANT]
+    > The *Remote tasks* action of **Rotate Local Admin Password** is not included by any Intune built-in role or the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../fundamentals/create-custom-role.md) to assign this permission to users who should have this capability.
 
 - **Retrieve local Administrator password** – To view password details, your account must have one of the following Microsoft Entra permissions:
 

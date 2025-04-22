@@ -12,7 +12,7 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.reviewer: tycast
+ms.reviewer: ilwu-microsoft
 
 # optional metadata
 
