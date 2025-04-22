@@ -729,9 +729,6 @@ You can also:
 
 - **Import** a CSV file with details about the app, including the URL. Use the `<app url>, <app name>, <app publisher>` format. Or, **Export** to create a list of the restricted apps you added, in the same format.
 
-  > [!TIP]
-  > You can import a list of preinstalled Apple apps by downloading the [Apple App BundleIDs CSV](https://github.com/microsoft/Intune-Config-Frameworks/blob/master/iOS/Supervised/Apple-App-BundleIDs.csv) (opens a Microsoft GitHub site).
-
 ## Wireless
 
 ### Settings apply to: Device enrollment and Automated device enrollment (supervised)
