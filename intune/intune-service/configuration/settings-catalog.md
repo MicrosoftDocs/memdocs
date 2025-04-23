@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get impact What If analysis, and learn more about each setting.
+description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get impact What If analysis, and learn more about each setting.
 keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/18/2024
+ms.date: 04/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection:
 - magic-ai-copilot
 ---
 
-# Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices
+# Use the settings catalog to configure settings on Windows, iOS/iPadOS, macOS, and Android devices
 
 The settings catalog lists all the settings you can configure all in one place. This feature simplifies how you create a policy and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 
@@ -68,6 +68,11 @@ This feature applies to:
   - Configure earlier versions of Microsoft Edge.
   - Configure Microsoft Edge browser settings that aren't in the settings catalog.
 
+- **Android**
+
+    Settings catalog for Android lists settings available for Android (AOSP) and corporate-owned Android Enterprise devices. More settings for Android devices will be added continually to Settings catalog.
+
+
 - **Windows 10/11**
 
   There are thousands of settings, including settings that weren't previously available. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
@@ -91,7 +96,7 @@ You create the policy by using the settings catalog profile type.
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **iOS/iPadOS**, **macOS**, or **Windows 10 and later**.
+    - **Platform**: Select **iOS/iPadOS**, **macOS**, **Android Enterprise**, **Android (AOSP)**, or **Windows 10 and later**.
     - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.
