@@ -35,7 +35,7 @@ ms.collection:
 
 In support of the [Microsoft Zero Trust security model](/security/zero-trust/zero-trust-identity-device-access-policies-common), this article provides example configurations you can use with Microsoft Intune to configure iOS/iPad device compliance settings for mobile users using personal and supervised devices. These examples include levels of device security configuration that align with Zero Trust principles.
 
-When using these examples, work with your security team to evaluate the threat environment, risk appetite, and the effect the different levels and configurations can have on usability. After reviewing and adjusting the examples to meet the needs of your organization, you can incorporate them within a ring deployment methodology for testing and production use by importing the sample iOS/iPadOS Security Configuration Framework JSON templates with [Intune's PowerShell scripts](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS).
+When using these examples, work with your security team to evaluate the threat environment, risk appetite, and the effect the different levels and configurations can have on usability. After reviewing and adjusting the examples to meet the needs of your organization, you can incorporate them within a ring deployment methodology for testing and production use by importing the sample [iOS/iPadOS Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
 > [!Note]
 > Due to the limited number of settings available for device compliance, there is no basic security (level 1) offering.
