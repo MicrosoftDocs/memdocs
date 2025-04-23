@@ -30,10 +30,7 @@ ms.collection:
 
 # Enroll your macOS device using the Company Portal app  
 
-Set up secure, remote access to work emails, files, and apps on your personal Mac. This article describes how to install the Company Portal app, enroll your Mac for work, and get troubleshooting help. 
-
-> [!TIP]
-> As a companion to this article, see our [Manage and secure devices for MacOS setup guide](https://go.microsoft.com/fwlink/?linkid=2314707) to review best practices and learn to enforce policies, deploy apps, and protect corporate data across your organization's devices. For a customized experience based on your environment, you can access the [Manage and secure devices for MacOS guide](https://go.microsoft.com/fwlink/?linkid=2313694) in the Microsoft 365 admin center.  
+Set up secure, remote access to work emails, files, and apps on your personal Mac. This article describes how to install the Company Portal app, enroll your Mac for work, and get troubleshooting help.  
 
 ## What to expect from the Company Portal app
 
