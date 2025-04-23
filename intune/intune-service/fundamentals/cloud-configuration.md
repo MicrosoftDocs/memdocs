@@ -90,7 +90,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 
 - Deploys a Windows PowerShell script that removes built-in apps, and simplifies the Start menu.
 
-  For information about PowerShell scripts in Intune, go to [Use PowerShell scripts on Windows client devices](../apps/intune-management-extension.md).
+  For information about PowerShell scripts in Intune, go to [Use PowerShell scripts on Windows client devices](../apps/powershell-scripts.md).
 
 - Creates a Windows client update ring policy. This policy automatically updates the devices, including product updates, drivers, and Windows updates.
 

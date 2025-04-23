@@ -557,7 +557,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 - **Deploy shell scripts**:
 
   - [**macOS**: Use shell scripts](../apps/macos-shell-scripts.md)
-  - [**Windows**: Use Windows PowerShell scripts](../apps/intune-management-extension.md)
+  - [**Windows**: Use Windows PowerShell scripts](../apps/powershell-scripts.md)
 
 ## Follow the minimum recommended baseline policies
 
