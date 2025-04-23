@@ -30,11 +30,14 @@ ms.collection:
 
 # Enroll your macOS device using the Company Portal app  
 
-Set up secure, remote access to work emails, files, and apps on your personal Mac. This article describes how to install the Company Portal app, enroll your Mac for work, and get troubleshooting help.      
+Set up secure, remote access to work emails, files, and apps on your personal Mac. This article describes how to install the Company Portal app, enroll your Mac for work, and get troubleshooting help. 
+
+> [!TIP]
+> As a companion to this article, see our [Manage and secure devices for MacOS setup guide](https://go.microsoft.com/fwlink/?linkid=2314707) to review best practices and learn to enforce policies, deploy apps, and protect corporate data across your organization's devices. For a customized experience based on your environment, you can access the [Manage and secure devices for MacOS guide](https://go.microsoft.com/fwlink/?linkid=2313694) in the Microsoft 365 admin center.  
 
 ## What to expect from the Company Portal app
 
-During initial setup, the Company Portal app requires you to sign in and authenticate with your work account. Company Portal then informs you of any device settings you need to change to meet your organization's requirements. For example, your organization could require you to make your device PIN longer, or require you to update your operating system. After you enroll your device, Company Portal helps you maintain the secure work access. The app notifies you of new policies and requirements and gives you the chance to adjust your settings so that you can continue to work uninterrupted. 
+During initial setup, the Company Portal app requires you to sign in and authenticate with your work account. Company Portal then informs you of any device settings you need to change to meet your organization's requirements. For example, your organization could require you to make your device PIN longer or require you to update your operating system. After you enroll your device, Company Portal helps you maintain the secure work access. The app notifies you of new policies and requirements and gives you the chance to adjust your settings so that you can continue to work uninterrupted. 
 
 For more information about the Company Portal app for macOS, see [What happens when I install the Company Portal app and enroll my device?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md)     
 
