@@ -35,9 +35,6 @@ ms.collection:
 
 Install a mobile threat defense (MTD) app on the personal device you use for work or school. An MTD app works by detecting and alerting you to threats on your device, like suspicious apps or networks, and operating system vulnerabilities. In this article, you'll learn how to set up and activate an MTD app so that you can satisfy your organization's security requirement and access work apps.    
 
-> [!TIP]
-> As a companion to this article, see our [Manage and secure apps for Android](https://go.microsoft.com/fwlink/?linkid=2309502) and [Manage and secure apps for iOS](https://go.microsoft.com/fwlink/?linkid=2309702) setup guides to review best practices and learn to enforce policies, deploy apps, and protect corporate data across your mobile devices. For a customized experience based on your environment, you can access the [Android](https://go.microsoft.com/fwlink/?linkid=2309503) and [iOS](https://go.microsoft.com/fwlink/?linkid=2309604) setup guides in the Microsoft 365 admin center.  
-
 ## Step 1: Install MTD app    
 
 >[!NOTE]
