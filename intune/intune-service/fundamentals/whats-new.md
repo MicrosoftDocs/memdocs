@@ -115,6 +115,19 @@ Applies to:
 
 ### Device configuration
 
+#### Updated device configuration template for Windows Delivery Optimization<!-- 32411831 -->
+
+We’ve updated the device configuration template for Windows [Delivery Optimization](../configuration/delivery-optimization-windows.md). The new template uses the settings format as found in the Settings Catalog, with settings that are taken directly from the Windows Configuration Service Providers (CSPs) for Windows Delivery Optimization, as documented by Windows at [Policy CSP – DeliveryOptimization](/windows/client-management/mdm/policy-csp-DeliveryOptimization).
+
+With this change you can no longer create new versions of the old profile. However, your pre-existing instances of the old profile remain available to use.
+
+For more information about this change, see the Intune Customer Success blog at [Support tip: Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-windows-device-configuration-policies-migrating-to-unified-settings-/4189665).
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
 #### New settings available in the Apple settings catalog<!-- 31523569 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
