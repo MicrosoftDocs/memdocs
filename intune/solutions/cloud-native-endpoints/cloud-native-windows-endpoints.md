@@ -9,7 +9,7 @@ author: scottbreenmsft
 
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/31/2024
+ms.date: 04/22/2025
 ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
@@ -627,7 +627,7 @@ To create a profile that uses the Device restrictions template, in the [Microsof
 
 Delivery Optimization is used to reduce bandwidth consumption by sharing the work of downloading supported packages among multiple endpoints. Delivery Optimization is a self-organizing distributed cache that enables clients to download those packages from alternate sources, like peers on the network. These peer sources supplement the traditional Internet-based servers. You can find out about all the settings available for Delivery Optimization and what types of downloads are supported at [Delivery Optimization for Windows updates](/windows/deployment/update/waas-delivery-optimization).
 
-To apply Delivery Optimization settings, create an Intune [Delivery Optimization profile](../../intune-service/configuration/delivery-optimization-settings.md) or a settings catalog profile.
+To apply Delivery Optimization settings, create an Intune [Delivery Optimization profile](../../intune-service/configuration/delivery-optimization-windows.md) or a settings catalog profile.
 
 Some settings that are commonly used by organizations are:
 

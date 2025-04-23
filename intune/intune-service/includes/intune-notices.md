@@ -86,7 +86,7 @@ Update your IT admin documentation and notify your helpdesk or users as needed. 
 
 ### Move to new Microsoft Graph Beta API properties for Windows Autopilot self-deploying mode and pre-provisioning
 
-In late February 2025, a select number of old Microsoft Graph Beta API [windowsAutopilotDeploymentProfile](/graph/api/resources/intune-shared-windowsautopilotdeploymentprofile) properties used for Windows Autopilot self-deploying mode and pre-provisioning are removed and stop working. The same data can be found using newer Graph API properties.
+In late May 2025 (previously March), a select number of old Microsoft Graph Beta API [windowsAutopilotDeploymentProfile](/graph/api/resources/intune-shared-windowsautopilotdeploymentprofile) properties used for Windows Autopilot self-deploying mode and pre-provisioning are removed and stop working. The same data can be found using newer Graph API properties.
 
 #### How does this change affect you or your users?
 

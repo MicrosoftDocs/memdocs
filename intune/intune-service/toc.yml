@@ -496,6 +496,8 @@ items:
                   href: ./apps/lob-apps-ios.md
                 - name: Windows LOB apps
                   href: ./apps/lob-apps-windows.md
+                - name: Intune management extension for Windows
+                  href: ./apps/intune-management-extension.md                  
                 - name: Enterprise App Management
                   items:
                   - name: Enterprise App Management overview
@@ -544,7 +546,7 @@ items:
                 - name: Microsoft Defender for Endpoint for macOS
                   href: ./apps/apps-advanced-threat-protection-macos.md
               - name: PowerShell scripts
-                href: ./apps/intune-management-extension.md
+                href: ./apps/powershell-scripts.md
               - name: macOS shell scripts
                 href: ./apps/macos-shell-scripts.md
               - name: Get the app bundle ID
@@ -1014,6 +1016,8 @@ items:
               href: ./protect/windows-10-update-rings.md
             - name: Feature updates policy
               href: ./protect/windows-10-feature-updates.md
+            - name: Windows quality updates policy
+              href: ./protect/windows-quality-update-policy.md  
             - name: Expedite updates policy
               href: ./protect/windows-10-expedite-updates.md
             - name: Windows driver updates
@@ -1342,6 +1346,9 @@ items:
         - name: Apple
           displayName: ios, ipados, macos
           href: ./configuration/apple-settings-catalog-configurations.md
+        - name: Android
+          displayName: Android
+          href: ./configuration/settings-catalog-android.md  
 
       - name: Device Configuration template settings lists
         items:
@@ -1377,9 +1384,6 @@ items:
             href: ./configuration/wi-fi-settings-android-aosp.md
         - name: Android Enterprise
           items:
-          - name: Custom (OMA-URI)
-            displayName: oma uri, byod, work profile, android, android enterprise, ae
-            href: ./configuration/custom-settings-android-for-work.md
           - name: Device restrictions - organization-owned devices
             displayName: cope, cobo, cosu, android, android enterprise, ae
             href: ./configuration/device-restrictions-android-for-work.md
