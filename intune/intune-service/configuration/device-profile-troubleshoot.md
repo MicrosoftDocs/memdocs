@@ -65,6 +65,9 @@ There are 4 main types of check-ins:
 
 **Notification-based check-ins** - These check-ins happen through different actions that trigger a notification. For example, when a policy, profile, or app is assigned (or unassigned), updated, deleted, or when certain behind the scenes changes like Microsoft Entra group membership updates are made. Other changes don't cause an immediate notification to devices, like adding an app as available to your users.
 
+  > [!IMPORTANT]
+  > Devices must be able to connect to specific network endpoints in order to receive push notifications. See [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).
+
 Intune notifies online devices to check-in with the Intune service. The notification times vary from immediately up to a few hours.
 These notification times also vary between platforms.
 
