@@ -37,6 +37,9 @@ ms.collection:
 
 Browse and install work apps in the Intune Company Portal app for Windows. This article describes how to install, view, and share work apps from Company Portal.    
 
+> [!TIP]
+> As a companion to this article, see our ‎[Intune‎ app protection for ‎Windows‎ 10/11 setup guide](https://go.microsoft.com/fwlink/?linkid=2309605) to review best practices and learn to enforce policies, deploy apps, and protect corporate data across a variety of devices. For a customized experience based on your environment, you can access the ‎[Intune‎ app protection for ‎Windows‎ 10/11 guide](https://go.microsoft.com/fwlink/?linkid=2309606) in the Microsoft 365 admin center.  
+
 ## Types of apps 
 
 There are two types of apps available in Company Portal: *optional apps* and *required apps*. 
@@ -48,7 +51,7 @@ Required apps are necessary for work and school and are deployed directly to you
 To find out which installed apps are required:  
 
 1. Sign into the Company Portal app with your work or school account.   
-2. Go to **Downloads & updates**.  
+1. Go to **Downloads & updates**.  
 
     ![Screenshot of the Downloads & updates page for the Company Portal app for Windows. ](./media/install-apps-cpapp-windows/windows-companyportal-02.png)  
 3. In the table, look under the column **Required by your organization**. A *yes* means that the app is required on your enrolled device.    
@@ -59,7 +62,7 @@ Before you begin, install [Intune Company Portal for Windows from the Microsoft 
 1. Sign in to the Company Portal app on your work or school device. You'll see the latest notifications on the Home page.  
 
     ![Screenshot of the Home page with notifications in the Company Portal app for Windows.](./media/install-apps-cpapp-windows/windows-companyportal-03.png)  
-
+   
 2. You can access available apps from the following places in Company Portal:      
 
     * **Home**: Go to **Home** to view your organization's featured apps.  
