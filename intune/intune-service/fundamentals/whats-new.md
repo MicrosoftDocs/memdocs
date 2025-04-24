@@ -87,6 +87,11 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 
 ### App management
 
+#### Relationship viewer available for Intune apps<!-- 17644546 -->
+
+The relationship viewer provides a graphical depiction of the relationships between different applications in the system, including superseding and dependent applications. Admins can find relationship viewer in Intune by selecting **Apps** > **All apps** > *a Win32 app* > **Relationship viewer**. The relationship viewer supports both Win32 apps and Enterprise App Catalog apps. For more information, see [App relationship viewer](../apps/apps-win32-app-management.md#app-relationship-viewer).
+
+
 #### Microsoft Intune support for Apple AI features<!-- 12792722, 30550110, 30220799 -->
 
 Intune app protection policies have new standalone settings for Apple AI features (Genmojis, Writing tools, and screen capture). Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, these Apple AI features are blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
