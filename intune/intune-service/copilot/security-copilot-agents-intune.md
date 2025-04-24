@@ -41,11 +41,11 @@ The Vulnerability Remediation Agent runs manually, on demand.
 
 #### Permissions
 
-*Placeholder: The level of authorization an AI agent is given by an admin during configuration that enables it to access specific information or carry out its tasks.*
+*Placeholder: The level of authorization an AI agent is given by an admin during configuration that enables it to access specific information or carry out its tasks.  Also add this detail to the Agent Page article.*
 
 #### Identity
 
-The agent runs in the context of the administrator who manually starts the agent.
+The agent persistently runs in the identity of the user who initially set up the agent.
 
 #### Products
 
