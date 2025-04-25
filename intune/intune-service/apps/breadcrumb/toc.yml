@@ -9,7 +9,7 @@ items:
     items:
     - name: Apps
       tocHref: /intune/intune-service/fundamentals/
-      topicHref: /intune/intune-service/
+      topicHref: /intune/intune-service/apps/
     - name: Apps
       tocHref: /intune/intune-service/protect/
-      topicHref: /intune/intune-service/
+      topicHref: /intune/intune-service/apps/

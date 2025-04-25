@@ -46,17 +46,17 @@ items:
         topicHref: /intune/intune-service/
 
       - name: Enrollment
-        tocHref: /intune/intune-service/
-        topicHref: /intune/intune-service/
+        tocHref: /intune/intune-service/enrollment/
+        topicHref: /intune/intune-service/enrollment/
       - name: Remote actions
-        tocHref: /intune/intune-service/
-        topicHref: /intune/intune-service/
+        tocHref: /intune/intune-service/remote-actions/
+        topicHref: /intune/intune-service/remote-actions/
       - name: Configuration
-        tocHref: /intune/intune-service/
-        topicHref: /intune/intune-service/
+        tocHref: /intune/intune-service/configuration/
+        topicHref: /intune/intune-service/configuration/
       - name: Protect
-        tocHref: /intune/intune-service/
-        topicHref: /intune/intune-service/
+        tocHref: /intune/intune-service/protect/
+        topicHref: /intune/intune-service/protect/
       - name: Developer
-        tocHref: /intune/intune-service/
-        topicHref: /intune/intune-service/
+        tocHref: /intune/intune-service/developer/
+        topicHref: /intune/intune-service/developer/
