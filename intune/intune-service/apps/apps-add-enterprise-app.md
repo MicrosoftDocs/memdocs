@@ -249,5 +249,6 @@ At this point, you've completed steps to add a Windows catalog app (Win32) to In
 
 ## Next steps
 
+- [App relationship viewer](../apps/apps-win32-app-management.md#app-relationship-viewer)
 - [Monitor app information and assignments with Microsoft Intune](apps-monitor.md)
 - [Troubleshoot Win32 app issues](apps-win32-troubleshoot.md)
