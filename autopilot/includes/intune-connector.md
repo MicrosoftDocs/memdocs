@@ -38,7 +38,7 @@ Before beginning the installation, make sure that all of the [Intune connector f
 
 #### Turn off Internet Explorer Enhanced Security Configuration
 
-Starting with version **6.2504.2001.8** of the updated Intune Connector for Active Directory, the Intune Connector for Active Directory switched to using WebView2, built on Microsoft Edge, instead of WebBrowser, built on Microsoft Internet Explorer. This change means that the Internet Explorer Enhanced Security Configuration setting in Windows Server no longer needs to be turned off. Make sure to run the Intune Connector for Active Directory installer version **6.2504.2001.8** or later to avoid issues with the Internet Explorer Enhanced Security Configuration setting.
+Starting with version **6.2504.2001.8**, the updated Intune Connector for Active Directory switched to using WebView2, built on Microsoft Edge, instead of WebBrowser, built on Microsoft Internet Explorer. This change means that the Internet Explorer Enhanced Security Configuration setting in Windows Server no longer needs to be turned off. Make sure to install version **6.2504.2001.8** or later of the Intune Connector for Active Directory to avoid issues with the Internet Explorer Enhanced Security Configuration setting.
 
 #### Download the Intune Connector for Active Directory
 
