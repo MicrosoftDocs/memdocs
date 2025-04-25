@@ -91,10 +91,10 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - Devices must:
   - Run a version of Windows 10/11 that remains in support.
-  - Be enrolled in Intune MDM and be Hybrid AD joined or Microsoft Entra joined.
+  - Be enrolled in Intune MDM and be Microsft Entra hybrid joined or Microsoft Entra joined.
   - Have Telemetry turned on, with a minimum setting of [*Required*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
 
-    Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy. The prerequisite to require Telemetry is under review as this feature moves towards general availability.
+    Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy.
 
     Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows 10/11. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
 
@@ -109,7 +109,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 - Feature updates are supported for the following Windows 10/11 editions:
   - Pro
   - Enterprise
-  - Education
+  - Pro Education
   - Education
   - Pro for Workstations
 
