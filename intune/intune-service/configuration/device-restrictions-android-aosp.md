@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2024
+ms.date: 04/15/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,9 +29,18 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Android (AOSP) device settings to allow or restrict features using Intune
+# Android (AOSP) device settings to allow or restrict features using Templates in Intune
 
-This article describes the different settings you can control on Android (AOSP) devices. You can use these restrictions to configure password requirements and access to device features.
+This article describes the different settings you can control on Android (AOSP) devices using Templates. You can use these restrictions to configure password requirements and access to device features.
+
+Settings can be configured either through **Templates** or **Settings catalog**. For more information on **Settings catalog**, go to [Settings catalog](settings-catalog.md).
+
+The settings outlined below can be found as **Templates** under **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Templates**. 
+
+> [!NOTE]
+>
+>- If you can't find a setting in **Templates**, select **Settings catalog**. The settings catalog is a list of the settings you can configure for Android (AOSP) devices. It includes additional settings that you can configure that are not available under **Templates**.
+>- If you can't find a setting in **Settings catalog**, check **Templates**.
 
 This feature applies to:
 
@@ -40,7 +49,21 @@ This feature applies to:
 
 ## Before you begin
 
-- Create an [AOSP device restrictions profile](device-restrictions-configure.md). For the platform, select **Android (AOSP)**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+3. Enter the following properties:
+
+    - **Platform**: Select **Android (AOSP)**.
+    - **Profile type**: Select **Templates**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
+    - **Name**: Name your profiles so you can easily identify them later.
+    - **Description**: This setting is optional but recommended.
+
+6. Select **Next**.
+
 
 ## Device password  
 
