@@ -44,7 +44,7 @@ Use this tutorial when:
 - Microsoft Intune subscription
 
   > [!TIP]
-  > An Enterprise Mobility + Security (EMS) subscription includes both Microsoft Entra ID P1 or P2 and Microsoft Intune. EMS subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).
+  > An Enterprise Mobility + Security (EMS) subscription includes both Microsoft Entra ID P1 or P2 and Microsoft Intune. EMS subscription ([free trial](https://go.microsoft.com/fwlink/?linkid=845167)).
 
 If not already present in your environment, during this tutorial you'll configure [Microsoft Entra Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Microsoft Entra tenant.
 
