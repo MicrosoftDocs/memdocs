@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 04/24/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -38,14 +38,16 @@ Personal and organization-owned devices can be enrolled in Intune. Once they're 
 - [Apple Configurator](#apple-configurator-enrollment)
 - [BYOD: User and Device enrollment](#byod-user-and-device-enrollment)
 
-This article provides enrollment recommendations and includes an overview of the administrator and user tasks for each iOS/iPadOS option.
+This article provides enrollment recommendations and includes an overview of the administrator and user tasks for each iOS/iPadOS option.  
 
 There's also a visual guide of the different enrollment options for each platform:
 
 [![A visual representation of Intune enrollment options by platform](./media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
 > [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+>
+> - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+> - As a companion to this article, see [Manage and secure iOS and iPadOS devices guide](https://go.microsoft.com/fwlink/?linkid=2314413) to review best practices, learn to configure managed and unmanaged app protection policies, and validate and manage app data. For a customized experience based on your environment, you can access the [Manage and secure iOS and iPadOS devices guide](https://go.microsoft.com/fwlink/?linkid=2313884) in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 ## Before you begin
 
