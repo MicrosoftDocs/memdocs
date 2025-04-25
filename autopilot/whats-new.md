@@ -36,9 +36,9 @@ appliesto:
 
 Date added: *April 18, 2025*
 
-We've updated the low-privileged Intune Connector for Active Directory build. New in build **6.2504.2001.8:**
+We've updated the low-privileged Intune Connector for Active Directory build. New in build **6.2504.2001.8**:
 
-- Updated the sign in page to use WebView2, built on Edge, instead of WebBrowser.
+- Updated the sign in page to use WebView2, built on Microsoft Edge, instead of WebBrowser.
 - **Error `MSA account <accountName> is not valid`** when signing in has been fixed.
 - **Error `Cannot start service ODJConnectorSvc on computer '.'`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--cannot-start-service-odjconnectorsvc-on-computer------occurring-when-setting-up-the-intune-connector-for-active-directory-).
 - **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--the-msa-account-couldn-t-be-granted-permission-to-create-computer-objects-in-the-following-ous--occurring-when-installing-the-intune-connector-for-active-directory-).
