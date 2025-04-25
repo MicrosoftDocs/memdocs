@@ -9,4 +9,4 @@ items:
     items:
     - name: Protect
       tocHref: /intune/intune-service/configuration
-      topicHref: /intune/intune-service/
+      topicHref: /intune/intune-service/protect/device-protect
