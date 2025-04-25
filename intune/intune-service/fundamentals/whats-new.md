@@ -406,8 +406,8 @@ You can now use Copilot to generate a KQL query to help you get data from across
 The following protected apps are now available for Microsoft Intune:
 
 - FacilyLife by Apleona GmbH (iOS)
-- Intapp 2.0 by Intapp, Inc. (Andriod)
-- DealCloud by Intapp, Inc. (Andriod)
+- Intapp 2.0 by Intapp, Inc. (Android)
+- DealCloud by Intapp, Inc. (Android)
 - Lemur Pro for Intune by Critigen LLC (iOS)
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
