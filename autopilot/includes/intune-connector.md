@@ -6,7 +6,7 @@ ms.reviewer: madakeva
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 04/21/2025
+ms.date: 04/25/2025
 ms.localizationpriority: medium
 ---
 
@@ -38,17 +38,7 @@ Before beginning the installation, make sure that all of the [Intune connector f
 
 #### Turn off Internet Explorer Enhanced Security Configuration
 
-By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems signing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends turning off Internet Explorer Enhanced Security Configuration. To turn off Internet Explorer Enhanced Security Configuration:
-
-1. Sign into the server where the Intune Connector for Active Directory is being installed with an account that has local administrator rights.
-
-1. Open **Server Manager**.
-
-1. In the left pane of Server Manager, select **Local Server**.
-
-1. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
-
-1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
+Starting with version **6.2504.2001.8**, the updated Intune Connector for Active Directory switched to using WebView2, built on Microsoft Edge, instead of WebBrowser, built on Microsoft Internet Explorer. This change means that the Internet Explorer Enhanced Security Configuration setting in Windows Server no longer needs to be turned off. Make sure to install version **6.2504.2001.8** or later of the Intune Connector for Active Directory to avoid issues with the Internet Explorer Enhanced Security Configuration setting.
 
 #### Download the Intune Connector for Active Directory
 

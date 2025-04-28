@@ -63,7 +63,7 @@ If you'll use Conditional Access policy to limit user access, we recommend confi
    1. Select **Include** > **All users**.
    2. Next, select **Exclude**, and then configure the groups you want to *grant access to*, and then save the user and Group configuration.
 
-4. Under **Cloud apps or actions** > **Select apps**, select the **Microsoft Tunnel Gateway app**.
+4. Under **Target resources** > choose **Resources** for Select what this policy applies to, under include pane **Select resources**, select the **Microsoft Tunnel Gateway**.
 
 5. Below *Access controls*, select **Grant**, select **Block access**, and then save the configuration.
 
