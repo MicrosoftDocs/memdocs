@@ -60,6 +60,7 @@ Before you begin setting up Microsoft Intune, you should:
 - Review the device platforms and operating systems that Intune supports.
 - Review which web browsers are supported when accessing Intune using Microsoft Intune admin center.
 - Get familiar with the network bandwidth requirements to perform installations and updates using Intune.
+- Review Network endpoints for IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments.[Network Endpoints](intune-endpoints.md)
 
 For guidance and need-to-know information before you start, go to [Supported configurations](supported-devices-browsers.md).
 
