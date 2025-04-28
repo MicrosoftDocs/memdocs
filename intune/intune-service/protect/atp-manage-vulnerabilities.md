@@ -86,7 +86,7 @@ Following is an example of the workflow for discovering and remediating an appli
 **Subscriptions**:
 
 - Microsoft Intune Plan 1
-- Microsoft Defender for Endpoint ([Sign up for a free trial](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)
+- Microsoft Defender for Endpoint ([Sign up for a free trial](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint).)
 
 Intune configurations for Defender for Endpoint:
 - Configure a [service-to-service connection](/mem/intune-service/protect/advanced-threat-protection-configure#connect-microsoft-defender-for-endpoint-to-intune) with Microsoft Defender for Endpoint.
