@@ -150,13 +150,13 @@ Once the app has been configured, you can assign an app protection policy to you
 > [!NOTE]
 > App protection policies for VisionOS devices support Microsoft Edge (v136 or later), OneDrive (v16.8.4 or later), Outlook (v4.2513.0 or later), and Microsoft Teams.
 
-To configure Microsoft Teams for VisionOS devices:
+To configure a managed app for VisionOS devices:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **Configuration** > **Create** > **Managed apps**.
 3. On the **Basics** page, set the following details:
     - **Name**: The name of the profile that will appear in the portal.
-    - **Select public apps**: Find and select the Microsoft Teams app for VisionOS devices.
+    - **Select public apps**: Find and select the app for VisionOS devices.
 4. On the **Settings** page, add the following configuration name and value:
     - **Name**: `com.microsoft.intune.mam.visionOSAllowiPadCompatApps`
     - **Value**: `Enabled`
