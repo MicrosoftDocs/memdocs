@@ -79,10 +79,26 @@ Create an enrollment profile to enable enrollment on devices.
         If you select **WEP Pre-shared key** or **WPA Pre-shared key**, also enter:  
 
         - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
-    - **For Microsoft Teams devices (preview)**: Select **Enabled** if this profile is applicable for Microsoft Teams Android devices. This setting should only be used for [Microsoft Teams Android devices](/microsoftteams/devices/teams-ip-phones). 
+    - **For Microsoft Teams devices (preview)**: Select **Enabled** if this profile is applicable for Microsoft Teams Android devices. This setting should only be used for [Microsoft Teams Android devices](/microsoftteams/devices/teams-ip-phones).
+    - **Naming Template**:The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: AndroidForWork_01/01/2025_12:00 PM  
+   
+       To create a custom naming template:  
+       1. Under Apply device name template, choose Yes.
+       2. Enter the naming template you want to apply to the devices. Names can contain letters, numbers, and hyphens.
+    
+       You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
+       - {{SERIAL}} for the device's serial number.
+       - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.
+       - {{DEVICETYPE}} for the device type, Example: *AndroidForWork*
+       - {{ENROLLEDDATETIME}} for the date and time of enrollment.
+       - {{UPNPREFIX}} for the user's first name. Example: Eric, when device is user affiliated.  
+       - {{USERNAME}} for the user's username when the device is user affiliated. Example: *Eric Solomon*  
+       - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
+  
+        Edits to the naming template only apply to new enrollments.  
 
-7. Select **Next** and optionally, select scope tags. 
-8. Select **Next**. Review the details of your profile and then select **Create** to save the profile.  
+8. Select **Next** and optionally, select scope tags. 
+9. Select **Next**. Review the details of your profile and then select **Create** to save the profile.  
 
 ### Access enrollment token  
 After you create a profile, Intune generates a token that's needed for enrollment. The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.
