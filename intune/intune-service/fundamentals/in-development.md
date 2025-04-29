@@ -91,6 +91,10 @@ Applies to:
 
 ## Device enrollment
 
+### Change to role-based access control for device enrollment limits<!-- 27115176 -->
+
+We're updating role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you will soon have read-only access to device enrollment limit policies. To create and edit these policies, you will need to be an Intune Service Administrator.
+
 ### Custom naming template for AOSP devices<!-- 31707864 -->
 
 You'll soon be able to use a custom template for naming AOSP user-affiliated and userless devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
