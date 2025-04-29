@@ -93,7 +93,7 @@ Applies to:
 
 ### Change to role-based access control for device enrollment limits<!-- 27115176 -->
 
-We're updating role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you will soon have read-only access to device enrollment limit policies. To create and edit these policies, you will need to be an Intune Service Administrator.
+We're updating role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you'll soon have read-only access to device enrollment limit policies. To create and edit these policies, you'll need to be an Intune Service Administrator.
 
 ### Custom naming template for AOSP devices<!-- 31707864 -->
 
@@ -185,7 +185,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ### Data collection from SimInfo entity on Windows devices<!--30120558 iddraft idready -->
 
-You will be able to collect data from the SimInfo entity on Windows devices with enhanced device inventory.
+You'll be able to collect data from the SimInfo entity on Windows devices with enhanced device inventory.
 
 Applies to:
 
