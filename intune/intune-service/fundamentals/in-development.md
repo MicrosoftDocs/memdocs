@@ -100,6 +100,15 @@ You'll soon be able to use a custom template for naming AOSP user-affiliated and
 
 ## Device management
 
+### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
+
+During an unattended Remote Help sessions on Android devices, we're enhancing security and user awareness during remote assistance by blocking the screen of the device, and users will be notified if they interact with it.
+
+This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices. 
+
+For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
+
+
 ### Cross Platform Device Inventory<!-- 25964936 -->
 
 Android, iOS, and Mac devices will be added to device inventory. Intune will collect a default set of inventory data including 74 Apple properties and 32 Android properties.
