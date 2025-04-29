@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/24/2025
+ms.date: 04/29/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,7 +59,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-<!-- ## Microsoft Intune Suite  -->
+<!-- ## Microsoft Intune Suite -->
 
 <!-- ***********************************************-->
 
@@ -85,14 +85,39 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+ <!-- Device configuration -->
 
 <!-- *********************************************** -->
+
+## Device enrollment
+
+### Change to role-based access control for device enrollment limits<!-- 27115176 -->
+
+We're updating role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you'll soon have read-only access to device enrollment limit policies. To create and edit these policies, you'll need to be an Intune Service Administrator.
+
+### Custom naming template for AOSP devices<!-- 31707864 -->
+
+You'll soon be able to use a custom template for naming AOSP user-affiliated and userless devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
 
 
 <!-- *********************************************** -->
 
 ## Device management
+
+### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
+
+During an unattended Remote Help sessions on Android devices, we're enhancing security and user awareness during remote assistance by blocking the screen of the device, and users will be notified if they interact with it.
+
+This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices. 
+
+For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
+
+
+### Cross Platform Device Inventory<!-- 25964936 -->
+
+Android, iOS, and Mac devices will be added to device inventory. Intune will collect a default set of inventory data including 74 Apple properties and 32 Android properties.
+
+For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
 
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
@@ -114,6 +139,14 @@ For more information, see [device cleanup rules](../remote-actions/devices-wipe.
 <!-- *********************************************** -->
 
 ## Device security
+
+### Detect rooted corporate-owned Android Enterprise devices<!--31672848  -->
+
+Configure compliance policies to detect if a corporate-owned Android Enterprise device is rooted. If Microsoft Intune detects that a device is rooted, you can have it marked as noncompliant. This feature is becoming available for devices enrolled as fully managed, dedicated, or corporate-owned with a work profile. 
+
+Applies to:
+
+- Android
 
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
 
@@ -148,7 +181,15 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-<!-- ## Tenant administration -->
+## Tenant administration
+
+### Data collection from SimInfo entity on Windows devices<!--30120558 iddraft idready -->
+
+You'll be able to collect data from the SimInfo entity on Windows devices with enhanced device inventory.
+
+Applies to:
+
+- Windows
 
 <!-- *********************************************** -->
 
