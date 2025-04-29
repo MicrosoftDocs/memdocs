@@ -100,6 +100,12 @@ You'll soon be able to use a custom template for naming AOSP user-affiliated and
 
 ## Device management
 
+### Cross Platform Device Inventory<!-- 25964936 -->
+
+Android, iOS, and Mac devices will be added to device inventory. Intune will collect a default set of inventory data including 74 Apple properties and 32 Android properties.
+
+For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
+
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
 Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA helps to mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
