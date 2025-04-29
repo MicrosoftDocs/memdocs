@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2024
+ms.date: 04/29/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -479,7 +479,10 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 
    You can resolve this error by trying to download the management again within 15 minutes. After 15 minutes, you have to factory reset the device to resolve the error. This error occurs because of a 15 minute time limit on SCEP certificates, which is enforced for security. 
   
-For information on the end-user experience, see [Enroll your iOS/iPadOS device in Intune by using ADE](../user-help/enroll-your-device-dep-ios.md).
+## End user experience  
+For information on the end-user experience, see:  
+- [ADE end user tasks](../fundamentals/deployment-guide-enrollment-ios-ipados.md#ade-end-user-tasks)
+- [Enroll your iOS/iPadOS device](../user-help/enroll-your-device-dep-ios.md)  
 
 ## Re-enroll a device  
 Complete these steps to re-enroll a device that already went through automated device enrollment.     
