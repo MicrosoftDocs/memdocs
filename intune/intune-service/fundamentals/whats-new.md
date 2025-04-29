@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/24/2025
+ms.date: 04/28/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -200,6 +200,9 @@ All custom policies should be replaced with other policy types. Learn more about
 ### Device security
 
 #### New settings added to the Windows security baseline version 24H2<!-- 32413310 -->
+
+> [!NOTE]
+> Rollout of the new settings for the security baseline is underway, but taking longer than usual. Due to this delay, the new settings might not be available until the week of May 5, 2025.
 
 The most recent Intune security baseline for Windows, version 24H2, is updated to include 16 new settings for managing the Windows Configuration Service Provider (CSP) for [*Lanman Server*](/windows/client-management/mdm/policy-csp-lanmanserver) and [*Lanman Workstation*](/windows/client-management/mdm/policy-csp-lanmanworkstation), and one new setting for [Defender](/windows/client-management/mdm/Defender-csp). These settings were previously unavailable in the baseline due to missing CSP support. The addition of these settings provides better control and configuration options.
  
@@ -406,8 +409,8 @@ You can now use Copilot to generate a KQL query to help you get data from across
 The following protected apps are now available for Microsoft Intune:
 
 - FacilyLife by Apleona GmbH (iOS)
-- Intapp 2.0 by Intapp, Inc. (Andriod)
-- DealCloud by Intapp, Inc. (Andriod)
+- Intapp 2.0 by Intapp, Inc. (Android)
+- DealCloud by Intapp, Inc. (Android)
 - Lemur Pro for Intune by Critigen LLC (iOS)
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
