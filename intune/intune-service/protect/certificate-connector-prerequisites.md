@@ -42,7 +42,7 @@ Requirements for the computer where you install the connector software:
 - Windows Server 2012 R2 or later.
 
   > [!NOTE]
-  > The Server installation must include the Desktop Experience and support use of a browser. For more information, see [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) in the Windows Server 2016 documentation.
+  > The Windows Server must be configured with the Desktop Experience, and for versions 2019 or earlier, the Microsoft Edge browser must be installed manually prior to initiating the connector setup. For more information, see [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) in the Windows Server 2016 documentation.
 
 - .NET 4.7.2
 

@@ -45,15 +45,13 @@ Learn about support changes before they're implemented in [removed and deprecate
 For more information, see [Removed and deprecated features for Configuration Manager.](deprecated/removed-and-deprecated-cmfeatures.md). -->
 
 ## Next steps
-At this time, version 2503 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2503.md#early-update-ring).
+<!-- At this time, version 2503 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2503.md#early-update-ring). -->
 
-<!-- As of April 21, 2025 version 2503 is globally available for all customers to install. -->
-<!-- >
->[!NOTE]
->For exisiting Fast ring current branch 2503 customers, you will see Slow ring upgrade package in console. Install 2503 Slow ring package to be in production current branch.
+As of April 23, 2025, version 2503 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2503](../../servers/manage/checklist-for-installing-update-2503.md).
--->
+
+
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.
 >

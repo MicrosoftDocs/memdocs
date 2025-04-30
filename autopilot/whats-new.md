@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: madakeva
-ms.date: 02/27/2025
+ms.date: 04/21/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -32,11 +32,24 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
+## Updated build for the low privileged account for Intune Connector for Active Directory
+
+Date added: *April 18, 2025*
+
+We've updated the low-privileged Intune Connector for Active Directory build. New in build **6.2504.2001.8**:
+
+- Updated the sign in page to use WebView2, built on Microsoft Edge, instead of WebBrowser.
+- **Error `MSA account <accountName> is not valid`** when signing in has been fixed.
+- **Error `Cannot start service ODJConnectorSvc on computer '.'`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--cannot-start-service-odjconnectorsvc-on-computer------occurring-when-setting-up-the-intune-connector-for-active-directory-).
+- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--the-msa-account-couldn-t-be-granted-permission-to-create-computer-objects-in-the-following-ous--occurring-when-installing-the-intune-connector-for-active-directory-).
+
+Download and install the latest version to get these changes.
+
 ## Low privileged account for Intune Connector for Active Directory for Hybrid join Windows Autopilot flows
 <!--9544276-->
 Date added: *February 27, 2025*
 
-We've updated the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will continue to work until deprecation in late May 2025.
+We've updated the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will continue to work until deprecation in late June 2025.
 
 For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](windows-autopilot-hybrid.md).
 
