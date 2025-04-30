@@ -5,8 +5,8 @@ title: Use role-based access control (RBAC) and scope tags for distributed IT
 titleSuffix: Microsoft Intune
 description: Use role-based access control (RBAC) and scope tags to filter configuration profiles to specific roles.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 02/28/2025
 ms.topic: how-to
