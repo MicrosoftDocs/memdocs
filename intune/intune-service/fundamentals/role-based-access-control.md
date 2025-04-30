@@ -48,7 +48,7 @@ You can use both the built-in and custom roles. Built-in roles cover some common
 
 To see a role in the **Intune admin center**, go to **Tenant administration** > **Roles** > **All roles** > choose a role. You can manage the role on the following pages:
 
-- **Properties**: The name, description, permissions, and scope tags for the role.
+- **Properties**: The name, description, permissions, and scope tags for the role. You can also view the name, description and permissions of built-in roles in this documentation at [Built-in roles permissions reference](../fundamentals/role-based-access-control-reference.md).
 - **Assignments**: A list of [role assignments](assign-role.md) defining which users have access to which users/devices. A role can have multiple assignments, and a user can be in multiple assignments.
 
 > [!NOTE]
