@@ -348,6 +348,16 @@ Use the `Disconnect-MgGraph` command to sign out.
 Disconnect-MgGraph
 ```
 
+### Building a Conditional Access policy
+Once the Remote Help service principal is created, learn more on how to set up a [conditional access policy.](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-policies)
+To apply conditional access policies to Remote Help, follow these steps:
+1. Navigate to the conditional access policy that you are creating
+2. Click on **Target resources**
+     1. Select **Resources (formerly cloud apps)** for what this policy applies to
+     2. Click on **Exclude**
+     3. Select **Select resources**
+     4. Under **Select**, check the **RemoteAssistanceService** with the app ID of 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
+
 ## Languages Supported
 
 Remote Help is supported in the following languages:
