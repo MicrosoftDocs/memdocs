@@ -151,8 +151,8 @@ To apply app protection policy to Microsoft Edge (v136 or later), OneDrive (v16.
 
 To add the configuration setting to your app configuration policy, on the **Settings** page, under the **General configuration settings** section, add the following configuration name and value:
 
-    - **Name**: `com.microsoft.intune.mam.visionOSAllowiPadCompatApps`
-    - **Value**: `Enabled`
+- **Name**: `com.microsoft.intune.mam.visionOSAllowiPadCompatApps`
+- **Value**: `Enabled`
 
 To apply app protection policy to Microsoft Teams, apply managed app filter app.deviceModel -startsWith "RealityDevice" when creating the app protection policy. For more information about filters for managed app properties, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties).
 
