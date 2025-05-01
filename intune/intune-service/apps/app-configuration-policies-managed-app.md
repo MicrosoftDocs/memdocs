@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/17/2025
+ms.date: 04/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -140,6 +140,23 @@ Intune supports the following token types in the configuration settings. Other c
 
 > [!Note]  
 > The \{\{ and \}\} characters are used by token types only and must not be used for other purposes.
+
+## Protect data on VisionOS devices
+
+You can use an app configuration policy to allow specific apps to be protected on Apple Vision Pro devices. Apple Vision Pro devices support the VisionOS operating system.
+
+Once the app has been configured, you can assign an app protection policy to your VisionOS devices. Implementing an app protection policy ensures organizational data is safeguarded on VisionOS devices, while maintaining compliance and security. 
+
+To apply app protection policy to Microsoft Edge (v136 or later), OneDrive (v16.8.4 or later) and Outlook (v4.2513.0 or later) for VisionOS devices, you must first configure the app using an app configuration policy. 
+
+To add the configuration setting to your app configuration policy, on the **Settings** page, under the **General configuration settings** section, add the following configuration name and value:
+
+- **Name**: `com.microsoft.intune.mam.visionOSAllowiPadCompatApps`
+- **Value**: `Enabled`
+
+To apply app protection policy to Microsoft Teams, apply managed app filter app.deviceModel -startsWith "RealityDevice" when creating the app protection policy. For more information about filters for managed app properties, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties).
+
+For related information about create app protection policies, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
 
 ## Next steps
 

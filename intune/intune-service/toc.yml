@@ -274,20 +274,20 @@ items:
       - name: Configure multiple admin approvals
         href: ./fundamentals/multi-admin-approval.md
 
-      - name: Manage roles
-        items:
-        - name: Role-based access control
-          href: ./fundamentals/role-based-access-control.md
-        - name: Assign a role to a user
-          href: ./fundamentals/assign-role.md
-        - name: Create a custom role
-          href: ./fundamentals/create-custom-role.md
-        - name: Use scope tags to determine what admins can see
-          href: ./fundamentals/scope-tags.md
-        - name: Distributed IT environment with many admins in the same Intune tenant
-          href: ./fundamentals/intune-scale-guidelines.md
-        - name: Built-in roles permissions reference
-          href: ./fundamentals/role-based-access-control-reference.md
+    - name: Manage roles
+      items:
+      - name: Role-based access control
+        href: ./fundamentals/role-based-access-control.md
+      - name: Assign a role to a user
+        href: ./fundamentals/assign-role.md
+      - name: Create a custom role
+        href: ./fundamentals/create-custom-role.md
+      - name: Use scope tags to determine what admins can see
+        href: ./fundamentals/scope-tags.md
+      - name: Distributed IT environment with many admins in the same Intune tenant
+        href: ./fundamentals/intune-scale-guidelines.md
+      - name: Built-in roles permissions reference
+        href: ./fundamentals/role-based-access-control-reference.md
 
     - name: Manage apps
       items:
