@@ -56,7 +56,7 @@ To export the Windows Autopilot profiles as JSON files, follow these steps:
 1. Copy the following commands by selecting **Copy** at the top right corner of the below **PowerShell** code block:
 
     ```powershell
-    Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
+    Connect-MgGraph -Scopes "Device.Read.All", "DeviceManagementManagedDevices.Read.All", "DeviceManagementServiceConfig.Read.All", "Domain.Read.All", "Group.Read.All", "GroupMember.Read.All", "User.Read"
     $AutopilotProfile = Get-AutopilotProfile
     $targetDirectory = "C:\Autopilot"
     $AutopilotProfile | ForEach-Object {
