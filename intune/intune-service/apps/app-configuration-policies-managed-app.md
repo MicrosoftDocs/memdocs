@@ -145,23 +145,13 @@ Intune supports the following token types in the configuration settings. Other c
 
 You can use an app configuration policy to allow specific apps to be protected on Apple Vision Pro devices. Apple Vision Pro devices support the VisionOS operating system.
 
-Once the app has been configured, you can assign an app protection policy to your VisionOS devices. Implementing an app protection policy ensures organizational data is safeguarded on VisionOS devices, while maintaining compliance and security. To add a supported app protection policy for VisionOS devices, you must first configure the app using an app configuration policy.
+Once the app has been configured, you can assign an app protection policy to your VisionOS devices. Implementing an app protection policy ensures organizational data is safeguarded on VisionOS devices, while maintaining compliance and security. 
 
-> [!NOTE]
-> App protection policies for VisionOS devices support Microsoft Edge (v136 or later), OneDrive (v16.8.4 or later), Outlook (v4.2513.0 or later), and Microsoft Teams.
-
-To configure a managed app for VisionOS devices:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose the **Apps** > **Configuration** > **Create** > **Managed apps**.
-3. On the **Basics** page, set the following details:
-    - **Name**: The name of the profile that will appear in the portal.
-    - **Select public apps**: Find and select the app for VisionOS devices.
-4. On the **Settings** page, add the following configuration name and value:
+To apply add a supported app protection policy to Microsoft Edge (v136 or later), OneDrive (v16.8.4 or later) and Outlook (v4.2513.0 or later) for VisionOS devices, you must first configure the app using an app configuration policy. On the **Settings** > **General** configuration settings page, add the following configuration name and value:
     - **Name**: `com.microsoft.intune.mam.visionOSAllowiPadCompatApps`
     - **Value**: `Enabled`
-5. On the **Assignments** page, select the groups to include and exclude.
-6. On the **Review + create** page, review the details and select **Create**.
+
+To apply app protection policy to Microsoft Teams, apply managed app filter app.deviceModel -startsWith "RealityDevice" when creating the app protection policy. For more information about filters for managed app properties, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties).
 
 For related information about create app protection policies, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
 
