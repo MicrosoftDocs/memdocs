@@ -4,8 +4,8 @@
 title: Role-based access control (RBAC) with Microsoft Intune
 description: Learn how RBAC lets you control who can perform actions and make changes in Microsoft Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 03/04/2025
 ms.topic: article
@@ -110,7 +110,7 @@ Intune supports two methods of role elevation. There are performance and least p
 
 - **Method 2**: Utilize [Privileged Identity Management (PIM) for Groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups) with an Intune RBAC role assignment. For more information about using PIM for Groups with Intune RBAC roles, see: [Configuring Microsoft Intune just-in-time admin access with Microsoft Entra PIM for Groups | Microsoft Community Hub](https://techcommunity.microsoft.com/blog/intunecustomersuccess/configuring-microsoft-intune-just-in-time-admin-access-with-azure-ad-pim-for-gro/3843972)
 
-When using PIM elevation for Microsoft Entra ID built-in Intune Administrator role, elevation typically happens within 10 seconds. PIM Groups based elevation for Intune Custom Roles can take up to 15 minutes to be applied.
+When using PIM elevation for Microsoft Entra ID built-in Intune Administrator role, elevation typically happens within 10 seconds. PIM Groups based elevation for Intune Custom Roles typically take up to 15 minutes (even up to 8 hours) to be applied. 
 
 ## Role assignments
 
