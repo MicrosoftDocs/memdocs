@@ -86,7 +86,7 @@ We have extended app protection policies (APP) to support Microsoft Edge (v136 o
 ### Tenant administration
 
 #### New icon for Microsoft Intune<!-- 29148691 -->
-Microsoft Intune has a new icon. The Intune icon will be updated across all platforms and apps associated with Intune, such as the Intune admin center and Intune Company Portal app. The new icon will gradually be implemented over the next few months.
+Microsoft Intune has a new icon. The Intune icon will be updated across platforms and apps associated with Intune, such as the Intune admin center and Intune Company Portal app. The new icon will gradually be implemented over the next few months.
 
 ## Week of April 21, 2025 (Service release 2504)
 
