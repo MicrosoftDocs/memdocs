@@ -1,11 +1,11 @@
 ---
 
 title: Microsoft Security Copilot agents in Microsoft Intune
-description: Learn about Security Copilot agents in Microsoft Intune Microsoft Intune
+description: Learn about Security Copilot agents in Microsoft Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/27/2025
+ms.date: 05/05/2025
 ms.topic: overview
 ms.service: security-copilot
 ms.localizationpriority: high
@@ -41,7 +41,7 @@ The Vulnerability Remediation Agent runs manually, on demand.
 
 #### Permissions
 
-*Placeholder: The level of authorization an AI agent is given by an admin during configuration that enables it to access specific information or carry out its tasks.  Also add this detail to the Agent Page article.*v
+The Vulnerability Remediation Agent runs using the identity of the user who installed the agent in Intune. To change this identity, the agent must be uninstalled, and then reinstalled.
 
 #### Identity
 
@@ -64,5 +64,5 @@ The agent requires the following products:
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
 #### Role-based access 
-*Placeholder: Who can see the agent's results and manage them.*
+*Placeholder: Who can see the agent's results and manage them*
 
