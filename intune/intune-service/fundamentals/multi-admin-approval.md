@@ -40,7 +40,7 @@ When any account in the Tenant is used to make a change to a resource that’s p
 Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
-- Scripts – Applies to deploying scripts to devices that run [Windows](../apps/intune-management-extension.md).
+- Scripts – Applies to deploying scripts to devices that run [Windows](../apps/powershell-scripts.md).
 - Access Policies - Applies to creating or managing multiple administrative approval policies.
 
 ## Prerequisites for access policies and approvers
@@ -66,7 +66,7 @@ All approver groups must also be a member group of one or more Intune role assig
 - On the Access policy request pane, the approver can enter notes in the **Approver notes** field, and then select an option to **Approve request** or **Reject request**. These notes are added to the request and are visible to the individual who requested the change when they review their requests on the **My request** page. For example, if the request is rejected, the reason for the rejection can be passed back to the requestor through the Approver notes.
 - Individuals who submit a request and are also members of the approval group for that can see their own requests on the Received request page. However, they can't approve their own requests.
 
-**If a change is approved**, Intune processes the requested change and updates the object. While Intune processes the request, its status can display as **Approved**. After it’s successfully processed, the status updates to **Completed**.
+**If a change is approved**, Intune processes the requested change and updates the object. While Intune processes the request, its status can display as **Approved**. The original requestor needs to view the request, and choose **Complete** to initiate the change. After it’s successfully processed, the status updates to **Completed**.
 
 **Each change of status** remains visible for up to 30 days after the last change of status. If a request isn’t processed further within 30 days, it becomes **Expired**, and must be resubmitted.
 
