@@ -5,7 +5,7 @@ description: Learn about Security Copilot agents in Microsoft Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/05/2025
+ms.date: 05/07/2025
 ms.topic: overview
 ms.service: security-copilot
 ms.localizationpriority: high
@@ -56,13 +56,14 @@ The agent requires the following products:
 - [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) - *Security Copilot must share a Tenant with Intune.*
 - [Microsoft Defender Vulnerability Management](../protect/advanced-threat-protection.md) *Available as part of Defender for Endpoint Plan 2, or as an add-on to Defender for Endpoint Plan 1.*
 
-
 #### Plugins
 
 - Microsoft Intune
 - [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
-#### Role-based access 
-*Placeholder: Who can see the agent's results and manage them*
+#### Role-based access
+
+*Placeholder: Who can see the agent's results and manage them. 
+Pending final RBAC detail review.*
 
