@@ -37,7 +37,7 @@ In Configuration Manager, to create the form XML for a Configuration Manager pro
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>  
-    <SmsFormData xmlns="http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework" FormatVersion="1">  
+    <SmsFormData xmlns="https://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework" FormatVersion="1">  
       <Form Id="PROPERTYSHEETGUID" CustomData="SomeData" FormType="PropertySheet" ForceRefresh="true">  
         <Assembly Name="ConfigMgrControl.dll" Namespace="Microsoft.ConfigurationManagement.AdminConsole.ConfigMgrPropertySheet" />  
         <Pages>  
