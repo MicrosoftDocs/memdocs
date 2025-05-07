@@ -5,7 +5,7 @@ description: Learn about Security Copilot agents in Microsoft Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/07/2025
+ms.date: 05/09/2025
 ms.topic: overview
 ms.service: security-copilot
 ms.localizationpriority: high
@@ -64,6 +64,29 @@ The agent requires the following products:
 
 #### Role-based access
 
-*Placeholder: Who can see the agent's results and manage them. 
-Pending final RBAC detail review.*
+To set up or remove the agent from the Intune admin center your account must be assigned an Intune license and have permissions equal to the following:
+
+- **Microsoft Intune**: Users must be assigned a built-in rule or custom role that includes the following permissions:  
+  - Managed apps/read
+  - Mobile apps/read
+  - Device configurations/read 
+  
+   The least privileged Intune built-in role that provides these permissions is [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator), or equivalent permissions.
+
+- **Microsoft Defender**: The user must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control).
+
+- **Security Copilot**: The user must be a [Copilot owner](/copilot/security/authentication).
+
+To work with the agent in the Intune admin center after the agent is installed, your account must be assigned an Intune license and have permissions equal to the following, including running the agent, viewing results, and managing agent suggestions:
+
+- **Microsoft Intune**: Users must be assigned a built-in rule or custom role that includes the following permissions:  
+  - Managed apps/read
+  - Mobile apps/read
+  - Device configurations/read 
+    
+  The least privileged Intune built-in role that provides these permissions is [Read Only Operator](.../fundamentals/role-based-access-control-reference.md#read-only-operator), or equivalent permissions.
+
+- **Microsoft Defender**: The user must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control).
+
+- **Security Copilot**: The user must be a [Copilot contributor](/copilot/security/authentication).
 
