@@ -210,7 +210,7 @@ All custom policies should be replaced with other policy types. Learn more about
 > [!NOTE]
 > Rollout of the new settings for the security baseline is underway, but taking longer than usual. Due to this delay, the new settings might not be available until the week of May 5, 2025.
 
-The most recent Intune security baseline for Windows, version 24H2, is updated to include 16 new settings for managing the Windows Configuration Service Provider (CSP) for [*Lanman Server*](/windows/client-management/mdm/policy-csp-lanmanserver) and [*Lanman Workstation*](/windows/client-management/mdm/policy-csp-lanmanworkstation), and one new setting for [Defender](/windows/client-management/mdm/Defender-csp). These settings were previously unavailable in the baseline due to missing CSP support. The addition of these settings provides better control and configuration options.
+The most recent Intune security baseline for Windows, version 24H2, is updated to include 15 new settings for managing the Windows Configuration Service Provider (CSP) for [*Lanman Server*](/windows/client-management/mdm/policy-csp-lanmanserver) and [*Lanman Workstation*](/windows/client-management/mdm/policy-csp-lanmanworkstation). These settings were previously unavailable in the baseline due to missing CSP support. The addition of these settings provides better control and configuration options.
  
 Because this is an update to an existing baseline version and not a new baseline version, the new settings aren’t visible in the baselines properties until you edit and save the baseline:
  
@@ -240,12 +240,7 @@ Following are the new settings that are added to the version 24H2 baseline, and 
 - [Require Encryption](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#requireencryption) – Baseline default: *Disabled*
 - [Enable Mailslots](/windows/client-management/mdm/policy-csp-LanmanWorkstation#enablemailslots) - Baseline default: *Disabled*
 
-[**Defender**](../protect/security-baseline-settings-mdm-all.md?pivots=mdm-24h2#defender)  
-- [Enable Dynamic Signature Dropped Event Reporting](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#enabledynamicsignaturedroppedeventreporting) – Baseline default: *Enabled*
-
-
 For more information, see [Intune security baselines](../protect/security-baselines.md).
-
 
 ### Intune apps
 
