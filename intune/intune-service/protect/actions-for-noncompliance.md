@@ -64,20 +64,19 @@ Following are the available actions for noncompliance:
 - **Send email to end user**: This action sends an email notification to the user.
 When you enable this action:
 
-  - Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the message locale, subject, message body, and can include the company logo, company name, and other contact information.
-  - Choose to send the message to more recipients by selecting one or more of your Microsoft Entra groups.
+- Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the message locale, subject, message body, and can include the company logo, company name, and other contact information.
+- Choose to send the message to more recipients by selecting one or more of your Microsoft Entra groups.
 
   Intune uses the email address defined in the end user's profile and not their user principal name (UPN). If there's no defined email address defined in the user's profile, then Intune doesn't send a notification email. When the email is sent, Intune includes details about the noncompliant device in the email notification.
 
   This action is supported on all platforms supported by Intune.
 
-   > [!NOTE] 
-   > Notification emails are sent from: microsoft-noreply@microsoft.com
-   > 
-   > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not receive the email notification.
-   > 
-   > _Prior to December 2022, notification emails in the commercial cloud were sent from: IntuneNotificationService@microsoft.com_
-
+  > [!NOTE]
+  > Notification emails are sent from: microsoft-noreply@microsoft.com
+>   > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not receive the email notification.
+> > _Prior to December 2022, notification emails in the commercial cloud were sent from: IntuneNotificationService@microsoft.com_
+  > Compliance notification emails are expected to be sent **within 6 hours** after a device is marked as non-compliant.
+  
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 
   The following platforms support this action:
@@ -187,18 +186,18 @@ Add variables to the message to create a personalized email with dynamic content
 2. Select **Endpoint security** > **Device compliance** > **Notifications** > **Create notification**.  
 3. On the **Basics** page, give the template a friendly name to help you identify it. Then select **Next**.  
   
-4. On the **Header and footer settings** page, add your company details and logo. 
+1. On the **Header and footer settings** page, add your company details and logo. 
 
-   > [!div class="mx-imgBorder"]
+      > [!div class="mx-imgBorder"]
    > ![Screenshot that shows example of the Header and footer settings page for a notification message in Intune.](./media/actions-for-noncompliance/actions-for-noncompliance-3.png)  
-
-   Your options:  
+   
+      Your options:  
    - **Email header – Show company logo** (default = *Enable*) - Upload a logo to add your organization's branding to the email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#customizing-the-user-experience).
-   - **Email footer – Show company name** (default = *Enable*) - Enable this setting to show your company name in the email. See **Tenant Value** to review the company name on record.      
-   - **Email footer – Show contact information** (default = *Enable*) -  Enable this setting to show your organization's contact information, such as name, phone number, and email address, in the email. See **Tenant Value** to review the contact information on record.   
-   - **Email footer - Show company portal website link** (default = *Disable*) - Enable this setting to include a link to the Company Portal website in the email. See **Tenant Value** to review the website link shown to users. 
+- **Email footer – Show company name** (default = *Enable*) - Enable this setting to show your company name in the email. See **Tenant Value** to review the company name on record.      
+- **Email footer – Show contact information** (default = *Enable*) -  Enable this setting to show your organization's contact information, such as name, phone number, and email address, in the email. See **Tenant Value** to review the contact information on record.   
+- **Email footer - Show company portal website link** (default = *Disable*) - Enable this setting to include a link to the Company Portal website in the email. See **Tenant Value** to review the website link shown to users. 
 
-   Select **Next** to continue.  
+      Select **Next** to continue.  
 
 5. On the **Notification message templates** page, configure one or more messages. For each message, specify the following details:  
 
