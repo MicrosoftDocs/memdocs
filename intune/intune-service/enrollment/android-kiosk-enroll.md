@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/15/2025
+ms.date: 05/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -95,7 +95,7 @@ You must create an enrollment profile so that you can enroll your dedicated devi
 
          - {{DEVICETYPE}} for the device type. Example: *AndroidForWork*  
 
-         - {{ENROLLEDDATETIME}} for the date and time of enrollment.  
+         - {{ENROLLMENTDATETIME}} for the date and time of enrollment.  
 
          - {{UPNPREFIX}} for the user's first name. Example: *Eric*, when device is user affiliated.  
 
