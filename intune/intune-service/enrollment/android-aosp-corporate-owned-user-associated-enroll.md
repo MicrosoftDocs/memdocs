@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2024
+ms.date: 05/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -80,7 +80,7 @@ Create an enrollment profile to enable enrollment on devices.
 
         - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
     - **For Microsoft Teams devices (preview)**: Select **Enabled** if this profile is applicable for Microsoft Teams Android devices. This setting should only be used for [Microsoft Teams Android devices](/microsoftteams/devices/teams-ip-phones).
-    - **Naming Template**:The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidForWork_01/01/2025_12:00 PM*  
+    - **Naming Template**:The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *EricSolomon_AndroidAOSP_05/02/2025_5:09 PM*  
    
        To create a custom naming template:  
        1. Under **Apply device name template**, choose **Yes**.
@@ -89,8 +89,8 @@ Create an enrollment profile to enable enrollment on devices.
        You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
        - {{SERIAL}} for the device's serial number.
        - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.
-       - {{DEVICETYPE}} for the device type, Example: *AndroidForWork*
-       - {{ENROLLEDDATETIME}} for the date and time of enrollment.
+       - {{DEVICETYPE}} for the device type, Example: *AndroidAOSP*
+       - {{ENROLLMENTDATETIME}} for the date and time of enrollment.
        - {{UPNPREFIX}} for the user's first name. Example: *Eric*, when device is user affiliated.  
        - {{USERNAME}} for the user's username when the device is user affiliated. Example: *Eric Solomon*  
        - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
