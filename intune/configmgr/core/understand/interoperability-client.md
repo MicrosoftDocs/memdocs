@@ -26,10 +26,10 @@ Typically, when you install a new [in-console update](../servers/manage/install-
 
 ## Supported versions
 
-See [Support for Configuration Manager current branch versions](../servers/manage/updates.md#supported-versions) for details on the current supported versions for ConfigMgr.
+See [Support for Configuration Manager current branch versions](../servers/manage/updates.md#supported-versions) for details on the current supported versions.
 
 > [!TIP]
-> The EIC is supported for the client versions which are still in the supported list of ConfigMgr versions. For eg. When ConfigMgr 2503 is the latest CB version, EIC supported client version can be on 2403.
+> The EIC is supported for the client versions which are still in the supported list of Configuration Manager versions. For example, when Configuration Manager 2503 is the latest CB version, EIC supported client version can be on 2403.
 
 Plan to update the extended interoperability client on devices that you manage with the current branch before support for the client expires. To do so, download a new version of the client from Microsoft, and then deploy that updated client software to your devices that use the current extended interoperability client.
 
