@@ -61,11 +61,10 @@ Following are the available actions for noncompliance:
 
   This action is supported on all platforms supported by Intune.
 
-- **Send email to end user**: This action sends an email notification to the user.
-When you enable this action:
+- **Send email to end user**: This action sends an email notification to the user. When you enable this action, your options are:
 
-- Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the message locale, subject, message body, and can include the company logo, company name, and other contact information.
-- Choose to send the message to more recipients by selecting one or more of your Microsoft Entra groups.
+  - Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the message locale, subject, message body, and can include the company logo, company name, and other contact information.
+  - Choose to send the message to more recipients by selecting one or more of your Microsoft Entra groups.
 
   Intune uses the email address defined in the end user's profile and not their user principal name (UPN). If there's no defined email address defined in the user's profile, then Intune doesn't send a notification email. When the email is sent, Intune includes details about the noncompliant device in the email notification.
 
@@ -182,23 +181,23 @@ Add variables to the message to create a personalized email with dynamic content
 ### To create the template
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-2. Select **Endpoint security** > **Device compliance** > **Notifications** > **Create notification**.  
-3. On the **Basics** page, give the template a friendly name to help you identify it. Then select **Next**.  
+1. Select **Endpoint security** > **Device compliance** > **Notifications** > **Create notification**.  
+1. On the **Basics** page, give the template a friendly name to help you identify it. Then select **Next**.  
   
 1. On the **Header and footer settings** page, add your company details and logo. 
 
       > [!div class="mx-imgBorder"]
    > ![Screenshot that shows example of the Header and footer settings page for a notification message in Intune.](./media/actions-for-noncompliance/actions-for-noncompliance-3.png)  
    
-      Your options:  
+   Your options:  
    - **Email header – Show company logo** (default = *Enable*) - Upload a logo to add your organization's branding to the email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#customizing-the-user-experience).
-- **Email footer – Show company name** (default = *Enable*) - Enable this setting to show your company name in the email. See **Tenant Value** to review the company name on record.      
-- **Email footer – Show contact information** (default = *Enable*) -  Enable this setting to show your organization's contact information, such as name, phone number, and email address, in the email. See **Tenant Value** to review the contact information on record.   
-- **Email footer - Show company portal website link** (default = *Disable*) - Enable this setting to include a link to the Company Portal website in the email. See **Tenant Value** to review the website link shown to users. 
+   - **Email footer – Show company name** (default = *Enable*) - Enable this setting to show your company name in the email. See **Tenant Value** to review the company name on record.      
+   - **Email footer – Show contact information** (default = *Enable*) -  Enable this setting to show your organization's contact information, such as name, phone number, and email address, in the email. See **Tenant Value** to review the contact information on record.   
+   - **Email footer - Show company portal website link** (default = *Disable*) - Enable this setting to include a link to the Company Portal website in the email. See **Tenant Value** to review the website link shown to users. 
 
-      Select **Next** to continue.  
+   Select **Next** to continue.  
 
-5. On the **Notification message templates** page, configure one or more messages. For each message, specify the following details:  
+1. On the **Notification message templates** page, configure one or more messages. For each message, specify the following details:  
 
    - **Locale**: Select the language that correlates to the device user's locale.  
    - **Subject**: Add the subject line for the email. You can enter up to 78 characters.   
@@ -216,14 +215,14 @@ Add variables to the message to create a personalized email with dynamic content
    > Intune converts Windows-style new line characters to `<br>` HTML tags but ignores all other types of new line characters, including those for macOS and Linux. To ensure line breaks render properly in templates, we recommend using the `<br>` tag to indicate the end of a line.
 
 
-5. Select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn’t include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.  
+1. Select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn’t include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.  
 
    Select **Next** to continue.
 
-6. On the **Scope tags** page, select tags to limit visibility and management of this message to specific Intune admin groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).  
+1. On the **Scope tags** page, select tags to limit visibility and management of this message to specific Intune admin groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).  
 
    Select **Next** to continue.  
-7. On the **Review + create** page, review your configurations to ensure the notification message template is ready to use. Select **Create** to complete creation of the notification.  
+1. On the **Review + create** page, review your configurations to ensure the notification message template is ready to use. Select **Create** to complete creation of the notification.  
 
 ### View and edit notifications
 
