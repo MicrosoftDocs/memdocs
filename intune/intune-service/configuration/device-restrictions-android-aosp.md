@@ -41,6 +41,7 @@ The settings outlined below can be found as **Templates** under **Devices** > **
 >
 >- If you can't find a setting in **Templates**, select **Settings catalog**. The settings catalog is a list of the settings you can configure for Android (AOSP) devices. It includes additional settings that you can configure that are not available under **Templates**.
 >- If you can't find a setting in **Settings catalog**, check **Templates**.
+>- Currently device configuration policies aren't supported for Teams (AOSP) devices.
 
 This feature applies to:
 
