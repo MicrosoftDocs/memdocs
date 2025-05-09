@@ -172,7 +172,7 @@ sections:
           I have purchased EMS or Microsoft 365 through a Cloud Solution Provider (CSP), do I have rights to use Configuration Manager?
         answer: |
 
-          Yes, you have rights to use Configuration Manager to manage clients covered by the EMS license. First download and install the [evaluation software](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager). Then contact your CSP partner to obtain the license key from the Microsoft Partner Center support team, specifically CSP.<!--SCCMDocs#472,OSGS 33035978--> When your CSP partner talks with Microsoft Support, they should ask them to reference the internal article ID 4033838.<!--SCCMDocs#493-->
+          Yes, you have rights to use Configuration Manager to manage clients covered by the EMS license. First download and install the [evaluation software](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager). Then contact your CSP partner to obtain the license key from the Microsoft Partner Center support team, specifically CSP.<!--SCCMDocs#472,OSGS 33035978--> When your CSP partner talks with Microsoft Support, they should ask them to reference the internal article ID 5037094.<!--SCCMDocs#493-->
 
 
 

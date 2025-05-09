@@ -54,7 +54,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by enrollment mode:
 
-- For Android Enterprise personally-owned work profile devices: [Android personally-owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
+- For Android Enterprise personally owned work profile devices: [Android personally owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
 - For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices: [Android fully managed-security settings](../enrollment/android-fully-managed-security-settings.md) -->  
 
 [Create a device compliance policy](create-compliance-policy.md#create-the-policy) to access available settings. For **Platform**, select **Android Enterprise**.  
@@ -203,7 +203,7 @@ This section describes the compliance profile settings available for fully manag
 
 - **Intune app runtime integrity**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Require** - Encrypt data storage on your devices.  
+  - **Require** - Check that the Intune app has the default runtime environment installed, and is properly signed.   
 
 ## Personally owned work profile  
 This section describes the compliance profile settings available for personal devices enrolling with work profiles. Setting categories include: 
@@ -271,7 +271,7 @@ This section describes the compliance profile settings available for personal de
   - [Integrity verdicts](https://developer.android.com/google/play/integrity/setup#configure-api)   
   
 > [!TIP]
-> Intune also has a policy that requires Play Protect to scan installed apps for threats. You can configure this setting in an Android Enterprise device configuration policy under **Device restrictons** > **System security**. For more information, see [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).  
+> Intune also has a policy that requires Play Protect to scan installed apps for threats. You can configure this setting in an Android Enterprise device configuration policy under **Device restrictions** > **System security**. For more information, see [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).  
 
 
 ### Device properties - *for personally owned work profile*
@@ -373,7 +373,7 @@ When a device is using an OS version later than the version in the rule, access 
   - The device password that unlocks the device.  
   - The work profile password that allows users to access the work profile.  
 
-  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity level you configure under **Work Profile Security** > **Password complexity**.  
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they're prompted to update their work profile password to match the complexity level you configure under **Work Profile Security** > **Password complexity**.  
 
   > [!IMPORTANT]
   >
@@ -445,7 +445,7 @@ If you don't configure password requirements, the use of a work profile password
   - The device password that unlocks the device.  
   - The work profile password that allows users to access the work profile.    
 
-  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they are prompted to update their work profile password to match the complexity you configure here.  
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they're prompted to update their work profile password to match the complexity you configure here.  
 
    > [!IMPORTANT]
   >
