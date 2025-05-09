@@ -330,7 +330,13 @@ For apps that have updated to v19.7.6 or later for Xcode 15 and v20.2.1 or later
  
 ## Notifications
 
+### Policy Notifications
+
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It's recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
+
+### UI Lifecycle Notifications
+
+The Intune MAM SDK now provides two new notifications to help applications better coordinate with the SDK's UI presentation lifecycle: `IntuneMAMSDKDidTakeOverUINotification` and `IntuneMAMSDKDidReleaseUINotification`. These notifications are fired when the Intune MAM SDK takes control of the application's UI (such as during enrollment) and when it releases control back to the application, respectively. These notifications address scenarios where applications need to know precisely when MAM SDK UI flows begin and end, allowing developers to properly sequence their own UI initialization and authentication processes. By observing these notifications, applications can prevent conflicts between app initialization and MAM enrollment processes, ensuring a smoother user experience during MAM enrollment and authentication.
 
 ## Safari web extensions
 
