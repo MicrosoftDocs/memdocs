@@ -198,7 +198,7 @@ Now we can create the Windows Autopilot profile and assign it to our test device
 
 3. Select **Create profile** > **Windows PC**.
 
-4. Enter the name **Autopilot Cloud-Native Windows Endpoint**, and then select **Next**.
+1. Enter the name **Autopilot Cloud Native Windows Endpoint**, and then select **Next**.
 
 5. Review and leave the default settings and select **Next**.
 
