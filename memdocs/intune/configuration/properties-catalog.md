@@ -7,7 +7,7 @@ keywords:
 author: smbhardwaj
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/14/2024
+ms.date: 05/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
