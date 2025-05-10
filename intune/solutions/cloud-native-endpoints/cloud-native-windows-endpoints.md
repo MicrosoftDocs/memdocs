@@ -313,39 +313,26 @@ This phase is designed to help you build out security settings for your organiza
 
 The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Policy** > **Windows and later** > **Profile type** = **Microsoft Defender Antivirus**.
 
-**Cloud Protection**:
+**Defender**:
 
-- Turn on cloud-delivered protection: **Yes**
-- Cloud-delivered protection level: **Not configured**
-- Defender Cloud Extended Timeout In Seconds: **50**
-
-**Real-time protection**:
-
-- Turn on real-time protection: **Yes**
-- Enable on access protection: **Yes**
-- Monitoring for incoming and outgoing files: **Monitor all files**
-- Turn on behavior monitoring: **Yes**
-- Turn on intrusion prevention: **Yes**
-- Enable network protection: **Enable**
-- Scan all downloaded file and attachments: **Yes**
-- Scan scripts that are used in Microsoft browsers: **Yes**
-- Scan network files: **Not Configured**
-- Scan emails: **Yes**
-
-**Remediation**:
-
-- Number of days (0-90) to keep quarantined malware: **30**
-- Submit samples consent: **Send safe samples automatically**
-- Action to take on potentially unwanted apps: **Enable**
-- Actions for detected threats: **Configure**
-  - Low threat: **Quarantine**
-  - Moderate threat: **Quarantine**
-  - High threat: **Quarantine**
-  - Severe threat: **Quarantine**
-
-Settings configured in the MDAV profile within Endpoint Security:
-
-:::image type="content" source="../media/cloud-native-windows-endpoints/defender-antivirus-policy.png" alt-text="Screenshot that shows an example of a Microsoft Defender Antivirus profile in Microsoft Intune.":::
+- Allow Behavior Monitoring: **Allowed. Turns on real-time behavior monitoring.**
+- Allow Cloud Protection: **Allowed. Turns on Cloud Protection.**
+- Allow Email Scanning : **Allowed. Turns on email scanning.**
+- Allow scanning of all downloaded files and attachments: **Allowed.**
+- Allow Realtime Monitoring: **Allowed. Turns on and runs the real-time monitoring service.**
+- Allow Scanning Network Files: **Allowed. Scans network files.**
+- Allow Script Scanning: **Allowed.**
+- Cloud Extended Timeout: **50**
+- Days To Retain Cleaned Malware: **30**
+- Enable Network Protection: **Enabled (audit mode)**
+- PUA Protection: **PUA Protection on. Detected items are blocked. They will show in history along with other threats.**
+- Real Time Scan Direction: **Monitor all files (bi-directional).**
+- Submit Samples Consent: **Send safe samples automatically.**
+- Allow On Access Protection: **Allowed.**
+- Remediation action for Severe threats: **Quarantine. Moves files to quarantine.**
+- Remediation action for Low severity threat: **Quarantine. Moves files to quarantine.**
+- Remediation action for Moderate severity threats: **Quarantine. Moves files to quarantine.**
+- Remediation action for High severity threats: **Quarantine. Moves files to quarantine.**
 
 For more information on Windows Defender configuration, including Microsoft Defender for Endpoint for customer's licensed for E3 and E5, go to:
 
@@ -442,7 +429,7 @@ By default, the built-in local administrator account ([well known SID](/windows-
 Windows Local Administrator Password Solution (LAPS) is one of the features you can use to randomize and securely store the password in Microsoft Entra. If you're using Intune as your MDM service, then use the following steps to enable [Windows LAPS](/windows-server/identity/laps/laps-overview).
 
 > [!IMPORTANT]
-> Windows LAPS assumes that the default local administrator account is enabled, even if it's renamed or if you create another local admin account. Windows LAPS doesn't create or enable any local accounts for you.
+> Windows LAPS assumes that the default local administrator account is enabled, even if it's renamed or if you create another local admin account. Windows LAPS doesn't create or enable any local accounts for you unless you configure [Automatic account management mode](/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode).
 >
 > You need to create or enable any local accounts separately from configuring Windows LAPS. You can script this task or use the Configuration Service Providers (CSP's), such as the [Accounts CSP](/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
 
