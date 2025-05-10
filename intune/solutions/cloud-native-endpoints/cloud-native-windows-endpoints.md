@@ -378,55 +378,62 @@ These settings can be enabled in the [Microsoft Intune admin center](https://go.
 
 When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../intune-service/protect/encrypt-devices.md) for more settings.
 
-**BitLocker – Base Settings**:
+**BitLocker**:
 
-- Enable full disk encryption for OS and fixed data drives: **Yes**
-- Require storage cards to be encrypted (mobile only): **Not configured**
-- Hide prompt about third-party encryption: **Yes**
-  - Allow standard users to enable encryption during Autopilot: **Yes**
-- Configure client-driven recovery password rotation: **Enable rotation on Microsoft Entra-joined devices**
+- Require Device Encryption: **Enabled**
+- Allow Warning For Other Disk Encryption: **Disabledd**
+  - Allow Standard User Encryption: **Enabled**
+- Configure Recovery Password Rotation: **Refresh on for Azure AD-joined devices**
 
-**BitLocker – Fixed Drive Settings**:
+**BitLocker Drive Encryption**:
 
-- BitLocker fixed drive policy: **Configure**
-- Fixed drive recovery: **Configure**
-  - Recovery key file creation: **Blocked**
-  - Configure BitLocker recovery package: **Password and key**
-  - Require device to back up recovery information to Azure AD: **Yes**
-  - Recovery password creation: **Allowed**
-  - Hide recovery options during BitLocker setup: **Not configured**
-  - Enable BitLocker after recovery information to store: **Not configured**
-  - Block the use of certificate-based data recovery agent (DRA): **Not configured**
-  - Block write access to fixed data-drives not protected by BitLocker: **Not configured**
-  - Configure encryption method for fixed data-drives: **Not configured**
+- Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later): **Not Configured**
+- Provide the unique identifiers for your organization: **Not Configured**
+ 
+**Operating System Drives**:
 
-**BitLocker – OS Drive Settings**:
+- Enforce drive encryption type on operating system drives: **Enabled**
+  - Select the encryption type: (Device) : **Used Space Only encryption**
+- Require additional authentication at startup: **Enabled**
+  - Allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive): **False**
+  - Configure TPM startup key and PIN: **Allow startup key and PIN with TPM**
+  - Configure TPM startup key: **Allow startup key with TPM**
+  - Configure TPM startup PIN: **Allow startup PIN with TPM**
+  - Configure TPM startup: **Require TPM**
+  - Configure minimum PIN length for startup: **Not configured**
+  - Allow enhanced PINs for startup: **Not configured**
+- Disallow standard users from changing the PIN or password: **Not configured**
+- Allow devices compliant with InstantGo or HSTI to opt out of pre-boot PIN: **Not configured**
+- Enable use of BitLocker authentication requiring preboot keyboard input on slates: **Not configured**
+- Choose how BitLocker-protected operating system drives can be recovered: **Enabled**
+  - Configure user storage of BitLocker recovery information: **Require 48-digit recovery password**
+  - Allow data recovery agent: **False**
+  - Configure storage of BitLocker recovery information to AD DS: **Store recovery passwords and key packages**
+  - Do not enable BitLocker until recovery information is stored to AD DS for operating system drives: **True**
+  - Omit recovery options from the BitLocker setup wizard: **True**
+  - Save BitLocker recovery information to AD DS for operating system drives: **True**
+- Configure pre-boot recovery message and URL: **Not configured**
+  
+**Fixed Data Drives**:
 
-- BitLocker system drive policy: **Configure**
-  - Startup authentication required: **Yes**
-  - Compatible TPM startup: **Required**
-  - Compatible TPM startup PIN: **Block**
-  - Compatible TPM startup key: **Block**
-  - Compatible TPM startup key and PIN: **Block**
-  - Disable BitLocker on devices where TPM is incompatible: **Not configured**
-  - Enable preboot recovery message and url: **Not configured**
-- System drive recovery: **Configure**
-  - Recovery key file creation: **Blocked**
-  - Configure BitLocker recovery package: **Password and key**
-  - Require device to back up recovery information to Azure AD: **Yes**
-  - Recovery password creation: **Allowed**
-  - Hide recovery options during BitLocker setup: **Not configured**
-  - Enable BitLocker after recovery information to store: **Not configured**
-  - Block the use of certificate-based data recovery agent (DRA): **Not configured**
-  - Minimum PIN length: *leave blank*
-  - Configure encryption method for Operating System drives: **Not configured**
+- Enforce drive encryption type on fixed data drives: **Enabled**
+  - Select the encryption type: (Device):  **Allow user to choose (default)**
+- Choose how BitLocker-protected fixed drives can be recovered: **Enabled**
+  - Configure user storage of BitLocker recovery information: **Require 48-digit recovery password**
+  - Allow data recovery agent: **False**
+  - Configure storage of BitLocker recovery information to AD DS: **Backup recovery passwords and key packages**
+  - Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives: **True**
+  - Omit recovery options from the BitLocker setup wizard: **True**
+  - Save BitLocker recovery information to AD DS for fixed data drives: **True**
+- Deny write access to fixed drives not protected by BitLocker: **Not configured**
 
-**BitLocker – Removable Drive Settings**:
+**Removable Data Drives**:
 
-- BitLocker removable drive policy: **Configure**
-  - Configure encryption method for removable data-drives: **Not configured**
-  - Block write access to removable data-drives not protected by BitLocker: **Not configured**
-  - Block write access to devices configured in another organization: **Not configured**
+- Control use of BitLocker on removable drives: **Enabled**
+  - Allow users to apply BitLocker protection on removable data drives (Device): **False**
+  - Allow users to suspend and decrypt BitLocker protection on removable data drives (Device): **False**
+- Deny write access to removable drives not protected by BitLocker: **Not configured**
+
 
 ### Windows Local Administrator Password Solution (LAPS)
 
