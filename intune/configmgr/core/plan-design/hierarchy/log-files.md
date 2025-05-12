@@ -287,6 +287,7 @@ The following table lists the log files that are on the Configuration Manager si
 |ResourceExplorer.log|Records errors, warnings, and information about running Resource Explorer.|Computer that runs the Configuration Manager console|
 |RESTPROVIDERSetup.log|Installation of the SMS Provider administration service REST API|Computer with the SMS Provider|
 |ruleengine.log|Records details about automatic deployment rules for the identification, content download, and software update group and deployment creation.|Site server|
+|SCCMReporting.log|Records details about RBAC checks when running the reports - as well as resource loads.|Site system server|
 |schedule.log|Records details about site-to-site job and file replication.|Site server|
 |sender.log|Records the files that transfer by file-based replication between sites.|Site server|
 |sinvproc.log|Records information about the processing of software inventory data to the site database.|Site server|
@@ -757,6 +758,7 @@ The following table lists the Configuration Manager log files that contain infor
 |srsrp.log|Records information about the activity and status of the reporting services point.|Site system server|
 |srsrpMSI.log|Records detailed results of the reporting services point installation process from the MSI output.|Site system server|
 |srsrpsetup.log|Records results of the reporting services point installation process.|Site system server|
+|SCCMReporting.log|Records details about RBAC checks when running the reports - as well as resource loads.|Site system server|
 
 ### <a name="BKMK_RBALog"></a> Role-based administration
 
