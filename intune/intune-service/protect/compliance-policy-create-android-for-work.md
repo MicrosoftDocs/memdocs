@@ -274,7 +274,8 @@ This section describes the compliance profile settings available for personal de
 > Intune also has a policy that requires Play Protect to scan installed apps for threats. You can configure this setting in an Android Enterprise device configuration policy under **Device restrictions** > **System security**. For more information, see [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).  
 
 
-### Device properties - *for personally owned work profile*
+### Device properties - *for personally owned work profile*  
+#### Operating system version - *for personally owned work profile*  
 Configure the requirements for operating system version.  
 
 - **Minimum OS version**  
@@ -290,12 +291,15 @@ When a device is using an OS version later than the version in the rule, access 
 
 ### System security - *for personally owned work profile*
 
+#### Encryption - *for personally owned work profile*
+
 Encryption requirements are available for the personally owned work profile.  You don't have to configure this setting because Android Enterprise devices enforce encryption.   
 
 - **Require encryption of data storage on device**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.  
   - **Require** -  Encrypt data storage on your devices.  
 
+#### Device security - *for personally owned work profile*  
 Configure device security requirements for the personally owned work profile.  
 
 - **Block apps from unknown sources**  
@@ -318,8 +322,8 @@ Configure device security requirements for the personally owned work profile.
     - Is installed from a known source
 
 - **Block USB debugging on device**  
-- **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-- **Block** - Prevent devices from using the USB debugging feature.  
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
+  - **Block** - Prevent devices from using the USB debugging feature.  
 
   You don't have to configure this setting for Android Enterprise fully managed devices, dedicated devices, and corporate-owned devices with work profiles, because USB debugging is already disabled.  
   
@@ -406,6 +410,7 @@ The following device security settings apply to devices running Android 11 and e
 - **Minimum password length**  
     This setting appears for certain password types. Enter the minimum number of characters required, between 4 and 16 characters.  
 
+#### Work profile security - *for personally owned work profile*  
 Configure password requirements for work profile security. If you don't, the use of a work profile password is optional and left up to users to configure.  
 
 - **Require a password to unlock work profile**  
