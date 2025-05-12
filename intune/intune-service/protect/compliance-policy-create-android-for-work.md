@@ -122,7 +122,7 @@ This section describes the compliance profile settings available for fully manag
 
 ### Device properties
 
-Configure the required operating system version properties. 
+Configure the requirements for operating system version.  
 
 - **Minimum OS version**  
   When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. Device users see a link with information about how to upgrade their OS. They can upgrade their device, and then access organization resources.  
