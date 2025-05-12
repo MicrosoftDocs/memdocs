@@ -64,7 +64,7 @@ For more information on the Intune feature, see [Deploy resource access profiles
 
 > [!NOTE]
 > The resource access workload is also part of device configuration. These policies are managed by Intune when you switch the [Device Configuration](#device-configuration) workload.
-> Starting in version 2403, The resource access policies node is removed from console. Slider is mandated to Intune and upgrade is blocked if old policieis are still available.
+> Starting in version 2403, The resource access policies node is removed from console. Slider is mandated to Intune and upgrade is blocked if old policies are still available.
 
 ## Endpoint Protection
 
