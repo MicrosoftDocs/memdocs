@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/05/2025
+ms.date: 05/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -63,15 +63,15 @@ Microsoft Intune provides one default policy for device limit restrictions that 
 
 To create device limit restrictions in Microsoft Intune, you must be assigned as Intune Service Administrator. This role is built-in to Microsoft Entra ID and can:
 
-Create device limit restrictions
+- Create device limit restrictions
 
-Edit device limit restrictions
+- Edit device limit restrictions
 
-Delete device limit restrictions
+- Delete device limit restrictions
 
-Reprioritize device limit restrictions
+- Reprioritize device limit restrictions
 
-All other built-in Intune roles, and people assigned the custom permissions, have read-only access to device limit restrictions. You can apply scope tags to a device limit restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).  
+Other built-in Intune roles have read-only access to device limit restrictions. If you once assigned your users custom permissions that permitted them to manage device limit restrictions, those permissions are now limited to read-only access. You can apply scope tags to a device limit restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).  
 
 ## Create a device limit restriction  
 
