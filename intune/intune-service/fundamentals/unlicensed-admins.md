@@ -48,9 +48,9 @@ You can give administrators access to Microsoft Intune without them requiring an
 
 4. From now on, users who sign in to the Microsoft Intune admin center don't require an Intune license. Roles assigned to users define their scope of access.
 
-Intune supports up to 350 unlicensed admins per security group, and only applies to direct members. Admins above this limit experience unpredictable behavior.
+   Intune supports up to 350 unlicensed admins per security group, and only applies to direct members. Admins above this limit experience unpredictable behavior.
 
-It can take up to 48 hours for access changes to take effect.
+   It can take up to 48 hours for access changes to take effect.
 
 ## Next step
 
