@@ -1421,10 +1421,6 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   Baseline default: *If you set this setting to 1, all files and directories that are excluded from real-time protection using contextual exclusions are scanned during a quick scan.*  
   [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationquickscanincludeexclusions)
 
-- **Enable Dynamic Signature Dropped Event Reporting**  
-  Baseline default: *Enabled*  
-  [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#enabledynamicsignaturedroppedeventreporting)
-
 ### Device Guard
 
 - **Configure System Guard Launch**  
