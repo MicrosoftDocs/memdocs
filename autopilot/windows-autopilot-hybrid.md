@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: madakeva
-ms.date: 02/27/2025
+ms.date: 04/25/2025
 ms.topic: how-to
 ms.service: windows-client
 ms.subservice: autopilot
@@ -45,7 +45,7 @@ Select the appropriate tab to see the relevant requirements:
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **General**](#tab/general-requirements)
 
 - Successfully configured the [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify the device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
-- If [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) is configured as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
+- If [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) is configured as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Windows Autopilot devices is included in the sync scope.
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Device enrollment**](#tab/device-enrollemnt-requirements)
 
@@ -65,7 +65,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Intune connector**](#tab/intune-connector-requirements)
 
-<!-- ### Intune connector server requirements -->
+<!-- ### Intune connector for Active Directory server requirements -->
 
 - The Intune Connector for Active Directory, also known as the Offline Domain Join (ODJ) connector, must be installed on a computer that's running Windows Server 2016 or later with .NET Framework version 4.7.2 or later.
 
@@ -86,7 +86,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 - For the updated Intune Connector for Active Directory, installation needs to be done with an account that has the following domain rights:
 
   - **Required** - Create **msDs-ManagedServiceAccount** objects in the Managed Service Accounts container
-  - **Optional** - Modify permissions in OUs in Active Directory - if the administrator installing the updated Intune Connector for Active Directory doesn't have this right, additional configuration steps are required by an administrator who has these rights. For more information, see the section [Increase the computer account limit in the Organizational Unit](#increase-the-computer-account-limit-in-the-organizational-unit) in this article.
+  - **Optional** - Modify permissions in OUs in Active Directory - if the administrator installing the updated Intune Connector for Active Directory doesn't have this right, additional configuration steps are required by an administrator who has these rights. For more information, see the section [Increase the computer account limit in the Organizational Unit (OU)](#increase-the-computer-account-limit-in-the-organizational-unit) in this article.
 
     These rights allow the Intune Connector for Active Directory install to properly create Managed Service Accounts (MSAs) and set permissions correctly for the OUs that the MSA is adding computers to.
 
@@ -95,6 +95,8 @@ Multi-domain support section removed
 -->
 
 - The Intune Connector for Active Directory requires the [same endpoints as Intune](/mem/intune-service/fundamentals/intune-endpoints).
+
+---
 
 ## Set up Windows automatic MDM enrollment
 
@@ -112,11 +114,11 @@ Multi-domain support section removed
 
 ### Configure web proxy settings
 
-If there's a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/mem/intune-service/enrollment/autopilot-hybrid-connector-proxy).
+If there's a web proxy in the networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Configure proxy settings for the Intune Connector for Active Directory](autopilot-hybrid-connector-proxy.md).
 
 ## Increase the computer account limit in the Organizational Unit
 
-[!INCLUDE [Increase the computer account limit in the Organizational Unit](includes/computer-account-limit.md)]
+[!INCLUDE [Increase the computer account limit in the Organizational Unit (OU)](includes/computer-account-limit.md)]
 
 ## Create a device group
 
@@ -158,7 +160,7 @@ Select one of the following ways to enroll Windows Autopilot devices.
 
 1. Assign the profile to a group that contains the members that need to be automatically registered with Windows Autopilot.
 
-For more information, see [Create an Autopilot deployment profile](profiles.md).
+For more information, see [Configure Windows Autopilot profiles](profiles.md).
 
 ### Register Windows Autopilot devices that aren't enrolled
 
@@ -238,7 +240,7 @@ Windows Autopilot deployment profiles are used to configure the Windows Autopilo
 
 1. In the **Create profile** screen, on the **Basics** page, enter a **Name** and optional **Description**.
 
-1. If all devices in the assigned groups should automatically register to Windows Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Windows Autopilot devices in assigned groups register with the Windows Autopilot deployment service. Personally owned devices aren't registered to Windows Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Windows Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Windows Autopilot deployment service. Instead the devices need to be directly deleted. For more information, see [Delete Autopilot devices](add-devices.md#delete-autopilot-devices).
+1. If all devices in the assigned groups should automatically register to Windows Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Windows Autopilot devices in assigned groups register with the Windows Autopilot deployment service. Personally owned devices aren't registered to Windows Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Windows Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Windows Autopilot deployment service. Instead the devices need to be directly deleted. For more information, see [Delete Windows Autopilot devices](add-devices.md#delete-windows-autopilot-devices).
 
 1. Select **Next**.
 
@@ -405,7 +407,7 @@ To uninstall the Intune Connector for Active Directory from the server, select t
     >
     > The legacy **Intune Connector for Active Directory** installer can be downloaded from the [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d) and should only be used for uninstalls. For new installs, use the [updated Intune Connector for Active Directory](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector-for-active-directory-on-the-server).
 
-
+---
 
 ## Next steps
 

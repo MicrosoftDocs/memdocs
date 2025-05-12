@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/13/2025
+ms.date: 04/02/2025
 ms.topic: overview
 ms.collection:
   - M365-modern-desktop
@@ -26,7 +26,7 @@ appliesto:
 | Feature | **Windows Autopilot<br>device preparation** | **Windows Autopilot** |
 | --- | --- | --- |
 | Features | <ul><li>Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments.</li><li>Faster, more consistent provisioning experience.</li><li>Near real-time monitoring and troubleshooting info.</li></ul> | <ul><li>Support for multiple device types ([HoloLens](/hololens/hololens2-autopilot), [Teams Meeting Room](/microsoftteams/rooms/autopilot-autologin)).</li><li>Many customization options for the provisioning experience.</li></ul> |
-| Supported modes | <ul><li>[User-driven](tutorial/user-driven/entra-join-workflow.md).</li></ul> | <ul><li>[User-driven](../tutorial/user-driven/azure-ad-join-workflow.md).</li><li>[Pre-provisioned](../tutorial/pre-provisioning/azure-ad-join-workflow.md).</li><li>[Self-deploying](../tutorial/self-deploying/self-deploying-workflow.md).</li><li>[Existing devices](../tutorial/existing-devices/existing-devices-workflow.md).</li></ul>|
+| Supported modes | <ul><li>[User-driven](tutorial/user-driven/entra-join-workflow.md).</li><li>Automatic.</li></ul> | <ul><li>[User-driven](../tutorial/user-driven/azure-ad-join-workflow.md).</li><li>[Pre-provisioned](../tutorial/pre-provisioning/azure-ad-join-workflow.md).</li><li>[Self-deploying](../tutorial/self-deploying/self-deploying-workflow.md).</li><li>[Existing devices](../tutorial/existing-devices/existing-devices-workflow.md).</li></ul>|
 | Join types supported | <ul><li>Microsoft Entra join.</li></ul> | <ul><li>Microsoft Entra join.</li><li>Microsoft Entra hybrid join.</li></ul> |
 |Device registration required? | No. | Yes. |
 | What do admins need to configure? | <ul><li>Windows Autopilot device preparation policy.</li><li>Device security group with **Intune Provisioning Client** as owner.</li></ul> | <ul><li>Windows Autopilot deployment profile.</li><li>Enrollment Status Page (ESP).</li></ul> |
@@ -48,7 +48,8 @@ In general, the following are some of the major factors when considering between
 | Pre-provisioned scenario | ❌ | ✅ |
 | Self-deploying scenario | ❌ | ✅ |
 | Existing devices scenario | ❌ | ✅ |
-| Autopilot reset support | ❌ | ✅ |
+| Automatic deployment scenario | ✅ | ❌ |
+| Windows Autopilot reset support | ❌ | ✅ |
 | Microsoft Entra join | ✅ | ✅ |
 | Microsoft Entra hybrid join | ❌ | ✅ |
 | [Windows Autopilot Reset](../tutorial/reset/autopilot-reset-overview.md) | ❌ | ✅ |
@@ -65,7 +66,7 @@ In general, the following are some of the major factors when considering between
 | [HoloLens](/hololens/hololens2-autopilot) support | ❌ | ✅ |
 | [Teams Meeting Room](/microsoftteams/rooms/autopilot-autologin) support | ❌ | ✅ |
 | Device Firmware Configuration Interface<br>([DFCI](../dfci-management.md)) Management support | ❌ | ✅ |
-| [Autopilot into co-management](/mem/configmgr/comanage/autopilot-enrollment) | ❌ | ✅ |
+| [Windows Autopilot into co-management](/mem/configmgr/comanage/autopilot-enrollment) | ❌ | ✅ |
 
 ## Using Windows Autopilot device preparation and Windows Autopilot concurrently
 

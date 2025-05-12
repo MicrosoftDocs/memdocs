@@ -5,9 +5,9 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 01/14/2025
+ms.date: 04/01/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -23,7 +23,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
-- Step 3: [Create a device group](entra-join-device-group.md)
+- Step 3: [Create an assigned device group](entra-join-device-group.md)
 - Step 4: [Create a user group](entra-join-user-group.md)
 
 > [!div class="checklist"]
@@ -46,7 +46,7 @@ The applications and PowerShell scripts specified should be the essential applic
 
 Any applications installed or PowerShell scripts that run during a Windows Autopilot device preparation deployment should be configured to install in the **System** context since the applications are installed and the PowerShell scripts ran during OOBE when no user is signed in.
 
-For applications to install and PowerShell scripts work successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create a device group](entra-join-device-group.md).
+For applications to install and PowerShell scripts work successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](entra-join-device-group.md).
 
 > [!NOTE]
 >
@@ -103,7 +103,7 @@ To assign the desired PowerShell scripts to the device group created for Windows
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **manage devices**, select **Scripts and remediations**.
+1. In the **Devices | Overview** screen, expand **Manage devices**, and then select **Scripts and remediations**.
 
 1. In the **Devices | Scripts and remediations** screen:
 

@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 2 of 11 - Install the Intune Connector
-description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 2 of 11 - Install the Intune Connector(ESP).
+title: Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 2 of 11 - Install the Intune Connector for Active Directory
+description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 2 of 11 - Install the Intune Connector for Active Directory.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 02/27/2025
+ms.date: 04/25/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -21,7 +21,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2016</a>
 ---
 
-# Pre-provision Microsoft Entra hybrid join: Install the Intune Connector
+# Pre-provision Microsoft Entra hybrid join: Install the Intune Connector for Active Directory
 
 Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join steps:
 
@@ -29,7 +29,7 @@ Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join ste
 
 > [!div class="checklist"]
 >
-> - **Step 2: Install the Intune Connector**
+> - **Step 2: Install the Intune Connector for Active Directory**
 
 - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
 - Step 4: [Register devices as Windows Autopilot devices](hybrid-azure-ad-join-register-device.md)
@@ -45,11 +45,11 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 > [!NOTE]
 >
-> If the Intune Connector is already installed and configured, skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md).
+> If the Intune Connector for Active Directory is already installed and configured, skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md).
 
 ## Install the Intune Connector for Active Directory
 
-[!INCLUDE [Install the Intune Connector](../../includes/intune-connector.md)]
+[!INCLUDE [Install the Intune Connector for Active Directory](../../includes/intune-connector.md)]
 
 ## Next step: Increase the computer account limit in the Organizational Unit (OU)
 
