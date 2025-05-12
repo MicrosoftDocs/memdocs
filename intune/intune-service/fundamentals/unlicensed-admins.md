@@ -37,12 +37,16 @@ You can give administrators access to Microsoft Intune without them requiring an
 ## Allow access
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Roles** > **Administrator Licensing**.
-2. Select **Allow access to unlicensed admins** > **Yes**.
+2. Select **Allow access to unlicensed admins**.
 
     > [!WARNING]
     > You can't undo this setting after clicking **Yes**.
 
-3. From now on, users who sign in to the Microsoft Intune admin center don't require an Intune license. Roles assigned to users define their scope of access.
+3. Select **Yes** to allow access to unlicensed admins.
+
+    :::image type="content" alt-text="Screenshot of administrator licensing to allow unlicensed admins." source="./media/unlicensed-admins/unlicensed-admins-01.png" :::
+
+4. From now on, users who sign in to the Microsoft Intune admin center don't require an Intune license. Roles assigned to users define their scope of access.
 
 Intune supports up to 350 unlicensed admins per security group, and only applies to direct members. Admins above this limit experience unpredictable behavior.
 
