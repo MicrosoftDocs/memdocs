@@ -63,6 +63,22 @@ The agent requires the following products:
 
 #### Role-based access
 
+For an Intune administrator (admin) to successfully manage or use the Vulnerability Remediation Agent, they must be assigned the role-based access controls (RBAC) for Intune, Microsoft Defender, and Security Copilot as described in the following sections.
+
+When assigning RBAC roles and permissions to admins to manage and use the agent, assign the least privileged built-in RBAC role or a custom role that includes the minimum permissions ￼required to complete their administrative tasks.
+
+| Action | Microsoft Intune | Microsoft Defender | Security Copilot |
+|--------|------------------|--------------------|------------------|
+| **Set Up and Removal**        | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment.md#role-based-access-control). | The admin must be a [Copilot owner](/copilot/security/authentication). |
+| **Work with Installed Agent** | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment.md#role-based-access-control). | The a must be a [Copilot contributor](/copilot/security/authentication). |
+
+> [!IMPORTANT]  
+> The Vulnerability Remediation Agent runs under the identity of the admin who set up the agent. During public preview, the identity can't be edited. To change this identity, the agent must be removed and set up again.
+>
+> Data that is reported by the agent and visible through agent suggestions might be visible to admins with access to view the agent within the Intune admin center, even when that data is outside the admins assigned Intune roles or scope.
+
+
+<!-- ORIGINAL Presentation>
 To set up or remove the agent from the Intune admin center your account must be assigned an Intune license and have permissions equal to the following:
 
 - **Microsoft Intune**: Users must be assigned a built-in rule or custom role that includes the following permissions:  
@@ -88,4 +104,4 @@ To work with the agent in the Intune admin center after the agent is installed, 
 - **Microsoft Defender**: The user must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control).
 
 - **Security Copilot**: The user must be a [Copilot contributor](/copilot/security/authentication).
-
+-->
