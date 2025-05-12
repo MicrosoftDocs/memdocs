@@ -44,7 +44,7 @@ For more information on the Intune feature, see [Use compliance policies to set 
 
 ## Windows Update policies
 
-Windows Update for Business policies let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices managed directly by Windows Update for Business. 
+Windows Update client policies (formerly known as Windows Update for Business policies) let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices. 
 
 After moving the Windows Update workload to Intune, the client settings in Configuration Manager need to be adjusted manually. Either modify existing client settings, or create a new custom client setting to disable the software update workflow. Deploy the setting to the collection of computers that are connected directly to WUfB.
 
