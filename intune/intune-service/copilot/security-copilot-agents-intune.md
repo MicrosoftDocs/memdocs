@@ -5,7 +5,7 @@ description: Learn about Security Copilot agents in Microsoft Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/09/2025
+ms.date: 05/19/2025
 ms.topic: overview
 ms.service: security-copilot
 ms.localizationpriority: high
@@ -51,15 +51,14 @@ The agent persistently runs in the identity of the user who initially set up the
 
 The agent requires the following products:
 
-- [Microsoft Intune Plan 1 subscription](https://www.microsoft.com/en-us/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) - *Provides the core Intune capabilities*.
-- [Microsoft Intune Suite](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) - *Intune Plan 2 and standalone add-ons aren't sufficient for this prerequisite.*
-- [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) - *Security Copilot must share a Tenant with Intune.*
-- [Microsoft Defender Vulnerability Management](../protect/advanced-threat-protection.md) *Available as part of Defender for Endpoint Plan 2, or as an add-on to Defender for Endpoint Plan 1.*
+- [Microsoft Intune Plan 1 subscription](https://www.microsoft.com/en-us/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) *This subscription provides the core Intune capabilities*.
+- [Microsoft Intune Suite](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) - *Intune Suite standalone solution add-on licenses including Intune Endpoint Privilege Management, Enterprise Application Management, and Intune Plan 2 do not meet this prerequisite.*
+- [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) - *Security Copilot must share a Tenant with Intune, and you must have sufficient SCUs to power Security Copilot workloads, including agents.*
+- [Microsoft Defender Vulnerability Management](../protect/advanced-threat-protection.md) *This capability is provided by Microsoft Defender for Endpoint P2 or Defender Vulnerability Management Standalone.*
 
 #### Plugins
 
 - Microsoft Intune
-- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
 #### Role-based access
