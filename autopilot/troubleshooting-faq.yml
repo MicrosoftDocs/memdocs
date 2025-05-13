@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: madakeva
   manager: aaroncz
-  ms.date: 02/27/2025
+  ms.date: 04/21/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -167,9 +167,9 @@ sections:
           ETW tracing can be used to get detailed information from Windows Autopilot and related components. The ETW trace files can be viewed using the Windows Performance Analyzer or similar tools. For more information, see [Troubleshooting Windows Autopilot](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
       - question: |
-          Why is the Intune Connector not logging in Event Viewer even though logging is enabled?
+          Why is the Intune Connector for Active Directory not logging in Event Viewer even though logging is enabled?
         answer: |
-          The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
+          The Intune Connector for Active Directory originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector for Active Directory has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
 
 
   - name: Troubleshooting Windows Autopilot device import and enrollment
@@ -472,14 +472,49 @@ sections:
           - The administrator installing and configuring the Intune Connector for Active Directory doesn't have the required permissions as outlined in the [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
           - The organization unit (OU) specified in the Intune Connector for Active Directory `ODJConnectorEnrollmentWiazard.exe.config` XML configuration file doesn't exist.
 
-          For detailed information on the error and what caused it, see the `ODJConnectorUI.log` normally located in the folder `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`.
+          For detailed information on the error and what caused it, see the `ODJConnectorUI.log` normally located in the following folder:
+          
+          `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`
+          
+          Follow the steps to [Increase the computer account limit in the Organizational Unit](tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit.md?tabs=updated-connector) if the following error appears in the `ODJConnectorUI.log`:
+          
+          **`System.AggregateException: One or more errors occurred. ---> System.DirectoryServices.DirectoryServicesCOMException: A constraint violation occurred.`**
 
           For more information, see [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector-for-active-directory-on-the-server).
+
+      - question: |
+          Why is the error "Cannot start service ODJConnectorSvc on computer '.'" occurring when setting up the Intune Connector for Active Directory?
+        answer: |
+          This error might occur for several reasons including:
+
+          - The domain has more than one domain controller with a replication latency policy. The MSA was created in one of the domain controllers but the search happened against another domain controller. Wait until replication has completed in accordance with your policy or manually sync. Once the replication is complete, then open the connector and choose **Configure MSA**.
+          
+          - A group policy is configured that doesn't allow services to be started as a non-privileged account. Make sure the MSA account has **Log on as a service** privileges granted. For example, see this instance with Operations Manager to [Enable service logon](/system-center/scom/enable-service-logon#enable-service-log-on-permission-for-run-as-accounts).
+
+      - question: |
+          Why is the error "Microsoft Edge can't read and write to its data directory" occurring?
+        answer: |
+          This error indicates that the user needs read/write permissions to the listed directory. For more information on how to grant these permissions, see [Manage user data folders](/microsoft-edge/webview2/concepts/user-data-folder?tabs=win32).
 
       - question: |
           Why did enrollments start failing when using the Intune Connector for Active Directory?
         answer: |
           Make sure that the Intune Connector for Active Directory is updated to version **6.2501.2000.5** or later and that the legacy version isn't still being used. For more information, see [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
+
+      - question: |
+          Why are the errors "Navigation to the webpage was canceled" or "Can't connect securely to this page" occurring while setting up theIntune Connector for Active Directory?
+        answer: |
+          This error might occur for several different type of issues including:
+
+          - The server where the administrator is installing and configuring the Intune Connector for Active Directory doesn't have the required internet access or required Intune URLs aren't allowed. For more information, see the following articles:<br>
+          <br>
+            - [Windows Autopilot requirements - Windows Autopilot Deployment Service](requirements.md?tabs=networking#windows-autopilot-deployment-service).
+            - [Intune core service](/intune/intune-service/fundamentals/intune-endpoints#endpoints).
+            - [Windows Autopilot dependencies](/intune/intune-service/fundamentals/intune-endpoints#windows-autopilot-dependencies).
+
+          - Server is sending network request via TLS 1.0 or 1.1 because PKCS Cryptography is disabled. To resolve the issue, on the server hosting the Intune Connector for Active Directory, delete the registry key value specified in the following command by running the command from an elevated command prompt:
+
+            `reg.exe delete "HKLM\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS" /v Enabled /f`
 
 
 additionalContent: |

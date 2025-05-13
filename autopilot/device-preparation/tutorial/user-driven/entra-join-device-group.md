@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 3 of 7 - Create a device group
-description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 3 of 7 - Create a device group.
+title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 3 of 7 - Create an assigned device group
+description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 3 of 7 - Create an assigned device group.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
+ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 01/14/2025
+ms.date: 04/04/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -17,7 +17,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation user-driven Microsoft Entra join: Create a device group
+# Windows Autopilot device preparation user-driven Microsoft Entra join: Create an assigned device group
 
 Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
@@ -26,7 +26,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
 > [!div class="checklist"]
 >
-> - **Step 3: Create a device group**
+> - **Step 3: Create an assigned device group**
 
 - Step 4: [Create a user group](entra-join-user-group.md)
 - Step 5: [Assign applications and PowerShell scripts to device group](entra-join-assign-apps-scripts.md)
@@ -37,20 +37,24 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 > [!NOTE]
 >
-> The device group created in this step is specific to Windows Autopilot device preparation. Microsoft recommends creating a device group specifically for use with Windows Autopilot device preparation instead of reusing existing device groups used in other Autopilot scenarios.
+> The device group created in this step is specific to Windows Autopilot device preparation. Microsoft recommends creating a device group specifically for use with Windows Autopilot device preparation instead of reusing existing device groups used in other Windows Autopilot scenarios.
 
-## Create a device group
+## Create an assigned device group
 
-Device groups are a collection of devices organized into a Microsoft Entra group. Device groups can be either dynamic or assigned:
+Device groups are a collection of devices organized into a Microsoft Entra group. Device groups can be either assigned or dynamic:
 
-- **Dynamic groups** - Devices are automatically added to the group based on rules.
-- **Assigned groups** - Devices are manually added to the group and are static.
+- **Assigned groups** - Devices are manually added to the group and are static. Windows Autopilot device preparation only uses assigned groups.
+- **Dynamic groups** - Devices are automatically added to the group based on rules. Windows Autopilot device preparation doesn't use dynamic groups.
 
-Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation policy. The device group specified in the Windows Autopilot device preparation policy is the device group where devices are added automatically during the Windows Autopilot device preparation deployment. The device group specified in the Windows Autopilot device preparation policy needs to be an assigned security group.
+Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation policy. The device group specified in the Windows Autopilot device preparation policy is an **assigned device group** where devices are added automatically during the Windows Autopilot device preparation deployment by the the Windows Autopilot device preparation process.
+
+> [!IMPORTANT]
+>
+> The device group specified in the Windows Autopilot device preparation policy needs to be an **assigned security device group**.
 
 To create an assigned security device group for use with Windows Autopilot device preparation, follow these steps:
 
-[!INCLUDE [How to create a device group in Intune](../../../includes/create-assigned-device-group.md)]
+[!INCLUDE [How to Create an assigned device group in Intune](../../../includes/create-assigned-device-group.md)]
 
 ## Next step: Create a user group
 
