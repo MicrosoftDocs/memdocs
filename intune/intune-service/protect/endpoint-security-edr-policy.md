@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/27/2025
+ms.date: 05/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -138,18 +138,17 @@ To manage EDR for Linux devices, select the **Linux** platform. The following pr
 
   To learn more about Defender for Endpoint settings that are available for Linux, see [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
 
-- **Microsoft Defender Global Exclusions (AV+EDR)** - Use this profile to manage both endpoint detection and response exclusion and Antivirus exclusions on Linux devices. Exclusions you can deploy through this profile are added to exclusions that devices might receive from other sources, including EDR and Antivirus exclusions managed by Intune or Microsoft Defender Antivirus policies. Settings from multiple sources are subject to policy merge, and create a super set of exclusions for applicable devices and users.
+- **Microsoft Defender Global Exclusions (AV+EDR)** - Use this profile to manage both endpoint detection and response exclusion and Antivirus exclusions on Linux devices that are managed through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario. Exclusions you can deploy through this profile are added to exclusions that devices might receive from other sources, including EDR and Antivirus exclusions managed by Intune or Microsoft Defender Antivirus policies. Settings from multiple sources are subject to policy merge, and create a super set of exclusions for applicable devices and users.
 
-  This profile supports use with:
-  - Devices enrolled with Intune.
+  This profile supports use with:  
   - Devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
 
   The EDR global exclusion template for Linux includes a simple template where you can **Add** and then edit one or more instances of exclusion configurations. This is the same configuration process as when configuring Intune policy for [Microsoft Defender Antivirus Exclusions](../protect/endpoint-security-antivirus-policy.md#linux) for Linux devices. The EDR global exclusion profile for Linux doesn't replace Microsoft Defender Antivirus Exclusions profiles you might already use for Linux.
 
-  To configure exclusions, each entry you add supports the following options: 
-  - **Path** - Define a path to exclude from endpoint detection and response. This can be a file or directory. Wild cards aren't supported. 
-  - **Process name** - Define a process name to exclude from endpoint detection and response. This can be a file name or full path. Wild cards aren't supported. 
-  
+  To configure exclusions, each entry you add supports the following options:  
+  - **Path** - Define a path to exclude from endpoint detection and response. This can be a file or directory. Wild cards aren't supported.
+  - **Process name** - Define a process name to exclude from endpoint detection and response. This can be a file name or full path. Wild cards aren't supported.
+
 For more information about Linux exclusions, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-exclusions) in the Microsoft Defender documentation.
 
 #### macOS
