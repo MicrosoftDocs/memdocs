@@ -64,6 +64,7 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |--- |--- |:-: |--- |:-: |:-: |:-: |:-: |:-: |
 |Microsoft Azure|[Android](https://play.google.com/store/apps/details?id=com.microsoft.azure&pcampaignid=web_share)|✔|No settings|✖|N/A|✖|✖|N/A|✖| 
 |Microsoft Azure|[iOS](https://apps.apple.com/app/microsoft-azure/id1219013620)|✔|No settings|✖|N/A|✖|✖|N/A|✖| 
+|Microsoft Clipchamp|[iOS](https://apps.apple.com/in/app/microsoft-clipchamp/id1503463881)|✔|No settings|✔|N/A|✖|✔|✔|✖|
 |Microsoft Copilot|[Android](https://play.google.com/store/apps/details?id=com.microsoft.copilot)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
 |Microsoft Copilot|[iOS](https://apps.apple.com/us/app/microsoft-copilot/id6472538445)|✔|No settings|✔ Supported for v28.1.420324001 or later|N/A|✖|✖|N/A|✖|
 |Microsoft Designer|[Android](https://play.google.com/store/apps/details?id=com.microsoft.designer&hl=en_IN)|✔|No settings|✔|N/A|✔|✔|✔|✖|
