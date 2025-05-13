@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2025
+ms.date: 05/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -125,6 +125,7 @@ Each elevation rule instructs EPM on how to:
 
   - **User confirmed** (Recommended): A user confirmed elevation always requires the user to select on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
   - **Automatic**: An automatic elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
+  - **Deny**: Deny rules prevent the identified file from being run in an elevated context.
   - **Support approved**: An administrator must approve any [support-required elevation request](../protect/epm-support-approved.md) that doesn't have a matching rule, before the application is allowed to run with elevated privileges.
 
 - **Manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the elevated process creates.
@@ -207,7 +208,7 @@ Deploy a *Windows elevation rules policy* to users or devices to deploy one or m
 - Identifies a file for which you want to manage elevation requests.
 - Can include a certificate to help validate that file’s integrity before it’s run. You can also add a reusable group that contains a certificate that you then use with one or more rules or policies.
 - Can include one or more manually added [file arguments or command line switches](#use-file-arguments-for-elevation-rules). When file arguments are added to a rule, EPM only allows file elevation of requests that include one of the defined command lines. If a defined command line isn’t part of the file elevation request, EPM denies that request.
-- Specifies if the elevation type of the file is automatic (silently) or if it requires user confirmation. With user confirmation, you can add additional user actions that must be completed before the file is run.
+- Specifies if the elevation type of the file is automatic (silently), or if it requires user confirmation. With user confirmation, you can add additional user actions that must be completed before the file is run. <!-- Should *support approved* go here, and how about *Deny*? -->
 
 In addition to this policy, a device must also be assigned a Windows elevation settings policy that enables Endpoint Privilege Management.
 
@@ -306,6 +307,8 @@ Use either of the following methods to create new elevation rules, which are add
        >
        > Only use automatic elevation for files you trust. These files will automatically elevate without user interaction. Rules that aren't well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](../protect/epm-guidance-for-creating-rules.md).
 
+     - **Deny**: A Deny rule prevents the identified file from being run in an elevated context. It supports the same options as other elevation types, including the use of file arguments to fine-tune exactly when the file is blocked from being run as elevated.  
+     
      - **Support approved**: This elevation type requires an administrator to approve a request prior to the elevation being allowed to complete. For more information, see [Support approved elevation requests](../protect/epm-support-approved.md).
 
        > [!Important]
