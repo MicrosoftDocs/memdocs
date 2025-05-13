@@ -64,6 +64,7 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |--- |--- |:-: |--- |:-: |:-: |:-: |:-: |:-: |
 |Microsoft Azure|[Android](https://play.google.com/store/apps/details?id=com.microsoft.azure&pcampaignid=web_share)|✔|No settings|✖|N/A|✖|✖|N/A|✖| 
 |Microsoft Azure|[iOS](https://apps.apple.com/app/microsoft-azure/id1219013620)|✔|No settings|✖|N/A|✖|✖|N/A|✖| 
+|Microsoft Clipchamp|[iOS](https://apps.apple.com/in/app/microsoft-clipchamp/id1503463881)|✔|No settings|✔|N/A|✖|✔|✔|✖|
 |Microsoft Copilot|[Android](https://play.google.com/store/apps/details?id=com.microsoft.copilot)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
 |Microsoft Copilot|[iOS](https://apps.apple.com/us/app/microsoft-copilot/id6472538445)|✔|No settings|✔ Supported for v28.1.420324001 or later|N/A|✖|✖|N/A|✖|
 |Microsoft Designer|[Android](https://play.google.com/store/apps/details?id=com.microsoft.designer&hl=en_IN)|✔|No settings|✔|N/A|✔|✔|✔|✖|
@@ -91,8 +92,8 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft Planner|[iOS](https://apps.apple.com/us/app/microsoft-planner/id1219301037)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
 |Microsoft PowerPoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint)|✔|No settings|✔|N/A|✖|✖|✔|✖|
 |Microsoft PowerPoint|[iOS](https://apps.apple.com/us/app/microsoft-powerpoint/id586449534)|✔|No settings|✔|N/A|✖|✖|✔|✖|
-|Microsoft Remote Desktop|[Android](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)|✔|✔|✖|N/A|N/A|N/A|N/A|✖|
-|Microsoft Windows App|[iOS](https://apps.apple.com/us/app/remote-desktop-mobile/id714464092)|✔|✔ see [Configure device redirection](/azure/virtual-desktop/client-device-redirection-intune).|✖|N/A|N/A|N/A|N/A|✖|
+|Microsoft Windows App|[Android](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)|✔|✔ see [Manage device redirection](/windows-app/manage-device-redirection-intune).|✖|N/A|N/A|N/A|N/A|✖|
+|Microsoft Windows App|[iOS](https://apps.apple.com/us/app/remote-desktop-mobile/id714464092)|✔|✔ see [Manage device redirection](/windows-app/manage-device-redirection-intune).|✖|N/A|N/A|N/A|N/A|✖|
 |Microsoft SharePoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.sharepoint)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
 |Microsoft SharePoint|[iOS](https://apps.apple.com/us/app/microsoft-sharepoint/id1091505266)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
 |Microsoft Teams|[Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)|✔|No settings|✔|N/A|✔|✔|✔|✔ Supported for v1416/1.0.0.2023226005 (2023226050) or later|
