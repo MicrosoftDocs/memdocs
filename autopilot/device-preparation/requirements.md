@@ -55,8 +55,8 @@ Windows Autopilot device preparation depends on specific features available in W
 #### Windows 11
 
 - Windows 11, version 24H2 or later.
-- Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
-- Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
+- Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows 11, version 23H2 installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
+- Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows 11, version 22H2 installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
 
 > [!IMPORTANT]
 >
@@ -65,9 +65,9 @@ Windows Autopilot device preparation depends on specific features available in W
 
 #### Windows 365 Cloud PCs
 
-- Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/en-us/topic/february-25-2025-kb5052093-os-build-26100-3323-preview-053856ea-f984-4bdb-866c-5f356f5a451b) or later - Windows installation media dated March 2025 or later has [KB5052093](https://support.microsoft.com/en-us/topic/february-25-2025-kb5052093-os-build-26100-3323-preview-053856ea-f984-4bdb-866c-5f356f5a451b)  included.
-- Windows 11, version 23H2 with [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) or later - Windows installation media dated March 2025 or later has [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) included.
-- Windows 11, version 22H2 with [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) or later - Windows installation media dated March 2025 or later has [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) included.
+- Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/en-us/topic/february-25-2025-kb5052093-os-build-26100-3323-preview-053856ea-f984-4bdb-866c-5f356f5a451b) or later - Windows 11, version 24H2 installation media dated March 2025 or later has [KB5052093](https://support.microsoft.com/en-us/topic/february-25-2025-kb5052093-os-build-26100-3323-preview-053856ea-f984-4bdb-866c-5f356f5a451b)  included.
+- Windows 11, version 23H2 with [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) or later - Windows 11, version 23H2 installation media dated March 2025 or later has [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) included.
+- Windows 11, version 22H2 with [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) or later - Windows 11, version 22H2 installation media dated March 2025 or later has [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) included.
 
 The following editions are supported:
 
