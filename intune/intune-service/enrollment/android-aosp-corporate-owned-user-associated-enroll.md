@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2025
+ms.date: 05/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -80,7 +80,7 @@ Create an enrollment profile to enable enrollment on devices.
 
         - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
     - **For Microsoft Teams devices (preview)**: Select **Enabled** if this profile is applicable for Microsoft Teams Android devices. This setting should only be used for [Microsoft Teams Android devices](/microsoftteams/devices/teams-ip-phones).
-    - **Naming Template**:The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *EricSolomon_AndroidAOSP_05/02/2025_5:09 PM*  
+    - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *EricSolomon_AndroidAOSP_05/02/2025_5:09 PM*  
    
        To create a custom naming template:  
        1. Under **Apply device name template**, choose **Yes**.
@@ -107,8 +107,8 @@ To view the token as a QR code, select your enrollment profile from the enrollme
 You can also export the enrollment profile JSON file. To create a JSON file, select **Export**.  
 
 > [!IMPORTANT]
->- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.
->- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial set up.
+>- The QR code contains any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user can't join a network from the device.
+>- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial setup.
 >- On RealWear devices, you should skip the first time setup. The Intune QR code is the only thing you need to set up the device.  
 
 
@@ -219,14 +219,14 @@ If you experience problems with enrollment or access to work resources, you can 
 
 The following are known limitations when working with AOSP devices in Intune:  
 
-* You cannot enforce certain password types via device compliance and device restrictions profiles. Password types include:   
+* You can't enforce certain password types via device compliance and device restrictions profiles. Password types include:   
     * Password required, no restriction 
     * Alphabetic  
     * Alphanumeric  
     * Alphanumeric with symbols    
     * Weak biometric   
-* Device compliance reporting is not available for Android (AOSP).  
-* Android (AOSP) management is not supported with Intune operated by 21Vianet.  
+* Device compliance reporting isn't available for Android (AOSP).  
+* Android (AOSP) management isn't supported with Intune operated by 21Vianet.  
 
 ## Next steps  
 
