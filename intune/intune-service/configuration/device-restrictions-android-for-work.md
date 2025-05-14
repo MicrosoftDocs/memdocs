@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2025
+ms.date: 05/13/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -547,7 +547,7 @@ End of comment -->
   > 
   > - Users on fully managed, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
   >
-  >   To apply the device password settings during device enrollment, assign the device restriction profile to users, not devices. During enrollment, users are asked to set a screen lock. Then, they must choose a device password that meets all the requirements in this device restriction profile.
+  >   To apply the device password settings during device enrollment, assign the device restriction profile to users (no [filters](../fundamentals/filters.md)). Don't assign the profile to devices. During enrollment, users are asked to set a screen lock. Then, they must choose a device password that meets all the requirements in this device restriction profile.
   > - On dedicated devices, if the device is set up with single or multi-app kiosk mode, then users are prompted to set a password. Screens force and guide users to create a compliant password before they can continue using the device.
   > - On dedicated devices that are not using kiosk mode, users are not notified of any password requirement. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements. 
 
