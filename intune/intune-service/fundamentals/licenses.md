@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/30/2024
+ms.date: 05/09/2024
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -34,7 +34,13 @@ Microsoft Intune is available for different customer needs and organization size
 
 ## Microsoft Intune
 
-The following plans are available for Microsoft Intune. For more information about the plans and pricing, see [Discover Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing).
+The following plans are available for Microsoft Intune.
+
+> [!IMPORTANT]
+> In addition to the plans described in this topic, see the following information about plans and pricing:
+> - [Discover Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing)
+> - [Licensing options available with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans)
+   - Download the full Microsoft subscription comparison table and locate the plans that include Microsoft Intune
 
 ### Microsoft Intune Plan 1
 

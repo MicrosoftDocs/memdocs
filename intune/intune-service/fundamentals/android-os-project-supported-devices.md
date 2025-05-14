@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/15/2024
+ms.date: 05/12/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,19 +43,21 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 
 |**OEM**     | **Device**              | **Minimum Firmware**    | **Type of Device** | **Restrictions**       |
 | ------- | -------------------| ------------------- | -------------- | ------------------ |
-| HTC     | Vive Focus Vision   | 7.0.999.159    | AR/VR Headset  |                    |
+| DigiLens Inc.| DigiLens ARGO    | DigiOS 2068 (B1.0001.2068)            | AR/VR Headset  |                    |
 | HTC     | HTC Vive Focus 3   | 5.2 - 5.0.999.624    | AR/VR Headset  |                    |
 | HTC     | HTC Vive XR Elite  | 4.0 - 1.0.999.350    | AR/VR Headset  |                    |
+| HTC     | Vive Focus Vision   | 7.0.999.159    | AR/VR Headset  |                    |
+| Lenovo  | ThinkReality VRX     | VRX_user_S766001_2310192349_kona   | AR/VR Headset  |                   |
 | Meta    | Quest 2            | v49                 | AR/VR Headset  | [Available in select regions only](https://work.meta.com/help/307276701907179) |
-| Meta    | Quest Pro          | v49                 | AR/VR Headset  | [Available in select regions only](https://work.meta.com/help/307276701907179)|
 | Meta    | Quest 3            | v59                 | AR/VR Headset  | [Available in select regions only](https://work.meta.com/help/307276701907179)|
-| PICO    | PICO Neo3 Pro/Eye     | PUI 4.8.19              | AR/VR Headset  |                    |
+| Meta    | Quest 3s           | v71                 | AR/VR Headset  |                    |
+| Meta    | Quest Pro          | v49                 | AR/VR Headset  | [Available in select regions only](https://work.meta.com/help/307276701907179)|
 | PICO    | PICO 4 Enterprise     | PUI 5.6.0              | AR/VR Headset  |                    |
+| PICO    | PICO Neo3 Pro/Eye     | PUI 4.8.19              | AR/VR Headset  |                    |
 | Realwear| HMT-1              | 11.2                | AR/VR Headset  |                    |
 | Realwear| HMT-1Z1            | 11.2                | AR/VR Headset  |                    |
 | Realwear| Navigator 500      | 1.1                | AR/VR Headset  |                    |
-| Lenovo| ThinkReality VRX     | VRX_user_S766001_2310192349_kona   | AR/VR Headset  |                   |
-| DigiLens Inc.| DigiLens ARGO    | DigiOS 2068 (B1.0001.2068)            | AR/VR Headset  |                    |
-| Vuzix     | M400   | M-Series Version 3.0.2    | AR/VR Headset  |                    |
-| Vuzix     | M4000   | M-Series Version 3.0.2   | AR/VR Headset  |                    |
-| Meta    | Quest 3s | v71                 | AR/VR Headset           |          |
+| Vuzix   | Blade 2            | Vuzix Blade 2 Version 1.2.1   | AR/VR Headset  |                    |
+| Vuzix   | M400               | M-Series Version 3.0.2    | AR/VR Headset  |                    |
+| Vuzix   | M4000              | M-Series Version 3.0.2   | AR/VR Headset  |                    |
+| Zebra   | WS50               | 11-49-15.00               | Wearable scanner         |                    |
