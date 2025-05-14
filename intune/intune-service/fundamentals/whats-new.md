@@ -75,6 +75,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of April 28, 2025
+
+### App management
+
+#### Intune support for Apple specialty devices<!-- 32486291 -->
+We have extended app protection policies (APP) to support Microsoft Edge (v136 or later), OneDrive (v16.8.4 or later), and Outlook (v4.2513.0 or later). To enable this setting for these specific apps on visionOS devices, you must set `com.microsoft.intune.mam.visionOSAllowiPadCompatApps` to `Enabled` in your app configuration policy. Once you have assigned your app configuration policy, you can create and assign your app protection policy for your VisionOS devices. For more information, see [Protect data on VisionOS devices](../apps/app-configuration-policies-managed-app.md#protect-data-on-visionos-devices).
+
+### Tenant administration
+
+#### New icon for Microsoft Intune<!-- 29148691 -->
+Microsoft Intune has a new icon. The Intune icon will be updated across platforms and apps associated with Intune, such as the Intune admin center and Intune Company Portal app. The new icon will gradually be implemented over the next few months.
+
 ## Week of April 21, 2025 (Service release 2504)
 
 ### Microsoft Intune Suite
@@ -90,13 +103,6 @@ EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-a
 #### Relationship viewer available for Intune apps<!-- 17644546 -->
 
 The relationship viewer provides a graphical depiction of the relationships between different applications in the system, including superseding and dependent applications. Admins can find relationship viewer in Intune by selecting **Apps** > **All apps** > *a Win32 app* > **Relationship viewer**. The relationship viewer supports both Win32 apps and Enterprise App Catalog apps. For more information, see [App relationship viewer](../apps/apps-win32-app-management.md#app-relationship-viewer).
-
-
-#### Microsoft Intune support for Apple AI features<!-- 12792722, 30550110, 30220799 -->
-
-Intune app protection policies have new standalone settings for Apple AI features (Genmojis, Writing tools, and screen capture). Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, these Apple AI features are blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
-
-For more information about these features, see [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037). For more information about Intune's related app protection policies, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md) and [How to manage data transfer between iOS apps in Microsoft Intune](../apps/data-transfer-between-apps-manage-ios.md).
 
 #### Apple VPP using new API v2.0<!-- 29567109 -->
 
@@ -204,7 +210,7 @@ All custom policies should be replaced with other policy types. Learn more about
 > [!NOTE]
 > Rollout of the new settings for the security baseline is underway, but taking longer than usual. Due to this delay, the new settings might not be available until the week of May 5, 2025.
 
-The most recent Intune security baseline for Windows, version 24H2, is updated to include 16 new settings for managing the Windows Configuration Service Provider (CSP) for [*Lanman Server*](/windows/client-management/mdm/policy-csp-lanmanserver) and [*Lanman Workstation*](/windows/client-management/mdm/policy-csp-lanmanworkstation), and one new setting for [Defender](/windows/client-management/mdm/Defender-csp). These settings were previously unavailable in the baseline due to missing CSP support. The addition of these settings provides better control and configuration options.
+The most recent Intune security baseline for Windows, version 24H2, is updated to include 15 new settings for managing the Windows Configuration Service Provider (CSP) for [*Lanman Server*](/windows/client-management/mdm/policy-csp-lanmanserver) and [*Lanman Workstation*](/windows/client-management/mdm/policy-csp-lanmanworkstation). These settings were previously unavailable in the baseline due to missing CSP support. The addition of these settings provides better control and configuration options.
  
 Because this is an update to an existing baseline version and not a new baseline version, the new settings aren’t visible in the baselines properties until you edit and save the baseline:
  
@@ -234,12 +240,7 @@ Following are the new settings that are added to the version 24H2 baseline, and 
 - [Require Encryption](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#requireencryption) – Baseline default: *Disabled*
 - [Enable Mailslots](/windows/client-management/mdm/policy-csp-LanmanWorkstation#enablemailslots) - Baseline default: *Disabled*
 
-[**Defender**](../protect/security-baseline-settings-mdm-all.md?pivots=mdm-24h2#defender)  
-- [Enable Dynamic Signature Dropped Event Reporting](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#enabledynamicsignaturedroppedeventreporting) – Baseline default: *Enabled*
-
-
 For more information, see [Intune security baselines](../protect/security-baselines.md).
-
 
 ### Intune apps
 

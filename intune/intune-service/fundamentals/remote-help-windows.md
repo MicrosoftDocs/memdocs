@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/18/2025
+ms.date: 04/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -347,6 +347,19 @@ Use the `Disconnect-MgGraph` command to sign out.
 ```powershell
 Disconnect-MgGraph
 ```
+
+### Building a Conditional Access policy
+
+After the Remote Help service principal is created, learn more on how to set up a [conditional access policy.](/entra/identity/conditional-access/concept-conditional-access-policies)
+
+To apply conditional access policies to Remote Help, follow these steps:
+
+1. Navigate to the conditional access policy that you created.
+2. Select **Target resources**
+     1. Select **Resources (formerly cloud apps)** to specify what this policy applies to.
+     2. Select **Exclude**.
+     3. Select **Select resources**.
+     4. Under **Select**, check the **RemoteAssistanceService** with the app ID of 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
 
 ## Languages Supported
 

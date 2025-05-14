@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/20/2025
+ms.date: 04/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -714,14 +714,14 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "custom_privacy_statement_url",
             "valueString": "link to custom privacy statement here"
-        }
+        },
         {
             "key": "virtual_app_switcher_type",
             "valueString": "float"
-        }
+        },
         {
             "key": "show_ringtone_selector",
-            "valueString": true
+            "valueBool": true
         }
     ]
 }
