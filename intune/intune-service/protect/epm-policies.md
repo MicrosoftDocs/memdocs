@@ -100,7 +100,7 @@ Use *Windows elevation settings policy* when you want to:
   - **Diagnostic data only** - This option sends only the diagnostic data to Microsoft about the health of the client components.
 
 ### About Windows elevation rules policy
-[](#about-windows-elevation-rules-policy)
+
 Use profiles for *Windows elevation rules policy* to manage the identification of specific files, and how elevation requests for those files are handled. Each *Windows elevation rule policy* includes one or more *elevation rules*. It's with elevation rules that you configure details about the file being managed and requirements for it to be elevated.
 
 The following types of files are supported:
