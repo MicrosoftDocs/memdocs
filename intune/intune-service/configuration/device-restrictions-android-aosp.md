@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2025
+ms.date: 05/14/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,16 +31,14 @@ ms.collection:
 
 # Android (AOSP) device settings to allow or restrict features using Templates in Intune
 
-This article describes the different settings you can control on Android (AOSP) devices using Templates. You can use these restrictions to configure password requirements and access to device features.
+This article lists and describes the different settings you can configure on Android (AOSP) devices using templates in Microsoft Intune. Settings can be configured using **Templates** or the **[settings catalog](settings-catalog.md)**. This article focuses on the templates.
 
-Settings can be configured either through **Templates** or **Settings catalog**. For more information on **Settings catalog**, go to [Settings catalog](settings-catalog.md).
-
-The settings outlined below can be found as **Templates** under **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Templates**. 
+You can use these restrictions to configure password requirements and access to device features.
 
 > [!NOTE]
 >
->- If you can't find a setting in **Templates**, select **Settings catalog**. The settings catalog is a list of the settings you can configure for Android (AOSP) devices. It includes additional settings that you can configure that are not available under **Templates**.
->- If you can't find a setting in **Settings catalog**, check **Templates**.
+>- If you can't find a setting in templates, then look for the setting in the settings catalog. It can include more settings that aren't available in templates. If you can't find a setting in the settings catalog, then look at the template settings.
+>- Device configuration profiles aren't supported on Microsoft Teams devices running AOSP.
 
 This feature applies to:
 
@@ -49,21 +47,9 @@ This feature applies to:
 
 ## Before you begin
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
-3. Enter the following properties:
-
-    - **Platform**: Select **Android (AOSP)**.
-    - **Profile type**: Select **Templates**.
-
-4. Select **Create**.
-5. In **Basics**, enter the following properties:
-
-    - **Name**: Name your profiles so you can easily identify them later.
-    - **Description**: This setting is optional but recommended.
-
-6. Select **Next**.
-
+- Create an [AOSP device restrictions profile](device-restrictions-configure.md).
+  - For platform, select **Android (AOSP)**.
+  - For profile type, select **Templates**
 
 ## Device password  
 
