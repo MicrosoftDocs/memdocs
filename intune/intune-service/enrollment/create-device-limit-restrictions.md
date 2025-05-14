@@ -116,7 +116,7 @@ When you create a restriction, it's added to the list just above the default. Yo
 
 1. Go to **Device limit restrictions**.
 2. Select **Device limit restrictions** to bring up the list of your policies.               
-3. Hover over the policy in the **Priority** column,and then select and drag the priority to the desired position in the list.   
+3. Hover over the policy in the **Priority** column, and then select and drag the priority to the desired position in the list.   
 
 ## Device user experience   
 BYOD users who reach their device limit receive a message during enrollment explaining the restriction. To continue enrolling, the device user must unenroll an existing device. Alternatively, as the admin you can increase the device limit in the admin center. For more information about troubleshooting enrollment errors such as this one, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
