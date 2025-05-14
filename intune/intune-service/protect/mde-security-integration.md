@@ -97,13 +97,28 @@ Policies for Microsoft Defender for Endpoint security management are supported f
 
 **Linux**:
 
-With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements) agent version **101.23052.0009** or later, security settings management supported across all Linux distributions listed in [Supported Linux distributions](/defender-endpoint/mde-linux-prerequisites).
+With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements) agent version **101.23052.0009** or later, security settings management is supported across all Linux distributions listed at [Supported Linux distributions](/defender-endpoint/mde-linux-prerequisites).
 
-To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for Linux*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
+You can find the version of your Defender agents using these methods:
 
-*Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enroll when they're missing the following filepath: `/sys/class/dmi/id/board_vendor`.
+- You can investigate a single device by browsing to *Assets > Devices > Overview* and reviewing the *Defender engine version* field.
 
-*Known issue*: When a Linux device performs synthetic registration, the Device Entra ID (formerly known as Device AAD ID) isn't visible in the Defender portal. This information can be viewed from the Intune or Microsoft Entra portals. Administrators can still manage devices with policies in this manner. 
+- You can view a summary report and export a full inventory list showing platform versions at *Reports > Endpoints > Device health > Microsoft Defender Antivirus health*.
+
+- You can use the following query in *Hunting > Advanced hunting* and review the *SoftwareVersion* data:
+
+  ```kusto
+  DeviceTvmSoftwareInventory
+  | where SoftwareName == "defender_for_linux"
+  ```
+  
+For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
+
+*Known issues*
+
+- With Defender agent version **101.23052.0009**, Linux devices fail to enroll if the following file path is absent: `/sys/class/dmi/id/board_vendor`.
+
+- When a Linux device performs synthetic registration, the Device Entra ID (formerly known as Device AAD ID) isn't visible in the Defender portal. This information can be viewed from the Intune or Microsoft Entra portals. Administrators can still manage devices with policies in this manner. 
 
 
 **macOS**:
@@ -113,14 +128,26 @@ With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defende
 - macOS 15 (Sequoia)
 - macOS 14 (Sonoma)
 - macOS 13 (Ventura)
-- macOS 12 (Monterey)
-- macOS 11 (Big Sur)
+You can find the versions of your Defender agents using these methods:
 
-To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for macOS*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-updates).
+- You can investigate a single device by browsing to *Assets > Devices > Overview* and reviewing the *Defender engine version* field.
 
-*Known issue*: With the Defender agent version **101.23052.0004**, macOS devices that are registered in Microsoft Entra ID before enrolling with security settings management receive a duplicate Device ID in Microsoft Entra ID, which is a synthetic registration. When you create a Microsoft Entra group for targeting policy, you must use the synthetic Device ID created by security settings management. In Microsoft Entra ID, the *Join Type* column for the synthetic Device ID  is blank.
+- You can view a summary report and export a full inventory list showing platform versions at *Reports > Endpoints > Device health > Microsoft Defender Antivirus health*.
 
-*Known issue*: When a macOS device performs synthetic registration, the Device Entra ID (formerly known as Device AAD ID) isn't visible in the Defender portal. This information can be viewed from the Intune or Microsoft Entra portals. Administrators can still manage devices with policies in this manner. 
+- You can use the following query in *Hunting > Advanced hunting* and review the *SoftwareVersion* data:
+
+  ```kusto
+  DeviceTvmSoftwareInventory
+  | where SoftwareName == "defender_for_mac"
+  ```
+  
+For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-updates).
+
+*Known issues*
+
+- With Defender agent version **101.23052.0004**, macOS devices that are registered in Microsoft Entra ID before enrolling with security settings management receive a duplicate Device ID in Microsoft Entra ID, which is a synthetic registration. When you create a Microsoft Entra group for targeting policy, you must use the synthetic Device ID created by security settings management. In Microsoft Entra ID, the *Join Type* column for the synthetic Device ID is blank.
+
+- When a macOS device performs synthetic registration, the Device Entra ID (formerly known as Device AAD ID) isn't visible in the Defender portal. This information can be viewed from the Intune or Microsoft Entra portals. Administrators can still manage devices with policies in this manner. 
 
 **Windows**:
 
