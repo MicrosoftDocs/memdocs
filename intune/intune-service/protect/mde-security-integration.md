@@ -97,17 +97,7 @@ Policies for Microsoft Defender for Endpoint security management are supported f
 
 **Linux**:
 
-With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements) agent version **101.23052.0009** or later, security settings management supports the following Linux distributions:
-
-- Red Hat Enterprise Linux 7.2 or higher  
-- CentOS 7.2 or higher  
-- Ubuntu 16.04 LTS or higher LTS  
-- Debian 9 or higher  
-- SUSE Linux Enterprise Server 12 or higher  
-- Oracle Linux 7.2 or higher  
-- Amazon Linux 2 
-- Amazon Linux 2023
-- Fedora 33 or higher
+With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements) agent version **101.23052.0009** or later, security settings management supported across all Linux distributions listed in [Supported Linux distributions](/defender-endpoint/mde-linux-prerequisites).
 
 To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for Linux*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
 
