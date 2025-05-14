@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/02/2025
+ms.date: 05/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -81,7 +81,7 @@ Create an enrollment profile to enable enrollment on devices.
     - **SSID**: Identifies the network that the device will connect to.  
 
         > [!NOTE]
-        > Wi-Fi details are required because the RealWear device does not have a button or option that lets it automatically connect to other devices.  
+        > Wi-Fi details are required because the RealWear device doesn't have a button or option that lets it automatically connect to other devices.  
 
     - **Hidden Network**: Choose whether this is a hidden network. By default, this setting is disabled. 
     - **Wi-Fi Type**: Select the type of authentication needed for this network.  
@@ -89,7 +89,7 @@ Create an enrollment profile to enable enrollment on devices.
         If you select **WEP Pre-Shared Key** or **WPA Pre-Shared Key**, also enter:   
 
         - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.
-        - **Naming Template**:The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidForWork_01/01/2025_12:00 PM*  
+        - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidForWork_01/01/2025_12:00 PM*  
 
           To create a custom naming template:  
           1. Under **Apply device name template**, choose **Yes**.
@@ -132,9 +132,9 @@ You can also export the enrollment profile JSON file. To create a JSON file:
 3. Select **Token > Export**.   
 
 > [!IMPORTANT]
->- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
->- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial set up.
->- Since you're managing the device via Intune, you should skip the RealWear first time setup. The Intune QR codes is the only thing you need to set up the device.   
+>- The QR code contains any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user can't join a network from the device.  
+>- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial setup.
+>- Since you're managing the device via Intune, you should skip the RealWear first time setup. The Intune QR code is the only thing you need to set up the device.   
 
 ### Replace token  
 Generate a new token to replace one that's nearing its expiration date. Replacing a token does not affect devices that are already enrolled.  
@@ -244,15 +244,15 @@ If you experience problems with enrollment or the Microsoft Intune app, you can 
 
 The following are known limitations when working with AOSP devices in Intune:  
 
-* You cannot enforce certain password types via device compliance and device restrictions profiles. Password types include:
+* You can't enforce certain password types via device compliance and device restrictions profiles. Password types include:
     * Password required, no restriction 
     * Alphabetic  
     * Alphanumeric  
     * Alphanumeric with symbols    
     * Weak biometric   
-*  Device compliance reporting is not available for Android (AOSP).   
+*  Device compliance reporting isn't available for Android (AOSP).   
 
-* Android (AOSP) management is not supported in environments using Intune operated by 21Vianet.    
+* Android (AOSP) management isn't supported in environments using Intune operated by 21Vianet.    
 
 ## Next steps  
 
