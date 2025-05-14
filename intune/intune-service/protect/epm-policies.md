@@ -272,7 +272,7 @@ Use either of the following methods to create new elevation rules, which are add
    :::image type="content" source="./media/epm-policies/create-a-rule.png" alt-text="Image from the admin center UI of the create a rule pane." lightbox="./media/epm-policies/create-a-rule.png":::
 
 ### Manually configure elevation rules for Windows elevation rules policy
-[](#manually-configure-elevation-rules-for-windows-elevation-rules-policy)
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
    Set the *Platform* to **Windows**, *Profile* to **Windows elevation rules policy**, and then select **Create**.
 
