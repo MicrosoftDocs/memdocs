@@ -28,6 +28,9 @@ ms.collection:
 
 Before you can add a Win32 app to Microsoft Intune, you must prepare the app by using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730).
 
+> [!TIP]
+> As a companion to this article, see our [‎Intune‎ app protection for ‎Windows‎ 10/11 setup guide](https://go.microsoft.com/fwlink/?linkid=2309605) to review best practices and learn to enforce policies, deploy apps, and protect corporate data across a variety of devices. For a customized experience based on your environment, you can access the [‎Intune‎ app protection for ‎Windows‎ 10/11 guide](https://go.microsoft.com/fwlink/?linkid=2309606) in the Microsoft 365 admin center.  
+
 ## Prerequisites
 
 To use Win32 app management, be sure you meet the following criteria:

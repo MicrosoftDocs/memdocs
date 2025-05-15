@@ -84,6 +84,10 @@ This section describes the compliance profile settings available for fully manag
 
 ### Device health
 
+- **Rooted devices**  
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
+  - **Block** - Mark rooted devices as noncompliant.
+
 - **Require the device to be at or under the Device Threat Level**  
   Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
 
@@ -227,7 +231,7 @@ This section describes the compliance profile settings available for personal de
 
 - **Rooted devices**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Block** - Mark rooted devices as not compliant.
+  - **Block** - Mark rooted devices as noncompliant.
 
 - **Require the device to be at or under the Device Threat Level**  
   Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
