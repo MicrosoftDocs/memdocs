@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 03/27/2025
+ms.date: 05/15/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -68,7 +68,6 @@ The following editions of Windows 11 are supported:
 - Windows 11 Enterprise.
 - Windows 11 Education.
 - [Windows 11 Enterprise LTSC](/windows/whats-new/ltsc/overview).
-
 - Windows 11 IoT Enterprise only when used in Microsoft Teams Rooms devices.
 
 #### Windows 10
@@ -83,7 +82,6 @@ The following editions of Windows 10 are supported:
 - Windows 10 Enterprise.
 - Windows 10 Education.
 - [Windows 10 Enterprise LTSC](/windows/whats-new/ltsc/overview).
-
 - Windows 10 IoT Enterprise only when used in Microsoft Teams Rooms devices.
 
 #### HoloLens
