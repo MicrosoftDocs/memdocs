@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/17/2024
+ms.date: 05/15/2025
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -28,7 +28,7 @@ ms.collection:
 When you're troubleshooting Win32 apps used in Microsoft Intune, you can use a number of methods. This article provides troubleshooting details and information to help you solve Win32 app problems. For more information, see [Win32 app installation troubleshooting](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting) resources.
 
 > [!NOTE]
-> This app management capability supports both 32-bit and 64-bit operating system architectures for Windows applications.
+> This app management capability supports 32-bit Windows, 64-bit Windows, and ARM64 operating system architectures for Windows applications.
 
 > [!IMPORTANT]
 > When you're deploying Win32 apps, consider using the [Intune Management Extension](../apps/intune-management-extension.md) approach exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business (LOB) apps during Windows Autopilot enrollment, the app installation might fail. However, mixing of Win32 and line-of-business apps during Windows Autopilot device preparation is supported. The Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device.
