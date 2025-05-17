@@ -38,7 +38,7 @@ Complete the following steps to integrate the Zimperium Mobile Threat Defense so
 
 ## Before you begin
 
-The following steps are done in the [Zimperium MTD console](https://www.zimperium.com/platform) and enable a connection to Zimperium's service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
+The following steps are done in the Zimperium MTD console and enable a connection to Zimperium's service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating Zimperium with Intune, make sure you have the following subscription and credentials:
 
