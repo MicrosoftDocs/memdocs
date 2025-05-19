@@ -83,6 +83,20 @@ The **Configuration settings** page has several configuration options. The follo
 
 In the **Configuration settings** page:
 
+1. Expand the **Deployment settings** section by selecting it:
+
+   1. **Deployment mode** - Select **User-driven** in the drop-down menu.
+
+   1. **Deployment type** - Select **Single user** in the drop-down menu.
+
+   1. **Join type** - Select **Microsoft Entra joined** in the drop-down menu.
+
+   1. **User account type** - Select either **Standard User** or **Administrator** as desired by toggling the switch.
+
+    > [!IMPORTANT]
+    >
+    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the desktop.
+
 1. Expand the **Out-of-box experience settings** section by selecting it.
 
    1. **Minutes allowed before showing installation error** - Enter the number of minutes allowed before failing a deployment.
@@ -129,20 +143,6 @@ In the **Configuration settings** page:
     > - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
     >
     > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
-
-1. Expand the **Deployment settings** section by selecting it:
-
-   1. **Deployment mode** - Select **User-driven** in the drop-down menu.
-
-   1. **Deployment type** - Select **Single user** in the drop-down menu.
-
-   1. **Join type** - Select **Microsoft Entra joined** in the drop-down menu.
-
-   1. **User account type** - Select either **Standard User** or **Administrator** as desired by toggling the switch.
-
-    > [!IMPORTANT]
-    >
-    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the desktop.
 
 1. Expand the **Scripts** section by selecting it:
 
