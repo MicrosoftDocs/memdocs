@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/29/2024
+ms.date: 04/07/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -38,7 +38,7 @@ For more information, on modifying the Management name and renaming in the Compa
 - [View device details with Microsoft Intune](../remote-actions/device-inventory.md#hardware-device-details).
 - [Rename device from the Intune Company Portal app for Windows](../user-help/rename-your-device-cpapp.md).
 
-If a device isn't listed here, it's not supported. This feature doesn't support renaming hybrid Microsoft Entra Windows devices.
+If a device isn't listed here, it isn't supported. This feature doesn't support renaming hybrid Microsoft Entra Windows devices.
 
 You can rename the following types of devices:
 
@@ -52,7 +52,7 @@ You can rename the following types of devices:
 - Corporate-owned co-managed devices that are Microsoft Entra joined
 
 > [!NOTE]
-> Renaming of Android Enterprise devices will only change the **Device name** in the Intune admin center and not on the device itself. The Device name in Intune is a friendly name that users are free to change.
+> Renaming Android Enterprise devices only changes the **Device name** in the Intune admin center and not on the device itself. The Device name in Intune is a friendly name that users can change.
 
 ## Rename a device
 
@@ -65,10 +65,10 @@ Use the **Rename** action to give your device a new name. If you already renamed
 5. Choose **Rename**.
 
 > [!NOTE]
-> If you have an enrollment profile (iOS) that uses a Device Name Template, the device will be renamed but will revert to using the template upon the next sync with Intune.
+> If you have an iOS enrollment profile with a Device Name Template, the device will be renamed but will revert to the template after the next sync with Intune.
 
 > [!NOTE]
-> It may take 10 minutes or more for a renamed Android Enterprise device to update in the Devices blade.
+> It could take 10 minutes or more for a renamed Android Enterprise device to update in the **Devices** area.
 
 ## Windows device rename rules
 

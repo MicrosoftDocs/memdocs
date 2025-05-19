@@ -7,7 +7,7 @@ description: View the default setting configuration of the various Microsoft Int
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/12/2025
+ms.date: 04/22/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -1549,11 +1549,73 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
     Baseline default: *False*  
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
 
+### Lanman Server
+
+- **Audit Client Does Not Support Encryption**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#auditclientdoesnotsupportencryption)    
+
+- **Audit Client Does Not Support Signing**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#auditclientdoesnotsupportsigning)    
+
+- **Audit Insecure Guest Logon**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#auditinsecureguestlogon)     
+
+- **Auth Rate Limiter Delay In Ms**  
+  Baseline default: *2000*  
+  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#authratelimiterdelayinms)   
+
+- **Enable Auth Rate Limiter**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#enableauthratelimiter)    
+
+- **Max SMB 2 Dialect**  
+  Baseline default: *SMB 3.1.1*  
+  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#maxsmb2dialect)
+
+- **Min SMB 2 Dialect**  
+  Baseline default: *3.0.0*  
+  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#minsmb2dialect)
+
+- **Enable Mailslots**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#enablemailslots)  
+
 ### Lanman Workstation
 
 - **Enable Insecure Guest Logons**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#enableinsecureguestlogons)
+
+- **Audit Insecure Guest Logon**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#auditinsecureguestlogon)
+
+- **Audit Server Does Not Support Encryption**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#auditserverdoesnotsupportencryption)
+
+- **Audit Server Does Not Support Signing**  
+  Baseline default: *Enabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#auditserverdoesnotsupportsigning)
+ 
+- **Max SMB 2 Dialect**  
+  Baseline default: *SMB 3.1.1*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#maxsmb2dialect)
+
+- **Min SMB 2 Dialect**  
+  Baseline default: *SMB 3.0.0*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#minsmb2dialect)
+
+- **Require Encryption**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#requireencryption)
+
+- **Enable Mailslots**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation#enablemailslots)
 
 ### Local Policies Security Options
   <!-- UI Links add - in place of url which uses _ -->

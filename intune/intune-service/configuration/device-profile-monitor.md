@@ -2,7 +2,7 @@
 # required metadata
 
 title: See device configuration policies with Microsoft Intune
-description: See and manage the device configuration policy details in Microsoft Intune. Look at a graphical chart of the number of devices assigned to a policy, and see which devices have policies assigned or deployed. Can also troubleshoot policies that have conflict settings. 
+description: See and manage the device configuration policy details in Microsoft Intune. Look at a graphical chart of the number of devices assigned to a policy, and see which devices have policies assigned or deployed. Can also troubleshoot policies that have conflict settings.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -62,7 +62,7 @@ After you create your device configuration policy, Intune provides reporting dat
 # [By policy](#tab/policy)
 
 1. In **Devices** > **Manage devices** > **Configuration** > **Policies** tab, select an existing policy.
- 
+
 2. **Device and user check-in status** shows the number of all users or devices that checked-in with the policy. If one device has multiple users, this report shows the status for each user. When the user or device checks in with Intune, they receive the settings in your policy.
 
     The following statuses are shown:
@@ -203,7 +203,7 @@ With your DFCI profile settings, you might see the following states:
   - The device lacks the hardware to disable the feature, and the profile setting is **Disabled**.
   - The device doesn't have the latest DFCI firmware version.
   - DFCI was disabled before being enrolled in Intune using a local "opt-out" control in the UEFI menu.
-  - The device was enrolled to Intune outside of Autopilot enrollment.
+  - The device was enrolled to Intune outside of Windows Autopilot enrollment.
   - The device isn't registered to Windows Autopilot by a Microsoft CSP, or registered directly by the OEM.
 
 ## Related content

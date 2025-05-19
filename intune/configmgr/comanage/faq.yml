@@ -30,7 +30,7 @@ sections:
 
           As an administrator, you can see co-managed devices in the Microsoft Intune admin center. You can do remote actions from the admin center, and can benefit from insights with [Endpoint analytics](../../analytics/overview.md).
 
-          Co-managed devices could be transformed to Autopilot-provisioned devices next time the device is reset.
+          Co-managed devices could be transformed to Windows Autopilot-provisioned devices next time the device is reset.
 
           Consider using the Company Portal. It's the cross-platform app portal experience for the Microsoft Intune family of products. By configuring co-managed devices to also use the Company Portal, you can provide a consistent user experience on all devices. Your users should get familiar with Company Portal as it will provide the integrated experience going forward. For more information, see [Use the Company Portal app on co-managed devices](company-portal.md).
 
@@ -117,12 +117,12 @@ sections:
       - question: |
           Can I use Windows Autopilot with co-management?
         answer: |
-          Yes. One of the two [paths to co-management](quickstart-paths.md) is to bootstrap with modern provisioning. For a new or repurposed device, [Autopilot](/autopilot/overview) joins it to Microsoft Entra ID and enrolls it to Intune. Intune can then deploy the Configuration Manager client and enable co-management.
+          Yes. One of the two [paths to co-management](quickstart-paths.md) is to bootstrap with modern provisioning. For a new or repurposed device, [Windows Autopilot](/autopilot/overview) joins it to Microsoft Entra ID and enrolls it to Intune. Intune can then deploy the Configuration Manager client and enable co-management.
 
           For more information, see [How to prepare internet-based devices for co-management](how-to-prepare-win10.md).
 
           > [!NOTE]
-          > You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for Microsoft Entra hybrid join. This limitation is due to the identity change of the device during the Microsoft Entra join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
+          > You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for Microsoft Entra hybrid join. This limitation is due to the identity change of the device during the Microsoft Entra join process. Deploy the Configuration Manager client after the Windows Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
 
       - question: |
           How do I manage updates for Windows and Microsoft 365 apps?
@@ -164,7 +164,7 @@ sections:
         answer: |
           No. CMG is a Configuration Manager feature for device connectivity. You should use a CMG if you have Configuration Manager clients on the internet, if they're co-managed or not. A co-managed client in an environment with no CMG would have to rely on VPN connectivity when it roams outside of the on-premises network.
 
-          The scenario to provision Microsoft Entra joined co-managed devices does require a CMG. It allows an interned-based device to install the Configuration Manager client after the Autopilot process.
+          The scenario to provision Microsoft Entra joined co-managed devices does require a CMG. It allows an interned-based device to install the Configuration Manager client after the Windows Autopilot process.
 
           For more information, see the following articles:
 

@@ -104,7 +104,7 @@ Windows LOB apps (specifically APPX and MSIX) that you've selected to install in
 - Error: A user can't be targeted with a device context install.
 
 > [!IMPORTANT]
-> When used in combination with an Autopilot pre-provisioning scenario, there is no requirement for LOB apps deployed in device context to target a device group. For more information, see [Windows Autopilot pre-provisioning deployment](/autopilot/pre-provision).
+> When used in combination with a Windows Autopilot pre-provisioning scenario, there is no requirement for LOB apps deployed in device context to target a device group. For more information, see [Windows Autopilot pre-provisioning deployment](/autopilot/pre-provision).
 
 > [!NOTE]
 > After you save an app assignment with a specific deployment, you can't change the context for that assignment, except for modern apps. For modern apps, you can change the context from user context to device context.

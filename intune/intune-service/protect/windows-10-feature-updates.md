@@ -91,10 +91,10 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - Devices must:
   - Run a version of Windows 10/11 that remains in support.
-  - Be enrolled in Intune MDM and be Hybrid AD joined or Microsoft Entra joined.
+  - Be enrolled in Intune MDM and be Microsft Entra hybrid joined or Microsoft Entra joined.
   - Have Telemetry turned on, with a minimum setting of [*Required*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
 
-    Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy. The prerequisite to require Telemetry is under review as this feature moves towards general availability.
+    Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy.
 
     Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows 10/11. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
 
@@ -109,7 +109,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 - Feature updates are supported for the following Windows 10/11 editions:
   - Pro
   - Enterprise
-  - Education
+  - Pro Education
   - Education
   - Pro for Workstations
 
@@ -134,7 +134,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
   >
   > For more information, see [Move from update ring deferrals to feature updates policy](windows-update-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
 
-- Feature updates for Windows 10 and later policies can't be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
+- Feature updates for Windows 10 and later policies can't be applied during the Windows Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
 - If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 

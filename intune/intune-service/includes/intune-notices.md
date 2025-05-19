@@ -4,7 +4,7 @@ description: include file
 author: dougeby  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 4/1/2025
+ms.date: 4/8/2025
 ms.author: dougeby
 manager: dougeby
 ms.custom: include file
@@ -17,7 +17,7 @@ These notices provide important information that can help you prepare for future
 As part of Microsoft’s Secure Future Initiative, we recently released an update to the Intune Connector for Active Directory to use a Managed Service Account instead of a local SYSTEM account for deploying Microsoft Entra hybrid joined devices with Windows Autopilot. The new connector aims to enhance security by reducing unnecessary privileges and permissions associated with the local SYSTEM account.
  
 > [!IMPORTANT]
-> In late May 2025, we'll remove the old connector which uses the local SYSTEM account. At that point, we will stop accepting enrollments from the old connector. For more details, refer to the blog: [Microsoft Intune Connector for Active Directory security update](https://aka.ms/Intune-connector-blog)
+> At the end of June 2025, we'll remove the old connector which uses the local SYSTEM account. At that point, we will stop accepting enrollments from the old connector. For more details, refer to the blog: [Microsoft Intune Connector for Active Directory security update](https://aka.ms/Intune-connector-blog)
 
 #### How does this change affect you or your users?
 
@@ -58,7 +58,7 @@ Update your firewall rules to include the new CDN endpoints. For the best experi
 
 Today, the Apple AI features for Genmojis, Writing tools, and screen capture are blocked when the app protection policy (APP) "Send Org data to other apps" setting is configured to a value other than "All apps". For more details on the current configuration, app requirements, and the list of current Apple AI controls review the blog: [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037)
 
-Expected with Intune’s April (2504) service release, Intune app protection policies have new standalone settings for blocking screen capture, Genmojis, and Writing tools. These standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15 and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool.
+In an upcoming release, Intune app protection policies have new standalone settings for blocking screen capture, Genmojis, and Writing tools. These standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15 and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool.
 
 #### How does this change affect you or your users?
 
@@ -86,7 +86,7 @@ Update your IT admin documentation and notify your helpdesk or users as needed. 
 
 ### Move to new Microsoft Graph Beta API properties for Windows Autopilot self-deploying mode and pre-provisioning
 
-In late February 2025, a select number of old Microsoft Graph Beta API [windowsAutopilotDeploymentProfile](/graph/api/resources/intune-shared-windowsautopilotdeploymentprofile) properties used for Windows Autopilot self-deploying mode and pre-provisioning are removed and stop working. The same data can be found using newer Graph API properties.
+In late May 2025 (previously March), a select number of old Microsoft Graph Beta API [windowsAutopilotDeploymentProfile](/graph/api/resources/intune-shared-windowsautopilotdeploymentprofile) properties used for Windows Autopilot self-deploying mode and pre-provisioning are removed and stop working. The same data can be found using newer Graph API properties.
 
 #### How does this change affect you or your users?
 

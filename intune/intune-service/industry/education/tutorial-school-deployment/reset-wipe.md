@@ -82,19 +82,19 @@ Consider using factory reset in the following example scenarios:
 ::: zone pivot="windows"
 
 > [!TIP]
-> Consider that once the device is wiped, the new user will go through OOBE. This option may be ideal if the device is also registered in Autopilot to make the OOBE experience seamless, or if you plan to use a provisioning package to re-enroll the device.
+> Consider that once the device is wiped, the new user will go through OOBE. This option may be ideal if the device is also registered in Windows Autopilot to make the OOBE experience seamless, or if you plan to use a provisioning package to re-enroll the device.
 
-### Autopilot Reset
+### Windows Autopilot Reset
 
 ✅ Return a device to original settings but maintain enrollment
 
-Autopilot Reset is ideal when all data on a device needs to be wiped, but the device remains enrolled in your tenant.
+Windows Autopilot Reset is ideal when all data on a device needs to be wiped, but the device remains enrolled in your tenant.
 
-Once the Autopilot reset action is completed, the device asks to chose region and keyboard layout, then it displays the sign-in screen.
+Once the Windows Autopilot reset action is completed, the device asks to chose region and keyboard layout, then it displays the sign-in screen.
 
 #### [Intune](#tab/intune)
 
-Here are the steps to perform an Autopilot reset from Intune:
+Here are the steps to perform a  Windows Autopilot reset from Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** > **All devices**.
@@ -104,7 +104,7 @@ Here are the steps to perform an Autopilot reset from Intune:
 
 #### [Intune For Education](#tab/intune-for-education)
 
-Here are the steps to perform an Autopilot reset from Intune for Education:
+Here are the steps to perform a Windows Autopilot reset from Intune for Education:
 
 1. Sign in to the [Intune for Education portal](https://intuneeducation.portal.azure.com).
 1. Select **Devices**.
@@ -115,14 +115,14 @@ Here are the steps to perform an Autopilot reset from Intune for Education:
 
 :::image type="content" source="./images/win11-autopilot-reset.png" alt-text="Three screenshots showing the device being wiped, ending up in the login screen" border="false":::
 
-Consider using Autopilot reset in the following example scenarios:
+Consider using Windows Autopilot reset in the following example scenarios:
 
 - The device isn't working properly, and you want to reset it without reimaging it.
 - It's the end of school year and you want to prepare the device for a new school year.
 - You need to reassign the device to a different student, and you want to reset the device to without requiring the student to go through OOBE.
 
 > [!TIP]
-> Consider that the end user will **not** go through OOBE, and the association of the user to  the device in Intune doesn't change. For this reason, this option may be ideal for devices that have been enrolled in Intune as *shared devices* (for example, a device that was enrolled with a provisioning package or using Autopilot self-deploying mode).
+> Consider that the end user will **not** go through OOBE, and the association of the user to  the device in Intune doesn't change. For this reason, this option may be ideal for devices that have been enrolled in Intune as *shared devices* (for example, a device that was enrolled with a provisioning package or using Windows Autopilot self-deploying mode).
 
 ::: zone-end
 
@@ -144,7 +144,7 @@ There are scenarios that require a device to be deleted from your tenant, for ex
 ::: zone pivot="windows"
 
 1. If possible, perform a **factory reset (wipe)** of the device. If the device can't be wiped, delete the device from Intune using [these steps][MEM-1].
-1. If the device is registered in Autopilot, delete the Autopilot object using [these steps][MEM-2].
+1. If the device is registered in Windows Autopilot, delete the Windows Autopilot object using [these steps][MEM-2].
 1. Delete the device from Microsoft Entra ID using [these steps][MEM-3].
 
 ::: zone-end

@@ -12,7 +12,7 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 
+ms.assetid:
 
 # optional metadata
 
@@ -72,7 +72,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 
 - Creates a Windows Autopilot enrollment profile that automatically enrolls devices in Microsoft Intune.
 
-  For information on creating your own Windows Autopilot profile, go to [Configure Autopilot profiles](/autopilot/profiles).
+  For information on creating your own Windows Autopilot profile, go to [Configure Windows Autopilot profiles](/autopilot/profiles).
 
 - Turns on and configures the Windows Autopilot enrollment status page (ESP). This page shows users the enrollment progress.
 
@@ -90,7 +90,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 
 - Deploys a Windows PowerShell script that removes built-in apps, and simplifies the Start menu.
 
-  For information about PowerShell scripts in Intune, go to [Use PowerShell scripts on Windows client devices](../apps/intune-management-extension.md).
+  For information about PowerShell scripts in Intune, go to [Use PowerShell scripts on Windows client devices](../apps/powershell-scripts.md).
 
 - Creates a Windows client update ring policy. This policy automatically updates the devices, including product updates, drivers, and Windows updates.
 

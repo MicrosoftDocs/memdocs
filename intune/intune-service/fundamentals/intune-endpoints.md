@@ -70,7 +70,7 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
 ```
 
-The script provides a convenient method to list and review all services required by Intune and Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.
+The script provides a convenient method to list and review all services required by Intune and Windows Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.
 
 ## Endpoints
 
@@ -102,18 +102,18 @@ ID |Desc |Category |ER |Addresses |Ports
 170 | MEM - Win32Apps| Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<BR>`swdin02-mscdn.manage.microsoft.com` | **TCP:** 80, 443|
 97 | Consumer Outlook.com, OneDrive, Device authentication and Microsoft account | Default<BR>Required | False | `account.live.com`<BR>`login.live.com`<BR> |**TCP:** 443  |
 190 | Endpoint discovery | Default<BR>Required | False | `go.microsoft.com` | **TCP:** 80, 443|
-189 | Dependency - Feature Deployment| Default<BR>Required | False |`config.edge.skype.com`<BR> | **TCP:** 443|
+189 | Dependency - Feature Deployment| Default<BR>Required | False |`config.edge.skype.com`<BR>`ecs.office.com`<BR> | **TCP:** 443|
 192 | Organizational messages| Default<BR>Required | False | `fd.api.orgmsg.microsoft.com`<BR>`ris.prod.api.personalization.ideas.microsoft.com`<BR>`contentauthassetscdn-prod.azureedge.net`<BR>`contentauthassetscdn-prodeur.azureedge.net`<BR>`contentauthrafcontentcdn-prod.azureedge.net`<BR>`contentauthrafcontentcdn-prodeur.azureedge.net`<BR> | **TCP:** 443|
 
-### Autopilot dependencies
+### Windows Autopilot dependencies
 
 ID |Desc |Category |ER |Addresses |Ports|
 -- |-- |-----|--- |--------------|--------------------------------|
-164 | Autopilot - Windows Update| Default<BR>Required | False | `*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`adl.windows.com`<BR> | **TCP:** 80, 443|
-165 | Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` |**UDP:** 123|
-169 | Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
-173 | Autopilot - Third party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
-182 | Autopilot - Diagnostics upload | Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR>`lgmsapewus2.blob.core.windows.net`<BR>`lgmsapesea.blob.core.windows.net`<BR>`lgmsapeaus.blob.core.windows.net`<BR>`lgmsapeind.blob.core.windows.net`<BR> | **TCP:** 443|
+164 | Windows Autopilot - Windows Update| Default<BR>Required | False | `*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`adl.windows.com`<BR> | **TCP:** 80, 443|
+165 | Windows Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` |**UDP:** 123|
+169 | Windows Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
+173 | Windows Autopilot - Third party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443|
+182 | Windows Autopilot - Diagnostics upload | Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR>`lgmsapewus2.blob.core.windows.net`<BR>`lgmsapesea.blob.core.windows.net`<BR>`lgmsapeaus.blob.core.windows.net`<BR>`lgmsapeind.blob.core.windows.net`<BR> | **TCP:** 443|
 
 ### Remote Help
 
@@ -121,7 +121,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 ID |Desc |Category |ER |Addresses |Ports|Notes|
 -- |-- |-----|--- | --------------| --------------------------------|------------|
-181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`*.trouter.skype.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`go.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`trouter2-usce-1-a.trouter.teams.microsoft.com`<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`trouter-azsc-usea-0-a.trouter.skype.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443|
+181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443|
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443|
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443|
 
@@ -245,9 +245,9 @@ You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. F
 |swdd02-mscdn.azureedge.net| Scripts & Win32 Apps |
 |swdin01-mscdn.azureedge.net| Scripts & Win32 Apps |
 |swdin02-mscdn.azureedge.net| Scripts & Win32 Apps |
-|ekcert.spserv.microsoft.com| Autopilot Self-deploy |
-|ekop.intel.com| Autopilot Self-deploy |
-|ftpm.amd.com| Autopilot Self-deploy |
+|ekcert.spserv.microsoft.com| Windows Autopilot Self-deploy |
+|ekop.intel.com| Windows Autopilot Self-deploy |
+|ftpm.amd.com| Windows Autopilot Self-deploy |
 |*.itunes.apple.com| Apple Device Management |
 |*.mzstatic.com| Apple Device Management |
 |*.phobos.apple.com| Apple Device Management |
@@ -288,7 +288,7 @@ The following tables list the ports and services that the Intune client accesses
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
-If you are using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [Powershell scripts](../apps/intune-management-extension.md), [Remediations](../fundamentals/remediations.md), [Endpoint analytics](../../analytics/overview.md), [Custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
+If you are using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [Powershell scripts](../apps/powershell-scripts.md), [Remediations](../fundamentals/remediations.md), [Endpoint analytics](../../analytics/overview.md), [Custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
 
 Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the table below for the CDN endpoints and ports required:
 
@@ -447,4 +447,3 @@ For more information, see the [Overview of Endpoint Privilege Management](../pro
 [Other endpoints not included in the Office 365 IP Address and URL Web service](/microsoft-365/enterprise/additional-office365-ip-addresses-and-urls)
 
 [Managing Office 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints)
-

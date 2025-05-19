@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Distributed IT with multiple admins 
+title: Distributed IT with multiple admins
 description: Learn about scaling guidelines for Microsoft Intune when you have a large number of local admins who need to manage their own users/devices and policies within the same tenant. Use Microsoft Intune's Role Based Access Control to manage access.
- 
+
 keywords:
-author: smritib17
-ms.author: smbhardwaj
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 02/14/2023
 ms.topic: how-to
@@ -24,7 +24,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: 
+ms.collection:
   - M365-identity-device-management
   - highpri
 ---
@@ -65,12 +65,12 @@ The partial delegation model proposes the following guidelines for policy manage
 ✔️  **Permissions**
 
 - Create, update and delete permissions for policies, enrollment profiles, and apps should be held by the Central team.
-- Grant only read and assign permissions to the local admins.  
+- Grant only read and assign permissions to the local admins.
 
 ✔️  **Reuse**
 
 - Commonly configured policies, enrollment profiles, and apps should be made available to the local admins to reuse, as much as possible.
-- Microsoft Intune uses many common configurations that fall into a few categories. Review the recommendations listed for [App Protection Policies](../apps/app-protection-framework.md#level-1-enterprise-basic-data-protection).  
+- Microsoft Intune uses many common configurations that fall into a few categories. Review the recommendations listed for [App Protection Policies](../apps/app-protection-framework.md#level-1-enterprise-basic-data-protection).
 - As local admins onboard, they should review the existing policies and reuse them as needed.
 
 ✔️  **Exceptions**
@@ -78,16 +78,16 @@ The partial delegation model proposes the following guidelines for policy manage
 - The Central team can create certain new policies, enrollment profiles, and apps as exceptions, when needed, on behalf of the local admins. Usually, these exceptions include any type of profile that requires unique parameters.
 
 A partial delegation model is proposed in these two areas:
-  
+
 **Group and assignment guidelines for local admins**: What are some of the best practices for local admins to adopt while organizing groups for device management through Microsoft Intune? To find out, read the article [Intune grouping, targeting, and filtering: Recommendations for best performance - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-grouping-targeting-and-filtering-recommendations-for-best/ba-p/2983058)
- 
+
 **Feature specific guidelines**: How are policies/profiles/apps managed between a central authority and the local admins with specific permissions for the different features. For more information, go to the section [Feature specific guidelines](#feature-specific-guidelines).
 
 ### Full delegation model
 
 The full delegation model proposes the following guidelines for policy management between the Central team and the local admins.
 
-- Each local admin should have their own scope tag to separate each object that they fully manage.  
+- Each local admin should have their own scope tag to separate each object that they fully manage.
 - When the local admin doesn't need to create, update or delete, then grant the local admin a role with read and assign permissions and avoid assigning any other role with full permission to them. With this approach, you can avoid combining permissions across scope tags.
 - Sometimes the local admins may need to create their own policies, profiles, and apps while sharing some common policies, profiles, and apps. In such cases, create a special group and assign the common policies, profiles, and apps, to this group. This group shouldn't be included in the Scope Group for any local admin. [Scope Group](role-based-access-control.md#role-assignments). This approach prevents the create, update and delete permissions assigned to the local admins from applying to these common policies, profiles and apps.
 
@@ -107,17 +107,17 @@ In the central model, a single local admin team (parent) manages multiple child 
 
 ### Devolved model
 
-In the devolved model, multiple local admins (children) are managed both by their dedicated local admin and also overseen by an intermediary local admin team. Both the parent and children admins have their own scope tags to represent management boundaries.  
+In the devolved model, multiple local admins (children) are managed both by their dedicated local admin and also overseen by an intermediary local admin team. Both the parent and children admins have their own scope tags to represent management boundaries.
 
 - If there are fewer than 50 children admins, the intermediate local admin team may be granted access by assigning all the children's scope tags to the intermediate local admin teams RBAC role assignment.
 - If there are more than 50 children admins, the intermediate local admin team should be granted their own scope tag to represent the entire collection of children admins they oversee.
 - Newly created policies under the children admin's scope tags must have the intermediate tag added by a user with an appropriate role to prevent the intermediate local admin team from losing visibility.
 
-### Hybrid model  
+### Hybrid model
 
 In the hybrid model, the same parent admin is used in both Central and Devolved model at the same time.
 There are no special recommendations for this model.
- 
+
 ## Feature specific guidelines
 
 Depending on the business requirements for each feature, guidelines provided in this section may recommend that you create policies per local admin and/or delegate the permissions needed for creating objects to the local administrators.
@@ -220,7 +220,7 @@ For more information, go to [Manage apps](../apps/apps-add.md).
 #### Apple Volume Purchase Program
 
 Currently, there are no scale concerns for the supported number of Volume Purchase Program tokens.
-For more information, go to [How many tokens can I upload.](../apps/vpp-apps-ios.md#how-many-tokens-can-i-upload).  
+For more information, go to [How many tokens can I upload.](../apps/vpp-apps-ios.md#how-many-tokens-can-i-upload).
 
 #### Windows
 
@@ -246,25 +246,25 @@ For more information, go to [How many tokens can I upload.](../apps/vpp-apps-ios
 > - Although many apps can be set to high-priority mode, only one app update can be installed at a time. One large app update could potentially block many smaller updates until the large app is done installing.
 > - Depending on when apps release new updates, there could be a sudden spike in your network usage if app releases coincide. If Wi-Fi is not available on some devices, there could also be a spike in cellular usage.
 > - Although disruptive user experiences have already been mentioned, the problem grows as more apps are set to high-priority update mode.
- 
+
 For more information on scale concerns regarding Managed Google Play app updates using high-priority update mode, go this [Techcommunity article.](https://techcommunity.microsoft.com/t5/intune-customer-success/best-practices-for-updating-your-android-enterprise-apps/ba-p/3038520)
 
 ### Enrollment profiles
 
 In this section:
 
-- Autopilot
+- Windows Autopilot
 - Enrollment status page (ESP)
 - Apple business manager (ABM)
 - Android Enterprise profiles
 - Enrollment restrictions
 - Device categories
 
-#### Autopilot
+#### Windows Autopilot
 
-- Grant local admins the permissions to read Autopilot devices and upload new Autopilot devices.
-- Local admins shouldn't create Autopilot profiles. When you delegate to a large number of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area.
-For more information on Autopilot, go to [Use Autopilot to enroll Windows devices in Intune](/autopilot/tutorial/autopilot-scenarios).
+- Grant local admins the permissions to read Windows Autopilot devices and upload new Windows Autopilot devices.
+- Local admins shouldn't create Windows Autopilot profiles. When you delegate to a large number of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area.
+For more information on Windows Autopilot, go to [Use Windows Autopilot to enroll Windows devices in Intune](/autopilot/tutorial/autopilot-scenarios).
 
 #### Enrollment status page
 
@@ -273,9 +273,9 @@ For more information on Autopilot, go to [Use Autopilot to enroll Windows device
 
 #### Apple Business Manager
 
-If possible, local admins shouldn't be granted create, update or delete permissions on enrollment profiles. If local admins are given permissions to create Apple Business Manager profiles it also gives them create, update and delete permissions in Autopilot. However, local admins shouldn't create Autopilot profiles.
+If possible, local admins shouldn't be granted create, update or delete permissions on enrollment profiles. If local admins are given permissions to create Apple Business Manager profiles it also gives them create, update and delete permissions in Windows Autopilot. However, local admins shouldn't create Windows Autopilot profiles.
 
-When you delegate to a large number of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area. For more information, go to [Use Apple Business Manager to enroll Apple devices in Intune](../enrollment/tutorial-use-device-enrollment-program-enroll-ios.md).  
+When you delegate to a large number of administrators, the total number of objects may become large and difficult to manage. The best practice varies per feature area. For more information, go to [Use Apple Business Manager to enroll Apple devices in Intune](../enrollment/tutorial-use-device-enrollment-program-enroll-ios.md).
 
 #### Android Enterprise profiles
 

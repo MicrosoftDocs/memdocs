@@ -19,9 +19,9 @@ user-driven/hybrid-azure-ad-join-esp.md
 
 Headings are driven by article context. -->
 
-The main feature of the Enrollment Status Page (ESP) is to display progress and current status to the end user while the device is being set up and enrolled via the Autopilot process. The other main feature of the ESP is to block a user from signing in and using the device until all required policies and applications are installed. Multiple ESP profiles can be created with different settings and assigned appropriately based on different needs and scenarios.
+The main feature of the Enrollment Status Page (ESP) is to display progress and current status to the end user while the device is being set up and enrolled via the Windows Autopilot process. The other main feature of the ESP is to block a user from signing in and using the device until all required policies and applications are installed. Multiple ESP profiles can be created with different settings and assigned appropriately based on different needs and scenarios.
 
-Out of box there's a default ESP that is assigned to all devices. The default setting in the default ESP is to not show app and profile progress during the Autopilot process. However, Microsoft recommends changing this default via a separate custom ESP to show app and profile progress. Enabling and configuring an ESP allows end users to properly see the progress of their device being set up and prevents them using the device until the device is fully configured and provisioned. A user signing into the device before being fully configured and provisioned can cause issues.
+Out of box there's a default ESP that is assigned to all devices. The default setting in the default ESP is to not show app and profile progress during the Windows Autopilot process. However, Microsoft recommends changing this default via a separate custom ESP to show app and profile progress. Enabling and configuring an ESP allows end users to properly see the progress of their device being set up and prevents them using the device until the device is fully configured and provisioned. A user signing into the device before being fully configured and provisioned can cause issues.
 
 The ESP has two phases:
 
@@ -34,7 +34,7 @@ Device ESP runs first followed by the User ESP.
 >
 > For Configuration Manager admins, an ESP is similar and analogous to Configuration Manager client settings.
 
-## Autopilot Enrollment Status Page (ESP) configuration options
+## Windows Autopilot Enrollment Status Page (ESP) configuration options
 
 When the Enrollment Status Page (ESP) is configured, it has several options that can be configured to meet the needs of the organization. The following lists the different options and their possible configurations:
 
@@ -86,7 +86,7 @@ When the Enrollment Status Page (ESP) is configured, it has several options that
 
 ## Configure and assign the Enrollment Status Page (ESP)
 
-To configure and assign the Autopilot Enrollment Status Page (ESP), follow these steps:
+To configure and assign the Windows Autopilot Enrollment Status Page (ESP), follow these steps:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -110,7 +110,7 @@ To configure and assign the Autopilot Enrollment Status Page (ESP), follow these
 
 1. In the **Settings** page, toggle the option **Show app and profile configuration progress** to **Yes**.
 
-   1. After the option **Show app and profile configuration progress** is toggled to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP as described in the section [Autopilot Enrollment Status Page (ESP) configuration options](#autopilot-enrollment-status-page-esp-configuration-options):
+   1. After the option **Show app and profile configuration progress** is toggled to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP as described in the section [Windows Autopilot Enrollment Status Page (ESP) configuration options](#windows-autopilot-enrollment-status-page-esp-configuration-options):
 
    1. Once the different ESP options under the **Settings** page are configured as desired, select **Next**.
 

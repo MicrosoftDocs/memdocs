@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/28/2024
+ms.date: 05/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: shthilla
+ms.reviewer: grwilson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -70,15 +70,15 @@ You must create an enrollment profile so that users can enroll corporate-owned w
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 
-2. Go to **Devices** > **Enrollment**.  
+1. Go to **Devices** > **Enrollment**.  
 
-3. Select the **Android** tab.  
+1. Select the **Android** tab.  
 
-4. Under **Android Enterprise** > **Enrollment Profiles**, choose **Corporate-owned devices with work profile**.  
+1. Under **Android Enterprise** > **Enrollment Profiles**, choose **Corporate-owned devices with work profile**.  
 
-5. Select **Create profile**.  
+1. Select **Create profile**.  
 
-6. Enter the basics for your profile:
+1. Enter the basics for your profile:
 
     - **Name**: Give the profile a name. Note the name down for later, because you need it when you set up the dynamic device group.   
 
@@ -87,17 +87,48 @@ You must create an enrollment profile so that users can enroll corporate-owned w
 
       - **Corporate-owned with work profile (default)**
         
-      - **Corporate-owned with work profile, via staging**  
+      - **Corporate-owned with work profile, via staging**    
+    
+      >[!TIP]
+      > Enrollment time grouping isn't supported with the staging token. If you're configuring a profile for use with enrollment time grouping, use the corporate-owned with work profile (default) token.
 
     - **Token expiration date**: Only available with the staging token. Enter the date you want the token to expire, up to 65 years in the future. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD` The token expires on the selected date at 12:59:59 PM in the time zone it was created.   
+1. Select **Next** to continue to **Device group**.  
+1. Optionally, select where to group devices at enrollment time. Select **Search by group name**. Then find and select a static Microsoft Entra device group. For information about how to create a device group to use for grouping, see [Set up enrollment time grouping](enrollment-time-grouping.md).  
+   >[!TIP]
+   > Be sure to select a device group, not a user group. 
+1. Select **Next** to continue to **Scope tags**.  
+1. Optionally, apply one or more scope tags to limit restriction visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).     
 
-8. Select **Next** to continue to **Scope tags**.  
+    - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidForWork_01/01/2025_12:00 PM*  
+    
+        To create a custom naming template:  
 
-9. Optionally, apply one or more scope tags to limit restriction visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).     
+       1. Under **Apply device name template**, choose **Yes**.  
 
-10. Choose **Next** to continue to **Create + review**.  
+       2. Enter the naming template you want to apply to the devices. Names can contain letters, numbers, and hyphens.  
 
-11. Review your choices, and then select **Create** to finish creating the profile.  
+         You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
+
+        - {{SERIAL}} for the device's serial number.  
+
+        - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
+
+        - {{DEVICETYPE}} for the device type. Example: *AndroidForWork*  
+
+        - {{ENROLLMENTDATETIME}} for the date and time of enrollment.  
+
+        - {{UPNPREFIX}} for the user's first name. Example: *Eric*, when device is user affiliated.  
+
+        - {{USERNAME}} for the user's username when the device is user affiliated. Example: *Eric Solomon*  
+        
+        - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
+
+         Edits you make to the naming template only apply to new enrollments.  
+
+1. Choose **Next** to continue to **Create + review**.  
+
+1. Review your choices, and then select **Create** to finish creating the profile.  
 
 ### Access enrollment token  
 After you create a profile, Intune generates the token you need for enrollment.  

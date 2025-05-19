@@ -2,7 +2,7 @@
 title: Endpoint analytics settings
 titleSuffix: Microsoft Intune
 description: Instructions for configuring settings in Endpoint analytics.
-ms.date: 02/22/2024
+ms.date: 04/08/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: how-to
@@ -51,11 +51,11 @@ To connect your Configuration Manager hierarchy with Endpoint analytics, you nee
 Once connected, you can [choose which devices you'd like to target](enroll-configmgr.md#bkmk_cm_enroll) for Endpoint analytics in the Configuration Manager console.
 
 > [!NOTE] 
-> Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
+> Some devices, such as non-Windows devices, aren't eligible for Endpoint analytics, but might be eligible for [device actions with Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection have no effect on Endpoint Analytics.
 
 ### <a name="bkmk_consent"></a> Consent to share data
 
-When you share anonymized data and aggregate metrics, enrolled organizations keep the **All organizations (median)** baseline updated. You can revoke consent to share this data at any time. When you revoke consent, it disables reports that rely on data for calculating insights such as startup performance. The data currently in the reports immediately becomes stale and new data isn't added. Prior to revoking consent, data is displayed for up to 60 days until historical data is no longer available.
+When you share anonymized data and aggregate metrics, enrolled organizations keep the **All organizations (median)** baseline updated. You can revoke consent to share this data at any time. When you revoke consent, it disables reports that rely on data for calculating insights such as startup performance. The data currently in the reports immediately becomes stale and new data isn't added. Before you revoke consent, you should know that data is displayed for up to 60 days until historical data is no longer available.
 
 To revoke consent:
 

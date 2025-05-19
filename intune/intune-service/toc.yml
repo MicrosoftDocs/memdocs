@@ -189,8 +189,8 @@ items:
     - name: Intune plugin in Security Copilot
       href: ./copilot/security-copilot.md
     - name: Copilot in Surface Management Portal
-      displayName: ai, copilot, surface, models, fleet, warranty    
-      href: ./copilot/security-copilot-surface-portal.md    
+      displayName: ai, copilot, surface, models, fleet, warranty
+      href: ./copilot/security-copilot-surface-portal.md
 
   - name: Endpoint analytics
     items:
@@ -235,7 +235,7 @@ items:
       - name: Device query
         href: ../analytics/device-query.md
       - name: Device query for multiple devices
-        href: ../analytics/device-query-multiple-devices.md        
+        href: ../analytics/device-query-multiple-devices.md
       - name: Data platform schema
         href: ../analytics/data-platform-schema.md
       - name: Battery health
@@ -274,20 +274,20 @@ items:
       - name: Configure multiple admin approvals
         href: ./fundamentals/multi-admin-approval.md
 
-      - name: Manage roles
-        items:
-        - name: Role-based access control
-          href: ./fundamentals/role-based-access-control.md
-        - name: Assign a role to a user
-          href: ./fundamentals/assign-role.md
-        - name: Create a custom role
-          href: ./fundamentals/create-custom-role.md
-        - name: Use scope tags to determine what admins can see
-          href: ./fundamentals/scope-tags.md
-        - name: Distributed IT environment with many admins in the same Intune tenant
-          href: ./fundamentals/intune-scale-guidelines.md
-        - name: Built-in roles permissions reference
-          href: ./fundamentals/role-based-access-control-reference.md
+    - name: Manage roles
+      items:
+      - name: Role-based access control
+        href: ./fundamentals/role-based-access-control.md
+      - name: Assign a role to a user
+        href: ./fundamentals/assign-role.md
+      - name: Create a custom role
+        href: ./fundamentals/create-custom-role.md
+      - name: Use scope tags to determine what admins can see
+        href: ./fundamentals/scope-tags.md
+      - name: Distributed IT environment with many admins in the same Intune tenant
+        href: ./fundamentals/intune-scale-guidelines.md
+      - name: Built-in roles permissions reference
+        href: ./fundamentals/role-based-access-control-reference.md
 
     - name: Manage apps
       items:
@@ -496,6 +496,8 @@ items:
                   href: ./apps/lob-apps-ios.md
                 - name: Windows LOB apps
                   href: ./apps/lob-apps-windows.md
+                - name: Intune management extension for Windows
+                  href: ./apps/intune-management-extension.md                  
                 - name: Enterprise App Management
                   items:
                   - name: Enterprise App Management overview
@@ -531,7 +533,7 @@ items:
                     href: ./apps/apps-win32-deploy-update-package.md
               - name: Add specific apps
                 items:
-                - name: Company Portal app - Autopilot
+                - name: Company Portal app - Windows Autopilot
                   href: ./apps/store-apps-company-portal-autopilot.md
                 - name: Company Portal app - Download
                   href: ./apps/store-apps-company-portal-app.md
@@ -544,7 +546,7 @@ items:
                 - name: Microsoft Defender for Endpoint for macOS
                   href: ./apps/apps-advanced-threat-protection-macos.md
               - name: PowerShell scripts
-                href: ./apps/intune-management-extension.md
+                href: ./apps/powershell-scripts.md
               - name: macOS shell scripts
                 href: ./apps/macos-shell-scripts.md
               - name: Get the app bundle ID
@@ -652,7 +654,7 @@ items:
               - name: Review app protection logs
                 href: ./apps/app-protection-policy-settings-log.md
             - name: Policies for Microsoft 365 apps
-              href: ./apps/app-office-policies.md 
+              href: ./apps/app-office-policies.md
             - name: Quiet time policies
               href: ./apps/apps-quiet-time-policies.md
             - name: Troubleshoot
@@ -1014,6 +1016,8 @@ items:
               href: ./protect/windows-10-update-rings.md
             - name: Feature updates policy
               href: ./protect/windows-10-feature-updates.md
+            - name: Windows quality updates policy
+              href: ./protect/windows-quality-update-policy.md  
             - name: Expedite updates policy
               href: ./protect/windows-10-expedite-updates.md
             - name: Windows driver updates
@@ -1129,6 +1133,10 @@ items:
           href: ./protect/windows-update-settings.md
         - name: Zero Trust security configuration examples
           items:
+          - name: Android fully managed compliance and security
+            href: ./protect/android-fully-managed-security-configurations.md
+          - name: Android personally-owned compliance and security
+            href: ./protect/android-personally-owned-security-configurations.md
           - name: iOS/iPadOS device compliance
             href: ./protect/ios-ipados-device-compliance-security-configurations.md
           - name: iOS/iPadOS personal device security
@@ -1338,6 +1346,9 @@ items:
         - name: Apple
           displayName: ios, ipados, macos
           href: ./configuration/apple-settings-catalog-configurations.md
+        - name: Android
+          displayName: Android
+          href: ./configuration/settings-catalog-android.md  
 
       - name: Device Configuration template settings lists
         items:
@@ -1373,9 +1384,6 @@ items:
             href: ./configuration/wi-fi-settings-android-aosp.md
         - name: Android Enterprise
           items:
-          - name: Custom (OMA-URI)
-            displayName: oma uri, byod, work profile, android, android enterprise, ae
-            href: ./configuration/custom-settings-android-for-work.md
           - name: Device restrictions - organization-owned devices
             displayName: cope, cobo, cosu, android, android enterprise, ae
             href: ./configuration/device-restrictions-android-for-work.md
@@ -1674,11 +1682,11 @@ items:
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
         - name: Enrollment solutions
           items:
-          - name: Set up enrollment with Apple Configurator  
+          - name: Set up enrollment with Apple Configurator
             items:
-            - name: Enroll corporate-owned devices  
+            - name: Enroll corporate-owned devices
               href: ./enrollment/apple-configurator-enroll-ios.md
-            - name: Enroll corporate-owned, userless devices  
+            - name: Enroll corporate-owned, userless devices
               href: ./enrollment/apple-corporate-owned-userless-enroll.md
           - name: Set up Apple Automated Device Enrollment
             items:

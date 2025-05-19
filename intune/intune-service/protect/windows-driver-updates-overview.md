@@ -191,12 +191,12 @@ For more information about planning deployments, see [Create a deployment plan](
 
 - No. Driver Updates aren't currently supported with Assignment Filters.
 
-### Can I apply driver updates policy during Autopilot?
+### Can I apply driver updates policy during Windows Autopilot?
 
 - No. Driver Updates aren't supported during autopilot at this time.
 
 > [!NOTE]
-> Windows applies critical updates during Autopilot. These updates may include critical driver updates that have not yet been approved by an admin.
+> Windows applies critical updates during Windows Autopilot. These updates may include critical driver updates that have not yet been approved by an admin.
 
 ### Can I use policy to roll back a driver update?
 
@@ -327,6 +327,9 @@ Here are some more details on when deadlines are applied to drivers:
 ### How do I set deferrals for drivers?
 
 - The deferral period set for Quality Updates within the Update Rings policy does not apply to drivers that are approved using the Driver Update Policy. Instead, use the deferral setting in the Driver policy to set a deferral.  In fact, using multiple driver policies with different deferral settings to create driver deployment rings is highly recommended. Remember to only assign a device to one driver policy.
+  
+> [!NOTE]
+> The deferral period only applies to automatically approved driver and firmware updates. An admin must specify the date to start offering a driver with any manual approval.
 
 ### Are the user experience settings from an Update Ring policy applied for driver updates?
 

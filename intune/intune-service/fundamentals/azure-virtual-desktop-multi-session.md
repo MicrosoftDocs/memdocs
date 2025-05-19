@@ -166,7 +166,7 @@ All other policies report as **Not applicable**.
 > [!IMPORTANT]
 > You'll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren't supported.
 
-[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 or Windows 11 Enterprise multi-session. 
+[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 or Windows 11 Enterprise multi-session.
 
 ## Endpoint security
 
@@ -209,7 +209,7 @@ The following settings are available in the catalog, with the links opening the 
 
 The following Windows 10 or Windows 11 desktop device remote actions aren't supported and will be grayed out in the UI and disabled in Graph for Windows 10 or Windows 11 Enterprise multi-session VMs:
 
-- Autopilot reset
+- Windows Autopilot reset
 - BitLocker key rotation
 - Fresh Start
 - Remote lock
@@ -225,7 +225,7 @@ For more information, see:
 
 ## Security baselines
 
-Security baselines aren't available for Windows 10 or Windows 11 Enterprise multi-session at this time. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../configuration/settings-catalog.md).
+Security baselines are available for Windows 11 Enterprise multi-session, but aren't available for Windows 10 Enterprise multi-session at this time. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../configuration/settings-catalog.md).
 
 ## Additional configurations that aren't supported on Windows 10 or Windows 11 Enterprise multi-session VMs
 

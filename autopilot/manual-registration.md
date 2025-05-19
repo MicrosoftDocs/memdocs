@@ -32,7 +32,7 @@ The following diagram shows how manual registration and OEM registration might b
 
 :::image type="content" source="images/image2.png" alt-text="Screenshot that shows Windows Autopilot device registration process.":::
 
-For a list of participant device manufacturers and device resellers, see [Autopilot device manufacturers and resellers](https://www.microsoft.com/microsoft-365/windows/windows-autopilot).
+For a list of participant device manufacturers and device resellers, see [Windows Autopilot device manufacturers and resellers](https://www.microsoft.com/microsoft-365/windows/windows-autopilot).
 
 To [manually register a device](add-devices.md), a device's hardware hash first has to be captured. Once this process is completed, the resulting hardware hash can be uploaded to the Windows Autopilot service. Because this process requires booting the device into Windows to obtain the hardware hash, manual registration is intended primarily for testing and evaluation scenarios.
 
@@ -84,11 +84,11 @@ For more information about device IDs, see the following articles:
 For a how to guide on how to register devices with Windows Autopilot, see one of the following links:
 
 - [Manually register devices with Windows Autopilot](add-devices.md).
-- [User-driven Microsoft Entra join: Register devices as Autopilot devices](tutorial/user-driven/azure-ad-join-register-device.md).
-- [User-driven Microsoft Entra hybrid join: Register devices as Autopilot devices](tutorial/user-driven/hybrid-azure-ad-join-register-device.md).
-- [Pre-provision Microsoft Entra join: Register devices as Autopilot devices](tutorial/pre-provisioning/azure-ad-join-register-device.md).
-- [Pre-provision Microsoft Entra hybrid join: Register devices as Autopilot devices](tutorial/pre-provisioning/hybrid-azure-ad-join-register-device.md).
-- [Self-deploying mode: Register devices as Autopilot devices](tutorial/self-deploying/self-deploying-register-device.md).
+- [User-driven Microsoft Entra join: Register devices as Windows Autopilot devices](tutorial/user-driven/azure-ad-join-register-device.md).
+- [User-driven Microsoft Entra hybrid join: Register devices as Windows Autopilot devices](tutorial/user-driven/hybrid-azure-ad-join-register-device.md).
+- [Pre-provision Microsoft Entra join: Register devices as Windows Autopilot devices](tutorial/pre-provisioning/azure-ad-join-register-device.md).
+- [Pre-provision Microsoft Entra hybrid join: Register devices as Windows Autopilot devices](tutorial/pre-provisioning/hybrid-azure-ad-join-register-device.md).
+- [Self-deploying mode: Register devices as Windows Autopilot devices](tutorial/self-deploying/self-deploying-register-device.md).
 
 ## Related content
 
