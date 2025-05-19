@@ -24,14 +24,13 @@ Windows Autopilot device preparation in automatic mode for Windows 365 Frontline
 - Step 1: [Set up Windows automatic Intune enrollment](automatic-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](automatic-allow-users-to-join.md)
 - Step 3: [Create an assigned device group](automatic-device-group.md)
-- Step 4: [Create a user group](automatic-user-group.md)
-- Step 5: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
+- Step 4: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
 
 > [!div class="checklist"]
 >
-> - **Step 6: Create Windows Autopilot device preparation policy**
+> - **Step 5: Create Windows Autopilot device preparation policy**
 
-- Step 7: [Add Windows corporate identifier to device](automatic-corporate-identifier.md)
+- Step 6: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
 
 For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode overview](automatic-workflow.md#workflow).
 
@@ -172,11 +171,7 @@ In the **Configuration settings** page:
 
 If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
-## Next step: Add Windows corporate identifier to device
+## Next step: Create a Cloud PC provisioning policy
 
 > [!div class="nextstepaction"]
-> [Step 7: Add Windows corporate identifier to device](automatic-corporate-identifier.md)
-
-> [!NOTE]
->
-> Windows Autopilot device preparation only requires [corporate identifiers for Windows](../../overview.md#corporate-identifiers-for-windows) if Intune enrollment restrictions are being used to block personal device enrollments. If Intune enrollment restrictions aren't being used to block personal device enrollments, then the next step is to deploy the device.
+> [Step 7: Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)

@@ -19,7 +19,7 @@ appliesto:
 
 # Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode in Intune
 
-This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation user-driven scenario when the devices are Microsoft Entra joined.
+This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode.
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
@@ -27,27 +27,26 @@ Before beginning, refer to the [How to: Plan your Microsoft Entra join implement
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode overview
 
-Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode is a solution that automates the configuration of Windows on a new device without the need for IT intervention. Normally the device is delivered directly from an OEM or reseller to the end-user. Windows Autopilot device preparation user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
+[Windows 365 Frontline Cloud PC in shared mode](/windows-365/enterprise/autopilot-device-preparation) builds upon the flexible licensing and usage model of Windows 365 Frontline by enabling the provisioning of shared Cloud PCs for groups of users to access on an occasional or part-time basis.
 
-- Powering on the device.
-- In certain scenarios, selecting the language, locale, and keyboard layout.
-- Connecting to a wireless network if the device isn't connected to a wired network.
-- Signing into Microsoft Entra ID with the end-user's Microsoft Entra credentials.
+Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode, also known as Windows Autopilot device preparation automatic mode, is a solution that adds an additional Windows Autopilot device preparation profile that can be included in Windows 365 Frontline shared provisioning policies. By including the Windows Autopilot device preparation profile in the Windows 365 Frontline shared provisioning policies, it ensures that essential required device-targeted apps and scripts in Intune are installed on shared Cloud PCs during the provisioning process before the user signs in. This feature helps increase standardization of shared Cloud PCs while reducing the management overhead that comes with IT admins creating and managing their own custom images with pre-installed applications.
 
-Windows Autopilot device preparation user-driven deployments can perform the following tasks during the deployment:
+Windows Autopilot device preparation tracks the installation progress of specified Intune applications and scripts during Cloud PC provisioning. Instead of marking Cloud PCs as "provisioned" after Intune enrollment, Windows Autopilot device preparation and Windows 365 wait until those workloads are fully installed. IT admins will see a new status of **Preparing** reflected in the console while device preparation is underway.
+
+Windows Autopilot device preparation automatic deployments performs the following tasks during the deployment:
 
 - Joins the device to Microsoft Entra ID.
 - Enrolls the device in Intune.
 - Installs up to 10 essential applications.
 - Runs up to 10 essential PowerShell scripts.
 
-Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the desktop.
+Once the Windows Autopilot device preparation automatic deployment is complete, the Cloud PC is ready for the end-user to use.
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode process
 
 During the out-of-box experience (OOBE), a user authenticates with their corporate credentials. If there's a Windows Autopilot device preparation policy assigned to the user signing in, then that policy is delivered to the device. It then determines the configuration that needs to be applied to the device based on the settings configured in the policy. After that, device setup continues in the following order:
 
-1. The device joins Microsoft Entra ID and enrolls in Intune.
+1. The Cloud PC joins Microsoft Entra ID and enrolls in Intune.
 
 1. The Intune management extension installs.
 
@@ -80,10 +79,9 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > - Step 1: [Set up Windows automatic Intune enrollment](automatic-automatic-enrollment.md)
 > - Step 2: [Allow users to join devices to Microsoft Entra ID](automatic-allow-users-to-join.md)
 > - Step 3: [Create an assigned device group](automatic-device-group.md)
-> - Step 4: [Create a user group](automatic-user-group.md)
-> - Step 5: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
-> - Step 6: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
-> - Step 7: [Add Windows corporate identifier to device](automatic-corporate-identifier.md)
+> - Step 4: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
+> - Step 5: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
+> - Step 6: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
 
 > [!NOTE]
 >

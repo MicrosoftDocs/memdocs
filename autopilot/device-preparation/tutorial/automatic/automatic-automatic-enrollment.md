@@ -27,10 +27,9 @@ Windows Autopilot device preparation in automatic mode for Windows 365 Frontline
 
 - Step 2: [Allow users to join devices to Microsoft Entra ID](automatic-allow-users-to-join.md)
 - Step 3: [Create an assigned device group](automatic-device-group.md)
-- Step 4: [Create a user group](automatic-user-group.md)
-- Step 5: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
-- Step 6: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
-- Step 7: [Add Windows corporate identifier to device](automatic-corporate-identifier.md)
+- Step 4: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
+- Step 5: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
+- Step 6: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
 
 For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode overview](automatic-workflow.md#workflow).
 

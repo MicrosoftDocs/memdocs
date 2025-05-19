@@ -28,10 +28,9 @@ Windows Autopilot device preparation in automatic mode for Windows 365 Frontline
 >
 > - **Step 3: Create an assigned device group**
 
-- Step 4: [Create a user group](automatic-user-group.md)
-- Step 5: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
-- Step 6: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
-- Step 7: [Add Windows corporate identifier to device](automatic-corporate-identifier.md)
+- Step 4: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
+- Step 5: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
+- Step 6: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
 
 For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode overview](automatic-workflow.md#workflow).
 
@@ -41,25 +40,29 @@ For an overview of the Windows Autopilot device preparation in automatic mode fo
 
 ## Create an assigned device group
 
-Device groups are a collection of devices organized into a Microsoft Entra group. Device groups can be either assigned or dynamic:
+Device groups are a collection of devices or Cloud PCs organized into a Microsoft Entra group. Normally device groups can be either assigned or dynamic:
 
-- **Assigned groups** - Devices are manually added to the group and are static. Windows Autopilot device preparation only uses assigned groups.
-- **Dynamic groups** - Devices are automatically added to the group based on rules. Windows Autopilot device preparation doesn't use dynamic groups.
+- **Assigned groups** - Devices or Cloud PCs are manually added to the group and are static. Windows Autopilot device preparation only uses assigned groups.
+- **Dynamic groups** - Devices or Cloud PCs are automatically added to the group based on rules. Windows Autopilot device preparation doesn't use dynamic groups.
 
-Windows Autopilot device preparation uses a device group as part of the Windows Autopilot device preparation policy. The device group specified in the Windows Autopilot device preparation policy is an **assigned device group** where devices are added automatically during the Windows Autopilot device preparation deployment by the the Windows Autopilot device preparation process.
+Windows Autopilot device preparation uses an **assigned device group** as part of the Windows Autopilot device preparation policy. The device group specified in the Windows Autopilot device preparation policy needs to be an **assigned device group**. The the Windows Autopilot device preparation process then adds devices or Cloud PCs automatically to this assigned device group during the Windows Autopilot device preparation deployment.
 
 > [!IMPORTANT]
 >
 > The device group specified in the Windows Autopilot device preparation policy needs to be an **assigned security device group**.
 
+> [!TIP]
+>
+> Although the same assigned device group can be used for multiple Windows Autopilot device preparation policies, Microsoft recommends creating a separate assigned device group for each Windows Autopilot device preparation policy. For example, a different assigned device group for a user-driven scenario vs. an automatic scenario. This allows for easier management of the Windows Autopilot device preparation policies and the devices or Cloud PCs that are assigned to them.
+
 To create an assigned security device group for use with Windows Autopilot device preparation, follow these steps:
 
 [!INCLUDE [How to Create an assigned device group in Intune](../../../includes/create-assigned-device-group.md)]
 
-## Next step: Create a user group
+## Next step: Assign applications and PowerShell scripts to device group
 
 > [!div class="nextstepaction"]
-> [Step 4: Create a user group](automatic-user-group.md)
+> [Step 4: Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
 
 ## Related content
 

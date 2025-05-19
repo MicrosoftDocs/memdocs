@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/19/2024
+ms.date: 05/20/2025
 ms.localizationpriority: medium
 ---
 
@@ -17,6 +17,7 @@ tutorial/self-deploying/self-deploying-automatic-enrollment.md
 tutorial/user-driven/azure-ad-join-automatic-enrollment.md
 tutorial/user-driven/hybrid-azure-ad-join-automatic-enrollment.md
 device-preparation/tutorial/user-driven/entra-join-automatic-enrollment.md
+device-preparation/tutorial/automatic/automatic-automatic-enrollment.md
 
 Headings are driven by article context. -->
 

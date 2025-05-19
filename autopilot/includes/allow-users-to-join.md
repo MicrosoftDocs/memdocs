@@ -5,7 +5,7 @@ manager: aaroncz
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/19/2024
+ms.date: 05/20/2025
 ms.localizationpriority: medium
 ---
 
@@ -14,6 +14,7 @@ ms.localizationpriority: medium
 tutorial/pre-provisioning/azure-ad-join-allow-users-to-join.md
 tutorial/user-driven/azure-ad-join-allow-users-to-join.md
 device-preparation/tutorial/user-driven/entra-join-allow-users-to-join.md
+device-preparation/tutorial/automatic/automatic-allow-users-to-join.md
 
 Headings are driven by article context. -->
 
