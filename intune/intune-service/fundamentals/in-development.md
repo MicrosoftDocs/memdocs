@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/29/2025
+ms.date: 05/22/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -104,26 +104,11 @@ You'll soon be able to use a custom template for naming AOSP user-affiliated and
 
 ## Device management
 
-### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
-
-During an unattended Remote Help sessions on Android devices, we're enhancing security and user awareness during remote assistance by blocking the screen of the device, and users will be notified if they interact with it.
-
-This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices. 
-
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
-
-
 ### Cross Platform Device Inventory<!-- 25964936 -->
 
 Android, iOS, and Mac devices will be added to device inventory. Intune will collect a default set of inventory data including 74 Apple properties and 32 Android properties.
 
 For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
-
-### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
-
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA helps to mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
-
-For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
 ### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 
@@ -147,16 +132,6 @@ Configure compliance policies to detect if a corporate-owned Android Enterprise 
 Applies to:
 
 - Android
-
-### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
-
-We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
-
-The template will support settings related to global exclusion settings. Applicable to antivirus and EDR engines on the client, the settings can configure exclusions to stop associated real time protection EDR alerts for the excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
-
-Applies to:
-
-- Linux
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
@@ -183,7 +158,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Tenant administration
 
-### Data collection from SimInfo entity on Windows devices<!--30120558 iddraft idready -->
+### Data collection from SimInfo entity on Windows devices<!--30120558 -->
 
 You'll be able to collect data from the SimInfo entity on Windows devices with enhanced device inventory.
 

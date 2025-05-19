@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/28/2025
+ms.date: 05/22/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -76,17 +76,81 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
+## Week of May 19, 2025 (Service release 2505)
+
+### Microsoft Intune Suite
+
+#### Endpoint Privilege Management rules explicitly deny elevation<!-- 30225542 -->
+ 
+Endpoint Privilege Management (EPM) elevation rules now include a new file elevation type of **Deny**. An EPM elevation rule set to *Deny* blocks the specified file from running in an elevated context. While we recommend using file elevation rules to allow users to elevate specific files, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
+
+*Deny* rules support the same configuration options as other [elevation types](#manually-configure-elevation-rules-for-windows-elevation-rules-policy) except for child processes, which are not used.
+
+For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../protect/epm-overview.md).
+
+### App management
+
+#### Newly available protected apps for Intune<!-- 31844143, 31974161, 32037902, 32038043 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Windows App by Microsoft Corporation (Android)
+- Microsoft Clipchamp by Microsoft Corporation (iOS)
+- 4CEE Connect by 4CEE Development
+- Mobile Helix Link for Intune by Mobile Helix
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Device management
+
+#### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
+
+During an unattended Remote Help sessions on Android devices, we've enhanced the security and user awareness during remote assistance by blocking the screen of the device, and notifying users if they interact with it. 
+
+This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices. 
+
+For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
+
+#### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
+
+Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). 
+
+The remote actions, **Retire**, **Wipe**, and **Delete** now support MAA. 
+
+Onboarding Remote device actions to MAA helps mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account thereby enhancing the overall security posture of the environment. 
+
+For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md)
+
+### Device security
+
+#### New endpoint security profile for configuring Endpoint detection and response and Antivirus exclusion settings on Linux devices <!-- 26549863 -->
+
+As part of the Intune scenario for [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use a new *Endpoint detection and response* profile for Linux named [**Microsoft Defender Global Exclusions (AV+EDR)**](../protect/endpoint-security-edr-policy.md#linux) that you can now use to manage Linux device exclusions for both Microsoft Defender *Endpoint detection and response* (EDR) and *Antivirus* (AV).
+
+This profile supports settings related to global exclusion settings as detailed in [Configure and validate exclusions on Linux](/defender-endpoint/linux-exclusions) in the Microsoft Defender documentation. These exclusion configurations can apply to both the antivirus and EDR engines on the Linux client to stop associated real time protection EDR alerts for excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
+
+The new Intune profile:
+
+- Is available in addition to the existing endpoint security Antivirus policy for Microsoft Defender Antivirus.
+- Is supported for devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+- Is not supported for Linux devices managed directly by Intune.
+
+For details about the available Defender settings, see [Configure security settings in Microsoft Defender for Endpoint on Linux - Microsoft Defender for Endpoint](/defender-endpoint/linux-preferences) in the Defender for Endpoint documentation.
+
+Applies to:
+- Linux
+
 ## Week of April 28, 2025
 
 ### App management
 
 #### Intune support for Apple specialty devices<!-- 32486291 -->
-We have extended app protection policies (APP) to support Microsoft Edge (v136 or later), OneDrive (v16.8.4 or later), and Outlook (v4.2513.0 or later). To enable this setting for these specific apps on visionOS devices, you must set `com.microsoft.intune.mam.visionOSAllowiPadCompatApps` to `Enabled` in your app configuration policy. Once you have assigned your app configuration policy, you can create and assign your app protection policy for your VisionOS devices. For more information, see [Protect data on VisionOS devices](../apps/app-configuration-policies-managed-app.md#protect-data-on-visionos-devices).
+We've extended app protection policies (APP) to support Microsoft Edge (v136 or later), OneDrive (v16.8.4 or later), and Outlook (v4.2513.0 or later). To enable this setting for these specific apps on visionOS devices, you must set `com.microsoft.intune.mam.visionOSAllowiPadCompatApps` to `Enabled` in your app configuration policy. Once you have assigned your app configuration policy, you can create and assign your app protection policy for your VisionOS devices. For more information, see [Protect data on VisionOS devices](../apps/app-configuration-policies-managed-app.md#protect-data-on-visionos-devices).
 
 ### Tenant administration
 
 #### New icon for Microsoft Intune<!-- 29148691 -->
-Microsoft Intune has a new icon. The Intune icon will be updated across platforms and apps associated with Intune, such as the Intune admin center and Intune Company Portal app. The new icon will gradually be implemented over the next few months.
+Microsoft Intune has a new icon. The Intune icon is being updated across platforms and apps associated with Intune, such as the Intune admin center and Intune Company Portal app. The new icon will gradually be implemented over the next few months.
 
 ## Week of April 21, 2025 (Service release 2504)
 
@@ -94,7 +158,7 @@ Microsoft Intune has a new icon. The Intune icon will be updated across platform
 
 #### Endpoint Privilege Management elevation rule support for file arguments and parameters<!-- 28077130 -->
 
-File elevation rules for Endpoint Privilege Manager (EPM) now support [command line file arguments](../protect/epm-policies.md#use-file-arguments-for-elevation-rules). When an elevation rule is configured to define one or more file arguments, EPM allows that file to run in an elevated request only when one of the defined arguments is used. EPM blocks elevation of the file should a command line argument be used that is not defined by the elevation rule. Use of file arguments in your file elevation rules can help you refine how and for what intent different files are successfully run in an elevated context by Endpoint Privilege Management.
+File elevation rules for Endpoint Privilege Manager (EPM) now support [command line file arguments](../protect/epm-policies.md#use-file-arguments-for-elevation-rules). When an elevation rule is configured to define one or more file arguments, EPM allows that file to run in an elevated request only when one of the defined arguments is used. EPM blocks elevation of the file should a command line argument be used that isn't defined by the elevation rule. Use of file arguments in your file elevation rules can help you refine how and for what intent different files are successfully run in an elevated context by Endpoint Privilege Management.
 
 EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
 
@@ -143,7 +207,7 @@ Applies to:
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-We've added a new setting in the Settings Catalog. To see this settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type.
+We've added a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type.
 
 ##### macOS
 
@@ -177,15 +241,15 @@ Applies to:
 
 You can use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template is available to configure in the enrollment profile. It can contain a combination of custom text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username. For more information, see:
 
- - [Android Enterprise corporate-owned devices with work profile](../enrollment/android-corporate-owned-work-profile-enroll.md#create-an-enrollment-profile)  
- - [Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md#create-an-enrollment-profile)  
- - [Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md#step-2-create-new-enrollment-profile)  
+ - [Android Enterprise corporate-owned devices with work profile](../enrollment/android-corporate-owned-work-profile-enroll.md#create-an-enrollment-profile)
+ - [Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md#create-an-enrollment-profile)
+ - [Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md#step-2-create-new-enrollment-profile)
 
 Applies to:
 
 - Android
 
-#### Enrollment-time grouping for Android Enterprise corporate devices <!-- 17530981  -->
+#### Enrollment-time grouping for Android Enterprise corporate devices <!-- 17530981 -->
 
 Now available for Android Enterprise corporate-owned devices, *enrollment time grouping* enables you to assign a static Microsoft Entra group to devices at enrollment time. When a targeted Android device enrolls, it receives all assigned policies, apps, and settings, typically by the time the user lands on the home screen. You can configure one static Microsoft Entra group per enrollment profile under the **Device group** tab in the Microsoft Intune admin center. For more information, see [Enrollment time grouping](../enrollment/enrollment-time-grouping.md).
 
