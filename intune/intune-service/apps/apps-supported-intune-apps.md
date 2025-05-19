@@ -92,7 +92,7 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft PowerPoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint)|✔|No settings|✔|N/A|✖|✖|✔|✖|
 |Microsoft PowerPoint|[iOS](https://apps.apple.com/us/app/microsoft-powerpoint/id586449534)|✔|No settings|✔|N/A|✖|✖|✔|✖|
 |Microsoft Windows App|[Android](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)|✔|✔ see [Manage device redirection](/windows-app/manage-device-redirection-intune).|✖|N/A|N/A|N/A|N/A|✖|
-|Microsoft Windows App|[iOS](https://apps.apple.com/us/app/remote-desktop-mobile/id714464092)|✔|✔ see [Manage device redirection](/windows-app/manage-device-redirection-intune).|✖|N/A|N/A|N/A|N/A|✖|
+|Microsoft Windows App|[iOS](https://apps.apple.com/us/app/remote-desktop-mobile/id714464092)|✔|✔ see [Manage device redirection](/windows-app/manage-device-redirection-intune).|✖|N/A|N/A|N/A|N/A|✖| 
 |Microsoft SharePoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.sharepoint)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
 |Microsoft SharePoint|[iOS](https://apps.apple.com/us/app/microsoft-sharepoint/id1091505266)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
 |Microsoft Teams|[Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)|✔|No settings|✔|N/A|✔|✔|✔|✔ Supported for v1416/1.0.0.2023226005 (2023226050) or later|
