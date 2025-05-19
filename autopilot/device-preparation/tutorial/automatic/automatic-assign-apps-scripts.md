@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 5 of 7 - Assign applications and PowerShell scripts to device group
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 5 of 7 - Assign applications and PowerShell scripts to device group.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 3 of 5 - Assign applications and PowerShell scripts to device group
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 4 of 6 - Assign applications and PowerShell scripts to device group.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 05/14/2025
+ms.date: 05/20/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -22,15 +22,14 @@ appliesto:
 Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](automatic-automatic-enrollment.md)
-- Step 2: [Allow users to join devices to Microsoft Entra ID](automatic-allow-users-to-join.md)
-- Step 3: [Create an assigned device group](automatic-device-group.md)
+- Step 2: [Create an assigned device group](automatic-device-group.md)
 
 > [!div class="checklist"]
 >
-> - **Step 4: Assign applications and PowerShell scripts to device group**
+> - **Step 3: Assign applications and PowerShell scripts to device group**
 
-- Step 5: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
-- Step 6: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
+- Step 4: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
+- Step 5: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
 
 For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode overview](automatic-workflow.md#workflow).
 
@@ -45,7 +44,10 @@ The applications and PowerShell scripts specified should be the essential applic
 
 Any applications installed or PowerShell scripts that run during a Windows Autopilot device preparation deployment should be configured to install in the **System** context since the applications are installed and the PowerShell scripts ran during OOBE when no user is signed in.
 
-For applications to install and PowerShell scripts work successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](automatic-device-group.md).
+For applications to install and PowerShell scripts work successfully during a Windows Autopilot device preparation deployment, two steps need to be taken:
+
+1. They must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](automatic-device-group.md). This step is covered in this article.
+2. They must be specified as part of the Windows Autopilot device preparation policy. This step is covered in the next step [Step 5: Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md).
 
 > [!NOTE]
 >
@@ -133,7 +135,7 @@ To assign the desired PowerShell scripts to the device group created for Windows
 ## Next step: Create Windows Autopilot device preparation policy
 
 > [!div class="nextstepaction"]
-> [Step 6: Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
+> [Step 4: Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
 
 ## Related content
 

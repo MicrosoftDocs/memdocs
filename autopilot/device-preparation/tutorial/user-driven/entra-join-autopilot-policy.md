@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 04/04/2025
+ms.date: 05/20/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -51,7 +51,7 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
 1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot device preparation**, select **Device preparation policies**.
 
-1. In the **Device preparation policies** screen, select **Create**.
+1. In the **Device preparation policies** screen, select **Create**, and then select **User Driven**.
 
 1. The **Create profile** screen opens. In the **Introduction** page, select **Next**.
 

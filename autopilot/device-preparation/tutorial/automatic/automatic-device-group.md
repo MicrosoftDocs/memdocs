@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 3 of 7 - Create an assigned device group
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 3 of 7 - Create an assigned device group.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 2 of 5 - Create an assigned device group
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 2 of 5 - Create an assigned device group.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 05/14/2025
+ms.date: 05/20/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -22,15 +22,14 @@ appliesto:
 Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](automatic-automatic-enrollment.md)
-- Step 2: [Allow users to join devices to Microsoft Entra ID](automatic-allow-users-to-join.md)
 
 > [!div class="checklist"]
 >
-> - **Step 3: Create an assigned device group**
+> - **Step 2: Create an assigned device group**
 
-- Step 4: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
-- Step 5: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
-- Step 6: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
+- Step 3: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
+- Step 4: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
+- Step 5: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
 
 For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode overview](automatic-workflow.md#workflow).
 
@@ -62,7 +61,7 @@ To create an assigned security device group for use with Windows Autopilot devic
 ## Next step: Assign applications and PowerShell scripts to device group
 
 > [!div class="nextstepaction"]
-> [Step 4: Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
+> [Step 3: Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
 
 ## Related content
 

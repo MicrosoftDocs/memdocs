@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 1 of 7 - Set up Windows automatic Intune enrollment
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 1 of 7 - Set up Windows automatic Intune enrollment.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 1 of 5 - Set up Windows automatic Intune enrollment
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 1 of 5 - Set up Windows automatic Intune enrollment.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 05/14/2025
+ms.date: 05/20/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -25,17 +25,16 @@ Windows Autopilot device preparation in automatic mode for Windows 365 Frontline
 >
 > - **Step 1: Set up Windows automatic Intune enrollment**
 
-- Step 2: [Allow users to join devices to Microsoft Entra ID](automatic-allow-users-to-join.md)
-- Step 3: [Create an assigned device group](automatic-device-group.md)
-- Step 4: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
-- Step 5: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
-- Step 6: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
+- Step 2: [Create an assigned device group](automatic-device-group.md)
+- Step 3: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
+- Step 4: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
+- Step 5: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
 
 For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode overview](automatic-workflow.md#workflow).
 
 > [!NOTE]
 >
-> If automatic Intune enrollment is already set up, skip this step and move on to [Step 2: Allow users to join devices to Microsoft Entra ID](automatic-allow-users-to-join.md).
+> If automatic Intune enrollment is already set up, skip this step and move on to [Step 2: Create an assigned device group](automatic-device-group.md).
 
 ## Set up Windows automatic Intune enrollment
 
@@ -43,10 +42,10 @@ In order for Windows Autopilot device preparation to work, devices need to be ab
 
 [!INCLUDE [Set up Windows automatic enrollment](../../../includes/automatic-intune-enrollment.md)]
 
-## Next step: Allow users to join devices to Microsoft Entra ID
+## Next step: Create an assigned device group
 
 > [!div class="nextstepaction"]
-> [Step 2: Allow users to join devices to Microsoft Entra ID](automatic-allow-users-to-join.md)
+> [Step 2: Create an assigned device group](automatic-device-group.md)
 
 ## Related content
 
