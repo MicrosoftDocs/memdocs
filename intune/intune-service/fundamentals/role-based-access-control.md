@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2025
+ms.date: 05/20/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,12 +65,6 @@ An Intune admin with sufficient permissions can assign any of the Intune roles t
 - **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
 - **School Administrator**: Manages Windows 10 devices in [Intune for Education](../industry/education/introduction-intune-education.md).
 
-<!-- These are not in my public tenant, but in either M365 or Wind >
-- **Organizational Messages Manager**: Manages organizational messages in Intune console. >> This role moved out of Intune and into M365.  
-- **Cloud PC Administrator**: A Cloud PC Administrator has read and write access to all Cloud PC features located within the Cloud PC area.  
-- **Cloud PC Reader**: A Cloud PC Reader has read access to all Cloud PC features located within the Cloud PC area.
--->
-
 ### Custom roles
 
 You can create your own custom Intune roles to grant admins only the specific permissions needed for their tasks. These custom roles can include any Intune RBAC permission, allowing for refined admin access and support for the principle of least-privileged access within the organization.
@@ -80,7 +74,6 @@ See [Create a custom role](create-custom-role.md).
 ### Microsoft Entra roles with Intune access
 
 Intune RBAC permissions are a subset of Microsoft Entra RBAC permissions. As a subset, there are some Entra roles that include permissions within Intune. Most Entra ID roles that have access to Intune are considered [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions). The use and assignment of privileged roles should be limited and not used for daily administrative tasks within Intune.
-
 
 Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties. To support this, use Intune’s built-in RBAC roles for daily Intune administrative tasks and avoid using Entra roles that have access to Intune.
 
@@ -138,12 +131,12 @@ To see a role assignment, choose **Intune** > **Tenant administration** > **Role
 - **Scope (Groups)**: Use Scope (Groups) to define the groups of users and devices that an admin with this role assignment can manage. Administrative users with this role assignment can use the permissions granted by the role to manage every user or device within the role assignments defined scope groups.
 
   > [!TIP]
-  > When configuring a scope group, limit access by selecting **only** specific security groups for the assignment. Do not add "Add all users" and "Add all devices" to ensure assignments cannot target all users or all devices.
+  > When configuring a scope group, limit access by selecting only the security groups that include the user and devices that an admin with this role assignment should manage. To ensure admins with this role cannot target all users or all devices, don't select *Add all users* or *Add all devices*.
 
 - [**Scope Tags**](scope-tags.md): Administrative users who are assigned this role assignment can see the resources that have the same scope tags.
 
 > [!NOTE]
-> Scope Tags are freeform text values that an administrator defines and then adds to a Role Assignment. The scope tag added on a role controls visibility of the role itself, while the scope tag added in role assignment limits the visibility of Intune objects (such as policies and apps) or devices to only administrators in that role assignment because the role assignment contains one or more matching scope tags.
+> Scope Tags are freeform text values that an administrator defines and then adds to a role assignment. The scope tag added on a role controls visibility of the role itself, while the scope tag added in role assignment limits the visibility of Intune objects (such as policies and apps) or devices to only administrators in that role assignment because the role assignment contains one or more matching scope tags.
 
 ### Multiple role assignments
 
