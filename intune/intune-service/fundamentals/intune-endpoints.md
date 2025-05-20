@@ -103,7 +103,7 @@ ID |Desc |Category |ER |Addresses |Ports
 97 | Consumer Outlook.com, OneDrive, Device authentication and Microsoft account | Default<BR>Required | False | `account.live.com`<BR>`login.live.com`<BR> |**TCP:** 443  |
 190 | Endpoint discovery | Default<BR>Required | False | `go.microsoft.com` | **TCP:** 80, 443|
 189 | Dependency - Feature Deployment| Default<BR>Required | False |`config.edge.skype.com`<BR>`ecs.office.com`<BR> | **TCP:** 443|
-192 | Organizational messages| Default<BR>Required | False | `fd.api.orgmsg.microsoft.com`<BR>`ris.prod.api.personalization.ideas.microsoft.com`<BR>`contentauthassetscdn-prod.azureedge.net`<BR>`contentauthassetscdn-prodeur.azureedge.net`<BR>`contentauthrafcontentcdn-prod.azureedge.net`<BR>`contentauthrafcontentcdn-prodeur.azureedge.net`<BR> | **TCP:** 443|
+192 | Organizational messages| Default<BR>Required | False | `fd.api.orgmsg.microsoft.com`<BR>`ris.prod.api.personalization.ideas.microsoft.com`<BR> | **TCP:** 443|
 
 ### Windows Autopilot dependencies
 
@@ -270,10 +270,6 @@ You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. F
 |lgmsapeweu.blob.core.windows.net | Collect Diagnostics |
 |fd.api.orgmsg.microsoft.com | Organizational messages |
 |ris.prod.api.personalization.ideas.microsoft.com | Organizational messages |
-|contentauthassetscdn-prod.azureedge.net | Organizational messages |
-|contentauthassetscdn-prodeur.azureedge.net | Organizational messages |
-|contentauthrafcontentcdn-prod.azureedge.net | Organizational messages |
-|contentauthrafcontentcdn-prodeur.azureedge.net | Organizational messages |
 |config.edge.skype.com | Feature Deployment |
 |go.microsoft.com | Endpoint discovery |
 
