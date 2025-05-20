@@ -36,21 +36,106 @@ ms.collection:
 This article goes over the properties supported in the Intune Data Platform. The Intune Data Platform can be accessed via Device query for single devices, Inventory, and Device query for Multiple Devices.
 
 Each table (entity) in this page lists the types of queries that are supported.
+## AppleAutoSetupAdminAccounts
 
-## BiosInfo
+**Description**: Provides basic account information on Apple devices
 
-**Description**: Provides basic BIOS Information.  
+**Supported platforms**: iOS, iPadOS, MacOS
 
-**Supported platforms**: Windows
-
-**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
+**Supported for**: Device query for multiple devices
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
-| Manufacturer | String (Max length 256 characters) | Manufacturer of this software element. |
-| ReleaseDateTime | DateTime(UTC) | BIOS Release Date |
-| SerialNumber | String (Max length 256 characters) | Assigned serial number of this software element. |
-| SmBiosVersion | String (Max length 256 characters) | BIOS version as reported by SMBIOS. |
+| AccountGUID | String | The generated GUID of the administrator account |
+| AccountShortName | String | The short name of the administrator account |
+
+## AppleDeviceStates
+
+**Description**: Apple Device state information
+
+**Supported platforms**: iOS, iPadOS, MacOS
+
+**Supported for**: Device query for multiple devices
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| MdmLostModeEnabled | bool | Specifies if Managed Lost Mode has been enabled |	
+| ActivationLockSupported | bool | Specifies if activation lock is available |
+| EraseAllContentAndSettingsPreFlight | string | Specifies if a device can perform Erase Device Command using Erase All Content and Settings (EACS) |
+| SystemIntegrityProtectionEnabled | bool | System Integrity Protection (SIP) is a security technology on Mac that prevents malicious software from modifying protected resources |
+| PinRequiredForEraseDevice | bool | Is a PIN required before erasing the device |
+| PinRequiredForDeviceLock | bool | Is a PIN required for device lock scenarios |
+| SupportsiOSAppInstalls | bool | Are iOS app installs supported on this device |
+| AwaitingConfiguration | bool | If true on the device channel, the device is still waiting for a DeviceConfiguredCommand to continue through Setup Assistant.|
+| Supervised | bool | If true, it’s a supervised device.|
+
+## AppleUpdateSettings
+
+**Description**: Determines update settings for Apple devices
+
+**Supported platforms**: iOS, iPadOS, MacOS
+
+**Supported for**: Device query for multiple devices
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| AutoCheckEnabled | bool | The preference to automatically check for app updates. |
+| AutomaticAppInstallationEnabled | bool | The preference to automatically install app updates. |
+| AutomaticOSInstallationEnabled | bool | The preference to automatically install operating system updates. |
+| AutomaticSecurityUpdatesEnabled | bool | The preference to automatically install system data files and security updates. |
+| BackgroundDownloadEnabled | bool | The preference to download app updates in the background. |
+| CatalogUrl | string | The URL to the software update catalog the client is using. |
+| IsDefaultCatalog | bool | If true, CatalogURL is the default catalog. |
+| PerformPeriodicCheck | bool | If true, start a new scan. |
+| PreviousScanDateTime | DateTime | The date of the last software update scan. |
+| PreviousScanResult | string | The result code of last software update scan; ”0” = success. |
+
+## Battery
+
+**Description**: Battery Information
+
+**Supported platforms**: Android, iOS, IPadOs, MacOS, Windows
+
+**Supported for**: single device query on-demand for Windows. Device Query for Multiple devices for Andoid, iOS, iPadOS, MacOS
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| InstanceName | string | Name used to identify the battery instance |
+| Health | string | Assessment of battery health |
+| CycleCount | long | The number of times a battery has gone through a full charge and discharge. Can be used to assess the battery state |
+| SerialNumber | string | Battery Serial Number - assigned by manufacturer |
+| Manufacturer | string | Manufacturer of the battery |
+| Model | string | Display name of the battery |
+| DesignedCapacity | long | The theoretical capacity of the battery when new, in milliwatt-hours. |
+| FullChargedCapacity | long | Full charge capacity of the battery in milliwatt-hours. |
+
+## Bluetooth
+
+**Description**: Bluetooth device information
+
+**Supported platforms**: iOS, iPadOS, MacOS
+
+**Supported for**: Device Query for Multiple devices.
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| MacAddress | string | Bluetooth media access control (MAC) address. |
+
+## Celluar
+
+**Description**: Celluar information about mobile devices
+
+**Supported platforms**: Androd, iOS, iPadOS, MacOS
+
+**Supported for**: single device query on-demand.
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| CellularTechnology | string | The cellular technology type |
+| DataRoamingEnabled | bool | If true, the device has enabled data roaming |
+| ModemFirmwareVersion | string | The modem firmware version |
+| NetworkTethered | bool | If true, the device is network-tethered. |
+| HotspotEnabled | bool | If true, the device has enabled Personal Hotspot, which isn’t available for all carriers. |
 
 ## Certificate
 
@@ -100,6 +185,20 @@ Each table (entity) in this page lists the types of queries that are supported.
 | MaxClockSpeed | long | The maximum possible frequency of the CPU. |
 | SocketDesignation | string (max length 256 characters) | The assigned socket on the board for the given CPU. |
 | Availability | string(max length 256 characters) | The availability and status of the CPU. |
+
+## DeviceStorage
+
+**Description**: Provides basic information about device storagee.
+
+**Supported platforms**: Android, iOS, iPadOS, MacOS
+
+**Supported for**: Device query for multiple devices.
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| DeviceCapacityBytes | long | Total device storage capacity |
+| Encrypted | bool | Details whether encryption is on or off |
+
 
 ## DiskDrive
 
@@ -235,7 +334,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Description**: A single row containing the operating system name and version.
 
-**Supported platforms**: Windows
+**Supported platforms**: Android, iOS, iPadOS, Windows
 
 **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
@@ -280,6 +379,29 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | HandleCount | long | Total number of handles that the process has open. This number is the sum of the handles currently opened by each thread in the process. |
 | WindowsUserAccount | string | The owner of the process |
 | OnDisk | boolNullable\<System.Boolean\>  | The process path exists yes=1, no=0, unknown=-1 |
+
+## SharediPad
+
+**Description**: Details for Shared iPad devices.
+
+**Supported platforms**: Windows
+
+**Supported for**: single device query on-demand.
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| EstimatedResidentUsersCount | long | Estimated number of users that can share the device based on space. |
+| IsMultiUser | bool | iPad set up as multi user |
+| IsTemporarySessionOnly | bool | The device only allows temporary sessions. |
+| ManagedAppleIdDefaultDomains | string | The list of domains that the device suggests on the Shared iPad login screen. |
+| OnlineAuthenticationGracePeriodDays | long | The grace period for Shared iPad online authentication (in days). A value of 0 indicates that the device requires online authentication for every login |
+| QuotaSizeBytes | long | The quota size in bytes for each user on this shared iPad device |
+| ResidentUsersCount | long | The number of users currently on this shared iPad device. |
+| SkipLanguageAndLocaleSetupForNewUsers | bool | If true, skip the language and country/region panes for new users on Shared iPad. |
+| TemporarySessionTimeoutSeconds | long | The timeout interval for the temporary session. A value of 0 indicates that there’s no timeout. |
+| UserSessionTimeoutSeconds | long | The timeout interval for the user session. A value of 0 indicates that there’s no timeout. |
+
+
 
 ## SystemEnclosure
 
