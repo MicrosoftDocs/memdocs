@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/09/2025
+ms.date: 05/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -250,7 +250,8 @@ On some devices, the user also needs to agree to Samsung's KLMS Agent terms and 
 > - On Knox 2.8-3.7 (inclusive) this consent is revoked if the Remote Help app is uninstalled.
 > - If the user agreed to KLMS license terms through another app, the prompt might not appear.  
 
-# How to use Remote Help 
+# How to use Remote Help for Android
+
 The use of Remote Help depends on whether you're requesting help or providing help. In this section, both scenarios are covered.
 
 ## Request Help
@@ -273,6 +274,7 @@ When you as the sharer and your helper are ready to begin the session:
 
    
 ## Provide Help
+
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
 
    a. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the Android device on which assistance is needed.
@@ -281,13 +283,13 @@ When you as the sharer and your helper are ready to begin the session:
    
    c. Select the session type from the options for which you have permission - screen sharing, full control, unattended control, and then **Launch Remote Help**.
 
-3. On the device, the user sees a prompt displaying a request to grant screen share or control of the device.  
+2. On the device, the user sees a prompt displaying a request to grant screen share or control of the device.  
 
     a. If starting an attended screen sharing or full control session, the user must select **Accept** to allow the session to begin. If the user doesn't accept within 5 minutes, the session times out.  
 
     b. If starting an unattended control session, the session will begin automatically after **30 seconds** if there is no response from the user.
 
-4. When the session is ongoing
+3. When the session is ongoing
    
     a. During an attended screen sharing or full control session, the sharer device displays a floating **End Session** button. This button can be repositioned on the screen. Tap the button to end the session from the sharer device.
    
@@ -298,7 +300,7 @@ When you as the sharer and your helper are ready to begin the session:
 > [!NOTE]
 > During an unattended control session, even with the screen of the device you are connected blocked to the end user, we recommend to limit your activities to non-sensitive operations.
 
-7. At the end of the session, select **Leave** to end the session from the admin console.
+4. At the end of the session, select **Leave** to end the session from the admin console.
 
 > [!NOTE]
 > On Android 13 devices, the device unlock UI (the PIN entry pad, or the pattern dot grid) can't be displayed remotely. To unlock the device, you can still use keyboard input to enter a passcode. Android added this feature as a security measure to protect the end user from a passcode or unlock pattern being captured if the device is unlocked while screen sharing.
