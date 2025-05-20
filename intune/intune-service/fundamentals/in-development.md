@@ -125,14 +125,6 @@ For more information, see [device cleanup rules](../remote-actions/devices-wipe.
 
 ## Device security
 
-### Detect rooted corporate-owned Android Enterprise devices<!--31672848  -->
-
-Configure compliance policies to detect if a corporate-owned Android Enterprise device is rooted. If Microsoft Intune detects that a device is rooted, you can have it marked as noncompliant. This feature is becoming available for devices enrolled as fully managed, dedicated, or corporate-owned with a work profile. 
-
-Applies to:
-
-- Android
-
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
