@@ -32,12 +32,13 @@ ms.collection:
 
 # Role-based access control (RBAC) with Microsoft Intune
 
-Securing access to your organization is a foundational security step. Microsoft Intune uses role-based access controls (RBAC), which are an extension of Microsoft Entra ID RBAC controls. Use of RBAC helps you manage who has access to your organization's resources and what they can do with those resources. By [assigning Intune RBAC roles](assign-role.md) to your Intune administrators and using scope tags, you can limit what each admin can view and manage. Each role has a set of permissions that determine what users with that role can access and change within your organization.
+Securing access to your organization is a foundational security step. Microsoft Intune uses role-based access controls (RBAC), which are an extension of Microsoft Entra ID RBAC controls. Use of RBAC helps you manage who has access to your organization's resources and what they can do with those resources. By [assigning Intune RBAC roles](assign-role.md) to your Intune administrators and using scope groups and scope tags, you can limit what each admin can view and manage. Each role has a set of permissions that determine what users with that role can access and change within your organization.
 
 - Assigned RBAC roles provide a set of permissions that determine what users with that role can access and change within your organization. 
-- Scope tags help ensure specific admins have access and visibility only to specific objects, helping to further refine and secure administrative access.
+- Scope groups are used to identify groups of users and devices that admins who are assigned the role have permissions to manage. 
+- Scope tags, which are free-form constructs can help ensure specific admins have access and visibility only to specific objects, further refining administrative access.
 
-The article provides foundational details for using and assigning RBAC in Intune.
+This article provides foundational details for using and assigning RBAC in Intune.
 
 ## Roles
 
@@ -75,7 +76,7 @@ See [Create a custom role](create-custom-role.md).
 
 Intune RBAC permissions are a subset of Microsoft Entra RBAC permissions. As a subset, there are some Entra roles that include permissions within Intune. Most Entra ID roles that have access to Intune are considered [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions). The use and assignment of privileged roles should be limited and not used for daily administrative tasks within Intune.
 
-Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties. To support this, use Intune’s built-in RBAC roles for daily Intune administrative tasks and avoid using Entra roles that have access to Intune.
+Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties. To support this principle, use Intune’s built-in RBAC roles for daily Intune administrative tasks and avoid using Entra roles that have access to Intune.
 
 The following table identifies the Entra roles that have access to Intune, and the Intune permissions they include.
 
@@ -105,7 +106,7 @@ Intune supports two methods of role elevation. There are performance and least p
 
 - **Method 2**: Utilize [Privileged Identity Management (PIM) for Groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups) with an Intune RBAC role assignment. For more information about using PIM for Groups with Intune RBAC roles, see: [Configuring Microsoft Intune just-in-time admin access with Microsoft Entra PIM for Groups | Microsoft Community Hub](https://techcommunity.microsoft.com/blog/intunecustomersuccess/configuring-microsoft-intune-just-in-time-admin-access-with-azure-ad-pim-for-gro/3843972)
 
-When using PIM elevation for the Intune Administrator role from Entra ID, elevation typically happens within 10 seconds. PIM Groups-based elevation for Intune's built-in or custom roles typically take up to 15 minutes to apply.
+When you use PIM elevation for the Intune Administrator role from Entra ID, elevation typically happens within 10 seconds. PIM Groups-based elevation for Intune's built-in or custom roles typically take up to 15 minutes to apply.
 
 ## Role assignments
 
@@ -120,7 +121,7 @@ Each group that is assigned an Intune role should include only users authorized 
 - If a least privileged built-in role grants excessive privileges or permissions, consider use of a custom role to limit the scope of administrative access.
 - When planning role assignments, consider the results of a user with [multiple role assignments](#multiple-role-assignments).
 
-To be assigned an Intune role and have access to administer Intune, a user doesn't require an Intune license so long as their account was created in Entra after June 2021. Accounts created prior to 2021 do require being assigned a license to use Intune.
+For a user to be assigned an Intune role and have access to administer Intune, they don't require an Intune license so long as their account was created in Entra after June 2021. Accounts created before June 2021 do require being assigned a license to use Intune.
 
 To see a role assignment, choose **Intune** > **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > choose an assignment. On the assignments **Properties** page, you can edit:
 
@@ -131,12 +132,12 @@ To see a role assignment, choose **Intune** > **Tenant administration** > **Role
 - **Scope (Groups)**: Use Scope (Groups) to define the groups of users and devices that an admin with this role assignment can manage. Administrative users with this role assignment can use the permissions granted by the role to manage every user or device within the role assignments defined scope groups.
 
   > [!TIP]
-  > When configuring a scope group, limit access by selecting only the security groups that include the user and devices that an admin with this role assignment should manage. To ensure admins with this role cannot target all users or all devices, don't select *Add all users* or *Add all devices*.
+  > When you configure a scope group, limit access by selecting only the security groups that include the user and devices that an admin with this role assignment should manage. To ensure admins with this role can't target all users or all devices, don't select *Add all users* or *Add all devices*.
 
 - [**Scope Tags**](scope-tags.md): Administrative users who are assigned this role assignment can see the resources that have the same scope tags.
 
 > [!NOTE]
-> Scope Tags are freeform text values that an administrator defines and then adds to a role assignment. The scope tag added on a role controls visibility of the role itself, while the scope tag added in role assignment limits the visibility of Intune objects (such as policies and apps) or devices to only administrators in that role assignment because the role assignment contains one or more matching scope tags.
+> Scope Tags are freeform text values that an administrator defines and then adds to a role assignment. The scope tag added on a role controls visibility of the role itself, while the scope tag added in role assignment limits the visibility of Intune objects like policies, apps, or devices to only administrators in that role assignment because the role assignment contains one or more matching scope tags.
 
 ### Multiple role assignments
 
