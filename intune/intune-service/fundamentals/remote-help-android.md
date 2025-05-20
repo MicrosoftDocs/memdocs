@@ -250,11 +250,11 @@ On some devices, the user also needs to agree to Samsung's KLMS Agent terms and 
 > - On Knox 2.8-3.7 (inclusive) this consent is revoked if the Remote Help app is uninstalled.
 > - If the user agreed to KLMS license terms through another app, the prompt might not appear.  
 
-# How to use Remote Help for Android
+## How to use Remote Help for Android
 
 The use of Remote Help depends on whether you're requesting help or providing help. In this section, both scenarios are covered.
 
-## Request Help
+### Request Help
 
 To request help, you must reach out to your support staff to request assistance.
 
@@ -273,7 +273,7 @@ When you as the sharer and your helper are ready to begin the session:
     b. During an unattended control session, the screen of the device will blocked due to security and privacy reasons, and you will be notified if you interact with it. If you interact with the blocked screen, you will receive a notification that a helper is currently remotely accessing it for maintence. When the notification is shown, you and the helper will not be able to taken any action for 30 seconds when this screen will close. You will not be able to end the session from your device until the helper ends the session.
 
    
-## Provide Help
+### Provide Help
 
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
 
