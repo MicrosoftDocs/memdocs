@@ -44,7 +44,7 @@ Before you sign up for Intune, determine if your organization already uses [Micr
 - If you don’t have an Entra tenant, then an Entra tenant is created for your organization when you **sign up** for an Intune subscription, which is common for trial subscriptions. In this scenario, the account you use to sign up automatically receives the Global Administrator role for the new Entra tenant.
 
 > [!TIP]  
-> The *Global Administrator* built-in role is a [privileged Entra ID role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), and isn’t recommended for daily use. As [described later](#role-based-access-control) in this article, you can reduce reliance on this role by assigning a less-privileged role to administrators who manage Intune and perform daily tasks. 
+> The *Global Administrator* built-in role is a [privileged Entra ID role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), and isn’t recommended for daily use. As [described later](#role-based-access-controls) in this article, you can reduce reliance on this role by assigning a less-privileged role to administrators who manage Intune and perform daily tasks. 
 
 > [!WARNING]
 > You can't combine an existing work or school account after you sign up for a new account.
@@ -77,7 +77,7 @@ After completing the sign-up process, you're directed to the Microsoft 365 admin
 
 ## Sign in to Microsoft Intune
 
-After signing up for Intune, use any device with a [supported browser](../fundamentals/supported-devices-browsers,md#intune-supported-web-browsers) to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to administer the service. Administration of Intune requires your account to have sufficient RBAC permissions within Intune for the tasks you want to manage. Initially, you might use an account that is assigned the Microsoft Entra ID built-in role of [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+After signing up for Intune, use any device with a [supported browser](../fundamentals/supported-devices-browsers.md#intune-supported-web-browsers) to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to administer the service. Administration of Intune requires your account to have sufficient RBAC permissions within Intune for the tasks you want to manage. Initially, you might use an account that is assigned the Microsoft Entra ID built-in role of [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
 The Intune Administrator is a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions) with global permissions within Microsoft Intune Online. With this role a user can configure Intune, add users, create groups of users, and assign the members of those groups Intune RBAC roles that provide them less privileged administrative access for daily use.
 

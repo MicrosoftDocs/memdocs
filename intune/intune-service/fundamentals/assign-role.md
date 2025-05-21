@@ -38,7 +38,7 @@ Before you assign roles to groups, ensure you have sufficient groups for the dif
 > [!IMPORTANT]  
 > Microsoft advises against using accounts with Intune Administrator-level permissions for daily management when lesser-privileged roles suffice. However, Intune Administrator permissions are necessary during initial Intune setup for tasks such as:  
 >
-> - Add users to Intune who serve as your Intune administrators. *(See [Add users](../fundamentals/users-add. ))*
+> - Add users to Intune who serve as your Intune administrators. *(See [Add users](../fundamentals/users-add.md))*
 > - Create groups of users that share similar administrative duties. *(See [Add groups](../fundamentals/groups-add.md))*
 > - Assign RBAC roles to groups of users, providing each group with only the permissions required to carry out their daily tasks. *(This article)*  
 >
@@ -48,7 +48,7 @@ Before you assign roles to groups, ensure you have sufficient groups for the dif
 
 To manage RBAC roles and assignments in Intune, your account must have one of the following permission sets:
 
-- The Intune built-in role of [**Intune Role Administrator**](../protect/role-based-access-control.md#built-in-roles). *Least privileged built-in role*
+- The Intune built-in role of [**Intune Role Administrator**](../fundamentals/role-based-access-control.md#built-in-roles). *Least privileged built-in role*
 - A custom role that includes the following categories and category permissions:
 
   **Roles**:  

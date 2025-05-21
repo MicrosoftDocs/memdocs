@@ -38,7 +38,7 @@ When your organization signs up for a Microsoft cloud-based service like Intune,
 
 Before you create user accounts or synchronize your on-premises Active Directory, we strongly recommend that you decide whether to use only the *.onmicrosoft.com* domain or to add one or more of your custom domain names. Set up a custom domain before adding users to simplify user management. Setting up a customer domain lets users sign in with the credentials they use to access other domain resources.
 
-When you subscribe to a cloud-based service from Microsoft, your instance of that service becomes a [Microsoft Entra tenant](https://learn.microsoft.com/en-us/entra/fundamentals/whatis). Your Entra tenant provides identity and directory services for Intune and your other cloud-based services. Because the tasks to configure Intune to use your organizations custom domain name are the same as for other services, you can use the information and procedures in [Managing custom domain names in your Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
+When you subscribe to a cloud-based service from Microsoft, your instance of that service becomes a [Microsoft Entra tenant](/entra/fundamentals/whatis). Your Entra tenant provides identity and directory services for Intune and your other cloud-based services. Because the tasks to configure Intune to use your organizations custom domain name are the same as for other services, you can use the information and procedures in [Managing custom domain names in your Microsoft Entra ID](/entra/fundamentals/add-custom-domain).
 
 > [!TIP]
 > You can add, verify, or remove custom domain names used with Intune to keep your business identity clear, but you can't rename or remove the initial *onmicrosoft.com* domain name.
