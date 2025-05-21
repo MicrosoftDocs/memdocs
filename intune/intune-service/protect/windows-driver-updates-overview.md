@@ -193,7 +193,7 @@ For more information about planning deployments, see [Create a deployment plan](
 
 ### Can I apply driver updates policy during Windows Autopilot?
 
-- No. Driver Updates aren't supported during autopilot at this time.
+- No. Driver Updates aren't supported during Windows Autopilot at this time.
 
 > [!NOTE]
 > Windows applies critical updates during Windows Autopilot. These updates may include critical driver updates that have not yet been approved by an admin.
