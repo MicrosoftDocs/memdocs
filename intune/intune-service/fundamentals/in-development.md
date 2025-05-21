@@ -148,15 +148,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Tenant administration
-
-### Data collection from SimInfo entity on Windows devices<!--30120558 -->
-
-You'll be able to collect data from the SimInfo entity on Windows devices with enhanced device inventory.
-
-Applies to:
-
-- Windows
+<!-- ## Tenant administration -->
 
 <!-- *********************************************** -->
 

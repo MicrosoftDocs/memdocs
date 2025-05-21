@@ -147,6 +147,17 @@ For details about the available Defender settings, see [Configure security setti
 
 Applies to:
 - Linux
+- 
+### Tenant administration
+
+#### Data collection from SimInfo entity on Windows devices<!--30120558 -->
+
+You can now collect data from the SimInfo entity on Windows devices with enhanced device inventory. 
+For more information, see [Intune Data Platform](../analytics/data-platform-schema.md).
+
+Applies to:
+
+-  Windows
 
 ## Week of April 28, 2025
 
