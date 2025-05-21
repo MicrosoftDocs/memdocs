@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 1 of 5 - Set up Windows automatic Intune enrollment
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 1 of 5 - Set up Windows automatic Intune enrollment.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 1 of 5 - Set up Windows automatic Intune enrollment
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 1 of 5 - Set up Windows automatic Intune enrollment.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -17,9 +17,9 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode: Set up Windows automatic Intune enrollment
+# Windows Autopilot device preparation in automatic mode for Windows 365: Set up Windows automatic Intune enrollment
 
-Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode steps:
+Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 
 > [!div class="checklist"]
 >
@@ -30,7 +30,7 @@ Windows Autopilot device preparation in automatic mode for Windows 365 Frontline
 - Step 4: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
 - Step 5: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
 
-For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode overview](automatic-workflow.md#workflow).
+For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 overview](automatic-workflow.md#workflow).
 
 > [!NOTE]
 >

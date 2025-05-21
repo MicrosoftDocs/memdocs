@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 5 of 5 - Create a Cloud PC provisioning policy
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode - Step 5 of 5 - Create a Cloud PC provisioning policy.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 5 of 5 - Create a Cloud PC provisioning policy
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 5 of 5 - Create a Cloud PC provisioning policy.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -17,9 +17,9 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode: Create a Cloud PC provisioning policy
+# Windows Autopilot device preparation in automatic mode for Windows 365: Create a Cloud PC provisioning policy
 
-Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode steps:
+Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](automatic-automatic-enrollment.md)
 - Step 2: [Create an assigned device group](automatic-device-group.md)
@@ -30,11 +30,11 @@ Windows Autopilot device preparation in automatic mode for Windows 365 Frontline
 >
 > - **Step 5: Create a Cloud PC provisioning policy**
 
-For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode overview](automatic-workflow.md#workflow).
+For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 overview](automatic-workflow.md#workflow).
 
-## Create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode
+## Create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365
 
-To create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode, follow these steps:
+To create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365 , follow these steps:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -81,7 +81,9 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
 
          1. Next to **Autopilot Device preparation policy**, use the drop down menu to select the Windows Autopilot device preparation policy created in [Step 4: Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md).
 
-         1. Next to **Minutes allowed before device preparation fails**, enter a value in minutes that allows adequate time to install the apps and scripts defined in the Windows Autopilot device preparation policy. For example, enter **60** for 60 minutes. If the apps and scripts aren't finished installing by this time, the device preparation fails. However, the provisioning continues.
+         1. Next to **Minutes allowed before device preparation fails**, enter a value in minutes that allows adequate time to install the apps and scripts defined in the Windows Autopilot device preparation policy. For example, enter **60** for 60 minutes. The recommended minimum value should be no lower than 30. If the apps and scripts aren't finished installing by this time, the device preparation fails. However, the provisioning continues.
+
+         1. To prevent users from connecting to the Cloud PC is the deployment fails or times out, select the option **Prevent users from connection to Cloud PC upon installation failure or timeout**. To allow users to connect to the Cloud PC even when the deployment fails or times out, leave this option unchecked.
 
       1. Once all settings are properly configured in the **Configuration** page, select **Next**.
 

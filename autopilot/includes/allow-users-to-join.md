@@ -14,7 +14,6 @@ ms.localizationpriority: medium
 tutorial/pre-provisioning/azure-ad-join-allow-users-to-join.md
 tutorial/user-driven/azure-ad-join-allow-users-to-join.md
 device-preparation/tutorial/user-driven/entra-join-allow-users-to-join.md
-device-preparation/tutorial/automatic/automatic-allow-users-to-join.md
 
 Headings are driven by article context. -->
 
