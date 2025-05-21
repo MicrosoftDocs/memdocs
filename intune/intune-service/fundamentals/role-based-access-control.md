@@ -154,7 +154,33 @@ If a user has multiple role assignments, permissions, and scope tags, those role
 - Permissions and scope tags for objects of different types (like policies or apps), don't apply to each other. A Read permission for a policy, for example, doesn't provide a Read permission to apps in the user's assignments.
 - When there aren't any scope tags or some scope tags are assigned from different assignments, a user can only see devices that are part of some scope tags and can't see all devices.
 
-## Monitor RBAC assignments
+## Montor RBAC assignments
+*This and the three subsections are in progress*
+
+Within the Intune admin center, you can go to **Tenant admin** > **Roles** and expand **Monitor** to find several views that can help you identify the permissions different users have within your Intune tenant. For example, in a complex administrative environment, you might use the **Admin permissions** view to specify a specific account to identify the scope of administrative privileges that account currently has.
+::: :::
+ 
+
+### My permissions
+When you select this node, you are shown the current Intune RBAC category and permission combinations that your account has. This view displays the all the permissions your account has from all role assignments, but not which role assignments provide them or by which group membership they are assigned.
+
+<!-- NEED To describe category and rights. IF not here, thats fine - but so we can link to it. Maybe a secttion: What is an RBAC permission  - which then details examples and for Intune links to the full Built--in role list?  -->  
+
+
+### Roles by permission
+With this view, you can see details about a specific Intune RBAC category and permission, and through which role assignments, and to which groups that combination is made available. 
+
+To get started, select an Intune permission Category and then a specific Permission from that category. The admin center then displays a list of instances that lead to that permission being assigned that includes:
+
+- **Role display name** – The name of the built-in or custom RBAC role that grants the permission. 
+- **Role assignment display name** – The name of the role assignment that assigns the role to groups of users.
+- **Group name** – The name of the group that receives that role assignment.
+
+### Admin permissions
+Use the Admin permissions node to identify the specific permissions that an account has been granted. 
+
+Start by specifying a specific **User** account. So long as the user has Intune permissions assigned to their account, Intune displays the complete list of those permissions identified by *Category* and *Permission*. 
+
 
 
 ## Next steps
