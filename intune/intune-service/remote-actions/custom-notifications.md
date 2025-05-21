@@ -60,9 +60,12 @@ If you have the Company Portal app open on an Android device, the notification r
 
 - Devices must have the Company Portal app or the Microsoft Intune app installed before users can receive custom notifications. They must also have configured permissions to allow the Company Portal app or the Microsoft Intune app to send push notifications. If needed, the Company Portal app and the Microsoft Intune app can prompt users to permit notifications.
 
-- On Android, Google Play Services is a required dependency.
+- On Android, Google Play Services is a required dependency. 
 
 - The device must be MDM enrolled.
+
+> [!NOTE]
+> For Android Fully Managed, Dedicated or Corporate Owned with Work Profile aren't supported for custom notifications.
 
 ### Permissions
 
