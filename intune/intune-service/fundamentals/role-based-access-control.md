@@ -66,6 +66,11 @@ An Intune admin with sufficient permissions can assign any of the Intune roles t
 - **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
 - **School Administrator**: Manages Windows 10 devices in [Intune for Education](../industry/education/introduction-intune-education.md).
 
+When your tenant includes a subscription to Windows 365 to support Cloud PCs, you'll also find the following Cloud PC roles in the Intune admin center. These roles are not available by default and include permissions within Intune for tasks related to Cloud PCs. For more information about these roles, see [Cloud PC built-in roles](/windows-365/enterprise/role-based-access#cloud-pc-built-in-roles) in the Windows 365 documentation.
+
+- **Cloud PC Administrator**: A Cloud PC Administrator has read and write access to all Cloud PC features located within the Cloud PC area.
+- **Cloud PC Reader**: A Cloud PC Reader has read access to all Cloud PC features located within the Cloud PC area.
+
 ### Custom roles
 
 You can create your own custom Intune roles to grant admins only the specific permissions needed for their tasks. These custom roles can include any Intune RBAC permission, allowing for refined admin access and support for the principle of least-privileged access within the organization.
@@ -148,6 +153,9 @@ If a user has multiple role assignments, permissions, and scope tags, those role
 - Other permissions (such as Create, Read, Update, Delete) and scope tags apply to all objects of the same type (like all policies or all apps) in any of the user's assignments.
 - Permissions and scope tags for objects of different types (like policies or apps), don't apply to each other. A Read permission for a policy, for example, doesn't provide a Read permission to apps in the user's assignments.
 - When there aren't any scope tags or some scope tags are assigned from different assignments, a user can only see devices that are part of some scope tags and can't see all devices.
+
+## Monitor RBAC assignments
+
 
 ## Next steps
 
