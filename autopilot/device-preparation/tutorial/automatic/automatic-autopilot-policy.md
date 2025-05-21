@@ -33,11 +33,11 @@ Windows Autopilot device preparation in automatic mode for Windows 365 Frontline
 
 For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode overview](automatic-workflow.md#workflow).
 
-## Create user-driven Microsoft Entra join Windows Autopilot device preparation policy
+## Create an automatic mode for Windows 365 Frontline in shared mode Windows Autopilot device preparation policy
 
 The Windows Autopilot policy specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 
-To create a user-driven Microsoft Entra join Windows Autopilot device preparation policy, follow these steps:
+To create an automatic mode for Windows 365 Frontline in shared mode Windows Autopilot device preparation policy, follow these steps:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -67,7 +67,7 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
    1. The **Apps** section allows selection of up to 10 managed applications reference with the deployment. The applications specified here should be the essential applications that should be installed on the device before the end-user can start using the device. Under the **Apps** section:
 
-      1. Under **Allowed Applications**, select **Add**. The **Select Apps** pane opens.
+      1. Select **Add**. The **Select Apps** pane opens.
 
          1. In the **Select Apps** pane:
 
@@ -96,7 +96,7 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
    1. The **Scripts** section allows selection of up to 10 PowerShell scripts to install during the deployment. The PowerShell scripts specified here should be the essential PowerShell scripts that should run on the device before the end-user can start using the device. Under the **Scripts** section:
 
-      1. Under **Allowed Scripts**, select **Add**. The **Select Scripts** pane opens.
+      1. Select **Add**. The **Select Scripts** pane opens.
 
       1. In the **Select Scripts** pane:
 
@@ -112,10 +112,6 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
    >
    > The PowerShell scripts selected in this setting should be assigned to the device security group previously specified in the **Device group** page. The PowerShell script should also be configured to run in the **System** context since the PowerShell scripts run during OOBE when no user is signed in. The PowerShell script can be set to run in the **System** context by setting the option **Run this script using the logged on credentials** to **No** in the properties of the PowerShell script.
 
-   > [!IMPORTANT]
-   >
-   > Make sure that the device that the Windows Autopilot device preparation deployment is run on isn't registered or added as a Windows Autopilot device. If the device is registered or added as a Windows Autopilot device, the Windows Autopilot profile takes precedence over the Windows Autopilot device preparation policy. In this scenario, the Windows Autopilot deployment runs instead of the Windows Autopilot device preparation deployment. If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../../../registration-overview.md#deregister-a-device).
-
    1. Once all of the desired **Apps** and **Scripts** are selected, select **Next**.
 
 1. In the **Scope tags** page, select **Next**.
@@ -125,14 +121,6 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
     > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
 
 1. In the **Review + create** page, review all settings to make sure they're all correct. Once everything is verified, select **Save** to finish creating the Windows Autopilot device preparation policy.
-
-> [!IMPORTANT]
->
-> Make sure that the device that the Windows Autopilot device preparation deployment is run on isn't registered or added as a Windows Autopilot device. If the device is registered or added as a Windows Autopilot device, the Windows Autopilot profile takes precedence over the Windows Autopilot device preparation policy. In this scenario, the Windows Autopilot deployment runs instead of the Windows Autopilot device preparation deployment. If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../../../registration-overview.md#deregister-a-device).
-
-## Policy priority
-
-If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
 ## Next step: Create a Cloud PC provisioning policy
 

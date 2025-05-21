@@ -69,7 +69,6 @@ Windows Autopilot device preparation depends on specific features available in W
 - Windows 11, version 23H2 with [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) or later.
 - Windows 11, version 22H2 with [KB5044380](https://support.microsoft.com/en-us/topic/october-22-2024-kb5044380-os-builds-22621-4391-and-22631-4391-preview-9a8db86a-815d-470a-be95-1aa2ad1feb05) or later.
 
-
 The following editions are supported:
 
 - Windows 11 Pro.
