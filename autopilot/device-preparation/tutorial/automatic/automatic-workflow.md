@@ -19,7 +19,7 @@ appliesto:
 
 # Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune
 
-This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation in automatic mode for Windows 365 .
+This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation in automatic mode for Windows 365.
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Windows Autopilot device preparation in automatic mode for Windows 365 deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
@@ -44,13 +44,11 @@ Once the Windows Autopilot device preparation automatic deployment is complete, 
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 process
 
-During the out-of-box experience (OOBE), a user authenticates with their corporate credentials. If there's a Windows Autopilot device preparation policy assigned to the user signing in, then that policy is delivered to the device. It then determines the configuration that needs to be applied to the device based on the settings configured in the policy. After that, device setup continues in the following order:
+After the Cloud PC is created, it checks to see if there's a Windows Autopilot device preparation policy assigned to the Cloud PC. If there is, then that policy is delivered to the Cloud PC. It then determines the configuration that needs to be applied to the Cloud PC based on the settings configured in the policy. After that, Cloud PC setup continues in the following order:
 
 1. The Cloud PC joins Microsoft Entra ID and enrolls in Intune.
 
 1. The Intune management extension installs.
-
-1. When the device is joined to Microsoft Entra ID during the first step, the user is automatically added to the local **Administrators** group on the device. If the user account is configured as a standard user, the setting is enforced by removing the user out of the **Administrators** group.
 
 1. The deployment syncs with the mobile device management (MDM) service such as Intune and checks if line-of-business (LOB) and Microsoft 365 applications are selected in the Windows Autopilot device preparation policy. It also syncs all MDM policy at this time, but application of the policy isn't tracked during the deployment.
 

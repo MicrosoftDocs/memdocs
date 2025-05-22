@@ -28,9 +28,8 @@ items:
       - name: Windows Autopilot device preparation scenarios
         href: device-preparation/tutorial/scenarios.md
       - name: Windows Autopilot device preparation user-driven Microsoft Entra join mode
+        href: device-preparation/tutorial/user-driven/entra-join-workflow.md
         items:
-        - name: Windows Autopilot device preparation user-driven Microsoft Entra join mode overview
-          href: device-preparation/tutorial/user-driven/entra-join-workflow.md
         - name: Step 1 - Set up Windows automatic Intune enrollment
           href: device-preparation/tutorial/user-driven/entra-join-automatic-enrollment.md
         - name: Step 2 - Allow users to join devices to Microsoft Entra ID
@@ -48,9 +47,8 @@ items:
 
 
       - name: Windows Autopilot device preparation automatic mode for Windows 365
+        href: device-preparation/tutorial/automatic/automatic-workflow.md
         items:
-            - name: Windows Autopilot device preparation automatic mode for Windows 365 overview
-              href: device-preparation/tutorial/automatic/automatic-workflow.md
             - name: Step 1 - Set up Windows automatic Intune enrollment
               href: device-preparation/tutorial/automatic/automatic-automatic-enrollment.md
             - name: Step 2 - Create an assigned device group
