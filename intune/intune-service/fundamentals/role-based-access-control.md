@@ -163,7 +163,7 @@ Within the Intune admin center, you can go to **Tenant admin** > **Roles** and e
 When you select this node, you are shown a combined list of the current Intune RBAC categories and permissions that your account is granted. This combined list includes all the permissions from all role assignments, but not which role assignments provide them or by which group membership they are assigned.
 
 ### Roles by permission
-With this view, you can see details about a specific Intune RBAC category and permission, and through which role assignments, and to which groups that combination is made available. 
+With this view, you can see details about a specific Intune RBAC [category and permission](../fundamentals/create-custom-role.md#custom-role-permissions), and through which role assignments, and to which groups that combination is made available. 
 
 To get started, select an Intune permission Category and then a specific Permission from that category. The admin center then displays a list of instances that lead to that permission being assigned that includes:
 
