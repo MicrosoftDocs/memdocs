@@ -34,7 +34,7 @@ For an overview of the Windows Autopilot device preparation in automatic mode fo
 
 ## Create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365
 
-To create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365 , follow these steps:
+To create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365, follow these steps:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -63,23 +63,23 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
 
          1. Next to **Network**, make sure **Microsoft hosted network** is selected.
 
-         1. Next to **Geography** and **Region**, make sure the appropriate geography and region settings are set as desired using the drop down menus.
+         1. Next to **Geography** and **Region**, make sure the appropriate geography and region settings are set as desired using the drop-down menus.
 
          1. Select the option **Use Microsoft Entra single sign-on** to enable it.
 
       1. Once all settings are properly configured in the **General** page, select **Next**.
 
-   1. In the **Image** page, select a [supported version of Windows](../../requirements.md#windows-365-cloud-pcs) from the **Gallery image** drop down menu, and then select **Next**.
+   1. In the **Image** page, select a [supported version of Windows](../../requirements.md#windows-365-cloud-pcs) from the **Gallery image** drop-down menu, and then select **Next**.
 
    1. In the **Configuration** page:
 
-      1. Next to **Language & Region** under **Windows Settings**, select the desired language and region setting using the drop down menu.
+      1. Next to **Language & Region** under **Windows Settings**, select the desired language and region setting using the drop-down menu.
 
       1. If desired, select **Apply device name template** under **Cloud PC naming**.
 
       1. Under **Windows Autopilot**:
 
-         1. Next to **Autopilot Device preparation policy**, use the drop down menu to select the Windows Autopilot device preparation policy created in [Step 4: Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md).
+         1. Next to **Autopilot Device preparation policy**, use the drop-down menu to select the Windows Autopilot device preparation policy created in [Step 4: Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md).
 
          1. Next to **Minutes allowed before device preparation fails**, enter a value in minutes that allows adequate time to install the apps and scripts defined in the Windows Autopilot device preparation policy. For example, enter **60** for 60 minutes. The recommended minimum value should be no lower than 30. If the apps and scripts aren't finished installing by this time, the device preparation fails. However, the provisioning continues.
 
@@ -111,7 +111,7 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
 
             1. In the **Name** text box, enter a name for the assignment.
 
-            1. In the **Remaining Cloud PCs** text box, enter the desired amount of Cloud PCs that should be provisioned. The number of available Cloud PC licenses is displayed next **Remaining Cloud PCs** and it decrements based on the number entered in the **Remaining Cloud PCs** text box.
+            1. In the **Remaining Cloud PCs** text box, enter the desired number of Cloud PCs that should be provisioned. The number of available Cloud PC licenses is displayed next **Remaining Cloud PCs** and it decrements based on the number entered in the **Remaining Cloud PCs** text box.
 
          1. Once everything is configured as desired in the **Select Cloud PC size** pane, select **Select**.
 
