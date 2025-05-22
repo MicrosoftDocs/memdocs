@@ -32,19 +32,17 @@ ms.collection:
 
 # Role-based access control (RBAC) with Microsoft Intune
 
-Securing access to your organization is a foundational security step. Microsoft Intune uses role-based access controls (RBAC), which are an extension of Microsoft Entra ID RBAC controls. Use of RBAC helps you manage who has access to your organization's resources and what they can do with those resources. By [assigning Intune RBAC roles](assign-role.md) to your Intune administrators and using scope groups and scope tags, you can limit what each admin can view and manage. Each role has a set of permissions that determine what users with that role can access and change within your organization.
+Securing access to your organization is an essential security step. This article introduces foundational details for using Microsoft Intune role-based access controls (RBAC), which are an extension of Microsoft Entra ID RBAC controls. Subsequent articles can help you deploy Intune RBAC in your organization.
 
-- Assigned RBAC roles provide a set of permissions that determine what users with that role can access and change within your organization. 
-- Scope groups are used to identify groups of users and devices that admins who are assigned the role have permissions to manage. 
-- Scope tags, which are free-form constructs can help ensure specific admins have access and visibility only to specific objects, further refining administrative access.
+With Intune RBAC, you can grant granular permissions to your admins to control who has access to your organization's resources, and what they can do with those resources. By assigning Intune RBAC roles and adhering to principles of least privilege access, your admins can perform their assigned tasks on only those users and devices that they should be empowered to manage. 
 
-This article provides foundational details for using and assigning RBAC in Intune.
+## RBAC Roles
 
-## Roles
+Each Intune RBAC role specifies a set of permissions that are available to users assigned to that role. Permissions are comprised of one or more management categories like *Device configuration* or *Audit data*, and sets of actions that can be taken like *Read*, *Write*, *Update*, and *Delete*. Together, they define the scope of administrative access and permissions within Intune. 
 
-Each RBAC role specifies a set of permissions that are available to users assigned to that role. Both built-in and custom roles can be utilized. Built-in roles address common Intune scenarios, while [custom roles you create](create-custom-role.md) allow for specific permissions as needed by an admin. Additionally, several Microsoft Entra roles include permissions within Intune.
+Intune includes both built-in and custom roles. Built-in roles are the same in all tenants and are provided to address common administrative scenarios, while [custom roles you create](create-custom-role.md) allow for specific permissions as needed by an admin. Its also being aware that several Microsoft Entra roles include permissions within Intune.
 
-To see a role in the **Intune admin center**, go to **Tenant administration** > **Roles** > **All roles** > choose a role. You can manage the role on the following pages:
+To view a role in the **Intune admin center**, go to **Tenant administration** > **Roles** > **All roles** > and select a role. You can then manage that role thorugh the following pages:
 
 - **Properties**: The name, description, permissions, and scope tags for the role. You can also view the name, description, and permissions of built-in roles in this documentation at [Built-in role permissions](../fundamentals/role-based-access-control-reference.md).
 - **Assignments**: Select an [assignment for a role](assign-role.md) to view details about it including the groups and scopes that the assignment includes. A role can have multiple assignments, and a user can receive multiple assignments.
@@ -113,7 +111,7 @@ Intune supports two methods of role elevation. There are performance and least p
 
 When you use PIM elevation for the Intune Administrator role from Entra ID, elevation typically happens within 10 seconds. PIM Groups-based elevation for Intune's built-in or custom roles typically take up to 15 minutes to apply.
 
-## Role assignments
+## About Intune role assignments
 
 Both Intune custom and built-in roles are assigned to groups of users. An assigned role applies to each user in the group and defines:
 
@@ -128,18 +126,18 @@ Each group that is assigned an Intune role should include only users authorized 
 
 For a user to be assigned an Intune role and have access to administer Intune, they don't require an Intune license so long as their account was created in Entra after June 2021. Accounts created before June 2021 do require being assigned a license to use Intune.
 
-To see a role assignment, choose **Intune** > **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > choose an assignment. On the assignments **Properties** page, you can edit:
+To view an existing role assignment, choose **Intune** > **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > choose an assignment. On the assignments **Properties** page, you can edit:
 
 - **Basics**: The assignments name and description.
 
-- **Members**: All users in the listed Azure security groups have permission to manage the users and devices that are listed in Scope (Groups).
+- **Members**: Members are the groups that are configured on the *Admin Groups* page when creating a role assignment. All users in the listed Azure security groups have permission to manage the users and devices that are listed in *Scope (Groups)*.
 
 - **Scope (Groups)**: Use Scope (Groups) to define the groups of users and devices that an admin with this role assignment can manage. Administrative users with this role assignment can use the permissions granted by the role to manage every user or device within the role assignments defined scope groups.
 
   > [!TIP]
   > When you configure a scope group, limit access by selecting only the security groups that include the user and devices that an admin with this role assignment should manage. To ensure admins with this role can't target all users or all devices, don't select *Add all users* or *Add all devices*.
 
-- [**Scope Tags**](scope-tags.md): Administrative users who are assigned this role assignment can see the resources that have the same scope tags.
+- [**Scope Tags**](scope-tags.md): Administrative users who are assigned this role assignment can see the resources that have the same scope tags. 
 
 > [!NOTE]
 > Scope Tags are freeform text values that an administrator defines and then adds to a role assignment. The scope tag added on a role controls visibility of the role itself, while the scope tag added in role assignment limits the visibility of Intune objects like policies, apps, or devices to only administrators in that role assignment because the role assignment contains one or more matching scope tags.
@@ -154,18 +152,15 @@ If a user has multiple role assignments, permissions, and scope tags, those role
 - Permissions and scope tags for objects of different types (like policies or apps), don't apply to each other. A Read permission for a policy, for example, doesn't provide a Read permission to apps in the user's assignments.
 - When there aren't any scope tags or some scope tags are assigned from different assignments, a user can only see devices that are part of some scope tags and can't see all devices.
 
-## Montor RBAC assignments
+## Monitor RBAC assignments
 *This and the three subsections are in progress*
 
-Within the Intune admin center, you can go to **Tenant admin** > **Roles** and expand **Monitor** to find several views that can help you identify the permissions different users have within your Intune tenant. For example, in a complex administrative environment, you might use the **Admin permissions** view to specify a specific account to identify the scope of administrative privileges that account currently has.
+Within the Intune admin center, you can go to **Tenant admin** > **Roles** and expand **Monitor** to find several views that can help you identify the permissions different users have within your Intune tenant. For example, in a complex administrative environment, you can use the **Admin permissions** view to specify an account so you can see its current scope of administrative privileges.
 ::: :::
  
 
 ### My permissions
-When you select this node, you are shown the current Intune RBAC category and permission combinations that your account has. This view displays the all the permissions your account has from all role assignments, but not which role assignments provide them or by which group membership they are assigned.
-
-<!-- NEED To describe category and rights. IF not here, thats fine - but so we can link to it. Maybe a secttion: What is an RBAC permission  - which then details examples and for Intune links to the full Built--in role list?  -->  
-
+When you select this node, you are shown a combined list of the current Intune RBAC categories and permissions that your account is granted. This combined list includes all the permissions from all role assignments, but not which role assignments provide them or by which group membership they are assigned.
 
 ### Roles by permission
 With this view, you can see details about a specific Intune RBAC category and permission, and through which role assignments, and to which groups that combination is made available. 
@@ -177,9 +172,9 @@ To get started, select an Intune permission Category and then a specific Permiss
 - **Group name** – The name of the group that receives that role assignment.
 
 ### Admin permissions
-Use the Admin permissions node to identify the specific permissions that an account has been granted. 
+Use the Admin permissions node to identify the specific permissions that an account is currently granted. 
 
-Start by specifying a specific **User** account. So long as the user has Intune permissions assigned to their account, Intune displays the complete list of those permissions identified by *Category* and *Permission*. 
+Start by specifying a **User** account. So long as the user has Intune permissions assigned to their account, Intune displays the complete list of those permissions identified by *Category* and *Permission*.
 
 
 

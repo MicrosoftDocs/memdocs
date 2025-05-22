@@ -44,7 +44,7 @@ Before you assign roles to groups, ensure you have sufficient groups for the dif
 >
 > After you complete these steps, switch to an account with only the permissions needed for ongoing administration to uphold the principle of least privilege.
 
-## Required RBAC permissions
+## RBAC permissions required to assign roles
 
 To manage RBAC roles and assignments in Intune, your account must have one of the following permission sets:
 
@@ -63,7 +63,7 @@ To manage RBAC roles and assignments in Intune, your account must have one of th
 
 ## Deploy Intune role assignments
 
-Use the following procedure to help you create and assign Intune's built-in and custom RBAC roles to groups of administrative users.
+Before you deploy Intune roles, be familiar with [About Intune role assignments](../fundamentals/role-based-access-control.md#about-intune-role-assignments) which provides details about several aspects of Intune role assignements.
 
 1. Sign in to the Microsoft Intune admin center and go to **Tenant administration** > **Roles** > **All roles**.
 
