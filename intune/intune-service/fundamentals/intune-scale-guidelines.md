@@ -89,7 +89,7 @@ The full delegation model proposes the following guidelines for policy managemen
 
 - Each local admin should have their own scope tag to separate each object that they fully manage.
 - When the local admin doesn't need to create, update or delete, then grant the local admin a role with read and assign permissions and avoid assigning any other role with full permission to them. With this approach, you can avoid combining permissions across scope tags.
-- Sometimes the local admins may need to create their own policies, profiles, and apps while sharing some common policies, profiles, and apps. In such cases, create a special group and assign the common policies, profiles, and apps, to this group. This group shouldn't be included in the Scope Group for any local admin. [Scope Group](role-based-access-control.md#role-assignments). This approach prevents the create, update and delete permissions assigned to the local admins from applying to these common policies, profiles and apps.
+- Sometimes the local admins may need to create their own policies, profiles, and apps while sharing some common policies, profiles, and apps. In such cases, create a special group and assign the common policies, profiles, and apps, to this group. This group shouldn't be included in the Scope Group for any local admin. [Scope Group](role-based-access-control.md#about-intune-role-assignments). This approach prevents the create, update and delete permissions assigned to the local admins from applying to these common policies, profiles and apps.
 
 ### Central model
 
