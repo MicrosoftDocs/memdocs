@@ -42,7 +42,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: iOS, iPadOS, MacOS
 
-**Supported for**: Device query for multiple devices
+**Supported for**: Device query for multiple devices.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -55,19 +55,19 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: iOS, iPadOS, MacOS
 
-**Supported for**: Device query for multiple devices
+**Supported for**: Device query for multiple devices.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
-| MdmLostModeEnabled | bool | Specifies if Managed Lost Mode has been enabled |	
-| ActivationLockSupported | bool | Specifies if activation lock is available |
-| EraseAllContentAndSettingsPreFlight | string | Specifies if a device can perform Erase Device Command using Erase All Content and Settings (EACS) |
-| SystemIntegrityProtectionEnabled | bool | System Integrity Protection (SIP) is a security technology on Mac that prevents malicious software from modifying protected resources |
-| PinRequiredForEraseDevice | bool | Is a PIN required before erasing the device |
-| PinRequiredForDeviceLock | bool | Is a PIN required for device lock scenarios |
-| SupportsiOSAppInstalls | bool | Are iOS app installs supported on this device |
-| AwaitingConfiguration | bool | If true on the device channel, the device is still waiting for a DeviceConfiguredCommand to continue through Setup Assistant.|
-| Supervised | bool | If true, it’s a supervised device.|
+|  ActivationLockSupported  |  bool  |  Specifies if activation lock is available  |
+|  AwaitingConfiguration  |  bool  |  If true on the device channel, the device is still waiting for a DeviceConfiguredCommand to continue through Setup Assistant. |
+|  EraseAllContentAndSettingsPreFlight  |  string  |  Specifies if a device can perform Erase Device Command using Erase All Content and Settings (EACS)  |
+|  MdmLostModeEnabled  |  bool  |  Specifies if Managed Lost Mode has been enabled  |
+|  PinRequiredForDeviceLock  |  bool  |  Is a PIN required for device lock scenarios  |
+|  PinRequiredForEraseDevice  |  bool  |  Is a PIN required before erasing the device  |
+|  Supervised  |  bool  |  If true, it’s a supervised device. |
+|  SupportsiOSAppInstalls  |  bool  |  Are iOS app installs supported on this device  |
+|  SystemIntegrityProtectionEnabled  |  bool  |  System Integrity Protection (SIP) is a security technology on Mac that prevents malicious software from modifying protected resources  |
 
 ## AppleUpdateSettings
 
@@ -75,7 +75,7 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: iOS, iPadOS, MacOS
 
-**Supported for**: Device query for multiple devices
+**Supported for**: Device query for multiple devices.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -92,22 +92,22 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 ## Battery
 
-**Description**: Battery Information
+**Description**: Provides details about battery and battery health.
 
-**Supported platforms**: Android, iOS, IPadOs, MacOS, Windows
+**Supported Platforms**: Androd, iOS, iPadOS, MacOS, Windows.
 
-**Supported for**: single device query on-demand for Windows. Device Query for Multiple devices for Andoid, iOS, iPadOS, MacOS
+**Supported for**: Device query for multiple devices, Inventory.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
-| InstanceName | string | Name used to identify the battery instance |
+| CycleCount | Long | The number of times a battery has gone through a full charge and discharge. Can be used to assess the battery state|
+| DesignCapacity | Long (milliwatt hours) | The theoretical capacity of the battery when new.|
+| FullChargedCapacity | Long (milliwatt hours) | Full charge capacity of the battery.|
 | Health | string | Assessment of battery health |
-| CycleCount | long | The number of times a battery has gone through a full charge and discharge. Can be used to assess the battery state |
-| SerialNumber | string | Battery Serial Number - assigned by manufacturer |
-| Manufacturer | string | Manufacturer of the battery |
-| Model | string | Display name of the battery |
-| DesignedCapacity | long | The theoretical capacity of the battery when new, in milliwatt-hours. |
-| FullChargedCapacity | long | Full charge capacity of the battery in milliwatt-hours. |
+| InstanceName| String | Name used to identify the battery instance.|
+| Manufacturer| String | Manufacturer of the battery.|
+| Model| String | Display name of the battery.|
+| SerialNumber| String | Battery serial number that is assigned by the manufacturer.|
 
 ## Bluetooth
 
@@ -127,15 +127,15 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 **Supported platforms**: Androd, iOS, iPadOS, MacOS
 
-**Supported for**: single device query on-demand.
+**Supported for**: Device Query for Multiple devices.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
 | CellularTechnology | string | The cellular technology type |
 | DataRoamingEnabled | bool | If true, the device has enabled data roaming |
+| HotspotEnabled | bool | If true, the device has enabled Personal Hotspot, which isn’t available for all carriers. |
 | ModemFirmwareVersion | string | The modem firmware version |
 | NetworkTethered | bool | If true, the device is network-tethered. |
-| HotspotEnabled | bool | If true, the device has enabled Personal Hotspot, which isn’t available for all carriers. |
 
 ## Certificate
 
@@ -336,7 +336,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Android, iOS, iPadOS, Windows
 
-**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
+**Supported for**: Device query for multiple devices, Single device query on-demand (Windows only), Inventory .
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -384,9 +384,9 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Description**: Details for Shared iPad devices.
 
-**Supported platforms**: Windows
+**Supported platforms**: iPadOS
 
-**Supported for**: single device query on-demand.
+**Supported for**: Device query for multiple devices.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -585,24 +585,6 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 | ModulePath | string (max 4096 characters) | Path to ServiceDll |
 | ServiceDescription | string (max 256 characters) | Service Description |
 | WindowsUserAccount | string (max 256 characters) | The name of the account that the service process is logged on as when it runs. This name can be of the form Domain\UserName |
-
-## Battery
-
-**Description**: Provides details about battery and battery health.
-
-**Supported Features**: Inventory
-
-**Supported Platforms**: Windows
-
-| **Property** | **Type** | **Description** |
-| --- | --- | --- |
-| CycleCount | Long | The number of times a battery has gone through a full charge and discharge. Can be used to assess the battery state|
-| DesignCapacity | Long (milliwatt hours) | The theoretical capacity of the battery when new.|
-| FullChargedCapacity | Long (milliwatt hours) | Full charge capacity of the battery.|
-| InstanceName| String | Name used to identify the battery instance.|
-| Manufacturer| String | Manufacturer of the battery.|
-| Model| String | Display name of the battery.|
-| SerialNumber| String | Battery serial number that is assigned by the manufacturer.|
 
 ## NetworkAdapter
 
