@@ -96,7 +96,7 @@ To create a new enrollment profile:
 
          - {{SERIAL}} for the device's serial number.  
 
-         - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
+         - {{SERIALLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
 
          - {{DEVICETYPE}} for the device type. Example: *AndroidForWork*  
 
