@@ -38,11 +38,11 @@ With Intune RBAC, you can grant granular permissions to your admins to control w
 
 ## RBAC Roles
 
-Each Intune RBAC role specifies a set of permissions that are available to users assigned to that role. Permissions are comprised of one or more management categories like *Device configuration* or *Audit data*, and sets of actions that can be taken like *Read*, *Write*, *Update*, and *Delete*. Together, they define the scope of administrative access and permissions within Intune. 
+Each Intune RBAC role specifies a set of permissions that are available to users assigned to that role. Permissions are composed of one or more management categories like *Device configuration* or *Audit data*, and sets of actions that can be taken like *Read*, *Write*, *Update*, and *Delete*. Together, they define the scope of administrative access and permissions within Intune. 
 
-Intune includes both built-in and custom roles. Built-in roles are the same in all tenants and are provided to address common administrative scenarios, while [custom roles you create](create-custom-role.md) allow for specific permissions as needed by an admin. Its also being aware that several Microsoft Entra roles include permissions within Intune.
+Intune includes both built-in and custom roles. Built-in roles are the same in all tenants and are provided to address common administrative scenarios, while [custom roles you create](create-custom-role.md) allow for specific permissions as needed by an admin. In addition, several Microsoft Entra roles include permissions within Intune.
 
-To view a role in the **Intune admin center**, go to **Tenant administration** > **Roles** > **All roles** > and select a role. You can then manage that role thorugh the following pages:
+To view a role in the **Intune admin center**, go to **Tenant administration** > **Roles** > **All roles** > and select a role. You can then manage that role through the following pages:
 
 - **Properties**: The name, description, permissions, and scope tags for the role. You can also view the name, description, and permissions of built-in roles in this documentation at [Built-in role permissions](../fundamentals/role-based-access-control-reference.md).
 - **Assignments**: Select an [assignment for a role](assign-role.md) to view details about it including the groups and scopes that the assignment includes. A role can have multiple assignments, and a user can receive multiple assignments.
@@ -64,10 +64,10 @@ An Intune admin with sufficient permissions can assign any of the Intune roles t
 - **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
 - **School Administrator**: Manages Windows 10 devices in [Intune for Education](../industry/education/introduction-intune-education.md).
 
-When your tenant includes a subscription to Windows 365 to support Cloud PCs, you'll also find the following Cloud PC roles in the Intune admin center. These roles are not available by default and include permissions within Intune for tasks related to Cloud PCs. For more information about these roles, see [Cloud PC built-in roles](/windows-365/enterprise/role-based-access#cloud-pc-built-in-roles) in the Windows 365 documentation.
+When your tenant includes a subscription to Windows 365 to support Cloud PCs, you'll also find the following Cloud PC roles in the Intune admin center. These roles aren't available by default and include permissions within Intune for tasks related to Cloud PCs. For more information about these roles, see [Cloud PC built-in roles](/windows-365/enterprise/role-based-access#cloud-pc-built-in-roles) in the Windows 365 documentation.
 
-- **Cloud PC Administrator**: A Cloud PC Administrator has read and write access to all Cloud PC features located within the Cloud PC area.
-- **Cloud PC Reader**: A Cloud PC Reader has read access to all Cloud PC features located within the Cloud PC area.
+- **Cloud PC Administrator**: A Cloud PC Administrator has *Read* and *Write* access to all Cloud PC features located within the Cloud PC area.
+- **Cloud PC Reader**: A Cloud PC Reader has *Read* access to all Cloud PC features located within the Cloud PC area.
 
 ### Custom roles
 
@@ -156,11 +156,11 @@ If a user has multiple role assignments, permissions, and scope tags, those role
 *This and the three subsections are in progress*
 
 Within the Intune admin center, you can go to **Tenant admin** > **Roles** and expand **Monitor** to find several views that can help you identify the permissions different users have within your Intune tenant. For example, in a complex administrative environment, you can use the **Admin permissions** view to specify an account so you can see its current scope of administrative privileges.
-::: :::
- 
+
+:::image type="content" source="./media/role-based-access-control/rbac-monitor-node.png" alt-text="A screen capture of the options for monitoring RBAC from within the Intune admin center.":::
 
 ### My permissions
-When you select this node, you are shown a combined list of the current Intune RBAC categories and permissions that your account is granted. This combined list includes all the permissions from all role assignments, but not which role assignments provide them or by which group membership they are assigned.
+When you select this node, you're shown a combined list of the current Intune RBAC categories and permissions that your account is granted. This combined list includes all the permissions from all role assignments, but not which role assignments provide them or by which group membership they are assigned.
 
 ### Roles by permission
 With this view, you can see details about a specific Intune RBAC [category and permission](../fundamentals/create-custom-role.md#custom-role-permissions), and through which role assignments, and to which groups that combination is made available. 
@@ -176,8 +176,7 @@ Use the Admin permissions node to identify the specific permissions that an acco
 
 Start by specifying a **User** account. So long as the user has Intune permissions assigned to their account, Intune displays the complete list of those permissions identified by *Category* and *Permission*.
 
-
-
+:::image type="content" source="./media/role-based-access-control/admin-permission-view.png" alt-text="A screen capture that shows an example of the Admin permissions view in the Intune admin center.":::
 ## Next steps
 
 - [Assign a role to a user](assign-role.md)
