@@ -112,7 +112,7 @@ You must create an enrollment profile so that users can enroll corporate-owned w
 
         - {{SERIAL}} for the device's serial number.  
 
-        - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
+        - {{SERIALLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
 
         - {{DEVICETYPE}} for the device type. Example: *AndroidForWork*  
 
