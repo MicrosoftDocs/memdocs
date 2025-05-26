@@ -44,6 +44,9 @@ Requirements for the computer where you install the connector software:
   > [!NOTE]
   > The Windows Server must be configured with the Desktop Experience, and for versions 2019 or earlier, the Microsoft Edge browser must be installed manually prior to initiating the connector setup. For more information, see [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) in the Windows Server 2016 documentation.
 
+  > [!IMPORTANT]
+  > Strong mapping in the Certificate Connector for Microsoft Intune only supported for Windows Server version 2019 or later. see the [Support tip: Implementing strong mapping in Microsoft Intune certificates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-implementing-strong-mapping-in-microsoft-intune-certificates/4053376)
+
 - .NET 4.7.2
 
 - Transport Layer Security (TLS) 1.2. For more information, see [Enable support for TLS 1.2 in your environment](/troubleshoot/azure/active-directory/enable-support-tls-environment) in the Microsoft Entra documentation.
