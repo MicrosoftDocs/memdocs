@@ -7,7 +7,7 @@ keywords:
 ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
-ms.date: 02/10/2025
+ms.date: 05/20/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -325,6 +325,20 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | ProcessorArchitecture | string(40 characters) | CPU type |
 | HardwareManufacturer | string (max 256 characters) | Hardware vendor |
 | HardwareModel | string (max 256 characters) | Hardware model |
+
+## SimInfo
+
+**Description**: Information on the Sim cards found on the device
+
+**Supported platforms**: Windows
+
+**Supported for**: Device query for multiple devices, Inventory.
+
+| **Property** | **Type** | **Description** |
+| --- | --- | --- |
+| WindowsESimId | String | The ID of an eSIM found on the device |
+| Eid | String | The electronic identification number of the device |
+| isActive | Boolean | Whether the eSIM is active or not |
 
 ## Tpm
 
