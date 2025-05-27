@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 05/22/2025
+ms.date: 05/28/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -29,7 +29,7 @@ Before beginning, refer to the [How to: Plan your Microsoft Entra join implement
 
 [Windows 365 Frontline Cloud PC in shared mode](/windows-365/enterprise/autopilot-device-preparation) builds upon the flexible licensing and usage model of Windows 365 Frontline by enabling the provisioning of shared Cloud PCs for groups of users to access on an occasional or part-time basis.
 
-Windows Autopilot device preparation in automatic mode for Windows 365, also known as Windows Autopilot device preparation automatic mode, is a solution that adds an additional Windows Autopilot device preparation profile that can be included in Windows 365 provisioning policies. By including the Windows Autopilot device preparation profile in the Windows 365 provisioning policies, it ensures that essential required device-targeted apps and scripts in Intune are installed on shared Cloud PCs during the provisioning process before the user signs in. This feature helps increase standardization of shared Cloud PCs while reducing the management overhead that comes with IT admins creating and managing their own custom images with pre-installed applications.
+Windows Autopilot device preparation in automatic mode for Windows 365, also known as Windows Autopilot device preparation automatic mode, is a solution that adds an additional Windows Autopilot device preparation policy that can be included in Windows 365 provisioning policies. By including the Windows Autopilot device preparation policy in the Windows 365 provisioning policies, it ensures that essential required device-targeted apps and scripts in Intune are installed on Cloud PCs during the provisioning process before the user signs in. This feature helps increase standardization of Cloud PCs while reducing the management overhead that comes with IT admins creating and managing their own custom images with pre-installed applications.
 
 Windows Autopilot device preparation tracks the installation progress of specified Intune applications and scripts during Cloud PC provisioning. Instead of marking Cloud PCs as "provisioned" after Intune enrollment, Windows Autopilot device preparation and Windows 365 wait until those workloads are fully installed. IT admins see a new status of **Preparing** reflected in the console while device preparation is underway.
 
@@ -44,29 +44,24 @@ Once the Windows Autopilot device preparation automatic deployment is complete, 
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 process
 
-After the Cloud PC is created, it checks to see if there's a Windows Autopilot device preparation policy assigned to the Cloud PC. If there is, then that policy is delivered to the Cloud PC. It then determines the configuration that needs to be applied to the Cloud PC based on the settings configured in the policy. After that, Cloud PC setup continues in the following order:
+1. The Windows 365 Cloud PC agent creates the Cloud PC.
 
-1. The Cloud PC joins Microsoft Entra ID and enrolls in Intune.
+1. Once the Cloud PC is created, the Cloud PC agent joins Microsoft Entra.
 
-1. The Intune management extension installs.
+1. The Cloud PC agent triggers Intune enrollment.
 
-1. The deployment syncs with the mobile device management (MDM) service such as Intune and checks if line-of-business (LOB) and Microsoft 365 applications are selected in the Windows Autopilot device preparation policy. It also syncs all MDM policy at this time, but application of the policy isn't tracked during the deployment.
+1. The Cloud PC agent calls the Windows Autopilot device preparation policy assigned to the Cloud PC provisioning policy and the configuration is applied including:
 
-1. If there are LOB and Microsoft 365 applications selected in the policy, then they're installed. If a LOB or Microsoft 365 application fails to install, then the deployment fails at this point.
+   1. The Intune management extension is installed.
 
-1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If a PowerShell script fails, then the deployment fails at this point.
+   1. The deployment syncs with Intune and checks if line-of-business (LOB) and Microsoft 365 applications are selected in the Windows Autopilot device preparation policy. It also syncs all MDM policy at this time, but application of the policy isn't tracked during the deployment. If this step fails, it will show up as failed on **Policy installation** in the report.
 
-1. The deployment checks if Win32 and Microsoft Store applications are selected in the Windows Autopilot device preparation policy. If there are Win32 and Microsoft Store applications selected in the policy, then they're installed. If a Win32 or Microsoft Store application fails to install, then the deployment fails at this point.
+   1. If there are LOB and Microsoft 365 applications selected in the policy, then they're installed. If any application installation fails, it will show up as failed on the app installation in the report.
 
-1. If all steps succeed, the **Required setup complete** page is displayed for the user.
+   1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If any script fails, it will show up as failed on the scripts in the report.
 
-1. Once the **Required setup complete** page is dismissed, the user is automatically signed in and the desktop is displayed.
+   1. The deployment checks if Win32 and Microsoft Store applications are selected in the Windows Autopilot device preparation policy. If there are Win32 and Microsoft Store applications selected in the policy, then they're installed.
 
-1. At this point, another sync is triggered and all other configurations is delivered to the device. Additional configurations might include:
-
-    - Applications and PowerShell scripts that were assigned to the device group specified in the Windows Autopilot device preparation policy but weren't explicitly selected in the policy.
-    - Any additional MDM policy.
-    - User-based configurations.
 
 ## Workflow
 
@@ -88,3 +83,8 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 > [!div class="nextstepaction"]
 > [Step 1: Set up Windows automatic Intune enrollment](automatic-automatic-enrollment.md)
+
+## Related articles
+
+- [Use automated Autopilot device preparation with Windows 365 Frontline Cloud PCs in shared mode (preview)](/windows-365/enterprise/autopilot-device-preparation).
+- [What is Windows 365 Frontline?](/windows-365/enterprise/introduction-windows-365-frontline).

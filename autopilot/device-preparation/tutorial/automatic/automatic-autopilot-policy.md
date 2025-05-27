@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 05/22/2025
+ms.date: 05/28/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -121,6 +121,10 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
     > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
 
 1. In the **Review + create** page, review all settings to make sure they're all correct. Once everything is verified, select **Save** to finish creating the Windows Autopilot device preparation policy.
+
+> [!TIP]
+>
+> When creating a Windows Autopilot device preparation policy for automatic mode, there is no **Assignments** page for assigning the policy. Instead, because the assignment is taken care of when creating the Cloud PC provisioning policy during [Step 5: Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md).
 
 ## Next step: Create a Cloud PC provisioning policy
 
