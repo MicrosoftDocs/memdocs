@@ -8,5 +8,5 @@ items:
     topicHref: /mem/intune-service/
     items:
     - name: Configuration
-      tocHref: /mem/intune-service/protect/
-      topicHref: /mem/intune-service/configuration/
+      tocHref: /intune/intune-service/protect/device-protect
+      topicHref: /intune/intune-service/configuration/device-profiles

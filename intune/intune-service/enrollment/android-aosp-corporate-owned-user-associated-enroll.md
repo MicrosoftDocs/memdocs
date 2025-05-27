@@ -79,7 +79,8 @@ Create an enrollment profile to enable enrollment on devices.
         If you select **WEP Pre-shared key** or **WPA Pre-shared key**, also enter:  
 
         - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
-    - **For Microsoft Teams devices (preview)**: Select **Enabled** if this profile is applicable for Microsoft Teams Android devices. This setting should only be used for [Microsoft Teams Android devices](/microsoftteams/devices/teams-ip-phones).
+
+    - **For Microsoft Teams devices**: Select **Enabled** if this profile is applicable for Microsoft Teams Android devices. This setting should only be used for [Microsoft Teams Android devices](/microsoftteams/devices/teams-ip-phones). You can enable this setting in one enrollment profile per tenant.  
     - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *EricSolomon_AndroidAOSP_05/02/2025_5:09 PM*  
    
        To create a custom naming template:  
