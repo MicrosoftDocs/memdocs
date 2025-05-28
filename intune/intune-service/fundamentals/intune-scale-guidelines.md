@@ -9,7 +9,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/28/2025
-ms.topic: Article
+ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -50,7 +50,7 @@ Each local admin can set up groups to suit their local organizational needs. The
 
 ## Role-based access control
 
-Securing access to your organization is an essential security step. Intune uses [role-based access controls](/fundamentals/role-based-access-control.md) to grant granular permissions to your admins to control who has access to your organization's resources, and what they can do with those resources. By assigning Intune RBAC roles and adhering to principles of least privilege access, your admins can perform their assigned tasks on only those users and devices that they should be empowered to manage.
+Securing access to your organization is an essential security step. Intune uses [role-based access controls](../fundamentals/role-based-access-control.md) to grant granular permissions to your admins to control who has access to your organization's resources, and what they can do with those resources. By assigning Intune RBAC roles and adhering to principles of least privilege access, your admins can perform their assigned tasks on only those users and devices that they should be empowered to manage.
 
 The following sections briefly describe different models with guidelines under each model for managing policies, profiles, and apps between the *Central team* and the *local admins*. The models are:
 
