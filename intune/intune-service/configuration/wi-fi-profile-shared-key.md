@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create WiFi profile with preshared key in Microsoft Intune
+title: Create Wi-Fi profile with preshared key in Microsoft Intune
 description: Use a custom profile to create a Wi-Fi profile with a preshared key (PSK), and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/19/2025
+ms.date: 05/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -87,8 +87,8 @@ This article shows you how to create the policy in Intune, and includes an XML e
     2. **Description**: Enter a description for the OMA-URI setting. This setting is optional, but recommended.
     3. **OMA-URI**: Enter one of the following options:
 
-        - **For Android**: `./Vendor/MSFT/WiFi/Profile/SSID/Settings`
-        - **For Windows**: `./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
+        - **For Android**: `./Vendor/MSFT/WiFi/Profile/{SSID}/Settings`
+        - **For Windows**: `./Vendor/MSFT/WiFi/Profile/{SSID}/WlanXml`
 
         > [!NOTE]
         >
@@ -97,10 +97,13 @@ This article shows you how to create the policy in Intune, and includes an XML e
 
         SSID (Service Set Identifier) is your Wi-Fi network name that you're creating the policy for. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`. If the Wi-Fi is named `Contoso WiFi`, enter `./Vendor/MSFT/WiFi/Profile/Contoso%20WiFi/Settings` (with the `%20` escape space).
 
-    4. **Data Type**: Select **String**.
+        > [!IMPORTANT]
+        > Despite the name, this field specifically is the Profile Name that appears as a "Friendly Name" to the user and contains the Wi-Fi settings information (which may or may not be the same as the SSID). The non-%-escaped value must correspond to `<name>` in `<WLANProfile> <name>`. The actual SSID (the name broadcast over the air) is contained inside the XML. 
 
-    5. **Value**: Paste your XML code. See the [Wi-Fi examples](#android-or-windows-wi-fi-profile-example) in this article. Update each value to match your network settings. The comments section of the code includes some pointers.
-    6. Select **Add** to save your changes.
+    5. **Data Type**: Select **String**.
+
+    6. **Value**: Paste your XML code. See the [Wi-Fi examples](#android-or-windows-wi-fi-profile-example) in this article or the [WiFi CSP examples](/windows/client-management/mdm/wifi-csp). Update each value to match your network settings. The comments section of the code includes some pointers.
+    7. Select **Add** to save your changes.
 
 8. Select **Next**.
 
