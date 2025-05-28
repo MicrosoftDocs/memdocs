@@ -149,7 +149,7 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
 
 1. In the `ODJConnectorEnrollmentWizard` directory, open the `ODJConnectorEnrollmentWizard.exe.config` XML file in a text editor, for example, **Notepad**.
 
-1. In the `ODJConnectorEnrollmentWizard.exe.config` XML file, add in any desired OUs that the MSA should have access to create computer objects in. The OU name should be the distinguished name and if applicable, needs to be escaped. The following example is an example XML entry with the OU distinguished name:
+1. In the `ODJConnectorEnrollmentWizard.exe.config` XML file, as a `key` value, add in any desired OUs that the MSA should have access to create computer objects in. The OU name should be the distinguished name and if applicable, needs to be escaped. The following example is an example XML entry with the OU distinguished name:
 
     ```xml
       <appSettings>
@@ -168,6 +168,10 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
         <add key="OrganizationalUnitsUsedForOfflineDomainJoin" value="OU=SubOU,OU=TopLevelOU,DC=contoso,DC=com;OU=Mine,DC=contoso,DC=com" />
       </appSettings>
     ```
+
+    > [!TIP]
+    >
+    > In the above example, replace the example red text with the organization's OUs in LDAP distinguished name format. To add multiple OUs, add additional `key` entries.
 
 1. Once all desired OUs are added, save the `ODJConnectorEnrollmentWizard.exe.config` XML file.
 
