@@ -100,10 +100,9 @@ This article shows you how to create the policy in Intune, and includes an XML e
         > [!IMPORTANT]
         > Despite the name, this field specifically is the Profile Name that appears as a "Friendly Name" to the user and contains the Wi-Fi settings information (which may or may not be the same as the SSID). The non-%-escaped value must correspond to `<name>` in `<WLANProfile> <name>`. The actual SSID (the name broadcast over the air) is contained inside the XML. 
 
-    5. **Data Type**: Select **String**.
-
-    6. **Value**: Paste your XML code. See the [Wi-Fi examples](#android-or-windows-wi-fi-profile-example) in this article or the [WiFi CSP examples](/windows/client-management/mdm/wifi-csp). Update each value to match your network settings. The comments section of the code includes some pointers.
-    7. Select **Add** to save your changes.
+    4. **Data Type**: Select **String**.
+    5. **Value**: Paste your XML code. See the [Wi-Fi examples](#android-or-windows-wi-fi-profile-example) in this article or the [WiFi CSP examples](/windows/client-management/mdm/wifi-csp). Update each value to match your network settings. The comments section of the code includes some pointers.
+    6. Select **Add** to save your changes.
 
 8. Select **Next**.
 
