@@ -245,7 +245,7 @@ As a helper, after receiving a request from a user who wants assistance by using
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
 > [!NOTE]
-> When the `EnableSecureCredentialPrompting` policy is enabled, it blocks the elevation process during Remote Help sessions. To allow elevation, disable this policy.  [Learn more.](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-admx-credui#enablesecurecredentialprompting)
+> When the `EnableSecureCredentialPrompting` policy is enabled, it blocks the elevation process during Remote Help sessions. To allow elevation, disable this policy.  [Learn more.](/windows/client-management/mdm/policy-csp-admx-credui#enablesecurecredentialprompting)
 
 6. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. If a helper performs elevated actions on a user's device and the sharer ends the session, at the end of the session the sharer is automatically signed out.
 
