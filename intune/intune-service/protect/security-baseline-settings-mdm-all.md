@@ -121,7 +121,7 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   - **DisableIPSourceRouting (Device)**  
     Baseline default: *Highest protection, source routing is completely disabled*
 
-- **MSS: (EnableCMPRedirect) Allow ICMP redirects to override OSPF generated routes**  
+- **MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowicmpredirectstooverrideospfgeneratedroutes)
 
