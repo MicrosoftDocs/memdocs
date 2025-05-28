@@ -198,7 +198,7 @@ Now we can create the Windows Autopilot profile and assign it to our test device
 
 3. Select **Create profile** > **Windows PC**.
 
-4. Enter the name **Autopilot Cloud-Native Windows Endpoint**, and then select **Next**.
+1. Enter the name **Autopilot Cloud Native Windows Endpoint**, and then select **Next**.
 
 5. Review and leave the default settings and select **Next**.
 
@@ -313,39 +313,26 @@ This phase is designed to help you build out security settings for your organiza
 
 The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Policy** > **Windows and later** > **Profile type** = **Microsoft Defender Antivirus**.
 
-**Cloud Protection**:
+**Defender**:
 
-- Turn on cloud-delivered protection: **Yes**
-- Cloud-delivered protection level: **Not configured**
-- Defender Cloud Extended Timeout In Seconds: **50**
-
-**Real-time protection**:
-
-- Turn on real-time protection: **Yes**
-- Enable on access protection: **Yes**
-- Monitoring for incoming and outgoing files: **Monitor all files**
-- Turn on behavior monitoring: **Yes**
-- Turn on intrusion prevention: **Yes**
-- Enable network protection: **Enable**
-- Scan all downloaded file and attachments: **Yes**
-- Scan scripts that are used in Microsoft browsers: **Yes**
-- Scan network files: **Not Configured**
-- Scan emails: **Yes**
-
-**Remediation**:
-
-- Number of days (0-90) to keep quarantined malware: **30**
-- Submit samples consent: **Send safe samples automatically**
-- Action to take on potentially unwanted apps: **Enable**
-- Actions for detected threats: **Configure**
-  - Low threat: **Quarantine**
-  - Moderate threat: **Quarantine**
-  - High threat: **Quarantine**
-  - Severe threat: **Quarantine**
-
-Settings configured in the MDAV profile within Endpoint Security:
-
-:::image type="content" source="../media/cloud-native-windows-endpoints/defender-antivirus-policy.png" alt-text="Screenshot that shows an example of a Microsoft Defender Antivirus profile in Microsoft Intune.":::
+- Allow Behavior Monitoring: **Allowed. Turns on real-time behavior monitoring.**
+- Allow Cloud Protection: **Allowed. Turns on Cloud Protection.**
+- Allow Email Scanning : **Allowed. Turns on email scanning.**
+- Allow scanning of all downloaded files and attachments: **Allowed.**
+- Allow Realtime Monitoring: **Allowed. Turns on and runs the real-time monitoring service.**
+- Allow Scanning Network Files: **Allowed. Scans network files.**
+- Allow Script Scanning: **Allowed.**
+- Cloud Extended Timeout: **50**
+- Days To Retain Cleaned Malware: **30**
+- Enable Network Protection: **Enabled (audit mode)**
+- PUA Protection: **PUA Protection on. Detected items are blocked. They will show in history along with other threats.**
+- Real Time Scan Direction: **Monitor all files (bi-directional).**
+- Submit Samples Consent: **Send safe samples automatically.**
+- Allow On Access Protection: **Allowed.**
+- Remediation action for Severe threats: **Quarantine. Moves files to quarantine.**
+- Remediation action for Low severity threat: **Quarantine. Moves files to quarantine.**
+- Remediation action for Moderate severity threats: **Quarantine. Moves files to quarantine.**
+- Remediation action for High severity threats: **Quarantine. Moves files to quarantine.**
 
 For more information on Windows Defender configuration, including Microsoft Defender for Endpoint for customer's licensed for E3 and E5, go to:
 
@@ -378,55 +365,62 @@ These settings can be enabled in the [Microsoft Intune admin center](https://go.
 
 When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../intune-service/protect/encrypt-devices.md) for more settings.
 
-**BitLocker – Base Settings**:
+**BitLocker**:
 
-- Enable full disk encryption for OS and fixed data drives: **Yes**
-- Require storage cards to be encrypted (mobile only): **Not configured**
-- Hide prompt about third-party encryption: **Yes**
-  - Allow standard users to enable encryption during Autopilot: **Yes**
-- Configure client-driven recovery password rotation: **Enable rotation on Microsoft Entra-joined devices**
+- Require Device Encryption: **Enabled**
+- Allow Warning For Other Disk Encryption: **Disabledd**
+  - Allow Standard User Encryption: **Enabled**
+- Configure Recovery Password Rotation: **Refresh on for Azure AD-joined devices**
 
-**BitLocker – Fixed Drive Settings**:
+**BitLocker Drive Encryption**:
 
-- BitLocker fixed drive policy: **Configure**
-- Fixed drive recovery: **Configure**
-  - Recovery key file creation: **Blocked**
-  - Configure BitLocker recovery package: **Password and key**
-  - Require device to back up recovery information to Azure AD: **Yes**
-  - Recovery password creation: **Allowed**
-  - Hide recovery options during BitLocker setup: **Not configured**
-  - Enable BitLocker after recovery information to store: **Not configured**
-  - Block the use of certificate-based data recovery agent (DRA): **Not configured**
-  - Block write access to fixed data-drives not protected by BitLocker: **Not configured**
-  - Configure encryption method for fixed data-drives: **Not configured**
+- Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later): **Not Configured**
+- Provide the unique identifiers for your organization: **Not Configured**
+ 
+**Operating System Drives**:
 
-**BitLocker – OS Drive Settings**:
+- Enforce drive encryption type on operating system drives: **Enabled**
+  - Select the encryption type: (Device) : **Used Space Only encryption**
+- Require additional authentication at startup: **Enabled**
+  - Allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive): **False**
+  - Configure TPM startup key and PIN: **Allow startup key and PIN with TPM**
+  - Configure TPM startup key: **Allow startup key with TPM**
+  - Configure TPM startup PIN: **Allow startup PIN with TPM**
+  - Configure TPM startup: **Require TPM**
+  - Configure minimum PIN length for startup: **Not configured**
+  - Allow enhanced PINs for startup: **Not configured**
+- Disallow standard users from changing the PIN or password: **Not configured**
+- Allow devices compliant with InstantGo or HSTI to opt out of pre-boot PIN: **Not configured**
+- Enable use of BitLocker authentication requiring preboot keyboard input on slates: **Not configured**
+- Choose how BitLocker-protected operating system drives can be recovered: **Enabled**
+  - Configure user storage of BitLocker recovery information: **Require 48-digit recovery password**
+  - Allow data recovery agent: **False**
+  - Configure storage of BitLocker recovery information to AD DS: **Store recovery passwords and key packages**
+  - Do not enable BitLocker until recovery information is stored to AD DS for operating system drives: **True**
+  - Omit recovery options from the BitLocker setup wizard: **True**
+  - Save BitLocker recovery information to AD DS for operating system drives: **True**
+- Configure pre-boot recovery message and URL: **Not configured**
+  
+**Fixed Data Drives**:
 
-- BitLocker system drive policy: **Configure**
-  - Startup authentication required: **Yes**
-  - Compatible TPM startup: **Required**
-  - Compatible TPM startup PIN: **Block**
-  - Compatible TPM startup key: **Block**
-  - Compatible TPM startup key and PIN: **Block**
-  - Disable BitLocker on devices where TPM is incompatible: **Not configured**
-  - Enable preboot recovery message and url: **Not configured**
-- System drive recovery: **Configure**
-  - Recovery key file creation: **Blocked**
-  - Configure BitLocker recovery package: **Password and key**
-  - Require device to back up recovery information to Azure AD: **Yes**
-  - Recovery password creation: **Allowed**
-  - Hide recovery options during BitLocker setup: **Not configured**
-  - Enable BitLocker after recovery information to store: **Not configured**
-  - Block the use of certificate-based data recovery agent (DRA): **Not configured**
-  - Minimum PIN length: *leave blank*
-  - Configure encryption method for Operating System drives: **Not configured**
+- Enforce drive encryption type on fixed data drives: **Enabled**
+  - Select the encryption type: (Device):  **Allow user to choose (default)**
+- Choose how BitLocker-protected fixed drives can be recovered: **Enabled**
+  - Configure user storage of BitLocker recovery information: **Require 48-digit recovery password**
+  - Allow data recovery agent: **False**
+  - Configure storage of BitLocker recovery information to AD DS: **Backup recovery passwords and key packages**
+  - Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives: **True**
+  - Omit recovery options from the BitLocker setup wizard: **True**
+  - Save BitLocker recovery information to AD DS for fixed data drives: **True**
+- Deny write access to fixed drives not protected by BitLocker: **Not configured**
 
-**BitLocker – Removable Drive Settings**:
+**Removable Data Drives**:
 
-- BitLocker removable drive policy: **Configure**
-  - Configure encryption method for removable data-drives: **Not configured**
-  - Block write access to removable data-drives not protected by BitLocker: **Not configured**
-  - Block write access to devices configured in another organization: **Not configured**
+- Control use of BitLocker on removable drives: **Enabled**
+  - Allow users to apply BitLocker protection on removable data drives (Device): **False**
+  - Allow users to suspend and decrypt BitLocker protection on removable data drives (Device): **False**
+- Deny write access to removable drives not protected by BitLocker: **Not configured**
+
 
 ### Windows Local Administrator Password Solution (LAPS)
 
@@ -435,7 +429,7 @@ By default, the built-in local administrator account ([well known SID](/windows-
 Windows Local Administrator Password Solution (LAPS) is one of the features you can use to randomize and securely store the password in Microsoft Entra. If you're using Intune as your MDM service, then use the following steps to enable [Windows LAPS](/windows-server/identity/laps/laps-overview).
 
 > [!IMPORTANT]
-> Windows LAPS assumes that the default local administrator account is enabled, even if it's renamed or if you create another local admin account. Windows LAPS doesn't create or enable any local accounts for you.
+> Windows LAPS assumes that the default local administrator account is enabled, even if it's renamed or if you create another local admin account. Windows LAPS doesn't create or enable any local accounts for you unless you configure [Automatic account management mode](/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode).
 >
 > You need to create or enable any local accounts separately from configuring Windows LAPS. You can script this task or use the Configuration Service Providers (CSP's), such as the [Accounts CSP](/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
 
@@ -584,7 +578,7 @@ Following are some settings available in the settings catalog that might be rele
     - Require Private Store Only - **Only Private store is enabled**
 
       > [!NOTE]
-      > This setting applies to Windows 10. On Windows 11, this setting blocks access to the public Microsoft store. A private store is coming to Windows 11. For more information, go to:
+      > This setting applies to Windows 10. On Windows 11, this setting blocks access to the public Microsoft store. For more information, go to:
       >
       > - [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077)
       > - [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286)
@@ -594,12 +588,6 @@ Following are some settings available in the settings catalog that might be rele
   For additional information on the settings page visibility, go to the [CSP documentation](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) and the ms-settings [URI scheme reference](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
   - Settings
     - Page Visibility List – **hide:gaming-gamebar;gaming-gamedvr;gaming-broadcasting;gaming-gamemode;gaming-trueplay;gaming-xboxnetworking;quietmomentsgame**
-
-- **Control Chat Icon Visibility in Taskbar**
-  The visibility of the Chat icon in the Windows 11 taskbar can be controlled using the [Policy CSP](/windows/client-management/mdm/policy-csp-Experience#experience-configurechaticonvisibilityonthetaskbar).
-
-  - Experience
-    - Configure Chat Icon - **Disabled**
 
 - **Control which tenants the Teams desktop client can sign in to**
 
