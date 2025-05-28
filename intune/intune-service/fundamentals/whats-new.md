@@ -153,8 +153,7 @@ Applies to:
 #### Data collection from SimInfo entity on Windows devices<!--30120558 -->
 
 You can now collect data from the SimInfo entity on Windows devices with enhanced device inventory. 
-For more information, see [Intune Data Platform](../analytics/data-platform-schema.md).
-
+For more information, see [Intune Data Platform](../../analytics/data-platform-schema.md).
 Applies to:
 
 -  Windows
