@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/27/2025
+ms.date: 05/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -95,10 +95,9 @@ This article shows you how to create the policy in Intune, and includes an XML e
         > - Be sure to include the period character at the beginning of the OMA-URI value.
         > - If the SSID has a space, then add an escape space `%20`.
 
-        SSID (Service Set Identifier) is your Wi-Fi network name that you're creating the policy for. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`. If the Wi-Fi is named `Contoso WiFi`, enter `./Vendor/MSFT/WiFi/Profile/Contoso%20WiFi/Settings` (with the `%20` escape space).
-
-        > [!IMPORTANT]
-        > Despite the name, this field is more accurately the Profile Name that appears as a "Friendly Name" to the user and contains the Wi-Fi settings information (which may or may not be the same as the SSID). The non-%-escaped value must correspond to `<name>` in `<WLANProfile> <name>`. The actual SSID (the name broadcast over the air) is contained inside the XML. 
+        SSID (Service Set Identifier) is your Wi-Fi network name that you're creating the policy for. This value is typically the friendly name that users see in their internet connection list. It's possible this friendly name is different than the actual SSID value of your Wi-Fi network. Be sure to enter the friendly name. If you export an existing Intune Wi-Fi profile to XML, the friendly name is listed in `<name>` in `<WLANProfile> <name>`.
+        
+        For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`. If the Wi-Fi is named `Contoso WiFi`, enter `./Vendor/MSFT/WiFi/Profile/Contoso%20WiFi/Settings` (with the `%20` escape space).
 
     4. **Data Type**: Select **String**.
     5. **Value**: Paste your XML code. See the [Wi-Fi examples](#android-or-windows-wi-fi-profile-example) in this article or the [WiFi CSP examples](/windows/client-management/mdm/wifi-csp#examples) (which are based on the [wireless profile samples](/windows/win32/nativewifi/wireless-profile-samples). Update each value to match your network settings. The comments section of the code includes some pointers.
