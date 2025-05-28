@@ -125,7 +125,7 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
 
 > [!TIP]
 >
-> When creating a Windows Autopilot device preparation policy for automatic mode, there is no **Assignments** page for assigning the policy. Instead, because the assignment is taken care of when creating the Cloud PC provisioning policy during [Step 5: Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md).
+> When a Windows Autopilot device preparation policy for automatic mode is created, there's no **Assignments** page for assigning the policy. Instead, the assignment is taken care of when creating the Cloud PC provisioning policy during [Step 5: Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md).
 
 ## Next step: Create a Cloud PC provisioning policy
 
