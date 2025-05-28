@@ -275,7 +275,7 @@ This feature applies to:
 
 - Android Open Source Project (AOSP) corporate-owned user-associated devices (single user)
 
-**Disable Bluetooth**: If 'True', disables Bluetooth on the device so that users can't pair with other devices. If 'False', Intune doesn't change or update this setting. By default, the OS might enable Bluetooth on the device.
+**Block Bluetooth**: If 'True', disables Bluetooth on the device so that users can't pair with other devices. If 'False', Intune doesn't change or update this setting. By default, the OS might enable Bluetooth on the device.
 
 This feature applies to:
 
