@@ -225,7 +225,7 @@ For more information, see:
 
 ## Security baselines
 
-Security baselines aren't available for Windows 10 or Windows 11 Enterprise multi-session at this time. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../configuration/settings-catalog.md).
+Security baselines are available for Windows 11 Enterprise multi-session, but aren't available for Windows 10 Enterprise multi-session at this time. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../configuration/settings-catalog.md).
 
 ## Additional configurations that aren't supported on Windows 10 or Windows 11 Enterprise multi-session VMs
 

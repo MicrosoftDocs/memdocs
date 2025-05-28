@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/01/2025
+ms.date: 04/29/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,23 +59,11 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-## Microsoft Intune Suite
-
-### Endpoint Privilege Management elevation rule support for file arguments and parameters<!--28077130 -->
-
-Soon, the file elevation rules for Endpoint Privilege Management (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
-
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
+<!-- ## Microsoft Intune Suite -->
 
 <!-- ***********************************************-->
 
 ## App management
-
-### Microsoft Intune support for Apple AI features<!-- 12792722, 30550110, 30220799 -->
-
-Intune app protection policies will have new standalone settings for Apple AI features (Genmojis, Writing tools, and screen capture). Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, these Apple AI features are blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
-
-For more information, see [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037).
 
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
@@ -97,58 +85,39 @@ Applies to:
 
 <!-- *********************************************** -->
 
-### Android settings in the Settings Catalog <!-- 31524383 (was 26981326) -->
-
-The settings catalog will soon support Android Enterprise and AOSP.
-
-Currently, to configure Android settings, you use the built-in templates. The settings from these templates are also available in the settings catalog. More settings will continue to be added.
-
-In the Intune admin center, when you create a device configuration profile, you select the **Profile Type** (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > select your **Platform** > **Profile Type**). All the profile types are moved to **Profile Type** > **Templates**.
-
-This change:
-
-- Will be a UI change with no impact on your existing policies. Your existing policies don't change. You'll still be able to create, edit, and assign these policies the same way.
-- Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
-
-To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
-
-Applies to:
-
-- Android Enterprise
-- AOSP
+ <!-- Device configuration -->
 
 <!-- *********************************************** -->
 
 ## Device enrollment
 
-### Enrollment-time grouping for Android Enterprise corporate devices <!-- 17530981 -->
+### Change to role-based access control for device enrollment limits<!-- 27115176 -->
 
-Soon to be available for Android Enterprise corporate-owned devices, *enrollment time grouping* enables you to assign a static Microsoft Entra group to devices at enrollment time. When a targeted Android device enrolls, it will receive all assigned policies, apps, and settings, typically by the time the user lands on the home screen. Intune admins will be able to configure one static Microsoft Entra group per enrollment profile under the **Device group** tab.
+We're updating role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you'll soon have read-only access to device enrollment limit policies. To create and edit these policies, you'll need to be an Intune Service Administrator.
 
+### Custom naming template for AOSP devices<!-- 31707864 -->
 
-### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
+You'll soon be able to use a custom template for naming AOSP user-affiliated and userless devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
 
-You'll soon be able to use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
-
-Applies to:
-
-- Android
 
 <!-- *********************************************** -->
 
 ## Device management
 
-### Intune ending support for custom profiles for personally owned work profile devices<!-- 27424084 -->
+### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
 
-Starting in April 2025, Intune will no longer support custom profiles for Android Enterprise personally owned work profile devices. After this time:
+During an unattended Remote Help sessions on Android devices, we're enhancing security and user awareness during remote assistance by blocking the screen of the device, and users will be notified if they interact with it.
 
-- Admins won’t be able to create new custom profiles for personally owned work profile devices. However, admins can still view and edit previously created custom profiles.
+This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices. 
 
-- Personally-owned work profile devices that currently have a custom profile assigned won't experience any immediate change of functionality. Because these profiles are no longer supported, the functionality set by these profiles might change in the future.
+For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
 
-- Intune technical support will no longer support custom profiles for personally owned work profile devices.
 
-All custom policies should be replaced with other policy types. Learn more about [Intune ending support for personally owned work profile custom profiles](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414).
+### Cross Platform Device Inventory<!-- 25964936 -->
+
+Android, iOS, and Mac devices will be added to device inventory. Intune will collect a default set of inventory data including 74 Apple properties and 32 Android properties.
+
+For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
 
 ### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
 
@@ -170,6 +139,14 @@ For more information, see [device cleanup rules](../remote-actions/devices-wipe.
 <!-- *********************************************** -->
 
 ## Device security
+
+### Detect rooted corporate-owned Android Enterprise devices<!--31672848  -->
+
+Configure compliance policies to detect if a corporate-owned Android Enterprise device is rooted. If Microsoft Intune detects that a device is rooted, you can have it marked as noncompliant. This feature is becoming available for devices enrolled as fully managed, dedicated, or corporate-owned with a work profile. 
+
+Applies to:
+
+- Android
 
 ### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
 
@@ -206,9 +183,13 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Tenant administration
 
-### Updates to Intune admin center home page<!-- 25914324 -->
+### Data collection from SimInfo entity on Windows devices<!--30120558 iddraft idready -->
 
-Microsoft Intune admin center's home page will be updated to include additional links to interactive demos, documentation, and training.
+You'll be able to collect data from the SimInfo entity on Windows devices with enhanced device inventory.
+
+Applies to:
+
+- Windows
 
 <!-- *********************************************** -->
 

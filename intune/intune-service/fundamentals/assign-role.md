@@ -4,8 +4,8 @@
 title: Assign a role to an Intune user
 description: Learn how to assign a built-in or custom role to a user in Microsoft Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 09/03/2024
 ms.topic: how-to

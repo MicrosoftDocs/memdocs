@@ -198,7 +198,7 @@ Create an app protection policy to automatically start the Microsoft Tunnel VPN 
 > [!NOTE]  
 > When the app is started, the Tunnel VPN connection will attempt to start, once started, the device will have access to the on-premises network routes available via the Microsoft Tunnel Gateway. If you wish to limit the tunnel network access to specific apps, then configure the "Per-App VPN (Android only) settings.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Protection** > **Create policy** > **Android**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Protection** > **Create** > **Android**.
 
 2. On the *Basics* tab, enter a *Name* for this policy, and a *Description (optional)*, and then select **Next**.
 
