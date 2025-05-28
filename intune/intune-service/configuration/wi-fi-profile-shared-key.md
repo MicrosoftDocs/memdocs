@@ -30,7 +30,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Use a custom device profile to create a WiFi profile with a preshared key using Intune
+# Use a custom device profile to create a Wi-Fi profile with a preshared key using Intune
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
@@ -98,10 +98,10 @@ This article shows you how to create the policy in Intune, and includes an XML e
         SSID (Service Set Identifier) is your Wi-Fi network name that you're creating the policy for. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`. If the Wi-Fi is named `Contoso WiFi`, enter `./Vendor/MSFT/WiFi/Profile/Contoso%20WiFi/Settings` (with the `%20` escape space).
 
         > [!IMPORTANT]
-        > Despite the name, this field specifically is the Profile Name that appears as a "Friendly Name" to the user and contains the Wi-Fi settings information (which may or may not be the same as the SSID). The non-%-escaped value must correspond to `<name>` in `<WLANProfile> <name>`. The actual SSID (the name broadcast over the air) is contained inside the XML. 
+        > Despite the name, this field is more accurately the Profile Name that appears as a "Friendly Name" to the user and contains the Wi-Fi settings information (which may or may not be the same as the SSID). The non-%-escaped value must correspond to `<name>` in `<WLANProfile> <name>`. The actual SSID (the name broadcast over the air) is contained inside the XML. 
 
     4. **Data Type**: Select **String**.
-    5. **Value**: Paste your XML code. See the [Wi-Fi examples](#android-or-windows-wi-fi-profile-example) in this article or the [WiFi CSP examples](/windows/client-management/mdm/wifi-csp). Update each value to match your network settings. The comments section of the code includes some pointers.
+    5. **Value**: Paste your XML code. See the [Wi-Fi examples](#android-or-windows-wi-fi-profile-example) in this article or the [WiFi CSP examples](/windows/client-management/mdm/wifi-csp#examples) (which are based on the [wireless profile samples](/windows/win32/nativewifi/wireless-profile-samples). Update each value to match your network settings. The comments section of the code includes some pointers.
     6. Select **Add** to save your changes.
 
 8. Select **Next**.
@@ -299,3 +299,4 @@ After you have the XML file, copy and paste the XML syntax into OMA-URI settings
 ## Resources
 
 - Be sure to [assign the profile](device-profile-assign.md), and [monitor](device-profile-monitor.md) its status.
+- For more information on EAP in general, see [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)
