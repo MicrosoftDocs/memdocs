@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 05/28/2025
+ms.date: 05/29/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -73,6 +73,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > - Step 3: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
 > - Step 4: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
 > - Step 5: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
+> - Step 6: [Monitor the deployment](automatic-monitor.md)
 
 > [!NOTE]
 >

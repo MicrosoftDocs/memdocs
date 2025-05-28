@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 1 of 5 - Set up Windows automatic Intune enrollment
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 1 of 5 - Set up Windows automatic Intune enrollment.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 1 of 6 - Set up Windows automatic Intune enrollment
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 1 of 6 - Set up Windows automatic Intune enrollment.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 05/28/2025
+ms.date: 05/29/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -29,6 +29,7 @@ Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 - Step 3: [Assign applications and PowerShell scripts to device group](automatic-assign-apps-scripts.md)
 - Step 4: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
 - Step 5: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
+- Step 6: [Monitor the deployment](automatic-monitor.md)
 
 For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 overview](automatic-workflow.md#workflow).
 

@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 4 of 5 - Create a Windows Autopilot device preparation policy
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 4 of 5 - Create a Windows Autopilot device preparation policy.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 4 of 6 - Create a Windows Autopilot device preparation policy
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 4 of 6 - Create a Windows Autopilot device preparation policy.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 05/28/2025
+ms.date: 05/29/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -30,6 +30,7 @@ Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 > - **Step 4: Create Windows Autopilot device preparation policy**
 
 - Step 5: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
+- Step 6: [Monitor the deployment](automatic-monitor.md)
 
 For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 overview](automatic-workflow.md#workflow).
 

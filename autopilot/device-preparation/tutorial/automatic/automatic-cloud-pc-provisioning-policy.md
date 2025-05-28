@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 5 of 5 - Create a Cloud PC provisioning policy
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 5 of 5 - Create a Cloud PC provisioning policy.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 5 of 6 - Create a Cloud PC provisioning policy
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 5 of 6 - Create a Cloud PC provisioning policy.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: aaroncz
-ms.date: 05/28/2025
+ms.date: 05/29/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -30,6 +30,8 @@ Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 >
 > - **Step 5: Create a Cloud PC provisioning policy**
 
+- Step 6: [Monitor the deployment](automatic-monitor.md)
+
 For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 overview](automatic-workflow.md#workflow).
 
 ## Create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365
@@ -40,11 +42,10 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
-
-1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Windows 365**.
+1. In the **Devices | Overview** screen, under **Device onboarding**, select **Windows 365**.
 
 1. At the top of the **Devices | Windows 365** screen, select **Provisioning policies**, and then select **Create policy**.
+
 1. In the **Create a provisioning policy** screen:
 
    1. In the **General** page:
@@ -132,3 +133,8 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
       1. Once all settings are properly configured in the **Assignments** page, select **Next**.
 
    1. In the **Review + create** page, review all settings to make sure they're all correct. Once everything is verified, select **Create** to finish creating the Cloud PC provisioning policy.
+
+## Next step: Monitor the deployment
+
+> [!div class="nextstepaction"]
+> [Step 6: Monitor the deployment](automatic-monitor.md)
