@@ -225,6 +225,10 @@ You can view the status of Remediations that are assigned or run on-demand to a 
 2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. Select **Remediations** in the **Monitor** section.
 
+## Known Issues
+
+When applying filters such as "Author" or "Status," or using the **Export** option on the **Remediations** page of **Scripts and remediations**, only the currently loaded script packages are included. To include all scripts, scroll until the full list is loaded.
+
 ## Next steps
 
 - Get the [PowerShell scripts](powershell-scripts-remediation.md) for Remediations.

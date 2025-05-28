@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/21/2024
+ms.date: 05/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -75,7 +75,8 @@ Complete these steps to enable Android Enterprise management options in Microsof
 
 > [!IMPORTANT]
 > - This account is used to manage the Google Admin account and associated subscriptions, as appropriate. The Microsoft Entra account must have an active mailbox to complete the validation process required by Google.
-> - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add and remove more administrators, if needed, in the Google admin console. Google recommends having at least 2 owners to an enterprise for redundancy. 
+> - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add and remove more administrators, if needed, in the Google admin console. Google recommends having at least 2 owners to an enterprise for redundancy.
+> - If the Microsoft sign-in option is missing, you might need to connect an MX record to the domain you're using for Exchange Online. For information about how to edit your domain's DNS settings, see [Add DNS records to connect your domain](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider).  
 
 8. Follow the onscreen prompts to finish creating a Google Admin account.  
 
