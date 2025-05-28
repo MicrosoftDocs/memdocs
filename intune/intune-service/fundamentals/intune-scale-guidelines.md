@@ -64,18 +64,18 @@ The following sections briefly describe different models with guidelines under e
 
 The partial delegation model proposes the following guidelines for policy management between the Central team and the local admins.
 
-✔️  **Permissions**
+✔️ **Permissions**
 
 - Create, update and delete permissions for policies, enrollment profiles, and apps should be held by the Central team.
 - Grant only read and assign permissions to the local admins.
 
-✔️  **Reuse**
+✔️ **Reuse**
 
 - Commonly configured policies, enrollment profiles, and apps should be made available to the local admins to reuse, as much as possible.
 - Microsoft Intune uses many common configurations that fall into a few categories. Review the recommendations listed for [App Protection Policies](../apps/app-protection-framework.md#level-1-enterprise-basic-data-protection).
 - As local admins onboard, they should review the existing policies and reuse them as needed.
 
-✔️  **Exceptions**
+✔️ **Exceptions**
 
 - The Central team can create new policies, enrollment profiles, and apps as exceptions when needed on behalf of the local admins. Usually, these exceptions include any type of profile that requires unique parameters.
 
@@ -286,7 +286,7 @@ When you delegate to a large number of administrators, the total number of objec
 
 #### Enrollment restrictions
 
-- The same set of permissions govern both device configuration and Enrollment restrictions. When you grant permissions to create for device configuration, then you're also granting  permissions to create for enrollment restrictions. However, local admins shouldn't be given permission to create enrollment restriction profiles. Instead instruct them not to create new Enrollment restrictions profiles.
+- The same set of permissions govern both device configuration and Enrollment restrictions. When you grant permissions to create for device configuration, then you're also granting permissions to create for enrollment restrictions. However, local admins shouldn't be given permission to create enrollment restriction profiles. Instead instruct them not to create new Enrollment restrictions profiles.
 
 - Enrollment device limit restrictions define how many devices each user can enroll. The enrollment device limit restrictions should cover all possible device limits for local admins to share. For more information, see [What are enrollment restrictions](../enrollment/enrollment-restrictions-set.md#available-restrictions).
 
