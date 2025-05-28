@@ -73,10 +73,10 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     > * SMS (read)
     > * Location access (coarse)
     > * Location access (fine)
+    > * Location access (background)
     > * Camera
     > * Record audio
     > * Allow body sensor data
-    > * Background location
 
 11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods to add configuration information:
     - **Use configuration designer**
