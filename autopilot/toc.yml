@@ -59,6 +59,8 @@ items:
               href: device-preparation/tutorial/automatic/automatic-autopilot-policy.md
             - name: Step 5 - Create a Cloud PC provisioning policy
               href: device-preparation/tutorial/automatic/automatic-cloud-pc-provisioning-policy.md
+            - name: Step 6 - Monitor the deployment
+              href: device-preparation/tutorial/automatic/automatic-monitor.md
 
 - name: Windows Autopilot
   expanded: true
