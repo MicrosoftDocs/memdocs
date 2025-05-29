@@ -167,7 +167,7 @@ For details about the available Defender settings, see [Configure security setti
 
 Applies to:
 - Linux
-- 
+
 ### Tenant administration
 
 #### Data collection from SimInfo entity on Windows devices<!--30120558 -->
