@@ -65,7 +65,7 @@ To view status of a Windows Autopilot device preparation in automatic mode for W
     >
     > The Cloud PCs can be filtered based on the different statuses by selecting the appropriate status above the table.
 
-### View details of the deployment
+### View granular status of the deployment
 
 To view granular status of the Windows Autopilot device preparation in automatic mode for Windows 365 deployment, including status of individual apps and scripts, use [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md):
 
