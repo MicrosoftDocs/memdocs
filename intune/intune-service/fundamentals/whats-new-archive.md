@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/21/2025
+ms.date: 05/22/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,6 +36,161 @@ ms.collection:
 <!-- Maintenance plan:
 
      Maintain ~2 years of archived content -->
+
+## Week of November 18, 2024 (Service release 2411)
+
+### App management
+
+#### Configuration values for specific managed applications on Intune enrolled iOS devices<!-- 30293382 -->
+
+Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, **IntuneMAMOID**, and **IntuneMAMDeviceID** app configuration values are automatically sent to managed applications on Intune enrolled iOS devices for the following apps:
+
+- Microsoft Excel
+- Microsoft Outlook
+- Microsoft PowerPoint
+- Microsoft Teams
+- Microsoft Word
+
+For more information, see Intune [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
+
+#### Additional installation error reporting for LOB apps on AOSP devices<!-- 27157460 -->
+
+Additional details are now provided for app installation reporting of Line of Business (LOB) apps on Android Open Source Project (AOSP) devices. You can view installation error codes and detailed error messages for LOB apps in Intune.
+
+For information about app installation error details, see [Monitor app information and assignments with Microsoft Intune](../apps/apps-monitor.md#app-installation-error-reporting).
+
+Applies to:
+
+- Android Open Source Project (AOSP) devices
+
+#### Microsoft Teams app protection on VisionOS devices (preview)<!-- 29913431 -->
+
+Microsoft Intune app protection policies (APP) are now supported on the Microsoft Teams app on VisionOS devices.
+
+To learn more about how to target policies to VisionOS devices, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties) for more information about filters for managed app properties.
+
+Applies to:
+
+- Microsoft Teams for iOS on VisionOS devices
+
+## Week of October 28, 2024
+
+### Device security
+
+#### Defender for Endpoint security settings support in government cloud environments (generally available)<!-- 30064299 -->
+
+Now generally available, customer tenants in the Government Community Cloud (GCC), US Government Community High (GCC High), and Department of Defense (DoD) environments can use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. Previously, support for Defender security settings was in public preview.
+
+This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+
+## Week of October 14, 2024 (Service release 2410)
+
+### App management
+
+#### Updates to app configuration policies for Android Enterprise devices<!-- 26711672 -->
+
+App configuration policies for Android Enterprise devices now support overriding the following permissions:
+
+- Access background location
+- Bluetooth (connect)
+
+For more information about app configuration policies for Android Enterprise devices, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
+
+Applies to:
+
+- Android Enterprise devices
+
+### Device configuration
+
+#### Windows Autopilot device preparation support in Intune operated by 21Vianet in China<!-- MAXADO-9313795 / INADO-28687730 -->
+
+Intune now supports *Windows Autopilot device preparation* policy for [Intune operated by 21Vianet in China](../fundamentals/china.md) cloud. Customers with tenants located in China can now use *Windows Autopilot device preparation* with Intune to provision devices.
+
+For information about this Windows Autopilot device preparation support, see the following in the Windows Autopilot device preparation documentation:
+
+- Overview: [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview)
+- Tutorial: [Windows Autopilot device preparation scenarios](/autopilot/device-preparation/tutorial/scenarios)
+
+### Device management
+
+#### Minimum OS version for Android devices is Android 10 and later for user-based management methods<!-- 14755802 -->
+
+Beginning in October 2024, Android 10 and later is the [minimum Android OS version that is supported for user-based management methods](../fundamentals/supported-devices-browsers.md#android), which includes:
+
+- Android Enterprise personally-owned work profile
+- Android Enterprise corporate owned work profile
+- Android Enterprise fully managed
+- Android Open Source Project (AOSP) user-based
+- Android device administrator
+- App protection policies (APP)
+- App configuration policies (ACP) for managed apps
+
+For enrolled devices on unsupported OS versions (Android 9 and lower)
+
+- Intune technical support isn't provided.
+- Intune won't make changes to address bugs or issues.
+- New and existing features aren't guaranteed to work.
+
+While Intune doesn't prevent enrollment or management of devices on unsupported Android OS versions, functionality isn't guaranteed, and use isn't recommended.
+
+Userless methods of Android device management (Dedicated and AOSP userless) and Microsoft Teams certified Android devices aren't affected by this change.
+
+#### Collection of additional device inventory details<!-- 29460196 -->
+
+Intune now collects additional files and registry keys to assist in troubleshooting the [Device Hardware Inventory](../remote-actions/collect-diagnostics.md) feature.
+
+Applies to:
+
+- Windows
+
+## Week of October 7, 2024
+
+### App management
+
+#### New UI for Intune Company Portal app for Windows<!-- 27219294 -->
+
+The UI for the Intune Company Portal app for Windows is updated. Users now see an improved experience for their desktop app without changing the functionality they've used in the past. Specific UI improvements are focused on the **Home**, **Devices**, and **Downloads & updates** pages. The new design is more intuitive and highlights areas where users need to take action.
+
+For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755). For end user details, see [Install and share apps on your device](../user-help/install-apps-cpapp-windows.md).
+
+### Device security
+
+#### New strong mapping requirements for SCEP certificates authenticating with KDC<!-- 29005591 -->
+
+The Key Distribution Center (KDC) requires user or device objects to be strongly mapped to Active Directory for certificate-based authentication. This means that a Simple Certificate Enrollment Protocol (SCEP) certificate's subject alternative name (SAN) must have a security identifier (SID) extension that maps to the user or device SID in Active Directory. The mapping requirement protects against certificate spoofing and ensures that certificate-based authentication against the KDC continues working.
+
+To meet requirements, modify or create a SCEP certificate profile in Microsoft Intune. Then add a `URI` attribute and the `OnPremisesSecurityIdentifier` variable to the SAN. After you do that, Microsoft Intune appends a tag with the SID extension to the SAN and issues new certificates to targeted users and devices. If the user or device has a SID on premises that's synced to Microsoft Entra ID, the certificate shows the SID. If they don't have a SID, a new certificate is issued without the SID.
+
+For more information and steps, see [Update certificate connector: Strong mapping requirements for KB5014754](../protect/certificates-profile-scep.md).
+
+Applies to:
+
+- Windows 10/11, iOS/iPadOS, and macOS user certificates
+- Windows 10/11 device certificates
+
+This requirement isn't applicable to device certificates used with Microsoft Entra joined users or devices, because the SID attribute is an on-premises identifier.
+
+#### Defender for Endpoint security settings support in government cloud environments (public preview)<!-- 24191406 -->
+
+In public preview, customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments can now use Intune to manage the Defender security settings on the devices that onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+
+For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
+
+## Week of September 30, 2024
+
+### Device security
+
+#### Updates to PKCS certificate issuance process in Microsoft Intune Certificate Connector, version 6.2406.0.1001 <!-- 24186560 -->
+
+We updated the process for Public Key Cryptography Standards (PKCS) certificate issuance in Microsoft Intune to support the security identifiers (SID) information requirements described in [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16). As part of this update, an OID attribute containing the user or device SID is added to the certificate. This change is available with the Certificate Connector for Microsoft Intune, version 6.2406.0.1001, and applies to users and devices synced from Active Directory on-premises to Microsoft Entra ID.
+
+The SID update is available for user certificates across all platforms, and for device certificates specifically on Microsoft Entra hybrid joined Windows devices.
+
+For more information, see:
+
+- [What's new for the certificate connector](../protect/certificate-connector-overview.md#september-19-2024)
+
+- [Apply PFX changes to certificate](../protect/certificates-pfx-configure.md)
 
 ## Week of September 23, 2024 (Service release 2409)
 
