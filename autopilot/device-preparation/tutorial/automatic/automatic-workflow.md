@@ -86,5 +86,6 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 ## Related articles
 
+- [Windows 365 Frontline Cloud PC in shared mode - Quick Start Guide](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905).
 - [Use automated Autopilot device preparation with Windows 365 Frontline Cloud PCs in shared mode (preview)](/windows-365/enterprise/autopilot-device-preparation).
 - [What is Windows 365 Frontline?](/windows-365/enterprise/introduction-windows-365-frontline)

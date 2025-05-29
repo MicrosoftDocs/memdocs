@@ -96,9 +96,9 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
 
          1. Next to **Minutes allowed before device preparation fails**, enter a value between 10 - 360 minutes that allows adequate time to install the apps and scripts defined in the Windows Autopilot device preparation policy. For example, enter **60** for 60 minutes. The recommended minimum value should be no lower than 30. If the apps and scripts aren't finished installing by the time specified, the device preparation fails.
 
-         1. To prevent users from connecting to the Cloud PC if the deployment fails or times out, select the option **Prevent users from connection to Cloud PC upon installation failure or timeout**. When this option is checked, deployments that fail are marked as **Failed**.
+         1. To prevent users from connecting to the Cloud PC if the deployment fails or times out, select the option **Prevent users from connection to Cloud PC upon installation failure or timeout**. When this option is checked, deployments that fail are marked as **Failed**. For more information, see the next step [Step 6: Monitor the deployment - View status of the deployment](automatic-monitor.md#view-status-of-the-deployment).
 
-         To allow users to connect to the Cloud PC even when the deployment fails or times out, leave the option **Prevent users from connection to Cloud PC upon installation failure or timeout** unchecked. When this option is unchecked, deployments that fail are marked as **Provisioned with warnings**.
+         To allow users to connect to the Cloud PC even when the deployment fails or times out, leave the option **Prevent users from connection to Cloud PC upon installation failure or timeout** unchecked. When this option is unchecked, deployments that fail are marked as **Provisioned with warnings**. For more information, see the next step [Step 6: Monitor the deployment - View status of the deployment](automatic-monitor.md#view-status-of-the-deployment).
 
       1. Once all settings are properly configured in the **Configuration** page, select **Next**.
 
