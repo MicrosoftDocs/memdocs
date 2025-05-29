@@ -149,12 +149,12 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
 
 1. In the `ODJConnectorEnrollmentWizard` directory, open the existing `ODJConnectorEnrollmentWizard.exe.config` XML file in a text editor, for example, **Notepad**.
 
-1. In `key` element of the `ODJConnectorEnrollmentWizard.exe.config` XML file:
+1. In the `add key` element of the `ODJConnectorEnrollmentWizard.exe.config` XML file:
 
-    - Next to `value=` add in any desired OUs that the MSA should have access to create computer objects in.
-    - The OU name needs to be the [LDAP distinguished name](/previous-versions/windows/desktop/ldap/distinguished-names) and if applicable, needs to be escaped.
+    - Next to `value=`, add in any desired OUs that the MSA should have access to create computer objects in.
+    - The OU name needs to be in the [LDAP distinguished name](/previous-versions/windows/desktop/ldap/distinguished-names) format and if applicable, needs to be escaped.
     - Multiple OUs are supported by separating each OU with a semicolon (;).
-    - Make sure to retain the quotes (") next to `value=`. All of the OU values need to be within the quotes.
+    - Make sure to retain the quotes (") next to `value=`. All of the OU values need to be within one pair of quotes.
     - Don't change the name of the key element `OrganizationalUnitsUsedForOfflineDomainJoin`.
 
     The following example is an example XML entry with multiple OUs in LDAP distinguished name format:
