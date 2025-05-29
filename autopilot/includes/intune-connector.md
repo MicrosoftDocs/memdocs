@@ -6,7 +6,7 @@ ms.reviewer: madakeva
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 04/25/2025
+ms.date: 05/29/2025
 ms.localizationpriority: medium
 ---
 
