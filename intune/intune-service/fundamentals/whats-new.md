@@ -85,7 +85,7 @@ As a public preview, you can now use the Vulnerability Remediation Agent for Sec
  
 This information empowers you with a current assessment of potential risk to your environment and guidance to help you decide which risk to address first.
 
-For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2321729).
+For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
 
 ## Week of May 26, 2025 (Service release 2505)
 
