@@ -108,11 +108,7 @@ Devices can have any [Windows edition that Intune supports](../fundamentals/supp
 - Windows 10, version 22H2 (19045.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
 - Windows 10, version 21H2 (19044.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
 - Windows 10, version 20H2 (19042.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
-
-The following [Windows long-term service channel](/windows/whats-new/ltsc/overview#the-long-term-servicing-channel-ltsc) (LTSC) releases are also supported:
-- Windows 11 Enterprise LTSC 2024
-- Windows 10 Enterprise LTSC 2021
-- Windows 10 Enterprise LTSC 2019
+- Windows 10 Enterprise LTSC 2019 and [later LTSC versions](/windows-server/identity/laps/laps-overview#windows-laps-supported-platforms)
 
 ### GCC High support
 
