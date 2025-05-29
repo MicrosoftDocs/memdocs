@@ -85,23 +85,15 @@ Applies to:
 
 <!-- *********************************************** -->
 
- <!-- Device configuration -->
+<!-- ## Device configuration -->
 
 <!-- *********************************************** -->
 
-### Custom naming template for AOSP devices<!-- 31707864 -->
-
-You'll soon be able to use a custom template for naming AOSP user-affiliated and userless devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
+<!-- ## Device enrollment -->
 
 <!-- *********************************************** -->
 
 ## Device management
-
-### Cross Platform Device Inventory<!-- 25964936 -->
-
-Android, iOS, and Mac devices will be added to device inventory. Intune will collect a default set of inventory data including 74 Apple properties and 32 Android properties.
-
-For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
 
 ### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 

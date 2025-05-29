@@ -103,11 +103,25 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Device enrollment
 
+#### Custom naming template for AOSP devices <!-- 31707864 -->
+
+Use a custom template for naming AOSP user-affiliated and userless devices when they enroll with Intune. The template is available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username. For more information about how to configure the template, see: 
+
+- [Set up Intune enrollment for Android (AOSP) corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
+- [Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
+
+
 #### Change to role-based access control for device enrollment limits<!-- 27115176 -->
 
 We updated role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you now have read-only access to device enrollment limit policies. To create and edit these policies, you must be an Intune  Administrator.
 
 ### Device management
+
+#### Cross Platform Device Inventory<!-- 25964936 -->
+
+Android, iOS and Mac devices are added to device inventory. Intune now collects a default set of inventory data including 74 Apple properties and 32 Android properties.
+
+For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
 
 #### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
 
