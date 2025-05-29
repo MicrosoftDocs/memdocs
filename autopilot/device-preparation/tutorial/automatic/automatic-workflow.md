@@ -53,7 +53,10 @@ Windows Autopilot device preparation tracks the installation progress of specifi
 
 > [!IMPORTANT]
 >
-> As part of a Windows Autopilot device preparation in automatic mode for Windows 365 deployment, up to 10 essential applications can be installed and up to 10 essential essential PowerShell scripts can be run.
+> As part of a Windows Autopilot device preparation in automatic mode for Windows 365 deployment:
+>
+> - Up to 10 essential applications can be installed.
+> - Up to 10 essential PowerShell scripts can be run.
 
 ## Workflow
 
