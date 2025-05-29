@@ -147,9 +147,17 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
 
 1. On the server where the Intune Connector for Active Directory is installed, navigate to `ODJConnectorEnrollmentWizard` directory where the Intune Connector for Active Directory was installed, normally `C:\Program Files\Microsoft Intune\ODJConnector\`.
 
-1. In the `ODJConnectorEnrollmentWizard` directory, open the `ODJConnectorEnrollmentWizard.exe.config` XML file in a text editor, for example, **Notepad**.
+1. In the `ODJConnectorEnrollmentWizard` directory, open the existing `ODJConnectorEnrollmentWizard.exe.config` XML file in a text editor, for example, **Notepad**.
 
-1. In the `ODJConnectorEnrollmentWizard.exe.config` XML file, as a `key` value, add in any desired OUs that the MSA should have access to create computer objects in. The OU name should be the distinguished name and if applicable, needs to be escaped. The following example is an example XML entry with the OU distinguished name:
+1. In `key` element of the `ODJConnectorEnrollmentWizard.exe.config` XML file:
+
+    - Next to `value=` add in any desired OUs that the MSA should have access to create computer objects in.
+    - The OU name needs to be the [LDAP distinguished name](/previous-versions/windows/desktop/ldap/distinguished-names) and if applicable, needs to be escaped.
+    - Multiple OUs are supported by separating each OU with a semicolon (;).
+    - Make sure to retain the quotes (") next to `value=`. All of the OU values need to be within the quotes.
+    - Don't change the name of the key element (`OrganizationalUnitsUsedForOfflineDomainJoin`)
+
+    The following example is an example XML entry with the OU distinguished name:
 
     ```xml
       <appSettings>
@@ -171,7 +179,7 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
 
     > [!TIP]
     >
-    > In the above example, replace the example red text with the organization's OUs in LDAP distinguished name format. To add multiple OUs, add additional `key` entries.
+    > In the example, replace the example red text next to `value=` with the organization's OUs in [LDAP distinguished name format](/previous-versions/windows/desktop/ldap/distinguished-names). Make sure all entries are within the quotes ("), and separate each OU with a semicolon (;) as shown in the example.
 
 1. Once all desired OUs are added, save the `ODJConnectorEnrollmentWizard.exe.config` XML file.
 
