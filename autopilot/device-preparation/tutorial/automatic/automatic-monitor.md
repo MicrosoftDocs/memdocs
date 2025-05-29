@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 6 of 6 - Monitor the deployment
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 6 of 6 - Monitor the deployment.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 6 of 6 - Monitor the deployment
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 6 of 6 - Monitor the deployment.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -17,7 +17,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation in automatic mode for Windows 365: Monitor the Windows Autopilot device preparation in automatic mode for Windows 365 deployment
+# Windows Autopilot device preparation in automatic mode for Windows 365 (preview): Monitor the Windows Autopilot device preparation in automatic mode for Windows 365 deployment
 
 Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 

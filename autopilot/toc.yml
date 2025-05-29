@@ -46,7 +46,7 @@ items:
           href: device-preparation/tutorial/user-driven/entra-join-corporate-identifier.md
 
 
-      - name: Windows Autopilot device preparation automatic mode for Windows 365
+      - name: Windows Autopilot device preparation automatic mode for Windows 365 (preview)
         href: device-preparation/tutorial/automatic/automatic-workflow.md
         items:
             - name: Step 1 - Set up Windows automatic Intune enrollment

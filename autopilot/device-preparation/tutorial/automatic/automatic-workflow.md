@@ -1,6 +1,6 @@
 ---
-title: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune
-description: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune.
+title: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune
+description: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
