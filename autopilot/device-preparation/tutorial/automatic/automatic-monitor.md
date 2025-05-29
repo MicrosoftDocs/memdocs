@@ -51,13 +51,15 @@ To view status of a Windows Autopilot device preparation in automatic mode for W
 
 1. The status of each Cloud PC is displayed under the **Status** column in this page. The statuses include:
 
-    - **Provisioning** - the Cloud PC is currently being provisioned and isn't ready for use yet.
+    - **Provisioning** - the Cloud PC is being provisioned and isn't ready for use yet.
+
+    - **Preparing** - the Cloud PC is undergoing Windows Autopilot device preparation configuration and isn't ready for use yet.
 
     - **Provisioned** - the Cloud PC is successfully provisioned and is ready to be used.
 
     - **Failed** - the Cloud PC failed to be provisioned successfully and can't be used due to the setting **Prevent users from connection to Cloud PC upon installation failure or timeout** option enabled in the Cloud PC provisioning policy. For more information, see [Create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365](automatic-cloud-pc-provisioning-policy.md#create-a-cloud-pc-provisioning-policy-for-use-with-windows-autopilot-device-preparation-in-automatic-mode-for-windows-365).
 
-    - **Provisioned with warnings** - the Cloud PC failed to be provisioned successfully but can be used due to the setting **Prevent users from connection to Cloud PC upon installation failure or timeout** option enabled in the Cloud PC provisioning policy. For more information, see [Create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365](automatic-cloud-pc-provisioning-policy.md#create-a-cloud-pc-provisioning-policy-for-use-with-windows-autopilot-device-preparation-in-automatic-mode-for-windows-365).
+    - **Provisioned with warnings** - the Cloud PC failed to be provisioned successfully but can be used due to the setting **Prevent users from connection to Cloud PC upon installation failure or timeout** option not being enabled in the Cloud PC provisioning policy. For more information, see [Create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365](automatic-cloud-pc-provisioning-policy.md#create-a-cloud-pc-provisioning-policy-for-use-with-windows-autopilot-device-preparation-in-automatic-mode-for-windows-365).
 
     > [!TIP]
     >
@@ -65,6 +67,6 @@ To view status of a Windows Autopilot device preparation in automatic mode for W
 
 ### View details of the deployment
 
-To view the details of a Windows Autopilot device preparation in automatic mode for Windows 365 deployment beyond just status, use [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md):
+To view granular status of the Windows Autopilot device preparation in automatic mode for Windows 365 deployment, including status of individual apps and scripts, use [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md):
 
 [!INCLUDE [Windows Autopilot device preparation reporting and monitoring](../../includes/reporting-monitoring.md)]

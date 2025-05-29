@@ -17,7 +17,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune
+# Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune
 
 This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation in automatic mode for Windows 365.
 
@@ -25,22 +25,11 @@ The purpose of this tutorial is a step by step guide for all the configuration s
 
 Before beginning, refer to the [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all requirements are met for joining devices to Microsoft Entra ID.
 
-## Windows Autopilot device preparation in automatic mode for Windows 365 overview
+## Windows Autopilot device preparation in automatic mode for Windows 365 overview (preview)
 
-[Windows 365 Frontline Cloud PC in shared mode](/windows-365/enterprise/autopilot-device-preparation) builds upon the flexible licensing and usage model of Windows 365 Frontline by enabling the provisioning of shared Cloud PCs for groups of users to access on an occasional or part-time basis.
+Windows Autopilot device preparation in automatic mode for Windows 365 (preview), also known as Windows Autopilot device preparation automatic mode, is a solution that adds an additional Windows Autopilot device preparation policy that can be included in Windows 365 provisioning policies. By including the Windows Autopilot device preparation policy in the Windows 365 provisioning policies, it ensures that essential required device-targeted apps and scripts in Intune are installed on Cloud PCs during the provisioning process before the user signs in. This feature helps increase standardization of Cloud PCs while reducing the management overhead that comes with IT admins creating and managing their own custom images with pre-installed applications.
 
-Windows Autopilot device preparation in automatic mode for Windows 365, also known as Windows Autopilot device preparation automatic mode, is a solution that adds an additional Windows Autopilot device preparation policy that can be included in Windows 365 provisioning policies. By including the Windows Autopilot device preparation policy in the Windows 365 provisioning policies, it ensures that essential required device-targeted apps and scripts in Intune are installed on Cloud PCs during the provisioning process before the user signs in. This feature helps increase standardization of Cloud PCs while reducing the management overhead that comes with IT admins creating and managing their own custom images with pre-installed applications.
-
-Windows Autopilot device preparation tracks the installation progress of specified Intune applications and scripts during Cloud PC provisioning. Instead of marking Cloud PCs as "provisioned" after Intune enrollment, Windows Autopilot device preparation and Windows 365 wait until those workloads are fully installed. IT admins see a new status of **Preparing** reflected in the console while device preparation is underway.
-
-Windows Autopilot device preparation automatic deployments perform the following tasks during the deployment:
-
-- Joins the device to Microsoft Entra ID.
-- Enrolls the device in Intune.
-- Installs up to 10 essential applications.
-- Runs up to 10 essential PowerShell scripts.
-
-Once the Windows Autopilot device preparation automatic deployment is complete, the Cloud PC is ready for the end-user to use.
+Windows Autopilot device preparation tracks the installation progress of specified Intune applications and scripts during Cloud PC provisioning. Instead of marking Cloud PCs as **Provisioned** after Intune enrollment, Windows Autopilot device preparation and Windows 365 wait until those workloads are fully installed. IT admins see a new status of **Preparing** reflected in the console while Windows Autopilot device preparation is underway.
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 process
 
@@ -58,9 +47,21 @@ Once the Windows Autopilot device preparation automatic deployment is complete, 
 
    1. If there are LOB and Microsoft 365 applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
+    > [!NOTE]
+    >
+    > Up to 10 essential applications can be installed.
+
    1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If any script fails, the **Deployment Status** shows up as **Failed** during the phase **Scripts installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
+    > [!NOTE]
+    >
+    > Up to 10 essential essential PowerShell scripts can be run.
+
    1. The deployment checks if Win32 and Microsoft Store applications are selected in the Windows Autopilot device preparation policy. If there are Win32 and Microsoft Store applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+
+    > [!NOTE]
+    >
+    > Up to 10 essential applications can be installed.
 
 ## Workflow
 
