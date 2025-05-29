@@ -51,12 +51,12 @@ Windows Autopilot device preparation tracks the installation progress of specifi
 
    1. The deployment checks if Win32 and Microsoft Store applications are selected in the Windows Autopilot device preparation policy. If there are Win32 and Microsoft Store applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
-  > [!IMPORTANT]
-  >
-  > As part of a Windows Autopilot device preparation in automatic mode for Windows 365 deployment:
-  >
-  > - Up to 10 essential applications can be installed.
-  > - Up to 10 essential PowerShell scripts can be run.
+    > [!IMPORTANT]
+    >
+    > As part of a Windows Autopilot device preparation in automatic mode for Windows 365 deployment:
+    >
+    > - Up to 10 essential applications can be installed.
+    > - Up to 10 essential PowerShell scripts can be run.
 
 ## Workflow
 
