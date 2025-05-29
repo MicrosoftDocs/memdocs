@@ -97,7 +97,7 @@ Create an enrollment profile to enable enrollment on devices.
 
           You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
           - {{SERIAL}} for the device's serial number.
-          - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.
+          - {{SERIALLAST4DIGITS}} for the last 4 digits of the device’s serial number.
           - {{DEVICETYPE}} for the device type, Example: *AndroidAOSP*
           - {{ENROLLEDDATETIME}} for the date and time of enrollment.
           - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
