@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2025
+ms.date: 05/29/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -76,7 +76,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of May 19, 2025 (Service release 2505)
+## Week of May 26, 2025 (Service release 2505)
 
 ### Microsoft Intune Suite
 
@@ -100,6 +100,12 @@ The following protected apps are now available for Microsoft Intune:
 - Mobile Helix Link for Intune by Mobile Helix
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Device enrollment
+
+#### Change to role-based access control for device enrollment limits<!-- 27115176 -->
+
+We updated role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you now have read-only access to device enrollment limit policies. To create and edit these policies, you must be an Intune  Administrator.
 
 ### Device management
 
