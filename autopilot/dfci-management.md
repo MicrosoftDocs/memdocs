@@ -92,6 +92,8 @@ For more information, see [Intune devices and apps API overview](/graph/intune-c
 - VAIO.
 - Samsung.
 
+- NEC.
+
 Other OEMs are pending.
 
 ## Known issues
