@@ -200,7 +200,7 @@ Select the Key Storage Provider that matches the provider you used to create the
 4. To authenticate to Intune Graph, run `Set-IntuneAuthenticationToken  -AdminUserName "<Admin-UPN>"`
 
    > [!NOTE]
-   > As the authentication is run against Graph, you must provide permissions to the AppID. If it's the first time you've used this utility, a *Global administrator* is required. The PowerShell cmdlets use the same AppID as the one used with [PowerShell Intune Samples](https://github.com/microsoftgraph/powershell-intune-samples).
+   > As the authentication is run against Graph, you must provide permissions to the AppID. If it's the first time you've used this utility, an *Intune administrator* role is required. The PowerShell cmdlets use the same AppID as the one used with [PowerShell Intune Samples](https://github.com/microsoftgraph/powershell-intune-samples).
 
 5. Convert the password for each PFX file you're importing to a secure string by running `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
 

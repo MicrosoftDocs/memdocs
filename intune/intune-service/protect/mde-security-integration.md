@@ -6,7 +6,7 @@ description: Learn how to use Intune policy to manage Microsoft Defender securit
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/04/2025
+ms.date: 05/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -131,7 +131,7 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2019 (with [KB5025229](https://support.microsoft.com/topic/april-11-2023-kb5025229-os-build-17763-4252-e8ead788-2cd3-4c9b-8c77-d677e2d8744f))
 - Windows Server 2019 Core (with the [Server Core App Compatibility Feature on Demand](/windows-server/get-started/server-core-app-compatibility-feature-on-demand) installed)  
 - Windows Server 2022, including Server Core (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
-- Windows Server 2025 (rolling out, beginning February 2025 and over the next several weeks)
+- Windows Server 2025
 
 - Domain controllers. See important information in [Use of security settings management on domain controllers](#use-of-security-settings-management-on-domain-controllers) (in this article).
 
@@ -247,6 +247,7 @@ The following policy types support the *Linux* platform.
 | Antivirus                            | Microsoft Defender Antivirus | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus                            | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Endpoint detection and response | Microsoft Defender Global Exclusions (AV+EDR) | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 
 ### macOS
 

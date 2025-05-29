@@ -121,7 +121,7 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   - **DisableIPSourceRouting (Device)**  
     Baseline default: *Highest protection, source routing is completely disabled*
 
-- **MSS: (EnableCMPRedirect) Allow ICMP redirects to override OSPF generated routes**  
+- **MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowicmpredirectstooverrideospfgeneratedroutes)
 
@@ -2471,6 +2471,12 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowsmartscreenie)
   - **Use SmartScreen Filter**  
+    Baseline default: *Enable*
+
+- **Use Pop-up Blocker**
+  Baseline default: *Enable*
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetexplorer-internetzoneusepopupblocker)
+  - **Use Pop-up Blocker**
     Baseline default: *Enable*
 
 - **Userdata persistence**  
