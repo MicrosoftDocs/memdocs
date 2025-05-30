@@ -95,9 +95,15 @@ Applies to:
 
 ## Device management
 
+### Remote actions with multiple administrative approval<!-- 27043113  -->
+
+Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). The remote action **Wipe** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account thereby enhancing the overall security posture of the environment.
+
+For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
+
 ### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 
-We're adding a feature that will allow a customer to:
+We're adding a feature that allows a customer to:
 
 - Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
 - Configure a different RBAC permission and assign the permission to different RBAC roles
