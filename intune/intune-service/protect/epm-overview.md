@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/19/2025
+ms.date: 05/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,6 +87,42 @@ Endpoint Privilege Management is supported with the following sovereign cloud en
 
 For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
+## Role-based access controls for Endpoint Privilege Management
+
+To manage Endpoint Privilege Management, your account must be assigned an Intune role-based access control (RBAC) role that includes the following permission with sufficient rights to complete the desired task:
+
+- **Endpoint Privilege Management Policy Authoring** – This permission is required to work with policy or data and reports for Endpoint Privilege Management, and supports the following rights:
+  - View Reports
+  - Read
+  - Create
+  - Update
+  - Delete
+  - Assign
+
+- **Endpoint Privilege Management Elevation Requests** - This permission is required to work with elevation requests that are submitted by users for approval, and supports the following rights:
+  - View elevation requests
+  - Modify elevation requests
+
+You can add this permission with one or more rights to your own custom RBAC roles, or use a built-in RBAC role dedicated to managing Endpoint Privilege Management:
+
+- **Endpoint Privilege Manager** – This built-in role is dedicated to managing Endpoint Privilege Management in the Intune console. This role includes all rights for *Endpoint Privilege Management Policy Authoring* and *Endpoint Privilege Management Elevation Requests*.
+
+- **Endpoint Privilege Reader** - Use this built-in role to view Endpoint Privilege Management policies in the Intune console, including reports. This role includes the following rights:
+  - View Reports
+  - Read
+  - View elevation requests
+
+In addition to the dedicated roles, the following built-in roles for Intune also include rights for *Endpoint Privilege Management Policy Authoring*:
+
+- **Endpoint Security Manager** - This role includes all rights for *Endpoint Privilege Management Policy Authoring* and *Endpoint Privilege Management Elevation Requests*.
+
+- **Read Only Operator** - This role includes the following rights:
+  - View Reports
+  - Read
+  - View elevation requests
+
+ For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+
 ## Getting started with Endpoint Privilege Management
 
 Endpoint Privilege Management (EPM) is built into Microsoft Intune, which means that all configuration is completed within the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the following high-level process:
@@ -131,41 +167,31 @@ When you configure the *elevation settings* and *elevation rules* policies that 
   - **Managed elevation**: Any elevation that Endpoint Privilege Management facilitates. Managed elevations include all elevations that EPM ends up facilitating for the standard user. These managed elevations could include elevations that happen as the result of an elevation rule or as part of default elevation action.
   - **Unmanaged elevation**: All file elevations that happen without use of Endpoint Privilege Management. These elevations can happen when a user with administrative rights uses the Windows default action of *Run as administrator*.
 
-## Role-based access controls for Endpoint Privilege Management
 
-To manage Endpoint Privilege Management, your account must be assigned an Intune role-based access control (RBAC) role that includes the following permission with sufficient rights to complete the desired task:
+## Security considerations
 
-- **Endpoint Privilege Management Policy Authoring** – This permission is required to work with policy or data and reports for Endpoint Privilege Management, and supports the following rights:
-  - View Reports
-  - Read
-  - Create
-  - Update
-  - Delete
-  - Assign
+To help ensure a secure deployment of Endpoint Privilege Management, consider these recommendations when configuring elevation behavior and rules:
+ 
+### Set a secure default elevation response
 
-- **Endpoint Privilege Management Elevation Requests** - This permission is required to work with elevation requests that are submitted by users for approval, and supports the following rights:
-  - View elevation requests
-  - Modify elevation requests
+Set the [default elevation response](../protect/epm-policies.md#about-windows-elevation-settings-policy) to **Support Approval** or **Deny** rather than **User Confirmed**. This ensures that elevation is governed by predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
+ 
+### Require file path restrictions in all rule types
 
-You can add this permission with one or more rights to your own custom RBAC roles, or use a built-in RBAC role dedicated to managing Endpoint Privilege Management:
+When [configuring an elevation rule](../protect/epm-policies.md#windows-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that leverage automatic elevation or wildcard-based attributes when the path points to a location that standard users cannot modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced prior to elevation.
 
-- **Endpoint Privilege Manager** – This built-in role is dedicated to managing Endpoint Privilege Management in the Intune console. This role includes all rights for *Endpoint Privilege Management Policy Authoring* and *Endpoint Privilege Management Elevation Requests*.
+This recommendation applies to rules created [automatically](../protect/epm-policies.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](../protect/epm-reports.md) or [support approved](../protect/epm-support-approved.md) request, and for elevation rules that you create [manually](../protect/epm-policies.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
 
-- **Endpoint Privilege Reader** - Use this built-in role to view Endpoint Privilege Management policies in the Intune console, including reports. This role includes the following rights:
-  - View Reports
-  - Read
-  - View elevation requests
+> [!IMPORTANT]  
+> Files located on network shares are not supported and should not be used in rule definitions.
+ 
+### Differentiate installer and runtime elevation
 
-In addition to the dedicated roles, the following built-in roles for Intune also include rights for *Endpoint Privilege Management Policy Authoring*:
+Be intentional about elevation for installer files versus application runtime. Elevation for installers should be tightly controlled to prevent unauthorized software installations. Runtime elevation should be minimized to reduce the overall attack surface.
+ 
+### Apply stricter rules to high-risk applications
 
-- **Endpoint Security Manager** - This role includes all rights for *Endpoint Privilege Management Policy Authoring* and *Endpoint Privilege Management Elevation Requests*.
-
-- **Read Only Operator** - This role includes the following rights:
-  - View Reports
-  - Read
-  - View elevation requests
-
- For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+Use more restrictive elevation rules for applications with broader access or scripting capabilities, such as web browsers and PowerShell. For PowerShell, consider using script-specific rules to ensure only trusted scripts are allowed to run with elevated privileges.
 
 ## EpmTools PowerShell module
 
