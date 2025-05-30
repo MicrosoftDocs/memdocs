@@ -238,14 +238,19 @@ You can view the **Noncompliant devices** report using the following steps:
 
 ### Windows hardware attestation report (Organizational)  
 
-View the status of hardware-attested compliance settings assigned to Windows devices. This report shows data for Intune-enrolled devices that are assigned a compliance policy with at least one hardware-attested compliance setting.    
+View the status of hardware-attested compliance settings assigned to Windows devices. This report shows data for Intune-enrolled devices that are assigned a compliance policy with at least one hardware-attested compliance setting. Microsoft Intune reports a *successful* status when it receives an attestation report from the device. Microsoft Intune reports an error status, along with the detected error type and code, when it's unable to generate an attestation report. 
 
 You can view the Windows hardware attestation report using the following steps:  
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Go to **Reports** > **Device Compliance**.
-1. Go to the **Reports** tab.  
-1. Select **Windows hardware attestation report**.   
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to **Reports** > **Device Compliance**.  
+1. Go to the **Reports** tab.   
+1. Select **Windows hardware attestation report**.  
+
+>[!NOTE]
+> - The **Latest report** column shows the date of the last issued health certificate. The date is both when the device receives a health certificate, and when it generates an attestation report for Microsoft Intune.  
+> - Every time the device generates an attestation report, the health certificate renews.  
+> - For more information about error types, codes, and troubleshooting, see [Health attestation CSP status and error-codes](../windows/client-management/mdm/healthattestation-csp#healthattestation-csp-status-and-error-codes).  
 
 ## Device configuration reports
 
