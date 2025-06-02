@@ -6,8 +6,8 @@ description: How to set up the Better Mobile Threat Defense with Microsoft Intun
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 07/31/2024
+manager: laurawi
+ms.date: 06/02/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -53,7 +53,6 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 ## Supported platforms
 
 - **Android 4.2.2 and later**
-
 - **iOS 8.0 and later**
 
 ## Prerequisites
@@ -63,11 +62,8 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 - Microsoft Intune Plan 1 subscription
 
 - Better Mobile Threat Defense subscription
-<!-- THe followiong line is removed, as the link shown is failign, and no valid link can be identified:
 
-  - For more information, see the Better Mobile website.  https://aad.bettermtd.com/
-
--->
+  For more information, see the [Better Mobile website](https://aad.bettermtd.com/).
 
 ## Sample scenarios
 
