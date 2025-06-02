@@ -191,7 +191,8 @@ items:
     - name: Copilot in Surface Management Portal
       displayName: ai, copilot, surface, models, fleet, warranty
       href: ./copilot/security-copilot-surface-portal.md
-
+    - name: Security Copilot agents in Microsoft Intune
+      href: ./copilot/security-copilot-agents-intune.md
   - name: Endpoint analytics
     items:
     - name: Overview
@@ -752,6 +753,8 @@ items:
                 href: ./protect/mde-security-integration.md
               - name: Manage endpoint security policies in Microsoft Defender
                 href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
+          - name: Vulnerability Remediation Agent 
+            href: ./protect/vulnerability-remediation-agent.md
           - name: Tenant attach
             href: ./protect/tenant-attach-intune.md
           - name: Encrypt disks
