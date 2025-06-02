@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/09/2025
+ms.date: 06/02/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,9 +75,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
-## Week of June 9, 2025
+## Week of June 2, 2025
 
-### Device security
+## Device security
 
 #### Vulnerability Remediation Agent for Intune (public preview)<!-- 30277408 -->
  

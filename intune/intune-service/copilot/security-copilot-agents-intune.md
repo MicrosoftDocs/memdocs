@@ -51,7 +51,7 @@ The agent persistently runs in the identity of the user who initially set up the
 
 The agent requires the following products:
 
-- [Microsoft Intune Plan 1 subscription](https://www.microsoft.com/en-us/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) *This subscription provides the core Intune capabilities*.
+- [Microsoft Intune Plan 1 subscription](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) *This subscription provides the core Intune capabilities*.
 - [Microsoft Intune Suite](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) - *Intune Suite standalone solution add-on licenses including Intune Endpoint Privilege Management, Enterprise Application Management, and Intune Plan 2 do not meet this prerequisite.*
 - [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) - *Security Copilot must share a Tenant with Intune, and you must have sufficient SCUs to power Security Copilot workloads, including agents.*
 - [Microsoft Defender Vulnerability Management](../protect/advanced-threat-protection.md) *This capability is provided by Microsoft Defender for Endpoint P2 or Defender Vulnerability Management Standalone.*
@@ -70,7 +70,7 @@ When assigning RBAC roles and permissions to admins to manage and use the agent,
 | Action | Microsoft Intune | Microsoft Defender | Security Copilot |
 |--------|------------------|--------------------|------------------|
 | **Set Up and Removal**        | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control). | The admin must be a [Copilot owner](/copilot/security/authentication). |
-| **Work with Installed Agent** | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control). | The a must be a [Copilot contributor](/copilot/security/authentication). |
+| **Work with Installed Agent** | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control). | The admin must be a [Copilot contributor](/copilot/security/authentication). |
 
 > [!IMPORTANT]  
 > The Vulnerability Remediation Agent runs under the identity of the admin who set up the agent. During public preview, the identity can't be edited. To change this identity, the agent must be removed and set up again.
