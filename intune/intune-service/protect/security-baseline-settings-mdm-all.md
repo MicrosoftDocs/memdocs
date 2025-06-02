@@ -2473,10 +2473,10 @@ The settings in this baseline are taken from the **version 23H2** of the Group P
   - **Use SmartScreen Filter**  
     Baseline default: *Enable*
 
-- **Use Pop-up Blocker**
-  Baseline default: *Enable*
+- **Use Pop-up Blocker**  
+  Baseline default: *Enable*  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetexplorer-internetzoneusepopupblocker)
-  - **Use Pop-up Blocker**
+  - **Use Pop-up Blocker**  
     Baseline default: *Enable*
 
 - **Userdata persistence**  
