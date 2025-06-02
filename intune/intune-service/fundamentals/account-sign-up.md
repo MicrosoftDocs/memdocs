@@ -52,7 +52,7 @@ This article can help system administrators sign up for an Intune account. Befor
 
 Securing access to your organization is a foundational security step. We recommend immediately after you sign up for Intune, plan to use the Microsoft 365 admin center to assign a user account the Entra ID built-in role [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
-Like the Global Administrator, the Intune Administrator is a privileged account. However, the permissions this role includes are applicable only within the scope of Microsoft Intune Online.
+Like the Global Administrator, the Intune Administrator is a privileged account. However, the permissions this role includes are applicable only within the scope of Microsoft Intune.
 
 In addition to configuring Intune, an Intune Administrator can use the Intune admin center to assign other user accounts to the specific Intune built-in roles that they require to complete their regular day-to-day administrative tasks. Use of lesser-privileged roles to manage daily tasks follows the principle of *least privileged* access and reduces risk.
 
@@ -76,7 +76,7 @@ After completing the sign-up process, you're directed to the Microsoft 365 admin
 
 After signing up for Intune, use any device with a [supported browser](../fundamentals/supported-devices-browsers.md#intune-supported-web-browsers) to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to administer the service. Administration of Intune requires your account to have sufficient RBAC permissions within Intune for the tasks you want to manage. Initially, you might use an account that is assigned the Microsoft Entra ID built-in role of [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
-The Intune Administrator is a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions) with global permissions within Microsoft Intune Online. With this role a user can configure Intune, add users, create groups of users, and assign the members of those groups Intune RBAC roles that provide them less privileged administrative access for daily use.
+The Intune Administrator is a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions) with global permissions within Microsoft Intune. With this role a user can configure Intune, add users, create groups of users, and assign the members of those groups Intune RBAC roles that provide them less privileged administrative access for daily use.
 
 Microsoft recommends using roles with the least privilege necessary for daily administration, reducing risk if an account is compromised. To learn more about Intune built-in and custom RBAC roles and for guidance about assigning these roles to users, see [Use role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
