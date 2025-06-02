@@ -48,7 +48,7 @@ You can configure Conditional Access policies based on Zimperium risk assessment
 - Microsoft Entra ID P1
 - Microsoft Intune Plan 1 subscription
 - Zimperium Mobile Threat Defense subscription
-  - For more information, see [Zimperium website](https://www.zimperium.com/zips-mobile-ips)
+  - For more information, see [Zimperium website](https://zimperium.com/)
 
 ## How do Intune and Zimperium help protect your company resources?
 
