@@ -67,7 +67,7 @@ For more information about consent and Microsoft Entra applications, see [Introd
 
 ## To set up Zimperium integration
 
-1. Go to [Zimperium MTD console](https://www.zimperium.com/platform) and sign in with your credentials. To perform the Zimperium integration setup process, you must sign in with a Microsoft Entra user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the Zimperium apps to communicate with Intune. 
+1. Go to [Zimperium MTD console](https://zconsole.zimperium.com/#!/login) and sign in with your credentials. To perform the Zimperium integration setup process, you must sign in with a Microsoft Entra user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the Zimperium apps to communicate with Intune. 
 
 2. Choose **Management** from the left menu.
 
