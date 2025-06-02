@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2025
+ms.date: 06/02/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -136,7 +136,12 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   - Android 9.0 and newer
 
-- **Location**: **Block** disables the **Location** setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the **Locate device** remote action that admins use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using location on the device. This setting is supported for fully managed devices running any Android version and corporate-owned work profile devices running Android 10 or less. 
+- **Location**: **Block** disables the **Location** setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the **Locate device** remote action that admins use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
+
+  This setting applies to:
+
+  - Fully managed devices running any Android version
+  - Corporate-owned device with a work profile running Android 10 or older
 
 ### Fully managed and dedicated devices
 
@@ -508,10 +513,6 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
     - **Top**: Search bar is shown at the top of devices.
     - **Bottom**: Search bar is shown at the bottom of devices.
     - **Hide**: Search bar is hidden.
-
-<!-- MandiA (7.16.2020) The following setting might be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
-  - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-End of comment -->
 
 ## Device password
 
