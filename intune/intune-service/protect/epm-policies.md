@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/19/2025
+ms.date: 05/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -61,15 +61,17 @@ Use *Windows elevation settings policy* when you want to:
   If a device has EPM disabled, the client components immediately disable. There's a delay of seven days before the EPM component is completely removed. The delay helps to reduce the time it takes to restore EPM should a device accidentally have EPM disabled or its elevation settings policy unassigned.
 
 - **Default elevation response** - Set a default response for an *elevation request* of any file that isn't managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must *explicitly request* elevation through the *Run with elevated access* right-click menu. By default, this option isn't configured. If no setting is delivered, the EPM components fall back to their built-in default, which is to **deny all requests**.
-  
+
   Options include:
 
   - **Deny all requests** - This option blocks the *elevate request* action for files that aren't defined in a Windows elevation rules policy.
   - **Require user confirmation** - When user confirmation is required, you can choose from the same validation options as found for Windows elevation rules policy.
   - **Require support approval** - When support approval is required, an administrator must approve elevation requests without a matching rule prior to the elevation being required.
 
-  > [!NOTE]
-  >
+  > [!TIP]  
+  > We [recommend use of *Support Approved*](../protect/epm-overview.md#set-a-secure-default-elevation-response) as a default elevation response.
+
+  > [!NOTE]  
   > Default responses are only processed for requests coming through the *Run with elevated access* right-click menu.
 
 - **Validation options** - Set validation options when the default elevation response is defined as *Require user confirmation*.
@@ -231,6 +233,9 @@ Use either of the following methods to create new elevation rules, which are add
   - Configure all aspects of the policy during policy creation, including assigning the policy to groups for use.
   - Can add one or more file arguments that must be part of the elevation request before EPM will allow file elevation.
 
+> [!TIP]  
+> For both automatically configured and manually configured elevation rules, we [recommend use of a *File path*](../protect/epm-overview.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
+
 ### Automatically configure elevation rules for Windows elevation rules policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management**. To select a file to use for an elevation rule, choose one of the following starting paths:
@@ -268,6 +273,9 @@ Use either of the following methods to create new elevation rules, which are add
 
    **Require the same file path as this elevation:**  
    When you select this checkbox, the File Path field in the rule is set to the file path as seen in the report. If the checkbox isn’t selected, the path remains empty.
+
+   > [!TIP]  
+   > While optional, we [recommend use of a *File path*](../protect/epm-overview.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
 
    :::image type="content" source="./media/epm-policies/create-a-rule.png" alt-text="Image from the admin center UI of the create a rule pane." lightbox="./media/epm-policies/create-a-rule.png":::
 
@@ -327,6 +335,10 @@ Use either of the following methods to create new elevation rules, which are add
 
    - **File name**: Specify the file name and its extension. For example: `myapplication.exe`
    - **File path** (Optional): Specify the location of the file. If the file can be run from any location or is unknown, you can leave this blank. You can also use a variable.
+
+     > [!TIP]  
+     > While optional, we [recommend use of a *File path*](../protect/epm-overview.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
+
    - **Signature source**: Choose one of the following options:
 
      - **Use a certificate file in reusable settings** (Default): This option uses a certificate file that has been added to a reusable settings group for Endpoint Privilege Management. You must [create a reusable settings group](#reusable-settings-groups) before you can use this option.
@@ -418,6 +430,7 @@ If a device receives two rules targeting the same application, both rules are co
 ## Next steps
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
+- [Security considerations for elevation rules](../protect/epm-overview.md#security-considerations)
 - [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
 - [Approving elevation requests](../protect/epm-support-approved.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)

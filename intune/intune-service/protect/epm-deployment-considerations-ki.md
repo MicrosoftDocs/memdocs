@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/18/2024
+ms.date: 05/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -134,6 +134,7 @@ Only one file can be elevated at a time. To launch multiple files elevated, righ
 
 - [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
+- [Security considerations for elevation rules](../protect/epm-overview.md#security-considerations)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
