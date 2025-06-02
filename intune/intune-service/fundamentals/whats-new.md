@@ -87,7 +87,6 @@ This information empowers you with a current assessment of potential risk to you
 
 For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
 
-
 ## Week of May 26, 2025 (Service release 2505)
 
 ### Microsoft Intune Suite
