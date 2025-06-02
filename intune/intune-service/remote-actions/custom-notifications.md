@@ -75,7 +75,7 @@ If you have the Company Portal app open on an Android device, the notification r
 
 ### Creating notifications
 
-- To create a message, use an account that is assigned an Intune role that includes the correct permission as described in the preceding *Permissions* section. To assign permissions to a user, see [Role assignments](../fundamentals/role-based-access-control.md#role-assignments).
+- To create a message, use an account that is assigned an Intune role that includes the correct permission as described in the preceding *Permissions* section. To assign permissions to a user, see [Role assignments](../fundamentals/role-based-access-control.md#about-intune-role-assignments).
 
 - Custom notifications are limited to 50-character titles and 500-character messages.  
 
