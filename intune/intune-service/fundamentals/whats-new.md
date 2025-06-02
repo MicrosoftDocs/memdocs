@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2025
+ms.date: 06/09/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of June 9, 2025
+
+### Device security
+
+#### Vulnerability Remediation Agent for Intune (public preview)<!-- 30277408 -->
+ 
+As a public preview, you can now use the Vulnerability Remediation Agent for Security Copilot. When run, this agent uses data from Microsoft Defender Vulnerability Management to identify and then provide remediation guidance for vulnerabilities on your managed devices. You run and access the agent and view its results from within the Intune admin center where you’ll see suggestions prioritized by the agent for remediation. Each suggestion includes key information like associated CVEs, severity, exploitability, affected systems, organizational exposure, business impact, and remediation guidance.
+ 
+This information empowers you with a current assessment of potential risk to your environment and guidance to help you decide which risk to address first.
+
+For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
 
 ## Week of May 26, 2025 (Service release 2505)
 
