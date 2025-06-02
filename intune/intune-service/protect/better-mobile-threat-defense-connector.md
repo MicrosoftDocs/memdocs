@@ -63,7 +63,7 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 
 - Better Mobile Threat Defense subscription
 
-  For more information, see the [Better Mobile website](https://aad.bettermtd.com/).
+  For more information, see the [Better Mobile website](https://better.mobi/).
 
 ## Sample scenarios
 
