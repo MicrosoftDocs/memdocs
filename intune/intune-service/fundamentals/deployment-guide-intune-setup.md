@@ -7,7 +7,7 @@ keywords: migrate from configuration manager to intune, move from airwatch to in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/20/2025
+ms.date: 06/03/2025
 ms.topic: upgrade-and-migration-article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -281,6 +281,9 @@ This section shows how to use the Microsoft Graph scripts for a tenant to tenant
 
 This section includes an overview of the steps. Use these steps as guidance, and know that your specific steps might be different.
 
+> [!IMPORTANT]  
+> Support for AzureAD PowerShell ended in March 2025, and is replaced by Microsoft Graph PowerShell. For more information, see [Action required: MSOnline and AzureAD PowerShell retirement - 2025 info and resources](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/action-required-msonline-and-azuread-powershell-retirement---2025-info-and-resou/4364991).
+
 1. Download the samples, and use Windows PowerShell to export your policies:
 
     1. Go to [microsoftgraph/powershell-intune-samples](https://github.com/microsoftgraph/powershell-intune-samples), select **Code** > **Download ZIP**. Extract the contents of the `.zip` file.
@@ -288,11 +291,9 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
         `cd C:\psscripts\powershell-intune-samples-master`
 
-    3. Install the AzureAD PowerShell module:
+    3. [Download and install](/powershell/microsoftgraph/installation?view=graph-powershell-1.0) the **Microsoft.Graph module**.
 
-        `Install-Module AzureAD`
-
-        Select **Y** to install the module from an untrusted repository. The install can take a few minutes.
+       If prompted, select **Y** to install the module from an untrusted repository. The install can take a few minutes.
 
     4. Change the directory to the folder with the script you want to run. For example, change the directory to the `CompliancePolicy` folder:
 
