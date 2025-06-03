@@ -77,7 +77,7 @@ Some trend charts in your view of the [Microsoft Intune admin center](https://go
 
 ## After a Data Warehouse account move
 
-After the Data Warehouse account move, you'll see in Intune that the Data Warehouse was reset, and your data is now stored in the new location. The charts and export options reset, and you see a notification, which upon clicking will direct you to an article explaining why the charts have reset.  
+After the Data Warehouse account move, you'll see in Intune that the Data Warehouse was reset. You'll need to update your Intune Data Warehouse API URL with the new tenant location for data to refresh. See [API URL structure](reports-api-url.md#api-url-structure).
 
 ## Data Warehouse move example 
 
