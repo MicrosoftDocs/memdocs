@@ -291,7 +291,7 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
         `cd C:\psscripts\powershell-intune-samples-master`
 
-    3. [Download and install](/powershell/microsoftgraph/installation?view=graph-powershell-1.0) the **Microsoft.Graph module**.
+    3. [Download and install](/powershell/microsoftgraph/installation) the **Microsoft.Graph module**.
 
        If prompted, select **Y** to install the module from an untrusted repository. The install can take a few minutes.
 

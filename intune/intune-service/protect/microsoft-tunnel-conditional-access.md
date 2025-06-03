@@ -38,7 +38,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 > [!IMPORTANT]  
 > Support for AzureAD PowerShell ended in March 2025, and is replaced by Microsoft Graph PowerShell. For more information, see [Action required: MSOnline and AzureAD PowerShell retirement - 2025 info and resources](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/action-required-msonline-and-azuread-powershell-retirement---2025-info-and-resou/4364991).
 
-1. [Download and install](/powershell/microsoftgraph/installation?view=graph-powershell-1.0) the **Microsoft.Graph module**.
+1. [Download and install](/powershell/microsoftgraph/installation) the **Microsoft.Graph module**.
 
 2. Download the PowerShell script named **mst-ca-provisioning.ps1** from [https://aka.ms/mst-ca-provisioning](https://aka.ms/mst-ca-provisioning).
 
