@@ -40,7 +40,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 1. [Download and install](/powershell/microsoftgraph/installation?view=graph-powershell-1.0) the **Microsoft.Graph module**.
 
-2. Download the PowerShell script named **mst-ca-provisioning.ps1** from [aka.ms/mst-ca-provisioning](aka.ms/mst-ca-provisioning).
+2. Download the PowerShell script named **mst-ca-provisioning.ps1** from [https://aka.ms/mst-ca-provisioning](https://aka.ms/mst-ca-provisioning).
 
 3. Using credentials that have the Microsoft Entra ID Role permissions [equivalent to **Intune Administrator**](/entra/identity/role-based-access-control/permissions-reference#intune-administrator), run the script from any location in your environment, to provision your tenant.
 
