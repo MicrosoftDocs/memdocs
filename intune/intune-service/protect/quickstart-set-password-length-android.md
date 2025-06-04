@@ -5,9 +5,9 @@ title: Password compliance policy for Android Enterprise devices
 titleSuffix: Microsoft Intune
 description: In this topic, you will use Microsoft Intune to set the length of the password required for Android Enterprise devices.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 06/07/2024
 ms.topic: article
 ms.service: microsoft-intune

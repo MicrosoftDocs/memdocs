@@ -4,9 +4,9 @@
 title: Copilot in Intune shows device information and errors
 description: Microsoft Copilot in Intune can help you get information about your devices, compare devices, and get error information. Use this information to help you manage and troubleshoot device issues.
 keywords: security copilot, intune, microsoft intune, copilot, device information, device errors, device troubleshooting, analyze error code, compare devices, AI, generative-AI
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune

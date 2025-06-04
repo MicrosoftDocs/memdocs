@@ -4,9 +4,9 @@ title: Move your Intune Data Warehouse account data
 titleSuffix: Microsoft Intune
 description: Understand how to back up your Intune Data Warehouse data when moving your account.
 keywords: 
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/18/2024
 ms.topic: reference
 ms.service: microsoft-intune
