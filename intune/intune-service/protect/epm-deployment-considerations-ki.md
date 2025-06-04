@@ -90,6 +90,18 @@ Behavior exists in Windows to set an attribute on files that are downloaded dire
 
 To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
 
+
+
+## Network resource access limitations
+
+Apps elevated with Endpoint Privilege Management (EPM) run in an isolated security context and can't access network resources that require user authentication—such as file shares or mapped drives.
+
+If access to these resources is needed, consider whether elevation is required at runtime.
+
+We're working on a fix to improve support for these scenarios in a future update.
+
+
+
 ### Windows devices that are "workplace joined" fail to enable Endpoint Privilege Management
 
 Devices that are workplace joined aren't supported by Endpoint Privilege Management. These devices won't show success or process EPM policies (elevation settings or elevation rules) when deployed to the device.
