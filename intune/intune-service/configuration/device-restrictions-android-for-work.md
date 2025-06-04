@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2025
+ms.date: 06/17/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -363,6 +363,10 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
         - Portrait
         - Landscape
         - Autorotate
+   
+        > [!NOTE]
+        > Android 16 and newer doesn't support this setting for devices with larger form factors with 600dp and larger display settings, like tablets.
+
       - **App notification badges**: **Enable** shows the number of new and unread notifications on app icons. When set to **Not configured**, Intune doesn't change or update this setting.
       - **Virtual home button**: A soft-key button that returns users to the Managed Home Screen so users can switch between apps. Your options:
         - **Not configured** (default): A home button isn't shown. Users must use the back button to switch between apps.
