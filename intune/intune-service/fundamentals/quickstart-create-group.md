@@ -5,9 +5,9 @@ title: Create a group to manage users
 titleSuffix: Microsoft Intune
 description: In this article, you'll use Microsoft Intune to create a group based on existing users.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 06/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune

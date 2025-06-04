@@ -4,9 +4,9 @@
 title: Add, configure, and protect apps with Intune
 titleSuffix: Microsoft Intune
 description: Add, configure, and protect apps with Intune.
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/16/2024
 ms.topic: article
 ms.service: microsoft-intune
