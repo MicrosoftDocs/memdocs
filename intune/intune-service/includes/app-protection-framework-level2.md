@@ -1,11 +1,11 @@
 ---
 title: include file
 description: include file
-author: erikre 
+author: nicholasswhite 
 ms.service: microsoft-intune
 ms.topic: include
 ms.date: 07/31/2024
-ms.author: erikre
+ms.author: nwhite
 ms.custom: include file
 ---
 #### Level 2 enterprise enhanced data protection

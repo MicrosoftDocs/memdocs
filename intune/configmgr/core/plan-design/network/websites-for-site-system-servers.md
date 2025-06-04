@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Websites for site system servers in Configuration Manager
@@ -109,7 +109,7 @@ Use the following general information when applicable:
 
 - The website name is **SMSWEB**.
 
-- When you set up HTTPS, specify a PKI certificate before you can save the configuration.  
+- When you set up HTTPS, specify a PKI certificate before you can save the configuration.
 
 - After you create the custom website, remove the custom website ports that you use from other websites in IIS:
 

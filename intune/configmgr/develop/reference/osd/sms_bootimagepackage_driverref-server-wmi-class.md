@@ -12,75 +12,75 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_BootImagePackage_DriverRef Server WMI Class
-The `SMS_BootImagePackage_DriverRef` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the association between a boot image package and a referenced driver.  
+The `SMS_BootImagePackage_DriverRef` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the association between a boot image package and a referenced driver.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_BootImagePackage_DriverRef : SMS_BaseClass  
-{  
-     SInt32 CI_ID;  
-     String PkgID;  
-     String SourcePath;  
-};  
-```  
+```
+Class SMS_BootImagePackage_DriverRef : SMS_BaseClass
+{
+     SInt32 CI_ID;
+     String PkgID;
+     String SourcePath;
+};
+```
 
-## Methods  
- The `SMS_BootImagePackage_DriverRef` class doesn't define any methods.  
+## Methods
+ The `SMS_BootImagePackage_DriverRef` class doesn't define any methods.
 
-## Properties  
- `CI_ID`  
- Data type: `SInt32`  
+## Properties
+ `CI_ID`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The unique ID of the configuration item associated with the [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) object. This ID is unique only for the site. The default value is 0.  
+ The unique ID of the configuration item associated with the [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) object. This ID is unique only for the site. The default value is 0.
 
- `PkgID`  
- Data type: `String`  
+ `PkgID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read, key]  
+ Qualifiers: [read, key]
 
- ID of the boot image package. The default value is "".  
+ ID of the boot image package. The default value is "".
 
- `SourcePath`  
- Data type: `String`  
+ `SourcePath`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Location of the driver content. The default value is "".  
+ Location of the driver content. The default value is "".
 
- The value of this property is typically the same as the `ContentSourcePath` property for the associated [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) object. However, the value can be different if the original content location isn't available.  
+ The value of this property is typically the same as the `ContentSourcePath` property for the associated [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) object. However, the value can be different if the original content location isn't available.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-  The boot image package is represented by an [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object. The drivers contained in the package are indicated in the `ReferencedDrivers` property of this object.  
+  The boot image package is represented by an [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object. The drivers contained in the package are indicated in the `ReferencedDrivers` property of this object.
 
-  Your application uses this class to determine what drivers are maintained with the boot image.  
+  Your application uses this class to determine what drivers are maintained with the boot image.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
 ## See also
 

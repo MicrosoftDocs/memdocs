@@ -12,64 +12,64 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ImportForProfile Method in Class SMS_MDMBulkEnrollmentPackages
-The `ImportForProfile` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports an On-Premises Mobile Device Management (MDM)  bulk enrollment package for a profile.  
+The `ImportForProfile` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports an On-Premises Mobile Device Management (MDM)  bulk enrollment package for a profile.
 
-## Syntax  
+## Syntax
 
-```  
-sint32 ImportForProfile(  
-     String ProfileGUID,  
-     String CertificateGUID,  
-     String PackageName,  
-     String Certificate  
-);  
+```
+sint32 ImportForProfile(
+     String ProfileGUID,
+     String CertificateGUID,
+     String PackageName,
+     String Certificate
+);
 
-```  
+```
 
-#### Parameters  
- `ProfileGUID`  
- Data type: `String`  
+#### Parameters
+ `ProfileGUID`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The GUID of the profile.  
+ The GUID of the profile.
 
- `CertificateGUID`  
- Data type: `String`  
+ `CertificateGUID`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The GUID of the certificate.  
+ The GUID of the certificate.
 
- `PackageName`  
- Data type: `String`  
+ `PackageName`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Package name.  
+ Package name.
 
- `Certificate`  
- Data type: `String`  
+ `Certificate`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The root certificate.  
+ The root certificate.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For more information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For more information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [SMS_MDMBulkEnrollmentPackages Server WMI Class](../../../develop/reference/mdm/sms_mdmbulkenrollmentpackages-server-wmi-class.md)   
+## See Also
+ [SMS_MDMBulkEnrollmentPackages Server WMI Class](../../../develop/reference/mdm/sms_mdmbulkenrollmentpackages-server-wmi-class.md)

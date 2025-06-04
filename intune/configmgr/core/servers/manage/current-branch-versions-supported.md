@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Support for Configuration Manager current branch versions
@@ -34,7 +34,7 @@ Microsoft plans to release updates for Configuration Manager current branch a fe
 For example, version 2203 releases in April 2022. Microsoft provides security and critical updates to that version for four months, through July 2022. It then switches to only security updates for the remaining 14 months of its support lifecycle, through September 2023.
 
 > [!NOTE]
-> A **Critical Update** specifies a widely released fix for a specific problem that addresses a critical, non-security-related bug. Security updates provide a severity rating for the updates, which includes the **Critical** rating.  To understand the different uses for the term **Critical** and for more information about each, see [update classifications](/mem/configmgr/sum/get-started/configure-classifications-and-products#to-configure-classifications-and-products-to-synchronize) and [Security update severity](/troubleshoot/windows-client/installing-updates-features-roles/standard-terminology-software-updates#security-update). 
+> A **Critical Update** specifies a widely released fix for a specific problem that addresses a critical, non-security-related bug. Security updates provide a severity rating for the updates, which includes the **Critical** rating.  To understand the different uses for the term **Critical** and for more information about each, see [update classifications](/mem/configmgr/sum/get-started/configure-classifications-and-products#to-configure-classifications-and-products-to-synchronize) and [Security update severity](/troubleshoot/windows-client/installing-updates-features-roles/standard-terminology-software-updates#security-update).
 
 For a list of the current branch versions, see [Version details](updates.md#version-details).
 

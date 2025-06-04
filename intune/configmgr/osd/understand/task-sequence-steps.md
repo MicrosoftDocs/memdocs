@@ -10,7 +10,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz,frankroj
+ms.reviewer: mstewart,frankroj
 ms.collection: tier3
 ---
 

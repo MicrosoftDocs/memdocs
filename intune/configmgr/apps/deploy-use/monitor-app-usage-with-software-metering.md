@@ -7,11 +7,11 @@ ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: how-to
 ms.author: sheetg
-author: sheetg09 
+author: sheetg09
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Software metering in Configuration Manager

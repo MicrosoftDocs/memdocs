@@ -12,43 +12,43 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ITSEnvClass::Value Property
-In Configuration Manager, the `Value` property contains the value of an operating system deployment task sequence environment variable.  
+In Configuration Manager, the `Value` property contains the value of an operating system deployment task sequence environment variable.
 
-## Syntax  
+## Syntax
 
-```  
-[IDL]  
-HRESULT Value([in] BSTR Name, [in] BSTR Value);  
+```
+[IDL]
+HRESULT Value([in] BSTR Name, [in] BSTR Value);
 
-HRESULT Value([in] BSTR Name, [out,retval] BSTR* Value);  
-```  
+HRESULT Value([in] BSTR Name, [out,retval] BSTR* Value);
+```
 
-#### Parameters  
- `Name`  
- Data type: `BSTR`  
+#### Parameters
+ `Name`
+ Data type: `BSTR`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The name of the environment variable.  
+ The name of the environment variable.
 
- `Value`  
- Data type: `BSTR`  
+ `Value`
+ Data type: `BSTR`
 
- Qualifiers: [in; out, retval]  
+ Qualifiers: [in; out, retval]
 
- On input, the value to set for the environment variable. On output, this parameter points to the value that is retrieved for the supplied name.  
+ On input, the value to set for the environment variable. On output, this parameter points to the value that is retrieved for the supplied name.
 
-## Return Values  
- An `HRESULT` code. Possible values include, but aren't limited to, the following value.  
+## Return Values
+ An `HRESULT` code. Possible values include, but aren't limited to, the following value.
 
- S_OK  
- The method succeeded.  
+ S_OK
+ The method succeeded.
 
-## Remarks  
- The `get_Value` function succeeds with S_OK when called with an invalid variable name, but retrieves an empty string for the value. This behavior differs from the more common return of a non-zero exit code to indicate an invalid variable name input.  
+## Remarks
+ The `get_Value` function succeeds with S_OK when called with an invalid variable name, but retrieves an empty string for the value. This behavior differs from the more common return of a non-zero exit code to indicate an invalid variable name input.
 
-## See Also  
+## See Also
  [ITSEnvClass Interface](../../../../../develop/reference/core/clients/client-classes/itsenvclass-interface.md)

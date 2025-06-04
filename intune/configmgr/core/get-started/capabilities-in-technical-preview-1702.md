@@ -12,52 +12,52 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1702 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1702. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1702. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 ##  Send feedback from the Configuration Manager console
 
-This preview introduces new feedback options in the Configuration Manager console. The Feedback options lets you send feedback directly to the development team, by way of the Configuration Manager product feedback website.  
+This preview introduces new feedback options in the Configuration Manager console. The Feedback options lets you send feedback directly to the development team, by way of the Configuration Manager product feedback website.
 
 > You can find the **Feedback** option:
-> -  In the ribbon, at the far left of the Home tab of each node.  
+> -  In the ribbon, at the far left of the Home tab of each node.
 >    ![Ribbon](./media/feedback-home.png)
 
--  When you right-click on any object in the console.   
-    ![Righ-click option](./media/feedback-option.png)   
+-  When you right-click on any object in the console.
+    ![Righ-click option](./media/feedback-option.png)
 
 Choosing **Feedback** opens your browser to the Configuration Manager product feedback website.
 
 ##  Changes for Updates and Servicing
 The following are introduced with this preview.
 
-**Simpler update choices**  
-The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.  
+**Simpler update choices**
+The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.
 
 You have the option to download and install the other available updates, even when they are not the most current version. However, you will receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
 
-**Improved cleanup of older updates**   
-We added an automatic clean-up function that deletes the unneeded downloads from the 'EasySetupPayload' folder on your site server.  
+**Improved cleanup of older updates**
+We added an automatic clean-up function that deletes the unneeded downloads from the 'EasySetupPayload' folder on your site server.
 
 
 ## Peer Cache improvements
-Starting with this release, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
+Starting with this release, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:
 -  Is in low battery mode.
 -  CPU load exceeds 80% at the time the content is requested.
 -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
--  There are no more available connections to the computer.   
+-  There are no more available connections to the computer.
 
 You can configure these settings using the client agent config class for the peer source feature (*SMS_WinPEPeerCacheConfig*) when you use the Configuration Manager SDK.
 
-When the computer rejects a request for the content, the requesting computer will continue to seek content form alternate sources in its pool of available content source locations.   
+When the computer rejects a request for the content, the requesting computer will continue to seek content form alternate sources in its pool of available content source locations.
 
 ## <a name="azurediscovery"></a> Use Microsoft Entra Domain Services to manage devices, users, and groups
 
@@ -79,17 +79,17 @@ To configure Microsoft Entra Domain Service, see [Get started with Microsoft Ent
 
 ### Discover resources
 After you set up Configuration Manager to run in Microsoft Entra ID, you can use the following Active Directory discovery methods to search
-Microsoft Entra ID for resources:  
+Microsoft Entra ID for resources:
 - Active Directory System Discovery
 - Active Directory User Discovery
-- Active Directory Group Discovery  
+- Active Directory Group Discovery
 
-For each method you use, edit the LDAP query to search the Microsoft Entra OU structures instead of the containers that are typical to on-premises Active Directory. This requires you to direct the query to search your Active Directory in your Azure subscription.  
+For each method you use, edit the LDAP query to search the Microsoft Entra OU structures instead of the containers that are typical to on-premises Active Directory. This requires you to direct the query to search your Active Directory in your Azure subscription.
 
 The following examples use a Microsoft Entra ID of *contoso.onmicrosoft.com*:
-- **System Discovery**   
-  Microsoft Entra ID stores devices under the **AADDC Computers** OU.  Configure the following:  
-  - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
+- **System Discovery**
+  Microsoft Entra ID stores devices under the **AADDC Computers** OU.  Configure the following:
+  - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*
 
 
 - **User Discovery**
@@ -97,7 +97,7 @@ Microsoft Entra ID stores users under the **AADDC Users** OU.  Configure the fol
   - *LDAP://OU=AADDC Users,DC= contoso,DC=onmicrosoft,DC=com*
 
 
-- **Group Discovery**  
+- **Group Discovery**
 Microsoft Entra ID does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
 
 See the following for more information about Microsoft Entra ID:
@@ -192,7 +192,7 @@ Use the following procedure to set a task sequence as high-impact.
    **User notification message text**: There are three text boxes that provide the body of the custom notification.
    - 1st text box: Specifies the main body of text, typically containing instructions for the user. For example, in the default user notification, this section contains something like "Upgrading the operating system will take time and your computer might restart several times."
    - 2nd text box: Specifies the bold text under the main body of text. For example, in the default user notification, this section contains something like "This in-place upgrade installs the new operating system and automatically migrates your apps, data, and settings."
-   - 3rd text box: Specifies the last line of text under the bold text. For example, in the default user notification, this section contains something like "Click Install to begin. Otherwise, click Cancel."   
+   - 3rd text box: Specifies the last line of text under the bold text. For example, in the default user notification, this section contains something like "Click Install to begin. Otherwise, click Cancel."
 
    Let's say you configure the following custom notification in properties.
 
@@ -203,12 +203,12 @@ Use the following procedure to set a task sequence as high-impact.
    ![Custom notification for a task sequence - Software Center](./media/user-notification-enduser.png)
 
 ### Configure Software Center properties
-Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.  
+Use the following procedure to configure the details for the task sequence displayed in Software Center. These details are for information only.
 1. In the Configuration Manager console, go to **Software Library** > **Operating Systems** > **Task Sequences**.
 2. Select the task sequence to edit, and click **Properties**.
 3. On the **General** tab, the following settings for Software Center are available:
    - **Restart required**: Lets the user know whether a restart is required during the installation.
-   - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.  
+   - **Download size (MB)**: Specifies how many megabytes is displayed in Software Center for the task sequence.
    - **Estimated run time (minutes)**: Specifies the estimated run time in minutes that's displayed in Software Center for the task sequence.
 
 
@@ -316,7 +316,7 @@ The following sections describe Android for Work management.
    - **Manage all devices as Android** - (Disabled) All Android devices, including devices that support Android for Work, will be enrolled as conventional Android devices
    - **Manage supported devices as Android for Work** - (Enabled) All devices that support Android for Work are enrolled as Android for Work devices. Any Android device that does not support Android for Work is enrolled as a conventional Android device.
    - **Manage supported devices for users only in these groups as Android for Work** - (Testing) Lets you target Android for Work management to a limited set of users. Only members of the selected groups who enroll a device that supports Android for Work are enrolled as Android for Work devices. All others are enrolled as Android devices.
-  
+
 > [!NOTE]
 > A known issue prevents the **Manage supported devices for users only in these groups as Android for Work** option from working as expected. Users' devices in the specified Microsoft Entra groups will enroll as Android instead of Android for Work. To test Android for Work, you must use the **Manage all supported devices as Android for Work**.
 

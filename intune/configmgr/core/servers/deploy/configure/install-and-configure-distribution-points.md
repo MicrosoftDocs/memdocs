@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz,frakroj
+ms.reviewer: mstewart,frakroj
 ---
 
 # Install and configure distribution points in Configuration Manager

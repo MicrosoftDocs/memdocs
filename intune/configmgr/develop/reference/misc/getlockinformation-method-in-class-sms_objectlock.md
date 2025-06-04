@@ -12,98 +12,98 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetLockInformation Method in Class SMS_ObjectLock
-The `GetLockInformation` Windows Management Instrumentation (WMI) class method, in Configuration Manager,  gets current lock information.  
+The `GetLockInformation` Windows Management Instrumentation (WMI) class method, in Configuration Manager,  gets current lock information.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 GetLockInformation(  
-    string ObjectRelPath,   
-    uint32 LockState,   
-    string AssignedUser,   
-    string AssignedObjectLockContext,   
-    string AssignedMachine,   
-    string AssignedSiteCode,   
-    datetime AssignedTimeUTC  
-);  
-```  
+```
+SInt32 GetLockInformation(
+    string ObjectRelPath,
+    uint32 LockState,
+    string AssignedUser,
+    string AssignedObjectLockContext,
+    string AssignedMachine,
+    string AssignedSiteCode,
+    datetime AssignedTimeUTC
+);
+```
 
-#### Parameters  
- `ObjectRelPath`  
- Data type: `String`  
+#### Parameters
+ `ObjectRelPath`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The path of the object for which the lock is requested.  
+ The path of the object for which the lock is requested.
 
- `LockState`  
- Data type: `UInt32`  
+ `LockState`
+ Data type: `UInt32`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Indicates the current state of the requested lock. Possible values are:  
+ Indicates the current state of the requested lock. Possible values are:
 
 | Value | Lock state |
 | ----- | ---------- |
-|0|Unassigned|  
-|1|Assigned|  
-|2|Requested|  
-|3|PendingAssignment|  
-|4|TimedOut|  
-|5|NotFound|  
+|0|Unassigned|
+|1|Assigned|
+|2|Requested|
+|3|PendingAssignment|
+|4|TimedOut|
+|5|NotFound|
 
- `AssignedUser`  
- Data type: `String`  
+ `AssignedUser`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Indicates the currently assigned user of the requested lock.  
+ Indicates the currently assigned user of the requested lock.
 
- `AssignedObjectLockContext`  
- Data type: `String`  
+ `AssignedObjectLockContext`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Indicates ObjectLockContext the lock is currently assigned to.  
+ Indicates ObjectLockContext the lock is currently assigned to.
 
- `AssignedMachine`  
- Data type: `String`  
+ `AssignedMachine`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Indicates the currently assigned computer of the requested lock.  
+ Indicates the currently assigned computer of the requested lock.
 
- `AssignedSiteCode`  
- Data type: `String`  
+ `AssignedSiteCode`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Indicates the current site of the requested lock.  
+ Indicates the current site of the requested lock.
 
- `AssignedTimeUTC`  
- Data type: `DateTime`  
+ `AssignedTimeUTC`
+ Data type: `DateTime`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Indicates the time at which the requested lock was assigned.  
+ Indicates the time at which the requested lock was assigned.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_ObjectLock Server WMI Class](../../../develop/reference/misc/sms_objectlock-server-wmi-class.md)

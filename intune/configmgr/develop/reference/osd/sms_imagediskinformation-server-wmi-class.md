@@ -12,141 +12,141 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ImageDiskInformation Server WMI Class
-The `SMS_ImageDiskInformation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all disks and partition information in an operating system image and operating system installer.  
+The `SMS_ImageDiskInformation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all disks and partition information in an operating system image and operating system installer.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ImageDiskInformation : SMS_BaseClass  
-{  
-    UInt32 DiskIndex;  
-    String DiskStyle;  
-    String PackageID;  
-    String PartitionFileSystem;  
-    UInt32 PartitionIndex;  
-    Boolean PartitionIsBoot;  
-    String PartitionLabel;  
-    SInt64 PartitionOffset;  
-    SInt64 PartitionSize;  
-    String PartitionStyle;  
-    String PartitionType;  
-};  
-```  
+```
+Class SMS_ImageDiskInformation : SMS_BaseClass
+{
+    UInt32 DiskIndex;
+    String DiskStyle;
+    String PackageID;
+    String PartitionFileSystem;
+    UInt32 PartitionIndex;
+    Boolean PartitionIsBoot;
+    String PartitionLabel;
+    SInt64 PartitionOffset;
+    SInt64 PartitionSize;
+    String PartitionStyle;
+    String PartitionType;
+};
+```
 
-## Methods  
- The `SMS_ImageDiskInformation` class does not define any methods.  
+## Methods
+ The `SMS_ImageDiskInformation` class does not define any methods.
 
-## Properties  
- `DiskIndex`  
- Data type: `UInt32`  
+## Properties
+ `DiskIndex`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Disk Index of this image.  
+ Disk Index of this image.
 
- `DiskStyle`  
- Data type: `String`  
+ `DiskStyle`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Disk style.   
+ Disk style.
 
- `PackageID`  
- Data type: `String`  
+ `PackageID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- ID of the image package.  
+ ID of the image package.
 
- `PartitionFileSystem`  
- Data type: `String`  
+ `PartitionFileSystem`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Partition file system.  
+ Partition file system.
 
- `PartitionIndex`  
- Data type: `UInt32`  
+ `PartitionIndex`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Partition index of this image.  
+ Partition index of this image.
 
- `PartitionIsBoot`  
- Data type: `Boolean`  
+ `PartitionIsBoot`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Whether the partition is the boot partition.  
+ Whether the partition is the boot partition.
 
- `PartitionLabel`  
- Data type: `String`  
+ `PartitionLabel`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Partition label.  
+ Partition label.
 
- `PartitionOffset`  
- Data type: `SInt64`  
+ `PartitionOffset`
+ Data type: `SInt64`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Partition offset.  
+ Partition offset.
 
- `PartitionSize`  
- Data type: `SInt64`  
+ `PartitionSize`
+ Data type: `SInt64`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Partition size.  
+ Partition size.
 
- `PartitionStyle`  
- Data type: `String`  
+ `PartitionStyle`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Partition style.   
+ Partition style.
 
- `PartitionType`  
- Data type: `String`  
+ `PartitionType`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Partition type.  
+ Partition type.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

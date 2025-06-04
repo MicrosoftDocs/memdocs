@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_CollectionInfoInFullEvaluationQueue server WMI class
@@ -21,7 +21,7 @@ Starting in version 2010, the `SMS_CollectionInfoInFullEvaluationQueue` WMI clas
 
 The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
 ```MOF
 Class SMS_CollectionInfoInFullEvaluationQueue : SMS_BaseClass
@@ -154,7 +154,7 @@ Estimated time cost of the evaluation in milliseconds.
 
 This class is read-only
 
-## Requirements  
+## Requirements
 
 ### Runtime requirements
 

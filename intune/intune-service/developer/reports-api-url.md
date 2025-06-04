@@ -4,9 +4,9 @@ title: Intune Data Warehouse API endpoint
 titleSuffix: Microsoft Intune 
 description: This reference topic describes the Microsoft Intune Data Warehouse API URL structure. Filter examples are provided.
 keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 10/30/2024
 ms.topic: reference
 ms.service: microsoft-intune
