@@ -104,7 +104,7 @@ To create a new enrollment profile:
 
          - {{UPNPREFIX}} for the user's first name. Example: *Eric*, when device is user affiliated.  
 
-         - {{USERNAME}} for the user's username when the device is user affiliated. Example: *Eric Solomon*  
+         - {{USERNAME}} for the user's username when the device is user affiliated. Example: *EricSolomon*  
 
          - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
          
