@@ -12,198 +12,198 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_JoinDomainWorkgroupAction Server WMI Class
-The `SMS_TaskSequence_JoinDomainWorkgroupAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that joins a Windows domain or a Windows workgroup.  
+The `SMS_TaskSequence_JoinDomainWorkgroupAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that joins a Windows domain or a Windows workgroup.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequence_JoinDomainWorkgroupAction : SMS_TaskSequence_Action  
-{  
-      SMS_TaskSequence_Condition Condition;  
-      Boolean ContinueOnError;  
-      String Description;  
-      String DomainName;  
-      String DomainOUName;  
-      String DomainPassword;  
-      String DomainUsername;  
-      Boolean Enabled;  
-      String Name;  
-      Boolean SkipReboot;  
-      String SupportedEnvironment;  
-      UInt32 Timeout;  
-      UInt32 Type;  
-      String WorkgroupName;  
-};  
-```  
+```
+Class SMS_TaskSequence_JoinDomainWorkgroupAction : SMS_TaskSequence_Action
+{
+      SMS_TaskSequence_Condition Condition;
+      Boolean ContinueOnError;
+      String Description;
+      String DomainName;
+      String DomainOUName;
+      String DomainPassword;
+      String DomainUsername;
+      Boolean Enabled;
+      String Name;
+      Boolean SkipReboot;
+      String SupportedEnvironment;
+      UInt32 Timeout;
+      UInt32 Type;
+      String WorkgroupName;
+};
+```
 
-## Methods  
- The `SMS_TaskSequence_JoinDomainWorkgroupAction` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequence_JoinDomainWorkgroupAction` class does not define any methods.
 
-## Properties  
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+## Properties
+ `Condition`
+ Data type: `SMS_TaskSequence_Condition`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `ContinueOnError`  
- Data type: `Boolean`  
+ `ContinueOnError`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("0-255")]  
+ Qualifiers: [AllowedLen("0-255")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `DomainName`  
- Data type: `String`  
+ `DomainName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("1-255")]  
+ Qualifiers: [AllowedLen("1-255")]
 
- Name of the domain for the target computer. The name length can be between 1 and 255 characters. Set this property if the `Type` property is set to 0.  
+ Name of the domain for the target computer. The name length can be between 1 and 255 characters. Set this property if the `Type` property is set to 0.
 
- `DomainOUName`  
- Data type: `String`  
+ `DomainOUName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("0-32767")]  
+ Qualifiers: [AllowedLen("0-32767")]
 
- The name of the Active Directory organizational unit (OU) to join. The name length can be between 0 and 32767 characters. Set this property if the `Type` property is set to 0.  
+ The name of the Active Directory organizational unit (OU) to join. The name length can be between 0 and 32767 characters. Set this property if the `Type` property is set to 0.
 
- `DomainPassword`  
- Data type: `String`  
+ `DomainPassword`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [VariableName("OSDJoinPassword"), Secret]  
+ Qualifiers: [VariableName("OSDJoinPassword"), Secret]
 
- Password of the account specified by `DomainUsername`. Set this property if the `Type` property is set to 0.  
+ Password of the account specified by `DomainUsername`. Set this property if the `Type` property is set to 0.
 
- The task sequence variable associated with this property is OSDJoinPassword. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).  
+ The task sequence variable associated with this property is OSDJoinPassword. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).
 
- `DomainPassword` might be required to disjoin from the computer's domain.  
+ `DomainPassword` might be required to disjoin from the computer's domain.
 
- `DomainUsername`  
- Data type: `String`  
+ `DomainUsername`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [VariableName("OSDJoinAccount")]  
+ Qualifiers: [VariableName("OSDJoinAccount")]
 
- Account that should be used by the target computer to join a Windows domain, with appropriate domain join rights. Set this property if the `Type` property is set to 0.  
+ Account that should be used by the target computer to join a Windows domain, with appropriate domain join rights. Set this property if the `Type` property is set to 0.
 
  The task sequence variable associated with this property is OSDJoinAccount. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).
 
- `DomainUserName` may be required to disjoin from the computer's domain.  
+ `DomainUserName` may be required to disjoin from the computer's domain.
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("1-100")]  
+ Qualifiers: [AllowedLen("1-100")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `SkipReboot`  
- Data type: `Boolean`  
+ `SkipReboot`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` to skip reboot after the network join action is complete.  
+ `true` to skip reboot after the network join action is complete.
 
- `SupportedEnvironment`  
- Data type: `String`  
+ `SupportedEnvironment`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_Null:ToInstance]  
+ Qualifiers: [Not_Null:ToInstance]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- The default value of this property for this task sequence action is FullOS.  
+ The default value of this property for this task sequence action is FullOS.
 
- `Timeout`  
- Data type: `UInt32`  
+ `Timeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Type`  
- Data type: `UInt32`  
+ `Type`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, VariableName("OSDJoinType")]  
+ Qualifiers: [not_null, VariableName("OSDJoinType")]
 
- The type of network join action required of the target computer. Possible values are:  
+ The type of network join action required of the target computer. Possible values are:
 
-| Value | Network join type |  
-| ----- | ----------------- |  
-|0|Domain|  
-|1|Workgroup|  
+| Value | Network join type |
+| ----- | ----------------- |
+|0|Domain|
+|1|Workgroup|
 
  The task sequence variable associated with this property is OSDJoinType. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md).
 
- `WorkgroupName`  
- Data type: `String`  
+ `WorkgroupName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("1-32")]  
+ Qualifiers: [AllowedLen("1-32")]
 
- Name of the workgroup to join. The name length can be between 1 and 32 characters. Set this property if the `Type` property is set to 1.  
+ Name of the workgroup to join. The name length can be between 1 and 32 characters. Set this property if the `Type` property is set to 1.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
- [CommandLine("osdjoin.exe /type:%%OSDJoinType%%"), VariablePrefix("OSDJoin"),  
+ [CommandLine("osdjoin.exe /type:%%OSDJoinType%%"), VariablePrefix("OSDJoin"),
 
- ActionCategory{"General,4,1"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "JoinDomainControl", "TaskSequenceOptionControl"}]  
+ ActionCategory{"General,4,1"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "JoinDomainControl", "TaskSequenceOptionControl"}]
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md)

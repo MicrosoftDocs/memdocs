@@ -12,316 +12,316 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_SoftwareDistributionAgentConfig Server WMI Class
-The `SMS_SoftwareDistributionAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies how client computers deploy software.  
+The `SMS_SoftwareDistributionAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies how client computers deploy software.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_SoftwareDistributionAgentConfig : SMS_ClientAgentConfig_BaseClass  
-{  
-    UInt32 AgentID;  
-    UInt32 CacheContentTimeout;  
-    UInt32 CacheSpaceFailureRetryCount;  
-    UInt32 CacheSpaceFailureRetryInterval;  
-    UInt32 CacheTombstoneContentMinDuration;  
-    UInt32 ContentLocationTimeoutInterval;  
-    UInt32 ContentLocationTimeoutRetryCount;  
-    UInt32 DefaultMaxDuration;  
-    Boolean DisplayNewProgramNotification;  
-    UInt32 DownloadModificationInterval;  
-    UInt32 DownloadRetryInterval;  
-    UInt32 ExecutionFailureRetryCount;  
-    UInt32 ExecutionFailureRetryErrorCodes[];  
-    UInt32 ExecutionFailureRetryInterval;  
-    Boolean LockSettings;  
-    UInt32 LogoffReturnCodes[];  
-    UInt32 NetworkFailureRetryCount;  
-    UInt32 NetworkFailureRetryInterval;  
-    String NewProgramNotificationUI;  
-    Boolean RebootLogoffNotification;  
-    UInt32 RebootReturnCodes[];  
-    Boolean RunNotification;  
-    UInt32 RunNotificationCountdownDuration;  
-    UInt32 SuccessReturnCodes[];  
-    UInt32 UIContentLocationTimeoutInterval;  
-    UInt32 UserPreemptionCountdown;  
-    UInt32 UserPreemptionTimeout;  
-    UInt32 WhatsNewDuration;  
-};  
-```  
+```
+Class SMS_SoftwareDistributionAgentConfig : SMS_ClientAgentConfig_BaseClass
+{
+    UInt32 AgentID;
+    UInt32 CacheContentTimeout;
+    UInt32 CacheSpaceFailureRetryCount;
+    UInt32 CacheSpaceFailureRetryInterval;
+    UInt32 CacheTombstoneContentMinDuration;
+    UInt32 ContentLocationTimeoutInterval;
+    UInt32 ContentLocationTimeoutRetryCount;
+    UInt32 DefaultMaxDuration;
+    Boolean DisplayNewProgramNotification;
+    UInt32 DownloadModificationInterval;
+    UInt32 DownloadRetryInterval;
+    UInt32 ExecutionFailureRetryCount;
+    UInt32 ExecutionFailureRetryErrorCodes[];
+    UInt32 ExecutionFailureRetryInterval;
+    Boolean LockSettings;
+    UInt32 LogoffReturnCodes[];
+    UInt32 NetworkFailureRetryCount;
+    UInt32 NetworkFailureRetryInterval;
+    String NewProgramNotificationUI;
+    Boolean RebootLogoffNotification;
+    UInt32 RebootReturnCodes[];
+    Boolean RunNotification;
+    UInt32 RunNotificationCountdownDuration;
+    UInt32 SuccessReturnCodes[];
+    UInt32 UIContentLocationTimeoutInterval;
+    UInt32 UserPreemptionCountdown;
+    UInt32 UserPreemptionTimeout;
+    UInt32 WhatsNewDuration;
+};
+```
 
-## Methods  
- The `SMS_SoftwareDistributionAgentConfig` class doesn't define any methods.  
+## Methods
+ The `SMS_SoftwareDistributionAgentConfig` class doesn't define any methods.
 
-## Properties  
- `AgentID`  
- Data type: `UInt32`  
+## Properties
+ `AgentID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Identifies the client agent component. The Software Distribution Agent ID is 6.  
+ Identifies the client agent component. The Software Distribution Agent ID is 6.
 
- `CacheContentTimeout`  
- Data type: `UInt32`  
+ `CacheContentTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Duration, in seconds, after which content can be deleted from the cache, even when referenced.  
+ Duration, in seconds, after which content can be deleted from the cache, even when referenced.
 
- `CacheSpaceFailureRetryCount`  
- Data type: `UInt32`  
+ `CacheSpaceFailureRetryCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of times to retry for non-fatal cache errors (-1 = 4,294,967,295 retries).  
+ Number of times to retry for non-fatal cache errors (-1 = 4,294,967,295 retries).
 
- `CacheSpaceFailureRetryInterval`  
- Data type: `UInt32`  
+ `CacheSpaceFailureRetryInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Interval, in seconds, between retry attempts for non-fatal cache errors.  
+ Interval, in seconds, between retry attempts for non-fatal cache errors.
 
- `CacheTombstoneContentMinDuration`  
- Data type: `UInt32`  
+ `CacheTombstoneContentMinDuration`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Minimum duration, in seconds, that content must be kept in the cache. This value doesn't set any extra time for the content to be kept in the cache after being tombstoned.  
+ Minimum duration, in seconds, that content must be kept in the cache. This value doesn't set any extra time for the content to be kept in the cache after being tombstoned.
 
- `ContentLocationTimeoutInterval`  
- Data type: `UInt32`  
+ `ContentLocationTimeoutInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Duration, in seconds, after which attempts to locate content should be failed.  
+ Duration, in seconds, after which attempts to locate content should be failed.
 
- `ContentLocationTimeoutRetryCount`  
- Data type: `UInt32`  
+ `ContentLocationTimeoutRetryCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of times a content location request retries after recoverable failures have occurred.  
+ Number of times a content location request retries after recoverable failures have occurred.
 
- `DefaultMaxDuration`  
- Data type: `UInt32`  
+ `DefaultMaxDuration`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is no longer used by the client.  
+ This property is no longer used by the client.
 
- `DisplayNewProgramNotification`  
- Data type: `Boolean`  
+ `DisplayNewProgramNotification`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is no longer used by the client.  
+ This property is no longer used by the client.
 
- `DownloadModificationInterval`  
- Data type: `UInt32`  
+ `DownloadModificationInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is no longer used by the client.  
+ This property is no longer used by the client.
 
- `DownloadRetryInterval`  
- Data type: `UInt32`  
+ `DownloadRetryInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is no longer used by the client.  
+ This property is no longer used by the client.
 
- `ExecutionFailureRetryCount`  
- Data type: `UInt32`  
+ `ExecutionFailureRetryCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of times to retry for non-fatal execution errors (-1 = 4,294,967,295 retries).  
+ Number of times to retry for non-fatal execution errors (-1 = 4,294,967,295 retries).
 
- `ExecutionFailureRetryErrorCodes`  
- Data type: `UInt32 Array`  
+ `ExecutionFailureRetryErrorCodes`
+ Data type: `UInt32 Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
  A list of the default program retry values from the site. If a program fails with one of these exit codes, the program will be retried.
 
- `ExecutionFailureRetryInterval`  
- Data type: `UInt32`  
+ `ExecutionFailureRetryInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Interval, in seconds, between retry attempts for non-fatal execution errors.  
+ Interval, in seconds, between retry attempts for non-fatal execution errors.
 
- `LockSettings`  
- Data type: `Boolean`  
+ `LockSettings`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- true if the site settings are locked and can't be overridden.  
+ true if the site settings are locked and can't be overridden.
 
- `LogoffReturnCodes`  
- Data type: `UInt32 Array`  
+ `LogoffReturnCodes`
+ Data type: `UInt32 Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Array of program return codes that indicate a sign out is required.  
+ Array of program return codes that indicate a sign out is required.
 
- `NetworkFailureRetryCount`  
- Data type: `UInt32`  
+ `NetworkFailureRetryCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of times to retry for non-fatal network errors (-1 = 4,294,967,295 retries).  
+ Number of times to retry for non-fatal network errors (-1 = 4,294,967,295 retries).
 
- `NetworkFailureRetryInterval`  
- Data type: `UInt32`  
+ `NetworkFailureRetryInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Interval, in seconds, between retry attempts for non-fatal network errors.  
+ Interval, in seconds, between retry attempts for non-fatal network errors.
 
- `NewProgramNotificationUI`  
- Data type: `String`  
+ `NewProgramNotificationUI`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [valuemap]  
+ Qualifiers: [valuemap]
 
- The console that should be shown when a user double-clicks a new program notification. Possible values are:  
+ The console that should be shown when a user double-clicks a new program notification. Possible values are:
 
-|Value|Definition|  
-|----|----|  
-|ARP|Add/Remove Programs|  
-|RAP|Run Advertised Programs|  
+|Value|Definition|
+|----|----|
+|ARP|Add/Remove Programs|
+|RAP|Run Advertised Programs|
 
- `RebootLogoffNotification`  
- Data type: `Boolean`  
+ `RebootLogoffNotification`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is no longer used by the client.  
+ This property is no longer used by the client.
 
- `RebootReturnCodes`  
- Data type: `UInt32 Array`  
+ `RebootReturnCodes`
+ Data type: `UInt32 Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Array of program return codes that indicate a restart is required.  
+ Array of program return codes that indicate a restart is required.
 
- `RunNotification`  
- Data type: `Boolean`  
+ `RunNotification`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is no longer used by the client.  
+ This property is no longer used by the client.
 
- `RunNotificationCountdownDuration`  
- Data type: `UInt32`  
+ `RunNotificationCountdownDuration`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is no longer used by the client.  
+ This property is no longer used by the client.
 
- `SuccessReturnCodes`  
- Data type: `UInt32 Array`  
+ `SuccessReturnCodes`
+ Data type: `UInt32 Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Array of program return codes that indicate success.  
+ Array of program return codes that indicate success.
 
- `UIContentLocationTimeoutInterval`  
- Data type: `UInt32`  
+ `UIContentLocationTimeoutInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Duration, in seconds, after which attempts to locate content should be failed.  
+ Duration, in seconds, after which attempts to locate content should be failed.
 
- `UserPreemptionCountdown`  
- Data type: `UInt32`  
+ `UserPreemptionCountdown`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Duration, in seconds, of the countdown displayed to the user before preemption.  
+ Duration, in seconds, of the countdown displayed to the user before preemption.
 
- `UserPreemptionTimeout`  
- Data type: `UInt32`  
+ `UserPreemptionTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The duration, in seconds, after which a pending mandatory program will run, if the user doesn't click Run on the Ready to Run dialog for their optional program. This timeout is used so that mandatory programs aren't blocked forever by users not clicking Run on the Download Completed/Ready to Run dialog for optional requests.  
+ The duration, in seconds, after which a pending mandatory program will run, if the user doesn't click Run on the Ready to Run dialog for their optional program. This timeout is used so that mandatory programs aren't blocked forever by users not clicking Run on the Download Completed/Ready to Run dialog for optional requests.
 
- `WhatsNewDuration`  
- Data type: `UInt32`  
+ `WhatsNewDuration`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is no longer used by the client.  
+ This property is no longer used by the client.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

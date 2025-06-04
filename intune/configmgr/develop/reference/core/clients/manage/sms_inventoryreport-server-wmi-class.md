@@ -12,85 +12,85 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_InventoryReport Server WMI Class
-The `SMS_InventoryReport` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the classes and properties that are enabled to be collected.  
+The `SMS_InventoryReport` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the classes and properties that are enabled to be collected.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_InventoryReport : SMS_BaseClass  
-{  
-    UInt32 DefaultTimeout;  
-    String Description;  
-    String InventoryReportID;  
-    SMS_InventoryReportClass ReportClasses[];  
-    UInt32 ReportTimeout;  
-};  
-```  
+```
+Class SMS_InventoryReport : SMS_BaseClass
+{
+    UInt32 DefaultTimeout;
+    String Description;
+    String InventoryReportID;
+    SMS_InventoryReportClass ReportClasses[];
+    UInt32 ReportTimeout;
+};
+```
 
-## Methods  
- The following table lists the methods in the `SMS_InventoryReport` class.  
+## Methods
+ The following table lists the methods in the `SMS_InventoryReport` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[ImportInventoryReport Method in Class SMS_InventoryReport](../../../../../develop/reference/core/clients/manage/importinventoryreport-method-in-class-sms_inventoryreport.md)|Imports new inventory classes and enables the collection of existing classes.|  
+|Method|Description|
+|------------|-----------------|
+|[ImportInventoryReport Method in Class SMS_InventoryReport](../../../../../develop/reference/core/clients/manage/importinventoryreport-method-in-class-sms_inventoryreport.md)|Imports new inventory classes and enables the collection of existing classes.|
 
-## Properties  
- `DefaultTimeout`  
- Data type: `UInt32`  
+## Properties
+ `DefaultTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The default timeout of the inventory collection cycle on the client.  
+ The default timeout of the inventory collection cycle on the client.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The description of the inventory report.  
+ The description of the inventory report.
 
- `InventoryReportID`  
- Data type: `String`  
+ `InventoryReportID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- A GUID that represents the inventory report type.  
+ A GUID that represents the inventory report type.
 
- `ReportClasses`  
- Data type: `Object Array`  
+ `ReportClasses`
+ Data type: `Object Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The classes that are enabled for collection in this report.  
+ The classes that are enabled for collection in this report.
 
- `ReportTimeout`  
- Data type: `UInt32`  
+ `ReportTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The timeout of the inventory collection cycle on the client.  
+ The timeout of the inventory collection cycle on the client.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

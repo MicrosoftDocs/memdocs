@@ -5,9 +5,9 @@ title: Send notifications to noncompliant devices
 titleSuffix: Microsoft Intune
 description: In this topic, you use Microsoft Intune to send email notifications to noncompliant devices.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 06/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune

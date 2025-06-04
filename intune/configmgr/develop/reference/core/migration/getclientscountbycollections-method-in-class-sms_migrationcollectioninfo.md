@@ -12,52 +12,52 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetClientsCountByCollections Method in Class SMS_MigrationCollectionInfo
-The `GetClientsCountByCollections` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the number of clients in the specified collections.  
+The `GetClientsCountByCollections` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the number of clients in the specified collections.
 
 > [!NOTE]
->  This method is reserved for future use.  
+>  This method is reserved for future use.
 
- The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 GetClientsCountByCollections(  
-     String collectionIDs[],  
-     UInt32 clientsCount  
-);  
-```  
+```
+SInt32 GetClientsCountByCollections(
+     String collectionIDs[],
+     UInt32 clientsCount
+);
+```
 
-#### Parameters  
- `collectionIDs`  
- Data type: `String` array  
+#### Parameters
+ `collectionIDs`
+ Data type: `String` array
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The specified collection IDs.  
+ The specified collection IDs.
 
- `clientsCount`  
- Data type: `UInt32`  
+ `clientsCount`
+ Data type: `UInt32`
 
- Qualifiers: `[out]`  
+ Qualifiers: `[out]`
 
- The number of clients in the collections.  
+ The number of clients in the collections.
 
-## Return Values  
- An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For more information about handling returned errors, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For more information about handling returned errors, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).
 
 ## See also
 

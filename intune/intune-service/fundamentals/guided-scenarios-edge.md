@@ -3,9 +3,9 @@ title: Guided scenario - Deploy Microsoft Edge for Mobile
 titleSuffix: Microsoft Intune
 description: Learn about the guided scenario to deploy Microsoft Edge for Mobile from the Microsoft 365 Device Management portal.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 02/24/2025
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune

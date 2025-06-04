@@ -6,7 +6,7 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.reviewer: madakeva
 ms.date: 04/02/2025
 ms.collection:

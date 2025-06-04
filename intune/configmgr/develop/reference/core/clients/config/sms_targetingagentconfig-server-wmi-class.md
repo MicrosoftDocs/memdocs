@@ -12,91 +12,91 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TargetingAgentConfig Server WMI Class
-The `SMS_TargetingAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents how the client is configured for user and device affinity.  
+The `SMS_TargetingAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents how the client is configured for user and device affinity.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TargetingAgentConfig : SMS_ClientAgentConfig_BaseClass  
-{  
-    UInt32 AgentID;  
-    UInt32 AllowUserAffinity;  
-    UInt32 AllowUserAffinityAfterMinutes;  
-    UInt32 AutoApproveAffinity;  
-    UInt32 ConsoleMinutes;  
-    UInt32 IntervalDays;  
-};  
-```  
+```
+Class SMS_TargetingAgentConfig : SMS_ClientAgentConfig_BaseClass
+{
+    UInt32 AgentID;
+    UInt32 AllowUserAffinity;
+    UInt32 AllowUserAffinityAfterMinutes;
+    UInt32 AutoApproveAffinity;
+    UInt32 ConsoleMinutes;
+    UInt32 IntervalDays;
+};
+```
 
-## Methods  
- The `SMS_TargetingAgentConfig` class does not define any methods.  
+## Methods
+ The `SMS_TargetingAgentConfig` class does not define any methods.
 
-## Properties  
- `AgentID`  
- Data type: `UInt32`  
+## Properties
+ `AgentID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Identifies the client agent component. The Targeting Agent Config ID is 10.  
+ Identifies the client agent component. The Targeting Agent Config ID is 10.
 
- `AllowUserAffinity`  
- Data type: `UInt32`  
+ `AllowUserAffinity`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Allows users to define their primary devices.  
+ Allows users to define their primary devices.
 
- `AllowUserAffinityAfterMinutes`  
- Data type: `UInt32`  
+ `AllowUserAffinityAfterMinutes`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is obsolete.  
+ This property is obsolete.
 
- `AutoApproveAffinity`  
- Data type: `UInt32`  
+ `AutoApproveAffinity`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Automatically configures user device affinity from usage data.  
+ Automatically configures user device affinity from usage data.
 
- `ConsoleMinutes`  
- Data type: `UInt32`  
+ `ConsoleMinutes`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- User device affinity usage threshold in minutes.  
+ User device affinity usage threshold in minutes.
 
- `IntervalDays`  
- Data type: `UInt32`  
+ `IntervalDays`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- User device affinity usage threshold in days.  
+ User device affinity usage threshold in days.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

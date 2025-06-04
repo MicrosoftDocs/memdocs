@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Monitor content you distribute with Configuration Manager
@@ -29,7 +29,7 @@ Use the Configuration Manager console to monitor distributed content, including:
 Configuration Manager only monitors the content on a distribution point that's in the content library. It doesn't monitor content stored on the distribution point in package or custom shares.
 
 > [!TIP]
-> The [Power BI sample reports](../../manage/powerbi-sample-reports.md) for Configuration Manager includes a report called **Content Status**. This report can also help with monitoring content. <!--5679791, 10123832, 10131458, 10488910-->  
+> The [Power BI sample reports](../../manage/powerbi-sample-reports.md) for Configuration Manager includes a report called **Content Status**. This report can also help with monitoring content. <!--5679791, 10123832, 10131458, 10488910-->
 
 ## Content status monitoring
 
@@ -110,7 +110,7 @@ You also view the following detailed status information:
 - How many distributions are in progress
 - How many have been successfully distributed
 
-### Monitor distribution point group status  
+### Monitor distribution point group status
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and then select the **Distribution Point Group Status** node. It displays the distribution point groups.
 
@@ -125,13 +125,13 @@ The **Distribution Point Configuration Status** node in the **Monitoring** works
 > [!WARNING]
 > Distribution point configuration status is relative to the last 24 hours. If the distribution point has an error and recovers, the error status might be displayed for up to 24 hours after the distribution point recovers.
 
-### Monitor distribution point configuration status  
+### Monitor distribution point configuration status
 
-1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and then select the **Distribution Point Configuration Status** node.  
+1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Distribution Status**, and then select the **Distribution Point Configuration Status** node.
 
-1. Select a distribution point.  
+1. Select a distribution point.
 
-1. In the results pane, switch to the **Details** tab. It displays status information for the distribution point.  
+1. In the results pane, switch to the **Details** tab. It displays status information for the distribution point.
 
 ## Client data sources dashboard
 

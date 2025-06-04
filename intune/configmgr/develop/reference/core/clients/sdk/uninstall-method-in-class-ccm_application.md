@@ -12,97 +12,97 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Uninstall Method in Class CCM_Application
-The `Uninstall` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that uninstalls an application.   
+The `Uninstall` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that uninstalls an application.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 Uninstall   
-{  
-    [IN]    String Id  
-    [IN]    String Revision  
-    [IN]    Boolean IsMachineTarget  
-    [IN]    UInt32 EnforcePreference  
-    [IN]    String Priority  
-    [IN]    Boolean IsRebootIfNeeded  
-    [OUT]   String JobId  
-};  
-```  
+```
+uint32 Uninstall
+{
+    [IN]    String Id
+    [IN]    String Revision
+    [IN]    Boolean IsMachineTarget
+    [IN]    UInt32 EnforcePreference
+    [IN]    String Priority
+    [IN]    Boolean IsRebootIfNeeded
+    [OUT]   String JobId
+};
+```
 
-## Parameters  
- `Id`  
- Data type: `String`  
+## Parameters
+ `Id`
+ Data type: `String`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- Application identifier.    
+ Application identifier.
 
- `Revision`  
- Data type: `String`  
+ `Revision`
+ Data type: `String`
 
- Qualifiers: [id("1"), in]  
+ Qualifiers: [id("1"), in]
 
- Revision.    
+ Revision.
 
- `IsMachineTarget`  
- Data type: `Boolean`  
+ `IsMachineTarget`
+ Data type: `Boolean`
 
- Qualifiers: [id("2"), in]  
+ Qualifiers: [id("2"), in]
 
- `true` if the application targets a machine.    
+ `true` if the application targets a machine.
 
- `EnforcePreference`  
- Data type: `UInt32`  
+ `EnforcePreference`
+ Data type: `UInt32`
 
- Qualifiers: [id("3"), in, values]  
+ Qualifiers: [id("3"), in, values]
 
- Enforce preference. Possible values are:   
+ Enforce preference. Possible values are:
 
-|Value|Enforce preference|  
-|-|-|  
-|0|Immediate|  
-|1|NonBusinessHours|  
-|2|AdminSchedule|  
+|Value|Enforce preference|
+|-|-|
+|0|Immediate|
+|1|NonBusinessHours|
+|2|AdminSchedule|
 
- `Priority`  
- Data type: `String`  
+ `Priority`
+ Data type: `String`
 
- Qualifiers: [id("4"), in, valuemap]  
+ Qualifiers: [id("4"), in, valuemap]
 
- Priority. Possible values are:   
+ Priority. Possible values are:
 
 |Value|
-|-|  
-|Foreground|  
-|High|  
-|Normal|  
-|Low|  
+|-|
+|Foreground|
+|High|
+|Normal|
+|Low|
 
- `IsRebootIfNeeded`  
- Data type: `Boolean`  
+ `IsRebootIfNeeded`
+ Data type: `Boolean`
 
- Qualifiers: [id("5"), in]  
+ Qualifiers: [id("5"), in]
 
- `true` if a reboot is needed.    
+ `true` if a reboot is needed.
 
- `JobId`  
- Data type: `String`  
+ `JobId`
+ Data type: `String`
 
- Qualifiers: [id("6"), out]  
+ Qualifiers: [id("6"), out]
 
- Job identifier.    
+ Job identifier.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

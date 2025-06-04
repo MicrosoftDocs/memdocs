@@ -12,59 +12,59 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_LastCategoryObject Server WMI Class
-The `SMS_LastCategoryObject` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the object that has this assignment as the last category assignment.  
+The `SMS_LastCategoryObject` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the object that has this assignment as the last category assignment.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_LastCategoryObject : SMS_BaseClass  
-{  
-    String CategoryID;  
-    String ObjectKey;  
-    UInt32 ObjectTypeID;  
-};  
-```  
+```
+Class SMS_LastCategoryObject : SMS_BaseClass
+{
+    String CategoryID;
+    String ObjectKey;
+    UInt32 ObjectTypeID;
+};
+```
 
-## Methods  
- The `SMS_LastCategoryObject` class does not define any methods.  
+## Methods
+ The `SMS_LastCategoryObject` class does not define any methods.
 
-## Properties  
- `CategoryID`  
- Data type: `String`  
+## Properties
+ `CategoryID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- ID of the RBA security category.  
+ ID of the RBA security category.
 
- `ObjectKey`  
- Data type: `String`  
+ `ObjectKey`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Object key.  
+ Object key.
 
- `ObjectTypeID`  
- Data type: `UInt32`  
+ `ObjectTypeID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- ID of the object type.  
+ ID of the object type.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

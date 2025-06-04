@@ -11,7 +11,7 @@ ms.author: Palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Pre-release features in Configuration Manager
