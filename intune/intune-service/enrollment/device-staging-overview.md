@@ -145,7 +145,9 @@ When applied, these actions don't have any effect on devices that are already en
 
 ## Reporting   
 >[!NOTE]
-> If you choose to apply a custom naming template while using staging, there are some reporting details to be aware about. During staging, the device name appears with a *Staging_* prefix and then your custom naming template. The name also has placeholder values for any user-affiliated variables. After the end user signs in to the Microsoft Intune app, the staging prefix goes away and the real user-affiliated values start appearing in the device name. Example: During device staging, the device name appears as **Staging_Store52_User2345_3408**, where the staging prefix is present and the user-affiliated variables are placeholders. After the user signs in to the app, the device name appears as **Store52_Eric_3408**.     
+> If you choose to apply a custom naming template while using staging, there are some reporting details to be aware about. During staging, the device name appears with a *Staging_* prefix and then your custom naming template. The name also has placeholder values for any user-affiliated variables. After the end user signs in to the Microsoft Intune app, the staging prefix goes away and the real user-affiliated values start appearing in the device name.
+>
+> For example, during device staging the device name appears as **Staging_Store52_User2345_3408**, where the staging prefix is present and the user-affiliated variables are placeholders. After the user signs in to the app, the device name appears as **Store52_Eric_3408**.     
 
 To view all devices with a staging token, go to **Devices** > **All devices**. 
 
