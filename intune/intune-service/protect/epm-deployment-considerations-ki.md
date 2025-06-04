@@ -90,7 +90,7 @@ Behavior exists in Windows to set an attribute on files that are downloaded dire
 
 To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
 
-## Network and cloud resource access limitations
+### Network and cloud resource access limitations
 
 Apps elevated with Endpoint Privilege Management (EPM) run in an isolated security context and can't access resources that require user authentication—this includes both network shares and cloud services (e.g., OneDrive, SharePoint, Azure).
 
