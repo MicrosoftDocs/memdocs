@@ -30,3 +30,4 @@ To work around this issue, add a **Run Command Line** step to the task sequence 
 `reg.exe add HKLM\SOFTWARE\Policies\Microsoft\TPM /v OSManagedAuthLevel /t REG_DWORD /d 2 /f`
 
 For more information on this registry key, see [Change the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password).
+This work around is only needed for ADK releases 10.1.22000. Later versions aren't affected.
