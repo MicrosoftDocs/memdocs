@@ -92,7 +92,7 @@ To correct this behavior, unblock the file by unblocking the file from the file 
 
 ### Network and cloud resource access limitations
 
-Apps elevated with Endpoint Privilege Management (EPM) run in an isolated security context and can't access resources that require user authentication—this includes both network shares and cloud services (e.g., OneDrive, SharePoint, Azure).
+Apps elevated with Endpoint Privilege Management (EPM) run in an isolated security context and can't access resources that require user authentication, including access to network shares and cloud services like OneDrive, SharePoint, and Azure.
 
 If access to these resources is needed, consider whether elevation is required at runtime.
 
