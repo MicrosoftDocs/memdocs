@@ -11,7 +11,7 @@ ms.author: brianhun
 manager: dougeby
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in Configuration Manager incremental versions

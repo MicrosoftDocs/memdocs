@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # CNG v3 certificates overview
@@ -50,8 +50,8 @@ The following scenarios currently aren't supported:
 
 - The following server roles aren't operational when installed in HTTPS mode with a CNG v3 certificate bound to the web site in Internet Information Services (IIS):
 
-  - Enrollment point  
-  - Enrollment proxy point  
+  - Enrollment point
+  - Enrollment proxy point
 
 ## To use CNG certificates
 

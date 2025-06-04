@@ -11,15 +11,15 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Flowchart - Manage content library
 
 *Applies to: Configuration Manager (current branch)*
 
-This flowchart diagram shows the process by which the site moves the content library to a remote location. For more information, see the following articles:  
-- [The content library](the-content-library.md)  
+This flowchart diagram shows the process by which the site moves the content library to a remote location. For more information, see the following articles:
+- [The content library](the-content-library.md)
 - [Site server high availability](../../servers/deploy/configure/site-server-high-availability.md)
 
 ![Flowchart diagram to move the content library to a remote location](media/manage-content-library-flowchart.png)

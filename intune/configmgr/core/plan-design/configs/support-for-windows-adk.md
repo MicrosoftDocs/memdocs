@@ -11,7 +11,7 @@ ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz,frankroj
+ms.reviewer: mstewart,frankroj
 ---
 
 # Support for the Windows ADK in Configuration Manager

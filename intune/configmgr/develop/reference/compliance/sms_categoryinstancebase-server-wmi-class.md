@@ -12,131 +12,131 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CategoryInstanceBase Server WMI Class
-The `SMS_CategoryInstanceBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as an abstract base class for the [SMS_CategoryInstance Server WMI Class](../../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md) and [SMS_UpdateCategoryInstance Server WMI Class](../../../develop/reference/sum/sms_updatecategoryinstance-server-wmi-class.md) classes.  
+The `SMS_CategoryInstanceBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as an abstract base class for the [SMS_CategoryInstance Server WMI Class](../../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md) and [SMS_UpdateCategoryInstance Server WMI Class](../../../develop/reference/sum/sms_updatecategoryinstance-server-wmi-class.md) classes.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CategoryInstanceBase : SMS_BaseClass  
-{  
-      String CategoryInstance_UniqueID;  
-      UInt32 CategoryInstanceID;  
-      String CategoryTypeName;  
-      String LocalizedCategoryInstanceName;  
-      SMS_Category_LocalizedProperties LocalizedInformation[];  
-      UInt32 LocalizedPropertyLocaleID;  
-      UInt32 ParentCategoryInstanceID;  
-      String SourceSite;  
-};  
-```  
+```
+Class SMS_CategoryInstanceBase : SMS_BaseClass
+{
+      String CategoryInstance_UniqueID;
+      UInt32 CategoryInstanceID;
+      String CategoryTypeName;
+      String LocalizedCategoryInstanceName;
+      SMS_Category_LocalizedProperties LocalizedInformation[];
+      UInt32 LocalizedPropertyLocaleID;
+      UInt32 ParentCategoryInstanceID;
+      String SourceSite;
+};
+```
 
-## Methods  
- The `SMS_CategoryInstanceBase` class does not define any methods.  
+## Methods
+ The `SMS_CategoryInstanceBase` class does not define any methods.
 
-## Properties  
- `CategoryInstance_UniqueID`  
- Data type: `String`  
+## Properties
+ `CategoryInstance_UniqueID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [unique, SizeLimit("512")  
+ Qualifiers: [unique, SizeLimit("512")
 
- Unique ID of the category instance. This ID is unique across sites. The string length can be up to 512 characters.  
+ Unique ID of the category instance. This ID is unique across sites. The string length can be up to 512 characters.
 
- `CategoryInstanceID`  
- Data type: `UInt32`  
+ `CategoryInstanceID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- ID of the category instance. This ID is not unique across sites.  
+ ID of the category instance. This ID is not unique across sites.
 
- `CategoryTypeName`  
- Data type: `String`  
+ `CategoryTypeName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The type of category represented by the category instance. Possible values are:  
+ The type of category represented by the category instance. Possible values are:
 
-- Product  
+- Product
 
-- Locale  
+- Locale
 
-- Classification  
+- Classification
 
-- Company  
+- Company
 
-- Product Family  
+- Product Family
 
-- User  
+- User
 
-  `LocalizedCategoryInstanceName`  
-  Data type: `String`  
+  `LocalizedCategoryInstanceName`
+  Data type: `String`
 
-  Access type: Read-only  
+  Access type: Read-only
 
-  Qualifiers: [read]  
+  Qualifiers: [read]
 
-  The localized name of the category instance.  
+  The localized name of the category instance.
 
-  `LocalizedInformation`  
-  Data type: `SMS_Category_LocalizedProperties` Array  
+  `LocalizedInformation`
+  Data type: `SMS_Category_LocalizedProperties` Array
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: [lazy]  
+  Qualifiers: [lazy]
 
-  Localized properties associated with the category instance.  
+  Localized properties associated with the category instance.
 
-  `LocalizedPropertyLocaleID`  
-  Data type: `UInt32`  
+  `LocalizedPropertyLocaleID`
+  Data type: `UInt32`
 
-  Access type: Read-only  
+  Access type: Read-only
 
-  Qualifiers: [read]  
+  Qualifiers: [read]
 
-  ID of the locale applying to the localized properties.  
+  ID of the locale applying to the localized properties.
 
-  `ParentCategoryInstanceID`  
-  Data type: `UInt32`  
+  `ParentCategoryInstanceID`
+  Data type: `UInt32`
 
-  Access type: Read-only  
+  Access type: Read-only
 
-  Qualifiers: [read]  
+  Qualifiers: [read]
 
-  ID of the parent for the category instance.  
+  ID of the parent for the category instance.
 
-  `SourceSite`  
-  Data type: `String`  
+  `SourceSite`
+  Data type: `String`
 
-  Access type: Read-only  
+  Access type: Read-only
 
-  Qualifiers: [read]  
+  Qualifiers: [read]
 
-  The site code for the site where the category instance is created.  
+  The site code for the site where the category instance is created.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Abstract  
+- Abstract
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)

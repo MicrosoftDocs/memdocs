@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Support Center user interface reference
@@ -117,7 +117,7 @@ This section describes the user interface for the **Support Center Client Tools*
 - [Window menu](#window-menu-client-tools)
 - [Client tab](#client-tab)
 - [Policy tab](#policy-tab-client-tools)
-- [Content tab](#content-tab) 
+- [Content tab](#content-tab)
 - [Inventory tab](#inventory-tab)
 - [Troubleshooting tab](#troubleshooting-tab-client-tools)
 - [Logs tab](#logs-tab)
@@ -307,7 +307,7 @@ Starting in Configuration Manager version 2107, the view is grouped by **Categor
    - **Topic type**: The state message type.
    - **Topic type ID**: The subtype of the state message.
    - **State ID**: The result of the action that you're monitoring.
-  
+
 
 > [!Note]
 > In Configuration Manager versions 2103 and earlier **Deployment view** is named **Content view**. <!--8272488-->
@@ -594,13 +594,13 @@ Save a copy of the registry key and subkeys that you select as a registry (.reg)
 
 #### Find (Viewer: Registry)
 
-Opens the Find window, which has the following features:  
+Opens the Find window, which has the following features:
 
-- **Find what**: Enter a string to search for in the WMI data set. It supports wildcard characters.  
+- **Find what**: Enter a string to search for in the WMI data set. It supports wildcard characters.
 
-- **Look at**: Choose whether you want to search within the WMI data set for a matching **Class or instance name**, **Property**, or **Value**.  
+- **Look at**: Choose whether you want to search within the WMI data set for a matching **Class or instance name**, **Property**, or **Value**.
 
-- **Match whole string only**: By default, it searches for strings that contain the string for which you're looking. Choose this checkbox to only find strings that are an exact match to the string that you provided.  
+- **Match whole string only**: By default, it searches for strings that contain the string for which you're looking. Choose this checkbox to only find strings that are an exact match to the string that you provided.
 
 #### Find next (Viewer: Registry)
 

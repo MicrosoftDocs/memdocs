@@ -11,7 +11,7 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Configure clients for cloud management gateway
@@ -90,6 +90,6 @@ If the Configuration Manager client doesn't have a current CMG or internet-facin
 ## Next steps
 
 Your CMG is now set up and functional with clients communicating to the site. Next, understand how to monitor the CMG service and clients:
-  
+
 > [!div class="nextstepaction"]
 > [Monitor CMG](monitor-clients-cloud-management-gateway.md)

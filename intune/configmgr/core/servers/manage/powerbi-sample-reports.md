@@ -11,7 +11,7 @@ author: gowdhamankarthikeyan
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Install Power BI sample reports

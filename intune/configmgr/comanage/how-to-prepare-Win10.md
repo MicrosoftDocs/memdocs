@@ -11,7 +11,7 @@ ms.subservice: co-management
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz,frankroj
+ms.reviewer: mstewart,frankroj
 ---
 
 # How to prepare internet-based devices for co-management

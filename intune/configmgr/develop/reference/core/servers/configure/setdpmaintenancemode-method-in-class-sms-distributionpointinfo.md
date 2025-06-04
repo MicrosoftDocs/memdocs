@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SetDPMaintenanceMode method in class SMS_DistributionPoint
@@ -21,16 +21,16 @@ ms.reviewer: mstewart,aaroncz
 
 The `SetDPMaintenanceMode` WMI class method in Configuration Manager sets a distribution point in maintenance mode. For more information, see [Maintenance mode](../../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_maint).
 
-The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
 ```MOF
 uint32 SetDPMaintenanceMode(
     [in] string NALPath,
     [in] uint32 Mode
 );
-```  
+```
 
 ## Parameters
 
@@ -40,7 +40,7 @@ Data type: `String`
 
 Qualifiers: `[in]`
 
- Network abstraction layer (NAL) path to the distribution point server.  
+ Network abstraction layer (NAL) path to the distribution point server.
 
 ### `Mode`
 
@@ -48,25 +48,25 @@ Data type: `uint32`
 
 Qualifiers: `[in]`
 
-`1` to enable maintenance mode, `0` to disable  
+`1` to enable maintenance mode, `0` to disable
 
 
 ## Return values
 
-An `uint32` data type that's `0` indicates success. A non-zero hresult indicates failure.  
+An `uint32` data type that's `0` indicates success. A non-zero hresult indicates failure.
 
-For more information about handling returned errors, see [About Configuration Manager errors](../../../../core/understand/about-configuration-manager-errors.md).  
+For more information about handling returned errors, see [About Configuration Manager errors](../../../../core/understand/about-configuration-manager-errors.md).
 
 
-## Requirements  
+## Requirements
 
 ### Runtime requirements
 
-For more information, see [Configuration Manager server runtime requirements](../../../../core/reqs/server-runtime-requirements.md).  
+For more information, see [Configuration Manager server runtime requirements](../../../../core/reqs/server-runtime-requirements.md).
 
 ### Development requirements
 
-For more information, see [Configuration Manager server development requirements](../../../../core/reqs/server-development-requirements.md).  
+For more information, see [Configuration Manager server development requirements](../../../../core/reqs/server-development-requirements.md).
 
 
 ## See also

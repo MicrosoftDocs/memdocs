@@ -12,145 +12,145 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_Service_IISConfiguration Client WMI Class
-In Configuration Manager, the `CCM_Service_IISConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports Internet Information Services (IIS)-related settings used by CCMEXEC for staging and receiving message payloads on a Management Point.  
+In Configuration Manager, the `CCM_Service_IISConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports Internet Information Services (IIS)-related settings used by CCMEXEC for staging and receiving message payloads on a Management Point.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_Service_IISConfiguration : CCM_Policy  
-{  
-      UInt8 Dummy[key]  ;  
-      String IncomingPayloadDir;  
-      String IncomingPayloadVirtualDir;  
-      String OutgoingPayloadDir;  
-      String OutgoingPayloadVirtualDir;  
-      String PolicyID;  
-      String PolicyInstanceID;  
-      UInt32 PolicyPrecedence;  
-      String PolicyRuleID;  
-      String PolicySource;  
-      String PolicyVersion;  
-};  
-```  
+```
+Class CCM_Service_IISConfiguration : CCM_Policy
+{
+      UInt8 Dummy[key]  ;
+      String IncomingPayloadDir;
+      String IncomingPayloadVirtualDir;
+      String OutgoingPayloadDir;
+      String OutgoingPayloadVirtualDir;
+      String PolicyID;
+      String PolicyInstanceID;
+      UInt32 PolicyPrecedence;
+      String PolicyRuleID;
+      String PolicySource;
+      String PolicyVersion;
+};
+```
 
-## Methods  
- The `CCM_Service_IISConfiguration` class does not define any methods.  
+## Methods
+ The `CCM_Service_IISConfiguration` class does not define any methods.
 
-## Properties  
- `Dummy[key]`  
- Data type: `UInt8`  
+## Properties
+ `Dummy[key]`
+ Data type: `UInt8`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Realkey]  
+ Qualifiers: [Realkey]
 
- Dummy key.  
+ Dummy key.
 
- `IncomingPayloadDir`  
- Data type: `String`  
+ `IncomingPayloadDir`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Directory where message payloads are uploaded to the server by clients. The System and Administrators account must have full access to this directory. In addition, the appropriate permissions must be given to allow clients to upload to this directory by means of IIS using the BITS ISAPI component. This directory must be created at install time; it is not automatically created by the service.  
+ Directory where message payloads are uploaded to the server by clients. The System and Administrators account must have full access to this directory. In addition, the appropriate permissions must be given to allow clients to upload to this directory by means of IIS using the BITS ISAPI component. This directory must be created at install time; it is not automatically created by the service.
 
- `IncomingPayloadVirtualDir`  
- Data type: `String`  
+ `IncomingPayloadVirtualDir`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- IIS virtual directory mapped to **IncomingPayloadDir**.  
+ IIS virtual directory mapped to **IncomingPayloadDir**.
 
- `OutgoingPayloadDir`  
- Data type: `String`  
+ `OutgoingPayloadDir`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Directory that is used to hold message payloads that will be downloaded by clients.  
+ Directory that is used to hold message payloads that will be downloaded by clients.
 
- `OutgoingPayloadVirtualDir`  
- Data type: `String`  
+ `OutgoingPayloadVirtualDir`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- IIS virtual directory mapped to **OutgoingPayloadDir**.  
+ IIS virtual directory mapped to **OutgoingPayloadDir**.
 
- `PolicyID`  
- Data type: `String`  
+ `PolicyID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyInstanceID`  
- Data type: `String`  
+ `PolicyInstanceID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyPrecedence`  
- Data type: `UInt32`  
+ `PolicyPrecedence`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyRuleID`  
- Data type: `String`  
+ `PolicyRuleID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicySource`  
- Data type: `String`  
+ `PolicySource`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyVersion`  
- Data type: `String`  
+ `PolicyVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
-## Remarks  
- An instance of this class should exist only if IIS has been configured to work with CCMEXEC, that is, IIS must be installed and the appropriate physical and virtual directories must be set up correctly. If this instance is omitted, CCMEXEC operates without using IIS, thus losing some functionality.  
+## Remarks
+ An instance of this class should exist only if IIS has been configured to work with CCMEXEC, that is, IIS must be installed and the appropriate physical and virtual directories must be set up correctly. If this instance is omitted, CCMEXEC operates without using IIS, thus losing some functionality.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
+## See Also
  [Client Framework and Data Transfer Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/client-framework-and-data-transfer-client-wmi-classes.md)

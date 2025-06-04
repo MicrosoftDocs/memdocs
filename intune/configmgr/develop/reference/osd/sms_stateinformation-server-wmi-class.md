@@ -12,108 +12,108 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_StateInformation Server WMI Class
-The `SMS_StateInformation` WMI class is an SMS Provider server class, in Configuration Manager, that provides information about a state message.  
+The `SMS_StateInformation` WMI class is an SMS Provider server class, in Configuration Manager, that provides information about a state message.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_StateInformation : SMS_BaseClass  
-{  
-      String StateDescription;  
-      UInt32 StateID;  
-      String StateName;  
-      UInt32 TopicType;  
-};  
-```  
+```
+Class SMS_StateInformation : SMS_BaseClass
+{
+      String StateDescription;
+      UInt32 StateID;
+      String StateName;
+      UInt32 TopicType;
+};
+```
 
-## Methods  
- The `SMS_StateInformation` class does not define any methods.  
+## Methods
+ The `SMS_StateInformation` class does not define any methods.
 
-## Properties  
- `StateDescription`  
- Data type: `String`  
+## Properties
+ `StateDescription`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Description of the state.  
+ Description of the state.
 
- `StateID`  
- Data type: `UInt32`  
+ `StateID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique ID of the state.  
+ Unique ID of the state.
 
- `StateName`  
- Data type: `String`  
+ `StateName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the state.  
+ Name of the state.
 
- `TopicType`  
- Data type: `UInt32`  
+ `TopicType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- State message topic type. Possible values are:  
+ State message topic type. Possible values are:
 
-| Value | Topic type |  
-| ----- | ---------- |  
-|500|Software update detection|  
-|501|Software update scan status|  
-|403|Settings management scan status|  
-|401|Settings Management compliance|  
-|402|Software updates installation|  
-|300|Software updates or desired configuration management assignment compliance|  
-|301|Software updates assignment enforcement (installation)|  
-|302|Software updates or desired configuration management assignment evaluation|  
-|100|State migration (server only)|  
-|600|PXE (server only)|  
-|700|State system resync (server only)|  
-|701|State system heartbeat (server only)|  
-|800|Client deployment FSP|  
-|801|Device client deployment FSP|  
-|900|Branch distribution point status|  
-|502|WSUS synch status|  
-|1000,1001|Client health state (FSP)|  
-|1002,1003,1004|Device client health state (FSP)|  
-|1100|Client mode readiness state|  
-|702|ClientKeyData updates (server only)|  
-|1500, 1501|CAL tracking (user)|  
-|1502, 1503|CAL tracking (computer)|  
+| Value | Topic type |
+| ----- | ---------- |
+|500|Software update detection|
+|501|Software update scan status|
+|403|Settings management scan status|
+|401|Settings Management compliance|
+|402|Software updates installation|
+|300|Software updates or desired configuration management assignment compliance|
+|301|Software updates assignment enforcement (installation)|
+|302|Software updates or desired configuration management assignment evaluation|
+|100|State migration (server only)|
+|600|PXE (server only)|
+|700|State system resync (server only)|
+|701|State system heartbeat (server only)|
+|800|Client deployment FSP|
+|801|Device client deployment FSP|
+|900|Branch distribution point status|
+|502|WSUS synch status|
+|1000,1001|Client health state (FSP)|
+|1002,1003,1004|Device client health state (FSP)|
+|1100|Client mode readiness state|
+|702|ClientKeyData updates (server only)|
+|1500, 1501|CAL tracking (user)|
+|1502, 1503|CAL tracking (computer)|
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-  This class allows you to access information about a Configuration Manager state message. These messages are sent by clients to notify of important changes of state. Each message provides a snapshot of the state of a process at a specific time. These messages can be helpful when troubleshooting or verifying that processes are working correctly.  
+  This class allows you to access information about a Configuration Manager state message. These messages are sent by clients to notify of important changes of state. Each message provides a snapshot of the state of a process at a specific time. These messages can be helpful when troubleshooting or verifying that processes are working correctly.
 
-  State messages are used with software updates, desired configuration management, client deployment, and client communication. Generally you will use state messages only through reports and client logs.  
+  State messages are used with software updates, desired configuration management, client deployment, and client communication. Generally you will use state messages only through reports and client logs.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
 ## See also
 

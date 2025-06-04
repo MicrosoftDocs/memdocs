@@ -12,57 +12,57 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Handle Configuration Manager Synchronous Errors by Using WMI
-You handle synchronous errors, in Configuration Manager, by inspecting the `SWbemLastError` object when an error occurs. An error has occurred when the error object `Number` property is non-zero.  
+You handle synchronous errors, in Configuration Manager, by inspecting the `SWbemLastError` object when an error occurs. An error has occurred when the error object `Number` property is non-zero.
 
 > [!NOTE]
->  In VBScript you should declare that you want to resume running the script if an error occurs. Otherwise, the script will end when an error condition occurs. To do this, use the `On Error Resume Next` declaration in your script.  
+>  In VBScript you should declare that you want to resume running the script if an error occurs. Otherwise, the script will end when an error condition occurs. To do this, use the `On Error Resume Next` declaration in your script.
 
-## Example  
- The following VBScript example displays the most recent error information that is available from the `SWbemLastError` object. You can use the following code, which tries to get an invalid SMS_Package package to test it.  
+## Example
+ The following VBScript example displays the most recent error information that is available from the `SWbemLastError` object. You can use the following code, which tries to get an invalid SMS_Package package to test it.
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).
 
-```vbs  
+```vbs
 
-Sub ExerciseError(connection)  
+Sub ExerciseError(connection)
 
-    On Error Resume next  
+    On Error Resume next
 
-    Dim packages  
-    Dim package  
+    Dim packages
+    Dim package
 
-    ' Run the query.  
-    Set package = connection.Get("SMS_Package.PackageID='UNKNOWN'")  
+    ' Run the query.
+    Set package = connection.Get("SMS_Package.PackageID='UNKNOWN'")
 
-    If Err.Number<>0 Then  
-        Call DisplayLastError  
-    End If  
+    If Err.Number<>0 Then
+        Call DisplayLastError
+    End If
 
-End Sub      
-```  
+End Sub
+```
 
-```vbs  
+```vbs
 
-Sub DisplayLastError  
-    Dim ExtendedStatus  
+Sub DisplayLastError
+    Dim ExtendedStatus
 
-    ' Get the error object.  
-    Set ExtendedStatus = CreateObject("WbemScripting.SWBEMLastError")  
+    ' Get the error object.
+    Set ExtendedStatus = CreateObject("WbemScripting.SWBEMLastError")
 
-    ' Determine the type of error.  
-    If ExtendedStatus.Path_.Class = "__ExtendedStatus" Then  
-        WScript.Echo "WMI Error: "& ExtendedStatus.Description              
-    ElseIf ExtendedStatus.Path_.Class = "SMS_ExtendedStatus" Then  
-        WScript.Echo "Provider Error: "& ExtendedStatus.Description  
-        WScript.Echo "Code: " & ExtendedStatus.ErrorCode  
-    End If  
-End Sub  
+    ' Determine the type of error.
+    If ExtendedStatus.Path_.Class = "__ExtendedStatus" Then
+        WScript.Echo "WMI Error: "& ExtendedStatus.Description
+    ElseIf ExtendedStatus.Path_.Class = "SMS_ExtendedStatus" Then
+        WScript.Echo "Provider Error: "& ExtendedStatus.Description
+        WScript.Echo "Code: " & ExtendedStatus.ErrorCode
+    End If
+End Sub
 
-```  
+```
 
-## See Also  
+## See Also
  [About errors](about-configuration-manager-errors.md)\
  [WMI SDK](/windows/win32/wmisdk/wmi-start-page)

@@ -12,16 +12,16 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1711 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1711. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1711. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-<!--  Known Issues Template   
+<!--  Known Issues Template
 **Known Issues in this Technical Preview:**
 -   **Issue Name**. Details
     Workaround details.
@@ -36,15 +36,15 @@ This article introduces the features that are available in the Technical Preview
   3. Right-click on the passive mode site server, and then choose **Delete**.
   4. After the site server uninstalls, on the active primary site server restart the service **CONFIGURATION_MANAGER_UPDATE**.
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 <!--  Section Template
 ##  FEATURE
 ### Procedure 1
-### Try it out!  
+### Try it out!
  Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
  -  Task 1
- -  Task 2              
+ -  Task 2
 -->
 
 ## Improvements to Run Task Sequence
@@ -58,7 +58,7 @@ This technical preview will improve the Run Task Sequence step. Improvements inc
 - Integration with deployment verification.
 - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
 
-### Try it out!  
+### Try it out!
 
 Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
 
@@ -110,4 +110,4 @@ You can also use this feature when deploying an app using the wizard.
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
 
 ## Next Steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).
