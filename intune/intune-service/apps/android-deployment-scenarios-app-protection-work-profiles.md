@@ -7,7 +7,7 @@ keywords:
 
 author: nicholasswhite
 ms.author: nwhite
-manager: dougeby
+manager: laurawi
 ms.date: 06/04/2025
 ms.topic: article
 ms.service: microsoft-intune

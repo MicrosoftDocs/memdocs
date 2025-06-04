@@ -5,9 +5,9 @@ title: How to monitor app protection policies
 titleSuffix: Microsoft Intune
 description: This topic describes how to monitor app protection policies in Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 06/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune

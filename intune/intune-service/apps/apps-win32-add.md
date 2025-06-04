@@ -3,9 +3,9 @@ title: Add and assign Win32 apps to Microsoft Intune
 titleSuffix:
 description: Learn how to add, assign, and manage Win32 apps with Microsoft Intune. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 01/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -5,9 +5,9 @@ title: Data protection framework using app protection policies
 titleSuffix: Microsoft Intune
 description: Learn how App Protection Policies (APP) ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 12/09/2024
 ms.topic: article
 ms.service: microsoft-intune

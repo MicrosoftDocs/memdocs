@@ -5,9 +5,9 @@ title: Data protection for Windows MAM
 titleSuffix: 
 description: Enable protected MAM access to org data using Windows MAM.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 08/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune

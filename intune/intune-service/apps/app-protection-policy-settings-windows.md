@@ -5,9 +5,9 @@ title: App protection policy settings for Windows
 titleSuffix: Microsoft Intune
 description: This article describes the app protection policy (APP) settings for MAM on Windows.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 02/20/2025
 ms.topic: article
 ms.service: microsoft-intune

@@ -5,9 +5,9 @@ title: Step 2. Create app protection policies for Microsoft Edge for Business
 titleSuffix:
 description: Step 2. Create app protection policies for Microsoft Edge for Business.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 03/26/2024
 ms.topic: how-to
 ms.service: microsoft-intune

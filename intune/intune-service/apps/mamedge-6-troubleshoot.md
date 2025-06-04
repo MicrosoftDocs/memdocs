@@ -5,9 +5,9 @@ title: Step 6. Troubleshoot Microsoft Edge for Business data security
 titleSuffix:
 description: Step 6. Troubleshoot Microsoft Edge for Business corporate data security in Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 03/26/2024
 ms.topic: article
 ms.service: microsoft-intune

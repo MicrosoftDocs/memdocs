@@ -5,9 +5,9 @@ title: Manage Android Enterprise system apps in Microsoft Intune
 titleSuffix: 
 description: Learn how to manage Android Enterprise system apps in Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
