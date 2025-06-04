@@ -4,9 +4,9 @@
 title: Manage Outlook for iOS and Android with Intune
 description: Use Intune app protection and configuration policies with Outlook for iOS and Android to ensure team collaboration experiences are always accessed with safeguards in place.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune

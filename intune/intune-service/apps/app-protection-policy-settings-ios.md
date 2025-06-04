@@ -7,7 +7,7 @@ description: This article describes the iOS/iPadOS app protection policy (APP) s
 keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: dougeby
+manager: laurawi
 ms.date: 06/03/2025
 ms.topic: article
 ms.service: microsoft-intune

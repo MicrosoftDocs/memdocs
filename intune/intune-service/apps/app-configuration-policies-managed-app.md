@@ -5,9 +5,9 @@ title: Configuration policies for Intune App SDK managed apps
 titleSuffix: Microsoft Intune
 description: Learn how to configure policies for Intune App SDK managed apps.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune

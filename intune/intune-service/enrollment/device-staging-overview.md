@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2024
+ms.date: 06/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: shthilla
+ms.reviewer: grwilson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -144,6 +144,10 @@ Select your token in the admin center to access token management options:
 When applied, these actions don't have any effect on devices that are already enrolled.   
 
 ## Reporting   
+>[!NOTE]
+> If you choose to apply a custom naming template while using staging, there are some reporting details to be aware about. During staging, the device name appears with a *Staging_* prefix and then your custom naming template. The name also has placeholder values for any user-affiliated variables. After the end user signs in to the Microsoft Intune app, the staging prefix goes away and the real user-affiliated values start appearing in the device name.
+>
+> For example, during device staging the device name appears as **Staging_Store52_User2345_3408**, where the staging prefix is present and the user-affiliated variables are placeholders. After the user signs in to the app, the device name appears as **Store52_Eric_3408**.     
 
 To view all devices with a staging token, go to **Devices** > **All devices**. 
 
