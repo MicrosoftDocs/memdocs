@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Diagnostic and usage data for version 2207
@@ -334,7 +334,7 @@ For Configuration Manager version 2207, this level includes the following data:
 - ***[New]*** Power plans with their peak and non-peak usage statistics
 
 - ***[New]*** Power plan peak usage statistics
- 
+
 - ***[New]*** Power plan setting options usage statistics
 
 ### Cloud services (Level 2)
@@ -384,9 +384,9 @@ For Configuration Manager version 2207, this level includes the following data:
 - Collections without a deployment
 
 - Count of collections synchronized to Microsoft Entra ID, including type and size
- 
+
 - ***[New]*** Statistics for collection member counts and collection rule counts
- 
+
 - ***[New]*** Statistics about the collection rule WMI class query dependencies
 
 ### Compliance settings (Level 2)
@@ -412,7 +412,7 @@ For Configuration Manager version 2207, this level includes the following data:
 - Count of OneDrive policies (created, deployed)
 
 - Count of compliance settings deployed by category, OS, and source (cloud vs on-premises)
- 
+
 - ***[New]*** Company resource access profile settings usage
 
 ### Configuration Manager console (Level 2)
@@ -432,7 +432,7 @@ For Configuration Manager version 2207, this level includes the following data:
 - Selected console usage information
 
 - Unsigned extension policy
- 
+
 - ***[New]*** Console dark mode usage
 
 ### Content (Level 2)
@@ -616,7 +616,7 @@ For Configuration Manager version 2207, this level includes the following data:
 - Windows Update fallback configuration settings
 
 - Type, size, and timeout settings of orchestration group scripts
- 
+
 - ***[New]*** Software Update Point setting options statistics
 
 ### SQL/performance data (Level 2)

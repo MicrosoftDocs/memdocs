@@ -10,26 +10,26 @@ ms.author: banreetkaur
 author: banreet
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Remote connection profiles in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use Configuration Manager remote connection profiles to allow your users to remotely connect to work computers. These profiles let you deploy Remote Desktop Connection settings to users in your hierarchy. Users can access any of their primary work computers through Remote Desktop over a VPN connection.  
+Use Configuration Manager remote connection profiles to allow your users to remotely connect to work computers. These profiles let you deploy Remote Desktop Connection settings to users in your hierarchy. Users can access any of their primary work computers through Remote Desktop over a VPN connection.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > When you specify remote connection profile settings with Configuration Manager, the client stores the settings in Windows local policy. These settings might override Remote Desktop settings that you configure with another application. Additionally, if you use Windows Group Policy to configure Remote Desktop settings, the settings specified in the Group Policy will override Configuration Manager settings.
 
 Configuration Manager creates a security group on clients, **Remote PC Connect**. When you deploy a remote connection profile, the client adds the primary users of the computer to this group. A local administrator can manually add or remove users to this group, but Configuration Manager updates the membership when it next evaluates compliance of the profile.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > If the user device affinity relationship between a user and a device changes, Configuration Manager disables the remote connection profile and Windows Firewall settings to prevent connections to the computer.
 
-## Prerequisites  
+## Prerequisites
 
-### External dependencies  
+### External dependencies
 
 - If you want to enable users to connect from the internet, install and configure a Remote Desktop Gateway server. For more information about how to install and configure a Remote Desktop Gateway server, see [Remote Desktop Services - Access from anywhere](/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere).
 
@@ -38,9 +38,9 @@ Configuration Manager creates a security group on clients, **Remote PC Connect**
     > [!TIP]
     > Group Policy settings to configure Windows Firewall can override the configuration that you set in Configuration Manager. If you use Group Policy to configure Windows Firewall, make sure that Group Policy settings don't block mstsc.exe.
 
-    If clients run a different host-based firewall, manually configure this firewall dependency.  
+    If clients run a different host-based firewall, manually configure this firewall dependency.
 
-### Configuration Manager dependencies  
+### Configuration Manager dependencies
 
 - In order for a user to connect to a work computer, that computer must be a primary device of the user. For more information, see [Link users and devices with user device affinity](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
@@ -48,7 +48,7 @@ Configuration Manager creates a security group on clients, **Remote PC Connect**
 
 ## Security and privacy considerations
 
-### Security considerations  
+### Security considerations
 
 - Manually specify user device affinity instead of allowing users to identify their primary device. Don't enable usage-based configuration.
 
@@ -58,19 +58,19 @@ Configuration Manager creates a security group on clients, **Remote PC Connect**
 
 - Restrict local administrative rights on the site server computer. A local administrator on the site server can manually add members to the **Remote PC Connect** security group that Configuration Manager automatically creates and maintains. This action might cause an elevation of privileges because members receive Remote Desktop permissions.
 
-### Privacy considerations  
+### Privacy considerations
 
-When a user remotely connects to a work computer, they download a .wsrdp file. This file contains the device name and the Remote Desktop Gateway Server name. These values are required to create the Remote Desktop session. The .wsrdp file is downloaded and automatically saved locally. This file is overwritten the next time that the user runs a Remote Desktop session.  
+When a user remotely connects to a work computer, they download a .wsrdp file. This file contains the device name and the Remote Desktop Gateway Server name. These values are required to create the Remote Desktop session. The .wsrdp file is downloaded and automatically saved locally. This file is overwritten the next time that the user runs a Remote Desktop session.
 
 ## Create a profile
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, and select **Remote Connection Profiles**.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, and select **Remote Connection Profiles**.
 
-1. On the **Home** tab of the ribbon, in the **Create** group, select **Create Remote Connection Profile**.  
+1. On the **Home** tab of the ribbon, in the **Create** group, select **Create Remote Connection Profile**.
 
-1. On the **General** page of the **Create Remote Connection Profile Wizard**, specify a name and optional description for the profile. Both values have a maximum limit of 256 characters.  
+1. On the **General** page of the **Create Remote Connection Profile Wizard**, specify a name and optional description for the profile. Both values have a maximum limit of 256 characters.
 
-1. On the **Profile Settings** page, specify the following settings:  
+1. On the **Profile Settings** page, specify the following settings:
 
     - **Full name and port of the Remote Desktop Gateway server (optional)**: Specify the name of the Remote Desktop Gateway Server to use for connections. This value has the following requirements:
 
@@ -89,20 +89,20 @@ When a user remotely connects to a work computer, they download a .wsrdp file. T
 
         - **Allow Windows Firewall exception for connections on Windows domains and on private networks**
 
-        > [!IMPORTANT]  
+        > [!IMPORTANT]
         > All three settings must be the same before you can continue.
 
         Only disable these settings when you deploy a profile to turn off remote connections.
 
 1. Complete the wizard.
 
-The new profile is displayed in the **Remote Connection Profiles** node in the **Assets and Compliance** workspace.  
+The new profile is displayed in the **Remote Connection Profiles** node in the **Assets and Compliance** workspace.
 
 ## Deploy
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, and select **Remote Connection Profiles**.
 
-1. In the **Remote Connection Profiles** list, select the profile that you want to deploy. In the **Home** tab of the ribbon, in the **Deployment** group, select **Deploy**.  
+1. In the **Remote Connection Profiles** list, select the profile that you want to deploy. In the **Home** tab of the ribbon, in the **Deployment** group, select **Deploy**.
 
 1. In the **Deploy Remote Connection Profile** window, specify the following information:
 
@@ -132,13 +132,13 @@ Don't deploy more than one remote connection profile with conflicting settings t
 
 In the Configuration Manager console, go to the **Monitoring** workspace, and select **Deployments**. In the **Deployments** list, select the remote connection profile deployment.
 
-You can review summary information about the compliance of the remote connection profile deployment on the main page. To view more detailed information, select the profile deployment. Then on the **Home** tab of the ribbon, in the **Deployment** group, select **View Status**. This action opens the **Deployment Status** page.  
+You can review summary information about the compliance of the remote connection profile deployment on the main page. To view more detailed information, select the profile deployment. Then on the **Home** tab of the ribbon, in the **Deployment** group, select **View Status**. This action opens the **Deployment Status** page.
 
-The **Deployment Status** page contains the following tabs:  
+The **Deployment Status** page contains the following tabs:
 
 - **Compliant**: Displays the compliance of the remote connection profile based on the number of assets that are affected.
 
-    > [!IMPORTANT]  
+    > [!IMPORTANT]
     > The client doesn't evaluate a remote connection profile if it's not applicable. However, it still reports compliant.
 
 - **Error**: Displays a list of all errors for the selected remote connection profile deployment based on the number of assets that are affected.
@@ -153,9 +153,9 @@ The **Asset Details** pane displays the devices with the selected compliance sta
 
 ## Reports
 
-Configuration Manager includes built-in reports that you can use to monitor information about remote connection profiles. These reports have the report category of **Compliance and Settings Management**.  
+Configuration Manager includes built-in reports that you can use to monitor information about remote connection profiles. These reports have the report category of **Compliance and Settings Management**.
 
-> [!IMPORTANT]  
-> Use the wildcard character (`%`) when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.  
+> [!IMPORTANT]
+> Use the wildcard character (`%`) when you use the parameters **Device filter** and **User filter** in the reports for compliance settings.
 
 For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).

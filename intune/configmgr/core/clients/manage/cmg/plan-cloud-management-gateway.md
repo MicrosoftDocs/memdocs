@@ -11,7 +11,7 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Plan for the CMG in Configuration Manager
@@ -175,6 +175,6 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 ## Next steps
 
 Next, determine how clients will authenticate with the CMG:
-  
+
 > [!div class="nextstepaction"]
 > [Plan for CMG client authentication](plan-client-authentication.md)

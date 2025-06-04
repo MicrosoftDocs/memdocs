@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 ms.collection:
     - tier3
     - essentials-security
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Plan for security in Configuration Manager

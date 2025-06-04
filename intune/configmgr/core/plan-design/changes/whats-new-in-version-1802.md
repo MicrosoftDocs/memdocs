@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # What's new in version 1802 of Configuration Manager
 
@@ -25,15 +25,15 @@ Aside from new features, this release also includes additional changes such as b
 The following additional updates to this release are also now available:
 - [Update rollup for Configuration Manager current branch, version 1802](https://support.microsoft.com/help/4163547)
 
-> [!TIP]  
-> To install a new site, you must use a baseline version of Configuration Manager.  
+> [!TIP]
+> To install a new site, you must use a baseline version of Configuration Manager.
 >
-> Learn more about:    
-> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
-> - [Installing updates at sites](../../servers/manage/updates.md)  
+> Learn more about:
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)
+> - [Installing updates at sites](../../servers/manage/updates.md)
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
-The following sections provide details about the changes and new capabilities in version 1802 of Configuration Manager.  
+The following sections provide details about the changes and new capabilities in version 1802 of Configuration Manager.
 
 <!--
 ## Deprecated features and operating systems
@@ -55,17 +55,17 @@ You use Configuration Manager boundary groups to define and regulate content dis
 
 ### Support for Windows 10 ARM64 devices
 <!-- 1353704 -->
-Starting in this release the Configuration Manager client is supported on Windows 10 ARM64 devices. Existing client management features should work with these new devices. For example, hardware and software inventory, software updates, and application management. Operating system deployment is currently not supported. 
+Starting in this release the Configuration Manager client is supported on Windows 10 ARM64 devices. Existing client management features should work with these new devices. For example, hardware and software inventory, software updates, and application management. Operating system deployment is currently not supported.
 
 ### Improved support for CNG certificates
 <!-- 1357314 -->
-Configuration Manager (current branch) version 1710 supports [Cryptography: Next Generation (CNG) certificates](../network/cng-certificates-overview.md). Version 1710 limits support to client certificates in several scenarios. 
+Configuration Manager (current branch) version 1710 supports [Cryptography: Next Generation (CNG) certificates](../network/cng-certificates-overview.md). Version 1710 limits support to client certificates in several scenarios.
 
 Starting in this release, use CNG certificates for the following HTTPS-enabled server roles:
 - Management point
 - Distribution point
 - Software update point
-- State migration point  
+- State migration point
 
 
 ### Boundary group fallback for management points
@@ -76,9 +76,9 @@ Configure fallback relationships for management points between [boundary groups]
 ### Cloud distribution point site affinity
 <!--503719-->
 This feature benefits customers with a multi-site, geographically dispersed hierarchy using cloud distribution points. When an internet-based client searches for content, previously there was no order to the list of cloud distribution points received by the client. This behavior could result in internet-based clients receiving content from geographically distant cloud distribution points. Downloading content from such a distant server is typically slower than a closer server.
- 
+
 With cloud distribution point site affinity, an internet-based client receives an ordered list. This list prioritizes cloud distribution points from the client's assigned site. This behavior allows the administrator to preserve their design intent for content downloads from site resources.
- 
+
 
 ## Management insights
 <!-- 1353967 -->
@@ -88,21 +88,21 @@ In Configuration Manager 1802, the following insights are available:
 - Applications:
     - Applications without deployments
 - Cloud Services: <!--1356412-->
-    - Assess co-management readiness 
+    - Assess co-management readiness
     - Enable your devices to be hybrid Azure Active Directory-joined
     - Modernize your identity and access infrastructure
-    -  Upgrade your clients to Windows 10, version 1709 or above 
+    -  Upgrade your clients to Windows 10, version 1709 or above
 - Collections:
     - Empty Collections
 - Simplified Management:  <!--1355148-->
-    - Outdated client versions  
-- Software Center: 
-    - Direct users to Software Center instead of Application Catalog  
-    - Use the new version of Software Center 
+    - Outdated client versions
+- Software Center:
+    - Direct users to Software Center instead of Application Catalog
+    - Use the new version of Software Center
 - Windows 10: <!--1357421-->
-    - Configure Windows telemetry and commercial ID key 
-    - Connect Configuration Manager to Upgrade Readiness 
-   
+    - Configure Windows telemetry and commercial ID key
+    - Connect Configuration Manager to Upgrade Readiness
+
 <!-- ## Migration  -->
 
 
@@ -114,23 +114,23 @@ In Configuration Manager 1802, the following insights are available:
 When creating an instance of the [cloud management gateway](../../clients/manage/cmg/overview.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate. For more information, see [CMG topology design](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
 
 > [!IMPORTANT]
-> This capability doesn't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
+> This capability doesn't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).
 
-### Improvements to cloud management gateway  
+### Improvements to cloud management gateway
 
-- Starting in this release, the **cloud management gateway** is no longer a pre-release feature.  
+- Starting in this release, the **cloud management gateway** is no longer a pre-release feature.
 
 - The feature documentation is revised and enhanced. For more information, see the following articles:
     - [Plan for the cloud management gateway](../../clients/manage/cmg/plan-cloud-management-gateway.md)
     - [Cloud management gateway size and scale numbers](../configs/size-and-scale-numbers.md#bkmk_cmg)
     - [Security and privacy for cloud management gateway](../../clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md)
     - [Frequently asked questions about the cloud management gateway](../../clients/manage/cmg/cloud-management-gateway-faq.yml)
-    - [Set up cloud management gateway](../../clients/manage/cmg/setup-cloud-management-gateway.md)  
+    - [Set up cloud management gateway](../../clients/manage/cmg/setup-cloud-management-gateway.md)
 
 
 ### Configure hardware inventory to collect strings larger than 255 characters
 <!-- 1357389 -->
-You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](../../clients/manage/inventory/extend-hardware-inventory.md#collect-strings-larger-than-255-characters) article. 
+You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](../../clients/manage/inventory/extend-hardware-inventory.md#collect-strings-larger-than-255-characters) article.
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
@@ -154,17 +154,17 @@ Starting in this release, Silverlight is no longer installed on client devices a
 ### Transition Endpoint Protection workload to Intune using co-management
 <!-- 1357365 -->
  The Endpoint Protection workload can be transitioned to Intune after enabling co-management. To transition the Endpoint Protection workload, go to the co-management properties page and move the slider bar from Configuration Manager to **Pilot** or **All**. For details about the workloads, see [Co-management workloads](../../../comanage/workloads.md). For more information about co-management, see [Co-management for Windows 10 devices](../../../comanage/overview.md).
- 
+
 ### Co-management dashboard in Configuration Manager
 <!--1356648-->
-Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [Co-management dashboard](../../../comanage/how-to-monitor.md#co-management-dashboard) article. 
+Beginning in this release, you can view a dashboard with information about co-management. The dashboard helps you review machines that are co-managed in your environment. The graphs can help identify devices that might need attention. For details, see the [Co-management dashboard](../../../comanage/how-to-monitor.md#co-management-dashboard) article.
 
 
 ## Compliance settings
 
 ### Microsoft Edge browser policies
 <!-- 1357310 -->
-For customers who use the [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) web browser on Windows 10 clients, create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. For more information, see [Create Microsoft Edge browser profile](../../../compliance/deploy-use/browser-profiles.md). 
+For customers who use the [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) web browser on Windows 10 clients, create a Configuration Manager compliance settings policy to configure several Microsoft Edge settings. For more information, see [Create Microsoft Edge browser profile](../../../compliance/deploy-use/browser-profiles.md).
 
 
 
@@ -182,11 +182,11 @@ Configure an application deployment to not automatically upgrade any superseded 
 <!-- 1357015 -->
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. For more information, see [Specify deployment settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings).
 
- > [!Note]  
- > This is an optional feature. For more information, see [Enable optional features from updates](../../servers/manage/optional-features.md).  
+ > [!Note]
+ > This is an optional feature. For more information, see [Enable optional features from updates](../../servers/manage/optional-features.md).
 
 
-### Run scripts improvements 
+### Run scripts improvements
 <!-- 1236459 -->
  Starting in this release, **Run Scripts** is no longer a pre-release feature. The script output now returns using JSON formatting. For more information, see [Create and run PowerShell scripts from the Configuration Manager console](../../../apps/deploy-use/create-deploy-scripts.md).
 
@@ -205,16 +205,16 @@ The default task sequence template for Windows 10 in-place upgrade now includes 
 This release includes the following improvements to operating system deployment:
 - In Windows PE, when launching cmtrace.exe, you are no longer prompted to choose whether to make this program the default viewer for log files. <!-- SMS 500897 -->
 - Add boot images to the [Download Package Content](../../../osd/understand/task-sequence-steps.md#BKMK_DownloadPackageContent) task sequence step.
-- Improvements to the [Run Task Sequence](../../../osd/understand/task-sequence-steps.md#child-task-sequence) step: <!-- 1261338 -->   
+- Improvements to the [Run Task Sequence](../../../osd/understand/task-sequence-steps.md#child-task-sequence) step: <!-- 1261338 -->
   - Support for all operating system deployment scenarios from Software Center, PXE, and media.
   - Improvements to console actions such as copy, import, export, and warning during object deletion.
   - Support for the [Create Prestaged Content File](../hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent) wizard.
-  - Integration with deployment verification. For more information, see [High-risk task sequence deployments](../../../osd/deploy-use/deploy-a-task-sequence.md). 
+  - Integration with deployment verification. For more information, see [High-risk task sequence deployments](../../../osd/deploy-use/deploy-a-task-sequence.md).
   - The Run Task Sequence step can now be used across multiple levels of task sequences, not just a single parent-child relationship. Multi-level relationships increase the complexity, so use with caution. These relationships are still checked for circular references.
 
 ### Deployment templates for task sequences
 <!-- 1357391 -->
-The [deployment wizard for task sequences](../../../osd/deploy-use/deploy-a-task-sequence.md) can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment. 
+The [deployment wizard for task sequences](../../../osd/deploy-use/deploy-a-task-sequence.md) can now create a deployment template. The deployment template can be saved and applied to an existing or new task sequence to create a deployment.
 
 ### Phased deployments for task sequences
 <!--1356837-->
@@ -235,22 +235,22 @@ If you deploy applications as available to users, they can now browse and instal
 
 ### Hide installed applications in Software Center
 <!--1357592-->
-Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](../../clients/deploy/about-client-settings.md#software-center-settings) has additional details.   
+Installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled under client settings. This option is set as the default when you install or upgrade to Configuration Manager 1802.  Installed applications are still available for review under the installation status tab. [Hide installed applications in Software Center](../../clients/deploy/about-client-settings.md#software-center-settings) has additional details.
 
 ### Hide unapproved applications in Software Center
  <!--1355146-->
-When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](../../clients/deploy/about-client-settings.md#software-center-settings) has additional details.  
+When this client setting option is enabled, user available applications that require approval are hidden in Software Center.  [Hide unapproved applications in Software Center](../../clients/deploy/about-client-settings.md#software-center-settings) has additional details.
 
 ### Software Center shows user additional compliance information
 <!-- 1235616 -->
  When using Device Health Attestation status as a compliance policy rule for Conditional Access to company resources, Software Center now shows the user the Device Health Attestation setting that is not compliant.
 
 
- ## Software updates 
+ ## Software updates
 
-### Schedule automatic deployment rule evaluation to be offset from a base day. 
+### Schedule automatic deployment rule evaluation to be offset from a base day.
 <!--1357133-->
-Automatic deployment rules can be scheduled to evaluate offset from a base day. Meaning, if patch Tuesday actually falls on Wednesday for you, the evaluation schedule can be set for the second Tuesday of the month offset by one day. For details, see [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md#BKMK_CreateAutomaticDeploymentRule). 
+Automatic deployment rules can be scheduled to evaluate offset from a base day. Meaning, if patch Tuesday actually falls on Wednesday for you, the evaluation schedule can be set for the second Tuesday of the month offset by one day. For details, see [Automatically deploy software updates](../../../sum/deploy-use/automatically-deploy-software-updates.md#BKMK_CreateAutomaticDeploymentRule).
 
 
 
@@ -286,21 +286,21 @@ Additional policy settings for the [Attack Surface Reduction](../../../protect/d
 
 ### New host interaction settings for Windows Defender Application Guard
 <!-- 1356256 -->
-For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](../../../protect/deploy-use/create-deploy-application-guard-policy.md#bkmk_HIS): 
-- Websites can be given access to the host's virtual graphics processor. 
-- Files downloaded inside the container can be persisted on the host. 
+For Windows 10 version 1709 and later devices, there are two new host interaction settings for [Windows Defender Application Guard](../../../protect/deploy-use/create-deploy-application-guard-policy.md#bkmk_HIS):
+- Websites can be given access to the host's virtual graphics processor.
+- Files downloaded inside the container can be persisted on the host.
 
 
 
 
 ## Configuration Manager console
 
-### Improvements to the Configuration Manager console 
+### Improvements to the Configuration Manager console
 This release includes the following improvements to the Configuration Manager console.
 - Device lists under Assets and Compliance, Devices, now display the primary user by default. This column only displays in the Devices node. The last logged on user can also be added as an optional column.<!-- 1357280 --> Enable [user and device affinity](../../clients/deploy/about-client-settings.md#user-and-device-affinity) client settings for the site to associate a primary user with a device.
-- If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282--> 
+- If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282-->
 - When using remote control on a client with multiple monitors at different DPI scaling, the mouse cursor now correctly maps between them. <!--433170-->
-- The [Office 365 Client Management dashboard](../../../sum/deploy-use/office-365-dashboard.md) displays a list of relevant devices when graph sections are selected. <!--1357281 --> 
+- The [Office 365 Client Management dashboard](../../../sum/deploy-use/office-365-dashboard.md) displays a list of relevant devices when graph sections are selected. <!--1357281 -->
 
 
 

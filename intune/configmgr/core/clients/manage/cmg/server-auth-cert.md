@@ -11,7 +11,7 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # CMG server authentication certificate
@@ -176,6 +176,6 @@ The Configuration Manager client policy includes the CMG service name, `GraniteF
 ## Next steps
 
 Continue your CMG setup by configuring Microsoft Entra ID:
-  
+
 > [!div class="nextstepaction"]
 > [Configure Microsoft Entra ID](configure-azure-ad.md)

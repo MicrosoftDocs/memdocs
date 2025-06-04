@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Creating custom reports by using SQL Server views in Configuration Manager
@@ -51,13 +51,13 @@ This section lists the changes that have been made since Configuration Manager 2
 
 ## In this section
 
-- **SQL Server views in Configuration Manager**  
+- **SQL Server views in Configuration Manager**
   Provides an overview of the views you can use to create reports in Configuration Manager.
 
-- **Working with reports in Configuration Manager**  
+- **Working with reports in Configuration Manager**
   Provides an overview of Configuration Manager reports, the elements of a report and procedures that you can use to create and manage reports.
 
-- **Technical reference for SQL Server views in Configuration Manager**  
+- **Technical reference for SQL Server views in Configuration Manager**
   Provides sample SQL statements for each Configuration Manager SQL view category, exercises for modifying existing Configuration Manager reports and creating new reports, information about writing SQL statements and the query design tools available in SQL Server that can be used when writing report SQL statements, and an overview of the Configuration Manager WMI Provider schema.
 
 ## See also

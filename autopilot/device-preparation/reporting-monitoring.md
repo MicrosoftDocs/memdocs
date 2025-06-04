@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
-manager: aaroncz
+manager: bpardi
 ms.date: 04/02/2025
 ms.topic: how-to
 ms.collection:

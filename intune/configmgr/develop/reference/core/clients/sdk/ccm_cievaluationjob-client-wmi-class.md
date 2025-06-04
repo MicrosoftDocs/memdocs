@@ -12,145 +12,145 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_CIEvaluationJob Client WMI Class
-The `CCM_CIEvaluationJob` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a configuration item evaluation job.   
+The `CCM_CIEvaluationJob` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a configuration item evaluation job.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_CIEvaluationJob :    
-{  
-    String CIAgentJobId;  
-    UInt32 ErrorCode;  
-    String Id;  
-    Boolean IsMachineTarget;  
-    Boolean IsRebootRequired;  
-    String JobState;  
-    DateTime LastModifiedTime;  
-    String OwnerSID;  
-    String Type;  
-    String UserSID;  
-};  
-```  
+```
+Class CCM_CIEvaluationJob :
+{
+    String CIAgentJobId;
+    UInt32 ErrorCode;
+    String Id;
+    Boolean IsMachineTarget;
+    Boolean IsRebootRequired;
+    String JobState;
+    DateTime LastModifiedTime;
+    String OwnerSID;
+    String Type;
+    String UserSID;
+};
+```
 
-## Methods  
- The `CCM_CIEvaluationJob` class doesn't define any methods.  
+## Methods
+ The `CCM_CIEvaluationJob` class doesn't define any methods.
 
-## Properties  
- `CIAgentJobId`  
- Data type: `String`  
+## Properties
+ `CIAgentJobId`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- CI agent job identifier.    
+ CI agent job identifier.
 
- `ErrorCode`  
- Data type: `UInt32`  
+ `ErrorCode`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Error code.    
+ Error code.
 
- `Id`  
- Data type: `String`  
+ `Id`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Identifier.    
+ Identifier.
 
- `IsMachineTarget`  
- Data type: `Boolean`  
+ `IsMachineTarget`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if this is a device targeted application.     
+ `true` if this is a device targeted application.
 
- `IsRebootRequired`  
- Data type: `Boolean`  
+ `IsRebootRequired`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if a reboot is required.    
+ `true` if a reboot is required.
 
- `JobState`  
- Data type: `String`  
+ `JobState`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [values]  
+ Qualifiers: [values]
 
- Job state. Possible values are:    
-
-|Value|
-|-|  
-|Idle|  
-|Evaluating|  
-|Success|  
-|Error|  
-|CanceledOrDeleted|  
-
- `LastModifiedTime`  
- Data type: `DateTime`  
-
- Access type: Read/Write  
-
- Qualifiers: none  
-
- Last modified time.    
-
- `OwnerSID`  
- Data type: `String`  
-
- Access type: Read/Write  
-
- Qualifiers: none  
-
- Owner identifier (SID).    
-
- `Type`  
- Data type: `String`  
-
- Access type: Read/Write  
-
- Qualifiers: [valuemap]  
-
- Job type. Possible values are:   
+ Job state. Possible values are:
 
 |Value|
-|-|  
-|DesiredConfiguration|  
-|ApplicationManagement|  
-|SoftwareUpdates|  
+|-|
+|Idle|
+|Evaluating|
+|Success|
+|Error|
+|CanceledOrDeleted|
 
- `UserSID`  
- Data type: `String`  
+ `LastModifiedTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- User identifier (SID).    
+ Last modified time.
 
-## Remarks  
+ `OwnerSID`
+ Data type: `String`
 
-## Requirements  
+ Access type: Read/Write
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+ Qualifiers: none
 
-## Development Requirements  
+ Owner identifier (SID).
+
+ `Type`
+ Data type: `String`
+
+ Access type: Read/Write
+
+ Qualifiers: [valuemap]
+
+ Job type. Possible values are:
+
+|Value|
+|-|
+|DesiredConfiguration|
+|ApplicationManagement|
+|SoftwareUpdates|
+
+ `UserSID`
+ Data type: `String`
+
+ Access type: Read/Write
+
+ Qualifiers: none
+
+ User identifier (SID).
+
+## Remarks
+
+## Requirements
+
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
+
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

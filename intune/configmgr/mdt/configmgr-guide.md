@@ -11,7 +11,7 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: frankroj,mstewart,aaroncz
+ms.reviewer: frankroj,mstewart
 ---
 
 # Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager

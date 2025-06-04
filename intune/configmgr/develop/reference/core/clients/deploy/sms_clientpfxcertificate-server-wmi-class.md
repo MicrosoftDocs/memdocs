@@ -12,134 +12,134 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ClientPfxCertificate Server WMI Class
-The `SMS_ClientPfxCertificate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains an imported  Pfx certificate.  
+The `SMS_ClientPfxCertificate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains an imported  Pfx certificate.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ClientPfxCertificate : SMS_BaseClass  
-{  
-    UInt32 CI_ID;  
-    UInt32 DeviceID;  
-    UInt32 IsTombstoned;  
-    String ProfileName;  
-    String Thumbprint;  
-    UInt32 UserItemKey;  
-    String UserName;  
-    DateTime ValidFrom;  
-    DateTime ValidUntil;  
-};  
+```
+Class SMS_ClientPfxCertificate : SMS_BaseClass
+{
+    UInt32 CI_ID;
+    UInt32 DeviceID;
+    UInt32 IsTombstoned;
+    String ProfileName;
+    String Thumbprint;
+    UInt32 UserItemKey;
+    String UserName;
+    DateTime ValidFrom;
+    DateTime ValidUntil;
+};
 
-```  
+```
 
-## Methods  
- The following table lists the methods in the `SMS_ClientPfxCertificate` class.  
+## Methods
+ The following table lists the methods in the `SMS_ClientPfxCertificate` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[ImportForUser Method in Class SMS_ClientPfxCertificate](../../../../../develop/reference/core/clients/deploy/importforuser-method-in-class-sms_clientpfxcertificate.md)|Imports a certificate for a user, encrypted by using a password.|  
-|[DeleteForUser Method in Class SMS_ClientPfxCertificate](../../../../../develop/reference/core/clients/deploy/deleteforuser-method-in-class-sms_clientpfxcertificate.md)|Deletes a certificate for a user.|  
+|Method|Description|
+|------------|-----------------|
+|[ImportForUser Method in Class SMS_ClientPfxCertificate](../../../../../develop/reference/core/clients/deploy/importforuser-method-in-class-sms_clientpfxcertificate.md)|Imports a certificate for a user, encrypted by using a password.|
+|[DeleteForUser Method in Class SMS_ClientPfxCertificate](../../../../../develop/reference/core/clients/deploy/deleteforuser-method-in-class-sms_clientpfxcertificate.md)|Deletes a certificate for a user.|
 
-## Properties  
- `CI_ID`  
- Data type: `UInt32`  
+## Properties
+ `CI_ID`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The unique ID of the configuration item.  
+ The unique ID of the configuration item.
 
- `DeviceID`  
- Data type: `UInt32`  
+ `DeviceID`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The ID of the device.  
+ The ID of the device.
 
- `IsTombstoned`  
- Data type: `UInt32`  
+ `IsTombstoned`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Specifies whether the certificate is marked for deletion.  
+ Specifies whether the certificate is marked for deletion.
 
- `ProfileName`  
- Data type: `String`  
+ `ProfileName`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- An SMS_ConfigurationPolicy Profile unique ID.  
+ An SMS_ConfigurationPolicy Profile unique ID.
 
- `Thumbprint`  
- Data type: `String`  
+ `Thumbprint`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The thumbprint for the certificate.  
+ The thumbprint for the certificate.
 
- `UserItemKey`  
- Data type: `UInt32`  
+ `UserItemKey`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The user item key.  
+ The user item key.
 
- `UserName`  
- Data type: `String`  
+ `UserName`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The user name.  
+ The user name.
 
- `ValidFrom`  
- Data type: `DateTime`  
+ `ValidFrom`
+ Data type: `DateTime`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The start date for the certificate.  
+ The start date for the certificate.
 
- `ValidUntil`  
- Data type: `DateTime`  
+ `ValidUntil`
+ Data type: `DateTime`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The expiration date for the certificate.  
+ The expiration date for the certificate.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

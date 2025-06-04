@@ -12,89 +12,89 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Check if a User Has Permissions for an Object
-In Configuration Manager, you can check for object permissions using the [UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md).  
+In Configuration Manager, you can check for object permissions using the [UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md).
 
-### To check if a user has permissions for an object  
+### To check if a user has permissions for an object
 
-1.  Create a dictionary object to pass object name and permissions to check for to the [UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md).  
+1.  Create a dictionary object to pass object name and permissions to check for to the [UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md).
 
-2.  Call the [UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md), passing in the dictionary object.  
+2.  Call the [UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md), passing in the dictionary object.
 
-3.  The method returns `true`, if the user has the permissions.  
+3.  The method returns `true`, if the user has the permissions.
 
-## Example  
- The following example checks to see if the user has the indicated permissions:  
+## Example
+ The following example checks to see if the user has the indicated permissions:
 
-```c#  
-public static bool UserHasPermissions(ConnectionManagerBase connectionManager, string objectName, int permissions, out int currentPermissions)  
-{  
-    if (connectionManager == null)  
-    {  
-        throw new ArgumentNullException("connectionManager");  
-    }  
-    if (string.IsNullOrEmpty(objectName) == true)  
-    {  
-        throw new ArgumentException("The parameter 'objectName' cannot be null or an empty string", "objectName");  
-    }  
-    IResultObject outParams = null;  
-    try  
-    {  
-        Dictionary<string, object> inParams = new Dictionary<string, object>();  
-        inParams["ObjectPath"] = objectName;  
-        inParams["Permissions"] = permissions;  
-        outParams = connectionManager.ExecuteMethod("SMS_RbacSecuredObject", "UserHasPermissions", inParams);  
-       if (outParams != null)  
-       {  
-            currentPermissions = outParams["Permissions"].IntegerValue;  
-            return outParams["ReturnValue"].BooleanValue;  
-       }  
-    }  
-    finally  
-    {  
-        if (outParams != null)  
-        {  
-            outParams.Dispose();  
-        }  
-    }  
-    currentPermissions = 0;  
-    return false;  
-}  
+```c#
+public static bool UserHasPermissions(ConnectionManagerBase connectionManager, string objectName, int permissions, out int currentPermissions)
+{
+    if (connectionManager == null)
+    {
+        throw new ArgumentNullException("connectionManager");
+    }
+    if (string.IsNullOrEmpty(objectName) == true)
+    {
+        throw new ArgumentException("The parameter 'objectName' cannot be null or an empty string", "objectName");
+    }
+    IResultObject outParams = null;
+    try
+    {
+        Dictionary<string, object> inParams = new Dictionary<string, object>();
+        inParams["ObjectPath"] = objectName;
+        inParams["Permissions"] = permissions;
+        outParams = connectionManager.ExecuteMethod("SMS_RbacSecuredObject", "UserHasPermissions", inParams);
+       if (outParams != null)
+       {
+            currentPermissions = outParams["Permissions"].IntegerValue;
+            return outParams["ReturnValue"].BooleanValue;
+       }
+    }
+    finally
+    {
+        if (outParams != null)
+        {
+            outParams.Dispose();
+        }
+    }
+    currentPermissions = 0;
+    return false;
+}
 
-```  
+```
 
- The example method has the following parameters:  
+ The example method has the following parameters:
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`connectionManager`|-   Managed: `connectionManager`|A valid connection to the SMS Provider.|  
-|`objectName`|`String`|Name of the object.|  
-|permissions|Integer|The permissions.|  
-|currentPermissions|Integer|The current permissions.|  
+|`connectionManager`|-   Managed: `connectionManager`|A valid connection to the SMS Provider.|
+|`objectName`|`String`|Name of the object.|
+|permissions|Integer|The permissions.|
+|currentPermissions|Integer|The current permissions.|
 
-## Compiling the Code  
- The C# example requires:  
+## Compiling the Code
+ The C# example requires:
 
-### Namespaces  
- Microsoft.ConfigurationManagement.ManagementProvider  
+### Namespaces
+ Microsoft.ConfigurationManagement.ManagementProvider
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
+ Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
- System  
+ System
 
-### Assembly  
- adminui.wqlqueryengine  
+### Assembly
+ adminui.wqlqueryengine
 
- microsoft.configurationmanagement.managementprovider  
+ microsoft.configurationmanagement.managementprovider
 
- mscorlib  
+ mscorlib
 
-## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
+## Robust Programming
+ For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## See Also  
- [SMS_Admin Server WMI Class](../../../../develop/reference/core/servers/configure/sms_admin-server-wmi-class.md)   
- [SMS_Role Server WMI Class](../../../../develop/reference/core/servers/configure/sms_role-server-wmi-class.md)   
+## See Also
+ [SMS_Admin Server WMI Class](../../../../develop/reference/core/servers/configure/sms_admin-server-wmi-class.md)
+ [SMS_Role Server WMI Class](../../../../develop/reference/core/servers/configure/sms_role-server-wmi-class.md)
  [SMS_SecuredCategory Server WMI Class](../../../../develop/reference/core/servers/configure/sms_securedcategory-server-wmi-class.md)

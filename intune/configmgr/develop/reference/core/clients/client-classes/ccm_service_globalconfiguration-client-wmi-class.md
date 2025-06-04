@@ -12,152 +12,152 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_Service_GlobalConfiguration Client WMI Class
-In Configuration Manager, the `CCM_Service_GlobalConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports global configuration for the CCMEXEC service. There's only one instance of this class on a computer.  
+In Configuration Manager, the `CCM_Service_GlobalConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports global configuration for the CCMEXEC service. There's only one instance of this class on a computer.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_Service_GlobalConfiguration : CCM_Policy  
-{  
-      UInt8 Dummy;  
-      UInt32 EndpointActiveMessageThreshold;  
-      UInt32 EndpointMessageTimeout;  
-      UInt32 EndpointReleaseTimeout;  
-      UInt32 OutgoingMessageTimeout;  
-      String PolicyID;  
-      String PolicyInstanceID;  
-      UInt32 PolicyPrecedence;  
-      String PolicyRuleID;  
-      String PolicySource;  
-      String PolicyVersion;  
-      String ServiceRootDir;  
-};  
-```  
+```
+Class CCM_Service_GlobalConfiguration : CCM_Policy
+{
+      UInt8 Dummy;
+      UInt32 EndpointActiveMessageThreshold;
+      UInt32 EndpointMessageTimeout;
+      UInt32 EndpointReleaseTimeout;
+      UInt32 OutgoingMessageTimeout;
+      String PolicyID;
+      String PolicyInstanceID;
+      UInt32 PolicyPrecedence;
+      String PolicyRuleID;
+      String PolicySource;
+      String PolicyVersion;
+      String ServiceRootDir;
+};
+```
 
-## Methods  
- The `CCM_Service_GlobalConfiguration` class doesn't define any methods.  
+## Methods
+ The `CCM_Service_GlobalConfiguration` class doesn't define any methods.
 
-## Properties  
- `Dummy`  
- Data type: `UInt8`  
+## Properties
+ `Dummy`
+ Data type: `UInt8`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Realkey]  
+ Qualifiers: [Realkey]
 
- Dummy key.  
+ Dummy key.
 
- `EndpointActiveMessageThreshold`  
- Data type: `UInt32`  
+ `EndpointActiveMessageThreshold`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Default maximum number of outstanding messages that endpoints are allowed. A message is outstanding if it has been dispatched to the endpoint, but the endpoint hasn't called **SetComplete** on the associated context. For serial endpoints, the AMT is always 1. This can be overridden on a per-endpoint basis.  
+ Default maximum number of outstanding messages that endpoints are allowed. A message is outstanding if it has been dispatched to the endpoint, but the endpoint hasn't called **SetComplete** on the associated context. For serial endpoints, the AMT is always 1. This can be overridden on a per-endpoint basis.
 
- `EndpointMessageTimeout`  
- Data type: `UInt32`  
+ `EndpointMessageTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Default timeout, in minutes, assigned to all messages that arrive for endpoints. If the value is NULL or 0, no default timeout is assigned. This can be overridden on a per-endpoint basis.  
+ Default timeout, in minutes, assigned to all messages that arrive for endpoints. If the value is NULL or 0, no default timeout is assigned. This can be overridden on a per-endpoint basis.
 
- `EndpointReleaseTimeout`  
- Data type: `UInt32`  
+ `EndpointReleaseTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Endpoint defaults. The default idle time, in minutes, that endpoints are allowed before they're released by the service. An endpoint is idle when no messages are being dispatched to it. If the value is NULL or 0, endpoints aren't released until the service shuts down. This can be overridden on a per-endpoint basis in the endpoint's configuration.  
+ Endpoint defaults. The default idle time, in minutes, that endpoints are allowed before they're released by the service. An endpoint is idle when no messages are being dispatched to it. If the value is NULL or 0, endpoints aren't released until the service shuts down. This can be overridden on a per-endpoint basis in the endpoint's configuration.
 
- `OutgoingMessageTimeout`  
- Data type: `UInt32`  
+ `OutgoingMessageTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Service defaults. The default timeout, in minutes, that all messages sent from the computer are assigned. If the value is NULL or 0, no default timeout is assigned. This can be overridden on a per-message basis by using the **Timeout** property of the message.  
+ Service defaults. The default timeout, in minutes, that all messages sent from the computer are assigned. If the value is NULL or 0, no default timeout is assigned. This can be overridden on a per-message basis by using the **Timeout** property of the message.
 
- `PolicyID`  
- Data type: `String`  
+ `PolicyID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyInstanceID`  
- Data type: `String`  
+ `PolicyInstanceID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyPrecedence`  
- Data type: `UInt32`  
+ `PolicyPrecedence`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyRuleID`  
- Data type: `String`  
+ `PolicyRuleID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicySource`  
- Data type: `String`  
+ `PolicySource`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyVersion`  
- Data type: `String`  
+ `PolicyVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `ServiceRootDir`  
- Data type: `String`  
+ `ServiceRootDir`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Root directory that the service uses internally for temporary files. The System and Administrators account must have full access to this directory (the latter is to allow the debugging of CCMEXEC as an application). The service creates this directory if it doesn't exist.  
+ Root directory that the service uses internally for temporary files. The System and Administrators account must have full access to this directory (the latter is to allow the debugging of CCMEXEC as an application). The service creates this directory if it doesn't exist.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
+## See Also
  [Client Framework and Data Transfer Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/client-framework-and-data-transfer-client-wmi-classes.md)
