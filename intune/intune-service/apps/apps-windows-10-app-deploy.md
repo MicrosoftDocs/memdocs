@@ -5,9 +5,9 @@ title: Windows app deployment by using Microsoft Intune
 titleSuffix:
 description: Learn about Windows 10/11 app deployment scenarios available with Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune

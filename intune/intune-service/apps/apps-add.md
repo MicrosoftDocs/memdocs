@@ -3,9 +3,9 @@ title: Add apps to Microsoft Intune
 titleSuffix:
 description: Learn how to add apps to Microsoft Intune so you can assign apps to users and devices. Intune supports a wide range of app types.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 08/09/2024
 ms.topic: overview
 ms.service: microsoft-intune

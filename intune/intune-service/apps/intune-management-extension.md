@@ -4,9 +4,9 @@
 title: Understand Microsoft Intune management extension
 description: Understand Microsoft Intune management extension for Windows.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune

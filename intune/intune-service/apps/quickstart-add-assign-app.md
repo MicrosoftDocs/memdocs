@@ -5,9 +5,9 @@ title: Add and assign an app
 titleSuffix: Microsoft Intune
 description: In this article, you'll use Microsoft Intune to add and assign an app.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 02/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune
