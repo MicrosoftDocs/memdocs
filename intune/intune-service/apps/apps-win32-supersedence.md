@@ -3,9 +3,9 @@ title: Add Win32 app supersedence
 titleSuffix: Microsoft Intune
 description: Learn how to use Win32 app supersedence with Microsoft Intune. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.service: microsoft-intune

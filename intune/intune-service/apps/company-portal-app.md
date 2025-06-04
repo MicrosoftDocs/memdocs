@@ -5,9 +5,9 @@ title: How to configure the Intune Company Portal apps, Company Portal website, 
 titleSuffix: Microsoft Intune
 description: Learn how you can configure the Intune Company Portal apps, Company Portal website, and Intune app.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 12/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune

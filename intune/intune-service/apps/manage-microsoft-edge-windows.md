@@ -5,9 +5,9 @@ title: Configure Microsoft Edge for Windows with Intune
 titleSuffix: 
 description: Use Intune configuration policies with Edge for Windows to ensure corporate websites are always accessed with safeguards in place. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 08/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -5,9 +5,9 @@ title: Validate your app protection policy setup
 titleSuffix: Microsoft Intune
 description: Learn how to test that your app protection policy is set up and working correctly in Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 01/06/2025
 ms.service: microsoft-intune
 ms.subservice: apps
