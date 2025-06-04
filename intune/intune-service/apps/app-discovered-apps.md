@@ -5,9 +5,9 @@ title: Discovered apps
 titleSuffix: Microsoft Intune
 description: Understand details about the detected apps that Intune found on a device.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 08/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune

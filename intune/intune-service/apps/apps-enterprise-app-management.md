@@ -3,9 +3,9 @@ title: Microsoft Intune Enterprise Application Management
 titleSuffix:
 description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/03/2025
 ms.topic: how-to
 ms.service: microsoft-intune
