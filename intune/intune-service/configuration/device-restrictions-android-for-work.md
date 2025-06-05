@@ -30,13 +30,13 @@ ms.collection:
 - highseo
 ---
 
-# Android device settings list to allow or restrict features using Templates in Intune
+# Android template device settings list to restrict features using Intune
 
 You can use a Microsoft Intune device restrictions profile to manage device features and settings on your Android Enterprise and AOSP devices.
 
 This article lists and describes the settings you can configure on Android devices using the Intune templates. As part of your mobile device management (MDM) solution, use these settings to create password restrictions, enable Bluetooth, manage system updates, create a kiosk experience, and more.
 
-This feature applies to:
+This article applies to:
 
 - Android Enterprise corporate-owned work profile (COPE)
 - Android Enterprise corporate owned fully managed (COBO)
@@ -47,32 +47,35 @@ This feature applies to:
 
 ## Before you begin
 
-- Create a device restrictions profile in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When you create the profile, select the following options:
+- Create a [device restrictions profile](device-restrictions-configure.md) in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When you create the profile, select the following options:
 
   - **Platform**: Select **Android Enterprise** or **Android (AOSP)**.
   - **Profile type**: Select **Templates**.
 
-  For the steps, go to [Create a device restriction profile in Microsoft Intune](device-restrictions-configure.md)
+  For the steps, go to [Create a device restriction profile in Microsoft Intune](device-restrictions-configure.md).
 
-- Settings can be configured using **Templates** (this article) or the **[settings catalog](settings-catalog.md)**. This article focuses on using the template. For more information on **Settings catalog**, go to:
+- Settings can be configured using **Templates** (this article) or the **[settings catalog](settings-catalog.md)**. This article focuses on the template. For more information on **Settings catalog**, go to:
 
   - [Use the settings catalog to configure Intune settings](settings-catalog.md)
   - [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md)
 
-[!TIP]
->
->- If you can't find a setting in **Templates**, select **Settings catalog**. The settings catalog is a list of the settings you can configure for corporate-owned Android Enterprise devices. It includes additional settings that you can configure that are not available under **Templates**.
->- If you can't find a setting in **Settings catalog**, check **Templates**.
+  > [!TIP]
+  >- If you can't find a setting in **Templates**, select **Settings catalog**. The settings catalog is a list of the settings you can configure for corporate-owned Android Enterprise devices. It includes additional settings that you can configure that are not available under **Templates**.
+  >- If you can't find a setting in **Settings catalog**, check **Templates**.
 
-# [Android Enterprise corporate-owned](#tab/aecorporate)
+- To learn more about the Android enrollment options, see [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
 
-These settings apply to Android Enterprise enrollment types where Intune controls the entire device:
+## Android Enterprise
+
+# [Corporate-owned](#tab/aecorporate)
+
+These settings apply to the following Android Enterprise enrollment types where Intune controls the entire device:
 
 - Fully managed devices
 - Dedicated devices
 - Corporate-owned devices with a work profile
 
-Some settings aren't supported by all enrollment types. To see the supported settings by the different enrollment types, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each setting is under a heading that indicates the enrollment types that can use the setting.
+Some settings aren't supported by all enrollment types. The [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) shows the enrollment types that the settings apply to.
 
 :::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Screenshot that shows the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune.":::
 
@@ -850,7 +853,7 @@ You can configure the following settings:
   > [!NOTE]
   > Variables aren't validated in the UI and are case sensitive. As a result, you can see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}`, instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
 
-# [Android Enterprise personally-owned](#tab/aepersonal)
+# [Personally-owned](#tab/aepersonal)
 
 These settings apply to Android Enterprise personally owned devices. When users enroll their personal devices in Intune, a work profile is created on the device. The work profile is a separate space on the device that keeps work apps and data separate from personal apps and data.
 
@@ -1124,13 +1127,16 @@ These password settings apply to the device password on personally owned devices
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow traffic to flow through the VPN tunnel or through the mobile network.
 
-# [AOSP](#tab/aosp)
+---
+
+## AOSP
 
 Android Open Source Project (AOSP) devices are Android devices that don't have Google Mobile Services (GMS) installed. These devices are typically used in kiosk scenarios, such as digital signage, point of sale, or other specialized use cases.
 
-To learn more about AOSP enrollment, see [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
+> [!NOTE]
+> Device configuration profiles aren't supported on Microsoft Teams devices running AOSP.
 
-## Device password
+### Device password
 
 - **Required password type**: Require users to use a certain type of password. Your options:  
 
@@ -1153,7 +1159,7 @@ To learn more about AOSP enrollment, see [Enrollment guide: Enroll Android devic
 >- RealWear devices currently only support device default, numeric, and numeric complex password types.  
 >- The password type **Password required, no restrictions** appears as an option but doesn't currently work on devices, which is a known issue.
 
-## General
+### General
 
 - **Block access to camera**: Prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.  
 
@@ -1177,12 +1183,8 @@ To learn more about AOSP enrollment, see [Enrollment guide: Enroll Android devic
 
 - **Block users from turning on unknown sources**: Prevents users from sideloading apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to sideload apps from unknown sources.
 
----
-
 ## Related articles
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-
-You can also create dedicated device kiosk profiles for [Android](device-restrictions-android.md#kiosk) and [Windows 10](kiosk-settings.md) devices.
-
-[Configure and troubleshoot Android enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974).
+- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- You can also create dedicated device kiosk profiles for [Android](device-restrictions-android.md#kiosk) and [Windows 10](kiosk-settings.md) devices.
+- [Configure and troubleshoot Android enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974).
