@@ -4,10 +4,10 @@ title: Add users and grant permissions
 titleSuffix: Microsoft Intune
 description:  Synchronize on-premises users with Microsoft Entra ID and grant administrator permissions for your Intune subscription.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.date: 03/04/2025
+author: brenduns
+ms.author: brenduns
+manager: laurawi
+ms.date: 06/05/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals

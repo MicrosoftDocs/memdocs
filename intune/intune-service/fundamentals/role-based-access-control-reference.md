@@ -6,7 +6,7 @@ description: Permissions reference for built-in roles for Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 06/14/2024
 ms.topic: reference
 ms.service: microsoft-intune
