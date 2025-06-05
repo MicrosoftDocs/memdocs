@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/18/2024
+ms.date: 05/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -90,6 +90,12 @@ Behavior exists in Windows to set an attribute on files that are downloaded dire
 
 To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
 
+### Network and cloud resource access limitations
+
+Apps elevated with Endpoint Privilege Management (EPM) run in an isolated security context and can't access resources that require user authentication, including access to network shares and cloud services like OneDrive, SharePoint, and Azure.
+
+If access to these resources is needed, consider whether elevation is required at runtime.
+
 ### Windows devices that are "workplace joined" fail to enable Endpoint Privilege Management
 
 Devices that are workplace joined aren't supported by Endpoint Privilege Management. These devices won't show success or process EPM policies (elevation settings or elevation rules) when deployed to the device.
@@ -134,6 +140,7 @@ Only one file can be elevated at a time. To launch multiple files elevated, righ
 
 - [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
+- [Security considerations for elevation rules](../protect/epm-overview.md#security-considerations)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)

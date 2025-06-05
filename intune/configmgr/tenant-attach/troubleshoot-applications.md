@@ -10,7 +10,7 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -22,7 +22,7 @@ Use the following to troubleshoot Configuration Manager applications in the Micr
 
 ## Common errors from the Microsoft Intune admin center
 
-When viewing or installing applications from the Microsoft Intune admin center, you may run across one of these errors.  
+When viewing or installing applications from the Microsoft Intune admin center, you may run across one of these errors.
 
 ### <a name="bkmk_intune"></a> You don’t have access to view this information
 <!--7980141-->
@@ -58,7 +58,7 @@ When viewing or installing applications from the Microsoft Intune admin center, 
 
 1. If you see `System.Security.SecurityException` in the **AdminService.log**, verify that your user principal name (UPN) discovered by [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) isn't set to a cloud UPN rather than an on-premises UPN. An empty UPN value is also acceptable as it means the Active Directory discovered domain name is used. If you see cloud-only UPN (example: onmicrosoft.com) that's not valid domain UPN (contoso.com), you have an issue and may need to go [set the UPN suffix in Active Directory](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
 1. Install [KB4576782 - Application blade times out in Microsoft Intune admin center](https://support.microsoft.com/help/4576782) if you see the below error in the **AdminService.log**:
-   ```log 
+   ```log
    System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
    System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
    System.ComponentModel.Win32Exception: The wait operation timed out

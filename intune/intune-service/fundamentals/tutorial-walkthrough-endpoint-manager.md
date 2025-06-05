@@ -5,9 +5,9 @@ title: Tutorial - Walkthrough the Microsoft Intune admin center
 titleSuffix: Microsoft Intune
 description: In this tutorial, you will tour Microsoft Intune in the Microsoft Intune admin center to better understand how to accomplish tasks.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 02/04/2025
 ms.topic: tutorial
 ms.service: microsoft-intune

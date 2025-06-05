@@ -11,7 +11,7 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Cost of CMG
@@ -138,6 +138,6 @@ For more information, see [Fundamental concepts for content management](../../..
 ## Next steps
 
 Now that you have your CMG design, understand the supported configurations and cost, you're ready to set up the CMG:
-  
+
 > [!div class="nextstepaction"]
 > [Set up checklist for cloud management gateway](set-up-checklist.md)

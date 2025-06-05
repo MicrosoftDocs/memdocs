@@ -12,47 +12,47 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ExportRole Method in Class SMS_Role
-The `ExportRole` Windows Management Instrumentation (WMI) class method, in Configuration Manager, exports roles to an XML string.  
+The `ExportRole` Windows Management Instrumentation (WMI) class method, in Configuration Manager, exports roles to an XML string.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 ExportRole(  
-     String RoleID,  
-     String ExportedXML,  
-);  
-```  
+```
+SInt32 ExportRole(
+     String RoleID,
+     String ExportedXML,
+);
+```
 
-#### Parameters  
- `RoleID`  
- Data type: `String`  
+#### Parameters
+ `RoleID`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The id of the role.  
+ The id of the role.
 
- `ExportedXML`  
- Data type: `String`  
+ `ExportedXML`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- The XML blob for the role.  
+ The XML blob for the role.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_Role Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_role-server-wmi-class.md)

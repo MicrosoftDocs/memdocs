@@ -12,85 +12,85 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ApplicationManagementAgentConfig Server WMI Class
-The `SMS_ApplicationManagementAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains the configuration of Application Management client agent settings.  
+The `SMS_ApplicationManagementAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains the configuration of Application Management client agent settings.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ApplicationManagementAgentConfig : SMS_ClientAgentConfig_BaseClass  
-{  
-    UInt32 AgentID;  
-    String AlternateContentProviders;  
-    Boolean AppXInplaceUpgradeEnabled;  
-    Boolean Enabled;  
-    String EvaluationSchedule;  
-};  
-```  
+```
+Class SMS_ApplicationManagementAgentConfig : SMS_ClientAgentConfig_BaseClass
+{
+    UInt32 AgentID;
+    String AlternateContentProviders;
+    Boolean AppXInplaceUpgradeEnabled;
+    Boolean Enabled;
+    String EvaluationSchedule;
+};
+```
 
-## Methods  
- The `SMS_ApplicationManagementAgentConfig` class does not define any methods.  
+## Methods
+ The `SMS_ApplicationManagementAgentConfig` class does not define any methods.
 
-## Properties  
- `AgentID`  
- Data type: `UInt32`  
+## Properties
+ `AgentID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Identifies the client agent component. The Application Management Agent ID is 17.  
+ Identifies the client agent component. The Application Management Agent ID is 17.
 
- `AlternateContentProviders`  
- Data type: `String`  
+ `AlternateContentProviders`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- An XML string to set alternate content provider settings. This property does not apply to a software update package or a driver package.  
+ An XML string to set alternate content provider settings. This property does not apply to a software update package or a driver package.
 
-```  
-<AlternateDownloadSettings SchemaVersion="1.0">    <Provider Name="logical name here">        <Data>provider specific data here</Data>    </Provider>    <Provider Name="logical name here">         <Data>provider specific data here</Data>    </Provider></AlternateDownloadSettings>  
-```  
+```
+<AlternateDownloadSettings SchemaVersion="1.0">    <Provider Name="logical name here">        <Data>provider specific data here</Data>    </Provider>    <Provider Name="logical name here">         <Data>provider specific data here</Data>    </Provider></AlternateDownloadSettings>
+```
 
- `AppXInplaceUpgradeEnabled`  
- Data type: `Boolean`  
+ `AppXInplaceUpgradeEnabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicates whether Windows app package (.appx files)  in-place upgrade is enabled.  
+ Indicates whether Windows app package (.appx files)  in-place upgrade is enabled.
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the agent is enabled.  
+ `true` if the agent is enabled.
 
- `EvaluationSchedule`  
- Data type: `String`  
+ `EvaluationSchedule`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Evaluation schedule for deployments.  
+ Evaluation schedule for deployments.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

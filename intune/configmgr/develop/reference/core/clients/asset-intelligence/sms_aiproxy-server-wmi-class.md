@@ -12,44 +12,44 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_AIProxy server WMI class
 
-The `SMS_AIProxy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Asset Intelligence proxy computer.  
+The `SMS_AIProxy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Asset Intelligence proxy computer.
 
 > [!NOTE]
-> This class can be accessed only on the central administration site.  
+> This class can be accessed only on the central administration site.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
 ```
-Class SMS_AIProxy : SMS_BaseClass   
-{   
-      string CatalogWatermark;   
-      uint32 CategoryChangeCount;   
-      uint32 CPUChangeCount;   
-      uint32 HWReqChangeCount;   
-      datetime LastCatalogUpdateCompletion;   
-      datetime LastCatalogUpdateRequest;   
-      uint32 LastSCOReturnCode;   
-      boolean PeriodicCatalogUpdateEnabled;   
-      string PeriodicCatalogUpdateSchedule;   
-      uint32 Port;   
-      string ProxyCertPath;   
-      boolean ProxyEnabled;   
-      string ProxyName;   
-      uint32 ProxyPollingInterval;   
-      uint32 ProxyState;   
-      boolean RelevancyOptOut;   
-      string SCOURL;   
-      string SiteCode;    
-      uint32 SoftwareTitlesChangeCount;   
-};  
-```  
+Class SMS_AIProxy : SMS_BaseClass
+{
+      string CatalogWatermark;
+      uint32 CategoryChangeCount;
+      uint32 CPUChangeCount;
+      uint32 HWReqChangeCount;
+      datetime LastCatalogUpdateCompletion;
+      datetime LastCatalogUpdateRequest;
+      uint32 LastSCOReturnCode;
+      boolean PeriodicCatalogUpdateEnabled;
+      string PeriodicCatalogUpdateSchedule;
+      uint32 Port;
+      string ProxyCertPath;
+      boolean ProxyEnabled;
+      string ProxyName;
+      uint32 ProxyPollingInterval;
+      uint32 ProxyState;
+      boolean RelevancyOptOut;
+      string SCOURL;
+      string SiteCode;
+      uint32 SoftwareTitlesChangeCount;
+};
+```
 
 ## Methods
 
@@ -61,220 +61,220 @@ The following table lists the methods in the `SMS_AIProxy` class.
 
 ## Properties
 
- `CatalogWatermark`  
- Data type: `String`  
+ `CatalogWatermark`
+ Data type: `String`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- The System Center Online catalog watermark, used for internal purposes. This is the watermark that was obtained during the last successful SCO catalog update. This watermark is sent up to the SCO again to request the next batch of updates.  
+ The System Center Online catalog watermark, used for internal purposes. This is the watermark that was obtained during the last successful SCO catalog update. This watermark is sent up to the SCO again to request the next batch of updates.
 
- `CategoryChangeCount`  
- Data type: `UInt32`  
+ `CategoryChangeCount`
+ Data type: `UInt32`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- An incrementing count of how many times the category catalog from SCO has been changed since this proxy was installed.  
+ An incrementing count of how many times the category catalog from SCO has been changed since this proxy was installed.
 
- `CPUChangeCount`  
- Data type: `UInt32`  
+ `CPUChangeCount`
+ Data type: `UInt32`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- An incrementing count of how many times the CPU catalog from SCO has been changed since this proxy was installed.  
+ An incrementing count of how many times the CPU catalog from SCO has been changed since this proxy was installed.
 
- `HWReqChangeCount`  
- Data type: `UInt32`  
+ `HWReqChangeCount`
+ Data type: `UInt32`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- An incrementing count of how many times the hardware requirements catalog from SCO has been changed since this proxy was installed.  
+ An incrementing count of how many times the hardware requirements catalog from SCO has been changed since this proxy was installed.
 
- `LastCatalogUpdateCompletion`  
- Data type: `DateTime`  
+ `LastCatalogUpdateCompletion`
+ Data type: `DateTime`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- The last successful completion of an SCO catalog update.  
+ The last successful completion of an SCO catalog update.
 
- `LastCatalogUpdateRequest`  
- Data type: `DateTime`  
+ `LastCatalogUpdateRequest`
+ Data type: `DateTime`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Indicates the last time a manually triggered Request Catalog Update was done by the user.  
+ Indicates the last time a manually triggered Request Catalog Update was done by the user.
 
- `LastSCOReturnCode`  
- Data type: `UInt32`  
+ `LastSCOReturnCode`
+ Data type: `UInt32`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Last HTTPS return code by SCO.  
+ Last HTTPS return code by SCO.
 
- `PeriodicCatalogUpdateEnabled`  
- Data type: `Boolean`  
+ `PeriodicCatalogUpdateEnabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` if the user has enabled periodic catalog updates.  
+ `true` if the user has enabled periodic catalog updates.
 
- `PeriodicCatalogUpdateSchedule`  
- Data type: `String`  
+ `PeriodicCatalogUpdateSchedule`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- User-defined schedule of when the SCO catalog updates occur.  
+ User-defined schedule of when the SCO catalog updates occur.
 
- `Port`  
- Data type: `UInt32`  
+ `Port`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Secure Sockets Layer (SSL) port to use for SCO connection.  
+ Secure Sockets Layer (SSL) port to use for SCO connection.
 
-|Type|Value|  
-|----------|-----------|  
-|Default|443|  
-|Minimum|1|  
-|Maximum|65535|  
+|Type|Value|
+|----------|-----------|
+|Default|443|
+|Minimum|1|
+|Maximum|65535|
 
- `ProxyCertPath`  
- Data type: `String`  
+ `ProxyCertPath`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Full Universal Naming Convention (UNC) path of the authentication certificate file.  
+ Full Universal Naming Convention (UNC) path of the authentication certificate file.
 
- `ProxyEnabled`  
- Data type: `Boolean`  
+ `ProxyEnabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` if the user has enabled the proxy operations.  
+ `true` if the user has enabled the proxy operations.
 
- `ProxyName`  
- Data type: `String`  
+ `ProxyName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: key  
+ Qualifiers: key
 
- Fully qualified domain name (FQDN) name of the proxy computer.  
+ Fully qualified domain name (FQDN) name of the proxy computer.
 
- `ProxyPollingInterval`  
- Data type: `UInt32`  
+ `ProxyPollingInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None)  
+ Qualifiers: None)
 
- Polling interval between proxy computer and database, in seconds.  
+ Polling interval between proxy computer and database, in seconds.
 
-|Type|Value|  
-|----------|-----------|  
-|Default|900 (15 Minutes)|  
-|Minimum|60 (1 Minute)|  
-|Maximum|86400 (24 Hours)|  
+|Type|Value|
+|----------|-----------|
+|Default|900 (15 Minutes)|
+|Minimum|60 (1 Minute)|
+|Maximum|86400 (24 Hours)|
 
- `ProxyState`  
- Data type: `UInt32`  
+ `ProxyState`
+ Data type: `UInt32`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: Enumeration  
+ Qualifiers: Enumeration
 
- Indicates the last SCO communication state. This comes from the proxy to the Asset Intelligence server processor through file replication.  
+ Indicates the last SCO communication state. This comes from the proxy to the Asset Intelligence server processor through file replication.
 
-|Value|Definition|  
-|-----------|----------------|  
-|0|Not installed|  
-|1|Installed|  
-|2|Bad configuration|  
-|3|Reserved state|  
-|4|Bad certificate|  
-|5|SCO is online|  
-|6|SCO is offline|  
+|Value|Definition|
+|-----------|----------------|
+|0|Not installed|
+|1|Installed|
+|2|Bad configuration|
+|3|Reserved state|
+|4|Bad certificate|
+|5|SCO is online|
+|6|SCO is offline|
 
- `RelevancyOptOut`  
- Data type: `Boolean`  
+ `RelevancyOptOut`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` if the user has opted out of sending relevancy information.  
+ `true` if the user has opted out of sending relevancy information.
 
- `SCOURL`  
- Data type: `String`  
+ `SCOURL`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The URL of the SCO.  
+ The URL of the SCO.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Three-letter site code for the site.  
+ Three-letter site code for the site.
 
- `SoftwareTitlesChangeCount`  
- Data type: `UInt32`  
+ `SoftwareTitlesChangeCount`
+ Data type: `UInt32`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- An incrementing count of how many times the software title catalog from SCO has been changed since this proxy was installed.  
+ An incrementing count of how many times the software title catalog from SCO has been changed since this proxy was installed.
 
 ## Remarks
 
-Class qualifiers for this class include:  
+Class qualifiers for this class include:
 
-- DisplayName("AI Proxy Table")  
+- DisplayName("AI Proxy Table")
 
-- Dynamic  
+- Dynamic
 
-- Provider("ExtnProv")  
+- Provider("ExtnProv")
 
-- Secured  
+- Secured
 
 For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../misc/class-and-property-qualifiers.md).
 
 ## Return values
 
-An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
-For information about handling returned errors, see [About Configuration Manager errors](../../../../core/understand/about-configuration-manager-errors.md).  
+For information about handling returned errors, see [About Configuration Manager errors](../../../../core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
 ### Runtime requirements
 

@@ -12,39 +12,39 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # DeleteByID Method in Class SMS_StatusMessage
-The `DeleteByID` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes a group of up to 256 status messages.  
+The `DeleteByID` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes a group of up to 256 status messages.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-UInt32 DeleteByID(  
-   SInt64 RecordIDs[]  
-);  
-```  
+```
+UInt32 DeleteByID(
+   SInt64 RecordIDs[]
+);
+```
 
-#### Parameters  
- `RecordIDs`  
- Data type: `SInt64` Array  
+#### Parameters
+ `RecordIDs`
+ Data type: `SInt64` Array
 
- Qualifiers: [in, Max(256)]  
+ Qualifiers: [in, Max(256)]
 
- IDs for the records of the status messages to delete.  
+ IDs for the records of the status messages to delete.
 
-## Return Values  
- A `UInt32` data type that indicates the number of rows deleted.  
+## Return Values
+ A `UInt32` data type that indicates the number of rows deleted.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_StatusMessage Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_statusmessage-server-wmi-class.md)

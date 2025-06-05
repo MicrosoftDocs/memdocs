@@ -12,64 +12,64 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # StoreEvent Method in Class CCM_ClientEvents
-The `StoreEvent` Windows Management Instrumentation (WMI) class method generates store events.  
+The `StoreEvent` Windows Management Instrumentation (WMI) class method generates store events.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
+```
 
- uint32 StoreEvent  
-{  
-     UInt32 DurationMS,  
-     String ComponentName,  
-     String EventName,  
-     String SessionId  
- };  
+ uint32 StoreEvent
+{
+     UInt32 DurationMS,
+     String ComponentName,
+     String EventName,
+     String SessionId
+ };
 
-```  
+```
 
-## Parameters  
- `DurationMS`  
- Data type: `UInt32`  
+## Parameters
+ `DurationMS`
+ Data type: `UInt32`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The duration of the event in milliseconds.  
+ The duration of the event in milliseconds.
 
- `ComponentName`  
- Data type: `String`  
+ `ComponentName`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The name of the component.  
+ The name of the component.
 
- `EventName`  
- Data type: `String`  
+ `EventName`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The name of the event.  
+ The name of the event.
 
- `SessionId`  
- Data type: `String`  
+ `SessionId`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The ID of the session.  
+ The ID of the session.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
 ## See also
 
-[CCM_ClientEvents Client WMI Class](../../../../../develop/reference/core/clients/sdk/ccm_clientevents-client-wmi-class.md)   
+[CCM_ClientEvents Client WMI Class](../../../../../develop/reference/core/clients/sdk/ccm_clientevents-client-wmi-class.md)

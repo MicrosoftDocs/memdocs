@@ -5,9 +5,9 @@ title: Policy sets
 titleSuffix: Microsoft Intune
 description: Use policy sets to group collections of management objects in Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/10/2024
 ms.topic: article
 ms.service: microsoft-intune

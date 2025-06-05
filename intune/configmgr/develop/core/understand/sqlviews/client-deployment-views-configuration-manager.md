@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Client deployment views in Configuration Manager
@@ -65,52 +65,52 @@ The client notification views are described in this section.
 
 List information about the tasks performed on devices by Configuration Manager client notification.
 This view can be joined to other views by using the **ResourceID** column.
- 
+
 ### v_BGB_ResTaskPush
 
 Lists information about the tasks deployed by Configuration Manager client notification, including the task ID, deployment ID, and status.
 This view can be joined to other views by using the **ResourceID** column.
- 
+
 ### v_BGB_Task
 
 Lists information about all tasks that have been deployed by client notification. This includes the task ID, when the task was created and whether it has expired.
 This view can be joined to other views by using the **TaskID** column.
- 
+
 ### v_BgbMP
 
 List the server name and database IDs of the management points that send out client notifications.
 This view can be joined to other views by using the **ServerName** column.
- 
+
 ### v_BgbServerCurrent
 
 Lists status information about online and offline clients for each server that sends client notification requests.
 This view can be joined to other views by using the **ServerID** column.
- 
+
 ### v_ClientAction
 
 Lists information about client notification actions that were taken. This information appears in the **Client Operations** node of the Configuration Manager console.
 This view can be joined to other views by using the **ID** column.
- 
+
 ### v_ClientActionImportance
 
 Lists information about the priority of client notification tasks as shown in the **Client Operations** node of the Configuration Manager console.
 This view can be joined to other views by using the **ClientOperationID** column.
- 
+
 ### v_ClientActionResult
 
 Lists information about the results of client notification actions that are shown in the **Client Operations** node of the Configuration Manager console.
 This view can be joined to other views by using the **MachineID** column.
- 
+
 ### v_ClientOperationInProcessing
 
 Lists the ID number of client notification operations that are currently being processed.
 It is unlikely that this view will be joined to other views.
- 
+
 ### v_ClientOperationLinkedObjects
 
 Lists information about objects that are linked to client notification actions.
 It is unlikely that this view will be joined to other views.
- 
+
 ### v_ClientOperationTargets
 
 Lists information about the computers on which client notification actions took place.
@@ -118,4 +118,4 @@ This view can be joined to other views by using the **MachineID** column.
 
 ## See also
 
-[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)

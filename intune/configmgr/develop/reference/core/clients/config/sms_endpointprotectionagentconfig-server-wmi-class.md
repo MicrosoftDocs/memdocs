@@ -12,166 +12,166 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_EndpointProtectionAgentConfig Server WMI Class
-The `SMS_EndpointProtectionAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies the settings for the Endpoint Protection client.  
+The `SMS_EndpointProtectionAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies the settings for the Endpoint Protection client.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_EndpointProtectionAgentConfig : SMS_ClientAgentConfig_BaseClass  
-{  
-    UInt32 AgentID;  
-    Boolean DisableFirstSignatureUpdate;  
-    Boolean EnableBlueProvider;  
-    Boolean EnableEP;  
-    UInt32 ForceRebootPeriod;  
-    UInt32 InstallRetryPeriod;  
-    Boolean InstallSCEPClient;  
-    Boolean LicenseAgreed;  
-    Boolean OverrideMaintenanceWindow;  
-    Boolean PersistInstallation;  
-    UInt32 PolicyEnforcePeriod;  
-    Boolean Remove3rdParty;  
-    Boolean SuppressReboot;  
-};  
-```  
+```
+Class SMS_EndpointProtectionAgentConfig : SMS_ClientAgentConfig_BaseClass
+{
+    UInt32 AgentID;
+    Boolean DisableFirstSignatureUpdate;
+    Boolean EnableBlueProvider;
+    Boolean EnableEP;
+    UInt32 ForceRebootPeriod;
+    UInt32 InstallRetryPeriod;
+    Boolean InstallSCEPClient;
+    Boolean LicenseAgreed;
+    Boolean OverrideMaintenanceWindow;
+    Boolean PersistInstallation;
+    UInt32 PolicyEnforcePeriod;
+    Boolean Remove3rdParty;
+    Boolean SuppressReboot;
+};
+```
 
-## Methods  
- The `SMS_EndpointProtectionAgentConfig` class doesn't define any methods.  
+## Methods
+ The `SMS_EndpointProtectionAgentConfig` class doesn't define any methods.
 
-## Properties  
- `AgentID`  
- Data type: `UInt32`  
+## Properties
+ `AgentID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Identifies the client agent component. The Endpoint Protection Agent ID is 20.  
+ Identifies the client agent component. The Endpoint Protection Agent ID is 20.
 
- `DisableFirstSignatureUpdate`  
- Data type: `Boolean`  
+ `DisableFirstSignatureUpdate`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Disable the first signature update on client from a remote source (Windows Update, WSUS, or UNC Path).  
+ Disable the first signature update on client from a remote source (Windows Update, WSUS, or UNC Path).
 
- `EnableBlueProvider`  
- Data type: `Boolean`  
+ `EnableBlueProvider`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the Windows R2 provider is enabled. This value isn't visible/available in the console. The default value is `true`.  
+ `true` if the Windows R2 provider is enabled. This value isn't visible/available in the console. The default value is `true`.
 
- `EnableEP`  
- Data type: `Boolean`  
+ `EnableEP`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the agent is enabled.  
+ `true` if the agent is enabled.
 
- `ForceRebootPeriod`  
- Data type: `UInt32`  
+ `ForceRebootPeriod`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Pending reboot window in hours.  
+ Pending reboot window in hours.
 
- `InstallRetryPeriod`  
- Data type: `UInt32`  
+ `InstallRetryPeriod`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Client-side verify common client existence interval.  
+ Client-side verify common client existence interval.
 
- `InstallSCEPClient`  
- Data type: `Boolean`  
+ `InstallSCEPClient`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client agent will install the common client.  
+ `true` if the client agent will install the common client.
 
- `LicenseAgreed`  
- Data type: `Boolean`  
+ `LicenseAgreed`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the Endpoint Protection License Agreement is approved.  
+ `true` if the Endpoint Protection License Agreement is approved.
 
- `OverrideMaintenanceWindow`  
- Data type: `Boolean`  
+ `OverrideMaintenanceWindow`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if maintenance windows shouldn't be respected.  
+ `true` if maintenance windows shouldn't be respected.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `PersistInstallation`  
- Data type: `Boolean`  
+ `PersistInstallation`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if. EndPoint Protection should be installed on persisted storage. This only applied to embedded operating systems.  
+ `true` if. EndPoint Protection should be installed on persisted storage. This only applied to embedded operating systems.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `PolicyEnforcePeriod`  
- Data type: `UInt32`  
+ `PolicyEnforcePeriod`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Client-side enforce anti-malware policy interval.  
+ Client-side enforce anti-malware policy interval.
 
- `Remove3rdParty`  
- Data type: `Boolean`  
+ `Remove3rdParty`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Remove existing 3rd party anti-malware solution when the Endpoint Protection client installs.  
+ Remove existing 3rd party anti-malware solution when the Endpoint Protection client installs.
 
- `SuppressReboot`  
- Data type: `Boolean`  
+ `SuppressReboot`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Suppress potential reboot after Endpoint Protection client installation.  
+ Suppress potential reboot after Endpoint Protection client installation.
 
-## Remarks  
- Enabling the Endpoint Protection client may uninstall existing antivirus solutions.  The Endpoint Protection client can't be enabled until an Endpoint Protection role is added to the hierarchy.  
+## Remarks
+ Enabling the Endpoint Protection client may uninstall existing antivirus solutions.  The Endpoint Protection client can't be enabled until an Endpoint Protection role is added to the hierarchy.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

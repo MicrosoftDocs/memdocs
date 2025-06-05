@@ -12,46 +12,46 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CIPresence Enumeration
-In Configuration Manager, the `CIPresence` enumeration defines configuration item presence types used in the discovery process.  
+In Configuration Manager, the `CIPresence` enumeration defines configuration item presence types used in the discovery process.
 
-## Syntax  
+## Syntax
 
-```  
-typedef enum tagCIPresence  
-{  
-  ciNotPresent = 0,ciNonCompliant = 0,  
-  ciPresent = 1,ciCompliant = 1,  
-  ciNotApplicable = 2,  
-  ciPresenceUnknown = 3,ciComplianceUnknown = 3,  
-  ciEvaluationError = 4,  
-  ciNotEvaluated = 5  
-} CIPresence;  
-```  
+```
+typedef enum tagCIPresence
+{
+  ciNotPresent = 0,ciNonCompliant = 0,
+  ciPresent = 1,ciCompliant = 1,
+  ciNotApplicable = 2,
+  ciPresenceUnknown = 3,ciComplianceUnknown = 3,
+  ciEvaluationError = 4,
+  ciNotEvaluated = 5
+} CIPresence;
+```
 
-## Elements  
- `ciNotPresent, ciNonCompliant`  
- Configuration item not present or not compliant.  
+## Elements
+ `ciNotPresent, ciNonCompliant`
+ Configuration item not present or not compliant.
 
- `ciPresent, ciCompliant`  
- Configuration item present or compliant.  
+ `ciPresent, ciCompliant`
+ Configuration item present or compliant.
 
- `ciNotApplicable`  
- Configuration item not applicable.  
+ `ciNotApplicable`
+ Configuration item not applicable.
 
- `ciPresenceUnknown, ciComplianceUnknown`  
- Configuration item presence or compliance unknown.  
+ `ciPresenceUnknown, ciComplianceUnknown`
+ Configuration item presence or compliance unknown.
 
- `ciEvaluationError`  
- Configuration item evaluation error.  
+ `ciEvaluationError`
+ Configuration item evaluation error.
 
- `ciNotEvaluated`  
- Configuration item not evaluated.  
+ `ciNotEvaluated`
+ Configuration item not evaluated.
 
-## Remarks  
- This enumeration is used by the [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md).  
+## Remarks
+ This enumeration is used by the [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md).
 
-## See Also  
+## See Also
  [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md)

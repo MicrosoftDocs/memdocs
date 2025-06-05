@@ -13,16 +13,16 @@ manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
 descriptions: Learn about the simplified syntax, methods, properties, and requirements of the SMS_AdminUIContent server class.
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_AdminUIContent Server WMI Class
-For internal use only.  
+For internal use only.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
+```
 Class SMS_AdminUIContent : SMS_BaseClass
 {
     DateTime CreationDate;
@@ -30,52 +30,52 @@ Class SMS_AdminUIContent : SMS_BaseClass
     String Name;
 };
 
-```  
+```
 
-## Methods  
- The `SMS_AdminUIContent` class does not define any methods.  
+## Methods
+ The `SMS_AdminUIContent` class does not define any methods.
 
-## Properties  
- `CreationDate`  
- Data type: `DateTime`  
-
- Access type: Read-only  
-
- Qualifiers: None  
-
- Reserved for internal use.  
-
- `Data`  
- Data type: `String`  
+## Properties
+ `CreationDate`
+ Data type: `DateTime`
 
  Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
  Reserved for internal use.
 
- `Name`  
- Data type:  `String`  
+ `Data`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
+
+ Qualifiers: None
+
+ Reserved for internal use.
+
+ `Name`
+ Data type:  `String`
+
+ Access type: Read-only
 
  Qualifiers: [unique, not_null, key]
 
  Reserved for internal use.
 
-## Remarks  
-  Class qualifiers for this class include:  
+## Remarks
+  Class qualifiers for this class include:
 
-- Read  
+- Read
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

@@ -12,111 +12,111 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_G_SYSTEM_DCMDeploymentErrorAssetDetails Server WMI Class
-The `SMS_G_SYSTEM_DCMDeploymentErrorAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the asset details for a deployment error.  
+The `SMS_G_SYSTEM_DCMDeploymentErrorAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the asset details for a deployment error.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_G_SYSTEM_DCMDeploymentErrorAssetDetails : SMS_G_System  
-{  
-    UInt32 AssignmentID;  
-    UInt32 BL_ID;  
-    UInt32 CI_ID;  
-    UInt32 ErrorCode;  
-    UInt32 ErrorType;  
-    UInt32 ObjectID;  
-    UInt32 ObjectType;  
-    UInt32 ResourceID;  
-};  
-```  
+```
+Class SMS_G_SYSTEM_DCMDeploymentErrorAssetDetails : SMS_G_System
+{
+    UInt32 AssignmentID;
+    UInt32 BL_ID;
+    UInt32 CI_ID;
+    UInt32 ErrorCode;
+    UInt32 ErrorType;
+    UInt32 ObjectID;
+    UInt32 ObjectType;
+    UInt32 ResourceID;
+};
+```
 
-## Methods  
- The `SMS_G_SYSTEM_DCMDeploymentErrorAssetDetails` class does not define any methods.  
+## Methods
+ The `SMS_G_SYSTEM_DCMDeploymentErrorAssetDetails` class does not define any methods.
 
-## Properties  
- `AssignmentID`  
- Data type: `UInt32`  
+## Properties
+ `AssignmentID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).  
+ See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).
 
- `BL_ID`  
- Data type: `UInt32`  
+ `BL_ID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).  
+ See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).
 
- `CI_ID`  
- Data type: `UInt32`  
+ `CI_ID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).  
+ See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).
 
- `ErrorCode`  
- Data type: `UInt32`  
+ `ErrorCode`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).  
+ See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).
 
- `ErrorType`  
- Data type: `UInt32`  
+ `ErrorType`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).  
+ See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).
 
- `ObjectID`  
- Data type: `UInt32`  
+ `ObjectID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).  
+ See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).
 
- `ObjectType`  
- Data type: `UInt32`  
+ `ObjectType`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).  
+ See [SMS_DCMDeploymentErrorAssetDetails Server WMI Class](../../../develop/reference/compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md).
 
- `ResourceID`  
- Data type: `UInt32`  
+ `ResourceID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- Unique ID, supplied by Configuration Manager, that identifies a client resource. This ID is not unique across sites.  
+ Unique ID, supplied by Configuration Manager, that identifies a client resource. This ID is not unique across sites.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

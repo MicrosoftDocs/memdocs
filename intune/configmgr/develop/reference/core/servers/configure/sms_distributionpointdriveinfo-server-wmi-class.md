@@ -12,145 +12,145 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DistributionPointDriveInfo Server WMI Class
-The `SMS_DistributionPointDriveInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the basic information about the drives on a distribution point site system role.  
+The `SMS_DistributionPointDriveInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the basic information about the drives on a distribution point site system role.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DistributionPointDriveInfo : SMS_BaseClass  
-{  
-    SInt64 BytesFree;  
-    SInt64 BytesTotal;  
-    SInt32 ConttentLibPriority;  
-    String Drive;  
-    String NALPath;  
-    SInt32 ObjectType;  
-    SInt32 PercentFree;  
-    SInt32 PkgSharePriority;  
-    String SiteCode;  
-    SInt32 Status;  
-};  
-```  
+```
+Class SMS_DistributionPointDriveInfo : SMS_BaseClass
+{
+    SInt64 BytesFree;
+    SInt64 BytesTotal;
+    SInt32 ConttentLibPriority;
+    String Drive;
+    String NALPath;
+    SInt32 ObjectType;
+    SInt32 PercentFree;
+    SInt32 PkgSharePriority;
+    String SiteCode;
+    SInt32 Status;
+};
+```
 
-## Methods  
- The `SMS_DistributionPointDriveInfo` class does not define any methods.  
+## Methods
+ The `SMS_DistributionPointDriveInfo` class does not define any methods.
 
-## Properties  
- `BytesFree`  
- Data type: `SInt64`  
+## Properties
+ `BytesFree`
+ Data type: `SInt64`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Amount of free, unused storage space, in kilobytes, for the storage object.  
+ Amount of free, unused storage space, in kilobytes, for the storage object.
 
- `BytesTotal`  
- Data type: `SInt64`  
+ `BytesTotal`
+ Data type: `SInt64`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Maximum amount of storage space, in kilobytes, of the storage object. A negative value indicates that information is currently unavailable.  
+ Maximum amount of storage space, in kilobytes, of the storage object. A negative value indicates that information is currently unavailable.
 
- `ConttentLibPriority`  
- Data type: `SInt32`  
+ `ConttentLibPriority`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The order of preference for distributing content to this drive when copying packages to the Configuration Manager content library on the distribution point system. Lower values are preferred over higher values.  
+ The order of preference for distributing content to this drive when copying packages to the Configuration Manager content library on the distribution point system. Lower values are preferred over higher values.
 
- `Drive`  
- Data type: `String`  
+ `Drive`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Drive that is used by the distribution point.  
+ Drive that is used by the distribution point.
 
- `NALPath`  
- Data type: `String`  
+ `NALPath`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Network abstraction layer (NAL) path to the distribution point.  
+ Network abstraction layer (NAL) path to the distribution point.
 
- `ObjectType`  
- Data type: `SInt32`  
+ `ObjectType`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Object type. Possible values are:  
+ Object type. Possible values are:
 
-|Value|Object type|  
-|-|-|  
-|Value|Description|  
-|0|PKG_TYPE_REGULAR|  
-|3|PKG_TYPE_DRIVER|  
-|4|PKG_TYPE_TASK_SEQUENCE|  
-|5|PKG_TYPE_SWUPDATES|  
-|6|PKG_TYPE_DEVICE_SETTING|  
-|8|PKG_CONTENT_PACKAGE|  
-|257|PKG_TYPE_IMAGE|  
-|258|PKG_TYPE_BOOTIMAGE|  
-|259|PKG_TYPE_OSINSTALLIMAGE|  
-|512|APPLICATION|  
+|Value|Object type|
+|-|-|
+|Value|Description|
+|0|PKG_TYPE_REGULAR|
+|3|PKG_TYPE_DRIVER|
+|4|PKG_TYPE_TASK_SEQUENCE|
+|5|PKG_TYPE_SWUPDATES|
+|6|PKG_TYPE_DEVICE_SETTING|
+|8|PKG_CONTENT_PACKAGE|
+|257|PKG_TYPE_IMAGE|
+|258|PKG_TYPE_BOOTIMAGE|
+|259|PKG_TYPE_OSINSTALLIMAGE|
+|512|APPLICATION|
 
- `PercentFree`  
- Data type: `SInt32`  
+ `PercentFree`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Percentage of free storage space available on the storage object.  
+ Percentage of free storage space available on the storage object.
 
- `PkgSharePriority`  
- Data type: `SInt32`  
+ `PkgSharePriority`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The order of preference for distributing packages to this drive when coping packages to package share location. Lower values are preferred over higher values.  
+ The order of preference for distributing packages to this drive when coping packages to package share location. Lower values are preferred over higher values.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Site code of the role.  
+ Site code of the role.
 
- `Status`  
- Data type: `SInt32`  
+ `Status`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last returned error code from attempts to copy content to this drive. A status of 0 indicates success.  
+ The last returned error code from attempts to copy content to this drive. A status of 0 indicates success.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

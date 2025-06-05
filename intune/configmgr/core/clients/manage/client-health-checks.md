@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Client health checks
@@ -128,7 +128,7 @@ If you enable the [wake-up proxy in client settings](../deploy/about-client-sett
 
 <!-- need to confirm if these checks are still applicable
 
-|WMI repository read and write test<!--14E6774A-1795-4E09-B17D-B6F36A124205--|Reset the WMI repository and reinstall the Configuration Manager client|Remediation of this client check is only performed on devices that run Windows Server 2003, Windows XP (64-bit) or earlier versions.|  
+|WMI repository read and write test<!--14E6774A-1795-4E09-B17D-B6F36A124205--|Reset the WMI repository and reinstall the Configuration Manager client|Remediation of this client check is only performed on devices that run Windows Server 2003, Windows XP (64-bit) or earlier versions.|
 
 |Verify that the client WMI provider is healthy<!--690A959D-6210-4930-865F-E3BB82F02133--|Restart the Windows Management Instrumentation service|Remediation of this client check is only performed on devices that run Windows Server 2003, Windows XP (64-bit) or earlier.|
 

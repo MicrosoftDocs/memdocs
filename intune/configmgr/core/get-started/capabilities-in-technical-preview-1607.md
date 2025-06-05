@@ -12,16 +12,16 @@ ms.author: banreetkaur
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1607 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1607. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1607. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 ## <a name="dmp_edition"></a>Improvements to the Windows 10 Edition Upgrade Policy
 
@@ -58,14 +58,14 @@ Custom branding for the Software Center is applied according to the following ru
 ## Use the same network adapter for multiple PXE initiated deployments
 In Technical Preview version 1607, when you use an ethernet adapter to image multiple devices (such as a USB ethernet adapter that you use on multiple devices), you can enable a new setting that allows you to enter hardware identifiers for the ethernet adapters. Configuration Manager ignores the hardware identifiers in the list when performing a PXE installation and for client registration.
 
-For more information about this issue, see the [Configuration Manager OSD Support Team Blog](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721).  
+For more information about this issue, see the [Configuration Manager OSD Support Team Blog](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721).
 
-### Enable the feature to manage duplicate hardware identifiers  
+### Enable the feature to manage duplicate hardware identifiers
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Updates and Servicing** > **Features**.
 2. In the display pane, select **Manage duplicate hardware identifiers**.
 3. On the **Home** tab, in the **Features** group, click **Turn on**.
 
-### Add hardware identifiers for Configuration Manager to ignore  
+### Add hardware identifiers for Configuration Manager to ignore
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Site Configuration** > **Sites**.
 2. On the **Home** tab, in the **Sites** group, click **Hierarchy Settings**.
 3. Go to the **Client Approval and Conflicting Records** tab.

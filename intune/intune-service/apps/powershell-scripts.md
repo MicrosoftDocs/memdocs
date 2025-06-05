@@ -4,9 +4,9 @@
 title: Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune
 description: Create and run PowerShell scripts, assign the script policy to Microsoft Entra groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10/11 devices in Microsoft Intune. Read common issues and resolutions. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune

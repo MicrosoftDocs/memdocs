@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # IProgressUI::ShowMessageEx method
@@ -21,39 +21,39 @@ ms.reviewer: mstewart,aaroncz
 
 Starting in version 2006, the `ShowMessageEx` method displays a customizable dialog box. This method is similar to the [IProgressUI::ShowMessage](iprogressui--showmessage-method.md) method, but also includes a new integer result variable, **pResult**.
 
-## Syntax  
+## Syntax
 
 ```
-[IDL]  
-HRESULT ShowMessageEx(  
-     BSTR pszText,  
-     BSTR pszCaption,  
+[IDL]
+HRESULT ShowMessageEx(
+     BSTR pszText,
+     BSTR pszCaption,
      ULONG uType,
      INT *pResult
-);  
-```  
+);
+```
 
-### Parameters  
+### Parameters
 
 #### `pszText`
 
-Data type: `BSTR`  
+Data type: `BSTR`
 
 Qualifiers: [in]
 
 The text displayed in the message box body.
-  
+
 #### `pszCaption`
 
-Data type: `BSTR`  
+Data type: `BSTR`
 
-Qualifiers: [in]  
+Qualifiers: [in]
 
 The text displayed in the message box windows header.
 
 #### `uType`
 
-Data type: `ULONG`  
+Data type: `ULONG`
 
 Qualifiers: [in]
 
@@ -79,8 +79,8 @@ The value of this variable is a standard [Windows message box return value](/win
 
 An `HRESULT` code. Possible values include, but aren't limited to, the following value. There are no `HRESULT` values returned that are specific to this method.
 
-S_OK  
-The method succeeded.  
+S_OK
+The method succeeded.
 
 To evaluate the user's response to the message box, use the [pResult](#presult) parameter.
 
@@ -107,10 +107,10 @@ You can use a script like this in the [Run PowerShell Script](../../../../../osd
 
 ## See also
 
-- [OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)  
+- [OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)
 
-- [IProgressUI interface](iprogressui-interface.md)  
+- [IProgressUI interface](iprogressui-interface.md)
 
-- [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)  
+- [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)
 
 - [How to use task sequence variables in a running Configuration Manager task sequence](../../../../osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)

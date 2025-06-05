@@ -5,9 +5,9 @@ title: Add web apps to Microsoft Intune
 titleSuffix: 
 description: Learn about adding web apps (client-server applications) to Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 05/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune

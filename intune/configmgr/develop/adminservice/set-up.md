@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to set up the administration service in Configuration Manager
@@ -41,7 +41,7 @@ There are two primary methods of using a server authentication certificate:
 
   - Most enterprise PKI implementations add the trusted root CAs to Windows clients. For example, using Active Directory Certificate Services with group policy. If you issue the certificate from a CA that your clients don't automatically trust, add the CA trusted root certificate to clients. You can scope this trust to only the clients that need to access the administration service.
 
-- Use a certificate from a public and globally trusted certificate provider.<!-- memdocs#1668 --> Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate issued by one of these providers, your clients automatically trust it.  
+- Use a certificate from a public and globally trusted certificate provider.<!-- memdocs#1668 --> Windows clients include trusted root certificate authorities (CAs) from these providers. By using a server authentication certificate issued by one of these providers, your clients automatically trust it.
 
 Once you have a server authentication certificate for the SMS Provider, you need to manually bind it to port 443 in IIS on the server that hosts the SMS Provider role.
 
@@ -77,16 +77,16 @@ Before you can configure the SMS Provider to allow CMG traffic, first set up a C
 
 Then use the following process to enable the administration service through the CMG:
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node.
 
-2. Select the server with the **SMS Provider** role.  
+2. Select the server with the **SMS Provider** role.
 
     > [!TIP]
     > On the ribbon, in the **Home** tab, select **Servers with Role** and then select **SMS Provider**. This action shows you the site systems with that role.
 
-3. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the **Site Role** tab.  
+3. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the **Site Role** tab.
 
-4. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.  
+4. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.
 
 To access the administration service from the internet, replace the SMS Provider FQDN with the CMG endpoint. For example:
 

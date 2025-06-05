@@ -6,8 +6,13 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
+<<<<<<< HEAD
 manager: aaroncz
 ms.date: 05/30/2025
+=======
+manager: bpardi
+ms.date: 04/01/2025
+>>>>>>> ebd9c60070e176d250090208fc00d6a18f21a73b
 ms.topic: tutorial
 ms.collection:
   - tier1

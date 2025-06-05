@@ -12,39 +12,39 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ProcessInBox Method in Class SMS_PDF_Package
-The `ProcessInBox` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports package definition files from the package definition file inbox.  
+The `ProcessInBox` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports package definition files from the package definition file inbox.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 ProcessInBox();  
-```  
+```
+SInt32 ProcessInBox();
+```
 
-#### Parameters  
- None.  
+#### Parameters
+ None.
 
-## Return Values  
- An `SInt32` data type that is the number of package definition files successfully loaded.  
+## Return Values
+ An `SInt32` data type that is the number of package definition files successfully loaded.
 
-## Remarks  
- This method processes all .pdf and .sms files found in the \\*Smsinstalldir*\Scripts\\<*localeid*>\Pdfstore\Load inbox. Successfully processed files are then removed and placed in the package definition file store. Files that fail to load, however, remain in the load directory.  
+## Remarks
+ This method processes all .pdf and .sms files found in the \\*Smsinstalldir*\Scripts\\<*localeid*>\Pdfstore\Load inbox. Successfully processed files are then removed and placed in the package definition file store. Files that fail to load, however, remain in the load directory.
 
- Configuration Manager uses this method at startup to load package definition file templates if the Configuration Manager tables are empty. Icons defined in the package definition file for the package or programs must exist in the load directory at the time the method is called.  
+ Configuration Manager uses this method at startup to load package definition file templates if the Configuration Manager tables are empty. Icons defined in the package definition file for the package or programs must exist in the load directory at the time the method is called.
 
- When your application imports a package definition file that has the same `Name`, `Publisher`, `Version`, and `Language` properties as an existing package definition file, the existing package definition file is overwritten, including file icons and programs. The value specified by the `PDFID` parameter is retained.  
+ When your application imports a package definition file that has the same `Name`, `Publisher`, `Version`, and `Language` properties as an existing package definition file, the existing package definition file is overwritten, including file icons and programs. The value specified by the `PDFID` parameter is retained.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_PDF_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_pdf_package-server-wmi-class.md)

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Advanced exercise 1: Create a new report for compliance settings in Configuration Manager
@@ -80,5 +80,5 @@ See [Advanced exercise 1 solution: create a new report for compliance settings i
 
 ## See also
 
-[Exercise 1: run an existing Configuration Manager report](exercise-1-run-existing-configuration-manager-report.md)  
+[Exercise 1: run an existing Configuration Manager report](exercise-1-run-existing-configuration-manager-report.md)
 [Advanced exercise 1 solution: create a new report for compliance settings in Configuration Manager](advanced-exercise-1-solution-create-new-report-compliance-settings-configuration-manager.md)

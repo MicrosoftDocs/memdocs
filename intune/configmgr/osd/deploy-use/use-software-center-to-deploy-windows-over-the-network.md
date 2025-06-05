@@ -10,7 +10,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -45,7 +45,7 @@ Also configure whether the deployment is required or available:
 - Available deployment: The task sequence is available in Software Center, and a user can install it on demand.
 
 After you create the deployment, clients in the target collection will show the task sequence in Software Center.
-    
+
 > [!NOTE]
 > If multiple users are signed in on the device, task sequence deployments might not appear in Software Center until other users are signed out.
 

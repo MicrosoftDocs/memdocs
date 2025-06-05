@@ -12,79 +12,79 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_CTM_JobStateEx4 Class
-The **CCM_CTM_JobStateEx4** class, in Configuration Manager, represents the state information for a single Content Transfer Manager job.  
+The **CCM_CTM_JobStateEx4** class, in Configuration Manager, represents the state information for a single Content Transfer Manager job.
 
-## Syntax  
+## Syntax
 
-```  
-class CCM_CTM_JobStateEx4  
-{  
-    string ProviderSettingsFromRequest;   
-    uint32 CurrentProviderPriority;   
-    string CurrentProviderLogicalName;   
-    string CurrentProviderCLSID;   
-    string CurrentProviderGlobalSettings;   
-    string CurrentProviderSettingsFromRequest;   
-};  
+```
+class CCM_CTM_JobStateEx4
+{
+    string ProviderSettingsFromRequest;
+    uint32 CurrentProviderPriority;
+    string CurrentProviderLogicalName;
+    string CurrentProviderCLSID;
+    string CurrentProviderGlobalSettings;
+    string CurrentProviderSettingsFromRequest;
+};
 
-```  
+```
 
-#### Parameters  
- `ProviderSettingsFromRequest`  
- Data type: String  
+#### Parameters
+ `ProviderSettingsFromRequest`
+ Data type: String
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- XML describing the allowed alternate providers and provider-specific settings.  
+ XML describing the allowed alternate providers and provider-specific settings.
 
- `CurrentProviderPriority`  
- Data type: UInt32  
+ `CurrentProviderPriority`
+ Data type: UInt32
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Priority in the face of multiple alternate provider choices. For future use.  
+ Priority in the face of multiple alternate provider choices. For future use.
 
- `CurrentProviderLogicalName`  
- Data type: String  
+ `CurrentProviderLogicalName`
+ Data type: String
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The name of the current provider. This value must match the value specified to the SMS provider.   
+ The name of the current provider. This value must match the value specified to the SMS provider.
 
- `CurrentProviderCLSID`  
- Data type: String  
+ `CurrentProviderCLSID`
+ Data type: String
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The COM class ID corresponding to the current provider.   
+ The COM class ID corresponding to the current provider.
 
- `CurrentProviderGlobalSettings`  
- Data type: String  
+ `CurrentProviderGlobalSettings`
+ Data type: String
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Provider-specific data for the current provider.  
+ Provider-specific data for the current provider.
 
- `CurrentProviderSettingsFromRequest`  
- Data type: String  
+ `CurrentProviderSettingsFromRequest`
+ Data type: String
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
  Provider-specific settings for the current provider.
 
-## Return Values  
- None.  
+## Return Values
+ None.
 
-## Remarks  
- There will be an instance of this class for each job started by the Content Transfer Manager.  
+## Remarks
+ There will be an instance of this class for each job started by the Content Transfer Manager.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).

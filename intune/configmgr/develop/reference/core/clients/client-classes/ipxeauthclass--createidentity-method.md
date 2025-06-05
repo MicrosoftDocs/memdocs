@@ -12,75 +12,75 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # IPxeAuthClass::CreateIdentity Method
-In Configuration Manager, the `CreateIdentity` method creates a PXE certificate identity that is used in the client configuration file. This method is used to create a new self-signed certificate.  
+In Configuration Manager, the `CreateIdentity` method creates a PXE certificate identity that is used in the client configuration file. This method is used to create a new self-signed certificate.
 
-## Syntax  
+## Syntax
 
-```  
-HRESULT CreateIdentity(  
-      BSTR FriendlyName,  
-      BSTR SubjectName,  
-      BSTR SMSID,  
-      VARIANT* StartTime,  
-      VARIANT* EndTime,  
-      VARIANT* Identity  
-);  
-```  
+```
+HRESULT CreateIdentity(
+      BSTR FriendlyName,
+      BSTR SubjectName,
+      BSTR SMSID,
+      VARIANT* StartTime,
+      VARIANT* EndTime,
+      VARIANT* Identity
+);
+```
 
-#### Parameters  
- `FriendlyName`  
- Data type: `BSTR`  
+#### Parameters
+ `FriendlyName`
+ Data type: `BSTR`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Friendly name of the certificate identity.  
+ Friendly name of the certificate identity.
 
- `SubjectName`  
- Data type: `BSTR`  
+ `SubjectName`
+ Data type: `BSTR`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Name of the certificate subject.  
+ Name of the certificate subject.
 
- `SMSID`  
- Data type: `BSTR`  
+ `SMSID`
+ Data type: `BSTR`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The GUID used to identify the certificate. This is the value of the SMSID property in [SMS_CertificateInfo Server WMI Class](../../../../../develop/reference/osd/sms_certificateinfo-server-wmi-class.md).  
+ The GUID used to identify the certificate. This is the value of the SMSID property in [SMS_CertificateInfo Server WMI Class](../../../../../develop/reference/osd/sms_certificateinfo-server-wmi-class.md).
 
- `StartTime`  
- Data type: `VARIANT`  
+ `StartTime`
+ Data type: `VARIANT`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Time when the certificate becomes valid.  
+ Time when the certificate becomes valid.
 
- `EndTime`  
- Data type: `VARIANT`  
+ `EndTime`
+ Data type: `VARIANT`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Time when the validity of the certificate ends.  
+ Time when the validity of the certificate ends.
 
- `Identity`  
- Data type: `VARIANT`  
+ `Identity`
+ Data type: `VARIANT`
 
- Qualifiers: [out, retval]  
+ Qualifiers: [out, retval]
 
- PXE certificate identity. Can be used with [SubmitRegistrationRecord Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md).  
+ PXE certificate identity. Can be used with [SubmitRegistrationRecord Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md).
 
-## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following value.  
+## Return Values
+ An `HRESULT` code. Possible values include, but are not limited to, the following value.
 
- S_OK  
- The method succeeded.  
+ S_OK
+ The method succeeded.
 
-## Remarks  
+## Remarks
 
-## See Also  
- [IPxeAuthClass Interface](../../../../../develop/reference/core/clients/client-classes/ipxeauthclass-interface.md)   
+## See Also
+ [IPxeAuthClass Interface](../../../../../develop/reference/core/clients/client-classes/ipxeauthclass-interface.md)
  [About Operating System Deployment Site Role Configuration](../../../../../develop/osd/about-operating-system-deployment-site-role-configuration.md)

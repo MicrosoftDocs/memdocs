@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/28/2025
+ms.date: 05/30/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,6 +36,8 @@ ms.collection:
 With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization’s users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
+
+In addition to the information in this article, remain aware of important [security considerations](../protect/epm-overview.md#security-considerations) when managing elevation rules.
 
 ## Defining rules for use with Endpoint Privilege Management
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2025
+ms.date: 06/02/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of June 2, 2025
+
+## Device security
+
+#### Vulnerability Remediation Agent for Intune (public preview)<!-- 30277408 -->
+ 
+As a public preview, you can now use the Vulnerability Remediation Agent for Security Copilot. When run, this agent uses data from Microsoft Defender Vulnerability Management to identify and then provide remediation guidance for vulnerabilities on your managed devices. You run and access the agent and view its results from within the Intune admin center where you’ll see suggestions prioritized by the agent for remediation. Each suggestion includes key information like associated CVEs, severity, exploitability, affected systems, organizational exposure, business impact, and remediation guidance.
+ 
+This information empowers you with a current assessment of potential risk to your environment and guidance to help you decide which risk to address first.
+
+For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
 
 ## Week of May 26, 2025 (Service release 2505)
 
@@ -100,6 +111,21 @@ The following protected apps are now available for Microsoft Intune:
 - Mobile Helix Link for Intune by Mobile Helix
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Device configuration
+
+### Manage DFCI profiles for Windows devices<!-- 30305262 -->
+
+We've added support to use DFCI profiles to manage UEFI (BIOS) settings for NEC devices that run Windows 10 or Windows 11. Not all NEC devices running Windows are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+
+You can manage DFCI profiles from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type. For more information about DFCI profiles, see:
+
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
+
+Applies to:
+
+- Windows
 
 ### Device enrollment
 
@@ -130,16 +156,6 @@ During an unattended Remote Help sessions on Android devices, we've enhanced the
 This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices. 
 
 For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
-
-#### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
-
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). 
-
-The remote actions, **Retire**, **Wipe**, and **Delete** now support MAA. 
-
-Onboarding Remote device actions to MAA helps mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account thereby enhancing the overall security posture of the environment. 
-
-For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md)
 
 ### Device security
 

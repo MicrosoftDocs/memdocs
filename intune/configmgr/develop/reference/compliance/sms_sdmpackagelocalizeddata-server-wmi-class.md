@@ -12,62 +12,62 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_SDMPackageLocalizedData Server WMI Class
-The `SMS_SDMPackageLocalizedData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents localized data for a System Definition Model (SDM) package.  
+The `SMS_SDMPackageLocalizedData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents localized data for a System Definition Model (SDM) package.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_SDMPackageLocalizedData  
-{  
-      UInt32 LocaleID;  
-      String LocalizedData;  
-};  
-```  
+```
+Class SMS_SDMPackageLocalizedData
+{
+      UInt32 LocaleID;
+      String LocalizedData;
+};
+```
 
-## Methods  
- The `SMS_SDMPackageLocalizedData` class does not define any methods.  
+## Methods
+ The `SMS_SDMPackageLocalizedData` class does not define any methods.
 
-## Properties  
- `LocaleID`  
- Data type: `UInt32`  
+## Properties
+ `LocaleID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The ID of the locale associated with the localized information.  
+ The ID of the locale associated with the localized information.
 
- `LocalizedData`  
- Data type: `String`  
+ `LocalizedData`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The localized data.  
+ The localized data.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Embedded  
+- Embedded
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-  This class is embedded by the [SMS_ConfigurationItemBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitembaseclass-server-wmi-class.md) through the `SDMPackageLocalizedData` property.  
+  This class is embedded by the [SMS_ConfigurationItemBaseClass Server WMI Class](../../../develop/reference/compliance/sms_configurationitembaseclass-server-wmi-class.md) through the `SDMPackageLocalizedData` property.
 
-  The application uses this class to add localized string resources to the server database.  
+  The application uses this class to add localized string resources to the server database.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)   
+## See Also
+ [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)
  [SMS_Package Server WMI Class](../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)

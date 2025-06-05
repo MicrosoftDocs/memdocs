@@ -5,9 +5,9 @@ title: Manage volume-purchased iOS/iPadOS eBooks
 titleSuffix: Microsoft Intune
 description: Learn about how you can sync books you purchased in volume from the iOS store into Intune and then manage and track their usage.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 02/24/2025
 ms.topic: how-to
 ms.service: microsoft-intune

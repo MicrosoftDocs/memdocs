@@ -10,7 +10,7 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -28,7 +28,7 @@ The following items are required to use resource explorer from the admin center:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md).
 - A supported version of Configuration Manager version and the corresponding version of the console installed.
-   - Historical inventory data requires Configuration Manager version 2103, or later. 
+   - Historical inventory data requires Configuration Manager version 2103, or later.
 - Upgrade the target devices to the latest version of the Configuration Manager client.
 
 ## Permissions
