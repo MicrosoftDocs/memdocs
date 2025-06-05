@@ -91,7 +91,6 @@ For more information, see [Intune devices and apps API overview](/graph/intune-c
 - Panasonic.
 - VAIO.
 - Samsung.
-
 - NEC.
 
 Other OEMs are pending.
