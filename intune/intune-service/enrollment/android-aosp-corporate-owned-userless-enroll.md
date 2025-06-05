@@ -63,7 +63,8 @@ You must also:
 * Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md) and [Managing specialty devices with Microsoft Intune](../fundamentals/specialty-devices-with-intune.md).  
 
 
-## Create an enrollment profile  
+## Create an enrollment profile
+
 Create an enrollment profile to enable enrollment on devices. 
 
 > [!TIP]
@@ -74,39 +75,42 @@ Create an enrollment profile to enable enrollment on devices.
 3. Select the **Android** tab.  
 4. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, userless devices**.  
 5. Select **Create profile**.  
-6.    Enter the basics for your profile:  
+6. Enter the basics for your profile:
+
     - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.   
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.    
     - **Token expiration date**: Select the date the token expires, which can be up to 90 days in the future.  
     - **SSID**: Identifies the network that the device will connect to.  
 
-        > [!NOTE]
-        > Wi-Fi details are required because the RealWear device doesn't have a button or option that lets it automatically connect to other devices.  
+      > [!NOTE]
+      > Wi-Fi details are required because the RealWear device doesn't have a button or option that lets it automatically connect to other devices.  
 
     - **Hidden Network**: Choose whether this is a hidden network. By default, this setting is disabled. 
     - **Wi-Fi Type**: Select the type of authentication needed for this network.  
 
-        If you select **WEP Pre-Shared Key** or **WPA Pre-Shared Key**, also enter:   
+      If you select **WEP Pre-Shared Key** or **WPA Pre-Shared Key**, also enter:
 
-        - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.
-        - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidAOSP_05/02/2025_5:09 PM*  
+      - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.
+      - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidAOSP_05/02/2025_5:09 PM*  
 
-          To create a custom naming template:  
-          1. Under **Apply device name template**, choose **Yes**.
-          2. Enter the naming template you want to apply to the devices. Names can contain letters, numbers, and hyphens.
+        To create a custom naming template:
 
-          You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
-          - {{SERIAL}} for the device's serial number.
-          - {{SERIALLAST4DIGITS}} for the last 4 digits of the device's serial number.
-          - {{DEVICETYPE}} for the device type, Example: *AndroidAOSP*
-          - {{ENROLLEDDATETIME}} for the date and time of enrollment.
-          - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
+        1. Under **Apply device name template**, choose **Yes**.
+        2. Enter the naming template you want to apply to the devices. Names can contain letters, numbers, and hyphens.
+
+            You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.
+
+            - {{SERIAL}} for the device's serial number.
+            - {{SERIALLAST4DIGITS}} for the last 4 digits of the device's serial number.
+            - {{DEVICETYPE}} for the device type, Example: *AndroidAOSP*
+            - {{ENROLLEDDATETIME}} for the date and time of enrollment.
+            - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
 
           Edits to the naming template only apply to new enrollments.  
 
 7. Select **Next**.
 8. Optionally, select scope tags.  
-9. Select **Next**. 
+9. Select **Next**.
 10. Review the details of your profile and then select **Create** to save the profile.  
 
 ### Access enrollment token  
