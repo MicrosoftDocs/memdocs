@@ -181,10 +181,10 @@ Your policy options:
 
 For a list of the settings you can configure, go to:
 
-- **Android Enterprise** device restrictions profile:
-  - [Corporate owned devices > **Device password** and **Work profile password**](../configuration/device-restrictions-android-for-work.md)
-  - [Personally owned devices with a work profile > **Work profile password** and **Password**](../configuration/device-restrictions-android-enterprise-personal.md)
-- **Android AOSP** [Device restrictions profile > **Device password**](../configuration/device-restrictions-android-aosp.md)
+- **Android** device restrictions profile:
+  - [Android Enterprise > Corporate owned devices > **Device password** and **Work profile password**](../configuration/device-restrictions-android-for-work.md)
+  - [Android Enterprise > Personally owned devices with a work profile > **Work profile password** and **Password**](../configuration/device-restrictions-android-for-work.md)
+  - [Android AOSP > **Device password**](../configuration/device-restrictions-android-for-work.md)
 - **iOS/iPadOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-ios.md)
 - **macOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-macos.md)
 - **Windows**:

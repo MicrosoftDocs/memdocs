@@ -74,7 +74,7 @@ Create an enrollment profile to enable enrollment on devices.
 3. Select the **Android** tab.  
 4. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, userless devices**.  
 5. Select **Create profile**.  
-6.	Enter the basics for your profile:  
+6.    Enter the basics for your profile:  
     - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.   
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.    
     - **Token expiration date**: Select the date the token expires, which can be up to 90 days in the future.  
@@ -97,7 +97,7 @@ Create an enrollment profile to enable enrollment on devices.
 
           You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
           - {{SERIAL}} for the device's serial number.
-          - {{SERIALLAST4DIGITS}} for the last 4 digits of the device’s serial number.
+          - {{SERIALLAST4DIGITS}} for the last 4 digits of the device's serial number.
           - {{DEVICETYPE}} for the device type, Example: *AndroidAOSP*
           - {{ENROLLEDDATETIME}} for the date and time of enrollment.
           - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
@@ -156,8 +156,8 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 2. Select the **Android** tab.  
 3. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, userless devices**.  
-4.	Choose the profile that you want to work with.
-5.	Select **Token** > **Revoke token** > **Yes**.   
+4.    Choose the profile that you want to work with.
+5.    Select **Token** > **Revoke token** > **Yes**.   
 
 ## Create a device group  
 You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about both groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
@@ -254,7 +254,7 @@ The following are known limitations when working with AOSP devices in Intune:
 
 ## Next steps  
 
-* [Create an Android (AOSP) device configuration policy](../configuration/device-restrictions-android-aosp.md) to restrict settings on devices. 
+* [Create an Android (AOSP) device configuration policy](../configuration/device-restrictions-android-for-work.md) to restrict settings on devices. 
 
 * [Create an Android (AOSP) device compliance policy](../protect/compliance-policy-create-android-aosp.md).   
 
