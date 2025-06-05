@@ -12,63 +12,63 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ImportInventoryReport Method in Class SMS_InventoryReport
-The `ImportInventoryReport` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports an inventory class from the MOF file content.  
+The `ImportInventoryReport` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports an inventory class from the MOF file content.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-sint32 ImportInventoryReport(     
-     string InventoryReportID,  
-     uint32 ImportType,  
-     string MofBuffer  
-);  
-```  
+```
+sint32 ImportInventoryReport(
+     string InventoryReportID,
+     uint32 ImportType,
+     string MofBuffer
+);
+```
 
-#### Parameters  
- `InventoryReportID`  
- Data type: `String`  
+#### Parameters
+ `InventoryReportID`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Inventory report ID.  
+ Inventory report ID.
 
- `ImportType`  
- Data type: `UInt32`  
+ `ImportType`
+ Data type: `UInt32`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Import type. Possible values are:  
+ Import type. Possible values are:
 
-|Value|Description|  
-|-----------|-----------------|  
-|1|ClassOnly: Imports only the inventory class. This option is only available at the central site or a standalone primary site.|  
-|2|ReportOnly: Imports only the inventory report.|  
-|3|BothClassAndReport: Imports both inventory class definition and inventory report information.|  
+|Value|Description|
+|-----------|-----------------|
+|1|ClassOnly: Imports only the inventory class. This option is only available at the central site or a standalone primary site.|
+|2|ReportOnly: Imports only the inventory report.|
+|3|BothClassAndReport: Imports both inventory class definition and inventory report information.|
 
- `MofBuffer`  
- Data type: `String`  
+ `MofBuffer`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The MOF content that contains the inventory class or report to import. This is the same format as the Configuration Manager 2007 sms_def.mof file, or the file format that you export from inventory client settings.  
+ The MOF content that contains the inventory class or report to import. This is the same format as the Configuration Manager 2007 sms_def.mof file, or the file format that you export from inventory client settings.
 
-## Return Values  
- An `SInt32`data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32`data type that is 0 to indicate success or non-zero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md)

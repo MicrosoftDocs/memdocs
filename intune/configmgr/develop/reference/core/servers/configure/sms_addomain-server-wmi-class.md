@@ -12,97 +12,97 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ADDomain Server WMI Class
-The `SMS_ADDomain` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains Active Directory domains discovered by Configuration Manager Forest Discovery.  
+The `SMS_ADDomain` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains Active Directory domains discovered by Configuration Manager Forest Discovery.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ADDomain : SMS_BaseClass  
-{  
-    UInt32 DomainID;  
-    String DomainMode;  
-    String DomainName;  
-    UInt32 Flags;  
-    UInt32 ForestID;  
-    DateTime LastDiscoveryTime;  
-};  
-```  
+```
+Class SMS_ADDomain : SMS_BaseClass
+{
+    UInt32 DomainID;
+    String DomainMode;
+    String DomainName;
+    UInt32 Flags;
+    UInt32 ForestID;
+    DateTime LastDiscoveryTime;
+};
+```
 
-## Methods  
- The `SMS_ADDomain` class does not define any methods.  
+## Methods
+ The `SMS_ADDomain` class does not define any methods.
 
-## Properties  
- `DomainID`  
- Data type: `UInt32`  
+## Properties
+ `DomainID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Identifier of the Active Directory domain.  
+ Identifier of the Active Directory domain.
 
- `DomainMode`  
- Data type: `String`  
+ `DomainMode`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The functional level of the Active Directory forest.  
+ The functional level of the Active Directory forest.
 
-|Forest Functional Level|  
-|-----------------------------|  
-|Windows 2000|  
-|Windows Server 2003 interim|  
-|Windows Server 2003|  
-|Windows Server 2008|  
-|Windows Server 2008 R2|  
+|Forest Functional Level|
+|-----------------------------|
+|Windows 2000|
+|Windows Server 2003 interim|
+|Windows Server 2003|
+|Windows Server 2008|
+|Windows Server 2008 R2|
 
- `DomainName`  
- Data type: `String`  
+ `DomainName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The name of the Active Directory domain.  
+ The name of the Active Directory domain.
 
- `Flags`  
- Data type: `UInt32`  
+ `Flags`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Flags.   
+ Flags.
 
- `ForestID`  
- Data type: `UInt32`  
+ `ForestID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The identifier of Active Directory forest.  
+ The identifier of Active Directory forest.
 
- `LastDiscoveryTime`  
- Data type: `DateTime`  
+ `LastDiscoveryTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The last time this domain was discovered by Active Directory forest discovery.  
+ The last time this domain was discovered by Active Directory forest discovery.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

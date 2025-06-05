@@ -12,19 +12,19 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # IProgressUI::CloseProgressDialog method
 
 In Configuration Manager, the `CloseProgressDialog` method closes open instances of `IProgressUI`.
 
-## Syntax  
+## Syntax
 
-```  
-[IDL]  
-HRESULT CloseProgressDialog();  
-```  
+```
+[IDL]
+HRESULT CloseProgressDialog();
+```
 
 ## Parameters
 
@@ -34,15 +34,15 @@ None
 
 An `HRESULT` code. Possible values include, but aren't limited to, the following value. There are no `HRESULT` values returned that are specific to this method.
 
-S_OK  
-The method succeeded.  
+S_OK
+The method succeeded.
 
 ## See also
 
-- [OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)  
+- [OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)
 
-- [IProgressUI interface](iprogressui-interface.md)  
+- [IProgressUI interface](iprogressui-interface.md)
 
-- [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)  
+- [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)
 
-- [How to use task sequence variables in a running Configuration Manager task sequence](../../../../osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)  
+- [How to use task sequence variables in a running Configuration Manager task sequence](../../../../osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)

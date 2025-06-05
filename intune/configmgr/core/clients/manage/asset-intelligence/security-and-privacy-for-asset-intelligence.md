@@ -10,7 +10,7 @@ author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

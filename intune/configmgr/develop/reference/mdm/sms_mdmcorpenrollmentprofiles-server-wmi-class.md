@@ -12,179 +12,179 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_MDMCorpEnrollmentProfiles Server WMI Class
-The `SMS_MDMCorpEnrollmentProfiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents On-premises Mobile Device Management (MDM) corporate enrollment profiles.  
+The `SMS_MDMCorpEnrollmentProfiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents On-premises Mobile Device Management (MDM) corporate enrollment profiles.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MDMCorpEnrollmentProfiles : SMS_BaseClass  
-{  
-    String ConfigurationUrl;  
-    DateTime CreationTime;  
-    String Department;  
-    String Description;  
-    UInt32 DeviceCount;  
-    UInt32 EnrollmentProgram;  
-    UInt32 IsDefault;  
-    UInt32 IsUserChallenge;  
-    DateTime ModifiedTime;  
-    String Name;  
-    UInt32 PlatformType;  
-    String ProfileId;  
-    String ProfileSettings;  
-    UInt32 SupervisionMode;  
-};  
+```
+Class SMS_MDMCorpEnrollmentProfiles : SMS_BaseClass
+{
+    String ConfigurationUrl;
+    DateTime CreationTime;
+    String Department;
+    String Description;
+    UInt32 DeviceCount;
+    UInt32 EnrollmentProgram;
+    UInt32 IsDefault;
+    UInt32 IsUserChallenge;
+    DateTime ModifiedTime;
+    String Name;
+    UInt32 PlatformType;
+    String ProfileId;
+    String ProfileSettings;
+    UInt32 SupervisionMode;
+};
 
-```  
+```
 
-## Methods  
- The `SMS_MDMCorpEnrollmentProfiles`  class does not define any methods.  
+## Methods
+ The `SMS_MDMCorpEnrollmentProfiles`  class does not define any methods.
 
-## Properties  
- `ConfigurationUrl`  
- Data type: `String`  
+## Properties
+ `ConfigurationUrl`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The configuration URL used for enrollment.  
+ The configuration URL used for enrollment.
 
- `CreationTime`  
- Data type: `DateTime`  
+ `CreationTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The time the enrollment profile was created.  
+ The time the enrollment profile was created.
 
- `Department`  
- Data type: `String`  
+ `Department`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Department.  
+ Department.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Description of the enrollment profile.  
+ Description of the enrollment profile.
 
- `DeviceCount`  
- Data type: `UInt32`  
+ `DeviceCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The number of devices associated with the profile.  
+ The number of devices associated with the profile.
 
- `EnrollmentProgram`  
- Data type: `UInt32`  
+ `EnrollmentProgram`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Enrollment Program.  
+ Enrollment Program.
 
- `IsDefault`  
- Data type: `UInt32`  
+ `IsDefault`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Is the enrollment profile the default.  
+ Is the enrollment profile the default.
 
- `IsUserChallenge`  
- Data type: `UInt32`  
+ `IsUserChallenge`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Profile is user challenged.  
+ Profile is user challenged.
 
- `ModifiedTime`  
- Data type: `DateTime`  
+ `ModifiedTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The time the enrollment profile was modified.  
+ The time the enrollment profile was modified.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the enrollment profile.  
+ Name of the enrollment profile.
 
- `PlatformType`  
- Data type: `UInt32`  
+ `PlatformType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Platform Type.  
+ Platform Type.
 
- `ProfileId`  
- Data type: `String`  
+ `ProfileId`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Enrollment profile ID.  
+ Enrollment profile ID.
 
- `ProfileSettings`  
- Data type: `String`  
+ `ProfileSettings`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The enrollment profile settings.  
+ The enrollment profile settings.
 
- `SupervisionMode`  
- Data type: `UInt32`  
+ `SupervisionMode`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Profile mode is supervised or not supervised for iOS.  
+ Profile mode is supervised or not supervised for iOS.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

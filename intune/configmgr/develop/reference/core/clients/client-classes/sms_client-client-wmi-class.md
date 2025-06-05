@@ -12,30 +12,30 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_Client Client WMI Class
 
-The `SMS_Client` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the client and facilitates manipulation and retrieval of client information.  
+The `SMS_Client` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the client and facilitates manipulation and retrieval of client information.
 
 The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
 ```syntax
-Class SMS_Client  
+Class SMS_Client
 {
-      Boolean AllowLocalAdminOverride;  
-      UInt32 ClientType;  
-      String ClientVersion;  
-      Boolean EnableAutoAssignment;  
+      Boolean AllowLocalAdminOverride;
+      UInt32 ClientType;
+      String ClientVersion;
+      Boolean EnableAutoAssignment;
 };
 ```
 
 ## Methods
 
-The following table shows the methods in `SMS_Client`.  
+The following table shows the methods in `SMS_Client`.
 
 |Method|Description|
 |------------|-----------------|
@@ -94,11 +94,11 @@ Qualifiers: None
 
 ### Runtime Requirements
 
-For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
 ### Development Requirements
 
-For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
 ## See Also
 

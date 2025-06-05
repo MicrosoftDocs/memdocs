@@ -12,113 +12,113 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_InstalledSoftwareMS Client WMI Class
 > [!IMPORTANT]
->  This class is no longer used in Configuration Manager.  
+>  This class is no longer used in Configuration Manager.
 
- The `SMS_InstalledSoftwareMS` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that merges Microsoft-specific installed software information from multiple sources to provide categorization and Microsoft Licensing information.  
+ The `SMS_InstalledSoftwareMS` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that merges Microsoft-specific installed software information from multiple sources to provide categorization and Microsoft Licensing information.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_InstalledSoftwareMS   
-{  
-      String ChannelCode;  
-      String ChannelID;  
-      String MPC;  
-      String ProductCode;  
-      String SoftwareCode;  
-};  
-```  
+```
+Class SMS_InstalledSoftwareMS
+{
+      String ChannelCode;
+      String ChannelID;
+      String MPC;
+      String ProductCode;
+      String SoftwareCode;
+};
+```
 
-## Methods  
- The `SMS_InstalledSoftwareMS` class does not define any methods.  
+## Methods
+ The `SMS_InstalledSoftwareMS` class does not define any methods.
 
-## Properties  
- `ChannelCode`  
- Data type: `String`  
+## Properties
+ `ChannelCode`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- The procurement channel for the product. Possible values are:  
+ The procurement channel for the product. Possible values are:
 
 | Value | Description |
 | ----- | ----------- |
-|0|Full Packaged Product|  
-|1|Compliance Checked Product|  
-|2|OEM|  
-|3|Volume|  
+|0|Full Packaged Product|
+|1|Compliance Checked Product|
+|2|OEM|
+|3|Volume|
 
- `ChannelID`  
- Data type: `String`  
+ `ChannelID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Three-digit ID that is also used to indicate the channel as obtained from the `ProductID` property for Microsoft products. The specific values vary by product.  
+ Three-digit ID that is also used to indicate the channel as obtained from the `ProductID` property for Microsoft products. The specific values vary by product.
 
- `MPC`  
- Data type: `String`  
+ `MPC`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Unique five-digit Microsoft Product Code that identifies a specific product family, version, language, and target operating system.  
+ Unique five-digit Microsoft Product Code that identifies a specific product family, version, language, and target operating system.
 
- `ProductCode`  
- Data type: `String`  
+ `ProductCode`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- A unique code for the particular product release. This code is represented as a GUID for Microsoft Windows Installer based applications or as the string used by the product to register with **Add or Remove Programs**.  
+ A unique code for the particular product release. This code is represented as a GUID for Microsoft Windows Installer based applications or as the string used by the product to register with **Add or Remove Programs**.
 
- `SoftwareCode`  
- Data type: `String`  
+ `SoftwareCode`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- A standardized version of the `ProductCode` property. All characters in the string are lowercase.  
+ A standardized version of the `ProductCode` property. All characters in the string are lowercase.
 
-## Remarks  
- This class merges information from as many as five sources. The first source is the Microsoft Windows `MsiEnumProducts` function. This function enumerates through all the products that are currently advertised or installed. Other sources of information for all installed software are the following registry keys:  
+## Remarks
+ This class merges information from as many as five sources. The first source is the Microsoft Windows `MsiEnumProducts` function. This function enumerates through all the products that are currently advertised or installed. Other sources of information for all installed software are the following registry keys:
 
-- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\\[User SID]\Products  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UserData\\[User SID]\Products
 
-- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 
-  The class also gathers information for operating system software from the following sources:  
+  The class also gathers information for operating system software from the following sources:
 
-- WMI class root\CIMV2:Win32_OperatingSystem  
+- WMI class root\CIMV2:Win32_OperatingSystem
 
-- Registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion  
+- Registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
- [Asset Intelligence Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/asset-intelligence-client-wmi-classes.md)   
- [SMS_AutoStartSoftware Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_autostartsoftware-client-wmi-class.md)   
- [SMS_BrowserHelperObject Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_browserhelperobject-client-wmi-class.md)   
- [SMS_InstalledExecutable Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_installedexecutable-client-wmi-class.md)   
- [SMS_InstalledSoftware Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_installedsoftware-client-wmi-class.md)   
- [SMS_Processor Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_processor-client-wmi-class.md)   
- [SMS_SoftwareShortcut Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_softwareshortcut-client-wmi-class.md)   
- [SMS_SystemConsoleUsage Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_systemconsoleusage-client-wmi-class.md)   
+## See Also
+ [Asset Intelligence Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/asset-intelligence-client-wmi-classes.md)
+ [SMS_AutoStartSoftware Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_autostartsoftware-client-wmi-class.md)
+ [SMS_BrowserHelperObject Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_browserhelperobject-client-wmi-class.md)
+ [SMS_InstalledExecutable Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_installedexecutable-client-wmi-class.md)
+ [SMS_InstalledSoftware Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_installedsoftware-client-wmi-class.md)
+ [SMS_Processor Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_processor-client-wmi-class.md)
+ [SMS_SoftwareShortcut Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_softwareshortcut-client-wmi-class.md)
+ [SMS_SystemConsoleUsage Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_systemconsoleusage-client-wmi-class.md)
  [SMS_SystemConsoleUser Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_systemconsoleuser-client-wmi-class.md)
