@@ -372,12 +372,7 @@ Microsoft recommends the following level 2 security policies:
 
   On Android devices, disk encryption and Samsung Knox might be built into the operating system. Disk encryption might be automatically enabled *when* you configure the lock screen settings. In Intune, you can create a device restrictions policy that configures lock screen settings.
 
-  For a list of the password and lock screen settings you can configure, go to the following articles:  
-
-  - [Organization owned devices - Device password](../configuration/device-restrictions-android-for-work.md#device-password)
-  - [Organization owned devices - Work profile password](../configuration/device-restrictions-android-for-work.md#work-profile-password)
-  - [Personally owned devices - Work profile password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)
-  - [Personally owned devices - Device password](../configuration/device-restrictions-android-enterprise-personal.md#password)
+  For a list of the password and lock screen settings you can configure, review the **Device password** and **Work profile password** settings in [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
   # [iOS/iPadOS](#tab/ios-disk)
 
@@ -405,12 +400,9 @@ Microsoft recommends the following level 2 security policies:
 
   # [Android](#tab/android-password)
 
-  On Android devices, you can use device restrictions policies to set password rules:
+  On Android devices, you can use device restrictions policies to set password rules.
 
-  - [Organization owned devices - Device password settings](../configuration/device-restrictions-android-for-work.md#device-password)
-  - [Organization owned devices - Work profile password settings](../configuration/device-restrictions-android-for-work.md#work-profile-password)
-  - [Personally owned devices - Work profile password settings](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)
-  - [Personally owned devices - Device password settings](../configuration/device-restrictions-android-enterprise-personal.md#password)
+  For a list of the password and lock screen settings you can configure, review the **Device password** and **Work profile password** settings in [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
   # [iOS/iPadOS](#tab/ios-password)
 
@@ -515,7 +507,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
 - **Use Android Common Criteria mode** on Android devices that are used by highly sensitive organizations, like government establishments.
 
-  For more information on this feature, go to [Android Common Criteria mode](../configuration/device-restrictions-android-for-work.md#system-security).
+  For more information on this feature, search for Common Criteria mode at [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 - Create policies that **apply to the Windows firmware layer**. These policies can help prevent malware from communicating with the Windows OS processes.
 
@@ -527,7 +519,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   - **Android Enterprise**:
     - [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md)
-    - [Dedicated devices that run as a kiosk device settings](../configuration/device-restrictions-android-for-work.md#dedicated-devices)
+    - [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md)
 
   - **Android device administrator**
     - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
