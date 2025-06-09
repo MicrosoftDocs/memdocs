@@ -1126,7 +1126,7 @@ These password settings apply to the device password on personally owned devices
 
 # [AOSP](#tab/aosp)
 
-Android Open Source Project (AOSP) devices are Android devices that don't have Google Mobile Services (GMS) installed. These devices are typically used in kiosk scenarios, such as digital signage, point of sale, or other specialized use cases.
+Android Open Source Project (AOSP) devices are Android devices that don't have Google Mobile Services (GMS) installed.
 
 > [!NOTE]
 > Device configuration profiles aren't supported on Microsoft Teams devices running AOSP.
