@@ -1369,6 +1369,29 @@ items:
           - name: Wi-Fi
             displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./configuration/wi-fi-settings-android-enterprise.md
+          - name: Android device administrator
+            items:
+            - name: Custom (OMA-URI)
+              items:
+              - name: Custom settings
+                displayName: oma uri, android, device administrator, da
+                href: ./configuration/custom-settings-android.md
+              - name: Allow/block apps for Samsung Knox Standard
+                displayName: oma uri, custom, android, device administrator, da
+                href: ./configuration/samsung-knox-apps-allow-block.md
+            - name: Device restrictions
+              displayName: android, device administrator, da
+              href: ./configuration/device-restrictions-android.md
+            - name: Email
+              displayName: android, device administrator, da
+              href: ./configuration/email-settings-android.md
+            - name: VPN
+              displayName: android, device administrator, da
+              href: ./configuration/vpn-settings-android.md
+            - name: Wi-Fi
+              displayName: wifi, wireless, android, device administrator, da
+              href: ./configuration/wi-fi-settings-android.md
+            
         - name: iOS/iPadOS
           items:
           - name: Custom
@@ -1490,28 +1513,6 @@ items:
           - name: VPN
             displayName: windows
             href: ./configuration/vpn-settings-windows-8-1.md
-        - name: Android device administrator
-          items:
-          - name: Custom (OMA-URI)
-            items:
-            - name: Custom settings
-              displayName: oma uri, android, device administrator, da
-              href: ./configuration/custom-settings-android.md
-            - name: Allow/block apps for Samsung Knox Standard
-              displayName: oma uri, custom, android, device administrator, da
-              href: ./configuration/samsung-knox-apps-allow-block.md
-          - name: Device restrictions
-            displayName: android, device administrator, da
-            href: ./configuration/device-restrictions-android.md
-          - name: Email
-            displayName: android, device administrator, da
-            href: ./configuration/email-settings-android.md
-          - name: VPN
-            displayName: android, device administrator, da
-            href: ./configuration/vpn-settings-android.md
-          - name: Wi-Fi
-            displayName: wifi, wireless, android, device administrator, da
-            href: ./configuration/wi-fi-settings-android.md
 
     - name: Assign and deploy policies
       items:
