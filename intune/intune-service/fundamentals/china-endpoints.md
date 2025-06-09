@@ -64,7 +64,15 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also n
 
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
-|CNPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
+|CNPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoftonline.cn) |
+
+# Network requirements for macOS app and script deployments
+
+If you're using Intune to deploy apps or scripts on macOS, you also need to grant access to endpoints in which your tenant currently resides. 
+
+|Azure Scale Unit (ASU) | Storage Name | CDN |
+| --- |------------- | --- |
+|CNPASU01| macsidecarap<br>macsidecarprodap |macsidecarap.manage.microsoft.com<br>macsidecarprodap.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoftonline.cn) |
 
 ## Partner service endpoints
 
