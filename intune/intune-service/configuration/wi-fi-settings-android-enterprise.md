@@ -28,7 +28,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Add Wi-Fi settings for Android devices in Microsoft Intune
+# Wi-Fi settings list for Android devices in Microsoft Intune
 
 You can create a profile with specific Wi-Fi settings, and then deploy this profile to your Android devices. Microsoft Intune offers many features, including authenticating to your network, using a pre-shared key, and more.
 
