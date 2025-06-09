@@ -27,7 +27,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Android device adminstrator settings that configure email in Intune
+# Android device administrator settings that configure email in Intune
 
 This article describes the different email settings you can control on Android device administrator Samsung Knox devices in Intune. As part of your mobile device management (MDM) solution, use these settings to configure an Exchange email server, use SSL to encrypt emails, and more. The email profile uses the native or built-in email app on the device, and allows users to connect to their organization email.
 

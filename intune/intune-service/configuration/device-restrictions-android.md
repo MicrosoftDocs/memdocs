@@ -39,7 +39,7 @@ This feature applies to:
   [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 >[!TIP]
->If the settings you want are not available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).
+>If the settings you want aren't available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).
 
 ## Before you begin
 
@@ -90,7 +90,7 @@ These settings apply to all Android OS versions and manufacturers, except where 
 - **Password**: **Require** users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access devices without entering a password.
 
     > [!NOTE]
-    > Samsung Knox devices automatically require a 4-digit PIN during MDM enrollment. Native Android devices may automatically require a PIN to become compliant with Conditional Access.
+    > Samsung Knox devices automatically require a 4-digit PIN during MDM enrollment. Native Android devices might automatically require a PIN to become compliant with Conditional Access.
 
 ### Android 10 and later
 
@@ -113,9 +113,9 @@ These settings apply to all Android OS versions and manufacturers, except where 
   - Android 10 and newer, but not on Samsung Knox.
 
   > [!IMPORTANT]
-  > The **Password complexity** setting is a work in progress. In late October 2020, **Password complexity** will take effect on devices.
+  > The **Password complexity** setting is a work in progress. In late October 2020, **Password complexity** takes effect on devices.
   >
-  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**, which is found under the *All Android devices* section. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don't set the **Password** setting to **Require**, users with weak passwords won't receive the warning.
+  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**, which is found under the *All Android devices* section. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don't set the **Password** setting to **Require**, users with weak passwords don't receive the warning.
 
 ### Android 9 and earlier, or Samsung Knox Android 15 and earlier
 
@@ -129,7 +129,7 @@ These settings apply to devices running Android 9 or earlier, and all Samsung Kn
   - **Device default**
   - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
   - **At least numeric**: Includes numeric characters, like `123456789`.
-  - **Numeric complex**: Repeated or consecutive numbers, like "1111" or "1234", aren't allowed. Before you assign this setting to devices, be sure to update the Company Portal app to the latest version on those devices.
+  - **Numeric complex**: Repeated or consecutive numbers, like `1111` or `1234`, aren't allowed. Before you assign this setting to devices, be sure to update the Company Portal app to the latest version on those devices.
 
     When set to **Numeric complex**, and you assign the setting to devices running an Android version earlier than 5.0, then the following behavior applies:
 
@@ -227,7 +227,7 @@ For each setting, add your apps:
 
 ## Kiosk
 
-Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or earlier, and only to apps you manage using Intune.
+Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or earlier, and only to Intune-managed apps.
 
 - Add apps you want to run when the device is in kiosk mode. In kiosk mode, only the apps you add run; apps not added don't run. Preinstalled browsers don't run as an app when the device is in kiosk mode. If a browser is required, consider using the [Managed Browser](../apps/manage-microsoft-edge.md).
 
