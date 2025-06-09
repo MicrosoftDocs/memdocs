@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Device restriction settings for Android in Microsoft Intune
+title: Device restriction settings for Android DA in Microsoft Intune
 description: See a list of all the Android device administrator settings you can control and restrict in Microsoft Intune. Use these settings to control the password, access Google Play, allow or prohibit apps, control the browser settings, block apps, backup to the Google cloud, and control the message, voice, data roaming, Wi-Fi, and Bluetooth connection options.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/23/2024
+ms.date: 06/09/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,9 +28,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Android and Samsung Knox Standard device restriction settings lists in Intune
+# Android device administrator and Samsung Knox Standard device restriction settings in Intune
 
-This article shows you all the Microsoft Intune device restrictions settings that you can configure for devices running Android. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password requirements, control security, and more.
+This article shows you all the Microsoft Intune device restrictions settings that you can configure for devices running Android device administrator (DA). As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password requirements, control security, and more.
 
 This feature applies to:
 
