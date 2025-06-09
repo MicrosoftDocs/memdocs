@@ -1367,16 +1367,8 @@ items:
             displayName: cope, cobo, cosu, byod, work profile, android, android enterprise, ae
             href: ./configuration/vpn-settings-android-enterprise.md
           - name: Wi-Fi
-            displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae
+            displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./configuration/wi-fi-settings-android-enterprise.md
-        - name: Android (AOSP)
-          items:
-          - name: Device restrictions
-            displayName: android, aosp
-            href: ./configuration/device-restrictions-android-aosp.md
-          - name: Wi-Fi
-            displayName: wifi, wireless, android, aosp
-            href: ./configuration/wi-fi-settings-android-aosp.md
         - name: iOS/iPadOS
           items:
           - name: Custom

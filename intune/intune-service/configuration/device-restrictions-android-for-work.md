@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #audience:
 params:
   siblings_only: true
-ms.reviewer: arnab, anuragjain
+ms.reviewer: cchristenson,arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
