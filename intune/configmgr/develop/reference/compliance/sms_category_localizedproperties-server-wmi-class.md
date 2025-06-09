@@ -12,60 +12,60 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_Category_LocalizedProperties Server WMI Class
-The `SMS_Category_LocalizedProperties` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes various localized properties for a category, for example, a product or a classification.  
+The `SMS_Category_LocalizedProperties` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes various localized properties for a category, for example, a product or a classification.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_Category_LocalizedProperties  
-{  
-      String CategoryInstanceName;  
-      UInt32 LocaleID;  
-};  
-```  
+```
+Class SMS_Category_LocalizedProperties
+{
+      String CategoryInstanceName;
+      UInt32 LocaleID;
+};
+```
 
-## Methods  
- The `SMS_Category_LocalizedProperties` class doesn't define any methods.  
+## Methods
+ The `SMS_Category_LocalizedProperties` class doesn't define any methods.
 
-## Properties  
- `CategoryInstanceName`  
- Data type: `String`  
+## Properties
+ `CategoryInstanceName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Display name of the category instance. The default value is "".  
+ Display name of the category instance. The default value is "".
 
- `LocaleID`  
- Data type: `UInt32`  
+ `LocaleID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- ID for the locale associated with the category instance.  
+ ID for the locale associated with the category instance.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Embedded  
+- Embedded
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-  Your application uses this class to create objects that are embedded by [SMS_CategoryInstance Server WMI Class](../../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md).  
+  Your application uses this class to create objects that are embedded by [SMS_CategoryInstance Server WMI Class](../../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)   
+## See Also
+ [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)
  [SMS_CategoryInstance Server WMI Class](../../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md)

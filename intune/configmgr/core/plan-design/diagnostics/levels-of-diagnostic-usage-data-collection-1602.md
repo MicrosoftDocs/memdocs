@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Levels of diagnostic usage data collection for version 1602 of Configuration Manager
@@ -30,7 +30,7 @@ Changes from previous versions are noted with ***[New]*** or ***[Updated]***.
  Administrators who have a role-based administrative scope that includes **Modify** permissions on the **Site** object class can change the level of data collected in the Diagnostics and Usage Data settings in the Configuration Manager console.
 
 
-  To do so, in the console, go to the backstage tab (the upper left tab with the dropdown arrow), select **Usage Data**, and then select the data level that you want to use.  
+  To do so, in the console, go to the backstage tab (the upper left tab with the dropdown arrow), select **Usage Data**, and then select the data level that you want to use.
 
 ##  <a name="bkmk_level1"></a> Level 1 - Basic
  The Basic level includes data about your hierarchy, data that's required to help improve your installation or upgrade experience, and data that helps determine the Configuration Manager updates that are applicable for your hierarchy.
@@ -39,9 +39,9 @@ Changes from previous versions are noted with ***[New]*** or ***[Updated]***.
 
 
 - Setup Information:
-  - Build, install type, language packs, features that you enabled  
+  - Build, install type, language packs, features that you enabled
 
-  - ***[Updated]***  Update pack deployment status and errors, download progress, and prerequisite errors     
+  - ***[Updated]***  Update pack deployment status and errors, download progress, and prerequisite errors
 
   - ***[New]*** Version of post-upgrade script
 
@@ -93,25 +93,25 @@ Beginning with Configuration Manager version 1602, this level includes the follo
 
 - **Application management:**
 
-  -   ***[Updated]*** Basic usage/targeting information for deployment types that are used within the organization (user versus device targeted, required versus available, and universal apps)  
+  -   ***[Updated]*** Basic usage/targeting information for deployment types that are used within the organization (user versus device targeted, required versus available, and universal apps)
 
-  -  ***[Updated]*** Application deployment information (install/uninstall, requires approval, user interaction enabled/disabled, dependency, and supersedence)  
+  -  ***[Updated]*** Application deployment information (install/uninstall, requires approval, user interaction enabled/disabled, dependency, and supersedence)
 
-  -   Available application request statistics  
+  -   Available application request statistics
 
-  -   Count of packages by type  
+  -   Count of packages by type
 
-  -   Count of application applicability by operating system  
+  -   Count of application applicability by operating system
 
-  -   Count of package/program deployments  
+  -   Count of package/program deployments
 
-  -   Count of App-V environments and deployment properties  
+  -   Count of App-V environments and deployment properties
 
-  -   Count of Windows 10 licensed application licenses  
+  -   Count of Windows 10 licensed application licenses
 
   -   ***[Updated]*** Minimum/maximum/average number of application deployments per user/device per time period
 
-  -   Maintenance window type and duration  
+  -   Maintenance window type and duration
 
   -  ***[New]*** Application policy size and complexity statistics
 
@@ -133,7 +133,7 @@ Beginning with Configuration Manager version 1602, this level includes the follo
 
   -   Count of rules and deployments that are created for custom settings
 
-  -   ***[Updated]*** Count of deployed Simple Certificate Enrollment Protocol, VPN, Wi-Fi, certificate (.pfx), and Compliance Policy templates   
+  -   ***[Updated]*** Count of deployed Simple Certificate Enrollment Protocol, VPN, Wi-Fi, certificate (.pfx), and Compliance Policy templates
 
   -  ***[New]*** Count of Simple Certificate Enrollment Protocol (SCEP) certificate, VPN, Wi-Fi, certificate (.pfx) and Compliance Policy deployments by platform
 

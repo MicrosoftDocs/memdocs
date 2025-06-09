@@ -10,7 +10,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -66,6 +66,6 @@ Depending upon your design, if clients have the option of more than one CMG for 
 ## Next steps
 
 Next, understand the costs associated with operating an Azure service for the CMG:
-  
+
 > [!div class="nextstepaction"]
 > [Cost of CMG](cost.md)

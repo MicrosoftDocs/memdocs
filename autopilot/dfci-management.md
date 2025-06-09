@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
-manager: aaroncz
+manager: bpardi
 ms.date: 03/25/2025
 ms.collection:
   - M365-modern-desktop
@@ -91,6 +91,7 @@ For more information, see [Intune devices and apps API overview](/graph/intune-c
 - Panasonic.
 - VAIO.
 - Samsung.
+- NEC.
 
 Other OEMs are pending.
 

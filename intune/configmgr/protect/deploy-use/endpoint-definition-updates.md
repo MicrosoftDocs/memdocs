@@ -10,11 +10,11 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
-# Configure definition updates for Endpoint Protection  
+# Configure definition updates for Endpoint Protection
 
 *Applies to: Configuration Manager (current branch)*
 

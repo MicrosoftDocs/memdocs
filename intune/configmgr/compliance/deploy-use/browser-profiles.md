@@ -11,7 +11,7 @@ ms.service: configuration-manager
 ms.subservice: compliance
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Configure Microsoft Edge Legacy settings in Configuration Manager

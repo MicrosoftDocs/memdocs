@@ -12,139 +12,139 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_TaskSequence_CaptureNetworkSettingsAction server WMI class
 
 The `SMS_TaskSequence_CaptureNetworkSettingsAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that captures network settings from the target computer.
 
-The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequence_CaptureNetworkSettingsAction : SMS_TaskSequence_Action  
-{  
-          SMS_TaskSequence_Condition Condition;  
-          Boolean ContinueOnError;  
-          String Description;  
-          Boolean Enabled;  
-          Boolean MigrateAdapterSettings;  
-          Boolean MigrateNetworkMembership;  
-          String Name;  
-          String SupportedEnvironment;  
-          UInt32 Timeout;  
-};  
-```  
+```
+Class SMS_TaskSequence_CaptureNetworkSettingsAction : SMS_TaskSequence_Action
+{
+          SMS_TaskSequence_Condition Condition;
+          Boolean ContinueOnError;
+          String Description;
+          Boolean Enabled;
+          Boolean MigrateAdapterSettings;
+          Boolean MigrateNetworkMembership;
+          String Name;
+          String SupportedEnvironment;
+          UInt32 Timeout;
+};
+```
 
-## Methods  
- The `SMS_TaskSequence_CaptureNetworkSettingsAction` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequence_CaptureNetworkSettingsAction` class does not define any methods.
 
-## Properties  
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+## Properties
+ `Condition`
+ Data type: `SMS_TaskSequence_Condition`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `ContinueOnError`  
- Data type: `Boolean`  
+ `ContinueOnError`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("0-255")]  
+ Qualifiers: [AllowedLen("0-255")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `MigrateAdapterSettings`  
- Data type: `Boolean`  
+ `MigrateAdapterSettings`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, VariableName("OSDMigrateAdapterSettings")]  
+ Qualifiers: [not_null, VariableName("OSDMigrateAdapterSettings")]
 
- `true` (default) to migrate TCP/IP and DNS settings for network adapters.  
+ `true` (default) to migrate TCP/IP and DNS settings for network adapters.
 
- The task sequence variable associated with this property is OSDMigrateAdapterSettings. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDMigrateAdapterSettings).  
+ The task sequence variable associated with this property is OSDMigrateAdapterSettings. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDMigrateAdapterSettings).
 
- `MigrateNetworkMembership`  
- Data type: `Boolean`  
+ `MigrateNetworkMembership`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, VariableName("OSDMigrateNetworkMembership")]  
+ Qualifiers: [not_null, VariableName("OSDMigrateNetworkMembership")]
 
- `true` to migrate workgroup or domain membership information as part of operating system deployment. The default value is `false`.  
+ `true` to migrate workgroup or domain membership information as part of operating system deployment. The default value is `false`.
 
- The task sequence variable associated with this property is OSDMigrateNetworkMembership. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDMigrateNetworkMembership).  
+ The task sequence variable associated with this property is OSDMigrateNetworkMembership. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDMigrateNetworkMembership).
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("1-100")]  
+ Qualifiers: [AllowedLen("1-100")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `SupportedEnvironment`  
- Data type: `String`  
+ `SupportedEnvironment`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_Null:ToInstance]  
+ Qualifiers: [Not_Null:ToInstance]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- The default value of this property for this task sequence action is FullOS.  
+ The default value of this property for this task sequence action is FullOS.
 
- `Timeout`  
- Data type: `UInt32`  
+ `Timeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
- [CommandLine("osdnetsettings.exe capture netmembership:%%OSDMigrateNetworkMembership%% adapters:%%OSDMigrateAdapterSettings%%"),  
+ [CommandLine("osdnetsettings.exe capture netmembership:%%OSDMigrateNetworkMembership%% adapters:%%OSDMigrateAdapterSettings%%"),
 
- ActionCategory{"Settings,1,7"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "CaptureNetworkSettingsControl", "TaskSequenceOptionControl"}]  
+ ActionCategory{"Settings,1,7"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "CaptureNetworkSettingsControl", "TaskSequenceOptionControl"}]
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
 ## See also
 

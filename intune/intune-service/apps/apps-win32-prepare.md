@@ -3,9 +3,9 @@ title: Prepare a Win32 app to be uploaded to Microsoft Intune
 titleSuffix:
 description: Learn how to prepare a Win32 app to be uploaded to Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune

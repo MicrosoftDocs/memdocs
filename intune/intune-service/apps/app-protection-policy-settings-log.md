@@ -5,9 +5,9 @@ title: Review app protection policy logs
 titleSuffix: Microsoft Intune
 description: This topic describes how to configure Intune app protection policy (APP) logs.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 01/06/2025
 ms.topic: troubleshooting
 ms.service: microsoft-intune

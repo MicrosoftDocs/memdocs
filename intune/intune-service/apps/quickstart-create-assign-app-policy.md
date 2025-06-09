@@ -5,9 +5,9 @@ title: Create and assign an app protection policy
 titleSuffix: Microsoft Intune
 description: In this article, you use Microsoft Intune to create and assign and app protection policy.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.topic: how-to
 ms.date: 02/28/2025
 ms.service: microsoft-intune

@@ -12,40 +12,40 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # IsOfficeContent Method in Class SMS_Content
-The `IsOfficeContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, specifies whether content is Microsoft 365 content.  
+The `IsOfficeContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, specifies whether content is Microsoft 365 content.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-Boolean IsOfficeContent (  
-    UInt32 ContentId  
-);  
+```
+Boolean IsOfficeContent (
+    UInt32 ContentId
+);
 
-```  
+```
 
-#### Parameters  
- `ContentId`  
- Data type: `UInt32`  
+#### Parameters
+ `ContentId`
+ Data type: `UInt32`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Content ID.  
+ Content ID.
 
-## Return Values  
- `True` if content is Microsoft 365 content; otherwise, `False`.  
+## Return Values
+ `True` if content is Microsoft 365 content; otherwise, `False`.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
 ## See also
 

@@ -10,7 +10,7 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -70,13 +70,13 @@ The troubleshooting portal in the [Microsoft Intune admin center](https://go.mic
 - Install the latest version of the Configuration Manager client
 - Target clients with **User and Device Affinity** [client settings](../core/clients/deploy/about-client-settings.md#user-and-device-affinity) to automatically create the affinities
    - For more information, see [Create user device affinity automatically based on usage](../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md#set-up-the-site-to-automatically-create-user-device-affinities).
-   - 
+   -
 ### View a user's devices
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Troubleshooting + support**.
 1. On the **Troubleshoot** page, select **Change user** then search for a user.
-1. The **Devices** chart lists the ConfigMgr devices associated with the user.  
+1. The **Devices** chart lists the ConfigMgr devices associated with the user.
    - Devices that previously reported affinity will resend their affinity to reflect in the admin center.
    - Devices that aren't already associated with a user will be updated once the affinity threshold has been met and reported.
 

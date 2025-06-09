@@ -12,210 +12,210 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TopThreatSummary Server WMI Class
-The `SMS_TopThreatSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that summarizes the top threats per collection.  
+The `SMS_TopThreatSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that summarizes the top threats per collection.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TopThreatSummary : SMS_BaseClass  
-{  
-    String CollectionID;  
-    UInt32 CollectionMembers;  
-    String CollectionName;  
-    UInt32 FailedCount;  
-    DateTime FirstDetectionTime;  
-    UInt32 InfectedCount;  
-    Boolean IsAllowed;  
-    Boolean IsExcluded;  
-    Boolean IsRestored;  
-    DateTime LastDetectionTime;  
-    DateTime LastUpdateTime;  
-    UInt32 PendingCount;  
-    UInt32 RemediatedCount;  
-    UInt32 Severity;  
-    UInt32 ThreatCategoryID;  
-    UInt64 ThreatID;  
-    String ThreatName;  
-};  
-```  
+```
+Class SMS_TopThreatSummary : SMS_BaseClass
+{
+    String CollectionID;
+    UInt32 CollectionMembers;
+    String CollectionName;
+    UInt32 FailedCount;
+    DateTime FirstDetectionTime;
+    UInt32 InfectedCount;
+    Boolean IsAllowed;
+    Boolean IsExcluded;
+    Boolean IsRestored;
+    DateTime LastDetectionTime;
+    DateTime LastUpdateTime;
+    UInt32 PendingCount;
+    UInt32 RemediatedCount;
+    UInt32 Severity;
+    UInt32 ThreatCategoryID;
+    UInt64 ThreatID;
+    String ThreatName;
+};
+```
 
-## Methods  
- The `SMS_TopThreatSummary` class does not define any methods.  
+## Methods
+ The `SMS_TopThreatSummary` class does not define any methods.
 
-## Properties  
- `CollectionID`  
- Data type: `String`  
+## Properties
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Identifier of the collection.  
+ Identifier of the collection.
 
- `CollectionMembers`  
- Data type: `UInt32`  
+ `CollectionMembers`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of collection members.  
+ Count of collection members.
 
- `CollectionName`  
- Data type: `String`  
+ `CollectionName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the collection.  
+ Name of the collection.
 
- `FailedCount`  
- Data type: `UInt32`  
+ `FailedCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Failed action client count.  
+ Failed action client count.
 
- `FirstDetectionTime`  
- Data type: `DateTime`  
+ `FirstDetectionTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- First time the malware is detected.  
+ First time the malware is detected.
 
- `InfectedCount`  
- Data type: `UInt32`  
+ `InfectedCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Infected client count.  
+ Infected client count.
 
- `IsAllowed`  
- Data type: `Boolean`  
+ `IsAllowed`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if we've trigger the action to allow this malware in this collection.  
+ `true` if we've trigger the action to allow this malware in this collection.
 
- `IsExcluded`  
- Data type: `Boolean`  
+ `IsExcluded`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if we've chosen to exclude this malware path (in the scan list) in this collection.  
+ `true` if we've chosen to exclude this malware path (in the scan list) in this collection.
 
- `IsRestored`  
- Data type: `Boolean`  
+ `IsRestored`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if we've tried to restore this malware in this collection.  
+ `true` if we've tried to restore this malware in this collection.
 
- `LastDetectionTime`  
- Data type: `DateTime`  
+ `LastDetectionTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last detection time.  
+ Last detection time.
 
- `LastUpdateTime`  
- Data type: `DateTime`  
+ `LastUpdateTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last update time.  
+ Last update time.
 
- `PendingCount`  
- Data type: `UInt32`  
+ `PendingCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of clients with pending actions to finish the remediation of the malware in this collection.  
+ Number of clients with pending actions to finish the remediation of the malware in this collection.
 
- `RemediatedCount`  
- Data type: `UInt32`  
+ `RemediatedCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of clients where malware was remediated successfully in the collection.  
+ Number of clients where malware was remediated successfully in the collection.
 
- `Severity`  
- Data type: `UInt32`  
+ `Severity`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Threat severity. Possible values are:  
+ Threat severity. Possible values are:
 
-| Value | Threat severity |  
-| ----- | --------------- |  
-|0|Not Yet Classified|  
-|1|Low|  
-|2|Medium|  
-|3|Not Used|  
-|4|High|  
-|5|Severe|  
+| Value | Threat severity |
+| ----- | --------------- |
+|0|Not Yet Classified|
+|1|Low|
+|2|Medium|
+|3|Not Used|
+|4|High|
+|5|Severe|
 
- `ThreatCategoryID`  
- Data type: `UInt32`  
+ `ThreatCategoryID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Category identifier of the threat.  
+ Category identifier of the threat.
 
- `ThreatID`  
- Data type: `UInt64`  
+ `ThreatID`
+ Data type: `UInt64`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Identifier of the threat.  
+ Identifier of the threat.
 
- `ThreatName`  
- Data type: `String`  
+ `ThreatName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the threat.  
+ Name of the threat.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

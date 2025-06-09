@@ -10,7 +10,7 @@ manager: apoorvseth
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

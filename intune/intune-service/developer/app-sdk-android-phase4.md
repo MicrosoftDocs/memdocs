@@ -4,9 +4,9 @@
 title: Microsoft Intune App SDK for Android developer integration and testing guide - MAM integration essentials 
 description: Understand MAM integration essentials to incorporate Intune mobile app management (MAM) into your Android app.
 keywords: SDK
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 08/07/2024
 ms.topic: reference
 ms.service: microsoft-intune

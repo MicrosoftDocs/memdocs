@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Prepare to use a SQL Server Always On availability group with Configuration Manager
@@ -90,13 +90,13 @@ Configure the database of each replica with the following settings:
 - Enable **CLR Integration**:
 
     ``` SQL
-    sp_configure 'show advanced options', 1;  
-    GO  
-    RECONFIGURE;  
-    GO  
-    sp_configure 'clr enabled', 1;  
-    GO  
-    RECONFIGURE;  
+    sp_configure 'show advanced options', 1;
+    GO
+    RECONFIGURE;
+    GO
+    sp_configure 'clr enabled', 1;
+    GO
+    RECONFIGURE;
     GO
     ```
 
@@ -209,7 +209,7 @@ Run the following SQL script to verify database configurations for both primary 
 - You can use an asynchronous commit replica to recover your synchronous replica. For more information, see [site database recovery options](../../manage/recover-sites.md#site-database-recovery-options).
 
     > [!WARNING]
-    > Configuration Manager doesn't support *failover* to use the asynchronous commit replica as your site database. For more information, see [Failover and failover modes (Always On availability groups)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
+    > Configuration Manager doesn't support *failover* to use the asynchronous commit replica as your site database. For more information, see [Failover and failover modes (Always On availability groups)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).
 
 Configuration Manager doesn't validate the state of the asynchronous commit replica to confirm it's current. Use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk. This replica can be out of sync by design. For more information, see [Overview of SQL Server Always On availability groups](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
@@ -342,9 +342,9 @@ You can't use a new database created on the replica. When you configure an avail
 
 ### Setup errors in ConfigMgrSetup.log
 
-When you run Configuration Manager setup to move a site database to an availability group, it tries to process database roles on the secondary replicas of the availability group. The **ConfigMgrSetup.log** file shows the following error:  
+When you run Configuration Manager setup to move a site database to an availability group, it tries to process database roles on the secondary replicas of the availability group. The **ConfigMgrSetup.log** file shows the following error:
 
-`ERROR: SQL Server error: [25000][3906][Microsoft][SQL Server Native Client 11.0][SQL Server]Failed to update database "CM_AAA" because the database is read-only. Configuration Manager Setup 1/21/2016 4:54:59 PM 7344 (0x1CB0)`  
+`ERROR: SQL Server error: [25000][3906][Microsoft][SQL Server Native Client 11.0][SQL Server]Failed to update database "CM_AAA" because the database is read-only. Configuration Manager Setup 1/21/2016 4:54:59 PM 7344 (0x1CB0)`
 
 These errors are safe to ignore.
 

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Console extension registration though community hub
@@ -130,7 +130,7 @@ Manifest.xml format:
 	</Deployments>
 </CustomExtensionManifest>
 ```
- 
+
 Example manifest.xml file:
 
 ```xml
@@ -161,10 +161,10 @@ When you have your extension built and packaged into an authenticode-signed `.ca
 > [!Important]
 > For local testing, you can import unsigned console extensions when you use version 2107 or later. For more information and additional import methods, see [Import console extensions](../../../../core/servers/manage/import-admin-console-extensions.md).
 
-1. Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`: 
+1. Run the following PowerShell script after editing the `$adminServiceProvider` and `$cabFilePath`:
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
    - `$cabFilePath` - Path to the extension's authenticode-signed `.cab` file
- 
+
     ```powershell
     $adminServiceProvider = "SMSProviderServer.contoso.com"
     $cabFilePath = "C:\Testing\MyExtension.cab"
@@ -173,20 +173,20 @@ When you have your extension built and packaged into an authenticode-signed `.ca
     $Data = Get-Content $cabFilePath
     $Bytes = [System.IO.File]::ReadAllBytes($cabFilePath)
     $base64Content = [Convert]::ToBase64String($Bytes)
-    
+
     $Headers = @{
         "Content-Type" = "Application/json"
     }
-    
+
     $Body = @{
                 CabFile = @{
                     FileName = $cabFileName
                     FileContent = $base64Content
                 }
             } | ConvertTo-Json
-    
+
     $result = Invoke-WebRequest -Method Post -Uri $adminServiceURL -Body $Body -Headers $Headers -UseDefaultCredentials
-    
+
     if ($result.StatusCode -eq 200) {Write-Host "$cabFileName was published successfully."}
     else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
     ```
@@ -200,7 +200,7 @@ When you have your extension built and packaged into an authenticode-signed `.ca
 
 *Applies only to technical preview versions of Configuration Manager*
 
-Make sure you've joined the community hub and that you've accepted the invite after your join request is approved. You contribute extensions the same way you would [contribute other community hub objects](../../../../core/servers/manage/community-hub-contribute.md). However, for there are additional requirements and additional information you need to supply for an extension. When you contribute a console extension to Community hub, the content must be signed. Content for console extensions isn't hosted by Microsoft. When you contribute your item, you'll be asked to provide a location to the signed `.cab` file along with other information for the extension. The following items are required for contributing extensions:  
+Make sure you've joined the community hub and that you've accepted the invite after your join request is approved. You contribute extensions the same way you would [contribute other community hub objects](../../../../core/servers/manage/community-hub-contribute.md). However, for there are additional requirements and additional information you need to supply for an extension. When you contribute a console extension to Community hub, the content must be signed. Content for console extensions isn't hosted by Microsoft. When you contribute your item, you'll be asked to provide a location to the signed `.cab` file along with other information for the extension. The following items are required for contributing extensions:
 
 - **Content URL**: Location for the downloadable `.cab` file
 - **SHA-256 hash of the content**: SHA-256 hash of the `.cab` file

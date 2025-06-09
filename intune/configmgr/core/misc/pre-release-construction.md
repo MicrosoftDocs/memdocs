@@ -10,7 +10,7 @@ ms.topic: conceptual
 robots: NOINDEX, NOFOLLOW
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Content under construction

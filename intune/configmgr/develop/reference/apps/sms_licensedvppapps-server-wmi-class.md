@@ -12,231 +12,231 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_LicensedVppApps Server WMI Class
-The `SMS_LicensedVppApps` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents license Information for Apple App Store Volume Purchase Program (VPP) and Microsoft Store for Business applications.  
+The `SMS_LicensedVppApps` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents license Information for Apple App Store Volume Purchase Program (VPP) and Microsoft Store for Business applications.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_LicensedVppApps : SMS_BaseClass  
-{  
-    String ApproximateSize;  
-    String ApplicationID;  
-    String ApplicationMetadata;  
-    SInt32 AvailableLicenses;  
-    DateTime ContentLastModified;  
-    DateTime CreatedDate;         
-    String DisplayName;  
-    DateTime LastSuccessfulSync;  
-    DateTime LastSync;  
-    UInt32 LicenseType;     
-    UInt32 Platform;  
-    String Publisher;  
-    String SoftwareVersion;  
-    String StoreCategory;  
-    String StoreLink;  
-    String SupportedLanguages;  
-    String SupportedProcessors;  
-    SInt32 TotalLicenses;  
-};  
+```
+Class SMS_LicensedVppApps : SMS_BaseClass
+{
+    String ApproximateSize;
+    String ApplicationID;
+    String ApplicationMetadata;
+    SInt32 AvailableLicenses;
+    DateTime ContentLastModified;
+    DateTime CreatedDate;
+    String DisplayName;
+    DateTime LastSuccessfulSync;
+    DateTime LastSync;
+    UInt32 LicenseType;
+    UInt32 Platform;
+    String Publisher;
+    String SoftwareVersion;
+    String StoreCategory;
+    String StoreLink;
+    String SupportedLanguages;
+    String SupportedProcessors;
+    SInt32 TotalLicenses;
+};
 
-```  
+```
 
-## Methods  
- The `SMS_LicensedVppApps` class does not define any methods.  
+## Methods
+ The `SMS_LicensedVppApps` class does not define any methods.
 
-## Properties  
- `ApproximateSize`  
- Data type: `String`  
+## Properties
+ `ApproximateSize`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The approximate size of the application.  
+ The approximate size of the application.
 
- `ApplicationID`  
- Data type: `String`  
+ `ApplicationID`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The ID of the application.  
+ The ID of the application.
 
- `ApplicationMetadata`  
- Data type: `String`  
+ `ApplicationMetadata`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- The application metadata.  
+ The application metadata.
 
- `AvailableLicenses`  
- Data type: `SInt32`  
+ `AvailableLicenses`
+ Data type: `SInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The number of available licenses for the application.  
+ The number of available licenses for the application.
 
- `ContentLastModified`  
- Data type: `DateTime`  
+ `ContentLastModified`
+ Data type: `DateTime`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The date and time that the content was last modified.  
+ The date and time that the content was last modified.
 
- `CreatedDate`  
- Data type: `DateTime`  
+ `CreatedDate`
+ Data type: `DateTime`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The date the application was created.  
+ The date the application was created.
 
- `DisplayName`  
- Data type: `String`  
+ `DisplayName`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The display name of the application.  
+ The display name of the application.
 
- `LastSuccessfulSync`  
- Data type: `DateTime`  
+ `LastSuccessfulSync`
+ Data type: `DateTime`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The date and time of the last successful synchronization.  
+ The date and time of the last successful synchronization.
 
- `LastSync`  
- Data type: `DateTime`  
+ `LastSync`
+ Data type: `DateTime`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The date and time of the last synchronization.  
+ The date and time of the last synchronization.
 
- `LicenseType`  
- Data type: `UInt32`  
+ `LicenseType`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The type of license. Possible values are:  
+ The type of license. Possible values are:
 
-|Value|License type|  
-|-|-|  
-|0|Online|  
-|1|Offline|  
+|Value|License type|
+|-|-|
+|0|Online|
+|1|Offline|
 
- `Platform`  
- Data type: `UInt32`  
+ `Platform`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The platform on which the application runs. Possible values are:  
+ The platform on which the application runs. Possible values are:
 
-|Value|Platform|  
-|-|-|  
-|0 or 1|Windows|  
-|2|iOS|  
+|Value|Platform|
+|-|-|
+|0 or 1|Windows|
+|2|iOS|
 
- `Publisher`  
- Data type: `String`  
+ `Publisher`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The name of the publisher of the application.  
+ The name of the publisher of the application.
 
- `SoftwareVersion`  
- Data type: `String`  
+ `SoftwareVersion`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The application version.  
+ The application version.
 
- `StoreCategory`  
- Data type: `String`  
+ `StoreCategory`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The category of the application in the store.  
+ The category of the application in the store.
 
- `StoreLink`  
- Data type: `String`  
+ `StoreLink`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The link to the application in the store.  
+ The link to the application in the store.
 
- `SupportedLanguages`  
- Data type: `String`  
+ `SupportedLanguages`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The languages the application supports.  
+ The languages the application supports.
 
- `SupportedProcessors`  
- Data type: `String`  
+ `SupportedProcessors`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The processor architectures that the application supports.  
+ The processor architectures that the application supports.
 
- `TotalLicenses`  
- Data type: `SInt32`  
+ `TotalLicenses`
+ Data type: `SInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The total number of licenses for the application. -1 indicates unlimited licenses.  
+ The total number of licenses for the application. -1 indicates unlimited licenses.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

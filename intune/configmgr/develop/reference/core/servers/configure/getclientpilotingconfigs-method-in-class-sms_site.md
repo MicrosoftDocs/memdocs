@@ -12,74 +12,74 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetClientPilotingConfigs Method in Class SMS_Site
-The `GetClientPilotingConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the configurations for client piloting settings.  
+The `GetClientPilotingConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the configurations for client piloting settings.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 GetClientPilotingConfigs (  
-    Boolean IsEnabled,  
-    Boolean IsAccepted,  
-    String TargetCollectionID,  
-    Datetime LastModifiedTime,  
-    String LastModifiedBy  
-);  
+```
+SInt32 GetClientPilotingConfigs (
+    Boolean IsEnabled,
+    Boolean IsAccepted,
+    String TargetCollectionID,
+    Datetime LastModifiedTime,
+    String LastModifiedBy
+);
 
-```  
+```
 
-#### Parameters  
- `IsEnabled`  
- Data type: `Boolean`  
+#### Parameters
+ `IsEnabled`
+ Data type: `Boolean`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Indicates whether client piloting testing mode is enabled.  
+ Indicates whether client piloting testing mode is enabled.
 
- `IsAccepted`  
- Data type: `Boolean`  
+ `IsAccepted`
+ Data type: `Boolean`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Indicates whether the new client binaries are accepted. If `IsEnabled` is `true`, this parameter is ignored and is always `false`.  
+ Indicates whether the new client binaries are accepted. If `IsEnabled` is `true`, this parameter is ignored and is always `false`.
 
- `TargetCollectionID`  
- Data type: `String`  
+ `TargetCollectionID`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Targeted collection ID.  
+ Targeted collection ID.
 
- `LastModifiedTime`  
- Data type: `Datetime`  
+ `LastModifiedTime`
+ Data type: `Datetime`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- The time that the last modification was made.  
+ The time that the last modification was made.
 
- `LastModifiedBy`  
- Data type: `String`  
+ `LastModifiedBy`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- The user name of the user who made the last modification.  
+ The user name of the user who made the last modification.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For more information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For more information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md)

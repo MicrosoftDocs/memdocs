@@ -12,70 +12,70 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SendNotifyErrorToCTM Method
-The **SendNotifyErrorToCTM** method, in Configuration Manager, notifies Content Transfer Manager of errors.  
+The **SendNotifyErrorToCTM** method, in Configuration Manager, notifies Content Transfer Manager of errors.
 
-## Syntax  
+## Syntax
 
-```  
-HRESULT stdcall SendNotifyErrorToCTM(  
-    LPCWSTR szEndpoint,   
-    LPCWSTR szID,   
-    LPCWSTR szClientData,   
-    HRESULT hrErrorCode,   
-    LPCWSTR szErrorMessage  
-);  
+```
+HRESULT stdcall SendNotifyErrorToCTM(
+    LPCWSTR szEndpoint,
+    LPCWSTR szID,
+    LPCWSTR szClientData,
+    HRESULT hrErrorCode,
+    LPCWSTR szErrorMessage
+);
 
-```  
+```
 
-#### Parameters  
- `szEndpoint`  
- Data type: LPCWSTR  
+#### Parameters
+ `szEndpoint`
+ Data type: LPCWSTR
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The notification endpoint. This was passed into the call to **ICcmAlternateDownloadProvider::DownloadContent** (szNotifyEndpoint).  
+ The notification endpoint. This was passed into the call to **ICcmAlternateDownloadProvider::DownloadContent** (szNotifyEndpoint).
 
- `szID`  
- Data type: LPCWSTR  
+ `szID`
+ Data type: LPCWSTR
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The job to which the notification corresponds. This is the GUID originally returned by **ICcmAlternateDownloadProvider::DownloadContent**.  
+ The job to which the notification corresponds. This is the GUID originally returned by **ICcmAlternateDownloadProvider::DownloadContent**.
 
- `szClientData`  
- Data type: LPCWSTR  
+ `szClientData`
+ Data type: LPCWSTR
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The client-specific data that was passed into the call to **ICcmAlternateDownloadProvider::DownloadContent** (szNotifyData.)  
+ The client-specific data that was passed into the call to **ICcmAlternateDownloadProvider::DownloadContent** (szNotifyData.)
 
- `hrErrorCode`  
- Data type: HRESULT  
+ `hrErrorCode`
+ Data type: HRESULT
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The failure code to report.  
+ The failure code to report.
 
- `szErrorMessage`  
- Data type: LPCWSTR  
+ `szErrorMessage`
+ Data type: LPCWSTR
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- An extended status message. Must not be NULL.  
+ An extended status message. Must not be NULL.
 
-## Return Values  
- An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
+## Return Values
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:
 
- S_OK  
- Success implies that discovery was triggered successfully. All other return values indicate failure.  
+ S_OK
+ Success implies that discovery was triggered successfully. All other return values indicate failure.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
