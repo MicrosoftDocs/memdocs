@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #audience:
 params:
   siblings_only: true
-ms.reviewer: arnab, anuragjain
+ms.reviewer: cchristenson,arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -852,7 +852,7 @@ You can configure the following settings:
 
 # [Personally owned](#tab/aepersonal)
 
-These settings apply to Android Enterprise personally owned devices. When users enroll their personal devices in Intune, a work profile is created on the device. The work profile is a separate space on the device that keeps work apps and data separate from personal apps and data.
+These settings apply to Android Enterprise personally owned devices with a work profile (BYOD). When users enroll their personal devices in Intune, a work profile is created on the device. The work profile is a separate space on the device that keeps work apps and data separate from personal apps and data.
 
 These settings configure the work profile.
 
