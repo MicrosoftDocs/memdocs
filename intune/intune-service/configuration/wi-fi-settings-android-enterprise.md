@@ -28,7 +28,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Add Wi-Fi settings for Android devices in Microsoft Intune
+# Wi-Fi settings list for Android devices in Microsoft Intune
 
 You can create a profile with specific Wi-Fi settings, and then deploy this profile to your Android devices. Microsoft Intune offers many features, including authenticating to your network, using a pre-shared key, and more.
 
@@ -152,7 +152,7 @@ These settings apply to the following Android Enterprise enrollment types where 
 
       - **Android 11 and newer**: New Wi-Fi profiles might require this setting be configured. Otherwise, the devices might not connect to your Wi-Fi network.
 
-      - **Android 14 and newer**: Google doesn't alllow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
+      - **Android 14 and newer**: Google doesn't allow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
 
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
@@ -179,7 +179,7 @@ These settings apply to the following Android Enterprise enrollment types where 
 
       - **Android 11 and newer**: New Wi-Fi profiles might require this setting be configured. Otherwise, the devices might not connect to your Wi-Fi network.
 
-      - **Android 14 and newer**: Google doesn't alllow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
+      - **Android 14 and newer**: Google doesn't allow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
 
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
@@ -207,7 +207,7 @@ These settings apply to the following Android Enterprise enrollment types where 
 
       - **Android 11 and newer**: New Wi-Fi profiles might require this setting be configured. Otherwise, the devices might not connect to your Wi-Fi network.
 
-      - **Android 14 and newer**: Google doesn't alllow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
+      - **Android 14 and newer**: Google doesn't allow the total content length of all the Radius servers to be greater than 256 characters or to include special characters. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, then we recommend you enter only the suffix.
 
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
