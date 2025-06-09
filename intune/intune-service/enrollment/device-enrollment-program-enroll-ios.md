@@ -98,7 +98,7 @@ Before creating an enrollment profile, decide how you want users to authenticate
   - No longer recommended
 
 > [!IMPORTANT]
-> We recommend using **Setup Assistant with modern authentication** for all Automated Device Enrollment (ADE) scenarios. Avoid using legacy authentication.
+> We recommend using **Setup Assistant with modern authentication** for all Automated Device Enrollment (ADE) scenarios with user device affinity. Avoid using legacy authentication.
 
 For more information about your authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).
 
@@ -260,7 +260,7 @@ Now that you've installed your token, you can create an enrollment profile for a
    - **Setup Assistant with modern authentication**
 
    > [!IMPORTANT]
-   > We recommend using **Setup Assistant with modern authentication** for your Apple devices for ADE (automated device enrollment). for your Apple devices for ADE (automated device enrollment). While use of the legacy authentication remains available, we do not recommend its use.
+   > We recommend using **Setup Assistant with modern authentication** for your Apple devices for ADE (automated device enrollment) scenarios with user device affinity. While use of the legacy authentication remains available, we do not recommend its use.
 
 1. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Microsoft Entra registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate into the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
 

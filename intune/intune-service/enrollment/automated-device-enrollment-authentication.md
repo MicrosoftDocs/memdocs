@@ -141,7 +141,7 @@ The following sequence of events describes an example of what a successful authe
 ## Option 4: Setup Assistant (legacy)
 
 > [!IMPORTANT]
-> We recommend using **Setup Assistant with modern authentication** for all Automated Device Enrollment (ADE) scenarios. Avoid using legacy authentication.
+> We recommend using **Setup Assistant with modern authentication** for all Automated Device Enrollment (ADE) scenarios with user device affinity. Avoid using legacy authentication.
 
 Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This option installs standard preconfigured settings when the device enrolls in Intune. Use this option for authentication when: 
 
