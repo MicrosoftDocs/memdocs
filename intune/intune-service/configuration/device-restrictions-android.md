@@ -244,4 +244,4 @@ Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create kiosk profiles for [Android Enterprise](device-restrictions-android-for-work.md#device-experience) and [Windows](kiosk-settings.md) devices.
+You can also create kiosk profiles for [Android Enterprise](device-restrictions-android-for-work.md) (Device experience) and [Windows](kiosk-settings.md) devices.
