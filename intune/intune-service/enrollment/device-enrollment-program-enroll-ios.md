@@ -83,7 +83,7 @@ Read through these enrollment requirements and best practices to prepare for a s
 
 ### Choose an authentication method
 
-Before creating an enrollment profile, decide how users will authenticate:
+Before creating an enrollment profile, decide how you want users to authenticate:
 
 - **Setup Assistant with modern authentication** (recommended):
   - Supported on iOS/iPadOS 13.0 and later

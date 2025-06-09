@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/24/2025
+ms.date: 06/09/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -166,7 +166,7 @@ This task list provides an overview. For more specific information, go to [Apple
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile:
 
   - Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices).
-  - Choose where users authenticate: **Setup Assistant with modern authentication** (recommeded), the **Company Portal** app, or  **Setup Assistant (legacy)** (not recommended).
+  - Choose where users authenticate: **Setup Assistant with modern authentication** (recommended), the **Company Portal** app, or **Setup Assistant (legacy)** (not recommended).
 
   For more specific information and suggestions, go to [Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md).
 
