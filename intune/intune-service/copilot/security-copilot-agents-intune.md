@@ -41,11 +41,11 @@ The Vulnerability Remediation Agent runs manually, on demand.
 
 #### Permissions
 
-The Vulnerability Remediation Agent runs using the identity of the user who installed the agent in Intune. This identity remains authorized for 90 days, after which the agent stops working. To change this identity or reauthorize the agent, the agent must be removed and then set up again.
+The Vulnerability Remediation Agent runs using the identity and permissions of the user who installed the agent in Intune.
 
 #### Identity
 
-The agent persistently runs in the identity of the user who initially set up the agent.
+The agent persistently runs in the identity of the user who initially set up the agent. This identity refreshes with each agent run and expires if the agent has not been run for 90 consecutive days. There is no notification regarding the end of the authorized period. To change this identity or reauthorize the agent, the agent must be removed and then set up again.
 
 #### Products
 
