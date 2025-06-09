@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2024
+ms.date: 06/09/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -127,21 +127,9 @@ This task list provides an overview. For more specific information, go to [Autom
 - You need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
 - Be sure the Apple token (`.p7m`) is active. For more specific information, go to [Create enrollment program token](../enrollment/device-enrollment-program-enroll-macos.md#create-enrollment-program-token).  
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, go to [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
-- Decide how users will authenticate on their devices: **Setup Assistant (legacy)** or **Setup Assistant with modern authentication**. Make this decision before you create the enrollment policy. Using the **Setup Assistant with modern authentication** is considered modern authentication. Microsoft recommends using **Setup Assistant with modern authentication**.
+- Decide how how you want users to authenticate on their devices: **Setup Assistant with modern authentication** (recommended), the **Company Portal** app, or **Setup Assistant (legacy)** (not recommended). Make this decision before you create the enrollment policy. Using the **Setup Assistant with modern authentication** is considered modern authentication. Microsoft recommends using **Setup Assistant with modern authentication**.
 
   For all organization-owned macOS devices, **Setup Assistant (legacy)** is always and automatically used, even if you don't see "Setup Assistant" text in Intune. Setup Assistant (legacy) authenticates the user, and enrolls the device.
-
-  - Select the **Setup Assistant (legacy)** when:
-
-    - You want to wipe the device.
-    - You don't want to use modern authentication features, such as MFA.
-    - You don't want to register devices in Microsoft Entra ID. Setup Assistant (legacy) authenticates the user with the Apple `.p7m` token. If it's acceptable to not register devices in Microsoft Entra ID, then you don't need to install the Company Portal app. Keep using the Setup Assistant (legacy).
-
-      If you want to use the Company Portal app for authentication instead of using Setup Assistant, or want the devices registered in Microsoft Entra ID, then:
-
-      1. To install the Company Portal app on devices, go to [add the Company Portal app](../apps/apps-company-portal-macos.md). Set the Company Portal app as a required app.
-      1. **After** the device is enrolled, install the Company Portal app.
-      1. Once installed, users open the Company Portal app, and sign in with their organization Microsoft Entra account (`user@contoso.com`). When they sign in, they're authenticated, and ready to receive your policies.
 
   - Select the **Setup Assistant with modern authentication** when:
 
@@ -157,6 +145,18 @@ This task list provides an overview. For more specific information, go to [Autom
     > After the Setup Assistant completes, users can use the device. When the home screen shows, the enrollment is complete, and user affinity is established. The device isn't fully registered with Microsoft Entra ID, and doesn't show in a user's device list in Microsoft Entra ID.
     >
     > If users need access to resources protected by Conditional Access or should be fully registered with Microsoft Entra ID, then [install the Company Portal app](../apps/apps-company-portal-macos.md). After it's installed, users open the Company Portal app, and sign in with their organization Microsoft Entra account (`user@contoso.com`). During this second login, any Conditional Access policies are evaluated, and Microsoft Entra registration is complete. Users can install and use organizational resources, including LOB apps.
+
+  - Select the **Setup Assistant (legacy)** when you can't use *Setup Assistant with modern authentication* and:
+
+    - You want to wipe the device.
+    - You don't want to use modern authentication features, such as MFA.
+    - You don't want to register devices in Microsoft Entra ID. Setup Assistant (legacy) authenticates the user with the Apple `.p7m` token. If it's acceptable to not register devices in Microsoft Entra ID, then you don't need to install the Company Portal app. Keep using the Setup Assistant (legacy).
+
+      If you want to use the Company Portal app for authentication instead of using Setup Assistant, or want the devices registered in Microsoft Entra ID, then:
+
+      1. To install the Company Portal app on devices, go to [add the Company Portal app](../apps/apps-company-portal-macos.md). Set the Company Portal app as a required app.
+      1. **After** the device is enrolled, install the Company Portal app.
+      1. Once installed, users open the Company Portal app, and sign in with their organization Microsoft Entra account (`user@contoso.com`). When they sign in, they're authenticated, and ready to receive your policies.
 
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apple Configurator** enrollment and create an enrollment profile. Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices).
 
