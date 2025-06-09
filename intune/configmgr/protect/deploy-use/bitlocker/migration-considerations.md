@@ -7,7 +7,7 @@ ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: upgrade-and-migration-article
 author: BalaDelli
-ms.author: baladell
+ms.author: bhuney
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: frankroj,mstewart

@@ -7,7 +7,7 @@ ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: reference
 author: BalaDelli
-ms.author: baladell
+ms.author: bhuney
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: frankroj,mstewart
