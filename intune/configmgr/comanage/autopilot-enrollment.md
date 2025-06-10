@@ -8,7 +8,7 @@ ms.service: configuration-manager
 ms.topic: how-to
 ms.localizationpriority: medium
 author: gowdhamankarthikeyan
-ms.author: gokarthi
+ms.author: brianhun
 ms.reviewer: mstewart,frankroj
 manager: apoorvseth
 ms.collection: tier3
