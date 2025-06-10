@@ -30,7 +30,7 @@ ms.collection:
 
 # Android Intune settings catalog settings list
 
-This article lists and describes the Android Enterprise settings you can configure in a settings catalog policy in Microsoft Intune. To learn more about the settings catalog, see [Settings catalog overview](settings-catalog.md).
+This article lists and describes the Android Enterprise and AOSP settings you can configure in a settings catalog policy in Microsoft Intune. To learn more about the settings catalog, see [Settings catalog overview](settings-catalog.md).
 
 This feature applies to:
 
@@ -186,9 +186,9 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
 Android Open Source Project (AOSP) devices are Android devices that don't have Google Mobile Services (GMS) installed.
 
-### Restrictions for AOSP devices
+### Device restriction (AOSP)
 
-#### Device Password for AOSP devices
+#### Device Password (AOSP)
 
 - **Required password type**: Set the password's complexity requirements. More password requirements become available based on your selection.
 
@@ -218,14 +218,14 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
   - Android Open Source Project (AOSP) corporate-owned userless devices (shared)
   - Android Open Source Project (AOSP) corporate-owned user-associated devices (single user)
 
-#### General settings for AOSP devices
+#### General (AOSP)
 
 - **Block access to camera**: If **True**, this setting prevents access to the camera on the device. If **False**, Intune doesn't change or update this setting. By default, the OS might allow access to the camera. Intune only manages access to the device camera. It doesn't have access to pictures or videos.
 
   This feature applies to:
 
-- Android Open Source Project (AOSP) corporate-owned userless devices (shared)
-- Android Open Source Project (AOSP) corporate-owned user-associated devices (single user)
+  - Android Open Source Project (AOSP) corporate-owned userless devices (shared)
+  - Android Open Source Project (AOSP) corporate-owned user-associated devices (single user)
 
 - **Block screen capture**: If **True**, this setting prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. If **False**, Intune doesn't change or update this settingWhen set to Not configured (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
 
