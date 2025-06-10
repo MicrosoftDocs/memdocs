@@ -30,7 +30,10 @@ ms.collection:
 
 # Built-in role permissions for Microsoft Intune
 
-The following tables lists the built-in roles for Microsoft Intune. The tables also list the permissions that are associated with each role.
+The following tables list the built-in roles for Microsoft Intune. The tables also list the permissions that are associated with each role. 
+
+> [!TIP]
+> When your tenant includes a subscription to Windows 365 to support Cloud PCs, you'll also find the following Cloud PC roles in the Intune admin center. These roles aren't available by default and include permissions within Intune for tasks related to Cloud PCs. For more information about these roles, see [Cloud PC built-in roles](/windows-365/enterprise/role-based-access#cloud-pc-built-in-roles) in the Windows 365 documentation.
 
 > [!NOTE]
 > This article was partially created with the help of artificial intelligence. Before publishing, an author reviewed and revised the content as needed. See [Our principles for using AI-generated content in Microsoft Learn](https://aka.ms/ai-content-principles).
@@ -408,7 +411,7 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 
 ## Intune Role Administrator
 
-Intune Role Administrators manage custom Intune roles and add assignments for built-in Intune roles. It is the only Intune role that can assign permissions to Administrators.
+Intune Role Administrators manage custom Intune roles and add assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
 
 | Permission | Action |
 | ---------- | ------ |
@@ -422,7 +425,7 @@ Intune Role Administrators manage custom Intune roles and add assignments for bu
 
 ## Policy and Profile manager
 
-Policy and Profile Managers manage compliance policy, configuration profiles, Apple enrollment and corporate device identifiers.
+Policy and Profile Managers manage compliance policy, configuration profiles, Apple enrollment, and corporate device identifiers.
 
 | Permission | Action |
 | ---------- | ------ |
@@ -503,7 +506,7 @@ Policy and Profile Managers manage compliance policy, configuration profiles, Ap
 
 ## Read Only Operator
 
-Read Only Operators view user, device, enrollment, configuration and application information and cannot make changes to Intune.
+Read Only Operators view user, device, enrollment, configuration, application information, and can't make changes to Intune.
 
 | Permission | Action |
 | ---------- | ------ |
