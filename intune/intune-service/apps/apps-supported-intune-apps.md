@@ -6,7 +6,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 05/12/2025
+ms.date: 06/16/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
