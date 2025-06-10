@@ -7,7 +7,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 04/17/2025
+ms.date: 06/10/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -78,6 +78,8 @@ The Intune management extension has the following prerequisites. Once they're me
     - [Client apps workload](/configmgr/comanage/workloads#client-apps)
     - [How to switch Configuration Manager workloads to Intune](/configmgr/comanage/how-to-switch-workloads)
 
+- For devices behind firewalls and proxy servers, you must enable communication for Intune. To learn more, see [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md).
+
 > [!NOTE]
 > For information about using Window 10/11 VMs, see [Using Windows 10/11 virtual machines with Intune](../fundamentals/windows-10-virtual-machines.md).
 
@@ -131,6 +133,7 @@ There are several conditions that can cause the IME to be removed from the devic
 - There are no PowerShell scripts or Win32 apps assigned to the groups that the user or device belongs.
 - The device can't check in with the Intune service. For example, there's no internet access, no access to Windows Push Notification Services (WNS), and so on.
 - The device is in S mode. The Intune management extension isn't supported on devices running in S mode.
+- If the WINHTTP proxy is configured only at the user level (and not machine-wide), ensure a user is signed into the device. Or, use `bitsadmin /util /setieproxy` to manually configure the proxy for the BITS (Background Intelligent Transfer Service). To learn more, see [bitsadmin command details](/windows-server/administration/windows-commands/bitsadmin-util-and-setieproxy). 
 
 To see if the device is auto-enrolled, you can:
 
@@ -168,5 +171,5 @@ In addition, you can use the log file *AppWorkload.log* to help troubleshoot and
 ## Next steps
 
 - The app you've created is displayed in the apps list. You can now assign it to the groups you choose. For more information, see [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md). 
-- Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [Monitor app information and assignments with Microsoft Intune](../apps/apps-monitor.md). 
+- Learn more about the ways you can monitor the app properties and its assignment. For more information, see [Monitor app information and assignments with Microsoft Intune](../apps/apps-monitor.md). 
 - Learn more about the context of your app in Intune. For more information, see [Overview of the Microsoft Intune mobile device management (MDM) lifecycle](../fundamentals/device-lifecycle.md). 
