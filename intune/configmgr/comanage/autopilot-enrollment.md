@@ -133,16 +133,6 @@ Use these recommendations for a more successful deployment:
 
 - [Windows Autopilot device preparation](/autopilot/device-preparation/overview) policy doesn't support Windows Autopilot into co-management. As a result, attempting to install co-management during the device preparation flow might result in failed deployments.
 
-- For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Microsoft Intune during the Windows Autopilot process. Installing Configuration Manager client as Win32 app doesn't change management authority to Configuration Manager and Microsoft Intune will continue to manage all the co-management workloads.
-
-    To change the management authority to Configuration Manager, set the following registry key value:<br>
-    <br>
-    - Path: **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server**
-    - Value: **ConfigInfo**
-    - REG_SZ: **2**
-
-    For more information, see [Co-management settings: Windows Autopilot with co-management](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500).
-
 - Windows Autopilot into co-management currently doesn't support the following functionality:
 
   - Microsoft Entra hybrid joined devices - If the device is targeted with co-management settings policy, in Microsoft Entra hybrid join scenario, the Windows Autopilot provisioning times out during ESP phase.
