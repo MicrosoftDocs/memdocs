@@ -78,6 +78,8 @@ The Intune management extension has the following prerequisites. Once they're me
     - [Client apps workload](/configmgr/comanage/workloads#client-apps)
     - [How to switch Configuration Manager workloads to Intune](/configmgr/comanage/how-to-switch-workloads)
 
+- Devices behind firewalls and proxy servers, you must enable communication for Intune. See [Network requirements for PowerShell scripts and Win32 apps](..fundamentals/intune-endpoints.md).
+
 > [!NOTE]
 > For information about using Window 10/11 VMs, see [Using Windows 10/11 virtual machines with Intune](../fundamentals/windows-10-virtual-machines.md).
 
@@ -131,6 +133,7 @@ There are several conditions that can cause the IME to be removed from the devic
 - There are no PowerShell scripts or Win32 apps assigned to the groups that the user or device belongs.
 - The device can't check in with the Intune service. For example, there's no internet access, no access to Windows Push Notification Services (WNS), and so on.
 - The device is in S mode. The Intune management extension isn't supported on devices running in S mode.
+- If the WINHTTP proxy is configured only at the user level (and not machine-wide), ensure a user is logged into the device or use `bitsadmin /util /setieproxy` to manually configure the proxy for the BITS (Background Intelligent Transfer Service). See [bitsadmin command details](/windows-server/administration/windows-commands/bitsadmin-util-and-setieproxy.md). 
 
 To see if the device is auto-enrolled, you can:
 
