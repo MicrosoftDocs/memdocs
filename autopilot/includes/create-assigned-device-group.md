@@ -5,7 +5,7 @@ manager: bpardi
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 05/30/2025
+ms.date: 06/11/2025
 ms.localizationpriority: medium
 ---
 
