@@ -7,7 +7,7 @@ ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: sheetg09
-ms.author: sheetg
+ms.author: brianhun
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -101,7 +101,7 @@ If you moved an existing site database to an availability group you [created and
 
 > [!IMPORTANT]
 >
-> If BitLocker recovery data is encrypted in the database as described in [Encrypt recovery data in the database](intune/configmgr/protect/deploy-use/bitlocker/encrypt-recovery-data.md), see [SQL AlwaysOn when BitLocker recovery data is encrypted in the database](bitlocker-keys-sql-always-on.md) for additional important and required steps and instructions.
+> If BitLocker recovery data is encrypted in the database as described in [Encrypt recovery data in the database](../../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md), see [SQL AlwaysOn when BitLocker recovery data is encrypted in the database](../../../../protect/deploy-use/bitlocker/bitlocker-keys-sql-always-on.md) for additional important and required steps and instructions.
 
 ## <a name="bkmk_sync"></a> Synchronous replica members
 

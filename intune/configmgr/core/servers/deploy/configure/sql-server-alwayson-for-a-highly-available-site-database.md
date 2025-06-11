@@ -7,7 +7,7 @@ ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: sheetg09
-ms.author: sheetg
+ms.author: brianhun
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -380,7 +380,7 @@ For more information, see [Backup and recovery](../../manage/backup-and-recovery
 
 ### SQL AlwaysOn when BitLocker recovery data is encrypted in the database
 
-If using SQL AlwaysOn, see [SQL AlwaysOn when BitLocker recovery data is encrypted in the database](bitlocker-keys-sql-always-on.md) for additional important and required steps and instructions.
+If using SQL AlwaysOn, see [SQL AlwaysOn when BitLocker recovery data is encrypted in the database](../../../../protect/deploy-use/bitlocker/bitlocker-keys-sql-always-on.md) for additional important and required steps and instructions.
 
 ## Changes for reporting
 
