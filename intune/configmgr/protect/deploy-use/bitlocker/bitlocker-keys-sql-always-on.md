@@ -16,21 +16,21 @@ ms.collection: tier3
 
 # BitLocker Encryption with SQL AlwaysOn
 
-When the BitLocker information is encrypted using the instructions at [Encrypt recovery data in the database](encrypt-recovery-data.md), there are additional steps required to ensure that all AlwaysOn nodes can automatically open the Database Master Key (DMK) when a failover event occurs. This allows seamless retrieval of BitLocker keys without manual intervention.
+For SQL AlwaysOn, additional steps are required when the BitLocker information is encrypted using the instructions at [Encrypt recovery data in the database](encrypt-recovery-data.md). The additional steps ensure that all AlwaysOn nodes can automatically open the Database Master Key (DMK) when a failover event occurs. Following steps allows seamless retrieval of BitLocker keys without manual intervention.
 
 ## Overview of BitLocker Encryption with SQL AlwaysOn
 
 SQL Server encrypts data using a hierarchical infrastructure and is described in depth at [Encryption Hierarchy](/sql/relational-databases/security/encryption/encryption-hierarchy).
 
-- **Site Master Key (SMK)** - this key is a *per instance* key that is unique to each SQL Server AlwaysOn node and isn't replicated. It is used to encrypt the database master key.
-- **Database Master Key (DMK)** - this key is stored in the database and is replicated. It is used to encrypt the BitLockerManagement_CERT.
+- **Site Master Key (SMK)** - this key is a *per instance* key that is unique to each SQL Server AlwaysOn node and isn't replicated. It's used to encrypt the database master key.
+- **Database Master Key (DMK)** - this key is stored in the database and is replicated. It's used to encrypt the BitLockerManagement_CERT.
 - **BitLockerManagement_CERT** - this certificate is stored in the database and is replicated. It's used to encrypt some BitLocker-related data like recovery keys.
 
-The DMK password is encrypted by the SMK. Since the SMK is node-specific, when a failover event occurs, the new primary node won't be able to decrypt the DMK password because it was encrypted with a different SMK. Setting the DMK password on each node allows the node to decrypt the password on failover.
+The SMK encrypts the DMK password. SMKs are node-specific. When a failover event occurs, the new primary node can't decrypt the DMK password since it was encrypted with a different SMK. Setting the DMK password on each node allows the node to decrypt the password on failover.
 
 > [!NOTE]
 >
-> The BitlockerManagemnt_CERT performs the encryption of the columns. If this certificate is lost or deleted, or the DMK that encrypted it is lost or deleted, BitLocker keys have to be escrowed and re-encrypted again.
+> The BitlockerManagemnt_CERT performs the encryption of the columns. If this certificate is lost or deleted, or the DMK that encrypted is lost or deleted, BitLocker keys have to be escrowed and re-encrypted again.
 
 ## If the Database Master Key (DMK) password is known
 
@@ -54,9 +54,9 @@ This command registers the DMK password with the local Service Master Key (SMK) 
 
 ## If the existing Database Master Key (DMK) password is unknown
 
-If the existing DMK password is unknown, the existing DMK must be dropped and a new one created with a known password. These steps document how perform this procedure.
+If the existing DMK password is unknown, the existing DMK must be dropped and a new one created with a known password. These steps document how to perform this procedure.
 
-### How to find a valid DMK
+### Find a valid DMK
 
 If it's unknown which node has a valid DMK, follow these steps to determine where the existing DMK is open:
 
@@ -78,11 +78,13 @@ If it's unknown which node has a valid DMK, follow these steps to determine wher
    - If the DMK is open, the query returns plaintext values for any rows that have a valid key in them. This node is the node to start on and the next step can be skipped.
    - If the DMK isn't open, the query returns NULL values for all rows. The current node isn't the node where the DMK is open. Follow the next step to find the node where the DMK is open.
 
-1. If the query returns all NULL values, then failover to each secondary node and repeat the previous steps until the node that can successfully decrypt **RecoveryAndHardwareCore_Keys** is found. This is the node to start on.
+1. If the query returns all NULL values, then failover to each secondary node and repeat the previous steps until the node that can successfully decrypt **RecoveryAndHardwareCore_Keys** is found. This node is the node to start on.
+
+### Create a new Database Master Key (DMK)
 
 Once the proper node with the open DMK is identified, follow these steps:
 
-1. On the node that was identified in the previouse steps, run the following query to export the BitLockerManagement_CERT certificate with its private key. Make sure to use a strong password:
+1. On the node that was identified in the previous steps, run the following query to export the BitLockerManagement_CERT certificate with its private key. Make sure to use a strong password:
 
     ```sql
     BACKUP CERTIFICATE BitLockerManagement_CERT
@@ -94,7 +96,7 @@ Once the proper node with the open DMK is identified, follow these steps:
     );
     ```
 
-1. To backup the Database Master Key (DMK), run the following query to export the existing DMK:
+1. Backup the existing Database Master Key (DMK) by running the following query to export the existing DMK:
 
     ```sql
     BACKUP MASTER KEY
@@ -115,7 +117,7 @@ Once the proper node with the open DMK is identified, follow these steps:
 
     This step removes the old keys.
 
-1. Run the following query to create a new DMK. Make to use a strong password:
+1. Run the following query to create a new DMK. Make sure to use a strong password:
 
     ```sql
     CREATE MASTER KEY
@@ -151,22 +153,37 @@ Once the proper node with the open DMK is identified, follow these steps:
     GRANT CONTROL ON CERTIFICATE::BitLockerManagement_CERT TO RecoveryAndHardwareWrite;
     ```
 
-1. **Fail over to the next node.**
+1. Fail over to the next node.
 
-(7) **Register the DMK password with the local SMK** (execute once per replica):
+1. Run the following query to register the DMK password with the local SMK. Execute once per replica:
 
-```sql
-EXEC sp_control_dbmasterkey_password
-    @db_name = N'CM_XXX',
-    @password = N'password',
-    @action = N'add';
-```
+    ```sql
+    EXEC sp_control_dbmasterkey_password
+        @db_name = N'CM_XXX',
+        @password = N'password',
+        @action = N'add';
+    ```
 
-(8) Perform steps 6 and 7 on any remaining nodes.
+1. Perform the previous two steps on any remaining nodes.
 
-(9) **Fail over to the original node.**
+1. Fail over to the original node.
 
-(10) To verify that all nodes will automatically open the Database Master Key and can decrypt the data failover to each node and run the query in the [How to find a valid DMK](#how-to-find-a-valid-dmk) section.
+### Verify all nodes can automatically open the Database Master Key (DMK) and can decrypt the data
+
+1. To verify that all nodes automatically open the Database Master Key (DMK) and can decrypt the data:
+
+   1. Failover to a node.
+
+   1. Run the following query:
+
+    ```sql
+    select RecoveryAndHardwareCore.DecryptString(RecoveryKey, DEFAULT) from RecoveryAndHardwareCore_Keys
+    ```
+
+   1. If the query returns plaintext values for any rows that have a valid key in them, then the node can automatically open the Database Master Key (DMK) and can decrypt the data.
+
+   1. Repeat the previous three steps for each additional node.
 
 > [!TIP]
-> For improved security:** Store the strong DMK password securely (e.g., in Azure Key Vault or another secure secret store) and avoid hardcoding it in scripts or configuration files.
+>
+> For improved security, store the strong DMK password securely. For example, in Azure Key Vault or another secure secret store. Additionally, avoid hardcoding the DMK password in plain text in scripts or configuration files.
