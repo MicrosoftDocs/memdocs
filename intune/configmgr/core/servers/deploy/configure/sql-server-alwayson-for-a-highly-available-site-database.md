@@ -2,7 +2,7 @@
 title: Prepare to use an availability group
 titleSuffix: Configuration Manager
 description: Plan to use a SQL Server Always On availability group for the Configuration Manager site database.
-ms.date: 03/25/2022
+ms.date: 06/11/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
@@ -278,7 +278,7 @@ For example, consider the following scenario:
 
 - You upgraded both of your secondary replica servers to SQL Server 2014 from previous versions. With the upgrade, these servers keep the original file path to store database files: `C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA`.
 
-- Before moving the site database to this availability group, on each secondary replica server, create the following file path: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. This path is a duplicate of the path in use on the primary replica, even if the secondary replicas won't use this file location.
+- Before moving the site database to this availability group, on each secondary replica server, create the following file path: `C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA`. This path is a duplicate of the path in use on the primary replica, even if the secondary replicas don't use this file location.
 
 - You then grant the SQL Server service account on each secondary replica full control access to the newly created file location on that server.
 
@@ -330,7 +330,7 @@ When the SQL Server hosts one or more availability groups in addition to the gro
 
 #### Configuration Manager supports only the site database in an availability group
 
-The following databases aren't supported by Configuration Manager in an availability group:
+Configuration Manager doesn't support the following databases in an availability group:
 
 - Reporting database
 
@@ -377,6 +377,10 @@ Site recovery can recreate the database in an availability group. This process w
 > When you run the setup/recovery wizard, the **New Availability Group Database** page only applies to manual seeding configurations. With automatic seeding, there's no shared database backup, so that page of the wizard isn't shown.<!-- SCCMDocs #2242 -->
 
 For more information, see [Backup and recovery](../../manage/backup-and-recovery.md).
+
+### SQL AlwaysOn when BitLocker recovery data is encrypted in the database
+
+If using SQL AlwaysOn, see [SQL AlwaysOn when BitLocker recovery data is encrypted in the database](bitlocker-keys-sql-always-on.md) for additional important and required steps and instructions.
 
 ## Changes for reporting
 

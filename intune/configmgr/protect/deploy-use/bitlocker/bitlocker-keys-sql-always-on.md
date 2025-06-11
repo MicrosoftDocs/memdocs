@@ -1,7 +1,7 @@
 ---
-title: Using BitLocker Management with SQL Always On
+title: Using SQL AlwaysOn when BitLocker recovery data is encrypted in the database
 titleSuffix: Configuration Manager
-description: Describes how to use BitLocker Management with SQL Always On
+description: Describes how to use SQL AlwaysOn when BitLocker recovery data is encrypted in the database
 ms.date: 06/11/2025
 ms.service: configuration-manager
 ms.subservice: protect
@@ -14,11 +14,11 @@ ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 
-# BitLocker Encryption with SQL AlwaysOn
+# SQL AlwaysOn when BitLocker recovery data is encrypted in the database
 
 For SQL AlwaysOn, additional steps are required when the BitLocker information is encrypted using the instructions at [Encrypt recovery data in the database](encrypt-recovery-data.md). The additional steps ensure that all AlwaysOn nodes can automatically open the Database Master Key (DMK) when a failover event occurs. Following steps allows seamless retrieval of BitLocker keys without manual intervention.
 
-## Overview of BitLocker Encryption with SQL AlwaysOn
+## Overview of SQL AlwaysOn when BitLocker recovery data is encrypted in the database
 
 SQL Server encrypts data using a hierarchical infrastructure and is described in depth at [Encryption Hierarchy](/sql/relational-databases/security/encryption/encryption-hierarchy).
 
@@ -30,11 +30,11 @@ The SMK encrypts the DMK password. SMKs are node-specific. When a failover event
 
 > [!NOTE]
 >
-> The BitlockerManagemnt_CERT performs the encryption of the columns. If this certificate is lost or deleted, or the DMK that encrypted is lost or deleted, BitLocker keys have to be escrowed and re-encrypted again.
+> The BitLockerManagement_CERT performs the encryption of the columns. If this certificate is lost or deleted, or the DMK that encrypted it is lost or deleted, BitLocker keys have to be escrowed and re-encrypted again.
 
 ## If the Database Master Key (DMK) password is known
 
-Execute the following command on each node in the Availability Group that hosts the Configuration Manager database.
+Execute the following command on each node in the Availability Group that hosts the Configuration Manager database:
 
 > [!IMPORTANT]
 >
@@ -51,6 +51,8 @@ EXEC sp_control_dbmasterkey_password
 ```
 
 This command registers the DMK password with the local Service Master Key (SMK) allowing SQL Server to automatically open the DMK when a failover event occurs. This process ensures the DMK can be decrypted automatically on that node after a failover or a restart.
+
+To verify that all nodes can automatically open the Database Master Key (DMK) and decrypt the data, see the section [Verify all nodes can automatically open the Database Master Key (DMK) and decrypt the data](#verify-all-nodes-can-automatically-open-the-database-master-key-dmk-and-decrypt-the-data) in this article.
 
 ## If the existing Database Master Key (DMK) password is unknown
 
@@ -70,7 +72,7 @@ If it's unknown which node has a valid DMK, follow these steps to determine wher
 1. Run the following query on the primary node:
 
     ```sql
-    select RecoveryAndHardwareCore.DecryptString(RecoveryKey, DEFAULT) from RecoveryAndHardwareCore_Keys
+    SELECT RecoveryAndHardwareCore.DecryptString(RecoveryKey, DEFAULT) FROM RecoveryAndHardwareCore_Keys
     ```
 
 1. In the resultant query:
@@ -168,16 +170,18 @@ Once the proper node with the open DMK is identified, follow these steps:
 
 1. Fail over to the original node.
 
-### Verify all nodes can automatically open the Database Master Key (DMK) and can decrypt the data
+1. To verify that all nodes can automatically open the Database Master Key (DMK) and decrypt the data, see the next section [Verify all nodes can automatically open the Database Master Key (DMK) and decrypt the data](#verify-all-nodes-can-automatically-open-the-database-master-key-dmk-and-decrypt-the-data) in this article.
 
-To verify that all nodes automatically open the Database Master Key (DMK) and can decrypt the data:
+## Verify all nodes can automatically open the Database Master Key (DMK) and decrypt the data
+
+To verify that all nodes can automatically open the Database Master Key (DMK) and decrypt the data:
 
 1. Failover to a node.
 
 1. Run the following query:
 
     ```sql
-    select RecoveryAndHardwareCore.DecryptString(RecoveryKey, DEFAULT) from RecoveryAndHardwareCore_Keys
+    SELECT RecoveryAndHardwareCore.DecryptString(RecoveryKey, DEFAULT) FROM RecoveryAndHardwareCore_Keys
     ```
 
 1. If the query returns plaintext values for any rows that have a valid key in them, then the node can automatically open the Database Master Key (DMK) and can decrypt the data.
@@ -187,3 +191,9 @@ To verify that all nodes automatically open the Database Master Key (DMK) and ca
 > [!TIP]
 >
 > For improved security, store the strong DMK password securely. For example, in Azure Key Vault or another secure secret store. Additionally, avoid hardcoding the DMK password in plain text in scripts or configuration files.
+
+## Related articles
+
+- [Encrypt recovery data in the database](encrypt-recovery-data.md).
+- [Prepare to use a SQL Server Always On availability group with Configuration Manager](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
+- [Configure a SQL Server Always On availability group for Configuration Manager](../../../core/servers/deploy/configure/configure-aoag.md).
