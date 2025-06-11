@@ -2,7 +2,7 @@
 title: Using BitLocker Management with SQL Always On
 titleSuffix: Configuration Manager
 description: Describes how to use BitLocker Management with SQL Always On
-ms.date: 06/10/2025
+ms.date: 06/11/2025
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
@@ -170,19 +170,19 @@ Once the proper node with the open DMK is identified, follow these steps:
 
 ### Verify all nodes can automatically open the Database Master Key (DMK) and can decrypt the data
 
-1. To verify that all nodes automatically open the Database Master Key (DMK) and can decrypt the data:
+To verify that all nodes automatically open the Database Master Key (DMK) and can decrypt the data:
 
-   1. Failover to a node.
+1. Failover to a node.
 
-   1. Run the following query:
+1. Run the following query:
 
     ```sql
     select RecoveryAndHardwareCore.DecryptString(RecoveryKey, DEFAULT) from RecoveryAndHardwareCore_Keys
     ```
 
-   1. If the query returns plaintext values for any rows that have a valid key in them, then the node can automatically open the Database Master Key (DMK) and can decrypt the data.
+1. If the query returns plaintext values for any rows that have a valid key in them, then the node can automatically open the Database Master Key (DMK) and can decrypt the data.
 
-   1. Repeat the previous three steps for each additional node.
+1. Repeat the previous three steps for each additional node.
 
 > [!TIP]
 >
