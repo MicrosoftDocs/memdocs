@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 # optional metadata
 
-#ROBOTS:
+#ROBOTS: NOINDEX
 #audience:
 
 ms.reviewer: sheetg
