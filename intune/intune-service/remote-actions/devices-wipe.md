@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/13/2025
+ms.date: 06/10/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -202,14 +202,16 @@ Device owners can manually unenroll their devices as explained in the following 
 - [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md)
 
 > [!TIP]
-> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Microsoft Entra ID records. To remove record of the Intune device, sign in to Microsoft Intune and delete the device manually. You must also manually delete the Microsoft Entra ID record, if applicable, because the cleanups rule will not remove it.
+> When a Windows device user uses the Settings app to un-enroll their device, Intune and the cleanup rules don't automatically delete the Intune device or Microsoft Entra ID records. To remove the Intune device record:
+> - Manually delete the device in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> - Manualy delete the device record in Microsoft Entra ID.
 
 ## Delete devices from the Intune admin center
 
 If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. Intune issues a **Retire** or **Wipe** action depending on the OS/Enrollment type. Not all enrollment types support the **Retire** action. See the following table for the expected behavior based on the device platform and the enrollment type.
 
-| OS      | Enrollment Type                                | Action triggered                                                                           |
-|---------|--------------------------------------------|--------------------------------------------------------------------------------------------|
+| OS  | Enrollment Type  | Action triggered   |
+|---|---|---|
 | Android | Device administrator                       | RETIRE - All Profiles are deleted, Company Portal (CP) app is signed out.           |
 | Android | Personally owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                               |
 | Android | Corporate-owned devices with work profile  | WIPE                                                                       |
@@ -232,16 +234,16 @@ If you want to remove devices from the Intune admin center, you can delete them 
 
 ### Automatically hide devices with cleanup rules
 
-You can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices cleaned up in this way are obfuscated and hidden from Intune reports. This setting affects all devices managed by Intune, not just specific ones.
+You can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices cleaned up in this way are concealed and hidden from Intune reports. This setting affects all devices managed by Intune, not just specific ones.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device cleanup rules** > **Yes**.
 3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
 4. Choose **Save**.
 
-When a device cleanup rule runs, it obfuscates the device from Intune reports. This action doesn't trigger a Wipe or Retire action.
+When a device cleanup rule runs, it conceals the device from Intune reports. This action doesn't trigger a Wipe or Retire action.
 
-If a cleaned up device checks-in before its device certification expires, it reappears in the admin center. Once the device certification expires, the device must go through a re-enrollment process for it to show up in the console.
+If a cleaned up device checks-in before its device certification expires, it reappears in the Intune admin center. Once the device certification expires, the device must go through a re-enrollment process for it to show up in the console.
 
 > [!IMPORTANT]
 > The device cleanup rule doesn't trigger a Bitlocker suspension when Bitlocker encryption is managed by Intune. To create a Bitlocker profile: [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
