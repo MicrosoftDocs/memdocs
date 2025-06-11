@@ -11,7 +11,7 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: high
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Cloud attach your Configuration Manager environment

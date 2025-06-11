@@ -11,7 +11,7 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz,frankroj
+ms.reviewer: mstewart,frankroj
 ---
 
 # Windows Autopilot with co-management

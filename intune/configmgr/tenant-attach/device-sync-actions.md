@@ -144,7 +144,7 @@ If needed, you can offboard a Configuration Manager hierarchy from the Microsoft
 When you offboard a hierarchy from the admin center, it may take up to two hours to remove from the Microsoft Intune admin center. If you offboard a Configuration Manager 2103 or later site that's online and healthy, the process may only take a few minutes.
 
 > [!NOTE]
-> If you are using custom [RBAC roles with Intune](../../intune-service/fundamentals/role-based-access-control.md#roles), you will need to grant the **Organization** > **Delete** permission to offboard a hierarchy.
+> If you are using custom [RBAC roles with Intune](../../intune-service/fundamentals/role-based-access-control.md#rbac-roles), you will need to grant the **Organization** > **Delete** permission to offboard a hierarchy.
 
 
 [!INCLUDE [Import a previously created Azure AD application](includes/import-azure-app.md)]

@@ -1,7 +1,7 @@
 ---
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include

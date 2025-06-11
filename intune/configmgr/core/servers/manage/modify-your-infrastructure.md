@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Modify your Configuration Manager infrastructure
@@ -34,7 +34,7 @@ Monitor the installation or removal of the SMS provider by viewing the **ConfigM
 
 Before you modify the SMS provider at a site, see [Plan for the SMS provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md).
 
-### Manage the SMS provider configuration for a site  
+### Manage the SMS provider configuration for a site
 
 1. Run **Configuration Manager Setup** from `\BIN\X64\setup.exe` in the Configuration Manager site installation folder.
 
@@ -48,7 +48,7 @@ Before you modify the SMS provider at a site, see [Plan for the SMS provider](..
 
     - **Uninstall the specified SMS provider**: Select the name of the computer from which you want to remove the SMS provider.
 
-    > [!TIP]  
+    > [!TIP]
     > To move the SMS provider between two computers, first install it to the new computer. Then remove it from the original location. There's no option to move the SMS provider between computers.
 
 After the setup wizard finishes, the SMS provider configuration is complete. In the site **Properties**, on the **General** tab, verify the computers that have an SMS provider installed for a site.
@@ -75,7 +75,7 @@ During site server installation, the Configuration Manager console installation 
 
 - If the associated language pack isn't available for the Configuration Manager console, the console opens in English (United States).
 
-For example, you install the Configuration Manager console from a site server that supports English, German, and French. If you open the Configuration Manager console on a computer with a configured language setting of French, the console opens in French. If you open the Configuration Manager console on a computer with a configured language of Japanese, the console opens in English because the Japanese language pack isn't available.  
+For example, you install the Configuration Manager console from a site server that supports English, German, and French. If you open the Configuration Manager console on a computer with a configured language setting of French, the console opens in French. If you open the Configuration Manager console on a computer with a configured language of Japanese, the console opens in English because the Japanese language pack isn't available.
 
 Each time the Configuration Manager console opens:
 
@@ -85,9 +85,9 @@ Each time the Configuration Manager console opens:
 
 When you want to open the Configuration Manager console in English regardless of the configured language settings on the computer, remove or rename the language pack files on the computer.
 
-Use the following procedures to start the Configuration Manager console in English regardless of the configured locale setting on the computer.  
+Use the following procedures to start the Configuration Manager console in English regardless of the configured locale setting on the computer.
 
-#### Install an English-only version of the Configuration Manager console on computers  
+#### Install an English-only version of the Configuration Manager console on computers
 
 1. In Windows Explorer, browse to `\Tools\ConsoleSetup\LanguagePack` in the Configuration Manager installation path.
 
@@ -96,17 +96,17 @@ Use the following procedures to start the Configuration Manager console in Engli
 1. Install the Configuration Manager console on the computer.
 
     > [!IMPORTANT]
-    > When new server languages are configured for the site server, the .msp and .mst files are recopied to the **LanguagePack** folder, and you must repeat this procedure to install new Configuration Manager consoles in only English.  
+    > When new server languages are configured for the site server, the .msp and .mst files are recopied to the **LanguagePack** folder, and you must repeat this procedure to install new Configuration Manager consoles in only English.
 
 #### Temporarily disable a console language on an existing Configuration Manager console installation
 
 1. On the computer that is running the Configuration Manager console, close the Configuration Manager console.
 
-1. In Windows Explorer, browse to &lt;*ConsoleInstallationPath*>\Bin\ on the Configuration Manager console computer.  
+1. In Windows Explorer, browse to &lt;*ConsoleInstallationPath*>\Bin\ on the Configuration Manager console computer.
 
-1. Rename the appropriate language folder for the language that is configured on the computer. For example, if the language settings for the computer were set for German, you could rename the **de** folder to **de.disabled**.  
+1. Rename the appropriate language folder for the language that is configured on the computer. For example, if the language settings for the computer were set for German, you could rename the **de** folder to **de.disabled**.
 
-1. To open the Configuration Manager console in the language that is configured for the computer, rename the folder to the original name. For example, rename **de.disabled** to **de**.  
+1. To open the Configuration Manager console in the language that is configured for the computer, rename the folder to the original name. For example, rename **de.disabled** to **de**.
 
 ## <a name="BKMK_ConfigDCOMforRemoteConsole"></a> Configure DCOM permissions for remote consoles
 
@@ -152,7 +152,7 @@ Repeat this procedure on each SMS provider computer that supports remote Configu
 
 After you install a site, you can modify the configuration of the site database and site database server. Run Configuration Manager setup on a CAS server or primary site server to make changes. You can move the site database to a new instance of SQL Server on the same computer, or to a different computer that runs a supported version of SQL Server. These changes aren't supported for the database configuration at secondary sites.
 
-For more information about the limits of support, see [Support policy for manual database changes in a Configuration Manager environment](https://support.microsoft.com/kb/3106512).  
+For more information about the limits of support, see [Support policy for manual database changes in a Configuration Manager environment](https://support.microsoft.com/kb/3106512).
 
 > [!NOTE]
 > When you modify the database configuration for a site, Configuration Manager restarts or reinstalls Configuration Manager services on the site server and remote site system servers that communicate with the database.
@@ -290,7 +290,7 @@ The account that you use to reset a site must have the following permissions:
   - A local **Administrator** on the primary site server
 
   - Privileges that are equivalent to the **Full Administrator** role-based administration security role
-  
+
   - If the primary site is in a hierarchy with a CAS, this account must also be a local **Administrator** on the CAS server.
 
 ### Limitations for a site reset

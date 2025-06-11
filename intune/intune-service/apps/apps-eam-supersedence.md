@@ -3,9 +3,9 @@ title: Guided update supersedence for Enterprise App Management
 titleSuffix: Microsoft Intune
 description: Learn how to update an Enterprise App Catalog app using supersedence with Microsoft Intune. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 09/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune

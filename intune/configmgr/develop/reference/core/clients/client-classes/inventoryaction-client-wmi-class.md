@@ -12,186 +12,186 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # InventoryAction Client WMI Class
-In Configuration Manager, the `InventoryAction` class is a client Windows Management Instrumentation (WMI) class that associates a set of queries with reporting details, tying together the item to report and the destination of the report.  
+In Configuration Manager, the `InventoryAction` class is a client Windows Management Instrumentation (WMI) class that associates a set of queries with reporting details, tying together the item to report and the destination of the report.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class InventoryAction : SMS_InventoryAgent_Policy  
-{  
-      UInt32 DefaultTimeout;  
-      String Description;  
-      String InventoryActionID;  
-      String InventoryActionLastUpdateTime;  
-      String PolicyID;  
-      String PolicyInstanceID;  
-      UInt32 PolicyPrecedence;  
-      String PolicyRuleID;  
-      String PolicySource;  
-      String PolicyVersion;  
-      String ReportDestination;  
-      UInt32 ReportTimeout;  
-      String ReportType;  
-};  
-```  
+```
+Class InventoryAction : SMS_InventoryAgent_Policy
+{
+      UInt32 DefaultTimeout;
+      String Description;
+      String InventoryActionID;
+      String InventoryActionLastUpdateTime;
+      String PolicyID;
+      String PolicyInstanceID;
+      UInt32 PolicyPrecedence;
+      String PolicyRuleID;
+      String PolicySource;
+      String PolicyVersion;
+      String ReportDestination;
+      UInt32 ReportTimeout;
+      String ReportType;
+};
+```
 
-## Methods  
- The `InventoryAction` class does not define any methods.  
+## Methods
+ The `InventoryAction` class does not define any methods.
 
-## Properties  
- `DefaultTimeout`  
- Data type: `UInt32`  
+## Properties
+ `DefaultTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Maximum time, by default, that the agent waits for each `InventoryDataItem` class query before canceling the query. The individual `InventoryDataItem` instances can override this default timeout.  
+ Maximum time, by default, that the agent waits for each `InventoryDataItem` class query before canceling the query. The individual `InventoryDataItem` instances can override this default timeout.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Text field that describes the inventory action. Possible values are:  
+ Text field that describes the inventory action. Possible values are:
 
-- Hardware  
+- Hardware
 
-- Software  
+- Software
 
-- Discovery  
+- Discovery
 
-  `InventoryActionID`  
-  Data type: `String`  
+  `InventoryActionID`
+  Data type: `String`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: [realkey]  
+  Qualifiers: [realkey]
 
-  Unique ID for the inventory action. Possible values are:  
+  Unique ID for the inventory action. Possible values are:
 
 | Inventory Action ID type | Value |
 | ------------------------ | ----- |
-|Discovery|{00000000-0000-0000-0000-000000000003}|  
-|Hardware Inventory|{00000000-0000-0000-0000-000000000001}|  
-|Software Inventory|{00000000-0000-0000-0000-000000000002}|  
-|SoftwareFileCollection|{00000000-0000-0000-0000-000000000010}|  
-|IDMIF collection|{00000000-0000-0000-0000-000000000011}|  
+|Discovery|{00000000-0000-0000-0000-000000000003}|
+|Hardware Inventory|{00000000-0000-0000-0000-000000000001}|
+|Software Inventory|{00000000-0000-0000-0000-000000000002}|
+|SoftwareFileCollection|{00000000-0000-0000-0000-000000000010}|
+|IDMIF collection|{00000000-0000-0000-0000-000000000011}|
 
- `InventoryActionLastUpdateTime`  
- Data type: `String`  
+ `InventoryActionLastUpdateTime`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Timestamp of the last update to the InventoryAction instance.  
+ Timestamp of the last update to the InventoryAction instance.
 
- `PolicyID`  
- Data type: `String`  
+ `PolicyID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique ID of the policy.  
+ Unique ID of the policy.
 
- `PolicyInstanceID`  
- Data type: `String`  
+ `PolicyInstanceID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique ID of the policy instance.  
+ Unique ID of the policy instance.
 
- `PolicyPrecedence`  
- Data type: `UInt32`  
+ `PolicyPrecedence`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Precedence for the policy.  
+ Precedence for the policy.
 
- `PolicyRuleID`  
- Data type: `String`  
+ `PolicyRuleID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: Key  
+ Qualifiers: Key
 
- Unique ID of the rule used to create the policy.  
+ Unique ID of the rule used to create the policy.
 
- `PolicySource`  
- Data type: `String`  
+ `PolicySource`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Source of the policy.  
+ Source of the policy.
 
- `PolicyVersion`  
- Data type: `String`  
+ `PolicyVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Version of the policy.  
+ Version of the policy.
 
- `ReportDestination`  
- Data type: `String`  
+ `ReportDestination`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Destination address for the generated report.  
+ Destination address for the generated report.
 
- `ReportTimeout`  
- Data type: `UInt32`  
+ `ReportTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Maximum time that the client messaging framework attempts to transmit the report if the destination endpoint is unreachable.  
+ Maximum time that the client messaging framework attempts to transmit the report if the destination endpoint is unreachable.
 
- `ReportType`  
- Data type: `String`  
+ `ReportType`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Type of inventory report. Possible values are:  
+ Type of inventory report. Possible values are:
 
 | Value | Description |
 | ----- | ----------- |
-|Full|Report contains all instances collected by the associated `InventoryDataItem` queries.|  
-|Delta|Report contains instances that have changed since the last report|  
-|Resync|Report contains instances in full report and also is triggered by a site policy resynchronization request|  
+|Full|Report contains all instances collected by the associated `InventoryDataItem` queries.|
+|Delta|Report contains instances that have changed since the last report|
+|Resync|Report contains instances in full report and also is triggered by a site policy resynchronization request|
 
-## Remarks  
- Three predefined inventory actions are provided through the site policy: hardware inventory, data discovery, and software inventory. For each of these inventory actions, the Inventory Agent generates a report by using the associated [InventoryDataItem Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydataitem-client-wmi-class.md) queries and sends the generated report to the specified destination.  
+## Remarks
+ Three predefined inventory actions are provided through the site policy: hardware inventory, data discovery, and software inventory. For each of these inventory actions, the Inventory Agent generates a report by using the associated [InventoryDataItem Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydataitem-client-wmi-class.md) queries and sends the generated report to the specified destination.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
- [Inventory Agent Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/inventory-agent-client-wmi-classes.md)   
+## See Also
+ [Inventory Agent Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/inventory-agent-client-wmi-classes.md)
  [InventoryDataItem Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydataitem-client-wmi-class.md)

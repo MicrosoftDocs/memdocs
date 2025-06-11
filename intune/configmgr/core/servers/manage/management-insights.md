@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 ms.collection:
     - tier3
     - essentials-manage
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Management insights in Configuration Manager

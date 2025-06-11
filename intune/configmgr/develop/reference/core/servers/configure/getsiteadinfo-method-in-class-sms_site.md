@@ -12,89 +12,89 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetSiteADInfo Method in Class SMS_Site
-The `GetSiteADInfo` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets Active Directory information of site server.  
+The `GetSiteADInfo` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets Active Directory information of site server.
 
- The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 GetSiteADInfo(  
-   String SiteCode,  
-   String DCName,  
-   String DCAddress,  
-   String DomainName,  
-   String ForestName,  
-   String DCSiteName,  
-   String ClientSiteName  
-);  
-```  
+```
+SInt32 GetSiteADInfo(
+   String SiteCode,
+   String DCName,
+   String DCAddress,
+   String DomainName,
+   String ForestName,
+   String DCSiteName,
+   String ClientSiteName
+);
+```
 
-#### Parameters  
- `SiteCode`  
- Data type: `String`  
+#### Parameters
+ `SiteCode`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Site code.   
+ Site code.
 
- `DCName`  
- Data type: `String`  
+ `DCName`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Name of the Active Directory domain controller.  
+ Name of the Active Directory domain controller.
 
- `DCAddress`  
- Data type: `String`  
+ `DCAddress`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Domain controller address.  
+ Domain controller address.
 
- `DomainName`  
- Data type: `String`  
+ `DomainName`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Domain name.  
+ Domain name.
 
- `ForestName`  
- Data type: `String`  
+ `ForestName`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Name of the Active Directory forest.  
+ Name of the Active Directory forest.
 
- `DCSiteName`  
- Data type: `String`  
+ `DCSiteName`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Name of the Active Directory site where the domain controller is located.  
+ Name of the Active Directory site where the domain controller is located.
 
- `ClientSiteName`  
- Data type: `String`  
+ `ClientSiteName`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Name of the site that the computer belongs to.  
+ Name of the site that the computer belongs to.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_Identification Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md)

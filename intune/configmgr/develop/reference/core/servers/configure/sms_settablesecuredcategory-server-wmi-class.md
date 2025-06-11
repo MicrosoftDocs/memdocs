@@ -12,154 +12,154 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_SettableSecuredCategory Server WMI Class
-The `SMS_SettableSecuredCategory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the list of secured categories which the current user can assign to certain types of objects.  
+The `SMS_SettableSecuredCategory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the list of secured categories which the current user can assign to certain types of objects.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_SettableSecuredCategory : SMS_BaseClass  
-{  
-    String CategoryDescription;  
-    String CategoryID;  
-    String CategoryName;  
-    String CreatedBy;  
-    DateTime CreatedDate;  
-    Boolean IsBuiltIn;  
-    String LastModifiedBy;  
-    DateTime LastModifiedDate;  
-    UInt32 NumberOfAdmins;  
-    UInt32 NumberOfObjects;  
-    UInt32 ObjectTypeID;  
-    String SourceSite;  
-};  
-```  
+```
+Class SMS_SettableSecuredCategory : SMS_BaseClass
+{
+    String CategoryDescription;
+    String CategoryID;
+    String CategoryName;
+    String CreatedBy;
+    DateTime CreatedDate;
+    Boolean IsBuiltIn;
+    String LastModifiedBy;
+    DateTime LastModifiedDate;
+    UInt32 NumberOfAdmins;
+    UInt32 NumberOfObjects;
+    UInt32 ObjectTypeID;
+    String SourceSite;
+};
+```
 
-## Methods  
- The `SMS_SettableSecuredCategory` class does not define any methods.  
+## Methods
+ The `SMS_SettableSecuredCategory` class does not define any methods.
 
-## Properties  
- `CategoryDescription`  
- Data type: `String`  
+## Properties
+ `CategoryDescription`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read, sizelimit("512")]  
+ Qualifiers: [read, sizelimit("512")]
 
- Description of the security category.  
+ Description of the security category.
 
- `CategoryID`  
- Data type: `String`  
+ `CategoryID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- ID of the security category.  
+ ID of the security category.
 
- `CategoryName`  
- Data type: `String`  
+ `CategoryName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read, sizelimit("256")]  
+ Qualifiers: [not_null, read, sizelimit("256")]
 
- Name of the security category.  
+ Name of the security category.
 
- `CreatedBy`  
- Data type: `String`  
+ `CreatedBy`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read, SizeLimit("512")]  
+ Qualifiers: [not_null, read, SizeLimit("512")]
 
- The name of the user who created the security category.  
+ The name of the user who created the security category.
 
- `CreatedDate`  
- Data type: `DateTime`  
+ `CreatedDate`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- The date when the security category was created.  
+ The date when the security category was created.
 
- `IsBuiltIn`  
- Data type: `Boolean`  
+ `IsBuiltIn`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- `true`, if this is a built-in security category (All or Default).  
+ `true`, if this is a built-in security category (All or Default).
 
- `LastModifiedBy`  
- Data type: `String`  
+ `LastModifiedBy`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read, SizeLimit("512")]  
+ Qualifiers: [not_null, read, SizeLimit("512")]
 
- The name of the user who last modified the security category.  
+ The name of the user who last modified the security category.
 
- `LastModifiedDate`  
- Data type: `DateTime`  
+ `LastModifiedDate`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- The date when the security category was last modified.  
+ The date when the security category was last modified.
 
- `NumberOfAdmins`  
- Data type: `UInt32`  
+ `NumberOfAdmins`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Number of admin accounts associated with this security category.  
+ Number of admin accounts associated with this security category.
 
- `NumberOfObjects`  
- Data type: `UInt32`  
+ `NumberOfObjects`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Number of objects associated with this security category.  
+ Number of objects associated with this security category.
 
- `ObjectTypeID`  
- Data type: `UInt32`  
+ `ObjectTypeID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- The object type which the current user has permission to assign to this security category.  
+ The object type which the current user has permission to assign to this security category.
 
- `SourceSite`  
- Data type: `String`  
+ `SourceSite`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read, SizeLimit("3")]  
+ Qualifiers: [not_null, read, SizeLimit("3")]
 
- Site where this was security category was created.  
+ Site where this was security category was created.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_SettableSecuredCategory Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_settablesecuredcategory-server-wmi-class.md)

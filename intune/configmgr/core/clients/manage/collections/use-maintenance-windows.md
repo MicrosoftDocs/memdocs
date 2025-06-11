@@ -11,7 +11,7 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to use maintenance windows in Configuration Manager
@@ -41,7 +41,7 @@ When a client is a member of a device collection that has a maintenance window, 
 
 ## Multiple maintenance windows
 
-When a client computer is a member of multiple device collections that have maintenance windows, these rules apply:  
+When a client computer is a member of multiple device collections that have maintenance windows, these rules apply:
 
 - If the maintenance windows don't overlap, the client treats them as two independent maintenance windows.
 

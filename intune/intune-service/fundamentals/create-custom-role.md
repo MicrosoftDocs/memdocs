@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/04/2025
-ms.topic: how-to
+ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -71,7 +71,7 @@ You can also copy an existing role.
 
 The following permissions are available when creating custom roles.
 
-|Permission                                                                                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|Category / permission                                                                                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Android FOTA/Assign| Assign Android firmware over-the-air (FOTA) deployments to Microsoft Entra security groups.|
 | Android FOTA/Delete                                                                                                            | Delete and cancel pending Android firmware over-the-air (FOTA) deployments and delete deployment history.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |

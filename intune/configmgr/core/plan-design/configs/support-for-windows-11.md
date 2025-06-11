@@ -10,7 +10,7 @@ author: Baladelli
 ms.author: Baladell
 manager: apoorvseth
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Support for Windows 11 in Configuration Manager

@@ -10,23 +10,23 @@ author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Get ready for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use the information in the following topics when you're ready to start planning your Configuration Manager deployment:  
+Use the information in the following topics when you're ready to start planning your Configuration Manager deployment:
 
 
--   [Design a hierarchy of sites for Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
+-   [Design a hierarchy of sites for Configuration Manager](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)
 
--   [Fundamentals of role-based administration for Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)  
+-   [Fundamentals of role-based administration for Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)
 
--   [Fundamental concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)  
+-   [Fundamental concepts for content management](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)
 
--   [Understand how clients find site resources and services for Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)  
+-   [Understand how clients find site resources and services for Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)
 
--   [Prepare your network environment for Configuration Manager](network/configure-firewalls-ports-domains.md)  
+-   [Prepare your network environment for Configuration Manager](network/configure-firewalls-ports-domains.md)
 
--   [Supported configurations for Configuration Manager](../../core/plan-design/configs/supported-configurations.md)  
+-   [Supported configurations for Configuration Manager](../../core/plan-design/configs/supported-configurations.md)

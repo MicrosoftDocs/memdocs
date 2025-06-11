@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1612 for Configuration Manager
 
@@ -20,10 +20,10 @@ ms.reviewer: mstewart,aaroncz
 
 
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1612. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1612. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 ## The Data Warehouse Service point
 Beginning with the Technical Preview version 1612, the Data Warehouse Service point enables you to store and report on long-term historical data for your Configuration Manager deployment. This is accomplished by automated synchronizations from the Configuration Manager site database to a data warehouse database. This information is then accessible from your Reporting services point.
@@ -33,50 +33,50 @@ The default data that is synchronized includes information about:
 - Infrastructure health
 - Security
 - Compliance
-- Malware   
+- Malware
 - Software deployments
 - Inventory details (however, inventory history isn't synchronized)
 
 In addition to installing and configuring the data warehouse database, several new reports are installed so you can easily search for and report on this data.
 
-### Data Warehouse Dataflow   
+### Data Warehouse Dataflow
 ![Datawarehouse_flow](./media/datawarehouse.png)
 
 | Step         | Details  |
-|:------:|-----------|  
-| **1** | The site server transfers and stores data in the site database.  |  
-| **2** | Based on its schedule and configuration, the Data Warehouse Service point gets data from the site database.  |  
-| **3** | The Data Warehouse Service point transfers and stores a copy of the synchronized data in the Data Warehouse database. |  
-| **A** | Using built-in reports, a request for data is made which is passed to the Reporting Services point using SQL Server Reporting Services. |  
-| **B** | Most reports are for current information, and these requests are run against the site database. |  
-| **C** | When a report requests historical data, by using one of the reports with a *Category* of **Data Warehouse**, the request is run against the Data Warehouse database.   |  
+|:------:|-----------|
+| **1** | The site server transfers and stores data in the site database.  |
+| **2** | Based on its schedule and configuration, the Data Warehouse Service point gets data from the site database.  |
+| **3** | The Data Warehouse Service point transfers and stores a copy of the synchronized data in the Data Warehouse database. |
+| **A** | Using built-in reports, a request for data is made which is passed to the Reporting Services point using SQL Server Reporting Services. |
+| **B** | Most reports are for current information, and these requests are run against the site database. |
+| **C** | When a report requests historical data, by using one of the reports with a *Category* of **Data Warehouse**, the request is run against the Data Warehouse database.   |
 
 ### Prerequisites for the Data Warehouse Service point and database
 - Your hierarchy must have a Reporting services point site system role installed.
 - The computer where you install the site system role requires .NET Framework 4.5.2 or later.
 - The computer account of the computer where you install the site system role must have local admin permissions to the computer that will host the data warehouse database.
-- The administrative account you use to install the site system role must be a DBO on the instance of SQL Server that will host the data warehouse database.  
+- The administrative account you use to install the site system role must be a DBO on the instance of SQL Server that will host the data warehouse database.
 - The database is supported:
   - With SQL Server 2012 or later, Enterprise or Datacenter edition.
   - On a default or named instance
   - On a *SQL Server Cluster*. Although this configuration should work, it hasn't been tested and support is best effort.
-  - When co-located with either the site database or Reporting services point database. However, we recommend it be installed on a separate server.  
-- The account that is used as the *Reporting Services Point Account* must have the **db_datareader** permission to the data warehouse database.  
+  - When co-located with either the site database or Reporting services point database. However, we recommend it be installed on a separate server.
+- The account that is used as the *Reporting Services Point Account* must have the **db_datareader** permission to the data warehouse database.
 - The database isn't supported on a *SQL Server AlwaysOn availability group*.
 
 ### Install the Data Warehouse
-You install the Data Warehouse site system role on a central administration site or primary site by using the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. See [Install site system roles](../servers/deploy/configure/install-site-system-roles.md) for more information. A hierarchy supports multiple instances of this role, but only one instance is supported at each site.  
+You install the Data Warehouse site system role on a central administration site or primary site by using the **Add Site System Roles Wizard** or the **Create Site System Server Wizard**. See [Install site system roles](../servers/deploy/configure/install-site-system-roles.md) for more information. A hierarchy supports multiple instances of this role, but only one instance is supported at each site.
 
 When you install the role, Configuration Manager creates the data warehouse database for you on the instance of SQL Server that you specify. If you specify the name of an existing database (as you would do if you [move the data warehouse database to a new SQL Server](#move-the-data-warehouse-database)), Configuration Manager doesn't create a new database but instead uses the one you specify.
 
 #### Configurations used during installation
 Use the following information to complete installation of the site system role:
 
-**System Role Selection** page:  
+**System Role Selection** page:
 Before the Wizard displays an option to select and install the Data Warehouse Service point, you must have installed a Reporting services point.
 
 **General** page: The following general information is required:
-- **Configuration Manager database settings:**   
+- **Configuration Manager database settings:**
   - **Server Name** - Specify the FQDN of the server that hosts the site database. If you don't use a default instance of SQL Server, you must specify the instance after the FQDN in the following format: ***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
   - **Database name** - Specify the name of the site database.
   - **Verify** - Click **Verify** to make sure that the connection to the site database is successful.
@@ -86,7 +86,7 @@ Before the Wizard displays an option to select and install the Data Warehouse Se
   - **Database name** - Specify the FQDN for the data warehouse database.  Configuration Manager will create the database with this name. If you specify a database name that already exists on the instance of SQL Server, Configuration Manager will use that database.
   - **Verify** - Click **Verify** to make sure that the connection to the site database is successful.
 
-**Synchronization settings** page:   
+**Synchronization settings** page:
 - **Data settings:**
   - **Replication groups to synchronize** – Select the data groups you want to synchronize. For information about the different types of data groups, see [Database replication](../plan-design/hierarchy/data-transfers-between-sites.md#bkmk_dbrep) and **Distributed views** in [Data transfers between sites](../plan-design/hierarchy/data-transfers-between-sites.md).
   - **Tables included to synchronize** – Specify the name of each extra table you want to synchronize. Separate multiple tables by using a comma. These tables will be synchronized from the site database in addition to the replication groups you select.
@@ -95,7 +95,7 @@ Before the Wizard displays an option to select and install the Data Warehouse Se
   - **Synchronization interval (minutes)** - Specify a value in minutes. After the interval is reached, a new synchronization starts. This supports a range from 60 to 1440 minutes (24 hours).
   - **Schedule** - Specify the days that you want synchronization to run.
 
-**Reporting point access**:   
+**Reporting point access**:
 After the data warehouse role is installed, ensure the account that is used as the *Reporting Services Point Account* has the **db_datareader** permission to the data warehouse database.
 
 #### Troubleshoot installation and data synchronization
@@ -119,11 +119,11 @@ After you install a Data Warehouse site system role, the following reports are a
 ### Move the Data Warehouse database
 Use the following steps to move the data warehouse database to a new SQL Server:
 
-1. Review the current database configuration and record the configuration details, including:  
+1. Review the current database configuration and record the configuration details, including:
    - The data groups you synchronize
-   - Tables you include or exclude from synchronization       
+   - Tables you include or exclude from synchronization
 
-   You'll reconfigure these data groups and tables after you restore the database to a new server and reinstall the site system role.  
+   You'll reconfigure these data groups and tables after you restore the database to a new server and reinstall the site system role.
 
 2. Use SQL Server Management Studio to backup the data warehouse database, and then again to restore that database to a SQL Server on the new computer that will host the data warehouse.
 
@@ -135,7 +135,7 @@ Use the following steps to move the data warehouse database to a new SQL Server:
 
 5. After the site system role installs, the move is complete.
 
-You can review the following Configuration Manager logs to confirm the site system role has successfully reinstalled:  
+You can review the following Configuration Manager logs to confirm the site system role has successfully reinstalled:
 - **DWSSMSI.log** and **DWSSSetup.log**  - Use these logs to investigate errors when installing the Data warehouse service point.
 - **Microsoft.ConfigMgrDataWarehouse.log** – Use this log to investigate data synchronization between the site database to the data warehouse database.
 
@@ -149,36 +149,36 @@ After you install Technical Preview 1612, you can find **ContentLibraryCleanup.e
 
 The tool released with this Technical Preview is intended to replace older versions of similar tools released for past Configuration Manager products. Although this tool version will cease to function after March 1st, 2017, new versions will release with future Technical Previews until such time as this tool is released as part of the Current Branch, or a production ready out-of-band release.
 
-### Requirements  
+### Requirements
 - The tool can be run directly on the computer that hosts the distribution point, or remotely from another server. The tool can only be run against a single distribution point at a time.
 - The user account that runs the tool must directly have role-based administration permissions that are equal to a Full Administrator on the Configuration Manager hierarchy.  The tool doesn't function when user account is granted permissions as a member of a Windows security group that has the Full Administrator permissions.
 
 ### Modes of operation
 The tool can be run in two modes:
-1. **What-If mode**:   
+1. **What-If mode**:
    When you don't specify the **/delete** switch, the tool runs in What-If mode and identifies the content that would be deleted from the distribution point but doesn't actually delete any data.
 
    - When the tool runs in this mode, information about the content that would be deleted is automatically written to the tools log file. The user isn't prompted to confirm each potential deletion.
-   - By default, the log file is written to the users temp folder on the computer where you run the tool, however you can use the /log switch to redirect the log file to another location.  
+   - By default, the log file is written to the users temp folder on the computer where you run the tool, however you can use the /log switch to redirect the log file to another location.
    </br>
 
-   We recommend you run the tool in this mode and review the resulting log file before you run the tool with the /delete switch.  
+   We recommend you run the tool in this mode and review the resulting log file before you run the tool with the /delete switch.
 
 2. **Delete mode**:
    When you run the tool with the **/delete** switch, the tool runs in delete mode.
 
    - When the tool runs in this mode, orphaned content that is found on the specified distribution point can be deleted from the distribution point's content library.
-   -  Before deleting each file, the user is prompted to confirm that the file should be deleted.  You can select, **Y** for yes, **N** for no, or **Yes to all** to skip further prompts and delete all orphaned content.  
+   -  Before deleting each file, the user is prompted to confirm that the file should be deleted.  You can select, **Y** for yes, **N** for no, or **Yes to all** to skip further prompts and delete all orphaned content.
    </br>
 
-   We recommend you run the tool in What-If mode and review the resulting log file before you run the tool with the /delete switch.  
+   We recommend you run the tool in What-If mode and review the resulting log file before you run the tool with the /delete switch.
 
-When the content library cleanup tool runs in either mode, it automatically creates a log with a name that includes the mode the tool runs in, distribution point name, date, and time of operation. The log file automatically opens when the tool finishes. By default, this log is written to the users **temp** folder on the computer where you run the tool., However, you can use a command line switch to redirect the log file to another location, including a network share.   
+When the content library cleanup tool runs in either mode, it automatically creates a log with a name that includes the mode the tool runs in, distribution point name, date, and time of operation. The log file automatically opens when the tool finishes. By default, this log is written to the users **temp** folder on the computer where you run the tool., However, you can use a command line switch to redirect the log file to another location, including a network share.
 
 
 ### Run the tool
 To run the tool:
-1. Open an administrative command prompt to a folder that contains **ContentLibraryCleanup.exe**.  
+1. Open an administrative command prompt to a folder that contains **ContentLibraryCleanup.exe**.
 2. Next, enter a command line that includes the required command line switches, and optional switches you want to use.
 
 **Known issue**
@@ -189,8 +189,8 @@ When the tool is run, an error like the following might be returned when any pac
 
 
 
-### Command line switches  
-The following command line switches can be used in any order.   
+### Command line switches
+The following command line switches can be used in any order.
 
 |Switch|Details|
 |---------|-------|
@@ -204,13 +204,13 @@ The following command line switches can be used in any order.
 
 ## Improvements for in-console search
 Based on your feedback, we have added the following improvements to in-console search:
-- **Object Path:**  
-  Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.   
+- **Object Path:**
+  Many objects now support a new column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching sub-nodes, the *Object Path* column in the results pane will show you the path to each object returned.
 
-- **Preservation of search text:**  
+- **Preservation of search text:**
   When you enter text in the search text box, and then switch between searching a sub-node and the current node, the text you typed will now persist and remain available for a new search without having to retype it.
 
-- **Preservation of your decision to search sub-nodes:**  
+- **Preservation of your decision to search sub-nodes:**
   The option you select for either searching the *current node* or *all sub-nodes* now persists when you change the node you're working in.   This new behavior means you don't need to constantly reset the decision as you move around the console.  By default, when you open the console the option is to only search the current node.
 
 ## Prevent installation of an application if a specified program is running.
@@ -264,7 +264,7 @@ To enable express installation files support on clients, you must enable express
 
 ## OData endpoint data access
 
- Configuration Manager now provides a RESTful OData endpoint for accessing Configuration Manager data. The endpoint is compatible with Odata version 4, which enables tools such as Excel and Power BI to easily access Configuration Manager data through a single endpoint. Technical Preview 1612 only supports read access to objects in Configuration Manager.  
+ Configuration Manager now provides a RESTful OData endpoint for accessing Configuration Manager data. The endpoint is compatible with Odata version 4, which enables tools such as Excel and Power BI to easily access Configuration Manager data through a single endpoint. Technical Preview 1612 only supports read access to objects in Configuration Manager.
 
 Data that is currently available in the [Configuration Manager WMI Provider](../../develop/reference/configuration-manager-reference.md) is now also accessible with the new OData RESTful endpoint. The entity sets exposed by the OData endpoint enable you to enumerate over the same data you can query with the WMI provider.
 

@@ -51,6 +51,14 @@ This feature applies to:
 
 #### Device Password
 
+  > [!NOTE]
+  > 
+  > - Users on fully managed, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
+  >
+  >   To apply the device password settings during device enrollment, assign the device restriction profile to users, not devices. During enrollment, users are asked to set a screen lock. Then, they must choose a device password that meets all the requirements in this device restriction profile.
+  > - On dedicated devices, if the device is set up with single or multi-app kiosk mode, then users are prompted to set a password. Screens force and guide users to create a compliant password before they can continue using the device.
+  > - On dedicated devices that are not using kiosk mode, users are not notified of any password requirement. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
+
 **Required password type**: Set the password's complexity requirements. Additional password requirements become available based on your selection.
 
 This feature applies to:
@@ -267,7 +275,7 @@ This feature applies to:
 
 - Android Open Source Project (AOSP) corporate-owned user-associated devices (single user)
 
-**Disable Bluetooth**: If 'True', disables Bluetooth on the device so that users can't pair with other devices. If 'False', Intune doesn't change or update this setting. By default, the OS might enable Bluetooth on the device.
+**Block Bluetooth**: If 'True', disables Bluetooth on the device so that users can't pair with other devices. If 'False', Intune doesn't change or update this setting. By default, the OS might enable Bluetooth on the device.
 
 This feature applies to:
 

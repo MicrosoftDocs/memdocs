@@ -12,16 +12,16 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1703 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1703. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1703. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 ## Deploy volume-purchased iOS apps to device collections
 
@@ -41,10 +41,10 @@ You can now deploy licensed apps to devices as well as users. Depending on the a
 
 ## Direct links to applications in Software Center
 
-You can now provide end users with a direct link to an application in Software Center. This means they no longer must open Software Center and search for an application before they can install it. 
+You can now provide end users with a direct link to an application in Software Center. This means they no longer must open Software Center and search for an application before they can install it.
 This is available only for Configuration Manager applications, not packages and programs or task sequences.
 
-### Try it out                 
+### Try it out
 
 Use the following URL format to open Software Center to a particular application:
 
@@ -85,9 +85,9 @@ With technical preview 1703, only Windows Store for Business (WSfB) is configure
 
 ### Prerequisites and planning
 When you set up a connection between Configuration Manager and the Windows Store for Business, you must provide a folder where app content synchronized from the store will be kept. To ensure that this folder is secure and that its content can be deployed to devices, make sure the following permissions are in place:
-- The computer on which you install the service connection point site system role (the top-level site in the hierarchy) must have read and write permissions to the folder you specified when using the **Computer$** account.  
+- The computer on which you install the service connection point site system role (the top-level site in the hierarchy) must have read and write permissions to the folder you specified when using the **Computer$** account.
 
-- The app author must have read permissions to the folder you specified.  
+- The app author must have read permissions to the folder you specified.
 
 - The **Computer$** account of each computer that hosts an instance of the SMS Provider must be able to use the folder you specified.
 
@@ -141,15 +141,15 @@ Beginning with this version, you can use device client settings to simplify the 
 - You must have configured your site to use the Upgrade Readiness cloud service.
 
 ### Configure Windows Analytics client settings
-To configure Windows Analytics, in the Configuration Manager console go to **Administration** > **Client Settings**, double-click **Create Custom Device Client Settings** and then check **Windows Analytics**.  
+To configure Windows Analytics, in the Configuration Manager console go to **Administration** > **Client Settings**, double-click **Create Custom Device Client Settings** and then check **Windows Analytics**.
 
 Then, configure the following after navigating to the **Windows Analytics** settings tab:
-- **Commercial ID**  
+- **Commercial ID**
 The commercial ID key maps information from devices you manage to the OMS workspace that hosts your organization's Windows Analytics data. If you have already configured a commercial ID key for use with Upgrade Readiness, use that ID. If you do not yet have a commercial ID key, generate your commercial ID key.
 
 - Set a **Diagnostic data level for Windows 10 devices**
 
-- Choose to **opt-in to commercial data collection on Windows 7, 8 and 8.1 devices**   
+- Choose to **opt-in to commercial data collection on Windows 7, 8 and 8.1 devices**
 
 - **Configure Internet Explore data collection**
 On devices running Windows 8.1 or earlier, Internet Explorer data collection can allow Upgrade Readiness to detect web app incompatibilities that could prevent a smooth upgrade to Windows 10. Internet Explorer data collection can be enabled on a per internet zone basis.

@@ -10,7 +10,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -121,7 +121,7 @@ The settings on this page configure the encryption settings for the drive on whi
 If you enable this setting, the user has to protect the OS drive, and BitLocker encrypts the drive. If you disable it, the user can't protect the drive. If you don't configure this policy, BitLocker protection isn't required on the OS drive.
 
 > [!NOTE]
-> If the drive is already encrypted, and you disable this setting, BitLocker decrypts the drive.  
+> If the drive is already encrypted, and you disable this setting, BitLocker decrypts the drive.
 
 If you have devices without a [Trusted Platform Module (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-top-node), use the option to **Allow BitLocker without a compatible TPM (requires a password)**. This setting allows BitLocker to encrypt the OS drive, even if the device doesn't have a TPM. If you allow this option, Windows prompts the user to specify a BitLocker password.
 

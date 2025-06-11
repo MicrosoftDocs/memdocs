@@ -3,9 +3,9 @@ title: Guided scenarios overview
 titleSuffix: Microsoft Intune
 description: Learn about the Intune guided scenarios available in the Microsoft 365 Device Management portal.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 05/16/2024
 ms.topic: overview
 ms.service: microsoft-intune

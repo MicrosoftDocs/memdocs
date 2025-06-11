@@ -12,188 +12,188 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # About Configuration Manager Custom Action MOF Files
-In Configuration Manager, operating system deployment actions are defined in the Managed Object Format (MOF) file, %*ProgramFiles*%\Microsoft Configuration Manager\bin\i386\\_tasksequenceprovider.mof.  
+In Configuration Manager, operating system deployment actions are defined in the Managed Object Format (MOF) file, %*ProgramFiles*%\Microsoft Configuration Manager\bin\i386\\_tasksequenceprovider.mof.
 
- When you create a custom action, you must create a MOF file that declares your custom action. You then use Mofcomp.exe to add your changes to the SMS Provider. For more information, see [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md).  
+ When you create a custom action, you must create a MOF file that declares your custom action. You then use Mofcomp.exe to add your changes to the SMS Provider. For more information, see [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md).
 
- The administrator configures the custom action, as defined by the MOF file, by using a custom action control. For more information, see [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md).  
+ The administrator configures the custom action, as defined by the MOF file, by using a custom action control. For more information, see [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md).
 
-## MOF File Content  
- A custom action derives from [SMS_TaskSequence_Action Server WMI Class](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md). The MOF file declaration includes a class definition and various qualifiers for the command line, task sequence variables, category, and custom action control assembly location.  
+## MOF File Content
+ A custom action derives from [SMS_TaskSequence_Action Server WMI Class](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md). The MOF file declaration includes a class definition and various qualifiers for the command line, task sequence variables, category, and custom action control assembly location.
 
- Properties declared in a class, except those with the `CommandLineArg` qualifier, are available as task sequence variables during client deployment. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).  
+ Properties declared in a class, except those with the `CommandLineArg` qualifier, are available as task sequence variables during client deployment. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).
 
- The namespace for the custom action is \\\root\SMS_Site_SITECODE. When the MOF file is compiled, the custom action is made a child of [SMS_TaskSequence_Action Server WMI Class](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
-
-> [!NOTE]
->  For an example MOF, see the task sequence action MOF that is declared in _tasksequenceprovider.mof.  
-
- The section of the MOF file for the custom action declaration will look similar to the following example:  
-
-```  
-[   CommandLine("smsswd.exe /run:%1 Application.exe /user:%2"),  
-    VariablePrefix("MyCustomActionPrefix"),  
-    ActionCategory("My Custom Action Category,7,1"),  
-    ActionName{"ConfigMgrTSAction.dll", "ConfigMgrTSAction.Properties.Resources", "ConfigMgrTSAction"},  
-    ActionUI{"ConfigMgrTSAction.dll", "ConfigMgrTSAction","ConfigMgrTSActionControl",   
-"ConfigureTSActionOptions"}  
-    ]  
-class ConfigMgrTSActionControl : SMS_TaskSequence_Action  
-{  
-    [TaskSequencePackage, CommandLineArg(1)]  
-    string          PackageIDForApplicationExe;  
-
-    [Not_Null, CommandLineArg(2)]  
-    string          User;  
-
-    [VariableName("CustomLocation")]  
-    string          Location;  
-
-};  
-
-```  
-
- The complete MOF also specifies the namespace and other information,  
-
- For the complete MOF for this sample, see [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md).  
-
-### Command Line  
- The command line for the action is described in the `CommandLine` class qualifier. It defines the application that is called and the various arguments that can be supplied. For each command-line argument, there is a `CommandLineArg` class qualifier for the argument on the corresponding class property.  
-
- `CommandLine` typically takes the form:  
-
- `CommandLine("smsswd.exe /run:%1 Application.exe %2 %3")`  
-
- Smsswd.exe is used to run a program within a package. It requires the following arguments:  
-
-|Argument|Description|  
-|--------------|-----------------|  
-|/run:%1|Identifies the package that the application is in. %1 is the package identifier ([SMS_Package Server WMI Class](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)`PackageID` property).|  
-|Application.exe|The custom action application that is performed.|  
-|%2 - %n|One or more command-line arguments for Application.exe.|  
-
- The command-line substitution strings, %1, %2 and so forth, are defined by the `CommandLineArg` class qualifier. For example, the following declares %1.  
-
-```  
-[TaskSequencePackage, CommandLineArg(1)]  
-string          PackageIDForApplicationExe;  
-```  
-
- With the custom action control, you use the `PackageIDForApplicationExe` property to configure the package identifier.  
+ The namespace for the custom action is \\\root\SMS_Site_SITECODE. When the MOF file is compiled, the custom action is made a child of [SMS_TaskSequence_Action Server WMI Class](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 > [!NOTE]
->  Properties declared with the `CommandLineArg` qualifier are not available as task sequence variables during client deployment.  
+>  For an example MOF, see the task sequence action MOF that is declared in _tasksequenceprovider.mof.
 
-### Action Category  
- An action can be associated with a specific category, in the task sequence editor drop down menu, by using the `ActionCategory` class qualifier.  
+ The section of the MOF file for the custom action declaration will look similar to the following example:
+
+```
+[   CommandLine("smsswd.exe /run:%1 Application.exe /user:%2"),
+    VariablePrefix("MyCustomActionPrefix"),
+    ActionCategory("My Custom Action Category,7,1"),
+    ActionName{"ConfigMgrTSAction.dll", "ConfigMgrTSAction.Properties.Resources", "ConfigMgrTSAction"},
+    ActionUI{"ConfigMgrTSAction.dll", "ConfigMgrTSAction","ConfigMgrTSActionControl",
+"ConfigureTSActionOptions"}
+    ]
+class ConfigMgrTSActionControl : SMS_TaskSequence_Action
+{
+    [TaskSequencePackage, CommandLineArg(1)]
+    string          PackageIDForApplicationExe;
+
+    [Not_Null, CommandLineArg(2)]
+    string          User;
+
+    [VariableName("CustomLocation")]
+    string          Location;
+
+};
+
+```
+
+ The complete MOF also specifies the namespace and other information,
+
+ For the complete MOF for this sample, see [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md).
+
+### Command Line
+ The command line for the action is described in the `CommandLine` class qualifier. It defines the application that is called and the various arguments that can be supplied. For each command-line argument, there is a `CommandLineArg` class qualifier for the argument on the corresponding class property.
+
+ `CommandLine` typically takes the form:
+
+ `CommandLine("smsswd.exe /run:%1 Application.exe %2 %3")`
+
+ Smsswd.exe is used to run a program within a package. It requires the following arguments:
+
+|Argument|Description|
+|--------------|-----------------|
+|/run:%1|Identifies the package that the application is in. %1 is the package identifier ([SMS_Package Server WMI Class](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md)`PackageID` property).|
+|Application.exe|The custom action application that is performed.|
+|%2 - %n|One or more command-line arguments for Application.exe.|
+
+ The command-line substitution strings, %1, %2 and so forth, are defined by the `CommandLineArg` class qualifier. For example, the following declares %1.
+
+```
+[TaskSequencePackage, CommandLineArg(1)]
+string          PackageIDForApplicationExe;
+```
+
+ With the custom action control, you use the `PackageIDForApplicationExe` property to configure the package identifier.
 
 > [!NOTE]
->  Do not use a category that is already in use by another action.  
+>  Properties declared with the `CommandLineArg` qualifier are not available as task sequence variables during client deployment.
 
- The syntax is:  
+### Action Category
+ An action can be associated with a specific category, in the task sequence editor drop down menu, by using the `ActionCategory` class qualifier.
 
- `ActionCategory{CategoryName,ActionOrder,CategoryOrder}`  
+> [!NOTE]
+>  Do not use a category that is already in use by another action.
 
- `CategoryName`  
- The category name.  
+ The syntax is:
 
- `ActionOrder`  
- The action order within the category.  
+ `ActionCategory{CategoryName,ActionOrder,CategoryOrder}`
 
- `CategoryOrder`  
- The category order within all categories.  
+ `CategoryName`
+ The category name.
 
- The default Configuration Manager categories that you can add an action to are:  
+ `ActionOrder`
+ The action order within the category.
 
-- General  
+ `CategoryOrder`
+ The category order within all categories.
 
-- Disks  
+ The default Configuration Manager categories that you can add an action to are:
 
-- User State  
+- General
 
-- Images  
+- Disks
 
-- Drivers  
+- User State
 
-- Settings  
+- Images
 
-  You can also create a new category by specifying a new category in the `ActionCategory` class qualifier. For example, the following MOF file creates a new category called My Custom Category. The action is placed second within the category and the category is placed fifth overall.  
+- Drivers
 
-  `ActionCategory{"My Custom Category",2,5"},`  
+- Settings
 
-### ActionName  
- The `ActionName` class qualifier defines the custom action control name. The qualifier has the following syntax:  
+  You can also create a new category by specifying a new category in the `ActionCategory` class qualifier. For example, the following MOF file creates a new category called My Custom Category. The action is placed second within the category and the category is placed fifth overall.
 
- `ActionName{"Assembly", "Namespace.Properties.Resources", "Control"}`  
+  `ActionCategory{"My Custom Category",2,5"},`
 
- `Assembly`  
- The assembly that contains the action control.  
+### ActionName
+ The `ActionName` class qualifier defines the custom action control name. The qualifier has the following syntax:
 
- `Namespace.Properties.Resources`  
- The namespace for the resource that contains the displayed action name strings. For more information, see [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md).  
+ `ActionName{"Assembly", "Namespace.Properties.Resources", "Control"}`
 
- `Control`  
- The control that contains the string resources.  
+ `Assembly`
+ The assembly that contains the action control.
 
-### Action User Interface  
- The `ActionUI` class qualifier defines the location of the assembly and classes that are used by an action. The qualifier has the following syntax:  
+ `Namespace.Properties.Resources`
+ The namespace for the resource that contains the displayed action name strings. For more information, see [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md).
 
- `ActionUI{"Assembly","Namespace", "Control", "Option control"}`  
+ `Control`
+ The control that contains the string resources.
 
- `Assembly`  
- The assembly that contains the action control.  
+### Action User Interface
+ The `ActionUI` class qualifier defines the location of the assembly and classes that are used by an action. The qualifier has the following syntax:
 
- `Namespace`  
- The namespace that the action control resides in.  
+ `ActionUI{"Assembly","Namespace", "Control", "Option control"}`
 
- `Control`  
- The action control displayed in the task sequence editor. It hosts the option control page.  
+ `Assembly`
+ The assembly that contains the action control.
 
- `Option control`  
- The page used to manage action options, in the task sequence editor.  
+ `Namespace`
+ The namespace that the action control resides in.
 
- Multiple control tabs can be implemented by including more control class names separated by commas. For example:  
+ `Control`
+ The action control displayed in the task sequence editor. It hosts the option control page.
 
- ActionUI{"Assembly","Namespace", "Control1", "Control2", "Control3", "Option control"}  
+ `Option control`
+ The page used to manage action options, in the task sequence editor.
 
-### Action Variables  
- The `VariableName` qualifier is used to override the default variable name for a property.  
+ Multiple control tabs can be implemented by including more control class names separated by commas. For example:
 
- A class property can be defined as a task sequence variable by adding the `VariableName` class qualifier. In the example above, the property `MessageTimeout` is an action variable with the name `RebootTimeout`.  
+ ActionUI{"Assembly","Namespace", "Control1", "Control2", "Control3", "Option control"}
 
- If the `VariablePrefix` class qualifier is used, the variables are prefixed with the class qualifier value.  
+### Action Variables
+ The `VariableName` qualifier is used to override the default variable name for a property.
 
- For more information about variable usage, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)  
+ A class property can be defined as a task sequence variable by adding the `VariableName` class qualifier. In the example above, the property `MessageTimeout` is an action variable with the name `RebootTimeout`.
 
-### Properties  
+ If the `VariablePrefix` class qualifier is used, the variables are prefixed with the class qualifier value.
 
-#### Qualifiers  
- There are several qualifiers that can be applied to the MOF properties. The following are commonly used:  
+ For more information about variable usage, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)
 
-|Qualifier|Description|  
-|---------------|-----------------|  
-|CommandLineArg|A property that should be inserted on the command line|  
-|Not_Null|A value is required for this property.|  
-|ValueMap|Specifies a list of allowed string values.|  
-|ValueRange|Specifies a range of allowed values (int fields).|  
-|RequiredIfNull|A value is required for this property if another property is null.|  
-|TaskSequencePackage|Identifies a property as a package identifier.|  
-|VariableName|Specifies a different name for the property in the task sequence environment.|  
-|AllowedLen|Specifies the minimum and maximum number of characters in a string.|  
-|SuccessCodes|Specifies one or more return code from the executable that indicates success.|  
+### Properties
 
-#### Restrictions  
+#### Qualifiers
+ There are several qualifiers that can be applied to the MOF properties. The following are commonly used:
 
--   Regular qualifier constraints can be applied to class properties. For example, in the example above, the command-line arguments cannot be `null`. For more information, see the [Windows Management Instrumentation (WMI) SDK](/windows/win32/wmisdk/wmi-start-page).  
+|Qualifier|Description|
+|---------------|-----------------|
+|CommandLineArg|A property that should be inserted on the command line|
+|Not_Null|A value is required for this property.|
+|ValueMap|Specifies a list of allowed string values.|
+|ValueRange|Specifies a range of allowed values (int fields).|
+|RequiredIfNull|A value is required for this property if another property is null.|
+|TaskSequencePackage|Identifies a property as a package identifier.|
+|VariableName|Specifies a different name for the property in the task sequence environment.|
+|AllowedLen|Specifies the minimum and maximum number of characters in a string.|
+|SuccessCodes|Specifies one or more return code from the executable that indicates success.|
 
--   Ensure that property names and qualifiers are synchronized between the MOF file, custom action control and client application. The property names must match as well as any limitations. For example, if an `int` property is required, and it must be in the range 1 - 512, then the MOF file should have a `Not_Null` and `ValueRange` qualifier, the custom control should ensure that the property is set and within range, and the client application should verify the value before using it.  
+#### Restrictions
 
-## See Also  
- [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md)   
- [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md)   
- [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md)   
- [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)   
+-   Regular qualifier constraints can be applied to class properties. For example, in the example above, the command-line arguments cannot be `null`. For more information, see the [Windows Management Instrumentation (WMI) SDK](/windows/win32/wmisdk/wmi-start-page).
+
+-   Ensure that property names and qualifiers are synchronized between the MOF file, custom action control and client application. The property names must match as well as any limitations. For example, if an `int` property is required, and it must be in the range 1 - 512, then the MOF file should have a `Not_Null` and `ValueRange` qualifier, the custom control should ensure that the property is set and within range, and the client application should verify the value before using it.
+
+## See Also
+ [About Configuration Manager Custom Actions](../../develop/osd/about-configuration-manager-custom-actions.md)
+ [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md)
+ [How to Create a MOF File for a Configuration Manager Custom Action](../../develop/osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md)
+ [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)
  [About Configuration Manager Custom Action Client Applications](../../develop/osd/about-configuration-manager-custom-action-client-applications.md)

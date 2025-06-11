@@ -12,51 +12,51 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ICcmAlternateDownloadProvider : ModifyJobPriority Method
-The **ICcmAlternateDownloadProvider::ModifyJobPriority** method, in Configuration Manager, instructs the provider to modify the priority for a given job.  
+The **ICcmAlternateDownloadProvider::ModifyJobPriority** method, in Configuration Manager, instructs the provider to modify the priority for a given job.
 
-## Syntax  
+## Syntax
 
-```  
-HRESULT ModifyJobPriority(  
-        [in] REFGUID JobID,   
-        [in] CCM_DTS_PRIORITY Priority  
-        );  
+```
+HRESULT ModifyJobPriority(
+        [in] REFGUID JobID,
+        [in] CCM_DTS_PRIORITY Priority
+        );
 
-```  
+```
 
-#### Parameters  
- `JobID`  
- Data type: `REFGUID`  
+#### Parameters
+ `JobID`
+ Data type: `REFGUID`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The job on which to take action.  
+ The job on which to take action.
 
- `Priority`  
- Data type: `CCM_DTS_PRIORITY`  
+ `Priority`
+ Data type: `CCM_DTS_PRIORITY`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The new priority.  
+ The new priority.
 
-## Return Values  
- An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
+## Return Values
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:
 
- S_OK  
- Success implies that discovery was triggered successfully. All other return values indicate failure.  
+ S_OK
+ Success implies that discovery was triggered successfully. All other return values indicate failure.
 
-## Remarks  
+## Remarks
 
 > [!NOTE]
->  An error should be returned if the job is not found or if modification of the priority failed. If any changes are required to make the guarantees described above on the comments on CCM_DTS_PRIORITY, the provider must make them. If the provider cannot honor that guarantee, it should report an error from this function.  
+>  An error should be returned if the job is not found or if modification of the priority failed. If any changes are required to make the guarantees described above on the comments on CCM_DTS_PRIORITY, the provider must make them. If the provider cannot honor that guarantee, it should report an error from this function.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
