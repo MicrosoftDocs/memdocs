@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 02/04/2025
+ms.reviewer: madakeva
+manager: bpardi
+ms.date: 04/02/2025
 ms.topic: overview
 ms.collection:
   - M365-modern-desktop
@@ -52,7 +52,8 @@ For additional detailed requirements, see [Windows Autopilot device preparation 
 
 When new Windows devices are initially deployed, Windows Autopilot device preparation uses the OEM-optimized version of Windows client. The OEM-optimized version of Windows client is preinstalled on the device, so custom images and drivers don't need to be maintained for every device model. Instead of re-imaging the device, with Windows Autopilot device preparation, the existing Windows installation can be transformed into a "business-ready" state that can:
 
-- Deliver Windows Autopilot device preparation configuration during user authentication during the out-of-box experience (OOBE).
+- Deliver Windows Autopilot device preparation configuration during device provisioning.
+
 - Automatically add devices to the device security group and receive selected applications and PowerShell scripts assigned to the group.
 
 ## Windows Autopilot device preparation improvements
@@ -68,22 +69,26 @@ New features in Windows Autopilot device preparation include:
 
 - **Utilizing enrollment time grouping in Intune** - Device is added to a device security group at enrollment time and configuration is delivered immediately. This feature provides a faster and more reliable setup. For more information, see [Enrollment Time Grouping](#enrollment-time-grouping).
 
-- **Out of the box granular reporting** - Improved monitoring and troubleshooting. Out of the box monitoring and reporting with near real-time status of deployments, including:
+- **Granular reporting** - Improved monitoring and troubleshooting. Monitoring and reporting with near real-time status of deployments, including:
+
   - Applications status
   - PowerShell scripts status
-  - Deployment time.
-    For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
+  - Deployment time. For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
 
-- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune/fundamentals/intune-govt-service-description) environments.
+- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/mem/intune-service/fundamentals/intune-govt-service-description) environments.
+
+> [!IMPORTANT]
+>
+> [Windows 365 Frontline in shared mode](/windows-365/enterprise/introduction-windows-365-frontline) isn't supported for GCCH and DoD at this time.
 
 ## Capabilities
 
 Windows Autopilot device preparation capabilities include:
 
-- Set up user-driven deployment flow.
+- Set up user-driven or automatic deployment flow.
 - By default, making sure users are standard non-administrator users.
-- Select application and PowerShell script to be delivered during OOBE.
-- Simplified and clear OOBE user experience with percentage progress indicator.
+- Select application and PowerShell script to be delivered during device setup.
+- Simplified and clear OOBE user experience with percentage progress indicator for user-driven flows.
 - Deployment report for better troubleshooting.
 
 ## Improved experiences
@@ -107,7 +112,7 @@ Windows Autopilot device preparation also improves the user experience in the fo
 
 Windows Autopilot device preparation offers near real-time status updates on deployments. Windows Autopilot device preparation monitoring includes application and PowerShell script status information, allowing for improved troubleshooting and reporting. Deployment monitoring includes the following features:
 
-- Easily track which devices went through Autopilot.
+- Easily track which devices that went through Windows Autopilot device preparation.
 - Track status and deployment phase for each device in near real-time.
 - Each device has the following details in the monitoring report:
   - Device details.
@@ -131,7 +136,7 @@ For Windows Autopilot device preparation:
 - Only applications and PowerShell scripts selected in the Windows Autopilot device preparation profile are deployed during OOBE. Any additional applications or PowerShell scripts assigned to the device group will be deployed after the Windows Autopilot device preparation deployment is complete.
 - For policies, Windows Autopilot device preparation syncs any policies assigned to the device group. However, Windows Autopilot device preparation doesn't track if the policies are applied during the deployment. The policies might be applied either during the deployment or after the deployment is complete.
 
-For more information, see [Enrollment time grouping in Microsoft Intune](/mem/intune/enrollment/enrollment-time-grouping).
+For more information, see [Enrollment time grouping in Microsoft Intune](/mem/intune-service/enrollment/enrollment-time-grouping).
 
 ### Corporate identifiers for Windows
 
@@ -139,9 +144,9 @@ Windows Autopilot device preparation supports the Intune corporate identifier en
 
 Windows Autopilot device preparation only requires corporate identifiers for Windows if Intune enrollment restrictions are being used to block personal device enrollments. For more information, see:
 
-- [Identify devices as corporate-owned](/mem/intune/enrollment/corporate-identifiers-add).
-- [What are enrollment restrictions?](/mem/intune/enrollment/enrollment-restrictions-set).
-- [Create device platform restrictions](/mem/intune/enrollment/create-device-platform-restrictions).
+- [Identify devices as corporate-owned](/mem/intune-service/enrollment/corporate-identifiers-add).
+- [What are enrollment restrictions?](/mem/intune-service/enrollment/enrollment-restrictions-set).
+- [Create device platform restrictions](/mem/intune-service/enrollment/create-device-platform-restrictions).
 
 ## Tutorial
 

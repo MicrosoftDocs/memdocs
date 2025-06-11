@@ -6,13 +6,13 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
+ms.reviewer: madakeva
+manager: bpardi
 ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
-ms.topic: conceptual
+ms.topic: article
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -71,11 +71,11 @@ To change this key value, use the Windows Configuration Designer (WCD) tool to c
 
 For more information, see [Cortana voice support](/windows-hardware/customize/desktop/cortana-voice-support).
 
-[!INCLUDE [cortana-app-deprecation](../memdocs/intune/includes/cortana-app-deprecation.md)]
+[!INCLUDE [cortana-app-deprecation](../intune/intune-service/includes/cortana-app-deprecation.md)]
 
 ### BitLocker encryption
 
-With Windows Autopilot, BitLocker encryption settings can be configured to apply before automatic encryption is started. For more information, see [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
+With Windows Autopilot, BitLocker encryption settings can be configured to apply before automatic encryption is started. For more information, see [Setting the BitLocker encryption algorithm for Windows Autopilot devices](bitlocker.md).
 
 ## Related content
 

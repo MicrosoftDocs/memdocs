@@ -5,9 +5,9 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 01/14/2025
+ms.reviewer: madakeva
+manager: bpardi
+ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -23,7 +23,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
-- Step 3: [Create a device group](entra-join-device-group.md)
+- Step 3: [Create an assigned device group](entra-join-device-group.md)
 - Step 4: [Create a user group](entra-join-user-group.md)
 
 > [!div class="checklist"]
@@ -46,20 +46,25 @@ The applications and PowerShell scripts specified should be the essential applic
 
 Any applications installed or PowerShell scripts that run during a Windows Autopilot device preparation deployment should be configured to install in the **System** context since the applications are installed and the PowerShell scripts ran during OOBE when no user is signed in.
 
-For applications to install and PowerShell scripts work successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create a device group](entra-join-device-group.md).
+For applications to install and PowerShell scripts work successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](entra-join-device-group.md).
+
+For applications to install and PowerShell scripts work successfully during a Windows Autopilot device preparation deployment, two steps need to be taken:
+
+1. They must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](entra-join-device-group.md). This step is covered in this article.
+2. They must be specified as part of the Windows Autopilot device preparation policy. This step is covered in the next step [Step 5: Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md).
 
 > [!NOTE]
 >
-> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/mem/intune/apps/apps-add) and [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
+> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/mem/intune-service/apps/apps-add) and [Use PowerShell scripts on Windows devices in Intune](/mem/intune-service/apps/intune-management-extension).
 
 ### Applications
 
 The following types of applications are supported for use with Windows Autopilot device preparation:
 
-- [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
-- [Win32](/mem/intune/apps/apps-win32-prepare).
-- [Microsoft Store](/mem/intune/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-- [Microsoft 365](/mem/intune/apps/apps-add-office365).
+- [Line-of-business (LOB)](/mem/intune-service/apps/lob-apps-windows).
+- [Win32](/mem/intune-service/apps/apps-win32-prepare).
+- [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
+- [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
 
 In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 
@@ -103,7 +108,7 @@ To assign the desired PowerShell scripts to the device group created for Windows
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **manage devices**, select **Scripts and remediations**.
+1. In the **Devices | Overview** screen, expand **Manage devices**, and then select **Scripts and remediations**.
 
 1. In the **Devices | Scripts and remediations** screen:
 
@@ -138,8 +143,8 @@ To assign the desired PowerShell scripts to the device group created for Windows
 
 ## Related content
 
-- [Add apps to Microsoft Intune](/mem/intune/apps/apps-add).
-- [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
-- [Assign apps to groups with Microsoft Intune](/mem/intune/apps/apps-deploy).
-- [Win32 app management in Microsoft Intune](/mem/intune/apps/apps-win32-app-management).
-- [Add a Windows line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-windows).
+- [Add apps to Microsoft Intune](/mem/intune-service/apps/apps-add).
+- [Use PowerShell scripts on Windows devices in Intune](/mem/intune-service/apps/intune-management-extension).
+- [Assign apps to groups with Microsoft Intune](/mem/intune-service/apps/apps-deploy).
+- [Win32 app management in Microsoft Intune](/mem/intune-service/apps/apps-win32-app-management).
+- [Add a Windows line-of-business app to Microsoft Intune](/mem/intune-service/apps/lob-apps-windows).

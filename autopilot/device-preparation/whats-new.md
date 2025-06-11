@@ -6,13 +6,13 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
-ms.reviewer: jubaptis
-ms.date: 10/15/2024
+manager: bpardi
+ms.reviewer: madakeva
+ms.date: 06/11/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
-ms.topic: conceptual
+ms.topic: whats-new
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -31,6 +31,21 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
+## Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode is in public preview
+
+Date added: *April 2, 2025*
+
+We've introduced a new flow for Windows Autopilot device preparation which can be used to provision [Windows 365 Frontline in shared mode](/windows-365/enterprise/introduction-windows-365-frontline). Admins can now choose **Automatic** when creating a Windows Autopilot device preparation policy to prepare a policy for Cloud PCs. The policy can then be included in the Cloud PC provisioning policy to ensure the policy is assigned to all Cloud PCs after they're created. The new Automatic policy allows admins to select up to 10 apps and up to 10 scripts which are delivered before a user accesses the Cloud PC. Deployments can then be monitored in the [Windows Autopilot device preparation deployment report](reporting-monitoring.md).
+
+With the new mode, admins can make sure their Cloud PCs are secured with required software and scripts before the end user logs in!
+
+For a tutorial on Windows Autopilot device preparation in automatic mode for Windows 365, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](tutorial/automatic/automatic-workflow.md).
+
+For more information, see the following articles:
+
+- [Windows 365 Frontline Cloud PC in shared mode - Quick Start Guide](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905).
+- [Use automated Autopilot device preparation with Windows 365 Frontline Cloud PCs in shared mode (preview)](/windows-365/enterprise/autopilot-device-preparation).
+
 ## Diagnostics logs automatically available in Windows Autopilot device preparation deployment status report
 
 Date added: *October 9, 2024*
@@ -41,7 +56,7 @@ Admins can now download diagnostics logs for failed Autopilot device preparation
 
 Date added: *September 18, 2024*
 
-As part of the 2409 Intune release, we're announcing support for Windows Autopilot Device Preparation policy in [Intune operated by 21Vianet in China](/mem/intune/fundamentals/china) cloud. Customers with tenants located in China can now provision devices and manage through Microsoft Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
+As part of the 2409 Intune release, we're announcing support for Windows Autopilot Device Preparation policy in [Intune operated by 21Vianet in China](/mem/intune-service/fundamentals/china) cloud. Customers with tenants located in China can now provision devices and manage through Microsoft Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
 
 <!-- MAXADO-9313795 / INADO-28687730 -->
 
@@ -67,7 +82,7 @@ In addition to the [Devices | Monitor](reporting-monitoring.md#accessing-reports
 
 Date added: *July 8, 2024*
 
-Customers who are blocking personal device enrollments can now use Windows Autopilot device preparation by pre-uploading the model, manufacturer, and serial number for all devices which will deploy with Autopilot device preparation. For more information, see [Add Windows corporate identifiers](/mem/intune/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
+Customers who are blocking personal device enrollments can now use Windows Autopilot device preparation by pre-uploading the model, manufacturer, and serial number for all devices which deploys with Windows Autopilot device preparation. For more information, see [Add Windows corporate identifiers](/mem/intune-service/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
 ## Additional role-based access control (RBAC) permissions for Managed apps and Mobile apps
 

@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 02/05/2025
+ms.reviewer: madakeva
+manager: bpardi
+ms.date: 04/04/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -59,7 +59,7 @@ As a workaround, select the table header **Allowed Applications** or **Allowed S
 Date added: *October 10, 2024*<br>
 Date updated: *February 5, 2025*
 
-When the [Managed installer policy](/mem/intune/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps and Microsoft Store apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
+When the [Managed installer policy](/mem/intune-service/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps and Microsoft Store apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
 
 > [!NOTE]
 >
@@ -101,7 +101,7 @@ Security group membership failures can be prevented by following these steps, en
 Date added: *July 8, 2024* <br>
 Date updated: *July 23, 2024*
 
-Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
+Windows Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
 
 As a workaround, customers can manually set the time zone in OOBE via Windows PowerShell until the issue is resolved:
 
@@ -127,7 +127,7 @@ There's a known issue that the Windows Autopilot device preparation policy shows
 - An assigned device security group was properly added to the policy.
 - The **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** is the owner of the device security group specified in the policy.
 
-The issue is being investigated. As a workaround, create a new assigned device security group with the **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner, and then assign the new device group to the Windows Autopilot device preparation policy. For more information on creating the assigned device group, see [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+The issue is being investigated. As a workaround, create a new assigned device security group with the **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner, and then assign the new device group to the Windows Autopilot device preparation policy. For more information on creating the assigned device group, see [Create an assigned device group](tutorial/user-driven/entra-join-device-group.md#create-an-assigned-device-group).
 
 **This issue was resolved in July 2024.**
 

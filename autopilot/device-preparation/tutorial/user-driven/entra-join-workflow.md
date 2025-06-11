@@ -5,9 +5,9 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 01/14/2025
+ms.reviewer: madakeva
+manager: bpardi
+ms.date: 03/27/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -27,7 +27,7 @@ Before beginning, refer to the [How to: Plan your Microsoft Entra join implement
 
 ## Windows Autopilot device preparation user-driven Microsoft Entra join overview
 
-Windows Autopilot device preparation user-driven Microsoft Entra join is a solution that automates the configuration of Windows on a new device without the need for IT intervention. Normally the device is delivered directly from an OEM or reseller to the end-user  Windows Autopilot device preparation user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
+Windows Autopilot device preparation user-driven Microsoft Entra join is a solution that automates the configuration of Windows on a new device without the need for IT intervention. Normally the device is delivered directly from an OEM or reseller to the end-user. Windows Autopilot device preparation user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
 
 - Powering on the device.
 - In certain scenarios, selecting the language, locale, and keyboard layout.
@@ -79,7 +79,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 >
 > - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 > - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
-> - Step 3: [Create a device group](entra-join-device-group.md)
+> - Step 3: [Create an assigned device group](entra-join-device-group.md)
 > - Step 4: [Create a user group](entra-join-user-group.md)
 > - Step 5: [Assign applications and PowerShell scripts to device group](entra-join-assign-apps-scripts.md)
 > - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)

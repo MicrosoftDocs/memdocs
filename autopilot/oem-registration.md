@@ -6,8 +6,8 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
+ms.reviewer: madakeva
+manager: bpardi
 ms.date: 06/28/2024
 ms.topic: how-to
 ms.collection:

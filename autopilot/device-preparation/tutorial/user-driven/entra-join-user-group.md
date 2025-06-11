@@ -1,13 +1,13 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 4 of 7 - Create a user group
-description: How to - Windows Autopilot device preparation  user-driven Microsoft Entra join - Step 4 of 7 - Create a user group.
+description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 4 of 7 - Create a user group.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 01/14/2025
+ms.reviewer: madakeva
+manager: bpardi
+ms.date: 04/04/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -23,7 +23,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
-- Step 3: [Create a device group](entra-join-device-group.md)
+- Step 3: [Create an assigned device group](entra-join-device-group.md)
 
 > [!div class="checklist"]
 >
@@ -37,7 +37,7 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 > [!NOTE]
 >
-> The user group created in this step is specific to Windows Autopilot device preparation. Microsoft recommends creating a user group specifically for use with Windows Autopilot device preparation instead of reusing existing user groups used in other Autopilot scenarios.
+> The user group created in this step is specific to Windows Autopilot device preparation. Microsoft recommends creating a user group specifically for use with Windows Autopilot device preparation instead of reusing existing user groups used in other Windows Autopilot scenarios.
 
 ## Create a user group
 

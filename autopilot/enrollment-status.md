@@ -6,13 +6,13 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
+ms.reviewer: madakeva
+manager: bpardi
 ms.date: 06/11/2024
 ms.collection:
   - M365-modern-desktop
   - tier2
-ms.topic: conceptual
+ms.topic: article
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -33,7 +33,7 @@ An administrator can deploy ESP profiles to a licensed Intune user and configure
 - Allow users to collect troubleshooting logs.
 - Specify what a user can do if device setup fails.
 
-For more information, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+For more information, see [Set up the Enrollment Status Page](/mem/intune-service/enrollment/windows-enrollment-status).
 
 :::image type="content" source="images/enrollment-status-page.png" alt-text="Screenshot that shows Enrollment Status Page":::
 

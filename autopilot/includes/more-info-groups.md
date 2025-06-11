@@ -1,7 +1,7 @@
 ---
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
@@ -24,6 +24,6 @@ Headings are driven by article context. -->
 For more information on creating groups in Intune, see the following articles:
 
 - [Create device groups](/autopilot/enrollment-autopilot).
-- [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add).
+- [Add groups to organize users and devices](/mem/intune-service/fundamentals/groups-add).
 - [Manage Microsoft Entra groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups).
 - [Dynamic membership rules for groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership).

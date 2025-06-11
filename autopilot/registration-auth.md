@@ -6,8 +6,8 @@ ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
+ms.reviewer: madakeva
+manager: bpardi
 ms.date: 06/28/2024
 ms.collection:
   - M365-modern-desktop

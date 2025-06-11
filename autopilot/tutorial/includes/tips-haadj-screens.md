@@ -1,7 +1,7 @@
 ---
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
@@ -16,7 +16,7 @@ user-driven\hybrid-azure-ad-join-deploy-device.md
 
 Headings are driven by article context. -->
 
-- Depending on how the Autopilot profile was configured at the **Create and assign Autopilot profile** step, additional screens might appear during the Autopilot deployment such as:<br>
+- Depending on how the Windows Autopilot profile was configured at the **Create and assign Windows Autopilot profile** step, additional screens might appear during the Windows Autopilot deployment such as:<br>
 <br>
   - **Language**/**Country**/**Region** or **Keyboard** screens before the Microsoft Entra sign-in page.
   - **Privacy** screen when the user ESP/**Account** setup begins but before the Windows sign-on screen appears.

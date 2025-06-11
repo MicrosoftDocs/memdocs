@@ -6,8 +6,8 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
+ms.reviewer: madakeva
+manager: bpardi
 ms.date: 06/28/2024
 ms.topic: how-to
 ms.collection:
@@ -45,7 +45,7 @@ Windows Autopilot doesn't require delegated administrator permissions when estab
 
 > [!NOTE]
 >
-> Partner Center doesn't have access to profiles created in Intune or Microsoft Store for Business. It only has access to the Autopilot profiles created through Partner Center.
+> Partner Center doesn't have access to profiles created in Intune or Microsoft Store for Business. It only has access to the Windows Autopilot profiles created through Partner Center.
 
 ## Related content
 
