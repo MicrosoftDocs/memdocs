@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2024
+ms.date: 05/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -370,6 +370,9 @@ As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) (Windo
 2. After the updated policy is deployed, you can then delete the new policy from the Intune portal.
 
 This sequence prevents anything from being blocked and fully removes the WDAC policy on the next reboot.
+
+> [!WARNING]
+> Before unenrolling a device from Intune that has received App Control for Business policies, or removing app control policies from that device, see [Remove App Control policies causing boot stop failures](/windows/security/application-security/application-control/app-control-for-business/deployment/disable-appcontrol-policies#remove-app-control-policies-causing-boot-stop-failures) in the Windows Security article **Remove App Control for Business policies**. This article provides important steps to follow to prevent potential boot stop failures.
 
 ## Monitor App Control for Business policies and the managed installer
 

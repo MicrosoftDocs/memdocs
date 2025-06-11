@@ -5,9 +5,9 @@ title: Microsoft Intune reports
 titleSuffix: Microsoft Intune
 description: Intune provides specific report types with focused views that contain consistent and timely data. 
 keywords:
-author: erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 08/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune

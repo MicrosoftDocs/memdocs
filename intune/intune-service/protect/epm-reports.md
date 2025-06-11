@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/12/2025
+ms.date: 05/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -108,6 +108,7 @@ In addition to the dedicated reports, you can view basic details about EPM polic
 ## Related content
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
+- [Security considerations for elevation rules](../protect/epm-overview.md#security-considerations)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Approving elevation requests](../protect/epm-support-approved.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)

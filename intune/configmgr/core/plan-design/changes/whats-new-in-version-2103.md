@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 2103 of Configuration Manager current branch
@@ -59,7 +59,7 @@ When tenant attach is enabled, the applications pane in the Microsoft Intune adm
 
 For more information on the error code and troubleshooting steps, see [Application installation common error codes reference](../../../tenant-attach/app-install-error-reference.md).
 
-<!-- 
+<!--
 ## Cloud-attached management
 
 ## Desktop Analytics
@@ -95,7 +95,7 @@ If you have a secondary site that uses SQL Server Express edition, this check wa
 
 Microsoft recommends that you keep SQL Server Express up to date. For more information, see [Security for site administration](../hierarchy/security-and-privacy-for-site-administration.md#update-sql-server-express-at-secondary-sites).
 
-<!-- 
+<!--
 ## Client management
  -->
 
@@ -382,7 +382,7 @@ There are now three methods to open recent files in OneTrace:
 
 For more information, see [Support Center OneTrace](../../support/support-center-onetrace.md#open-recent-files).
 
-<!-- 
+<!--
 ## Content management
  -->
 
@@ -422,7 +422,7 @@ The following [features are now deprecated](deprecated/removed-and-deprecated-cm
 - Sites that allow HTTP client communication. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 <!--
-As first announced in version 1906, version 2103 drops support for the following client OS versions:  
+As first announced in version 1906, version 2103 drops support for the following client OS versions:
 
 - Windows CE 7.0
 - Windows 10 Mobile

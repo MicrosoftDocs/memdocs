@@ -10,7 +10,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -133,7 +133,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
     - **Protect media with a password**: Enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the bootable media.
 
-        > [!IMPORTANT]  
+        > [!IMPORTANT]
         > As a security best practice, always assign a password to help protect the bootable media. Assigning a password to the media not only prevents someone without the password from running a task sequence when using the media, but it also properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
         >
         > Using a password doesn't encrypt the remaining content of the bootable media such as packages. Don't include any sensitive information in task sequence packages such as scripts. Store and implement all sensitive information by using task sequence variables.
@@ -191,7 +191,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 You can create bootable media on a removable USB drive when the drive isn't connected to the computer running the Configuration Manager console.
 
-1. [Create the task sequence boot media](#process). On the **Media type** page, select **CD/DVD set**. The wizard writes the output files to the location that you specify. For example: `\\servername\folder\outputfile.iso`.  
+1. [Create the task sequence boot media](#process). On the **Media type** page, select **CD/DVD set**. The wizard writes the output files to the location that you specify. For example: `\\servername\folder\outputfile.iso`.
 
 1. Prepare the removable USB drive. The drive must be formatted, empty, and bootable.
 

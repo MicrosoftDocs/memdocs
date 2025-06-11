@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Upgrade the long-term servicing branch to the current branch
@@ -31,7 +31,7 @@ On the top-tier site of your hierarchy, you can run Configuration Manager setup 
 
 When your site has converted to the Current Branch, previously unavailable features and capabilities will be available for use.
 
-> [!NOTE]  
+> [!NOTE]
 > Qualifying baseline media is a media that has a version that is equal to or later than your LTSB installation.
 
 For example, because the LTSB is based on version 1606, you cannot use the baseline 1511 media to convert to the Current Branch. Instead, you run setup from the same version 1606 baseline media that you used to install the LTSB site, and choose the licensing option for the Current Branch.  Alternately, if a later baseline of the Current Branch has been released, you can run setup from that baseline media.
@@ -41,8 +41,8 @@ For a list of baseline versions, see **Baseline and update versions** in [Update
 ## Use the Configuration Manager console to convert the long-term servicing branch
 If your site runs the LTSB, you can use the following option in the Configuration Manager console to convert to the Current Branch:
 
- 1. In the console, go to **Administration** > **Site Configuration** > **Sites**, and then open **Hierarchy Settings**.  
+ 1. In the console, go to **Administration** > **Site Configuration** > **Sites**, and then open **Hierarchy Settings**.
 
- 2. In **Hierarchy Settings**, switch to the **Licensing** tab. Select the option to **Convert to Current Branch**, and then choose **Apply**.  
+ 2. In **Hierarchy Settings**, switch to the **Licensing** tab. Select the option to **Convert to Current Branch**, and then choose **Apply**.
 
 When your site has converted to the Current Branch, previously unavailable features and capabilities will be available for use.

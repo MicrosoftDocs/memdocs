@@ -12,37 +12,37 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # AppDetectState Enumeration
-In Configuration Manager, the `AppDetectState` enumeration defines application installation states. This enumeration is used by the [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md).  
+In Configuration Manager, the `AppDetectState` enumeration defines application installation states. This enumeration is used by the [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md).
 
-## Syntax  
+## Syntax
 
-```  
-typedef enum tagAppDetectState  
-{  
-    appDetectNotFound = 0,   
-    appDetectInstalled,   
-    appDetectFailed  
-}AppDetectState;  
+```
+typedef enum tagAppDetectState
+{
+    appDetectNotFound = 0,
+    appDetectInstalled,
+    appDetectFailed
+}AppDetectState;
 
-```  
+```
 
-## Elements  
- `appDetectNotFound`  
- The application was not found.  
+## Elements
+ `appDetectNotFound`
+ The application was not found.
 
- `appDetectInstalled`  
- The application is installed.  
+ `appDetectInstalled`
+ The application is installed.
 
- `appDetectFailed`  
- Application detection failed.  
+ `appDetectFailed`
+ Application detection failed.
 
-## Remarks  
- This enumeration is used by the [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md).  
+## Remarks
+ This enumeration is used by the [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md).
 
-## See Also  
- [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)   
- [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+## See Also
+ [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

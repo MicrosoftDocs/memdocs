@@ -12,96 +12,96 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_RbacSecuredObject Server WMI Class
-The `SMS_RbacSecuredObject` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the RBAC Security Object.  
+The `SMS_RbacSecuredObject` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the RBAC Security Object.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_RbacSecuredObject : SMS_BaseClass  
-{  
-    UInt32 AvailableInstanceOperations;  
-    UInt32 AvailableTypeOperations;  
-    UInt32 GrantedOperations;  
-    UInt32 ObjectTypeID;  
-    String ObjectTypeName;  
-    SMS_Operation Operations[];  
-};  
-```  
+```
+Class SMS_RbacSecuredObject : SMS_BaseClass
+{
+    UInt32 AvailableInstanceOperations;
+    UInt32 AvailableTypeOperations;
+    UInt32 GrantedOperations;
+    UInt32 ObjectTypeID;
+    String ObjectTypeName;
+    SMS_Operation Operations[];
+};
+```
 
-## Methods  
- The following table lists the methods in the `SMS_RbacSecuredObject` class.  
+## Methods
+ The following table lists the methods in the `SMS_RbacSecuredObject` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md)|Returns `true` if the current user has all the requested rights to the given object.|  
-|[GetCollectionsWithResourcePermissions Method in Class SMS_RbacSecuredObject](../../../../../develop/reference/core/servers/configure/getcollectionswithresourcepermissions-method-in-class-sms_rbacsecuredobject.md)|Retrieves the collections that the given resource is a member of and the requested permissions.|  
-|[GetAvailableScopes Method in Class SMS_RbacSecuredObject](../../../../../develop/reference/core/servers/configure/getavailablescopes-method-in-class-sms_rbacsecuredobject.md)|Returns the secured scopes which current user has all the specified roles associated.|  
-|[GetUserList Method in Class SMS_RbacSecuredObject](../../../../../develop/reference/core/servers/configure/getuserlist-method-in-class-sms_rbacsecuredobject.md)|Returns the secured scopes which current user has all the specified roles associated.|  
+|Method|Description|
+|------------|-----------------|
+|[UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md)|Returns `true` if the current user has all the requested rights to the given object.|
+|[GetCollectionsWithResourcePermissions Method in Class SMS_RbacSecuredObject](../../../../../develop/reference/core/servers/configure/getcollectionswithresourcepermissions-method-in-class-sms_rbacsecuredobject.md)|Retrieves the collections that the given resource is a member of and the requested permissions.|
+|[GetAvailableScopes Method in Class SMS_RbacSecuredObject](../../../../../develop/reference/core/servers/configure/getavailablescopes-method-in-class-sms_rbacsecuredobject.md)|Returns the secured scopes which current user has all the specified roles associated.|
+|[GetUserList Method in Class SMS_RbacSecuredObject](../../../../../develop/reference/core/servers/configure/getuserlist-method-in-class-sms_rbacsecuredobject.md)|Returns the secured scopes which current user has all the specified roles associated.|
 
-## Properties  
- `AvailableInstanceOperations`  
- Data type: `UInt32`  
+## Properties
+ `AvailableInstanceOperations`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Available instance level permissions. Detail at Operations.  
+ Available instance level permissions. Detail at Operations.
 
- `AvailableTypeOperations`  
- Data type: `UInt32`  
+ `AvailableTypeOperations`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Available permissions. Detail at Operations.  
+ Available permissions. Detail at Operations.
 
- `GrantedOperations`  
- Data type: `UInt32`  
+ `GrantedOperations`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The operations which are granted to the current user for this type of object.  
+ The operations which are granted to the current user for this type of object.
 
- `ObjectTypeID`  
- Data type: `UInt32`  
+ `ObjectTypeID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The type of object.  
+ The type of object.
 
- `ObjectTypeName`  
- Data type: `String`  
+ `ObjectTypeName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [sizelimit("256")]  
+ Qualifiers: [sizelimit("256")]
 
- Name of the object type.  
+ Name of the object type.
 
- `Operations`  
- Data type: `SMS_Operation` Array  
+ `Operations`
+ Data type: `SMS_Operation` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- The list of operations which belong to this type.   
+ The list of operations which belong to this type.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

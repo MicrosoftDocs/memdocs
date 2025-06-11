@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # What&#39;s new in version 1702 of Configuration Manager
 
@@ -20,22 +20,22 @@ ms.reviewer: mstewart,aaroncz
 
 Update 1702 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1602, 1606, or 1610. It's also available as a baseline version you can use when installing a new deployment.
 
-> [!TIP]  
-> To install a new site, you must use a baseline version of Configuration Manager.  
+> [!TIP]
+> To install a new site, you must use a baseline version of Configuration Manager.
 >
-> Learn more about:    
-> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
-> - [Installing updates at sites](../../servers/manage/updates.md)  
+> Learn more about:
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)
+> - [Installing updates at sites](../../servers/manage/updates.md)
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
-The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.  
+The following sections provide details about changes and new capabilities introduced in version 1702 of Configuration Manager.
 
 ## Deprecated features and operating systems
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
 Version 1702 drops support for the following products:
 - **SQL Server 2008 R2**, for site database servers. Deprecation of support was [first announced](deprecated/removed-and-deprecated-server.md#sql-server) on July 10, 2015. This version of SQL Server remains supported when you use a Configuration Manager version prior to version 1702.
-- **Windows Server 2008 R2**, for site system servers and most site system roles. Deprecation of support was [first announced](deprecated/removed-and-deprecated-server.md#server-os) on July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.  
+- **Windows Server 2008 R2**, for site system servers and most site system roles. Deprecation of support was [first announced](deprecated/removed-and-deprecated-server.md#server-os) on July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.
 - **Windows Server 2008**, for site system servers and most site system roles. Deprecation of support was [first announced](deprecated/removed-and-deprecated-server.md#server-os) on  July 10, 2015.
 - **Windows XP Embedded**, as a client operating system. Deprecation was [first announced](deprecated/removed-and-deprecated-client.md#deprecated-client-operating-systems) on  July 10, 2015. This version of Windows remains supported when you use a Configuration Manager version prior to version 1702.
 
@@ -46,13 +46,13 @@ Version 1702 drops support for the following products:
 
 ### Improvements for in-console search
 The following are improvements to using search in the Configuration Manager console:
-- **Object Path:**  
-  Many objects now support a column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching subnodes, the *Object Path* column in the results pane will show you the path to each object that is returned.   
+- **Object Path:**
+  Many objects now support a column named **Object Path**.  When you search and include this column in your display results, you can view the path to each object. For example, if you run a search for apps in the Applications node and are also searching subnodes, the *Object Path* column in the results pane will show you the path to each object that is returned.
 
-- **Preservation of search text:**  
+- **Preservation of search text:**
   When you enter text into the search text box, and then switch between searching a subnode and the current node, the text that you typed will now persist and remain available for a new search without having to reenter it.
 
-- **Preservation of your decision to search sub-nodes:**  
+- **Preservation of your decision to search sub-nodes:**
   The option that you choose for searching the *current node* or *all subnodes* now persists when you change the node you're working in. This new behavior means that you don't need to constantly reset this decision as you move around the console. By default, when you open the console the option is to search only the current node.
 
 
@@ -61,11 +61,11 @@ The following are improvements to using search in the Configuration Manager cons
 You can use the in-console feedback options to send feedback directly to the development team.
 
 You can find the **Feedback** option:
-- In the ribbon, at the far left of the Home tab of each node.  
+- In the ribbon, at the far left of the Home tab of each node.
   ![Ribbon](./media/feedback-home.png)
 
-- When you right-click on any object in the console.   
-   ![Right-click option](./media/feedback-option.png)   
+- When you right-click on any object in the console.
+   ![Right-click option](./media/feedback-option.png)
 
   Choosing **Feedback** opens your browser to the Configuration Manager feedback website.
 
@@ -73,22 +73,22 @@ You can find the **Feedback** option:
 ###  Changes for Updates and Servicing
 The following are changes for Updates and Servicing:
 
-- **Node location**   
+- **Node location**
   After installing version 1702, the **Updates and Servicing** node appears as a top-level node under **Administration**. It's no longer a child node below **Cloud Services**.
 
-- **New update states**  
-  When you view available updates in the console, there are two new states:  
+- **New update states**
+  When you view available updates in the console, there are two new states:
   - **Available for install** - This is an update that has been downloaded and ready to install.
   - **Ready for download**  - This update is available, but hasn't been downloaded. You can choose to download this update, but it has been superseded by a more recent update.
 
 
-- **Simpler update choices**  
-  The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.  
+- **Simpler update choices**
+  The next time your infrastructure qualifies for two or more updates, only the latest update is downloaded. For example, if your current site version is two or more older than the most recent version that is available, only that most recent update version is downloaded automatically.
 
   You can choose to download and install the other available updates, even when they aren't the most current version. If you download an older update, you'll receive a warning that the update has been replaced by a newer one. To download an update that is *Available to Download*, select the update in the console and then click **Download**.
 
-- **Improved cleanup of older updates**   
-  We added an automatic clean-up function that deletes the unneeded downloads from the 'EasySetupPayload' folder on your site server. Because this is introduced with version 1702, cleanup begins to work after installing a subsequent update like an update rollup or future update version.  
+- **Improved cleanup of older updates**
+  We added an automatic clean-up function that deletes the unneeded downloads from the 'EasySetupPayload' folder on your site server. Because this is introduced with version 1702, cleanup begins to work after installing a subsequent update like an update rollup or future update version.
 
 
 ### Data Warehouse service point
@@ -100,12 +100,12 @@ For more information, see [The Data Warehouse service point](../../servers/manag
 
 
 ### Peer Cache improvements
-Beginning with version 1702, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:  
+Beginning with version 1702, a peer cache source computer will reject a request for content when the peer cache source computer meets any of the following conditions:
 -  Is in low battery mode.
 -  CPU load exceeds 80% at the time the content is requested.
 -  Disk I/O has an *AvgDiskQueueLength* that exceeds 10.
--  There are no more available connections to the computer.   
-For more information, see **Limited access to a peer cache source** in [Peer Cache for Configuration Manager clients](../hierarchy/client-peer-cache.md).   
+-  There are no more available connections to the computer.
+For more information, see **Limited access to a peer cache source** in [Peer Cache for Configuration Manager clients](../hierarchy/client-peer-cache.md).
 
 Additionally, three new reports are added to your reporting point. You can use these reports to understand more details about rejected content requests, including which boundary group, computer, and content was involved. See [Monitoring](../hierarchy/client-peer-cache.md#monitoring) in the peer cache topic.
 
@@ -197,13 +197,13 @@ This version introduced the following improvements:
 
 ### Improvements to the Auto Apply Driver task sequence
 New task sequence variables are now available to configure the timeout value on the Auto Apply Driver task sequence step when making HTTP catalog requests. The following variables and default values (in seconds) are available:
-- SMSTSDriverRequestResolveTimeOut  
+- SMSTSDriverRequestResolveTimeOut
   Default: 60
-- SMSTSDriverRequestConnectTimeOut  
+- SMSTSDriverRequestConnectTimeOut
   Default: 60
-- SMSTSDriverRequestSendTimeOut  
+- SMSTSDriverRequestSendTimeOut
   Default: 60
-- SMSTSDriverRequestReceiveTimeOut  
+- SMSTSDriverRequestReceiveTimeOut
   Default: 480
 
 ### Windows 10 ADK tracked by build version
@@ -253,10 +253,10 @@ This change affects the wizards for creating the following items:
 
 With this change, hybrid deployments can provide support more quickly for new Android and iOS versions without needing a new Configuration Manager release or extension. Once a new version is supported in Intune standalone, users will be able to upgrade their mobile devices to that version.
 
-To prevent issues when upgrading from prior versions of Configuration Manager, mobile operating system versions are still available in the properties pages for these items. If you still need to target a specific version, you can create the new item, and then specify the targeted version on the properties page of the newly created item. 
+To prevent issues when upgrading from prior versions of Configuration Manager, mobile operating system versions are still available in the properties pages for these items. If you still need to target a specific version, you can create the new item, and then specify the targeted version on the properties page of the newly created item.
 
 > [!NOTE]
-> The last mobile operating system version available in the properties pages applies to that version and all subsequent versions. Properties pages provide the following choices for targeting operating systems later than Android 7 and iOS 10: 
+> The last mobile operating system version available in the properties pages applies to that version and all subsequent versions. Properties pages provide the following choices for targeting operating systems later than Android 7 and iOS 10:
 > - **Android 7 and higher**
 > - **All iOS 10 and higher iPhone or iPod touch devices**
 > - **All iOS 10 and higher iPad devices**

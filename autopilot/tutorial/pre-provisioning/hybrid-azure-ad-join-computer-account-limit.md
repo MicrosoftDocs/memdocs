@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
-manager: aaroncz
+manager: bpardi
 ms.date: 02/27/2025
 ms.topic: tutorial
 ms.collection:

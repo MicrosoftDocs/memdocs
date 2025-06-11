@@ -5,7 +5,7 @@ ms.service: configuration-manager
 ms.topic: include
 ms.date: 04/08/2022
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -28,11 +28,11 @@ You can specify the maximum amount of time a software update installation has to
     - Windows Server 2019
     - Office 365
 
-- **Maximum run time for all other software updates outside these categories such as third-party updates (minutes)**: The default maximum run time of these updates varies depending on when the update first synchronized into the environment and the Configuration Manager version. Use the cart below to determine the maximum runtime value for these updates: 
-   
+- **Maximum run time for all other software updates outside these categories such as third-party updates (minutes)**: The default maximum run time of these updates varies depending on when the update first synchronized into the environment and the Configuration Manager version. Use the cart below to determine the maximum runtime value for these updates:
+
    |**2203 or later** |  **2103, 2107, or 2111**|  **2010** |
    |---|---|---|
    | The maximum run time for all other software updates is customizable. The default is 60 minutes.<!--12770887-->|  60 minutes <!--7833866-->| 10 minutes|
    > [!Important]
-   > - This setting only changes the maximum runtime for new updates that are synchronized in by SUP. It doesn't change the run time on existing updates that synchronized before the run time was modified. For instance, if `Update 1` was first synchronized into a 2111 environment, then it's maximum run time is 60 minutes. You then upgrade the environment to version 2203 and set the maximum run time to 30 minutes. `Update 1` retains it's 60 minute runtime. However, when a new update, `Update 2`, synchronizes in, it is given the new 30 minute run time. 
+   > - This setting only changes the maximum runtime for new updates that are synchronized in by SUP. It doesn't change the run time on existing updates that synchronized before the run time was modified. For instance, if `Update 1` was first synchronized into a 2111 environment, then it's maximum run time is 60 minutes. You then upgrade the environment to version 2203 and set the maximum run time to 30 minutes. `Update 1` retains it's 60 minute runtime. However, when a new update, `Update 2`, synchronizes in, it is given the new 30 minute run time.
    > - If you need to change the maximum run time of an update manually, you can [configure the software update settings](../get-started/manage-settings-for-software-updates.md#BKMK_SoftwareUpdatesSettings) for it.

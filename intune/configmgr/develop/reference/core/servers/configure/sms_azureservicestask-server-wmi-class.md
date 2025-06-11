@@ -12,142 +12,142 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_AzureServicesTask server WMI class
 
-The `SMS_AzureServicesTask` WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure specific operation that can be performed on the specified Microsoft Azure service. This can be used to initiate an operation and monitor the results of the operation.  
+The `SMS_AzureServicesTask` WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure specific operation that can be performed on the specified Microsoft Azure service. This can be used to initiate an operation and monitor the results of the operation.
 
-The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_AzureServicesTask : SMS_BaseClass  
-{  
-    UInt32 AzureServiceId;  
-    String SiteCode;  
-    DateTime TaskCreationTime;  
-    DateTime TaskEndTime;  
-    UInt32 TaskID;  
-    String TaskKeyValue;  
-    UInt32 TaskStateId;  
-    UInt32 TaskTypeId;  
-    UInt32 Type;  
-};  
-```  
+```
+Class SMS_AzureServicesTask : SMS_BaseClass
+{
+    UInt32 AzureServiceId;
+    String SiteCode;
+    DateTime TaskCreationTime;
+    DateTime TaskEndTime;
+    UInt32 TaskID;
+    String TaskKeyValue;
+    UInt32 TaskStateId;
+    UInt32 TaskTypeId;
+    UInt32 Type;
+};
+```
 
-## Methods  
- The `SMS_AzureServicesTask` class doesn't define any methods.  
+## Methods
+ The `SMS_AzureServicesTask` class doesn't define any methods.
 
-## Properties  
- `AzureServiceId`  
- Data type: `UInt32`  
+## Properties
+ `AzureServiceId`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The service identifier key for the `SMS_AzureService` instance on which the current task will be performed.  
+ The service identifier key for the `SMS_AzureService` instance on which the current task will be performed.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Site code of the site that owns the task.  
+ Site code of the site that owns the task.
 
- `TaskCreationTime`  
- Data type: `DateTime`  
+ `TaskCreationTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Time the task was created.  
+ Time the task was created.
 
- `TaskEndTime`  
- Data type: `DateTime`  
+ `TaskEndTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Time the task ended.  
+ Time the task ended.
 
- `TaskID`  
- Data type: `UInt32`  
+ `TaskID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, not_null]  
+ Qualifiers: [key, not_null]
 
- Identifier of the Microsoft Azure service task.  
+ Identifier of the Microsoft Azure service task.
 
- `TaskKeyValue`  
- Data type: `String`  
+ `TaskKeyValue`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Input for the task - if necessary. This value isn't needed for `CreateDeployment`, `UpgradeDeployment`, `DeleteDeployment`, `StopDeployment`, or `StartDeployment` and any value will be ignored.  
+ Input for the task - if necessary. This value isn't needed for `CreateDeployment`, `UpgradeDeployment`, `DeleteDeployment`, `StopDeployment`, or `StartDeployment` and any value will be ignored.
 
- `TaskStateId`  
- Data type: `UInt32`  
+ `TaskStateId`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [values]  
+ Qualifiers: [values]
 
- Identifier of the current task state. Possible values are:  
+ Identifier of the current task state. Possible values are:
 
-|Value|Task state|  
-|-|-|  
-|1|Created|  
-|2|In Progress|  
-|3|Completed|  
-|4|Failed|  
+|Value|Task state|
+|-|-|
+|1|Created|
+|2|In Progress|
+|3|Completed|
+|4|Failed|
 
- `TaskTypeId`  
- Data type: `UInt32`  
+ `TaskTypeId`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, values]  
+ Qualifiers: [not_null, values]
 
- Identifier for type of task. Possible values are:  
+ Identifier for type of task. Possible values are:
 
-|Value|Task type|  
-|-|-|  
-|1|CreateDeployment|  
-|2|UpgradeDeployment|  
-|3|DeleteDeployment|  
-|4|StopDeployment|  
-|5|StartDeployment|  
+|Value|Task type|
+|-|-|
+|1|CreateDeployment|
+|2|UpgradeDeployment|
+|3|DeleteDeployment|
+|4|StopDeployment|
+|5|StartDeployment|
 
- `Type`  
- Data type: `UInt32`  
+ `Type`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Type of task. Possible values are:  
+ Type of task. Possible values are:
 
-|Value|Task type|  
-|-|-|  
-|0|RunOnce|  
+|Value|Task type|
+|-|-|
+|0|RunOnce|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

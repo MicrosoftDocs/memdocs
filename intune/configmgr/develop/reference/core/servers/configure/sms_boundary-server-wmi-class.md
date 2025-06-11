@@ -12,168 +12,168 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_Boundary Server WMI Class
-The `SMS_Boundary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a boundary defined within the hierarchy.  
+The `SMS_Boundary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a boundary defined within the hierarchy.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_Boundary : SMS_BaseClass  
-{  
-    UInt32 BoundaryFlags;  
-    UInt32 BoundaryID;  
-    UInt32 BoundaryType;  
-    String CreatedBy;  
-    DateTime CreatedOn;  
-    String DefaultSiteCode[];  
-    String DisplayName;  
-    UInt32 GroupCount;  
-    String ModifiedBy;  
-    DateTime ModifiedOn;  
-    String SiteSystems[];  
-    String Value;  
-};  
-```  
+```
+Class SMS_Boundary : SMS_BaseClass
+{
+    UInt32 BoundaryFlags;
+    UInt32 BoundaryID;
+    UInt32 BoundaryType;
+    String CreatedBy;
+    DateTime CreatedOn;
+    String DefaultSiteCode[];
+    String DisplayName;
+    UInt32 GroupCount;
+    String ModifiedBy;
+    DateTime ModifiedOn;
+    String SiteSystems[];
+    String Value;
+};
+```
 
-## Methods  
- The `SMS_Boundary` class does not define any methods.  
+## Methods
+ The `SMS_Boundary` class does not define any methods.
 
-## Properties  
- `BoundaryFlags`  
- Data type: `UInt32`  
+## Properties
+ `BoundaryFlags`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is obsolete, use the `Flags` property in `SMS_BoundaryGroupSiteSystems` instead.  
+ This property is obsolete, use the `Flags` property in `SMS_BoundaryGroupSiteSystems` instead.
 
- Specifies the connection type of the boundary. Possible values are:  
+ Specifies the connection type of the boundary. Possible values are:
 
-|Value|Connection type|  
-|-|-|  
-|0|FAST|  
-|1|SLOW|  
+|Value|Connection type|
+|-|-|
+|0|FAST|
+|1|SLOW|
 
- `BoundaryID`  
- Data type: `UInt32`  
+ `BoundaryID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique identifier of the boundary.  
+ Unique identifier of the boundary.
 
- `BoundaryType`  
- Data type: `UInt32`  
+ `BoundaryType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- Boundary type.  
+ Boundary type.
 
-|Value|Boundary type|  
-|-|-|  
-|0|IPSUBNET|  
-|1|ADSITE|  
-|2|IPV6PREFIX|  
-|3|IPRANGE|  
+|Value|Boundary type|
+|-|-|
+|0|IPSUBNET|
+|1|ADSITE|
+|2|IPV6PREFIX|
+|3|IPRANGE|
 
- `CreatedBy`  
- Data type: `String`  
+ `CreatedBy`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- User that created the boundary.  
+ User that created the boundary.
 
- `CreatedOn`  
- Data type: `DateTime`  
+ `CreatedOn`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Date the boundary was created.  
+ Date the boundary was created.
 
- `DefaultSiteCode`  
- Data type: `String Array`  
+ `DefaultSiteCode`
+ Data type: `String Array`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Site code new clients will be auto assigned to.  
+ Site code new clients will be auto assigned to.
 
- `DisplayName`  
- Data type: `String`  
+ `DisplayName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Display name of the boundary.  
+ Display name of the boundary.
 
- `GroupCount`  
- Data type: `UInt32`  
+ `GroupCount`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Count of boundary groups that have this boundary.  
+ Count of boundary groups that have this boundary.
 
- `ModifiedBy`  
- Data type: `String`  
+ `ModifiedBy`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- User that last modified the boundary.  
+ User that last modified the boundary.
 
- `ModifiedOn`  
- Data type: `DateTime`  
+ `ModifiedOn`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Date the boundary was last modified.  
+ Date the boundary was last modified.
 
- `SiteSystems`  
- Data type: `String Array`  
+ `SiteSystems`
+ Data type: `String Array`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Site system machines within the boundary.  
+ Site system machines within the boundary.
 
- `Value`  
- Data type: `String`  
+ `Value`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Boundary value.  
+ Boundary value.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)

@@ -89,7 +89,7 @@ Create an enrollment profile to enable enrollment on devices.
     
        You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
        - {{SERIAL}} for the device's serial number.
-       - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.
+       - {{SERIALLAST4DIGITS}} for the last 4 digits of the device’s serial number.
        - {{DEVICETYPE}} for the device type, Example: *AndroidAOSP*
        - {{ENROLLMENTDATETIME}} for the date and time of enrollment.
        - {{UPNPREFIX}} for the user's first name. Example: *Eric*, when device is user affiliated.  
