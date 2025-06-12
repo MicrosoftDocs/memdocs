@@ -280,7 +280,7 @@ In October 2024, Intune supports Android 10 and later for user-based management 
 - Android Enterprise fully managed
 - Android Open Source Project (AOSP) user-based
 - Android device administrator
-- App protection policies (APP)
+- App protection policies
 - App configuration policies (ACP) for managed apps
 
 Moving forward, we'll end support for one or two versions annually in October until we only support the latest four major versions of Android. You can learn more about this change by reading the blog: [Intune moving to support Android 10 and later for user-based management methods in October 2024](https://aka.ms/Intune/Android-10-support).

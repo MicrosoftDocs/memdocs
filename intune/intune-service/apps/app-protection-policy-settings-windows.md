@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 02/20/2025
+ms.date: 06/12/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,14 +37,14 @@ ms.collection:
 
 This article describes app protection policy (APP) settings for Windows. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the Intune admin center when you make a new policy. 
 
-You can enable protected MAM access to org data via Microsoft Edge on personal Windows devices. This capability is known as [Windows MAM](../apps/protect-mam-windows.md) and provides functionality using Intune Application Configuration Policies (ACP), Intune Application Protection Policies (APP), Windows Security Center client threat defense, and Application Protection Conditional Access. For more information about Windows MAM, see [Data protection for Windows MAM](../apps/protect-mam-windows.md), [Create an MTD app protection policy for Windows](../protect/mtd-app-protection-policy.md#to-create-an-mtd-app-protection-policy-for-windows), and [Configure Microsoft Edge for Windows with Intune](../apps/manage-microsoft-edge-windows.md).
+You can enable protected MAM access to org data via Microsoft Edge on personal Windows devices. This capability is known as [Windows MAM](../apps/protect-mam-windows.md) and provides functionality using Intune Application Configuration Policies (ACP), Intune app protection policies, Windows Security Center client threat defense, and Application Protection Conditional Access. For more information about Windows MAM, see [Data protection for Windows MAM](../apps/protect-mam-windows.md), [Create an MTD app protection policy for Windows](../protect/mtd-app-protection-policy.md#to-create-an-mtd-app-protection-policy-for-windows), and [Configure Microsoft Edge for Windows with Intune](../apps/manage-microsoft-edge-windows.md).
 
 There are two categories of app protection policy settings for Windows:
 - [Data protection](../apps/app-protection-policy-settings-windows.md#data-protection)
 - [Health Checks](../apps/app-protection-policy-settings-windows.md#health-checks)
 
 > [!IMPORTANT]
-> Intune MAM on Windows supports unmanaged devices.  If a device is already managed, then Intune MAM enrollment is blocked and APP settings won't be applied.  If a device becomes managed after MAM enrollment, APP settings will no longer be applied.
+> Intune MAM on Windows supports unmanaged devices.  If a device is already managed, then Intune MAM enrollment is blocked and app protection policies settings won't be applied.  If a device becomes managed after MAM enrollment, app protection policies settings will no longer be applied.
 > 
 > Additionally, the device must not be EntraID Joined or Mobile Device Management (MDM) enrolled to any tenant, including the tenant of your MAM user. The device must also not be Workplace Joined to more than two users besides the MAM user (limit is 3 total).
 
