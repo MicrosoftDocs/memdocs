@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: bpardi
-ms.date: 04/04/2025
+ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -51,7 +51,7 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
 1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot device preparation**, select **Device preparation policies**.
 
-1. In the **Device preparation policies** screen, select **Create**.
+1. In the **Device preparation policies** screen, select **Create**, and then select **User Driven**.
 
 1. The **Create profile** screen opens. In the **Introduction** page, select **Next**.
 
@@ -82,6 +82,20 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 The **Configuration settings** page has several configuration options. The following section describes each option in the **Configuration settings** page and what each option should be set to for a Microsoft Entra join Windows Autopilot device preparation deployment.
 
 In the **Configuration settings** page:
+
+1. Expand the **Deployment settings** section by selecting it:
+
+   1. **Deployment mode** - Select **User-driven** in the drop-down menu.
+
+   1. **Deployment type** - Select **Single user** in the drop-down menu.
+
+   1. **Join type** - Select **Microsoft Entra joined** in the drop-down menu.
+
+   1. **User account type** - Select either **Standard User** or **Administrator** as desired by toggling the switch.
+
+    > [!IMPORTANT]
+    >
+    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the desktop.
 
 1. Expand the **Out-of-box experience settings** section by selecting it.
 
@@ -129,20 +143,6 @@ In the **Configuration settings** page:
     > - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
     >
     > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
-
-1. Expand the **Deployment settings** section by selecting it:
-
-   1. **Deployment mode** - Select **User-driven** in the drop-down menu.
-
-   1. **Deployment type** - Select **Single user** in the drop-down menu.
-
-   1. **Join type** - Select **Microsoft Entra joined** in the drop-down menu.
-
-   1. **User account type** - Select either **Standard User** or **Administrator** as desired by toggling the switch.
-
-    > [!IMPORTANT]
-    >
-    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the desktop.
 
 1. Expand the **Scripts** section by selecting it:
 

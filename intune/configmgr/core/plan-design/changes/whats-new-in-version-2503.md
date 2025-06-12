@@ -34,6 +34,12 @@ For a list of significant customer-reported issues resolved in this release, see
 
  - Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQL 2016 or latest version. **VC++ Redistributable Version** needs to be upgraded to latest version on **Secondary sites**. [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
+### Microsoft ODBC redistributable
+ - The Microsoft ODBC redistributable component is updated to version **18.4.1.1** on all Site servers and Management Points.
+ - ConfigMgrPreReq will throw an error stalling the upgrade if it detects a version lower than that.
+    
+    > INFO: Microsoft ODBC Driver 18 for SQL Server is installed but it is older than the required version.  
+    > SQL client prerequisite missing for Configuration Manager setup.;    Error;    Install the Microsoft ODBC driver 18 for SQL setup from https://go.microsoft.com/fwlink/?linkid=2299909. More information https://go.microsoft.com/fwlink/?linkid=2226618
 
 
 <!-- ## Deprecated features
