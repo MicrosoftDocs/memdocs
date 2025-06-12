@@ -1,7 +1,7 @@
 ---
-title: Using SQL AlwaysOn when BitLocker recovery data is encrypted in the database
+title: Using SQL Always On when BitLocker recovery data is encrypted in the database
 titleSuffix: Configuration Manager
-description: Describes how to use SQL AlwaysOn when BitLocker recovery data is encrypted in the database
+description: Describes how to use SQL Always On when BitLocker recovery data is encrypted in the database
 ms.date: 06/12/2025
 ms.service: configuration-manager
 ms.subservice: protect
@@ -14,15 +14,15 @@ ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 
-# SQL AlwaysOn when BitLocker recovery data is encrypted in the database
+# SQL Always On when BitLocker recovery data is encrypted in the database
 
-For SQL AlwaysOn, additional steps are required when the BitLocker information is encrypted using the instructions at [Encrypt recovery data in the database](encrypt-recovery-data.md). The additional steps ensure that all AlwaysOn nodes can automatically open the Database Master Key (DMK) when a failover event occurs. Following steps allows seamless retrieval of BitLocker keys without manual intervention.
+For SQL Always On, additional steps are required when the BitLocker information is encrypted using the instructions at [Encrypt recovery data in the database](encrypt-recovery-data.md). The additional steps ensure that all Always On nodes can automatically open the Database Master Key (DMK) when a failover event occurs. Following steps allows seamless retrieval of BitLocker keys without manual intervention.
 
-## Overview of SQL AlwaysOn when BitLocker recovery data is encrypted in the database
+## Overview of SQL Always On when BitLocker recovery data is encrypted in the database
 
 SQL Server encrypts data using a hierarchical infrastructure and is described in depth at [Encryption Hierarchy](/sql/relational-databases/security/encryption/encryption-hierarchy).
 
-- **Site Master Key (SMK)** - this key is a *per instance* key that is unique to each SQL Server AlwaysOn node and isn't replicated. It's used to encrypt the database master key.
+- **Site Master Key (SMK)** - this key is a *per instance* key that is unique to each SQL Server Always On node and isn't replicated. It's used to encrypt the database master key.
 - **Database Master Key (DMK)** - this key is stored in the database and is replicated. It's used to encrypt the BitLockerManagement_CERT.
 - **BitLockerManagement_CERT** - this certificate is stored in the database and is replicated. It's used to encrypt some BitLocker-related data like recovery keys.
 
