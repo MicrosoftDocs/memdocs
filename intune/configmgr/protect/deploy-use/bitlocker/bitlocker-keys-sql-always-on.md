@@ -22,15 +22,15 @@ For SQL Always On, additional steps are required when the BitLocker information 
 
 SQL Server encrypts data using a hierarchical infrastructure and is described in depth at [Encryption Hierarchy](/sql/relational-databases/security/encryption/encryption-hierarchy).
 
-- **Site Master Key (SMK)** - this key is a *per instance* key that is unique to each SQL Server Always On node and isn't replicated. It's used to encrypt the database master key.
-- **Database Master Key (DMK)** - this key is stored in the database and is replicated. It's used to encrypt the BitLockerManagement_CERT.
-- **BitLockerManagement_CERT** - this certificate is stored in the database and is replicated. It's used to encrypt some BitLocker-related data like recovery keys.
+- **Site Master Key (SMK)** - This key is a *per instance* key that is unique to each SQL Server Always On node and isn't replicated. It's used to encrypt the database master key.
+- **Database Master Key (DMK)** - This key is stored in the database and is replicated. It's used to encrypt the BitLockerManagement_CERT.
+- **BitLockerManagement_CERT** - This certificate is stored in the database and is replicated. It's used to encrypt some BitLocker-related data like recovery keys.
 
 The SMK encrypts the DMK password. SMKs are node-specific. When a failover event occurs, the new primary node can't decrypt the DMK password since it was encrypted with a different SMK. Setting the DMK password on each node allows the node to decrypt the password on failover.
 
 > [!NOTE]
 >
-> The BitLockerManagement_CERT performs the encryption of the columns. If this certificate is lost or deleted, or the DMK that encrypted it is lost or deleted, BitLocker keys have to be escrowed and re-encrypted again.
+> The BitLockerManagement_CERT performs the encryption of the columns. If this certificate is lost or deleted, or the DMK that encrypted it's lost or deleted, BitLocker keys have to be escrowed and re-encrypted again.
 
 ## If the Database Master Key (DMK) password is known
 
@@ -100,7 +100,7 @@ Once the proper node with the open DMK is identified, follow these steps:
     );
     ```
 
-1. Backup the existing Database Master Key (DMK) by running the following query to export the existing DMK:
+1. Back up the existing Database Master Key (DMK) by running the following query to export the existing DMK:
 
     ```sql
     BACKUP MASTER KEY
@@ -177,7 +177,7 @@ Once the proper node with the open DMK is identified, follow these steps:
 
 To verify that all nodes can automatically open the Database Master Key (DMK) and decrypt the data:
 
-1. Failover to a node.
+1. Fail over to a node.
 
 1. Run the following query:
 
