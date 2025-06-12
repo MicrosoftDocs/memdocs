@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: bpardi
 ms.reviewer: madakeva
-ms.date: 04/02/2025
+ms.date: 06/11/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -39,9 +39,12 @@ We've introduced a new flow for Windows Autopilot device preparation which can b
 
 With the new mode, admins can make sure their Cloud PCs are secured with required software and scripts before the end user logs in!
 
-> [!NOTE]
->
-> After release, it might take a few days for new the new Windows 365 Windows Autopilot device preparation feature to appear in the Microsoft Intune console.
+For a tutorial on Windows Autopilot device preparation in automatic mode for Windows 365, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](tutorial/automatic/automatic-workflow.md).
+
+For more information, see the following articles:
+
+- [Windows 365 Frontline Cloud PC in shared mode - Quick Start Guide](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905).
+- [Use automated Autopilot device preparation with Windows 365 Frontline Cloud PCs in shared mode (preview)](/windows-365/enterprise/autopilot-device-preparation).
 
 ## Diagnostics logs automatically available in Windows Autopilot device preparation deployment status report
 
