@@ -28,7 +28,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Assign policies in Microsoft Intune

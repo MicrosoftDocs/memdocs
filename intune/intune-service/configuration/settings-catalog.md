@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS, macOS, and Android devices
