@@ -66,7 +66,7 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
-4. Choose **Select** to open the **Add app** configuration options.
+4. Choose **Select** to open the **Add app** steps.
 
 ## Step 1 - App information
 
