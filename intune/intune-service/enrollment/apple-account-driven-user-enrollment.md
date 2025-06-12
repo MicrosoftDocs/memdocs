@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2024
+ms.date: 06/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -166,8 +166,6 @@ If a conflict occurs because a user is assigned more than one profile, Intune ap
 
 ## Removing device from management  
 The volume and cryptographic keys created to manage the work data on the device are erased when the device unenrolls from Intune.  
-
-To get around this issue, the device user must uninstall the Microsoft Authenticator app and restart enrollment.  
 
 ## Next steps  
 * For an overview of supported Apple User Enrollment features and management actions in Microsoft Intune, see [Overview of Apple User Enrollment in Microsoft Intune](ios-user-enrollment-supported-actions.md).  
