@@ -2,7 +2,7 @@
 title: Encrypt recovery data in the database
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes in the Configuration Manager database.
-ms.date: 06/11/2025
+ms.date: 06/12/2025
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to

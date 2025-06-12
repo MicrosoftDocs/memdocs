@@ -2,7 +2,7 @@
 title: Using SQL AlwaysOn when BitLocker recovery data is encrypted in the database
 titleSuffix: Configuration Manager
 description: Describes how to use SQL AlwaysOn when BitLocker recovery data is encrypted in the database
-ms.date: 06/11/2025
+ms.date: 06/12/2025
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
@@ -72,7 +72,9 @@ If it's unknown which node has a valid DMK, follow these steps to determine wher
 1. Run the following query on the primary node:
 
     ```sql
-    SELECT RecoveryAndHardwareCore.DecryptString(RecoveryKey, DEFAULT) FROM RecoveryAndHardwareCore_Keys
+    SELECT TOP 5 RecoveryAndHardwareCore.DecryptString(RecoveryKey, DEFAULT)
+    FROM RecoveryAndHardwareCore_Keys
+    ORDER BY LastUpdateTime DESC
     ```
 
 1. In the resultant query:
@@ -138,7 +140,7 @@ Once the proper node with the open DMK is identified, follow these steps:
 1. Run the following query to import the previously exported BitLockerManagement_CERT certificate:
 
     ```sql
-    CREATE CERTIFICATE BitLockerManagement_CERT
+    CREATE CERTIFICATE BitLockerManagement_CERT AUTHORIZATION RecoveryAndHardwareCore
     FROM FILE = 'C:\Windows\Temp\BitLockerManagement_CERT'
     WITH PRIVATE KEY
     (
@@ -150,7 +152,6 @@ Once the proper node with the open DMK is identified, follow these steps:
 1. Run the following query to grant required control permissions on the certificate:
 
     ```sql
-    GRANT CONTROL ON CERTIFICATE::BitLockerManagement_CERT TO RecoveryAndHardwareCore;
     GRANT CONTROL ON CERTIFICATE::BitLockerManagement_CERT TO RecoveryAndHardwareRead;
     GRANT CONTROL ON CERTIFICATE::BitLockerManagement_CERT TO RecoveryAndHardwareWrite;
     ```
@@ -181,7 +182,9 @@ To verify that all nodes can automatically open the Database Master Key (DMK) an
 1. Run the following query:
 
     ```sql
-    SELECT RecoveryAndHardwareCore.DecryptString(RecoveryKey, DEFAULT) FROM RecoveryAndHardwareCore_Keys
+    SELECT TOP 5 RecoveryAndHardwareCore.DecryptString(RecoveryKey, DEFAULT)
+    FROM RecoveryAndHardwareCore_Keys
+    ORDER BY LastUpdateTime DESC
     ```
 
 1. If the query returns plaintext values for any rows that have a valid key in them, then the node can automatically open the Database Master Key (DMK) and can decrypt the data.

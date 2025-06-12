@@ -2,7 +2,7 @@
 title: Prepare to use an availability group
 titleSuffix: Configuration Manager
 description: Plan to use a SQL Server Always On availability group for the Configuration Manager site database.
-ms.date: 06/11/2025
+ms.date: 06/12/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
