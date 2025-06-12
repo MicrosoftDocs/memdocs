@@ -132,7 +132,7 @@ The self-service portal displays the notice text based on the following rules:
 
 1. Create a copy of your default notice file with the localized text. Save it in the folder for the language code. For example, for Spanish (Spain), by default the full path is `C:\inetpub\Microsoft BitLocker Management Solution\Self Service Website\es-es\Notice.txt`.
 
-Repeat this process to a localized notice file for all languages that you support in your organization.
+   Repeat this process to a localized notice file for all languages that you support in your organization.
 
 ## Next steps
 
