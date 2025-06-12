@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Recommended antivirus exclusions for Configuration Manager
@@ -26,7 +26,7 @@ This article contains recommendations that may help an administrator determine t
 > - We recommend that you temporarily apply these procedures to evaluate a system. If your system performance or stability is improved by the recommendations that are made in this article, contact your antivirus software vendor for instructions or for an updated version of the antivirus software.
 > - This article contains information that shows how to help lower security settings or how to temporarily turn off security features on a computer. You can make these changes to understand the nature of a specific problem. Before you make these changes, we recommend that you evaluate the risks that are associated with implementing this workaround in your particular environment.
 
-## Possible symptoms 
+## Possible symptoms
 
 Antivirus real-time protection can cause many problems on Configuration Manager site servers, site systems, and clients.
 
@@ -51,9 +51,9 @@ To prevent such problems, we recommend that you add the following real-time prot
 
 |Folder|Path|
 | - | - |
-|*ConfigMgr Installation Folder*  |  %ProgramFiles%\Microsoft Configuration Manager  |  
-|*MP Installation Folder*  |%ProgramFiles%\SMS_CCM  |  
-|*Client Installation Folder*  |%Windir%\CCM  |  
+|*ConfigMgr Installation Folder*  |  %ProgramFiles%\Microsoft Configuration Manager  |
+|*MP Installation Folder*  |%ProgramFiles%\SMS_CCM  |
+|*Client Installation Folder*  |%Windir%\CCM  |
 
 ### Folder exclusions for site servers
 

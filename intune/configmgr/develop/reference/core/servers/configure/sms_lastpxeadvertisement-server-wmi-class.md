@@ -12,81 +12,81 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_LastPXEAdvertisement Server WMI Class
-The `SMS_LastPXEAdvertisement` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the last PXE advertisement.  
+The `SMS_LastPXEAdvertisement` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the last PXE advertisement.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_LastPXEAdvertisement : SMS_BaseClass  
-{  
-    String AdvertisementID;  
-    DateTime LastPXEAdvertisementTime;  
-    String NetbiosName;  
-    UInt32 ResourceId;  
-    String SMBIOSGUID;  
-};  
-```  
+```
+Class SMS_LastPXEAdvertisement : SMS_BaseClass
+{
+    String AdvertisementID;
+    DateTime LastPXEAdvertisementTime;
+    String NetbiosName;
+    UInt32 ResourceId;
+    String SMBIOSGUID;
+};
+```
 
-## Methods  
- The `SMS_LastPXEAdvertisement` class does not define any methods.  
+## Methods
+ The `SMS_LastPXEAdvertisement` class does not define any methods.
 
-## Properties  
- `AdvertisementID`  
- Data type: `String`  
+## Properties
+ `AdvertisementID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The advertisement ID.  
+ The advertisement ID.
 
- `LastPXEAdvertisementTime`  
- Data type: `DateTime`  
+ `LastPXEAdvertisementTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The time of last PXE advertisement for this equipment.  
+ The time of last PXE advertisement for this equipment.
 
- `NetbiosName`  
- Data type: `String`  
+ `NetbiosName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
  The NETBIOS name for the resource, which is often the same as the host name.
 
- `ResourceId`  
- Data type: `UInt32`  
+ `ResourceId`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Key of the item.  
+ Key of the item.
 
- `SMBIOSGUID`  
- Data type: `String`  
+ `SMBIOSGUID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The GUID of the BIOS.  
+ The GUID of the BIOS.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

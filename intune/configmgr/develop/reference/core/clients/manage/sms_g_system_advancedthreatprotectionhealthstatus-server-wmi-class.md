@@ -12,90 +12,90 @@ manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
 description: An overview of SMS_G_System_AdvancedThreatProtectionHealthStatus Server WMI Class
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_G_System_AdvancedThreatProtectionHealthStatus Server WMI Class
-The  `SMS_G_System_AdvancedThreatProtectionHealthStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Defender for Endpoint client health status.  
+The  `SMS_G_System_AdvancedThreatProtectionHealthStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Defender for Endpoint client health status.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_G_System_AdvancedThreatProtectionHealthStatus : SMS_G_System  
-{  
-    DateTime LastConnected;  
-    UInt32 OnboardingState;  
-    String OrgId;  
-    UInt32 ResourceID;  
-    Boolean SenseIsRunning;  
-};          
-```  
+```
+Class SMS_G_System_AdvancedThreatProtectionHealthStatus : SMS_G_System
+{
+    DateTime LastConnected;
+    UInt32 OnboardingState;
+    String OrgId;
+    UInt32 ResourceID;
+    Boolean SenseIsRunning;
+};
+```
 
-## Methods  
- The `SMS_G_System_AdvancedThreatProtectionHealthStatus` class does not define any methods.  
+## Methods
+ The `SMS_G_System_AdvancedThreatProtectionHealthStatus` class does not define any methods.
 
-## Properties  
- `LastConnected`  
- Data type: `DateTime`  
+## Properties
+ `LastConnected`
+ Data type: `DateTime`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The time that the Microsoft Defender for Endpoint agent last connected to the cloud.  
+ The time that the Microsoft Defender for Endpoint agent last connected to the cloud.
 
- `OnboardingState`  
- Data type: `UInt32`  
+ `OnboardingState`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The onboarding state.  
+ The onboarding state.
 
- `OrgId`  
- Data type: `String`  
+ `OrgId`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The ID of the organization that the Microsoft Defender for Endpoint agent reports to.  
+ The ID of the organization that the Microsoft Defender for Endpoint agent reports to.
 
- `ResourceID`  
- Data type: `UInt32`  
+ `ResourceID`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key, not_null]  
+ Qualifiers: [key, not_null]
 
- See [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md).  
+ See [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md).
 
- `SenseIsRunning`  
- Data type: `Boolean`  
+ `SenseIsRunning`
+ Data type: `Boolean`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- Indicates whether the Microsoft Defender for Endpoint agent is running.  
+ Indicates whether the Microsoft Defender for Endpoint agent is running.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Secured  
+- Secured
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

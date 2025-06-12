@@ -12,62 +12,62 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_RoleInObjectType Server WMI Class
-The `SMS_RoleInObjectType` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that maps a role and its associated object types.  
+The `SMS_RoleInObjectType` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that maps a role and its associated object types.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_RoleInObjectType : SMS_BaseClass  
-{  
-    UInt32 ObjectTypeID;  
-    String RoleID;  
-};  
-```  
+```
+Class SMS_RoleInObjectType : SMS_BaseClass
+{
+    UInt32 ObjectTypeID;
+    String RoleID;
+};
+```
 
-## Methods  
- The `SMS_RoleInObjectType` class doesn't define any methods.  
+## Methods
+ The `SMS_RoleInObjectType` class doesn't define any methods.
 
-## Properties  
- `ObjectTypeID`  
- Data type: `UInt32`  
+## Properties
+ `ObjectTypeID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Secured object class ID. Possible values are listed below.  
+ Secured object class ID. Possible values are listed below.
 
 | Value | Object type ID |
 | ----- | -------------- |
-|2|SMS_Package|  
-|14|SMS_OperatingSystemInstallPackage|  
-|18|SMS_ImagePackage|  
-|19|SMS_BootImagePackage|  
-|21|SMS_DeviceSettingPackage|  
-|23|SMS_DriverPackage|  
-|24|SMS_SoftwareUpdatesPackage|  
-|31|SMS_Application|  
+|2|SMS_Package|
+|14|SMS_OperatingSystemInstallPackage|
+|18|SMS_ImagePackage|
+|19|SMS_BootImagePackage|
+|21|SMS_DeviceSettingPackage|
+|23|SMS_DriverPackage|
+|24|SMS_SoftwareUpdatesPackage|
+|31|SMS_Application|
 
- `RoleID`  
- Data type: `String`  
+ `RoleID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The ID of the role.  
+ The ID of the role.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

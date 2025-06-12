@@ -5,9 +5,9 @@ title: Windows Information Protection (WIP) app protection policy
 titleSuffix: Microsoft Intune
 description: Create and deploy Windows Information Protection (WIP) policy with Microsoft Intune
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -81,7 +81,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **Protection** > **Create policy**.
+2. Select **Apps** > **Protection** > **Create**.
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.
     - **Description:** (Optional) Type a description.

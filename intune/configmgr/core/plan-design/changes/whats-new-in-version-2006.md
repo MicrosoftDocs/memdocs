@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: medium
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 2006 of Configuration Manager current branch
@@ -55,7 +55,7 @@ You can now create Microsoft Defender antivirus policies in the Microsoft Intune
 
 ### Install applications from the admin center
 <!--7518897, 6024389-->
-You can initiate an application install in real time for a tenant attached device from the Microsoft Intune admin center. Starting with Configuration Manager version 2006, the list of applications available for the device also includes applications deployed to the device's currently logged on user. For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md).  
+You can initiate an application install in real time for a tenant attached device from the Microsoft Intune admin center. Starting with Configuration Manager version 2006, the list of applications available for the device also includes applications deployed to the device's currently logged on user. For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md).
 
 ### Import previously created Azure AD application during tenant attach onboarding
 <!--6479246-->
@@ -297,7 +297,7 @@ For more information, see [Set up BitLocker portals](../../../protect/deploy-use
 
 *(First introduced in June 2020)*
 
-The IT admin community has developed a wealth of knowledge over the years. Rather than reinventing items like scripts and reports from scratch, we've built a Configuration Manager **Community hub** where you can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others' work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub will leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. For the initial release, the content made available in the Community hub will be uploaded only by Microsoft. 
+The IT admin community has developed a wealth of knowledge over the years. Rather than reinventing items like scripts and reports from scratch, we've built a Configuration Manager **Community hub** where you can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others' work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub will leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. For the initial release, the content made available in the Community hub will be uploaded only by Microsoft.
 
 For more information, see [Community hub and GitHub](../../servers/manage/community-hub.md).
 
@@ -336,7 +336,7 @@ For more information, see [Install Power BI sample reports](../../servers/manage
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
-As first announced in version 1906, version 2006 drops support for the following client OS versions:  
+As first announced in version 1906, version 2006 drops support for the following client OS versions:
 
 - Windows CE 7.0
 - Windows 10 Mobile
@@ -356,7 +356,7 @@ For more information on changes to the administration service REST API, see [Adm
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4578830).
 
-The following revised update rollup (4575789) is available in the console starting on November 30, 2020: [Revised update rollup for Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575789). 
+The following revised update rollup (4575789) is available in the console starting on November 30, 2020: [Revised update rollup for Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575789).
 
 Note this revision supersedes the original release of KB 4578605 [Update rollup for Microsoft Configuration Manager version 2006](https://support.microsoft.com/help/4578605).
 

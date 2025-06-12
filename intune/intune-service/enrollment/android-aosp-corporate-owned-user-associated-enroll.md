@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2024
+ms.date: 05/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -79,10 +79,27 @@ Create an enrollment profile to enable enrollment on devices.
         If you select **WEP Pre-shared key** or **WPA Pre-shared key**, also enter:  
 
         - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
-    - **For Microsoft Teams devices (preview)**: Select **Enabled** if this profile is applicable for Microsoft Teams Android devices. This setting should only be used for [Microsoft Teams Android devices](/microsoftteams/devices/teams-ip-phones). 
 
-7. Select **Next** and optionally, select scope tags. 
-8. Select **Next**. Review the details of your profile and then select **Create** to save the profile.  
+    - **For Microsoft Teams devices**: Select **Enabled** if this profile is applicable for Microsoft Teams Android devices. This setting should only be used for [Microsoft Teams Android devices](/microsoftteams/devices/teams-ip-phones). You can enable this setting in one enrollment profile per tenant.  
+    - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *EricSolomon_AndroidAOSP_05/02/2025_5:09 PM*  
+   
+       To create a custom naming template:  
+       1. Under **Apply device name template**, choose **Yes**.
+       2. Enter the naming template you want to apply to the devices. Names can contain letters, numbers, and hyphens.
+    
+       You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
+       - {{SERIAL}} for the device's serial number.
+       - {{SERIALLAST4DIGITS}} for the last 4 digits of the device’s serial number.
+       - {{DEVICETYPE}} for the device type, Example: *AndroidAOSP*
+       - {{ENROLLMENTDATETIME}} for the date and time of enrollment.
+       - {{UPNPREFIX}} for the user's first name. Example: *Eric*, when device is user affiliated.  
+       - {{USERNAME}} for the user's username when the device is user affiliated. Example: *Eric Solomon*  
+       - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
+  
+        Edits to the naming template only apply to new enrollments.  
+
+8. Select **Next** and optionally, select scope tags. 
+9. Select **Next**. Review the details of your profile and then select **Create** to save the profile.  
 
 ### Access enrollment token  
 After you create a profile, Intune generates a token that's needed for enrollment. The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.
@@ -91,8 +108,8 @@ To view the token as a QR code, select your enrollment profile from the enrollme
 You can also export the enrollment profile JSON file. To create a JSON file, select **Export**.  
 
 > [!IMPORTANT]
->- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.
->- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial set up.
+>- The QR code contains any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user can't join a network from the device.
+>- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial setup.
 >- On RealWear devices, you should skip the first time setup. The Intune QR code is the only thing you need to set up the device.  
 
 
@@ -203,14 +220,14 @@ If you experience problems with enrollment or access to work resources, you can 
 
 The following are known limitations when working with AOSP devices in Intune:  
 
-* You cannot enforce certain password types via device compliance and device restrictions profiles. Password types include:   
+* You can't enforce certain password types via device compliance and device restrictions profiles. Password types include:   
     * Password required, no restriction 
     * Alphabetic  
     * Alphanumeric  
     * Alphanumeric with symbols    
     * Weak biometric   
-* Device compliance reporting is not available for Android (AOSP).  
-* Android (AOSP) management is not supported with Intune operated by 21Vianet.  
+* Device compliance reporting isn't available for Android (AOSP).  
+* Android (AOSP) management isn't supported with Intune operated by 21Vianet.  
 
 ## Next steps  
 

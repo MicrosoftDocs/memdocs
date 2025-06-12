@@ -4,9 +4,9 @@ title: Devices - Intune Data Warehouse
 titleSuffix: Microsoft Intune
 description: Reference article for the Devices category of entity collections in the Intune Data Warehouse API.
 keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 10/30/2024
 ms.topic: reference
 ms.service: microsoft-intune

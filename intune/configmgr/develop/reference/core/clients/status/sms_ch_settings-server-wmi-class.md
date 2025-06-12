@@ -12,119 +12,119 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CH_Settings Server WMI Class
-The `SMS_CH_Settings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client status settings.  
+The `SMS_CH_Settings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client status settings.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CH_Settings : SMS_BaseClass  
-{  
-    String ADRetrievingSchedule;   
-    UInt32 CleanUpInterval;  
-    UInt32 DDRInactiveInterval;  
-    UInt32 HWInactiveInterval;  
-    Boolean NeedADLastLogonTime;   
-    UInt32 PolicyInactiveInterval;  
-    UInt32 SettingsID;  
-    UInt32 StatusInactiveInterval;  
-    UInt32 SWInactiveInterval;  
-};  
-```  
+```
+Class SMS_CH_Settings : SMS_BaseClass
+{
+    String ADRetrievingSchedule;
+    UInt32 CleanUpInterval;
+    UInt32 DDRInactiveInterval;
+    UInt32 HWInactiveInterval;
+    Boolean NeedADLastLogonTime;
+    UInt32 PolicyInactiveInterval;
+    UInt32 SettingsID;
+    UInt32 StatusInactiveInterval;
+    UInt32 SWInactiveInterval;
+};
+```
 
-## Methods  
- The `SMS_CH_Settings` class does not define any methods.  
+## Methods
+ The `SMS_CH_Settings` class does not define any methods.
 
-## Properties  
- `ADRetrievingSchedule`  
- Data type: `String`  
+## Properties
+ `ADRetrievingSchedule`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Schedule for how frequently the system retrieves information from Active Directory.  
+ Schedule for how frequently the system retrieves information from Active Directory.
 
- `CleanUpInterval`  
- Data type: `UInt32`  
+ `CleanUpInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- History clean up interval.  
+ History clean up interval.
 
- `DDRInactiveInterval`  
- Data type: `UInt32`  
+ `DDRInactiveInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Heartbeat discovery inactive interval.  
+ Heartbeat discovery inactive interval.
 
- `HWInactiveInterval`  
- Data type: `UInt32`  
+ `HWInactiveInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Hardware inventory inactive interval.  
+ Hardware inventory inactive interval.
 
- `NeedADLastLogonTime`  
- Data type: `Boolean`  
+ `NeedADLastLogonTime`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last logged on time from Active Directory.  
+ Last logged on time from Active Directory.
 
- `PolicyInactiveInterval`  
- Data type: `UInt32`  
+ `PolicyInactiveInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Policy request inactive interval.  
+ Policy request inactive interval.
 
- `SettingsID`  
- Data type: `UInt32`  
+ `SettingsID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Settings ID.  
+ Settings ID.
 
- `StatusInactiveInterval`  
- Data type: `UInt32`  
+ `StatusInactiveInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Status message inactive interval.  
+ Status message inactive interval.
 
- `SWInactiveInterval`  
- Data type: `UInt32`  
+ `SWInactiveInterval`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Software inventory inactive interval.  
+ Software inventory inactive interval.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

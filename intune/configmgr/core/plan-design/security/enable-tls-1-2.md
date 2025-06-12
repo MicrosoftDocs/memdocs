@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to enable TLS 1.2
@@ -92,7 +92,7 @@ Generally, the following items can determine which protocol version is used:
 - The application can dictate which specific protocol versions to negotiate.
   - Best practice dictates to avoid hard coding specific protocol versions at the application level and to follow the configuration defined at the component and OS protocol level.
   - Configuration Manager follows this best practice.
-- For applications written using the .NET Framework, the default protocol versions depend on the version of the framework they were compiled upon.  
+- For applications written using the .NET Framework, the default protocol versions depend on the version of the framework they were compiled upon.
   - .NET versions before 4.6.3 did not include TLS 1.1 and 1.2 in the list of protocols for negotiation, by default.
 - Applications that use WinHTTP for HTTPS communications, like the Configuration Manager client, depend on the OS version, patch level, and configuration for protocol version support.
 

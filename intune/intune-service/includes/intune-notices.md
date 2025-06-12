@@ -12,6 +12,27 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Google Play strong integrity definition update for Android 13 or above
+
+Google recently updated the definition of "Strong Integrity" for devices running Android 13 or above, requiring hardware-backed security signals and recent security updates. For more information refer to the [Android Developers Blog: Making the Play Integrity API faster, more resilient, and more private](https://android-developers.googleblog.com/2024/12/making-play-integrity-api-faster-resilient-private.html). Microsoft Intune will enforce this change by **September 30, 2025**. Until then we've adjusted app protection policy and compliance policy behavior to align with Google’s recommended backward compatibility guidance to minimize disruption as detailed in [Improved verdicts in Android 13 and later devices | Google Play | Android Developers](https://developer.android.com/google/play/integrity/improvements#how_can_i_use_the_old_meets-strong-integrity_label_definition_across_all_android_sdk_versions).
+
+#### How does this change affect you or your users?
+
+If you have targeted users with app protection policies and/or compliance policies that are using devices running Android 13 or above without a security update in the past 12 months, these devices will no longer meet the "Strong Integrity" standard. 
+
+**User Impact:** For users running devices on Android 13 or above after this change:
+- Devices without the latest security updates may be downgraded from "Strong Integrity" to "Device Integrity" which could result in conditional launch blocks for affected devices.
+- Devices without the latest security updates may see their devices become noncompliant in the Intune Company Portal app and could lose access to company resources based on your organization's Conditional Access policies.
+
+Note that devices running Android versions 12 or below aren't affected by this change. 
+
+#### How can you prepare?
+
+Before September 30, 2025, review and update your policies as needed. Ensure users with devices running Android 13 or above are receiving timely security updates. You can use the [app protection status report](../apps/app-protection-policies-monitor.md#view-the-app-protection-status-report) to monitor the date of the last Android Security Patch received by the device and notify users to update as needed. The following admin options are available to help warn or block users:
+
+- For app protection policies configure the **Min OS version** and **Min patch version** conditional launch settings. For more details, review [Android app protection policy settings in Microsoft Intune | Microsoft Learn](../apps/app-protection-policy-settings-android.md#conditional-launch)
+- For compliance policies configure the **Minimum security patch level** compliance setting. For more details, review: [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md)
+
 ### Plan for Change: New Intune connector for deploying Microsoft Entra hybrid joined devices using Windows Autopilot
 
 As part of Microsoft’s Secure Future Initiative, we recently released an update to the Intune Connector for Active Directory to use a Managed Service Account instead of a local SYSTEM account for deploying Microsoft Entra hybrid joined devices with Windows Autopilot. The new connector aims to enhance security by reducing unnecessary privileges and permissions associated with the local SYSTEM account.

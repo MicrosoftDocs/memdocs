@@ -5,9 +5,9 @@ title: Configure the Microsoft Managed Home Screen app
 titleSuffix: Microsoft Intune
 description: Learn how to configure the Microsoft Managed Home Screen app.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune

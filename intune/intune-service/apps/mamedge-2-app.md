@@ -5,9 +5,9 @@ title: Step 2. Create app protection policies for Microsoft Edge for Business
 titleSuffix:
 description: Step 2. Create app protection policies for Microsoft Edge for Business.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 03/26/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -63,7 +63,7 @@ Use the following steps to apply the data protection framework.
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Apps** > **Protection** > **Create policy** > **Windows**.
+2. Select **Apps** > **Protection** > **Create** > **Windows**.
 
 3. On the **Create policy** step, set the following details:
 
@@ -141,7 +141,7 @@ Next, you create a **Level 3** app protection policy for Microsoft Edge from Mic
 
 To create the app protection policy, follow these steps:
 
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **Protection** > **Create policy**.
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **Protection** > **Create**.
 
 2. Select **Create policy** > **Android** or **iOS/iPadOS**. Next, enter the following information:
 

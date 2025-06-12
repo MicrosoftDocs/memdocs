@@ -5,9 +5,9 @@ title: Add built-in apps to mobile devices using Microsoft Intune
 titleSuffix: 
 description: Learn how you can use Intune to make it easier to install built-in apps mobile devices.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune

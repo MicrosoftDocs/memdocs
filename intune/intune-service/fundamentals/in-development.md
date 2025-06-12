@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/29/2025
+ms.date: 05/30/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,19 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Managed Home Screen orientation changes with Android 16 <!-- 30316862 -->
+
+Starting with Android 16, Android stops enforcing screen orientation on devices with 600dp and larger display settings. This change impacts the Managed Home Screen (MHS) on devices with larger form factors, like tablets.
+
+On these Android 16 devices, orientation is determined by the device’s orientation setting, not the MHS settings you configure.
+
+To learn more about Android 16 changes, see [Behavior changes: Apps targeting Android 16 or higher](https://developer.android.com/about/versions/16/behavior-changes-16) (opens Android website).
+
+Applies to:
+
+- Android Enterprise
+
+
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
 Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This change allows you to update apps more easily without needing to update those profiles with the latest versions. 
@@ -85,78 +98,62 @@ Applies to:
 
 <!-- *********************************************** -->
 
- <!-- Device configuration -->
+## Device configuration
+
+### New Block Bluetooth setting in the Android settings catalog<!-- 15583647 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There's a new **Block Bluetooth** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, Bluetooth is disabled on the device.
+
+There's also a **Block Bluetooth Configuration** setting that prevents end users from changing the Bluetooth setting on the device.
+
+These settings are different and have different results. Some examples include:
+
+- **Scenario**: An end user turned on the Bluetooth setting on their device. The admin creates an Intune policy that sets the **Block Bluetooth** setting to **True**.
+
+  In this situation, Bluetooth is blocked on the device, even though the end user turned it on.
+
+- **Scenario**: An end user turned on the Bluetooth setting on their device. The admin creates an Intune policy that sets the **Block Bluetooth Configuration** setting to **True**.
+
+  In this situation, Bluetooth is turned on since the end user previously turned it on. The end user can't turn off Bluetooth. If the end user previously turned Bluetooth off, and then the **Block Bluetooth Configuration** policy applies, then Bluetooth is turned off and the end user can't turn it back on. 
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
+
+Applies to:
+
+- Android Enterprise corporate-owned devices with a work profile (COPE)
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### Change to role-based access control for device enrollment limits<!-- 27115176 -->
-
-We're updating role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you'll soon have read-only access to device enrollment limit policies. To create and edit these policies, you'll need to be an Intune Service Administrator.
-
-### Custom naming template for AOSP devices<!-- 31707864 -->
-
-You'll soon be able to use a custom template for naming AOSP user-affiliated and userless devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
-
+<!-- ## Device enrollment -->
 
 <!-- *********************************************** -->
 
 ## Device management
 
-### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
+### Remote actions with multiple administrative approval<!-- 27043113  -->
 
-During an unattended Remote Help sessions on Android devices, we're enhancing security and user awareness during remote assistance by blocking the screen of the device, and users will be notified if they interact with it.
+Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). The remote action **Wipe** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account thereby enhancing the overall security posture of the environment.
 
-This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices. 
-
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
-
-
-### Cross Platform Device Inventory<!-- 25964936 -->
-
-Android, iOS, and Mac devices will be added to device inventory. Intune will collect a default set of inventory data including 74 Apple properties and 32 Android properties.
-
-For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
-
-### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
-
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA helps to mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
-
-For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
+For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
 ### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 
-We're adding a feature that will allow a customer to:
+We're adding a feature that allows a customer to:
 
 - Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
 - Configure a different RBAC permission and assign the permission to different RBAC roles
 
 Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
 
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
+For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
 
 <!-- *********************************************** -->
 
 ## Device security
-
-### Detect rooted corporate-owned Android Enterprise devices<!--31672848  -->
-
-Configure compliance policies to detect if a corporate-owned Android Enterprise device is rooted. If Microsoft Intune detects that a device is rooted, you can have it marked as noncompliant. This feature is becoming available for devices enrolled as fully managed, dedicated, or corporate-owned with a work profile. 
-
-Applies to:
-
-- Android
-
-### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
-
-We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
-
-The template will support settings related to global exclusion settings. Applicable to antivirus and EDR engines on the client, the settings can configure exclusions to stop associated real time protection EDR alerts for the excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
-
-Applies to:
-
-- Linux
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
@@ -177,19 +174,35 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
+## Monitor and troubleshoot
+
+### New status column in Windows hardware attestation report<!-- 26527908 -->
+
+We're introducing a new column in the Windows hardware attestation report named, **Attest Status**. Under this column Microsoft Intune will show the error messages it receives during the attestation process. This feature will enhance the visibility of error messages received from both service-side and client-side attestation errors, including WinINet errors, HTTP bad request errors, and other error messages related to failure.
+
+### Declarative Apple software update report<!-- 31557946 -->
+
+You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new Apple software updates report located under *Reports* > *Apple updates*. Using the new report, you'll be able to see:
+
+- Pending OS update information such as OS and build version, and its status on the device
+- Current OS information for a device
+- Information about past software updates on the device
+- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM
+- Information about the latest public update made available by Apple
+- Devices that have been patched with a Rapid Security Response, or have a Rapid Security Response available
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+<!-- *********************************************** -->
+
 <!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
 
-## Tenant administration
-
-### Data collection from SimInfo entity on Windows devices<!--30120558 iddraft idready -->
-
-You'll be able to collect data from the SimInfo entity on Windows devices with enhanced device inventory.
-
-Applies to:
-
-- Windows
+<!-- ## Tenant administration -->
 
 <!-- *********************************************** -->
 

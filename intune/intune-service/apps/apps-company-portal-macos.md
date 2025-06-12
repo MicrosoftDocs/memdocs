@@ -5,9 +5,9 @@ title: Add the Company Portal for macOS app
 titleSuffix: Microsoft Intune
 description: Add the macOS Company Portal app.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune

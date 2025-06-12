@@ -5,9 +5,9 @@ title: Understanding Microsoft Intune management agent for macOS
 titleSuffix:
 description: Learn about the Microsoft Intune management agent for macOS.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 07/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune

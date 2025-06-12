@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Introduction to the long-term servicing branch of Configuration Manager

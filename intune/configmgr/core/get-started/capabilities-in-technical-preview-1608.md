@@ -12,22 +12,22 @@ ms.author: banreetkaur
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1608 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1608. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1608. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 
 
 
-##  Improvements to the Prepare ConfigMgr Client for Capture task sequence step  
-The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image, it will install a new Configuration Manager client each time.  
+##  Improvements to the Prepare ConfigMgr Client for Capture task sequence step
+The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image, it will install a new Configuration Manager client each time.
 
 
 ## Improvements to Software Center

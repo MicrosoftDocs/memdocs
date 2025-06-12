@@ -12,64 +12,64 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ImportForUser Method in Class SMS_ClientPfxCertificate
-The `ImportForUser` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a certificate for a user, encrypted by using a password.  
+The `ImportForUser` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a certificate for a user, encrypted by using a password.
 
-## Syntax  
+## Syntax
 
-```  
-sint32 ImportForUser(  
-     String ProfileName,  
-     String UserName,  
-     String EncryptedPfxBlob,  
-     String Password  
-);  
+```
+sint32 ImportForUser(
+     String ProfileName,
+     String UserName,
+     String EncryptedPfxBlob,
+     String Password
+);
 
-```  
+```
 
-#### Parameters  
- `ProfileName`  
- Data type: `String`  
+#### Parameters
+ `ProfileName`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The profile name.  
+ The profile name.
 
- `UserName`  
- Data type: `String`  
+ `UserName`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The user name.  
+ The user name.
 
- `EncryptedPfxBlob`  
- Data type: `String`  
+ `EncryptedPfxBlob`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The encrypted blob.  
+ The encrypted blob.
 
- `Password`  
- Data type: `String`  
+ `Password`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The password used to encrypt the certificate.  
+ The password used to encrypt the certificate.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For more information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For more information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [SMS_ClientPfxCertificate Server WMI Class](../../../../../develop/reference/core/clients/deploy/sms_clientpfxcertificate-server-wmi-class.md)   
+## See Also
+ [SMS_ClientPfxCertificate Server WMI Class](../../../../../develop/reference/core/clients/deploy/sms_clientpfxcertificate-server-wmi-class.md)

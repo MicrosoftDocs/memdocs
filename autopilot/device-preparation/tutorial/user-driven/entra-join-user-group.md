@@ -1,12 +1,12 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 4 of 7 - Create a user group
-description: How to - Windows Autopilot device preparation  user-driven Microsoft Entra join - Step 4 of 7 - Create a user group.
+description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 4 of 7 - Create a user group.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
-manager: aaroncz
+manager: bpardi
 ms.date: 04/04/2025
 ms.topic: tutorial
 ms.collection:

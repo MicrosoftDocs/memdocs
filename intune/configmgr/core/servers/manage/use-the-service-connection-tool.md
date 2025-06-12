@@ -11,7 +11,7 @@ author: gowdhamankarthikeyan
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Use the service connection tool for Configuration Manager
@@ -85,7 +85,7 @@ For more information, see [Command-line parameters](#bkmk_cmd).
 > [!TIP]
 > The tool determines the version of your site from the data file. To verify the version, look in the .cab file for the text file named with the site version.
 
-## Use the tool  
+## Use the tool
 
 The service connection tool is in the Configuration Manager installation media at the following path: `SMSSETUP\TOOLS\ServiceConnectionTool\ServiceConnectionTool.exe`. Always use the service connection tool that matches the version of Configuration Manager that you use. All of these files must be in the same folder for the service connection tool to work.
 
@@ -130,7 +130,7 @@ In this procedure, the command-line examples use the following file names and fo
 
     For more examples, see [Command line parameters](#bkmk_cmd).
 
-    > [!NOTE]  
+    > [!NOTE]
     > When you run this command line, you might see the following error:
     >
     > **Unhandled Exception: System.UnauthorizedAccessException: Access to the path 'C:\Users\jqpublic\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' is denied.**
