@@ -1,12 +1,12 @@
 ---
-title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and PowerShell scripts to device group
-description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and PowerShell scripts to device group.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 3 of 6 - Assign applications and PowerShell scripts to device group
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 3 of 6 - Assign applications and PowerShell scripts to device group.
 ms.service: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
-manager: bpardi
+manager: aaroncz
 ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:
@@ -17,23 +17,22 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation user-driven Microsoft Entra join: Assign applications and PowerShell scripts to device group
+# Windows Autopilot device preparation in automatic mode for Windows 365 (preview): Assign applications and PowerShell scripts to device group
 
-Windows Autopilot device preparation user-driven Microsoft Entra join steps:
+Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 
-- Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
-- Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
-- Step 3: [Create an assigned device group](entra-join-device-group.md)
-- Step 4: [Create a user group](entra-join-user-group.md)
+- Step 1: [Set up Windows automatic Intune enrollment](automatic-automatic-enrollment.md)
+- Step 2: [Create an assigned device group](automatic-device-group.md)
 
 > [!div class="checklist"]
 >
-> - **Step 5: Assign applications and PowerShell scripts to device group**
+> - **Step 3: Assign applications and PowerShell scripts to device group**
 
-- Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
-- Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
+- Step 4: [Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
+- Step 5: [Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
+- Step 6: [Monitor the deployment](automatic-monitor.md)
 
-For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
+For an overview of the Windows Autopilot device preparation in automatic mode for Windows 365 workflow, see [Windows Autopilot device preparation in automatic mode for Windows 365 overview](automatic-workflow.md#workflow).
 
 ## Assign applications and PowerShell scripts to device group
 
@@ -46,12 +45,10 @@ The applications and PowerShell scripts specified should be the essential applic
 
 Any applications installed or PowerShell scripts that run during a Windows Autopilot device preparation deployment should be configured to install in the **System** context since the applications are installed and the PowerShell scripts ran during OOBE when no user is signed in.
 
-For applications to install and PowerShell scripts work successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](entra-join-device-group.md).
-
 For applications to install and PowerShell scripts work successfully during a Windows Autopilot device preparation deployment, two steps need to be taken:
 
-1. They must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](entra-join-device-group.md). This step is covered in this article.
-2. They must be specified as part of the Windows Autopilot device preparation policy. This step is covered in the next step [Step 5: Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md).
+1. They must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](automatic-device-group.md). This step is covered in this article.
+2. They must be specified as part of the Windows Autopilot device preparation policy. This step is covered in the next step [Step 5: Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md).
 
 > [!NOTE]
 >
@@ -139,7 +136,7 @@ To assign the desired PowerShell scripts to the device group created for Windows
 ## Next step: Create Windows Autopilot device preparation policy
 
 > [!div class="nextstepaction"]
-> [Step 6: Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
+> [Step 4: Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md)
 
 ## Related content
 
