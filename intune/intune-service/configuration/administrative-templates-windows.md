@@ -27,7 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Use Windows 10/11 templates to configure group policy settings in Microsoft Intune
