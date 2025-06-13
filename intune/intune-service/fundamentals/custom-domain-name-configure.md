@@ -54,3 +54,9 @@ To configure a custom domain name, use an account that is assigned the Entra ID 
 Managing custom domains for your Microsoft Entra organization requires use of an account with [sufficient permissions](#role-based-access-controls) in Entra ID. For guidance to add and then verify that your custom domain name is valid in Microsoft Entra, see [Add your custom domain name to your tenant](/entra/fundamentals/add-custom-domain) in the Entra ID documentation.
 
 Learn more [about the initial onmicrosoft.com domain in Microsoft 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A).
+
+## Related content
+
+- [Add users](../fundamentals/users-add.md)
+- [Add groups](../fundamentals/groups-add.md)
+

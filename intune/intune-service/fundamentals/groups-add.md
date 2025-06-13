@@ -148,8 +148,8 @@ For more guidance on using Filters, go to:
 - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
 - [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](filters-performance-recommendations.md)
 
-## See also
+## Related content
 
-- [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
-- [Manage access to resources with Microsoft Entra groups](/azure/active-directory/active-directory-manage-groups)
-- [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md)
+- [Assign users licenses to Intune](../fundamentals/licenses-assign.md)
+- [Assign Microsoft Intune roles to groups of users for role-based access control](../fundamentals/assign-role.md)
+

@@ -96,7 +96,8 @@ Before you deploy Intune roles, be familiar with [About Intune role assignments]
 
 The new assignment is displayed in the list of assignments.
 
-## Next steps
+## Related content
 
-- [Learn more about role-based access control in Intune](role-based-access-control.md)
-- [Create a custom role](create-custom-role.md)
+- [Create a custom role](../fundamentals/create-custom-role.md)
+- [Set the MDM authority](../fundamentals/mdm-authority-set.md)
+
