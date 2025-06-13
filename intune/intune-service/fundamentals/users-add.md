@@ -90,7 +90,7 @@ The following procedural steps can be used to add individual users to your Intun
 4. On the **Assignments** tab you can assign the user to a single administrative unit, and up to 20 groups or Microsoft Entra roles at the time the account is created. You can also configure Assignments after the user is created. 
 
    > [!TIP]  
-   > Some options might not be available to configure based on your accounts level of privilege in Microsoft Entra. For example, if you're assigned only the *User Administrator* role, you can assign users to groups but lack rights to assign an administrative unit or assign the user a Microsoft Entra role. For information about the permissions provided by different roles, see [Microsoft Entra built-in roles](entra/identity/role-based-access-control/permissions-reference).
+   > Some options might not be available to configure based on your accounts level of privilege in Microsoft Entra. For example, if you're assigned only the *User Administrator* role, you can assign users to groups but lack rights to assign an administrative unit or assign the user a Microsoft Entra role. For information about the permissions provided by different roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
    **To assign a group to the new user**:  
    1. Select **+ Add group**.
