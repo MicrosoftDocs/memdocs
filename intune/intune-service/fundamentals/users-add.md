@@ -1,3 +1,4 @@
+---
 title: Add users to Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Learn how to add and managing Microsoft Entra user accounts from within Microsoft Intune.
