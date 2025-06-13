@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/24/2025
+ms.date: 06/09/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -86,7 +86,7 @@ This task list provides an overview. For more specific information, go to [Apple
 - Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
 - Be sure the Apple token (.p7m) is active. For more specific information, go to [Get an Apple ADE token](../enrollment/device-enrollment-program-enroll-ios.md#get-an-apple-automated-device-enrollment-token).
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
-- Decide how users will authenticate on their devices: the **Company Portal** app, **Setup Assistant (legacy)**, or **Setup Assistant with modern authentication**. Make this decision before you create the enrollment profile. Using the **Company Portal** app or **Setup Assistant with modern authentication** is considered modern authentication.
+- Decide [how users will authenticate](../enrollment/device-enrollment-program-enroll-ios.md#choose-an-authentication-method) their devices: the **Setup Assistant with modern authentication** (recommended), **Company Portal** app, or **Setup Assistant (legacy)** (no longer recommended). Make this decision before you create the enrollment profile. Using the **Company Portal** app or **Setup Assistant with modern authentication** is considered modern authentication.
 
   - Select the **Company Portal** app when:
 
@@ -98,14 +98,6 @@ This task list provides an overview. For more specific information, go to [Apple
     - You want to automatically install the **Company Portal** app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install the **Company Portal** app during enrollment without user Apple IDs.
     - You want to lock the device until the **Company Portal** app installs. After it installs, users sign in to the Company Portal app with their organization Microsoft Entra account. Then, the device is unlocked, and users can use it.
 
-  - Select the **Setup Assistant (legacy)** when:
-
-    - You want to wipe the device.
-    - You don't want to use modern authentication features, like MFA.
-    - You don't want to register devices in Microsoft Entra ID. Setup Assistant (legacy) authenticates the user with the Apple `.p7m` token. If it's acceptable to not register devices in Microsoft Entra ID, then you don't need to install the Company Portal app. Keep using the Setup Assistant (legacy).
-
-      If you want devices registered in Microsoft Entra ID, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant (legacy), you can install the Company Portal app. We recommend installing the **Company Portal** app during enrollment.
-
   - Select the **Setup Assistant with modern authentication** when:
 
     - You want to wipe the device.
@@ -115,6 +107,14 @@ This task list provides an overview. For more specific information, go to [Apple
     - You want devices registered in Microsoft Entra ID. When they're registered, you can use features available with Microsoft Entra ID, like Conditional Access.
     - You want to automatically install the **Company Portal** app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install the **Company Portal** app during enrollment without user Apple IDs.
     - You want users to use the device, even when the Company Portal app isn't installed.
+
+    - Select the **Setup Assistant (legacy)** when you can't use *Setup Assistant with modern authentication* and:
+
+    - You want to wipe the device.
+    - You don't want to use modern authentication features, like MFA.
+    - You don't want to register devices in Microsoft Entra ID. Setup Assistant (legacy) authenticates the user with the Apple `.p7m` token. If it's acceptable to not register devices in Microsoft Entra ID, then you don't need to install the Company Portal app. Keep using the Setup Assistant (legacy).
+
+      If you want devices registered in Microsoft Entra ID, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant (legacy), you can install the Company Portal app. We recommend installing the **Company Portal** app during enrollment.
 
   > [!NOTE]
   > To authenticate users, Microsoft recommends using the **Company Portal** app or the **Setup Assistant with modern authentication**.
@@ -166,7 +166,7 @@ This task list provides an overview. For more specific information, go to [Apple
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile:
 
   - Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices).
-  - Choose where users authenticate: the **Company Portal** app, **Setup Assistant (legacy)**, or **Setup Assistant with modern authentication**.
+  - Choose where users authenticate: **Setup Assistant with modern authentication** (recommended), the **Company Portal** app, or **Setup Assistant (legacy)** (not recommended).
 
   For more specific information and suggestions, go to [Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md).
 
