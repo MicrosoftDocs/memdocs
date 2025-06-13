@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: bpardi
-ms.date: 04/01/2025
+ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -47,6 +47,11 @@ The applications and PowerShell scripts specified should be the essential applic
 Any applications installed or PowerShell scripts that run during a Windows Autopilot device preparation deployment should be configured to install in the **System** context since the applications are installed and the PowerShell scripts ran during OOBE when no user is signed in.
 
 For applications to install and PowerShell scripts work successfully, they must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](entra-join-device-group.md).
+
+For applications to install and PowerShell scripts work successfully during a Windows Autopilot device preparation deployment, two steps need to be taken:
+
+1. They must be assigned to the device group created for Windows Autopilot device preparation in [Step 3: Create an assigned device group](entra-join-device-group.md). This step is covered in this article.
+2. They must be specified as part of the Windows Autopilot device preparation policy. This step is covered in the next step [Step 5: Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md).
 
 > [!NOTE]
 >

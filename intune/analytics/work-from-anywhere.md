@@ -100,7 +100,7 @@ In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness
 
 > [!NOTE]
 >
-> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune-service/remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment.
+> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune-service/remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment.
 > - Windows 11 hardware readiness insights do not impact your Work from anywhere score.
 
 ## <a name="bkmk_np"></a> No commercial median

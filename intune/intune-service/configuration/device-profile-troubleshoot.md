@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Common questions, answers, and scenarios with policies and profiles in Microsoft Intune
