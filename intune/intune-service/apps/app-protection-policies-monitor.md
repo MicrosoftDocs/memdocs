@@ -38,6 +38,9 @@ You can monitor the status of the app protection policies that you've applied to
 App protection data is retained for a minimum of 90 days. Any app instances that have checked in to the Intune service within the past 90 days is included in the app protection status report. 
 
 > [!NOTE]
+> When an app protection policy is deleted, scoped admins will not see any app instances associated with that policy. Global admins will continue to see the policy name listed as "not available" for deleted policies.
+
+> [!NOTE]
 > For iOS 16 and later devices, the **Device Name** value in all app protection reports will be a generic device name. For related information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
 
 ## View the **App protection status** report
