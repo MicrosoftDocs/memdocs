@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 06/13/2025
+ms.date: 06/16/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,7 +29,7 @@ ms.collection:
 
 # Add and manage users for Microsoft Intune 
 
-Microsoft Entra provides the identity service for Microsoft Intune which means user accounts you see in Intune exist in Microsoft Entra. As an administrator with sufficient permissions to Microsoft Entra, you can use the Intune admin center to manage Microsoft Entra users. Intune also supports use of user accounts that synchronize from Active Directory to any cloud-based service that shares the tenant with Intune and your Microsoft Entra tenant.
+Microsoft Entra ID, part of Microsoft Entra, is the identity service for Microsoft Intune which means user accounts you see in Intune exist in Microsoft Entra. As an administrator with sufficient permissions to Microsoft Entra, you can use the Intune admin center to manage Microsoft Entra users. Intune also supports use of user accounts that synchronize from Active Directory to any cloud-based service that shares the tenant with Intune and your Microsoft Entra tenant.
 
 To manage user accounts in the Intune admin center, your administrative account must have sufficient role-based access control (RBAC) permissions within Microsoft Entra. The permissions required to manage user accounts in Intune are also sufficient permissions to manage users from within the Microsoft 365 admin center or directly through the Microsoft Entra admin center.
 
@@ -139,7 +139,7 @@ For more information about using a csv file to add Intune users, see [Bulk creat
 
 ## Sync Active Directory and add users to Intune
 
-You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Entra which includes Intune users. Having your on-premises Active Directory service connected with all of your Microsoft Entra ID-based services makes managing user identity simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. When you link the same [Microsoft Entra tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you previously synchronized are available to all cloud-based services.
+You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Entra which includes Intune users. Having your on-premises Active Directory service connected with all of your Microsoft Entra ID-based services makes managing user identity simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. When you link the same [Microsoft Entra tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you previously synchronized are available to all your cloud-based services.
 
 Be sure your AD admins have access to your Microsoft Entra subscription and are trained to complete common AD and Microsoft Entra tasks.
 
