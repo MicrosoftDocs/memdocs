@@ -48,7 +48,10 @@ If you don't have an Intune subscription, [sign up for a free trial account](fre
 
 ## Sign in to the Microsoft Intune admin center
 
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/role-based-access-control-reference.md) with sufficient permissions. If you have created an Intune Trial subscription, the account you created the subscription with is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+
+> [!CAUTION]  
+> The Global Administrator built-in role is a [privileged Microsoft Entra ID role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), and isn’t recommended for daily use. As described the [sign-in to Intune artice](../fundamentals/account-sign-up#role-based-access-controls), you can reduce reliance on this role by assigning a less-privileged role to administrators who manage Intune and perform daily tasks.
 
 ## Create a group
 
