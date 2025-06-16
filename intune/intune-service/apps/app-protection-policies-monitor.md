@@ -41,7 +41,7 @@ App protection data is retained for a minimum of 90 days. Any app instances that
 > When you delete an app protection policy, scoped admins no longer see app instances associated with that policy. Global admins continue to see the policy name listed as "not available."
 
 > [!NOTE]
-> For iOS 16 and later devices, the **Device Name** value in all app protection reports is a generic device name. For related information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
+> For iOS 16 and later devices, the **Device Name** value in all app protection reports is a generic device name. For more information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
 
 ## View the **App protection status** report
 
