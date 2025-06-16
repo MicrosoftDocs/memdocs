@@ -29,7 +29,7 @@ ms.collection:
 - highpri
 - highseo
 - security-copilot
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Microsoft Copilot in Intune (public preview)

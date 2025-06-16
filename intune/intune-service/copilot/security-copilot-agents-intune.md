@@ -12,7 +12,7 @@ ms.localizationpriority: high
 ms.reviewer: idaewor
 ms.collection:
 - security-copilot
-- magic-ai-copilot
+- msec-ai-copilot
 - tier1
 - essentials
 - get-started
