@@ -29,7 +29,7 @@ ms.collection:
 
 # Add and manage users for Microsoft Intune 
 
-Microsoft Entra ID, part of Microsoft Entra, is the identity service for Microsoft Intune which means user accounts you see in Intune exist in Microsoft Entra. As an administrator with sufficient role-based access control (RBAC) permissions within Microsoft Entra, you can use the Intune admin center to manage Microsoft Entra users. Those same Entra permissions also enable an admin to manage users from within the Microsoft 365 admin center or directly through the Microsoft Entra admin centerIntune. 
+Microsoft Entra ID, part of Microsoft Entra, is the identity service for Microsoft Intune which means user accounts you see in Intune exist in Microsoft Entra. As an administrator with sufficient role-based access control (RBAC) permissions within Microsoft Entra, you can use the Intune admin center to manage Microsoft Entra users. Those same Entra permissions also enable an admin to manage users from within the Microsoft 365 admin center or directly through the Microsoft Entra admin center.
 
 Intune also supports use of user accounts that synchronize from Active Directory to any cloud-based service that shares the tenant with Intune and your Entra tenant.
 
