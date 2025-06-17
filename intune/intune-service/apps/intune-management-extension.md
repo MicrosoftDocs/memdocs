@@ -133,7 +133,7 @@ There are several conditions that can cause the IME to be removed from the devic
 - There are no PowerShell scripts or Win32 apps assigned to the groups that the user or device belongs.
 - The device can't check in with the Intune service. For example, there's no internet access, no access to Windows Push Notification Services (WNS), and so on.
 - The device is in S mode. The Intune management extension isn't supported on devices running in S mode.
-- If the WINHTTP proxy is configured only at the user level (and not machine-wide), ensure a user is signed into the device. Or, use `bitsadmin /util /setieproxy` to manually configure the proxy for the BITS (Background Intelligent Transfer Service). To learn more, see [bitsadmin command details](/windows-server/administration/windows-commands/bitsadmin-util-and-setieproxy). 
+- On Windows 10 devices, if the proxy is configured only at the user level (and not machine-wide), ensure a user is signed into the device. Or, use `bitsadmin /util /setieproxy` to manually configure the proxy for the BITS (Background Intelligent Transfer Service). To learn more, see [bitsadmin command details](/windows-server/administration/windows-commands/bitsadmin-util-and-setieproxy). 
 
 To see if the device is auto-enrolled, you can:
 
