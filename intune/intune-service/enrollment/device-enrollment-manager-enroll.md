@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2024
+ms.date: 06/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -123,7 +123,7 @@ Conditional Access is only supported with DEM on devices running:
 * Windows 11
 
 > [!NOTE]
-> Microsoft Entra Join, Microsoft Entra registration and Workplace Join are not supported by DEM accounts on iOS/iPadOS and macOS.
+>  DEM accounts on iOS/iPadOS and macOS do not support Microsoft Entra Join, Microsoft Entra registration, and Workplace Join. 
 
 ### Device limit restrictions    
 DEM enrolls Windows 10/11 devices in shared device mode, so device limit restrictions won't work on them. Instead, you can configure a hard limit for these devices in the Microsoft Entra admin center. For more information, see [Manage device identities](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).       
