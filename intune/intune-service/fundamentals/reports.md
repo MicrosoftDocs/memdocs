@@ -250,7 +250,7 @@ You can view the Windows hardware attestation report using the following steps:
 >[!NOTE]
 > - The **Latest report** column shows the date of the last issued health certificate. The date is both when the device receives a health certificate, and when it generates an attestation report for Microsoft Intune.  
 > - Every time the device generates an attestation report, the health certificate renews.  
-> - For more information about error types, codes, and troubleshooting, see [Health attestation CSP status and error-codes](../windows/client-management/mdm/healthattestation-csp#healthattestation-csp-status-and-error-codes).  
+> - For more information about error types, codes, and troubleshooting, see [Health attestation CSP status and error-codes](/windows/client-management/mdm/healthattestation-csp#healthattestation-csp-status-and-error-codes).  
 
 ## Device configuration reports
 
