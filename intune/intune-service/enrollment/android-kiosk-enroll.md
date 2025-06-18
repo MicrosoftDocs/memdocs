@@ -7,7 +7,7 @@ description: Configure enrollment in Microsoft Intune for Android Enterprise ded
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune

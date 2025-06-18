@@ -7,7 +7,7 @@ description: Get the Apple token needed to set up Apple School Manager and Micro
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/07/2025
 ms.topic: how-to
 ms.service: microsoft-intune

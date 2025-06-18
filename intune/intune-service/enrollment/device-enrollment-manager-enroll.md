@@ -7,7 +7,7 @@ description: Use the device enrollment manager account to enroll devices in Intu
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -20,7 +20,7 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 #ROBOTS:
 #audience:
 
-ms.reviewer: shthilla
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
