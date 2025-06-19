@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 05/30/2025
+ms.date: 06/27/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -133,7 +133,7 @@ We're introducing a new column in the Windows hardware attestation report named,
 
 ### Declarative Apple software update report<!-- 31557946 -->
 
-You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new Apple software updates report located under *Reports* > *Apple updates*. Using the new report, you'll be able to see:
+You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new Apple software updates report located under *Reports* > *Apple updates*. Using the new report, you'll be able to see:
 
 - Pending OS update information such as OS and build version, and its status on the device
 - Current OS information for a device
