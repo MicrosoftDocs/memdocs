@@ -75,6 +75,111 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of June 23, 2025 (Service release 2506)
+
+### App management
+
+#### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
+
+Windows Autopilot now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you can select apps from the Enterprise App Catalog as blocking apps in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to ensure those apps are delivered before the user can access the desktop.
+
+For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
+
+Applies to:
+
+- Windows
+
+#### Managed Home Screen orientation changes with Android 16<!-- 30316862 -->
+
+Starting with Android 16, Android stops enforcing screen orientation on devices with 600dp and larger display settings. This change impacts the Managed Home Screen (MHS) on devices with larger form factors, like tablets.
+
+On these Android 16 devices, orientation is determined by the device’s orientation setting, not the MHS settings you configure.
+
+To learn more about Android 16 changes, go to [Behavior changes: Apps targeting Android 16 or higher](https://developer.android.com/about/versions/16/behavior-changes-16) (opens Android website).
+
+Applies to:
+
+- Android Enterprise
+
+
+### Device configuration
+
+#### New settings available in the Apple settings catalog<!-- 32498293 iddraft wnready wnstaged  -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the settings catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+##### iOS/iPadOS
+
+**Managed Settings**:
+
+- Idle Reboot Allowed
+
+##### macOS
+
+**Authentication > Extensible Single Sign On (SSO)**:
+
+- Allow Device Identifiers In Attestation
+
+**Microsoft Edge**:
+
+- The Microsoft Edge category has been updated with hundreds of new settings. Learn more about available macOS Edge settings at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
+
+Apple deprecated the Identification payload in macOS 15.4.
+
+#### New Block Bluetooth setting in the Android Enterprise settings catalog<!-- 15583647 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There's a new **Block Bluetooth** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, Bluetooth is disabled on the device.
+
+There's also a **Block Bluetooth Configuration** setting that prevents end users from changing the Bluetooth setting on the device.
+
+These settings are different and have different results. Some examples include:
+
+- **Scenario**: An end user turned on the Bluetooth setting on their device. The admin creates an Intune policy that sets the **Block Bluetooth** setting to **True**.
+
+  In this situation, Bluetooth is blocked on the device, even though the end user turned it on.
+
+- **Scenario**: An end user turned on the Bluetooth setting on their device. The admin creates an Intune policy that sets the **Block Bluetooth Configuration** setting to **True**.
+
+  In this situation, Bluetooth is turned on since the end user previously turned it on. The end user can't turn off Bluetooth. If the end user previously turned Bluetooth off, and then the **Block Bluetooth Configuration** policy applies, then Bluetooth is turned off and the end user can't turn it back on.
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md).
+
+Applies to:
+
+- Android Enterprise corporate-owned devices with a work profile (COPE)
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+
+### Device management
+
+#### New reporting system for improved performance and data consistency<!-- 31823383 -->
+
+Microsoft Intune is rolling out the new Policy Reporting Service (PRS) V3. The new system brings faster report generation, improved reliability, and better data consistency.
+ 
+In the first phase, some high-traffic compliance and device configuration reports are transitioning to the new system.
+ 
+Users will notice quicker updates in the Intune admin center and fewer issues with stale data. No action is required from users, as your reports transition automatically.
+
+To learn more about the Intune reports you can use, see [Intune reports](reports.md).
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 32647747, 32692741, 32775449, 32920017 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Datasite for Intune by Datasite (iOS)
+- Mijn InPlanning by Intus Workforce Solutions (iOS)
+- Nitro PDF Pro by Nitro Software, Inc. (iOS)
+- SMART TeamWorks by SMART Technologies ULC (iOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+
 
 ## Week of June 9, 2025
 
