@@ -1358,6 +1358,7 @@ items:
         - name: Android
           items:
           - name: OEMConfig
+            displayName: original equipment manufacturers, oem, android enterprise, ae
             href: ./configuration/android-oem-configuration-overview.md
           - name: Device restrictions
             displayName: cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
@@ -1418,10 +1419,6 @@ items:
           - name: Device restrictions
             href: ./configuration/device-restrictions-ios.md
             displayName: ios, ipados
-          - name: Edition upgrade and mode switch START HERE?? ASK LAURA
-            href: 
-
-
           - name: Email
             displayName: ios, ipados
             href: ./configuration/email-settings-ios.md
@@ -1431,8 +1428,6 @@ items:
             href: ./protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
           - name: SCEP certificate
             href: ./protect/certificates-profile-scep.md
-          - name: Secure assessment (Education) START HERE?? ASK LAURA
-
           - name: Trusted certificate
             href: ./protect/certificates-trusted-root.md
           - name: VPN
@@ -1469,9 +1464,8 @@ items:
             href: ./configuration/preference-file-settings-macos.md
           - name: SCEP certificate
             href: ./protect/certificates-profile-scep.md
-          - name: Software updates
-            href: .protect/software-updates-macos.md START HERE?? ASK BRENT
-
+          - name: Software updates (macOS 13 and older)
+            href: ./protect/software-updates-macos.md
           - name: Trusted certificate
             href: ./protect/certificates-trusted-root.md
           - name: VPN
