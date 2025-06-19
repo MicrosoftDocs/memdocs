@@ -7,7 +7,7 @@ description: Set up Android Enterprise work profile for corporate-owned devices 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
