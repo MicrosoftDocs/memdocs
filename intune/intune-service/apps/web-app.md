@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 05/10/2024
+ms.date: 06/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
