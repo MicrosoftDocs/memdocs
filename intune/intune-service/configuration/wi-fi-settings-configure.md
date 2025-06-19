@@ -6,7 +6,7 @@ description: See the steps to create a Wi-Fi device configuration profile in Mic
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 07/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
