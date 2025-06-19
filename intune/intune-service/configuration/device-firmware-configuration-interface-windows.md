@@ -6,7 +6,7 @@ description: Learn more about the Device Firmware Configuration Interface (DFCI)
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 04/04/2024
 ms.topic: how-to
 ms.service: microsoft-intune

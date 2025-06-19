@@ -6,7 +6,7 @@ description: Add or configure Surface Hub devices settings running Windows 10 Te
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 04/15/2024
 ms.topic: reference
 ms.service: microsoft-intune

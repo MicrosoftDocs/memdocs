@@ -6,7 +6,7 @@ description: Read about and configure device restriction settings in Microsoft I
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 10/17/2023
 ms.topic: reference
 ms.service: microsoft-intune

@@ -7,7 +7,7 @@ description: Delivery Optimization settings for Windows 10 and Windows 11 device
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
+manager: dougeby
 ms.date: 04/22/2025
 ms.topic: reference
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ description: Configure Properties catalog policy to manage Device Inventory sett
 keywords:
 author: smbhardwaj
 ms.author: smbhardwaj
-manager: laurawi
+manager: dougeby
 ms.date: 11/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune

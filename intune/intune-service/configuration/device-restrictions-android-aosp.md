@@ -6,7 +6,7 @@ description: On Android Open Source Project (AOSP) devices, restrict settings on
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 05/14/2025
 ms.topic: reference
 ms.service: microsoft-intune

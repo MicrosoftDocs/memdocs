@@ -3,7 +3,7 @@ title: Deploy Microsoft Edge policy using ADMX template in Microsoft Intune
 description: Add or create settings using ADMX administrative templates to configure Microsoft Edge on Windows devices. Using Microsoft Intune, you can configure group policy settings, and deploy these settings to Microsoft Edge users.
 ms.author: mandia
 author: MandiOhlinger
-manager: laurawi
+manager: dougeby
 ms.date: 07/22/2024
 audience: ITPro
 ms.topic: how-to

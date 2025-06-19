@@ -7,7 +7,7 @@ description: Create or add a WiFi device configuration profile for macOS devices
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 11/19/2024
 ms.topic: reference
 ms.service: microsoft-intune

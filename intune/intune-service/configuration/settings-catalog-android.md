@@ -6,7 +6,7 @@ description: Use the Microsoft Intune settings catalog to add, configure, or res
 keywords:
 author: smbhardwaj
 ms.author: smbhardwaj
-manager: laurawi
+manager: dougeby
 ms.date: 04/17/2025
 ms.topic: reference
 ms.service: microsoft-intune

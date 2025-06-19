@@ -6,7 +6,7 @@ description: Add the Samsung Knox Service Plugin, Zebra OEMConfig Powered by MX,
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 02/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
