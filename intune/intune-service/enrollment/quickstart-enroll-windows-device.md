@@ -6,7 +6,7 @@ description: In this evaluation task, enroll a device running Windows 10/11 into
 services: microsoft-intune
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 07/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune

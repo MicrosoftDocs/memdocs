@@ -7,7 +7,7 @@ description: Set up Intune for corporate-owned userless devices built on the And
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: priyar
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

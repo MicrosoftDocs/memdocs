@@ -6,7 +6,7 @@ description: Set terms and conditions that users see in the Company Portal for I
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune

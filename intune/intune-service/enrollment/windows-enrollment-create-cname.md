@@ -7,7 +7,7 @@ description: Simplify enrollment for users by enabling automatic discovery of th
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 02/13/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -20,7 +20,7 @@ ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
