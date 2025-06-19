@@ -6,7 +6,7 @@ description: Use a custom profile for per-app VPN profiles on Android device adm
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 02/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ description: On Android Enterprise or Android for Work devices owned by your org
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 06/02/2025
 ms.topic: reference
 ms.service: microsoft-intune

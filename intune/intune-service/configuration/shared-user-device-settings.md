@@ -5,7 +5,7 @@ description: Add and use Windows 10/11 and Windows Holographic for Business devi
 keywords: intune shared device, shared device intune, sharedpc
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 04/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune

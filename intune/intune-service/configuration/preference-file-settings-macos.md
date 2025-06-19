@@ -7,7 +7,7 @@ description: Add an xml or plist file that includes key information about your a
 keywords: preference file, property list file, plist, macOS, microsoft intune, endpoint management
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 08/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune

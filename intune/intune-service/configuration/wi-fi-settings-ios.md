@@ -7,7 +7,7 @@ description: Create or add a WiFi device configuration profile for iOS/iPadOS de
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 06/25/2024
 ms.topic: reference
 ms.service: microsoft-intune

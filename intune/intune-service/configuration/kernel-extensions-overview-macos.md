@@ -7,7 +7,7 @@ description: Learn more about system extensions and kernel extensions for macOS 
 keywords: macos, kernel extensions, system extensions, microsoft intune, endpoint management
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 09/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune

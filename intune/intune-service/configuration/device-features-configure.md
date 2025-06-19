@@ -6,7 +6,7 @@ description: Add or create an iOS, iPadOS, or macOS device profile. Configure se
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune

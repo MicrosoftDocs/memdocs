@@ -7,7 +7,7 @@ description: Add Bash scripts to create a custom Linux profile in Microsoft Intu
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 01/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune

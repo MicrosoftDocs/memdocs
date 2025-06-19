@@ -6,7 +6,7 @@ description: See a list of all the email settings you can configure and add to i
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 04/15/2024
 ms.topic: reference
 ms.service: microsoft-intune

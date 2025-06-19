@@ -6,7 +6,7 @@ description: See a list of all the Android device administrator settings you can
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 09/23/2024
 ms.topic: reference
 ms.service: microsoft-intune

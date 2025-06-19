@@ -6,7 +6,7 @@ description: Add a device configuration profile to restrict features on Android 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 08/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune

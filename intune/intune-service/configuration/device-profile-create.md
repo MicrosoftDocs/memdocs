@@ -6,7 +6,7 @@ description: Add or configure a device configuration profile in Microsoft Intune
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 04/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -7,7 +7,7 @@ description: Create or add a wired network device configuration profile for Wind
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 06/25/2024
 ms.topic: reference
 ms.service: microsoft-intune

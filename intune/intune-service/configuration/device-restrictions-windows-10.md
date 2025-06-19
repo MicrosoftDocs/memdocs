@@ -6,7 +6,7 @@ description: See a list of all the settings and their descriptions for creating 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 11/16/2023
 ms.topic: reference
 ms.service: microsoft-intune

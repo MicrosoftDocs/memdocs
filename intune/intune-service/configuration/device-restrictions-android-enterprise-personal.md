@@ -6,7 +6,7 @@ description: On Android Enterprise or Android for Work personally owned BYOD dev
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 03/11/2024
 ms.topic: reference
 ms.service: microsoft-intune

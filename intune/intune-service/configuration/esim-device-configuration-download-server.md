@@ -6,7 +6,7 @@ description: Learn about configuration of an eSIM Download Server from Microsoft
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 06/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune

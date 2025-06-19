@@ -7,7 +7,7 @@ description: Export iOS and iPadOS settings from Apple Configurator or Apple Pro
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 02/18/2025
 ms.topic: article
 ms.service: microsoft-intune

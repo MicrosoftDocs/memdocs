@@ -6,7 +6,7 @@ description: Use Microsoft Intune to create and deploy multiple OEMConfig device
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune

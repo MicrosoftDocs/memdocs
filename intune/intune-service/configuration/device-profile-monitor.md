@@ -6,7 +6,7 @@ description: See and manage the device configuration policy details in Microsoft
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 05/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune

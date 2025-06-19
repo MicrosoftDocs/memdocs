@@ -6,7 +6,7 @@ description: Use Administrative templates in Microsoft Intune to create groups o
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 12/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune

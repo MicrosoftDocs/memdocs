@@ -7,7 +7,7 @@ description: Create or add a WiFi device configuration profile for Android devic
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 04/23/2024
 ms.topic: reference
 ms.service: microsoft-intune

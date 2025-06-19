@@ -6,7 +6,7 @@ description: Learn and read about all the available VPN settings in Microsoft In
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 03/26/2024
 ms.topic: reference
 ms.service: microsoft-intune

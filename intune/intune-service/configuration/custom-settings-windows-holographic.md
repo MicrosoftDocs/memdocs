@@ -6,7 +6,7 @@ description: Add or create a custom profile to use the OMA-URI settings for devi
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 04/16/2024
 ms.service: microsoft-intune
 ms.subservice: configuration

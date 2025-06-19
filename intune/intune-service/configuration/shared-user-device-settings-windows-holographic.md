@@ -6,7 +6,7 @@ description: Add and use Windows Holographic for Business to configure devices t
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
+manager: dougeby
 ms.date: 04/16/2024
 ms.topic: reference
 ms.service: microsoft-intune
