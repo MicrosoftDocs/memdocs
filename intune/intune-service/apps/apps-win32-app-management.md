@@ -5,7 +5,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 04/22/2025
+ms.date: 06/13/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -32,7 +32,7 @@ In addition to supporting extensive management capabilities, Win32 app managemen
 - Support for several app types
 - Control for complex app installations
 - Support for detection rules, dependencies, and requirements
-- Support for 32-bit and 64-bit Windows operating system architecture
+- Support for 32-bit Windows, 64-bit Windows, and ARM64 operating system architecture
 - Support for Windows S mode devices
 
 Although it's possible for cloud-connected customers to use Microsoft Configuration Manager for Windows app management, Intune-only customers have greater management capabilities for their Win32 apps. This article provides an overview of the Intune Win32 app management features and related information.

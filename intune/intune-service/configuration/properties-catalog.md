@@ -148,6 +148,7 @@ Inventory supports the following entities. To learn more about what properties a
 - Memory Info
 - Network Adapter
 - Os Version
+- Sim Info
 - System Enclosure
 - Time
 - Tpm
