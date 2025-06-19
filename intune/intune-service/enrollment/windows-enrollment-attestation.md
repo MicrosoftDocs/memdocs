@@ -7,7 +7,7 @@ description: Find out how the Device attestation status report can help you and 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 02/14/2025
 ms.topic: how-to
 ms.service: microsoft-intune

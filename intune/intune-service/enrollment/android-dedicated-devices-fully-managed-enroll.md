@@ -7,7 +7,7 @@ description: Learn how to enroll Android Enterprise dedicated, fully managed, or
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: shthilla, chmaguir
+ms.reviewer: grwilson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

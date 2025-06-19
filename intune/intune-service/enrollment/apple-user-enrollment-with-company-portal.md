@@ -7,7 +7,7 @@ description: Set up the profile based Apple User Enrollment option for personal 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: amanhaq
+ms.reviewer: rishitasarin
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
