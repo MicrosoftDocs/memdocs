@@ -7,7 +7,7 @@ description: Set up enrollment for macOS devices in Intune.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/15/2024
 ms.topic: overview
 ms.service: microsoft-intune

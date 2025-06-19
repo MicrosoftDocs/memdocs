@@ -7,7 +7,7 @@ description: Learn how to connect your Intune account to your Managed Google Pla
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: priyar
+ms.reviewer: grwilson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

@@ -7,7 +7,7 @@ description: Set up Intune for corporate-owned userless iOS/iPadOS devices.
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 02/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune
