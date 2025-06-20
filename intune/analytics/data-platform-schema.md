@@ -36,6 +36,9 @@ ms.collection:
 This article goes over the properties supported in the Intune Data Platform. The Intune Data Platform can be accessed via Device query for single devices, Inventory, and Device query for Multiple Devices.
 
 Each table (entity) in this page lists the types of queries that are supported.
+
+ > [!NOTE]
+ > For entities that currently inlcude Android data, the following platforms are currently supported: Android Enterprise corporate owned dedicated devices (COSU), Android Enterprise corporate owned fully managed (COBO), and Android Enterprise corporate owned work profile (COPE)
 ## AppleAutoSetupAdminAccounts
 
 **Description**: Provides basic account information on Apple devices
