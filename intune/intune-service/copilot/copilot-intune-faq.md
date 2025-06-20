@@ -4,8 +4,8 @@
 title: Copilot in Intune FAQ
 description: Get answers to common questions when using Copilot in Microsoft Intune.
 keywords: security copilot, intune, microsoft intune, copilot, faq
-author: nicholasswhite
-ms.author: nwhite
+author: MandiOhlinger
+ms.author: mandia
 manager: laurawi
 ms.date: 11/08/2024
 ms.topic: how-to
