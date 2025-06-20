@@ -185,6 +185,12 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### App management
 
+#### Microsoft Intune support for Apple AI screen capture control<!-- 12792722 -->
+
+Intune app protection policies now include a standalone setting to manage Apple AI screen capture. This setting is supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, screen capture is blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
+
+For more information, see [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037).
+
 #### ARM64 support for Win32 apps<!-- 28475401 -->
 
 When adding a Win32 app to Intune, you can select an option to check and install the app on Windows devices running ARM64 operating systems. This capability is available from the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > **Create**. The ARM64 option is available by selecting the **Operating system architecture** option under the **Requirements** step. To ensure that you don't have any impact to any Win32 applications that you previously targeted to 64-bit devices, your existing 64-bit Win32 applications will also have ARM64 selected. After the availability of being able to specifically target ARM64 operating system architectures, selecting x64 won't target ARM64 devices.
