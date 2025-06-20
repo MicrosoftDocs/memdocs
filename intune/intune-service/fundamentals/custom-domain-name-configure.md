@@ -47,7 +47,11 @@ When you subscribe to a cloud-based service from Microsoft, your instance of tha
 
 ## Role-based access controls
 
-To configure a custom domain name, use an account that is assigned the Entra ID built-in role of [Domain Name Administrator](/entra/identity/role-based-access-control/permissions-reference#domain-name-administrator), which is the least privileged Entra ID role that can [manage custom domain names](/entra/identity/role-based-access-control/delegate-by-task#custom-domain-names-least-privileged-roles).
+The following Microsoft Entra built-in RBAC role is the least privileged role that includes sufficient permissions to manage custom domain names:
+
+- [Domain Name Administrator](/entra/identity/role-based-access-control/permissions-reference#domain-name-administrator) - This role provides permissions sufficient to [manage custom domain names](/entra/identity/role-based-access-control/delegate-by-task#custom-domain-names-least-privileged-roles) (read, add, verify, update, and delete). Users assigned this role can also read directory information about users, groups, and applications, as these objects possess domain dependencies.
+
+When working with role-based access controls (RBAC), Microsoft recommends following the principle of least-permissions by using only accounts that have the minimum required permissions for a task, and **limiting** use and assignment of [privileged](/entra/identity/role-based-access-control/privileged-roles-permissions) administrative roles.
 
 ## Add and verify your custom domain
 
