@@ -31,6 +31,14 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
+## Deliver Enterprise App Catalog (EAM) apps during Autopilot device preparation
+
+Date added: *June 26, 2025*
+
+Autopilot device preparation now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. With Intune's 2506 release, you can now select apps from the Enterprise App Catalog in the device preparation policy. This allows you to ensure those apps are delivered before the user can access the desktop.
+
+For related information, see [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
+
 ## Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode is in public preview
 
 Date added: *April 2, 2025*
