@@ -6,7 +6,7 @@ description: See the supported apps, compliance policies, and device configurati
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 07/18/2024
 ms.topic: reference
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ description: Enroll Android and Android Enterprise corporate-owned work profile,
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/23/2024
 ms.topic: article
 ms.service: microsoft-intune

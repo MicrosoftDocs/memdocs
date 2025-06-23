@@ -5,7 +5,7 @@ description: ServiceNow integration enables help desk staff, who are licensed to
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 02/27/2025
 ms.topic: troubleshooting
 ms.service: microsoft-intune

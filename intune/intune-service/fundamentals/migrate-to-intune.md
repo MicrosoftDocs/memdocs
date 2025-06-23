@@ -7,7 +7,7 @@ description: Learn how to migrate your mobile device management from Microsoft 3
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ description: Review older announcements from the Intune what's new page
 keywords:
 author: dougeby
 ms.author: dougeby
-manager: dougeby
+manager: laurawi
 ms.date: 05/22/2025
 ms.topic: whats-new
 ms.service: microsoft-intune

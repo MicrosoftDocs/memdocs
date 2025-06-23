@@ -6,7 +6,7 @@ description: Enroll Android, Android Enterprise, iOS, iPadOS, Linux, macOS, and 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 4/3/2024
 ms.topic: how-to
 ms.service: microsoft-intune
