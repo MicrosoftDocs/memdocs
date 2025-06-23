@@ -149,4 +149,4 @@ To assign the desired PowerShell scripts to the device group created for Windows
 - [Assign apps to groups with Microsoft Intune](/mem/intune-service/apps/apps-deploy).
 - [Win32 app management in Microsoft Intune](/mem/intune-service/apps/apps-win32-app-management).
 - [Add a Windows line-of-business app to Microsoft Intune](/mem/intune-service/apps/lob-apps-windows).
-- [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
+- [Add an Enterprise App Catalog app to Microsoft Intune](/intune/intune-service/apps/apps-add-enterprise-app).
