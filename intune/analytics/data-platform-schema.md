@@ -7,7 +7,7 @@ keywords:
 ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
-ms.date: 05/20/2025
+ms.date: 06/23/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,8 +37,12 @@ This article goes over the properties supported in the Intune Data Platform. The
 
 Each table (entity) in this page lists the types of queries that are supported.
 
- > [!NOTE]
- > For entities that currently inlcude Android data, the following platforms are currently supported: Android Enterprise corporate owned dedicated devices (COSU), Android Enterprise corporate owned fully managed (COBO), and Android Enterprise corporate owned work profile (COPE)
+For entities that include Android data, the following platforms are supported:
+
+- Android Enterprise corporate owned dedicated devices (COSU)
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned work profile (COPE)
+
 ## AppleAutoSetupAdminAccounts
 
 **Description**: Provides basic account information on Apple devices
