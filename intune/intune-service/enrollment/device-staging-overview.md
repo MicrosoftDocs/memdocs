@@ -7,7 +7,7 @@ description: An overview of device staging, Android Enterprise token types, and 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 06/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
