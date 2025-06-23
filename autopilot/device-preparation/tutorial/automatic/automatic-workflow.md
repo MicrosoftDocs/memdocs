@@ -17,7 +17,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune
+# Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode (preview) in Intune
 
 This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation in automatic mode for Windows 365.
 
