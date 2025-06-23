@@ -141,7 +141,7 @@ In the **Configuration settings** page:
     > - [Win32](/mem/intune-service/apps/apps-win32-prepare).
     > - [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
     > - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
-    > - [Enterprise App Catalog](../apps/apps-add-enterprise-app.md).
+    > - [Enterprise App Catalog](/intune/intune-service/apps/apps-add-enterprise-app).
     >
     > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 
