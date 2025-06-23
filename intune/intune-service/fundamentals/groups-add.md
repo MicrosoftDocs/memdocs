@@ -84,7 +84,7 @@ For example, you might deploy an Intune compliance policy to the *all devices* g
 
 ## Add groups to Intune
 
-When you create a group within the Microsoft Intune admin center, you're actually creating groups in Microsoft Entra ID. The following procedure provides basic guidance for creating groups in the Intune admin center. For more detailed information, see the following Microsoft Entra articles:
+When you create a group within the Microsoft Intune admin center, you're actually creating a group in Microsoft Entra ID. The following procedure provides basic guidance for creating groups in the Intune admin center. For more detailed information, see the following Microsoft Entra articles:
 
 - [Manage Microsoft Entra groups and group membership](/entra/fundamentals/how-to-manage-groups)
 - [Create a basic group and add members using Microsoft Entra ID](/entra/fundamentals/how-to-manage-groups)
@@ -92,7 +92,7 @@ When you create a group within the Microsoft Intune admin center, you're actuall
 
 To create groups in the Microsoft Intune admin center:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **New group**.Select **Groups** > **New group**:  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **New group**:  
 
    :::image type="content" source="./media/groups-add/groups-add-new.png" alt-text="Screenshot that shows Groups pane of the Intune admin center." lightbox="./media/groups-add/groups-add-new.png":::
 
@@ -110,7 +110,7 @@ To create groups in the Microsoft Intune admin center:
 
         To add users at this time, locate and select **No members selected** to open the *Add members* pane.
 
-        On the pane, use the *Users* or*Devices* tab where you can select the checkbox next to each object that you want to add to this group.
+        On the pane, use the *Users* or *Devices* tab where you can select the checkbox next to each object that you want to add to this group.
 
         You can also select the *Groups* tab if you want to nest a group within this group. A group that includes a group as a member is known as a parent group. Be careful when nesting groups as the membership relationships might not be clear to admins who later use the parent group for an assignment. Any membership changes made to a nested group are automatically applied to the effective membership of the parent group.
 
@@ -130,7 +130,7 @@ To create groups in the Microsoft Intune admin center:
         > [!TIP]  
         > No specific Entra ID license is required for members of dynamic device groups.
 
-   5. The *Owners*, Configuration is optional. By default, the user that creates a group is an owner. To add other owners, select **No owners selected** and then the **Users** tab, where you can then select one or more users to add as owners of this group. 
+   5. The *Owners* configuration is optional. By default, the user that creates a group is an owner. To add other owners, select **No owners selected** and then the **Users** tab, where you can then select one or more users to add as owners of this group. 
 
 3. Select **Create** to add the new group. Your group is shown in the list.
 
