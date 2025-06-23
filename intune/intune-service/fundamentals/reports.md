@@ -238,7 +238,7 @@ You can view the **Noncompliant devices** report using the following steps:
 
 ### Windows hardware attestation report (Organizational)  
 
-View the status of hardware-attested compliance settings assigned to Windows devices. This report shows data for Intune-enrolled devices that are assigned a compliance policy with at least one hardware-attested compliance setting. Microsoft Intune reports a *successful* status when it receives an attestation report from the device. Microsoft Intune reports an error status, along with the detected error type and code, when it's unable to generate an attestation report. 
+View the status of hardware-attested compliance settings assigned to Windows devices. This report shows data for Intune-enrolled devices that are assigned a compliance policy with at least one hardware-attested compliance setting. Microsoft Intune reports a *successful* status when it receives an attestation report from the device. Microsoft Intune reports an *error* status, along with the detected error type and code, when it's unable to generate an attestation report. 
 
 You can view the Windows hardware attestation report using the following steps:  
 
