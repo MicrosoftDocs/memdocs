@@ -6,7 +6,7 @@ description: The Settings insight feature adds insights giving you confidence in
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 7/31/2024
 ms.topic: article
 ms.service: microsoft-intune

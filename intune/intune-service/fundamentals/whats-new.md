@@ -6,7 +6,7 @@ description: Find out what's new in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 06/13/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
