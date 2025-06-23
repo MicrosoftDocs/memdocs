@@ -6,7 +6,7 @@ description: Create device configuration email profiles that use Exchange server
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/09/2025
 ms.topic: reference
 ms.service: microsoft-intune
