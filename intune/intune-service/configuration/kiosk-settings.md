@@ -43,7 +43,7 @@ This feature applies to:
 To create kiosk profiles for other platforms, go to:
 
 - [Android device administrator](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#device-experience)
+- [Android Enterprise](device-restrictions-android-for-work.md) (Device experience)
 - [iOS/iPadOS](device-restrictions-ios.md#kiosk)
 
 Intune supports one kiosk profile per device. If you need multiple kiosk profiles on a single device, you can use a [Custom OMA-URI](custom-settings-windows-10.md).
@@ -107,6 +107,6 @@ The next time each device checks in, the policy is applied.
 - You can create kiosk profiles for devices that run the following platforms:
 
   - [Android device administrator](device-restrictions-android.md#kiosk)
-  - [Android Enterprise](device-restrictions-android-for-work.md#device-experience)
+  - [Android Enterprise](device-restrictions-android-for-work.md) (Device experience)
   - [Windows 10/11](kiosk-settings-windows.md)
   - [Windows Holographic for Business](kiosk-settings-holographic.md)

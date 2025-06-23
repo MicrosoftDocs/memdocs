@@ -134,7 +134,7 @@ The next decision is to decide if the devices are shared with many users or assi
     Remember, Android (AOSP) devices don't support Google Mobile Services (GMS).
 
     - For more information on Android (AOSP) user-associated enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../../intune-service/enrollment/android-aosp-corporate-owned-user-associated-enroll.md).
-    - For a list of some of the settings can you can configure, go to [Android (AOSP) device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-android-aosp.md).
+    - For a list of some of the settings can you can configure, go to [Android (AOSP) device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md).
 
 ## Step 3 - Home screen and device experience
 
