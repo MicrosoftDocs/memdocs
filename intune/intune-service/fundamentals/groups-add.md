@@ -94,7 +94,7 @@ To create groups in the Microsoft Intune admin center:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **New group**.Select **Groups** > **New group**:  
 
-   :::image type="content" source="./media/groups-add/groups-add-new.png" alt-text="Screenshot that shows Groups pane of the Intune admin center." source="./media/groups-add/groups-add-new.png" lightbox="./media/groups-add/groups-add-new.png":::
+   :::image type="content" source="./media/groups-add/groups-add-new.png" alt-text="Screenshot that shows Groups pane of the Intune admin center." lightbox="./media/groups-add/groups-add-new.png":::
 
 2. The *New Group* pane opens, which is the same interface as found in Microsoft Entra:
 
