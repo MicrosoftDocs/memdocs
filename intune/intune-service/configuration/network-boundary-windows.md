@@ -6,7 +6,7 @@ description: Add a Windows Network Boundary policy to Windows devices using Micr
 keywords: network boundary, ipv4, ipv6, windows, proxy server, ip range, microsoft intune, endpoint management
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune

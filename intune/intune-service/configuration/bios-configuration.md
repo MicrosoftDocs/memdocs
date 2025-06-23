@@ -6,7 +6,7 @@ description: Learn more about the BIOS configuration profile that can manage tra
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune

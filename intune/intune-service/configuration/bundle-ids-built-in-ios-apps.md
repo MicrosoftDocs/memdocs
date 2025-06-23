@@ -6,7 +6,7 @@ description: See a list of the bundle IDs for the built-in iOS and iPadOS apps. 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/27/2024
 ms.topic: reference
 ms.service: microsoft-intune

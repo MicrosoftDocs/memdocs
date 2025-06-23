@@ -6,7 +6,7 @@ description: Configure your Windows 10/11 client devices as single-app and multi
 keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/20/2025
 ms.topic: reference
 ms.service: microsoft-intune
