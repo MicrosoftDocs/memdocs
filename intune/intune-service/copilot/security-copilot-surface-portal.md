@@ -4,9 +4,9 @@
 title: Security Copilot in Microsoft Surface Management Portal
 description: You can use Security Copilot to help you manage and monitor Surface devices at scale.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 ms.date: 02/18/2025
 ms.topic: concept-article
 ms.service: microsoft-intune
@@ -29,7 +29,7 @@ ms.collection:
 - highpri
 - highseo
 - security-copilot
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Security Copilot in Microsoft Surface Management Portal (Public Preview)

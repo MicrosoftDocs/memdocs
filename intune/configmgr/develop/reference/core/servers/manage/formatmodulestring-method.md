@@ -12,48 +12,48 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # FormatModuleString Method
-The `FormatModuleString` method, in Configuration Manager, loads string resources from the resource DLL.  
+The `FormatModuleString` method, in Configuration Manager, loads string resources from the resource DLL.
 
-## Syntax  
+## Syntax
 
-```  
-[VBScript]  
-SMSFormatMessageCtl.FormatModuleString   
-```  
+```
+[VBScript]
+SMSFormatMessageCtl.FormatModuleString
+```
 
-#### Parameters  
- `ModuleName`  
- Data type: `string`  
+#### Parameters
+ `ModuleName`
+ Data type: `string`
 
- Name of the module to load. The name can be Srvmsgs.dll, Provmsgs.dll, or Climmsgs.dll.  
+ Name of the module to load. The name can be Srvmsgs.dll, Provmsgs.dll, or Climmsgs.dll.
 
- `MessageID`  
- Data type: `int`  
+ `MessageID`
+ Data type: `int`
 
- Message ID " combined by using the bitwise OR operation with the severity.  
+ Message ID " combined by using the bitwise OR operation with the severity.
 
- `InsertionStrings`  
- Data type: `object`  
+ `InsertionStrings`
+ Data type: `object`
 
- Optional list of insertion strings.  
+ Optional list of insertion strings.
 
-## Return Value  
- A string.  
+## Return Value
+ A string.
 
-## Remarks  
- `FormatModuleString` loads a string that is specified by `MessageID` from a string resource in the `ModuleName` module and inserts the supplied strings.  
+## Remarks
+ `FormatModuleString` loads a string that is specified by `MessageID` from a string resource in the `ModuleName` module and inserts the supplied strings.
 
-## Requirements  
- FormatMessageCtl.dll.  
+## Requirements
+ FormatMessageCtl.dll.
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMSFormatMessageCtl Class](../../../../../develop/reference/core/servers/manage/smsformatmessagectl-class.md)

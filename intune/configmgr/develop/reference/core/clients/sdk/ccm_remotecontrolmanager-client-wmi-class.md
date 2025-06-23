@@ -12,33 +12,33 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_RemoteControlManager Client WMI Class
-The `CCM_RemoteControlManager` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains several methods to help manage client remote control settings.    
+The `CCM_RemoteControlManager` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains several methods to help manage client remote control settings.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_RemoteControlManager :    
-{  
-};  
-```  
+```
+Class CCM_RemoteControlManager :
+{
+};
+```
 
-## Methods  
- The following table lists the methods in the `CCM_RemoteControlManager` class.  
+## Methods
+ The following table lists the methods in the `CCM_RemoteControlManager` class.
 
--   [GetRemCtrlSettings Method in Class CCM_RemoteControlManager](../../../../../develop/reference/core/clients/sdk/getremctrlsettings-method-in-class-ccm_remotecontrolmanager.md)  
+-   [GetRemCtrlSettings Method in Class CCM_RemoteControlManager](../../../../../develop/reference/core/clients/sdk/getremctrlsettings-method-in-class-ccm_remotecontrolmanager.md)
 
--   [SetRemCtrlSettings Method in Class CCM_RemoteControlManager](../../../../../develop/reference/core/clients/sdk/setremctrlsettings-method-in-class-ccm_remotecontrolmanager.md)  
+-   [SetRemCtrlSettings Method in Class CCM_RemoteControlManager](../../../../../develop/reference/core/clients/sdk/setremctrlsettings-method-in-class-ccm_remotecontrolmanager.md)
 
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

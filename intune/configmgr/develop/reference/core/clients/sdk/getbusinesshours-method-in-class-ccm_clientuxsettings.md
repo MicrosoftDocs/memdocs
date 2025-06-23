@@ -12,52 +12,52 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetBusinessHours Method in Class CCM_ClientUXSettings
-The `GetBusinessHours` Windows Management Instrumentation (WMI) class method in Configuration Manager that gets the values for business hours.   
+The `GetBusinessHours` Windows Management Instrumentation (WMI) class method in Configuration Manager that gets the values for business hours.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 GetBusinessHours   
-{  
-    [OUT]   UInt32 WorkingDays  
-    [OUT]   UInt32 StartTime  
-    [OUT]   UInt32 EndTime  
-};  
-```  
+```
+uint32 GetBusinessHours
+{
+    [OUT]   UInt32 WorkingDays
+    [OUT]   UInt32 StartTime
+    [OUT]   UInt32 EndTime
+};
+```
 
-## Parameters  
- `WorkingDays`  
- Data type: `UInt32`  
+## Parameters
+ `WorkingDays`
+ Data type: `UInt32`
 
- Qualifiers: [id("0"), out]  
+ Qualifiers: [id("0"), out]
 
- Working days.    
+ Working days.
 
- `StartTime`  
- Data type: `UInt32`  
+ `StartTime`
+ Data type: `UInt32`
 
- Qualifiers: [id("1"), out]  
+ Qualifiers: [id("1"), out]
 
- Start time.    
+ Start time.
 
- `EndTime`  
- Data type: `UInt32`  
+ `EndTime`
+ Data type: `UInt32`
 
- Qualifiers: [id("2"), out]  
+ Qualifiers: [id("2"), out]
 
- End time.    
+ End time.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

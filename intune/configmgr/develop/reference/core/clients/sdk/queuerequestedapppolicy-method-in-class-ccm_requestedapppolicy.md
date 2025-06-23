@@ -12,66 +12,66 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # QueueRequestedAppPolicy Method in Class CCM_RequestedAppPolicy
-The `QueueRequestedAppPolicy` Windows Management Instrumentation (WMI) class method in Configuration Manager that queues and application policy request.   
+The `QueueRequestedAppPolicy` Windows Management Instrumentation (WMI) class method in Configuration Manager that queues and application policy request.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 QueueRequestedAppPolicy   
-{  
-    [IN]    String PolicyId  
-    [IN]    String PolicyRevision  
-    [IN]    String Id  
-    [IN]    UInt32 EnforcePreference  
-};  
-```  
+```
+uint32 QueueRequestedAppPolicy
+{
+    [IN]    String PolicyId
+    [IN]    String PolicyRevision
+    [IN]    String Id
+    [IN]    UInt32 EnforcePreference
+};
+```
 
-## Parameters  
- `PolicyId`  
- Data type: `String`  
+## Parameters
+ `PolicyId`
+ Data type: `String`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- Policy identifier.    
+ Policy identifier.
 
- `PolicyRevision`  
- Data type: `String`  
+ `PolicyRevision`
+ Data type: `String`
 
- Qualifiers: [id("1"), in]  
+ Qualifiers: [id("1"), in]
 
- Policy revision.    
+ Policy revision.
 
- `Id`  
- Data type: `String`  
+ `Id`
+ Data type: `String`
 
- Qualifiers: [id("2"), in]  
+ Qualifiers: [id("2"), in]
 
- Identifier.    
+ Identifier.
 
- `EnforcePreference`  
- Data type: `UInt32`  
+ `EnforcePreference`
+ Data type: `UInt32`
 
- Qualifiers: [id("3"), in]  
+ Qualifiers: [id("3"), in]
 
- Enforce preference. Possible values are:   
+ Enforce preference. Possible values are:
 
-|Value|Enforce preference|  
-|-|-|  
-|0|Immediate|  
-|1|Non-Business Hours|  
-|2|Admin Schedule|  
+|Value|Enforce preference|
+|-|-|
+|0|Immediate|
+|1|Non-Business Hours|
+|2|Admin Schedule|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

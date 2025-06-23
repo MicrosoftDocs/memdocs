@@ -4,9 +4,9 @@
 title: Copilot in Intune FAQ
 description: Get answers to common questions when using Copilot in Microsoft Intune.
 keywords: security copilot, intune, microsoft intune, copilot, faq
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 ms.date: 11/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Microsoft Copilot in Intune FAQ

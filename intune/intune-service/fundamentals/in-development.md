@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 05/29/2025
+ms.date: 05/30/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,19 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Managed Home Screen orientation changes with Android 16 <!-- 30316862 -->
+
+Starting with Android 16, Android stops enforcing screen orientation on devices with 600dp and larger display settings. This change impacts the Managed Home Screen (MHS) on devices with larger form factors, like tablets.
+
+On these Android 16 devices, orientation is determined by the device’s orientation setting, not the MHS settings you configure.
+
+To learn more about Android 16 changes, see [Behavior changes: Apps targeting Android 16 or higher](https://developer.android.com/about/versions/16/behavior-changes-16) (opens Android website).
+
+Applies to:
+
+- Android Enterprise
+
+
 ### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
 Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This change allows you to update apps more easily without needing to update those profiles with the latest versions. 
@@ -85,7 +98,33 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
+
+### New Block Bluetooth setting in the Android settings catalog<!-- 15583647 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There's a new **Block Bluetooth** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, Bluetooth is disabled on the device.
+
+There's also a **Block Bluetooth Configuration** setting that prevents end users from changing the Bluetooth setting on the device.
+
+These settings are different and have different results. Some examples include:
+
+- **Scenario**: An end user turned on the Bluetooth setting on their device. The admin creates an Intune policy that sets the **Block Bluetooth** setting to **True**.
+
+  In this situation, Bluetooth is blocked on the device, even though the end user turned it on.
+
+- **Scenario**: An end user turned on the Bluetooth setting on their device. The admin creates an Intune policy that sets the **Block Bluetooth Configuration** setting to **True**.
+
+  In this situation, Bluetooth is turned on since the end user previously turned it on. The end user can't turn off Bluetooth. If the end user previously turned Bluetooth off, and then the **Block Bluetooth Configuration** policy applies, then Bluetooth is turned off and the end user can't turn it back on. 
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
+
+Applies to:
+
+- Android Enterprise corporate-owned devices with a work profile (COPE)
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
 
 <!-- *********************************************** -->
 
@@ -110,7 +149,7 @@ We're adding a feature that allows a customer to:
 
 Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
 
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
+For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
 
 <!-- *********************************************** -->
 
@@ -132,6 +171,30 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 <!-- ## Intune apps -->
+
+<!-- *********************************************** -->
+
+## Monitor and troubleshoot
+
+### New status column in Windows hardware attestation report<!-- 26527908 -->
+
+We're introducing a new column in the Windows hardware attestation report named, **Attest Status**. Under this column Microsoft Intune will show the error messages it receives during the attestation process. This feature will enhance the visibility of error messages received from both service-side and client-side attestation errors, including WinINet errors, HTTP bad request errors, and other error messages related to failure.
+
+### Declarative Apple software update report<!-- 31557946 -->
+
+You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new Apple software updates report located under *Reports* > *Apple updates*. Using the new report, you'll be able to see:
+
+- Pending OS update information such as OS and build version, and its status on the device
+- Current OS information for a device
+- Information about past software updates on the device
+- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM
+- Information about the latest public update made available by Apple
+- Devices that have been patched with a Rapid Security Response, or have a Rapid Security Response available
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
 
 <!-- *********************************************** -->
 

@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Use the Hotfix Installer to install updates for Configuration Manager
@@ -255,7 +255,7 @@ You can deploy specific updates to applicable clients. The following information
 |All primary site servers|Create a direct membership query and add each primary site server.|
 |All secondary site servers|Create a direct membership query and add each secondary site server.|
 |All x86 clients|Create a collection with the following query criteria: `Select * from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.ResourceID = SMS_R_System.ResourceId where SMS_G_System_SYSTEM.SystemType = "X86-based PC"`|
-|All x64 clients|Create a collection with the following query criteria: `Select * from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.ResourceID = SMS_R_System.ResourceId where SMS_G_System_SYSTEM.SystemType = "X64-based PC"`|  
+|All x64 clients|Create a collection with the following query criteria: `Select * from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.ResourceID = SMS_R_System.ResourceId where SMS_G_System_SYSTEM.SystemType = "X64-based PC"`|
 |All computers that run the Configuration Manager console|Create a direct membership query and add each computer.|
 |Remote computers that run an instance of the SMS Provider|Create a direct membership query and add each computer.|
 

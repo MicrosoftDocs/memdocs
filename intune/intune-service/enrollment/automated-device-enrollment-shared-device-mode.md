@@ -7,7 +7,7 @@ description: Learn how to set up Apple automated device enrollment for iOS/iPadO
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: amanh 
+ms.reviewer: annovich 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

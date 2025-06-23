@@ -5,9 +5,9 @@ title: Microsoft Intune reports
 titleSuffix: Microsoft Intune
 description: Intune provides specific report types with focused views that contain consistent and timely data. 
 keywords:
-author: erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 08/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -52,13 +52,9 @@ The reporting framework provides a consistent and more comprehensive reporting e
 
 ## Who can access the data?
 
-Users with the following permissions can review logs:
-
-- Global Administrator
-- Intune Administrator
-- Administrators assigned to an Intune role with **Read** permissions
-
-For more information about administrator permissions, see [Types of administrators](../fundamentals/users-add.md#types-of-administrators).
+Users assigned an Intune role-based access control role with sufficient permissions permissions can review logs. The least privileged built-in Intune role with these permissions is the [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator).
+ 
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 
 ## Reporting tiles
 

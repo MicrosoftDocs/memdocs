@@ -12,84 +12,84 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_APermission Server WMI Class
-The `SMS_APermission` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is embedded by `SMS_Admin` and describes the permission granted to a specific admin.  
+The `SMS_APermission` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is embedded by `SMS_Admin` and describes the permission granted to a specific admin.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_APermission :    
-{  
-    String CategoryID;  
-    String CategoryName;  
-    UInt32 CategoryTypeID;  
-    String RoleID;  
-    String RoleName;  
-};  
-```  
+```
+Class SMS_APermission :
+{
+    String CategoryID;
+    String CategoryName;
+    UInt32 CategoryTypeID;
+    String RoleID;
+    String RoleName;
+};
+```
 
-## Methods  
- The `SMS_APermission` class does not define any methods.  
+## Methods
+ The `SMS_APermission` class does not define any methods.
 
-## Properties  
- `CategoryID`  
- Data type: `String`  
+## Properties
+ `CategoryID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- ID of the associated RBA security category or collection.  
+ ID of the associated RBA security category or collection.
 
- `CategoryName`  
- Data type: `String`  
+ `CategoryName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Name of the RBA security category or collection.  
+ Name of the RBA security category or collection.
 
- `CategoryTypeID`  
- Data type: `UInt32`  
+ `CategoryTypeID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- The type of category. The default value is 29.  
+ The type of category. The default value is 29.
 
-|Value|Category type|  
-|-|-|  
-|1|Collection|  
-|29|SecuredScope|  
+|Value|Category type|
+|-|-|
+|1|Collection|
+|29|SecuredScope|
 
- `RoleID`  
- Data type: `String`  
+ `RoleID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- ID of the security role.  
+ ID of the security role.
 
- `RoleName`  
- Data type: `String`  
+ `RoleName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Name of the role.  
+ Name of the role.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

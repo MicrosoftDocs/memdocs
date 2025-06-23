@@ -6,7 +6,7 @@ description: Add corporate identifiers (enrollment method, IMEI, and serial numb
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 04/11/2025
 ms.topic: how-to
 # optional metadata

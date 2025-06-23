@@ -12,6 +12,66 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Intune is moving to support iOS/iPadOS 17 and later
+
+Later in calendar year 2025, we expect iOS 26 and iPadOS 26 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), requires [iOS 17/iPadOS 17 and higher](../fundamentals/supported-devices-browsers.md) shortly after the iOS/iPadOS 26 release.
+
+#### How does this change affect you or your users?
+
+If you're managing iOS/iPadOS devices, you might have devices that won't be able to upgrade to the minimum supported version (iOS 17/iPadOS 17).
+
+Given that Microsoft 365 mobile apps are supported on iOS 17/iPadOS 17 and higher, this change may not affect you. You likely already upgraded your OS or devices.
+
+To check which devices support iOS 17 or iPadOS 17 (if applicable), see the following Apple documentation:
+
+- [Supported iPhone models](https://support.apple.com/guide/iphone/iphone-models-compatible-with-ios-17-iphe3fa5df43/17.0/ios/17.0)
+- [Supported iPad models](https://support.apple.com/guide/ipad/ipad-models-compatible-with-ipados-17-ipad213a25b2/17.0/ipados/17.0)
+
+> [!NOTE]
+> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. The minimum supported OS version changes to iOS 17/iPadOS 17 while the allowed OS version changes to iOS 14/iPadOS 14 and later. See [this statement about ADE Userless support](https://aka.ms/ADE_userless_support) for more information.
+
+#### How can you prepare?
+
+Check your Intune reporting to see what devices or users might be affected. For devices with mobile device management (MDM), go to **Devices** > **All devices** and filter by OS. For devices with app protection policies, go to **Apps** > **Monitor** > **App protection status** and use the *Platform* and *Platform version* columns to filter.
+
+To manage the supported OS version in your organization, you can use Microsoft Intune controls for both MDM and APP. For more information, refer to [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md).
+
+### Plan for change: Intune is moving to support macOS 14 and higher later this year
+
+Later in calendar year 2025, we expect macOS Tahoe 26 to be released by Apple. Microsoft Intune, the Company Portal app, and the Intune mobile device management agent support macOS 14 and later. Since the Company Portal app for iOS and macOS are a unified app, this change will occur shortly after the release of macOS 26. This doesn't affect existing enrolled devices.
+
+#### How does this change affect you or your users?
+
+This change only affects you if you currently manage, or plan to manage, macOS devices with Intune. This change might not affect you because your users have likely already upgraded their macOS devices. For a list of supported devices, refer to [macOS Sonoma is compatible with these computers](https://support.apple.com/105113).
+
+> [!NOTE]
+> Devices that are currently enrolled on macOS 13.x or below will continue to remain enrolled even when those versions are no longer supported. New devices are unable to enroll if they're running macOS 13.x or below.
+
+#### How can you prepare?
+
+Check your Intune reporting to see what devices or users might be affected. Go to **Devices** > **All devices** and filter by macOS. You can add more columns to help identify who in your organization has devices running macOS 13.x or earlier. Ask your users to upgrade their devices to a supported OS version.
+
+### Plan for Change: Google Play strong integrity definition update for Android 13 or above
+
+Google recently updated the definition of "Strong Integrity" for devices running Android 13 or above, requiring hardware-backed security signals and recent security updates. For more information refer to the [Android Developers Blog: Making the Play Integrity API faster, more resilient, and more private](https://android-developers.googleblog.com/2024/12/making-play-integrity-api-faster-resilient-private.html). Microsoft Intune will enforce this change by **September 30, 2025**. Until then we've adjusted app protection policy and compliance policy behavior to align with Google’s recommended backward compatibility guidance to minimize disruption as detailed in [Improved verdicts in Android 13 and later devices | Google Play | Android Developers](https://developer.android.com/google/play/integrity/improvements#how_can_i_use_the_old_meets-strong-integrity_label_definition_across_all_android_sdk_versions).
+
+#### How does this change affect you or your users?
+
+If you have targeted users with app protection policies and/or compliance policies that are using devices running Android 13 or above without a security update in the past 12 months, these devices will no longer meet the "Strong Integrity" standard. 
+
+**User Impact:** For users running devices on Android 13 or above after this change:
+- Devices without the latest security updates may be downgraded from "Strong Integrity" to "Device Integrity" which could result in conditional launch blocks for affected devices.
+- Devices without the latest security updates may see their devices become noncompliant in the Intune Company Portal app and could lose access to company resources based on your organization's Conditional Access policies.
+
+Note that devices running Android versions 12 or below aren't affected by this change. 
+
+#### How can you prepare?
+
+Before September 30, 2025, review and update your policies as needed. Ensure users with devices running Android 13 or above are receiving timely security updates. You can use the [app protection status report](../apps/app-protection-policies-monitor.md#view-the-app-protection-status-report) to monitor the date of the last Android Security Patch received by the device and notify users to update as needed. The following admin options are available to help warn or block users:
+
+- For app protection policies configure the **Min OS version** and **Min patch version** conditional launch settings. For more details, review [Android app protection policy settings in Microsoft Intune | Microsoft Learn](../apps/app-protection-policy-settings-android.md#conditional-launch)
+- For compliance policies configure the **Minimum security patch level** compliance setting. For more details, review: [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md)
+
 ### Plan for Change: New Intune connector for deploying Microsoft Entra hybrid joined devices using Windows Autopilot
 
 As part of Microsoft’s Secure Future Initiative, we recently released an update to the Intune Connector for Active Directory to use a Managed Service Account instead of a local SYSTEM account for deploying Microsoft Entra hybrid joined devices with Windows Autopilot. The new connector aims to enhance security by reducing unnecessary privileges and permissions associated with the local SYSTEM account.
@@ -210,45 +270,6 @@ You should also plan to update your documentation or developer guidance if appli
 Here are the public repositories:
 - [Intune App SDK for Android](https://github.com/microsoftconnect/ms-intune-app-sdk-android)
 - [Intune App Wrapping Tool for Android](https://github.com/microsoftconnect/intune-app-wrapping-tool-android)
-
-### Plan for Change: Intune is moving to support iOS/iPadOS 16 and later<!--28391935-->
-
-Later in calendar year 2024, we expect iOS 18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), requires [iOS 16/iPadOS 16 and higher](../fundamentals/supported-devices-browsers.md) shortly after the iOS/iPadOS 18 release.
-
-#### How does this change affect you or your users?
-
-If you're managing iOS/iPadOS devices, you might have devices that won't be able to upgrade to the minimum supported version (iOS 16/iPadOS 16).
-
-Given that Microsoft 365 mobile apps are supported on iOS 16/iPadOS 16 and higher, this change may not affect you. You likely already upgraded your OS or devices.
-
-To check which devices support iOS 16 or iPadOS 16 (if applicable), see the following Apple documentation:
-
-- [Supported iPhone models](https://support.apple.com/guide/iphone/supported-models-iphe3fa5df43/16.0/ios/16.0)
-- [Supported iPad models](https://support.apple.com/guide/ipad/supported-models-ipad213a25b2/16.0/ipados/16.0)
-
-> [!NOTE]
-> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. The minimum supported OS version changes to iOS 16/iPadOS 16 while the allowed OS version changes to iOS 13/iPadOS 13 and later. See [this statement about ADE Userless support](https://aka.ms/ADE_userless_support) for more information.
-
-#### How can you prepare?
-
-Check your Intune reporting to see what devices or users might be affected. For devices with mobile device management (MDM), go to **Devices** > **All devices** and filter by OS. For devices with app protection policies, go to **Apps** > **Monitor** > **App protection status** and use the *Platform* and *Platform version* columns to filter.
-
-To manage the supported OS version in your organization, you can use Microsoft Intune controls for both MDM and APP. For more information, see [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md).
-
-### Plan for change: Intune is moving to support macOS 13 and higher later this year<!--28391869-->
-
-Later in calendar year 2024, we expect macOS 15 Sequoia to be released by Apple. Microsoft Intune, the Company Portal app, and the Intune mobile device management agent support macOS 13 and later. Since the Company Portal app for iOS and macOS are a unified app, this change will occur shortly after the release of macOS 15. This doesn't affect existing enrolled devices.
-
-#### How does this change affect you or your users?
-
-This change only affects you if you currently manage, or plan to manage, macOS devices with Intune. This change might not affect you because your users have likely already upgraded their macOS devices. For a list of supported devices, see [macOS Ventura is compatible with these computers](https://support.apple.com/102861).
-
-> [!NOTE]
-> Devices that are currently enrolled on macOS 12.x or below will continue to remain enrolled even when those versions are no longer supported. New devices are unable to enroll if they're running macOS 12.x or below.
-
-#### How can you prepare?
-
-Check your Intune reporting to see what devices or users might be affected. Go to **Devices** > **All devices** and filter by macOS. You can add more columns to help identify who in your organization has devices running macOS 12.x or earlier. Ask your users to upgrade their devices to a supported OS version.
 
 ### Intune moving to support Android 10 and later for user-based management methods in October 2024<!--14755802-->
 

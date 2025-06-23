@@ -1,7 +1,7 @@
 ---
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.reviewer: madakeva
 ms.subservice: autopilot
 ms.service: windows-client

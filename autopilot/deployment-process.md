@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 06/11/2024
+manager: bpardi
+ms.date: 06/13/2025
 ms.topic: install-set-up-deploy
 ms.collection: tier2
 appliesto:

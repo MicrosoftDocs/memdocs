@@ -3,9 +3,9 @@ title: Guided scenario - Secure Microsoft Office mobile apps
 titleSuffix: Microsoft Intune
 description: Learn about the guided scenario to deploy secure Microsoft Office mobile apps from the Microsoft 365 Device Management portal.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 03/28/2024
 ms.topic: article
 ms.service: microsoft-intune

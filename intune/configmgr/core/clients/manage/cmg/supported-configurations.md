@@ -10,7 +10,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -115,6 +115,6 @@ Alternate content providers aren't supported to get content from a content-enabl
 ## Next steps
 
 Next, plan how the design the CMG for the best performance at the appropriate scale:
-  
+
 > [!div class="nextstepaction"]
 > [CMG performance and scale](perf-scale.md)

@@ -7,8 +7,8 @@ description: Use the device enrollment manager account to enroll devices in Intu
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 05/24/2024
+manager: laurawi
+ms.date: 06/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -20,7 +20,7 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 #ROBOTS:
 #audience:
 
-ms.reviewer: shthilla
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -120,7 +120,10 @@ You must use device-level certificates to manage Wi-Fi and email connections.
 Conditional Access is only supported with DEM on devices running:  
 
 * Windows 10, version 1803 and later  
-* Windows 11     
+* Windows 11
+
+> [!NOTE]
+>  DEM accounts on iOS/iPadOS and macOS do not support Microsoft Entra Join, Microsoft Entra registration, and Workplace Join. 
 
 ### Device limit restrictions    
 DEM enrolls Windows 10/11 devices in shared device mode, so device limit restrictions won't work on them. Instead, you can configure a hard limit for these devices in the Microsoft Entra admin center. For more information, see [Manage device identities](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).       

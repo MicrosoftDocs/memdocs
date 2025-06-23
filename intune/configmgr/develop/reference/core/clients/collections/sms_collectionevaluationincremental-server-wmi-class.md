@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_CollectionEvaluationIncremental server WMI class
@@ -21,7 +21,7 @@ Starting in version 2010, the `SMS_CollectionEvaluationIncremental` WMI class is
 
 The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
 ```MOF
 Class SMS_CollectionEvaluationIncremental : SMS_BaseClass
@@ -103,7 +103,7 @@ Last incremental evaluation completion time of the collection.
 
 This class is read-only
 
-## Requirements  
+## Requirements
 
 ### Runtime requirements
 

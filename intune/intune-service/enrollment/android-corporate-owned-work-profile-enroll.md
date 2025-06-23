@@ -7,7 +7,7 @@ description: Set up Android Enterprise work profile for corporate-owned devices 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -120,7 +120,7 @@ You must create an enrollment profile so that users can enroll corporate-owned w
 
         - {{UPNPREFIX}} for the user's first name. Example: *Eric*, when device is user affiliated.  
 
-        - {{USERNAME}} for the user's username when the device is user affiliated. Example: *Eric Solomon*  
+        - {{USERNAME}} for the user's username when the device is user affiliated. Example: *EricSolomon*  
         
         - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
 
