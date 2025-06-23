@@ -33,9 +33,9 @@ ms.collection:
 
 # Use groups to organize users and devices for Microsoft Intune
 
-Microsoft Intune uses security groups from Microsoft Entra ID for various organizational needs. These needs include the grouping of users or devices by geographic location, department, hardware characteristics, and more. To support the use of Entra groups by Intune, the Intune admin center includes the Entra Groups blade with all its functionality. Any groups that appear in Entra, as well as new groups that an Intune admin might create are visible in both Intune and Entra, as well as other products that share the Entra Groups user interface, like Microsoft 365.
+Microsoft Intune uses security groups from Microsoft Entra ID for various organizational needs. These needs include the grouping of users or devices by geographic location, department, hardware characteristics, and more. To support the use of Entra groups by Intune, the Intune admin center includes the Entra Groups user interface with all its functionality. Any groups that appear in Entra and new groups that an Intune admin might create are visible in Intune, Entra, and other products that share the Entra Groups user interface like Microsoft 365.
 
-With well-defined groups in place, Intune admins can use those groups when deploying policies for configuration or compliance, deploying apps, and for assigning other administrative users’ permissions so they can help administer different aspects of the Intune subscription.
+Intune admins use well-defined groups when deploying policies, deploying apps, and for assigning other administrative users’ permissions so they can help administer different aspects of the Intune subscription.
 
 This article focuses on using the Intune admin center to create groups for use with Intune, including details about the permissions required to manage and use those groups within the admin center.
 
@@ -43,16 +43,16 @@ You can learn more about [Microsoft Entra groups](/entra/fundamentals/concept-le
 
 ## Role-based access controls for working with groups
 
-By default, all Microsoft Entra user accounts have permissions to create and configure new groups without being assigned an Entra RBAC role. This includes use of the Groups node within the Intune admin center to create groups.
+By default, all Microsoft Entra user accounts have permissions to create and configure new groups without being assigned an Entra role-based access control (RBAC) role. These permissions extend to use of the Groups node within the Intune admin center.
 
-After a new group is created, its properties including membership can only be managed by the user who created the group, users who are assigned as the group’s *Owner*, and users who are assigned sufficient Entra RBAC permissions to manage Entra groups.  Other users who don’t have rights to edit a group’s properties can view its membership and if administering Intune, can assign Intune policies, apps, and role assignments to the group.
+Only the user who created the group, users who are assigned as an *Owner*, and users who have sufficient Entra RBAC permissions to manage Entra groups can edit the properties of a group. Other users without rights to edit a group can view its membership, and if administering Intune, can assign Intune policies, apps, and role assignments to the group.
 
 
-The following Microsoft Entra built-in RBAC role is the least privileged built-in role that includes sufficient permissions to edit and  manage Entra groups that were created by other users:
+The following Microsoft Entra built-in RBAC role is the least privileged built-in role that includes sufficient permissions to edit and  manage Entra groups created by other users:
 
 - [**Groups Administrator**](/entra/identity/role-based-access-control/permissions-reference#groups-administrator) – This role provides permissions sufficient to add and edit groups from within the admin centers for Microsoft Intune, Microsoft Entra, and Microsoft 365.
 
-When working with RBAC, Microsoft recommends following the principle of least-permissions by using only accounts that have the minimum required permissions for a task, and limiting use and assignment of privileged administrative roles like the Intune Administrator.
+When you work with RBAC, Microsoft recommends following the principle of least-permissions by using only accounts that have the minimum required permissions for a task, and limiting use and assignment of privileged administrative roles like the Intune Administrator.
 
 To learn more about Microsoft Entra groups and group access, see [Learn about groups and access rights](/entra/fundamentals/concept-learn-about-groups) in the Entra documentation.
 
@@ -60,25 +60,25 @@ To learn more about Microsoft Entra groups and group access, see [Learn about gr
 
 Intune admins should be aware of the following aspects of Microsoft Entra groups when creating new groups or assigning them for policy deployment or administrative roles.
 
-**Security** - The groups you use with Intune must be groups that are enabled for security.  This typically requires the groups [group type](/entra/fundamentals/concept-learn-about-groups#group-types) be set to *Security* when the group is created. A security group supports both users and devices as members.
+**Security** - The groups you use with Intune must be groups that are enabled for security. This typically requires the groups [group type](/entra/fundamentals/concept-learn-about-groups#group-types) be set to *Security* when the group is created. A security group supports both users and devices as members.
 
-By default, *Microsoft 365* groups in Microsoft Entra are not security-enabled, support only users as members, and are not supported by Intune. While you can [use Microsoft Graph PowerShell](/microsoft-365/enterprise/manage-security-groups-with-microsoft-365-powershell) to create security-enabled Microsoft 365 groups that can be used by Intune, like default Microsoft 365 groups, even when enabled for security, they only support users as members.
+By default, *Microsoft 365* groups in Microsoft Entra aren't security-enabled, support only users as members, and aren't supported by Intune. While you can [use Microsoft Graph PowerShell](/microsoft-365/enterprise/manage-security-groups-with-microsoft-365-powershell) to create security-enabled Microsoft 365 groups that Intune supports, like the default Microsoft 365 groups they can only include users and not devices.
 
-**Membership** -  Intune supports use of groups with both *Assigned* and *Dynamic* group [membership types](/entra/fundamentals/concept-learn-about-groups#membership-types). When planning groups for your Intune tenant, consider how the group will be used. For example, to assign a built-in Intune RBAC role like the Endpoint Security Manager to administrative users, use a group with manually assigned members to limit who receives that privileged role. Conversely, to deploy a default set of device configuration policies to all Windows 11 devices, you might use a group that dynamically adds members based on a devices operating system version. A dynamic group helps ensure new devices that enroll with Intune automatically receive the intended default configuration policy without having to manually identify and then add those devices to a group.
+**Membership** -  Intune supports use of groups with both *Assigned* and *Dynamic* group [membership types](/entra/fundamentals/concept-learn-about-groups#membership-types). When planning groups for your Intune tenant, consider how each group might be used. For example, to assign a built-in Intune RBAC role like the Endpoint Security Manager to administrative users, use a group with manually assigned members to limit who receives that privileged role. Conversely, to deploy a default set of device configuration policies to all Windows 11 devices, you might use a group that dynamically adds members based on a devices operating system version. Use of a dynamic group can help you ensure devices that enroll with Intune automatically receive the intended default policy without the device having to be manually added to a group.
 
-## About the Intune All users and All devices groups
+## The Intune All users and All devices groups
 
-In addition to the Microsoft Entra groups that you can create and use with Intune, Intune includes two virtual groups that are only available within the context of Intune:
+In addition to the Microsoft Entra groups that you can create and use with Intune, Intune includes two virtual groups that are only available within the context of Intune and from within the Intune admin center:
 
-- *All users* - This group automatically includes every user who is assigned a license for Intune.
+- *All users* - This group automatically includes every user who has a license for Intune.
 - *All devices* - This group automatically includes each device that enrolls with Intune.
 
-These virtual groups provide an easy way to target all applicable users or devices with Intune policies and assignments that you want to broadly apply and are only visible within the Intune admin center in the context of assignments for Intune objects.
+These virtual groups provide an easy way to target all applicable users or devices with Intune policies and assignments that should broadly apply.
 
-For example, you might deploy an Intune compliance policy to the *all devices* group to establish a minimum level of compliance requirements that must be met by all devices in your organization. Later, you can deploy more requirements to specific Entra groups to apply additional requirements you might have for specific groups of devices or users.
+For example, you might deploy an Intune compliance policy to the *all devices* group to establish a minimum level of compliance requirements that all devices in your organization must meet. Later, you can deploy more requirements to specific Entra groups to apply extra requirements you might have for specific groups of devices or users.
 
 > [!TIP]  
-> This is a good place to mention the use of **Filters** for groups within Intune. You can use Filters within Intune when assigning apps, policies, and profiles in Microsoft Intune to large groups like *All users* and *All devices*. Filters can help you dynamically control which devices or users receive the deployment. For information about using Filters, see:  
+> Consider the use of **Filters** for groups within Intune. You can use Filters within Intune when assigning apps, policies, and profiles in Microsoft Intune to large groups like *All users* and *All devices*. Filters can help you dynamically control which devices or users receive the deployment. For information about using Filters, see:  
 > - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/intune/intune-service/fundamentals/filters)
 > - [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/intune/intune-service/fundamentals/filters-performance-recommendations)
 
@@ -98,21 +98,21 @@ To create groups in the Microsoft Intune admin center:
 
 2. The *New Group* pane opens, which is the same interface as found in Microsoft Entra:
 
-   :::image type="content" source="./media/groups-add/groups-add-properties.png" alt-text="Screenshot that shows the New group pane from Entra wihtin the Intune admin center.":::
+   :::image type="content" source="./media/groups-add/groups-add-properties.png" alt-text="Screenshot that shows the New group pane from Entra within the Intune admin center.":::
 
    Configure the following options for the New Group:  
    1. Set *Group type* to **Security**.
-   2. For *Group name*, specify a meaningful name that identifies clearly identifies the group. This name is visible to those working with groups in the admin center.
-   3. For *Group description*, which is optional, specify additional details about the group, or its intended use.
-   4. For *Membership type*, select from the following:
+   2. For *Group name*, specify a meaningful name that identifies clearly identifies the group. This name is visible to users who work with groups in the admin center.
+   3. For *Group description*, which is optional, specify other details about the group like its intended use.
+   4. For *Membership type*, select from the following options:
         
-      - **Assigned** – With this membership type you will need to manually add users to the group, which can be done now or later after the group is created.
+      - **Assigned** – With this membership type you'll need to manually add users to the group, which can be done now or later after the group is created.
 
         To add users at this time, locate and select **No members selected** to open the *Add members* pane.
 
         On the pane, use the *Users* or*Devices* tab where you can select the checkbox next to each object that you want to add to this group.
 
-        You can also select the *Groups* tab if you want to nest a group within this group. A group that includes a group as a member is called a parent group. Be careful when nesting groups as the membership relationships might not be clear to admins who later use the parent group for an assignment. Any membership changes made to a nested group are automatically applied to the effective membership of the parent group.
+        You can also select the *Groups* tab if you want to nest a group within this group. A group that includes a group as a member is known as a parent group. Be careful when nesting groups as the membership relationships might not be clear to admins who later use the parent group for an assignment. Any membership changes made to a nested group are automatically applied to the effective membership of the parent group.
 
         > [!IMPORTANT]  
         > Microsoft doesn’t recommend using both users and devices in the same group. Mixed groups that are used for Intune deployments or assignments can result in policy conflicts and unexpected results.
@@ -130,7 +130,7 @@ To create groups in the Microsoft Intune admin center:
         > [!TIP]  
         > No specific Entra ID license is required for members of dynamic device groups.
 
-   5. The *Owners*, Configuration is optional. By default, the user that creates a group is an owner. To add additional owners, select **No owners selected** and then the **Users** tab, where you can then select one or more users to add as owners of this group. 
+   5. The *Owners*, Configuration is optional. By default, the user that creates a group is an owner. To add other owners, select **No owners selected** and then the **Users** tab, where you can then select one or more users to add as owners of this group. 
 
 3. Select **Create** to add the new group. Your group is shown in the list.
 
