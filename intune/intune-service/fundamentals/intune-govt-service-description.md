@@ -108,6 +108,7 @@ The following features aren't available and won't be supported for GCC High and 
 | Chrome OS Connector | ❌ |
 | Microsoft Store for Business | ❌ |
 | On-premises Exchange Connector | ❌ |
+|Windows Subscription Activation| ❌ |
 | [TeamViewer connector](../remote-actions/teamviewer-support.md) </br>or TeamViewer feature | ❌ |
 
 ## Next steps
