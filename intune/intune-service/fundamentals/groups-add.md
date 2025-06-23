@@ -64,7 +64,7 @@ Intune admins should be aware of the following aspects of Microsoft Entra groups
 
 By default, *Microsoft 365* groups in Microsoft Entra aren't security-enabled, support only users as members, and aren't supported by Intune. While you can [use Microsoft Graph PowerShell](/microsoft-365/enterprise/manage-security-groups-with-microsoft-365-powershell) to create security-enabled Microsoft 365 groups that Intune supports, like the default Microsoft 365 groups they can only include users and not devices.
 
-**Membership** -  Intune supports use of groups with both *Assigned* and *Dynamic* group [membership types](/entra/fundamentals/concept-learn-about-groups#membership-types). When planning groups for your Intune tenant, consider how each group might be used. For example, to assign a built-in Intune RBAC role like the Endpoint Security Manager to administrative users, use a group with manually assigned members to limit who receives that privileged role. Conversely, to deploy a default set of device configuration policies to all Windows 11 devices, you might use a group that dynamically adds members based on a devices operating system version. Use of a dynamic group can help you ensure devices that enroll with Intune automatically receive the intended default policy without the device having to be manually added to a group.
+**Membership** - Intune supports both *Assigned* and *Dynamic group* memberships. Choose the [membership type](/entra/fundamentals/concept-learn-about-groups#membership-types) based on how you plan to manage group membership - manually or automatically based on rules. For example, to assign a built-in Intune RBAC role like the Endpoint Security Manager to administrative users, use a group with manually assigned members to limit who receives that privileged role. Conversely, to deploy a default set of device configuration policies to all Windows 11 devices, you might use a group that dynamically adds members based on a devices operating system version. Use of a dynamic group can help you ensure devices that enroll with Intune automatically receive the intended default policy without the device having to be manually added to a group.
 
 ## The Intune All users and All devices groups
 
@@ -84,7 +84,7 @@ For example, you might deploy an Intune compliance policy to the *all devices* g
 
 ## Add groups to Intune
 
-When you create a group within the Microsoft Intune admin center, your creating groups in Microsoft Entra ID. The following procedure provides basic guidance for creating groups in the Intune admin center. For more detailed information, see the following Microsoft Entra articles:
+When you create a group within the Microsoft Intune admin center, you're actually creating groups in Microsoft Entra ID. The following procedure provides basic guidance for creating groups in the Intune admin center. For more detailed information, see the following Microsoft Entra articles:
 
 - [Manage Microsoft Entra groups and group membership](/entra/fundamentals/how-to-manage-groups)
 - [Create a basic group and add members using Microsoft Entra ID](/entra/fundamentals/how-to-manage-groups)
@@ -102,7 +102,7 @@ To create groups in the Microsoft Intune admin center:
 
    Configure the following options for the New Group:  
    1. Set *Group type* to **Security**.
-   2. For *Group name*, specify a meaningful name that identifies clearly identifies the group. This name is visible to users who work with groups in the admin center.
+   2. For *Group name*, specify a meaningful name that clearly identifies the group. This name is visible to users who work with groups in the admin center.
    3. For *Group description*, which is optional, specify other details about the group like its intended use.
    4. For *Membership type*, select from the following options:
         
@@ -115,7 +115,7 @@ To create groups in the Microsoft Intune admin center:
         You can also select the *Groups* tab if you want to nest a group within this group. A group that includes a group as a member is known as a parent group. Be careful when nesting groups as the membership relationships might not be clear to admins who later use the parent group for an assignment. Any membership changes made to a nested group are automatically applied to the effective membership of the parent group.
 
         > [!IMPORTANT]  
-        > Microsoft doesn’t recommend using both users and devices in the same group. Mixed groups that are used for Intune deployments or assignments can result in policy conflicts and unexpected results.
+        > Avoid creating groups that include both users and devices, as this can lead to policy conflicts and unpredictable behavior during Intune deployments.
 
         > [!TIP]  
         > To create groups of devices, you can use [device categories](/intune/intune-service/enrollment/device-group-mapping) to automatically join devices to a group at the time they enroll with Intune.
