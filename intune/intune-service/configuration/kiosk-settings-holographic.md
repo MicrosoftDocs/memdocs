@@ -119,4 +119,4 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [Windows](kiosk-settings-windows.md) devices.
+- Create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [Windows](kiosk-settings-windows.md) devices.
