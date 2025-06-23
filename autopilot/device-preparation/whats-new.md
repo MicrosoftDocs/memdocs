@@ -37,7 +37,7 @@ Date added: *June 26, 2025*
 
 Autopilot device preparation now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. With Intune's 2506 release, you can now select apps from the Enterprise App Catalog in the device preparation policy. This allows you to ensure those apps are delivered before the user can access the desktop.
 
-For related information, see [Add an Enterprise App Catalog app to Microsoft Intune](../../intune/intune-service/apps/apps-add-enterprise-app.md).
+For related information, see [Add an Enterprise App Catalog app to Microsoft Intune](/intune/intune-service/apps/apps-add-enterprise-app).
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode is in public preview
 
