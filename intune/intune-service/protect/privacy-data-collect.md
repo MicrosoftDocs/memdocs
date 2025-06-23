@@ -41,7 +41,7 @@ When users enroll their corporate or personal devices with Intune, Intune collec
 - Customer accounts at third party services (per admin's instructions).
 - Diagnostic, performance, and usage information.
 
-From these sources, Intune collects information that falls into the following two categories: [required](#required-data), [optional](#optional-data). Each category is divided into customer data, personal data, diagnostic data, and service-generated data.
+From these sources, Intune collects information that falls into the following two categories: [required](#required-data), [optional](#optional-data). 
 
 > [!NOTE]
 > We don't sell any data collected by our service to any third parties for any reason.
