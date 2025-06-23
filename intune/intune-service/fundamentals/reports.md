@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 08/12/2024
+ms.date: 06/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,7 +52,7 @@ The reporting framework provides a consistent and more comprehensive reporting e
 
 ## Who can access the data?
 
-Users assigned an Intune role-based access control role with sufficient permissions permissions can review logs. The least privileged built-in Intune role with these permissions is the [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator).
+Users assigned an Intune role-based access control role with sufficient permissions can review logs. The least privileged built-in Intune role with these permissions is the [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator).
  
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 
