@@ -58,7 +58,7 @@ The Remote Help app supports the following capabilities on Android:
 
 ## Supported devices
 
-- Samsung devices
+- Samsung Knox devices
 - Zebra devices
   - Running MX version 8.3 or higher
   - Unattended control is only supported on MX version 9.3 and higher
@@ -74,6 +74,8 @@ For general prerequisites, go to [Prerequisites for Remote Help](remote-help.md#
 - Install the Intune app on devices with a version higher than 5.0.5541.0
 
 - Devices must NOT have device configuration policy set to block Screen capture
+
+- Samsung devices only: The device must have Knox, list of Knox compatible devices here [Device Compatibility Knox Solutions | Samsung Knox](https://www.samsungknox.com/en/knox-platform/supported-devices).
 
 - Zebra devices only: Set up Zebra OEMConfig for your tenant. For more details, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md)  
 
