@@ -6,7 +6,7 @@ description: Add or create a profile to use custom settings for Windows 10/11 cl
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/16/2025
 ms.topic: how-to
 ms.service: microsoft-intune

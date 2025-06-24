@@ -7,7 +7,7 @@ description: Learn the Intune settings you can use to control settings for the C
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 12/06/2018
 ms.topic: archived
 ms.service: microsoft-intune

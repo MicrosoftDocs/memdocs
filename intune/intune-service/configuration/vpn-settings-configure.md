@@ -6,7 +6,7 @@ description: On Android device administrator, Android Enterprise, iOS, iPadOS, m
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune

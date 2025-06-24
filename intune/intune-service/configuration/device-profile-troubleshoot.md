@@ -6,7 +6,7 @@ description: Common questions, answers, and scenarios with device policies and p
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/28/2025
 ms.topic: troubleshooting
 ms.service: microsoft-intune

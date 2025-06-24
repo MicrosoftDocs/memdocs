@@ -7,7 +7,7 @@ description: Review endpoints for Intune. This page lists IP addresses and port 
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 05/21/2025
 ms.topic: reference
 ms.service: microsoft-intune

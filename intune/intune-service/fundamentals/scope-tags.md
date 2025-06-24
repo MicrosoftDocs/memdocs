@@ -7,7 +7,7 @@ description: Use role-based access control (RBAC) and scope tags to filter confi
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 02/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune

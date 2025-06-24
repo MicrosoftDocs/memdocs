@@ -89,7 +89,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 <sup>1</sup> Consider using [Windows MAM](../apps/protect-mam-windows.md), or [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection) and [Microsoft Purview Data Loss Prevention](/microsoft-365/compliance/dlp-learn-about-dlp). Microsoft Purview simplifies the configuration set-up and provides an advanced set of capabilities. <br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
-<sup>4</sup> Intune doesn't provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience).<br> 
+<sup>4</sup> Intune doesn't provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md) > **Device experience**.<br> 
 <sup>5</sup> LOB for AE are supported, but the apps need to be published privately to Managed Google Play.<br>
 <sup>6</sup> This native iOS feature allows Intune to take over the ownership of an application originally deployed outside of Intune. This action occurs during the next check-in.
 

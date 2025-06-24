@@ -6,7 +6,7 @@ description: See all the settings to create VPN connections on Android Enterpris
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/26/2024
 ms.topic: reference
 ms.service: microsoft-intune
@@ -46,7 +46,7 @@ As an Intune administrator, you can create and assign VPN settings to Android En
 > To configure always-on VPN, you need to:
 >
 > 1. Create a VPN profile with your connection info, as described in this article.
-> 2. Create a [device restrictions](device-restrictions-android-for-work.md#connectivity) profile with the Always-on VPN setting configured.
+> 2. Create an [Android Enterprise device restrictions](device-restrictions-android-for-work.md) > **Corporate-owned** > **Connectivity** profile with the Always-on VPN setting configured.
 > 3. Assign both profiles to your groups.
 
 ## Before you begin
