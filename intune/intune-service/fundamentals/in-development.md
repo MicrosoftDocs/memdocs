@@ -127,10 +127,6 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Monitor and troubleshoot
 
-### New status column in Windows hardware attestation report<!-- 26527908 -->
-
-We're introducing a new column in the Windows hardware attestation report named, **Attest Status**. Under this column Microsoft Intune will show the error messages it receives during the attestation process. This feature will enhance the visibility of error messages received from both service-side and client-side attestation errors, including WinINet errors, HTTP bad request errors, and other error messages related to failure.
-
 ### Declarative Apple software update report<!-- 31557946 -->
 
 You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new Apple software updates report located under *Reports* > *Apple updates*. Using the new report, you'll be able to see:

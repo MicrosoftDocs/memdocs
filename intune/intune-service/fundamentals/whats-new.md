@@ -179,7 +179,17 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
+### Monitor and troubleshoot
 
+####  New status column in Windows hardware attestation report<!-- 26527908 -->
+
+We added a new column, **Attest Status**, to the Windows hardware attestation report to improve visibility into attestation errors. This column shows error messages received during the attestation process, helping you identify issues from both the service and client sides.  Error types shown in this column include:
+
+- WinINet errors
+- HTTP bad request errors
+- Other attestation-related failures
+
+For more information about the report, see [Windows hardware attestation report](../fundamentals/reports.md#windows-hardware-attestation-report-organizational).
 
 ## Week of June 9, 2025
 
