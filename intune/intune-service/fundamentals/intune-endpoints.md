@@ -61,13 +61,13 @@ To make it easier to configure services through firewalls, we onboarded with the
 By using the following PowerShell script, you can retrieve the list of IP addresses for the Intune service.
 
 ```PowerShell
-(invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.ips} | select -unique -ExpandProperty ips
+   (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.ips} | select -unique -ExpandProperty ips
 ```
 
 By using the following PowerShell script, you can retrieve the list of FQDNs used by Intune and dependent services. When you run the script, the URLs in the script output might be different than the URLs in the following tables. At a minimum, make sure you include the URLs in the tables.
 
 ```PowerShell
-(invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
+   (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
 ```
 
 The script provides a convenient method to list and review all services required by Intune and Windows Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.
@@ -93,10 +93,10 @@ The data columns shown in the tables are:
 ### Intune core service
 
 > [!NOTE]  
-> If the firewall that you're using allows you to create firewall rules using a domain name, then use the *.manage.microsoft.com and manage.microsoft.com domain. However, if the firewall provider that you're using, doesn't allow you to create a firewall rule using a domain name, we recommend that you use the approved list of all subnets in this section.
+> If the firewall that you're using allows you to create firewall rules using a domain name, then use the `*.manage.microsoft.com` and `manage.microsoft.com` domain. However, if the firewall provider that you're using, doesn't allow you to create a firewall rule using a domain name, we recommend that you use the approved list of all subnets in this section.
 
 | ID | Desc | Category | ER | Addresses | Ports |
-|--| ---- | -------- |--| --------- | ----- |
+|----|------|----------|----|-----------|-------|
 | 163 | Intune client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29, 104.208.197.64/27, 172.160.217.160/27, 172.201.237.160/27, 172.202.86.192/27, 172.205.63.0/25, 172.212.214.0/25, 172.215.131.0/27, 20.168.189.128/27, 20.199.207.192/28, 20.204.194.128/31, 20.208.149.192/27, 20.208.157.128/27, 20.214.131.176/29, 20.43.129.0/24, 20.91.147.72/29, 4.145.74.224/27, 4.150.254.64/27, 4.154.145.224/27, 4.200.254.32/27, 4.207.244.0/27, 4.213.25.64/27, 4.213.86.128/25, 4.216.205.32/27, 4.237.143.128/25, 40.84.70.128/25, 48.218.252.128/25, 57.151.0.192/27, 57.153.235.0/25, 57.154.140.128/25, 57.154.195.0/25, 57.155.45.128/25, 68.218.134.96/27, 74.224.214.64/27, 74.242.35.0/25, 172.208.170.0/25, 74.241.231.0/25, 74.242.184.128/25` | **TCP:** 80, 443 |
 | 172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
 | 170 | MEM - Win32Apps | Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<BR>`swdin02-mscdn.manage.microsoft.com` | **TCP:** 80, 443 |
@@ -108,7 +108,7 @@ The data columns shown in the tables are:
 ### Authentication dependencies
 
 | ID | Desc | Category | ER | Addresses | Ports |
-|--| ---- | -------- |--| --------- | ----- |
+|----|------|----------|----|-----------|-------|
 | 56 | Authentication and Identity, includes Microsoft Entra ID and Entra ID related services.| Allow<BR>Required | True | `login.microsoftonline.com`<BR>`graph.windows.net` | **TCP:** 80, 443 |
 | 150 | Office Customization Service provides Office 365 ProPlus deployment configuration, application settings, and cloud based policy management. | Default | False | `*.officeconfig.msocdn.com`<BR>`config.office.com` | **TCP:** 443 |
 | 59 | Identity supporting services & CDNs. | Default<BR>Required | False |`enterpriseregistration.windows.net`<BR>`certauth.enterpriseregistration.windows.net` | **TCP:** 80, 443 |
@@ -133,8 +133,8 @@ In this section, the following tables list the Intune dependencies and the ports
 #### Android AOSP dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
-| --- | ---- | -------- | ----- | --------- | ----- |
-| 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR>'intunecdnpeasd.manage.microsoft.com'<BR>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com)<br> | **TCP:** 443 |
+|-----|------|----------|-------|-----------|-------|
+| 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR>`intunecdnpeasd.manage.microsoft.com`<BR>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com)<br> | **TCP:** 443 |
 
 > [!NOTE]  
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store, Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
@@ -144,7 +144,7 @@ In this section, the following tables list the Intune dependencies and the ports
 #### Apple dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
-| --- | ---- | -------- | ----- | --------- | ----- |
+|-----|------|----------|-------|-----------|-------|
 | 178 | MEM - Apple Dependencies | Default<BR>Required | False | `itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`*.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR> | **TCP:** 80, 443, 5223 |
 
 For more information, see the following resources:
@@ -158,7 +158,7 @@ For more information, see the following resources:
 #### Delivery optimization dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
-| --- | ---- | -------- | ----- | --------- | ----- |
+|-----|------|----------|-------|-----------|-------|
 | 172 | MDM - Delivery Optimization Dependencies | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
 
 **Port requirements** - For client-service communication, it uses HTTP or HTTPS over port 80/443. Optionally, for peer-to-peer traffic, Delivery Optimization uses 7680 for TCP/IP and Teredo on port 3544 for NAT traversal. For more information, see [Delivery Optimization documentation](/windows/deployment/do/)
@@ -167,16 +167,16 @@ For more information, see the following resources:
 
 **Firewall requirements** - Allow the following hostnames through your firewall to support Delivery Optimization. For communication between clients and the Delivery Optimization cloud service:
 
-- \*.do.dsp.mp.microsoft.com
+- `*.do.dsp.mp.microsoft.com`
 
 For Delivery Optimization metadata:
 
-- \*.dl.delivery.mp.microsoft.com
+- `*.dl.delivery.mp.microsoft.com`
 
 #### Windows Push Notification Services (WNS) dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
-| --- | ---- | -------- | ----- | --------- | ----- |
+|-----|------|----------|-------|-----------|-------|
 | 171 | MEM - WNS Dependencies | Default<BR>Required | False | `*.notify.windows.com`<BR>`*.wns.windows.com`<BR>`sinwns1011421.wns.windows.com`<BR>`sin.notify.windows.com`<BR> | **TCP:** 443 |
 
 For Intune-managed Windows devices managed using Mobile Device Management (MDM), device actions and other immediate activities require the use of Windows Push Notification Services (WNS). For more information, see [Allowing Windows Notification traffic through enterprise firewalls](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
@@ -185,7 +185,8 @@ For Intune-managed Windows devices managed using Mobile Device Management (MDM),
 
 In addition to configuring the network requirements listed in the following table, you need to configure the network requirements for Azure communication services as well. For more information, see [Azure communication services network requirements](/azure/communication-services/concepts/voice-video-calling/network-requirements).
 
-ID |Desc |Category |ER |Addresses |Ports|Notes|--|-- |-----|--- | --------------| --------------------------------|------------|
+| ID |Desc |Category |ER |Addresses |Ports|Notes|
+|----|-----|---------|---|----------|-----|-----|
 181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443 |
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443 |
@@ -193,7 +194,7 @@ ID |Desc |Category |ER |Addresses |Ports|Notes|--|-- |-----|--- | --------------
 ### Windows Autopilot dependencies
 
 | ID | Desc | Category | ER | Addresses | Ports |
-|--- | ---- | -------- |--| --------- | ----- |
+|----|------|----------|----|-----------|-------|
 | 164 | Windows Autopilot - Windows Update| Default<BR>Required | False | `*.windowsupdate.com`<BR>`*.dl.delivery.mp.microsoft.com`<BR>`*.prod.do.dsp.mp.microsoft.com`<BR>`*.delivery.mp.microsoft.com`<BR>`*.update.microsoft.com`<BR>`tsfe.trafficshaping.dsp.mp.microsoft.com`<BR>`adl.windows.com`<BR> | **TCP:** 80, 443 |
 | 165 | Windows Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` | **UDP:** 123 |
 | 169 | Windows Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
@@ -211,7 +212,7 @@ For more information about configuring Defender for Endpoint connectivity, see [
 To support Defender for Endpoint security settings management, allow the following hostnames through your firewall.
 For communication between clients and the cloud service:
 
-- \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
+- `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
   > [!IMPORTANT]  
   > SSL Inspection isn't supported on endpoints required for Microsoft Defender for Endpoint.
@@ -222,8 +223,8 @@ To support Endpoint Privilege Management, allow the following hostnames on tcp p
 
 For communication between clients and the cloud service:
 
-- \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
-- \*.events.data.microsoft.com - Used by Intune-managed devices to send [optional reporting data](../protect/epm-data-collection.md) to the Intune data collection endpoint.
+- `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
+- `*.events.data.microsoft.com` - Used by Intune-managed devices to send [optional reporting data](../protect/epm-data-collection.md) to the Intune data collection endpoint.
 
   > [!IMPORTANT]  
   > SSL Inspection isn't supported on endpoints required for Endpoint Privilege Management.
@@ -241,10 +242,10 @@ Managed Windows devices that use the Microsoft Store either to acquire, install,
 
 **Microsoft Store API (AppInstallManager):**
 
-- displaycatalog.mp.microsoft.com
-- purchase.md.mp.microsoft.com
-- licensing.mp.microsoft.com
-- storeedgefd.dsx.mp.microsoft.com
+- `displaycatalog.mp.microsoft.com`
+- `purchase.md.mp.microsoft.com`
+- `licensing.mp.microsoft.com`
+- `storeedgefd.dsx.mp.microsoft.com`
 
 **Windows Update Agent:**
 
@@ -257,13 +258,13 @@ For details, see the following resources:
 
 Win32 content download locations and endpoints are unique per application and are provided by the external publisher. You can find the location for each Win32 Store app using the following command on a test system (you can obtain the [PackageId] for a Store app by referencing the **Package Identifier** property of the app after adding it to Microsoft Intune):
 
-`winget show [PackageId]`
+- `winget show [PackageId]`
 
 The **Installer Url** property either shows the external download location or the region-based (Microsoft-hosted) fallback cache based on whether the cache is in-use. The content download location can change between the cache and external location.
 
 **Microsoft-hosted Win32 app fallback cache:**
 
-- cdn.storeedgefd.dsx.mp.microsoft.com
+- `cdn.storeedgefd.dsx.mp.microsoft.com`
 
 **Delivery Optimization (optional, required for peering):**
 
@@ -329,10 +330,10 @@ If you're using Intune to deploy apps or scripts on macOS, you also need to gran
 Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 
 |Region | CDN | Port |
-| ----- |---- | ---- |
-|North America | macsidecar.manage.microsoft.com<br>macsidecarprod.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-|Europe | macsidecareu.manage.microsoft.com<br>macsidecarprodeu.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-|Asia Pacific| macsidecarap.manage.microsoft.com<br>macsidecarprodap.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) |**TCP:** 443 |
+|-------|-----|------|
+|North America | `macsidecar.manage.microsoft.com`<br>`macsidecarprod.azureedge.net`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+|Europe | `macsidecareu.manage.microsoft.com`<br>`macsidecarprodeu.azureedge.net`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+|Asia Pacific| `macsidecarap.manage.microsoft.com`<br>`macsidecarprodap.azureedge.net`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) |**TCP:** 443 |
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
@@ -344,10 +345,10 @@ Different endpoints are used depending on your tenant location. To find your ten
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
 |Region | CDN | Port |
-| --- |------------- | --- |
-| North America | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net<br>imeswda-afd-primary.manage.microsoft.com<br>imeswda-afd-secondary.manage.microsoft.com<br>imeswda-afd-hotfix.manage.microsoft.com<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-|Europe | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net<br>imeswdb-afd-primary.manage.microsoft.com<br>imeswdb-afd-secondary.manage.microsoft.com<br>imeswdb-afd-hotfix.manage.microsoft.com<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-| Asia Pacific | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net<br>imeswdc-afd-primary.manage.microsoft.com<br>imeswdc-afd-secondary.manage.microsoft.com<br>imeswdc-afd-hotfix.manage.microsoft.com<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+|-----|--------------|-----|
+| North America | `naprodimedatapri.azureedge.net`<br>`naprodimedatasec.azureedge.net`<br>`naprodimedatahotfix.azureedge.net`<br>`imeswda-afd-primary.manage.microsoft.com`<br>`imeswda-afd-secondary.manage.microsoft.com`<br>`imeswda-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+|Europe | `euprodimedatapri.azureedge.net`<br>`euprodimedatasec.azureedge.net`<br>`euprodimedatahotfix.azureedge.net`<br>`imeswdb-afd-primary.manage.microsoft.com`<br>`imeswdb-afd-secondary.manage.microsoft.com`<br>`imeswdb-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+| Asia Pacific | `approdimedatapri.azureedge.net`<br>`approdimedatasec.azureedge.net`<br>`approdimedatahotfix.azureedge.net`<br>`imeswdc-afd-primary.manage.microsoft.com`<br>`imeswdc-afd-secondary.manage.microsoft.com`<br>`imeswdc-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
 
 
 ## Windows Autopatch
