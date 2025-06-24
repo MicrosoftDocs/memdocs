@@ -20,6 +20,7 @@ To support the upcoming release of iOS/iPadOS 26 and ensure continued app protec
 > Updating to SDK v21.0.0 or later requires your app to be registered with Microsoft Entra. Review the following GitHub announcements for more details on the specific impact:
 > - SDK for iOS: [App Registration Requirement Will be Enforced in Version 21.0.0+ | microsoftconnect/ms-intune-app-sdk-ios - Discussion #569](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/discussions/569)
 > - Wrapper for iOS: [-ac and -ar parameters will become required in version 21.0.0 | microsoftconnect/intune-app-wrapping-tool-ios - Discussion #136](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/discussions/136)
+> 
 > If you have questions or concerns, file an issue in the GitHub repository or reply directly to the GitHub announcement. 
 
 As a best practice, always update your iOS/iPadOS apps to the latest App SDK or App Wrapping Tool to ensure that your app continues to run smoothly.
