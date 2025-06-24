@@ -234,7 +234,7 @@ For more information, see the [Overview of Endpoint Privilege Management](../pro
 ## Microsoft Security Copilot
 
 To ensure communication between Security Copilot and certain security solutions, you must allow Security Copilot's egress IPs to contact the solution.
-For information on the required endpoints, see [Microsoft Security Copilot egress IPs](/copilot/security/plugin-ip-address).
+For information on the required endpoints, see [Microsoft Security Copilot egress IPs](/copilot/security/plugin-ip-address) in the Security Copilot documentation.
 
 ## Microsoft Store
 
