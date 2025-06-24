@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/19/2023
+ms.date: 06/24/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -40,10 +40,6 @@ During the session, you can view the device's display via screen sharing and if 
 
 In this article, we refer to the users who provide help as *helpers*, and devices that receive help as *sharers* as they share their session with the helper.
 
-> [!IMPORTANT]
->
-> Remote Help on Android is now generally available.
-
 ## Remote Help capabilities and requirements on Android
 
 The Remote Help app supports the following capabilities on Android:
@@ -75,7 +71,7 @@ For general prerequisites, go to [Prerequisites for Remote Help](remote-help.md#
 
 - Devices must NOT have device configuration policy set to block Screen capture
 
-- Samsung devices only: The device must have Knox, list of Knox compatible devices here [Device Compatibility Knox Solutions | Samsung Knox](https://www.samsungknox.com/en/knox-platform/supported-devices). Samsung devices without Knox work for screen share, but not for full control or unattended mode.
+- Samsung devices only: The device must have Knox. For a list of Knox compatible devices, see [Device Compatibility Knox Solutions](https://www.samsungknox.com/knox-platform/supported-devices) (opens Samsung's website). Samsung devices without Knox work for screen share, but don't work in full control or unattended mode.
 
 - Zebra devices only: Set up Zebra OEMConfig for your tenant. For more details, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md)  
 
