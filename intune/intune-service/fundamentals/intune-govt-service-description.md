@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/06/2025
+ms.date: 06/23/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.suite: ems
@@ -108,6 +108,7 @@ The following features aren't available and won't be supported for GCC High and 
 | Chrome OS Connector | ❌ |
 | Microsoft Store for Business | ❌ |
 | On-premises Exchange Connector | ❌ |
+| Windows Subscription Activation | ❌ |
 | [TeamViewer connector](../remote-actions/teamviewer-support.md) </br>or TeamViewer feature | ❌ |
 
 ## Next steps
