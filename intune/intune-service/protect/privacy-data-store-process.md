@@ -8,7 +8,7 @@ keywords: data, privacy
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/07/2023
+ms.date: 06/23/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid: edb07842-6a16-482e-8c1d-541a29e169a8
 #ROBOTS:
 #audience:
 
-ms.reviewer: angerobe
+ms.reviewer: bradyw
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -67,7 +67,6 @@ Microsoft Intune won't store Customer Data at rest outside the stated geo, excep
 - Preview, beta, or other prerelease services, which typically store customer data in the United States but might store it globally.
 
 Microsoft doesn't control or limit the Geo from which customers or their end users might access customer data. Similarly, where customer data in other services is subsequently integrated into Intune, the originating customer data will continue to be stored subject to the other service's own Geo commitments (if any); only the copy of the customer data integrated into Intune will be stored in the stated Geo for Intune.
-
 
 ### Data residency option
 
