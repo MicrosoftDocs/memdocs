@@ -94,12 +94,19 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
  
  When you edit an existing certificate profile to include these attributes, it triggers a reissuance of all certificates, which might incur additional costs depending on your CA agreement. 
  
- To avoid service disruption, complete the following steps:
+ To avoid service disruption, complete the following steps in the Microsoft Intune admin center:
 
   1. Review your Intune SCEP certificate profiles used for S/MIME scenarios.  
-  2. Update the subject name to include thes variables:  
-   - G={{GivenName}}   
-   - SN={{SurName}}   
+  2. Update the subject name in the Microsoft Intune admin center to include these variables:  
+      - G={{GivenName}}   
+      - SN={{SurName}} 
+
+     Variables are available to select in the SCEP profile within the **Subject name format** menu.  
+    
+      > [!div class="mx-imgBorder"]
+        > ![Image of a SCEP certificate profile and its configuration settings, highlighting the subject name format setting.](./media/certificates-profile-scep/subject-name-2506.png)
+     
+
   3. Test changes. Before broad deployment, create a new profile and assign a small user group.  
   4. Don't rely on automatic updates. Intune doesn't modify profiles on your behalf due to the risk of duplicate attributes and unintended certificate reissuance.  
 
