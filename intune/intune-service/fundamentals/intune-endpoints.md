@@ -231,10 +231,10 @@ For communication between clients and the cloud service:
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
 
-## Microsoft Security for Copilot
+## Microsoft Security Copilot
 
-
-
+To ensure communication between Security Copilot and certain security solutions, you must allow Security Copilot's egress IPs to contact the solution.
+For information on the required endpoints, see [Microsoft Security Copilot egress IPs](/copilot/security/plugin-ip-address).
 
 ## Microsoft Store
 
