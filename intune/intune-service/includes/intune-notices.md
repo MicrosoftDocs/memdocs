@@ -12,6 +12,34 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Update to the latest Intune App SDK and Intune App Wrapping Tool  for iOS and register your app with Microsoft Entra
+
+To support the upcoming release of iOS/iPadOS 26 and ensure continued app protection policy (APP, also known as MAM) enforcement, update to the latest versions of the Intune App SDK and the Intune App Wrapping Tool to ensure applications stay secure and run smoothly. **Important:** If you don't update to the latest versions, some app protection policies may not apply to your app in certain scenarios.
+
+> [!NOTE]
+> Updating to SDK v21.0.0 or later requires your app to be registered with Microsoft Entra. Review the following GitHub announcements for more details on the specific impact:
+> - SDK for iOS: [App Registration Requirement Will be Enforced in Version 21.0.0+ | microsoftconnect/ms-intune-app-sdk-ios - Discussion #569](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/discussions/569)
+> - Wrapper for iOS: [-ac and -ar parameters will become required in version 21.0.0 | microsoftconnect/intune-app-wrapping-tool-ios - Discussion #136](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/discussions/136)
+> If you have questions or concerns, file an issue in the GitHub repository or reply directly to the GitHub announcement. 
+
+As a best practice, always update your iOS/iPadOS apps to the latest App SDK or App Wrapping Tool to ensure that your app continues to run smoothly.
+
+#### How does this change affect you or your users?
+
+If you have applications using the Intune App SDK or Intune App Wrapping Tool, update to the latest version to support iOS/iPadOS 26. Updating to v21.0.0 or later requires that apps must be registered with Microsoft Entra. While it was previously possible for apps to enable Intune MAM without full Microsoft Entra configuration, this won't be supported starting with SDK 21.0.0. Apps that aren't properly registered may fail to function or receive app protection policies. 
+
+#### How can you prepare?
+
+- For apps running on iOS 26, update to the new version of the Intune App SDK for iOS: [Releases - microsoftconnect/ms-intune-app-sdk-ios](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases)
+    - For apps built with XCode 16 use the latest v20.x release.
+    - For apps built with XCode 26 use v21.0.0 or later, which is expected to release in September 2025.
+- For apps running on iOS 26, update to the new version of the Intune App Wrapping Tool for iOS: [Releases - microsoftconnect/intune-app-wrapping-tool-ios](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases)
+    - For apps built with XCode 16 use the latest v20.x release.
+    - For apps built with XCode 26 use v21.0.0 or later which is expected to release in September 2025.
+- Ensure your apps are registered in Microsoft Entra. For more details refer to: [How to register an app in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app)
+
+Notify your users as applicable, to ensure they upgrade their apps to the latest version prior to upgrading to iOS 26. You can review the Intune App SDK version in use by your users in the Microsoft Intune admin center by navigating to **Apps** > **Monitor** > **App protection status**, then review “Platform version” and “iOS SDK version”.  
+
 ### Plan for Change: Intune is moving to support iOS/iPadOS 17 and later
 
 Later in calendar year 2025, we expect iOS 26 and iPadOS 26 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), requires [iOS 17/iPadOS 17 and higher](../fundamentals/supported-devices-browsers.md) shortly after the iOS/iPadOS 26 release.
@@ -184,49 +212,6 @@ For apps that have updated to the latest Intune App SDK or Intune App Wrapping T
 #### How can you prepare?
 
 Review your app protection policies and if needed, create a [Managed apps app configuration policy](../apps/app-configuration-policies-managed-app.md) to allow screen capture by configuring the above setting *(Apps > App configuration policies > Create > Managed apps > Step 3 ‘Settings’ under General configuration)*. For more information review, [iOS app protection policy settings – Data protection](../apps/app-protection-policy-settings-ios.md#data-protection) and [App configuration policies - Managed apps](../apps/app-configuration-policies-overview.md#managed-apps).
-
-### Take Action: Update to the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS
-
-To support the upcoming release of iOS/iPadOS 18.2, update to the latest versions of the Intune App SDK and the Intune App Wrapping Tool to ensure applications stay secure and run smoothly. **Important:** If you don't update to the latest versions, some app protection policies may not apply to your app in certain scenarios. Review the following GitHub announcements for more details on the specific impact:
-
-- SDK for iOS: [Update recommended prior to iOS 18.2 general availability - microsoftconnect/ms-intune-app-sdk-ios - Discussion #495](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/discussions/495) 
-- Wrapper for iOS: [Update recommended prior to iOS 18.2 general availability - microsoftconnect/intune-app-wrapping-tool-ios - Discussion #128](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/discussions/128)
-
-As a best practice, always update your iOS apps to the latest App SDK or App Wrapping Tool to ensure that your app continues to run smoothly.
-
-#### How does this change affect you or your users?
-
-If you have applications using the Intune App SDK or Intune App Wrapping Tool, you'll need to update to the latest version to support iOS 18.2.
-
-#### How can you prepare?
-
-For apps running on iOS 18.2, you must update to the new version of the Intune App SDK for iOS:
-- [For apps built with XCode 15 use v19.7.6 - Release 19.7.6 - microsoftconnect/ms-intune-app-sdk-ios - GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/19.7.6)
-- [For apps built with XCode 16 use v20.2.1 - Release 20.2.1 - microsoftconnect/ms-intune-app-sdk-ios - GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/20.2.1)
-
-For apps running on iOS 18.2, you must update to the new version of the Intune App Wrapping Tool for iOS:
-- [For apps built with XCode 15 use v19.7.6 - Release 19.7.6 - microsoftconnect/intune-app-wrapping-tool-ios - GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases/tag/19.7.6)
-- [For apps built with XCode 16 use v20.2.1 - Release 20.2.1 - microsoftconnect/intune-app-wrapping-tool-ios - GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases/tag/20.2.1)
-
-> [!IMPORTANT]
->
-> The listed SDK releases support blocking screen capture, Genmojis, and writing tools in response to new AI features in iOS 18.2. For apps that have updated to these SDK versions, screen capture block is applied if you have configured *Send Org data to other apps* to a value other than *All apps*. See [iOS/iPadOS app protection policy settings](../apps/app-protection-policy-settings-ios.md#data-protection) for more info. You can configure app configuration policy setting **com.microsoft.intune.mam.screencapturecontrol = Disabled** if you wish to allow screen capture for your iOS devices. See [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md#managed-apps) for more info. Intune will be providing more granular controls for blocking specific AI features in the future. Follow [What's new in Microsoft Intune](../fundamentals/whats-new.md) to stay up to date.
->
-> Notify your users as applicable, to ensure they upgrade their apps to the latest version prior to upgrading to iOS 18.2. You can review the Intune App SDK version in use by your users in the Microsoft Intune admin center by navigating to **Apps** > **Monitor** > **App protection status**, then review *Platform version* and *iOS SDK version*.
->
-> If you have questions, leave a comment on the applicable GitHub announcement. Additionally, if you haven't already, navigate to the applicable GitHub repository and subscribe to *Releases* and *Discussions* (Watch > Custom > select Releases, Discussions) to ensure you stay up-to-date with the latest SDK releases, updates, and other important announcements.
-
-### Plan for Change: Specific app configuration values will be automatically sent to specific apps
-
-Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, **IntuneMAMOID**, and **IntuneMAMDeviceID** app configuration values will be automatically sent to managed applications on Intune enrolled iOS devices for the following apps: Microsoft Excel, Microsoft Outlook, Microsoft PowerPoint, Microsoft Teams and Microsoft Word. Intune will continue to expand this list to include additional managed apps.
-
-#### How does this change affect you or your users?
-
-If these values aren't configured correctly for iOS devices, there's a possibility of either the policy not getting delivered to the app or the wrong policy is delivered. For more information, see [Support tip: Intune MAM users on iOS/iPadOS userless devices may be blocked in rare cases](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-intune-mam-users-on-iosipados-userless-devices-may-be-blocked-in-rar/4254335).
-
-#### How can you prepare?
-
-No additional action is needed.
 
 ### Plan for Change: Implement strong mapping for SCEP and PKCS certificates
 
