@@ -36,7 +36,7 @@ If you have applications using the Intune App SDK or Intune App Wrapping Tool, u
 - For apps running on iOS 26, update to the new version of the Intune App Wrapping Tool for iOS: [Releases - microsoftconnect/intune-app-wrapping-tool-ios](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases)
     - For apps built with XCode 16 use the latest v20.x release.
     - For apps built with XCode 26 use v21.0.0 or later which is expected to release in September 2025.
-- Ensure your apps are registered in Microsoft Entra. For more details refer to: [How to register an app in Microsoft Entra ID](../../entra/identity-platform/quickstart-register-app)
+- Ensure your apps are registered in Microsoft Entra. For more details refer to: [How to register an app in Microsoft Entra ID](../../entra/identity-platform/quickstart-register-app.md)
 
 Notify your users as applicable, to ensure they upgrade their apps to the latest version prior to upgrading to iOS 26. You can review the Intune App SDK version in use by your users in the Microsoft Intune admin center by navigating to **Apps** > **Monitor** > **App protection status**, then review “Platform version” and “iOS SDK version”.  
 
