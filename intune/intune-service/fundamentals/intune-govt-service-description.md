@@ -69,7 +69,7 @@ These government instances are also known as **IL4** and **IL5**, where **IL** r
 
 - Administrators can get help locking down their Intune tenants using the Secure Technical Implementation Guide (STIG).
 
-  To download this document from the `dod.cyber.mil` website, go to [https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Intune_Service_Desktop_V1R1_STIG.zip](https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Intune_Service_Desktop_V1R1_STIG.zip).
+  To get guidance from the `cyber.mil` website, go to the [STIGs Document Library](https://public.cyber.mil/stigs/downloads/?_dl_facet_stigs=mdm-emm) (opens the `public.cyber.mil` website).
 
 ## Feature differences in Intune GCC High and DoD
 
