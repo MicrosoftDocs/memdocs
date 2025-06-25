@@ -6,7 +6,7 @@ description: Use Microsoft Intune to manage and use devices running Android Ente
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune

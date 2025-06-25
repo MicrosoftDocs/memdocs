@@ -6,7 +6,7 @@ description: See all the settings to configure iOS and iPadOS devices for AirPri
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/17/2024
 ms.topic: reference
 ms.service: microsoft-intune

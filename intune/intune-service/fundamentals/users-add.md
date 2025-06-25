@@ -6,7 +6,7 @@ description:  Synchronize on-premises users with Microsoft Entra ID and grant ad
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune

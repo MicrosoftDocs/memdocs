@@ -6,7 +6,7 @@ description: Add or use eSIM to get internet and data access using different dat
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune

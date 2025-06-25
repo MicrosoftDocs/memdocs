@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/16/2025
 ms.topic: overview
 ms.service: microsoft-intune
@@ -252,7 +252,7 @@ This feature supports:
 - Windows 11 (single app kiosk only)
 - Windows 10
 
-Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## MX profile (Zebra)
 

@@ -6,7 +6,7 @@ description: Add and use Windows 10/11 to configure devices that are shared, or 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/28/2025
 ms.topic: reference
 ms.service: microsoft-intune

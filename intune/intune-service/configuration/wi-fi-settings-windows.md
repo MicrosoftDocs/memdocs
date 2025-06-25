@@ -6,7 +6,7 @@ description: Add or create Wi-Fi configuration profile using Wi-Fi settings for 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 05/15/2025
 ms.topic: reference
 ms.service: microsoft-intune

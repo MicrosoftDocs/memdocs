@@ -6,7 +6,7 @@ description: When using filters in Microsoft Intune, use Intune virtual groups t
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 12/11/2024
 ms.topic: article
 ms.service: microsoft-intune
