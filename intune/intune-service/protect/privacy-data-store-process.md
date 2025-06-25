@@ -8,7 +8,7 @@ keywords: data, privacy
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/23/2025
+ms.date: 06/25/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
