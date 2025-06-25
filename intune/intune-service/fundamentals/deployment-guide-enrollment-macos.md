@@ -6,7 +6,7 @@ description: Enroll macOS devices using device enrollment, automated device enro
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/09/2025
 ms.topic: article
 ms.service: microsoft-intune

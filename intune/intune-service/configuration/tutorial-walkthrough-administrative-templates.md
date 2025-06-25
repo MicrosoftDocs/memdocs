@@ -6,7 +6,7 @@ description: This tutorial or walkthrough uses Microsoft Intune to configure Off
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/27/2024
 ms.topic: tutorial
 ms.service: microsoft-intune

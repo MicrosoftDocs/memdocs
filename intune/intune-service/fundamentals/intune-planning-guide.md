@@ -6,7 +6,7 @@ description: Plan, design, implement, adopt, and move to Microsoft Intune. Get g
 keywords: mobile device management migration guide, migration guide, intune planning and configuration spreadsheet, intune deployment planning, design and implementation guide, intune deployment project plan
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 07/23/2024
 ms.topic: upgrade-and-migration-article
 ms.service: microsoft-intune

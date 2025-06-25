@@ -6,7 +6,7 @@ description: Use mobile application management without enrollment to deploy apps
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/22/2024
 ms.topic: article
 ms.service: microsoft-intune
