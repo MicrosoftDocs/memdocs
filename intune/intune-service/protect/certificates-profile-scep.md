@@ -102,7 +102,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
       - G={{GivenName}}   
       - SN={{SurName}} 
 
-     Variables are available to select in the SCEP profile under **Configuration settings** > **Subject name format**.  
+     You can enter variables in the SCEP profile under **Configuration settings** > **Subject name format**.  
     
       > [!div class="mx-imgBorder"]
         > ![Image of a SCEP certificate profile and its configuration settings, highlighting the subject name format setting.](./media/certificates-profile-scep/subject-name-2506.png)
