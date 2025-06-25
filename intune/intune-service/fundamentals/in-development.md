@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 05/30/2025
+ms.date: 06/27/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,7 +59,12 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-<!-- ## Microsoft Intune Suite -->
+## Microsoft Intune Suite
+
+###  Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334  -->
+
+We’re working on a dashboard for Endpoint Privilege Management (EPM) that will bring you insights to support having your users run as standard users in place of running with local admin permissions. First, the dashboard will report progress towards a Standard User Status to help you understand when your admin users might be ready to be moved to standard users. The dashboard will also help you understand the file elevation trends in your organization.
+
 
 <!-- ***********************************************-->
 
@@ -75,8 +80,35 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration  -->
+## Device configuration
 
+### New settings available in the Apple settings catalog <!-- 33064192 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+#### iOS/iPadOS
+
+**Cellular Private Network**:
+
+- Cellular Data Preferred
+- CSG Network Identifier
+- Data Set Name
+- Enable NR Standalone
+- Geofences
+- Network Identifier
+- Version Number
+
+#### macOS
+
+**Authentication > Extensible Single Sign On Kerberos**:
+
+- Allow Platform SSO Auth Fallback
+
+**Microsoft Edge**:
+
+- The Microsoft Edge category is updated with new settings. Learn more about available macOS Edge settings at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
 
 <!-- *********************************************** -->
 
@@ -85,6 +117,27 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device management
+
+### New Microsoft Graph permissions for API calls to device management endpoints<!-- 20952394 -->
+
+On July 31, 2025, calls to several Microsoft Graph APIs will require one of two newly added *DeviceManagement* permissions that replace existing permissions. With this change, the older permissions will no longer function and API calls from tools and scripts that use the older permissions will fail.
+
+The following are the Microsoft Graph API calls that are affected:
+
+- ~/deviceManagement/deviceShellScripts
+- ~/deviceManagement/deviceHealthScripts
+- ~/deviceManagement/deviceComplianceScripts
+- ~/deviceManagement/deviceCustomAttributeShellScripts 
+- ~/deviceManagement/deviceManagementScripts 
+
+The following are the new permissions that will soon be required, and the old permissions that will no longer function:
+- **DeviceManagementScripts.Read.All** - This new permission replaces use of*DeviceMangementConfiguration.Read.All*
+
+- **DeviceManagementScripts.ReadWrite.All** - This new permission replaces use of the*DeviceManagementConfiguration.ReadWrite.All*
+
+Until July 31, 2025, both the *DeviceManagementScripts* and the older *DeviceManagmentConfiguration* permissions will work. However, to ensure your tools and scripts continue to function, review and update them to use only the newer permissions before July 31, 2025.
+
+For more information, see [Graph APIs used to configure devices](../developer/graph-apis-used-by-intune-device-configuration-windows.md).
 
 ### Remote actions with multiple administrative approval<!-- 27043113  -->
 
@@ -107,6 +160,32 @@ For more information, see [device cleanup rules](../remote-actions/devices-wipe.
 
 ## Device security
 
+### macOS support for local administrator account configuration LAPS and password solution<!-- 25385731 -->
+
+We’re working on adding Intune support for macOS local administrator account configuration during ADE (automated device enrollment) enrollment, and macOS support for Microsoft Local Admin Password Solution (LAPS).
+
+With the local admin account configuration support:  
+- You’ll be able to use macOS automated device enrollment (ADE) profiles to configure the local and standard administrator accounts for a device. When configured, this capability applies to all new macOS device enrollments as well as device re-enrollments.
+- Intune automatically creates a randomized, unique, and secure password for the device’s admin account. That password is then automatically rotated every six months.
+- Previously enrolled devices won’t be affected unless or until they re-enroll with Intune if these settings are configured.
+- The following variables will be supported for the fullname and username account settings:  
+  - {{username}}
+  - {{serialNumber}}
+  - {{partialupn}}
+  - {{managedDeviceName}}
+
+With the LAPS support:  
+- For custom RBAC roles: Permissions to view and manage the admin password will require an admin be assigned new Intune role-based access control permissions for Enrollment program.
+- Admins with sufficient permissions will be able to view and manually rotate the password of devices that enrolled with the local admin account configuration through macOS ADE.
+
+Applies to:
+
+- macOS
+
+For more information about this support for macOS, see the following in the Apple developer documentation:
+- [Account Configuration | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/account_configuration)
+- [Set the Local Administrator Password | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/set_the_local_administrator_password)
+
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
@@ -127,6 +206,21 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 ## Monitor and troubleshoot
+
+### Declarative Apple software update operational report<!-- 25207078 -->
+You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
+
+- Pending OS update information such as OS and build version, and its status on the device
+- Current OS information for a device, including Rapid Security Responses
+- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM
+- Information about the latest public update made available by Apple
+ 
+This new report will be available through the *Devices* > Select a device > *Monitor* node of the admin center.
+ 
+Applies to:
+ 
+- iOS/iPadOS
+- macOS
 
 ### Declarative Apple software update reports<!-- 31557946 -->
 
