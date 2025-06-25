@@ -81,7 +81,8 @@ To ensure your SCEP profile meets strong mapping requirements, create a SCEP cer
 For more information about the KDC's requirements and enforcement date for strong mapping, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
 
 ## S/MIME certificate requirements for third party public CA       
-[!IMPORTANT] Beginning July 16, 2025, the Certification Authority Browser Forum (CA/Browser Forum) is enforcing new S/MIME baseline requirements for public certificate authorities (CAs). These requirements apply to all sponsor-validated S/MIME certificates that the public CAs issue. For more information about S/MIME certificate requirements, see [CA/Browser Forum](https://cabforum.org/working-groups/smime/).  
+> [!IMPORTANT]
+> Beginning July 16, 2025, the Certification Authority Browser Forum (CA/Browser Forum) is enforcing new S/MIME baseline requirements for public certificate authorities (CAs). These requirements apply to all sponsor-validated S/MIME certificates that the public CAs issue. For more information about S/MIME certificate requirements, see [CA/Browser Forum](https://cabforum.org/working-groups/smime/).  
 
 The certificate subject name (SN) in all S/MIME certificates must include the following information:  
 
@@ -97,11 +98,11 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
  To avoid service disruption, complete the following steps in the Microsoft Intune admin center:
 
   1. Review your Intune SCEP certificate profiles used for S/MIME scenarios.  
-  2. Update the subject name in the Microsoft Intune admin center to include these variables:  
+  2. Update the subject name format to include these variables:  
       - G={{GivenName}}   
       - SN={{SurName}} 
 
-     Variables are available to select in the SCEP profile within the **Subject name format** menu.  
+     Variables are available to select in the SCEP profile under **Configuration settings** > **Subject name format**.  
     
       > [!div class="mx-imgBorder"]
         > ![Image of a SCEP certificate profile and its configuration settings, highlighting the subject name format setting.](./media/certificates-profile-scep/subject-name-2506.png)
