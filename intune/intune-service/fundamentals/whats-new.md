@@ -89,6 +89,12 @@ Applies to:
 
 - Windows
 
+#### Microsoft Intune support for Apple AI screen capture control<!-- 12792722 -->
+
+Intune app protection policies now include a standalone setting to manage Apple AI screen capture. This setting is supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, screen capture is blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
+
+For more information, see [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037).
+
 #### Managed Home Screen orientation changes with Android 16<!-- 30316862 -->
 
 Starting with Android 16, Android stops enforcing screen orientation on devices with 600dp and larger display settings. This change impacts the Managed Home Screen (MHS) on devices with larger form factors, like tablets.
@@ -194,12 +200,6 @@ For more information about the report, see [Windows hardware attestation report]
 ## Week of June 9, 2025
 
 ### App management
-
-#### Microsoft Intune support for Apple AI screen capture control<!-- 12792722 -->
-
-Intune app protection policies now include a standalone setting to manage Apple AI screen capture. This setting is supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, screen capture is blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
-
-For more information, see [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037).
 
 #### ARM64 support for Win32 apps<!-- 28475401 -->
 
