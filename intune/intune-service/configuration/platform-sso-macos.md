@@ -6,7 +6,7 @@ description: Use Microsoft Intune to configure Platform SSO for macOS devices. P
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 01/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune

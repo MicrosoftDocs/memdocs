@@ -657,12 +657,12 @@
     },
     {
       "source_path": "intune/intune/configuration/device-restrictions-android-aosp.md",
-      "redirect_url": "/intune/intune-service/configuration/device-restrictions-android-aosp",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-android-for-work",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/device-restrictions-android-enterprise-personal.md",
-      "redirect_url": "/intune/intune-service/configuration/device-restrictions-android-enterprise-personal",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-android-for-work",
       "redirect_document_id": false
     },
     {
@@ -957,7 +957,7 @@
     },
     {
       "source_path": "intune/intune/configuration/wi-fi-settings-android-aosp.md",
-      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-android-aosp",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-android-enterprise",
       "redirect_document_id": false
     },
     {

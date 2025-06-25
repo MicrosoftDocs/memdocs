@@ -6,7 +6,7 @@ description: Use Microsoft Intune to manage and use Zebra devices running Androi
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -123,7 +123,7 @@ When you create the profile in StageNow, on the last step, select **Export to MD
   Or, you can use built-in features in Intune to get these changes, including:
 
   - App management features to [add](../apps/apps-add.md), [deploy](../apps/apps-deploy.md), update, and [monitor](../apps/apps-monitor.md) apps.
-  - Manage [system and app updates](device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) on devices running Android Enterprise
+  - Manage [system and app updates](device-restrictions-android-for-work.md) on devices running Android Enterprise
 
 After you test the file, the next step is to deploy the profile to devices using Intune.
 

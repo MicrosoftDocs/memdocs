@@ -6,7 +6,7 @@ description: This article describes Microsoft Intune features that are in develo
 keywords:
 author: dougeby
 ms.author: dougeby
-manager: dougeby
+manager: laurawi
 ms.date: 05/30/2025
 ms.topic: article
 ms.service: microsoft-intune
