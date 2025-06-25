@@ -163,7 +163,7 @@ The CSP-based policy from Intune overrides all other sources of LAPS policy, suc
 Starting with Windows 11 24H2, you can configure Windows LAPS using the new [automatic account management mode(/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode)] to manage the built-in local Administrator account or create a new, custom account that it then manages. On down-level Windows versions, Windows LAPS can only manage accounts that already exist on the device. 
 
 > [!NOTE]
-> When using manual account management mode or Windows LAPS on devices running Windows 11, version 23H2 or earlier, specifying an account name that does not exist on the device has no effect and does not generate an error.
+> When using manual account management mode or Windows LAPS on devices running Windows 11 version 23H2 or earlier, specifying an account name that does not exist on the device has no effect and does not generate an error.
 
 ### Does Windows LAPS rotate and backup the password for a device that is disabled in Microsoft Entra?
 
