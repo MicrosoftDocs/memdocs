@@ -39,7 +39,7 @@ ms.collection:
 
 Microsoft Intune isn’t deployed to all Microsoft data centers globally. We make decisions on where to deploy Intune services based on the number of customers, regional affiliations, and to help customers comply with laws, regulations or industry standards that explicitly govern the location of data storage. 
 
-Microsoft offers and operates Intune services on in three major geographic regions:
+Microsoft offers and operates Intune services in three major geographic regions:
 
 - **North America** - Includes data centers in the United States
 - **Europe** - Includes data centers located solely in the [European Data boundary](/privacy/eudb/eu-data-boundary-learn): European Union (EU) and the European Free Trade Association (EFTA)
