@@ -7,7 +7,7 @@ description: Configure multi-admin approval to protect your tenant against the u
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ description: Learn more about policy assignment filters, and see the steps to cr
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 03/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune

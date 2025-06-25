@@ -73,7 +73,7 @@ App developers can use [delegated scopes](https://developer.android.com/work/ver
 - Allow app to access Android security logs
 - Allow app to access Android network activity logs
 
-Once these capabilities have been integrated into a Managed Google Play app using Google's API, you can configure these settings in Intune using device configuration profiles. For more information, see [Android Enterprise device settings - Applications](../configuration/device-restrictions-android-for-work.md#applications).
+Once these capabilities have been integrated into a Managed Google Play app using Google's API, you can configure these settings in Intune using device configuration profiles. For more information, see [Android Enterprise device settings -> Corporate-owned > Applications](../configuration/device-restrictions-android-for-work.md).
 
 For app implementation details, see [Android developer documentation - Delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes).
 

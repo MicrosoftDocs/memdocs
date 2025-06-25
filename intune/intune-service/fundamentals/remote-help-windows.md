@@ -7,7 +7,7 @@ description: Use the Remote Help app to provide remote assistance to authenticat
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 04/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune

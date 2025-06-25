@@ -6,7 +6,7 @@ description: See a list of all the settings, and what they do when upgrading a W
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/15/2024
 ms.topic: reference
 ms.service: microsoft-intune
