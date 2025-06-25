@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/08/2025
+ms.date: 06/24/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -109,7 +109,7 @@ In this step, use the information to learn the differences with the authenticati
 |**Supported on macOS 14.x +**|✅|✅|✅|
 |**Optionally, allow new users to log in with Entra ID credentials (macOS 14.x +)**|✅|✅|✅|
 
-### Secure Enclave
+### Option 1 - Secure Enclave (recommended)
 
 When you configure Platform SSO with the **Secure Enclave** authentication method, the SSO plug-in uses hardware-bound cryptographic keys. It doesn't use the Microsoft Entra credentials to authenticate the user to apps and websites.
 
@@ -127,7 +127,26 @@ Secure Enclave:
 - Its setup can be bootstrapped with an authentication app for MFA authentication or Microsoft [Temporary Access Pass (TAP)](/entra/identity/authentication/howto-authentication-temporary-access-pass).
 - Enables the creation and usage of Microsoft Entra ID passkeys.
 
-### Password
+### Option 2 - Smart Card
+
+When you configure Platform SSO with the **Smart card** authentication method, users can use the smart card certificate and the associated PIN to sign in to the device and authenticate to apps and websites.
+
+This option:
+
+- Is considered password-less.
+- Leaves the local account username and password as-is. These values aren't changed.​
+
+For more information, go to [Microsoft Entra certificate-based authentication on iOS and macOS](/entra/identity/authentication/concept-certificate-based-authentication-mobile-ios).
+
+#### Configure keyvault recovery (optional)
+
+When using password sync authentication you can enable keyvault recovery to ensure that data can be recovered in the event that a user forgets their password. IT Admins should review Apple's documentation and evaluate whether using Institutional FileVault Recovery Keys is a good option for them.
+
+- [Manage FileVault with mobile device management](https://support.apple.com/en-ie/guide/deployment/dep0a2cb7686/web)
+
+- [FileVault MDM payload settings for Apple devices](https://support.apple.com/en-ie/guide/deployment/dep32bf53500/1/web/1.0)
+
+### Option 3 - Password
 
 When you configure Platform SSO with the **Password** authentication method, users sign in to the device with their Microsoft Entra ID user account instead of their local account password.
 
@@ -151,33 +170,9 @@ With the **Password** authentication method:
 >
 > Make sure your Intune password policy and/or compliance policy matches your Microsoft Entra password policy. If the policies don't match, then the password might not sync and end users are denied access.
 
-### Smart Card
-
-When you configure Platform SSO with the **Smart card** authentication method, users can use the smart card certificate and the associated PIN to sign in to the device and authenticate to apps and websites.
-
-This option:
-
-- Is considered password-less.
-- Leaves the local account username and password as-is. These values aren't changed.​
-
-For more information, go to [Microsoft Entra certificate-based authentication on iOS and macOS](/entra/identity/authentication/concept-certificate-based-authentication-mobile-ios).
-
-#### Configure keyvault recovery (optional)
-
-When using password sync authentication you can enable keyvault recovery to ensure that data can be recovered in the event that a user forgets their password. IT Admins should review Apple's documentation and evaluate whether using Institutional FileVault Recovery Keys is a good option for them.
-
-- [Manage FileVault with mobile device management](https://support.apple.com/en-ie/guide/deployment/dep0a2cb7686/web)
-
-- [FileVault MDM payload settings for Apple devices](https://support.apple.com/en-ie/guide/deployment/dep32bf53500/1/web/1.0)
-- 
 ## Step 2 - Create the Platform SSO policy in Intune
 
-To configure the Platform SSO policy, use the following steps to create an [Intune settings catalog](settings-catalog.md) policy. The Microsoft Enterprise SSO plug-in requires the settings listed.
-
-- To learn more about the plug-in, go to [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin).
-- For details about the payload settings for the Extensible Single Sign-on extension, go to [Extensible Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/depfd9cdf845/web) (opens Apple's web site).
-
-**Create the policy**:
+To configure the Platform SSO policy, use the steps in this section to create an [Intune settings catalog](settings-catalog.md) policy. The Microsoft Enterprise SSO plug-in requires the settings listed.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
@@ -199,10 +194,10 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
     In the list, select the following settings:
 
-    - **Authentication Method (Deprecated)** (macOS 13 only)
+    - **Authentication Method (Deprecated)** (Select for macOS 13 only)
     - **Extension Identifier**
     - Expand **Platform SSO**:
-      - Select **Authentication Method** (macOS 14+)
+      - Select **Authentication Method** (Select for macOS 14+)
       - Select **Token To User Mapping**
       - Select **Use Shared Device Keys**
     - **Registration Token**
@@ -242,10 +237,9 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 
     :::image type="content" source="./media/platform-sso-macos/intune-psso-device-profile.png" alt-text="Screenshot that shows the recommended Platform SSO settings in an Intune MDM profile.":::
 
-
-9. To configure biometric policy when using the `UserSecureEnclaveKey` authentication method, please review the [documentation on UserSecureEnclaveKeyBiometricPolicy](/entra/identity/devices/macos-psso#microsoft-platform-sso-usersecureenclavekeybiometricpolicy) carefully and apply the necessary settings if required.
-
+??
 10. To customize Kerberos TGT mapping behavior, refer to the `custom_tgt_setting` section in this [documentation](/entra/identity/devices/device-join-macos-platform-single-sign-on-kerberos-configuration).
+??
 
 11. Select **Next**.
 12. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -267,6 +261,11 @@ To configure the Platform SSO policy, use the following steps to create an [Intu
 14. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 The next time the device checks for configuration updates, the settings you configured are applied.
+
+### Learn more
+
+- To learn more about the plug-in, go to [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin).
+- For details about the payload settings for the Extensible Single Sign-on extension, go to [Extensible Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/depfd9cdf845/web) (opens Apple's web site).
 
 ## Step 3 - Deploy the Company Portal app for macOS
 
@@ -328,11 +327,39 @@ After you confirm that your settings catalog policy is working, unassign any exi
 
 If you keep both policies, conflicts can occur.
 
-## Non-Microsoft apps and Microsoft Enterprise SSO Extension settings
+## More common scenarios you can configure
+
+### Touch ID biometric policy with Secure Enclave authentication
+
+On devices that support Touch ID biometric authentication, you can use the Secure Enclave authentication option. This policy requires users to authenticate with Touch ID whenever the User Secure Enclave Key needs to be accessed.
+
+To learn more about this option, see [UserSecureEnclaveKeyBiometricPolicy](/entra/identity/devices/macos-psso#microsoft-platform-sso-usersecureenclavekeybiometricpolicy).
+
+Add the **Extension Data** setting to your existing Platform SSO settings catalog policy. The **Extension Data** setting is a similar concept to an open text field; you can configure any values you need.
+
+1. In your existing Platform SSO settings catalog policy, add **Extension Data**:
+
+    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Manage devices** > **Configuration**), select your existing Platform SSO settings catalog policy.
+    2. In **Properties** > **Configuration settings**, select **Edit** > **Add settings**.
+    3. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
+
+        :::image type="content" source="./media/platform-sso-macos/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune.":::
+
+    4. In the list, select **Extension Data** and close the settings picker:
+
+        :::image type="content" source="./media/platform-sso-macos/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and Extension Data in Microsoft Intune.":::
+
+2. In **Extension Data**, **Add** the following keys and values:
+
+    | Key | Type  | Value | Description |
+    | --- | --- | --- | --- |
+    | **enable_se_key_biometric_policy**  | Boolean | True | Copy and paste this value. |
+
+3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](device-profile-troubleshoot.md#policy-refresh-intervals).
+
+### Non-Microsoft apps and Microsoft Enterprise SSO Extension settings
 
 If you previously used the Microsoft Enterprise SSO Extension, and/or want to enable SSO on non-Microsoft apps, then add the **Extension Data** setting to your existing Platform SSO settings catalog policy.
-
-The **Extension Data** setting is a similar concept to an open text field; you can configure any values you need.
 
 In this section, we use the **Extension Data** setting to:
 
@@ -371,7 +398,7 @@ The following settings are commonly recommended for configuring SSO settings, in
 
 3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](device-profile-troubleshoot.md#policy-refresh-intervals).
 
-## End user experience settings
+### End user experience settings
 
 When you create the settings catalog profile in [Step 2 - Create the Platform SSO policy in Intune](#step-2---create-the-platform-sso-policy-in-intune), there are more optional settings that you can configure.
 
