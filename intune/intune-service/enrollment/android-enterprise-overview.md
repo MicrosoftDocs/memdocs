@@ -7,7 +7,7 @@ description: Learn more about Android Enterprise work profile management, a devi
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 04/05/2024
 ms.topic: overview
 ms.service: microsoft-intune
@@ -20,7 +20,7 @@ ms.assetid: 2cc3c960-1fdd-47ca-a693-420d47b403de
 #ROBOTS:
 #audience:
 
-ms.reviewer: chmaguir
+ms.reviewer: grwilson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

@@ -7,7 +7,7 @@ description: Overview and setup of the enrollment time grouping feature in Micro
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 04/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune

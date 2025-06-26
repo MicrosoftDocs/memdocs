@@ -6,7 +6,7 @@ description: When using filters, get more information on the device properties, 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 03/06/2025
 ms.topic: reference
 ms.service: microsoft-intune

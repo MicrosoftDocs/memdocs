@@ -6,7 +6,7 @@ description: Use the Remote Help web app to provide remote assistance to authent
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 04/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune

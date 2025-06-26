@@ -130,13 +130,13 @@ For more information on all prerequisites including permissions, see [Prerequisi
 
 ### Visual C++ Redistributable for the site server
 
-- Starting in version 2107, Configuration Manager installs the Microsoft Visual C++ 2015-2019 redistributable package (14.28.29914.0) on each computer that installs a site server. In version 2103 and earlier, it installs the Visual C++ 2013 version (12.0.40660.0).<!--5170229-->
+- Starting in version 2503, Configuration Manager installs the Microsoft Visual C++ 2015-2022 redistributable package (14.40.33816.0) on each computer that installs a site server. In version 2107 and before, it installs the Visual C++ 2015-2019 version (14.28.29914.0).
 
 - The CAS and primary sites require both the x86 and x64 versions of the applicable redistributable file.
 
 ### SQL ODBC driver for the site server
 
-Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date. From **version 2503** onwards, The ODBC driver version has to be updated to version **18.4.1.1** and above or it will block the upgrade.
 
 For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 

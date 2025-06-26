@@ -6,7 +6,7 @@ description: Configure your Windows 10/11 and Windows Holographic for Business d
 keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11, Windows Holographic for Business, Windows HoloLens, Windows kiosk
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune

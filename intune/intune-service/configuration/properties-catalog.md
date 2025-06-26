@@ -6,7 +6,7 @@ description: Configure Properties catalog policy to manage Device Inventory sett
 keywords:
 author: smbhardwaj
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 11/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -148,6 +148,7 @@ Inventory supports the following entities. To learn more about what properties a
 - Memory Info
 - Network Adapter
 - Os Version
+- Sim Info
 - System Enclosure
 - Time
 - Tpm

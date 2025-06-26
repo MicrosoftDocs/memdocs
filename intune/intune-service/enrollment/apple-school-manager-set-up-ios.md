@@ -7,7 +7,7 @@ description: Learn how to set up Microsoft Intune with Apple School Manager for 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/06/2025
 ms.topic: how-to
 ms.service: microsoft-intune

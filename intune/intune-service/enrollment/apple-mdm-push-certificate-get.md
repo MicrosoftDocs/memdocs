@@ -7,7 +7,7 @@ description: Get an Apple MDM Push certificate to manage iOS/iPadOS devices with
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
