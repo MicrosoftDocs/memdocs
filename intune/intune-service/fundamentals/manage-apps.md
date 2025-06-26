@@ -7,7 +7,7 @@ description: Get an overview of the concepts and features you should know when m
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/19/2025
 ms.topic: article
 ms.service: microsoft-intune

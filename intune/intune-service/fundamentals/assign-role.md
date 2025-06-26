@@ -6,7 +6,7 @@ description: Learn how to assign a built-in or custom role to a user in Microsof
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 05/20/2025
 ms.topic: article
 ms.service: microsoft-intune

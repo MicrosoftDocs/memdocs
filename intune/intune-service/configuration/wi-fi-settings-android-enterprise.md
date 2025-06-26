@@ -6,7 +6,7 @@ description: Create or add a WiFi device configuration profile for Android Enter
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/17/2025
 ms.topic: reference
 ms.service: microsoft-intune

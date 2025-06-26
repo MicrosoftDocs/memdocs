@@ -6,7 +6,7 @@ description: See a list of all the Android device administrator settings you can
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/09/2025
 ms.topic: reference
 ms.service: microsoft-intune
@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 # optional metadata
 
-#ROBOTS:
+#ROBOTS: NOINDEX
 #audience:
 
 ms.reviewer: anuragjain

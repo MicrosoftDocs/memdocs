@@ -8,7 +8,7 @@ ms.subservice: fundamentals
 ms.topic: reference
 author: smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.localizationpriority: high
 ---
 

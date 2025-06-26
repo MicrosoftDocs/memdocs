@@ -7,7 +7,7 @@ description: Guidelines for using Azure Virtual Desktop multi-session with Micro
 keywords:
 author: smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 02/13/2025
 ms.topic: article
 ms.service: microsoft-intune
@@ -221,7 +221,7 @@ The following Windows 10 or Windows 11 desktop device remote actions aren't supp
 Deleting VMs from Azure will leave orphaned device records in the Microsoft Intune admin center. AVD machines are deleted automatically after 30 days and removed permanently after 60 days.
 For more information, see:
 - [Using Intune device cleanup rules](https://techcommunity.microsoft.com/t5/device-management-in-microsoft/using-intune-device-cleanup-rules-updated-version/ba-p/3760854).
-- [Automatically remove devices with cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules)
+- [Automatically remove devices with cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules)
 
 ## Security baselines
 

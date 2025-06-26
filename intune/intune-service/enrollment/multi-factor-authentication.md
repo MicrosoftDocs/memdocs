@@ -7,7 +7,7 @@ description: How to require multifactor authentication in Microsoft Entra ID for
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 12/11/2024
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ description: Use a custom profile to create a Wi-Fi profile with a preshared key
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 05/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune

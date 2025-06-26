@@ -6,7 +6,7 @@ description: Learn more about the frequency of the Microsoft Intune service upda
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/10/2025
 ms.topic: overview
 ms.service: microsoft-intune

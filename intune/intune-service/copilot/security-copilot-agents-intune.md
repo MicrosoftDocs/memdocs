@@ -12,7 +12,7 @@ ms.localizationpriority: high
 ms.reviewer: idaewor
 ms.collection:
 - security-copilot
-- magic-ai-copilot
+- msec-ai-copilot
 - tier1
 - essentials
 - get-started
@@ -69,8 +69,8 @@ When assigning RBAC roles and permissions to admins to manage and use the agent,
 
 | Action | Microsoft Intune | Microsoft Defender | Security Copilot |
 |--------|------------------|--------------------|------------------|
-| **Set Up and Removal**        | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control). | The admin must be a [Copilot owner](/copilot/security/authentication). |
-| **Work with Installed Agent** | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control). | The admin must be a [Copilot contributor](/copilot/security/authentication). |
+| **Set Up and Removal**        | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Microsoft Entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role. | The admin must be a [Copilot owner](/copilot/security/authentication). |
+| **Work with Installed Agent** | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Microsoft Entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role. | The admin must be a [Copilot contributor](/copilot/security/authentication). |
 
 > [!IMPORTANT]  
 > The Vulnerability Remediation Agent runs under the identity of the admin who set up the agent. During public preview, the identity can't be edited. To change this identity, the agent must be removed and set up again.
@@ -88,7 +88,7 @@ To set up or remove the agent from the Intune admin center your account must be 
   
    The least privileged Intune built-in role that provides these permissions is [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator), or equivalent permissions.
 
-- **Microsoft Defender**: The user must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control).
+- **Microsoft Defender**: The user must have permissions equal to the Microsoft Entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role, which provides the required access to Microsoft Defender.
 
 - **Security Copilot**: The user must be a [Copilot owner](/copilot/security/authentication).
 
@@ -101,7 +101,7 @@ To work with the agent in the Intune admin center after the agent is installed, 
     
   The least privileged Intune built-in role that provides these permissions is [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator), or equivalent permissions.
 
-- **Microsoft Defender**: The user must have permissions equal to the Endpoint Defender role [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control).
+- **Microsoft Defender**: The user must have permissions equal to the Microsoft entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role, which provides the required access to Microsoft Defender.
 
 - **Security Copilot**: The user must be a [Copilot contributor](/copilot/security/authentication).
 -->
