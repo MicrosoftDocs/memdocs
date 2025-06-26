@@ -6,7 +6,7 @@ description: See all the settings to create VPN connections on Android device ad
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/09/2025
 ms.topic: reference
 ms.service: microsoft-intune

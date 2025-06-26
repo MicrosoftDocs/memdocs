@@ -50,7 +50,7 @@ When **Remote lock** is applied to a device that doesn’t have a PIN or passwor
 
 **Remote lock** isn't supported for:
 
-- Windows 10 desktop
+- Windows
 
 > [!NOTE]
 > For macOS devices, you set a 6-digit recovery PIN. When the device is locked, the **Device overview** displays the PIN until another device action is sent. Please make sure to write down the pin since it will only be available for 30 days after the remote lock command is sent. After the 30 days, Intune will no longer have the PIN. Also, you will see a failed status in reporting if you initiate this command again for the same device while the original pin has not been used to successfully unlock the device. You should only send this command once, write down the pin, and until you use it to get into the macOS device successfully, do not try to send this command to the same device again.

@@ -7,7 +7,7 @@ description: Review China endpoints for Intune.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 06/09/2025
 ms.topic: reference
 ms.service: microsoft-intune

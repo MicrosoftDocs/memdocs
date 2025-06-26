@@ -6,7 +6,7 @@ description: Use our platform deployment guide to set up Linux device management
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/04/2024  
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune

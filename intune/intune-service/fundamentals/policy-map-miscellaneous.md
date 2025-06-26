@@ -6,7 +6,7 @@ description: A detailed miscellaneous policy map between Basic Mobility and Secu
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 11/02/2023
 ms.topic: reference
 ms.service: microsoft-intune

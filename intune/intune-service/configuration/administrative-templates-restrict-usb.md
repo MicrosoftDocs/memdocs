@@ -6,7 +6,7 @@ description: Use ADMX administrative templates in Microsoft Intune to restrict U
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 07/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune

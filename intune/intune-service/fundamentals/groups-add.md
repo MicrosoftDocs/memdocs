@@ -7,7 +7,7 @@ description: Add or create groups to organize users and devices by geography, de
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 01/14/2025
 ms.topic: how-to
 #customer intent: As an IT admin, I want to add groups, so that users and devices are organized.

@@ -4,9 +4,9 @@
 title: eSIM configuration of a download server
 description: Learn about configuration of an eSIM Download Server from Microsoft Intune.  
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 ms.date: 06/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
