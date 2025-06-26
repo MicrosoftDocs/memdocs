@@ -6,7 +6,7 @@ description: Learn how to use Microsoft Intune to create an email device profile
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 08/14/2024
 ms.topic: how-to
 ms.service: microsoft-intune

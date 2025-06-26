@@ -7,7 +7,7 @@ description: The Intune tenant status page displays details about your tenant an
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 02/24/2025
 ms.topic: concept-article
 ms.service: microsoft-intune

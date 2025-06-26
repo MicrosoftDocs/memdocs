@@ -6,7 +6,7 @@ description: Common questions, answers, and scenarios with device policies and p
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/28/2025
 ms.topic: troubleshooting
 ms.service: microsoft-intune
@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Common questions, answers, and scenarios with policies and profiles in Microsoft Intune

@@ -6,7 +6,7 @@ description: A detailed list of the policy map between Basic Mobility and Securi
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 08/14/2024
 ms.topic: article
 ms.service: microsoft-intune

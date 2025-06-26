@@ -7,7 +7,7 @@ description: Learn about how to set the mobile device management authority in Mi
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 09/24/2024
 ms.topic: how-to
 ms.service: microsoft-intune

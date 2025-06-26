@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create device profiles in Microsoft Intune
-description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, and add a scope tag.
+description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, and add a scope tag. Learn more about applicability rules, and the policy refresh cycle times.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 04/15/2025
+manager: laurawi
+ms.date: 06/24/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
 #ROBOTS:
 #audience:
 
-ms.reviewer: heenamac
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,18 +28,14 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Create a device profile in Microsoft Intune
 
 Device profiles allow you to add and configure settings, and then push these settings to devices in your organization. You have some options when creating policies:
 
-- **Administrative templates**: On Windows 10/11 devices, these templates are ADMX settings that you configure. If you're familiar with ADMX policies or group policy objects (GPO), then using administrative templates is a natural step to Microsoft Intune.
-
-  For more information, go to [Administrative Templates](administrative-templates-windows.md)
-
-- **Baselines**: On Windows 10/11 devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
+- **Baselines**: On Windows devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
 
   For more information, go to [Security baselines](../protect/security-baselines.md).
 
@@ -47,7 +43,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
   For more information, go to [Settings catalog](settings-catalog.md).
 
-- **Templates**: On Android, iOS/iPadOS, macOS, and Windows devices, the templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
+- **Templates**: On your Apple, Android, and Windows devices, the templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
   For more information, including the available templates, go to [Apply features and settings on your devices using device profiles](device-profiles.md).
 
@@ -67,7 +63,9 @@ This feature applies to:
 
 ## Create the profile
 
-Profiles are created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In this admin center, select **Devices**. You have the following options:
+Profiles are created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). At a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+
+In this admin center, select **Devices**. You have the following options:
 
 :::image type="content" source="./media/device-profile-create/devices-overview.png" alt-text="Screenshot that shows how to select Devices to see what you can configure and manage in Microsoft Intune.":::
 
@@ -76,9 +74,10 @@ Profiles are created in the [Microsoft Intune admin center](https://go.microsoft
 - **By platform**: Create and view policies and profiles by your platform. This view can also show features specific to the platform. For example, select **Windows 10 and later**. You see Windows-specific features, such as **Windows Update Rings** and **PowerShell scripts**.
 - **Manage devices**: Create device profiles, upload custom [PowerShell scripts](../apps/powershell-scripts.md) to run on devices, and add data plans to devices using [eSIM](esim-device-configuration.md).
 
-When you create a profile (**Devices** > **Manage devices** > **Configuration** > **Create**), choose your platform:
+When you create a profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**), choose your platform:
 
 - **Android device administrator**
+- **Android (AOSP)**
 - **Android Enterprise**
 - **iOS/iPadOS**
 - **macOS**
@@ -87,7 +86,6 @@ When you create a profile (**Devices** > **Manage devices** > **Configuration** 
 
 Then, choose the profile. Depending on the platform you choose, the settings you can configure are different. The following articles describe the different profiles:
 
-- [Administrative templates (Windows)](administrative-templates-windows.md)
 - [BIOS configuration and other settings](bios-configuration.md)
 - [Custom](custom-settings-configure.md)
 - [Delivery Optimization (Windows)](delivery-optimization-windows.md)
@@ -119,13 +117,13 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [Windows health monitoring](windows-health-monitoring.md)
 - [Wired networks (macOS)](wired-network-settings-macos.md)
 
-For example, if you select **Android Enterprise** for the platform, your options look similar to the following profile:
-
-:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Screenshot that shows how to create an iOS/iPadOS device configuration policy and profile in Microsoft Intune.":::
-
-If you select **Windows 10 and later** for the platform, your options look similar to the following profile:
+For example, if you select **Windows 10 and later** for the platform, your options look similar to the following profile:
 
 :::image type="content" source="./media/device-profile-create/windows-create-device-profile.png" alt-text="Screenshot that shows how to create a Windows device configuration policy and profile in Microsoft Intune.":::
+
+If you select **Android Enterprise** for the platform and **Templates** for the profile type, your options look similar to the following profile:
+
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Screenshot that shows how to create an Android Enterprise device configuration policy and profile in Microsoft Intune.":::
 
 ## Scope tags
 
@@ -223,12 +221,13 @@ When creating profiles, consider the following recommendations:
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Screenshot that shows an Intune admin template that applies to user and devices in Microsoft Intune.":::
 
-- Use Microsoft Copilot in Intune to evaluate your policies, learn more about a policy setting and its impact on your users & security, and compare policies between two devices.
+- Use Microsoft Copilot in Intune to evaluate your policies, learn more about a policy setting & its effect on your users & security, and compare policies between two devices.
 
   For more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
 
 - Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from four (4) characters to six (6) characters, let your users know before your assign the policy.
 
-## Next steps
+## Related content
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](device-profile-assign.md).
+- [Monitor its status](device-profile-monitor.md).

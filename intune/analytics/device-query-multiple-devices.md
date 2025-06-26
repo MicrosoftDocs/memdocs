@@ -236,6 +236,7 @@ Device query supports the following entities. To learn more about what propertie
 - Memory Info
 - Network Adapter
 - Os Version
+- Sim Info
 - System Enclosure
 - Time
 - Tpm

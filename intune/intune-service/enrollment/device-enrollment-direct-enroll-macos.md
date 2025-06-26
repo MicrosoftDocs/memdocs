@@ -7,7 +7,7 @@ description: Deploy and enroll macOS devices in Microsoft Intune using direct en
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 04/03/2024
 ms.topic: how-to
 ms.service: microsoft-intune
