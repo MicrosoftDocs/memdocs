@@ -7,7 +7,7 @@ description: Learn about Shared iPad devices.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/23/2024
 ms.topic: overview
 ms.service: microsoft-intune
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

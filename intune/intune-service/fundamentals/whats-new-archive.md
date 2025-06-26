@@ -6,7 +6,7 @@ description: Review older announcements from the Intune what's new page
 keywords:
 author: dougeby
 ms.author: dougeby
-manager: dougeby
+manager: laurawi
 ms.date: 05/22/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
@@ -401,9 +401,7 @@ For more information about the device enrollment types supported by Apple, see [
 
 #### Intune now supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
 
-Later this year, we expect iOS 18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require iOS/iPadOS 16 and higher shortly after the iOS/iPadOS 18 release.
-
-For more information on this change, see [Plan for change: Intune is moving to support iOS/iPadOS 16 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-16-and-later).
+With the release of iOS 18 and iPadOS 18, Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will now require iOS/iPadOS 16 and higher.
 
 > [!NOTE]
 > Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
@@ -415,8 +413,6 @@ Applies to:
 #### Intune now supports macOS 13.x as the minimum version<!-- 28391869 -->
 
 With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Ventura) and later.
-
-For more information on this change, see [Plan for change: Intune is moving to support macOS 13 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year)
 
 > [!NOTE]
 > macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).

@@ -7,7 +7,7 @@ description: Use Remote Help to provide remote assistance to authenticated users
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ description: Find out what's new in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 06/13/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
@@ -94,7 +94,7 @@ Applies to:
 
 ## Device security
 
-#### Vulnerability Remediation Agent for Intune (public preview)<!-- 30277408 -->
+#### Vulnerability Remediation Agent for Intune (public preview)<!-- 33475311 -->
  
 The Vulnerability Remediation Agent is currently in a limited public preview and available to only a select group of customers. If you’re interested in gaining access or would like to learn more, please reach out to your sales team for further details and next steps.
 

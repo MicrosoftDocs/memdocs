@@ -6,7 +6,7 @@ description: Use settings catalog in Microsoft Intune to configure thousands of 
 keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune

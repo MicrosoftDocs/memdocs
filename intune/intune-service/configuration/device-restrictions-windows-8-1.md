@@ -7,7 +7,7 @@ description: Learn the Intune settings you can use to control device settings an
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/16/2024
 ms.topic: reference
 ms.service: microsoft-intune
