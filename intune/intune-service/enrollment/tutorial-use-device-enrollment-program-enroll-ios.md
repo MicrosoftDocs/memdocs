@@ -7,7 +7,7 @@ description: In this tutorial, you'll set up Apple corporate device enrollment f
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 03/05/2025
 ms.topic: tutorial
 ms.service: microsoft-intune
@@ -21,7 +21,7 @@ Customer intent: As an Intune admin, I want to set up automated device enrollmen
 #ROBOTS:
 #audience:
 
-ms.reviewer: maholdaa 
+ms.reviewer: annovich 
 ms.custom: intune
 ms.collection:
 - tier1

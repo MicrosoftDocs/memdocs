@@ -6,7 +6,7 @@ description: Use the settings catalog in Microsoft Intune to create a Universal 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 05/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune

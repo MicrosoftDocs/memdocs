@@ -6,7 +6,7 @@ description: Configure device configuration policy to manage Delivery Optimizati
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 04/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune

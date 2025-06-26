@@ -6,8 +6,8 @@ description: Configure and deploy policies for devices you manage with endpoint 
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 08/19/2024
+manager: laurawi
+ms.date: 06/20/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -221,9 +221,6 @@ Intune supports the following two settings to exclude specific file and folder p
   When you set an applicable setting in an attack surface reduction rule profile to anything other than *Not configured*, Intune presents the option to use **ASR Only Per Rule Exclusions** for that individual setting. With this option, you can configure a file and folder exclusion that are isolated to individual settings, which is in contrast to use of the global setting **Attack Surface Reduction Only Exclusions** which applies its exclusions to all settings on the device.
 
   By default, **ASR Only Per Rule Exclusions** is set to **Not configured**.
-  
-  > [!IMPORTANT]
-  > ASR policies do not support merge functionality for *ASR Only Per Rule Exclusions* and a policy conflict can result when multiple policies that configure *ASR Only Per Rule Exclusions* for the same device conflict. To avoid conflicts, combine the configurations for *ASR Only Per Rule Exclusions* into a single ASR policy. We are investigating adding policy merge for *ASR Only Per Rule Exclusions* in a future update.
 
 ## Policy merge for settings
 

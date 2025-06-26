@@ -7,7 +7,7 @@ description: Microsoft Intune Suite unifies a series of mission-critical advance
 keywords:
 author: smritib17 
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune

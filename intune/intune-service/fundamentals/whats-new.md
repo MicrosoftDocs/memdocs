@@ -6,8 +6,8 @@ description: Find out what's new in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 06/02/2025
+manager: laurawi
+ms.date: 06/13/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,11 +75,26 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of June 9, 2025
+
+### App management
+
+#### ARM64 support for Win32 apps<!-- 28475401 -->
+
+When adding a Win32 app to Intune, you can select an option to check and install the app on Windows devices running ARM64 operating systems. This capability is available from the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > **Create**. The ARM64 option is available by selecting the **Operating system architecture** option under the **Requirements** step. To ensure that you don't have any impact to any Win32 applications that you previously targeted to 64-bit devices, your existing 64-bit Win32 applications will also have ARM64 selected. After the availability of being able to specifically target ARM64 operating system architectures, selecting x64 will not target ARM64 devices.
+
+For related information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+Applies to:
+
+- Windows devices
+
 ## Week of June 2, 2025
 
 ## Device security
 
-#### Vulnerability Remediation Agent for Intune (public preview)<!-- 30277408 -->
+#### Vulnerability Remediation Agent for Intune (public preview)<!-- 33475311 -->
  
 The Vulnerability Remediation Agent is currently in a limited public preview and available to only a select group of customers. If you’re interested in gaining access or would like to learn more, please reach out to your sales team for further details and next steps.
 

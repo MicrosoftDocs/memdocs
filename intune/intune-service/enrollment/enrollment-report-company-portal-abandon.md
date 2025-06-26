@@ -7,7 +7,7 @@ description: Access your organization's incomplete user enrollments report gener
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 02/27/2025
 ms.topic: article
 ms.service: microsoft-intune

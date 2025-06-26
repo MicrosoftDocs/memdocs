@@ -7,7 +7,7 @@ description: Create or add a wired network device configuration profile or polic
 keywords: 802.1x, wired network, macos, windows, microsoft intune, endpoint management
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune

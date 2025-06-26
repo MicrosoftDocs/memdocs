@@ -7,7 +7,7 @@ description: Restrict the number of devices allowed to enroll in Microsoft Intun
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ titleSuffix: Microsoft Intune
 description: Learn about the different levels of protection and configuration in Microsoft Intune, including minimum, enhanced, and high levels.
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 08/19/2024
 ms.topic: concept-article
 ms.service: microsoft-intune

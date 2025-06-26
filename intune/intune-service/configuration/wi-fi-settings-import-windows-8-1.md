@@ -6,7 +6,7 @@ description: Export Wi-Fi settings from a Windows device as an XML file using th
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 07/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune

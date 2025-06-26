@@ -6,7 +6,7 @@ description: Learn about the deprecation for the Intune PC software client.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 10/15/2020
 ms.topic: archived
 ms.service: microsoft-intune

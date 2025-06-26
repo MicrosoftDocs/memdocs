@@ -7,7 +7,7 @@ description: Learn how to enroll Android devices in Microsoft Intune with the Kn
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 12/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -20,7 +20,7 @@ ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 #ROBOTS:
 #audience:
 
-ms.reviewer: chmaguir
+ms.reviewer: abigailstein
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

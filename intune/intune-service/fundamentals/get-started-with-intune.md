@@ -6,7 +6,7 @@ description: See an overview of the steps to start using Intune. Plan your move 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/19/2025
 ms.topic: overview
 ms.service: microsoft-intune

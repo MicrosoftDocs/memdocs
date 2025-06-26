@@ -43,7 +43,7 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
 ## Customizing the user experience
 
-By customizing the end-user experience, you will help to provide a familiar and helpful experience for your end users. To do this, sign in as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant Administration** > **Customization** where you can either edit the default policy or create up to 25 user group targeted policies. Note that targeting policies to device groups is not supported. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
+By customizing the end-user experience, you will help to provide a familiar and helpful experience for your end users. To do this, sign in as an [Intune administrator](../fundamentals/role-based-access-control-reference.md) with sufficient permissions. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant Administration** > **Customization** where you can either edit the default policy or create up to 25 user group targeted policies. Note that targeting policies to device groups is not supported. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
 
 ## Branding
 
