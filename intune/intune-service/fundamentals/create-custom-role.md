@@ -6,7 +6,7 @@ description: Learn how to create a custom role in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 03/04/2025
 ms.topic: article
 ms.service: microsoft-intune

@@ -3,10 +3,17 @@ title: Add users to Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Learn how to add and managing Microsoft Entra user accounts from within Microsoft Intune.
 keywords:
+<<<<<<< HEAD
 author: brenduns
 ms.author: brenduns
 manager: laurawi
 ms.date: 06/16/2025
+=======
+author: Smritib17
+ms.author: smbhardwaj
+manager: laurawi
+ms.date: 03/04/2025
+>>>>>>> 3ef2b952e0a46927b8892457a0e10c9743b882f6
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals

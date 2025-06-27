@@ -6,7 +6,7 @@ description: Sometimes a Remote Help session starts in service but the client co
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 08/16/2023
 ms.topic: how-to
 ms.service: microsoft-intune

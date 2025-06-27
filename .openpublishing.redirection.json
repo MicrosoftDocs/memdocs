@@ -2,6 +2,21 @@
   "redirections": [
 
     {
+      "source_path": "intune/intune-service/configuration/device-restrictions-android-aosp.md",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-android-for-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/device-restrictions-android-enterprise-personal.md",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-android-for-work",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "intune/intune-service/configuration/wi-fi-settings-android-aosp.md",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-android-enterprise",
+      "redirect_document_id": false
+    },    
+    {
       "source_path": "intune/intune-service/protect/exchange-connector-install.md",
       "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
       "redirect_document_id": false
