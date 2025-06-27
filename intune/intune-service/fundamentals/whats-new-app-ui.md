@@ -7,7 +7,7 @@ description: Find out what has changed in UI for apps that work on end-user devi
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 02/20/2025 
 ms.topic: article
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ description: Add or create a virtual private network (VPN) configuration profile
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 11/19/2024
 ms.topic: reference
 ms.service: microsoft-intune

@@ -7,7 +7,7 @@ description: This article describes the general guidelines for using Windows 10 
 keywords:
 author: Smritib17  
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 02/13/2025
 ms.topic: article
 ms.service: microsoft-intune

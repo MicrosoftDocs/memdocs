@@ -7,7 +7,7 @@ description: Add a custom domain name for your Microsoft Intune subscription
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 05/21/2025
 ms.topic: article
 ms.service: microsoft-intune

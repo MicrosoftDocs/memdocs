@@ -6,7 +6,7 @@ description: Use this Windows 10/11 cloud configuration step-by-step setup guide
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 01/22/2024
 ms.topic: article
 ms.service: microsoft-intune
