@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 06/27/2024
+ms.date: 07/22/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -253,6 +253,7 @@ Intune supports the following OEMConfig apps:
 | Panasonic | com.panasonic.mobile.oemconfig | |
 | Pepperl+Fuchs SE | com.ecom.econfig.smart0x | |
 | Point Mobile | device.apps.emkitagent | |
+| RugGear | com.ruggear.rgoem | |
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/) |
 | Seuic | com.seuic.seuicoemconfig | | 
 | Social Mobile | com.rhinomobility.oemconfig | |
