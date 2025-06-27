@@ -8,7 +8,6 @@ author: brenduns
 ms.author: brenduns
 manager: laurawi
 ms.date: 06/27/2025
-
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
