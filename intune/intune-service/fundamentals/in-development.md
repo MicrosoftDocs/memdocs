@@ -4,10 +4,11 @@
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 keywords:
-author: dougeby
-ms.author: dougeby
-manager: dougeby
+author: brenduns
+ms.author: brenduns
+manager: laurawi
 ms.date: 06/27/2025
+
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals

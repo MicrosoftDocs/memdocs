@@ -6,7 +6,7 @@ description: Learn how RBAC lets you control who can perform actions and make ch
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 05/20/2025
 ms.topic: article
 ms.service: microsoft-intune

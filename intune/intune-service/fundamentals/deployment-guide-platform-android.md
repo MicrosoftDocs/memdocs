@@ -6,7 +6,7 @@ description: Learn the recommended processes to manage Android devices in Micros
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 04/15/2025
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune

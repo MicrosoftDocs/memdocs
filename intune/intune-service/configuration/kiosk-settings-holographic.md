@@ -6,7 +6,7 @@ description: Configure your  Windows Holographic for Business devices as single-
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/15/2024
 ms.topic: reference
 ms.service: microsoft-intune
@@ -119,4 +119,4 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [Windows](kiosk-settings-windows.md) devices.
+- Create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [Windows](kiosk-settings-windows.md) devices.
