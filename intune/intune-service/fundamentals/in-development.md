@@ -147,7 +147,7 @@ The following are the Microsoft Graph API calls that are affected:
 The following are the new permissions that will soon be required, and the old permissions that will no longer function:
 - **DeviceManagementScripts.Read.All** - This new permission replaces use of*DeviceMangementConfiguration.Read.All*
 
-- **DeviceManagementScripts.ReadWrite.All** - This new permission replaces use of the*DeviceManagementConfiguration.ReadWrite.All*
+- **DeviceManagementScripts.ReadWrite.All** - This new permission replaces use of the *DeviceManagementConfiguration.ReadWrite.All*
 
 Until July 31, 2025, both the *DeviceManagementScripts* and the older *DeviceManagementConfiguration* permissions will work. However, to ensure your tools and scripts continue to function, review and update them to use only the newer permissions before July 31, 2025.
 
@@ -223,7 +223,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ### Declarative Apple software update operational report<!-- 25207078 -->
 
-You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
+You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
 
 - Pending OS update information such as OS and build version, and its status on the device
 - Current OS information for a device, including Rapid Security Responses
@@ -239,7 +239,7 @@ Applies to:
 
 ### Declarative Apple software update reports<!-- 31557946 -->
 
-You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using new Apple software update reports:
+You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using new Apple software update reports:
 
  - *Apple software update failures report* - With this report you’ll be able to view details about update failures including why the update failed, how many times it has failed, and the timestamp of the last failure.
 - *Apple software updates report* - View details about pending and current software update information across your entire device fleet.
