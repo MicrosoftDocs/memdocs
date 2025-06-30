@@ -395,6 +395,8 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
 
      > [!NOTE]
      > When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it's crucial to configure the 'On Demand' rules to activate the 'Disconnect on Sleep' setting effectively. Failure to do so results in both the Tunnel VPN and Defender VPN being disconnected when the iOS device enters sleep mode, while the VPN is turned on.
+     >
+     > However, due to a conflict between how a Single Sign-On (SSO) applications obtain access tokens and how Tunnel VPN on-demand rules work, setting up an on-demand rule to connect to all domains when also using 'Deisconnect on Sleep' is not supported when using SSO.
      > 
      > In general, configuring On Demand rules for per-app VPNs is recommended, as it allows apps to initiate VPN connections as needed and ensures that the 'Disconnect on Sleep' setting functions as intended.
      
