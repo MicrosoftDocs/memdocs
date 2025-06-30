@@ -123,6 +123,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 - The Microsoft Edge category is updated with new settings. Learn more about available macOS Edge settings at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
 
+
 <!-- *********************************************** -->
 
 <!-- ## Device enrollment -->
@@ -221,6 +222,7 @@ When this change takes effect, devices that are assigned this policy while manag
 ## Monitor and troubleshoot
 
 ### Declarative Apple software update operational report<!-- 25207078 -->
+
 You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
 
 - Pending OS update information such as OS and build version, and its status on the device

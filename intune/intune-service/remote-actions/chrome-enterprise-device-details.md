@@ -74,7 +74,7 @@ Select **System info** to see a real-time snapshot of the information available 
 ### Delegated administration 
 You can create dynamic device groups based on a [Google Admin organizational unit](https://knowledge.workspace.google.com/kb/how-to-create-an-organizational-unit-000007002) as a way to delegate administrators to Intune-synced ChromeOS devices. This section describes how to create a dynamic device group so that you can control admin access to the ChromeOS device inventory and remote device actions in the Microsoft Intune admin center.   
 
-1. In the Microsoft Intune admin center, [create a group](../fundamentals/groups-add.md#add-a-new-group) with the following details:  
+1. In the Microsoft Intune admin center, [create a group](../fundamentals/groups-add.md#add-groups-to-intune) with the following details:  
    1. For **Membership type**, select **Dynamic Device**.
    2. Select **Add a dynamic query**.   
    3. For **Property**, select **enrollmentProfileName**. Select the **Operator**, depending on how you want the rule to work. For **Value**, enter the name of a Google Admin organizational unit.  
