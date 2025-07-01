@@ -7,7 +7,7 @@ keywords: security copilot, intune, microsoft intune, copilot, device informatio
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 11/08/2024
+ms.date: 07/01/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice:
@@ -29,7 +29,7 @@ ms.collection:
 - msec-ai-copilot
 ---
 
-# Use Microsoft Copilot in Intune to troubleshoot devices (public preview)
+# Use Microsoft Copilot in Intune to troubleshoot devices
 
 Microsoft Security Copilot is a generative-AI security analysis tool that can help your organization get information quickly. Copilot is [built into Microsoft Intune](copilot-intune-overview.md). It can help IT admins manage and troubleshoot devices.
 
@@ -44,8 +44,6 @@ With Copilot in Intune, you can:
 This article describes how to use Copilot to manage and troubleshoot device issues in Intune.
 
 ## Before you begin
-
-- Copilot in Intune is in [public preview](../fundamentals/public-preview.md).
 
 - To use Copilot in Intune, make sure Copilot is enabled. For more information, see:
 
