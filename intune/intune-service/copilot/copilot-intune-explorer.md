@@ -59,53 +59,51 @@ The best way to explore is to ask your specific questions in natural language. T
 
 There are also built-in examples that help you understand the kinds of questions you can ask. You can explore your data by asking about the relationships between devices, users, apps, policies, updates, and compliance. Your search is matched to available query views, with more queries continually being added.
 
-### Start exploring
+### 1 - Start exploring
 
-1. **Open Explorer**.
+In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Explorer**. When it opens, you see a prompt.
 
-    In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Explorer**. When it opens, you see a prompt.
+:::image type="content" source="./media/copilot-intune-explorer/admin-center-explorer.png" alt-text="Select the Copilot Explorer in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/admin-center-explorer.png":::
 
-    :::image type="content" source="./media/copilot-intune-explorer/admin-center-explorer.png" alt-text="Select the Copilot Explorer in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/admin-center-explorer.png":::
+### 2 - Type a request in natural language
 
-2. **Type a request in natural language**.
+In the prompt box, type your request in natural language. When you start typing, a drop-down list of prompts similar to your text is shown. These prompts are built into Intune and list the kinds of questions you can ask.
 
-    In the prompt box, type your request in natural language. When you start typing, a drop-down list of prompts similar to your text is shown. These prompts are built into Intune and list the kinds of questions you can ask. Select the prompt that best matches your request, or continue typing for more suggestions.
+Select the prompt that best matches your request, or continue typing for more suggestions. For example, start typing `what are the top 5 apps`. As you type, a list of suggestions is shown.
 
-    For example, start typing `what are the top 5 apps`. As you type, a list of suggestions is shown.
+:::image type="content" source="./media/copilot-intune-explorer/explorer-prompt-apps-example.png" alt-text="Sample prompt in Copilot Explorer that asks about the top five apps in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-prompt-apps-example.png":::
 
-    :::image type="content" source="./media/copilot-intune-explorer/explorer-prompt-apps-example.png" alt-text="Sample prompt in Copilot Explorer that asks about the top five apps in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-prompt-apps-example.png":::
+You can ask about devices, device updates, apps, app configuration, app protection, configuration policies, and compliance.
 
-    You can ask about devices, device updates, apps, app configuration, app protection, configuration policies, and compliance.
+### 3 - Use the built-in examples
 
-3. **Use the built-in examples**.
+There are also built-in examples that you can use. You can filter the examples by category to find an example that best matches your request.
 
-    There are also built-in examples that you can use and filter by category to find an example that best matches your request.
+:::image type="content" source="./media/copilot-intune-explorer/explorer-prompt-categories.png" alt-text="Select a Copilot Explorer example or filter the example list by the category in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-prompt-categories.png":::
 
-    :::image type="content" source="./media/copilot-intune-explorer/explorer-prompt-categories.png" alt-text="Select a Copilot Explorer example or filter the example list by the category in the Microsoft Intune admin center.":::
+The examples include parameter inputs that you enter. For example, if you select the **Compliance** category, there's a list of queries related to compliance. You can select one of the examples, like **Get *Platform* devices that are noncompliant..**. In the prompt, select a platform, like **Windows**. The prompt is updated to show the platform.
 
-    The examples include parameter inputs that you enter. For example, if you select the **Compliance** category, there's a list of queries related to compliance. You can select one of the examples, like **Get *platform* devices that are noncompliant..**. In the prompt, select a platform, like **Windows**. The prompt is updated to show the platform.
+:::image type="content" source="./media/copilot-intune-explorer/explorer-example-compliance-category-platform.png" alt-text="In Copilot Explorer, select the compliance example and select the Windows platform in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-example-compliance-category-platform.png":::
 
-    :::image type="content" source="./media/copilot-intune-explorer/explorer-example-compliance-category-platform.png" alt-text="In Copilot Explorer, select the compliance example and select the Windows platform in the Microsoft Intune admin center.":::
+### 4 - Get results
 
-4. **Get results**.
+The **Get results** button runs your query. Copilot summarizes and helps you understand the results, suggests other queries that could help, and recommends actions you can take based on the query results.
 
-    The **Get results** button runs your query. Copilot summarizes and helps you understand the results, suggests other queries that could help, and recommends actions you can take based on the query results.
+:::image type="content" source="./media/copilot-intune-explorer/explorer-copilot-summary.png" alt-text="In Copilot Explorer, the Copilot Summary summarizes the query results, and shows suggestions and actions in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-copilot-summary.png":::
 
-    :::image type="content" source="./media/copilot-intune-explorer/explorer-copilot-summary.png" alt-text="In Copilot Explorer, the Copilot Summary summarizes the query results, and shows suggestions and actions in the Microsoft Intune admin center.":::
+### 5 - Take action
 
-5. **Take action**.
+In the query results, you can export the results and select an item to get more information. If your query results are a list of users or devices, you can add them to a group, and target apps and policies to this group.
 
-    In the query results, you can export the results and select an item to get more information. If your query results are a list of users or devices, you can add them to a group, and target apps and policies to this group.
+:::image type="content" source="./media/copilot-intune-explorer/explorer-query-results.png" alt-text="In the Copilot Explorer, you can export the query results and add users or devices to groups in the Microsoft Intune admin center.":::
 
-    :::image type="content" source="./media/copilot-intune-explorer/explorer-query-results.png" alt-text="In the Copilot Explorer, you can export the query results and add users or devices to groups in the Microsoft Intune admin center.":::
+You can select an existing group or create a new group. When finished, a progress report is automatically created. If you want to keep the report, export it now, as the report isn't available again.
 
-    You can select an existing group or create a new group. When finished, a progress report is automatically created. If you want to keep the report, export it now, as the report isn't available again.
+In the following example, a query found noncompliant devices that are out of the grace period. These devices are added to a group. Some devices failed to be added to the group, and the **Status detail** shows the reason why. You can use the **Add filters** option to filter the results, like the devices that were successfully added to the group.
 
-    In the following example, a query found noncompliant devices that are out of the grace period. These devices are added to a group. Some devices failed to be added to the group, and the report shows the reason why. You can use the **Add filters** option to filter the results, like the devices that were successfully added to the group.
+:::image type="content" source="./media/copilot-intune-explorer/explorer-add-to-group-report.png" alt-text="In the Copilot Explorer, add the device query results to a group and view the report status in the Microsoft Intune admin center.":::
 
-    :::image type="content" source="./media/copilot-intune-explorer/explorer-add-to-group-report.png" alt-text="In the Copilot Explorer, you can export the query results and add users or devices to groups in the Microsoft Intune admin center.":::
-
-## Feedback and the future
+## Feedback and future updates
 
 Explorer is constantly improving. We continue to add more queries, more querying capabilities, more Intune data sources, and more actions. We want your feedback, including any capabilities you want to see and missing queries that you need.
 

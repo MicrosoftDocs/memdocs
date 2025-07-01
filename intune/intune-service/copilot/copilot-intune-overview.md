@@ -91,13 +91,13 @@ To use Copilot in Intune, you should know the following information:
 > [!TIP]
 > For some common questions asked about Copilot in Intune, go to [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
 
-## Start using Copilot in Intune
+## Start using Copilot
 
 To access Copilot in Intune, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The home screen lists the ways to get started with Copilot.
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-home-page.png" alt-text="Screenshot that shows the Intune admin center homepage with Copilot features in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-home-page.png":::
 
-Currently, there are three areas to use Copilot in Intune:
+You can use Copilot in Intune for:
 
 - Data exploration using natural language
 - Policy and setting management
@@ -168,10 +168,7 @@ When the Copilot window opens, select a prompt and enter any required or optiona
 
 For more information about using Copilot with your devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 
-> [!TIP]
-> You can also use Copilot to help you troubleshoot device issues using device query. For more information, see [Query with Copilot in device query](#query-with-copilot-in-device-query) (in this article).
-
-## Device query using KQL
+### ✅ Use Copilot to create KQL queries to get device details
 
 You can use Copilot to help you create Kusto Query Language (KQL) queries to run when using device query in Intune.
 
@@ -180,7 +177,7 @@ You can use Copilot to help you create Kusto Query Language (KQL) queries to run
 
 You can use this feature for either an individual device, or for multiple devices.
 
-### Query a single device
+#### Query a single device
 
 To query a single device in Intune, select a device, select **Device query**, and then select **Query with Copilot**.
 
@@ -203,7 +200,7 @@ The following examples are some queries you can try:
     > [!NOTE]
     > Copilot can only generate queries for requests related to the properties that device query support. You can't use this feature to ask Copilot for details about the device beyond what is available in device query. For a full list of supported properties in device query, go to [Device query](../../analytics/device-query.md).
 
-### Query multiple devices
+#### Query multiple devices
 
 To query data across multiple devices in Intune, select **Devices** > **Device query** > **Query with Copilot**.
 
