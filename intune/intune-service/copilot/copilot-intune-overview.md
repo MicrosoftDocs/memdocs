@@ -102,7 +102,6 @@ You can use Copilot in Intune for:
 - Data exploration using natural language
 - Policy and setting management
 - Device details and troubleshooting
-- Device query using KQL
 
 ## Data exploration
 

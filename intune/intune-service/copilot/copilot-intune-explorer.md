@@ -81,7 +81,7 @@ There are also built-in examples that you can use. You can filter the examples b
 
 :::image type="content" source="./media/copilot-intune-explorer/explorer-prompt-categories.png" alt-text="Select a Copilot Explorer example or filter the example list by the category in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-prompt-categories.png":::
 
-The examples include parameter inputs that you enter. For example, if you select the **Compliance** category, there's a list of queries related to compliance. You can select one of the examples, like **Get *Platform* devices that are noncompliant..**. In the prompt, select a platform, like **Windows**. The prompt is updated to show the platform.
+The examples include parameter inputs that you enter. For example, if you select the **Compliance** category, there's a list of queries related to compliance. You can select one of the examples, like **Get *Platform* devices that are noncompliant..**. In the prompt, select a platform. The prompt is updated to show the platform.
 
 :::image type="content" source="./media/copilot-intune-explorer/explorer-example-compliance-category-platform.png" alt-text="In Copilot Explorer, select the compliance example and select the Windows platform in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-example-compliance-category-platform.png":::
 
@@ -97,7 +97,7 @@ In the query results, you can export the results and select an item to get more 
 
 :::image type="content" source="./media/copilot-intune-explorer/explorer-query-results.png" alt-text="In the Copilot Explorer, you can export the query results and add users or devices to groups in the Microsoft Intune admin center.":::
 
-You can select an existing group or create a new group. When finished, a progress report is automatically created. If you want to keep the report, export it now, as the report isn't available again.
+When you add to a group, you can select an existing group or create a new group. When finished, a progress report is automatically created. If you want to keep the report, export it now, as the report isn't available again.
 
 In the following example, a query found noncompliant devices that are out of the grace period. These devices are added to a group. Some devices failed to be added to the group, and the **Status detail** shows the reason why. You can use the **Add filters** option to filter the results, like the devices that were successfully added to the group.
 
