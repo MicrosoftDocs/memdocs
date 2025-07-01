@@ -7,7 +7,7 @@ keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings cata
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 06/30/2025
+ms.date: 07/01/2025
 ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
@@ -32,9 +32,7 @@ ms.collection:
 - msec-ai-copilot
 ---
 
-# Microsoft Copilot in Intune (public preview)
-
-This feature is in [public preview](../fundamentals/public-preview.md).
+# Microsoft Copilot in Intune
 
 [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) is an generative-AI security analysis tool. It can help you and your organization get information quickly and make decisions that affect security and risk.
 

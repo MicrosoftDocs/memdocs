@@ -32,7 +32,7 @@ ms.collection:
 - msec-ai-copilot
 ---
 
-# Security Copilot in Microsoft Surface Management Portal (Public Preview)
+# Security Copilot in Microsoft Surface Management Portal
 
 Microsoft Security Copilot is a cloud-based AI platform that provides a natural language Copilot experience that can be used to provide information and resolve issues. [Surface Management Portal](/surface/surface-management-portal) provides a centralized platform to manage and monitor Surface devices at scale. Surface Management Portal integration with Microsoft Copilot for Security helps Surface device administrators be more efficient, and resolve hardware issues faster and at scale. 
 
@@ -55,8 +55,8 @@ If you use [Microsoft Surface Management Portal](/surface/surface-management-por
 There are Surface Management Portal capabilities built into Security Copilot, and you can use prompts to get more information, including:
 
 - Information about your device fleet, including summary on warranties, and end of service and support.
--	Details about issues with specific devices, so you can troubleshoot more quickly and easily.
--	Information to help you learn about safeguarding and improving the lifetime of your Surface devices.
+-    Details about issues with specific devices, so you can troubleshoot more quickly and easily.
+-    Information to help you learn about safeguarding and improving the lifetime of your Surface devices.
 
 This article shows you how to access your [Microsoft Surface Management Portal data in Security Copilot](#enable-the-security-copilot-integration-in-surface-management-portal).
 
@@ -91,14 +91,12 @@ Enable integration of Security Copilot:
 Once you have set up Security Copilot, you can start using Copilot for Surface Management Portal by selecting one of the available prompts.
 
 **Sample prompts**:
+
 - Troubleshoot Surface devices.
 - List all my Surface device models' end of service date.
 - Compare technical specifications of two Surface devices.
 - Generate a warranty coverage report for all devices.
 - What are the best practices for protecting Surface devices?
-
-> [!NOTE]
-> These capabilities are available for public preview.
 
 ## Provide feedback
 

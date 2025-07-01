@@ -145,7 +145,7 @@ The following are the Microsoft Graph API calls that are affected:
 - ~/deviceManagement/deviceManagementScripts 
 
 The following are the new permissions that will soon be required, and the old permissions that will no longer function:
-- **DeviceManagementScripts.Read.All** - This new permission replaces use of*DeviceMangementConfiguration.Read.All*
+- **DeviceManagementScripts.Read.All** - This new permission replaces use of *DeviceManagementConfiguration.Read.All*
 
 - **DeviceManagementScripts.ReadWrite.All** - This new permission replaces use of the *DeviceManagementConfiguration.ReadWrite.All*
 
