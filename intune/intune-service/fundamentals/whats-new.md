@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 06/27/2025
+ms.date: 07/02/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -88,12 +88,6 @@ For related information, see [Set up the Enrollment Status Page](../enrollment/w
 Applies to:
 
 - Windows
-
-#### Microsoft Intune support for Apple AI features<!-- 12792722, 30550110, 30220799 -->
-
-Intune app protection policies have new standalone settings for Apple AI features (Genmojis, Writing tools, and screen capture). Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, these Apple AI features are blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
-
-For more information about Intune's related app protection policies, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
 
 #### Managed Home Screen orientation changes with Android 16<!-- 30316862 -->
 
