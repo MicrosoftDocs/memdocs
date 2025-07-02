@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 06/27/2025
+ms.date: 07/01/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,26 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of July 14, 2025
+
+### Device management
+
+#### Explorer is powered by Copilot and available for your custom questions<!-- 29339619 -->
+
+Explorer in Intune is a Copilot-powered feature. Admins can ask questions in a natural language that run queries against your Intune resource data, including questions about your devices, apps, policies, updates, and compliance.
+
+There are also example queries that you can filter to find an example that best matches your request.
+
+When the query runs, Copilot summarizes the results and recommends actions you can take.  If your query results are a list of users or devices, you can add them to a group, and target apps and policies to this group.
+
+This feature helps you spend less time getting to the data you're looking for. For example, you can:
+
+- Get help troubleshooting and identify devices based on specific criteria
+- Create a custom report
+- Inspect specific Intune resources to ensure things are configured as expected
+
+To learn more about this feature, see [Explore Intune data and get Microsoft Copilot recommendations](../copilot/copilot-intune-explorer.md).
+
 ## Week of June 23, 2025 (Service release 2506)
 
 ### App management
