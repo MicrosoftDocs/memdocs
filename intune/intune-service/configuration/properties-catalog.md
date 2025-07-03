@@ -47,6 +47,9 @@ Windows 10
 
 - For a user to view collected data about devices, they must have the Managed Devices **Read** permission.
 
+> [!NOTE]
+> As Intune employs its own RBAC system to manage access to device management features, restricted guest users will be able to access the Intune portal with the appropriate permissions.
+
 ## Supported platforms
 
 Inventory is currently only supported on devices running Windows 10 and later. Inventory is only supported on the following minimum Windows versions:
