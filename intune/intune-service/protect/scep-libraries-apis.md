@@ -175,7 +175,7 @@ Validates a SCEP certificate request.
 - **Exception** - Thrown if an unexpected error is encountered
 
 > [!IMPORTANT]
-> The sever should log exceptions thrown by this method. The `IntuneScepServiceException` properties have detailed information on why the certificate request validation failed.
+> The server should log exceptions thrown by this method. The `IntuneScepServiceException` properties have detailed information on why the certificate request validation failed.
 
 **Security notes**:
 
@@ -216,7 +216,7 @@ Notifies Intune that a certificate is created as part of processing a SCEP reque
 - **Exception** - Thrown if an unexpected error is encountered.  
 
 > [!IMPORTANT]
-> The sever should log exceptions thrown by this method. The `IntuneScepServiceException` properties have detailed information on why the certificate request validation failed.
+> The server should log exceptions thrown by this method. The `IntuneScepServiceException` properties have detailed information on why the certificate request validation failed.
 
 **Security notes**:
 
