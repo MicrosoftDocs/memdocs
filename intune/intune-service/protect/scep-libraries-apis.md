@@ -350,7 +350,7 @@ Uploads a list of revocation results from a third party CA to Intune.
 
 - **transactionId** - A GUID string that uniquely identifies the entire transaction to allow for log correlation across download/upload results calls. Third party API callers should use the same transactionId from the DownloadCARevocationRequest call. 
 
-- revocationResults – The list of CARevocationResults objects to send to Intune.  
+- **revocationResults** – The list of `CARevocationResults` objects to send to Intune.  
 
 **Throws**:
 
@@ -385,7 +385,7 @@ Returns a list of CA revocation requests.
 
 **Source file**:  
 
-The GitHub source folder location is in the [Microsoft/Intune-Resource-Access GitHub repository](https://github.com/microsoft/Intune-Resource-Access/tree/eae184eea8f7dab417d3ac29cc3ac39b7db8cace/src/CsrValidation/csharp/ScepValidation). IntuneRevocationClient.cs is the source file. 
+The GitHub source folder location is in the [Microsoft/Intune-Resource-Access GitHub repository](https://github.com/microsoft/Intune-Resource-Access/tree/eae184eea8f7dab417d3ac29cc3ac39b7db8cace/src/CsrValidation/csharp/ScepValidation). `IntuneRevocationClient.cs` is the source file. 
 
 **Parameters**:
 
@@ -400,7 +400,7 @@ var transactionId = Guid.NewGuid().ToString();
 > [!NOTE]
 > After a call is made, Intune enforces a 60-minute cool-down period. During that period of time, no revocation request is sent to avoid duplicate requests and overloading the API.  
 
-- **issuerName** (optional) – This value is the same as **CertIssuingAuthority** in the *ScepRequestValidation* call. Maximum string length is 256 characters.  
+- **issuerName** (optional) – This value is the same as **CertIssuingAuthority** in the ScepRequestValidation call. Maximum string length is 256 characters.  
 
 **Throws**:
 
@@ -430,7 +430,7 @@ Uploads a list of revocation results from a third party CA to Intune.
 
 - **transactionId** - A GUID string that uniquely identifies the entire transaction to allow for log correlation across download/upload results calls. Third party API callers should use the same transactionId from the DownloadCARevocationRequestsAsync call. 
 
-- revocationResults – The list of CARevocationResults objects to send to Intune.  
+- **revocationResults** – The list of `CARevocationResults` objects to send to Intune.  
 
 **Throws**:
 
