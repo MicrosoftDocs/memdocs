@@ -179,7 +179,7 @@ Validates a SCEP certificate request.
 
 **Security notes**:
 
-- If this method throws an exception, the SCEP server **must not** issue a certificate to the client.
+- If this method throws an exception, the SCEP server must not issue a certificate to the client.
 - SCEP certificate request validation failures may indicate a problem in the Intune infrastructure. Or, they could indicate that an attacker is trying to get a certificate.
 
 ##### SendSuccessNotification method
@@ -241,16 +241,16 @@ Notifies Intune that an error occurred while processing a SCEP request. This met
 
 **Parameters**:
 
-- **transactionId** - The SCEP Transaction ID
-- **certificateRequest** - DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
-- **hResult** - Win32 error code that best describes the error that was encountered. See [Win32 Error Codes](/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d)
-- **errorDescription** - Description of the error encountered
+- **transactionId** - The SCEP Transaction ID.
+- **certificateRequest** - DER-encoded PKCS #10 Certificate Request Base64 encoded as a string.
+- **hResult** - Win32 error code that best describes the error that was encountered. See [Win32 Error Codes](/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d).
+- **errorDescription** - Description of the error encountered.
 
 **Throws**:
 
-- **IllegalArgumentException** - Thrown if called with a parameter that is not valid
-- **IntuneScepServiceException** - Thrown if it is found that the certificate request is not valid
-- **Exception** - Thrown if an un-expected error is encountered
+- **IllegalArgumentException** - Thrown if called with a parameter that is not valid.
+- **IntuneScepServiceException** - Thrown if it is found that the certificate request is not valid.
+- **Exception** - Thrown if an un-expected error is encountered.
 
 > [!IMPORTANT]
 > Exceptions thrown by this method should be logged by the server. Note that the `IntuneScepServiceException` properties have detailed information on why the certificate request validation failed.
@@ -275,14 +275,168 @@ Use this method to inform the client that it must use the specified SSL socket f
 
 **Parameters**:
 
-- **factory** - The SSL socket factory that the client should use for HTTPS requests
+- **factory** - The SSL socket factory that the client should use for HTTPS requests.
 
 **Throws**:
 
-- **IllegalArgumentException** - Thrown if called with a parameter that is not valid
+- **IllegalArgumentException** - Thrown if called with a parameter that is not valid.
 
 > [!NOTE]
-> The SSL Socket factory must be set if required prior to executing the other methods of this class.
+> The SSL Socket factory must be set if required prior to executing the other methods of this class.  
+
+##### DownloadCARevocationRequests method 
+
+>[!NOTE]
+> Do not use raw OData API directly hosted at CertificateAuthorityRequests/downloadRevocationRequests using CARevocationDownloadParameters. This API will be removed in an upcoming API update.  
+
+**Signature**:
+
+```java
+List<CARevocationRequest> DownloadCARevocationRequests(String transactionId,  
+    int maxCARequestsToDownload, String issuerName) 
+```
+
+**Description**:
+
+Downloads a list of revocation requests from Intune. 
+
+> [!NOTE]
+> After a call is made with DownloadCARevocationRequests, Intune enforces a 60-minute cool-down period. During that period of time, no revocation request is sent to avoid duplicate requests and overloading the API. 
+
+**Source file**:  
+
+The GitHub source folder location is in the [Microsoft/Intune-Resource-Access GitHub repository](https://github.com/microsoft/Intune-Resource-Access/tree/eae184eea8f7dab417d3ac29cc3ac39b7db8cace/src/CsrValidation/java/lib/src/main/java/com/microsoft/intune/scepvalidation). IntuneRevocationClient.java is the source file. 
+
+**Parameters**:
+
+- **transactionId** - A GUID string that uniquely identifies the entire transaction to allow for log correlation across download/upload result calls. Third party API callers should do the following to create the GUID: 
+
+```java
+String  transactionId = UUID.randomUUID.toString(); 
+```  
+
+- **maxCARequestsToDownload** - The maximum number of revocation requests to download from Intune. We recommend an upper bound value of 100.   
+
+> [!NOTE]
+> After a call is made, Intune enforces a 60-minute cool-down period. During that period of time, no revocation request is sent to avoid duplicate requests and overloading the API.  
+
+- **issuerName** – This is the same value as **CertIssuingAuthority** in the *ScepRequestValidation* call. Maximum string length is 256 characters.  
+
+**Throws**:
+
+- **IntuneClientException** - Thrown if the service reports a failure in processing the notification. Examine the exception error code.  
+- **IllegalArgumentException** - Thrown if called with a parameter that is not valid.  
+
+**Security notes**:  
+
+API permissions are required. For more information and app registration permissions, see [Onboard SCEP server in Azure](scep-libraries-apis.md#onboard-scep-server-in-azure) in this article. 
+
+##### UploadRevocationResults method  
+**Signature**:
+
+```java
+void UploadRevocationResults(  
+
+    String transactionId,  
+
+    List<CARevocationResult> revocationResults)  
+```
+
+**Description**:
+
+Uploads a list of revocation results from a third party CA to Intune. 
+
+**Parameters**:
+
+- **transactionId** - A GUID string that uniquely identifies the entire transaction to allow for log correlation across download/upload results calls. Third party API callers should use the same transactionId from the DownloadCARevocationRequest call. 
+
+- revocationResults – The list of CARevocationResults objects to send to Intune.  
+
+**Throws**:
+
+- **IntuneClientException** - Thrown if the service reports a failure in processing the notification. Examine the exception error code.  
+- **IllegalArgumentException** - Thrown if called with a parameter that is not valid.  
+
+### C# API  
+The C# API includes the methods used by the SCEP service to download and upload revocation results. 
+
+#### DownloadCARevocationRequestsAsync method  
+>[!NOTE]
+> Do not use raw OData API directly hosted at CertificateAuthorityRequests/downloadRevocationRequests using CARevocationDownloadParameters. This API will be removed in an upcoming API update.  
+
+**Signature**:  
+
+```c#
+Task<List<CARevocationRequest>> DownloadCARevocationRequestsAsync( 
+
+    string transactionId,  
+
+    int maxCARevocationRequestsToDownload,  
+
+    string issuerName = null) 
+```  
+
+**Description**:
+
+Returns a list of CA revocation requests.   
+
+> [!NOTE]
+> After a call is made with DownloadCARevocationRequestsAsync, Intune enforces a 60-minute cool-down period. During that period of time, no revocation request is sent to avoid duplicate requests and overloading the API. 
+
+**Source file**:  
+
+The GitHub source folder location is in the [Microsoft/Intune-Resource-Access GitHub repository](https://github.com/microsoft/Intune-Resource-Access/tree/eae184eea8f7dab417d3ac29cc3ac39b7db8cace/src/CsrValidation/csharp/ScepValidation). IntuneRevocationClient.cs is the source file. 
+
+**Parameters**:
+
+- **transactionId** - A GUID string that uniquely identifies the entire transaction to allow for log correlation across download/upload results calls. Third party API callers should do the following to create the GUID: 
+
+```c#
+var transactionId = Guid.NewGuid().ToString();  
+```  
+
+- **maxCARequestsToDownload** - The maximum number of revocation requests to download from Intune. We recommend an upper bound value of 100.   
+
+> [!NOTE]
+> After a call is made, Intune enforces a 60-minute cool-down period. During that period of time, no revocation request is sent to avoid duplicate requests and overloading the API.  
+
+- **issuerName** (optional) – This is the same value as **CertIssuingAuthority** in the *ScepRequestValidation* call. Maximum string length is 256 characters.  
+
+**Throws**:
+
+- **IntuneClientException** - Thrown if the service reports a failure in processing the notification. Examine the exception error code.  
+- **IllegalArgumentException** - Thrown if called with a parameter that is not valid.  
+
+**Security notes**:
+
+API permissions are required. For more information and app registration permissions, see [Onboard SCEP server in Azure](scep-libraries-apis.md#onboard-scep-server-in-azure) in this article.  
+
+##### UploadRevocationResults method  
+**Signature**:
+
+```c#
+Task UploadRevocationResultsAsync(  
+
+    string transactionId,  
+
+    List<CARevocationResult> requestResults)  
+```
+
+**Description**:
+
+Uploads a list of revocation results from a third party CA to Intune. 
+
+**Parameters**:
+
+- **transactionId** - A GUID string that uniquely identifies the entire transaction to allow for log correlation across download/upload results calls. Third party API callers should use the same transactionId from the DownloadCARevocationRequestsAsync call. 
+
+- revocationResults – The list of CARevocationResults objects to send to Intune.  
+
+**Throws**:
+
+- **IntuneClientException** - Thrown if the service reports a failure in processing the notification. Examine the exception error code.  
+
+- **IllegalArgumentException** - Thrown if called with a parameter that is not valid.  
 
 ## Integration testing
 
