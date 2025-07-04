@@ -217,9 +217,9 @@ For communication between clients and the cloud service:
   > [!IMPORTANT]  
   > SSL Inspection isn't supported on endpoints required for Microsoft Defender for Endpoint.
 
-## Microsoft Intune Endpoint Privilege Management
+## Microsoft Intune Endpoint Privilege Management & Advanced Inventory
 
-To support Endpoint Privilege Management, allow the following hostnames on tcp port 443 through your firewall
+To support Endpoint Privilege Management and advanced inventory, allow the following hostnames on tcp port 443 through your firewall
 
 For communication between clients and the cloud service:
 
@@ -229,7 +229,7 @@ For communication between clients and the cloud service:
   > [!IMPORTANT]  
   > SSL Inspection isn't supported on endpoints required for Endpoint Privilege Management.
 
-For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
+For more information about endpoint privilege mangement, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
 
 ## Microsoft Security Copilot
 
