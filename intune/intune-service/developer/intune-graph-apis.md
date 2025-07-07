@@ -174,15 +174,15 @@ The following table summarizes the Intune API permission scopes.  The first colu
 | __Read and write Microsoft Intune devices__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw) |
 | __Read Microsoft Intune devices__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro) |
 | __Read and write Microsoft Intune RBAC settings__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw) |
-| **Read Microsoft Intune scripts** | [DeviceManagementScripts.Read.All](#devicemanagementscriptsreadall) |
-| **Read and write Microsoft Intune scripts** | [DeviceManagementScripts.ReadWrite.All](#devicemanagementscriptsreadwriteall) |
-| __Read Microsoft Intune RBAC settings__ | [DeviceManagementRBAC.Read.All](#devicemanagementrbacreadall) |
+| __Read Microsoft Intune RBAC settings__ | [DeviceManagementRBAC.Read.All](#rac-ra) |
+| __Read Microsoft Intune scripts__ | [DeviceManagementScripts.Read.All](#script-ra) |
+| __Read and write Microsoft Intune scripts__ | [DeviceManagementScripts.ReadWrite.All](#script-rw) |
 | __Read and write Microsoft Intune apps__ | [DeviceManagementApps.ReadWrite.All](#app-rw) |
 | __Read Microsoft Intune apps__ | [DeviceManagementApps.Read.All](#app-ro) |
 | __Read and write Microsoft Intune Device Configuration and Policies__ | [DeviceManagementConfiguration.ReadWrite.All](#devicemanagementconfigurationreadwriteall)  |
 | __Read Microsoft Intune Device Configuration and Policies__ | [DeviceManagementConfiguration.Read.All](#cfg-ro) |
 | __Read and write Microsoft Intune configuration__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw) |
-| __Read Microsoft Intune configuration__ | [DeviceManagementServiceConfig.Read.All](#devicemanagementserviceconfigreadall) |
+| __Read Microsoft Intune configuration__ | [DeviceManagementServiceConfig.Read.All](#svc-ro) |
 
 The table lists the settings as they appear in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The following sections describe the scopes in alphabetical order.
 
@@ -287,7 +287,7 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Disable Activation Lock
   - Request remote assistance
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="rac-ra"></a>DeviceManagementRBAC.Read.All
 
 - **Enable Access** setting: __Read Microsoft Intune RBAC settings__
 
@@ -306,7 +306,7 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Role Assignments
   - Role Definitions
 
-### DeviceManagementScripts.Read.All
+### <a name="script-ra"></a>DeviceManagementScripts.Read.All
 
 - **Enable Access** setting: **Read Microsoft Intune scripts**
 
@@ -317,7 +317,7 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Device Custom Attribute Shell Scripts
   - Device Management Scripts
 
-### DeviceManagementScripts.ReadWrite.All
+### <a name="script-rw"></a>DeviceManagementScripts.ReadWrite.All
 
 - **Enable Access** setting: **Read and write Microsoft Intune scripts**  
   Allows the same operations as *DeviceManagementScripts.Read.All*
