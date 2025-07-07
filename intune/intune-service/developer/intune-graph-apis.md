@@ -179,7 +179,7 @@ The following table summarizes the Intune API permission scopes.  The first colu
 | __Read and write Microsoft Intune scripts__ | [DeviceManagementScripts.ReadWrite.All](#script-rw) |
 | __Read and write Microsoft Intune apps__ | [DeviceManagementApps.ReadWrite.All](#app-rw) |
 | __Read Microsoft Intune apps__ | [DeviceManagementApps.Read.All](#app-ro) |
-| __Read and write Microsoft Intune Device Configuration and Policies__ | [DeviceManagementConfiguration.ReadWrite.All](#devicemanagementconfigurationreadwriteall)  |
+| __Read and write Microsoft Intune Device Configuration and Policies__ | [DeviceManagementConfiguration.ReadWrite.All](#cfg-rw)  |
 | __Read Microsoft Intune Device Configuration and Policies__ | [DeviceManagementConfiguration.Read.All](#cfg-ro) |
 | __Read and write Microsoft Intune configuration__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw) |
 | __Read Microsoft Intune configuration__ | [DeviceManagementServiceConfig.Read.All](#svc-ro) |
@@ -228,7 +228,7 @@ At this time, all Intune permission scopes require administrator access.  This m
 > - ~/deviceManagement/deviceCustomAttributeShellScripts 
 > - ~/deviceManagement/deviceManagementScripts 
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+### <a name="cfg-rw"></a>DeviceManagementConfiguration.ReadWrite.All
 
 - **Enable Access** setting: __Read and write Microsoft Intune device configuration and policies__
 
