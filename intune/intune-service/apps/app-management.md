@@ -35,14 +35,14 @@ ms.collection:
 
 # What is Microsoft Intune app management?
 
-Microsoft Intune is a cloud-based service that protects your organization's data by using mobile device management (MDM) and mobile application management (MAM). You can use Intune to protect your organization's data at the app level (MAM) on both company devices and users' personal devices, such as smartphones, tablets, and laptops. Intune provides data protection for apps that have been enhanced to support Intune and deployed using Intune, as well as data protection for devices that have been enrolled in Intune.
+Microsoft Intune is a cloud-based service that protects your organization's data by using mobile device management (MDM) and mobile application management (MAM). You can use Intune to protect your organization's data at the app level (MAM) on both company devices and users' personal devices, such as smartphones, tablets, and laptops - provided the app is wrapped with the InTune SDK. Intune provides data protection for apps that have been enhanced to support Intune and deployed using Intune, as well as data protection for devices that have been enrolled in Intune. Mobile  Application Management tools require the app be wrapped in the InTune SDK, so the relevant controls are built onto the application. Management without this wrapping is limited to MDM, which requires enrollment.
 
 The benefits of app management in Microsoft Intune include:
 - **Data protection**: Intune helps protect organization (corporate) data by controlling how apps are used and ensuring that sensitive information isn't leaked or shared inappropriately.
 - **Wide range of app support**: Intune supports various app types, such as store apps, web apps, and line-of-business (LOB) apps. In addition, Intune supports several platforms, such as iOS/iPadOS and Android. This app support allows organizations to manage a diverse set of applications using Intune.
 - **Access control**: Intune enables organizations to manage access to organization resources, enforce compliance policies, and protect sensitive data.
 - **App configuration and updates**: Intune allows organizations to manage app settings and updates, ensuring that employees are using the latest and most secure versions of their apps.
-- **App management on personal devices**: You can specifically use MAM to assign, protect, and manage apps on devices that aren't enrolled with Intune.
+- **App management on personal devices**: You can specifically use MAM to assign, protect, and manage Intune-wrapped apps on devices that aren't enrolled with Intune. These configurations are done at the user level, and the application needs to have the required code to handle it.
 
 Examples of using app management with Microsoft Intune include:
 - Deploying, protecting, and managing apps for specific groups of users within your organization
@@ -54,9 +54,13 @@ Examples of using app management with Microsoft Intune include:
 
 ## Mobile Application Management (MAM) basics
 
-[Intune mobile application management](app-lifecycle.md) refers to the suite of Intune management features that lets you publish, push, configure, secure, monitor, and update mobile apps for your users.
-
 MAM allows you to manage and protect your organization's data within an application. Many productivity apps, such as the Microsoft 365 (Office) apps, can be managed by Intune MAM. See the official list of [Microsoft Intune protected apps](apps-supported-intune-apps.md) available for public use.
+
+To use MAM, applications must be wrapped by the InTune SDK, but users do not need to be enrolled. The relevant controls in InTune are packaged around the app, not the device - so when an MAM assigned user installs a MAM-managed app, that MAM-managed app has the requisite functions built onto it - even without enrollment. Custom apps can be wrapped by the SDK, and there are a number of InTune-supporting apps in the library. If an app is not wrapped by the InTune SDK (aka, the controls have not been made part of the app), you are still able to do some management at the Device level, but this requires enrollment. 
+
+The features that require InTune wrapping (MAM) include App Protection Policies, App Configuration Policies targeting Applications, iOS App Provisioning Profiles. 
+
+The features available to enrolled devices (MDM) include App Configuration policies targeting devices (provided there is XML config exposed to use), and Device-level restrictions, including Device Assignment restrictions like disabling iCloud backup and removing app when device is unenrolled. 
 
 Intune MAM supports two configurations:
 
