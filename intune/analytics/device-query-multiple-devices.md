@@ -7,7 +7,7 @@ keywords:
 ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
-ms.date: 03/10/2025
+ms.date: 07/07/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,9 +52,11 @@ Device query for multiple devices is currently only supported on devices running
 
 ## How to use device query for multiple devices
 
-To use Device query for multiple devices, navigate to the **Devices** pane and select **Device query**. Then, input a query in the query box using the supported properties and supported operators and select **Run** to execute the query. Results are displayed in the **Results** tab area. If you only want to run part of the query, or if you have multiple queries in the query window and only want to run one, you can highlight the query you want to run and select **Run**. Only that query is run.
+To use device query for multiple devices, go to the **Devices** pane and select **Device query**. Then input a query in the query box using the supported properties and supported operators and select **Run** to execute the query. Results are displayed in the **Results** tab area. If you only want to run part of the query, or if you have multiple queries in the query window and only want to run one, you can highlight the query you want to run and select **Run**. Only that query is run.
 
 You can expand the view on the left side to see all the properties that can be queried. Select any one to populate into your query. You can select and drag the edges of both the left side and the query window to make any adjustments.  
+
+After running a query, select **Export** to save results to a .CSV file. You have the option to export all columns in the query result or just the columns you select. You can export up to 50,000 results to a file. 
 
 > [!TIP]
 > You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#query-multiple-devices).
