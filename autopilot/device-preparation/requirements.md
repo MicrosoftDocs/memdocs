@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: bpardi
-ms.date: 05/21/2025
+ms.date: 06/11/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -20,7 +20,6 @@ ms.custom:
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
-
 
 # Windows Autopilot device preparation requirements
 

@@ -7,7 +7,7 @@ description: Learn about backup and restore scenarios for iOS/iPadOS devices.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 08/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune

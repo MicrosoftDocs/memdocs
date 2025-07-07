@@ -6,8 +6,8 @@ description: Find out what's new in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 06/02/2025
+manager: laurawi
+ms.date: 07/02/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,11 +75,154 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of June 23, 2025 (Service release 2506)
+
+### App management
+
+#### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
+
+Windows Autopilot now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you can select apps from the Enterprise App Catalog as blocking apps in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to ensure those apps are delivered before the user can access the desktop.
+
+For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
+
+Applies to:
+
+- Windows
+
+#### Managed Home Screen orientation changes with Android 16<!-- 30316862 -->
+
+Starting with Android 16, Android stops enforcing screen orientation on devices with 600dp and larger display settings. This change impacts the Managed Home Screen (MHS) on devices with larger form factors, like tablets.
+
+On these Android 16 devices, orientation is determined by the device’s orientation setting, not the MHS settings you configure.
+
+To learn more about Android 16 changes, go to [Behavior changes: Apps targeting Android 16 or higher](https://developer.android.com/about/versions/16/behavior-changes-16) (opens Android website).
+
+Applies to:
+
+- Android Enterprise
+
+
+### Device configuration
+
+#### New settings available in the Apple settings catalog<!-- 32498293 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the settings catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+##### iOS/iPadOS
+
+**Managed Settings**:
+
+- Idle Reboot Allowed
+
+##### macOS
+
+**Authentication > Extensible Single Sign On (SSO)**:
+
+- Allow Device Identifiers In Attestation
+
+**Microsoft Edge**:
+
+- The Microsoft Edge category has been updated with hundreds of new settings. Learn more about available macOS Edge settings at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
+
+Apple deprecated the Identification payload in macOS 15.4.
+
+#### New Block Bluetooth setting in the Android Enterprise settings catalog<!-- 15583647 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There's a new **Block Bluetooth** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, Bluetooth is disabled on the device.
+
+There's also a **Block Bluetooth Configuration** setting that prevents end users from changing the Bluetooth setting on the device.
+
+These settings are different and have different results. Some examples include:
+
+- **Scenario**: An end user turned on the Bluetooth setting on their device. The admin creates an Intune policy that sets the **Block Bluetooth** setting to **True**.
+
+  In this situation, Bluetooth is blocked on the device, even though the end user turned it on.
+
+- **Scenario**: An end user turned on the Bluetooth setting on their device. The admin creates an Intune policy that sets the **Block Bluetooth Configuration** setting to **True**.
+
+  In this situation, Bluetooth is turned on since the end user previously turned it on. The end user can't turn off Bluetooth. If the end user previously turned Bluetooth off, and then the **Block Bluetooth Configuration** policy applies, then Bluetooth is turned off and the end user can't turn it back on.
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
+
+Applies to:
+
+- Android Enterprise corporate-owned devices with a work profile (COPE)
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+
+### Device management
+
+#### New reporting system for improved performance and data consistency<!-- 31823383 -->
+
+Microsoft Intune is rolling out the new Policy Reporting Service (PRS) V3. The new system brings faster report generation, improved reliability, and better data consistency.
+ 
+In the first phase, some high-traffic compliance and device configuration reports are transitioning to the new system.
+ 
+Users will notice quicker updates in the Intune admin center and fewer issues with stale data. No action is required from users, as your reports transition automatically.
+
+To learn more about the Intune reports you can use, see [Intune reports](reports.md).
+
+### Device security
+
+#### New attributes and S/MIME baseline requirements for SCEP certificate profiles <!-- 33116047 -->
+
+Intune supports two new attributes for subject name settings in SCEP and PKCS device configuration profiles. They include:
+
+- G={{GivenName}}
+- SN={{SurName}}
+
+Beginning July 16th, you are required to use these attributes in the subject name format if you're using a third party public certificate authority (CA) integrated with the Intune SCEP API for issuing S\MIME (encryption or signing) certificates anchored up to a public root CA. After that date, a public CA will not issue or sign S\MIME certificates that omit these attributes. 
+
+For more information, see [S/MIME certificate requirements for third party public CA](../protect/certificates-profile-scep.md#smime-certificate-requirements-for-third-party-public-ca).
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 32647747, 32692741, 32775449, 32920017 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Datasite for Intune by Datasite (iOS)
+- Mijn InPlanning by Intus Workforce Solutions (iOS)
+- Nitro PDF Pro by Nitro Software, Inc. (iOS)
+- SMART TeamWorks by SMART Technologies ULC (iOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Monitor and troubleshoot
+
+####  New status column in Windows hardware attestation report<!-- 26527908 -->
+
+We added a new column, **Attest Status**, to the Windows hardware attestation report to improve visibility into attestation errors. This column shows error messages received during the attestation process, helping you identify issues from both the service and client sides.  Error types shown in this column include:
+
+- WinINet errors
+- HTTP bad request errors
+- Other attestation-related failures
+
+For more information about the report, see [Windows hardware attestation report](../fundamentals/reports.md#windows-hardware-attestation-report-organizational).
+
+## Week of June 9, 2025
+
+### App management
+
+#### ARM64 support for Win32 apps<!-- 28475401 -->
+
+When adding a Win32 app to Intune, you can select an option to check and install the app on Windows devices running ARM64 operating systems. This capability is available from the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > **Create**. The ARM64 option is available by selecting the **Operating system architecture** option under the **Requirements** step. To ensure that you don't have any impact to any Win32 applications that you previously targeted to 64-bit devices, your existing 64-bit Win32 applications will also have ARM64 selected. After the availability of being able to specifically target ARM64 operating system architectures, selecting x64 won't target ARM64 devices.
+
+For related information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+Applies to:
+
+- Windows devices
+
 ## Week of June 2, 2025
 
 ## Device security
 
-#### Vulnerability Remediation Agent for Intune (public preview)<!-- 30277408 -->
+#### Vulnerability Remediation Agent for Intune (public preview)<!-- 33475311 -->
  
 The Vulnerability Remediation Agent is currently in a limited public preview and available to only a select group of customers. If you’re interested in gaining access or would like to learn more, please reach out to your sales team for further details and next steps.
 
@@ -97,7 +240,7 @@ For more information about this agent including prerequisites, see [Vulnerabilit
  
 Endpoint Privilege Management (EPM) elevation rules now include a new file elevation type of **Deny**. An EPM elevation rule set to *Deny* blocks the specified file from running in an elevated context. While we recommend using file elevation rules to allow users to elevate specific files, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
 
-*Deny* rules support the same configuration options as other [elevation types](../protect/epm-policies.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy) except for child processes, which are not used.
+*Deny* rules support the same configuration options as other [elevation types](../protect/epm-policies.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy) except for child processes, which aren't used.
 
 For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../protect/epm-overview.md).
 
@@ -141,13 +284,13 @@ Use a custom template for naming AOSP user-affiliated and userless devices when 
 
 #### Change to role-based access control for device enrollment limits<!-- 27115176 -->
 
-We updated role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you now have read-only access to device enrollment limit policies. To create and edit these policies, you must be an Intune  Administrator.
+We updated role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you now have read-only access to device enrollment limit policies. To create and edit these policies, you must be an Intune Administrator.
 
 ### Device management
 
 #### Cross Platform Device Inventory<!-- 25964936 -->
 
-Android, iOS and Mac devices are added to device inventory. Intune now collects a default set of inventory data including 74 Apple properties and 32 Android properties.
+Android, iOS, and Mac devices are added to device inventory. Intune now collects a default set of inventory data including 74 Apple properties and 32 Android properties.
 
 For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
 
@@ -179,7 +322,7 @@ The new Intune profile:
 
 - Is available in addition to the existing endpoint security Antivirus policy for Microsoft Defender Antivirus.
 - Is supported for devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
-- Is not supported for Linux devices managed directly by Intune.
+- Isn't supported for Linux devices managed directly by Intune.
 
 For details about the available Defender settings, see [Configure security settings in Microsoft Defender for Endpoint on Linux - Microsoft Defender for Endpoint](/defender-endpoint/linux-preferences) in the Defender for Endpoint documentation.
 
@@ -194,7 +337,7 @@ You can now collect data from the SimInfo entity on Windows devices with enhance
 For more information, see [Intune Data Platform](../../analytics/data-platform-schema.md).
 Applies to:
 
--  Windows
+- Windows
 
 ## Week of April 28, 2025
 
@@ -235,7 +378,7 @@ Applies to:
 
 #### Additional org data storage service options for Android and iOS apps<!-- 29606862 -->
 
-Intune now provides additional storage services options when saving copies of org data using an app protection policy for Android or iOS. In addition to the existing org data storage options, you can also select **iManage** and **Egnyte** as storage options. You must select these services as exemptions from your block list by setting **Save copies of org data** to **Block**, then selecting the allowed storage services next to the **Allow user to save copies to selected services** setting. Note that this setting does not apply to all applications.
+Intune now provides additional storage services options when saving copies of org data using an app protection policy for Android or iOS. In addition to the existing org data storage options, you can also select **iManage** and **Egnyte** as storage options. You must select these services as exemptions from your block list by setting **Save copies of org data** to **Block**, then selecting the allowed storage services next to the **Allow user to save copies to selected services** setting. Note that this setting doesn't apply to all applications.
 
 For more information about data protection using app protection policies, see [iOS app protection policy settings - Data protection](../apps/app-protection-policy-settings-ios.md#data-protection) and [Android app protection policy settings - Data protection](../apps/app-protection-policy-settings-android.md#data-protection).
 
@@ -248,9 +391,9 @@ Applies to:
 
 #### Updated device configuration template for Windows Delivery Optimization<!-- 32411831 -->
 
-We’ve updated the device configuration template for Windows [Delivery Optimization](../configuration/delivery-optimization-windows.md). The new template uses the settings format as found in the Settings Catalog, with settings that are taken directly from the Windows Configuration Service Providers (CSPs) for Windows Delivery Optimization, as documented by Windows at [Policy CSP – DeliveryOptimization](/windows/client-management/mdm/policy-csp-DeliveryOptimization).
+We've updated the device configuration template for Windows [Delivery Optimization](../configuration/delivery-optimization-windows.md). The new template uses the settings format as found in the Settings Catalog, with settings that are taken directly from the Windows Configuration Service Providers (CSPs) for Windows Delivery Optimization, as documented by Windows at [Policy CSP – DeliveryOptimization](/windows/client-management/mdm/policy-csp-DeliveryOptimization).
 
-With this change you can no longer create new versions of the old profile. However, your pre-existing instances of the old profile remain available to use.
+With this change you can no longer create new versions of the old profile. However, your preexisting instances of the old profile remain available to use.
 
 For more information about this change, see the Intune Customer Success blog at [Support tip: Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-windows-device-configuration-policies-migrating-to-unified-settings-/4189665).
 
@@ -315,7 +458,7 @@ Now available for Android Enterprise corporate-owned devices, *enrollment time g
 
 Starting in April 2025, Intune no longer supports custom profiles for Android Enterprise personally owned work profile devices. With this end of support:
 
-- Admins won’t be able to create new custom profiles for personally owned work profile devices. However, admins can still view and edit previously created custom profiles.
+- Admins won't be able to create new custom profiles for personally owned work profile devices. However, admins can still view and edit previously created custom profiles.
 
 - Personally-owned work profile devices that currently have a custom profile assigned won't experience any immediate change of functionality. Because these profiles are no longer supported, the functionality set by these profiles might change in the future.
 
@@ -332,10 +475,10 @@ All custom policies should be replaced with other policy types. Learn more about
 
 The most recent Intune security baseline for Windows, version 24H2, is updated to include 15 new settings for managing the Windows Configuration Service Provider (CSP) for [*Lanman Server*](/windows/client-management/mdm/policy-csp-lanmanserver) and [*Lanman Workstation*](/windows/client-management/mdm/policy-csp-lanmanworkstation). These settings were previously unavailable in the baseline due to missing CSP support. The addition of these settings provides better control and configuration options.
  
-Because this is an update to an existing baseline version and not a new baseline version, the new settings aren’t visible in the baselines properties until you edit and save the baseline:
+Because this is an update to an existing baseline version and not a new baseline version, the new settings aren't visible in the baselines properties until you edit and save the baseline:
  
 - **Pre-existing baseline instances**:  
-Before the new settings are available in a pre-existing baseline instance, you must select and then *Edit* that baseline instance. To have the baseline deploy the new settings, you must then *Save* that baseline instance. When the baseline is opened for editing, each of the new settings becomes visible with its default security baseline configuration. Before saving, you can reconfigure one or more of the new settings or make no changes other than to save the current configuration which then uses the baseline defaults for each of the new settings.
+Before the new settings are available in a preexisting baseline instance, you must select and then *Edit* that baseline instance. To have the baseline deploy the new settings, you must then *Save* that baseline instance. When the baseline is opened for editing, each of the new settings becomes visible with its default security baseline configuration. Before saving, you can reconfigure one or more of the new settings or make no changes other than to save the current configuration that then uses the baseline defaults for each of the new settings.
 
 - **New baseline instances**:  
 When you create a new instance of a Windows security baseline version 24H2, that instance includes the new settings along with all the previously available settings.
@@ -631,7 +774,7 @@ Applies to:
 
 #### Manage the DefaultEnforcement configuration for Microsoft Defender Device Control on Windows devices<!-- 30253799 -->
 
-You can now use Intune to manage the configuration of the Microsoft Defender CSP for [DefaultEnforcement](/windows/client-management/mdm/defender-csp#configurationdefaultenforcement) for Device Control. DefaultEnforcement manages the configuration of Device Control on devices that don’t receive Device Control policies or for devices that receive and evaluate a policy for Device Control when no rules in the policy are matched.
+You can now use Intune to manage the configuration of the Microsoft Defender CSP for [DefaultEnforcement](/windows/client-management/mdm/defender-csp#configurationdefaultenforcement) for Device Control. DefaultEnforcement manages the configuration of Device Control on devices that don't receive Device Control policies or for devices that receive and evaluate a policy for Device Control when no rules in the policy are matched.
 
 You can use the following two Microsoft Intune options to configure DefaultEnforcement. With both options, the setting appears as **Default Enforcement**, and is found in the *Defender* category:
 
@@ -748,7 +891,7 @@ When your Azure Tenant is licensed for Microsoft Security Copilot, you can now u
 
 With this capability, while reviewing the properties of a file elevation request, you'll now find option to **Analyze with Copilot**. Use of this option directs Security Copilot to use the files hash in a prompt Microsoft Defender Threat Intelligence to evaluate the file potential indicators of compromise so you can then make a more informed decision to either approve or deny that file elevation request. Some of the results that are returned to your current view in the admin center include:
 
-- The files’ reputation
+- The files' reputation
 - Information about the trust of the publisher
 - The risk score for the user requesting the file elevation
 - The risk score of the device from which the elevation was submitted
@@ -808,7 +951,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Security baselines for HoloLens 2<!-- 24914095 -->
 
-You can now deploy two distinct instances of the security baseline for HoloLens 2. These baselines represent Microsoft’s best practice guidelines and experience from deploying and supporting HoloLens 2 devices to customers across various industries. The two baselines instances:
+You can now deploy two distinct instances of the security baseline for HoloLens 2. These baselines represent Microsoft's best practice guidelines and experience from deploying and supporting HoloLens 2 devices to customers across various industries. The two baselines instances:
 
 - **Standard Security Baseline for HoloLens 2**:
   The standard security baseline for HoloLens 2 represents the recommendations for configuring security settings that are applicable to all types of customers irrespective of HoloLens 2 use case scenarios. [View the default configuration of settings in the standard security baseline](../protect/security-baseline-hololens2-standard.md).
@@ -893,7 +1036,7 @@ In the **Configuration settings** tab, when you select Basic Wi-Fi type, several
 
 It was possible to configure these in the past with Custom Configuration policies, but going forward, we recommend setting these in the Wi-Fi Configuration profile, because [Intune is ending support for Custom policies in April 2024.](https://aka.ms/Intune/Android-customprofiles).
 
-For more information, see [Wi-Fi settings for personally-owned work profile devices.](../configuration/wi-fi-settings-android-enterprise.md#personally-owned-work-profile).
+For more information, see [Wi-Fi settings for personally-owned work profile devices.](../configuration/wi-fi-settings-android-enterprise.md).
 
 Applies to:
 

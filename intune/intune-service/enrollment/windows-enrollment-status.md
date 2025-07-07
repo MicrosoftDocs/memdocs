@@ -7,7 +7,7 @@ description: Set up a greeting page for users signing in and enrolling Windows d
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 02/03/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -173,7 +173,7 @@ The apps that are included in this list are used by Intune to filter the list th
 - App 2
 - App 3
 
-and **App 3** and **App 4** are targeted to the device or user, the ESP tracks only **App 3**.  **App 4** is still installed, but the ESP doesn't wait for it to complete.
+and **App 3** and **App 4** are targeted to the device or user, the ESP tracks only **App 3**.  **App 4** is still installed during pre-provisioning flows, but the ESP doesn't wait for it to complete. In other scenarios, such as user-driven and self-deploying mode, and when **App 4** is a win32, Microsoft Store, or Enterprise app catalog app, it does not get installed until after ESP completes.
 
 ## ESP tracking
 

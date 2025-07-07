@@ -7,8 +7,8 @@ description: Use role-based access control (RBAC) and scope tags to filter confi
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 02/28/2025
+manager: laurawi
+ms.date: 06/06/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,11 +31,11 @@ ms.collection:
 
 # Use role-based access control (RBAC) and scope tags for distributed IT
 
-You can use role-based access control and scope tags to make sure that the right admins have the correct access and visibility to the required Intune objects. Roles determine what access admins have to which objects. Scope tags determine which objects admins can see.
+You can use role-based access control and scope tags to make sure that your Intune admins have the correct access and visibility to the Intune objects you expect them to manage. Roles determine what access admins have to which objects. Scope tags determine which objects admins can see.
 
-For example, let's say a Seattle regional office admin has the Policy and Profile Manager role. You want this admin to see and manage only the profiles and policies that only apply to Seattle devices. To set up this access, you would:
+For example, let's say a Seattle regional office admin has the *Policy and Profile Manager* role. You want this admin to see and manage only the profiles and policies that only apply to *Seattle* devices, a group of devices that are all located at the Seattle office. To set up this access, you would:
 
-1. Create a scope tag called Seattle.
+1. Create a scope tag called *Seattle*.
 2. Create a role assignment for the Policy and Profile Manager role with:
     - Members (Groups) = A security group named Seattle IT admins. All admins in this group have  permission to manage policies and profiles for users/devices in the Scope (Groups).
     - Scope (Groups) = A security group named Seattle users. All users/devices in this group can have their profiles and policies managed by the admins in the Members (Groups).

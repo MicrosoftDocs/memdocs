@@ -6,7 +6,7 @@ description: Review older announcements from the Intune what's new page
 keywords:
 author: dougeby
 ms.author: dougeby
-manager: dougeby
+manager: laurawi
 ms.date: 05/22/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
@@ -79,7 +79,7 @@ Applies to:
 
 #### Defender for Endpoint security settings support in government cloud environments (generally available)<!-- 30064299 -->
 
-Now generally available, customer tenants in the Government Community Cloud (GCC), US Government Community High (GCC High), and Department of Defense (DoD) environments can use Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. Previously, support for Defender security settings was in public preview.
+Now generally available, customer tenants in the Government Community Cloud (GCC), US Government Community High (GCC High), and Department of Defense (DoD) environments can use Intune to manage the Defender security settings on the devices you've onboarded to Defender without enrolling those devices with Intune. Previously, support for Defender security settings was in public preview.
 
 This capability is known as [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
 
@@ -401,9 +401,7 @@ For more information about the device enrollment types supported by Apple, see [
 
 #### Intune now supports iOS/iPadOS 16.x as the minimum version<!-- 28391935 -->
 
-Later this year, we expect iOS 18 and iPadOS 18 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require iOS/iPadOS 16 and higher shortly after the iOS/iPadOS 18 release.
-
-For more information on this change, see [Plan for change: Intune is moving to support iOS/iPadOS 16 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-16-and-later).
+With the release of iOS 18 and iPadOS 18, Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will now require iOS/iPadOS 16 and higher.
 
 > [!NOTE]
 > Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
@@ -415,8 +413,6 @@ Applies to:
 #### Intune now supports macOS 13.x as the minimum version<!-- 28391869 -->
 
 With Apple's release of macOS 15 Sequoia, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 13 (Ventura) and later.
-
-For more information on this change, see [Plan for change: Intune is moving to support macOS 13 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-macos-13-and-higher-later-this-year)
 
 > [!NOTE]
 > macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
@@ -431,7 +427,7 @@ Applies to:
 
 #### Easy creation of Endpoint Privilege Management elevation rules from support approval requests and reports<!-- 28196775 -->
 
-You can now create Endpoint Privilege Management (EPM) elevation rules directly from a support approved elevation request or from details found in the EPM Elevation report. With this new capability, you won’t need to manually identify specific file detection details for elevation rules. Instead, for files that appear in the Elevation report or a support approved elevation request, you can select that file to open its elevation detail pane, and then select the option to **Create a rule with these file details**.
+You can now create Endpoint Privilege Management (EPM) elevation rules directly from a support approved elevation request or from details found in the EPM Elevation report. With this new capability, you won't need to manually identify specific file detection details for elevation rules. Instead, for files that appear in the Elevation report or a support approved elevation request, you can select that file to open its elevation detail pane, and then select the option to **Create a rule with these file details**.
 
 When you use this option, you can then choose to add the new rule to one of your existing elevation policies, or create a new policy with only the new rule.
 
@@ -871,7 +867,7 @@ You can now configure just-in-time (JIT) registration and JIT compliance remedia
 
 We have consolidated the Intune profiles that were related to identity and account protection, into a single new profile named *Account protection*. This new profile is found in the [account protection policy node of endpoint security](../protect/endpoint-security-account-protection-policy.md), and is now the only profile template that remains available when creating new policy instances for identity and account protection. The new profile includes Windows Hello for Business settings for both users and devices, and settings for Windows Credential Guard.
 
-Because this new profile uses Intune’s unified settings format for device management, the profiles settings are also available through the [settings catalog](../configuration/settings-catalog.md), and help to improve the reporting experience in the Intune admin center.
+Because this new profile uses Intune's unified settings format for device management, the profiles settings are also available through the [settings catalog](../configuration/settings-catalog.md), and help to improve the reporting experience in the Intune admin center.
 
 You can continue to use any instances of the following profile templates that you already have in place, but Intune no longer supports creating new instances of these profiles:
 
@@ -1204,7 +1200,7 @@ For more information, see:
 
 #### New granular RBAC controls for Intune endpoint security<!-- 5475572 -->
 
-We’ve begun to replace the role-based access control (RBAC) rights to endpoint security policies that are granted by the *Security baselines* permission with a series of more granular permissions for specific endpoint security tasks. This change can help you assign the specific rights your Intune admins require to do specific jobs instead of relying on either the [built-in](../fundamentals/role-based-access-control.md#built-in-roles) *Endpoint Security Manager* role or a [custom role](../fundamentals/create-custom-role.md) that includes the *Security baseline* permission. Prior to this change, the *Security baseline* permission grants rights across all endpoint security policies.
+We've begun to replace the role-based access control (RBAC) rights to endpoint security policies that are granted by the *Security baselines* permission with a series of more granular permissions for specific endpoint security tasks. This change can help you assign the specific rights your Intune admins require to do specific jobs instead of relying on either the [built-in](../fundamentals/role-based-access-control.md#built-in-roles) *Endpoint Security Manager* role or a [custom role](../fundamentals/create-custom-role.md) that includes the *Security baseline* permission. Prior to this change, the *Security baseline* permission grants rights across all endpoint security policies.
 
 The following new RBAC permissions are available for endpoint security workloads:
 
@@ -2875,7 +2871,7 @@ Applies to:
 For more information on this feature, see:
 
 - [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations)
-- [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune > Applications](../configuration/device-restrictions-android-for-work.md#applications)
+- [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune > Applications](../configuration/device-restrictions-android-for-work.md)
 
 #### Samsung ended support for kiosk mode on Android device administrator (DA) devices<!-- 24810356  -->
 
@@ -2920,7 +2916,7 @@ Applies to:
 
 - Android Enterprise personally owned devices with a work profile (BYOD)
 
-For a list of settings you can configure on personally owned devices with a work profile, see [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
+For a list of settings you can configure on personally owned devices with a work profile, see [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 #### New settings available in the macOS settings catalog<!-- 24950434  -->
 
@@ -4269,7 +4265,7 @@ Currently, there's an **Add and remove accounts** setting that can allow Google 
 
 - **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains or add them in the admin center using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
 
-For more information on the settings you can configure, see [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
+For more information on the settings you can configure, see [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 Applies to:
 
@@ -4723,7 +4719,7 @@ This setting changed. You can now add Google accounts. The **Add and remove acco
 
 - **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
 
-For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
+For more information on the settings you can configure, go to [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 Applies to:
 
@@ -5460,7 +5456,7 @@ The Company Portal app enforces the **Password complexity** setting.
 For more information on this setting and the other settings you can configure on personally owned devices with a work profile, go to:
 
 - [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
-- [Device restriction settings list for Android Enterprise in Intune](../configuration/device-restrictions-android-enterprise-personal.md)
+- [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md)
 
 Applies to:
 
@@ -5634,7 +5630,7 @@ If you continue to use the **Required password type** and **Minimum password len
 
 For more information on these settings and what happens to existing devices with the deprecated settings configured, go to:
 
-- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-enterprise-personal.md)
+- [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md)
 - [Android Enterprise personally owned devices with a work profile - compliance policy settings list](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
 
 Applies to:

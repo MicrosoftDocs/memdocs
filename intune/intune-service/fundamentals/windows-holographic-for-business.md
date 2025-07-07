@@ -5,7 +5,7 @@ description: Use Microsoft Intune to manage and complete different tasks on devi
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 03/17/2025
 ms.topic: article
 ms.service: microsoft-intune

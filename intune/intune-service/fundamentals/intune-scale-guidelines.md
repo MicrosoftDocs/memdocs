@@ -7,7 +7,7 @@ description: Learn about scaling guidelines for Microsoft Intune when you have a
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 05/28/2025
 ms.topic: article
 ms.service: microsoft-intune

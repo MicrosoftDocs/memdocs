@@ -58,7 +58,7 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 ## Add and deploy a Microsoft Store app
 
-An [Intune administrator](../fundamentals/users-add.md#types-of-administrators) can use the following steps to add and deploy a Microsoft Store app. 
+An [Intune administrator](../fundamentals/role-based-access-control-reference.md) with sufficient permissions can use the following steps to add and deploy a Microsoft Store app.
 
 ### Step 1: Add an app from the Microsoft Store
 

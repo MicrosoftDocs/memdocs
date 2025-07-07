@@ -1,14 +1,13 @@
 ---
 # required metadata
 
-title: Set up Jamf Mobile Threat Protection integration with Intune
-titleSuffix: Intune on Azure
+title: Set up Jamf Mobile Threat Protection integration with Microsoft Intune
 description: How to set up the Jamf Mobile Threat Protection solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/18/2024
+ms.date: 06/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -40,15 +39,14 @@ Complete the following steps to integrate the Jamf Mobile Threat Defense solutio
 Before you start the process to integrate Jamf with Intune, make sure you have the following prerequisites in place:
 
 - Microsoft Intune Plan 1 subscription
-- Microsoft Entra administrator credentials and assigned role that is able to grant the following permissions:
 
+- Microsoft Entra administrator credentials and assigned role that is able to grant the following permissions:
   - Sign in and read user profile
   - Access the directory as the signed-in user
   - Read directory data
   - Send device risk information to Intune
 
-- A valid Jamf Security Cloud subscription
-  - An administrator account with super admin privileges
+- A valid Jamf Security Cloud subscription, including an administrator account with super admin privileges
 
 ## Integration overview
 
@@ -67,11 +65,11 @@ Setting up integration between Jamf and Intune doesn't require any support from 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > **Add**.
+2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > **Create**.
 
-3. On the **Add Connector** page, use the dropdown and select **Jamf**. And then select **Create**.
+3. On the **Add Connector** page, use the dropdown and select **Jamf Trust** to load the Jamf connector configuration options.
 
-4. On the Mobile Threat Defense pane, select the **Jamf** MTD Connector from the list of connectors to open the **Edit connector** pane. Select **Open the Jamf admin console** to open Jamf Security Cloud portal, and sign in.
+4. For the first step, select **Open the Jamf Trust admin console** to open Jamf Security Cloud portal, and sign in.
 
 5. In the Jamf Security Cloud portal, go to **Integrations > UEM Integration**, and select the **UEM Connect** tab. Use the EMM Vendor drop-down and select **Microsoft Intune**.
 

@@ -5,7 +5,7 @@ description: Learn more about the features and capabilities of Microsoft Surface
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 10/28/2021
 ms.topic: concept-article
 ms.service: microsoft-intune

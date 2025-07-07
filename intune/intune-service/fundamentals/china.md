@@ -7,7 +7,7 @@ description: Intune operated by 21Vianet in China.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 11/25/2024
 ms.topic: article
 ms.service: microsoft-intune

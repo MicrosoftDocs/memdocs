@@ -6,7 +6,7 @@ description: Microsoft Intune is a cloud-based service that helps you manage Win
 keywords:
 author: dougeby
 ms.author: dougeby
-manager: dougeby
+manager: laurawi
 ms.date: 12/12/2023
 ms.topic: article
 ms.service: microsoft-intune
