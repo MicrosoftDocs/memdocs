@@ -35,7 +35,11 @@ ms.collection:
 
 This article goes over the properties supported in the Intune Data Platform. The Intune Data Platform can be accessed via Device query for single devices, Inventory, and Device query for Multiple Devices.
 
-Each table (entity) in this page lists the types of queries that are supported.
+Each table (entity) in this page lists the types of queries that are supported with the following information:  
+- Property: The name of the property.  
+- Type: The type of property. 
+- Description: The purpose of the property. 
+- Platform:  The operating systems that support the property.
 
 For entities that include Android data, the following platforms are supported:
 
@@ -224,8 +228,8 @@ For entities that include Android data, the following platforms are supported:
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| DeviceCapacityBytes | long | Total device storage capacity ||
-| Encrypted | bool | Details whether encryption is on or off ||
+| DeviceCapacityBytes | long | Total device storage capacity |Android, iOS, iPadOS, macOS|
+| Encrypted | bool | Details whether encryption is on or off |Android|
 
 
 ## DiskDrive
@@ -238,17 +242,17 @@ For entities that include Android data, the following platforms are supported:
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| DriveId | string (max length 256 characters) | The unique identifier of the drive on the system. ||
-| PartitionCount | long | Number of detected partitions on disk. ||
+| DriveId | string (max length 256 characters) | The unique identifier of the drive on the system. |Windows|
+| PartitionCount | long | Number of detected partitions on disk. |Windows|
 | DriveIndex | long | Physical drive number of the disk. |
-| InterfaceType | string (max length 256 characters) | The interface type of the disk. ||
-| PnpDeviceId | string (max 256 length 256 characters) | The unique identifier of the drive on the system. ||
-| SizeBytes | long | Size of the disk. ||
-| Manufacturer | string (max length 256 characters) | The manufacturer of the disk. ||
+| InterfaceType | string (max length 256 characters) | The interface type of the disk. |Windows|
+| PnpDeviceId | string (max 256 length 256 characters) | The unique identifier of the drive on the system. |Windows|
+| SizeBytes | long | Size of the disk. |Windows|
+| Manufacturer | string (max length 256 characters) | The manufacturer of the disk. |Windows|
 | Model | string (max length 256 characters) | Hard drive model. ||
-| DiskName | string (max length 256 characters) | The label of the disk object. ||
-| SerialNumber | string (max length 256 characters) | The serial number of the disk. ||
-| Description | string (max length 256 characters) | The OS's description of the disk. ||
+| DiskName | string (max length 256 characters) | The label of the disk object. |Windows|
+| SerialNumber | string (max length 256 characters) | The serial number of the disk. |Windows|
+| Description | string (max length 256 characters) | The OS's description of the disk. |Windows|
 
 ## EncryptableVolume
 
@@ -260,13 +264,13 @@ For entities that include Android data, the following platforms are supported:
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| VolumeId | string(Max length 256 characters) | ID of the encrypted volume. ||
-| WindowsDriveLetter | string(Max length 5 characters) | Drive letter of the encrypted drive. ||
-| PersistentVolumeId | string(Max length 38 characters) This is a Guid | Persistent ID of the drive. ||
-| ProtectionStatus | string (max length 256 characters) | The BitLocker protection status of the drive. ||
-| EncryptionMethod | string(256) | The encryption type of the device. ||
-| EncryptionPercentage | long (An integer from 0 to 100 inclusive) | The percentage of the drive that is encrypted. ||
-| Locked | bool | The accessibility status of the drive from Windows. ||
+| VolumeId | string(Max length 256 characters) | ID of the encrypted volume. |Windows|
+| WindowsDriveLetter | string(Max length 5 characters) | Drive letter of the encrypted drive. |Windows|
+| PersistentVolumeId | string(Max length 38 characters) This is a Guid | Persistent ID of the drive. |Windows|
+| ProtectionStatus | string (max length 256 characters) | The BitLocker protection status of the drive. |Windows|
+| EncryptionMethod | string(256) | The encryption type of the device. |Windows|
+| EncryptionPercentage | long (An integer from 0 to 100 inclusive) | The percentage of the drive that is encrypted. |Windows|
+| Locked | bool | The accessibility status of the drive from Windows. |Windows|
 
 ## FileInfo
 
@@ -281,19 +285,19 @@ For entities that include Android data, the following platforms are supported:
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| Path | string(Max Length 260 characters) | Absolute file path ||
-| Directory | string (Max Length 4096 characters) | Directory of file(s) ||
-| FileName | string(Max Length 260 characters) | Namxxe portion of file path ||
-| SizeBytes | long | Size of file in bytes ||
-| LastAccessDateTime | datetime(UTC) | Last access time ||
-| LastModifiedDateTime | datetime(UTC) | Last modification time ||
-| LastStatusChangeDateTime | datetime(UTC) | Last status change time ||
-| CreatedDateTime | datetime(UTC) | (B)irth or (cr)eate time ||
-| Attributes | string | File attribute string. See: [https://ss64.com/nt/attrib.html](https://ss64.com/nt/attrib.html) ||
-| FileVersion | string(Max length 256 characters) | File version ||
-| ProductVersion | string(Max length 256 characters) | File product version ||
-| ProductName | string(Max length 256 characters) | File Product Name ||
-| OriginalName | string(Max length 256 characters) | (Executable files only) Original filename ||
+| Path | string(Max Length 260 characters) | Absolute file path |Windows|
+| Directory | string (Max Length 4096 characters) | Directory of file(s) |Windows|
+| FileName | string(Max Length 260 characters) | Namxxe portion of file path |Windows|
+| SizeBytes | long | Size of file in bytes |Windows|
+| LastAccessDateTime | datetime(UTC) | Last access time |Windows|
+| LastModifiedDateTime | datetime(UTC) | Last modification time |Windows|
+| LastStatusChangeDateTime | datetime(UTC) | Last status change time |Windows|
+| CreatedDateTime | datetime(UTC) | (B)irth or (cr)eate time |Windows|
+| Attributes | string | File attribute string. See: [https://ss64.com/nt/attrib.html](https://ss64.com/nt/attrib.html) |Windows|
+| FileVersion | string(Max length 256 characters) | File version |Windows|
+| ProductVersion | string(Max length 256 characters) | File product version |Windows|
+| ProductName | string(Max length 256 characters) | File Product Name |Windows|
+| OriginalName | string(Max length 256 characters) | (Executable files only) Original filename |Windows|
 
 ## LocalGroup
 
@@ -301,13 +305,13 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported platforms**: Windows
 
-**Supported for**: single device query on-demand.
+**Supported for**: Single device query on-demand.
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| GroupId | long, Result should be (\>=0) | Group ID ||
-| GroupName | String(Max length 256 characters) | Group Name ||
-| WindowsSid | String(Max length 256 characters) | sid of group on windows ||
+| GroupId | long, Result should be (\>=0) | Group ID |Windows|
+| GroupName | String(Max length 256 characters) | Group Name |Windows|
+| WindowsSid | String(Max length 256 characters) | sid of group on windows |Windows|
 
 ## LocalUserAccount
 
@@ -319,11 +323,11 @@ For entities that include Android data, the following platforms are supported:
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| UserId | long, Result should be (\>=0) | User ID ||
-| Username | string(max length 256 characters) | Username ||
-| UserDescription | string(max length 256 characters) | Optional user description ||
-| HomeDirectory | string(max length 4096 characters) | User's home directory ||
-| WindowsSid | string(max length 256 characters) | Windows Sid ||
+| UserId | long, Result should be (\>=0) | User ID |Windows|
+| Username | string(max length 256 characters) | Username |Windows|
+| UserDescription | string(max length 256 characters) | Optional user description |Windows|
+| HomeDirectory | string(max length 4096 characters) | User's home directory |Windows|
+| WindowsSid | string(max length 256 characters) | Windows Sid |Windows|
 
 ## LogicalDrive
 
@@ -335,12 +339,12 @@ For entities that include Android data, the following platforms are supported:
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| DriveIdentifier | string (Max length 5 characters) | The drive ID, usually the drive name. For example, 'C:'. ||
-| DriveType | string(Max length 100 character) | Drive type such as local disk or removal disk ||
-| DiskDescription | string (Max length 256 characters) | The canonical description of the drive. For example, 'Logical Fixed Disk', 'CD-ROM Disk'. ||
-| FreeSpaceBytes | long, Result should be (\>=0) | The amount of free space, in bytes, of the drive (-1 on failure). ||
-| DiskSizeBytes | long, Result should be (\>=0) | The total amount of space, in bytes, of the drive (-1 on failure). ||
-| FileSystem | string(Max length 256 characters) | The file system of the drive. ||
+| DriveIdentifier | string (Max length 5 characters) | The drive ID, usually the drive name. For example, 'C:'. |Windows |
+| DriveType | string(Max length 100 character) | Drive type such as local disk or removal disk |Windows |
+| DiskDescription | string (Max length 256 characters) | The canonical description of the drive. For example, 'Logical Fixed Disk', 'CD-ROM Disk'. |Windows |
+| FreeSpaceBytes | long, Result should be (\>=0) | The amount of free space, in bytes, of the drive (-1 on failure). |Windows |
+| DiskSizeBytes | long, Result should be (\>=0) | The total amount of space, in bytes, of the drive (-1 on failure). |Windows |
+| FileSystem | string(Max length 256 characters) | The file system of the drive. |Windows |
 
 ## MemoryInfo
 
@@ -353,10 +357,10 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| PhysicalMemoryTotalBytes | Long, Result should be (\>=0) | Total amount of physical memory available to the operating system. This value doesn't necessarily indicate the true amount of physical memory, but what is reported to the operating system as available to it. ||
-| PhysicalMemoryFreeBytes | LongResult should be (\>=0) |Number of bytes of physical memory currently unused and available. ||
-| VirtualMemoryTotalBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory. ||
-| VirtualMemoryFreeBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory currently unused and available. ||  
+| PhysicalMemoryTotalBytes | Long, Result should be (\>=0) | Total amount of physical memory available to the operating system. This value doesn't necessarily indicate the true amount of physical memory, but what is reported to the operating system as available to it. |Windows single device query, Windows multi device query |
+| PhysicalMemoryFreeBytes | LongResult should be (\>=0) |Number of bytes of physical memory currently unused and available. |Windows single device query |
+| VirtualMemoryTotalBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory. |Windows single device query, Windows multi device query |
+| VirtualMemoryFreeBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory currently unused and available. |Windows single device query |  
 
 ## NetworkAdapter
 
@@ -368,16 +372,17 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| Identifier | String | Unique identifier of the adapter from other devices on the system. ||
-| Manufacturer | String | Name of the network adapter's manufacturer. ||
-| Type | String | Network medium in use. ||
+| Identifier | String | Unique identifier of the adapter from other devices on the system. |Windows|
+| MacAddress| String | Hardware identification number that uniquely identifies each device on a network. |Android, iOS, iPadOS, macOS |
+| Manufacturer | String | Name of the network adapter's manufacturer. |Windows|
+| Type | String | Network medium in use. |Windows|
 
 > [!NOTE]
 > Inventory will only report up to 20 network adapters per device.
 
 ## OsVersion
 
-**Description**: A single row containing the operating system name and version.
+**Description**: A single record containing the operating system name and version of the device. 
 
 **Supported platforms**: Android, iOS, iPadOS, Windows
 
@@ -385,14 +390,16 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| OsName | string (max length 256 characters) | Distribution or product name ||
-| OsVersion | string (max length 40characters) | Pretty, suitable for presentation, OS version ||
-| MajorVersion | Long | Major release version ||
-| MinorVersion | Long | Minor release version ||
-| PatchVersion | long | Optional patch release ||
-| BuildVersion | string | Optional build-specific or variant string ||
-| Architecture | string(max length 256 characters) | OS Architecture ||
-| InstallDateTime | datetime (UTC) | The install date time of the OS. ||
+| OsName | string (max length 256 characters) | Distribution or product name |Android, iOS, iPadOS, Windows|
+| OsVersion | string (max length 40characters) | Pretty, suitable for presentation, OS version |Android, iOS, iPadOS, Windows|
+| MajorVersion | Long | Major release version |Android, iOS, iPadOS, Windows single device query, Windows multi device query |
+| MinorVersion | Long | Minor release version |Android, iOS, iPadOS, Windows single device query, Windows multi device query |
+| PatchVersion | long | Optional patch release |Android, iOS, iPadOS, macOS, Windows single device query |
+| BuildVersion | string | Optional build-specific or variant string |Android, iOS, iPadOS, macOS,  Windows single device query |
+| Architecture | string(max length 256 characters) | OS Architecture |Windows single device query, Windows multi device query |
+| InstallDateTime | datetime (UTC) | The install date time of the OS. |Windows single device query, Windows multi device query |
+|AppleSupplementalOSVersion |String |The OS version that contains the Rapid Security Response version which is designated by a letter. |iOS, iPadOS, macOS |
+|AppleSupplementalBuildVersion |String |The OS build version that contains the Rapid Security Response version which is designated by a letter. |iOS, iPadOS, macOS |  
 
 ## Process
 
@@ -404,26 +411,26 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| ProcessId | long | Process ID ||
-| ProcessName | string (max 260 characters) | The name of process ||
-| Path | string (max 4096 characters) | Path to executed binary ||
-| CommandLine | string (max 4096 characters) | Complete argv ||
-| CurrentWorkingDirectory | string (max 256 characters) | Process current working directory ||
-| WorkingSetSizeBytes | long | Bytes of private memory used by process ||
-| TotalSizeBytes | long | Total virtual memory size ||
-| DiskBytesRead | long | Bytes read from disk ||
-| DiskBytesWritten | long | Bytes written to disk ||
-| ParentProcessId | long | Process parent's PID ||
-| Priority | long | Process nice level (-20 to 20, default 0) ||
-| UserTimeMilliseconds | long | CPU time in milliseconds spent user space ||
-| SystemTimeMilliseconds | long | CPU time in milliseconds spent in kernel space ||
-| StartDateTime | Datetime(UTC)Need to convert this value to datetime | Process start datetime in UTC ||
-| ElapsedTimeMilliseconds | long | Elapsed time in seconds this process has been running. ||
-| ProcessorTimePercent | long | Returns elapsed time that all of the threads of this process used the processor to execute instructions in 100-nanoseconds ticks. ||
-| ThreadCount | long | Number of threads used by process ||
-| HandleCount | long | Total number of handles that the process has open. This number is the sum of the handles currently opened by each thread in the process. ||
+| ProcessId | long | Process ID |Windows|
+| ProcessName | string (max 260 characters) | The name of process |Windows|
+| Path | string (max 4096 characters) | Path to executed binary |Windows|
+| CommandLine | string (max 4096 characters) | Complete argv |Windows|
+| CurrentWorkingDirectory | string (max 256 characters) | Process current working directory |Windows|
+| WorkingSetSizeBytes | long | Bytes of private memory used by process |Windows|
+| TotalSizeBytes | long | Total virtual memory size |Windows|
+| DiskBytesRead | long | Bytes read from disk |Windows|
+| DiskBytesWritten | long | Bytes written to disk |Windows|
+| ParentProcessId | long | Process parent's PID |Windows|
+| Priority | long | Process nice level (-20 to 20, default 0) |Windows|
+| UserTimeMilliseconds | long | CPU time in milliseconds spent user space |Windows|
+| SystemTimeMilliseconds | long | CPU time in milliseconds spent in kernel space |Windows|
+| StartDateTime | Datetime(UTC)Need to convert this value to datetime | Process start datetime in UTC |Windows|
+| ElapsedTimeMilliseconds | long | Elapsed time in seconds this process has been running. |Windows|
+| ProcessorTimePercent | long | Returns elapsed time that all of the threads of this process used the processor to execute instructions in 100-nanoseconds ticks. |Windows|
+| ThreadCount | long | Number of threads used by process |Windows|
+| HandleCount | long | Total number of handles that the process has open. This number is the sum of the handles currently opened by each thread in the process. |Windows|
 | WindowsUserAccount | string | The owner of the process ||
-| OnDisk | boolNullable\<System.Boolean\>  | The process path exists yes=1, no=0, unknown=-1 ||
+| OnDisk | boolNullable\<System.Boolean\>  | The process path exists yes=1, no=0, unknown=-1 |Windows|
 
 ## SharediPad
 
@@ -435,18 +442,16 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| EstimatedResidentUsersCount | long | Estimated number of users that can share the device based on space. ||
-| IsMultiUser | bool | iPad set up as multi user ||
-| IsTemporarySessionOnly | bool | The device only allows temporary sessions. ||
-| ManagedAppleIdDefaultDomains | string | The list of domains that the device suggests on the Shared iPad login screen. ||
-| OnlineAuthenticationGracePeriodDays | long | The grace period for Shared iPad online authentication (in days). A value of 0 indicates that the device requires online authentication for every login ||
-| QuotaSizeBytes | long | The quota size in bytes for each user on this shared iPad device ||
-| ResidentUsersCount | long | The number of users currently on this shared iPad device. ||
-| SkipLanguageAndLocaleSetupForNewUsers | bool | If true, skip the language and country/region panes for new users on Shared iPad. ||
-| TemporarySessionTimeoutSeconds | long | The timeout interval for the temporary session. A value of 0 indicates that there’s no timeout. ||
-| UserSessionTimeoutSeconds | long | The timeout interval for the user session. A value of 0 indicates that there’s no timeout. ||
-
-
+| EstimatedResidentUsersCount | long | Estimated number of users that can share the device based on space. |iPadOS|
+| IsMultiUser | bool | iPad set up as multi user |iPadOS|
+| IsTemporarySessionOnly | bool | The device only allows temporary sessions. |iPadOS|
+| ManagedAppleIdDefaultDomains | string | The list of domains that the device suggests on the Shared iPad login screen. |iPadOS|
+| OnlineAuthenticationGracePeriodDays | long | The grace period for Shared iPad online authentication (in days). A value of 0 indicates that the device requires online authentication for every login |iPadOS|
+| QuotaSizeBytes | long | The quota size in bytes for each user on this shared iPad device |iPadOS|
+| ResidentUsersCount | long | The number of users currently on this shared iPad device. |iPadOS|
+| SkipLanguageAndLocaleSetupForNewUsers | bool | If true, skip the language and country/region panes for new users on Shared iPad. |iPadOS|
+| TemporarySessionTimeoutSeconds | long | The timeout interval for the temporary session. A value of 0 indicates that there’s no timeout. |iPadOS|
+| UserSessionTimeoutSeconds | long | The timeout interval for the user session. A value of 0 indicates that there’s no timeout. |iPadOS|  
 
 ## SystemEnclosure
 
@@ -461,19 +466,19 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| SerialNumber | string (max 64 characters) | The serial number of the chassis. ||
-| AudibleAlarmEquipped | bool | If TRUE, the frame is equipped with an audible alarm. ||
-| BreachDescription | string(max 256 characters) | If provided, gives a more detailed description of a detected security breach. ||
-| ChassisTypes | Array[string] | A comma-separated list of chassis types, such as Desktop or Laptop. ||
-| ExtendedDescription | string(max 256 characters) | An extended description of the chassis if available. ||
-| LockEquipped | bool | If TRUE, the frame is equipped with a lock. ||
-| Manufacturer | string (max 256 characters) | The manufacturer of the chassis. ||
+| SerialNumber | string (max 64 characters) | The serial number of the chassis. |Windows single device query, Windows multi device query |
+| AudibleAlarmEquipped | bool | If TRUE, the frame is equipped with an audible alarm. |Windows single device query, Windows multi device query |
+| BreachDescription | string(max 256 characters) | If provided, gives a more detailed description of a detected security breach. |Windows single device query, Windows multi device query |
+| ChassisTypes | Array[string] | A comma-separated list of chassis types, such as Desktop or Laptop. |Windows single device query|
+| ExtendedDescription | string(max 256 characters) | An extended description of the chassis if available. |Windows single device query, Windows multi device query |
+| LockEquipped | bool | If TRUE, the frame is equipped with a lock. |Windows single device query, Windows multi device query |
+| Manufacturer | string (max 256 characters) | The manufacturer of the chassis. |Windows single device query, Windows multi device query |
 | Model | string (max 256 characters) | The model of the chassis. ||
-| SecurityBreach | string(max 256 characters) | The physical status of the chassis such as Breach Successful, Breach Attempted, etc. ||
-| SmBiosAssetTag | string (max 120 characters) | The assigned asset tag number of the chassis. ||
-| Sku | string (max 64 characters) | The Stock Keeping Unit number if available. ||
-| Status | string(256 characters) | If available, gives various operational or nonoperational statuses such as OK, Degraded, and Pred Fail. ||
-| VisibleAlarmEquipped | bool | If TRUE, the frame is equipped with a visual alarm. ||
+| SecurityBreach | string(max 256 characters) | The physical status of the chassis such as Breach Successful, Breach Attempted, etc. |Windows single device query, Windows multi device query |
+| SmBiosAssetTag | string (max 120 characters) | The assigned asset tag number of the chassis. |Windows single device query, Windows multi device query |
+| Sku | string (max 64 characters) | The Stock Keeping Unit number if available. |Windows single device query, Windows multi device query |
+| Status | string(256 characters) | If available, gives various operational or nonoperational statuses such as OK, Degraded, and Pred Fail. |Windows single device query, Windows multi device query |
+| VisibleAlarmEquipped | bool | If TRUE, the frame is equipped with a visual alarm. |Windows single device query, Windows multi device query |
 
 ## SystemInfo
 
@@ -485,13 +490,13 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| FqdnHostname | string (max 256) | Network hostname including domain ||
-| Uuid | string (max 36 characters) | Unique ID provided by the system ||
-| ComputerName | string (max 256 characters) | Friendly computer name (optional) ||
+| FqdnHostname | string (max 256) | Network hostname including domain |Windows single device query |
+| Uuid | string (max 36 characters) | Unique ID provided by the system |Windows single device query |
+| ComputerName | string (max 256 characters) | Friendly computer name (optional) |Windows single device query |
 | PhysicalProcessorCount | Long | Number of physical processors ||
-| ProcessorArchitecture | string(40 characters) | CPU type ||
-| HardwareManufacturer | string (max 256 characters) | Hardware vendor ||
-| HardwareModel | string (max 256 characters) | Hardware model ||
+| ProcessorArchitecture | string(40 characters) | CPU type |Windows single device query |
+| HardwareManufacturer | string (max 256 characters) | Hardware vendor |Windows single device query |
+| HardwareModel | string (max 256 characters) | Hardware model |Windows single device query |
 
 ## SimInfo
 
@@ -503,29 +508,9 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| WindowsESimId | String | The ID of an eSIM found on the device ||
-| Eid | String | The electronic identification number of the device ||
-| isActive | Boolean | Whether the eSIM is active or not ||
-
-## Tpm
-
-**Description**: Provides TPM related information of the device.  
-
-**Supported platforms**: Windows
-
-**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
-
-| **Property** | **Type** | **Description** |**Platform**|
-| --- | --- | --- |--- |
-| Activated | bool | TPM is activated ||
-| Enabled | bool | TPM is enabled ||
-| Owned | bool | TPM is owned ||
-| Manufacturer | string (max 256 characters) | TPM manufacturers name ||
-| ManufacturerVersion | string (max 256 characters) | TPM version ||
-| ManufacturerId | long | TPM manufacturers ID ||
-| ProductName | string (max 256 characters) | Product name of the TPM ||
-| PhysicalPresenceVersion | string (max 256 characters) | Version of the Physical Presence Interface ||
-| SpecVersion | string (max 256 characters) | Trusted Computing Group specification that the TPM supports ||  
+| WindowsESimId | String | The ID of an eSIM found on the device |Windows|
+| Eid | String | The electronic identification number of the device |Windows|
+| isActive | Boolean | Whether the eSIM is active or not |Windows|
 
 ## Time
 
@@ -538,6 +523,26 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
 | TimeZone | String | Describes the device's time zone. |Windows|
+
+## Tpm
+
+**Description**: Provides TPM related information of the device.  
+
+**Supported platforms**: Windows
+
+**Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
+
+| **Property** | **Type** | **Description** |**Platform**|
+| --- | --- | --- |--- |
+| Activated | bool | TPM is activated |Windows|
+| Enabled | bool | TPM is enabled |Windows|
+| Owned | bool | TPM is owned |Windows|
+| Manufacturer | string (max 256 characters) | TPM manufacturers name |Windows|
+| ManufacturerVersion | string (max 256 characters) | TPM version ||
+| ManufacturerId | long | TPM manufacturers ID |Windows|
+| ProductName | string (max 256 characters) | Product name of the TPM |Windows|
+| PhysicalPresenceVersion | string (max 256 characters) | Version of the Physical Presence Interface |Windows|
+| SpecVersion | string (max 256 characters) | Trusted Computing Group specification that the TPM supports |Windows|  
 
 ## VideoController
 
@@ -566,11 +571,11 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 | ReportId(Key) | string (max 256 characters) | Report ID of the App crash |
 | --- | --- | --- |
-| AppPath | string (max 256 characters) | Application path ||
-| AppName | string (max 256 characters) | Application file name ||
-| AppVersion | string (max 40 characters) | Application version ||
-| LoggedDateTime | datetime (UTC) | System UTC time at which the event occurred ||
-| WindowsUserAccount | string (max 256 characters) | User account associated with this app crash ||
+| AppPath | string (max 256 characters) | Application path |Windows|
+| AppName | string (max 256 characters) | Application file name |Windows|
+| AppVersion | string (max 40 characters) | Application version |Windows|
+| LoggedDateTime | datetime (UTC) | System UTC time at which the event occurred |Windows|
+| WindowsUserAccount | string (max 256 characters) | User account associated with this app crash |Windows|
 
 ## WindowsDriver
 
@@ -582,16 +587,16 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| DriverDeviceId(Key) | string (Max 256 characters) | Device ID ||
-| FriendlyName | string(Max 256 characters) | Such as "Microsoft Device Association Root Enumerator" ||
-| DriverDescription | string (Max 256 characters) | Driver description ||
-| DriverVersion | string (Max 20 characters) | Driver version ||
-| InfName | string (Max 260 characters) | Associated inf file ||
-| Class | string (Max 256 characters) | Device/driver class name ||
-| ProviderName | string (Max 256 characters) | Driver provider ||
-| Manufacturer | string (Max 256 characters) | Device manufacturer ||
-| BuildDate[Win32\_PnPSignedDriver class (Windows) | Microsoft Learn](/previous-versions/windows/desktop/legacy/aa394354(v=vs.85)) | datetime(UTC) | Driver date ||
-| Signed | bool | Whether the driver is signed or not ||
+| DriverDeviceId(Key) | string (Max 256 characters) | Device ID |Windows|
+| FriendlyName | string(Max 256 characters) | Such as "Microsoft Device Association Root Enumerator" |Windows|
+| DriverDescription | string (Max 256 characters) | Driver description |Windows|
+| DriverVersion | string (Max 20 characters) | Driver version |Windows|
+| InfName | string (Max 260 characters) | Associated inf file |Windows|
+| Class | string (Max 256 characters) | Device/driver class name |Windows|
+| ProviderName | string (Max 256 characters) | Driver provider |Windows|
+| Manufacturer | string (Max 256 characters) | Device manufacturer |Windows|
+| BuildDate[Win32\_PnPSignedDriver class (Windows) | Microsoft Learn](/previous-versions/windows/desktop/legacy/aa394354(v=vs.85)) | datetime(UTC) | Driver date |Windows|
+| Signed | bool | Whether the driver is signed or not |Windows|
 
 ## WindowsEvent
 
