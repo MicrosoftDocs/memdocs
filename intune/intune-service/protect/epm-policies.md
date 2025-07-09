@@ -363,6 +363,39 @@ Use either of the following methods to create new elevation rules, which are add
 
 6. In **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 
+### Use variables in file names for elevation rules
+
+Wildcards are supported as part of a file name when configuring the **File name** field on the Rule properties page of an elevation rule policy. However, they are not supported in the file name extension. The following wildcard characters are supported:
+
+- Question mark (__?__) - Question marks  replace individual characters in a file name. 
+- Asterisk (__*__) - Asterisk replace a string of characters in a file name. 
+
+The following rules apply to use of wildcards in a file name:  
+- Can be used in any position of a file's name except for the first character.
+- Can't be used to offset the file extension.
+- Can't be used to within the file extension.
+<!-- in doubt>
+- Can't be followed at any point by a period other than the period that offsets the file extension.
+- Can't be used to replace a period (.) within a file name, prior to the file extension.
+-->
+<!-- in doubt>
+- A question mark can be followed by non-wildcard characters, other than periods.
+- An asterisk can't be followed by a non-wildcard character other than the period that offsets the file extension.
+- Any number of wildcard characters can be used in in a file name, including in multiple locations that are separated by non-wildcard characters.
+- An asterisk can't be followed by a non-wildcard character. 
+- A question mark can be followed by non-wildcard characters. other than periods.
+-->
+
+The following are examples of supported wildcard use for file name entries for a Visual Studio setup file called *VSCodeUserSetup-arm64-1.99.2.exe*:  
+- VSCodeUserSetup*.exe
+- VSCodeUserSetup-arm64-*.exe
+- VSCodeUserSetup-????-.exe
+
+
+> [!CAUTION]
+> With wildcard use for file names, it is important to use additional methods for file validation to
+
+
 ### Use file arguments for elevation rules
 
 When you manually configure or edit a [file elevation rule](#windows-elevation-rules-policy), you can add one or more file command lines or arguments to help you control how that file is used, and what it can be used to do when it's run in an elevated context. 
