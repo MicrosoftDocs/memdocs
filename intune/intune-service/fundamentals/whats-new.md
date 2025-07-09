@@ -79,6 +79,12 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
+#### Microsoft Intune support for Apple AI features<!-- 12792722, 30550110, 30220799 -->
+
+Intune app protection policies have new standalone settings for Apple AI features (Genmojis, Writing tools, and screen capture). Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Previously, these Apple AI features were blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
+
+For more information about Intune's related app protection policies, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
+
 #### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
 
 Windows Autopilot now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you can select apps from the Enterprise App Catalog as blocking apps in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to ensure those apps are delivered before the user can access the desktop.
