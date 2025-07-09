@@ -153,7 +153,7 @@ For entities that include Android data, the following platforms are supported:
 | --- | --- | --- |--- |
 | MacAddress | string | Bluetooth media access control (MAC) address. |iOS, iPadOS, macOS|
 
-## Celluar
+## Cellular
 
 **Description**: Provides cellular information about mobile devices.
 
@@ -209,14 +209,14 @@ For entities that include Android data, the following platforms are supported:
 | Manufacturer | string (max length 256 characters) | The manufacturer of the CPU. | Windows single device query, Windows multi device query |
 | ProcessorType | string | The processor type, such as Central, Math, or Video. |Windows single device query, Windows multi device query  |
 | Architecture | String (max length 20 characters) | Processor architecture used by the platform. |Windows single device query, Windows multi device query  |
-| CpuStatus | string (max 256 length 256 characters) | The current operating status of the CPU. |Windows single device query, Windows multi device query  |
+| CpuStatus | string (max length 256 characters) | The current operating status of the CPU. |Windows single device query, Windows multi device query  |
 | CoreCount | long | The number of cores of the CPU. |Windows single device query, Windows multi device query |
 | LogicalProcessorCount | long | The number of logical processors of the CPU. |Windows single device query, Windows multi device query  |
 | AddressWidth | long | The width of the CPU address bus. |Windows single device query, Windows multi device query |
 | CurrentClockSpeed | long | The current frequency of the CPU. | Windows single device query|
 | MaxClockSpeed | long | The maximum possible frequency of the CPU. |Windows single device query, Windows multi device query |
 | SocketDesignation | string (max length 256 characters) | The assigned socket on the board for the given CPU. | Windows single device query, Windows multi device query |
-| Availability | string(max length 256 characters) | The availability and status of the CPU. |Windows single device query |
+| Availability | string (max length 256 characters) | The availability and status of the CPU. |Windows single device query |
 
 ## DeviceStorage
 
@@ -246,7 +246,7 @@ For entities that include Android data, the following platforms are supported:
 | PartitionCount | long | Number of detected partitions on disk. |Windows|
 | DriveIndex | long | Physical drive number of the disk. |Windows|
 | InterfaceType | string (max length 256 characters) | The interface type of the disk. |Windows|
-| PnpDeviceId | string (max 256 length 256 characters) | The unique identifier of the drive on the system. |Windows|
+| PnpDeviceId | string (max length 256 characters) | The unique identifier of the drive on the system. |Windows|
 | SizeBytes | long | Size of the disk. |Windows|
 | Manufacturer | string (max length 256 characters) | The manufacturer of the disk. |Windows|
 | Model | string (max length 256 characters) | Hard drive model. |Windows|
@@ -264,11 +264,11 @@ For entities that include Android data, the following platforms are supported:
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| VolumeId | string(Max length 256 characters) | ID of the encrypted volume. |Windows|
-| WindowsDriveLetter | string(Max length 5 characters) | Drive letter of the encrypted drive. |Windows|
-| PersistentVolumeId | string(Max length 38 characters) This is a Guid | Persistent ID of the drive. |Windows|
+| VolumeId | string (max length 256 characters) | ID of the encrypted volume. |Windows|
+| WindowsDriveLetter | string (max length 5 characters) | Drive letter of the encrypted drive. |Windows|
+| PersistentVolumeId | string (max length 38 characters) This is a Guid | Persistent ID of the drive. |Windows|
 | ProtectionStatus | string (max length 256 characters) | The BitLocker protection status of the drive. |Windows|
-| EncryptionMethod | string(256) | The encryption type of the device. |Windows|
+| EncryptionMethod | string (256) | The encryption type of the device. |Windows|
 | EncryptionPercentage | long (An integer from 0 to 100 inclusive) | The percentage of the drive that is encrypted. |Windows|
 | Locked | bool | The accessibility status of the drive from Windows. |Windows|
 
@@ -285,19 +285,19 @@ For entities that include Android data, the following platforms are supported:
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| Path | string (Max Length 260 characters) | Absolute file path |Windows|
-| Directory | string (Max Length 4,096 characters) | Directory of files |Windows|
-| FileName | string (Max Length 260 characters) | Namxxe portion of file path |Windows|
+| Path | string (max length 260 characters) | Absolute file path |Windows|
+| Directory | string (max length 4,096 characters) | Directory of files |Windows|
+| FileName | string (max length 260 characters) | Namxxe portion of file path |Windows|
 | SizeBytes | long | Size of file in bytes |Windows|
 | LastAccessDateTime | datetime (UTC) | Last access time |Windows|
 | LastModifiedDateTime | datetime (UTC) | Last modification time |Windows|
 | LastStatusChangeDateTime | datetime (UTC) | Last status change time |Windows|
 | CreatedDateTime | datetime (UTC) | (B)irth or (cr)eate time |Windows|
 | Attributes | string | File attribute string. See: [https://ss64.com/nt/attrib.html](https://ss64.com/nt/attrib.html) |Windows|
-| FileVersion | string(Max length 256 characters) | File version |Windows|
-| ProductVersion | string(Max length 256 characters) | File product version |Windows|
-| ProductName | string(Max length 256 characters) | File Product Name |Windows|
-| OriginalName | string(Max length 256 characters) | (Executable files only) Original filename |Windows|
+| FileVersion | string (max length 256 characters) | File version |Windows|
+| ProductVersion | string (max length 256 characters) | File product version |Windows|
+| ProductName | string (max length 256 characters) | File Product Name |Windows|
+| OriginalName | string (max length 256 characters) | (Executable files only) Original filename |Windows|
 
 ## LocalGroup
 
@@ -310,8 +310,8 @@ For entities that include Android data, the following platforms are supported:
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
 | GroupId | long, Result should be (\>=0) | Group ID |Windows|
-| GroupName | String(Max length 256 characters) | Group Name |Windows|
-| WindowsSid | String(Max length 256 characters) | SID of group on Windows |Windows|
+| GroupName | String (max length 256 characters) | Group Name |Windows|
+| WindowsSid | String (max length 256 characters) | SID of group on Windows |Windows|
 
 ## LocalUserAccount
 
@@ -339,12 +339,12 @@ For entities that include Android data, the following platforms are supported:
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| DriveIdentifier | string (Max length 5 characters) | The drive ID, usually the drive name. For example, 'C:'. |Windows |
-| DriveType | string(Max length 100 character) | Drive type such as local disk or removal disk |Windows |
-| DiskDescription | string (Max length 256 characters) | The canonical description of the drive. For example, 'Logical Fixed Disk', 'CD-ROM Disk'. |Windows |
+| DriveIdentifier | string (max length 5 characters) | The drive ID, usually the drive name. For example, 'C:'. |Windows |
+| DriveType | string (max length 100 character) | Drive type such as local disk or removal disk |Windows |
+| DiskDescription | string (max length 256 characters) | The canonical description of the drive. For example, 'Logical Fixed Disk', 'CD-ROM Disk'. |Windows |
 | FreeSpaceBytes | long, Result should be (\>=0) | The amount of free space, in bytes, of the drive (-1 on failure). |Windows |
 | DiskSizeBytes | long, Result should be (\>=0) | The total amount of space, in bytes, of the drive (-1 on failure). |Windows |
-| FileSystem | string (Max length 256 characters) | The file system of the drive. |Windows |
+| FileSystem | string (max length 256 characters) | The file system of the drive. |Windows |
 
 ## MemoryInfo
 
@@ -396,7 +396,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | MinorVersion | Long | Minor release version |Android, iOS, iPadOS, Windows single device query, Windows multi device query |
 | PatchVersion | long | Optional patch release |Android, iOS, iPadOS, macOS, Windows single device query |
 | BuildVersion | string | Optional build-specific or variant string |Android, iOS, iPadOS, macOS,  Windows single device query |
-| Architecture | string(max length 256 characters) | OS Architecture |Windows single device query, Windows multi device query |
+| Architecture | string (max length 256 characters) | OS Architecture |Windows single device query, Windows multi device query |
 | InstallDateTime | datetime (UTC) | The install date time of the OS. |Windows single device query, Windows multi device query |
 |AppleSupplementalOSVersion |String |The OS version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |
 |AppleSupplementalBuildVersion |String |The OS build version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |  
@@ -468,13 +468,13 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | --- | --- | --- |--- |
 | SerialNumber | string (max 64 characters) | The serial number of the chassis. |Windows single device query, Windows multi device query |
 | AudibleAlarmEquipped | bool | If TRUE, the frame is equipped with an audible alarm. |Windows single device query, Windows multi device query |
-| BreachDescription | string(max 256 characters) | If provided, gives a more detailed description of a detected security breach. |Windows single device query, Windows multi device query |
+| BreachDescription | string (max 256 characters) | If provided, gives a more detailed description of a detected security breach. |Windows single device query, Windows multi device query |
 | ChassisTypes | Array[string] | A comma-separated list of chassis types, such as Desktop or Laptop. |Windows single device query|
-| ExtendedDescription | string(max 256 characters) | An extended description of the chassis if available. |Windows single device query, Windows multi device query |
+| ExtendedDescription | string (max 256 characters) | An extended description of the chassis if available. |Windows single device query, Windows multi device query |
 | LockEquipped | bool | If TRUE, the frame is equipped with a lock. |Windows single device query, Windows multi device query |
 | Manufacturer | string (max 256 characters) | The manufacturer of the chassis. |Windows single device query, Windows multi device query |
 | Model | string (max 256 characters) | The model of the chassis. |Windows single device query, Windows multi device query |
-| SecurityBreach | string(max 256 characters) | The physical status of the chassis such as Breach Successful, Breach Attempted, etc. |Windows single device query, Windows multi device query |
+| SecurityBreach | string (max 256 characters) | The physical status of the chassis such as Breach Successful, Breach Attempted, etc. |Windows single device query, Windows multi device query |
 | SmBiosAssetTag | string (max 120 characters) | The assigned asset tag number of the chassis. |Windows single device query, Windows multi device query |
 | Sku | string (max 64 characters) | The Stock Keeping Unit number if available. |Windows single device query, Windows multi device query |
 | Status | string(256 characters) | If available, gives various operational or nonoperational statuses such as OK, Degraded, and Pred Fail. |Windows single device query, Windows multi device query |
@@ -570,7 +570,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 **Supported for**: single device query on-demand.
 
 | **Property** | **Type** | **Description** |**Platform**|
-| --- | --- | --- |
+| --- | --- | --- |---|
 | ReportId (Key) | string (max 256 characters) | Report ID of the app crash event. |Windows|
 | AppPath | string (max 256 characters) | Application path of the crashed app. |Windows|
 | AppName | string (max 256 characters) | Application file name of the crashed app. |Windows|
@@ -588,14 +588,14 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| DriverDeviceId(Key) | string (Max 256 characters) | Device ID |Windows|
-| FriendlyName | string(Max 256 characters) | Such as "Microsoft Device Association Root Enumerator" |Windows|
-| DriverDescription | string (Max 256 characters) | Driver description |Windows|
-| DriverVersion | string (Max 20 characters) | Driver version |Windows|
-| InfName | string (Max 260 characters) | Associated inf file |Windows|
-| Class | string (Max 256 characters) | Device/driver class name |Windows|
-| ProviderName | string (Max 256 characters) | Driver provider |Windows|
-| Manufacturer | string (Max 256 characters) | Device manufacturer |Windows|
+| DriverDeviceId(Key) | string (max 256 characters) | Device ID |Windows|
+| FriendlyName | string (max 256 characters) | Such as "Microsoft Device Association Root Enumerator" |Windows|
+| DriverDescription | string (max 256 characters) | Driver description |Windows|
+| DriverVersion | string (max 20 characters) | Driver version |Windows|
+| InfName | string (max 260 characters) | Associated inf file |Windows|
+| Class | string (max 256 characters) | Device/driver class name |Windows|
+| ProviderName | string (max 256 characters) | Driver provider |Windows|
+| Manufacturer | string (max 256 characters) | Device manufacturer |Windows|
 | BuildDate[Win32\_PnPSignedDriver class (Windows) | Microsoft Learn](/previous-versions/windows/desktop/legacy/aa394354(v=vs.85)) | datetime(UTC) | Driver date |Windows|
 | Signed | bool | Whether the driver is signed or not |Windows|
 
@@ -653,7 +653,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | --- | --- | --- |--- |
 | RegistryKey | string (max 16,638 characters) | Full path to the value |Windows|
 | ValueName | string (max 16,383 characters) | Name of the registry value entry |Windows|
-| ValueType | string (max 255) | Type of the registry value, or 'subkey' if item is a subkey |Windows|
+| ValueType | string (max 255 characters) | Type of the registry value, or 'subkey' if item is a subkey |Windows|
 | ValueData | string (max size 1 MB) | Data content of registry value |Windows|
 
 ## WindowsService
@@ -667,11 +667,11 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
 | ServiceName | string (max 256 characters) | Service name |Windows|
-| ServiceType | string (max 40)[Win32\_Service class - Win32 apps | Microsoft Learn](/windows/win32/cimwin32prov/win32-service) | Service Type such as: OWN\_PROCESS, SHARE\_PROCESS, or Interactive |Windows|
-| DisplayName | string (max 256 characters) | Service Display name |Windows|
-| State | string (max 40 characters) | Service Current status such as STOPPED, START\_PENDING, STOP\_PENDING, RUNNING, CONTINUE\_PENDING, PAUSE\_PENDING, PAUSED |Windows|
-| ProcessId | long | the Process ID of the service |Windows|
-| StartMode | string (Max 40 characters) | Service start type: BOOT\_START, SYSTEM\_START, AUTO\_START, DEMAND\_START, DISABLED |Windows|
+| ServiceType | string (max 40 characters) | Service Type, such as OWN\_PROCESS, SHARE\_PROCESS, or Interactive |Windows|
+| DisplayName | string (max 256 characters) | Service display name |Windows|
+| State | string (max 40 characters) | Current status of the services, such as STOPPED, START\_PENDING, STOP\_PENDING, RUNNING, CONTINUE\_PENDING, PAUSE\_PENDING, PAUSED |Windows|
+| ProcessId | long | The Process ID of the service, if running |Windows|
+| StartMode | string (max 40 characters) | Service start type: BOOT\_START, SYSTEM\_START, AUTO\_START, DEMAND\_START, DISABLED |Windows|
 | ExitCode | long | The error code that the service uses to report an error that occurs when it is starting or stopping |Windows|
 | ServiceSpecific ExitCode | long | The service-specific error code that the service returns when an error occurs while the service is starting or stopping|Windows|
 | Path | string (max 4,096 characters) | Path to Service Executable |Windows|
