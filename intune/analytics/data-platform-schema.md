@@ -73,7 +73,7 @@ For entities that include Android data, the following platforms are supported:
 |  ActivationLockSupported  |  bool  |  Specifies if activation lock is available  |iOS, iPadOS, macOS|
 |  AwaitingConfiguration  |  bool  |  If true on the device channel, the device is still waiting for a DeviceConfiguredCommand to continue through Setup Assistant. |iOS, iPadOS, macOS|
 |  EraseAllContentAndSettingsPreFlight  |  string  |  Specifies if a device can perform Erase Device Command using Erase All Content and Settings (EACS)  |macOS|
-|  MdmLostModeEnabled  |  bool  |  Specifies if Managed Lost Mode has been enabled  |iOS, iPadOS|
+|  MdmLostModeEnabled  |  bool  |  Specifies if Managed Lost Mode is enabled  |iOS, iPadOS|
 |  PinRequiredForDeviceLock  |  bool  |  Is a PIN required for device lock scenarios  |macOS|
 |  PinRequiredForEraseDevice  |  bool  |  Is a PIN required before erasing the device  |macOS|
 |  Supervised  |  bool  |  If true, it’s a supervised device. |iOS, iPadOS, macOS|
@@ -94,7 +94,7 @@ For entities that include Android data, the following platforms are supported:
 | AutomaticAppInstallationEnabled | bool | The preference to automatically install app updates. |macOS|
 | AutomaticOSInstallationEnabled | bool | The preference to automatically install operating system updates. |macOS|
 | AutomaticSecurityUpdatesEnabled | bool | The preference to automatically install system data files and security updates. |macOS|
-| BackgroundDownloadEnabled | bool | The preference to download app updates in the background. |
+| BackgroundDownloadEnabled | bool | The preference to download app updates in the background. |macOS|
 | CatalogUrl | string | The URL to the software update catalog the client is using. |macOS|
 | IsDefaultCatalog | bool | If true, CatalogURL is the default catalog. |macOS|
 | PerformPeriodicCheck | bool | If true, start a new scan. |macOS|
@@ -111,14 +111,14 @@ For entities that include Android data, the following platforms are supported:
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| CycleCount | Long | The number of times a battery has gone through a full charge and discharge. Can be used to assess the battery state|Android, Windows|
+| CycleCount | Long | The number of times a battery completed a full charge and discharge. Can be used to assess the battery state.|Android, Windows|
 | DesignCapacity | Long (milliwatt hours) | The theoretical capacity of the battery when new.|Windows|
 | FullChargedCapacity | Long (milliwatt hours) | Full charge capacity of the battery.|Windows|
 | Health | string | Assessment of battery health |Android, iOS, iPadOS, macOS, Windows|
 | InstanceName| String | Name used to identify the battery instance.|Android, iOS, iPadOS, macOS, Windows|
 | Manufacturer| String | Manufacturer of the battery.|Windows|
 | Model| String | Display name of the battery.|Windows|
-| SerialNumber| String | Battery serial number that is assigned by the manufacturer.|Android|
+| SerialNumber| String | The battery serial number that the manufacturer assigned.|Android|
 
 ## BiosInfo 
 
@@ -155,18 +155,18 @@ For entities that include Android data, the following platforms are supported:
 
 ## Celluar
 
-**Description**: Provides celluar information about mobile devices
+**Description**: Provides cellular information about mobile devices.
 
-**Supported platforms**: Androd, iOS, iPadOS, macOS
+**Supported platforms**: Android, iOS, iPadOS, macOS
 
 **Supported for**: Device query for multiple devices.
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- | --- |
-| CellularTechnology | string | The cellular technology type |Android, iOS, iPadOS|
-| DataRoamingEnabled | bool | If true, the device has enabled data roaming |iOS, iPadOS|
-| HotspotEnabled | bool | If true, the device has enabled Personal Hotspot, which isn’t available for all carriers. |iOS, iPadOS|
-| ModemFirmwareVersion | string | The modem firmware version |iOS, iPadOS|
+| CellularTechnology | string | The cellular technology type. |Android, iOS, iPadOS|
+| DataRoamingEnabled | bool | If true, the device enables data roaming. |iOS, iPadOS|
+| HotspotEnabled | bool | If true, the device enables Personal Hotspot, which isn’t available for all carriers. |iOS, iPadOS|
+| ModemFirmwareVersion | string | The modem firmware version. |iOS, iPadOS|
 | NetworkTethered | bool | If true, the device is network-tethered. |iOS, iPadOS|
 
 ## Certificate
@@ -210,7 +210,7 @@ For entities that include Android data, the following platforms are supported:
 | ProcessorType | string | The processor type, such as Central, Math, or Video. |Windows single device query, Windows multi device query  |
 | Architecture | String (max length 20 characters) | Processor architecture used by the platform. |Windows single device query, Windows multi device query  |
 | CpuStatus | string (max 256 length 256 characters) | The current operating status of the CPU. |Windows single device query, Windows multi device query  |
-| CoreCount | long | The number of cores of the CPU. |
+| CoreCount | long | The number of cores of the CPU. |Windows single device query, Windows multi device query |
 | LogicalProcessorCount | long | The number of logical processors of the CPU. |Windows single device query, Windows multi device query  |
 | AddressWidth | long | The width of the CPU address bus. |Windows single device query, Windows multi device query |
 | CurrentClockSpeed | long | The current frequency of the CPU. | Windows single device query|
@@ -244,12 +244,12 @@ For entities that include Android data, the following platforms are supported:
 | --- | --- | --- |--- |
 | DriveId | string (max length 256 characters) | The unique identifier of the drive on the system. |Windows|
 | PartitionCount | long | Number of detected partitions on disk. |Windows|
-| DriveIndex | long | Physical drive number of the disk. |
+| DriveIndex | long | Physical drive number of the disk. |Windows|
 | InterfaceType | string (max length 256 characters) | The interface type of the disk. |Windows|
 | PnpDeviceId | string (max 256 length 256 characters) | The unique identifier of the drive on the system. |Windows|
 | SizeBytes | long | Size of the disk. |Windows|
 | Manufacturer | string (max length 256 characters) | The manufacturer of the disk. |Windows|
-| Model | string (max length 256 characters) | Hard drive model. ||
+| Model | string (max length 256 characters) | Hard drive model. |Windows|
 | DiskName | string (max length 256 characters) | The label of the disk object. |Windows|
 | SerialNumber | string (max length 256 characters) | The serial number of the disk. |Windows|
 | Description | string (max length 256 characters) | The OS's description of the disk. |Windows|
@@ -281,18 +281,18 @@ For entities that include Android data, the following platforms are supported:
 **Supported for**: single device query on-demand.
 
 > [!NOTE]
-> This is a parameterized entity where you must pass in the path of the File you want to query. For example, pass in `FileInfo('c:\windows\system32\drivers\etc\hosts') | take 10`. If a directory is passed, it will return info on the files in the directory and sub-directories.
+> This is a parameterized entity where you must pass in the path of the File you want to query. For example, pass in `FileInfo('c:\windows\system32\drivers\etc\hosts') | take 10`. If a directory is passed, it will return information about the files in the directory and subdirectories.  
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| Path | string(Max Length 260 characters) | Absolute file path |Windows|
-| Directory | string (Max Length 4096 characters) | Directory of file(s) |Windows|
-| FileName | string(Max Length 260 characters) | Namxxe portion of file path |Windows|
+| Path | string (Max Length 260 characters) | Absolute file path |Windows|
+| Directory | string (Max Length 4,096 characters) | Directory of files |Windows|
+| FileName | string (Max Length 260 characters) | Namxxe portion of file path |Windows|
 | SizeBytes | long | Size of file in bytes |Windows|
-| LastAccessDateTime | datetime(UTC) | Last access time |Windows|
-| LastModifiedDateTime | datetime(UTC) | Last modification time |Windows|
-| LastStatusChangeDateTime | datetime(UTC) | Last status change time |Windows|
-| CreatedDateTime | datetime(UTC) | (B)irth or (cr)eate time |Windows|
+| LastAccessDateTime | datetime (UTC) | Last access time |Windows|
+| LastModifiedDateTime | datetime (UTC) | Last modification time |Windows|
+| LastStatusChangeDateTime | datetime (UTC) | Last status change time |Windows|
+| CreatedDateTime | datetime (UTC) | (B)irth or (cr)eate time |Windows|
 | Attributes | string | File attribute string. See: [https://ss64.com/nt/attrib.html](https://ss64.com/nt/attrib.html) |Windows|
 | FileVersion | string(Max length 256 characters) | File version |Windows|
 | ProductVersion | string(Max length 256 characters) | File product version |Windows|
@@ -311,7 +311,7 @@ For entities that include Android data, the following platforms are supported:
 | --- | --- | --- |--- |
 | GroupId | long, Result should be (\>=0) | Group ID |Windows|
 | GroupName | String(Max length 256 characters) | Group Name |Windows|
-| WindowsSid | String(Max length 256 characters) | sid of group on windows |Windows|
+| WindowsSid | String(Max length 256 characters) | SID of group on Windows |Windows|
 
 ## LocalUserAccount
 
@@ -324,10 +324,10 @@ For entities that include Android data, the following platforms are supported:
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
 | UserId | long, Result should be (\>=0) | User ID |Windows|
-| Username | string(max length 256 characters) | Username |Windows|
-| UserDescription | string(max length 256 characters) | Optional user description |Windows|
-| HomeDirectory | string(max length 4096 characters) | User's home directory |Windows|
-| WindowsSid | string(max length 256 characters) | Windows Sid |Windows|
+| Username | string (max length 256 characters) | Username |Windows|
+| UserDescription | string (max length 256 characters) | Optional user description |Windows|
+| HomeDirectory | string (max length 4,096 characters) | User's home directory |Windows|
+| WindowsSid | string (max length 256 characters) | Windows Sid |Windows|
 
 ## LogicalDrive
 
@@ -344,7 +344,7 @@ For entities that include Android data, the following platforms are supported:
 | DiskDescription | string (Max length 256 characters) | The canonical description of the drive. For example, 'Logical Fixed Disk', 'CD-ROM Disk'. |Windows |
 | FreeSpaceBytes | long, Result should be (\>=0) | The amount of free space, in bytes, of the drive (-1 on failure). |Windows |
 | DiskSizeBytes | long, Result should be (\>=0) | The total amount of space, in bytes, of the drive (-1 on failure). |Windows |
-| FileSystem | string(Max length 256 characters) | The file system of the drive. |Windows |
+| FileSystem | string (Max length 256 characters) | The file system of the drive. |Windows |
 
 ## MemoryInfo
 
@@ -353,7 +353,7 @@ For entities that include Android data, the following platforms are supported:
 **Supported platforms**: Windows
 
 **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
-Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for single device query on-demand.
+PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for single device query on-demand.  
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
@@ -378,7 +378,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | Type | String | Network medium in use. |Windows|
 
 > [!NOTE]
-> Inventory will only report up to 20 network adapters per device.
+> Inventory only reports up to 20 network adapters per device.
 
 ## OsVersion
 
@@ -386,7 +386,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Android, iOS, iPadOS, Windows
 
-**Supported for**: Device query for multiple devices, Single device query on-demand (Windows only), Inventory .
+**Supported for**: Device query for multiple devices, Single device query on-demand (Windows only), Inventory.
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
@@ -398,8 +398,8 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | BuildVersion | string | Optional build-specific or variant string |Android, iOS, iPadOS, macOS,  Windows single device query |
 | Architecture | string(max length 256 characters) | OS Architecture |Windows single device query, Windows multi device query |
 | InstallDateTime | datetime (UTC) | The install date time of the OS. |Windows single device query, Windows multi device query |
-|AppleSupplementalOSVersion |String |The OS version that contains the Rapid Security Response version which is designated by a letter. |iOS, iPadOS, macOS |
-|AppleSupplementalBuildVersion |String |The OS build version that contains the Rapid Security Response version which is designated by a letter. |iOS, iPadOS, macOS |  
+|AppleSupplementalOSVersion |String |The OS version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |
+|AppleSupplementalBuildVersion |String |The OS build version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |  
 
 ## Process
 
@@ -413,8 +413,8 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | --- | --- | --- |--- |
 | ProcessId | long | Process ID |Windows|
 | ProcessName | string (max 260 characters) | The name of process |Windows|
-| Path | string (max 4096 characters) | Path to executed binary |Windows|
-| CommandLine | string (max 4096 characters) | Complete argv |Windows|
+| Path | string (max 4,096 characters) | Path to executed binary |Windows|
+| CommandLine | string (max 4,096 characters) | Complete argv |Windows|
 | CurrentWorkingDirectory | string (max 256 characters) | Process current working directory |Windows|
 | WorkingSetSizeBytes | long | Bytes of private memory used by process |Windows|
 | TotalSizeBytes | long | Total virtual memory size |Windows|
@@ -429,7 +429,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | ProcessorTimePercent | long | Returns elapsed time that all of the threads of this process used the processor to execute instructions in 100-nanoseconds ticks. |Windows|
 | ThreadCount | long | Number of threads used by process |Windows|
 | HandleCount | long | Total number of handles that the process has open. This number is the sum of the handles currently opened by each thread in the process. |Windows|
-| WindowsUserAccount | string | The owner of the process ||
+| WindowsUserAccount | string | The owner of the process |Windows|
 | OnDisk | boolNullable\<System.Boolean\>  | The process path exists yes=1, no=0, unknown=-1 |Windows|
 
 ## SharediPad
@@ -443,7 +443,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
 | EstimatedResidentUsersCount | long | Estimated number of users that can share the device based on space. |iPadOS|
-| IsMultiUser | bool | iPad set up as multi user |iPadOS|
+| IsMultiUser | bool | iPad set up as multiuser |iPadOS|
 | IsTemporarySessionOnly | bool | The device only allows temporary sessions. |iPadOS|
 | ManagedAppleIdDefaultDomains | string | The list of domains that the device suggests on the Shared iPad login screen. |iPadOS|
 | OnlineAuthenticationGracePeriodDays | long | The grace period for Shared iPad online authentication (in days). A value of 0 indicates that the device requires online authentication for every login |iPadOS|
@@ -473,7 +473,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | ExtendedDescription | string(max 256 characters) | An extended description of the chassis if available. |Windows single device query, Windows multi device query |
 | LockEquipped | bool | If TRUE, the frame is equipped with a lock. |Windows single device query, Windows multi device query |
 | Manufacturer | string (max 256 characters) | The manufacturer of the chassis. |Windows single device query, Windows multi device query |
-| Model | string (max 256 characters) | The model of the chassis. ||
+| Model | string (max 256 characters) | The model of the chassis. |Windows single device query, Windows multi device query |
 | SecurityBreach | string(max 256 characters) | The physical status of the chassis such as Breach Successful, Breach Attempted, etc. |Windows single device query, Windows multi device query |
 | SmBiosAssetTag | string (max 120 characters) | The assigned asset tag number of the chassis. |Windows single device query, Windows multi device query |
 | Sku | string (max 64 characters) | The Stock Keeping Unit number if available. |Windows single device query, Windows multi device query |
@@ -493,7 +493,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | FqdnHostname | string (max 256) | Network hostname including domain |Windows single device query |
 | Uuid | string (max 36 characters) | Unique ID provided by the system |Windows single device query |
 | ComputerName | string (max 256 characters) | Friendly computer name (optional) |Windows single device query |
-| PhysicalProcessorCount | Long | Number of physical processors ||
+| PhysicalProcessorCount | Long | Number of physical processors |Windows single device query |
 | ProcessorArchitecture | string(40 characters) | CPU type |Windows single device query |
 | HardwareManufacturer | string (max 256 characters) | Hardware vendor |Windows single device query |
 | HardwareModel | string (max 256 characters) | Hardware model |Windows single device query |
@@ -524,7 +524,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | --- | --- | --- |--- |
 | TimeZone | String | Describes the device's time zone. |Windows|
 
-## Tpm
+## TPM  
 
 **Description**: Provides TPM related information of the device.  
 
@@ -538,7 +538,7 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 | Enabled | bool | TPM is enabled |Windows|
 | Owned | bool | TPM is owned |Windows|
 | Manufacturer | string (max 256 characters) | TPM manufacturers name |Windows|
-| ManufacturerVersion | string (max 256 characters) | TPM version ||
+| ManufacturerVersion | string (max 256 characters) | TPM version |Windows|
 | ManufacturerId | long | TPM manufacturers ID |Windows|
 | ProductName | string (max 256 characters) | Product name of the TPM |Windows|
 | PhysicalPresenceVersion | string (max 256 characters) | Version of the Physical Presence Interface |Windows|
@@ -569,13 +569,14 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported for**: single device query on-demand.
 
-| ReportId(Key) | string (max 256 characters) | Report ID of the App crash |
+| **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |
-| AppPath | string (max 256 characters) | Application path |Windows|
-| AppName | string (max 256 characters) | Application file name |Windows|
-| AppVersion | string (max 40 characters) | Application version |Windows|
-| LoggedDateTime | datetime (UTC) | System UTC time at which the event occurred |Windows|
-| WindowsUserAccount | string (max 256 characters) | User account associated with this app crash |Windows|
+| ReportId (Key) | string (max 256 characters) | Report ID of the app crash event. |Windows|
+| AppPath | string (max 256 characters) | Application path of the crashed app. |Windows|
+| AppName | string (max 256 characters) | Application file name of the crashed app. |Windows|
+| AppVersion | string (max 40 characters) | Application version of the crashed app. |Windows|
+| LoggedDateTime | datetime (UTC) | System UTC time at which the event occurred and was logged. |Windows|
+| WindowsUserAccount | string (max 256 characters) | User account associated with this app crash, if any. |Windows|
 
 ## WindowsDriver
 
@@ -604,19 +605,18 @@ Note that PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only
 
 **Supported platforms**: Windows
 
-**Supported for**: single device query on-demand.
+**Supported for**: Single device query on-demand.
 
 > [!NOTE]
 > When constructing the query, you must specify the log name and look back time, for example: `WindowsEvent(Application, 1d) | take 1`.
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| LogName | string (max 256 characters) | the name of log ||
-| EventId | long | event ID |Windows|
-| Level | string string (max 30 characters) | Level display name
-possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |Windows|
+| LogName | string (max 256 characters) | Name of the Windows event log|Windows|
+| EventId | long | Event ID number |Windows|
+| Level | string  | Level display name for the event. Possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |Windows|
 | LoggedDateTime | datetime (UTC) | System UTC time at which the event occurred |Windows|
-| Message | string (max 32766 characters) | The event messages |Windows|
+| Message | string (max 32,766 characters) | The event messages |Windows|
 | ProviderName | string (max 256 characters) | Provider name of event |Windows|
 | WindowsUserAccount | string (max 256) | User account associated with this event |Windows|
 
@@ -631,7 +631,7 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |Windows|
 | Property | Type | Description |**Platform**|
 | --- | --- | --- |--- |
 | HotFixId (key) | string (max 256 characters) | Unique identifier associated with a particular update. |Windows|
-| ComputerName                   | string (max 256 characters) | The name of the computer the patch is installed on. |Windows|
+| ComputerName | string (max 256 characters) | The name of the computer the patch is installed on. |Windows|
 | Caption | string (max 256 characters) | A short textual description of the object. |Windows|
 | QfeDescription | string (max 256 characters) | A textual description of the object. |Windows|
 | FixComments | string (max 256 characters) | More comments about the Qfe. |Windows|
@@ -647,22 +647,22 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |Windows|
 **Supported for**: single device query on-demand.
 
 > [!NOTE]
-> You must pass in the registry key you are trying to query. For example, `WindowsRegistry('HKEY_LOCAL_MACHINE\\ServiceLastKnownStatus')`.
+> You must pass in the registry key you're trying to query. For example, `WindowsRegistry('HKEY_LOCAL_MACHINE\\ServiceLastKnownStatus')`.
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
-| RegistryKey | string (max 16638 characters) | Full path to the value |Windows|
-| ValueName | string (max 16383 characters) | Name of the registry value entry |Windows|
+| RegistryKey | string (max 16,638 characters) | Full path to the value |Windows|
+| ValueName | string (max 16,383 characters) | Name of the registry value entry |Windows|
 | ValueType | string (max 255) | Type of the registry value, or 'subkey' if item is a subkey |Windows|
 | ValueData | string (max size 1 MB) | Data content of registry value |Windows|
 
 ## WindowsService
 
-**Description**: Lists all installed Windows services and their relevant data.
+**Description**: Lists all installed Windows services and their key properties.
 
 **Supported platforms**: Windows
 
-**Supported for**: single device query on-demand.
+**Supported for**: Single device query on-demand.  
 
 | **Property** | **Type** | **Description** |**Platform**|
 | --- | --- | --- |--- |
@@ -674,8 +674,8 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |Windows|
 | StartMode | string (Max 40 characters) | Service start type: BOOT\_START, SYSTEM\_START, AUTO\_START, DEMAND\_START, DISABLED |Windows|
 | ExitCode | long | The error code that the service uses to report an error that occurs when it is starting or stopping |Windows|
 | ServiceSpecific ExitCode | long | The service-specific error code that the service returns when an error occurs while the service is starting or stopping|Windows|
-| Path | string (max 4096 characters) | Path to Service Executable |Windows|
-| ModulePath | string (max 4096 characters) | Path to ServiceDll |Windows|
+| Path | string (max 4,096 characters) | Path to Service Executable |Windows|
+| ModulePath | string (max 4,096 characters) | Path to ServiceDll |Windows|
 | ServiceDescription | string (max 256 characters) | Service Description |Windows|
 | WindowsUserAccount | string (max 256 characters) | The name of the account that the service process is logged on as when it runs. This name can be of the form Domain\UserName |Windows|
 
