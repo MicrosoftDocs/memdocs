@@ -56,10 +56,6 @@ The following table contains the possible values for the `reportName` parameter.
 | AppInvAggregate | Under **Apps** > **Monitor** > **Discovered apps** > **Export**  |
 | AppInvByDevice | Under **Devices** > **All Devices** > **Device** > **Discovered Apps**  |
 | AppInvRawData | Under **Apps** > **Monitor** > **Discovered apps** > **Export**  |
-<!-- | AppleDDMDeviceOSUpdateStatus | | -->
-<!-- | AppleDDMOSUpdateFailures | | -->
-<!-- | AppleDDMOSVersionReport | | -->
-<!-- | AppleDDMSoftwareUpdatesSummary | | -->
 | AutopilotV1DeploymentStatus | |
 | AutopilotV2DeploymentStatus | |
 | AutopilotV2DeploymentStatusDetailedAppInfo | |
@@ -229,7 +225,6 @@ The following table contains the possible values for the `reportName` parameter.
 | WindowsDeviceHealthAttestationReport | |
 | WindowsUpdatePerPolicyPerDeviceStatus | |
 | WorkFromAnywhereDeviceList | |
-
 
 Each of the listed reports is described below.
 
@@ -440,102 +435,6 @@ You can filter the `AppInvRawData` report using the `eq` comparison operator on 
 - UserId
 - EmailAddress
 - UserName
-
-<!-- ## AppleDDMDeviceOSUpdateStatus
-
-The following table contains the possible output when calling the `AppleDDMDeviceOSUpdateStatus` report:
-
-| Available properties |
-|-|
-| CurrentBuildVersion |
-| CurrentOSVersion |
-| DeviceId |
-| FailureCount |
-| FailureReason |
-| InstallReason |
-| InstallState |
-| LastReportedTime |
-| LatestAvailableOSVersion |
-| PendingBuildVersion |
-| PendingOSVersion |
-| TargetLocalDateTime |
-
-There are no filters for this report. -->
-
-<!-- ## AppleDDMOSUpdateFailures
-
-The following table contains the possible output when calling the `AppleDDMOSUpdateFailures` report:
-
-| Available properties |
-|-|
-| CurrentBuildVersion |
-| CurrentOSVersion |
-| DeclarationId |
-| DeviceFamily |
-| DeviceId |
-| DeviceModelMarketingName |
-| DeviceName |
-| FailureCount |
-| FailureReason |
-| InstallReason |
-| InstallState |
-| LastFailureTime |
-| LastReportedTime |
-| LatestAvailableOSVersion |
-| PendingBuildVersion |
-| PendingOSVersion |
-| SupplementalBuildVersion |
-| SupplementalExtraVersion |
-| TargetLocalDateTime |
-| UserEmail |
-| UserName |
-
-There are no filters for this report. -->
-
-<!-- ## AppleDDMOSVersionReport
-
-The following table contains the possible output when calling the `AppleDDMOSVersionReport` report:
-
-| Available properties |
-|-|
-| CurrentBuildVersion |
-| CurrentOSVersion |
-| DeclarationId |
-| DeviceFamily |
-| DeviceId |
-| DeviceName |
-| FailureCount |
-| FailureReason |
-| InstallReason |
-| InstallState |
-| IsDeviceUpToDate |
-| IsRSRUpdateAvailable |
-| LastReportedTime |
-| LatestAvailableOSVersion |
-| PendingBuildVersion |
-| PendingOSVersion |
-| SupplementalBuildVersion |
-| SupplementalExtraVersion |
-| TargetLocalDateTime |
-
-There are no filters for this report. -->
-
-<!-- ## AppleDDMSoftwareUpdatesSummary
-
-The following table contains the possible output when calling the `AppleDDMSoftwareUpdatesSummary` report:
-
-| Available properties |
-|-|
-| CountDevicesDownloading |
-| CountDevicesFailed |
-| CountDevicesInstalling |
-| CountDevicesNotAssigned |
-| CountDevicesPrepared |
-| CountDevicesUpToDate |
-| CountDevicesWaiting |
-| DeviceFamily |
-
-There are no filters for this report. -->
 
 ## AutopilotV1DeploymentStatus
 
