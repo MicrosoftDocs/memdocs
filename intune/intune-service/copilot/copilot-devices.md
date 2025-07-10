@@ -72,9 +72,9 @@ This section guides you through some Copilot prompts that you can use.
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices**, and then select any device.
-3. Select **Explore with Copilot**:
+3. Select **Summarize with Copilot**:
 
-    :::image type="content" source="./media/copilot-devices/explore-with-copilot.png" alt-text="Screenshot that shows where you select a device and then select Explore with Copilot in Microsoft Intune or Intune admin center.":::
+    :::image type="content" source="./media/copilot-devices/summarize-with-copilot.png" alt-text="Screenshot that shows where you select a device and then select Summarize with Copilot in Microsoft Intune or Intune admin center.":::
 
 4. In Copilot, there are prompts for you to choose from. Select a prompt to get more information about the device.
 
