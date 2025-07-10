@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/02/2025
+ms.date: 07/10/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -94,6 +94,25 @@ This feature helps you spend less time getting to the data you're looking for. F
 - Inspect specific Intune resources to ensure things are configured as expected
 
 To learn more about this feature, see [Explore Intune data and get Microsoft Copilot recommendations](../copilot/copilot-intune-explorer.md).
+
+#### Surface Management Portal and Copilot Integration<!-- 31192897 -->
+
+The Surface Management Portal is a workspace in the Intune Admin Center that brings together data and insights for enrolled Surface devices.
+
+- View device compliance, support activity, warranty or protection plan coverage, and estimated carbon emissions.
+- Monitor each device’s status, including warranty expiration, protection plan details, and active support requests.
+- Manage Surface devices in one centralized location.
+- Automatically receive data from Intune-enrolled Surface devices when users sign in for the first time.
+
+Security Copilot simplifies how admins access data from the Surface Management Portal by using built-in prompts. Instead of creating custom reports or navigating multiple dashboards, admins can ask questions in natural language, such as:
+
+- Which devices are out of compliance and out of warranty?
+- Which devices have TPM disabled and BitLocker off?
+- What are the estimated carbon emissions for our Surface fleet?
+
+Copilot responds with contextual answers and suggested next steps. This improves efficiency and security by enabling faster resolution with AI-generated summaries, reducing manual effort through natural-language queries, delivering tailored insights that reflect each device’s current state and lifecycle, and strengthening your organization’s security posture with proactive detection and guided remediation.
+
+To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](../copilot/security-copilot-surface-portal.md) 
 
 ## Week of June 23, 2025 (Service release 2506)
 
