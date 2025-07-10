@@ -29,11 +29,14 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Device Query for Multiple Devices
+# Device query for multiple devices
 
 Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
 
-## Prerequisites
+## Prerequisites  
+
+> [!NOTE]
+> You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically. 
 
 - To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
 
@@ -48,7 +51,16 @@ Device query for multiple devices allows you to gain comprehensive insights abou
 
 ## Supported platforms
 
-Device query for multiple devices is currently only supported on devices running Windows 10 and later.
+Device query for multiple devices is supported on devices running:  
+
+- Windows 10 and later  
+- Android  
+  - Android Enterprise corporate owned dedicated devices (COSU)  
+  - Android Enterprise corporate owned fully managed (COBO)  
+  - Android Enterprise corporate owned work profile (COPE)  
+- Apple  
+  - iOS/iPadOS  
+  - macOS  
 
 ## How to use device query for multiple devices
 
@@ -227,15 +239,22 @@ Scalar functions can be used to perform operations on individual values. The fol
 
 Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
 
-- Battery
+- Apple Auto Setup Admin Accounts 
+- Apple Device States 
+- Apple Update Settings 
+- Battery 
 - Bios Info
-- Cpu
-- Disk Drive
-- Encryptable Volume
-- Logical Drive
-- Memory Info
+- Bluetooth  
+- Cellular  
+- CPU  
+- Device Storage  
+- Disk Drive  
+- Encryptable Volume  
+- Logical Drive  
+- Memory Info  
 - Network Adapter
 - Os Version
+- Shared iPad  
 - Sim Info
 - System Enclosure
 - Time
