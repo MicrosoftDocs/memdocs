@@ -60,9 +60,10 @@ There are Surface Management Portal capabilities built into Security Copilot, an
 
 ## Key features
 
-Copilot for Surface Management Portal brings the capabilities of Security Copilot to the Microsoft Surface Management Portal admin center, enabling you to respond to Surface device issues and escalations quickly. Bringing AI to Surface Management Portal allows teams to immediately understand coverage of their device fleet and determine remediation steps in a timely manner. You can also learn more about protecting your organizations devices from malware and other threats, so that you can reduce risks.
+Copilot for Surface Management Portal brings the capabilities of Security Copilot to the Microsoft Surface Management Portal admin center, enabling you to respond to Surface device issues and escalations quickly. Bringing AI to Surface Management Portal allows teams to immediately understand coverage of their device fleet and determine remediation steps in a timely manner. You can also learn more about protecting your organizations devices from malware and other threats, so that you can reduce risks.  
 
-<img width="1900" alt="image (2)" src="https://github.com/user-attachments/assets/71da1916-c2b4-437d-82a1-2d9ac7df7578" />
+> [!div class="mx-imgBorder"]
+> ![Screenshot that shows Copilot in the Surface Management Portal.](./media/security-copilot-surface-portal/surface-management-portal-01.png)    
 
 
 ## Enable the Security Copilot Integration in Surface Management Portal
