@@ -96,7 +96,7 @@ You can now use Microsoft Copilot in Intune to explore your Intune data using na
   - Monitor the status of each device, including applicable warranty or protection plan expirations and active support requests.
   - Centralize Surface-specific device administration in a single environment.
   - Automatically access comprehensive information from your Intune-enrolled Surface devices, which flows into the Surface Management Portal when users sign in for the first time.
-  </br>
+  
   To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](../copilot/security-copilot-surface-portal.md)
 
 ## Week of June 23, 2025 (Service release 2506)
