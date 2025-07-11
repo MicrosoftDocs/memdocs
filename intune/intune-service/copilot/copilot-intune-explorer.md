@@ -74,7 +74,7 @@ Select the prompt that best matches your request, or continue typing for more su
 :::image type="content" source="./media/copilot-intune-explorer/explorer-prompt-apps-example.png" alt-text="Sample prompt in Copilot Explorer that asks about the top five apps in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-prompt-apps-example.png":::
 
 #### What data can I explore?
-You can explore several Intune resources and the relationships between them. The areas you can ask about along with the queries and query capabilities available will all evolve as we add more data coverage and exploration functionality. T=Here are the areas that you can explore today:
+You can explore several Intune resources and the relationships between them. The areas you can ask about along with the queries and query capabilities available will all evolve as we add more data coverage and exploration functionality. The areas you can explore today include:
 
 - Devices (device properties)
 - Device updates (Windows, other platforms coming soon)
