@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Explorer in Microsoft Intune queries data and shows Copilot recommendations
+title: Explore Intune data with natural language and take action
 description: In Microsoft Intune, use Explorer to query your data in natural language and run built-in queries that match your request. Copilot summarizes the results, and provides recommendations and actions based on the query results. You can also create policies that target users and groups in the query results. Use this feature to explore your Intune data, troubleshoot issues, and create custom reports.
 keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, explorer, query, data exploration, natural language
 author: MandiOhlinger
