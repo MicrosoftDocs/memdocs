@@ -155,9 +155,9 @@ You can use this feature on the following policy types in Intune:
 
 You can use Copilot to get device-specific information, like the installed apps, group membership, and more.
 
-To use this feature in Intune, select a device, and then select **Explore with Copilot**.
+To use this feature in Intune, select a device, and then select **Summarize with Copilot**.
 
-:::image type="content" source="./media/copilot-intune-overview/explore-with-copilot.png" alt-text="Screenshot that shows where you select any device and then select Explore with Copilot in Microsoft Intune and Intune admin center.":::
+:::image type="content" source="./media/copilot-intune-overview/summarize-with-copilot.png" alt-text="Screenshot that shows where you select any device and then select Summarize with Copilot in Microsoft Intune and Intune admin center.":::
 
 When the Copilot window opens, select a prompt and enter any required or optional input, if needed. You can also open the prompt guide for some follow-up questions.
 
