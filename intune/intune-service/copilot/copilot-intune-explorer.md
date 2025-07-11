@@ -36,9 +36,9 @@ ms.collection:
 
 Using natural language and your own words, you can query and explore your Intune data. An intelligent search matches your request to available query views that are built into Intune.
 
-These queries can have parameter inputs that you enter, like the platform or device-specific info. Microsoft Copilot in Intune summarizes the query results and recommends actions you can take based on the query results.
+These queries can have parameter inputs that you enter, like the platform or device-specific info. A Copilot summary summarizes the query results and provides recommendations you can consider based on the query results.
 
-This feature can help with situations like finding devices based on your query, identifying users with compliance issues, or finding devices that need updates. You can use this data to help troubleshoot.
+This feature can help with situations like finding devices based on your query, identifying users with compliance issues, finding devices that need updates, or finding specific apps or policies. You can use this data to help troubleshoot.
 
 You can also use the query output to add users or devices to groups, and create custom reports. For example, you can find devices that are noncompliant and out of the grace period, and then add those devices to a group. You can then target apps and policies to this group.
 
