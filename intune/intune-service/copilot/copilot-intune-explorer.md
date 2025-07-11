@@ -116,7 +116,7 @@ In the following example, a query found noncompliant devices that are out of the
 
 This data exploration capability is constantly improving. We continue to add more areas of Intune data that you can explore, more data coverage in each area, more querying capabilities and interaction with Copilot, more Intune data sources, and more actions. We want your feedback as we make improvements, including any capabilities you want to see and missing queries that you need.
 
-:::image type="content" source="./media/copilot-intune-explorer/explorer-provide-feedback.png" alt-text="Submit feedback about the capabiliities avialable to explore data with Copilot in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-provide-feedback.png":::
+:::image type="content" source="./media/copilot-intune-explorer/explorer-provide-feedback.png" alt-text="Submit feedback about the capabilities available to explore data with Copilot in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-provide-feedback.png":::
 
 ## Related content
 
