@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/02/2025
+ms.date: 07/10/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -79,21 +79,25 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device management
 
-#### Explorer is powered by Copilot and available for your custom questions<!-- 29339619 -->
+#### Experience Microsoft Copilot in Intune<!-- 29339619, 31192897 -->
 
-Explorer in Intune is a Copilot-powered feature. Admins can ask questions in a natural language that run queries against your Intune resource data, including questions about your devices, apps, policies, updates, and compliance.
+You can now use Microsoft Copilot in Intune to explore your Intune data using natural language, take action on the results, manage policies and settings, understand your security posture, troubleshoot device issues, and view insights about enrolled Surface devices.
 
-There are also example queries that you can filter to find an example that best matches your request.
+- **Explore your Intune data** - Use natural language to explore your Intune data and take action based on the results. Admins can run queries against Intune resource data, including questions about devices, apps, policies, updates, and compliance. When a query runs, a Copilot summary helps you understand the results and offers suggestions. You can add devices or users from the query results to a group to target apps and policies. There are also example queries that you can filter to find an example that best matches your request or use to help you create your own request.</br></br>Data coverage, querying capabilities, and actionability will evolve over time as we make improvements to how you explore your data.</br></br>To learn more about this feature, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md)
 
-When the query runs, Copilot summarizes the results and recommends actions you can take.  If your query results are a list of users or devices, you can add them to a group, and target apps and policies to this group.
+- **Conversational chat experience** - Use the Copilot in Intune chat experience to interact with your data using natural language to manage tasks, get insights, and troubleshoot issues. Here’s what you can do with the chat experience:</br></br>
+  - Policy and setting management: Use Copilot in Intune to summarize an existing policy or learn more about individual policy settings and recommended values.
+  - Device details and troubleshooting: Use Copilot in Intune to get device details and troubleshoot a device to get device-specific information like the installed apps, group memberships and more.
+  - Device Query: Use Copilot in Intune to help you create Kusto Query Language (KQL) queries to run when using device query in Intune.
+  - Endpoint Privilege Management (EPM): Use Copilot in Intune to help identify potential elevation risks from within the EPM support approved workflow.
 
-This feature helps you spend less time getting to the data you're looking for. For example, you can:
+- **Microsoft Copilot in Surface Management Portal** - Microsoft Copilot in Intune includes the Surface Management Portal, a workspace in the Intune admin center that brings together vital data and insights about enrolled Surface devices, all in one place.</br></br>
+  - Gain insights into device compliance, support activity, applicable warranty or protection plan coverage, and carbon emission estimates.
+  - Monitor the status of each device, including applicable warranty or protection plan expirations and active support requests.
+  - Centralize Surface-specific device administration in a single environment.
+  - Automatically access comprehensive information from your Intune-enrolled Surface devices, which flows into the Surface Management Portal when users sign in for the first time.
 
-- Get help troubleshooting and identify devices based on specific criteria
-- Create a custom report
-- Inspect specific Intune resources to ensure things are configured as expected
-
-To learn more about this feature, see [Explore Intune data and get Microsoft Copilot recommendations](../copilot/copilot-intune-explorer.md).
+  To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](../copilot/security-copilot-surface-portal.md)
 
 ## Week of June 23, 2025 (Service release 2506)
 
