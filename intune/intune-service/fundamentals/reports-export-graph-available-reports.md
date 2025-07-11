@@ -49,182 +49,186 @@ The following table contains the possible values for the `reportName` parameter.
 | ReportName (Export Parameter) | Associated Report in Microsoft Intune |
 |------------------------------|----------------------------------------|
 | ActiveMalware | Under **Endpoint Security** > **Antivirus** > **Win10 detected malware** |
-| ADMXSettingsByDeviceByPolicy | |
+| ADMXSettingsByDeviceByPolicy | Under **Reports** > **Device management** > **Device Configuration** |
 | AllAppsList | Under **Apps** > **All Apps** |
-| AllDeviceCertificates | |
+| AllDeviceCertificates | Under **Devices** > **Monitor** > **Certificates** |
+| AppleDDMDeviceOSUpdateStatus | Under **Devices** > **Monitor** > **By platform** > *select specific platform* |
+| AppleDDMOSUpdateFailures | Under **Devices** > **Monitor** > **By platform** > *select specific platform* |
+| AppleDDMOSVersionReport | Under **Devices** > **Monitor** > **By platform** > *select specific platform* |
+| AppleDDMSoftwareUpdatesSummary | Under **Devices** > **Monitor** > **By platform** > *select specific platform* |
 | AppInstallStatusAggregate | Under **Apps** > **Monitor** > **App install status** |
 | AppInvAggregate | Under **Apps** > **Monitor** > **Discovered apps** > **Export**  |
 | AppInvByDevice | Under **Devices** > **All Devices** > **Device** > **Discovered Apps**  |
 | AppInvRawData | Under **Apps** > **Monitor** > **Discovered apps** > **Export**  |
-| AutopilotV1DeploymentStatus | |
-| AutopilotV2DeploymentStatus | |
-| AutopilotV2DeploymentStatusDetailedAppInfo | |
-| AutopilotV2DeploymentStatusDetailedScriptInfo | |
-| BRBatteryByModel | |
-| BRBatteryByOs | |
-| BRDeviceBatteryAgg | |
-| BREnergyUsage | |
-| CatalogAppsUpdateList | |
-| CertificatesByRAPolicy | |
+| AutopilotV1DeploymentStatus | Under **Devices** > **Windows** > **Enrollment** > **Windows Autopilot** |
+| AutopilotV2DeploymentStatus | Under **Devices** > **Windows** > **Enrollment** > **Windows Autopilot** |
+| AutopilotV2DeploymentStatusDetailedAppInfo | Under **Devices** > **Windows** > **Enrollment** > **Windows Autopilot** |
+| AutopilotV2DeploymentStatusDetailedScriptInfo | Under **Devices** > **Windows** > **Enrollment** > **Windows Autopilot** |
+| BRBatteryByModel | Under **Reports** > **Endpoint analytics** > **Battery health** > *select model performance* |
+| BRBatteryByOs | Under **Reports** > **Endpoint analytics** > **Battery health** > *select OS performance* |
+| BRDeviceBatteryAgg | Under **Reports** > **Endpoint analytics** > **Battery health** > *select device performance* |
+| BREnergyUsage | Under **Reports** > **Endpoint analytics** > **Battery health** |
+| CatalogAppsUpdateList | Under **Apps** > **Monitor** > **Enterprise App Catalog apps with updates** |
+| CertificatesByRAPolicy | Under **Devices** > **Monitor** > **Certificates** |
 | ComanagedDeviceWorkloads | Under **Reports** > **Cloud attached devices** > **Reports** > **Co-Managed Workloads** |
 | ComanagementEligibilityTenantAttachedDevices | Under **Reports** > **Cloud attached devices** > **Reports** > **Co-Management Eligibility** |
-| ConfigurationPolicyAggregate | |
-| ConfigurationPolicyAggregateV3 | |
-| ConfigurationPolicyDeviceAggregates | |
-| ConfigurationPolicyDeviceAggregatesV3 | |
-| ConfigurationPolicyDeviceAggregatesWithPF | |
-| ConfigurationPolicyDeviceAggregatesWithPFV3 | |
+| ConfigurationPolicyAggregate | Under **Devices** > **Manage devices** > **Configuration** |
+| ConfigurationPolicyAggregateV3 | Under **Devices** > **Manage devices** > **Configuration** |
+| ConfigurationPolicyDeviceAggregates | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* |
+| ConfigurationPolicyDeviceAggregatesV3 | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* |
+| ConfigurationPolicyDeviceAggregatesWithPF | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* |
+| ConfigurationPolicyDeviceAggregatesWithPFV3 | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* |
 | DefenderAgents | Under **Reports** > **MicrosoftDefender** > **Reports** > **Agent Status** |
-| DependentAppsInstallStatus | |
-| DeviceAssignmentStatusByConfigurationPolicy | |
-| DeviceAssignmentStatusByConfigurationPolicyForAC | |
-| DeviceAssignmentStatusByConfigurationPolicyForASR | |
-| DeviceAssignmentStatusByConfigurationPolicyForEDR | |
-| DeviceAssignmentStatusByConfigurationPolicyV3 | |
+| DependentAppsInstallStatus | Under **Apps** > **All Apps** > *select the dependent app* > **Device install status** |
+| DeviceAssignmentStatusByConfigurationPolicy | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* > **Device assignment status** |
+| DeviceAssignmentStatusByConfigurationPolicyForAC | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* > **Device assignment status** |
+| DeviceAssignmentStatusByConfigurationPolicyForASR | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* > **Device assignment status** |
+| DeviceAssignmentStatusByConfigurationPolicyForEDR | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* > **Device assignment status** |
+| DeviceAssignmentStatusByConfigurationPolicyV3 | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* > **Device assignment status** |
 | DeviceCompliance | Device Compliance Org |
-| DeviceComplianceTrend | |
-| DeviceConfigurationPolicyStatuses | |
-| DeviceConfigurationPolicyStatusesV3 | |
-| DeviceConfigurationPolicyStatusesWithPF | |
-| DeviceConfigurationPolicyStatusesWithPFV3 | |
-| DeviceEnrollmentFailures | |
+| DeviceComplianceTrend | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceConfigurationPolicyStatuses | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceConfigurationPolicyStatusesV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceConfigurationPolicyStatusesWithPF | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceConfigurationPolicyStatusesWithPFV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceEnrollmentFailures | Under **Devices** > **Device onboarding** > **Enrollment** > **Monitor** |
 | DeviceFailuresByFeatureUpdatePolicy | Under **Devices** > **Monitor** > **Failure for feature updates** > *click on error* |
 | DeviceInstallStatusByApp | Under **Apps** > **All Apps** > *Select an individual app* |
-| DeviceIntentPerSettingStatus | |
-| DeviceInventoryPolicyStatusesV3 | |
-| DeviceInventoryPolicyStatusesWithPF | |
-| DeviceNonCompliance | Non-compliant devices |
-| DevicePoliciesComplianceReport | |
-| DevicePoliciesComplianceReportV3 | |
-| DevicePolicySettingsComplianceReport | |
-| DevicePolicySettingsComplianceReportV3 | |
+| DeviceIntentPerSettingStatus | Under **Devices** > **All Devices** > *select specific device* |
+| DeviceInventoryPolicyStatusesV3 | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* > **Device assignment status** |
+| DeviceInventoryPolicyStatusesWithPF | Under **Devices** > **Manage devices** > **Configuration** > *select specific policy* > **Device assignment status** |
+| DeviceNonCompliance | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DevicePoliciesComplianceReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DevicePoliciesComplianceReportV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DevicePolicySettingsComplianceReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DevicePolicySettingsComplianceReportV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
 | DeviceRunStatesByProactiveRemediation | Under **Reports** > **Endpoint Analytics** > **Proactive remediations** > *Select a remediation* > **Device status** |
-| DeviceRunStatesByScript | |
+| DeviceRunStatesByScript | Under **Devices** > **Manage devices** > **Scripts and remediations** > *select specific script* > **Device status** |
 | Devices | All devices list |
 | DevicesByAppInv | Under **Apps** > **Monitor** > **Discovered apps** > **Discovered app**> **Export**  |
-| DevicesStatusByPolicyPlatformComplianceReport | |
-| DevicesStatusByPolicyPlatformComplianceReportV3 | |
-| DevicesStatusBySettingReport | |
-| DevicesStatusBySettingReportV3 | |
-| DeviceStatusByCompliacePolicyReport | |
-| DeviceStatusByCompliacePolicyReportV3 | |
-| DeviceStatusByCompliancePolicySettingReport | |
-| DeviceStatusByCompliancePolicySettingReportV3 | |
-| DeviceStatusesByConfigurationProfile | |
-| DeviceStatusesByConfigurationProfileForAppControl | |
-| DeviceStatusesByConfigurationProfileForASR | |
-| DeviceStatusesByConfigurationProfileForEDR | |
-| DeviceStatusesByConfigurationProfileV3 | |
-| DeviceStatusesByConfigurationProfileWithPF | |
-| DeviceStatusesByConfigurationProfileWithPFV3 | |
-| DeviceStatusesByInventoryPolicyWithPF | |
-| DeviceStatusesByInventoryPolicyWithPFV3 | |
-| DeviceStatusSummaryByCompliacePolicyReport | |
-| DeviceStatusSummaryByCompliacePolicyReportV3 | |
-| DeviceStatusSummaryByCompliancePolicySettingsReport | |
-| DeviceStatusSummaryByCompliancePolicySettingsReportV3 | |
+| DevicesStatusByPolicyPlatformComplianceReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DevicesStatusByPolicyPlatformComplianceReportV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DevicesStatusBySettingReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DevicesStatusBySettingReportV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceStatusByCompliacePolicyReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceStatusByCompliacePolicyReportV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceStatusByCompliancePolicySettingReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceStatusByCompliancePolicySettingReportV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceStatusesByConfigurationProfile | Under **Devices** > **Manage devices** > **Configuration** > **Policies** > *select specific policy* > **Device and user check-in status** |
+| DeviceStatusesByConfigurationProfileForAppControl | Under **Devices** > **Manage devices** > **Configuration** > **Policies** > *select specific policy* > **Device and user check-in status** |
+| DeviceStatusesByConfigurationProfileForASR | Under **Devices** > **Manage devices** > **Configuration** > **Policies** > *select specific policy* > **Device and user check-in status** |
+| DeviceStatusesByConfigurationProfileForEDR | Under **Devices** > **Manage devices** > **Configuration** > **Policies** > *select specific policy* > **Device and user check-in status** |
+| DeviceStatusesByConfigurationProfileV3 | Under **Devices** > **Manage devices** > **Configuration** > **Policies** > *select specific policy* > **Device and user check-in status** |
+| DeviceStatusesByConfigurationProfileWithPF | Under **Devices** > **Manage devices** > **Configuration** > **Policies** > *select specific policy* > **Device and user check-in status** |
+| DeviceStatusesByConfigurationProfileWithPFV3 | Under **Devices** > **Manage devices** > **Configuration** > **Policies** > *select specific policy* > **Device and user check-in status** |
+| DeviceStatusesByInventoryPolicyWithPF | Under **Devices** > **Manage devices** > **Compliance** |
+| DeviceStatusesByInventoryPolicyWithPFV3 | Under **Devices** > **Manage devices** > **Compliance** |
+| DeviceStatusSummaryByCompliacePolicyReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceStatusSummaryByCompliacePolicyReportV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceStatusSummaryByCompliancePolicySettingsReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DeviceStatusSummaryByCompliancePolicySettingsReportV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
 | DevicesWithInventory | Under **Devices** > **All Devices** > **Export** |
-| DevicesWithoutCompliancePolicy | |
-| DevicesWithoutCompliancePolicyV3 | |
-| DriverUpdatePolicyStatusSummary | |
-| EAAnomalyAsset | |
-| EAAnomalyAssetV2 | |
-| EAAnomalyDeviceAsset | |
-| EAAnomalyDeviceAssetV2 | |
-| EAAppPerformance | |
-| EADeviceModelPerformance | |
-| EADeviceModelPerformanceV2 | |
-| EADevicePerformance | |
-| EADevicePerformanceV2 | |
-| EADeviceScoresV2 | |
-| EAModelScoresV2 | |
-| EAOSVersionsPerformance | |
-| EAResourcePerfAggByDevice | |
-| EAResourcePerfAggByModel | |
-| EAResourcePerfCpuSpikeProcess | |
-| EAResourcePerfRamSpikeProcess | |
-| EAStartupPerfDevicePerformance | |
-| EAStartupPerfDevicePerformanceV2 | |
-| EAStartupPerfDeviceProcesses | |
-| EAStartupPerfModelPerformance | |
-| EAStartupPerfModelPerformanceV2 | |
-| EAWFADeviceList | |
-| EAWFAModelPerformance | |
-| EAWFAPerDevicePerformance | |
-| EnrollmentActivity | |
-| EnrollmentConfigurationPoliciesByDevice | |
-| EpmAggregationReportByApplication | |
-| EpmAggregationReportByApplicationV2 | |
-| EpmAggregationReportByPublisher | |
-| EpmAggregationReportByPublisherV2 | |
-| EpmAggregationReportByUser | |
-| EpmAggregationReportByUserAppByMonth | |
-| EpmAggregationReportByUserV2 | |
-| EpmDeniedReport | |
-| EpmElevationReportByUserAppByDayToReporting | |
-| EpmElevationReportElevationEvent | |
-| EpmInsightsElevationTrend | |
-| EpmInsightsMostFrequentElevations | |
-| EpmInsightsReport | |
+| DevicesWithoutCompliancePolicy | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DevicesWithoutCompliancePolicyV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| DriverUpdatePolicyStatusSummary | Under **Devices** > **Manage updates** > **Windows updates** > **Driver updates** |
+| EAAnomalyAsset | Under **Reports** > **Endpoint analytics** > **Anomalies** |
+| EAAnomalyAssetV2 | Under **Reports** > **Endpoint analytics** > **Anomalies** |
+| EAAnomalyDeviceAsset | Under **Reports** > **Endpoint analytics** > **Anomalies** |
+| EAAnomalyDeviceAssetV2 | Under **Reports** > **Endpoint analytics** > **Anomalies** |
+| EAAppPerformance | Under **Reports** > **Endpoint analytics** > **Application reliability** > **App performance** |
+| EADeviceModelPerformance | Under **Reports** > **Endpoint analytics** |
+| EADeviceModelPerformanceV2 | Under **Reports** > **Endpoint analytics** |
+| EADevicePerformance | Under **Reports** > **Endpoint analytics** |
+| EADevicePerformanceV2 | Under **Reports** > **Endpoint analytics** |
+| EADeviceScoresV2 | Under **Reports** > **Endpoint analytics** > **Device scores** |
+| EAModelScoresV2 | Under **Reports** > **Endpoint analytics** > **Model scores** |
+| EAOSVersionsPerformance | Under **Reports** > **Endpoint analytics** > **Application reliability** > **OS versions performance** |
+| EAResourcePerfAggByDevice | Under **Reports** > **Endpoint analytics** > **Resource performance** > **Device performance** |
+| EAResourcePerfAggByModel | Under **Reports** > **Endpoint analytics** > **Resource performance** > **Model performance** |
+| EAResourcePerfCpuSpikeProcess | Under **Reports** > **Endpoint analytics** > **Resource performance** > **Resource performance score** |
+| EAResourcePerfRamSpikeProcess | Under **Reports** > **Endpoint analytics** > **Resource performance** > **Resource performance score** |
+| EAStartupPerfDevicePerformance | Under **Reports** > **Endpoint analytics** > **Startup performance** > **Device performance** |
+| EAStartupPerfDevicePerformanceV2 | Under **Reports** > **Endpoint analytics** > **Startup performance** > **Device performance** |
+| EAStartupPerfDeviceProcesses | Under **Reports** > **Endpoint analytics** > **Startup performance** > **Startup processes** |
+| EAStartupPerfModelPerformance | Under **Reports** > **Endpoint analytics** > **Startup performance** > **Model performance** |
+| EAStartupPerfModelPerformanceV2 | Under **Reports** > **Endpoint analytics** > **Startup performance** > **Model performance** |
+| EAWFADeviceList | Under **Reports** > **Endpoint analytics** > **Work from anywhere** > **Device performance** |
+| EAWFAModelPerformance | Under **Reports** > **Endpoint analytics** > **Work from anywhere** > **Model performance** |
+| EAWFAPerDevicePerformance | Under **Reports** > **Endpoint analytics** > **Work from anywhere** > **Device performance** |
+| EnrollmentActivity | Under **Dashboard** > **Device enrollment** and/or **Intune enrolled devices** |
+| EnrollmentConfigurationPoliciesByDevice | Under **Devices** > **Device onboarding** > **Enrollment** |
+| EpmAggregationReportByApplication | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report by applications** |
+| EpmAggregationReportByApplicationV2 | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report by applications** |
+| EpmAggregationReportByPublisher | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report by publisher** |
+| EpmAggregationReportByPublisherV2 | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report by publisher** |
+| EpmAggregationReportByUser | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report by user** |
+| EpmAggregationReportByUserAppByMonth | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report by user** |
+| EpmAggregationReportByUserV2 | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report by user** |
+| EpmDeniedReport | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report** |
+| EpmElevationReportByUserAppByDayToReporting | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report** |
+| EpmElevationReportElevationEvent | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report** |
+| EpmInsightsElevationTrend | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report** |
+| EpmInsightsMostFrequentElevations | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report** |
+| EpmInsightsReport | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report** |
 | FeatureUpdateDeviceState | Under **Reports** > **Window Updates** > **Reports** > **Windows Feature Update Report**  |
 | FeatureUpdatePolicyFailuresAggregate | Under **Devices** > **Monitor** > **Failure for feature updates** |
-| FeatureUpdatePolicyStatusSummary | |
-| FilteredAppsList | |
+| FeatureUpdatePolicyStatusSummary | Under **Devices** > **Manage updates** > **Windows updates** > **Feature updates** |
+| FilteredAppsList | Under **Apps** > **All Apps** |
 | FirewallStatus | Under **Reports** > **Firewall** > **MDM Firewall status for Windows 10 and later** |
-| FirewallUnhealthyStatus | |
+| FirewallUnhealthyStatus | Under **Reports** > **Endpoint security** > **Firewall** |
 | GPAnalyticsSettingMigrationReadiness | Under **Reports** > **Group policy analytics** > **Reports** > **Group policy migration readiness** |
-| InventoryPolicyDeviceAggregatesV3 | |
-| InventoryPolicyDeviceAggregatesWithPF | |
+| InventoryPolicyDeviceAggregatesV3 | Under **Devices** > **Monitor** |
+| InventoryPolicyDeviceAggregatesWithPF | Under **Devices** > **Monitor** |
 | MAMAppConfigurationStatus | Under **Apps** > **Monitor** > **App protection status** > **App configuration report** |
-| MAMAppConfigurationStatusScopedV2 | |
-| MAMAppConfigurationStatusV2 | |
+| MAMAppConfigurationStatusScopedV2 | Under **Apps** > **Monitor** |
+| MAMAppConfigurationStatusV2 | Under **Apps** > **Monitor** |
 | MAMAppProtectionStatus | Under **Apps** > **Monitor** > **App protection status** > **App protection report: iOS, Android** |
-| MAMAppProtectionStatusScopedV2 | |
-| MAMAppProtectionStatusV2 | |
+| MAMAppProtectionStatusScopedV2 | Under **Apps** > **Monitor** |
+| MAMAppProtectionStatusV2 | Under **Apps** > **Monitor** |
 | Malware | Under **Reports** > **MicrosoftDefender** > **Reports** > **Detected malware** |
-| MEMUpgradeReadinessOrgAsset | |
-| NonCompliantCompliancePoliciesAggregate | |
-| NonCompliantCompliancePoliciesAggregateV3 | |
-| NonCompliantConfigurationPoliciesAggregateWithPF | |
-| NonCompliantConfigurationPoliciesAggregateWithPFV3 | |
-| NoncompliantDevicesAndSettings | |
-| NoncompliantDevicesAndSettingsV3 | |
-| NonCompliantDevicesByCompliancePolicy | |
-| NonCompliantDevicesByCompliancePolicyV3 | |
-| NoncompliantDevicesToBeRetired | |
-| OrgAppsInstallStatus | |
-| OrgDeviceInstallStatus | |
-| PerSettingDeviceSummaryByConfigurationPolicy | |
-| PerSettingDeviceSummaryByConfigurationPolicyForAppControl | |
-| PerSettingDeviceSummaryByConfigurationPolicyForEDR | |
-| PerSettingDeviceSummaryByInventoryPolicy | |
-| PerSettingDeviceSummaryByInventoryPolicyV3 | |
-| PerSettingSummaryByDeviceConfigurationPolicy | |
-| Policies | |
-| PolicyComplianceAggReport | |
-| PolicyComplianceAggReportV3 | |
-| PolicyNonComplianceAgg | |
-| PolicyNonComplianceAggVer3 | |
-| PolicyNonComplianceNew | |
-| PolicyNonComplianceNewV3 | |
-| PolicyRunStatesByProactiveRemediation | |
+| MEMUpgradeReadinessOrgAsset | Under **Devices** |
+| NonCompliantCompliancePoliciesAggregate | Under **Reports** > **Device management** > **Device compliance** |
+| NonCompliantCompliancePoliciesAggregateV3 | Under **Reports** > **Device management** > **Device compliance** |
+| NonCompliantConfigurationPoliciesAggregateWithPF | Under **Reports** > **Device management** > **Device compliance** |
+| NonCompliantConfigurationPoliciesAggregateWithPFV3 | Under **Reports** > **Device management** > **Device compliance** |
+| NoncompliantDevicesAndSettings | Under **Reports** > **Device management** > **Device compliance** |
+| NoncompliantDevicesAndSettingsV3 | Under **Reports** > **Device management** > **Device compliance** |
+| NonCompliantDevicesByCompliancePolicy | Under **Reports** > **Device management** > **Device compliance** |
+| NonCompliantDevicesByCompliancePolicyV3 | Under **Reports** > **Device management** > **Device compliance** |
+| NoncompliantDevicesToBeRetired | Under **Reports** > **Device management** > **Device compliance** |
+| OrgAppsInstallStatus | Under **Apps** > **Monitor** > **App install status** |
+| OrgDeviceInstallStatus | Under **Devices** > **Monitor** |
+| PerSettingDeviceSummaryByConfigurationPolicy | Under **Devices** > **Monitor** > **Configuration profiles** |
+| PerSettingDeviceSummaryByConfigurationPolicyForAppControl | Under **Devices** > **Monitor** > **Configuration profiles** |
+| PerSettingDeviceSummaryByConfigurationPolicyForEDR | Under **Devices** > **Monitor** > **Configuration profiles** |
+| PerSettingDeviceSummaryByInventoryPolicy | Under **Devices** > **Monitor** > **Configuration profiles** |
+| PerSettingDeviceSummaryByInventoryPolicyV3 | Under **Devices** > **Monitor** > **Configuration profiles** |
+| PerSettingSummaryByDeviceConfigurationPolicy | Under **Devices** > **Monitor** > **Configuration profiles** |
+| Policies | Under **Devices** > **Manage Device** > *select specific policy type* |
+| PolicyComplianceAggReport | Under **Reports** > **Device management** > **Device compliance** |
+| PolicyComplianceAggReportV3 | Under **Reports** > **Device management** > **Device compliance** |
+| PolicyNonComplianceAgg | Under **Reports** > **Device management** > **Device compliance** |
+| PolicyNonComplianceAggVer3 | Under **Reports** > **Device management** > **Device compliance** |
+| PolicyNonComplianceNew | Under **Reports** > **Device management** > **Device compliance** |
+| PolicyNonComplianceNewV3 | Under **Reports** > **Device management** > **Device compliance** |
+| PolicyRunStatesByProactiveRemediation | Under **Reports** > **Endpoint analytics** |
 | QualityUpdateDeviceErrorsByPolicy | Under **Devices** > **Monitor** > **Windows Expedited update failures** > *Select a profile* |
 | QualityUpdateDeviceStatusByPolicy | Under **Reports** > **Windows updates** > **Reports** > **Windows Expedited Update Report** |
-| QualityUpdatePolicyStatusSummary | |
-| RemoteAssistanceSessions | |
-| ResourcePerformanceAggregateByDevice | |
-| ResourcePerformanceAggregateByModel | |
-| SettingComplianceAggReport | |
-| SettingComplianceAggReportV3 | |
-| TicketingSecurityTaskAppsList | |
-| TpmAttestationStatus | |
+| QualityUpdatePolicyStatusSummary | Under **Reports** > **Device management** > **Windows updates** |
+| RemoteAssistanceSessions | Under **Reports** > **Endpoint analytics** |
+| ResourcePerformanceAggregateByDevice | Under **Reports** > **Endpoint analytics** |
+| ResourcePerformanceAggregateByModel | Under **Reports** > **Endpoint analytics** |
+| SettingComplianceAggReport | Under **Reports** > **Device management** > **Device compliance** |
+| SettingComplianceAggReportV3 | Under **Reports** > **Device management** > **Device compliance** |
+| TicketingSecurityTaskAppsList | Under **Endpoint security** > **Security tasks** |
+| TpmAttestationStatus | Under **Devices** > **Manage devices** > **Configuration** > **Monitor** > **Device encryption status** |
 | UnhealthyDefenderAgents | Under **Endpoint Security** > **Antivirus** > **Win10 Unhealthy Endpoints** |
 | UserInstallStatusAggregateByApp | Under **Apps** > **All Apps** > *Select an individual app* |
-| Users | |
-| UserScaleTest | |
-| WindowsDeviceHealthAttestationReport | |
-| WindowsUpdatePerPolicyPerDeviceStatus | |
-| WorkFromAnywhereDeviceList | |
+| Users | Under **Users** |
+| UserScaleTest | Under **Reports** > **Endpoint analytics** |
+| WindowsDeviceHealthAttestationReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
+| WindowsUpdatePerPolicyPerDeviceStatus | Under **Devices** > **Manage updates** > **Windows updates** |
+| WorkFromAnywhereDeviceList | Under **Reports** > **Endpoint analytics** > **Work from anywhere** |
 
 Each of the listed reports is described below.
 
@@ -252,8 +256,8 @@ The following table contains the possible output when calling the `ActiveMalware
 |     _ManagedBy  |
 
 You can choose to filter the `ActiveMalware` and `Malware` report's output based on the following columns:
-- `Severity`
 - `ExecutionState`
+- `Severity`
 - `State`
 
 ## ADMXSettingsByDeviceByPolicy
@@ -278,9 +282,9 @@ The following table contains the possible output when calling the `ADMXSettingsB
 | UserId |
 
 You can choose to filter the `ADMXSettingsByDeviceByPolicy` report's output based on the following columns:
+- `DeviceId`
 - `PolicyId`
 - `UserId`
-- `DeviceId`
 
 ## AllAppsList
 
@@ -358,8 +362,8 @@ The following table contains the possible output when calling the `AppInstallSta
 | Publisher |
 
 You can choose to filter the `AppInstallStatusAggregate` report's output based on the following columns:
-- `Platform`
 - `FailedDevicePercentage`
+- `Platform`
 
 ## AppInvAggregate
 
@@ -545,18 +549,18 @@ The following table contains the possible output when calling the `BRBatteryByMo
 | SchemaVersion |
 
 You can choose to filter the `BRBatteryByModel` report's output based on the following columns:
-- `DeviceScopeId`
-- `PartnerFeaturesBitmask`
 - `ActiveDevices`
-- `ModelMaximumCapacity`
-- `ModelRuntime`
+- `DeviceScopeId`
 - `ModelBatteryAge`
-- `ModelCycleCount`
-- `ModelMedianCapacity`
-- `ModelMedianRuntime`
-- `ModelMedianCycleCount`
 - `ModelBatteryHealthScore`
+- `ModelCycleCount`
+- `ModelMaximumCapacity`
+- `ModelMedianCapacity`
+- `ModelMedianCycleCount`
+- `ModelMedianRuntime`
+- `ModelRuntime`
 - `NeedsAttention`
+- `PartnerFeaturesBitmask`
 
 ## BRBatteryByOs
 
@@ -584,18 +588,18 @@ The following table contains the possible output when calling the `BRBatteryByOs
 | SchemaVersion |
 
 You can choose to filter the `BRBatteryByOs` report's output based on the following columns:
-- `DeviceScopeId`
-- `PartnerFeaturesBitmask`
 - `ActiveDevices`
-- `OsMaximumCapacity`
-- `OsRuntime`
-- `OsBatteryAge`
-- `OsCycleCount`
-- `OsMedianCapacity`
-- `OsMedianRuntime`
-- `OsMedianCycleCount`
-- `OsBatteryHealthScore`
+- `DeviceScopeId`
 - `NeedsAttention`
+- `OsBatteryAge`
+- `OsBatteryHealthScore`
+- `OsCycleCount`
+- `OsMaximumCapacity`
+- `OsMedianCapacity`
+- `OsMedianCycleCount`
+- `OsMedianRuntime`
+- `OsRuntime`
+- `PartnerFeaturesBitmask`
 
 ## BRDeviceBatteryAgg
 
@@ -637,15 +641,15 @@ The following table contains the possible output when calling the `BRDeviceBatte
 | SchemaVersion |
 
 You can choose to filter the `BRDeviceBatteryAgg` report's output based on the following columns:
-- `DeviceScopeIds`
-- `PartnerFeaturesBitmask`
-- `MaximumCapacity`
-- `FullChargeActiveRuntime`
-- `EstimatedBatteryAge`
+- `BatteryHealthScore`
 - `CycleCount`
 - `DeviceBatteryCount`
-- `BatteryHealthScore`
+- `DeviceScopeIds`
+- `EstimatedBatteryAge`
+- `FullChargeActiveRuntime`
+- `MaximumCapacity`
 - `NeedsAttention`
+- `PartnerFeaturesBitmask`
 
 ## BREnergyUsage
 
@@ -668,11 +672,11 @@ The following table contains the possible output when calling the `BREnergyUsage
 | TotalAppUsageDuration |
 
 You can choose to filter the `BREnergyUsage` report's output based on the following columns:
-- `DeviceScopeId`
-- `PartnerFeaturesBitmask`
 - `ActiveDevices`
-- `IsForeground`
 - `BatteryUsageInPercentage`
+- `DeviceScopeId`
+- `IsForeground`
+- `PartnerFeaturesBitmask`
 
 ## CatalogAppsUpdateList
 
@@ -802,12 +806,12 @@ The following table contains the possible output when calling the `ComanagedDevi
 
 You can choose to filter the `ComanagedDeviceWorkloads` report's output based on the following columns:
 - `CompliancePolicy`
-- `ResourceAccess`
 - `DeviceConfiguration`
-- `WindowsUpdateforBusiness`
 - `EndpointProtection`
 - `ModernApps`
 - `OfficeApps`
+- `ResourceAccess`
+- `WindowsUpdateforBusiness`
 
 ## ComanagementEligibilityTenantAttachedDevices
 
@@ -1032,10 +1036,10 @@ The following table contains the possible output when calling the `DefenderAgent
 
 You can choose to filter the `DefenderAgents` report's output based on the following columns:
 - `DeviceState`
-- `SignatureUpdateOverdue`
 - `MalwareProtectionEnabled`
-- `RealTimeProtectionEnabled`
 - `NetworkInspectionSystemEnabled`
+- `RealTimeProtectionEnabled`
+- `SignatureUpdateOverdue`
 
 ## DependentAppsInstallStatus
 
@@ -1080,10 +1084,10 @@ The following table contains the possible output when calling the `DeviceAssignm
 | ReportStatus |
 
 You can choose to filter the `DeviceAssignmentStatusByConfigurationPolicy` report's output based on the following columns:
-- `PolicyId`
-- `PolicyBaseTypeName`
-- `UnifiedPolicyPlatformType`
 - `AssignmentStatus`
+- `PolicyBaseTypeName`
+- `PolicyId`
+- `UnifiedPolicyPlatformType`
 
 ## DeviceAssignmentStatusByConfigurationPolicyForAC
 
@@ -1106,10 +1110,10 @@ The following table contains the possible output when calling the `DeviceAssignm
 | ReportStatus |
 
 You can choose to filter the `DeviceAssignmentStatusByConfigurationPolicyForAC` report's output based on the following columns:
-- `PolicyId`
-- `PolicyBaseTypeName`
-- `UnifiedPolicyPlatformType`
 - `AssignmentStatus`
+- `PolicyBaseTypeName`
+- `PolicyId`
+- `UnifiedPolicyPlatformType`
 
 ## DeviceAssignmentStatusByConfigurationPolicyForASR
 
@@ -1132,10 +1136,10 @@ The following table contains the possible output when calling the `DeviceAssignm
 | ReportStatus |
 
 You can choose to filter the `DeviceAssignmentStatusByConfigurationPolicyForASR` report's output based on the following columns:
-- `PolicyId`
-- `PolicyBaseTypeName`
-- `UnifiedPolicyPlatformType`
 - `AssignmentStatus`
+- `PolicyBaseTypeName`
+- `PolicyId`
+- `UnifiedPolicyPlatformType`
 
 ## DeviceAssignmentStatusByConfigurationPolicyForEDR
 
@@ -1158,10 +1162,10 @@ The following table contains the possible output when calling the `DeviceAssignm
 | ReportStatus |
 
 You can choose to filter the `DeviceAssignmentStatusByConfigurationPolicyForEDR` report's output based on the following columns:
-- `PolicyId`
-- `PolicyBaseTypeName`
-- `UnifiedPolicyPlatformType`
 - `AssignmentStatus`
+- `PolicyBaseTypeName`
+- `PolicyId`
+- `UnifiedPolicyPlatformType`
 
 ## DeviceAssignmentStatusByConfigurationPolicyV3
 
@@ -1184,10 +1188,10 @@ The following table contains the possible output when calling the `DeviceAssignm
 | ReportStatus |
 
 You can choose to filter the `DeviceAssignmentStatusByConfigurationPolicyV3` report's output based on the following columns:
-- `PolicyId`
-- `PolicyBaseTypeName`
-- `UnifiedPolicyPlatformType`
 - `AssignmentStatus`
+- `PolicyBaseTypeName`
+- `PolicyId`
+- `UnifiedPolicyPlatformType`
 
 ## DeviceCompliance
 
@@ -1220,9 +1224,9 @@ The following table contains the possible output when calling the `DeviceComplia
 
 You can choose to filter the `DeviceCompliance` report's output based on the following columns:
 - `ComplianceState`
+- `DeviceType`
 - `OS`
 - `OwnerType`
-- `DeviceType`
 
 ## DeviceComplianceTrend
 
@@ -1356,9 +1360,9 @@ The following table contains the possible output when calling the `DeviceEnrollm
 
 You can choose to filter the `DeviceEnrollmentFailures` report's output based on the following columns:
 - `EnrollmentFailureDateTime`
-- `OS`
-- `FailureReason`
 - `EnrollmentMethod`
+- `FailureReason`
+- `OS`
 - `UserId`
 
 ## DeviceFailuresByFeatureUpdatePolicy
@@ -1392,8 +1396,8 @@ The following table contains the possible output when calling the `DeviceFailure
 |     WindowsUpdateVersion     |
 
 You can choose to filter the `DeviceFailuresByFeatureUpdatePolicy` report's output based on the following columns:
-- `PolicyId` **(Required)**
 - `AlertMessage`
+- `PolicyId` **(Required)**
 - `RecommendedAction`
 - `WindowsUpdateVersion`
 
@@ -1421,8 +1425,8 @@ The following table contains the possible output when calling the `DeviceInstall
 | UserPrincipalName |
 
 You can choose to filter the `DeviceInstallStatusByApp` report's output based on the following columns:
-- `ApplicationId` **(Required)**
 - `AppInstallState`
+- `ApplicationId` **(Required)**
 - `HexErrorCode` (Used as ErrorCode)
 
 ## DeviceIntentPerSettingStatus
@@ -1526,11 +1530,11 @@ The following table contains the possible output when calling the `DeviceNonComp
 | UserName   |
 
 You can choose to filter the `DeviceNonCompliance` report's output based on the following columns:
+- `ComplianceState`
+- `DeviceType`
 - `OS`
 - `OwnerType`
-- `DeviceType`
 - `UserId`
-- `ComplianceState`
 
 ## DevicePoliciesComplianceReport
 
@@ -1653,9 +1657,9 @@ The following table contains the possible output when calling the `DeviceRunStat
 |   UserName   |
 
 You can choose to filter the `DeviceRunStatesByProactiveRemediation` report's output based on the following columns:
+- `DetectionStatus`
 - `PolicyId` **(required)**
 - `RemediationStatus`
-- `DetectionStatus`
 
 ## DeviceRunStatesByScript
 
@@ -1755,16 +1759,16 @@ The following table contains the possible output when calling the `Devices` repo
 | WifiMacAddress        |
 
 You can choose to filter the `Devices` report's output based on the following columns:
-- `OwnerType`
-- `DeviceType`
-- `ManagementAgents`
 - `CategoryName`
-- `ManagementState`
 - `CompliantState`
+- `CreatedDate`
+- `DeviceType`
+- `EnrollmentType`
 - `JailBroken`
 - `LastContact`
-- `CreatedDate`
-- `EnrollmentType`
+- `ManagementAgents`
+- `ManagementState`
+- `OwnerType`
 
 ## DevicesByAppInv
 
@@ -2342,16 +2346,16 @@ The following table contains the possible output when calling the `DevicesWithIn
 | TPMManufacturerVersion  | TPMManufacturerVersion  |
 
 You can choose to filter the `DevicesWithInventory` report's output based on the following columns:
-- `CreatedDate`
-- `LastContact`
 - `CategoryName`
 - `CompliantState`
-- `ManagementAgents`
-- `OwnerType`
-- `ManagementState`
+- `CreatedDate`
 - `DeviceType`
-- `JailBroken`
 - `EnrollmentType`
+- `JailBroken`
+- `LastContact`
+- `ManagementAgents`
+- `ManagementState`
+- `OwnerType`
 - `PartnerFeaturesBitmask`
 
 The `ProcessorArchitecture` mappings for Windows 10+ are the following:
@@ -2458,11 +2462,11 @@ The following table contains the possible output when calling the `EAAnomalyAsse
 | State |
 
 You can choose to filter the `EAAnomalyAsset` report's output based on the following columns:
-- `Severity`
-- `State`
-- `DeviceImpactedCount`
 - `AnomalyFirstOccurrenceDateTime`
 - `AnomalyLatestOccurrenceDateTime`
+- `DeviceImpactedCount`
+- `Severity`
+- `State`
 
 ## EAAnomalyAssetV2
 
@@ -2485,11 +2489,11 @@ The following table contains the possible output when calling the `EAAnomalyAsse
 | State |
 
 You can choose to filter the `EAAnomalyAssetV2` report's output based on the following columns:
-- `Severity`
-- `State`
-- `DeviceImpactedCount`
 - `AnomalyFirstOccurrenceDateTime`
 - `AnomalyLatestOccurrenceDateTime`
+- `DeviceImpactedCount`
+- `Severity`
+- `State`
 
 ## EAAnomalyDeviceAsset
 
@@ -2561,13 +2565,13 @@ The following table contains the possible output when calling the `EAAppPerforma
 | TotalAppUsageDuration |
 
 You can choose to filter the `EAAppPerformance` report's output based on the following columns:
-- `DeviceScopeId`
-- `PartnerFeaturesBitmask`
 - `ActiveDevices`
-- `TotalAppUsageDuration`
-- `TotalAppCrashes`
-- `MeanTimeToFailure`
 - `AppHealthScore`
+- `DeviceScopeId`
+- `MeanTimeToFailure`
+- `PartnerFeaturesBitmask`
+- `TotalAppCrashes`
+- `TotalAppUsageDuration`
 
 ## EADeviceModelPerformance
 
@@ -2590,12 +2594,12 @@ The following table contains the possible output when calling the `EADeviceModel
 | TargetSnapshotId |
 
 You can choose to filter the `EADeviceModelPerformance` report's output based on the following columns:
-- `DeviceScopeId`
-- `PartnerFeaturesBitmask`
 - `ActiveDevices`
+- `DeviceScopeId`
+- `HealthStatus`
 - `MeanTimeToFailure`
 - `ModelAppHealthScore`
-- `HealthStatus`
+- `PartnerFeaturesBitmask`
 
 ## EADeviceModelPerformanceV2
 
@@ -2618,12 +2622,12 @@ The following table contains the possible output when calling the `EADeviceModel
 | TargetSnapshotId |
 
 You can choose to filter the `EADeviceModelPerformanceV2` report's output based on the following columns:
-- `DeviceScopeId`
-- `PartnerFeaturesBitmask`
 - `ActiveDevices`
+- `DeviceScopeId`
+- `HealthStatus`
 - `MeanTimeToFailure`
 - `ModelAppHealthScore`
-- `HealthStatus`
+- `PartnerFeaturesBitmask`
 
 ## EADevicePerformance
 
@@ -2651,13 +2655,13 @@ The following table contains the possible output when calling the `EADevicePerfo
 | TotalAppHangs |
 
 You can choose to filter the `EADevicePerformance` report's output based on the following columns:
-- `DeviceScopeIds`
-- `PartnerFeaturesBitmask`
-- `DeviceId`
-- `TotalAppCrashes`
-- `MeanTimeToFailure`
 - `DeviceAppHealthScore`
+- `DeviceId`
+- `DeviceScopeIds`
 - `HealthStatus`
+- `MeanTimeToFailure`
+- `PartnerFeaturesBitmask`
+- `TotalAppCrashes`
 
 ## EADevicePerformanceV2
 
@@ -2685,13 +2689,13 @@ The following table contains the possible output when calling the `EADevicePerfo
 | TotalAppHangs |
 
 You can choose to filter the `EADevicePerformanceV2` report's output based on the following columns:
-- `DeviceScopeIds`
-- `PartnerFeaturesBitmask`
-- `DeviceId`
-- `TotalAppCrashes`
-- `MeanTimeToFailure`
 - `DeviceAppHealthScore`
+- `DeviceId`
+- `DeviceScopeIds`
 - `HealthStatus`
+- `MeanTimeToFailure`
+- `PartnerFeaturesBitmask`
+- `TotalAppCrashes`
 
 ## EADeviceScoresV2
 
@@ -2714,15 +2718,15 @@ The following table contains the possible output when calling the `EADeviceScore
 | WorkFromAnywhereScore |
 
 You can choose to filter the `EADeviceScoresV2` report's output based on the following columns:
-- `PartnerFeaturesBitmask`
-- `HealthStatus`
-- `EndpointAnalyticsScore`
-- `StartupPerformanceScore`
 - `AppReliabilityScore`
-- `WorkFromAnywhereScore`
 - `DeviceScopeIds`
+- `EndpointAnalyticsScore`
+- `HealthStatus`
 - `OverviewBatteryHealthScore`
+- `PartnerFeaturesBitmask`
 - `ResourcePerfScore`
+- `StartupPerformanceScore`
+- `WorkFromAnywhereScore`
 
 ## EAModelScoresV2
 
@@ -2744,16 +2748,16 @@ The following table contains the possible output when calling the `EAModelScores
 | WorkFromAnywhereScore |
 
 You can choose to filter the `EAModelScoresV2` report's output based on the following columns:
-- `PartnerFeaturesBitmask`
-- `ModelDeviceCount`
-- `HealthStatus`
-- `EndpointAnalyticsScore`
-- `StartupPerformanceScore`
 - `AppReliabilityScore`
-- `WorkFromAnywhereScore`
 - `DeviceScopeId`
+- `EndpointAnalyticsScore`
+- `HealthStatus`
+- `ModelDeviceCount`
 - `OverviewBatteryHealthScore`
+- `PartnerFeaturesBitmask`
 - `ResourcePerfScore`
+- `StartupPerformanceScore`
+- `WorkFromAnywhereScore`
 
 ## EAOSVersionsPerformance
 
@@ -2774,11 +2778,11 @@ The following table contains the possible output when calling the `EAOSVersionsP
 | SchemaVersion |
 
 You can choose to filter the `EAOSVersionsPerformance` report's output based on the following columns:
-- `DeviceScopeId`
-- `PartnerFeaturesBitmask`
 - `ActiveDevices`
+- `DeviceScopeId`
 - `MeanTimeToFailure`
 - `OSVersionAppHealthScore`
+- `PartnerFeaturesBitmask`
 
 ## EAResourcePerfAggByDevice
 
@@ -2812,21 +2816,21 @@ The following table contains the possible output when calling the `EAResourcePer
 | TotalRamInMB |
 
 You can choose to filter the `EAResourcePerfAggByDevice` report's output based on the following columns:
-- `PartnerFeaturesBitmask`
-- `DeviceId`
+- `ClockSpeed`
+- `Cores`
 - `CpuSpikeTimePercentage`
-- `RamSpikeTimePercentage`
 - `CpuSpikeTimeScore`
-- `RamSpikeTimeScore`
-- `ResourcePerfScore`
+- `DeviceId`
+- `DeviceScopeIds`
+- `DiskType`
 - `HealthStatus`
 - `MachineType`
+- `PartnerFeaturesBitmask`
 - `ProcessorName`
-- `DiskType`
+- `RamSpikeTimePercentage`
+- `RamSpikeTimeScore`
+- `ResourcePerfScore`
 - `TotalRamInMB`
-- `Cores`
-- `ClockSpeed`
-- `DeviceScopeIds`
 
 ## EAResourcePerfAggByModel
 
@@ -2856,19 +2860,19 @@ The following table contains the possible output when calling the `EAResourcePer
 | TotalRamInMB |
 
 You can choose to filter the `EAResourcePerfAggByModel` report's output based on the following columns:
-- `PartnerFeaturesBitmask`
-- `ModelId`
 - `CpuSpikeTimePercentage`
-- `RamSpikeTimePercentage`
 - `CpuSpikeTimeScore`
+- `DeviceScopeId`
+- `HealthStatus`
+- `MachineType`
+- `ModelId`
+- `PartnerFeaturesBitmask`
+- `ProcessorName`
+- `RamSpikeTimePercentage`
 - `RamSpikeTimeScore`
 - `ResourcePerfScore`
 - `TotalDeviceCount`
-- `HealthStatus`
-- `MachineType`
-- `ProcessorName`
 - `TotalRamInMB`
-- `DeviceScopeId`
 
 ## EAResourcePerfCpuSpikeProcess
 
@@ -2885,12 +2889,12 @@ The following table contains the possible output when calling the `EAResourcePer
 | Publisher |
 
 You can choose to filter the `EAResourcePerfCpuSpikeProcess` report's output based on the following columns:
+- `CpuSpikeCount`
+- `Description`
 - `DeviceId`
 - `DisplayName`
-- `Description`
-- `Publisher`
-- `CpuSpikeCount`
 - `EventDateTime`
+- `Publisher`
 
 ## EAResourcePerfRamSpikeProcess
 
@@ -2907,12 +2911,12 @@ The following table contains the possible output when calling the `EAResourcePer
 | RamUsageInMb |
 
 You can choose to filter the `EAResourcePerfRamSpikeProcess` report's output based on the following columns:
+- `Description`
 - `DeviceId`
 - `DisplayName`
-- `Description`
+- `EventDateTime`
 - `Publisher`
 - `RamUsageInMb`
-- `EventDateTime`
 
 ## EAStartupPerfDevicePerformance
 
@@ -2944,21 +2948,21 @@ The following table contains the possible output when calling the `EAStartupPerf
 | TargetSnapshotId |
 
 You can choose to filter the `EAStartupPerfDevicePerformance` report's output based on the following columns:
-- `DeviceScopeIds`
-- `PartnerFeaturesBitmask`
-- `DeviceId`
-- `Disktype`
-- `CoreBootTime`
-- `GPBootTime`
-- `CoreLogonTime`
-- `GPLogonTime`
-- `DesktopUsableTime`
-- `RestartCount`
 - `BlueScreenCount`
-- `StartupPerformanceScore`
 - `BootScore`
-- `LogonScore`
+- `CoreBootTime`
+- `CoreLogonTime`
+- `DesktopUsableTime`
+- `DeviceId`
+- `DeviceScopeIds`
+- `Disktype`
+- `GPBootTime`
+- `GPLogonTime`
 - `HealthStatus`
+- `LogonScore`
+- `PartnerFeaturesBitmask`
+- `RestartCount`
+- `StartupPerformanceScore`
 
 ## EAStartupPerfDevicePerformanceV2
 
@@ -2990,21 +2994,21 @@ The following table contains the possible output when calling the `EAStartupPerf
 | TargetSnapshotId |
 
 You can choose to filter the `EAStartupPerfDevicePerformanceV2` report's output based on the following columns:
-- `DeviceScopeIds`
-- `PartnerFeaturesBitmask`
-- `DeviceId`
-- `Disktype`
-- `CoreBootTime`
-- `GPBootTime`
-- `CoreLogonTime`
-- `GPLogonTime`
-- `DesktopUsableTime`
-- `RestartCount`
 - `BlueScreenCount`
-- `StartupPerformanceScore`
 - `BootScore`
-- `LogonScore`
+- `CoreBootTime`
+- `CoreLogonTime`
+- `DesktopUsableTime`
+- `DeviceId`
+- `DeviceScopeIds`
+- `Disktype`
+- `GPBootTime`
+- `GPLogonTime`
 - `HealthStatus`
+- `LogonScore`
+- `PartnerFeaturesBitmask`
+- `RestartCount`
+- `StartupPerformanceScore`
 
 ## EAStartupPerfDeviceProcesses
 
@@ -3025,10 +3029,10 @@ The following table contains the possible output when calling the `EAStartupPerf
 
 You can choose to filter the `EAStartupPerfDeviceProcesses` report's output based on the following columns:
 - `DeviceScopeId`
-- `PartnerFeaturesBitmask`
-- `TotalDeviceCount`
 - `Median`
+- `PartnerFeaturesBitmask`
 - `TimePerProcess`
+- `TotalDeviceCount`
 
 ## EAStartupPerfModelPerformance
 
@@ -3059,19 +3063,19 @@ The following table contains the possible output when calling the `EAStartupPerf
 | TotalDeviceRecordCount |
 
 You can choose to filter the `EAStartupPerfModelPerformance` report's output based on the following columns:
-- `DeviceScopeId`
-- `PartnerFeaturesBitmask`
-- `ModelId`
-- `Disktype`
-- `TotalDeviceRecordCount`
-- `CoreBootTime`
-- `GPBootTime`
-- `CoreLogonTime`
-- `GPLogonTime`
-- `AverageRestarts`
 - `AverageBlueScreens`
-- `StartupPerformanceScore`
+- `AverageRestarts`
+- `CoreBootTime`
+- `CoreLogonTime`
+- `DeviceScopeId`
+- `Disktype`
+- `GPBootTime`
+- `GPLogonTime`
 - `HealthStatus`
+- `ModelId`
+- `PartnerFeaturesBitmask`
+- `StartupPerformanceScore`
+- `TotalDeviceRecordCount`
 
 ## EAStartupPerfModelPerformanceV2
 
@@ -3102,19 +3106,19 @@ The following table contains the possible output when calling the `EAStartupPerf
 | TotalDeviceRecordCount |
 
 You can choose to filter the `EAStartupPerfModelPerformanceV2` report's output based on the following columns:
-- `DeviceScopeId`
-- `PartnerFeaturesBitmask`
-- `ModelId`
-- `Disktype`
-- `TotalDeviceRecordCount`
-- `CoreBootTime`
-- `GPBootTime`
-- `CoreLogonTime`
-- `GPLogonTime`
-- `AverageRestarts`
 - `AverageBlueScreens`
-- `StartupPerformanceScore`
+- `AverageRestarts`
+- `CoreBootTime`
+- `CoreLogonTime`
+- `DeviceScopeId`
+- `Disktype`
+- `GPBootTime`
+- `GPLogonTime`
 - `HealthStatus`
+- `ModelId`
+- `PartnerFeaturesBitmask`
+- `StartupPerformanceScore`
+- `TotalDeviceRecordCount`
 
 ## EAWFADeviceList
 
@@ -3154,20 +3158,20 @@ The following table contains the possible output when calling the `EAWFADeviceLi
 | UpgradeEligibility |
 
 You can choose to filter the `EAWFADeviceList` report's output based on the following columns:
-- `DeviceScopeIds`
-- `PartnerFeaturesBitmask`
-- `DeviceId`
-- `ManagedBy`
-- `Ownership`
-- `GraphDeviceIsManaged`
-- `JoinType`
-- `TenantAttached`
-- `CompliancePolicySetToIntune`
-- `OtherWorkloadsSetToIntune`
-- `AutoPilotRegistered`
 - `AutoPilotProfileAssigned`
-- `UpgradeEligibility`
+- `AutoPilotRegistered`
+- `CompliancePolicySetToIntune`
+- `DeviceId`
+- `DeviceScopeIds`
+- `GraphDeviceIsManaged`
 - `IsCloudManagedGatewayEnabled`
+- `JoinType`
+- `ManagedBy`
+- `OtherWorkloadsSetToIntune`
+- `Ownership`
+- `PartnerFeaturesBitmask`
+- `TenantAttached`
+- `UpgradeEligibility`
 
 ## EAWFAModelPerformance
 
@@ -3192,14 +3196,14 @@ The following table contains the possible output when calling the `EAWFAModelPer
 | WorkFromAnywhereScore |
 
 You can choose to filter the `EAWFAModelPerformance` report's output based on the following columns:
-- `DeviceScopeId`
-- `PartnerFeaturesBitmask`
-- `HealthStatus`
-- `ModelDeviceCount`
-- `WindowsScore`
 - `CloudIdentityScore`
 - `CloudManagementScore`
 - `CloudProvisioningScore`
+- `DeviceScopeId`
+- `HealthStatus`
+- `ModelDeviceCount`
+- `PartnerFeaturesBitmask`
+- `WindowsScore`
 - `WorkFromAnywhereScore`
 
 ## EAWFAPerDevicePerformance
@@ -3226,14 +3230,14 @@ The following table contains the possible output when calling the `EAWFAPerDevic
 | WorkFromAnywhereScore |
 
 You can choose to filter the `EAWFAPerDevicePerformance` report's output based on the following columns:
-- `DeviceScopeIds`
-- `PartnerFeaturesBitmask`
-- `DeviceId`
-- `HealthStatus`
-- `WindowsScore`
 - `CloudIdentityScore`
 - `CloudManagementScore`
 - `CloudProvisioningScore`
+- `DeviceId`
+- `DeviceScopeIds`
+- `HealthStatus`
+- `PartnerFeaturesBitmask`
+- `WindowsScore`
 - `WorkFromAnywhereScore`
 
 ## EnrollmentActivity
@@ -3262,9 +3266,9 @@ The following table contains the possible output when calling the `EnrollmentAct
 
 You can choose to filter the `EnrollmentActivity` report's output based on the following columns:
 - `EnrollmentDateTime`
-- `OS`
-- `FailureReason`
 - `EnrollmentMethod`
+- `FailureReason`
+- `OS`
 - `UserId`
 
 ## EnrollmentConfigurationPoliciesByDevice
@@ -3286,8 +3290,8 @@ The following table contains the possible output when calling the `EnrollmentCon
 | LastAppliedTime |
 
 You can choose to filter the `EnrollmentConfigurationPoliciesByDevice` report's output based on the following columns:
-- `State`
 - `DeviceId`
+- `State`
 
 ## EpmAggregationReportByApplication
 
@@ -3305,8 +3309,8 @@ The following table contains the possible output when calling the `EpmAggregatio
 | IsBackgroundProcess |
 
 You can choose to filter the `EpmAggregationReportByApplication` report's output based on the following columns:
-- `ElevationType`
 - `CompanyName`
+- `ElevationType`
 - `FileName`
 - `FileVersion`
 
@@ -3468,8 +3472,8 @@ The following table contains the possible output when calling the `EpmElevationR
 
 You can choose to filter the `EpmElevationReportElevationEvent` report's output based on the following columns:
 - `ElevationType`
-- `Result`
 - `EventDateTime`
+- `Result`
 
 ## EpmInsightsElevationTrend
 
@@ -3544,10 +3548,10 @@ The following table contains the possible output when calling the `FeatureUpdate
 |     WindowsUpdateVersion  |
 
 You can choose to filter the `FeatureUpdateDeviceState` report's output based on the following columns:
-- `PolicyId` **(Required)**
 - `AggregateState`
 - `LatestAlertMessage`
 - `OwnerType`
+- `PolicyId` **(Required)**
 
 ## FeatureUpdatePolicyFailuresAggregate report
 
@@ -3660,9 +3664,9 @@ The following table contains the possible output when calling the `GPAnalyticsSe
 | SettingName   |
 
 You can choose to filter the `GPAnalyticsSettingMigrationReadiness` report's output based on the following columns:
+- `CSPName`
 - `MigrationReadiness`
 - `ProfileType`
-- `CSPName`
 
 ## InventoryPolicyDeviceAggregatesV3
 
@@ -3743,8 +3747,8 @@ The following table contains the possible output when calling the `Malware` repo
 | _ManagedBy |
 
 You can choose to filter the `Malware` report's output based on the following columns:
-- `Severity`
 - `ExecutionState`
+- `Severity`
 - `State`
 
 ## MAMAppConfigurationStatus
@@ -3977,13 +3981,13 @@ The following table contains the possible output when calling the `NonCompliantC
 | UnifiedPolicyType |
 
 You can choose to filter the `NonCompliantCompliancePoliciesAggregate` report's output based on the following columns:
-- `PolicyName`
-- `PolicyType`
-- `UnifiedPolicyType`
 - `PolicyBaseTypeName`
 - `PolicyId`
+- `PolicyName`
 - `PolicyPlatformType`
+- `PolicyType`
 - `UnifiedPolicyPlatformType`
+- `UnifiedPolicyType`
 
 ## NonCompliantCompliancePoliciesAggregateV3
 
@@ -4008,13 +4012,13 @@ The following table contains the possible output when calling the `NonCompliantC
 | UnifiedPolicyType |
 
 You can choose to filter the `NonCompliantCompliancePoliciesAggregateV3` report's output based on the following columns:
-- `PolicyName`
-- `PolicyType`
-- `UnifiedPolicyType`
 - `PolicyBaseTypeName`
 - `PolicyId`
+- `PolicyName`
 - `PolicyPlatformType`
+- `PolicyType`
 - `UnifiedPolicyPlatformType`
+- `UnifiedPolicyType`
 
 ## NonCompliantConfigurationPoliciesAggregateWithPF
 
@@ -4041,15 +4045,15 @@ The following table contains the possible output when calling the `NonCompliantC
 | UnifiedPolicyType |
 
 You can choose to filter the `NonCompliantConfigurationPoliciesAggregateWithPF` report's output based on the following columns:
-- `PolicyName`
-- `PolicyType`
-- `UnifiedPolicyType`
-- `PolicyBaseTypeName`
-- `PolicyId`
-- `PolicyPlatformType`
-- `UnifiedPolicyPlatformType`
 - `NumberOfErrorDevices`
 - `NumberOfNonCompliantDevices`
+- `PolicyBaseTypeName`
+- `PolicyId`
+- `PolicyName`
+- `PolicyPlatformType`
+- `PolicyType`
+- `UnifiedPolicyPlatformType`
+- `UnifiedPolicyType`
 
 ## NonCompliantConfigurationPoliciesAggregateWithPFV3
 
@@ -4076,15 +4080,15 @@ The following table contains the possible output when calling the `NonCompliantC
 | UnifiedPolicyType |
 
 You can choose to filter the `NonCompliantConfigurationPoliciesAggregateWithPFV3` report's output based on the following columns:
-- `PolicyName`
-- `PolicyType`
-- `UnifiedPolicyType`
-- `PolicyBaseTypeName`
-- `PolicyId`
-- `PolicyPlatformType`
-- `UnifiedPolicyPlatformType`
 - `NumberOfErrorDevices`
 - `NumberOfNonCompliantDevices`
+- `PolicyBaseTypeName`
+- `PolicyId`
+- `PolicyName`
+- `PolicyPlatformType`
+- `PolicyType`
+- `UnifiedPolicyPlatformType`
+- `UnifiedPolicyType`
 
 ## NoncompliantDevicesAndSettings
 
@@ -4146,13 +4150,13 @@ The following table contains the possible output when calling the `NonCompliantD
 | UPN |
 
 You can choose to filter the `NonCompliantDevicesByCompliancePolicy` report's output based on the following columns:
-- `PolicyName`
-- `PolicyType`
 - `DeviceType`
 - `PolicyBaseTypeName`
 - `PolicyId`
+- `PolicyName`
 - `PolicyPlatformType`
 - `PolicyStatus`
+- `PolicyType`
 
 ## NonCompliantDevicesByCompliancePolicyV3
 
@@ -4176,13 +4180,13 @@ The following table contains the possible output when calling the `NonCompliantD
 | UPN |
 
 You can choose to filter the `NonCompliantDevicesByCompliancePolicyV3` report's output based on the following columns:
-- `PolicyName`
-- `PolicyType`
 - `DeviceType`
 - `PolicyBaseTypeName`
 - `PolicyId`
+- `PolicyName`
 - `PolicyPlatformType`
 - `PolicyStatus`
+- `PolicyType`
 
 ## NoncompliantDevicesToBeRetired
 
@@ -4405,15 +4409,15 @@ The following table contains the possible output when calling the `PolicyNonComp
 | UnifiedPolicyType |
 
 You can choose to filter the `PolicyNonComplianceAgg` report's output based on the following columns:
-- `PolicyName`
-- `PolicyType`
-- `UnifiedPolicyType`
-- `PolicyBaseTypeName`
-- `PolicyId`
-- `PolicyPlatformType`
-- `UnifiedPolicyPlatformType`
 - `NumberOfErrorDevices`
 - `NumberOfNonCompliantDevices`
+- `PolicyBaseTypeName`
+- `PolicyId`
+- `PolicyName`
+- `PolicyPlatformType`
+- `PolicyType`
+- `UnifiedPolicyPlatformType`
+- `UnifiedPolicyType`
 
 ## PolicyNonComplianceAggVer3
 
@@ -4438,15 +4442,15 @@ The following table contains the possible output when calling the `PolicyNonComp
 | UnifiedPolicyType |
 
 You can choose to filter the `PolicyNonComplianceAggVer3` report's output based on the following columns:
-- `PolicyName`
-- `PolicyType`
-- `UnifiedPolicyType`
-- `PolicyBaseTypeName`
-- `PolicyId`
-- `PolicyPlatformType`
-- `UnifiedPolicyPlatformType`
 - `NumberOfErrorDevices`
 - `NumberOfNonCompliantDevices`
+- `PolicyBaseTypeName`
+- `PolicyId`
+- `PolicyName`
+- `PolicyPlatformType`
+- `PolicyType`
+- `UnifiedPolicyPlatformType`
+- `UnifiedPolicyType`
 
 ## PolicyNonComplianceNew
 
@@ -4470,13 +4474,13 @@ The following table contains the possible output when calling the `PolicyNonComp
 | UPN |
 
 You can choose to filter the `PolicyNonComplianceNew` report's output based on the following columns:
-- `PolicyName`
-- `PolicyType`
 - `DeviceType`
 - `PolicyBaseTypeName`
 - `PolicyId`
+- `PolicyName`
 - `PolicyPlatformType`
 - `PolicyStatus`
+- `PolicyType`
 
 ## PolicyNonComplianceNewV3
 
@@ -4500,13 +4504,13 @@ The following table contains the possible output when calling the `PolicyNonComp
 | UPN |
 
 You can choose to filter the `PolicyNonComplianceNewV3` report's output based on the following columns:
-- `PolicyName`
-- `PolicyType`
 - `DeviceType`
 - `PolicyBaseTypeName`
 - `PolicyId`
+- `PolicyName`
 - `PolicyPlatformType`
 - `PolicyStatus`
+- `PolicyType`
 
 ## PolicyRunStatesByProactiveRemediation
 
@@ -4562,8 +4566,8 @@ The following table contains the possible output when calling the `QualityUpdate
 | Win32ErrorCode   |
 
 You can choose to filter the `QualityUpdateDeviceErrorsByPolicy` report's output based on the following columns:
-- `PolicyId` **(required)**
 - `AlertMessage`
+- `PolicyId` **(required)**
 
 ## QualityUpdateDeviceStatusByPolicy
 
@@ -4589,9 +4593,9 @@ The following table contains the possible output when calling the `QualityUpdate
 | UPN   |
 
 You can choose to filter the `QualityUpdateDeviceStatusByPolicy` report's output based on the following columns:
-- `PolicyId` **(required)**
 - `AggregateState`
 - `OwnerType`
+- `PolicyId` **(required)**
 
 ## QualityUpdatePolicyStatusSummary
 
@@ -4634,11 +4638,11 @@ The following table contains the possible output when calling the `RemoteAssista
 | SharerLastName |
 
 You can choose to filter the `RemoteAssistanceSessions` report's output based on the following columns:
+- `DeviceName`
+- `OS`
 - `ProviderID`
 - `Recipient ID`
 - `RecipientName`
-- `DeviceName`
-- `OS`
 
 ## ResourcePerformanceAggregateByDevice
 
@@ -4663,15 +4667,15 @@ The following table contains the possible output when calling the `ResourcePerfo
 | ResourcePerfScore |
 
 You can choose to filter the `ResourcePerformanceAggregateByDevice` report's output based on the following columns:
-- `PartnerFeaturesBitmask`
-- `DeviceId`
 - `CpuSpikeTimePercentage`
-- `RamSpikeTimePercentage`
+- `CpuSpikeTimePercentageThreshold`
 - `CpuSpikeTimeScore`
+- `DeviceId`
+- `PartnerFeaturesBitmask`
+- `RamSpikeTimePercentage`
+- `RamSpikeTimePercentageThreshold`
 - `RamSpikeTimeScore`
 - `ResourcePerfScore`
-- `CpuSpikeTimePercentageThreshold`
-- `RamSpikeTimePercentageThreshold`
 
 ## ResourcePerformanceAggregateByModel
 
@@ -4695,16 +4699,16 @@ The following table contains the possible output when calling the `ResourcePerfo
 | TotalDeviceCount |
 
 You can choose to filter the `ResourcePerformanceAggregateByModel` report's output based on the following columns:
-- `PartnerFeaturesBitmask`
-- `ModelId`
 - `CpuSpikeTimePercentage`
-- `RamSpikeTimePercentage`
+- `CpuSpikeTimePercentageThreshold`
 - `CpuSpikeTimeScore`
+- `ModelId`
+- `PartnerFeaturesBitmask`
+- `RamSpikeTimePercentage`
+- `RamSpikeTimePercentageThreshold`
 - `RamSpikeTimeScore`
 - `ResourcePerfScore`
 - `TotalDeviceCount`
-- `CpuSpikeTimePercentageThreshold`
-- `RamSpikeTimePercentageThreshold`
 
 ## SettingComplianceAggReport
 
@@ -4812,10 +4816,10 @@ The following table contains the possible output when calling the `UnhealthyDefe
 
 You can choose to filter the `UnhealthyDefenderAgents` report's output based on the following columns:
 - `DeviceState`
-- `SignatureUpdateOverdue`
 - `MalwareProtectionEnabled`
-- `RealTimeProtectionEnabled`
 - `NetworkInspectionSystemEnabled`
+- `RealTimeProtectionEnabled`
+- `SignatureUpdateOverdue`
 
 ## UserInstallStatusAggregateByApp
 
@@ -4861,9 +4865,9 @@ The following table contains the possible output when calling the `UserScaleTest
 | UserName |
 
 You can choose to filter the `UserScaleTest` report's output based on the following columns:
-- `UserId`
 - `UPN`
 - `UserEmail`
+- `UserId`
 - `UserName`
 
 ## WindowsDeviceHealthAttestationReport
@@ -4951,17 +4955,17 @@ The following table contains the possible output when calling the `WorkFromAnywh
 | UpgradeEligibility |
 
 You can choose to filter the `WorkFromAnywhereDeviceList` report's output based on the following columns:
-- `PartnerFeaturesBitmask`
+- `AutoPilotProfileAssigned`
+- `AutoPilotRegistered`
+- `CompliancePolicySetToIntune`
 - `DeviceId`
-- `ManagedBy`
-- `Ownership`
 - `GraphDeviceIsManaged`
 - `JoinType`
-- `TenantAttached`
-- `CompliancePolicySetToIntune`
+- `ManagedBy`
 - `OtherWorkloadsSetToIntune`
-- `AutoPilotRegistered`
-- `AutoPilotProfileAssigned`
+- `Ownership`
+- `PartnerFeaturesBitmask`
+- `TenantAttached`
 - `UpgradeEligibility`
 
 
