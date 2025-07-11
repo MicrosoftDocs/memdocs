@@ -36,7 +36,7 @@ ms.collection:
 
 Microsoft Security Copilot is a cloud-based AI platform that provides a natural language Copilot experience that can be used to provide information and resolve issues. [Surface Management Portal](/surface/surface-management-portal) provides a centralized platform to manage and monitor Surface devices at scale. Surface Management Portal integration with Microsoft Copilot for Security helps Surface device administrators be more efficient, and resolve hardware issues faster and at scale. 
 
-Copilot for Surface Management Portal provides visibility into your environment's warranty coverage landscape, and end-of-servicing timelines. Additionally, it offers insights into various aspects of device management, including compliance policies, malware protection, and other threats to reduce risks.
+Copilot for Surface Management Portal provides visibility into your environment's applicable warranty and protection plan coverage, whichever is longer (Coverage), and end-of-servicing timelines. Additionally, it offers insights into various aspects of device management, including compliance policies, malware protection, and other threats to reduce risks.
 
 ## Know before you begin
 
@@ -54,17 +54,16 @@ If you use [Microsoft Surface Management Portal](/surface/surface-management-por
 
 There are Surface Management Portal capabilities built into Security Copilot, and you can use prompts to get more information, including:
 
-- Information about your device fleet, including summary on warranties, and end of service and support.
+- Information about your device fleet, including summary on coverage, and end of service and support.
 -    Details about issues with specific devices, so you can troubleshoot more quickly and easily.
 -    Information to help you learn about safeguarding and improving the lifetime of your Surface devices.
 
-This article shows you how to access your [Microsoft Surface Management Portal data in Security Copilot](#enable-the-security-copilot-integration-in-surface-management-portal).
-
 ## Key features
 
-Copilot for Surface Management Portal brings the capabilities of Security Copilot to the Microsoft Surface Management Portal admin center, enabling you to respond to Surface device issues and escalations quickly. Bringing AI to Surface Management Portal allows teams to immediately understand warranty coverage of their device fleet and determine remediation steps in a timely manner. As an administrator, you can compare the latest Surface for Business devices with their current Surface devices. You can also learn more about protecting your organizations devices from malware and other threats, so that you can reduce risks.
+Copilot for Surface Management Portal brings the capabilities of Security Copilot to the Microsoft Surface Management Portal admin center, enabling you to respond to Surface device issues and escalations quickly. Bringing AI to Surface Management Portal allows teams to immediately understand coverage of their device fleet and determine remediation steps in a timely manner. You can also learn more about protecting your organizations devices from malware and other threats, so that you can reduce risks.  
 
-:::image type="content" source="./media/security-copilot-surface-portal/surface-management-portal-01.png" lightbox="./media/security-copilot-surface-portal/surface-management-portal-01.png" alt-text="Screenshot that shows Copilot in the Surface Management Portal.":::
+:::image type="content" source="./media/security-copilot-surface-portal/surface-management-portal-01.png" alt-text="Screenshot that shows Copilot in the Surface Management Portal." lightbox="./media/security-copilot-surface-portal/surface-management-portal-01.png" border="true":::
+
 
 ## Enable the Security Copilot Integration in Surface Management Portal
 
@@ -94,7 +93,6 @@ Once you have set up Security Copilot, you can start using Copilot for Surface M
 
 - Troubleshoot Surface devices.
 - List all my Surface device models' end of service date.
-- Compare technical specifications of two Surface devices.
 - Generate a warranty coverage report for all devices.
 - What are the best practices for protecting Surface devices?
 
