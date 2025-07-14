@@ -205,7 +205,7 @@ To monitor software updates for Apple devices, you can use the following mehtods
   > [!IMPORTANT]
   > A policy that reports Success only means that the configuration successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy will report error as the device sees this as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
 
-- Per device declarative software update reports. For more information, see [Per-device software update reports](../protect/software-update-report-apple-per-device.md).
+- Per device declarative software update reports. For more information, see [Use the per-device software update reports](../protect/software-update-report-apple-per-device.md).
 
 ## Using the Software Update Settings declarative configuration
 
