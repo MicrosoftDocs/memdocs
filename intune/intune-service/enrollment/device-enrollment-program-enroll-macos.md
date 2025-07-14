@@ -184,9 +184,9 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
 1. Select **Next**.   
 
-1. Optionally, on the **Account Settings** page, you can configure the local user account on targeted Macs, and configure a devices local administrator account.
+1. Optionally, on the **Account Settings** page, you can configure the local administrator and user accounts on targeted Macs.
 
-   When a supported macOS device enrolls with Intune through automated device enrollment profile that configures the *local administrator password*, the device is enabled for *macOS local account configuration with the Microsoft local admin password solution* (LAPS). With this capability, newly enrolled devices receive a unique local administrator account that has a strong, encrypted, and randomized admin password, which is also stored and encrypted by Intune. After enrollment, Intune automatically rotates a LAPS-managed administrator password every six months and supports look up and manual rotation of the admin password by Intune administrators with sufficient permissions. 
+   When a supported macOS device enrolls with Intune through an automated device enrollment (ADE) profile that configures the local administrator, the device is enabled for macOS local account configuration with the Microsoft local admin password solution (LAPS). With this capability, newly enrolled devices receive a unique local administrator account that has a strong, encrypted, and randomized admin password (15 alphanumeric characters), which is also stored and encrypted by Intune. After enrollment, Intune automatically rotates a LAPS-managed administrator password every six months by default and supports look up and manual rotation of the admin password by Intune administrators with sufficient permissions.
 
    For information about configuring and then managing this capability, [Setup macOS account configuration with LAPS](../enrollment/macos-laps.md).
 
@@ -199,8 +199,22 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
    * **Create a local user account**: Select **Yes** to configure local user account settings for targeted Macs. Select **Not configured** to skip all account setting configurations.     
    * **Prefill account info**: The default configuration, **Not configured**, requires the device user to enter their account username and full name in Setup Assistant. To prefill the account information for them instead, select **Yes**. Then enter the primary account name and full name:   
+
+   <!-- was >
      * **Primary account name**: Enter the username for the account. `{{partialupn}}` is the supported token variable for *account name*.    
      * **Primary account full name**: Enter the full name of the account.   `{{username}}` is the supported token variable for *full name*.   
+   -->
+   * **Local user account username**:
+     * {{serialNumber}} - for example, F4KN99ZUG5V2
+     * {{partialupn}} - for example, John
+     * {{managedDeviceName}} - for example, F2AL10ZUG4W2_14_4/15/2025_12:45PM
+     * {{OnPremisesSamAccountName}} - for example, contoso\John
+
+   * **Local user account full name:**:
+     * {{username}} - for example, John@contoso.com
+     * {{serialNumber}} - for example, F4KN99ZUG5V2
+     * {{OnPremisesSamAccountName}} - for example, contoso\John
+
    * **Restrict editing**: The default configuration is set to **Yes** so that device users can't edit the account name and full name configured for them. To allow device users to edit the account name and full name, select **Not configured**. If you're only using Setup Assistant (legacy) to enroll devices running macOS 10.15 and later, you can expect the following end user experience:   
      * **Yes**: The account creation screen in Setup Assistant never appears. Instead, the local user account is automatically created based on the other setting configurations, and the password is automatically populated from the Microsoft Entra authentication screen. The device user can't edit these fields.           
      * **Not configured**: The local user account screen is shown to the end user in Setup Assistant and is populated with the configured account values, and the password from the Microsoft Entra authentication screen. The device user can edit these fields during Setup Assistant.   
@@ -210,7 +224,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
    * **Authentication method**: Select **Setup Assistant with modern authentication** or **Setup Assistant (legacy)**.   
    * **Await final configuration**: Select **Yes**.       
 
-   Local accounts depend on the *await final configuration* feature when they're being created. As a result, if you configure any local user account settings, this setting is always enabled. Even if you don't touch the *await final configuration* setting, it's enabled in the background and applied to the enrollment profile.  
+   Local accounts depend on the await final configuration feature when they're being created. As a result, if you configure any local admin or user account settings, this setting is always enabled. Even if you don't touch the await final configuration setting, it's always enabled in the background and applied to the enrollment profile.
 
 1. Select **Next**.  
 

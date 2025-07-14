@@ -68,17 +68,17 @@ For permissions and details required to manage macOS policies for automated devi
 
 ## Configuration account and password options
 
-This section provides details for configuring *macOS local account configuration with LAPS*, which is accomplished during step 12 of the [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile) procedure for macOS automatic device enrollment profiles.
+This section provides details for configuring *macOS local account configuration with LAPS*, which is accomplished during step 12 of the [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile) procedure for macOS automatic device enrollment (ADE) profiles.
 
 When you [configure a macOS automated device enrollment profile](../enrollment/device-enrollment-program-enroll-macos.md), the **Account Settings** tab presents options to configure both the Local administrator account and the Local user account. By default, these options are both set to *No*.
 
 :::image type="content" source="./media/macos-laps/account-settings-initial-configuration.png" alt-text="Screen shot of the default appearance of the automated device enrollment profiles Account Setting pane.":::
 
-When you select **Yes** for either the local or admin account options, you're configuring both the macOS local account configuration and the admin LAPS configuration for devices that enroll using this enrollment profile.
+When you select **Yes** for either the local or admin or user account options, you're configuring both the macOS local admin account with LAPS configuration as well as a standard user account for devices that enroll using this enrollment profile.
 
 Unique account passwords are created using 15 characters with a mixture of lowercase and uppercase letters, numbers, and special symbols.
 
-Whenever the local account configuration is enabled, the **Await final configuration** setting is always set to **Yes** in the backend by default. This setting is set because the account configuration occurs during Setup Assistant.
+Whenever any part of the local account configuration, the **Await final configuration** setting is always set to **Yes** in the backend by default. This setting is set because the account configuration occurs during Setup Assistant.
 
 ### Local administrator account
 
