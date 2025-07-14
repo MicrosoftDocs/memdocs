@@ -67,6 +67,8 @@ For permissions and details required to manage macOS policies for automated devi
 
 ## Configuration account and password options
 
+This section provides details for configuring *macOS local account configuration with LAPS*, which is accomplished during step 12 of the [Create an Apple enrollment profile](/enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile) procedure for macOS automatic device enrollment profiles.
+
 When [configuring a macOS automated device enrollment profile](../enrollment/device-enrollment-program-enroll-macos.md), the **Account Settings** tab presents options to configure both the Local administrator account and the Local user account. By default, these are both set to *No*.
 
 :::image type="content" source="./media/macos-laps/account-settings-initial-configuration.png" alt-text="Screen shot of the default appearance of the automated device enrollment profiles Account Setting pane.":::
