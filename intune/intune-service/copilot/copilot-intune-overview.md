@@ -7,7 +7,7 @@ keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings cata
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 03/07/2025
+ms.date: 07/01/2025
 ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
@@ -32,11 +32,9 @@ ms.collection:
 - msec-ai-copilot
 ---
 
-# Microsoft Copilot in Intune (public preview)
+# Microsoft Copilot in Intune
 
-This feature is in [public preview](../fundamentals/public-preview.md).
-
-[Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) is a generative-AI security analysis tool. It can help you and your organization get information quickly and make decisions that affect security and risk.
+[Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) is an generative-AI security analysis tool. It can help you and your organization get information quickly and make decisions that affect security and risk.
 
 Intune has capabilities that are powered by Copilot. These capabilities access your Intune data and help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
 
@@ -91,23 +89,31 @@ To use Copilot in Intune, you should know the following information:
 > [!TIP]
 > For some common questions asked about Copilot in Intune, go to [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
 
-## Start using Copilot in Intune
+## Start using Copilot
 
 To access Copilot in Intune, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The home screen lists the ways to get started with Copilot.
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-home-page.png" alt-text="Screenshot that shows the Intune admin center homepage with Copilot features in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-home-page.png":::
 
-Currently, there are three areas to use Copilot in Intune:
+You can use Copilot in Intune for:
 
+- Data exploration using natural language
 - Policy and setting management
 - Device details and troubleshooting
-- Device query
 
-### Policy and setting management
+## Data exploration
+
+Using natural language, you can query and explore your Intune data, including data about your devices, users, apps, policies, updates, and compliance. There are also built-in examples that help you understand the kinds of questions you can ask.
+
+When you run a query, Copilot summarizes the results and recommends actions you can take based on the query results. You can also use the query output to add users or devices to groups, and create custom reports.
+
+To learn more, see [Explore Intune data and get Microsoft Copilot recommendations](copilot-intune-explorer.md).
+
+## Policy and setting management
 
 Copilot is embedded in policy settings and with your existing policies.
 
-#### ✅ Use Copilot to learn more about individual settings and recommended values
+### ✅ Use Copilot to learn more about individual settings and recommended values
 
 When you create an Intune policy, you add settings and configure these settings to meet your organization's requirements. When you add a setting, there's a Copilot tooltip.
 
@@ -121,7 +127,7 @@ In the Copilot window, there are more prompts that you can use. You can also sel
 
 :::image type="content" source="./media/copilot-intune-overview/compliance-policy-setting-copilot-prompt-guide.png" alt-text="Screenshot that shows the Copilot prompt guide when you add a setting in a compliance policy in Microsoft Intune and Intune admin center.":::
 
-The Copilot prompts can help you understand the impact of the setting, look for potential conflicts, and provide a recommended value. For an example of how to use Copilot with the settings catalog, go to [Use the settings catalog to create device configuration policies](../configuration/settings-catalog.md).
+The Copilot prompts can help you understand the effect of the setting, look for potential conflicts, and provide a recommended value. For an example of how to use Copilot with the settings catalog, go to [Use the settings catalog to create device configuration policies](../configuration/settings-catalog.md).
 
 You can use the Copilot tooltips on the following policy types in Intune:
 
@@ -129,9 +135,9 @@ You can use the Copilot tooltips on the following policy types in Intune:
 - Device configuration policies, including the settings catalog
 - Most endpoint security policies
 
-#### ✅ Use Copilot to summarize an existing policy
+### ✅ Use Copilot to summarize an existing policy
 
-On your existing Intune policies, you can use Copilot to summarize the policy. The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the impact of a policy and its settings on your users and devices.
+On your existing Intune policies, you can use Copilot to summarize the policy. The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the effect of a policy and its settings on your users and devices.
 
 To use this feature in Intune, select an existing policy and then select **Summarize with Copilot**.
 
@@ -143,15 +149,15 @@ You can use this feature on the following policy types in Intune:
 - Device configuration policies, including the settings catalog
 - Most endpoint security policies
 
-### Device details and troubleshooting
+## Device details and troubleshooting
 
-#### ✅ Use Copilot to get device details and troubleshoot a device
+### ✅ Use Copilot to get device details and troubleshoot a device
 
 You can use Copilot to get device-specific information, like the installed apps, group membership, and more.
 
-To use this feature in Intune, select a device, and then select **Explore with Copilot**.
+To use this feature in Intune, select a device, and then select **Summarize with Copilot**.
 
-:::image type="content" source="./media/copilot-intune-overview/explore-with-copilot.png" alt-text="Screenshot that shows where you select any device and then select Explore with Copilot in Microsoft Intune and Intune admin center.":::
+:::image type="content" source="./media/copilot-intune-overview/summarize-with-copilot.png" alt-text="Screenshot that shows where you select any device and then select Summarize with Copilot in Microsoft Intune and Intune admin center.":::
 
 When the Copilot window opens, select a prompt and enter any required or optional input, if needed. You can also open the prompt guide for some follow-up questions.
 
@@ -159,10 +165,7 @@ When the Copilot window opens, select a prompt and enter any required or optiona
 
 For more information about using Copilot with your devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 
-> [!TIP]
-> You can also use Copilot to help you troubleshoot device issues using device query. For more details see the [following section](#query-with-copilot-in-device-query).
-
-### Query with Copilot in device query
+### ✅ Use Copilot to create KQL queries to get device details
 
 You can use Copilot to help you create Kusto Query Language (KQL) queries to run when using device query in Intune.
 
@@ -175,13 +178,13 @@ You can use this feature for either an individual device, or for multiple device
 
 To query a single device in Intune, select a device, select **Device query**, and then select **Query with Copilot**.
 
-When the Copilot window opens, enter your question about the device. If device query supports the properties needed to answer the question, Copilot will generate a KQL query that you can use to get the data that you require.
+When the Copilot window opens, enter your question about the device. If device query supports the properties needed to answer the question, Copilot generates a KQL query that you can use to get the data that you require.
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-device-query.png" alt-text="Screenshot that shows the Copilot window with your prompt for device query." lightbox="./media/copilot-intune-overview/copilot-device-query.png":::
 
-To use the query that Copilot generates, select **Add to editor** to add it to the query editor in device query, or select **Add and run** to add it to the editor and automatically run it. Select **How was this query generated?** to see an explanation generated by Copilot for how it created a query in response to your request.
+To use the query that Copilot generates, select **Add to editor** to add it to the query editor in device query, or select **Add and run** to add it to the editor and automatically run it. To see a Copilot-generated explanation for how COpilot created a query in response to your request, select **How was this query generated?**.
 
-Here are some example queries you can try:
+The following examples are some queries you can try:
 
 - Is Defender running on this device?
 - Show me the last 5 app crash events on this device.
@@ -192,27 +195,26 @@ Here are some example queries you can try:
 - Show me drivers on this device grouped by provider name.
 
     > [!NOTE]
-    > Copilot can only generate queries for requests related to the properties that are supported by device query. You cannot use this feature to ask Copilot for details about the device beyond what is available in device query.
-For a full list of supported properties in device query, go to [Device query](../../analytics/device-query.md).
+    > Copilot can only generate queries for requests related to the properties that device query support. You can't use this feature to ask Copilot for details about the device beyond what is available in device query. For a full list of supported properties in device query, go to [Device query](../../analytics/device-query.md).
 
 #### Query multiple devices
 
 To query data across multiple devices in Intune, select **Devices** > **Device query** > **Query with Copilot**.
 
-When the Copilot window opens, enter your question about the device. If device query supports the properties needed to answer the question, Copilot will generate a KQL query that you can use to get the data that you require.
+When the Copilot window opens, enter your question about the device. If device query supports the properties needed to answer the question, Copilot generates a KQL query that you can use to get the data that you require.
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-devices-query.png" alt-text="Screenshot that shows the Copilot window for querying multiple devices." lightbox="./media/copilot-intune-overview/copilot-devices-query.png":::
 
 You can select the options that Copilot generates to quickly generate a KQL query, or you can enter your question or request other device data. Once Copilot generates the query, select **Add to editor** to add it to the query editor, or select **Add and run** to add it to the editor and automatically run it. To make a new request, select **Query with Copilot** to display the Copilot pane.
 
-Here are some example queries you can try:
+The following examples are some queries you can try:
 
-- Which devices have not been encrypted?
+- Which devices haven't been encrypted?
 - Show me Windows 11 devices.
 - Which devices have a hot fix?
 - Show me TPM 2.0 devices.
 - Show me devices sorted by manufacturer.
-- Which devices have not been patched in the last 30 days?
+- Which devices haven't been patched in the last 30 days?
 
 ## Related content
 
