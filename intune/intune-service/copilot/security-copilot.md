@@ -62,9 +62,9 @@ This article shows you how to access your Microsoft Intune data in Security Copi
 
 There are three areas to use Copilot in Intune:
 
+- [Data exploration using natural language](../copilot/copilot-intune-overview.md#data-exploration)
 - [Policy and setting management](../copilot/copilot-intune-overview.md#policy-and-setting-management)
 - [Device details and troubleshooting](../copilot/copilot-intune-overview.md#device-details-and-troubleshooting)
-- [Device query](../copilot/copilot-intune-overview.md#query-with-copilot-in-device-query)
 
 ### Security admin focus
 
