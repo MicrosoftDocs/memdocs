@@ -4,10 +4,10 @@
 title: Use the settings catalog to configure managed software updates 
 description: Use Microsoft Intune to configure Apple's declarative device management (DDM) settings to install a specific update by an enforced deadline. This feature uses the settings catalog to configure managed software updates for supervised iOS/iPadOS and managed macOS devices.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.date: 03/18/2025
+author: brenduns
+ms.author: brenduns
+manager: laurawi
+ms.date: 07/14/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.collection:
 - sub-updates
 ---
 
-# Managed software updates with the settings catalog
+# Managed software updates with the settings catalog in Microsoft Intune
 
 You can use the Intune [settings catalog](../configuration/settings-catalog.md) to configure managed software updates for iOS/iPadOS and macOS devices. With managed software updates in Intune, you can:
 
@@ -198,10 +198,14 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 ## Monitoring managed software updates
 
-Managed software updates use the same reporting as device configuration policies. For more information, go to [Monitor device configuration policies](../configuration/device-profile-monitor.md).
+To monitor software updates for Apple devices, you can use the following mehtods:
 
-> [!IMPORTANT]
-> A policy that reports Success only means that the configuration successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy will report error as the device sees this as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
+- Managed software updates use the same reporting as device configuration policies. For more information, see [Monitor device configuration policies](../configuration/device-profile-monitor.md).
+
+  > [!IMPORTANT]
+  > A policy that reports Success only means that the configuration successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy will report error as the device sees this as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
+
+- Per device declarative software update reports. For more information, see [Per-device software update reports](../protect/software-update-report-apple-per-device.md).
 
 ## Using the Software Update Settings declarative configuration
 
