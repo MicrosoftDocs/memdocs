@@ -99,7 +99,7 @@ Intune-based deployments are facilitated using Jamf Activation Profiles defined 
 
 After creating an Activation Profile in Jamf, you assign it to users and devices in Intune. While an Activation Profile is universal across device platforms and management strategies, the following steps define how to configure Intune based upon these differences.
 
-The steps from here assume you created an Activation Profile in Jamf that you would like to deploy via Intune to your target devices. For more information about creating and using Jamf Activation Profiles, see [Activation Profiles](https://learn.jamf.com/en-US/bundle/jamf-security-documentation/page/Activation_Profiles.html) in the Jamf Security Documentation.
+The steps from here assume you created an Activation Profile in Jamf that you would like to deploy via Intune to your target devices. For more information about creating and using Jamf Activation Profiles, see [Activation Profiles](https://learn.jamf.com/bundle/jamf-security-cloud-setup-guide/page/Activation_Profiles.html) in the Jamf Security Cloud Portal Setup Guide.
 
 > [!NOTE]
 >
@@ -110,15 +110,15 @@ The steps from here assume you created an Activation Profile in Jamf that you wo
 For iOS and Android devices that you manage with Intune, Jamf can deploy over-the-air for rapid push-based activations. Be sure you already created the Activation Profiles you need before proceeding with this section. Deploying Jamf to managed devices involves:
 
 - Adding Jamf configuration profiles to Intune and assigning to target devices.
-- Adding the Jamf trust app and respective app configurations to Intune and assigning to target devices.
+- Adding the Jamf Trust app and respective app configurations to Intune and assigning to target devices.
 
 ### Configure and deploy iOS configuration profiles
 
 In this section, you download **required** iOS device configuration files and then deliver them over-the-air via MDM to your Intune managed devices.
 
-1. In Jamf Security Cloud portal, navigate to the Activation Profile you want to deploy (Devices > Activations), then select the **Deployment Strategies** tab > **Managed Devices** > **Microsoft Intune**.
+1. In Jamf Security Cloud portal, navigate to the Activation Profile you want to deploy (Devices > Activation profiles), then select **Microsoft Intune** under **Select your UEM solution**.
 
-2. Expand the **Apple iOS Supervised** or **Apple iOS Unsupervised** sections based upon your device fleet configuration.
+2. Select  **iOS and iPadOS supervised** or **iOS and iPadOS unsupervised** under **Select your OS** based upon your device fleet configuration.
 
 3. Download the provided configuration profile and prepare to upload them in a later step.
 
@@ -150,7 +150,7 @@ The following sections describe how to configure Jamf and Intune to enable end u
 
 Activation Profiles to be used with MAM must have Associated User set to the Authenticated by Identity Provider > Microsoft Entra option.
 
-1. In the Jamf Security Cloud portal, select an existing, or create a new, Activation Profile that unenrolled devices with MAM managed applications use during enrollment in Devices > Activations.
+1. In the Jamf Security Cloud portal, select an existing, or create a new, Activation Profile that unenrolled devices with MAM managed applications use during enrollment in Devices > Activation profiles.
 
 2. Select the **Identity-based provisioning** tab, and then scroll to the Microsoft section.
 
@@ -167,4 +167,4 @@ Activation Profiles to be used with MAM must have Associated User set to the Aut
 ## Next Steps
 
 - With Jamf Activation Profiles loaded in the Jamf Security Cloud portal, create client apps in Intune to deploy the Jamf Trust app to Android and iOS/iPadOS devices. The Jamf app config provides essential functionality to complement device configuration profiles that are pushed to devices, and is recommended for all deployments. See [Add MTD apps](mtd-apps-ios-app-configuration-policy-add-assign.md) for the procedures and custom details specific to the Jamf apps.
-- With Jamf integrated with Intune, you can tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Support Center Getting Started Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in the Jamf documentation.
+- With Jamf integrated with Intune, you can tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Jamf Security Cloud Portal Setup Guide](https://learn.jamf.com/bundle/jamf-security-cloud-setup-guide/page/RADAR_Portal.html) from Jamf.
