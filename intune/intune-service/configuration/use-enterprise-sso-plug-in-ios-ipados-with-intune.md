@@ -7,7 +7,7 @@ keywords: Enterprise SSO plug-in, Microsoft Intune
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 05/01/2024
+ms.date: 07/14/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
