@@ -91,8 +91,8 @@ Following are examples of the available configuration options. Additional detail
   - {{managedDeviceName}} - for example, **F2AL10ZUG4W2_14_4/15/2025_12:45PM** 
   - {{OnPremisesSamAccountName}} - for example, **contoso\John**
 
-- **Admin account full name - Specify the account name or use one of the following supported variables to dynamically create the name. By default, this field uses *Admin*.
-  - {{username}} - for example, John@contoso.com
+- **Admin account full name** - Specify the account name or use one of the following supported variables to dynamically create the name. By default, this field uses *Admin*.
+  - {{username}} - for example, **John@contoso.com**
   - {{serialNumber}} - for example, **F4KN99ZUG5V2**
   - {{OnPremisesSamAccountName}} - for example, **contoso\John**
 - **Hide in Users & Groups** - Make the admin account hidden in the sign-in window and in Users & Groups. By default, this set to *Not Configured*.
@@ -114,7 +114,7 @@ Following is some guidance for the available options. Additional details are acc
   - {{OnPremisesSamAccountName}} - for example, **contoso\John**
 
 - **Primary account full name** - Specify the full name for the account or use one of the following variables to dynamically create the name. Setup Assistant uses this value to prefill the Full Name field if *Prefill account info* is set to *Not configured*. By default, this field uses the *{{username}}* variable:
-  - {{username}} - for example, John@contoso.com
+  - {{username}} - for example, **John@contoso.com**
   - {{serialNumber}} - for example, **F4KN99ZUG5V2** 
   - {{OnPremisesSamAccountName}} - for example, **contoso\John**
 
