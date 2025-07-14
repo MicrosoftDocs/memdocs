@@ -33,7 +33,7 @@ ms.collection:
  
 # Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune
 
-You can now use a macOS automated device enrollment (ADE) profile to configure a newly enrolled macOS device for both admin and user account configuration alongside with Microsoft local admin password solution (LAPS). **macOS account configuration with LAPS** is an optional set of configurations you can use in new and existing macOS ADE profiles with and without user device affinity. These configurations for account management only apply to new enrollments.
+You can use a macOS automated device enrollment (ADE) profile to configure a newly enrolled macOS device for both admin and user account configuration alongside with Microsoft local admin password solution (LAPS). **macOS account configuration with LAPS** is an optional set of configurations you can use in new and existing macOS ADE profiles with and without user device affinity. These configurations for account management only apply to new enrollments.
 
 With *macOS local account configuration with LAPS*, devices are provisioned with a local administrator account that has a strong, encrypted, and randomized admin password, which is stored and encrypted by Intune. Similarly, a local standard user account can also be provisioned within the enrollment profile. After enrollment, Intune automatically rotates the LAPS-managed administrator password every six months. To supplement autorotation, Intune admins with sufficient permissions can use the Intune admin center to view a devices local administrator account password and can manually rotate that password at need with remote device actions.
 
