@@ -7,7 +7,7 @@ keywords:
 ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
-ms.date: 07/07/2025
+ms.date: 07/14/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
