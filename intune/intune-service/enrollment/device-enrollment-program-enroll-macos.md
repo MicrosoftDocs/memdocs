@@ -7,7 +7,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: laurawi
-ms.date: 06/09/2025
+ms.date: 07/22/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -184,12 +184,16 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
 1. Select **Next**.   
 
-1. Optionally, on the **Account Settings** page, you can configure the local primary account on targeted Macs. 
+1. Optionally, on the **Account Settings** page, you can configure the local primary account on targeted Macs, and configure a devices local administrator account.
+
+   When a supported macOS device enrolls with Intune through automated device enrollment profile that configures the *local administrator password*, the device is enabled for *macOS local account configuration with the Microsoft local admin password solution* (LAPS). With this capability, newly enrolled devices receive a unique local administrator account that has a strong, encrypted, and randomized admin password, which is also stored and encrypted by Intune. After enrollment, Intune automatically rotates a LAPS-managed administrator password every six months and supports look up and manual rotation of the admin password by Intune administrators with sufficient permissions. 
+
+   For information about configuring and then managing this capability, [Setup macOS account configuration with LAPS](../enrollment/macos-laps.md).
 
    > [!div class="mx-imgBorder"]
    > ![Image of admin center showing new Account settings section in the macOS automated device enrollment profile.](./media/device-enrollment-program-enroll-macos/macos-account-settings-intune.png)  
 
-   These settings are supported on devices running macOS 10.11 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement.  
+   The following settings for the local primary account are supported on devices running macOS 10.11 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you also configuring the local administrator password through this profile, see [local administrator account](../enrollment/macos-laps.md) in the *Setup macOS account configuration with LAPS* article, and then return here.
 
    Your options:  
 
