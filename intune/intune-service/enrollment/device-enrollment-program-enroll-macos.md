@@ -200,10 +200,6 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
    * **Create a local user account**: Select **Yes** to configure local user account settings for targeted Macs. Select **Not configured** to skip all account setting configurations.     
    * **Prefill account info**: The default configuration, **Not configured**, requires the device user to enter their account username and full name in Setup Assistant. To prefill the account information for them instead, select **Yes**. Then enter the primary account name and full name:   
 
-   <!-- was >
-     * **Primary account name**: Enter the username for the account. `{{partialupn}}` is the supported token variable for *account name*.    
-     * **Primary account full name**: Enter the full name of the account.   `{{username}}` is the supported token variable for *full name*.   
-   -->
    * **Local user account username**:
      * {{serialNumber}} - for example, F4KN99ZUG5V2
      * {{partialupn}} - for example, John
