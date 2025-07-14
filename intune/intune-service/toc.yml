@@ -182,6 +182,9 @@ items:
     - name: Copilot in Intune
       displayName: ai, copilot
       href: ./copilot/copilot-intune-overview.md
+    - name: Explore your Intune data
+      displayName: ai, copilot, explore, data, query
+      href: ./copilot/copilot-intune-explorer.md
     - name: Troubleshoot a device using Copilot
       href: ./copilot/copilot-devices.md
     - name: Copilot in Intune FAQ

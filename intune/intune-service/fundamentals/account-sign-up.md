@@ -92,7 +92,7 @@ Microsoft 365 Business: `https://portal.microsoft.com/adminportal`
 
 Microsoft 365 Mobile Device Management: `https://admin.microsoft.com/adminportal/home#/MifoDevices`
 
-## Next steps
+## Related content
 
 - [Configure domains](../fundamentals/custom-domain-name-configure.md)
 - [Add users](../fundamentals/users-add.md)

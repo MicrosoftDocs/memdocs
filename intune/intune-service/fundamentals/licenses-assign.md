@@ -173,3 +173,9 @@ Verify with:
 ```
 
 ![Command line sample of PowerShell verification alt-text="Command line sample"](./media/licenses-assign/posh-addlic-verify.png)
+
+## Related content
+
+- [Assign Microsoft Intune roles to groups of users for role-based access control](../fundamentals/assign-role.md)
+- [Set the MDM authority](../fundamentals/mdm-authority-set.md)
+

@@ -52,6 +52,9 @@ To deploy the ESP to devices, you have to create an ESP profile in Microsoft Int
 
 This article describes the information that the enrollment status page tracks and how to create an ESP profile.
 
+> [!NOTE]
+> You can create maximum of 51 ESP profiles (Default + 50) in a tenant.
+
 ## Windows CSP
 
 ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/windows/client-management/mdm/enrollmentstatustracking-csp) and [FirstSyncStatus CSP](/windows/client-management/mdm/dmclient-csp) to track app installation.
@@ -173,7 +176,7 @@ The apps that are included in this list are used by Intune to filter the list th
 - App 2
 - App 3
 
-and **App 3** and **App 4** are targeted to the device or user, the ESP tracks only **App 3**.  **App 4** is still installed, but the ESP doesn't wait for it to complete.
+and **App 3** and **App 4** are targeted to the device or user, the ESP tracks only **App 3**.  **App 4** is still installed during pre-provisioning flows, but the ESP doesn't wait for it to complete. In other scenarios, such as user-driven and self-deploying mode, and when **App 4** is a win32, Microsoft Store, or Enterprise app catalog app, it does not get installed until after ESP completes.
 
 ## ESP tracking
 
