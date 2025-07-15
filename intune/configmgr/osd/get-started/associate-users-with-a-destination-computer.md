@@ -27,7 +27,7 @@ For more information about user device affinity, see [Link users and devices wit
 There are several methods by which you can integrate user device affinity into your OS deployments. You can integrate user device affinity into PXE deployments, bootable media deployments, and pre-staged media deployments.
 
 > [!NOTE]
-> When integrating user device affinity in your OS deployments, the value of the **SMSTSAssignUsersMode** variable needs to match the value configured in the boot method (PXE, bootable media, pre-staged media).
+> When you integrate user device affinity in your OS deployments, the value of the **SMSTSAssignUsersMode** variable needs to match the value configured in the boot method (PXE, bootable media, pre-staged media).
 > 
 > If the values do not match, then device affinity will not be set.
 
