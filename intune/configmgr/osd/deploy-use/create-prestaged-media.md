@@ -127,6 +127,13 @@ The hard drive of the destination computer must be formatted before the prestage
 
         - **Do not allow user device affinity**: The media doesn't associate users with the destination computer. In this scenario, the task sequence doesn't associate users with the destination computer when it deploys the OS.
 
+        > [!NOTE]
+        > When setting user device affinity via a task sequence, the value configured here needs to match the value specified for the **SMSTSAssignUsersMode** variable.
+        > 
+        > If the values do not match, then device affinity will not be set.
+        > 
+        > For more information, see [Task sequence variables](../../../../../understand/task-sequence-variables#SMSTSAssignUsersMode).
+
 7. On the **Task Sequence** page, select the task sequence that runs on the destination computer. Verify the list of content referenced by the task sequence.
 
     - **Detect associated application dependencies and add them to this media**: Also add content to the media for application dependencies.
