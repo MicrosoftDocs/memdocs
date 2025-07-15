@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/30/2025
+ms.date: 07/22/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -114,7 +114,7 @@ Each elevation rule instructs EPM on how to:
 
 - **Identify the file using**:
 
-  - *File name (including extension).* The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions are used to further validate the file when elevation is attempted.
+  - *File name (including extension).* The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions are used to further validate the file when elevation is attempted. The file name (excluding extensions) can include use of [variables](#use-variables-in-file-names-for-elevation-rules) for single characters through use of a question mark `?` or strings through use of an askterisk `*`.
   - *Certificate.* Certificates can be added directly to a rule, or by using a reusable settings group. When a certificate is used in a rule, it's also required to be valid. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see the next section [Reusable settings groups](#reusable-settings-group).
 
 - **Validate the file**:
@@ -207,7 +207,7 @@ A device must have an elevation settings policy that enables support for EPM bef
 
 Deploy a *Windows elevation rules policy* to users or devices to deploy one or more rules for files that are managed for elevation by Endpoint Privilege Management. Each rule you add to this policy:
 
-- Identifies a file for which you want to manage elevation requests.
+- Identifies a file by file name and file extension for which you want to manage elevation requests.
 - Can include a certificate to help validate that file’s integrity before it’s run. You can also add a reusable group that contains a certificate that you then use with one or more rules or policies.
 - Can include one or more manually added [file arguments or command line switches](#use-file-arguments-for-elevation-rules). When file arguments are added to a rule, EPM only allows file elevation of requests that include one of the defined command lines. If a defined command line isn’t part of the file elevation request, EPM denies that request.
 - Specifies if the elevation type of the file is automatic (silently), or if it requires user confirmation. With user confirmation, you can add additional user actions that must be completed before the file is run.
@@ -333,7 +333,7 @@ Use either of the following methods to create new elevation rules, which are add
 
    *File information* is where you specify the details that identify a file that this rule applies to.
 
-   - **File name**: Specify the file name and its extension. For example: `myapplication.exe`
+   - **File name**: Specify the file name and its extension. For example: `myapplication.exe`. You can also use a [variable](#use-variables-in-file-names-for-elevation-rules) in the file name.
    - **File path** (Optional): Specify the location of the file. If the file can be run from any location or is unknown, you can leave this blank. You can also use a variable.
 
      > [!TIP]  
@@ -365,36 +365,19 @@ Use either of the following methods to create new elevation rules, which are add
 
 ### Use variables in file names for elevation rules
 
-Wildcards are supported as part of a file name when configuring the **File name** field on the Rule properties page of an elevation rule policy. However, they are not supported in the file name extension. The following wildcard characters are supported:
+When you configure file elevation rules, you can use wildcard characters as part of a file name when configuring the **File name** field on the *Rule properties* page of an elevation rule policy. Wildcards are not supported in the file name extension. Use of wildcards provides flexability in your rules to support trusted files that have names that might change frequently with subsequent revisions.
 
-- Question mark (__?__) - Question marks  replace individual characters in a file name. 
-- Asterisk (__*__) - Asterisk replace a string of characters in a file name. 
+The following wildcard characters are supported:  
+- Question mark `?` - Question marks  replace individual characters in a file name.
+- Asterisk `*` - Asterisk replace a string of characters in a file name.
 
-The following rules apply to use of wildcards in a file name:  
-- Can be used in any position of a file's name except for the first character.
-- Can't be used to offset the file extension.
-- Can't be used to within the file extension.
-<!-- in doubt>
-- Can't be followed at any point by a period other than the period that offsets the file extension.
-- Can't be used to replace a period (.) within a file name, prior to the file extension.
--->
-<!-- in doubt>
-- A question mark can be followed by non-wildcard characters, other than periods.
-- An asterisk can't be followed by a non-wildcard character other than the period that offsets the file extension.
-- Any number of wildcard characters can be used in in a file name, including in multiple locations that are separated by non-wildcard characters.
-- An asterisk can't be followed by a non-wildcard character. 
-- A question mark can be followed by non-wildcard characters. other than periods.
--->
-
-The following are examples of supported wildcard use for file name entries for a Visual Studio setup file called *VSCodeUserSetup-arm64-1.99.2.exe*:  
+The following are examples of supported wildcard use for a Visual Studio setup file called *VSCodeUserSetup-arm64-1.99.2.exe*:  
 - VSCodeUserSetup*.exe
 - VSCodeUserSetup-arm64-*.exe
-- VSCodeUserSetup-????-.exe
+- VSCodeUserSetup-?????-1.??.?.exe
 
-
-> [!CAUTION]
-> With wildcard use for file names, it is important to use additional methods for file validation to
-
+> [!TIP]  
+> When you use variables in a file name, avoid use of rule properties that might conflict, like a *File hash* that would match only a single instnace of the variable file name you seek to support.
 
 ### Use file arguments for elevation rules
 
