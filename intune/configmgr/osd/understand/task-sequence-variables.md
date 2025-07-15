@@ -1631,6 +1631,13 @@ Specifies how a task sequence associates users with the destination computer. Se
 
 - **Disabled**: The task sequence doesn't associate users with the destination computer when it deploys the OS.
 
+> [!NOTE]
+> When setting this variable, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
+> 
+> If the values do not match, then device affinity will not be set.
+>
+> For more information see [Associate users with a destination computer in Configuration Manager](../../../../../get-started/associate-users-with-a-destination-computer).
+
 ### <a name="SMSTSDisableStatusRetry"></a> SMSTSDisableStatusRetry
 
 <!--512358-->
