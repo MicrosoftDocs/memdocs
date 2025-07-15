@@ -7,7 +7,7 @@ keywords:
 ms.author: smbhardwaj
 author: smritib17 
 manager: dougeby
-ms.date: 06/23/2025
+ms.date: 07/15/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,8 +36,8 @@ ms.collection:
 This article goes over the properties supported in the Intune Data Platform. The Intune Data Platform can be accessed via Device query for single devices, Inventory, and Device query for Multiple Devices.
 
 Each table (entity) in this page lists the types of queries that are supported with the following information:  
-- Property: The name of the property.  
-- Type: The type of property. 
+- Property: The name of the variable we collect and store.  
+- Type: The data type you can expect to see, such as *string* or *boolean*.  
 - Description: The purpose of the property. 
 - Platform:  The operating systems that support the property.
 
