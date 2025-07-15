@@ -29,11 +29,14 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Device Query for Multiple Devices
+# Device query for multiple devices
 
 Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
 
-## Prerequisites
+## Prerequisites  
+
+> [!NOTE]
+> You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically. 
 
 - To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
 
@@ -48,7 +51,16 @@ Device query for multiple devices allows you to gain comprehensive insights abou
 
 ## Supported platforms
 
-Device query for multiple devices is currently only supported on devices running Windows 10 and later.
+Device query for multiple devices is supported on devices running:  
+
+- Windows 10 and later  
+- Android  
+  - Android Enterprise corporate owned dedicated devices (COSU)  
+  - Android Enterprise corporate owned fully managed (COBO)  
+  - Android Enterprise corporate owned work profile (COPE)  
+- Apple  
+  - iOS/iPadOS  
+  - macOS  
 
 ## How to use device query for multiple devices
 
@@ -112,7 +124,7 @@ Battery| project Device, InstanceName, Manufacturer, Model, SerialNumber, CycleC
 This query lists devices with physical and virtual memory in GB.
 
 ```kusto
-MemoryInfo| project Device, PhysicalMemoryGB = PhysicalMemoryTotalBytes/(1000*1000*1000), VirtuaMemoryGB = VirtualMemoryTotalBytes/(1000*1000*1000) | order by PhysicalMemoryGB asc  
+MemoryInfo| project Device, PhysicalMemoryGB = PhysicalMemoryTotalBytes/(1000*1000*1000), VirtualMemoryGB = VirtualMemoryTotalBytes/(1000*1000*1000) | order by PhysicalMemoryGB asc  
 ```
 
 #### Device count by OS version
@@ -151,7 +163,7 @@ Table operators can be used to filter, summarize, and transform data streams. Th
 | --- | --- |
 | count | Returns a table with a single record containing the number of records. |
 | distinct | Produces a table with the distinct combination of the provided columns of the input table. |
-| join | Merge the rows of two tables to form a new table by matching row for the same device. Only the join types of `innerunique`, `Leftouter`, `Fullouter`, `Rightoutre`, and inner are supported. If you type in a join type other than the ones supported, they're ignored. Join statements support `on` syntax if joined with `Device` or `Device.Deviceid`. Common syntax for join is LeftEntity \| join [hints] (RightEntity) on Conditions. For more info, see [Join](/kusto/query/join-operator) documentation.|
+| join | Merge the rows of two tables to form a new table by matching row for the same device. Only the join types of `innerunique`, `Leftouter`, `Fullouter`, `Rightouter`, and inner are supported. If you type in a join type other than the ones supported, they're ignored. Join statements support `on` syntax if joined with `Device` or `Device.Deviceid`. Common syntax for join is LeftEntity \| join [hints] (RightEntity) on Conditions. For more info, see [Join](/kusto/query/join-operator) documentation.|
 | order by | Sort the rows of the input table into order by one or more columns. |
 | project | Select the columns to include, rename or drop, and insert new computed columns. |
 | take | Return up to the specified number of rows. |
@@ -229,15 +241,22 @@ Scalar functions can be used to perform operations on individual values. The fol
 
 Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
 
-- Battery
+- Apple Auto Setup Admin Accounts 
+- Apple Device States 
+- Apple Update Settings 
+- Battery 
 - Bios Info
-- Cpu
-- Disk Drive
-- Encryptable Volume
-- Logical Drive
-- Memory Info
+- Bluetooth  
+- Cellular  
+- CPU  
+- Device Storage  
+- Disk Drive  
+- Encryptable Volume  
+- Logical Drive  
+- Memory Info  
 - Network Adapter
 - Os Version
+- Shared iPad  
 - Sim Info
 - System Enclosure
 - Time
