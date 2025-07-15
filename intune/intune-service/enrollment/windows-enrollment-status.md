@@ -52,6 +52,9 @@ To deploy the ESP to devices, you have to create an ESP profile in Microsoft Int
 
 This article describes the information that the enrollment status page tracks and how to create an ESP profile.
 
+> [!NOTE]
+> You can create maximum of 51 ESP profiles (Default + 50) in a tenant.
+
 ## Windows CSP
 
 ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/windows/client-management/mdm/enrollmentstatustracking-csp) and [FirstSyncStatus CSP](/windows/client-management/mdm/dmclient-csp) to track app installation.

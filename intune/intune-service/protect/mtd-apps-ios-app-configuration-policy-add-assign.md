@@ -108,7 +108,7 @@ For general guidance about Intune app configuration policies, see the following 
 
   1. In the **Jamf Portal**, select the **Add** button under **Configuration settings** format.
   2. Select **Activation Profile URL** from the list of **Configuration Keys**. Select **OK**.
-  3. For **Activation Profile URL** select **string** from the **Value type** menu then copy the **Shareable Link URL** from the desired Activation Profile in RADAR.
+  3. For **Activation Profile URL** select **string** from the **Value type** menu then copy the **Shareable Link URL** from the desired Activation Profile in Jamf Security Cloud.
   4. In the **Intune admin center app configuration UI**, select **Settings**, define **Configuration settings format > Use Configuration Designer** and paste the **Shareable Link URL**.
 
   > [!NOTE]
@@ -118,7 +118,7 @@ For general guidance about Intune app configuration policies, see the following 
 - **iOS**:  
   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Jamf iOS app configuration policy using the following information when prompted.
 
-  1. In **Jamf Portal**, navigate to **Devices > Activations** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.
+  1. In **Jamf Security Cloud**, navigate to **Devices > Activation profiles** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.
   2. Expand the box to reveal the iOS app configuration XML and copy it to your system clipboard.
   3. In **Intune admin center app configuration UI Settings,** define **Configuration settings format > Enter XML data**.
   4. Paste the XML in the app configuration text box.
