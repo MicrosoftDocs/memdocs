@@ -287,7 +287,7 @@ For entities that include Android data, the following platforms are supported:
 | --- | --- | --- |--- |
 | Path | string (max length 260 characters) | Absolute file path |Windows|
 | Directory | string (max length 4,096 characters) | Directory of files |Windows|
-| FileName | string (max length 260 characters) | Namxxe portion of file path |Windows|
+| FileName | string (max length 260 characters) | Name portion of file path |Windows|
 | SizeBytes | long | Size of file in bytes |Windows|
 | LastAccessDateTime | datetime (UTC) | Last access time |Windows|
 | LastModifiedDateTime | datetime (UTC) | Last modification time |Windows|
@@ -358,7 +358,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | **Property** | **Type** | **Description** |**Supported platforms**|
 | --- | --- | --- |--- |
 | PhysicalMemoryTotalBytes | Long, Result should be (\>=0) | Total amount of physical memory available to the operating system. This value doesn't necessarily indicate the true amount of physical memory, but what is reported to the operating system as available to it. |Windows single device query, Windows multi device query |
-| PhysicalMemoryFreeBytes | LongResult should be (\>=0) |Number of bytes of physical memory currently unused and available. |Windows single device query |
+| PhysicalMemoryFreeBytes | Long, Result should be (\>=0) |Number of bytes of physical memory currently unused and available. |Windows single device query |
 | VirtualMemoryTotalBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory. |Windows single device query, Windows multi device query |
 | VirtualMemoryFreeBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory currently unused and available. |Windows single device query |  
 
@@ -391,7 +391,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | **Property** | **Type** | **Description** |**Supported platforms**|
 | --- | --- | --- |--- |
 | OsName | string (max length 256 characters) | Distribution or product name |Android, iOS, iPadOS, Windows|
-| OsVersion | string (max length 40characters) | Pretty, suitable for presentation, OS version |Android, iOS, iPadOS, Windows|
+| OsVersion | string (max length 40 characters) | Pretty, suitable for presentation, OS version |Android, iOS, iPadOS, Windows|
 | MajorVersion | Long | Major release version |Android, iOS, iPadOS, Windows single device query, Windows multi device query |
 | MinorVersion | Long | Minor release version |Android, iOS, iPadOS, Windows single device query, Windows multi device query |
 | PatchVersion | long | Optional patch release |Android, iOS, iPadOS, macOS, Windows single device query |
@@ -477,7 +477,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | SecurityBreach | string (max 256 characters) | The physical status of the chassis such as Breach Successful, Breach Attempted, etc. |Windows single device query, Windows multi device query |
 | SmBiosAssetTag | string (max 120 characters) | The assigned asset tag number of the chassis. |Windows single device query, Windows multi device query |
 | Sku | string (max 64 characters) | The Stock Keeping Unit number if available. |Windows single device query, Windows multi device query |
-| Status | string(256 characters) | If available, gives various operational or nonoperational statuses such as OK, Degraded, and Pred Fail. |Windows single device query, Windows multi device query |
+| Status | string (256 characters) | If available, gives various operational or nonoperational statuses such as OK, Degraded, and Pred Fail. |Windows single device query, Windows multi device query |
 | VisibleAlarmEquipped | bool | If TRUE, the frame is equipped with a visual alarm. |Windows single device query, Windows multi device query |
 
 ## SystemInfo
