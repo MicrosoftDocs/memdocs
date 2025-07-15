@@ -189,4 +189,4 @@ For the latest changes and additions, see [What's new in Microsoft Intune](../fu
   * Cloud PKI Issuing CA  
   * BYOCA Issuing CA
 * In the admin center, when you select **View all certificates** for an issuing CA, Intune only shows the first 1,000 issued certificates. We're actively working to address this limitation. As a workaround, go to **Devices** > **Monitor**. Then select **Certificates** to view all issued certificates.
-* [Data Residency option](../protect/privacy-data-store-process.md#data-residency-option) is currently not available to customers using Cloud PKI 
+* A [data residency option](../protect/privacy-data-store-process.md#data-residency-option) is currently not available to customers using Cloud PKI.   
