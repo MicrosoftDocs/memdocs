@@ -5,8 +5,8 @@ title: Learn about using Intune to manage Microsoft Defender settings on devices
 description: Learn how to use Intune policy to manage Microsoft Defender security settings on devices that aren't enrolled with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 05/19/2025
+manager: laurawi
+ms.date: 06/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -99,7 +99,7 @@ Policies for Microsoft Defender for Endpoint security management are supported f
 
 With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements) agent version **101.23052.0009** or later, security settings management is supported across all Linux distributions listed at [Supported Linux distributions](/defender-endpoint/mde-linux-prerequisites).
 
-You can find the version of your Defender agents using these methods:
+You can find the version of your Defender agents using these methods from within the [Microsoft Defender portal](https://security.microsoft.com):
 
 - You can investigate a single device by browsing to *Assets > Devices > Overview* and reviewing the *Defender engine version* field.
 
@@ -128,7 +128,8 @@ With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defende
 - macOS 15 (Sequoia)
 - macOS 14 (Sonoma)
 - macOS 13 (Ventura)
-You can find the versions of your Defender agents using these methods:
+
+You can find the versions of your Defender agents using these methods from within the [Microsoft Defender portal](https://security.microsoft.com):
 
 - You can investigate a single device by browsing to *Assets > Devices > Overview* and reviewing the *Defender engine version* field.
 

@@ -83,7 +83,7 @@ Before you deploy Intune roles, be familiar with [About Intune role assignments]
 5. On the **Scope (Groups)** page, add groups that contain only the users or devices that the members of the Admin Groups you selected in the previous step should be allowed to manage. Then, select **Next**.
 
    > [!NOTE]  
-   > The *All users* and *All devices* groups are [Intune virtual groups](groups-add.md#intune-all-users-and-all-devices-groups), not Microsoft Entra security groups. Therefore, you can't use them as parents for Microsoft Entra security groups in Scope (Groups) assignments. To assign  *All users* and *All devices* and specific Microsoft Entra security groups, add them separately. Otherwise, admins won't have access to specific Microsoft Entra user groups even if the role’s Scope (Groups) is set to *All Users*.
+   > The *All users* and *All devices* groups are [Intune virtual groups](groups-add.md#the-intune-all-users-and-all-devices-groups), not Microsoft Entra security groups. Therefore, you can't use them as parents for Microsoft Entra security groups in Scope (Groups) assignments. To assign  *All users* and *All devices* and specific Microsoft Entra security groups, add them separately. Otherwise, admins won't have access to specific Microsoft Entra user groups even if the role’s Scope (Groups) is set to *All Users*.
    >
    > Nesting is supported for Microsoft Entra security groups.
 
@@ -96,7 +96,8 @@ Before you deploy Intune roles, be familiar with [About Intune role assignments]
 
 The new assignment is displayed in the list of assignments.
 
-## Next steps
+## Related content
 
-- [Learn more about role-based access control in Intune](role-based-access-control.md)
-- [Create a custom role](create-custom-role.md)
+- [Create a custom role](../fundamentals/create-custom-role.md)
+- [Set the MDM authority](../fundamentals/mdm-authority-set.md)
+

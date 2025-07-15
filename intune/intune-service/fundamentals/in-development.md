@@ -4,10 +4,10 @@
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 keywords:
-author: dougeby
-ms.author: dougeby
+author: laurawi
+ms.author: brenduns
 manager: laurawi
-ms.date: 05/30/2025
+ms.date: 06/27/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,34 +59,29 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-<!-- ## Microsoft Intune Suite -->
+## Microsoft Intune Suite
+
+###  Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334  -->
+
+We’re working on a dashboard for Endpoint Privilege Management (EPM) that will bring you insights to support having your users run as standard users in place of running with local admin permissions. First, the dashboard will report progress towards a Standard User Status to help you understand when your admin users might be ready to be moved to standard users. The dashboard will also help you understand the file elevation trends in your organization.
+
+### Endpoint Privileged Management support on Azure Virtual Desktop<!-- 26079227 -->
+
+We're adding support to deploy Endpoint Privilege Management (EPM) policies to users on Azure Virtual Desktop (AVD) single-session virtual machines. With this support EPM elevation policies will work on AVD single-session environments.
+
+For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../protect/epm-overview.md).
+
+
+### Endpoint Privilege Management support for wildcards in elevation rules<!-- 30290730 -->
+
+Endpoint Privilege Management (EPM) will soon support the use of wildcards when defining elevation rules. Wildcards allow for more flexible rule creation with broader matching capabilities, enabling file elevations for trusted files that have names that might change with subsequent revisions.
+ 
+For example, you'll be able to create a rule for a Visual Studio setup file called *VSCodeUserSetup-arm64-1.99.2.exe* using wildcards to accommodate future revisions. Several wildcard forms can be used, including `VSCodeUserSetup*`, `VSCodeUserSetup-arm64-*`, or `VSCodeUserSetup-?????-1.??.?.exe`, where an asterisk represents a string, and question marks represent single characters.
+
 
 <!-- ***********************************************-->
 
 ## App management
-
-### Managed Home Screen orientation changes with Android 16 <!-- 30316862 -->
-
-Starting with Android 16, Android stops enforcing screen orientation on devices with 600dp and larger display settings. This change impacts the Managed Home Screen (MHS) on devices with larger form factors, like tablets.
-
-On these Android 16 devices, orientation is determined by the device’s orientation setting, not the MHS settings you configure.
-
-To learn more about Android 16 changes, see [Behavior changes: Apps targeting Android 16 or higher](https://developer.android.com/about/versions/16/behavior-changes-16) (opens Android website).
-
-Applies to:
-
-- Android Enterprise
-
-
-### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
-
-Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This change allows you to update apps more easily without needing to update those profiles with the latest versions. 
-
-For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
-
-Applies to:
-
-- Windows
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -100,31 +95,34 @@ Applies to:
 
 ## Device configuration
 
-### New Block Bluetooth setting in the Android settings catalog<!-- 15583647 -->
+### New settings available in the Apple settings catalog <!-- 33064192 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-There's a new **Block Bluetooth** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, Bluetooth is disabled on the device.
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
-There's also a **Block Bluetooth Configuration** setting that prevents end users from changing the Bluetooth setting on the device.
+#### iOS/iPadOS
 
-These settings are different and have different results. Some examples include:
+**Cellular Private Network**:
 
-- **Scenario**: An end user turned on the Bluetooth setting on their device. The admin creates an Intune policy that sets the **Block Bluetooth** setting to **True**.
+- Cellular Data Preferred
+- CSG Network Identifier
+- Data Set Name
+- Enable NR Standalone
+- Geofences
+- Network Identifier
+- Version Number
 
-  In this situation, Bluetooth is blocked on the device, even though the end user turned it on.
+#### macOS
 
-- **Scenario**: An end user turned on the Bluetooth setting on their device. The admin creates an Intune policy that sets the **Block Bluetooth Configuration** setting to **True**.
+**Authentication > Extensible Single Sign On Kerberos**:
 
-  In this situation, Bluetooth is turned on since the end user previously turned it on. The end user can't turn off Bluetooth. If the end user previously turned Bluetooth off, and then the **Block Bluetooth Configuration** policy applies, then Bluetooth is turned off and the end user can't turn it back on. 
+- Allow Platform SSO Auth Fallback
 
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
+**Microsoft Edge**:
 
-Applies to:
+- The Microsoft Edge category is updated with new settings. Learn more about available macOS Edge settings at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
 
-- Android Enterprise corporate-owned devices with a work profile (COPE)
-- Android Enterprise corporate owned fully managed (COBO)
-- Android Enterprise corporate owned dedicated devices (COSU)
 
 <!-- *********************************************** -->
 
@@ -133,6 +131,27 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device management
+
+### New Microsoft Graph permissions for API calls to device management endpoints<!-- 20952394 -->
+
+On July 31, 2025, calls to several Microsoft Graph APIs will require one of two newly added *DeviceManagement* permissions that replace existing permissions. With this change, the older permissions will no longer function and API calls from tools and scripts that use the older permissions will fail.
+
+The following are the Microsoft Graph API calls that are affected:
+
+- ~/deviceManagement/deviceShellScripts
+- ~/deviceManagement/deviceHealthScripts
+- ~/deviceManagement/deviceComplianceScripts
+- ~/deviceManagement/deviceCustomAttributeShellScripts 
+- ~/deviceManagement/deviceManagementScripts 
+
+The following are the new permissions that will soon be required, and the old permissions that will no longer function:
+- **DeviceManagementScripts.Read.All** - This new permission replaces use of *DeviceManagementConfiguration.Read.All*
+
+- **DeviceManagementScripts.ReadWrite.All** - This new permission replaces use of the *DeviceManagementConfiguration.ReadWrite.All*
+
+Until July 31, 2025, both the *DeviceManagementScripts* and the older *DeviceManagementConfiguration* permissions will work. However, to ensure your tools and scripts continue to function, review and update them to use only the newer permissions before July 31, 2025.
+
+For more information, see [Graph APIs used to configure devices](../developer/graph-apis-used-by-intune-device-configuration-windows.md).
 
 ### Remote actions with multiple administrative approval<!-- 27043113  -->
 
@@ -155,6 +174,32 @@ For more information, see [device cleanup rules](../remote-actions/devices-wipe.
 
 ## Device security
 
+### macOS support for local administrator account configuration LAPS and password solution<!-- 25385731 -->
+
+We’re working on adding Intune support for macOS local administrator account configuration during ADE (automated device enrollment) enrollment, and macOS support for Microsoft Local Admin Password Solution (LAPS).
+
+With the local admin account configuration support:  
+- You’ll be able to use macOS automated device enrollment (ADE) profiles to configure the local and standard administrator accounts for a device. When configured, this capability applies to all new macOS device enrollments as well as device re-enrollments.
+- Intune automatically creates a randomized, unique, and secure password for the device’s admin account. That password is then automatically rotated every six months.
+- Previously enrolled devices won’t be affected unless or until they re-enroll with Intune if these settings are configured.
+- The following variables will be supported for the fullname and username account settings:  
+  - {{username}}
+  - {{serialNumber}}
+  - {{partialupn}}
+  - {{managedDeviceName}}
+
+With the LAPS support:  
+- For custom RBAC roles: Permissions to view and manage the admin password will require an admin be assigned new Intune role-based access control permissions for Enrollment program.
+- Admins with sufficient permissions will be able to view and manually rotate the password of devices that enrolled with the local admin account configuration through macOS ADE.
+
+Applies to:
+
+- macOS
+
+For more information about this support for macOS, see the following in the Apple developer documentation:
+- [Account Configuration | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/account_configuration)
+- [Set the Local Administrator Password | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/set_the_local_administrator_password)
+
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
@@ -176,20 +221,31 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Monitor and troubleshoot
 
-### New status column in Windows hardware attestation report<!-- 26527908 -->
+### Declarative Apple software update operational report<!-- 25207078 -->
 
-We're introducing a new column in the Windows hardware attestation report named, **Attest Status**. Under this column Microsoft Intune will show the error messages it receives during the attestation process. This feature will enhance the visibility of error messages received from both service-side and client-side attestation errors, including WinINet errors, HTTP bad request errors, and other error messages related to failure.
-
-### Declarative Apple software update report<!-- 31557946 -->
-
-You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new Apple software updates report located under *Reports* > *Apple updates*. Using the new report, you'll be able to see:
+You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
 
 - Pending OS update information such as OS and build version, and its status on the device
-- Current OS information for a device
-- Information about past software updates on the device
+- Current OS information for a device, including Rapid Security Responses
 - Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM
 - Information about the latest public update made available by Apple
-- Devices that have been patched with a Rapid Security Response, or have a Rapid Security Response available
+ 
+This new report will be available through the *Devices* > Select a device > *Monitor* node of the admin center.
+ 
+Applies to:
+ 
+- iOS/iPadOS
+- macOS
+
+### Declarative Apple software update reports<!-- 31557946 -->
+
+You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using new Apple software update reports:
+
+ - *Apple software update failures report* - With this report you’ll be able to view details about update failures including why the update failed, how many times it has failed, and the timestamp of the last failure.
+- *Apple software updates report* - View details about pending and current software update information across your entire device fleet.
+- *Apple software update summary report* - View a summary of the update installation status for each OS.
+
+The Apple software update failure report will be available through the *Devices* > *Monitor* node of the admin center. The Apple software updates report and summary report will be available through the *Reports* > *Apple updates* node of the admin center.
 
 Applies to:
 
