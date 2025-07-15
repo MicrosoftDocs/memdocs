@@ -193,7 +193,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
    > [!div class="mx-imgBorder"]
    > ![Image of admin center showing new Account settings section in the macOS automated device enrollment profile.](./media/device-enrollment-program-enroll-macos/macos-account-settings-intune.png)  
 
-   The following settings for the local user account are supported on devices running macOS 10.11 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you also configuring the local administrator password through this profile, see [local administrator account](../enrollment/macos-laps.md) in the *Setup macOS account configuration with LAPS* article, and then return here.
+   The following settings for the local user account are supported on devices running macOS 12 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you also configuring the local administrator password through this profile, see [local administrator account](../enrollment/macos-laps.md) in the *Setup macOS account configuration with LAPS* article, and then return here.
 
    Your options:  
 
