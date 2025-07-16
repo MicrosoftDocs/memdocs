@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
+ms.reviewer: mstewart, frankroj
 ---
 
 # Configure role-based administration for Configuration Manager
