@@ -114,7 +114,7 @@ Each elevation rule instructs EPM on how to:
 
 - **Identify the file using**:
 
-  - *File name (including extension).* The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions are used to further validate the file when elevation is attempted. The file name (excluding extensions) can include use of [variables](#use-variables-in-file-names-for-elevation-rules) for single characters through use of a question mark `?` or strings through use of an asterisk `*`.
+  - *File name (including extension).* The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions are used to further validate the file when elevation is attempted. The file name (excluding extensions) can include use of [variables](#use-variables-in-elevation-rules) for single characters through use of a question mark `?` or strings through use of an asterisk `*`.
   - *Certificate.* Certificates can be added directly to a rule, or by using a reusable settings group. When a certificate is used in a rule, it's also required to be valid. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see the next section [Reusable settings groups](#reusable-settings-group).
 
 - **Validate the file**:
@@ -333,7 +333,7 @@ Use either of the following methods to create new elevation rules, which are add
 
    *File information* is where you specify the details that identify a file that this rule applies to.
 
-   - **File name**: Specify the file name and its extension. For example: `myapplication.exe`. You can also use a [variable](#use-variables-in-file-names-for-elevation-rules) in the file name.
+   - **File name**: Specify the file name and its extension. For example: `myapplication.exe`. You can also use a [variable](#use-variables-in-elevation-rules) in the file name.
    - **File path** (Optional): Specify the location of the file. If the file can be run from any location or is unknown, you can leave this blank. You can also use a variable.
 
      > [!TIP]  
@@ -363,7 +363,7 @@ Use either of the following methods to create new elevation rules, which are add
 
 6. In **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 
-### Use variables in file names for elevation rules
+### Use variables in elevation rules
 
 When you manually configure file elevation rules, you can use wildcard characters for the following configurations that are available on the *Rule properties* page of an elevation rule policy:
 
