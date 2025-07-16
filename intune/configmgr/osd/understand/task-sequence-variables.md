@@ -6,9 +6,9 @@ ms.date: 04/08/2022
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
-author: BalaDelli
-ms.author: baladell
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.localizationpriority: medium
 ms.reviewer: mstewart
 ms.collection: tier3
