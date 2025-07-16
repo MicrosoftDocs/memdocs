@@ -199,7 +199,7 @@ In the first phase, some high-traffic compliance and device configuration report
 
 Users will notice quicker updates in the Intune admin center and fewer issues with stale data. No action is required from users, as your reports transition automatically.
 
-With PRSv3, device reports only update when a device checks in. This is an intentional change from previous versions.
+With (PRS) V3, device reports only update when a device checks in. This is an intentional change from previous versions.
 
 If a policy is removed but the device hasn't checked in, the report continues to show the last known status. The policy is removed during the next check-in, at which point the report is updated. This behavior improves accuracy but may differ from what customers experienced with (PRS) V1.
 
