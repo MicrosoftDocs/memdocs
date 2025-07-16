@@ -149,6 +149,13 @@ An administrative user can't use the **Delete** or **Modify** permissions on a c
 
 To grant individuals or members of a security group access to manage Configuration Manager, create an administrative user. Specify a Windows account of the user or user group. Assign each administrative user to at least one security role and one security scope. You can also assign collections to limit the administrative scope of the user or group.
 
+> [!NOTE]
+> If the administrative user is a member of the **Protected Users** global security group, they will only be able to run the console for 4 hours at a time. After 4 hours, the console will automatically close, losing any unsaved work in progress, as their kerberos authorization will have expired, and can not be renewed.
+>
+> Members of the **Protected Users** security group should monitor their time in the console and save/close any work in progress before 4 hours, then re-launch the console to continue working.
+>
+> For more information regarding the **Protected Users** security group, see [Protected Users security group](../../windows-server/security/credentials-protection-and-management/protected-users-security-group), and [Guidance about how to configure protected accounts](../../windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
+
 ### How to create a new administrative user
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and then select the **Administrative Users** node.
