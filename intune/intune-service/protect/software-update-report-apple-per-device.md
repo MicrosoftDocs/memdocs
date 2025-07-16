@@ -46,10 +46,10 @@ Applies to:
 ## About the reports
 To find the per-device reports for iOS, iPadOS and macOS, sign-in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > select either *iOS/iPadOS* or *macOS*, and then select a device.
 
-On the devices *Overview* page,  expand *Monitor* and then depending on the type of device you're viewing select the report:
+On the devices *Overview* page, expand *Monitor* and then depending on the type of device you're viewing select the report:
 
-- For iOS an iPadOS, select **iOS software updates**
-- For macOS, select **macOS software updates**
+- For iOS and iPadOS, select **iOS software updates**.
+- For macOS, select **macOS software updates**.
 
 The following example is taken from the *macOS software updates* report:
 
@@ -64,9 +64,9 @@ In the per-device view, Intune displays the following information when successfu
 - Pending Build Version
 - Install Reason
 - Install State
-- Last Reported Time
+- Last Reported Time - This value is the last time that the device synced with Intune.
 
-You can also view Apple public update information in the report view when made available by Apple. 
+You can also view Apple public update information in the report view when made available by Apple.
 
 To learn more about the Apple declarative device management process, see [Installing and enforcing software updates for Apple devices](https://support.apple.com/guide/deployment/installing-and-enforcing-software-updates-depd30715cbb/web) in the Apple documentation.
 
