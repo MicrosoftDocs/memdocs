@@ -6,11 +6,11 @@ ms.date: 08/17/2018
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.localizationpriority: medium
-ms.reviewer: mstewart
+ms.reviewer: mstewart,frankroj
 ms.collection: tier3
 ---
 
