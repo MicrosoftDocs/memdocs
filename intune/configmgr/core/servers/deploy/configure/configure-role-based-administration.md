@@ -6,9 +6,9 @@ ms.date: 12/21/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart, frankroj
