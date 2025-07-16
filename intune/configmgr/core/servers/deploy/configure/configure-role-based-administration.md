@@ -154,7 +154,7 @@ To grant individuals or members of a security group access to manage Configurati
 >
 > Members of the **Protected Users** security group should monitor their time in the console and save/close any work in progress before 4 hours, then re-launch the console to continue working.
 >
-> For more information regarding the **Protected Users** security group, see [Protected Users security group](../../windows-server/security/credentials-protection-and-management/protected-users-security-group), and [Guidance about how to configure protected accounts](../../windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
+> For more information regarding the **Protected Users** security group, see [Protected Users security group](/windows-server/security/credentials-protection-and-management/protected-users-security-group), and [Guidance about how to configure protected accounts](/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
 
 ### How to create a new administrative user
 
