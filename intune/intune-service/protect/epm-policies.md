@@ -388,9 +388,6 @@ The following are examples of supported wildcard use:
 - *File path* for the same file, typically found in `C:\Users\<username>\Downloads\`:
   - `C:\Users\*\Downloads\`
 
-- **File name**: Wilde cards are supported when used as part of a file name when configuring the **File name** field on the *Rule properties* page of an elevation rule policy.
-- **Folder path**: 
-
 > [!TIP]  
 > When using variables in a file name, avoid use of rule properties that might conflict, like a *File hash* that would match only a single instance of the variable file name you seek to support. Similarly, for use in a folder name, limit the configuration of wildcard so only valid locations for the file are supported.
 
