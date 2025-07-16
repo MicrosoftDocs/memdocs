@@ -81,7 +81,7 @@ General prerequisites that apply to Remote Help:
 - [Intune subscription](../fundamentals/licenses.md)
   - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.
   - [Supported platforms and devices](#supported-platforms-and-devices)
-  - Remote Help is supported on enrolled devices that also need to be Entra registered devices.
+  - To support Remote Help Intune-enrolled devices must be registered with Mirosoft Entra. 
 
 For specific prerequisites based on the platform that you're using, go to:
 
