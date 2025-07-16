@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/10/2025
+ms.date: 07/15/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,7 +77,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 -->
 ## Week of July 14, 2025
 
-### Device management
+### Device management  
 
 #### Experience Microsoft Copilot in Intune<!-- 29339619, 31192897 -->
 
@@ -98,6 +98,11 @@ You can now use Microsoft Copilot in Intune to explore your Intune data using na
   - Automatically access comprehensive information from your Intune-enrolled Surface devices, which flows into the Surface Management Portal when users sign in for the first time.
 
   To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](../copilot/security-copilot-surface-portal.md)
+
+### Monitor and troubleshoot  
+
+#### Export device query results to CSV file <!-- 27967896 -->
+Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../analytics/device-query-multiple-devices.md#how-to-use-device-query-for-multiple-devices).  
 
 ## Week of June 23, 2025 (Service release 2506)
 
