@@ -182,6 +182,9 @@ items:
     - name: Copilot in Intune
       displayName: ai, copilot
       href: ./copilot/copilot-intune-overview.md
+    - name: Explore your Intune data
+      displayName: ai, copilot, explore, data, query
+      href: ./copilot/copilot-intune-explorer.md
     - name: Troubleshoot a device using Copilot
       href: ./copilot/copilot-devices.md
     - name: Copilot in Intune FAQ
@@ -1011,6 +1014,8 @@ items:
               href: ./protect/software-updates-ios.md
             - name: macOS update policies
               href: ./protect/software-updates-macos.md
+            - name: Per-device software update reports
+              href: ./protect/software-update-report-apple-per-device.md
           - name: Windows updates
             items:
             - name: Use Windows Update client policies
