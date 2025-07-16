@@ -160,7 +160,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
         > 
         > If the values do not match, then device affinity will not be set.
         > 
-        > For more information, see [Task sequence variables](../../../../../understand/task-sequence-variables.md#SMSTSAssignUsersMode).
+        > For more information, see [Task sequence variables](../understand/task-sequence-variables.md#SMSTSAssignUsersMode).
 
 1. On the **Boot image** page, specify the following options:
 
