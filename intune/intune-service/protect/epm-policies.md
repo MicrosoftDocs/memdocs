@@ -365,19 +365,34 @@ Use either of the following methods to create new elevation rules, which are add
 
 ### Use variables in file names for elevation rules
 
-When you configure file elevation rules, you can use wildcard characters as part of a file name when configuring the **File name** field on the *Rule properties* page of an elevation rule policy. Wildcards are not supported in the file name extension. Use of wildcards provides flexability in your rules to support trusted files that have names that might change frequently with subsequent revisions.
+When you manually configure file elevation rules, you can use wildcard characters for the following configurations which are available on the *Rule properties* page of an elevation rule policy:
+
+- **File name**: Wildcards are supported as part of a file name when configuring the *File name* field.
+- **Folder path**: Wildcards are supported as part of a folder path when configuring the *Folder path* field.
+
+Currently, wildcards aren't supported by automatically created elevation rules.  
+
+Use of wildcards provides flexibility in your rules to support trusted files that have names that might change frequently with subsequent revisions, or for which the file path might also change.
 
 The following wildcard characters are supported:  
 - Question mark `?` - Question marks  replace individual characters in a file name.
 - Asterisk `*` - Asterisk replace a string of characters in a file name.
 
-The following are examples of supported wildcard use for a Visual Studio setup file called *VSCodeUserSetup-arm64-1.99.2.exe*:  
-- VSCodeUserSetup*.exe
-- VSCodeUserSetup-arm64-*.exe
-- VSCodeUserSetup-?????-1.??.?.exe
+The following are examples of supported wildcard use:
+
+- *File name* for a Visual Studio setup file called `VSCodeUserSetup-arm64-1.99.2.exe`:  
+  - `VSCodeUserSetup*.exe`
+  - `VSCodeUserSetup-arm64-*.exe`
+  - `VSCodeUserSetup-?????-1.??.?.exe`
+
+- *File path* for the same file, typically found in `C:\Users\<username>\Downloads\`:
+  - `C:\Users\*\Downloads\`
+
+- **File name**: Wilde cards are supported when used as part of a file name when configuring the **File name** field on the *Rule properties* page of an elevation rule policy.
+- **Folder path**: 
 
 > [!TIP]  
-> When you use variables in a file name, avoid use of rule properties that might conflict, like a *File hash* that would match only a single instnace of the variable file name you seek to support.
+> When using variables in a file name, avoid use of rule properties that might conflict, like a *File hash* that would match only a single instance of the variable file name you seek to support. Similarly, for use in a folder name, limit the configuration of a wildcard so only valid locations for the file are supported.
 
 ### Use file arguments for elevation rules
 
