@@ -1636,7 +1636,7 @@ Specifies how a task sequence associates users with the destination computer. Se
 > 
 > If the values do not match, then device affinity will not be set.
 >
-> For more information see [Associate users with a destination computer in Configuration Manager](../../../../../get-started/associate-users-with-a-destination-computer.md).
+> For more information see [Associate users with a destination computer in Configuration Manager](../get-started/associate-users-with-a-destination-computer.md).
 
 ### <a name="SMSTSDisableStatusRetry"></a> SMSTSDisableStatusRetry
 
