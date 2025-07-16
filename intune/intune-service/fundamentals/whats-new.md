@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/15/2025
+ms.date: 07/16/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -191,13 +191,17 @@ Applies to:
 
 ### Device management
 
-#### New reporting system for improved performance and data consistency<!-- 31823383 -->
+#### New reporting system for improved performance and data consistency <!-- 31823383, 33812267 -->
 
 Microsoft Intune is rolling out the new Policy Reporting Service (PRS) V3. The new system brings faster report generation, improved reliability, and better data consistency.
- 
+
 In the first phase, some high-traffic compliance and device configuration reports are transitioning to the new system.
- 
+
 Users will notice quicker updates in the Intune admin center and fewer issues with stale data. No action is required from users, as your reports transition automatically.
+
+With PRSv3, device reports only update when a device checks in. This is an intentional change from previous versions.
+
+If a policy is removed but the device hasn't checked in, the report continues to show the last known status. The policy is removed during the next check-in, at which point the report is updated. This behavior improves accuracy but may differ from what customers experienced with (PRS) V1.
 
 To learn more about the Intune reports you can use, see [Intune reports](reports.md).
 
