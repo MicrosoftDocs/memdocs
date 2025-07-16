@@ -443,7 +443,7 @@ Select the option to **Enable PXE support for clients**, and then configure the 
     > 
     > If the values do not match, then device affinity will not be set.
     >
-    > For more information, see [Task sequence variables](../../../../osd/understand/task-sequence-variables#SMSTSAssignUsersMode).
+    > For more information, see [Task sequence variables](../../../../osd/understand/task-sequence-variables.md#SMSTSAssignUsersMode).
 
 - **Network interfaces**: Specify that the distribution point responds to PXE requests from all network interfaces or from specific network interfaces. If the distribution point responds to specific network interfaces, then provide the MAC address for each network interface.
 
