@@ -132,7 +132,7 @@ The hard drive of the destination computer must be formatted before the prestage
         > 
         > If the values do not match, then device affinity will not be set.
         > 
-        > For more information, see [Task sequence variables](../../../../../understand/task-sequence-variables#SMSTSAssignUsersMode).
+        > For more information, see [Task sequence variables](../../../../../understand/task-sequence-variables.md#SMSTSAssignUsersMode).
 
 7. On the **Task Sequence** page, select the task sequence that runs on the destination computer. Verify the list of content referenced by the task sequence.
 
