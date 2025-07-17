@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/16/2025
+ms.date: 07/24/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,34 +75,168 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of July 21, 2025 (Service release 2507)
+
+### Microsoft Intune Suite
+
+#### Endpoint Privilege Management support for wildcards in elevation rules<!-- 30290730 -->
+
+You can now use wildcards in the file name and file path of elevation rules you define for Endpoint Privilege Management (EPM). Wildcards allow for more flexible rule creation with broader matching capabilities, enabling file elevations for trusted files that have names that might change with subsequent revisions.
+
+For file names, use of wildcards is supported only in the file name and not for the file extension. You can use a question mark `?` to replace a single character at any point in the file name and an asterisk `*` to replace a string of characters at the end of the file name.
+
+The following are a few examples of wildcard use for a Visual Studio setup file called `VSCodeUserSetup-arm64-1.99.2.exe` that's found in `C:\Users\<username>\Downloads\`:
+
+- File name:  
+  - `VSCodeUserSetup*.exe`
+  - `VSCodeUserSetup-arm64-*.exe`
+  - `VSCodeUserSetup-?????-1.??.?.exe`
+
+- File path:  
+  - `C:\Users\*\Downloads\`
+
+For more information see [Use variables in elevation rules](../protect/epm-policies.md#use-variables-in-elevation-rules) in Configure policies for Endpoint Privilege Management.
+
+### Device configuration
+
+#### New settings available in the Apple settings catalog <!-- 33064192 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+##### iOS/iPadOS
+
+**Cellular Private Network**:
+
+- Cellular Data Preferred
+- CSG Network Identifier
+- Data Set Name
+- Enable NR Standalone
+- Geofences
+- Network Identifier
+- Version Number
+
+##### macOS
+
+**Microsoft Edge**:
+
+- The Microsoft Edge category is updated with new settings. Learn more about available macOS Edge settings at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
+
+### Device management
+
+#### Platform support for Device Cleanup rules<!-- 13835920 -->
+
+Using [cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules), you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
+
+With this feature, you can:
+
+- Configure individual device cleanup rules per platform, like Windows, iOS/iPadOS, macOS, and Android.
+- Use the [Audit logs](monitor-audit-logs.md) to see the devices that the device cleanup rules conceal from the Intune reports.
+- Use [role-based access control (RBAC)](role-based-access-control.md) to customize the user roles that can create device cleanup rules.
+
+For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules).
+
+### Device security
+
+#### macOS support for local administrator account configuration with LAPS (password solution) - GA <!-- 25385731 -->
+
+We’ve added support to the macOS automated device enrollment (ADE) profiles to configure newly enrolled macOS devices that run macOS 12 or later, with both a local administrator and local user account, along with support for the Microsoft Local Admin Password Solution (LAPS).
+ 
+With this support:  
+- You can use macOS automated device enrollment (ADE) profiles to configure the local administrator and user accounts for a device. When configured, this capability applies to all new macOS device enrollments as well as device re-enrollments assigned to that enrollment profile.
+- Intune creates a randomized, unique, and secure password for the device’s admin account. It is 15 alphanumeric characters.
+- Intune automatically rotates the password every six months by default.
+- Previously enrolled devices aren’t affected unless they re-enroll with Intune through an applicable ADE profile.
+
+For account creation, the following variables are supported by the profile:
+
+- **Admin account username**:
+  - {{serialNumber}} - for example, F4KN99ZUG5V2
+  - {{partialupn}} - for example, John
+  - {{managedDeviceName}} - for example, F2AL10ZUG4W2_14_4/15/2025_12:45PM
+  - {{OnPremisesSamAccountName}} - for example, contoso\John
+
+-  **Admin account full name**:
+  - {{username}} - for example, John@contoso.com
+  - {{serialNumber}} - for example, F4KN99ZUG5V2
+  - {{OnPremisesSamAccountName}} - for example, contoso\John
+
+To support LAPS:  
+- We’ve added two new role-based access control permissions for *Enrollment program* that can grant an administrative account permission to view a managed devices password, and to rotate that password.
+- By default, these permissions are not part of any built-in Intune RBAC role, and must be explicitly assigned to admins through custom roles.
+
+To learn about all the details for this new capability, see [Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune](../enrollment/macos-laps.md).
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 33015811, 33016789 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Vault CRM by Veeva Systems Inc. (iOS)
+- Workvivo by Workvivo
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Monitor and troubleshot
+
+#### Per-device declarative Apple software update report<!-- 25207078 -->
+
+You can now view a per-device software update report for Apple devices. This report uses Apples built-in declarative reporting infrastructure to provide Intune a near real-time view of the software update status of managed devices.
+
+To find this report within the Intune Admin center, go to *Devices* and then select an applicable device. In the Devices Overview pane, below Monitor you'll find the report listed as **iOS software updates** for iOS or iPadOS devices, and as **macOS software updates** for macOS devices.
+
+The following Apple devices support this new report:  
+- iOS 17 and later
+- iPadOS 17 and later
+- macOS 14 and later
+
+Some of the details that are available include, but are not limited to:  
+- Pending OS update information such as OS and build version, and its status on the device.
+- Current OS information for a device.
+- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM.
+- Information about the latest public update made available by Apple.
+
+Finally, with the addition of this new report, the previously available macOS per-device **Software updates** report is now deprecated. While it remains available in the admin center while viewing a device, and can still be used, it will be remove from Intune with a future update. See [Support tip: Move to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/IntuneCustomerSuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/443217).
+
+For more information about this new report, see [Use the per-device declarative Apple software update reports in Microsoft Intune](/protect/software-update-report-apple-per-device).
+
 ## Week of July 14, 2025
 
-### Device management  
+### Device management
 
 #### Experience Microsoft Copilot in Intune<!-- 29339619, 31192897 -->
 
 You can now use Microsoft Copilot in Intune to explore your Intune data using natural language, take action on the results, manage policies and settings, understand your security posture, troubleshoot device issues, and view insights about enrolled Surface devices.
 
-- **Explore your Intune data** - Use natural language to explore your Intune data and take action based on the results. Admins can run queries against Intune resource data, including questions about devices, apps, policies, updates, and compliance. When a query runs, a Copilot summary helps you understand the results and offers suggestions. You can add devices or users from the query results to a group to target apps and policies. There are also example queries that you can filter to find an example that best matches your request or use to help you create your own request.</br></br>Data coverage, querying capabilities, and actionability will evolve over time as we make improvements to how you explore your data.</br></br>To learn more about this feature, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md)
+- **Explore your Intune data** - Use natural language to explore your Intune data and take action based on the results. Admins can run queries against Intune resource data, including questions about devices, apps, policies, updates, and compliance. When a query runs, a Copilot summary helps you understand the results and offers suggestions. You can add devices or users from the query results to a group to target apps and policies. There are also example queries that you can filter to find an example that best matches your request or use to help you create your own request.
 
-- **Conversational chat experience** - Use the Copilot in Intune chat experience to interact with your data using natural language to manage tasks, get insights, and troubleshoot issues. Here’s what you can do with the chat experience:</br></br>
+  Data coverage, querying capabilities, and actionability will evolve over time as we make improvements to how you explore your data.
+  
+  To learn more about this feature, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+
+- **Conversational chat experience** - Use the Copilot in Intune chat experience to interact with your data using natural language to manage tasks, get insights, and troubleshoot issues. Here’s what you can do with the chat experience:
+
   - Policy and setting management: Use Copilot in Intune to summarize an existing policy or learn more about individual policy settings and recommended values.
   - Device details and troubleshooting: Use Copilot in Intune to get device details and troubleshoot a device to get device-specific information like the installed apps, group memberships and more.
   - Device Query: Use Copilot in Intune to help you create Kusto Query Language (KQL) queries to run when using device query in Intune.
   - Endpoint Privilege Management (EPM): Use Copilot in Intune to help identify potential elevation risks from within the EPM support approved workflow.
 
-- **Microsoft Copilot in Surface Management Portal** - Microsoft Copilot in Intune includes the Surface Management Portal, a workspace in the Intune admin center that brings together vital data and insights about enrolled Surface devices, all in one place.</br></br>
+- **Microsoft Copilot in Surface Management Portal** - Microsoft Copilot in Intune includes the Surface Management Portal, a workspace in the Intune admin center that brings together vital data and insights about enrolled Surface devices, all in one place.
+
   - Gain insights into device compliance, support activity, applicable warranty or protection plan coverage, and carbon emission estimates.
   - Monitor the status of each device, including applicable warranty or protection plan expirations and active support requests.
   - Centralize Surface-specific device administration in a single environment.
   - Automatically access comprehensive information from your Intune-enrolled Surface devices, which flows into the Surface Management Portal when users sign in for the first time.
 
-  To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](../copilot/security-copilot-surface-portal.md)
+  To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](../copilot/security-copilot-surface-portal.md).
 
-### Monitor and troubleshoot  
+### Monitor and troubleshoot
 
 #### Export device query results to CSV file <!-- 27967896 -->
-Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../analytics/device-query-multiple-devices.md#how-to-use-device-query-for-multiple-devices).  
+
+Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../analytics/device-query-multiple-devices.md#how-to-use-device-query-for-multiple-devices).
 
 ## Week of June 23, 2025 (Service release 2506)
 
@@ -135,7 +269,6 @@ To learn more about Android 16 changes, go to [Behavior changes: Apps targeting 
 Applies to:
 
 - Android Enterprise
-
 
 ### Device configuration
 
