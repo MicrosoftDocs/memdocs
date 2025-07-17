@@ -12,187 +12,187 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_PowerAgentConfig Server WMI Class
-The `SMS_PowerAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies power management settings on client computers.  
+The `SMS_PowerAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies power management settings on client computers.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_PowerAgentConfig : SMS_ClientAgentConfig_BaseClass  
-{  
-    UInt32 AgentID;  
-    Boolean AllowUserToOptOutFromPowerPlan;  
-    Boolean Enabled;  
-    Boolean EnableP2PWakeupSolution; (obsolete in SP1)  
-    Boolean EnableWakeupProxy;  
-    Boolean EnableUserIdleMonitoring;  
-    UInt32 MaxCPU;  
-    UInt32 MaxMachinesPerManager;  
-    UInt32 MinimumServersNeeded;  
-    UInt32 NumOfDaysToKeep;  
-    UInt32 NumOfMonthsToKeep;  
-    UInt32 Port;  
-    UInt32 WakeupProxyDirectAccessPrefixList;  
-    UInt32 WakeupProxyFirewallFlags;  
-    UInt32 WolPort;  
-};  
-```  
+```
+Class SMS_PowerAgentConfig : SMS_ClientAgentConfig_BaseClass
+{
+    UInt32 AgentID;
+    Boolean AllowUserToOptOutFromPowerPlan;
+    Boolean Enabled;
+    Boolean EnableP2PWakeupSolution; (obsolete in SP1)
+    Boolean EnableWakeupProxy;
+    Boolean EnableUserIdleMonitoring;
+    UInt32 MaxCPU;
+    UInt32 MaxMachinesPerManager;
+    UInt32 MinimumServersNeeded;
+    UInt32 NumOfDaysToKeep;
+    UInt32 NumOfMonthsToKeep;
+    UInt32 Port;
+    UInt32 WakeupProxyDirectAccessPrefixList;
+    UInt32 WakeupProxyFirewallFlags;
+    UInt32 WolPort;
+};
+```
 
-## Methods  
- The `SMS_PowerAgentConfig` class does not define any methods.  
+## Methods
+ The `SMS_PowerAgentConfig` class does not define any methods.
 
-## Properties  
- `AgentID`  
- Data type: `UInt32`  
+## Properties
+ `AgentID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Identifies the client agent component. The Power Management Agent ID is 18.  
+ Identifies the client agent component. The Power Management Agent ID is 18.
 
- `AllowUserToOptOutFromPowerPlan`  
- Data type: `Boolean`  
+ `AllowUserToOptOutFromPowerPlan`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` to allow users to exclude their device from power management.  
+ `true` to allow users to exclude their device from power management.
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the agent is enabled.  
+ `true` if the agent is enabled.
 
- `EnableP2PWakeupSolution`  
- Data type: `Boolean`  
+ `EnableP2PWakeupSolution`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This method/property has been removed or deprecated in Configuration Manager SP1.  
+ This method/property has been removed or deprecated in Configuration Manager SP1.
 
- `EnableWakeupProxy`  
- Data type: `Boolean`  
+ `EnableWakeupProxy`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- EnableWakeupProxy.   
+ EnableWakeupProxy.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `EnableUserIdleMonitoring`  
- Data type: `Boolean`  
+ `EnableUserIdleMonitoring`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if user idle status needs to be monitored. The default value is `true`.  
+ `true` if user idle status needs to be monitored. The default value is `true`.
 
- `MaxCPU`  
- Data type: `UInt32`  
+ `MaxCPU`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for future use.  
+ Reserved for future use.
 
- `MaxMachinesPerManager`  
- Data type: `UInt32`  
+ `MaxMachinesPerManager`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for future use.  
+ Reserved for future use.
 
- `MinimumServersNeeded`  
- Data type: `UInt32`  
+ `MinimumServersNeeded`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for future use.  
+ Reserved for future use.
 
- `NumOfDaysToKeep`  
- Data type: `UInt32`  
+ `NumOfDaysToKeep`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Maximum number of days that power data will be kept on the client computer. The default value is 31.  
+ Maximum number of days that power data will be kept on the client computer. The default value is 31.
 
- `NumOfMonthsToKeep`  
- Data type: `UInt32`  
+ `NumOfMonthsToKeep`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Maximum number of months that power data will be kept on the client computer. The default value is 13.  
+ Maximum number of months that power data will be kept on the client computer. The default value is 13.
 
- `Port`  
- Data type: `UInt32`  
+ `Port`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for future use.  
+ Reserved for future use.
 
- `WakeupProxyDirectAccessPrefixList`  
- Data type: `UInt32`  
+ `WakeupProxyDirectAccessPrefixList`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- WakeupProxyDirectAccessPrefixList.   
+ WakeupProxyDirectAccessPrefixList.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `WakeupProxyFirewallFlags`  
- Data type: `UInt32`  
+ `WakeupProxyFirewallFlags`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- WakeupProxyFirewallFlags.   
+ WakeupProxyFirewallFlags.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `WolPort`  
- Data type: `UInt32`  
+ `WolPort`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for future use.  
+ Reserved for future use.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

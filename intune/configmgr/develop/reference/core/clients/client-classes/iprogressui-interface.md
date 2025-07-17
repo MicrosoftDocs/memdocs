@@ -12,19 +12,19 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # IProgressUI interface
 
-The `IProgressUI` automation interface in Configuration Manager represents the user interface that allows custom actions to report progress to the OS deployment task sequencing environment.  
+The `IProgressUI` automation interface in Configuration Manager represents the user interface that allows custom actions to report progress to the OS deployment task sequencing environment.
 
 ## Methods for this interface
 
-|Term|Definition|  
-|----------|----------------|  
-|[IProgressUI::CloseProgressDialog](iprogressui--closeprogressdialog-method.md)|Closes open instances of `IProgressUI`|  
-|[IProgressUI::ShowActionProgress](iprogressui--showactionprogress-method.md)|Displays custom action progress information in a dialog box while the custom action is running.|  
+|Term|Definition|
+|----------|----------------|
+|[IProgressUI::CloseProgressDialog](iprogressui--closeprogressdialog-method.md)|Closes open instances of `IProgressUI`|
+|[IProgressUI::ShowActionProgress](iprogressui--showactionprogress-method.md)|Displays custom action progress information in a dialog box while the custom action is running.|
 |[IProgressUI::ShowErrorDialog](iprogressui--showerrordialog-method.md)|Displays customizable error information in a dialog box.|
 |[IProgressUI::ShowMessage](iprogressui--showmessage-method.md)|Displays customizable dialog box.|
 |[IProgressUI::ShowMessageEx](iprogressui--showmessageex-method.md)|Displays customizable dialog box and captures an integer result variable.|
@@ -34,12 +34,12 @@ The `IProgressUI` automation interface in Configuration Manager represents the u
 
 ## Remarks
 
-The GUID for `IProgressUI` is B64D758A-01C2-4bf0-9F17-621EFB9CF697.  
+The GUID for `IProgressUI` is B64D758A-01C2-4bf0-9F17-621EFB9CF697.
 
 ## See also
 
-- [OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)  
+- [OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)
 
-- [ProgressUI Class](progressui-client-com-automation-class.md)  
+- [ProgressUI Class](progressui-client-com-automation-class.md)
 
-- [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)  
+- [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)

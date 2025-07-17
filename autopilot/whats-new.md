@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.reviewer: madakeva
-ms.date: 04/17/2025
+ms.date: 04/21/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -32,16 +32,24 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
+## Deliver Enterprise App Catalog (EAM) apps during the Enrollment status page
+
+Date added: *June 26, 2025*
+
+Windows Autopilot now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. With Intune's 2506 release, you can now select apps from the Enterprise App Catalog as blocking apps in the Enrollment status page (ESP) profile. This allows you to ensure those apps are delivered before the user can access the desktop.
+
+For related information, see [Add an Enterprise App Catalog app to Microsoft Intune](/intune/intune-service/apps/apps-add-enterprise-app).
+
 ## Updated build for the low privileged account for Intune Connector for Active Directory
 
 Date added: *April 18, 2025*
 
-We've updated the low-privileged Intune Connector for Active Directory build. New in build **6.2504.2001.8:**
+We've updated the low-privileged Intune Connector for Active Directory build. New in build **6.2504.2001.8**:
 
-- Updated the sign in page to use WebView2, built on Edge, instead of WebBrowser.
+- Updated the sign in page to use WebView2, built on Microsoft Edge, instead of WebBrowser.
 - **Error `MSA account <accountName> is not valid`** when signing in has been fixed.
-- **Error `Cannot start service ODJConnectorSvc on computer '.'`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq).
-- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq).
+- **Error `Cannot start service ODJConnectorSvc on computer '.'`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--cannot-start-service-odjconnectorsvc-on-computer------occurring-when-setting-up-the-intune-connector-for-active-directory-).
+- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--the-msa-account-couldn-t-be-granted-permission-to-create-computer-objects-in-the-following-ous--occurring-when-installing-the-intune-connector-for-active-directory-).
 
 Download and install the latest version to get these changes.
 

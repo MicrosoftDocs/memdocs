@@ -6,7 +6,7 @@ titleSuffix: Microsoft Intune
 description: Step 1 for deploying or setting up Intune. The starting point is to review supported configurations, sign up for the trial, configure the custom domain name, add users and groups to Intune, assign licenses to users, manage roles, grant admin permissions, and set the MDM authority.  
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 04/07/2025
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune
@@ -60,6 +60,7 @@ Before you begin setting up Microsoft Intune, you should:
 - Review the device platforms and operating systems that Intune supports.
 - Review which web browsers are supported when accessing Intune using Microsoft Intune admin center.
 - Get familiar with the network bandwidth requirements to perform installations and updates using Intune.
+- Review Network endpoints for IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments.[Network Endpoints](intune-endpoints.md)
 
 For guidance and need-to-know information before you start, go to [Supported configurations](supported-devices-browsers.md).
 

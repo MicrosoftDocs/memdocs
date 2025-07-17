@@ -7,8 +7,8 @@ description: Delivery Optimization settings for Windows 10 and Windows 11 device
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 03/27/2025
+manager: laurawi
+ms.date: 04/22/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,6 +37,12 @@ This feature applies to:
 - Windows 11
 
 > [!NOTE]
+> The information in this article applies to Intune profiles for Delivery Optimization created before April 24, 2025.
+>
+> is article details the settings you can find in Windows device configuration templates for Delivery Optimization created before April 24, 2025. On April 24, 2025, the original Delivery Optimization templated was deprecated and replaced by a new template that uses the newer settings format as found in the Settings Catalog. 
+> 
+> For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text that is available within in the Microsoft Intune admin center are taken directly from the settings authoritative content. You can access that content by viewing a settings *information text* and then selecting the **Learn more** link.
+
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 This article lists some of the settings for Delivery Optimization that Intune supports for devices that run Windows.
@@ -103,7 +109,5 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 > When you install a Microsoft Connected Cache on a Configuration Manager distribution point, cloud-managed devices can use the on-premises cache. As long as the device can communicate with the server, the cache is available to deliver content to these devices. For more information, see [Microsoft Connected Cache in Configuration Manager](../../configmgr/core/plan-design/hierarchy/microsoft-connected-cache.md).<!-- 8827227 -->
 
 ## Next steps
-
-[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 [Learn more about Delivery Optimization in Intune](delivery-optimization-windows.md).

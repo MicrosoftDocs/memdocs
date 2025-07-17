@@ -4,9 +4,9 @@ title: Intune Data Warehouse Change log
 titleSuffix: Microsoft Intune
 description: This topic provides a list of changes for the Microsoft Intune Data Warehouse API.
 keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/18/2024
 ms.topic: reference
 ms.service: microsoft-intune

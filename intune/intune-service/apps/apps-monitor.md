@@ -5,9 +5,9 @@ title: Monitor app information and assignments
 titleSuffix: Microsoft Intune
 description: After you've assigned an app to users or devices, use this information to help you monitor the app's status.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune

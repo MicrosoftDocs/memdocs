@@ -7,7 +7,7 @@ description: Enable Intune automatic enrollment for Windows devices joining or r
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune

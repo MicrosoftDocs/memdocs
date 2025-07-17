@@ -1,12 +1,12 @@
 ---
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.reviewer: madakeva
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 02/27/2025
+ms.date: 05/29/2025
 ms.localizationpriority: medium
 ---
 
@@ -22,7 +22,7 @@ The purpose of the Intune Connector for Active Directory, also known as the Offl
 
 > [!IMPORTANT]
 >
-> Starting with Intune 2501, Intune uses an updated Intune Connector for Active Directory that strengthens security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts). When the Intune Connector for Active Directory is downloaded from within Intune, the updated Intune Connector for Active Directory is downloaded. The previous legacy Intune Connector for Active Directory is still available for download at [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d), but Microsoft recommends using the updated Intune Connector for Active Directory installer going forward. The previous legacy Intune Connector for Active Directory will continue to work through sometime in May 2025. However, it needs to be updated to the updated Intune Connector for Active Directory before then to avoid loss of functionality. For more information, see [Intune Connector for Active Directory with low-privileged account for Windows Autopilot Hybrid Microsoft Entra join deployments](https://aka.ms/Intune-Connector-blog).
+> Starting with Intune 2501, Intune uses an updated Intune Connector for Active Directory that strengthens security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts). When the Intune Connector for Active Directory is downloaded from within Intune, the updated Intune Connector for Active Directory is downloaded. The previous legacy Intune Connector for Active Directory is still available for download at [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d), but Microsoft recommends using the updated Intune Connector for Active Directory installer going forward. The previous legacy Intune Connector for Active Directory will continue to work through sometime in June 2025. However, it needs to be updated to the updated Intune Connector for Active Directory before then to avoid loss of functionality. For more information, see [Intune Connector for Active Directory with low-privileged account for Windows Autopilot Hybrid Microsoft Entra join deployments](https://aka.ms/Intune-Connector-blog).
 >
 > Updating of the Intune Connector for Active Directory to the updated version isn't done automatically. The legacy Intune Connector for Active Directory needs to be manually uninstalled followed by the updated connector manually downloaded and installed. Instructions for the manual uninstall and install process of the Intune Connector for Active Directory are provided in the following sections.
 
@@ -38,17 +38,7 @@ Before beginning the installation, make sure that all of the [Intune connector f
 
 #### Turn off Internet Explorer Enhanced Security Configuration
 
-By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. Internet Explorer Enhanced Security Configuration might cause problems signing into the Intune Connector for Active Directory. Since Internet Explorer is deprecated and in most instances, not even installed on Windows Server, Microsoft recommends turning off Internet Explorer Enhanced Security Configuration. To turn off Internet Explorer Enhanced Security Configuration:
-
-1. Sign into the server where the Intune Connector for Active Directory is being installed with an account that has local administrator rights.
-
-1. Open **Server Manager**.
-
-1. In the left pane of Server Manager, select **Local Server**.
-
-1. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
-
-1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
+Starting with version **6.2504.2001.8**, the updated Intune Connector for Active Directory switched to using WebView2, built on Microsoft Edge, instead of WebBrowser, built on Microsoft Internet Explorer. This change means that the Internet Explorer Enhanced Security Configuration setting in Windows Server no longer needs to be turned off. Make sure to install version **6.2504.2001.8** or later of the Intune Connector for Active Directory to avoid issues with the Internet Explorer Enhanced Security Configuration setting.
 
 #### Download the Intune Connector for Active Directory
 
@@ -157,9 +147,17 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
 
 1. On the server where the Intune Connector for Active Directory is installed, navigate to `ODJConnectorEnrollmentWizard` directory where the Intune Connector for Active Directory was installed, normally `C:\Program Files\Microsoft Intune\ODJConnector\`.
 
-1. In the `ODJConnectorEnrollmentWizard` directory, open the `ODJConnectorEnrollmentWizard.exe.config` XML file in a text editor, for example, **Notepad**.
+1. In the `ODJConnectorEnrollmentWizard` directory, open the existing `ODJConnectorEnrollmentWizard.exe.config` XML file in a text editor, for example, **Notepad**.
 
-1. In the `ODJConnectorEnrollmentWizard.exe.config` XML file, add in any desired OUs that the MSA should have access to create computer objects in. The OU name should be the distinguished name and if applicable, needs to be escaped. The following example is an example XML entry with the OU distinguished name:
+1. In the `add key` element of the `ODJConnectorEnrollmentWizard.exe.config` XML file:
+
+    - Next to `value=`, add in any desired OUs that the MSA should have access to create computer objects in.
+    - The OU name needs to be in the [LDAP distinguished name](/previous-versions/windows/desktop/ldap/distinguished-names) format and if applicable, needs to be escaped.
+    - Multiple OUs are supported by separating each OU with a semicolon (;).
+    - Make sure to retain the quotes (") next to `value=`. All of the OU values need to be within one pair of quotes.
+    - Don't change the name of the key element `OrganizationalUnitsUsedForOfflineDomainJoin`.
+
+    The following example is an example XML entry with multiple OUs in LDAP distinguished name format:
 
     ```xml
       <appSettings>
@@ -178,6 +176,10 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
         <add key="OrganizationalUnitsUsedForOfflineDomainJoin" value="OU=SubOU,OU=TopLevelOU,DC=contoso,DC=com;OU=Mine,DC=contoso,DC=com" />
       </appSettings>
     ```
+
+    > [!TIP]
+    >
+    > In the example, replace the example red text next to `value=` with the organization's OUs in [LDAP distinguished name format](/previous-versions/windows/desktop/ldap/distinguished-names). As shown in the example, make sure all OU entries are within the quotes (") and that each OU is separated with a semicolon (;) .
 
 1. Once all desired OUs are added, save the `ODJConnectorEnrollmentWizard.exe.config` XML file.
 

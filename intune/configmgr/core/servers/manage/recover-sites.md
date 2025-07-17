@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Recover a Configuration Manager site
@@ -24,7 +24,7 @@ The sections in this article can help you recover a Configuration Manager site. 
 
 ## Considerations before recovering a site
 
-> [!Important]  
+> [!Important]
 > This information applies only to site recovery scenarios. When you're upgrading your on-premises infrastructure and not actively recovering a failed site, review the information in the following articles:
 >
 > - [Upgrade on-premises infrastructure](upgrade-on-premises-infrastructure.md)
@@ -106,7 +106,7 @@ Don't change the SQL Server edition. Restoring a site database from Standard edi
 Other SQL Server configuration requirements:
 
 - SQL Server can't be set to **single-user mode**.
-- Make sure the MDF and LDF files are valid. When you recover a site, there's no check for the state of the files.  
+- Make sure the MDF and LDF files are valid. When you recover a site, there's no check for the state of the files.
 
 ### SQL Server Always On availability groups
 
@@ -121,73 +121,73 @@ After you restore a site database that you configured for database replicas, rec
 There are two main areas to consider for Configuration Manager primary site server and central administration site (CAS) recovery: the **site server** and the **site database**.
 The following sections can help you select the best options for your recovery scenario.
 
-> [!NOTE]  
+> [!NOTE]
 > When Configuration Manager setup detects an existing site on the server, you can start a site recovery, but the recovery options for the site server are limited. For example, if you run Setup on an existing site server, when you choose recovery, you can recover the site database server, but the option to recover the site server is disabled.
 
 ### Site server recovery options
 
-Start Configuration Manager setup from a copy of the **CD.Latest** folder that you created outside of the Configuration Manager installation folder.  
+Start Configuration Manager setup from a copy of the **CD.Latest** folder that you created outside of the Configuration Manager installation folder.
 
-- If you run setup from the **Start** menu on the site server, the **Recover a site** option isn't available.  
+- If you run setup from the **Start** menu on the site server, the **Recover a site** option isn't available.
 
 - If you installed any updates from within the Configuration Manager console before you made your backup, you can't reinstall the site by using setup from the following locations:
 
   - Installation media
   - The Configuration Manager installation path
 
-Then select the **Recover a site** option. You have the following recovery options for the failed site server:  
+Then select the **Recover a site** option. You have the following recovery options for the failed site server:
 
 #### Recover the site server using an existing backup
 
-Use this option when you have a Configuration Manager backup of the site server from before the site failure. The site creates this backup as part of the **Backup Site Server** maintenance task. The site is reinstalled, and the site settings are configured based on the site that was backed up.  
+Use this option when you have a Configuration Manager backup of the site server from before the site failure. The site creates this backup as part of the **Backup Site Server** maintenance task. The site is reinstalled, and the site settings are configured based on the site that was backed up.
 
 #### Reinstall the site server
 
-Use this option when you don't have a backup of the site server. The site server is reinstalled, and you must specify the site settings as you would during an initial installation.  
+Use this option when you don't have a backup of the site server. The site server is reinstalled, and you must specify the site settings as you would during an initial installation.
 
-- Use the same site code and site database name that you used when the failed site was first installed.  
+- Use the same site code and site database name that you used when the failed site was first installed.
 
-- You can reinstall the site on a new computer that runs a new OS version.  
+- You can reinstall the site on a new computer that runs a new OS version.
 
 - The server must use the same hostname and fully qualified domain name (FQDN) of the original site server.
 
 ### Site database recovery options
 
-When you run Configuration Manager setup, you have the following recovery options for the site database:  
+When you run Configuration Manager setup, you have the following recovery options for the site database:
 
 #### Recover the site database using a backup set
 
-Use this option when you have a Configuration Manager backup of the site database from before the database failure. The site creates this backup as part of the **Backup Site Server** maintenance task. In a hierarchy, when restoring a primary site, the recovery process retrieves from the CAS any changes made to the site database after the last backup. When restoring the CAS, the recovery process retrieves these changes from a reference primary site. When you recover the site database for a standalone primary site, you lose site changes after the last backup.  
+Use this option when you have a Configuration Manager backup of the site database from before the database failure. The site creates this backup as part of the **Backup Site Server** maintenance task. In a hierarchy, when restoring a primary site, the recovery process retrieves from the CAS any changes made to the site database after the last backup. When restoring the CAS, the recovery process retrieves these changes from a reference primary site. When you recover the site database for a standalone primary site, you lose site changes after the last backup.
 
-When you recover the site database for a site in a hierarchy, the recovery behavior is different for a CAS and primary site. The behavior is also different when the last backup is inside or outside of the SQL Server change tracking retention period. For more information, see the [Site database recovery scenarios](#site-database-recovery-scenarios) section in this article.  
+When you recover the site database for a site in a hierarchy, the recovery behavior is different for a CAS and primary site. The behavior is also different when the last backup is inside or outside of the SQL Server change tracking retention period. For more information, see the [Site database recovery scenarios](#site-database-recovery-scenarios) section in this article.
 
-> [!NOTE]  
-> If you select to restore the site database by using a backup set, but the site database already exists, the recovery fails.  
+> [!NOTE]
+> If you select to restore the site database by using a backup set, but the site database already exists, the recovery fails.
 
 #### Create a new database for this site
 
-Use this option when you don't have a backup of the site database. In a hierarchy, the recovery process creates a new site database. When restoring a child primary site, it recovers the data by replicating from the CAS. When restoring the CAS, it replicates data from a reference primary site. This option isn't available when you're recovering a standalone primary site or a CAS that doesn't have primary sites.  
+Use this option when you don't have a backup of the site database. In a hierarchy, the recovery process creates a new site database. When restoring a child primary site, it recovers the data by replicating from the CAS. When restoring the CAS, it replicates data from a reference primary site. This option isn't available when you're recovering a standalone primary site or a CAS that doesn't have primary sites.
 
 #### Use a site database that has been manually recovered
 
-Use this option when you've already recovered the Configuration Manager site database, but need to complete the recovery process.  
+Use this option when you've already recovered the Configuration Manager site database, but need to complete the recovery process.
 
-- Configuration Manager can recover the site database from any of the following processes:  
+- Configuration Manager can recover the site database from any of the following processes:
 
-  - The Configuration Manager backup maintenance task  
-  - A site database backup using Data Protection Manager (DPM)  
-  - Another backup process  
+  - The Configuration Manager backup maintenance task
+  - A site database backup using Data Protection Manager (DPM)
+  - Another backup process
 
-    After you restore the site database by using a method outside Configuration Manager, run Setup, and select this option to complete the site database recovery.  
+    After you restore the site database by using a method outside Configuration Manager, run Setup, and select this option to complete the site database recovery.
 
-    > [!NOTE]  
-    > When you use DPM to back up your site database, use the DPM procedures to restore the site database to a specified location before you continue the restore process in Configuration Manager. For more information about DPM, see the [Data Protection Manager](/system-center/dpm) documentation library.  
+    > [!NOTE]
+    > When you use DPM to back up your site database, use the DPM procedures to restore the site database to a specified location before you continue the restore process in Configuration Manager. For more information about DPM, see the [Data Protection Manager](/system-center/dpm) documentation library.
 
-- In a hierarchy, when you recover a primary site database, the recovery process retrieves from the CAS any changes made to the site database after the last backup. When restoring the CAS, the recovery process retrieves these changes from a reference primary site. When you recover the site database for a standalone primary site, you lose site changes after the last backup.  
+- In a hierarchy, when you recover a primary site database, the recovery process retrieves from the CAS any changes made to the site database after the last backup. When restoring the CAS, the recovery process retrieves these changes from a reference primary site. When you recover the site database for a standalone primary site, you lose site changes after the last backup.
 
 #### Skip database recovery
 
-Use this option when no data loss has occurred on the Configuration Manager site database server. This option is only valid when the site database is on a different computer than the site server that you're recovering.  
+Use this option when no data loss has occurred on the Configuration Manager site database server. This option is only valid when the site database is on a different computer than the site server that you're recovering.
 
 ### SQL Server change tracking retention period
 
@@ -213,35 +213,35 @@ The recovery process removes the existing site data for that primary site in the
 
 ### Site database recovery scenarios
 
-After a site database is restored from a backup, Configuration Manager tries to restore the changes in site and global data after the last database backup. Configuration Manager starts the following actions after a site database is restored from backup:  
+After a site database is restored from a backup, Configuration Manager tries to restore the changes in site and global data after the last database backup. Configuration Manager starts the following actions after a site database is restored from backup:
 
 #### Recovered site is a CAS
 
-- Database backup within change tracking retention period  
+- Database backup within change tracking retention period
 
-  - **Global data**: The changes in global data after the backup are replicated from all primary sites.  
+  - **Global data**: The changes in global data after the backup are replicated from all primary sites.
 
-  - **Site data**: The changes in site data after the backup are replicated from all primary sites.  
+  - **Site data**: The changes in site data after the backup are replicated from all primary sites.
 
-- Database backup older than change tracking retention period  
+- Database backup older than change tracking retention period
 
-  - **Global data**: The CAS reinitializes the global data from the reference primary site if you specify it. Then all other primary sites reinitialize the global data from the CAS. If you don't specify a reference site, all primary sites reinitialize the global data from the CAS. This data is what you restored from backup.  
+  - **Global data**: The CAS reinitializes the global data from the reference primary site if you specify it. Then all other primary sites reinitialize the global data from the CAS. If you don't specify a reference site, all primary sites reinitialize the global data from the CAS. This data is what you restored from backup.
 
-  - **Site data**: The CAS reinitializes the site data from each primary site.  
+  - **Site data**: The CAS reinitializes the site data from each primary site.
 
 #### Recovered site is a primary site
 
-- Database backup within change tracking retention period  
+- Database backup within change tracking retention period
 
-  - **Global data**: The changes in global data after the backup are replicated from the CAS.  
+  - **Global data**: The changes in global data after the backup are replicated from the CAS.
 
-  - **Site data**: The CAS reinitializes the site data from the primary site. Changes after the backup are lost. Clients regenerate most data when they send information to the primary site.  
+  - **Site data**: The CAS reinitializes the site data from the primary site. Changes after the backup are lost. Clients regenerate most data when they send information to the primary site.
 
-- Database backup older than change tracking retention period  
+- Database backup older than change tracking retention period
 
-  - **Global data**: The primary site reinitializes the global data from the CAS.  
+  - **Global data**: The primary site reinitializes the global data from the CAS.
 
-  - **Site data**: The CAS reinitializes the site data from the primary site. Changes after the backup are lost. Clients regenerate most data when they send information to the primary site.  
+  - **Site data**: The CAS reinitializes the site data from the primary site. Changes after the backup are lost. Clients regenerate most data when they send information to the primary site.
 
 ## Site recovery procedures
 
@@ -249,32 +249,32 @@ Use one of the following procedures to help you recover your site server and sit
 
 ### Start a site recovery in the setup wizard
 
-1. Copy the [CD.Latest folder](the-cd.latest-folder.md) to a location outside the Configuration Manager installation folder. From the copy of the CD.Latest folder, run the Configuration Manager setup wizard.  
+1. Copy the [CD.Latest folder](the-cd.latest-folder.md) to a location outside the Configuration Manager installation folder. From the copy of the CD.Latest folder, run the Configuration Manager setup wizard.
 
-2. On the **Getting Started** page, select **Recover a site**, and then select **Next**.  
+2. On the **Getting Started** page, select **Recover a site**, and then select **Next**.
 
-3. Complete the wizard by using the options that are appropriate for your site recovery.  
+3. Complete the wizard by using the options that are appropriate for your site recovery.
 
-     - During the recovery, setup identifies the SQL Server Service Broker (SSB) port used by the SQL Server. Don't change this port setting during recovery or data replication won't work properly after the recovery completes.  
+     - During the recovery, setup identifies the SQL Server Service Broker (SSB) port used by the SQL Server. Don't change this port setting during recovery or data replication won't work properly after the recovery completes.
 
-     - You can specify the original or a new path to use for the Configuration Manager installation in the setup wizard.  
+     - You can specify the original or a new path to use for the Configuration Manager installation in the setup wizard.
 
 ### Start an unattended site recovery
 
-1. Prepare the unattended installation script for the options that you require for the site recovery. For more information, see [Unattended site recovery](unattended-recovery.md).  
+1. Prepare the unattended installation script for the options that you require for the site recovery. For more information, see [Unattended site recovery](unattended-recovery.md).
 
-2. Run Configuration Manager setup by using the `/script` command-line option. For example, you create a setup initialization file **ConfigMgrUnattend.ini**. You save it in the `C:\Temp` directory of the computer on which you're running setup. Use the following command:  
+2. Run Configuration Manager setup by using the `/script` command-line option. For example, you create a setup initialization file **ConfigMgrUnattend.ini**. You save it in the `C:\Temp` directory of the computer on which you're running setup. Use the following command:
 
-    `setup.exe /script C:\temp\ConfigMgrUnattend.ini`  
+    `setup.exe /script C:\temp\ConfigMgrUnattend.ini`
 
-> [!NOTE]  
+> [!NOTE]
 > After you recover a CAS, replication of some site data from child sites can fail to be established. This data can include hardware inventory, software inventory, and status messages.
 >
 > If this issue occurs, reinitialize the **ConfigMgrDRSSiteQueue** for database replication. Use **SQL Server Manager** to run the following query against the site database for the CAS:
 >
 > ``` SQL
-> IF EXISTS (SELECT * FROM sys.service_queues WHERE name = 'ConfigMgrDRSSiteQueue' AND is_receive_enabled = 0)  
->  
+> IF EXISTS (SELECT * FROM sys.service_queues WHERE name = 'ConfigMgrDRSSiteQueue' AND is_receive_enabled = 0)
+>
 > ALTER QUEUE [dbo].[ConfigMgrDRSSiteQueue] WITH STATUS = ON
 > ```
 
@@ -288,21 +288,21 @@ After a site server recovery, reenter the passwords for any user accounts in the
 
 #### Reenter user account passwords after site recovery
 
-1. Open the Configuration Manager console and connect to the recovered site.  
+1. Open the Configuration Manager console and connect to the recovered site.
 
-2. Go to the **Administration** workspace, expand **Security**, and then select **Accounts**.  
+2. Go to the **Administration** workspace, expand **Security**, and then select **Accounts**.
 
-3. For each account, do the following steps to reenter the password:  
+3. For each account, do the following steps to reenter the password:
 
-     1. Select the account from the list identified after site recovery.  
+     1. Select the account from the list identified after site recovery.
 
-     2. Select **Properties** in the ribbon.  
+     2. Select **Properties** in the ribbon.
 
-     3. On the **General** tab, select **Set**, and then reenter the password for the account.  
+     3. On the **General** tab, select **Set**, and then reenter the password for the account.
 
-     4. Select **Verify**, choose the appropriate data source for the selected user account, and then select **Test connection**. This step tests that the user account can connect to the data source, and verifies the credentials.  
+     4. Select **Verify**, choose the appropriate data source for the selected user account, and then select **Test connection**. This step tests that the user account can connect to the data source, and verifies the credentials.
 
-     5. Select **OK** to save the password changes, and then select **OK** to close the account properties page.  
+     5. Select **OK** to save the password changes, and then select **OK** to close the account properties page.
 
 #### Reenter PXE passwords
 
@@ -391,9 +391,9 @@ The site database tracks where the site server stores the content files. The con
 
 If you don't have a file system backup for the package source files, manually copy or download them. This process is similar to when you originally created the package. Run the following query in SQL Server to find the package source location for all packages and applications: `SELECT * FROM v_Package`. Identify the package source site by looking at the first three characters of the package ID. For example, if the package ID is CEN00001, the site code for the source site is CEN. When you restore the package source files, they must be restored to the same location in which they were before the failure.
 
-If you don't have a file system backup that includes the content library, you have the following restore options:  
+If you don't have a file system backup that includes the content library, you have the following restore options:
 
-- **Import a prestaged content file**: In a Configuration Manager hierarchy, you can create a prestaged content file with all packages and applications from another location. Then import the prestaged content file to recover the content library on the site server.  
+- **Import a prestaged content file**: In a Configuration Manager hierarchy, you can create a prestaged content file with all packages and applications from another location. Then import the prestaged content file to recover the content library on the site server.
 
 - **Update content**: Configuration Manager copies the content from the package source to the content library. For this action to finish successfully, the package source files must be available in the original location. Do this action on each package and application.
 
@@ -403,11 +403,11 @@ When you've included System Center Updates Publisher database files in your back
 
 #### Restore the Updates Publisher database
 
-1. Reinstall Updates Publisher on the recovered computer.  
+1. Reinstall Updates Publisher on the recovered computer.
 
-2. Copy the database file **Scupdb.sdf** from your backup destination to `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` on the computer that runs Updates Publisher.  
+2. Copy the database file **Scupdb.sdf** from your backup destination to `%USERPROFILE%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\` on the computer that runs Updates Publisher.
 
-3. When more than one user runs Updates Publisher on the computer, copy each database file to the appropriate user profile location.  
+3. When more than one user runs Updates Publisher on the computer, copy each database file to the appropriate user profile location.
 
 ### User State Migration data
 
@@ -427,17 +427,17 @@ Configuration Manager doesn't support the backup of the database at a secondary 
 
 ### Requirements
 
-- The server must meet all secondary site prerequisites and have appropriate security rights configured.  
+- The server must meet all secondary site prerequisites and have appropriate security rights configured.
 
-- Use the same installation path that was used for the failed site.  
+- Use the same installation path that was used for the failed site.
 
-- Use a server with the same configuration as the failed server. This configuration includes its fully qualified domain name (FQDN).  
+- Use a server with the same configuration as the failed server. This configuration includes its fully qualified domain name (FQDN).
 
-- The server must have the same SQL Server configuration as the failed site.  
+- The server must have the same SQL Server configuration as the failed site.
 
-  - During a secondary site recovery, Configuration Manager doesn't install SQL Server Express if it's not already installed on the computer.  
+  - During a secondary site recovery, Configuration Manager doesn't install SQL Server Express if it's not already installed on the computer.
 
-  - Use the same version of SQL Server and the same instance of SQL Server that you used for the secondary site database before the failure.  
+  - Use the same version of SQL Server and the same instance of SQL Server that you used for the secondary site database before the failure.
 
 ### Procedure
 

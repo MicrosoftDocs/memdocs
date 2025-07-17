@@ -6,8 +6,8 @@ description: Microsoft Intune manages users and devices, simplifies app manageme
 keywords: what is Intune, mobile endpoint management, mobile application management
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 05/21/2024
+manager: laurawi
+ms.date: 04/30/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -342,3 +342,4 @@ Specifically:
 - [Manage devices using Microsoft Intune](manage-devices.md)
 - [Manage apps using Microsoft Intune](manage-apps.md)
 - [Troubleshoot Microsoft Intune](/troubleshoot/mem/intune/welcome-intune)
+- [Microsoft Intune guides at setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2313710)

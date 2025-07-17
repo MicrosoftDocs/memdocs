@@ -2,10 +2,10 @@
 title: Win32 app management in Microsoft Intune
 description: Learn how to manage Win32 apps with Microsoft Intune. This article provides an overview of the Intune Win32 app delivery and management capabilities.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 03/31/2025
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
+ms.date: 06/13/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -32,7 +32,7 @@ In addition to supporting extensive management capabilities, Win32 app managemen
 - Support for several app types
 - Control for complex app installations
 - Support for detection rules, dependencies, and requirements
-- Support for 32-bit and 64-bit Windows operating system architecture
+- Support for 32-bit Windows, 64-bit Windows, and ARM64 operating system architecture
 - Support for Windows S mode devices
 
 Although it's possible for cloud-connected customers to use Microsoft Configuration Manager for Windows app management, Intune-only customers have greater management capabilities for their Win32 apps. This article provides an overview of the Intune Win32 app management features and related information.
@@ -163,6 +163,28 @@ Set the app availability and other app assignment properties using the following
 ## Notifications for Win32 apps
 
 If needed, you can suppress showing user notifications per app assignment. Follow the steps above and choose either **Show toast notifications for computer restarts** or **Hide all toast notifications** for the **End user notifications** option in the **Edit assignment** pane based on the level of notification suppression that you require.
+
+## App relationship viewer
+
+By selecting a Win32 app in Intune, you'll be able to view which apps are directed connected to the selected app. These connected apps are child apps. Child apps are designated as dependent applications and superseded applications. The apps in the view are clickable and can be navigated to directly from the selected app.
+
+The relationship viewer is available for two app types:
+- Windows app (Win32)
+- Windows catalog app (Win32)
+
+To view an app using the relationship viewer:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All Apps** or **Apps** > **Windows**.
+3. Select an app from the list with **Windows app (Win32)** or **Windows catalog app (Win32)** as the **Type**.
+4. From the app pane, select **Relationship viewer**.
+
+![Screenshot of the Relationship viewer.](./media/apps-win32-app-management/relationship-viewer.png)
+
+For related information, see the following resources:
+- [Add Win32 app supersedence](../apps/apps-win32-supersedence.md)
+- [App relationship viewer](../apps/apps-win32-app-management.md#app-relationship-viewer)
+- [Microsoft Intune Enterprise Application Management](../apps/apps-enterprise-app-management.md)
 
 ## Next steps
 

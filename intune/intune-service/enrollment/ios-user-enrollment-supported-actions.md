@@ -7,7 +7,7 @@ description: Utilize Apple User Enrollment to enroll and manage user-owned iOS/i
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 08/19/2024
 ms.topic: concept-article
 ms.service: microsoft-intune

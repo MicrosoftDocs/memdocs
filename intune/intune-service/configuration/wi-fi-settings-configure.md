@@ -6,7 +6,7 @@ description: See the steps to create a Wi-Fi device configuration profile in Mic
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 07/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -94,13 +94,12 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
 6. Select **Next**.
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Select your platform for detailed settings:
 
-    - [Android device administrator](wi-fi-settings-android.md)
-    - [Android (AOSP)](wi-fi-settings-android-aosp.md)
-    - [Android Enterprise](wi-fi-settings-android-enterprise.md), including dedicated devices
+    - [Android](wi-fi-settings-android-enterprise.md), including dedicated devices
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
     - [Windows 10/11](wi-fi-settings-windows.md)
     - [Windows 8.1 and newer](wi-fi-settings-import-windows-8-1.md), including Windows Holographic for Business
+    - [Android device administrator](wi-fi-settings-android.md)
 
 8. Select **Next**.
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).

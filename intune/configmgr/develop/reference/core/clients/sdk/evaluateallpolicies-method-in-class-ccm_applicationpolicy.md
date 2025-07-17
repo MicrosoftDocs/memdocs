@@ -12,52 +12,52 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # EvaluateAllPolicies Method in Class CCM_ApplicationPolicy
-The `EvaluateAllPolicies` Windows Management Instrumentation (WMI) class method in Configuration Manager that evaluated all policies.   
+The `EvaluateAllPolicies` Windows Management Instrumentation (WMI) class method in Configuration Manager that evaluated all policies.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 EvaluateAllPolicies   
-{  
-    [IN]    Boolean IsEnforceAction  
-    [OUT]   String JobIdUser  
-    [OUT]   String JobIdMachine  
-};  
-```  
+```
+uint32 EvaluateAllPolicies
+{
+    [IN]    Boolean IsEnforceAction
+    [OUT]   String JobIdUser
+    [OUT]   String JobIdMachine
+};
+```
 
-## Parameters  
- `IsEnforceAction`  
- Data type: `Boolean`  
+## Parameters
+ `IsEnforceAction`
+ Data type: `Boolean`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- `True` if the action is enforced.    
+ `True` if the action is enforced.
 
- `JobIdUser`  
- Data type: `String`  
+ `JobIdUser`
+ Data type: `String`
 
- Qualifiers: [id("1"), out]  
+ Qualifiers: [id("1"), out]
 
- Job identifier of a user policy.    
+ Job identifier of a user policy.
 
- `JobIdMachine`  
- Data type: `String`  
+ `JobIdMachine`
+ Data type: `String`
 
- Qualifiers: [id("2"), out]  
+ Qualifiers: [id("2"), out]
 
- Job identifier of a machine policy.    
+ Job identifier of a machine policy.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

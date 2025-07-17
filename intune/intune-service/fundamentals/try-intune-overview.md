@@ -5,9 +5,9 @@ title: Try Microsoft Intune overview
 titleSuffix: 
 description: Evaluate Microsoft Intune by stepping through common Intune settings.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/24/2024
 ms.topic: concept-article
 ms.service: microsoft-intune

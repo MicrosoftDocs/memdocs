@@ -6,8 +6,8 @@ description: Learn the recommended processes to manage Android devices in Micros
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 04/02/2024
+manager: laurawi
+ms.date: 04/15/2025
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -122,7 +122,6 @@ Use Microsoft Intune to enable or disable settings and features on devices. To c
 |[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see [Android Enterprise device settings](../configuration/device-restrictions-android-for-work.md) or [Android device administrator device settings](../configuration/device-restrictions-android.md).|Android Enterprise, Android device administrator |
 |[Configure custom settings for Android device administrator](../configuration/custom-settings-android.md)|Add or create custom settings that aren't built in to Intune, such as a per-app VPN profile and web protection with Microsoft Defender for Endpoint.|Android device administrator |
 |[Configure Samsung Knox apps](../configuration/samsung-knox-apps-allow-block.md)|Create a custom profile to allow and block apps for Samsung Knox Standard devices.| Android device administrator|
-|[Create custom profile for Android Enterprise](../configuration/custom-settings-android-for-work.md)|Add or create custom settings that aren't built in to Intune for personally owned devices.|Android Enterprise|
 |[Configure Zebra Mobility Extensions (MX) profile](../configuration/android-zebra-mx-overview.md)|Use Zebra's Mobility Extensions (MX) profiles to customize or add more Zebra-specific settings in Intune.| Android device administrator |
 |[Create OEMConfig configuration profile](../configuration/android-oem-configuration-overview.md)|Use OEMConfig to add, create, and customize OEM-specific settings for Android Enterprise devices.| Android Enterprise |
 |[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune apps with your organization's branding to create a familiar experience for people enrolling their devices.|Android Enterprise, Android device administrator |  

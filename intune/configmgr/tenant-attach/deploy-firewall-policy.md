@@ -10,7 +10,7 @@ manager: apoorvseth
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -34,7 +34,7 @@ ms.collection: tier3
       - Only Windows 10 clients can be targeted with firewall policies currently.
    - **Profile**: Microsoft Defender Firewall (ConfigMgr)
 1. Select **Create** then give the profile a **Name** and a **Description**.
-1. On the **Configuration settings** page, set the firewall settings for the devices. For more information about the available settings, see [Settings for firewall policy for tenant attached devices](../../intune-service/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)  
+1. On the **Configuration settings** page, set the firewall settings for the devices. For more information about the available settings, see [Settings for firewall policy for tenant attached devices](../../intune-service/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
 
 1. On the **Assignments** page, select the collections to include for the policy assignment then choose **Next**.
 1. Review the settings on the **Review + Create** page and select **Create** when you're done.

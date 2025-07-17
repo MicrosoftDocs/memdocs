@@ -7,8 +7,8 @@ description: Configure enrollment in Microsoft Intune for Android Enterprise ded
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 04/15/2025
+manager: laurawi
+ms.date: 05/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: chmaguir
+ms.reviewer: grwilson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -77,11 +77,42 @@ You must create an enrollment profile so that you can enroll your dedicated devi
     - **Token type**: Choose the type of token you want to use to enroll dedicated devices.
         - **Corporate-owned dedicated device (default)**: This token enrolls devices as a standard Android Enterprise dedicated device. These devices require no user credentials at any point. This is the default token type that dedicated devices will enroll with unless updated by Admin at time of token creation.
         - **Corporate-owned dedicated device with Microsoft Entra ID shared mode**: This token enrolls devices as a standard Android Enterprise dedicated device and, during enrollment, deploys Microsoft's Authenticator app configured into Microsoft Entra shared device mode. With this option, users can achieve single sign-in and single sign-out across apps on the device that are integrated with the Microsoft Entra Microsoft Authentication Library and global sign-in/sign-out calls. 
+    - **Token expiration date**: Enter the date you want the token to expire, up to 65 years in the future. The token expires on the selected date at 12:59:59 PM in the time zone it was created. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD`  
+
+    - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidForWork_01/01/2025_12:00 PM*   
+    
+       To create a custom naming template:  
+
+         1. Under **Apply device name template**, choose **Yes**.  
+
+         2. Enter the naming template you want to apply to the devices. Names can contain letters, numbers, and hyphens. 
+         
+         You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.  
+
+         - {{SERIAL}} for the device's serial number.  
+
+         - {{SERIALLAST4DIGITS}} for the last 4 digits of the device’s serial number.   
+
+         - {{DEVICETYPE}} for the device type. Example: *AndroidForWork*  
+
+         - {{ENROLLMENTDATETIME}} for the date and time of enrollment.  
+
+         - {{UPNPREFIX}} for the user's first name. Example: *Eric*, when device is user affiliated.  
+
+         - {{USERNAME}} for the user's username when the device is user affiliated. Example: *EricSolomon*  
+
+         - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
+         
+         Edits you make to the naming template only apply to new enrollments.  
+
     - **Token expiration date**: Enter the date you want the token to expire, up to 65 years in the future. The token expires on the selected date at 12:59:59 PM in the time zone it was created. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD` 
+
 1. Select **Next** to continue to **Device group**.  
 1. Optionally, select where to group devices at enrollment time. Select **Search by group name**. Then find and select a static Microsoft Entra device group. For information about how to create a device group to use for grouping, see [Set up enrollment time grouping](enrollment-time-grouping.md).  
-   >[!TIP]
+
+   > [!TIP]
    > Be sure to select a device group, not a user group.  
+
 7. Select **Next** to continue to **Scope tags**.    
 8.  Optionally, apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md). 
 9. Select **Next** to continue to **Review + create**.  

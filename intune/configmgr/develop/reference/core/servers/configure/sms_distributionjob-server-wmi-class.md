@@ -12,199 +12,199 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DistributionJob Server WMI Class
-The `SMS_DistributionJob` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a distribution point job.   
+The `SMS_DistributionJob` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a distribution point job.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DistributionJob : SMS_BaseClass  
-{  
-    UInt32 Action;  
-    Datetime CreationTime;  
-    UInt32 DPID;  
-    UInt32 DynamicOrder;  
-    UInt64 JobID;  
-    Datetime LastUpdateTime;  
-    String NALPath;  
-    UInt32 PackageVersion;  
-    String PkgID;  
-    UInt32 RemainingSize;  
-    UInt32 ReStartTime;  
-    UInt32 RetryCount;;  
-    Datetime StartTime;  
-    UInt32 State;  
-    UInt64 TotalSize;  
-};  
-```  
+```
+Class SMS_DistributionJob : SMS_BaseClass
+{
+    UInt32 Action;
+    Datetime CreationTime;
+    UInt32 DPID;
+    UInt32 DynamicOrder;
+    UInt64 JobID;
+    Datetime LastUpdateTime;
+    String NALPath;
+    UInt32 PackageVersion;
+    String PkgID;
+    UInt32 RemainingSize;
+    UInt32 ReStartTime;
+    UInt32 RetryCount;;
+    Datetime StartTime;
+    UInt32 State;
+    UInt64 TotalSize;
+};
+```
 
-## Methods  
- The `SMS_DistributionJob` class does not define any methods.  
+## Methods
+ The `SMS_DistributionJob` class does not define any methods.
 
-## Properties  
- `Action`  
- Data type: `UInt32`  
+## Properties
+ `Action`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Current job action. Possible values are:  
+ Current job action. Possible values are:
 
-|Value|Job action|  
-|-|-|  
-|1|DISTSRC_ACTION_UPDATE|  
-|2|DISTSRC_ACTION_ADD|  
-|5|DISTSRC_ACTION_CANCEL|  
+|Value|Job action|
+|-|-|
+|1|DISTSRC_ACTION_UPDATE|
+|2|DISTSRC_ACTION_ADD|
+|5|DISTSRC_ACTION_CANCEL|
 
- `CreationTime`  
- Data type: `Datetime`  
+ `CreationTime`
+ Data type: `Datetime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Job creation time.  
+ Job creation time.
 
- `DPID`  
- Data type: `UInt32`  
+ `DPID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Distribution point identifier.  
+ Distribution point identifier.
 
- `DynamicOrder`  
- Data type: `UInt32`  
+ `DynamicOrder`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Dynamic order for the job.  
+ Dynamic order for the job.
 
- `JobID`  
- Data type: `UInt64`  
+ `JobID`
+ Data type: `UInt64`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read, key]  
+ Qualifiers: [read, key]
 
- Job identifier.  
+ Job identifier.
 
- `LastUpdateTime`  
- Data type: `Datetime`  
+ `LastUpdateTime`
+ Data type: `Datetime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Last update time of the job.  
+ Last update time of the job.
 
- `NALPath`  
- Data type: `String`  
+ `NALPath`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Distribution point NAL path.  
+ Distribution point NAL path.
 
- `PackageVersion`  
- Data type: `UInt32`  
+ `PackageVersion`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Package version.  
+ Package version.
 
- `PkgID`  
- Data type: `String`  
+ `PkgID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Package identifier.  
+ Package identifier.
 
- `RemainingSize`  
- Data type: `UInt32`  
+ `RemainingSize`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Remaining size of the distribution job.  
+ Remaining size of the distribution job.
 
- `ReStartTime`  
- Data type: `UInt32`  
+ `ReStartTime`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Job restart time.  
+ Job restart time.
 
- `RetryCount`  
- Data type: `UIn32`  
+ `RetryCount`
+ Data type: `UIn32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Retry count.  
+ Retry count.
 
- `StartTime`  
- Data type: `Datetime`  
+ `StartTime`
+ Data type: `Datetime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Job start time.  
+ Job start time.
 
- `State`  
- Data type: `UInt32`  
+ `State`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Current job state. Possible values are:  
+ Current job state. Possible values are:
 
- `TotalSize`  
- Data type: `UInt64`  
+ `TotalSize`
+ Data type: `UInt64`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Date of the last status update.  
+ Date of the last status update.
 
-|Value|Job state|  
-|-|-|  
-|0|DISTSRC_STATE_PENDING|  
-|1|DISTSRC_STATE_READY|  
-|2|DISTSRC_STATE_STARTED|  
-|3|DISTSRC_STATE_INPROGRESS|  
-|4|DISTSRC_STATE_PENDING_RESTART|  
-|5|DISTSRC_STATE_COMPLETE|  
-|6|DISTSRC_STATE_FAILED|  
-|7|DISTSRC_STATE_CANCELLED|  
-|8|DISTSRC_STATE_SUSPENDED|  
+|Value|Job state|
+|-|-|
+|0|DISTSRC_STATE_PENDING|
+|1|DISTSRC_STATE_READY|
+|2|DISTSRC_STATE_STARTED|
+|3|DISTSRC_STATE_INPROGRESS|
+|4|DISTSRC_STATE_PENDING_RESTART|
+|5|DISTSRC_STATE_COMPLETE|
+|6|DISTSRC_STATE_FAILED|
+|7|DISTSRC_STATE_CANCELLED|
+|8|DISTSRC_STATE_SUSPENDED|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

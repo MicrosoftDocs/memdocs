@@ -5,6 +5,10 @@ items:
   items:
   - name: KB 31909343 Summary of changes in 2503
     href: 2503/31909343.md
+  - name: KB 32480179 Configuration Manager 2503 early update ring
+    href: 2503/32480179.md
+  - name: KB 33177653 Azure for US Government update
+    href: 2503/33177653.md
 - name: Version 2409
   items:
   - name: KB 30195272 Summary of changes in 2409
@@ -13,6 +17,8 @@ items:
     href: 2409/30833053.md
   - name: KB 30385346 Update rollup for version 2409
     href: 2409/30385346.md
+  - name: KB 33177653 Azure for US Government update
+    href: 2503/33177653.md
 - name: Version 2403
   items:
   - name: KB 26186448 Summary of changes in 2403
@@ -23,6 +29,8 @@ items:
     href: 2403/28458746.md 
   - name: KB 28204160 Update rollup for version 2403
     href: 2403/28204160.md
+  - name: KB 33177653 Azure for US Government update
+    href: 2503/33177653.md
 - name: Version 2309
   items:
   - name: KB 24341484 Summary of changes in 2309

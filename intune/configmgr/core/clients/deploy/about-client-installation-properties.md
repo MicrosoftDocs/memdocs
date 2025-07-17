@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # About client installation parameters and properties in Configuration Manager

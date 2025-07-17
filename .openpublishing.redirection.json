@@ -2,6 +2,21 @@
   "redirections": [
 
     {
+      "source_path": "intune/intune-service/configuration/device-restrictions-android-aosp.md",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-android-for-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/device-restrictions-android-enterprise-personal.md",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-android-for-work",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "intune/intune-service/configuration/wi-fi-settings-android-aosp.md",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-android-enterprise",
+      "redirect_document_id": false
+    },    
+    {
       "source_path": "intune/intune-service/protect/exchange-connector-install.md",
       "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
       "redirect_document_id": false
@@ -2498,6 +2513,11 @@
     {
       "source_path": "intune/intune/protect/data-outside-protect.md",
       "redirect_url": "/information-protection/get-started/infoprotect-quick-start-tutorial",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/custom-settings-android-for-work.md",
+      "redirect_url": "https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414",
       "redirect_document_id": false
     }
   ]

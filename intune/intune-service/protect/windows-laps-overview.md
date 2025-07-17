@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2025
+ms.date: 05/29/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -103,11 +103,12 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
 
 Devices can have any [Windows edition that Intune supports](../fundamentals/supported-devices-browsers.md#microsoft), but must run of one of the following versions to support the Windows LAPS CSP:
 
+- Windows 11, version 22H2 (22621.1555 or later) with [KB5025239](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982)
+- Windows 11, version 21H2 (22000.1817 or later) with [KB5025224](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc)
 - Windows 10, version 22H2 (19045.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
 - Windows 10, version 21H2 (19044.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
 - Windows 10, version 20H2 (19042.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
-- Windows 11, version 22H2 (22621.1555 or later) with [KB5025239](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982)
-- Windows 11, version 21H2 (22000.1817 or later) with [KB5025224](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc)
+- Windows 10 Enterprise LTSC 2019 and [later LTSC versions](/windows-server/identity/laps/laps-overview#windows-laps-supported-platforms)
 
 ### GCC High support
 
@@ -159,7 +160,10 @@ The CSP-based policy from Intune overrides all other sources of LAPS policy, suc
 
 ### Can Windows LAPS create local admin accounts based on the administrator account name that’s configured using LAPS policy?
 
-No. Windows LAPS can only manage accounts that already exist on the device. If a policy specifies an account by name that doesn't exist on the device, the policy applies and doesn’t report an error. However, no account is backed up.
+Starting with Windows 11 24H2, you can configure Windows LAPS using the new [automatic account management mode](/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode) to manage the built-in local Administrator account or create a new, custom account that it then manages. On down-level Windows versions, Windows LAPS can only manage accounts that already exist on the device. 
+
+> [!NOTE]
+> When using manual account management mode or Windows LAPS on devices running Windows 11 version 23H2 or earlier, specifying an account name that does not exist on the device has no effect and does not generate an error.
 
 ### Does Windows LAPS rotate and backup the password for a device that is disabled in Microsoft Entra?
 

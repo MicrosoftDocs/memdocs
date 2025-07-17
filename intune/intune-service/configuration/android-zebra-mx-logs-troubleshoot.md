@@ -6,7 +6,7 @@ description: See common issues and resolutions when using StageNow on Android de
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/27/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune

@@ -3,10 +3,10 @@ title: Add an Enterprise App Catalog app to Microsoft Intune
 titleSuffix:
 description: Learn how to add an Enterprise App Catalog app to Microsoft Intune. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 09/16/2024
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
+ms.date: 06/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,6 +36,9 @@ When you add an app to Intune, you'll commonly want to use default installation,
 > Microsoft does not assert compliance or authorizations for apps distributed via Intune. Customers are responsible for ensuring that apps meet their requirements.
 
 Once you add an Enterprise App Catalog app to Intune, you can assign that app to end-users or devices.
+
+> [!NOTE]
+> Enterprise App Catalog apps are supported with Windows Autopilot. Using Windows Autopilot, you can select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions.
 
 ## Add a Windows catalog app (Win32) to Intune
 
@@ -249,5 +252,6 @@ At this point, you've completed steps to add a Windows catalog app (Win32) to In
 
 ## Next steps
 
+- [App relationship viewer](../apps/apps-win32-app-management.md#app-relationship-viewer)
 - [Monitor app information and assignments with Microsoft Intune](apps-monitor.md)
 - [Troubleshoot Win32 app issues](apps-win32-troubleshoot.md)

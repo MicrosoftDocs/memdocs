@@ -5,9 +5,9 @@ title: Data protection framework using app protection policies
 titleSuffix: Microsoft Intune
 description: Learn how App Protection Policies (APP) ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 12/09/2024
 ms.topic: article
 ms.service: microsoft-intune
@@ -68,7 +68,7 @@ The following App Protection Policy settings should be enabled for the applicabl
 
 Microsoft recommends reviewing and categorizing usage scenarios, and then configuring users using the prescriptive guidance for that level. As with any framework, settings within a corresponding level may need to be adjusted based on the needs of the organization as data protection must evaluate the threat environment, risk appetite, and impact to usability.
 
-Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Intune App Protection Policy Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
+Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample Intune App Protection Policy Configuration Framework JSON templates with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
 > [!NOTE]
 > When using MAM for Windows, see [App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
@@ -108,7 +108,7 @@ The policies should include other Microsoft apps based on business need, additio
 
 ## Next steps
 
-Administrators can incorporate the above configuration levels within their ring deployment methodology for testing and production use by importing the sample [Intune App Protection Policy Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
+Administrators can incorporate the above configuration levels within their ring deployment methodology for testing and production use by importing the sample Intune App Protection Policy Configuration Framework JSON templates with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
 ## See also
 

@@ -12,115 +12,115 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_Service_HostedClass Client WMI Class
 > [!IMPORTANT]
->  This class supports the Configuration Manager 2007 infrastructure and is not intended to be used directly from your code.  
+>  This class supports the Configuration Manager 2007 infrastructure and is not intended to be used directly from your code.
 
- in Configuration Manager, the `CCM_Service_HostedClass` class is a client Windows Management Instrumentation (WMI) class that configures a COM class to be hosted in the CCMEXEC service.  
+ in Configuration Manager, the `CCM_Service_HostedClass` class is a client Windows Management Instrumentation (WMI) class that configures a COM class to be hosted in the CCMEXEC service.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_Service_HostedClass : CCM_Policy  
-{  
-      String CLSID;  
-      String Description;  
-      String PolicyID;  
-      String PolicyInstanceID;  
-      UInt32 PolicyPrecedence;  
-      String PolicyRuleID;  
-      String PolicySource;  
-      String PolicyVersion;  
-};  
-```  
+```
+Class CCM_Service_HostedClass : CCM_Policy
+{
+      String CLSID;
+      String Description;
+      String PolicyID;
+      String PolicyInstanceID;
+      UInt32 PolicyPrecedence;
+      String PolicyRuleID;
+      String PolicySource;
+      String PolicyVersion;
+};
+```
 
-## Methods  
- The `CCM_Service_HostedClass` class does not define any methods.  
+## Methods
+ The `CCM_Service_HostedClass` class does not define any methods.
 
-## Properties  
- `CLSID`  
- Data type: `String`  
+## Properties
+ `CLSID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Realkey]  
+ Qualifiers: [Realkey]
 
- CLSID of the COM class that will be hosted in the service. The class must be registered as an in-process DLL component and be associated with the same application ID as CCMEXEC.  
+ CLSID of the COM class that will be hosted in the service. The class must be registered as an in-process DLL component and be associated with the same application ID as CCMEXEC.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- COM class description.  
+ COM class description.
 
- `PolicyID`  
- Data type: `String`  
+ `PolicyID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyInstanceID`  
- Data type: `String`  
+ `PolicyInstanceID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyPrecedence`  
- Data type: `UInt32`  
+ `PolicyPrecedence`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyRuleID`  
- Data type: `String`  
+ `PolicyRuleID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicySource`  
- Data type: `String`  
+ `PolicySource`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
- `PolicyVersion`  
- Data type: `String`  
+ `PolicyVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).  
+ See [CCM_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy-client-wmi-class.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
+## See Also
  [Client Framework and Data Transfer Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/client-framework-and-data-transfer-client-wmi-classes.md)

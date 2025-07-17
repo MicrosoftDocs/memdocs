@@ -10,7 +10,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -78,6 +78,6 @@ If you can't register clients on the internal network, you can create and deploy
 ## Next steps
 
 Next, design how to use a CMG in your hierarchy:
-  
+
 > [!div class="nextstepaction"]
 > [CMG hierarchy design](plan-hierarchy-design.md)

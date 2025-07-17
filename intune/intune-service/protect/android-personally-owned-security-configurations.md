@@ -40,7 +40,7 @@ When using these examples, work with your security team to evaluate the threat e
 For more information on each policy setting, see:
 
 - [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
-- [Android Enterprise device settings to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md)
+- [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md) > Personally owned
 
 > [!NOTE]
 > Because of the settings available for personally-owned work profile devices, there's no basic security (level 1) offering. The available settings don't justify a difference between level 1 and level 2. 
@@ -102,7 +102,7 @@ Level 2 is the recommended minimum security configuration for personal devices w
 | System Security | Prevent app installations from unknown sources in the personal profile | Block |  |
 
 > [!Note]
-> When a personally-owned work profile is enabled, “One Lock” is configured by default to combine device and work profile passcodes. One Lock can be disabled to separate work profile and device passcodes if necessary, under work profile settings. For more information, review the setting *One lock for device and work profile* in the [Work Profile Password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password) section of in *Android Enterprise device settings list to allow or restrict features on personally owned devices*.
+> When a personally-owned work profile is enabled, "One Lock" is configured by default to combine device and work profile passcodes. One Lock can be disabled to separate work profile and device passcodes if necessary, under work profile settings. For more information, review the setting *One lock for device and work profile* in the [Work Profile Password](../configuration/device-restrictions-android-for-work.md) section of in *Android Enterprise personally owned devices*.
 
 ## Personally-owned work profile high security (level 3)
 

@@ -4,10 +4,10 @@
 title: Role-based access control (RBAC) with Microsoft Intune
 description: Learn how RBAC lets you control who can perform actions and make changes in Microsoft Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.date: 03/04/2025
+author: brenduns
+ms.author: brenduns
+manager: laurawi
+ms.date: 05/20/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,31 +32,27 @@ ms.collection:
 
 # Role-based access control (RBAC) with Microsoft Intune
 
-Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. By [assigning roles](assign-role.md) to your Intune users, you can limit what they can see and change. Each role has a set of permissions that determine what users with that role can access and change within your organization.
+Securing access to your organization is an essential security step. This article introduces foundational details for using Microsoft Intune role-based access controls (RBAC), which are an extension of Microsoft Entra ID RBAC controls. Subsequent articles can help you deploy Intune RBAC in your organization.
 
-To create, edit, or assign roles, your account must have one of the following roles in Microsoft Entra ID:
+With Intune RBAC, you can grant granular permissions to your admins to control who has access to your organization's resources, and what they can do with those resources. By assigning Intune RBAC roles and adhering to principles of least privilege access, your admins can perform their assigned tasks on only those users and devices that they should be empowered to manage. 
 
-- **Global Administrator**
-- **Intune Service Administrator** (also known as **Intune Administrator**)
-  or
-- Be assigned an Intune role with Role permissions (recommended to ensure least-permissions)
+## RBAC Roles
 
-## Roles
+Each Intune RBAC role specifies a set of permissions that are available to users assigned to that role. Permissions are composed of one or more management categories like *Device configuration* or *Audit data*, and sets of actions that can be taken like *Read*, *Write*, *Update*, and *Delete*. Together, they define the scope of administrative access and permissions within Intune. 
 
-A role defines the set of permissions granted to users assigned to that role.
-You can use both the built-in and custom roles. Built-in roles cover some common Intune scenarios. You can [create your own custom roles](create-custom-role.md) with the exact set of permissions you need. Several Microsoft Entra roles have permissions to Intune.
+Intune includes both built-in and custom roles. Built-in roles are the same in all tenants and are provided to address common administrative scenarios, while [custom roles you create](create-custom-role.md) allow for specific permissions as needed by an admin. In addition, several Microsoft Entra roles include permissions within Intune.
 
-To see a role in the **Intune admin center**, go to **Tenant administration** > **Roles** > **All roles** > choose a role. You can manage the role on the following pages:
+To view a role in the **Intune admin center**, go to **Tenant administration** > **Roles** > **All roles** > and select a role. You can then manage that role through the following pages:
 
-- **Properties**: The name, description, permissions, and scope tags for the role.
-- **Assignments**: A list of [role assignments](assign-role.md) defining which users have access to which users/devices. A role can have multiple assignments, and a user can be in multiple assignments.
+- **Properties**: The name, description, permissions, and scope tags for the role. You can also view the name, description, and permissions of built-in roles in this documentation at [Built-in role permissions](../fundamentals/role-based-access-control-reference.md).
+- **Assignments**: Select an [assignment for a role](assign-role.md) to view details about it including the groups and scopes that the assignment includes. A role can have multiple assignments, and a user can receive multiple assignments.
 
 > [!NOTE]
-> To be able to administer Intune you must have an Intune license assigned. Alternatively, you can allow non-licensed users to administer Intune by setting [Allow access to unlicensed admins to Yes](unlicensed-admins.md).
+> In June 2021, Intune began supporting [unlicensed admins](../fundamentals/unlicensed-admins.md). User accounts created after this change can administer Intune without an assigned license. Accounts created before this change still require a license to manage Intune.
 
 ### Built-in roles
 
-You can assign built-in roles to groups without further configuration. You can't delete or edit the name, description, type, or permissions of a built-in role.
+An Intune admin with sufficient permissions can assign any of the Intune roles to groups of users. Built-in roles grant specific permissions necessary for performing administrative tasks that align with the role's purpose. Intune doesn’t support edits to description, type, or permissions of a built-in role.
 
 - **Application Manager**: Manages mobile and managed applications, can read device information and can view device configuration profiles.
 - **Endpoint Privilege Manager**: Manages Endpoint Privilege Management policies in the Intune console.
@@ -65,44 +61,47 @@ You can assign built-in roles to groups without further configuration. You can't
 - **Help Desk Operator**: Performs remote tasks on users and devices, and can assign applications or policies to users or devices.
 - **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
 - **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
-- **Organizational Messages Manager**: Manages organizational messages in Intune console.
 - **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
 - **School Administrator**: Manages Windows 10 devices in [Intune for Education](../industry/education/introduction-intune-education.md).
-- **Cloud PC Administrator**: A Cloud PC Administrator has read and write access to all Cloud PC features located within the Cloud PC area.
-- **Cloud PC Reader**: A Cloud PC Reader has read access to all Cloud PC features located within the Cloud PC area.
+
+When your tenant includes a subscription to Windows 365 to support Cloud PCs, you'll also find the following Cloud PC roles in the Intune admin center. These roles aren't available by default and include permissions within Intune for tasks related to Cloud PCs. For more information about these roles, see [Cloud PC built-in roles](/windows-365/enterprise/role-based-access#cloud-pc-built-in-roles) in the Windows 365 documentation.
+
+- **Cloud PC Administrator**: A Cloud PC Administrator has *Read* and *Write* access to all Cloud PC features located within the Cloud PC area.
+- **Cloud PC Reader**: A Cloud PC Reader has *Read* access to all Cloud PC features located within the Cloud PC area.
 
 ### Custom roles
 
-You can create your own roles with custom permissions. For more information about custom roles, see [Create a custom role](create-custom-role.md).
+You can create your own custom Intune roles to grant admins only the specific permissions needed for their tasks. These custom roles can include any Intune RBAC permission, allowing for refined admin access and support for the principle of least-privileged access within the organization.
 
-<a name='azure-active-directory-roles-with-intune-access'></a>
+See [Create a custom role](create-custom-role.md).
 
 ### Microsoft Entra roles with Intune access
 
-Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties. Global Administrator and Intune Service Administrator
-are [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions) and assignment **should be limited**.  
+Intune RBAC permissions are a subset of Microsoft Entra RBAC permissions. As a subset, there are some Entra roles that include permissions within Intune. Most Entra ID roles that have access to Intune are considered [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions). The use and assignment of privileged roles should be limited and not used for daily administrative tasks within Intune.
 
-> [!TIP]
-> Utilize [Entra Permissions Management](/entra/permissions-management/overview) to identify privileged administrators and assist in managing least-permissions.
+Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties. To support this principle, use Intune’s built-in RBAC roles for daily Intune administrative tasks and avoid using Entra roles that have access to Intune.
+
+The following table identifies the Entra roles that have access to Intune, and the Intune permissions they include.
 
 | Microsoft Entra role | All Intune data | Intune audit data |
 | --- | :---: | :---: |
-| Global Administrator | Read/write | Read/write |
-| Intune Service Administrator | Read/write | Read/write |
-| Conditional Access Administrator | None | None |
-| Security Administrator | Read only (full administrative permissions for Endpoint Security node) | Read only |
-| Security Operator | Read only | Read only |
-| Security Reader | Read only | Read only |
+| Global Administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read/write | Read/write |
+| Intune Service Administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read/write | Read/write |
+| Conditional Access Administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | None | None |
+| Security Administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only (full administrative permissions for Endpoint Security node) | Read only |
+| Security Operator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only | Read only |
+| Security Reader [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only | Read only |
 | Compliance Administrator | None | Read only |
 | Compliance Data Administrator | None | Read only |
-| Global Reader (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
-| Helpdesk administrator (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
+| Global Reader [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
+| Helpdesk administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
 | Reports Reader | None | Read Only|
 
-> [!TIP]
-> Intune also shows three Microsoft Entra extensions: **Users**, **Groups**, and **Conditional Access**, which are controlled using Microsoft Entra RBAC. Additionally, the **User Account Administrator** only performs Microsoft Entra user/group activities and does not have full permissions to perform all activities in Intune. For more information, see [RBAC with Microsoft Entra ID](/azure/active-directory/active-directory-assign-admin-roles).
+In addition to the Entra roles with permission within Intune, the following three areas of Intune are direct extensions of Entra: **Users**, **Groups**, and **Conditional Access**. Instances of these objects and configurations made from within Intune exist in Entra. As Entra objects, they can be managed by Entra administrators with sufficient permissions granted by an Entra role. Similarly, Intune admins with sufficient permissions for Intune can view and manage these object types that are created in Entra.
 
 ## Privileged Identity Management for Intune
+
+When you use Entra ID Privileged Identity Management (PIM), you can manage when a user can use the privileges provided by an Intune RBAC role or the Intune Administrator role from Entra ID.
 
 Intune supports two methods of role elevation. There are performance and least privilege differences between the two methods.
 
@@ -110,32 +109,38 @@ Intune supports two methods of role elevation. There are performance and least p
 
 - **Method 2**: Utilize [Privileged Identity Management (PIM) for Groups](/entra/id-governance/privileged-identity-management/concept-pim-for-groups) with an Intune RBAC role assignment. For more information about using PIM for Groups with Intune RBAC roles, see: [Configuring Microsoft Intune just-in-time admin access with Microsoft Entra PIM for Groups | Microsoft Community Hub](https://techcommunity.microsoft.com/blog/intunecustomersuccess/configuring-microsoft-intune-just-in-time-admin-access-with-azure-ad-pim-for-gro/3843972)
 
-When using PIM elevation for Microsoft Entra ID built-in Intune Administrator role, elevation typically happens within 10 seconds. PIM Groups based elevation for Intune Custom Roles can take up to 15 minutes to be applied.
+When you use PIM elevation for the Intune Administrator role from Entra ID, elevation typically happens within 10 seconds. PIM Groups-based elevation for Intune's built-in or custom roles typically take up to 15 minutes to apply.
 
-## Role assignments
+## About Intune role assignments
 
-A role assignment defines:
+Both Intune custom and built-in roles are assigned to groups of users. An assigned role applies to each user in the group and defines:
 
 - which users are assigned to the role
 - what resources they can see
 - what resources they can change.
 
-You can assign both custom and built-in roles to your users who are administrators in Intune. To be assigned an Intune role, the user must have an Intune license.
-To see a role assignment, choose **Intune** > **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > choose an assignment. On the **Properties** page, you can edit:
+Each group that is assigned an Intune role should include only users authorized to perform the administrative tasks for that role.
+
+- If a least privileged built-in role grants excessive privileges or permissions, consider use of a custom role to limit the scope of administrative access.
+- When planning role assignments, consider the results of a user with [multiple role assignments](#multiple-role-assignments).
+
+For a user to be assigned an Intune role and have access to administer Intune, they don't require an Intune license so long as their account was created in Entra after June 2021. Accounts created before June 2021 do require being assigned a license to use Intune.
+
+To view an existing role assignment, choose **Intune** > **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > choose an assignment. On the assignments **Properties** page, you can edit:
 
 - **Basics**: The assignments name and description.
 
-- **Members**: All users in the listed Azure security groups have permission to manage the users/devices that are listed in Scope (Groups).
+- **Members**: Members are the groups that are configured on the *Admin Groups* page when creating a role assignment. All users in the listed Azure security groups have permission to manage the users and devices that are listed in *Scope (Groups)*.
 
-- **Scope (Groups)**: Scope Groups are Microsoft Entra security groups of users or devices or both for which administrators in that role assignment are limited to performing operations on. For example, deployment of a policy or application to a user or remotely locking a device. All users and devices in these Microsoft Entra security groups can be managed by the users in Members.
+- **Scope (Groups)**: Use Scope (Groups) to define the groups of users and devices that an admin with this role assignment can manage. Administrative users with this role assignment can use the permissions granted by the role to manage every user or device within the role assignments defined scope groups.
 
-> [!TIP]
-> Limit access to only specified scope groups by **only** selecting the specific security groups for the assignment.  Do not add "Add all users" and "Add all devices" to ensure assignments cannot target all users or all devices.
+  > [!TIP]
+  > When you configure a scope group, limit access by selecting only the security groups that include the user and devices that an admin with this role assignment should manage. To ensure admins with this role can't target all users or all devices, don't select *Add all users* or *Add all devices*.
 
-- **[Scope Tags](scope-tags.md)**: Users in Members can see the resources that have the same scope tags.
+- [**Scope Tags**](scope-tags.md): Administrative users who are assigned this role assignment can see the resources that have the same scope tags. 
 
 > [!NOTE]
-> Scope Tags are freeform text values that an administrator defines and then adds to a Role Assignment. The scope tag added on a role controls visibility of the role itself, while the scope tag added in role assignment limits the visibility of Intune objects (such as policies and apps) or devices to only administrators in that role assignment because the role assignment contains one or more matching scope tags.
+> Scope Tags are freeform text values that an administrator defines and then adds to a role assignment. The scope tag added on a role controls visibility of the role itself, while the scope tag added in role assignment limits the visibility of Intune objects like policies, apps, or devices to only administrators in that role assignment because the role assignment contains one or more matching scope tags.
 
 ### Multiple role assignments
 
@@ -147,6 +152,31 @@ If a user has multiple role assignments, permissions, and scope tags, those role
 - Permissions and scope tags for objects of different types (like policies or apps), don't apply to each other. A Read permission for a policy, for example, doesn't provide a Read permission to apps in the user's assignments.
 - When there aren't any scope tags or some scope tags are assigned from different assignments, a user can only see devices that are part of some scope tags and can't see all devices.
 
+## Monitor RBAC assignments
+*This and the three subsections are in progress*
+
+Within the Intune admin center, you can go to **Tenant admin** > **Roles** and expand **Monitor** to find several views that can help you identify the permissions different users have within your Intune tenant. For example, in a complex administrative environment, you can use the **Admin permissions** view to specify an account so you can see its current scope of administrative privileges.
+
+:::image type="content" source="./media/role-based-access-control/rbac-monitor-node.png" alt-text="A screen capture of the options for monitoring RBAC from within the Intune admin center.":::
+
+### My permissions
+When you select this node, you're shown a combined list of the current Intune RBAC categories and permissions that your account is granted. This combined list includes all the permissions from all role assignments, but not which role assignments provide them or by which group membership they are assigned.
+
+### Roles by permission
+With this view, you can see details about a specific Intune RBAC [category and permission](../fundamentals/create-custom-role.md#custom-role-permissions), and through which role assignments, and to which groups that combination is made available. 
+
+To get started, select an Intune permission Category and then a specific Permission from that category. The admin center then displays a list of instances that lead to that permission being assigned that includes:
+
+- **Role display name** – The name of the built-in or custom RBAC role that grants the permission. 
+- **Role assignment display name** – The name of the role assignment that assigns the role to groups of users.
+- **Group name** – The name of the group that receives that role assignment.
+
+### Admin permissions
+Use the Admin permissions node to identify the specific permissions that an account is currently granted. 
+
+Start by specifying a **User** account. So long as the user has Intune permissions assigned to their account, Intune displays the complete list of those permissions identified by *Category* and *Permission*.
+
+:::image type="content" source="./media/role-based-access-control/admin-permission-view.png" alt-text="A screen capture that shows an example of the Admin permissions view in the Intune admin center.":::
 ## Next steps
 
 - [Assign a role to a user](assign-role.md)

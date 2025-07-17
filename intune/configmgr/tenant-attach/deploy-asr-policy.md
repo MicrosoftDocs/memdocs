@@ -10,7 +10,7 @@ ms.assetid: 07379821-02b3-4c61-af03-329c782e10d6
 manager: apoorvseth
 author: gowdhamankarthikeyan
 ms.author: gokarthi
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

@@ -25,9 +25,9 @@ ms.reviewer: aanavath
 ms.custom: intune-enduser
 ms.collection:
 - tier2
----  
+---
 
-# Install mobile threat defense app  
+  # Install mobile threat defense app  
 
 **Applies to:**
 * iOS/iPadOS
@@ -44,7 +44,7 @@ Install a mobile threat defense (MTD) app on the device you use for work or scho
 
 * [ActiveShield](https://apps.apple.com/app/activeshield/id980234260)
 * [Microsoft Defender for Endpoint](https://apps.apple.com/app/microsoft-defender-atp/id1526737990)
-* [Jamf](https://apps.apple.com)
+* [Jamf Trust](https://apps.apple.com/us/app/jamf-trust/id1608041266)
 * [Lookout for Work](https://apps.apple.com/app/lookout-for-work/id997193468)
 * [Pradeo Security](https://apps.apple.com)
 * [Harmony Mobile Protect](https://apps.apple.com/app/sandblast-mobile-protect/id1006390797)
@@ -85,7 +85,7 @@ After you install the MTD app, activate the MTD app on your iOS or Android devic
 
  After you've met this requirement, you can securely sign in and access work apps and files on your device. If Company Portal is still blocking you from access:  
 
- * Check the MTD app for threats and [resolve them](#resolving-a-threat).  
+* Check the MTD app for threats and [resolve them](#resolving-a-threat).  
 
  * Return to the Company Portal app or website and check for other flagged device settings. Your workplace might have other requirements that require your attention. For more information, see [Check device compliance in Company Portal app for iOS](sync-your-device-manually-ios.md).  
 

@@ -5,9 +5,9 @@ title: Manage Microsoft Edge on iOS and Android with Intune
 titleSuffix: 
 description: Use Intune app protection and configuration policies with Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -724,8 +724,8 @@ Organizations can manage the Edge startup web page option by setting the default
 |:--|:----|
 |com.microsoft.intune.mam.managedbrowser.RestoreBrowsingOption |**0**: (default) no configure<br> **1**: Continue browsing where I left off<br> **2**: Always Start with a Fresh New Tab |
 
-#### Manage managed browser token interactive mode
-Organizations can configure whether to turn on or off the managed browser token interactive mode.
+#### Manage interactive mode for Web Single Sign-On
+Organizations have the option to enable or disable interactive mode for Web Single Sign-On (WebSSO). When interactive mode is activated, Edge mobile will update the current account's login status and prompt the user to re-authenticate through direct interaction if needed.
 
 |Key |Value |
 |:--|:----|

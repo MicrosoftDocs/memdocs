@@ -11,7 +11,7 @@ ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Surface device dashboard in Configuration Manager

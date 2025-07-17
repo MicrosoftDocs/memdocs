@@ -12,20 +12,20 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # What&#39;s new in version 1606 of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
 Update 1606 for Configuration Manager is available as an in-console update for previously installed sites that run version 1511 or 1602. Version 1511 is the initial baseline version you use to install new Configuration Manager sites.
-> [!TIP]  
-> Learn more about:  
->   
-> - [Installing new sites](../../servers/deploy/install/prepare-to-install-sites.md) (using a baseline version like 1511)  
-> - [Installing updates at sites](../../servers/manage/updates.md) (like update 1602 or 1606)  
+> [!TIP]
+> Learn more about:
+>
+> - [Installing new sites](../../servers/deploy/install/prepare-to-install-sites.md) (using a baseline version like 1511)
+> - [Installing updates at sites](../../servers/manage/updates.md) (like update 1602 or 1606)
 
- The following sections provide details about changes and new capabilities introduced in version 1606 of Configuration Manager.  
+ The following sections provide details about changes and new capabilities introduced in version 1606 of Configuration Manager.
 
 
 
@@ -47,18 +47,18 @@ The following are changes to the Updates and Servicing node in the Configuration
     - **Prerequisites Check**
     - **Installation**
 
-  Additionally, there's now more detailed information for each step, including which log file you can view for more information.  
+  Additionally, there's now more detailed information for each step, including which log file you can view for more information.
 -   **New option to retry prerequisite failures:**
 
     In both the **Administration** and **Monitoring** workspaces, the **Updates and Servicing** node includes a new button on the ribbon called **Ignore prerequisite warnings**.
 
-    When you install updates without using the option to ignore prerequisite warnings (from within the Updates Wizard), and that update installation halts due to a warning, you can then select **Ignore prerequisite warnings** from the ribbon. This triggers an automatic continuation of the update installation.  
+    When you install updates without using the option to ignore prerequisite warnings (from within the Updates Wizard), and that update installation halts due to a warning, you can then select **Ignore prerequisite warnings** from the ribbon. This triggers an automatic continuation of the update installation.
 
 
 
 - **Cleaner view of updates:**
 
-    In the **Updates and Servicing** node, you now see only the most recently installed update, and any new updates that are available for you to install. To view previously installed updates, click the new **History** button that appears in the ribbon.  
+    In the **Updates and Servicing** node, you now see only the most recently installed update, and any new updates that are available for you to install. To view previously installed updates, click the new **History** button that appears in the ribbon.
 
 -   **Renamed option for pre-production:**
 
@@ -207,7 +207,7 @@ You can identify corporate-owned devices by importing their international statio
 
 You can now enable Health Attestation services monitoring for Windows 10 PCs by using only on-premises infrastructure, so that computers without Internet access can report Device Health Attestation (DHA).
 
-For details, see [Health attestation for Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).  
+For details, see [Health attestation for Configuration Manager](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers).
 
 ## Remote control
 Allow your users the opportunity to accept or deny file transfers before transferring content from the shared clipboard in a remote control session. Users only need to grant permission once per session, and the viewer doesn't have the ability to give themselves permission to proceed with the file transfer. You can find this new setting in the **Administration** workspace. Go to **Client Settings**, and then in **Default Settings**, open the **Remote Tools** panel.

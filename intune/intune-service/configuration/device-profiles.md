@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 
 ms.author: mandia
-manager: dougeby
-ms.date: 09/23/2024
+manager: laurawi
+ms.date: 04/16/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,7 +40,7 @@ When you configure device features using configuration profile, you can help you
 
 You can create profiles for different devices and different platforms, including Android, iOS/iPadOS, macOS, and Windows. There are some configuration settings that are unique to each platform. It's also common to have many device profiles for each platform, ranging from antivirus settings to custom settings.
 
-When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups. 
+When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups.
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
@@ -104,7 +104,6 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
-- Android Enterprise
 - iOS/iPadOS
 - macOS
 - Windows 11
@@ -253,7 +252,7 @@ This feature supports:
 - Windows 11 (single app kiosk only)
 - Windows 10
 
-Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## MX profile (Zebra)
 
@@ -314,6 +313,8 @@ This feature supports:
 
 - iOS/iPadOS
 - macOS
+- Android Enterprise
+- Android (AOSP)
 - Windows 11
 - Windows 10
 
@@ -335,7 +336,7 @@ On Linux devices, you can [add existing Bash scripts](../configuration/device-pr
 
 On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md), and then deploy these scripts to your macOS devices.
 
-On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/intune-management-extension.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/powershell-scripts.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
 
 This feature supports:
 

@@ -74,7 +74,7 @@ $hash = @{ Manufacturer = $WMI_ComputerSystem.Manufacturer; BiosVersion = $WMI_B
 return $hash | ConvertTo-Json -Compress
 ```
 
-Following is an example of the output of the sample script fro Windows:
+Following is an example of the output of the sample script for Windows:
 
 ```powershell
 {"BiosVersion":"1.24","Manufacturer":"Microsoft Corporation","TPMChipPresent":true}
@@ -94,7 +94,7 @@ For example, if your script should use the Bash shell as the interpreter, add th
 
 If you want to use Python for your script, indicate where the interpreter is installed. For example, add the following to the top of your script: `[ !/usr/bin/python3 ]` or `[ !/usr/bin/env python ]`
 
-**Recommended best practice**: To enable your scripts to handle scenarios like interrupts or cancellation signals, implement graceful termination mechanisms. When a script properly caches and handles these signals, the script can perform cleanup tasks and exist gracefully, ensuring resources are released correctly. For example, you can catch specific signals like SIGINT (interrupt signal) or SIGTERM (termination signal) and define custom actions to run when these signals are received. These actions can include closing open files, releasing acquired locks, or cleaning up temporary resources. Proper handling of signals helps to maintain script integrity and improve overall user experience.
+**Recommended best practice**: To enable your scripts to handle scenarios like interrupts or cancellation signals, implement graceful termination mechanisms. When a script properly caches and handles these signals, the script can perform cleanup tasks and exit gracefully, ensuring resources are released correctly. For example, you can catch specific signals like SIGINT (interrupt signal) or SIGTERM (termination signal) and define custom actions to run when these signals are received. These actions can include closing open files, releasing acquired locks, or cleaning up temporary resources. Proper handling of signals helps to maintain script integrity and improve overall user experience.
 
 For more information, see the [Intune Linux Custom Compliance Samples](https://github.com/microsoft/shell-intune-samples/tree/master/Linux) guide.
 

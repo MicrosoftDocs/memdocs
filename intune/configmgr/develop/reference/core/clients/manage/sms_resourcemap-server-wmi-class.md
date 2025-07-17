@@ -12,81 +12,81 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ResourceMap Server WMI Class
-The `SMS_ResourceMap` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps a resource type to its resource class name and display name.  
+The `SMS_ResourceMap` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps a resource type to its resource class name and display name.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ResourceMap : SMS_BaseClass  
-{  
-     String DisplayName;  
-     String ResourceClassName;  
-     UInt32 ResourceType;  
-};  
-```  
+```
+Class SMS_ResourceMap : SMS_BaseClass
+{
+     String DisplayName;
+     String ResourceClassName;
+     UInt32 ResourceType;
+};
+```
 
-## Methods  
- The following table lists the methods in `SMS_ResourceMap`.  
+## Methods
+ The following table lists the methods in `SMS_ResourceMap`.
 
-|Method|Description|  
-|------------|-----------------|  
-|[GetClassesWithData Method in Class SMS_ResourceMap](../../../../../develop/reference/core/clients/manage/getclasseswithdata-method-in-class-sms_resourcemap.md)|Gets the names of the classes that have inventory data for a resource.|  
-|[Refresh Method in Class SMS_ResourceMap](../../../../../develop/reference/core/clients/manage/refresh-method-in-class-sms_resourcemap.md)|Updates the resource and inventory class definitions.|  
+|Method|Description|
+|------------|-----------------|
+|[GetClassesWithData Method in Class SMS_ResourceMap](../../../../../develop/reference/core/clients/manage/getclasseswithdata-method-in-class-sms_resourcemap.md)|Gets the names of the classes that have inventory data for a resource.|
+|[Refresh Method in Class SMS_ResourceMap](../../../../../develop/reference/core/clients/manage/refresh-method-in-class-sms_resourcemap.md)|Updates the resource and inventory class definitions.|
 
-## Properties  
- `DisplayName`  
- Data type: **String**  
+## Properties
+ `DisplayName`
+ Data type: **String**
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name displayed in the Configuration Manager console to represent the resource class name. For a list of the default resource display names, see the `ResourceType` property.  
+ Name displayed in the Configuration Manager console to represent the resource class name. For a list of the default resource display names, see the `ResourceType` property.
 
- `ResourceClassName`  
- Data type: **String**  
+ `ResourceClassName`
+ Data type: **String**
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Class name of the resource. For a list of the default resource class names, see the `ResourceType` property.  
+ Class name of the resource. For a list of the default resource class names, see the `ResourceType` property.
 
- `ResourceType`  
- Data type: **UInt32**  
+ `ResourceType`
+ Data type: **UInt32**
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Type of resources on the site. Possible values are:  
+ Type of resources on the site. Possible values are:
 
-|Resource type|Display name|Class|  
-|-------------------|------------------|-----------|  
-|3|User Group|`SMS_R_UserGroup`|  
-|4|User|`SMS_R_User`|  
-|5|System|`SMS_R_System`|  
-|See the following Note|IP Network|`SMS_R_IPNetwork`|  
+|Resource type|Display name|Class|
+|-------------------|------------------|-----------|
+|3|User Group|`SMS_R_UserGroup`|
+|4|User|`SMS_R_User`|
+|5|System|`SMS_R_System`|
+|See the following Note|IP Network|`SMS_R_IPNetwork`|
 
 > [!NOTE]
->  The IP network resource type might not have a resource type value of 6. Its value depends on when Network Discovery was initiated relative to the discovery of new architectures by the Discovery Data Manager. The resource type value is 6 if the Data Discovery Manager discovered a new architecture before network discovery was initiated.  
+>  The IP network resource type might not have a resource type value of 6. Its value depends on when Network Discovery was initiated relative to the discovery of new architectures by the Discovery Data Manager. The resource type value is 6 if the Data Discovery Manager discovered a new architecture before network discovery was initiated.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

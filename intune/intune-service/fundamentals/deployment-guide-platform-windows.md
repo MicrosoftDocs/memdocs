@@ -6,7 +6,7 @@ description: Use our platform deployment guide to set up Windows device manageme
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 08/21/2024
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune
@@ -134,7 +134,7 @@ As you set up apps and app policies, think about your organization's requirement
 |[Add Microsoft 365 apps](../apps/apps-add-office365.md) |Add Microsoft 365 Apps for enterprise. |
 |[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|
 |[Include and exclude app assignments ](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.|
-|[Use PowerShell scripts](../apps/intune-management-extension.md)|Upload PowerShell scripts to extend Windows device management capabilities in Intune and make it easier to move to modern management.|
+|[Use PowerShell scripts](../apps/powershell-scripts.md)|Upload PowerShell scripts to extend Windows device management capabilities in Intune and make it easier to move to modern management.|
 
 ## Step 8: Enroll devices
 

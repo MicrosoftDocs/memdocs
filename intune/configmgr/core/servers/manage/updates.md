@@ -6,12 +6,12 @@ ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: Baladelli    
+author: Baladelli
 ms.author: Baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Updates and servicing for Configuration Manager
@@ -55,6 +55,7 @@ The following supported versions<sup>`*`</sup>, of Configuration Manager are cur
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
 |-------------|-----------|------------|--------------|------------------------|
+| [**2503**](../../plan-design/changes/whats-new-in-version-2503.md)<br /> (5.00.9135) | March 31, 2025 | September 30, 2026 | No | Yes |
 | [**2409**](../../plan-design/changes/whats-new-in-version-2409.md)<br /> (5.00.9132) | December 4, 2024 | June 4, 2026 | No | Yes |
 | [**2403**](../../plan-design/changes/whats-new-in-version-2403.md)<br /> (5.00.9128) | April 22, 2024 | October 22, 2025 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 

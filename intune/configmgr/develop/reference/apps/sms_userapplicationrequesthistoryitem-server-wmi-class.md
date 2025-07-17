@@ -12,82 +12,82 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_UserApplicationRequestHistoryItem Server WMI Class
-The `SMS_UserApplicationRequestHistoryItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an update to an instance of `SMS_UserApplicationRequest`.  
+The `SMS_UserApplicationRequestHistoryItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an update to an instance of `SMS_UserApplicationRequest`.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_UserApplicationRequestHistoryItem :    
-{  
-    String Comments;  
-    String ModifiedBy;  
-    DateTime ModifiedDate;  
-    UInt32 State;  
-};  
-```  
+```
+Class SMS_UserApplicationRequestHistoryItem :
+{
+    String Comments;
+    String ModifiedBy;
+    DateTime ModifiedDate;
+    UInt32 State;
+};
+```
 
-## Methods  
- The `SMS_UserApplicationRequestHistoryItem` class does not define any methods.  
+## Methods
+ The `SMS_UserApplicationRequestHistoryItem` class does not define any methods.
 
-## Properties  
- `Comments`  
- Data type: `String`  
+## Properties
+ `Comments`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Comments entered to explain why the change occurred. These could be user's comment explaining why they are requesting the application or approver comments explaining why the application was approved or denied.  
+ Comments entered to explain why the change occurred. These could be user's comment explaining why they are requesting the application or approver comments explaining why the application was approved or denied.
 
- `ModifiedBy`  
- Data type: `String`  
+ `ModifiedBy`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The user who made the change to the request.  
+ The user who made the change to the request.
 
- `ModifiedDate`  
- Data type: `DateTime`  
+ `ModifiedDate`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The date when the change to the request was made.  
+ The date when the change to the request was made.
 
- `State`  
- Data type: `UInt32`  
+ `State`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The state of the request after the change was made. Possible values are:  
+ The state of the request after the change was made. Possible values are:
 
-|Value|State|  
-|-|-|  
-|1|Requested|  
-|2|Canceled|  
-|3|Denied|  
-|4|Approved|  
+|Value|State|
+|-|-|
+|1|Requested|
+|2|Canceled|
+|3|Denied|
+|4|Approved|
 
-## Remarks  
+## Remarks
 
-## Requirements  
- Each time a request is updated, an instance of this class is created to track the history of the request.  
+## Requirements
+ Each time a request is updated, an instance of this class is created to track the history of the request.
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_UserApplicationRequest Server WMI Class](../../../develop/reference/apps/sms_userapplicationrequest-server-wmi-class.md)

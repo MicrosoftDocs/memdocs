@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Import Configuration Manager console extensions
@@ -20,14 +20,14 @@ ms.reviewer: mstewart,aaroncz
 
 Starting in Configuration Manager 2103, you can import console extensions to be used in your environment. These extensions show up under the **Console extensions** node. Importing and just having extensions in the console doesn't make them immediately available. An administrator still has to approve the extension for the site and enable notifications. Then console users can install the extension to their local console. For more information about managing and installing console extensions, see [Manage Configuration Manager console extensions](admin-console-extensions.md).
 
-Based on the version of Configuration Manager you're running, different import options are available. Initially, only signed extensions could be imported through the administration service. Support for importing unsigned extensions was added later. Then a wizard that could import both signed and unsigned extensions for you without having to run a script was introduced in version 2111.  
+Based on the version of Configuration Manager you're running, different import options are available. Initially, only signed extensions could be imported through the administration service. Support for importing unsigned extensions was added later. Then a wizard that could import both signed and unsigned extensions for you without having to run a script was introduced in version 2111.
 
 
 |Configuration Manager version| 2103| 2107 | 2111 or later|
 |---|---|---|---|
 |Import a signed extension| Yes | Yes | Yes |
 |Import an unsigned extension| No | Yes, when you [allow unsigned](#bkmk_allow-unsigned) | Yes, when you [allow unsigned](#bkmk_allow-unsigned)|
-|Import from the [administration service](../../../develop/adminservice/usage.md) with a PowerShell script| Yes, signed extensions only | Yes | Yes | 
+|Import from the [administration service](../../../develop/adminservice/usage.md) with a PowerShell script| Yes, signed extensions only | Yes | Yes |
 |Import from the **Import Console Extension** wizard | No | No | Yes|
 
 ## How to import console extensions
@@ -52,7 +52,7 @@ When you have an extension packaged in a signed `.cab` file, you can import it i
 
    - `$adminServiceProvider` - The top-level SMSProvider server where the administration service is installed
    - `$cabFilePath` - Path to the extension's signed `.cab` file
- 
+
  ```powershell
 $adminServiceProvider = "SMSProviderServer.contoso.com"
 $cabFilePath = "C:\Testing\MyExtension.cab"
@@ -61,20 +61,20 @@ $cabFileName = (Get-Item -Path $cabFilePath).Name
 $Data = Get-Content $cabFilePath
 $Bytes = [System.IO.File]::ReadAllBytes($cabFilePath)
 $base64Content = [Convert]::ToBase64String($Bytes)
-    
+
     $Headers = @{
         "Content-Type" = "Application/json"
     }
-    
+
     $Body = @{
                 CabFile = @{
                     FileName = $cabFileName
                     FileContent = $base64Content
                 }
             } | ConvertTo-Json
-    
+
     $result = Invoke-WebRequest -Method Post -Uri $adminServiceURL -Body $Body -Headers $Headers -UseDefaultCredentials
-    
+
 if ($result.StatusCode -eq 200) {Write-Host "$cabFileName was published successfully."}
 else {Write-Host "$cabFileName publish failed. Review AdminService.log for more information."}
 ```
@@ -128,7 +128,7 @@ Starting in version 2111, you can use the **Import Console Extension** wizard to
 1. If needed, select the option for **Allow extension to be unsigned**.
 1. Select **Next** to review the import summary, then complete the wizard to import the extension.
 
-> [!Note] 
+> [!Note]
 > To import unsigned extensions, the **Hierarchy approved console extensions can be unsigned** option needs to be enabled in the **Hierarchy Settings**. For more information, see [Allow unsigned hierarchy approved console extensions](#bkmk_allow-unsigned).
 
 

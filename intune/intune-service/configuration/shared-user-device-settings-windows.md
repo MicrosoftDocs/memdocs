@@ -6,8 +6,8 @@ description: Add and use Windows 10/11 to configure devices that are shared, or 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 04/15/2024
+manager: laurawi
+ms.date: 04/28/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -97,7 +97,11 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
   - **Enabled**: Uses the recommended settings for devices used in schools, which are more restrictive.
   - **Disabled**: The default and recommended education policies aren't used.
 
-  For more information on what the education policies do, go to [Windows configuration recommendations for education customers](/education/windows/configure-windows-for-education).
+  To learn more, see:
+
+  - [Shared PC technical reference - SetEDUPolicy](/windows/configuration/shared-pc/shared-pc-technical#setedupolicy)
+  - [SetEduPolicies CSP](/windows/client-management/mdm/sharedpc-csp#setedupolicies)
+  - [Common Education device restrictions](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions)
 
 > [!TIP]
 > [Set up a shared or guest PC](/windows/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows client feature, including concepts and group policies that can be set in shared mode.

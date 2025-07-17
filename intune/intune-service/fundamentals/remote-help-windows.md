@@ -7,8 +7,8 @@ description: Use the Remote Help app to provide remote assistance to authenticat
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
-ms.date: 03/18/2025
+manager: laurawi
+ms.date: 04/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -244,7 +244,10 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. If a helper performs elevated actions on a user's device and the sharer ends the session, at the end of the session the sharer is automatically signed out.
+> [!NOTE]
+> When the `EnableSecureCredentialPrompting` policy is enabled, it blocks the elevation process during Remote Help sessions. To allow elevation, disable this policy.  [Learn more.](/windows/client-management/mdm/policy-csp-admx-credui#enablesecurecredentialprompting)
+
+6. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. If a helper performs elevated actions on a user's device and the sharer ends the session, at the end of the session the sharer is automatically signed out.
 
 #### Provide help on an unenrolled device
 
@@ -259,7 +262,7 @@ After the sharer enters the security code, as the helper you'll see information 
 Now you'll be in a session with the user with the same experience and procedure outlined in the section [Provide help](#provide-help).
 
 > [!IMPORTANT]
-> During a Remote Help session, when a helper has the Elevation permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for a non-admin sharer, a button will appear on the helper's Remote Help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. When the sharer ends the Remote Help session, they will be shown a dialog box that will warn them that if they continue, they will be logged off. If the helper ends the session, the sharer will not be logged off.
+> During a Remote Help session, when a helper has the Elevation permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for a non-admin sharer, a button will appear on the helper's Remote Help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. When the sharer ends the Remote Help session, they will be shown a dialog box that will warn them that if they continue, they will be logged off. If the helper ends the session, the sharer will not be logged off.
 
 #### Provide help on an AVD
 
@@ -347,6 +350,19 @@ Use the `Disconnect-MgGraph` command to sign out.
 ```powershell
 Disconnect-MgGraph
 ```
+
+### Building a Conditional Access policy
+
+After the Remote Help service principal is created, learn more on how to set up a [conditional access policy.](/entra/identity/conditional-access/concept-conditional-access-policies)
+
+To apply conditional access policies to Remote Help, follow these steps:
+
+1. Navigate to the conditional access policy that you created.
+2. Select **Target resources**
+     1. Select **Resources (formerly cloud apps)** to specify what this policy applies to.
+     2. Select **Exclude**.
+     3. Select **Select resources**.
+     4. Under **Select**, check the **RemoteAssistanceService** with the app ID of 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
 
 ## Languages Supported
 

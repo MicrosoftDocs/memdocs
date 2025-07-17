@@ -23,6 +23,10 @@ landingContent:
         links:
           - text: KB 31909343 Summary of changes in 2503
             url: 2503/31909343.md
+          - text: KB 32480179 Configuration Manager 2503 early update ring
+            url: 2503/32480179.md
+          - text: KB 33177653 Azure for US Government Update
+            url: 2503/33177653.md
   - title: Configuration Manager 2409
     linkLists:
       - linkListType: overview
@@ -33,6 +37,8 @@ landingContent:
             url: 2409/30833053.md
           - text: KB 30385346 Update rollup for Configuration Manager version 2409
             url: 2409/30385346.md
+          - text: KB 33177653 Azure for US Government Update
+            url: 2503/33177653.md
   - title: Configuration Manager 2403
     linkLists:
       - linkListType: overview
@@ -45,6 +51,8 @@ landingContent:
             url: 2403/28458746.md
           - text: KB 28204160 Update rollup for Configuration Manager version 2403
             url: 2403/28204160.md
+          - text: KB 33177653 Azure for US Government Update
+            url: 2503/33177653.md
   - title: Configuration Manager 2309
     linkLists:
       - linkListType: overview

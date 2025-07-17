@@ -12,26 +12,26 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ITSEnvClass::Create Method
-In Configuration Manager, the `Create` method creates an operating system deployment task sequence environment.  
+In Configuration Manager, the `Create` method creates an operating system deployment task sequence environment.
 
-## Syntax  
+## Syntax
 
-```  
-[IDL]  
-HRESULT Create();  
-```  
+```
+[IDL]
+HRESULT Create();
+```
 
-#### Parameters  
- None.  
+#### Parameters
+ None.
 
-## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following value.  
+## Return Values
+ An `HRESULT` code. Possible values include, but are not limited to, the following value.
 
- S_OK  
- The method succeeded.  
+ S_OK
+ The method succeeded.
 
-## See Also  
+## See Also
  [ITSEnvClass Interface](../../../../../develop/reference/core/clients/client-classes/itsenvclass-interface.md)
