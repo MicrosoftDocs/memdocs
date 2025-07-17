@@ -95,7 +95,7 @@ The following are a few examples of wildcard use for a Visual Studio setup file 
 - File path:  
   - `C:\Users\*\Downloads\`
 
-For more information see [Use variables in elevation rules](../protect/epm-policies.md#use-variables-in-elevation-rules) in Configure policies for Endpoint Privilege Management.
+For more information, see [Use variables in elevation rules](../protect/epm-policies.md#use-variables-in-elevation-rules) in Configure policies for Endpoint Privilege Management.
 
 ### Device configuration
 
@@ -121,7 +121,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 **Microsoft Edge**:
 
-- The Microsoft Edge category is updated with new settings. Learn more about available macOS Edge settings at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
+- The Microsoft Edge category is updated with new settings. Learn more about available macOS settings for Microsoft Edge  at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
 
 ### Device management
 
@@ -144,8 +144,8 @@ For more information, see [device cleanup rules](../remote-actions/devices-wipe.
 We’ve added support to the macOS automated device enrollment (ADE) profiles to configure newly enrolled macOS devices that run macOS 12 or later, with both a local administrator and local user account, along with support for the Microsoft Local Admin Password Solution (LAPS).
  
 With this support:  
-- You can use macOS automated device enrollment (ADE) profiles to configure the local administrator and user accounts for a device. When configured, this capability applies to all new macOS device enrollments as well as device re-enrollments assigned to that enrollment profile.
-- Intune creates a randomized, unique, and secure password for the device’s admin account. It is 15 alphanumeric characters.
+- You can use macOS automated device enrollment (ADE) profiles to configure the local administrator and user accounts for a device. When configured, this capability applies to all new macOS device enrollments and device re-enrollments assigned to that enrollment profile.
+- Intune creates a randomized, unique, and secure password for the device’s admin account. It's 15 alphanumeric characters.
 - Intune automatically rotates the password every six months by default.
 - Previously enrolled devices aren’t affected unless they re-enroll with Intune through an applicable ADE profile.
 
@@ -164,7 +164,7 @@ For account creation, the following variables are supported by the profile:
 
 To support LAPS:  
 - We’ve added two new role-based access control permissions for *Enrollment program* that can grant an administrative account permission to view a managed devices password, and to rotate that password.
-- By default, these permissions are not part of any built-in Intune RBAC role, and must be explicitly assigned to admins through custom roles.
+- By default, these permissions aren't part of any built-in Intune RBAC role, and must be explicitly assigned to admins through custom roles.
 
 To learn about all the details for this new capability, see [Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune](../enrollment/macos-laps.md).
 
@@ -192,7 +192,7 @@ The following Apple devices support this new report:
 - iPadOS 17 and later
 - macOS 14 and later
 
-Some of the details that are available include, but are not limited to:  
+Some of the details that are available include, but aren't limited to:  
 - Pending OS update information such as OS and build version, and its status on the device.
 - Current OS information for a device.
 - Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM.
