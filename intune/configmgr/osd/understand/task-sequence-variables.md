@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 04/08/2022
+ms.date: 07/17/2025
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
@@ -10,7 +10,7 @@ author: bhuney
 ms.author: brianhun
 manager: averyspa
 ms.localizationpriority: medium
-ms.reviewer: mstewart
+ms.reviewer: frankroj.mstewart
 ms.collection: tier3
 ---
 
@@ -1632,11 +1632,12 @@ Specifies how a task sequence associates users with the destination computer. Se
 - **Disabled**: The task sequence doesn't associate users with the destination computer when it deploys the OS.
 
 > [!NOTE]
-> When setting this variable, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
-> 
-> If the values do not match, then device affinity will not be set.
 >
-> For more information see [Associate users with a destination computer in Configuration Manager](../get-started/associate-users-with-a-destination-computer.md).
+> When setting the **SMSTSAssignUsersMode* variable, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
+> 
+> If the values doesn't match, then device affinity isn'te set.
+>
+> For more information, see [Associate users with a destination computer in Configuration Manager](../get-started/associate-users-with-a-destination-computer.md).
 
 ### <a name="SMSTSDisableStatusRetry"></a> SMSTSDisableStatusRetry
 
