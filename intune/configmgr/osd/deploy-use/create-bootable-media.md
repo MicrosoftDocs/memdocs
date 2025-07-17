@@ -2,15 +2,15 @@
 title: Create bootable media
 titleSuffix: Configuration Manager
 description: Use bootable media in Configuration Manager to install a new version of Windows or replace a computer.
-ms.date: 12/14/2023
+ms.date: 07/17/2025
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.localizationpriority: medium
-ms.reviewer: mstewart
+ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 
@@ -154,6 +154,14 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
         - **Allow user device affinity pending administrator approval**: The media associates users with the destination computer after approval is granted. This functionality is based on the scope of the task sequence that deploys the OS. In this scenario, the task sequence creates a relationship between the specified users and the destination computer. It then waits for approval from an administrative user before it deploys the OS.
 
         - **Do not allow user device affinity**: The media doesn't associate users with the destination computer. In this scenario, the task sequence doesn't associate users with the destination computer when it deploys the OS.
+
+        > [!NOTE]
+        >
+        > When setting the **SMSTSAssignUsersMode* variable, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
+        > 
+        > If the values don't match, then device affinity isn't set.
+        > 
+        > For more information, see [Task sequence variables](../understand/task-sequence-variables.md#SMSTSAssignUsersMode).
 
 1. On the **Boot image** page, specify the following options:
 
