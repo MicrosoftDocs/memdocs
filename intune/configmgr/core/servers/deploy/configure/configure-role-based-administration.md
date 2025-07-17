@@ -2,7 +2,7 @@
 title: Configure role-based administration
 titleSuffix: Configuration Manager
 description: Combine security roles, security scopes, and assigned collections to define the administrative scope for each administrative user.
-ms.date: 12/21/2021
+ms.date: 07/17/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.author: brianhun
 manager: averyspa
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart, frankroj
+ms.reviewer: mstewart,frankroj
 ---
 
 # Configure role-based administration for Configuration Manager
@@ -150,11 +150,12 @@ An administrative user can't use the **Delete** or **Modify** permissions on a c
 To grant individuals or members of a security group access to manage Configuration Manager, create an administrative user. Specify a Windows account of the user or user group. Assign each administrative user to at least one security role and one security scope. You can also assign collections to limit the administrative scope of the user or group.
 
 > [!NOTE]
-> If the administrative user is a member of the **Protected Users** global security group, they will only be able to run the console for 4 hours at a time. After 4 hours, the console will automatically close, losing any unsaved work in progress, as their kerberos authorization will have expired, and can not be renewed.
 >
-> Members of the **Protected Users** security group should monitor their time in the console and save/close any work in progress before 4 hours, then re-launch the console to continue working.
+> If the administrative user is a member of the **Protected Users** global security group, they can only run the console for 4 hours at a time. After 4 hours, their kerberos authorization expires and can't  be renewed. The console automatically closes and any unsaved work in progress is lost.
 >
-> For more information regarding the **Protected Users** security group, see [Protected Users security group](/windows-server/security/credentials-protection-and-management/protected-users-security-group), and [Guidance about how to configure protected accounts](/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
+> Members of the **Protected Users** security group should monitor their time in the console and save or close any work in progress before 4 hours. After closing the console, re-launch it to continue working.
+>
+> For more information regarding the **Protected Users** security group, see [Protected Users security group](/windows-server/security/credentials-protection-and-management/protected-users-security-group) and [Guidance about how to configure protected accounts](/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
 
 ### How to create a new administrative user
 
