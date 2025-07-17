@@ -7,7 +7,7 @@ keywords:
 author: laurawi
 ms.author: brenduns
 manager: laurawi
-ms.date: 06/27/2025
+ms.date: 07/23/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -71,14 +71,6 @@ We're adding support to deploy Endpoint Privilege Management (EPM) policies to u
 
 For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../protect/epm-overview.md).
 
-
-### Endpoint Privilege Management support for wildcards in elevation rules<!-- 30290730 -->
-
-Endpoint Privilege Management (EPM) will soon support the use of wildcards when defining elevation rules. Wildcards allow for more flexible rule creation with broader matching capabilities, enabling file elevations for trusted files that have names that might change with subsequent revisions.
- 
-For example, you'll be able to create a rule for a Visual Studio setup file called *VSCodeUserSetup-arm64-1.99.2.exe* using wildcards to accommodate future revisions. Several wildcard forms can be used, including `VSCodeUserSetup*`, `VSCodeUserSetup-arm64-*`, or `VSCodeUserSetup-?????-1.??.?.exe`, where an asterisk represents a string, and question marks represent single characters.
-
-
 <!-- ***********************************************-->
 
 ## App management
@@ -93,35 +85,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device configuration
-
-### New settings available in the Apple settings catalog <!-- 33064192 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
-
-#### iOS/iPadOS
-
-**Cellular Private Network**:
-
-- Cellular Data Preferred
-- CSG Network Identifier
-- Data Set Name
-- Enable NR Standalone
-- Geofences
-- Network Identifier
-- Version Number
-
-#### macOS
-
-**Authentication > Extensible Single Sign On Kerberos**:
-
-- Allow Platform SSO Auth Fallback
-
-**Microsoft Edge**:
-
-- The Microsoft Edge category is updated with new settings. Learn more about available macOS Edge settings at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
+<!-- ## Device configuration -->
 
 
 <!-- *********************************************** -->
@@ -159,46 +123,9 @@ Intune *access policies* help protect against a compromised administrative accou
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
-
-We're adding a feature that allows a customer to:
-
-- Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
-- Configure a different RBAC permission and assign the permission to different RBAC roles
-
-Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
-
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
-
 <!-- *********************************************** -->
 
 ## Device security
-
-### macOS support for local administrator account configuration LAPS and password solution<!-- 25385731 -->
-
-We’re working on adding Intune support for macOS local administrator account configuration during ADE (automated device enrollment) enrollment, and macOS support for Microsoft Local Admin Password Solution (LAPS).
-
-With the local admin account configuration support:  
-- You’ll be able to use macOS automated device enrollment (ADE) profiles to configure the local and standard administrator accounts for a device. When configured, this capability applies to all new macOS device enrollments as well as device re-enrollments.
-- Intune automatically creates a randomized, unique, and secure password for the device’s admin account. That password is then automatically rotated every six months.
-- Previously enrolled devices won’t be affected unless or until they re-enroll with Intune if these settings are configured.
-- The following variables will be supported for the fullname and username account settings:  
-  - {{username}}
-  - {{serialNumber}}
-  - {{partialupn}}
-  - {{managedDeviceName}}
-
-With the LAPS support:  
-- For custom RBAC roles: Permissions to view and manage the admin password will require an admin be assigned new Intune role-based access control permissions for Enrollment program.
-- Admins with sufficient permissions will be able to view and manually rotate the password of devices that enrolled with the local admin account configuration through macOS ADE.
-
-Applies to:
-
-- macOS
-
-For more information about this support for macOS, see the following in the Apple developer documentation:
-- [Account Configuration | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/account_configuration)
-- [Set the Local Administrator Password | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/set_the_local_administrator_password)
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
@@ -220,22 +147,6 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 ## Monitor and troubleshoot
-
-### Declarative Apple software update operational report<!-- 25207078 -->
-
-You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
-
-- Pending OS update information such as OS and build version, and its status on the device
-- Current OS information for a device, including Rapid Security Responses
-- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM
-- Information about the latest public update made available by Apple
- 
-This new report will be available through the *Devices* > Select a device > *Monitor* node of the admin center.
- 
-Applies to:
- 
-- iOS/iPadOS
-- macOS
 
 ### Declarative Apple software update reports<!-- 31557946 -->
 

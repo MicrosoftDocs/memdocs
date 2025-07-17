@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/24/2025
+ms.date: 07/23/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
