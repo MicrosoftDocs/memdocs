@@ -200,7 +200,7 @@ Some of the details that are available include, but aren't limited to:
 
 Finally, with the addition of this new report, the previously available macOS per-device **Software updates** report is now deprecated. While it remains available in the admin center while viewing a device, and can still be used, it will be remove from Intune with a future update. See [Support tip: Move to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/IntuneCustomerSuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/443217).
 
-For more information about this new report, see [Use the per-device declarative Apple software update reports in Microsoft Intune](/protect/software-update-report-apple-per-device).
+For more information about this new report, see [Use the per-device declarative Apple software update reports in Microsoft Intune](../protect/software-update-report-apple-per-device.md).
 
 ## Week of July 14, 2025
 
