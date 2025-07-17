@@ -41,27 +41,6 @@ Administrators can change the level of data that's collected by going to the **U
 For more information about usage data levels and settings, see [Diagnostics and usage data](../diagnostics/diagnostics-and-usage-data.md).
 
 
-
-## Log Analytics Connector
-
-The Log Analytics Connector syncs data, such as collections, from Configuration Manager to the Azure cloud service. The Azure subscription ID and secret key are stored in the Configuration Manager database when an admin configures the feature. Both the Microsoft Entra client secret and the Azure workspace shared key are stored in the on-premises Configuration Manager database. All communications between Configuration Manager and Azure use HTTPS. No additional information about the collections is provided to Microsoft outside of randomized diagnostics and usage data.
-
-For more information about the information that Log Analytics collects, see [Log analytics data security](/azure/log-analytics/log-analytics-data-security).
-
-
-
-## Asset Intelligence
-
-Asset Intelligence lets administrators define, track, and proactively manage conformity with configuration standards. Metering and reporting on the deployment and use of both physical and virtual applications helps organizations make better business decisions about software licensing and maintain compliance with licensing agreements. After collecting usage data from Configuration Manager clients, you can use different features to view the data, including collections, queries, and reporting.
-
-During each synchronization, a catalog of known software is downloaded from Microsoft. You can choose to send Microsoft information about uncategorized software titles that are discovered within your organization to be researched and added to the catalog. Prior to uploading this information, a dialog box shows data that's going to be uploaded. Uploaded data can't be recalled. Asset Intelligence doesn't send information about users and computers or license usage to Microsoft.
-
-After a software title is uploaded, Microsoft researchers identify, categorize, and then make that knowledge available to all other customers who use this feature and other consumers of the catalog. Any uploaded software title becomes public. The application and its categorization become part of the catalog and then can be downloaded to other consumers of the catalog. Before you configure Asset Intelligence data collection and decide whether to submit information to Microsoft, consider the privacy requirements of your organization.
-
-Asset Intelligence isn't enabled by default in Configuration Manager. Uploading uncategorized titles never occurs automatically, and the system isn't designed to automate this task. You must manually select and approve the upload of each software title.
-
-
-
 ## Endpoint Protection
 
 Microsoft Cloud Protection Service was formerly known as Microsoft Active Protection Service or MAPS.
@@ -83,16 +62,3 @@ Microsoft Cloud Protection Service reports are used to improve Microsoft softwar
 Microsoft Cloud Protection Service does not intentionally collect personal information. To the extent that Microsoft Cloud Protection Service collects any personal information, Microsoft does not use the information to identify you or contact you.
 
 For more information, see [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).
-
-
-
-## Site Hierarchy – Geographical View with Bing Maps
-
-> [!IMPORTANT]
-> Starting in August 2020, this feature is deprecated. Use the **Hierarchy Diagram** option.<!--8116777-->
-
-In the Configuration Manager console, go to the **Monitoring** workspace, select the **Site Hierarchy** node, and switch to the **Geographical View**. This view lets you use maps that Microsoft Bing Maps provides to view your Configuration Manager physical server topology. To enable this feature, location information that you provide is sent from your server to the Bing Maps Web service.
-
-Microsoft uses the information to operate and improve Microsoft Bing Maps and other Microsoft sites and services. For more information, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
-
-You can choose not to use the Geographical View for the Site Hierarchy. The default Hierarchy Diagram view lets you see the hierarchy and doesn't use the Bing Maps service.
