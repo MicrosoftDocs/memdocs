@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/02/2025
+ms.date: 07/16/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,35 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of July 14, 2025
+
+### Device management  
+
+#### Experience Microsoft Copilot in Intune<!-- 29339619, 31192897 -->
+
+You can now use Microsoft Copilot in Intune to explore your Intune data using natural language, take action on the results, manage policies and settings, understand your security posture, troubleshoot device issues, and view insights about enrolled Surface devices.
+
+- **Explore your Intune data** - Use natural language to explore your Intune data and take action based on the results. Admins can run queries against Intune resource data, including questions about devices, apps, policies, updates, and compliance. When a query runs, a Copilot summary helps you understand the results and offers suggestions. You can add devices or users from the query results to a group to target apps and policies. There are also example queries that you can filter to find an example that best matches your request or use to help you create your own request.</br></br>Data coverage, querying capabilities, and actionability will evolve over time as we make improvements to how you explore your data.</br></br>To learn more about this feature, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md)
+
+- **Conversational chat experience** - Use the Copilot in Intune chat experience to interact with your data using natural language to manage tasks, get insights, and troubleshoot issues. Here’s what you can do with the chat experience:</br></br>
+  - Policy and setting management: Use Copilot in Intune to summarize an existing policy or learn more about individual policy settings and recommended values.
+  - Device details and troubleshooting: Use Copilot in Intune to get device details and troubleshoot a device to get device-specific information like the installed apps, group memberships and more.
+  - Device Query: Use Copilot in Intune to help you create Kusto Query Language (KQL) queries to run when using device query in Intune.
+  - Endpoint Privilege Management (EPM): Use Copilot in Intune to help identify potential elevation risks from within the EPM support approved workflow.
+
+- **Microsoft Copilot in Surface Management Portal** - Microsoft Copilot in Intune includes the Surface Management Portal, a workspace in the Intune admin center that brings together vital data and insights about enrolled Surface devices, all in one place.</br></br>
+  - Gain insights into device compliance, support activity, applicable warranty or protection plan coverage, and carbon emission estimates.
+  - Monitor the status of each device, including applicable warranty or protection plan expirations and active support requests.
+  - Centralize Surface-specific device administration in a single environment.
+  - Automatically access comprehensive information from your Intune-enrolled Surface devices, which flows into the Surface Management Portal when users sign in for the first time.
+
+  To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](../copilot/security-copilot-surface-portal.md)
+
+### Monitor and troubleshoot  
+
+#### Export device query results to CSV file <!-- 27967896 -->
+Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../analytics/device-query-multiple-devices.md#how-to-use-device-query-for-multiple-devices).  
+
 ## Week of June 23, 2025 (Service release 2506)
 
 ### App management
@@ -99,7 +128,7 @@ Applies to:
 
 Starting with Android 16, Android stops enforcing screen orientation on devices with 600dp and larger display settings. This change impacts the Managed Home Screen (MHS) on devices with larger form factors, like tablets.
 
-On these Android 16 devices, orientation is determined by the device’s orientation setting, not the MHS settings you configure.
+On these Android 16 devices, orientation is determined by the device's orientation setting, not the MHS settings you configure.
 
 To learn more about Android 16 changes, go to [Behavior changes: Apps targeting Android 16 or higher](https://developer.android.com/about/versions/16/behavior-changes-16) (opens Android website).
 
@@ -162,13 +191,17 @@ Applies to:
 
 ### Device management
 
-#### New reporting system for improved performance and data consistency<!-- 31823383 -->
+#### New reporting system for improved performance and data consistency <!-- 31823383, 33812267 -->
 
 Microsoft Intune is rolling out the new Policy Reporting Service (PRS) V3. The new system brings faster report generation, improved reliability, and better data consistency.
- 
+
 In the first phase, some high-traffic compliance and device configuration reports are transitioning to the new system.
- 
+
 Users will notice quicker updates in the Intune admin center and fewer issues with stale data. No action is required from users, as your reports transition automatically.
+
+With (PRS) V3, device reports only update when a device checks in. This is an intentional change from previous versions.
+
+If a policy is removed but the device hasn't checked in, the report continues to show the last known status. The policy is removed during the next check-in, at which point the report is updated. This behavior improves accuracy but may differ from what customers experienced with (PRS) V1.
 
 To learn more about the Intune reports you can use, see [Intune reports](reports.md).
 
@@ -230,9 +263,9 @@ Applies to:
 
 #### Vulnerability Remediation Agent for Intune (public preview)<!-- 33475311 -->
  
-The Vulnerability Remediation Agent is currently in a limited public preview and available to only a select group of customers. If you’re interested in gaining access or would like to learn more, please reach out to your sales team for further details and next steps.
+The Vulnerability Remediation Agent is currently in a limited public preview and available to only a select group of customers. If you're interested in gaining access or would like to learn more, please reach out to your sales team for further details and next steps.
 
-When run, this agent uses data from Microsoft Defender Vulnerability Management to identify and then provide remediation guidance for vulnerabilities on your managed devices. You run and access the agent and view its results from within the Intune admin center where you’ll see suggestions prioritized by the agent for remediation. Each suggestion includes key information like associated CVEs, severity, exploitability, affected systems, organizational exposure, business impact, and remediation guidance.
+When run, this agent uses data from Microsoft Defender Vulnerability Management to identify and then provide remediation guidance for vulnerabilities on your managed devices. You run and access the agent and view its results from within the Intune admin center where you'll see suggestions prioritized by the agent for remediation. Each suggestion includes key information like associated CVEs, severity, exploitability, affected systems, organizational exposure, business impact, and remediation guidance.
  
 This information empowers you with a current assessment of potential risk to your environment and guidance to help you decide which risk to address first.
 
@@ -670,7 +703,7 @@ For more information, see:
 
 #### Copilot assistant for device query<!-- 26933762 -->
 
-You can now use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**. For more information, see [Query with Copilot in device query](../copilot/copilot-intune-overview.md#query-with-copilot-in-device-query).
+You can now use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**. For more information, see [Query with Copilot in device query](../copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
 ### Intune apps
 
