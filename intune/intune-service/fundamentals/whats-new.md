@@ -41,7 +41,7 @@ You can also read:
 - Information about [how Intune service updates are released](intune-service-servicing-information.md)
 
 > [!NOTE]
-> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) can take up to three days to roll out and will be in the following order:
+> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) can take up to three days to roll out and is in the following order:
 >
 > - Day 1: Asia Pacific (APAC)
 > - Day 2: Europe, Middle East, Africa (EMEA)
@@ -85,7 +85,7 @@ You can now use wildcards in the file name and file path of elevation rules you 
 
 For file names, use of wildcards is supported only in the file name and not for the file extension. You can use a question mark `?` to replace a single character at any point in the file name and an asterisk `*` to replace a string of characters at the end of the file name.
 
-The following are a few examples of wildcard use for a Visual Studio setup file called `VSCodeUserSetup-arm64-1.99.2.exe` that's found in `C:\Users\<username>\Downloads\`:
+The following are a few examples of wildcard use for a Visual Studio setup file called `VSCodeUserSetup-arm64-1.99.2.exe` found in `C:\Users\<username>\Downloads\`:
 
 - File name:  
   - `VSCodeUserSetup*.exe`
@@ -96,6 +96,16 @@ The following are a few examples of wildcard use for a Visual Studio setup file 
   - `C:\Users\*\Downloads\`
 
 For more information, see [Use variables in elevation rules](../protect/epm-policies.md#use-variables-in-elevation-rules) in Configure policies for Endpoint Privilege Management.
+
+### App management
+
+#### Newly available OEMConfig apps in Intune <!-- 5306739 -->
+
+The following OEMConfig app is now available in Intune for Android Enterprise:
+
+- RugGear
+
+For more information about OEMConfig, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
 ### Device configuration
 
