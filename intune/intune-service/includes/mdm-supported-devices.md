@@ -51,7 +51,6 @@ ms.localizationpriority: high
 ### Linux
 
 - Ubuntu Desktop 22.04 LTS with a GNOME graphical desktop environment
-- Ubuntu Desktop 20.04 LTS with a GNOME graphical desktop environment
 - Ubuntu LTS, version 24.04
 - RedHat Enterprise Linux 8  
 - RedHat Enterprise Linux 9

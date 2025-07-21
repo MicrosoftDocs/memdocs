@@ -37,7 +37,7 @@ This feature applies to:
 
 - Windows 10/11 (excluding Windows 10/11 Home)  
 - Linux 
-  - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS  
+  - Ubuntu Desktop, version 22.04 LTS and later
   - RedHat Enterprise Linux 8  
   - RedHat Enterprise Linux 9  
 

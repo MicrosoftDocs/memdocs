@@ -37,7 +37,7 @@ You include the JSON file in a compliance policy when you configure a policy to 
 
 This feature applies to:
 
-- Linux – Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
+- Linux – Ubuntu Desktop, version 22.04 LTS and later 
 - Windows 10/11
 
 A correctly formatted JSON file must include the following information:

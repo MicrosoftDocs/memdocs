@@ -58,7 +58,7 @@ To use device compliance policies, be sure you:
   - Android AOSP
   - Android Enterprise
   - iOS
-  - Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
+  - Linux - Ubuntu Desktop, version 22.04 LTS and later
   - macOS
   - Windows 10/11
 
@@ -70,7 +70,7 @@ To use device compliance policies, be sure you:
 
 In addition to compliance settings that are built in to Intune, the following platforms support adding custom compliance settings to compliance policies:
 
-- Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
+- Ubuntu Desktop, version 22.04 LTS and later 
 - Windows 10/11
 
 Before you can add custom settings, you must prepare a custom JSON file that defines the settings you want to base your custom compliance on, and a script that runs on devices to detect the settings defined in the JSON.
@@ -89,7 +89,7 @@ For more information about using custom compliance settings, including supported
    - **Android (AOSP)**
    - **Android Enterprise**
    - **iOS/iPadOS**
-   - **Linux** - (Ubuntu Desktop, version 20.04 LTS and 22.04 LTS, RedHat Enterprise Linux 8, or RedHat Enterprise Linux 9) 
+   - **Linux** - (Ubuntu Desktop, version 22.04 LTS and later, RedHat Enterprise Linux 8, or RedHat Enterprise Linux 9) 
    - **macOS**  
    - **Windows 10 and later** 
    - **Windows 8.1 and later**  
@@ -120,7 +120,7 @@ For more information about using custom compliance settings, including supported
    > [!TIP]  
    > This is an optional step that’s supported for the following platforms:  
    >
-   > - Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
+   > - Linux - Ubuntu Desktop, version 22.04 LTS and later 
    > - Windows 10 and later  
    > Before you can add custom settings to a policy, you must have uploaded a detection script to Intune, and have ready a JSON file that defines the settings you want to use for compliance. See [Custom compliance settings](../protect/compliance-use-custom-settings.md).
 
