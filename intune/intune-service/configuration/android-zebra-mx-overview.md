@@ -92,7 +92,7 @@ The Company Portal app requires Device Administrator to manage Android devices. 
 
 If a UI isn't available, use the **DevAdmin Manager** in StageNow to create a profile that manually grants Device Administrator to the Company Portal app.
 
-The following steps provide an overview. For specific details, go to Zebra's documentation. [Set battery swap mode as device administrator](https://zebratechnologies.force.com/s/article/Set-Battery-Swap-Mode-as-Device-Administrator-using-StageNow-Tool) (opens Zebra's website) may be a good resource.
+The following steps provide an overview. For specific details, go to Zebra's documentation. [Set battery swap mode as device administrator](https://supportcommunity.zebra.com/s/article/Set-Battery-Swap-Mode-as-Device-Administrator-using-StageNow-Tool) (opens Zebra's website) may be a good resource.
 
 1. In StageNow, create a profile and select **Xpert Mode**.
 2. Add **DevAdmin Manager** to the profile.
