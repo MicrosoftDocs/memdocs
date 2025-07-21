@@ -137,7 +137,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### Platform support for Device Cleanup rules<!-- 13835920 -->
 
-Using [cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules), you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
+Using [cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules), you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
 
 With this feature, you can:
 
@@ -145,7 +145,7 @@ With this feature, you can:
 - Use the [Audit logs](monitor-audit-logs.md) to see the devices that the device cleanup rules conceal from the Intune reports.
 - Use [role-based access control (RBAC)](role-based-access-control.md) to customize the user roles that can create device cleanup rules.
 
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules).
+For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
 
 ### Device security
 
