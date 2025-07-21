@@ -2,15 +2,15 @@
 title: Create prestaged media
 titleSuffix: Configuration Manager
 description: Use prestaged media in Configuration Manager to simplify deployment of Windows in several scenarios.
-ms.date: 12/14/2023
+ms.date: 07/17/2025
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.localizationpriority: medium
-ms.reviewer: mstewart
+ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 
@@ -126,6 +126,14 @@ The hard drive of the destination computer must be formatted before the prestage
         - **Allow user device affinity pending administrator approval**: The media associates users with the destination computer after approval is granted. This functionality is based on the scope of the task sequence that deploys the OS. In this scenario, the task sequence creates a relationship between the specified users and the destination computer, but waits for approval from an administrative user before the OS is deployed.
 
         - **Do not allow user device affinity**: The media doesn't associate users with the destination computer. In this scenario, the task sequence doesn't associate users with the destination computer when it deploys the OS.
+
+        > [!NOTE]
+        >
+        > When setting user device affinity during a task sequence, the value configured here needs to match the value specified for the **SMSTSAssignUsersMode** variable.
+        > 
+        > If the values don't match, then device affinity isn't set.
+        > 
+        > For more information, see [Task sequence variables](../understand/task-sequence-variables.md#SMSTSAssignUsersMode).
 
 7. On the **Task Sequence** page, select the task sequence that runs on the destination computer. Verify the list of content referenced by the task sequence.
 
