@@ -31,7 +31,7 @@ ms.collection:
 
 To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. Also:
 
-- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in the Office message center.
+- If we anticipate that you need to take action before a change, we'll publish a complementary post in the Office message center.
 - When a feature enters production, whether it's in preview or generally available, the feature description moves from this article to [What's new](whats-new.md).
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
@@ -67,7 +67,7 @@ We’re working on a dashboard for Endpoint Privilege Management (EPM) that will
 
 ### Endpoint Privileged Management support on Azure Virtual Desktop<!-- 26079227 -->
 
-We're adding support to deploy Endpoint Privilege Management (EPM) policies to users on Azure Virtual Desktop (AVD) single-session virtual machines. With this support EPM elevation policies will work on AVD single-session environments.
+We're adding support to deploy Endpoint Privilege Management (EPM) policies to users on Azure Virtual Desktop (AVD) single-session virtual machines. With this support, EPM elevation policies will work on AVD single-session environments.
 
 For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../protect/epm-overview.md).
 
@@ -89,7 +89,7 @@ We're enhancing support for Android Enterprise dedicated devices with two new fe
 
 Offline Mode lets users access designated apps when the device is offline or unable to connect to the network. You can also configure a grace period before requiring users to sign in once connectivity is restored.  
 
-App access without sign in lets users launch specific apps from the MHS sign-in screen-- regardless of network status-- via the MHS top bar. This can be helpful for apps that need to be available immediately, such as help desk or emergency tools.  
+App access without sign in lets users launch specific apps from the MHS sign-in screen--regardless of network status--via the MHS top bar. This can be helpful for apps that need to be available immediately, such as help desk or emergency tools.  
 
 These features are intended for use on dedicated devices enrolled in Microsoft Entra Shared device mode and will be able to be configured via device configuration policy.  
 
@@ -111,7 +111,7 @@ The [Settings Catalog](../configuration/settings-catalog.md) lists all the setti
 
 There's a new **Hide organization name** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, the enterprise name isn't shown on the device, such as lock screen.  
 
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md).  
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).  
 
 Applies to:  
 
@@ -194,7 +194,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 Intune administrators will be able to configure a new feature in public preview called Windows Backup for Organizations. With this feature, you can back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Announcing Windows Backup for Organizations - Windows IT Blog](https://techcommunity.microsoft.com/blog/windows-itpro-blog/announcing-windows-backup-for-organizations/4416659).  
 
 ### New resolution button improves compliance remediation experience<!-- 31370959 -->
-We are improving the Just in Time (JIT) compliance remediation experience for device users in Microsoft Intune. Intune is collaborating with Microsoft Defender to:  
+We're improving the Just in Time (JIT) compliance remediation experience for device users in Microsoft Intune. Intune is collaborating with Microsoft Defender to:  
 
 - Remove user clicks required to view and learn remediation steps.   
 - Add a **Resolve** button to reduce time-to-remediation.  
@@ -237,7 +237,7 @@ For more information on multiple administrative approval, see [Use multiple admi
 We're adding a feature that allows a customer to:
 
 - Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
-- Configure a different RBAC permission and assign the permission to different RBAC roles
+- Configure a different role-based-access-control (RBAC) permission and assign the permission to different RBAC roles
 
 Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
 
@@ -269,7 +269,7 @@ Applies to:
 
 - macOS
 
-For more information about this support for macOS, see the following in the Apple developer documentation:
+For more information about this support for macOS, see the following resources in the Apple developer documentation:
 - [Account Configuration | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/account_configuration)
 - [Set the Local Administrator Password | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/set_the_local_administrator_password)
 
@@ -314,7 +314,7 @@ Applies to:
 
 You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using new Apple software update reports:
 
- - *Apple software update failures report* - With this report you’ll be able to view details about update failures including why the update failed, how many times it has failed, and the timestamp of the last failure.
+ - *Apple software update failures report* - With this report you’ll be able to view details about update failures including why the update failed, how many times it failed, and the timestamp of the last failure.
 - *Apple software updates report* - View details about pending and current software update information across your entire device fleet.
 - *Apple software update summary report* - View a summary of the update installation status for each OS.
 
