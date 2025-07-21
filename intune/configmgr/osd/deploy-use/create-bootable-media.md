@@ -106,7 +106,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
     - If you select **Removable USB drive**, select the drive where you want to store the content.
 
-        - **Format removable USB drive (FAT32) and make bootable**: By default, let Configuration Manager prepare the USB drive. Many newer UEFI devices require a bootable FAT32 partition. However, this format also limits the size of files and overall capacity of the drive. If you've already formatted and configured the removable drive, disable this option.
+        - **Format removable USB drive (FAT32) and make bootable**: By default, let Configuration Manager prepare the USB drive. Many newer UEFI devices require a bootable FAT32 partition. However, this format also limits the size of files and overall capacity of the drive. If the removable drive is already formatted and configured, disable this option.
 
     - If you select **CD/DVD set**, specify the capacity of the media (**Media size**) and the name and path of the output file (**Media file**). The wizard writes the output files to this location. For example: `\\servername\folder\outputfile.iso`
 
@@ -125,16 +125,20 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
         - Configuration Manager writes a text file called `MediaLabel.txt` to the root of the media. By default, the file includes a single line of text: `label=Configuration Manager`. If you customize the label for media, this line uses your custom label instead of the default value.
 
-    - **Include autorun.inf file on media**<!-- 4090666 -->: Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.
+    - **Include autorun.inf file on media**<!-- 4090666 -->: Configuration Manager doesn't add an autorun.inf file by default. Anti-malware products commonly block this file. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.
 
 1. On the **Security** page, specify the following options:
 
-    - **Enable unknown computer support**: Allow the media to deploy an OS to a computer that's not managed by Configuration Manager. There's no record of these computers in the Configuration Manager database. For more information, see [Prepare for unknown computer deployments](../get-started/prepare-for-unknown-computer-deployments.md).
+    - **Enable unknown computer support**: Allow the media to deploy an OS to a computer that Configuration Manager doesn't manage. There's no record of these computers in the Configuration Manager database. For more information, see [Prepare for unknown computer deployments](../get-started/prepare-for-unknown-computer-deployments.md).
 
     - **Protect media with a password**: Enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the bootable media.
 
         > [!IMPORTANT]
-        > As a security best practice, always assign a password to help protect the bootable media. Assigning a password to the media not only prevents someone without the password from running a task sequence when using the media, but it also properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
+        >
+        > As a security best practice, always assign a password to help protect the bootable media. Assigning a password to the media:
+        >
+        > - Prevents someone without the password from running a task sequence when using the media
+        > - Properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
         >
         > Using a password doesn't encrypt the remaining content of the bootable media such as packages. Don't include any sensitive information in task sequence packages such as scripts. Store and implement all sensitive information by using task sequence variables.
 
@@ -157,10 +161,10 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
         > [!NOTE]
         >
-        > When setting the **SMSTSAssignUsersMode* variable, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
-        > 
+        > When setting the **SMSTSAssignUsersMode* variable during a task sequence, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
+        >
         > If the values don't match, then device affinity isn't set.
-        > 
+        >
         > For more information, see [Task sequence variables](../understand/task-sequence-variables.md#SMSTSAssignUsersMode).
 
 1. On the **Boot image** page, specify the following options:
