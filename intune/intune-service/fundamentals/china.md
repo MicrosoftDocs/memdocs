@@ -50,7 +50,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Management of Windows 10 is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
 - Windows Autopilot and Business Store features aren't currently available. As part of the 2409 Intune service release, we announced support for Windows Autopilot Device Preparation policy in Intune operated by 21Vianet in China cloud. For  more information, see [(What's new in Windows Autopilot device preparation | Microsoft Learn](/autopilot/device-preparation/whats-new#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment)
-- Intune operated by 21Vianet supports the Company Portal for Windows app. Use WinGet to download the Company portal package and dependencies and then deploy as a Line-of-Business app via Intune. [Use the WinGet tool to install and manage applications](/windows/package-manager/winget/).
+- Intune operated by 21Vianet supports the Company Portal for Windows app. For more information, see [Download the offline Company Portal app](https://learn.microsoft.com/en-us/intune/intune-service/apps/store-apps-company-portal-app#download-the-offline-company-portal-app)
 - Microsoft Intune Endpoint Analytics and Log Analytics features aren't currently available.
 - Azure Virtual Desktop Windows 10 and Windows 11 multi-session isn't currently supported for 21Vianet.
 - Because Google Mobile Services isn't available in China, customers in Intune operated by 21Vianet can't use features that require Google Mobile Services. These features include:
@@ -64,6 +64,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices are supported for the MTD partners that also support the 21Vianet environment. When you sign in to a 21Vianet tenant, you can see the connectors that are available in that environment.
 - Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices.
 - Intune operated by 21Vianet doesn't support partner device management integration with Jamf for macOS devices.
+- Windows Feature Update, Driver upadate is not available.
 
 ## You control customer data
 
