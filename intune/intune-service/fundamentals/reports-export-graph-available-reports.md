@@ -7,7 +7,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 07/10/2024
+ms.date: 07/21/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -34,17 +34,17 @@ ms.collection:
 Microsoft Intune provides many reports in the Microsoft Intune admin center that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 > [!NOTE]
-> Intune reports that have been migrated to a new [Intune reporting infrastructure](https://techcommunity.microsoft.com/t5/intune-customer-success/new-reporting-framework-coming-to-intune/ba-p/1009553#:~:text=New%20Reporting%20Framework%20Coming%20to%20Intune%20%20,Device%20compliance%20logging%20%203%20more%20rows), will be available for export from a single top-level export Graph API.
+> Intune reports that are migrated to a new [Intune reporting infrastructure](https://techcommunity.microsoft.com/t5/intune-customer-success/new-reporting-framework-coming-to-intune/ba-p/1009553#:~:text=New%20Reporting%20Framework%20Coming%20to%20Intune%20%20,Device%20compliance%20logging%20%203%20more%20rows), are available for export from a single top-level export Graph API.
 >
 > For more information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
-Microsoft Intune will export reports using the following Microsoft Graph API endpoint:
+Microsoft Intune exports reports through the following Microsoft Graph API endpoint:
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 ```
 
-The following table contains the possible values for the `reportName` parameter. These are the currently available reports for export.
+The following table contains the possible values for the `reportName` parameterparameter and the corresponding reports you can export.
 
 | ReportName (Export Parameter) | Associated Report in Microsoft Intune |
 |------------------------------|----------------------------------------|
@@ -52,10 +52,6 @@ The following table contains the possible values for the `reportName` parameter.
 | ADMXSettingsByDeviceByPolicy | Under **Reports** > **Device management** > **Device Configuration** |
 | AllAppsList | Under **Apps** > **All Apps** |
 | AllDeviceCertificates | Under **Devices** > **Monitor** > **Certificates** |
-| AppleDDMDeviceOSUpdateStatus | Under **Devices** > **Monitor** > **By platform** > *select specific platform* |
-| AppleDDMOSUpdateFailures | Under **Devices** > **Monitor** > **By platform** > *select specific platform* |
-| AppleDDMOSVersionReport | Under **Devices** > **Monitor** > **By platform** > *select specific platform* |
-| AppleDDMSoftwareUpdatesSummary | Under **Devices** > **Monitor** > **By platform** > *select specific platform* |
 | AppInstallStatusAggregate | Under **Apps** > **Monitor** > **App install status** |
 | AppInvAggregate | Under **Apps** > **Monitor** > **Discovered apps** > **Export**  |
 | AppInvByDevice | Under **Devices** > **All Devices** > **Device** > **Discovered Apps**  |
@@ -230,7 +226,7 @@ The following table contains the possible values for the `reportName` parameter.
 | WindowsUpdatePerPolicyPerDeviceStatus | Under **Devices** > **Manage updates** > **Windows updates** |
 | WorkFromAnywhereDeviceList | Under **Reports** > **Endpoint analytics** > **Work from anywhere** |
 
-Each of the listed reports is described below.
+The following sections describe each listed report.
 
 ## ActiveMalware
 
@@ -743,12 +739,12 @@ The following table contains the possible output when calling the `ChromeOSDevic
 |     SerialNumber  |
 |     WifiMacAddress  |
 
-To call this report, you'll need a minimum RBAC permission of **Read** for **Managed Devices**. The minimum Microsoft Graph Application required permission is `DeviceManagementManagedDevices.Read.All`.
+To call this report, you need a minimum role-based access control permission of **Read** for **Managed Devices**. The minimum Microsoft Graph Application required permission is `DeviceManagementManagedDevices.Read.All`.
 
 > [!NOTE]
 > The reporting data for this report is updated at a minimum of once per day.
 
-The properties `LastOSUpdateTime` and `LastRebootTime` will only populate in the report when the **OS Update Status** setting is enabled in the Google Admin Console. This setting can be found in the Google Admin Console under **Devices** > **Chrome** **Settings**.
+The properties `LastOSUpdateTime` and `LastRebootTime` only populate in the report when the **OS Update Status** setting is enabled in the Google Admin Console. This setting can be found in the Google Admin Console under **Devices** > **Chrome** **Settings**.
 
 You can filter the `ChromeOSDevices` report using the following properties: 
 - IntuneDeviceId
@@ -763,20 +759,20 @@ You can generate the ChromeOSDevices report using the Microsoft Graph API to mak
 
 | Microsoft Graph API Endpoint | Method | Body examples |
 |---|---|---|
-| `https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs` | POST | The following examples show different types of calls you can make based on the data you need to retrieve. This list is not comprehensive.<ul><li>Return all devices using CSV format:<br>`{ 'reportName': 'ChromeOSDevices', 'format': 'csv' }`</li><li>Return all devices using JSON format:<br>`{ 'reportName': 'ChromeOSDevices', 'format': 'json' }`</li><li>Use a filter:<br>`{ 'reportName': 'ChromeOSDevices', 'filter':'(ChromeOSDeviceStatus eq  'ACTIVE') ', 'format': 'csv' }`</li><li>Select which columns are included in the report:<br>`{ 'reportName': 'ChromeOSDevices', 'select':['IntuneDeviceId','IntuneDeviceName','MostRecentUserEmail']}`</li></ul>  |
+| `https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs` | POST | The following examples show different types of calls you can make based on the data you need to retrieve. This list isn't comprehensive.<ul><li>Return all devices using CSV format:<br>`{ 'reportName': 'ChromeOSDevices', 'format': 'csv' }`</li><li>Return all devices using JSON format:<br>`{ 'reportName': 'ChromeOSDevices', 'format': 'json' }`</li><li>Use a filter:<br>`{ 'reportName': 'ChromeOSDevices', 'filter':'(ChromeOSDeviceStatus eq  'ACTIVE') ', 'format': 'csv' }`</li><li>Select which columns are included in the report:<br>`{ 'reportName': 'ChromeOSDevices', 'select':['IntuneDeviceId','IntuneDeviceName','MostRecentUserEmail']}`</li></ul>  |
 
 ### Check the status of the ChromeOSDevices report
 
-You can check whether the ChromeOSDevices report has completed by using the Microsoft Graph API. 
+You can check whether the ChromeOSDevices report has completed by using the Microsoft Graph API.
 
-| Microsoft Graph API Endpoint | Method | 
+| Microsoft Graph API endpoint | Method |
 |---|---|
-| `https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('id') ` | GET |
+| `https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('id')` | GET |
 
-Use the output from the above call to determine the status of the ChromeOSDevices report. An example call will look similar to the following:
-`https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('ChromeOSDevices_1223a321-4bcd-5432-efg1-0hi9876h1234') `
+Use the output from this call to check the report status. The following example shows a typical request:
+`https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs('ChromeOSDevices_1223a321-4bcd-5432-efg1-0hi9876h1234')`
 
-You can continue to run your call to check the status of the report. When the report shows a status of `complete`, your report is ready to be downloaded.
+Repeat the call until the response includes a status of `complete`. When the report is complete, you can download it.
 
 ### Download the completed ChromeOSDevices report
 
@@ -2278,11 +2274,11 @@ There are no filters for this report.
 ## DevicesWithInventory
 
 > [!NOTE]
-> To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API will allow you to select, to what you will receive back.
+> To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API allows you to select, to what you receive back.
 >
-> The column alias can only be accepted by the select parameter, and can not be accepted by the filter parameter.
+> The column alias can only be accepted by the select parameter, and can’t be accepted by the filter parameter.
 >
-> The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` will only be exported when they are included in the select parameter. These columns will not be exported by default.
+> The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` will only be exported when they're included in the select parameter. These columns won't be exported by default.
 
 The following table contains the possible output when calling the `DevicesWithInventory` report:
 
@@ -3564,7 +3560,7 @@ The following table contains the possible output when calling the `FeatureUpdate
 |     PolicyId  |
 |     PolicyName  |
 
-You cannot filter this report.
+You can't filter this report.
 
 ## FeatureUpdatePolicyStatusSummary
 
