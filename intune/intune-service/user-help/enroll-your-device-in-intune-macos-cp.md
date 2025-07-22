@@ -7,7 +7,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/08/2024
+ms.date: 07/22/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -38,6 +38,18 @@ During initial setup, the Company Portal app requires you to sign in and authent
 
 For more information about the Company Portal app for macOS, see [What happens when I install the Company Portal app and enroll my device?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md)     
 
+## Enrollment profile details 
+An enrollment profile is downloaded and saved to disk in `tmp/profile.mobileconfig`. You can view and finish installing the enrollment profile on your device in the Apple system settings app. The profile contains the following information:  
+
+- Verification status: A valid profile says **Verified**.
+- Description: The management profile description says **Install this profile to get access to your company apps**. 
+- Signed: 
+- Received: States the day, month, year, and time that the enrollment profile was received on the device.
+- Settings:
+- Profile service enrollment description: A valid profile says **Encrypted Profile Service**.
+
+  Before you install the enrollment profile, it's important to review the information in the enrollment profile to verify that it's from Microsoft. 
+
 ## Before you begin  
 Your device must be running macOS 11 or later.   
 
@@ -65,7 +77,7 @@ Your device must be running macOS 11 or later.
 1. On the **Install management profile** page, select **Download profile**.  
 1. Your macOS system settings open in a new window. The management profile you downloaded is shown.  
     1. Select the profile to open it.  
-    1. Select **Install...**  
+    1. Review the detaila of the enrollment profile. Select **Install...**  
     1. When asked to confirm installation, select **Install**.   
     1. Enter your device password to allow the profile to enroll your device. Then select **Enroll**.  
 1. Wait while the management profile installs and then enrolls your device. 
