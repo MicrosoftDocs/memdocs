@@ -70,7 +70,7 @@ The following compliance partners are supported as generally available:
 - Mosyle Fuse
 - Mosyle Onek12
 - SOTI MobiControl
-- VMware Workspace ONE UEM (formerly AirWatch)
+- Omnissa Workspace ONE UEM (formerly AirWatch)
 
 > [!NOTE]
 > If you offer an MDM product and would like to onboard as a device compliance partner, fill out this Form: [Intune partner compliance onboarding.](https://aka.ms/IntunePartnerComplianceOnboarding)
@@ -99,7 +99,7 @@ Enable support for a device compliance partner to use compliance state data from
 
 3. On the **Basics** page, expand the **Compliance partner** drop-down and select the partner you're adding.
 
-   - To use VMware Workspace ONE as the compliance partner for iOS or Android platforms, select **VMware Workspace ONE mobile compliance**.
+   - To use Omnissa Workspace ONE as the compliance partner for iOS or Android platforms, select ** Workspace ONE Conditional Access**.
 
    Next, select the drop-down for **Platform**, and select the platform.
 
@@ -123,12 +123,12 @@ Your configuration now appears on the Partner compliance management page.
 
 5. Select **Review + save** and then **Save** to save your edits.
 
-6. *This step only applies when you use VMware Workspace ONE*:
+6. *This step only applies when you use Omnissa Workspace ONE*:
 
    From within the Workspace ONE UEM console, you must manually synchronize the changes you saved in the Microsoft Intune admin center. Until you manually sync changes, Workspace ONE UEM isn’t aware of configuration changes, and users in new groups you’ve assigned won’t successfully report compliance.
 
    To manually sync from Azure Services:
-   1. Sign in to your VMware Workspace ONE UEM console.
+   1. Sign in to your Omnissa Workspace ONE UEM console.
    2. Go to **Settings** > **System** > **Enterprise Integration** > **Directory Services**.
    3. For *Sync Azure Services*, select **SYNC**.
 
@@ -142,7 +142,7 @@ To enable a device compliance partner to work with Intune, you must complete con
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
 - [CLOMO MDM](https://support.clomo.com/?page_id=61477)
 - [Kandji Device Compliance](https://support.kandji.io/support/solutions/articles/72000630314)
-- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
+- [Omnissa Workspace ONE UEM](https://docs.omnissa.com/bundle/WorkspaceONE-UEM-Managing-DevicesV2410/page/ConditionalAccessMicrosoftEntraID.html)
   
 
 ## Enroll your devices to your device compliance partner
@@ -181,4 +181,4 @@ Use the documentation from your third-party partner to create compliance policie
 - [Blackberry UEM](https://docs.blackberry.com/en/id-comm-collab/blackberry-workspaces/blackberry-workspaces-plug-in-for-blackberry-uem/4_10/compatibility-matrix/imm1460398825659/ioz1460399956336)
 - [Citrix Endpoint Management - Integrate with Microsoft Entra Conditional Access](https://docs.citrix.com/en-us/citrix-endpoint-management/prepare-to-enroll-devices-and-deliver-resources.html#integrate-with-azure-ad-conditional-access)
 - [Ivanti Neurons for MDM](https://forums.ivanti.com/s/article/MobileIron-Cloud-Azure-Device-Compliance-for-iOS-and-Android)
-- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
+- [Omnissa Workspace ONE UEM](https://docs.omnissa.com/bundle/WorkspaceONE-UEM-Managing-DevicesV2410/page/ConditionalAccessMicrosoftEntraID.html)
