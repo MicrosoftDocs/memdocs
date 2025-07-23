@@ -80,8 +80,8 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft Lists|[Android](https://play.google.com/store/apps/details?id=com.microsoft.lists.public&gl=US)|✔|No settings|✖|N/A|N/A|✖|✖|✖|
 |Microsoft Loop|[iOS](https://apps.apple.com/us/app/microsoft-loop/id1637682491)|✔|No settings|✔|N/A|✖|N/A|N/A|✖|
 |Microsoft Loop|[Android](https://play.google.com/store/apps/details?id=com.microsoft.loop)|✔|No settings|✔|N/A|✖|N/A|N/A|✖|
-|Office (Microsoft 365)|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|✖|
-|Microsoft 365 (Office)|[iOS](https://apps.apple.com/app/microsoft-office/id541164041)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✔ Supported for v2.72 or later|✖|✔|✖|
+|Microsoft 365 Copilot|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|✖|
+|Microsoft 365 Copilot|[iOS](https://apps.apple.com/app/microsoft-office/id541164041)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✔ Supported for v2.72 or later|✖|✔|✖|
 |Microsoft OneDrive|[Android](https://play.google.com/store/apps/details?id=com.microsoft.skydrive)|✔|No settings|✔|N/A|✖|✔|N/A|✖|
 |Microsoft OneDrive|[iOS](https://apps.apple.com/us/app/onedrive-cloud-storage-for/id477537958)|✔|No settings|✔|N/A|✖|✔|N/A|✖|
 |Microsoft OneNote|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.onenote)|✔|No settings|✔|N/A|✖|✖|N/A|✖|
