@@ -343,6 +343,14 @@ Applies to:
 
 <!-- *********************************************** -->
 
+## Role-based access control
+
+### Multi-administrator approval support for role-based access control <!-- 26838684 -->
+
+Support for multiple administrative approval (MAA) is being expanded to include role-based access control. When this feature is enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This helps protect your organization from unauthorized or accidental role-based access control changes by enforcing dual authorization.
+
+<!-- *********************************************** -->
+
 <!-- ## Tenant administration -->
 
 <!-- *********************************************** -->
