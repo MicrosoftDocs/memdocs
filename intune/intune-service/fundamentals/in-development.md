@@ -77,7 +77,7 @@ For example, you'll be able to create a rule for a Visual Studio setup file call
 
 ## App management  
 
-### Offline Mode and Pre-Signed In Apps for Android Enterprise Dedicated Devices<!-- 30303710 -->  
+### Offline Mode and Pre-Signed In Apps for Android Enterprise Dedicated Devices<!-- 30303710, 25476290 -->  
 
 We're enhancing support for Android Enterprise dedicated devices with two new features in Managed Home Screen (MHS): Offline mode and App access without sign in  
 
@@ -85,7 +85,10 @@ Offline Mode lets users access designated apps when the device is offline or una
 
 App access without sign in lets users launch specific apps from the MHS sign-in screen--regardless of network status--via the MHS top bar. This can be helpful for apps that need to be available immediately, such as help desk or emergency tools.  
 
-These features are intended for use on dedicated devices enrolled in Microsoft Entra Shared device mode and will be able to be configured via device configuration policy.  
+These features are intended for use on dedicated devices enrolled in Microsoft Entra Shared device mode and will be able to be configured via device configuration policy.
+
+Applies to:
+- Android Enterprise
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -94,6 +97,15 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 Applies to:
 
 - iOS/iPadOS
+
+### Android app configuration policies support new variable values<!-- 32843208 -->
+
+Intune will support more variable values for Android Enterprise app configuration policies. The new values include: account name, device name, employee ID, MEID, serial number, and last four digits of the serial number.
+
+To learn more, see [Supported variables for configuration values](../apps/app-configuration-policies-use-android.md#supported-variables-for-configuration-values).
+
+Applies to:
+- Android Enterprise
 
 <!-- *********************************************** -->
 
@@ -331,6 +343,14 @@ Applies to:
 <!-- *********************************************** -->
 
 <!-- ## Role-based access control -->
+
+<!-- *********************************************** -->
+
+## Role-based access control
+
+### Multi-administrator approval support for role-based access control <!-- 26838684 -->
+
+Support for multiple administrative approval (MAA) is being expanded to include role-based access control. When this feature is enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This helps protect your organization from unauthorized or accidental role-based access control changes by enforcing dual authorization.
 
 <!-- *********************************************** -->
 
