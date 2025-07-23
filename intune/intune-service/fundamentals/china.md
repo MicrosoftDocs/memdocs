@@ -50,7 +50,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Management of Windows 10 is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
 - Windows Autopilot and Business Store features aren't currently available. As part of the 2409 Intune service release, we announced support for Windows Autopilot Device Preparation policy in Intune operated by 21Vianet in China cloud. For  more information, see [(What's new in Windows Autopilot device preparation | Microsoft Learn](/autopilot/device-preparation/whats-new#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment)
-- Intune operated by 21Vianet supports the Company Portal for Windows app. For more information, see [Download the offline Company Portal app](https://learn.microsoft.com/en-us/intune/intune-service/apps/store-apps-company-portal-app#download-the-offline-company-portal-app)
+- Intune operated by 21Vianet supports the Company Portal for Windows app. For more information, see [Download the offline Company Portal app](../apps/store-apps-company-portal-app.md#download-the-offline-company-portal-app).  
 - Microsoft Intune Endpoint Analytics and Log Analytics features aren't currently available.
 - Azure Virtual Desktop Windows 10 and Windows 11 multi-session isn't currently supported for 21Vianet.
 - Because Google Mobile Services isn't available in China, customers in Intune operated by 21Vianet can't use features that require Google Mobile Services. These features include:
