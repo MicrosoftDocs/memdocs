@@ -63,13 +63,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ###  Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334  -->
 
-We’re working on a dashboard for Endpoint Privilege Management (EPM) that will bring you insights to support having your users run as standard users in place of running with local admin permissions. First, the dashboard will report progress towards a Standard User Status to help you understand when your admin users might be ready to be moved to standard users. The dashboard will also help you understand the file elevation trends in your organization.
-
-### Endpoint Privileged Management support on Azure Virtual Desktop<!-- 26079227 -->
-
-We're adding support to deploy Endpoint Privilege Management (EPM) policies to users on Azure Virtual Desktop (AVD) single-session virtual machines. With this support, EPM elevation policies will work on AVD single-session environments.
-
-For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../protect/epm-overview.md).
+We’re working on a dashboard for Endpoint Privilege Management (EPM) that will bring you insights to support having your users run as standard users in place of running with local admin permissions. First, the dashboard will report progress towards a Standard User Status to help you understand when your admin users might be ready to be moved to standard users. The dashboard will also help you understand the file elevation trends in your organization.  
 
 
 ### Endpoint Privilege Management support for wildcards in elevation rules<!-- 30290730 -->
@@ -245,7 +239,16 @@ For more information, see [device cleanup rules](../remote-actions/devices-wipe.
 
 <!-- *********************************************** -->
 
-## Device security
+## Device security  
+
+### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
+
+We’re adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices, and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+ 
+Applies to:  
+- Windows
+
+For information about the currently available Intune security baselines, see [Security baselines overview](../protect/security-baselines.md).  
 
 ### macOS support for local administrator account configuration LAPS and password solution<!-- 25385731 -->
 
