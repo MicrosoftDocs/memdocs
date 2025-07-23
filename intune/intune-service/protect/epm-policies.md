@@ -79,7 +79,7 @@ Use *Windows elevation settings policy* when you want to:
   Options include:
 
   - **Business justification** - This option requires the end user to provide a justification before completing an elevation that is facilitated by the default elevation response.
-  - **Windows authentication** - This option requires the end user to authenticate before completing an elevation that is facilitated by the default elevation response.
+  - **Windows authentication** - This option requires the end user to authenticate before completing an elevation that is facilitated by the default elevation response. If the device is configured for passwordless sign-in, Windows authentication will use it; otherwise, it defaults to username and password. For guidance on setting up passwordless authentication, see https://learn.microsoft.com/en-us/windows/security/identity-protection/passwordless-experience/.
 
   >[!NOTE]
   > Multiple validation options can be selected to satisfy the needs of the organization. If no options are selected, then the user is only required to select *continue* to complete the elevation.
