@@ -64,7 +64,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices are supported for the MTD partners that also support the 21Vianet environment. When you sign in to a 21Vianet tenant, you can see the connectors that are available in that environment.
 - Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices.
 - Intune operated by 21Vianet doesn't support partner device management integration with Jamf for macOS devices.
-- Windows Feature Update, Driver upadate is not available.
+- Windows feature updates and driver updates aren't available.  
 
 ## You control customer data
 
