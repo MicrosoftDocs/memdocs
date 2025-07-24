@@ -93,13 +93,13 @@ Using Intune policies, you can also force users to update their devices:
 
 ### ✅ Use the built-in settings
 
+[!INCLUDE [Apple MDM software updates deprecation](../includes/apple-mdm-updates-deprecation.md)]
+
 To manage updates, Apple has the following options:
 
 - **Declarative device management (DDM)**
 
   On iOS/iPadOS 17.0 and later, use Apple's declarative device management (DDM) to manage software updates. DDM is the modern way to manage devices with an improved user experience, as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads the update, prepares the device for the installation, & installs the update.
-
-  Don't use the MDM-based policy settings on these devices, as Apple deprecated the MDM policies.
 
   The DDM settings are configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [Managed software updates with the settings catalog](managed-software-updates-ios-macos.md).
 

@@ -243,7 +243,7 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - Enforced Software Update Minor OS Deferred Install Delay (macOS)
 - Enforced Software Update Non OS Deferred Install Delay (macOS)
 
-:::image type="content" source="./media/managed-software-updates-ios-macos/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune.":::
+:::image type="content" source="./media/managed-software-updates-ios-macos/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune." lightbox="./media/managed-software-updates-ios-macos/settings-catalog-restrictions-delay-updates.png":::
 
 ## Related articles
 

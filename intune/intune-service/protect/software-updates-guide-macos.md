@@ -79,7 +79,7 @@ On macOS 14 and newer devices, use Apple's declarative device management (DDM) t
 
 DDM is the modern way to manage settings. The independent nature of DDM provides an improved user experience, as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads the update, prepares the device for the installation, & installs the update.
 
-Don't use the MDM-based policy settings on these devices, as Apple deprecated the MDM policies.
+Don't use the MDM-based software update policy settings on these devices, as Apple deprecated the MDM policies.
 
 The DDM settings are configurable in the [Intune settings catalog](../configuration/settings-catalog.md). For more information, go to [Managed software updates with the settings catalog](managed-software-updates-ios-macos.md).
 
@@ -145,7 +145,7 @@ The [Intune settings catalog](../configuration/settings-catalog.md) includes set
 - Prevents end users from disabling update checks.
 - Configures the device to check for updates and prompt users regularly.
 
-This settings catalog policy works with [Step 1 - Use a software update policy to manage when updates are installed](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed) (in this article). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
+This settings catalog policy works with [Step 1 - Use a software update policy to manage when updates are installed](#step-1---use-a-software-update-policy-to-manage-when-updates-are-installed) (in this article). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Manage devices > Configuration > Settings catalog > Software Update**.
 1. Configure the following settings:
