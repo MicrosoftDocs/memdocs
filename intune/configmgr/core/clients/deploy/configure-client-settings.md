@@ -6,7 +6,7 @@ ms.date: 04/05/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWis
+author: LauraWi
 ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
