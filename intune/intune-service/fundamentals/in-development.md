@@ -189,7 +189,10 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+## Device enrollment  
+
+### Intune to support Ubuntu 22.04 and later<!-- 32756619 -->
+Microsoft Intune and the Microsoft Intune app for Linux will support Ubuntu 22.04 and later, while ending support for Ubuntu 20.04. Devices that are currently enrolled on Ubuntu 20.04 will remain enrolled even when that version is no longer supported. New devices will be unable to enroll if they're running Ubuntu 20.04. To prepare for this change, check your Intune reporting to see what devices or users might be affected. In the admin center, go to **Devices** > **All devices** and filter OS by Linux. You can add more columns to help identify who in your organization has devices running Ubuntu 20.04. Notify your users to upgrade their devices to a supported Ubuntu version.   
 
 <!-- *********************************************** -->
 
