@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/22/2025
+ms.date: 07/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,7 +32,7 @@ ms.collection:
 
 # Use the per-device declarative Apple software update reports in Microsoft Intune
 
-Microsoft Intune’s declarative Apple software update reports for Apple devices relies on a reporting model that's part of Apple devices that provides near real-time status for Apple software updates. Available in Intune as a per-device report, these reports include the status information as reported directly by an Apple device each time the device’s software update status changes.
+Microsoft Intune's declarative Apple software update reports for Apple devices relies on a reporting model that's part of Apple devices that provides near real-time status for Apple software updates. Available in Intune as a per-device report, these reports include the status information as reported directly by an Apple device each time the device's software update status changes.
 
 Applies to:
 
@@ -40,10 +40,11 @@ Applies to:
 - iPadOS 17 and later
 - macOS 13 and later
 
-> [!NOTE]  
-> With the availability of the declarative software update report for macOS, the previously available report for macOS devices named Software updates is now deprecated. This report remains available as *Software updates (deprecated)* when you go to *Devices* in the admin center and select a macOS device. While this report remains available for use in the Intune admin center, its being removed in a future update.
+> [!NOTE]
+> Apple deprecated MDM-based software update workloads. So, the previous **Software updates** report for macOS devices is deprecated. This deprecated report remains available in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > *Devices* > select a macOS device > *Software updates (deprecated)*. This report is being removed in a future update.
 
 ## About the reports
+
 To find the per-device reports for iOS, iPadOS and macOS, sign-in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > select either *iOS/iPadOS* or *macOS*, and then select a device.
 
 On the devices *Overview* page, expand *Monitor* and then depending on the type of device you're viewing select the report:

@@ -6,8 +6,8 @@ description: Use Microsoft Intune to manage system updates for supervised iOS/iP
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
-ms.date: 04/07/2025
+manager: laurawi
+ms.date: 07/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: annovich
+ms.reviewer: annovich, beflamm
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,9 +30,12 @@ ms.collection:
 - sub-updates
 ---
 
-# Manage iOS/iPadOS software update policies in Intune
+# Manage iOS/iPadOS software updates using MDM-based policies in Microsoft Intune
 
-You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPad devices that are enrolled as *supervised devices*.
+> [!IMPORTANT]
+> [!INCLUDE [Apple MDM software updates deprecation](../includes/apple-mdm-updates-deprecation.md)]
+
+You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPadOS devices that are enrolled as *supervised devices*.
 
 A [supervised device](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) is a device that enrolls through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
 
@@ -41,30 +44,26 @@ This feature applies to:
 - iOS 10.3 and later (supervised)
 - iPadOS 13.0 and later (supervised)
 
-> [!TIP]
-> You can use the [Intune settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage software updates with the settings catalog](managed-software-updates-ios-macos.md). It is recommended for any iOS devices above 17.0 to use this method instead of Update Policies.
-
-With policies for iOS software updates, you can:
+With these MDM-based policies, you can:
 
 - Choose to deploy the *latest update* that's available, or choose to deploy an older update, based on the update version number.
 
   When deploying an older update, you must also deploy a device restrictions profile to [restrict visibility of software updates](#delay-visibility-of-software-updates). Update profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a device configuration policy that restricts visibility of software updates.
 
-- Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in. Or, creating date and time ranges during which updates can install or are blocked from installing.
+- Create a schedule that determines when the update installs. Schedules can be simple, like installing updates the next time that the device checks in. Or, creating date and time ranges during which updates can install or are blocked from installing.
 
   By default, devices check in with Intune about every eight hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 
-> [!NOTE]
->
-> - iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md) will install only when the device is charging and while no users are signed in to a *Shared iPad session* on the device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
->
-> - If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behavior may be undesirable. Consider testing to assess the impact of OS updates on the app you are running in ASAM. You can use Intune [*device restriction profiles*](../configuration/device-restrictions-ios.md#general) to configure ASAM.
+## Before you begin
 
-> [!TIP]
-> If you're new to configuring software updates or want some guidance based on common scenarios, go to:
->
-> - [Software updates planning guide for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
-> - [Software updates planning guide for BYOD and personal devices](software-updates-guide-personal-byod.md)
+- iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md) install only when the device is charging and while no users are signed in to a *Shared iPad session* on the device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
+
+- If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the effect of OS updates should be considered as the resulting behavior might be undesirable. Consider testing to assess the effect of OS updates on the app you're running in ASAM. You can use Intune [*device restriction profiles*](../configuration/device-restrictions-ios.md#general) to configure ASAM.
+
+- If you're new to configuring software updates or want some guidance based on common scenarios, go to:
+
+  - [Software updates planning guide for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
+  - [Software updates planning guide for BYOD and personal devices](software-updates-guide-personal-byod.md)
 
 ## Configure the update policy
 
@@ -102,7 +101,7 @@ With policies for iOS software updates, you can:
 
       > [!NOTE]
       >
-      > You can configure settings in a [device restrictions](#delay-visibility-of-software-updates) profile to hide an update from device users for a period of time on your supervised iOS/iPadOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
+      > You can configure settings in a [device restrictions](#delay-visibility-of-software-updates) profile to hide an update from device users for a time period on your supervised iOS/iPadOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
       >
       > When you use a device restriction to hide an update, review your software update policies to ensure they won't schedule the installation of the update before that restriction period ends. Software update policies install updates based on their own schedule, regardless of the update being hidden or visible to the device user.
 
@@ -136,7 +135,7 @@ You can edit an existing policy, including changing the restricted times:
 3. After introducing a change, select **Review + save** > **Save** to save your edits, and return to the policies *Properties*.
 
 > [!NOTE]
-> If the **Start time** and **End time** are both set to 12 AM, Intune does not check for restrictions on when to install updates. This means that any configurations you have for **Select times to prevent update installations** are ignored, and updates can install at any time.
+> If the **Start time** and **End time** are both set to 12 AM, Intune doesn't check for restrictions on when to install updates. So, any configurations you have for **Select times to prevent update installations** are ignored, and updates can install at any time.
 
 ## Delay visibility of software updates
 
@@ -161,7 +160,7 @@ For guidance from the Intune support team, see the Intune Customer Success blog 
 
 In the Microsoft Intune admin center, go to **Devices** > **Monitor** > **Installation failures for iOS devices**.
 
-Intune displays a list of supervised iOS/iPadOS devices that are targeted by an update policy. The list doesn't include devices that are up-to-date and healthy because iOS/iPad devices only return information about installation failures.
+Intune displays a list of supervised iOS/iPadOS devices that are targeted by an update policy. The list doesn't include devices that are up-to-date and healthy because iOS/iPadOS devices only return information about installation failures.
 
 For each device on the list, the *Installation Status* displays the error that the device returns. To view the list of potential installation status values, on the *Installation failures for iOS devices* page, select **Filters** and then expand the drop-down list for *Installation Status*.
 
