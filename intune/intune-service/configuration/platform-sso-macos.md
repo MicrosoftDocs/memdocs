@@ -378,6 +378,7 @@ The following settings let you customize the end-user experience and give more g
 | **Enable Create User At Login** | **Enable** or **Disable**. | Allow any organizational user to sign in to the device using their Microsoft Entra credentials. When you create new local accounts, the provided username and password must be the same as the user's Microsoft Entra ID UPN (`user@contoso.com`) and password.|
 | **New User Authorization Mode** | **Standard**, **Admin**, or **Groups** | One-time permissions the user has at sign-in when the account is created using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
 | **User Authorization Mode** | **Standard**, **Admin**, or **Groups** | Persistent permissions the user has at sign-in each time the user authenticates using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
+| **Non Platform SSO Accounts** | The local account names you want to exclude from Platform SSO | The list of local accounts that are not prompted to register for Platform SSO. This could be appropriate for accounts like the local administrator account that shouldn't be registered with an Entra account. These acccount listed in this policy are not subject to the 'FileVaultPolicy', 'LoginPolicy', or 'UnlockPolicy'.|
 
 ## Other MDMs
 
