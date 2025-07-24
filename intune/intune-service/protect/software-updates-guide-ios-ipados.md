@@ -47,7 +47,7 @@ This section lists the Microsoft-recommended guidance and strategies to install 
 
 ### ✅ Manage updates with policies
 
-Microsoft recommends you create policies that update your devices. We don't recommend that you put this responsibility on end users.
+Microsoft recommends you create policies that update your devices.
 
 By default, users receive notifications and/or see the latest updates available on their devices (Settings > General > Software Updates). Users can choose to download and install updates whenever they want.
 

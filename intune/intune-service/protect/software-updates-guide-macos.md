@@ -51,7 +51,7 @@ To install updates faster and avoid delays, make sure the devices are:
 
 ## Manage updates with policies
 
-✅ Do create policies that update your devices. Don't put this responsibility on end users.
+✅ Do create policies that update your devices.
 
 By default, users receive notifications and/or see the latest updates available on their devices (Settings > General > Software Updates). Users can choose to download and install updates whenever they want.
 

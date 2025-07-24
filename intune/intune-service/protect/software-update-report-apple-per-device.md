@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/23/2025
+ms.date: 07/24/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,7 +32,7 @@ ms.collection:
 
 # Use the per-device declarative Apple software update reports in Microsoft Intune
 
-Microsoft Intune's declarative Apple software update reports for Apple devices relies on a reporting model that's part of Apple devices that provides near real-time status for Apple software updates. Available in Intune as a per-device report, these reports include the status information as reported directly by an Apple device each time the device's software update status changes.
+Microsoft Intune's declarative Apple software update reports rely on an event-based reporting model to provide near real-time status for Apple software updates. These reports are available in Intune as a per-device report. They include the status information as reported directly by an Apple device each time the device's software update status changes.
 
 Applies to:
 
