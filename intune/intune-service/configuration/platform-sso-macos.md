@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 01/08/2025
+ms.date: 07/24/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -374,10 +374,11 @@ The following settings let you customize the end-user experience and give more g
 
 | Platform SSO settings | Possible values  | Usage |
 | --- | --- | --- |
-| **Account Display Name**  | Any string value. | Customize the organization name end users see in the Platform SSO notifications. |
-| **Enable Create User At Login** | **Enable** or **Disable**. | Allow any organizational user to sign in to the device using their Microsoft Entra credentials. When you create new local accounts, the provided username and password must be the same as the user's Microsoft Entra ID UPN (`user@contoso.com`) and password.|
+| **Account Display Name**  | Any string value | Customize the organization name end users see in the Platform SSO notifications. |
+| **Enable Create User At Login** | **Enable** or **Disable** | Allow any organizational user to sign in to the device using their Microsoft Entra credentials. When you create new local accounts, the provided username and password must be the same as the user's Microsoft Entra ID UPN (`user@contoso.com`) and password.|
 | **New User Authorization Mode** | **Standard**, **Admin**, or **Groups** | One-time permissions the user has at sign-in when the account is created using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
 | **User Authorization Mode** | **Standard**, **Admin**, or **Groups** | Persistent permissions the user has at sign-in each time the user authenticates using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
+| **Non Platform SSO Accounts** | Enter the local account names you want to exclude from Platform SSO. | This list of local accounts aren't prompted to register for Platform SSO. This setting is appropriate for accounts that shouldn't be registered with a Microsoft Entra account, like the local admin account. The acccounts listed in this policy aren't subject to the `FileVaultPolicy`, `LoginPolicy`, or `UnlockPolicy`. |
 
 ## Other MDMs
 
