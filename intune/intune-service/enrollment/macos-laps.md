@@ -133,6 +133,8 @@ To view the local Administrator password of a device, your own account must be a
 
 On the **Passwords and keys** pane, you can retrieve the admin password for the macOS device under the **Local administrator account password** section. Here you can also see the last time the password was rotated, manually or automatically.
 
+To see whether an enrolled macOS device has an Intune managed admin password, if the password can be successfully retrieved in the console, that means the password for the local administrator account is managed by Intune. 
+
 :::image type="content" source="./media/macos-laps/passwords-and-keys-pane.png" alt-text="Screen capture that shows the Passwords and keys pane, and the Rotate local admin password options.":::
 
 ## Manually rotate admin account password
