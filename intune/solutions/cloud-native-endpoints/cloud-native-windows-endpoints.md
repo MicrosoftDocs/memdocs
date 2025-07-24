@@ -9,7 +9,7 @@ author: scottbreenmsft
 
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2025
+ms.date: 07/24/2025
 ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
