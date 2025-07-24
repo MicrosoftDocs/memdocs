@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/23/2025
+ms.date: 07/24/2025
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -73,7 +73,7 @@ When the devices are powered on, plugged in, and connected to the Internet, then
 
 To keep your devices on the most current version and with minimal effort from you, keep the automatic updates feature enabled:
 
-:::image type="content" source="./media/software-updates-guide-ios-ipados/apple-automatic-update-settings.png" alt-text="Screenshot that shows automatic update settings on iOS/iPadOS Apple devices.":::
+:::image type="content" source="./media/software-updates-guide-ios-ipados/apple-automatic-update-settings.png" alt-text="Screenshot that shows automatic update settings on iOS/iPadOS Apple devices." lightbox="./media/software-updates-guide-ios-ipados/apple-automatic-update-settings.png":::
 
 Automatic updates work together with other update policies, which can provide a positive experience for admins and end users.
 
@@ -93,7 +93,8 @@ Using Intune policies, you can also force users to update their devices:
 
 ### ✅ Use the built-in settings
 
-[!INCLUDE [Apple MDM software updates deprecation](../includes/apple-mdm-updates-deprecation.md)]
+> [!NOTE]
+> [!INCLUDE [Apple MDM software updates deprecation](../includes/apple-mdm-updates-deprecation.md)]
 
 To manage updates, Apple has the following options:
 
@@ -182,7 +183,7 @@ As an admin, you're comfortable with:
 
 To accomplish these goals, you can use a policy with the following default settings:
 
-:::image type="content" source="./media/software-updates-guide-ios-ipados/knowledge-worker-policy-settings.png" alt-text="Screenshot that shows the select version to install and schedule type software update settings for iOS/iPadOS devices in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/software-updates-guide-ios-ipados/knowledge-worker-policy-settings.png" alt-text="Screenshot that shows the select version to install and schedule type software update settings for iOS/iPadOS devices in the Microsoft Intune admin center." lightbox="./media/software-updates-guide-ios-ipados/knowledge-worker-policy-settings.png":::
 
 ### Kiosks
 
@@ -212,7 +213,7 @@ You chose an overnight servicing window of 10 hours where updates can be downloa
 
 To accomplish this task, create a policy with the following settings:
 
-:::image type="content" source="./media/software-updates-guide-ios-ipados/kiosks-policy-settings.png" alt-text="Screenshot that shows the specific version to install and installing the updates on Monday nights for iOS/iPadOS devices in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/software-updates-guide-ios-ipados/kiosks-policy-settings.png" alt-text="Screenshot that shows the specific version to install and installing the updates on Monday nights for iOS/iPadOS devices in the Microsoft Intune admin center." lightbox="./media/software-updates-guide-ios-ipados/kiosks-policy-settings.png":::
 
 ### Factory machines
 
@@ -240,7 +241,7 @@ You want to schedule updates during a two hour downtime window overnight on a Su
 
 To accomplish this task, create a policy with the following settings:
 
-:::image type="content" source="./media/software-updates-guide-ios-ipados/factory-machines-policy-settings.png" alt-text="Screenshot that shows the specific version to install and installing the updates on Sundays for iOS/iPadOS devices in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/software-updates-guide-ios-ipados/factory-machines-policy-settings.png" alt-text="Screenshot that shows the specific version to install and installing the updates on Sundays for iOS/iPadOS devices in the Microsoft Intune admin center." lightbox="./media/software-updates-guide-ios-ipados/factory-machines-policy-settings.png":::
 
 ### Shared devices
 
@@ -270,11 +271,11 @@ To accomplish this task, this scenario involves two policies:
 
 - In the first policy, you want all users signed out or want to reboot the device after a set amount of time. You can create an Apple Business Manager enrollment profile to sign out any users who are idle for more than 15 minutes (900 seconds):
 
-  :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-maximum-seconds-policy-settings.png" alt-text="Screenshot that shows how to enroll iOS/iPadOS devices without user affinity and setting the inactivity value in the Microsoft Intune admin center.":::
+  :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-maximum-seconds-policy-settings.png" alt-text="Screenshot that shows how to enroll iOS/iPadOS devices without user affinity and setting the inactivity value in the Microsoft Intune admin center." lightbox="./media/software-updates-guide-ios-ipados/shared-devices-maximum-seconds-policy-settings.png":::
 
 - In the second policy, schedule the update using the following settings:
 
-  :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-outside-scheduled-time-policy-settings.png" alt-text="Screenshot that shows installing the latest version and outside scheduled time software update settings for iOS/iPadOS devices in the Microsoft Intune admin center.":::
+  :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-outside-scheduled-time-policy-settings.png" alt-text="Screenshot that shows installing the latest version and outside scheduled time software update settings for iOS/iPadOS devices in the Microsoft Intune admin center." lightbox="./media/software-updates-guide-ios-ipados/shared-devices-outside-scheduled-time-policy-settings.png":::
 
 ## Related articles
 

@@ -51,7 +51,8 @@ Apple's declarative device management (DDM) allows you to install a specific upd
 
 On Apple devices in Intune, you can create MDM-based software update policies or DDM-managed software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types.
 
-Apple deprecated MDM-based software update workloads. Microsoft recommends you use DDM to install updates instead. For more information on these changes, see [support tip for moving to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/4432177).
+> [!NOTE]
+> Apple deprecated MDM-based software update workloads. Microsoft recommends you use DDM to install updates instead. For more information on these changes, see [support tip for moving to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/4432177).
 
 Use the following information to help you decide which policy type to use.
 
@@ -122,7 +123,7 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 6. Choose **Select all these settings** and then close the settings picker.
 
-    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-updates-enforce-latest.png" alt-text="Screenshot that shows the settings catalog software update enforce latest settings for Apple devices in Microsoft Intune.":::
+    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-updates-enforce-latest.png" alt-text="Screenshot that shows the settings catalog software update enforce latest settings for Apple devices in Microsoft Intune." lightbox="./media/managed-software-updates-ios-macos/ddm-software-updates-enforce-latest.png":::
 
 7. Configure the settings:
 
@@ -167,7 +168,7 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 6. Choose **Select all these settings** and then close the settings picker.
 
-    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-update-category.png" alt-text="Screenshot that shows the settings catalog software update settings for Apple devices in Microsoft Intune.":::
+    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-update-category.png" alt-text="Screenshot that shows the settings catalog software update settings for Apple devices in Microsoft Intune." lightbox="./media/managed-software-updates-ios-macos/ddm-software-update-category.png":::
 
 7. Configure the settings:
 
@@ -227,7 +228,7 @@ When you configure DDM software updates, you might want to manage aspects of the
 
 Previously in MDM, these settings were spread across multiple payloads such as Restrictions, Managed Settings, and Software Update. As of August 2024, it's recommended to use the DDM-based Software Update Settings configuration to manage updates. To create a Software Update Settings policy, go to the Settings catalog > Declarative Device Management (DDM) > Software Update Settings. More information on these settings is available in the documentation section for the [Software Update Settings declarative configuration](/mem/intune-service/configuration/apple-settings-catalog-configurations).
 
-## Delay visibility of updates using MDM ??
+## Delay visibility of updates using MDM
 
 > [!NOTE]
 > As of August 2024, it's recommended to use the DDM-based Software Update Settings configuration to manage update settings such as deferrals.
