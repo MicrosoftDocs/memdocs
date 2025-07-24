@@ -6,8 +6,8 @@ ms.date: 12/19/2024
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: upgrade-and-migration-article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart

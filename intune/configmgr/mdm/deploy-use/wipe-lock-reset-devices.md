@@ -6,8 +6,8 @@ ms.date: 08/14/2018
 ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart
