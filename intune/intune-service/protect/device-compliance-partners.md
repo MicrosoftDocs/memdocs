@@ -62,6 +62,7 @@ The following compliance partners are supported as generally available:
 - BlackBerry UEM
 - Citrix Workspace device compliance
 - CLOMO MDM
+- Fleet
 - IBM MaaS360
 - Jamf Pro
 - Kandji
@@ -141,6 +142,7 @@ To enable a device compliance partner to work with Intune, you must complete con
 - [42Gears SureMDM](https://docs.42gears.com/suremdm/docs/SureMDM/ConditionalAccessintheSureMDMCon.html)
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
 - [CLOMO MDM](https://support.clomo.com/?page_id=61477)
+- [Fleet Entra conditional access integration](https://fleetdm.com/guides/entra-conditional-access-integration#basic-article)
 - [Kandji Device Compliance](https://support.kandji.io/support/solutions/articles/72000630314)
 - [Omnissa Workspace ONE UEM](https://docs.omnissa.com/bundle/WorkspaceONE-UEM-Managing-DevicesV2410/page/ConditionalAccessMicrosoftEntraID.html)
   
@@ -180,5 +182,6 @@ Use the documentation from your third-party partner to create compliance policie
 - [Addigy](https://support.addigy.com/hc/en-us/articles/12346305032211)
 - [Blackberry UEM](https://docs.blackberry.com/en/id-comm-collab/blackberry-workspaces/blackberry-workspaces-plug-in-for-blackberry-uem/4_10/compatibility-matrix/imm1460398825659/ioz1460399956336)
 - [Citrix Endpoint Management - Integrate with Microsoft Entra Conditional Access](https://docs.citrix.com/en-us/citrix-endpoint-management/prepare-to-enroll-devices-and-deliver-resources.html#integrate-with-azure-ad-conditional-access)
+- [Fleet Entra conditional access integration](https://fleetdm.com/guides/entra-conditional-access-integration#basic-article)
 - [Ivanti Neurons for MDM](https://forums.ivanti.com/s/article/MobileIron-Cloud-Azure-Device-Compliance-for-iOS-and-Android)
 - [Omnissa Workspace ONE UEM](https://docs.omnissa.com/bundle/WorkspaceONE-UEM-Managing-DevicesV2410/page/ConditionalAccessMicrosoftEntraID.html)
