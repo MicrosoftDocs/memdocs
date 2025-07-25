@@ -2,13 +2,13 @@
 title: Use maintenance windows
 titleSuffix: Configuration Manager
 description: Use collections and maintenance windows to effectively manage clients in Configuration Manager.
-ms.date: 08/01/2021
+ms.date: 07/25/2025
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart
