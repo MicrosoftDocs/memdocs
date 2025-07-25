@@ -187,30 +187,7 @@ The following protected apps are now available for Microsoft Intune:
 - Vault CRM by Veeva Systems Inc. (iOS)
 - Workvivo by Workvivo
 
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
-### Monitor and troubleshot
-
-#### Per-device declarative Apple software update report<!-- 25207078 -->
-
-You can now view a per-device software update report for Apple devices. This report uses Apples built-in declarative reporting infrastructure to provide Intune a near real-time view of the software update status of managed devices.
-
-To find this report within the Intune Admin center, go to *Devices* and then select an applicable device. In the Devices Overview pane, below Monitor you'll find the report listed as **iOS software updates** for iOS or iPadOS devices, and as **macOS software updates** for macOS devices.
-
-The following Apple devices support this new report:  
-- iOS 17 and later
-- iPadOS 17 and later
-- macOS 14 and later
-
-Some of the details that are available include, but aren't limited to:  
-- Pending OS update information such as OS and build version, and its status on the device.
-- Current OS information for a device.
-- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM.
-- Information about the latest public update made available by Apple.
-
-Finally, with the addition of this new report, the previously available macOS per-device **Software updates** report is now deprecated. While it remains available in the admin center while viewing a device, and can still be used, it will be remove from Intune with a future update. See [Support tip: Move to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/IntuneCustomerSuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/443217).
-
-For more information about this new report, see [Use the per-device declarative Apple software update reports in Microsoft Intune](../protect/software-update-report-apple-per-device.md).
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).  
 
 ## Week of July 14, 2025
 
