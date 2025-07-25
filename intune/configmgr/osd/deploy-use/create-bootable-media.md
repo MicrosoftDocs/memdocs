@@ -161,7 +161,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
         > [!NOTE]
         >
-        > When setting the **SMSTSAssignUsersMode* variable during a task sequence, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
+        > When setting the **SMSTSAssignUsersMode** variable during a task sequence, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
         >
         > If the values don't match, then device affinity isn't set.
         >
