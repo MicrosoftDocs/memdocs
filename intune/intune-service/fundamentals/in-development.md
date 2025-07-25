@@ -7,7 +7,7 @@ keywords:
 author: laurawi
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/24/2025
+ms.date: 07/25/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -231,19 +231,7 @@ For more information, see [Graph APIs used to configure devices](../developer/gr
 
 Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). The remote action **Wipe** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account thereby enhancing the overall security posture of the environment.
 
-For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
-
-
-### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
-
-We're adding a feature that allows a customer to:
-
-- Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
-- Configure a different role-based-access-control (RBAC) permission and assign the permission to different RBAC roles
-
-Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
-
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
+For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).  
 
 
 <!-- *********************************************** -->
@@ -258,34 +246,6 @@ Applies to:
 - Windows
 
 For information about the currently available Intune security baselines, see [Security baselines overview](../protect/security-baselines.md).  
-
-
-### macOS support for local administrator account configuration LAPS and password solution<!-- 25385731 -->
-
-We’re working on adding Intune support for macOS local administrator account configuration during ADE (automated device enrollment) enrollment, and macOS support for Microsoft Local Admin Password Solution (LAPS).
-
-With the local admin account configuration support:  
-- You’ll be able to use macOS automated device enrollment (ADE) profiles to configure the local and standard administrator accounts for a device. When configured, this capability applies to all new macOS device enrollments as well as device re-enrollments.
-- Intune automatically creates a randomized, unique, and secure password for the device’s admin account. That password is then automatically rotated every six months.
-- Previously enrolled devices won’t be affected unless or until they re-enroll with Intune if these settings are configured.
-- The following variables will be supported for the fullname and username account settings:  
-  - {{username}}
-  - {{serialNumber}}
-  - {{partialupn}}
-  - {{managedDeviceName}}
-
-With the LAPS support:  
-- For custom RBAC roles: Permissions to view and manage the admin password will require an admin be assigned new Intune role-based access control permissions for Enrollment program.
-- Admins with sufficient permissions will be able to view and manually rotate the password of devices that enrolled with the local admin account configuration through macOS ADE.
-
-Applies to:
-
-- macOS
-
-For more information about this support for macOS, see the following resources in the Apple developer documentation:
-- [Account Configuration | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/account_configuration)
-- [Set the Local Administrator Password | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/set_the_local_administrator_password)
-
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
