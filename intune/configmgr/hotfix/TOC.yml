@@ -19,6 +19,8 @@ items:
     href: 2409/30385346.md
   - name: KB 33177653 Azure for US Government update
     href: 2503/33177653.md
+  - name: KB 33926600 SQL security update for Microsoft Configuration Manager
+    href: 2409/33926600.md
 - name: Version 2403
   items:
   - name: KB 26186448 Summary of changes in 2403
@@ -31,6 +33,8 @@ items:
     href: 2403/28204160.md
   - name: KB 33177653 Azure for US Government update
     href: 2503/33177653.md
+  - name: KB 33926600 SQL security update for Microsoft Configuration Manager
+    href: 2409/33926600.md
 - name: Version 2309
   items:
   - name: KB 24341484 Summary of changes in 2309
