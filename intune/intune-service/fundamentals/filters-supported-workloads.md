@@ -254,7 +254,7 @@ You can use filters for some common app policies on the following platforms. For
 | PKCS certificate | ✅ |
 | PKCS imported certificate | ✅ |
 | SCEP certificate | ✅ |
-| Settings catalog | ✅ |
+| Settings catalog (MDM) | ✅ |
 | Settings catalog (DDM) | ❌ |
 | Trusted certificate | ✅ |
 | VPN | ✅ |
@@ -287,7 +287,7 @@ You can use filters for some common app policies on the following platforms. For
 | PKCS imported certificate | ✅ |
 | Preference file | ✅ |
 | SCEP certificate | ✅ |
-| Settings catalog | ✅ |
+| Settings catalog (MDM) | ✅ |
 | Settings catalog (DDM) | ❌ |
 | Trusted certificate | ✅ |
 | VPN | ✅ |
