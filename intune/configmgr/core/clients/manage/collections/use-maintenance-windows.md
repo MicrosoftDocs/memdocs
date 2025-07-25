@@ -117,6 +117,9 @@ Offset Maintenance Windows scheduled in the last week of the month may encounter
 - If the offset value causes the start date to fall in the following month, it will be adjusted to the end of the current month.
 - If the offset value causes the start date to fall on the last day of the current month, no Maintenance Window will be scheduled for that month.
 
+> [!NOTE]
+> The issues with Offset Maintenance Windows scheduled in the last week of the month is resolved in version 2503. Offset values that cause the Maintenance Window to be scheduled on or after the last day of the current month now schedule as expected.
+
 ### UTC Maintenance Windows and Daylight Saving Time
 
 <!-- 24733858 -->
