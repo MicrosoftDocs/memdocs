@@ -165,12 +165,12 @@ For account creation, the following variables are supported by the profile:
   - {{serialNumber}} - for example, F4KN99ZUG5V2
   - {{partialupn}} - for example, John
   - {{managedDeviceName}} - for example, F2AL10ZUG4W2_14_4/15/2025_12:45PM
-  - {{OnPremisesSamAccountName}} - for example, contoso\John
+  - {{onPremisesSamAccountName}} - for example, contoso\John
 
 -  **Admin account full name**:
   - {{username}} - for example, John@contoso.com
   - {{serialNumber}} - for example, F4KN99ZUG5V2
-  - {{OnPremisesSamAccountName}} - for example, contoso\John
+  - {{onPremisesSamAccountName}} - for example, contoso\John
 
 To support LAPS:  
 - We’ve added two new role-based access control permissions for *Enrollment program* that can grant an administrative account permission to view a managed devices password, and to rotate that password.
