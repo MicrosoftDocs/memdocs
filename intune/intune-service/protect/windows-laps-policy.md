@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/13/2024
+ms.date: 07/22/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,6 +46,9 @@ Applies to:
 
 - Windows 10
 - Windows 11
+
+> [!TIP]  
+> The Intune support for Windows LAPS is similar but distinct from Intune’s implementation of macOS LAPS. For information about macOS LAPS in Intune, see [macOS local account configuration with LAPS](../enrollment/macos-laps.md).
 
 ## About Intune LAPS policy
 

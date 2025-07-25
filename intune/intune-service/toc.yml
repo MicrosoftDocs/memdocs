@@ -1014,6 +1014,8 @@ items:
               href: ./protect/software-updates-ios.md
             - name: macOS update policies
               href: ./protect/software-updates-macos.md
+            - name: Per-device software update reports
+              href: ./protect/software-update-report-apple-per-device.md
           - name: Windows updates
             items:
             - name: Use Windows Update client policies
@@ -1785,6 +1787,8 @@ items:
           items:
           - name: Set up automated device enrollment for macOS
             href: ./enrollment/device-enrollment-program-enroll-macos.md
+          - name: . Setup macOS account configuration with LAPS
+            href: ./enrollment/macos-laps.md
           - name: Set up Direct Enrollment for macOS
             href: ./enrollment/device-enrollment-direct-enroll-macos.md
         - name: Enrollment configurations

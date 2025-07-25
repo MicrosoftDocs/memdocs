@@ -65,14 +65,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 We’re working on a dashboard for Endpoint Privilege Management (EPM) that will bring you insights to support having your users run as standard users in place of running with local admin permissions. First, the dashboard will report progress towards a Standard User Status to help you understand when your admin users might be ready to be moved to standard users. The dashboard will also help you understand the file elevation trends in your organization.  
 
-
-### Endpoint Privilege Management support for wildcards in elevation rules<!-- 30290730 -->
-
-Endpoint Privilege Management (EPM) will soon support the use of wildcards when defining elevation rules. Wildcards allow for more flexible rule creation with broader matching capabilities, enabling file elevations for trusted files that have names that might change with subsequent revisions.
- 
-For example, you'll be able to create a rule for a Visual Studio setup file called *VSCodeUserSetup-arm64-1.99.2.exe* using wildcards to accommodate future revisions. Several wildcard forms can be used, including `VSCodeUserSetup*`, `VSCodeUserSetup-arm64-*`, or `VSCodeUserSetup-?????-1.??.?.exe`, where an asterisk represents a string, and question marks represent single characters.
-
-
 <!-- ***********************************************-->
 
 ## App management  
@@ -241,6 +233,7 @@ Intune *access policies* help protect against a compromised administrative accou
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
+
 ### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
 
 We're adding a feature that allows a customer to:
@@ -251,6 +244,7 @@ We're adding a feature that allows a customer to:
 Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
 
 For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
+
 
 <!-- *********************************************** -->
 
@@ -264,6 +258,7 @@ Applies to:
 - Windows
 
 For information about the currently available Intune security baselines, see [Security baselines overview](../protect/security-baselines.md).  
+
 
 ### macOS support for local administrator account configuration LAPS and password solution<!-- 25385731 -->
 
@@ -291,6 +286,7 @@ For more information about this support for macOS, see the following resources i
 - [Account Configuration | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/account_configuration)
 - [Set the Local Administrator Password | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/set_the_local_administrator_password)
 
+
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
@@ -311,22 +307,6 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 ## Monitor and troubleshoot
-
-### Declarative Apple software update operational report<!-- 25207078 -->
-
-You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
-
-- Pending OS update information such as OS and build version, and its status on the device
-- Current OS information for a device, including Rapid Security Responses
-- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM
-- Information about the latest public update made available by Apple
- 
-This new report will be available through the *Devices* > Select a device > *Monitor* node of the admin center.
- 
-Applies to:
- 
-- iOS/iPadOS
-- macOS
 
 ### Declarative Apple software update reports<!-- 31557946 -->
 
