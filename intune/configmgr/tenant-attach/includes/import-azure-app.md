@@ -7,7 +7,7 @@ ms.topic: include
 ms.localizationpriority: high
 ms.date: 07/11/2022
 manager: apoorvseth
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 <!-- This include file is currently used by device-sync-actions.md and cloud-attach/enable.md. Note H2/H3s for this include file may be context driven by article. -->
@@ -22,10 +22,10 @@ From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-mana
 - Microsoft Entra tenant name
 - Microsoft Entra tenant ID
 - Application name
-- Client ID 
+- Client ID
 - Secret key
 - Secret key expiry
-- App ID URI 
+- App ID URI
 
 > [!Important]
 > - The App ID URI must use one of the following formats:<!-- 10617402 -->
@@ -33,7 +33,7 @@ From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-mana
 >    - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 >
 >   For more information on creating a Microsoft Entra app, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md).
-> - When you use an imported Microsoft Entra app, you aren't notified of an upcoming expiration date from [console notifications](../../core/servers/manage/admin-console-notifications.md). <!--10568158--> 
+> - When you use an imported Microsoft Entra app, you aren't notified of an upcoming expiration date from [console notifications](../../core/servers/manage/admin-console-notifications.md). <!--10568158-->
 
 <a name='azure-ad-application-permissions-and-configuration'></a>
 

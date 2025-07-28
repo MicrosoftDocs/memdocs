@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Configure security in Configuration Manager
@@ -205,6 +205,6 @@ From the **Authentication** tab of Hierarchy Settings, you can also exclude cert
 
 - [How to enable TLS 1.2](enable-tls-1-2.md)
 
-- [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)  
+- [Cryptographic controls technical reference](cryptographic-controls-technical-reference.md)
 
-- [Communication between endpoints](../hierarchy/communications-between-endpoints.md)  
+- [Communication between endpoints](../hierarchy/communications-between-endpoints.md)

@@ -12,71 +12,71 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_IntuneAccountInfo Server WMI Class
-The `SMS_IntuneAccountInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Intune account information.  
+The `SMS_IntuneAccountInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Intune account information.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_IntuneAccountInfo : SMS_BaseClass  
-{  
-    String AADTenantID;  
-    String IntuneAccountID;  
-    Datetime LastUpdateTime;  
-};  
+```
+Class SMS_IntuneAccountInfo : SMS_BaseClass
+{
+    String AADTenantID;
+    String IntuneAccountID;
+    Datetime LastUpdateTime;
+};
 
-```  
+```
 
-## Methods  
- The `SMS_IntuneAccountInfo` class does not define any methods.  
+## Methods
+ The `SMS_IntuneAccountInfo` class does not define any methods.
 
-## Properties  
- `AADTenantID`  
- Data type: `String`  
+## Properties
+ `AADTenantID`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The GUID of the Microsoft Entra account.  
+ The GUID of the Microsoft Entra account.
 
- `IntuneAccountID`  
- Data type: `String`  
+ `IntuneAccountID`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The GUID of the Microsoft Intune account.  
+ The GUID of the Microsoft Intune account.
 
- `LastUpdateTime`  
- Data type: `DateTime`  
+ `LastUpdateTime`
+ Data type: `DateTime`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last date and time that the account was updated.  
+ The last date and time that the account was updated.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

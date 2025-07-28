@@ -5,9 +5,9 @@ title: How to use Intune in environments without Google Mobile Services
 titleSuffix: Microsoft Intune
 description: Learn how to use Intune in environments without Google Mobile Services.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 10/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune

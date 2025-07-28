@@ -8,7 +8,7 @@ author:  gowdhamankarthikeyan
 ms.author: gokarthi
 ms.collection: tier3
 manager: apoorvseth
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 <!--This file is currently used by deploy-firewall-policy.md, deploy-asr-policy.md, deploy-antivirus-policy.md, and atp-onboard.md-->
 

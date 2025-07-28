@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_TaskSequence_SetVariableAction server WMI class
@@ -157,9 +157,9 @@ Value of the task sequence environment variable. The value length must be betwee
 Class qualifiers for this class include:
 
 ```
-[CommandLine("tsenv.exe \\"%1=%2\\""),  
+[CommandLine("tsenv.exe \\"%1=%2\\""),
 
-ActionCategory{"General,7,1"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "SetSequenceVariableControl", "TaskSequenceOptionControl"}]  
+ActionCategory{"General,7,1"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "SetSequenceVariableControl", "TaskSequenceOptionControl"}]
 ```
 
 For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).

@@ -11,7 +11,7 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to extend hardware inventory in Configuration Manager

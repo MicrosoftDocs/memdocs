@@ -12,32 +12,32 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetMachinePolicy Method in Class CCM_ClientUtilities
-The `GetMachinePolicy` Windows Management Instrumentation (WMI) class method gets and evaluates the machine policy for a client device.  
+The `GetMachinePolicy` Windows Management Instrumentation (WMI) class method gets and evaluates the machine policy for a client device.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
+```
 
-uint32 GetMachinePolicy();  
+uint32 GetMachinePolicy();
 
-```  
+```
 
 
-## Requirements  
+## Requirements
 
 ### Runtime requirements
 
-For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
 ### Development requirements
 
-For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
 ## See also
 
- [CCM_ClientUtilities Client WMI Class](../../../../../develop/reference/core/clients/sdk/ccm_clientutilities-client-wmi-class.md)   
+ [CCM_ClientUtilities Client WMI Class](../../../../../develop/reference/core/clients/sdk/ccm_clientutilities-client-wmi-class.md)

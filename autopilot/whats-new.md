@@ -6,7 +6,7 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.reviewer: madakeva
 ms.date: 04/21/2025
 ms.collection:
@@ -31,6 +31,14 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+## Deliver Enterprise App Catalog (EAM) apps during the Enrollment status page
+
+Date added: *June 26, 2025*
+
+Windows Autopilot now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. With Intune's 2506 release, you can now select apps from the Enterprise App Catalog as blocking apps in the Enrollment status page (ESP) profile. This allows you to ensure those apps are delivered before the user can access the desktop.
+
+For related information, see [Add an Enterprise App Catalog app to Microsoft Intune](/intune/intune-service/apps/apps-add-enterprise-app).
 
 ## Updated build for the low privileged account for Intune Connector for Active Directory
 

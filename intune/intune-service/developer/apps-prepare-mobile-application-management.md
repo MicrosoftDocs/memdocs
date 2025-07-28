@@ -4,9 +4,9 @@
 title: Prepare apps for mobile application management with Microsoft Intune
 description: The information in this topic helps you decide when you should use the App wrapping tool and the App SDK to enable your custom line-of-business apps to use the mobile app management policies.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/18/2024
 ms.topic: reference
 ms.service: microsoft-intune

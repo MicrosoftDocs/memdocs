@@ -7,7 +7,7 @@ description: Set up enrollment notifications in Intune for employees or students
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 06/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune

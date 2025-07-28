@@ -5,9 +5,9 @@ title: Tutorial - Configure Slack to use Intune for EMM and app configuration
 titleSuffix: Microsoft Intune
 description: In this tutorial you will configure Slack to use Intune for EMM and app configuration.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 06/07/2024
 ms.topic: tutorial
 ms.service: microsoft-intune
@@ -58,7 +58,9 @@ Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructio
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/role-based-access-control-reference.md) with sufficient permissions. If you have created an Intune Trial subscription, the account you created the subscription with is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+
+The Global Administrator built-in role is a [privileged Microsoft Entra ID role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), and isn’t recommended for daily use. As described the [sign-in to Intune artice](../fundamentals/account-sign-up.md#role-based-access-controls), you can reduce reliance on this role by assigning a less-privileged role to administrators who manage Intune and perform daily tasks.
 
 ## Set up Slack for EMM on iOS devices
 

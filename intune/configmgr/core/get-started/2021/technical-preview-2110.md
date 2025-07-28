@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 2110
@@ -38,7 +38,7 @@ The following sections describe the new features to try out in this version:
 
 
 ## General known issues
- 
+
 [!INCLUDE [11016837](includes/2109/known-issue-11016837.md)]
 <!--[!INCLUDE [11018755](includes/2110/known-issue-11018755.md)]
  -->

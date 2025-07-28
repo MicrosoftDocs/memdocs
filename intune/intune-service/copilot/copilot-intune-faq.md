@@ -4,9 +4,9 @@
 title: Copilot in Intune FAQ
 description: Get answers to common questions when using Copilot in Microsoft Intune.
 keywords: security copilot, intune, microsoft intune, copilot, faq
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 ms.date: 11/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Microsoft Copilot in Intune FAQ
@@ -78,6 +78,8 @@ You can't get insights from other Microsoft services, like Microsoft Defender, M
 ### How much does Copilot in Intune cost?
 
 Copilot in Intune is included with Security Copilot. Security Copilot uses security compute units (SCUs). There aren't any other licensing requirements or Intune-specific licenses for using Copilot in Intune.
+
+You need Security Copilot enabled to access Copilot in Intune features. Some Copilot in Intune capabilities may use little to none of your provisioned SCUs, while other capabilities may use more. Usage will also change as Copilot in Intune capabilities are changed and improved over time.
 
 For more information about SCUs, see:
 

@@ -10,7 +10,7 @@ author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -69,7 +69,7 @@ To aid troubleshooting, use the CMG connection analyzer for real-time verificati
 
      1. **Client certificate**: Use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](configure-authentication.md#pki-certificate).
 
-1. Select **Start** to start the analysis. The analyzer window displays the results. Select an entry to see more details in the Description field.  
+1. Select **Start** to start the analysis. The analyzer window displays the results. Select an entry to see more details in the Description field.
 
 :::image type="content" source="media/cmg-connection-analyzer.png" alt-text="Example output for the cloud management gateway (CMG) connection analyzer.":::
 
@@ -135,6 +135,6 @@ To test this feature, temporarily reduce one of the following values:
 ## Next steps
 
 If you need to change the configuration, you can modify the CMG:
-  
+
 > [!div class="nextstepaction"]
 > [Modify a CMG](modify-cloud-management-gateway.md)

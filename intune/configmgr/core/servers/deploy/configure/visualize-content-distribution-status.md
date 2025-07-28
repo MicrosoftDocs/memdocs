@@ -7,11 +7,11 @@ ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.author: baladell 
+ms.author: baladell
 author: BalaDelli
 manager: apoorvseth
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Visualize content distribution status

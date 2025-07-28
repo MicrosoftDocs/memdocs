@@ -6,7 +6,7 @@ description: Learn how to connect the Google Admin Console to Microsoft Intune s
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 10/26/2022  
 ms.topic: how-to
 ms.service: microsoft-intune

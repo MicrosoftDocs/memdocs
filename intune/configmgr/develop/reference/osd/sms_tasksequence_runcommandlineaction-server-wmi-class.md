@@ -12,16 +12,16 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_TaskSequence_RunCommandLineAction server WMI class
 
 The `SMS_TaskSequence_RunCommandLineAction` WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that runs a user-specified command line.
 
-The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
 ```MOF
 Class SMS_TaskSequence_RunCommandLineAction : SMS_TaskSequence_Action
@@ -42,8 +42,8 @@ Class SMS_TaskSequence_RunCommandLineAction : SMS_TaskSequence_Action
       String UserName;
       String UserPassword;
       String WorkingDirectory;
-};  
-```  
+};
+```
 
 ## Methods
 
@@ -53,9 +53,9 @@ The `SMS_TaskSequence_RunCommandLineAction` class doesn't define any methods.
 
 ### `CommandLine`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[Not_Null, CommandLineArg(2), AllowedLen("1-32000")]`
 
@@ -63,39 +63,39 @@ Specify a command-line. The length can be between 1 and 32,000 characters. For e
 
 ### `Condition`
 
-Data type: `SMS_TaskSequence_Condition`  
+Data type: `SMS_TaskSequence_Condition`
 
-Access type: Read/Write  
+Access type: Read/Write
 
-Qualifiers: None  
+Qualifiers: None
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `ContinueOnError`
 
-Data type: `Boolean`  
+Data type: `Boolean`
 
-Access type: Read/Write  
+Access type: Read/Write
 
-Qualifiers: None  
+Qualifiers: None
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `Description`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[AllowedLen("0-255")]`
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `DisableWow64Redirection`
 
-Data type: `Boolean`  
+Data type: `Boolean`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[Not_Null, VariableName("SMSTSDisableWow64Redirection")]`
 
@@ -105,29 +105,29 @@ The task sequence variable associated with this property is [SMSTSDisableWow64Re
 
 ### `Enabled`
 
-Data type: `Boolean`  
+Data type: `Boolean`
 
-Access type: Read/Write  
+Access type: Read/Write
 
-Qualifiers: None  
+Qualifiers: None
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `Name`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[AllowedLen("1-100")]`
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `PackageID`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[TaskSequencePackage, CommandLineArg(1)]`
 
@@ -147,7 +147,7 @@ Specify a task sequence variable to store the output of the script.
 
 Data type: `Boolean`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[VariableName("_SMSTSRunCommandLineAsUser"), RequireR2]`
 
@@ -155,7 +155,7 @@ When set to `true`, the command line runs under the credentials specified by the
 
 ### `SuccessCodes`
 
-Data type: `String`  
+Data type: `String`
 
 Access type: Read/Write
 
@@ -165,62 +165,62 @@ Exit codes that indicate success. The default setting is `"0 3010"`.
 
 ### `SupportedEnvironment`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[Not_Null:ToInstance]`
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `Timeout`
 
-Data type: `UInt32`  
+Data type: `UInt32`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[Not_Null:ToInstance]`
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `UserName`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[VariableName("SMSTSRunCommandLineUserName"]`
 
-The user account to run the command line under when the `RunAsUser` property is set to `true`.  
+The user account to run the command line under when the `RunAsUser` property is set to `true`.
 
 ### `UserPassword`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[VariableName("SMSTSRunCommandLineUserPassword", Secret]`
 
-Masked password associated with the user account that is used to run the command line when the `RunAsUser` property is set to `true`.  
+Masked password associated with the user account that is used to run the command line when the `RunAsUser` property is set to `true`.
 
 ### `WorkingDirectory`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[AllowedLen("0-255")]`
 
-The directory from which to run the command line. Set this property to an absolute path or a relative path. The path length must be between 0 and 255 characters.  
+The directory from which to run the command line. Set this property to an absolute path or a relative path. The path length must be between 0 and 255 characters.
 
 ## Remarks
 
-Class qualifiers for this class include:  
+Class qualifiers for this class include:
 
 ```
-[CommandLine("smsswd.exe /run:%1 %2"),  
+[CommandLine("smsswd.exe /run:%1 %2"),
 
-ActionCategory("General,1,1"),ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "RunCommandLineControl", "TaskSequenceOptionControl"}]  
+ActionCategory("General,1,1"),ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "RunCommandLineControl", "TaskSequenceOptionControl"}]
 ```
 
 For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).

@@ -7,8 +7,8 @@ description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microso
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 04/29/2025
+manager: laurawi
+ms.date: 06/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -83,13 +83,24 @@ Read through these enrollment requirements and best practices to prepare for a s
 
 ### Choose an authentication method
 
-Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication and has features like multifactor authentication. 
+Before creating an enrollment profile, decide how you want users to authenticate:
 
-Intune also supports just-in-time registration (JIT registration) for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app for Microsoft Entra registration and compliance. To use JIT registration, you have to create a device configuration policy *before* you create the Apple enrollment profile and configure Setup Assistant with modern authentication. 
+- **Setup Assistant with modern authentication** (recommended):
+  - Supported on iOS/iPadOS 13.0 and later
+  - Supports multifactor authentication and just-in-time (JIT) registration, eliminating the need for the Company Portal app if configured with a device configuration policy
 
-Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use Setup Assistant (legacy) for authentication.  
+- **Intune Company Portal app**: 
+  - Also supports modern authentication and multifactor authentication
+  - Still requires users to complete Microsoft Entra registration via the app
 
-For more information about your authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
+- **Setup Assistant (Legacy)**: 
+  - Supports devices running iOS/iPadOS earlier than 13.0
+  - No longer recommended
+
+> [!IMPORTANT]
+> We recommend using **Setup Assistant with modern authentication** for all Automated Device Enrollment (ADE) scenarios with user device affinity. Avoid using legacy authentication.
+
+For more information about your authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).
 
 ### What is supervised mode?  
 
@@ -244,9 +255,12 @@ Now that you've installed your token, you can create an enrollment profile for a
 
     Your options:
 
-     - **Company Portal**  
-     - **Setup Assistant (legacy)**
-     - **Setup Assistant with modern authentication**  
+   - **Company Portal**  
+   - **Setup Assistant (legacy)**
+   - **Setup Assistant with modern authentication**
+
+   > [!IMPORTANT]
+   > We recommend using **Setup Assistant with modern authentication** for your Apple devices for ADE (automated device enrollment) scenarios with user device affinity. While use of the legacy authentication remains available, we do not recommend its use.
 
 1. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Microsoft Entra registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate into the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.service: microsoft-intune

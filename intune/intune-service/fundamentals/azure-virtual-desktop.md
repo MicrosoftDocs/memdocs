@@ -7,7 +7,7 @@ description: Guidelines for using Azure Virtual Desktop single-session with Micr
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 02/13/2025
 ms.topic: article
 ms.service: microsoft-intune
@@ -93,7 +93,7 @@ The following Windows 10 desktop device remote actions aren't supported/recommen
 
 ### Retirement
 
-Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
+Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
 
 ### Known issues
 

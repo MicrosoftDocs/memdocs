@@ -12,63 +12,63 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # LoadIconForPDF Method in Class SMS_PDF_Package
-The `LoadIconForPDF` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a required icon for a package definition file.  
+The `LoadIconForPDF` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a required icon for a package definition file.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 LoadIconForPDF(  
-    UInt32 PDFID,  
-     String IconFileName,  
-     UInt8 Icon[]  
-);  
-```  
+```
+SInt32 LoadIconForPDF(
+    UInt32 PDFID,
+     String IconFileName,
+     UInt8 Icon[]
+);
+```
 
-#### Parameters  
- `PDFID`  
- Data type: `UInt32`  
+#### Parameters
+ `PDFID`
+ Data type: `UInt32`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- ID of the package definition file to which to add icons. Get this value from the `PDFID` parameter of the [LoadPDF Method in Class SMS_PDF_Package](../../../../../develop/reference/core/servers/configure/loadpdf-method-in-class-sms_pdf_package.md) method.  
+ ID of the package definition file to which to add icons. Get this value from the `PDFID` parameter of the [LoadPDF Method in Class SMS_PDF_Package](../../../../../develop/reference/core/servers/configure/loadpdf-method-in-class-sms_pdf_package.md) method.
 
- `IconFileName`  
- Data type: `String`  
+ `IconFileName`
+ Data type: `String`
 
- Qualifiers: [in, SizeLimit("100")]  
+ Qualifiers: [in, SizeLimit("100")]
 
- Full path and file name of a required package definition file icon. Get the icon name from the `RequriedIconNames` parameter of the `LoadPDF` method. Include the path if necessary.  
+ Full path and file name of a required package definition file icon. Get the icon name from the `RequriedIconNames` parameter of the `LoadPDF` method. Include the path if necessary.
 
- `Icon`  
- Data type: `UInt8` Array  
+ `Icon`
+ Data type: `UInt8` Array
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Icon to associate with the package.  
+ Icon to associate with the package.
 
-## Return Values  
- An `SInt32` data type.  
+## Return Values
+ An `SInt32` data type.
 
-## Remarks  
- Package definition files can reference icons to be used with the package. These icons are not part of the file and must be loaded separately.  
+## Remarks
+ Package definition files can reference icons to be used with the package. These icons are not part of the file and must be loaded separately.
 
- Your application must call `LoadIconForPDF` for every icon that [LoadPDF Method in Class SMS_PDF_Package](../../../../../develop/reference/core/servers/configure/loadpdf-method-in-class-sms_pdf_package.md) loads.  
+ Your application must call `LoadIconForPDF` for every icon that [LoadPDF Method in Class SMS_PDF_Package](../../../../../develop/reference/core/servers/configure/loadpdf-method-in-class-sms_pdf_package.md) loads.
 
-## Example Code  
- For an example that uses the `LoadIconForPDF` method, see [LoadPDF Method in Class SMS_PDF_Package](../../../../../develop/reference/core/servers/configure/loadpdf-method-in-class-sms_pdf_package.md).  
+## Example Code
+ For an example that uses the `LoadIconForPDF` method, see [LoadPDF Method in Class SMS_PDF_Package](../../../../../develop/reference/core/servers/configure/loadpdf-method-in-class-sms_pdf_package.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_PDF_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_pdf_package-server-wmi-class.md)

@@ -5,9 +5,9 @@ title: Add and assign an app
 titleSuffix: Microsoft Intune
 description: In this article, you'll use Microsoft Intune to add and assign an app.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 02/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -45,7 +45,11 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/role-based-access-control-reference.md) with sufficient permissions. If you have created an Intune Trial subscription, the account you created the subscription with is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+
+> [!CAUTION]  
+> The Global Administrator built-in role is a [privileged Microsoft Entra ID role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), and isn’t recommended for daily use. As described the [sign-in to Intune artice](../fundamentals/account-sign-up.md#role-based-access-controls), you can reduce reliance on this role by assigning a less-privileged role to administrators who manage Intune and perform daily tasks.
+
 
 ## Add the app to Intune
 

@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 2009
@@ -37,7 +37,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improved Windows Server restart experience for non-administrator accounts](includes/2009/7821529.md)]
 
 [!INCLUDE [Improvements to OS deployment](includes/2009/7799892.md)]
-<!--7799892,7068388--> 
+<!--7799892,7068388-->
 
 <!--
 ## General known issues

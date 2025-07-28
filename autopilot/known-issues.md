@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
-manager: aaroncz
+manager: bpardi
 ms.date: 05/09/2025
 ms.collection:
   - M365-modern-desktop
@@ -41,7 +41,7 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
-### TPM attestation isn't working for some ST Micro and Nuvoton TPMs 
+### TPM attestation isn't working for some ST Micro and Nuvoton TPMs
 
 Date added: *May 9, 2025*
 
@@ -58,15 +58,15 @@ The following issues are under active investigation:
 - **Error `MSA account <accountName> is not valid` when signing in.**
 
   This error occurs when the connector successfully creates the MSA but fails to retrieve the data from the domain controller. Various issues can cause the error, including replication delays between domain controllers in single domain, or when the user account exists in a different domain to the connector machine.
-  
+
   This issue is resolved in build **6.2504.2001.8.**
-  
+
 - **Error `Failed to create a managed service account - Element not found`.**
 
 - **Error `Cannot start service ODJConnectorSvc on computer '.'. ---> System.ComponentModel.Win32Exception: The service did not start due to a logon failure` after the MSA is created.**
 
   This error occurs when the service can't run as the MSA. The service not being able to run as the MSA can be caused by various issues, including group or local policy restricting **Log on as a service** privileges. For more information on how to mitigate this error, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--cannot-start-service-odjconnectorsvc-on-computer------occurring-when-setting-up-the-intune-connector-for-active-directory-).
-  
+
 - **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`**
 
   For information on how to mitigate this error, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#troubleshooting-the-intune-connector-for-active-directory).

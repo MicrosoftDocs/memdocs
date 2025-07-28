@@ -12,41 +12,41 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ICcmAlternateDownloadProvider : CancelJob Method
-The **ICcmAlternateDownloadProvider::CancelJob** method, in Configuration Manager, cancels a job.  
+The **ICcmAlternateDownloadProvider::CancelJob** method, in Configuration Manager, cancels a job.
 
 > [!NOTE]
->  An error should be returned if the job is not found or if cancellation failed.  
+>  An error should be returned if the job is not found or if cancellation failed.
 
-## Syntax  
+## Syntax
 
-```  
-HRESULT CancelJob(  
-            REFGUID JobID  
-    );  
+```
+HRESULT CancelJob(
+            REFGUID JobID
+    );
 
-```  
+```
 
-#### Parameters  
- `JobID`  
- Data type: `REFGUID`  
+#### Parameters
+ `JobID`
+ Data type: `REFGUID`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The job upon which to take action.  
+ The job upon which to take action.
 
-## Return Values  
- An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
+## Return Values
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:
 
- S_OK  
- Success implies that discovery was triggered successfully. All other return values indicate failure.  
+ S_OK
+ Success implies that discovery was triggered successfully. All other return values indicate failure.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).

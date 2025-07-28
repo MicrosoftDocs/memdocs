@@ -6,7 +6,7 @@ description: Deployment guide to set up, onboard, or move to Intune. These steps
 keywords: migrate from configuration manager to intune, move from airwatch to intune, move gpo to intune, move from co-management to intune
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/03/2025
 ms.topic: upgrade-and-migration-article
 ms.service: microsoft-intune

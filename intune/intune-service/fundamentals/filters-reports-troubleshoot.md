@@ -6,7 +6,7 @@ description: Use the device and app filter reports to get more information on su
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 11/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune

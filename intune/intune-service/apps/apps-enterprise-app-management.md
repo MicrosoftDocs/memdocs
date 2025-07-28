@@ -3,10 +3,10 @@ title: Microsoft Intune Enterprise Application Management
 titleSuffix:
 description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 04/03/2025
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
+ms.date: 06/17/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,6 +36,7 @@ The Enterprise App Management provides the following benefits:
 
 - **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
 - **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they're available in the catalog. Use the **Enterprise App Catalog apps with updates** report.
+- **Windows Autopilot integration**: Enterprise App Catalog apps are supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you can select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions.
 
 When you add an Enterprise App Catalog app, Intune prefills the following installation details:
 
