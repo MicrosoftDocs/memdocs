@@ -298,6 +298,21 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
+### Declarative Apple software update operational report<!-- 25207078 -->
+You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
+
+- Pending OS update information such as OS and build version, and its status on the device
+- Current OS information for a device, including Rapid Security Responses
+- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM
+- Information about the latest public update made available by Apple
+ 
+This new report will be available through the *Devices* > Select a device > *Monitor* node of the admin center.
+ 
+Applies to:
+ 
+- iOS/iPadOS
+- macOS
+
 <!-- *********************************************** -->
 
 <!-- ## Role-based access control -->
