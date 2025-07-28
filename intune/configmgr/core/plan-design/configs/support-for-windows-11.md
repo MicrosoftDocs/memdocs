@@ -6,8 +6,8 @@ ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: Baladelli
-ms.author: Baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.collection: tier3
 ms.reviewer: mstewart
@@ -48,9 +48,9 @@ The following table lists the versions of Windows 11 that you can use as a clien
 
 | Windows 11 version                         | ConfigMgr 2309 | ConfigMgr 2403 | ConfigMgr 2409 |
 |--------------------------------------------|----------------|----------------|----------------|
-| **24H2**<br>(10.0.26100) <!--2027-10-12--> | ![Supported](media/red-x.png) | ![Supported](media/red-x.png) | ![Supported](media/green-check.png) |
-| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **24H2**<br>(10.0.26100) <!--2027-10-12--> |:::image type="icon" source="media/red-x.png":::  | :::image type="icon" source="media/red-x.png"::: | :::image type="icon" source="media/green-check.png"::: |
+| **23H2**<br>(10.0.22631) <!--2026-10-31--> | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: |
+| **22H2**<br>(10.0.22621) <!--2025-10-14--> | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: |
 
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
@@ -62,8 +62,8 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 | Key |
 |--|
-| ![Supported](media/green-check.png) = **Supported** |
-| ![Not supported](media/red-x.png) = **Not supported** |
+| :::image type="icon" source="media/green-check.png"::: = **Supported** |
+|:::image type="icon" source="media/red-x.png":::  = **Not supported** |
 
 ## Support notes
 
