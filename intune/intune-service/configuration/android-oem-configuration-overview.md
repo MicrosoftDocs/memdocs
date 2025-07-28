@@ -250,6 +250,7 @@ Intune supports the following OEMConfig apps:
 | LG | com.lge.android.oemconfig | |
 | Motorola Solutions | com.motorolasolutions.lexoemconfig | |
 | Motorola Mobility | com.motorola.oemconfig.rel | [Moto OEMConfig Guide](https://motorola-global-portal.custhelp.com/app/answers/prod_answer_detail/a_id/160503 ) |
+| Urovo | com.urovo.oemconfigs | |
 | Panasonic | com.panasonic.mobile.oemconfig | |
 | Pepperl+Fuchs SE | com.ecom.econfig.smart0x | |
 | Point Mobile | device.apps.emkitagent | |
