@@ -284,7 +284,7 @@ Applies to:
 - macOS
 
 ### Declarative Apple software update operational report<!-- 25207078 -->
-You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
+You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
 
 - Pending OS update information such as OS and build version, and its status on the device
 - Current OS information for a device, including Rapid Security Responses
