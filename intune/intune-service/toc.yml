@@ -182,6 +182,9 @@ items:
     - name: Copilot in Intune
       displayName: ai, copilot
       href: ./copilot/copilot-intune-overview.md
+    - name: Explore your Intune data
+      displayName: ai, copilot, explore, data, query
+      href: ./copilot/copilot-intune-explorer.md
     - name: Troubleshoot a device using Copilot
       href: ./copilot/copilot-devices.md
     - name: Copilot in Intune FAQ
@@ -1782,6 +1785,8 @@ items:
           items:
           - name: Set up automated device enrollment for macOS
             href: ./enrollment/device-enrollment-program-enroll-macos.md
+          - name: . Setup macOS account configuration with LAPS
+            href: ./enrollment/macos-laps.md
           - name: Set up Direct Enrollment for macOS
             href: ./enrollment/device-enrollment-direct-enroll-macos.md
         - name: Enrollment configurations
