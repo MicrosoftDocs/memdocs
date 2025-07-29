@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/24/2025
+ms.date: 07/29/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -237,16 +237,12 @@ To configure the Platform SSO policy, use the steps in this section to create an
 
     :::image type="content" source="./media/platform-sso-macos/intune-psso-device-profile.png" alt-text="Screenshot that shows the recommended Platform SSO settings in an Intune MDM profile.":::
 
-??
-10. To customize Kerberos TGT mapping behavior, refer to the `custom_tgt_setting` section in this [documentation](/entra/identity/devices/device-join-macos-platform-single-sign-on-kerberos-configuration).
-??
-
-11. Select **Next**.
-12. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. Select **Next**.
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-13. In **Assignments**, select the user or device groups that receive your profile. For devices with user affinity, assign to users or user groups. For devices with multiple users that are enrolled without user affinity, assign to devices or device groups.
+11. In **Assignments**, select the user or device groups that receive your profile. For devices with user affinity, assign to users or user groups. For devices with multiple users that are enrolled without user affinity, assign to devices or device groups.
 
     > [!IMPORTANT]
     > For Platform SSO settings on devices with user affinity, it's not supported to assign to device groups or filters. When using device group assignment or user group assignment with filters on devices with user affinity, the user might be unable to access resources protected by Conditional Access. This issue can happen:
@@ -258,7 +254,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
 
     Select **Next**.
 
-14. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+12. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 The next time the device checks for configuration updates, the settings you configured are applied.
 
