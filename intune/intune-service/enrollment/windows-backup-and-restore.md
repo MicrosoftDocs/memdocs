@@ -32,7 +32,7 @@ ms.collection:
 
 # Set up Windows backup and restore  
 
-*Applies to: Windows 10, Windows 11*
+*Applies to: Windows 10, Windows 11*  
 
 Enable users to securely sync their settings to the cloud and restore them on new or reimaged devices. When used together, the Microsoft Intune Windows backup and restore settings let users back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device during enrollment. The restore option is presented to users on its own screen during device enrollment.   
 
