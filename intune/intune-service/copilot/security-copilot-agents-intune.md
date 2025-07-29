@@ -6,6 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 07/10/2025
+ms.update-cycle: 180-days
 ms.topic: overview
 ms.service: security-copilot
 ms.localizationpriority: high
