@@ -36,12 +36,10 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 
 ## Prerequisites
 
-- The macOS device must be running macOS 10.13 or later.
-- The macOS device must have at least 650 MB of disk space.
-- Deploy kernel extension in Intune. See more information, see [Add macOS kernel extensions in Intune](../configuration/kernel-extensions-overview-macos.md).
+- The macOS device must be running macOS 13 or later.
 
-> [!IMPORTANT]
-> The kernel extension can be automatically approved only if it is present on the device before the Microsoft DDefender for Endpoint app is installed. Else, users will see "System extension blocked" message on Macs and must approve the extension by going to **Security Preferences** or **System Preferences** > **Security & Privacy** and then selecting **Allow**. For more information, see [Troubleshoot kernel extension issues in Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
+- The macOS device must have at least 1 GB of disk space.
+
 
 ## Add Microsoft Defender for Endpoint to Intune
 

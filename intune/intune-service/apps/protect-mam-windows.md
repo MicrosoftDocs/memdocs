@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 08/28/2024
+ms.date: 06/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -37,7 +37,7 @@ ms.custom: intune-azure
 
 You can enable protected Mobile Application Management (MAM) access to org data on personal Windows devices. This capability uses the following functionality:
 - Intune Application Configuration Policies (ACP) to customize the org user experience
-- Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy
+- Intune app protection policies to secure org data and ensure the client device is healthy
 - Windows Security Center client threat defense integrated with Intune APP to detect local health threats on personal Windows devices
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID
 
@@ -73,7 +73,7 @@ Members of your organization (end-users) expect to have the following functional
 > For information related to Microsoft Entra ID, see [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows).
 
 ## Conditional Access Compliance 
-Preventing data loss is a part of protecting your organizational data. Data loss prevention (DLP) is only effective if your org data cannot be accessed from any unprotected system or device. App Protection Conditional Access uses Conditional Access (CA) to ensure App Protection Policies (APP) are supported and enforced in a client application before allowing access to protected resources (such as org data).  APP CA will allow end-users with personal Windows devices to use APP managed applications, including Microsoft Edge, to access Microsoft Entra resources without fully managing their personal device.
+Preventing data loss is a part of protecting your organizational data. Data loss prevention (DLP) is only effective if your org data cannot be accessed from any unprotected system or device. App Protection Conditional Access uses Conditional Access (CA) to ensure app protection policies are supported and enforced in a client application before allowing access to protected resources (such as org data). App Protection Conditional Access will allow end-users with personal Windows devices to use app protection policies managed applications, including Microsoft Edge, to access Microsoft Entra resources without fully managing their personal device.
 
 This MAM service syncs compliance state per user, per app, and per device to the Microsoft Entra CA service. This includes the threat information received from the Mobile Threat Defense (MTD) vendors starting with Windows Security Center.
 
@@ -90,7 +90,9 @@ The MAM Client communicates the client heath state (or health metadata) to the M
 ### Conditional Access Compliance
 Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using policy managed applications on Windows. To do this, you'll need a Conditional Access policy that targets all potential users. Follow the steps in [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows), which allows Microsoft Edge for Windows, but blocks other web browsers from connecting to Microsoft 365 endpoints.
 
-With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started).
+With Conditional Access, you can also target on-premises sites that you have exposed to external users via the Microsoft Entra application proxy.
+
+For more information, see [Using Microsoft Entra application proxy to publish on-premises apps for remote users](/entra/identity/app-proxy/overview-what-is-app-proxy)
 
 ## Threat Defense Health
 
@@ -107,14 +109,14 @@ For related information, see [create an MTD app protection policy for Windows](.
 
 ## Create Intune app protection policies
 
-App Protection Policies (APP) define which apps are allowed and the actions they can take with your organization's data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario.
+App protection policies define which apps are allowed and the actions they can take with your organization's data. The choices available in app protection policies enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario.
 
-As an admin, you can configure how data is protected through APP. This configuration applies to the native Windows application interaction with the data. APP settings are segmented into three categories:
+As an admin, you can configure how data is protected through app protection policies. This configuration applies to the native Windows application interaction with the data. App protection policy settings are segmented into three categories:
 -	**Data Protection** - These settings control how data can move into and out of an org context (account, document, location, services) for the user.
 <!-- -	**Access** - These settings control how the user must verify their identity before interacting with org data. -->
 -	**Health Checks** (Conditional Launch) - These settings controls the device conditions required to access org data and the remediation action(s) if the conditions aren't met.
 
-To help organizations prioritize client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for mobile app management. 
+To help organizations prioritize client endpoint hardening, Microsoft has introduced taxonomy for its app protection policies data protection framework for mobile app management. 
 
 To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](app-protection-framework.md).
 

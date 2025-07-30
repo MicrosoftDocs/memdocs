@@ -112,12 +112,12 @@ Following is some guidance for the available options. Additional details are acc
   - {{serialNumber}} - for example, **F4KN99ZUG5V2** 
   - {{partialupn}} - for example, **John**
   - {{managedDeviceName}} - for example, **F2AL10ZUG4W2_14_4/15/2025_12:45PM**
-  - {{OnPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **contoso\John**
 
 - **Primary account full name** - Specify the full name for the account or use one of the following variables to dynamically create the name. Setup Assistant uses this value to prefill the Full Name field if *Prefill account info* is set to *Not configured*. By default, this field uses the *{{username}}* variable:
   - {{username}} - for example, **John@contoso.com**
   - {{serialNumber}} - for example, **F4KN99ZUG5V2** 
-  - {{OnPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **contoso\John**
 
 - **Restrict editing** - Prevent the end user from editing the full name and account name. By default, this is set to *Not configured*.
 
@@ -132,6 +132,8 @@ To view the local Administrator password of a device, your own account must be a
 1.	In the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **macOS devices** > select a **macOS device** to open its *Overview* pane > **Passwords and keys**.
 
 On the **Passwords and keys** pane, you can retrieve the admin password for the macOS device under the **Local administrator account password** section. Here you can also see the last time the password was rotated, manually or automatically.
+
+To see whether an enrolled macOS device has an Intune managed admin password, if the password can be successfully retrieved in the console, that means the password for the local administrator account is managed by Intune. 
 
 :::image type="content" source="./media/macos-laps/passwords-and-keys-pane.png" alt-text="Screen capture that shows the Passwords and keys pane, and the Rotate local admin password options.":::
 
