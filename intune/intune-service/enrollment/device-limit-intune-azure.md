@@ -7,7 +7,7 @@ description: Learn the differences between Intune device limit restrictions and 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 10/14/2024
 ms.topic: concept-article
 ms.service: microsoft-intune

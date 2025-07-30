@@ -7,7 +7,7 @@ description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microso
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 06/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ description: Add or create a VPN configuration profile on iOS/iPadOS devices usi
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/30/2024
 ms.topic: reference
 ms.service: microsoft-intune

@@ -7,7 +7,7 @@ description: Learn how to create the enrollment profile in Intune for Apple Scho
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/07/2025
 ms.topic: how-to
 ms.service: microsoft-intune

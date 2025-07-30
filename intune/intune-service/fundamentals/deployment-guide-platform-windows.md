@@ -6,7 +6,7 @@ description: Use our platform deployment guide to set up Windows device manageme
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 08/21/2024
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune

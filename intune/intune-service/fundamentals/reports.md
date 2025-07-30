@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 08/12/2024
+ms.date: 06/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,13 +52,9 @@ The reporting framework provides a consistent and more comprehensive reporting e
 
 ## Who can access the data?
 
-Users with the following permissions can review logs:
-
-- Global Administrator
-- Intune Administrator
-- Administrators assigned to an Intune role with **Read** permissions
-
-For more information about administrator permissions, see [Types of administrators](../fundamentals/users-add.md#types-of-administrators).
+Users assigned an Intune role-based access control role with sufficient permissions can review logs. The least privileged built-in Intune role with these permissions is the [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator).
+ 
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 
 ## Reporting tiles
 
@@ -238,14 +234,19 @@ You can view the **Noncompliant devices** report using the following steps:
 
 ### Windows hardware attestation report (Organizational)  
 
-View the status of hardware-attested compliance settings assigned to Windows devices. This report shows data for Intune-enrolled devices that are assigned a compliance policy with at least one hardware-attested compliance setting.    
+View the status of hardware-attested compliance settings assigned to Windows devices. This report shows data for Intune-enrolled devices that are assigned a compliance policy with at least one hardware-attested compliance setting. Microsoft Intune reports a *successful* status when it receives an attestation report from the device. Microsoft Intune reports an *error* status, along with the detected error type and code, when it's unable to generate an attestation report. 
 
 You can view the Windows hardware attestation report using the following steps:  
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Go to **Reports** > **Device Compliance**.
-1. Go to the **Reports** tab.  
-1. Select **Windows hardware attestation report**.   
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to **Reports** > **Device Compliance**.  
+1. Go to the **Reports** tab.   
+1. Select **Windows hardware attestation report**.  
+
+>[!NOTE]
+> - The **Latest report** column shows the date of the last issued health certificate. The date is both when the device receives a health certificate, and when it generates an attestation report for Microsoft Intune.  
+> - Every time the device generates an attestation report, the health certificate renews.  
+> - For more information about error types, codes, and troubleshooting, see [Health attestation CSP status and error-codes](/windows/client-management/mdm/healthattestation-csp#healthattestation-csp-status-and-error-codes).  
 
 ## Device configuration reports
 

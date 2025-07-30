@@ -6,7 +6,7 @@ description: Configure your Windows 10/11 client devices as single-app and multi
 keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/20/2025
 ms.topic: reference
 ms.service: microsoft-intune
@@ -250,6 +250,6 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
 
 [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-You can also create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [Windows Holographic for Business](kiosk-settings-holographic.md) devices.
+You can also create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [Windows Holographic for Business](kiosk-settings-holographic.md) devices.
 
 Also see [set up a single-app kiosk](/windows/configuration/kiosk-single-app) or [set up a multi-app kiosk](/windows/configuration/lock-down-windows-10-to-specific-apps) in the Windows guidance.

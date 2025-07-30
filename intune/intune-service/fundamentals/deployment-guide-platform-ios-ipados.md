@@ -6,7 +6,7 @@ description: A guide to managing iOS/iPadOS devices in Microsoft Intune.
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 07/22/2024
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune

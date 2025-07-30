@@ -7,7 +7,7 @@ description: Learn about the methods for managing device operating system versio
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 06/12/2025
 ms.topic: concept-article
 ms.service: microsoft-intune
