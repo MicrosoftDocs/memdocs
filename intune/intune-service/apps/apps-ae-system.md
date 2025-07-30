@@ -73,7 +73,10 @@ You can disable an Android Enterprise system app in Intune using the following s
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps**.
 3. Select the system app from the app list.
-4. Change the assignment for this app to **Uninstalled** and save. 
+4. Change the assignment for this app to **Uninstalled** and save.
+
+> [!TIP]
+> To disable on-device AI experiences, block the AICore system service by disallowing com.google.android.aicore as a system app.
 
 ## Next steps
 
