@@ -90,7 +90,9 @@ The MAM Client communicates the client heath state (or health metadata) to the M
 ### Conditional Access Compliance
 Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using policy managed applications on Windows. To do this, you'll need a Conditional Access policy that targets all potential users. Follow the steps in [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows), which allows Microsoft Edge for Windows, but blocks other web browsers from connecting to Microsoft 365 endpoints.
 
-With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started).
+With Conditional Access, you can also target on-premises sites that you have exposed to external users via the Microsoft Entra application proxy.
+
+For more information, see [Using Microsoft Entra application proxy to publish on-premises apps for remote users](/entra/identity/app-proxy/overview-what-is-app-proxy)
 
 ## Threat Defense Health
 

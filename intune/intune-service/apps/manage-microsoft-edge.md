@@ -89,7 +89,9 @@ Follow the steps in [Require approved client apps or app protection policy with 
 >[!NOTE]
 > This policy ensures mobile users can access all Microsoft 365 endpoints from within Microsoft Edge for iOS and Android. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
 
-With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started).
+With Conditional Access, you can also target on-premises sites that you have exposed to external users via the Microsoft Entra application proxy.
+
+For more information, see [Using Microsoft Entra application proxy to publish on-premises apps for remote users](/entra/identity/app-proxy/overview-what-is-app-proxy)
 
 > [!NOTE]
 > To use app-based Conditional Access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
@@ -674,7 +676,7 @@ For more information about the URLs format, see [Enterprise policy URL pattern f
 
 ### Manage proxy configuration
 
-You can use Microsoft Edge for iOS and Android and [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started) together to give users access to intranet sites on their mobile devices. For example: 
+You can use Microsoft Edge for iOS and Android and [Microsoft Entra application proxy](/entra/identity/app-proxy/overview-what-is-app-proxy) together to give users access to intranet sites on their mobile devices. For example: 
 
 - A user is using the Outlook mobile app, which is protected by Intune. They then click a link to an intranet site in an email, and Microsoft Edge for iOS and Android recognizes that this intranet site has been exposed to the user through Application Proxy. The user is automatically routed through Application Proxy, to authenticate with any applicable multifactor authentication and Conditional Access, before reaching the intranet site. The user is now able to access internal sites, even on their mobile devices, and the link in Outlook works as expected.
 - A user opens Microsoft Edge for iOS and Android on their iOS or Android device. If Edge for iOS and Android is protected with Intune, and Application Proxy is enabled, the user can go to an intranet site by using the internal URL they're used to. Edge for iOS and Android recognizes that this intranet site has been exposed to the user through Application Proxy. The user is automatically routed through Application Proxy, to authenticate before reaching the intranet site.
