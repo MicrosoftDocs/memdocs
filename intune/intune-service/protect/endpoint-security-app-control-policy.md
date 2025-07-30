@@ -155,7 +155,7 @@ App Control for Business policies are an implementation of Windows Defender Appl
 
 The following procedure guides you through adding the Intune Management Extension as a managed installer for your tenant. Intune supports a single managed installer policy.
 
-1. In the Microsoft Intune admin center, go to **Endpoint security (Preview)**, select the **Managed installer** tab and then select **Add*. The *Add managed installer* pane opens.
+1. In the Microsoft Intune admin center, go to **Endpoint security** > **App Control for Business** > select the **Managed installer** tab and then select **Add**. The *Add managed installer* pane opens.
 
    :::image type="content" source="./media/endpoint-security-app-control-policy/add-managed-installer.png" alt-text="Screen shot of the Managed installer page, with the Add managed installer pane on the right side." lightbox="./media/endpoint-security-app-control-policy/add-managed-installer.png" :::
 
