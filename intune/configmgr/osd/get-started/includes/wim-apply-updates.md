@@ -11,11 +11,14 @@ ms.localizationpriority: medium
 
 > [!IMPORTANT]
 >
-> With the changes with how Windows 11 updates are applied via UUP patches, Offline Servicing of Windows 11 images is no longer supported. The recommended method to keep Windows 11 deployments up-to-date is to acquire the latest patched Windows 11 ISO from [Microsoft 365 admin center](https://admin.microsoft.com/). Once the updated Windows 11 ISO is obtained, import the **install.wim** image from the ISO into the site for use with your bare metal and in-place upgrade Task Sequences.
+> With the changes with how Windows 11 updates are applied via UUP patches, Offline Servicing of Windows 11 images and update packages via Configuration Manager is no longer supported. The recommended method to keep Windows 11 deployments up-to-date is to acquire the latest patched Windows 11 ISO from [Microsoft 365 admin center](https://admin.microsoft.com/). Once the updated Windows 11 ISO is obtained:
+>
+> - Import the **install.wim** image from the ISO into the site for **Operating System Images** packages used in bare metal/refresh task sequences.
+> - Import the whole contents of the ISO into the site for **Operating System Upgrade Packages** used in-place upgrade task sequences.
 
 > [!NOTE]
 >
-> This section applies to both **OS images** and **OS upgrade packages**. It uses the general term "image" to refer to the Windows image file (WIM). Both of these objects have a WIM, which contains Windows installation files. Software updates are applicable to these files in both objects. The behavior of this process is the same between both objects.
+> This section applies to both **Operating System Images** and **Operating System Upgrade Packages**. It uses the general term "image" to refer to the Windows image file (WIM). Both of these objects have a WIM, which contains Windows installation files. Software updates are applicable to these files in both objects. The behavior of this process is the same between both objects.
 
 Each month there are new software updates applicable to the image. Before you can apply software updates to it, you need the following prerequisites:
 

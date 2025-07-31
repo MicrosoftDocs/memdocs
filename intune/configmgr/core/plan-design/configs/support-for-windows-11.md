@@ -62,8 +62,8 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 | Key |
 |--|
-| ![Supported](media/green-check.png) = **Supported** |
-| ![Not supported](media/red-x.png) = **Not supported** |
+| :::image type="content" source="media/green-check.png" alt-text="Green check is supported"::: = **Supported** |
+| :::image type="content" source="media/red-x.png" alt-text="Red X is not Supported"::: = **Not supported** |
 
 ## Support notes
 
@@ -94,7 +94,10 @@ To provide feedback on Windows Insider, use the Windows [Feedback Hub](/windows-
 
 ## Offline servicing
 
-With the changes with how Windows 11 updates are applied via UUP patches, Offline Servicing of Windows 11 images is no longer supported. The recommended method to keep Windows 11 deployments up-to-date is to acquire the latest patched Windows 11 ISO from [Microsoft 365 admin center](https://admin.microsoft.com/). Once the updated Windows 11 ISO is obtained, import the **install.wim** image from the ISO into the site for use with your bare metal and in-place upgrade Task Sequences.
+With the changes with how Windows 11 updates are applied via UUP patches, Offline Servicing of Windows 11 images and update packages via Configuration Manager is no longer supported. The recommended method to keep Windows 11 deployments up-to-date is to acquire the latest patched Windows 11 ISO from [Microsoft 365 admin center](https://admin.microsoft.com/). Once the updated Windows 11 ISO is obtained:
+
+- Import the **install.wim** image from the ISO into the site for **Operating System Images** packages used in bare metal/refresh task sequences.
+- Import the whole contents of the ISO into the site for **Operating System Upgrade Packages** used in-place upgrade task sequences.
 
 ## Known issues
 
