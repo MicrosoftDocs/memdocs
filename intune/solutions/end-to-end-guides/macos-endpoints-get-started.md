@@ -150,7 +150,7 @@ The high-level steps to configure Apple Business Manager (or Apple School Manage
 3. In Apple Business Manager, assign devices to your Intune MDM.
 4. In Intune, assign the ADE profiles to your macOS devices.
 
-When you use macOS ADE enrollment profiles, we recommend configuring [macOS account configuration with LAPS](../..intune-service/enrollment/macos-laps.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.
+When you use macOS ADE enrollment profiles, we recommend configuring [macOS account configuration with LAPS](../../intune-service/enrollment/macos-laps.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.
 
 ### Step 5 - Target devices
 
