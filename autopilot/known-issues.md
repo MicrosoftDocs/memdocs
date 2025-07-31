@@ -41,9 +41,18 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Enrollment status page Account setup phase is not shown when signing in via FIDO2 (YubiKey) during self-deploying mode
+
+Date added: *July 31, 2025*
+
+When using Autopilot in self-deploying mode with Shared PC mode configured, the Enrollment status page (ESP) Account setup phase is not shown for users signing in with FIDO2 (YubiKey). Account setup is shown when users sign in via username/password sign-ins. 
+
 ### TPM attestation isn't working for some ST Micro and Nuvoton TPMs
 
 Date added: *May 9, 2025*
+Date updated: *July 31, 2025*
+
+The issue is resolved by the OEM. Lenovo customers should work with Lenovo support if they encounter an issue.
 
 Platforms with the latest models of TPMs manufactured by ST Micro and Nuvoton which support RSA 3072bit might fail TPM attestation and cause failures during pre-provisioning and self-deploying mode. The issue is being investigated.
 
