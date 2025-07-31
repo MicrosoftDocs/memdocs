@@ -48,9 +48,11 @@ The following table lists the versions of Windows 11 that you can use as a clien
 
 | Windows 11 version                         | ConfigMgr 2309 | ConfigMgr 2403 | ConfigMgr 2409 |
 |--------------------------------------------|----------------|----------------|----------------|
-| **24H2**<br>(10.0.26100) <!--2027-10-12--> | ![Supported](media/red-x.png) | ![Supported](media/red-x.png) | ![Supported](media/green-check.png) |
-| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **24H2**<br>(10.0.26100) <!--2027-10-12--> | :::image type="content" source="media/red-x.png" alt-text="Windows 11 24H2 isn't supported with Configuration Manager 2309."::: | :::image type="content" source="media/red-x.png" alt-text="Windows 11 24H2 isn't supported with Configuration Manager 2403."::: | :::image type="content" source="media/green-check.png" alt-text="Windows 11 24H2 is supported with Configuration Manager 2403."::: |
+
+| **23H2**<br>(10.0.22631) <!--2026-10-31--> | :::image type="content" source="media/green-check.png" alt-text="Windows 11 23H2 is supported with Configuration Manager 2309."::: | :::image type="content" source="media/green-check.png" alt-text="Windows 11 23H2 is supported with Configuration Manager 2403."::: | :::image type="content" source="media/green-check.png" alt-text="Windows 11 23H2 is supported with Configuration Manager 2403."::: |
+
+| **22H2**<br>(10.0.22621) <!--2025-10-14--> | :::image type="content" source="media/green-check.png" alt-text="Windows 11 22H2 is supported with Configuration Manager 2309."::: | :::image type="content" source="media/green-check.png" alt-text="Windows 11 22H2 is supported with Configuration Manager 2403."::: | :::image type="content" source="media/green-check.png" alt-text="Windows 11 22H2 is supported with Configuration Manager 2403."::: |
 
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
@@ -92,7 +94,7 @@ You can [update and service Windows Insider](../../../sum/get-started/configure-
 
 To provide feedback on Windows Insider, use the Windows [Feedback Hub](/windows-insider/business/feedback).
 
-### Offline servicing
+## Offline servicing
 
 With the changes with how Windows 11 updates are applied via UUP patches, Offline Servicing of Windows 11 images is no longer supported. The recommended method to keep Windows 11 deployments up-to-date is to acquire the latest patched Windows 11 ISO from [Microsoft 365 admin center](https://admin.microsoft.com/). Once the updated Windows 11 ISO is obtained, import the **install.wim** image from the ISO into the site for use with your bare metal and in-place upgrade Task Sequences.
 
