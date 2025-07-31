@@ -3,12 +3,12 @@
 
 title: Configure app protection policies for Windows 10/11
 titleSuffix: Microsoft Intune
-description: This article describes how to configure app protection policies (APP) for Windows 10/11 devices.
+description: This article describes how to configure app protection policies for Windows 10/11 devices.
 keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 01/06/2025
+ms.date: 06/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps

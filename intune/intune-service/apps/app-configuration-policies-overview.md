@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 11/21/2024
+ms.date: 06/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -69,7 +69,7 @@ App configuration can be delivered either through the mobile device management (
 Intune represents these different app configuration policy channels as:
 
 - **Managed devices** - The device is managed by Intune as the unified endpoint management provider. The app must be pinned to the management profile on iOS/iPadOS or deployed through Managed Google Play on Android devices. In addition, the app supports the desired app configuration.
-- **Managed apps** - An app that has either integrated the Intune App SDK or has been wrapped using the Intune Wrapping Tool and supports App Protection Policies (APP). In this configuration, neither the device's enrollment state or how the app is delivered to the device matter. The app supports the desired app configuration.
+- **Managed apps** - An app that has either integrated the Intune App SDK or has been wrapped using the Intune Wrapping Tool and supports app protection policies. In this configuration, neither the device's enrollment state or how the app is delivered to the device matter. The app supports the desired app configuration.
 
 ![Device enrollment type](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
@@ -98,7 +98,7 @@ Delivery of app configuration through the MAM channel does not require the devic
 
 - General app configuration settings
 - S/MIME configuration settings
-- Advanced APP data protection settings which extend the capabilities offered by App Protection Policies
+- Advanced app protection policies data protection settings which extend the capabilities offered by app protection policies
 
 > [!NOTE]
 > Intune managed apps will check in with an interval of 30 minutes for Intune App Configuration Policy status, when deployed in conjunction with an Intune App Protection Policy. If an Intune App Protection Policy isn't assigned to the user, then the Intune App Configuration Policy check-in interval is set to 720 minutes.

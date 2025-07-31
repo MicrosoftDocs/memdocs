@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Corporate-owned Android Enterprise device restriction settings in Microsoft Intune
+title: Device restriction settings for Android in Microsoft Intune
 description: On Android Enterprise or Android for Work devices owned by your organization, you can restrict settings on the device using Microsoft Intune. Allow copy and paste, notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 06/17/2025
+ms.date: 07/29/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #audience:
 params:
   siblings_only: true
-ms.reviewer: cchristenson,arnab
+ms.reviewer: cchristenson, arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
