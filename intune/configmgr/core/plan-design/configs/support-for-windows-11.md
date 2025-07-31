@@ -2,13 +2,13 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 12/04/2024
+ms.date: 07/31/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: Baladelli
-ms.author: Baladell
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.collection: tier3
 ms.reviewer: mstewart
 ---
@@ -92,6 +92,10 @@ You can [update and service Windows Insider](../../../sum/get-started/configure-
 
 To provide feedback on Windows Insider, use the Windows [Feedback Hub](/windows-insider/business/feedback).
 
+### Offline servicing
+
+With the changes with how Windows 11 updates are applied via UUP patches, Offline Servicing of Windows 11 images is no longer supported. The recommended method to keep Windows 11 deployments up-to-date is to acquire the latest patched Windows 11 ISO from [Microsoft 365 admin center](https://admin.microsoft.com/). Once the updated Windows 11 ISO is obtained, import the **install.wim** image from the ISO into the site for use with your bare metal and in-place upgrade Task Sequences.
+
 ## Known issues
 
 <!-- 10797955 -->
@@ -132,11 +136,6 @@ Use one of the following options to work around this issue:
 - Install the console on a device running another version of Windows.
 
 - Add users to the authentication exclusion list. For more information, see [Configure SMS Provider authentication](../security/configure-security.md#sms-provider-authentication).
-
-### Offline servicing
-
-> [!Note]
-> Starting March 2023 offline servicing (UUP patch) will not work for any version of Windows 11.
 
 ## Next steps
 
