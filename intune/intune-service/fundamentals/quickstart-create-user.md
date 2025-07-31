@@ -11,7 +11,7 @@ ms.localizationpriority: high
 ms.topic: how-to
 ms.date: 04/07/2025
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.assetid: 820fcb18-0927-4ebd-be79-dce92b51c261
 
 # optional metadata

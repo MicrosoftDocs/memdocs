@@ -154,7 +154,7 @@ items:
         - name: Miscellaneous policy mapping
           displayName: migrate, mdm, office, windows
           href: ./fundamentals/policy-map-miscellaneous.md
-  - name: Deploy Intune
+  - name: Deployment guide for Intune
     items:
     - name: Get started with your deployment
       displayName: mdm, mam, android, ios, ipados, macos, windows
@@ -182,6 +182,9 @@ items:
     - name: Copilot in Intune
       displayName: ai, copilot
       href: ./copilot/copilot-intune-overview.md
+    - name: Explore your Intune data
+      displayName: ai, copilot, explore, data, query
+      href: ./copilot/copilot-intune-explorer.md
     - name: Troubleshoot a device using Copilot
       href: ./copilot/copilot-devices.md
     - name: Copilot in Intune FAQ
@@ -191,7 +194,8 @@ items:
     - name: Copilot in Surface Management Portal
       displayName: ai, copilot, surface, models, fleet, warranty
       href: ./copilot/security-copilot-surface-portal.md
-
+    - name: Security Copilot agents in Microsoft Intune
+      href: ./copilot/security-copilot-agents-intune.md
   - name: Endpoint analytics
     items:
     - name: Overview
@@ -752,6 +756,8 @@ items:
                 href: ./protect/mde-security-integration.md
               - name: Manage endpoint security policies in Microsoft Defender
                 href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
+          - name: Vulnerability Remediation Agent 
+            href: ./protect/vulnerability-remediation-agent.md
           - name: Tenant attach
             href: ./protect/tenant-attach-intune.md
           - name: Encrypt disks
@@ -1161,14 +1167,15 @@ items:
       - name: Device configuration overview
         displayName: android, ios, ipados, macos, windows
         href: ./configuration/device-profiles.md
-      - name: How-to guides
+      - name: Create a profile
+        displayName: android, ios, ipados, macos, windows
+        href: ./configuration/device-profile-create.md
+      - name: Monitor a profile
+        displayName: android, ios, ipados, macos, windows
+        href: ./configuration/device-profile-monitor.md
+
+      - name: Profiles and their step-by-step guides
         items:
-        - name: Profiles - Get started
-          displayName: android, ios, ipados, macos, windows
-          href: ./configuration/device-profile-create.md
-        - name: Monitor existing profiles
-          displayName: android, ios, ipados, macos, windows
-          href: ./configuration/device-profile-monitor.md
         - name: Settings catalog
           displayName: gpo, admx, ios, ipados, macos, windows
           items:
@@ -1237,7 +1244,7 @@ items:
           - name: Import GPOs to create a policy
             displayName: gpo, admx, settings catalog, windows
             href: ./configuration/group-policy-analytics-migrate.md
-          - name: Create administrative templates
+          - name: Create administrative templates (retired)
             displayName: gpo, admx, windows
             href: ./configuration/administrative-templates-windows.md
           - name: Import custom ADMX and ADML
@@ -1254,7 +1261,7 @@ items:
             href: ./configuration/administrative-templates-restrict-usb.md
         - name: BIOS & DFCI on Windows
           items:
-          - name: BIOS configuration
+          - name: Configure the BIOS
             displayName: bios, firmware, windows, dell
             href: ./configuration/bios-configuration.md
           - name: DFCI settings for UEFI
@@ -1273,7 +1280,7 @@ items:
           href: ./configuration/wired-networks-configure.md
         - name: Device features on iOS/iPadOS and macOS
           items:
-          - name: Device features
+          - name: Configure device features
             href: ./configuration/device-features-configure.md
             displayName: airprint, home screen, lock screen, sso, single sign-on, ios, ipados, macos
           - name: Single sign-on (SSO)
@@ -1352,44 +1359,14 @@ items:
 
       - name: Device Configuration template settings lists
         items:
-        - name: Android device administrator
+        - name: Android
           items:
-          - name: Custom (OMA-URI)
-            items:
-            - name: Custom settings
-              displayName: oma uri, android, device administrator, da
-              href: ./configuration/custom-settings-android.md
-            - name: Allow/block apps for Samsung Knox Standard
-              displayName: oma uri, custom, android, device administrator, da
-              href: ./configuration/samsung-knox-apps-allow-block.md
+          - name: OEMConfig
+            displayName: original equipment manufacturers, oem, android enterprise, ae
+            href: ./configuration/android-oem-configuration-overview.md
           - name: Device restrictions
-            displayName: android, device administrator, da
-            href: ./configuration/device-restrictions-android.md
-          - name: Email
-            displayName: android, device administrator, da
-            href: ./configuration/email-settings-android.md
-          - name: VPN
-            displayName: android, device administrator, da
-            href: ./configuration/vpn-settings-android.md
-          - name: Wi-Fi
-            displayName: wifi, wireless, android, device administrator, da
-            href: ./configuration/wi-fi-settings-android.md
-        - name: Android (AOSP)
-          items:
-          - name: Device restrictions
-            displayName: android, aosp
-            href: ./configuration/device-restrictions-android-aosp.md
-          - name: Wi-Fi
-            displayName: wifi, wireless, android, aosp
-            href: ./configuration/wi-fi-settings-android-aosp.md
-        - name: Android Enterprise
-          items:
-          - name: Device restrictions - organization-owned devices
-            displayName: cope, cobo, cosu, android, android enterprise, ae
+            displayName: cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./configuration/device-restrictions-android-for-work.md
-          - name: Device restrictions - personally owned devices
-            displayName: byod, work profile, android, android enterprise, ae
-            href: ./configuration/device-restrictions-android-enterprise-personal.md
           - name: Email
             displayName: byod, work profile, android, android enterprise, ae
             href: ./configuration/email-settings-android-enterprise.md
@@ -1397,13 +1374,49 @@ items:
             displayName: cope, cobo, cosu, byod, work profile, android, android enterprise, ae
             href: ./configuration/vpn-settings-android-enterprise.md
           - name: Wi-Fi
-            displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae
+            displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./configuration/wi-fi-settings-android-enterprise.md
+          - name: Trusted certificate
+            href: ./protect/certificates-trusted-root.md
+          - name: PKCS certificate
+            href: ./protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
+          - name: PKCS imported certificate
+            href: ./protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
+          - name: Derived credential
+            href: ./protect/derived-credentials.md
+          - name: SCEP certificate
+            href: ./protect/certificates-profile-scep.md
+
+          - name: Android device administrator
+            items:
+            - name: Custom (OMA-URI)
+              items:
+              - name: Custom settings
+                displayName: oma uri, android, device administrator, da
+                href: ./configuration/custom-settings-android.md
+              - name: Allow/block apps for Samsung Knox Standard
+                displayName: oma uri, custom, android, device administrator, da
+                href: ./configuration/samsung-knox-apps-allow-block.md
+            - name: Device restrictions
+              displayName: android, device administrator, da
+              href: ./configuration/device-restrictions-android.md
+            - name: Email
+              displayName: android, device administrator, da
+              href: ./configuration/email-settings-android.md
+            - name: VPN
+              displayName: android, device administrator, da
+              href: ./configuration/vpn-settings-android.md
+            - name: Wi-Fi
+              displayName: wifi, wireless, android, device administrator, da
+              href: ./configuration/wi-fi-settings-android.md
+            
         - name: iOS/iPadOS
           items:
           - name: Custom
             displayName: ios, ipados
             href: ./configuration/custom-settings-ios.md
+          - name: Derived credential
+            href: ./protect/derived-credentials.md
           - name: Device features
             displayName: ios, ipados
             href: ./configuration/ios-device-features-settings.md
@@ -1413,6 +1426,14 @@ items:
           - name: Email
             displayName: ios, ipados
             href: ./configuration/email-settings-ios.md
+          - name: PKCS certificate
+            href: ./protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
+          - name: PKCS imported certificate
+            href: ./protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
+          - name: SCEP certificate
+            href: ./protect/certificates-profile-scep.md
+          - name: Trusted certificate
+            href: ./protect/certificates-trusted-root.md
           - name: VPN
             displayName: ios, ipados
             href: ./configuration/vpn-settings-ios.md
@@ -1433,12 +1454,24 @@ items:
           - name: Device restrictions
             displayName: macos
             href: ./configuration/device-restrictions-macos.md
-          - name: Endpoint protection
+          - name: Endpoint protection (deprecated)
             displayName: macos
             href: ./protect/endpoint-protection-macos.md
-          - name: Extensions
+          - name: Extensions (deprecated)
             displayName: kernel, system, macos
             href: ./configuration/kernel-extensions-settings-macos.md
+          - name: PKCS certificate
+            href: ./protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
+          - name: PKCS imported certificate
+            href: ./protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
+          - name: Preference file
+            href: ./configuration/preference-file-settings-macos.md
+          - name: SCEP certificate
+            href: ./protect/certificates-profile-scep.md
+          - name: Software updates (macOS 13 and older)
+            href: ./protect/software-updates-macos.md
+          - name: Trusted certificate
+            href: ./protect/certificates-trusted-root.md
           - name: VPN
             displayName: macos
             href: ./configuration/vpn-settings-macos.md
@@ -1450,6 +1483,8 @@ items:
             href: ./configuration/wired-network-settings-macos.md
         - name: Windows 10/11
           items:
+          - name: BIOS configurations and other settings
+            href: ./configuration/bios-configuration.md            
           - name: Custom (OMA-URI)
             displayName: oma uri, windows
             href: ./configuration/custom-settings-windows-10.md
@@ -1465,6 +1500,8 @@ items:
           - name: Device restrictions (Windows 10 Teams)
             displayName: surface
             href: ./configuration/device-restrictions-windows-10-teams.md
+          - name: Domain join
+            href: ./configuration/domain-join-configure.md
           - name: Edition upgrade and mode switch
             displayName: windows, s mode
             href: ./configuration/edition-upgrade-windows-settings.md
@@ -1474,7 +1511,7 @@ items:
           - name: Endpoint protection
             displayName: windows
             href: ./protect/endpoint-protection-windows-10.md
-          - name: Identity protection
+          - name: Identity protection (deprecated)
             displayName: hello, windows
             href: ./protect/identity-protection-windows-settings.md
           - name: Kiosk
@@ -1748,6 +1785,8 @@ items:
           items:
           - name: Set up automated device enrollment for macOS
             href: ./enrollment/device-enrollment-program-enroll-macos.md
+          - name: ./Setup macOS account configuration with LAPS
+            href: ./enrollment/macos-laps.md
           - name: Set up Direct Enrollment for macOS
             href: ./enrollment/device-enrollment-direct-enroll-macos.md
         - name: Enrollment configurations

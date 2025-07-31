@@ -6,7 +6,7 @@ description: Learn how Intune helps you manage devices through their lifecycle -
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 12/04/2018
 ms.topic: concept-article
 ms.service: microsoft-intune

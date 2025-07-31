@@ -12,75 +12,75 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # DownloadContents Method in Class CCM_Application
-The `DownloadContents` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that downloads the content for an application.   
+The `DownloadContents` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that downloads the content for an application.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 DownloadContents   
-{  
-    [IN]    String Id  
-    [IN]    String Revision  
-    [IN]    Boolean IsMachineTarget  
-    [IN]    String Priority  
-    [OUT]   String JobId  
-};  
-```  
+```
+uint32 DownloadContents
+{
+    [IN]    String Id
+    [IN]    String Revision
+    [IN]    Boolean IsMachineTarget
+    [IN]    String Priority
+    [OUT]   String JobId
+};
+```
 
-## Parameters  
- `Id`  
- Data type: `String`  
+## Parameters
+ `Id`
+ Data type: `String`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- Application identifier.    
+ Application identifier.
 
- `Revision`  
- Data type: `String`  
+ `Revision`
+ Data type: `String`
 
- Qualifiers: [id("1"), in]  
+ Qualifiers: [id("1"), in]
 
- Revision.    
+ Revision.
 
- `IsMachineTarget`  
- Data type: `Boolean`  
+ `IsMachineTarget`
+ Data type: `Boolean`
 
- Qualifiers: [id("2"), in]  
+ Qualifiers: [id("2"), in]
 
- `true` if the application targets a device.    
+ `true` if the application targets a device.
 
- `Priority`  
- Data type: `String`  
+ `Priority`
+ Data type: `String`
 
- Qualifiers: [id("3"), in, valuemap]  
+ Qualifiers: [id("3"), in, valuemap]
 
- Priority. Possible values are:   
+ Priority. Possible values are:
 
 |Value|
-|-|  
-|Foreground|  
-|High|  
-|Normal|  
-|Low|  
+|-|
+|Foreground|
+|High|
+|Normal|
+|Low|
 
- `JobId`  
- Data type: `String`  
+ `JobId`
+ Data type: `String`
 
- Qualifiers: [id("4"), out]  
+ Qualifiers: [id("4"), out]
 
- Job identifier.    
+ Job identifier.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

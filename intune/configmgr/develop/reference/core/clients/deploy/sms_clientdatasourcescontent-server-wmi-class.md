@@ -12,103 +12,103 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ClientDataSourcesContent Server WMI Class
-The `SMS_ClientDataSourcesContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client content data sources per boundary group.  
+The `SMS_ClientDataSourcesContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client content data sources per boundary group.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ClientDataSourcesContent : SMS_BaseClass  
-{  
-    UInt64 BranchCacheBytes;  
-    UInt64 CloudDistributionPointBytes;  
-    UInt64 DistributionPointBytes;  
-    UInt32 DpSourceServerCount;  
-    UInt64 PeerCacheBytes;  
-    UInt32 SpSourceClientCount;  
-};  
+```
+Class SMS_ClientDataSourcesContent : SMS_BaseClass
+{
+    UInt64 BranchCacheBytes;
+    UInt64 CloudDistributionPointBytes;
+    UInt64 DistributionPointBytes;
+    UInt32 DpSourceServerCount;
+    UInt64 PeerCacheBytes;
+    UInt32 SpSourceClientCount;
+};
 
-```  
+```
 
-## Methods  
- The `SMS_ClientDataSourcesContent` class does not define any methods.  
+## Methods
+ The `SMS_ClientDataSourcesContent` class does not define any methods.
 
-## Properties  
- `BranchCacheBytes`  
- Data type: `UInt64`  
+## Properties
+ `BranchCacheBytes`
+ Data type: `UInt64`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of bytes from the branch cache.  
+ Number of bytes from the branch cache.
 
- `CloudDistributionPointBytes`  
- Data type: `UInt64`  
+ `CloudDistributionPointBytes`
+ Data type: `UInt64`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of bytes from cloud distribution points.  
+ Number of bytes from cloud distribution points.
 
- `DistributionPointBytes`  
- Data type: `UInt64`  
+ `DistributionPointBytes`
+ Data type: `UInt64`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of bytes from distribution points.  
+ Number of bytes from distribution points.
 
- `DpSourceServerCount`  
- Data type: `UInt32`  
+ `DpSourceServerCount`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of distribution points that served content.  
+ Number of distribution points that served content.
 
- `PeerCacheBytes`  
- Data type: `UInt64`  
+ `PeerCacheBytes`
+ Data type: `UInt64`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of bytes from the peer cache.  
+ Number of bytes from the peer cache.
 
- `SpSourceClientCount`  
- Data type: `UInt32`  
+ `SpSourceClientCount`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of super peers that served content.  
+ Number of super peers that served content.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-- Singleton  
+- Singleton
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

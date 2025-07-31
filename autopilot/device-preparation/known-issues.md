@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
-manager: aaroncz
+manager: bpardi
 ms.date: 04/04/2025
 ms.collection:
   - M365-modern-desktop
@@ -54,12 +54,12 @@ During the editing flow of the Windows Autopilot device preparation policy, ther
 
 As a workaround, select the table header **Allowed Applications** or **Allowed Scripts** to reload the table's contents.
 
-## Win32 and WinGet applications are skipped when Managed installer policy is enabled for the tenant
+## Win32, WinGet, and Enterprise App Catalog applications are skipped when Managed installer policy is enabled for the tenant
 
 Date added: *October 10, 2024*<br>
-Date updated: *February 5, 2025*
+Date updated: *June 20, 2025*
 
-When the [Managed installer policy](/mem/intune-service/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps and Microsoft Store apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
+When the [Managed installer policy](/mem/intune-service/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps, Microsoft Store, and Enterprise App Catalog apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
 
 > [!NOTE]
 >

@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/25/2024
+ms.date: 06/26/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,7 +15,7 @@ ms.subservice: protect
 #ROBOTS:
 #audience:
 
-ms.reviewer: sheetg
+ms.reviewer: wicale
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -79,6 +79,38 @@ After you add the URI attribute and value to the certificate profile, Microsoft 
 To ensure your SCEP profile meets strong mapping requirements, create a SCEP certificate profile in the Microsoft Intune admin center, or modify an existing profile with the new SAN attribute and value. As a prerequisite, users and devices must be synced from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/synchronization).   
 
 For more information about the KDC's requirements and enforcement date for strong mapping, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
+
+## S/MIME certificate requirements for third party public CA       
+> [!IMPORTANT]
+> Beginning July 16, 2025, the Certification Authority Browser Forum (CA/Browser Forum) is enforcing new S/MIME baseline requirements for public certificate authorities (CAs). These requirements apply to all sponsor-validated S/MIME certificates that the public CAs issue. For more information about S/MIME certificate requirements, see [CA/Browser Forum](https://cabforum.org/working-groups/smime/).  
+
+The certificate subject name (SN) in all S/MIME certificates must include the following information:  
+
+- Given name attribute  
+- Surname attribute  
+
+ In terms of Microsoft Intune, these attributes are required for you when using Intune SCEP certificate profiles with third party public CA partners to issue S/MIME certificates for secure email. For a list of those CA partners, see [Third party certification authority partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners).  
+ 
+ Public CAs will reject certificate requests from Intune-enrolled devices that omit the given name and surname attributes from the subject name. This requirement applies to new certificates and renewals. 
+ 
+ When you edit an existing certificate profile to include these attributes, it triggers a reissuance of all certificates, which might incur additional costs depending on your CA agreement. 
+ 
+ To avoid service disruption, complete the following steps in the Microsoft Intune admin center:
+
+  1. Review your Intune SCEP certificate profiles used for S/MIME scenarios.  
+  2. Update the subject name format to include these variables:  
+      - G={{GivenName}}   
+      - SN={{SurName}} 
+
+     You can enter variables in the SCEP profile under **Configuration settings** > **Subject name format**.  
+    
+      > [!div class="mx-imgBorder"]
+        > ![Image of a SCEP certificate profile and its configuration settings, highlighting the subject name format setting.](./media/certificates-profile-scep/subject-name-2506.png)
+     
+
+  3. Test changes. Before broad deployment, create a new profile and assign a small user group.  
+  4. Don't rely on automatic updates. Intune doesn't modify profiles on your behalf due to the risk of duplicate attributes and unintended certificate reissuance.  
+
 
 ## Create a SCEP certificate profile
 

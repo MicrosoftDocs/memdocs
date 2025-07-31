@@ -6,7 +6,7 @@ description: Enroll Linux devices in Intune using the Intune app. Set an overvie
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 01/09/2025
 ms.topic: article
 ms.service: microsoft-intune

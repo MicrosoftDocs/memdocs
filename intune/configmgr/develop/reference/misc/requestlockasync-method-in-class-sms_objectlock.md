@@ -12,57 +12,57 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # RequestLockAsync Method in Class SMS_ObjectLock
-The `RequestLockAsync` Windows Management Instrumentation (WMI) class method, in Configuration Manager, asynchronously acquires a lock to edit global objects.  
+The `RequestLockAsync` Windows Management Instrumentation (WMI) class method, in Configuration Manager, asynchronously acquires a lock to edit global objects.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 RequestLockAsync(  
-    string ObjectRelPath,   
-    boolean RequestTransfer,   
-    string RequestID   
-);  
-```  
+```
+SInt32 RequestLockAsync(
+    string ObjectRelPath,
+    boolean RequestTransfer,
+    string RequestID
+);
+```
 
-#### Parameters  
- `ObjectRelPath`  
- Data type: `String`  
+#### Parameters
+ `ObjectRelPath`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The path of the object for which the lock is requested.  
+ The path of the object for which the lock is requested.
 
- `RequestTransfer`  
- Data type: `Boolean`  
+ `RequestTransfer`
+ Data type: `Boolean`
 
- Qualifiers: [in, optional]  
+ Qualifiers: [in, optional]
 
- If the lock is not owned by the local site, the lock request should be forwarded to the parent/child site.  
+ If the lock is not owned by the local site, the lock request should be forwarded to the parent/child site.
 
- `RequestID`  
- Data type: `String`  
+ `RequestID`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Unique identifier of the request.  
+ Unique identifier of the request.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_ObjectLock Server WMI Class](../../../develop/reference/misc/sms_objectlock-server-wmi-class.md)

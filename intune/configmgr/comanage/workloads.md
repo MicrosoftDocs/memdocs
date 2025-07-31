@@ -11,7 +11,7 @@ ms.subservice: co-management
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Co-management workloads
@@ -44,9 +44,9 @@ For more information on the Intune feature, see [Use compliance policies to set 
 
 ## Windows Update policies
 
-Windows Update client policies (formerly known as Windows Update for Business policies) let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices. 
+Windows Update client policies (formerly known as Windows Update for Business policies) let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices.
 
-After moving the Windows Update workload to Intune, the client settings in Configuration Manager need to be adjusted manually. Either modify existing client settings, or create a new custom client setting to disable the software update workflow. Deploy the setting to the collection of computers that are connected directly to Windows Update (which was also called Windows Update for Business). 
+After moving the Windows Update workload to Intune, the client settings in Configuration Manager need to be adjusted manually. Either modify existing client settings, or create a new custom client setting to disable the software update workflow. Deploy the setting to the collection of computers that are connected directly to Windows Update (which was also called Windows Update for Business).
 
 > [!NOTE]
 > To use Windows Autopatch with these devices, this workload must be moved to Intune, and client settings for Software Updates set to 'No' in Configuration Manager. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
@@ -155,7 +155,7 @@ For more information on the Intune feature, see [What is Microsoft Intune app ma
 
 When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients. For more information, see [Microsoft Connected Cache with Configuration Manager](../core/plan-design/hierarchy/microsoft-connected-cache.md#support-for-intune-win32-apps).
 
-For example, if you wish to deploy the new Store applications (winget) via Microsoft Intune, you need to switch this workload. 
+For example, if you wish to deploy the new Store applications (winget) via Microsoft Intune, you need to switch this workload.
 
 ## Diagram for app workloads
 

@@ -12,86 +12,86 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_WhatsNewFeature Server WMI Class
-For internal use only.  
+For internal use only.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_WhatsNewFeature : SMS_BaseClass  
-{  
-    String Description;  
-    UInt32 Milestone;  
-    String Name;  
-    SMS_WhatsNewScenario Scenarios[];  
-};  
+```
+Class SMS_WhatsNewFeature : SMS_BaseClass
+{
+    String Description;
+    UInt32 Milestone;
+    String Name;
+    SMS_WhatsNewScenario Scenarios[];
+};
 
-```  
+```
 
-## Methods  
- The following table lists the methods in the `SMS_WhatsNewFeature` class.  
+## Methods
+ The following table lists the methods in the `SMS_WhatsNewFeature` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[GetFeatures Method in Class SMS_WhatsNewFeature](../../../develop/reference/misc/getfeatures-method-in-class-sms_whatsnewfeature.md)|Reserved for internal use.|  
+|Method|Description|
+|------------|-----------------|
+|[GetFeatures Method in Class SMS_WhatsNewFeature](../../../develop/reference/misc/getfeatures-method-in-class-sms_whatsnewfeature.md)|Reserved for internal use.|
 
-## Properties  
- `Description`  
- Data type: `String`  
+## Properties
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for internal use.  
+ Reserved for internal use.
 
- `Milestone`  
- Data type: `UInt32`  
+ `Milestone`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for internal use.  
+ Reserved for internal use.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for internal use.  
+ Reserved for internal use.
 
- `Scenarios`  
- Data type: `SMS_WhatsNewScenario Array`  
+ `Scenarios`
+ Data type: `SMS_WhatsNewScenario Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for internal use.  
+ Reserved for internal use.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [Configuration Manager Reference](../../../develop/reference/configuration-manager-reference.md)

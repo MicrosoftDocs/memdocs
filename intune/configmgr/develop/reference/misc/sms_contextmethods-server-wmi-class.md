@@ -12,44 +12,44 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ContextMethods Server WMI Class
-The `SMS_ContextMethods` Windows Management Instrumentation (WMI) class is an abstract class in Configuration Manager that contains methods for caching WMI context qualifiers with the SMS Provider.  
+The `SMS_ContextMethods` Windows Management Instrumentation (WMI) class is an abstract class in Configuration Manager that contains methods for caching WMI context qualifiers with the SMS Provider.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ContextMethods ();  
-```  
+```
+Class SMS_ContextMethods ();
+```
 
-## Methods  
- The following table lists the methods in `SMS_ContextMethods`.  
+## Methods
+ The following table lists the methods in `SMS_ContextMethods`.
 
-|Term|Description|  
-|----------|-----------------|  
-|[ClearContextHandle Method in Class SMS_ContextMethods](../../../develop/reference/misc/clearcontexthandle-method-in-class-sms_contextmethods.md)|Releases cached context data.|  
-|[GetContextHandle Method in Class SMS_ContextMethods](../../../develop/reference/misc/getcontexthandle-method-in-class-sms_contextmethods.md)|Caches multiple context qualifiers within the SMS Provider. This allows applications to use a much smaller context object when making API calls to WMI.|  
+|Term|Description|
+|----------|-----------------|
+|[ClearContextHandle Method in Class SMS_ContextMethods](../../../develop/reference/misc/clearcontexthandle-method-in-class-sms_contextmethods.md)|Releases cached context data.|
+|[GetContextHandle Method in Class SMS_ContextMethods](../../../develop/reference/misc/getcontexthandle-method-in-class-sms_contextmethods.md)|Caches multiple context qualifiers within the SMS Provider. This allows applications to use a much smaller context object when making API calls to WMI.|
 
-## Properties  
- The `SMS_ContextMethods` class doesn't define any properties.  
+## Properties
+ The `SMS_ContextMethods` class doesn't define any properties.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Abstract  
+- Abstract
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [Configuration Manager Context Qualifiers](../../../develop/core/understand/context-qualifiers.md)

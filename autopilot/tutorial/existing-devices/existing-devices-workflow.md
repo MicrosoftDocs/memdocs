@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 06/19/2024
+manager: bpardi
+ms.date: 05/23/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -81,7 +81,9 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 > [!IMPORTANT]
 >
-> If enrollment restrictions are configured to block personal devices from enrolling, Windows Autopilot for existing devices can't be used. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune-service/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices).
+> - If enrollment restrictions are configured to block personal devices from enrolling, Windows Autopilot for existing devices can't be used. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune-service/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices).
+>
+> - Any devices registered using a .json file during a hybrid join scenario are normally enrolled as a Corporate device.
 
 ## Walkthrough
 

@@ -12,34 +12,34 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # AppAction Enumeration
-In Configuration Manager, the `AppAction` enumeration defines action types. This enumeration is used by the [IAppManagmentTypes Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementtypes-interface.md).  
+In Configuration Manager, the `AppAction` enumeration defines action types. This enumeration is used by the [IAppManagmentTypes Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementtypes-interface.md).
 
-## Syntax  
+## Syntax
 
-```  
-typedef enum AppAction  
-{  
-    appDiscovery = 0,   
-    appInstall = 1,   
-    appUninstall = 2  
-}AppAction;  
-```  
+```
+typedef enum AppAction
+{
+    appDiscovery = 0,
+    appInstall = 1,
+    appUninstall = 2
+}AppAction;
+```
 
-## Elements  
- `appDiscovery`  
- The action type is discovery.  
+## Elements
+ `appDiscovery`
+ The action type is discovery.
 
- `appInstall`  
- The action type is install.  
+ `appInstall`
+ The action type is install.
 
- `appUninstall`  
- The action type is uninstall.  
+ `appUninstall`
+ The action type is uninstall.
 
-## See Also  
- [IAppManagementTypes Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementtypes-interface.md)   
- [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)   
- [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+## See Also
+ [IAppManagementTypes Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementtypes-interface.md)
+ [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

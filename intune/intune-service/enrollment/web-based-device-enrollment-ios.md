@@ -7,7 +7,7 @@ description: Set up web-based device enrollment to manage user-owned iOS/iPadOS 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 09/23/2024
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune

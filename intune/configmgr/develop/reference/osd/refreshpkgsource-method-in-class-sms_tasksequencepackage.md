@@ -12,41 +12,41 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # RefreshPkgSource Method in Class SMS_TaskSequencePackage
-The `RefreshPkgSource` class method, in Configuration Manager, refreshes the package source at all distribution points when the package properties haven't changed.  
+The `RefreshPkgSource` class method, in Configuration Manager, refreshes the package source at all distribution points when the package properties haven't changed.
 
 > [!CAUTION]
->  This method supports the Configuration Manager infrastructure and renders your task sequence inoperable if it is called.  
+>  This method supports the Configuration Manager infrastructure and renders your task sequence inoperable if it is called.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 RefreshPkgSource();  
-```  
+```
+SInt32 RefreshPkgSource();
+```
 
-#### Parameters  
- None.  
+#### Parameters
+ None.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or nonzero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or nonzero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Remarks  
- Using this method is the only way to force an update of the source files, other than by creating a `RefreshSchedule` value for the package. For information about the `RefreshSchedule` property, see [SMS_PackageBaseclass Server WMI Class](../../../develop/reference/core/servers/configure/sms_packagebaseclass-server-wmi-class.md).  
+## Remarks
+ Using this method is the only way to force an update of the source files, other than by creating a `RefreshSchedule` value for the package. For information about the `RefreshSchedule` property, see [SMS_PackageBaseclass Server WMI Class](../../../develop/reference/core/servers/configure/sms_packagebaseclass-server-wmi-class.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [SMS_TaskSequencePackage Server WMI Class](../../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md)   
+## See Also
+ [SMS_TaskSequencePackage Server WMI Class](../../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md)
  [SetSourceSite Method in Class SMS_TaskSequencePackage](../../../develop/reference/osd/setsourcesite-method-in-class-sms_tasksequencepackage.md)

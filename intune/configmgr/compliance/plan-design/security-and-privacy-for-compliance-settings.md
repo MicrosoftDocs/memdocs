@@ -11,7 +11,7 @@ manager: apoorvseth
 ms.author: sheetg
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Security and privacy for compliance settings in Configuration Manager

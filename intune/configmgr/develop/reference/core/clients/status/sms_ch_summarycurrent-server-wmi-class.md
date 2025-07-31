@@ -12,159 +12,159 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CH_SummaryCurrent Server WMI Class
-The `SMS_CH_SummaryCurrent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client summary.  
+The `SMS_CH_SummaryCurrent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client summary.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CH_SummaryCurrent : SMS_BaseClass  
-{  
-    UInt32 ClientsActive;  
-    UInt32 ClientsHealthUnknown;  
-    UInt32 ClientsHealthy;  
-    UInt32 ClientsHealthyActive;  
-    UInt32 ClientsHealthyInactive;  
-    UInt32 ClientsInactive;  
-    UInt32 ClientsRemediationSuccess;  
-    UInt32 ClientsRemediationTotal;  
-    UInt32 ClientsTotal;  
-    UInt32 ClientsUnhealthy;  
-    UInt32 ClientsUnhealthyActive;  
-    UInt32 ClientsUnhealthyInactive;  
-    String CollectionID;  
-};  
-```  
+```
+Class SMS_CH_SummaryCurrent : SMS_BaseClass
+{
+    UInt32 ClientsActive;
+    UInt32 ClientsHealthUnknown;
+    UInt32 ClientsHealthy;
+    UInt32 ClientsHealthyActive;
+    UInt32 ClientsHealthyInactive;
+    UInt32 ClientsInactive;
+    UInt32 ClientsRemediationSuccess;
+    UInt32 ClientsRemediationTotal;
+    UInt32 ClientsTotal;
+    UInt32 ClientsUnhealthy;
+    UInt32 ClientsUnhealthyActive;
+    UInt32 ClientsUnhealthyInactive;
+    String CollectionID;
+};
+```
 
-## Methods  
- The `SMS_CH_SummaryCurrent` class does not define any methods.  
+## Methods
+ The `SMS_CH_SummaryCurrent` class does not define any methods.
 
-## Properties  
- `ClientsActive`  
- Data type: `UInt32`  
+## Properties
+ `ClientsActive`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of active clients.  
+ Count of active clients.
 
- `ClientsHealthUnknown`  
- Data type: `UInt32`  
+ `ClientsHealthUnknown`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of healthy unknown clients.  
+ Count of healthy unknown clients.
 
- `ClientsHealthy`  
- Data type: `UInt32`  
+ `ClientsHealthy`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of healthy clients.  
+ Count of healthy clients.
 
- `ClientsHealthyActive`  
- Data type: `UInt32`  
+ `ClientsHealthyActive`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of health and active clients.  
+ Count of health and active clients.
 
- `ClientsHealthyInactive`  
- Data type: `UInt32`  
+ `ClientsHealthyInactive`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of healthy and inactive clients.  
+ Count of healthy and inactive clients.
 
- `ClientsInactive`  
- Data type: `UInt32`  
+ `ClientsInactive`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of inactive clients.  
+ Count of inactive clients.
 
- `ClientsRemediationSuccess`  
- Data type: `UInt32`  
+ `ClientsRemediationSuccess`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of successfully remediated clients.  
+ Count of successfully remediated clients.
 
- `ClientsRemediationTotal`  
- Data type: `UInt32`  
+ `ClientsRemediationTotal`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total count of remediated clients (successful and unsuccessful).  
+ Total count of remediated clients (successful and unsuccessful).
 
- `ClientsTotal`  
- Data type: `UInt32`  
+ `ClientsTotal`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of clients.  
+ Count of clients.
 
- `ClientsUnhealthy`  
- Data type: `UInt32`  
+ `ClientsUnhealthy`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of unhealthy clients.  
+ Count of unhealthy clients.
 
- `ClientsUnhealthyActive`  
- Data type: `UInt32`  
+ `ClientsUnhealthyActive`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of unhealthy and active clients.  
+ Count of unhealthy and active clients.
 
- `ClientsUnhealthyInactive`  
- Data type: `UInt32`  
+ `ClientsUnhealthyInactive`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of unhealthy and inactive clients.  
+ Count of unhealthy and inactive clients.
 
- `CollectionID`  
- Data type: `String`  
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique auto-generated ID containing eight characters that identifies the collection.  
+ Unique auto-generated ID containing eight characters that identifies the collection.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

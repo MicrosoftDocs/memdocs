@@ -5,9 +5,9 @@ title: Understand app protection policy delivery and timing
 titleSuffix: Microsoft Intune
 description: Learn the different deployment windows for app protection policies to understand when changes should appear on your end user devices.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 05/20/2024
 ms.topic: concept-article
 ms.service: microsoft-intune

@@ -2,12 +2,12 @@
 # required metadata
 title: Create and deploy app protection policies
 titleSuffix: Microsoft Intune
-description: This article describes how to create and assign Microsoft Intune app protection policies (APP).
+description: This article describes how to create and assign Microsoft Intune app protection policies.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 01/16/2025
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
+ms.date: 06/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -32,19 +32,19 @@ ms.collection:
 ---
 # How to create and assign app protection policies
 
-Learn how to create and assign Microsoft Intune app protection policies (APP) for users of your organization. This article also describes how to make changes to existing policies.
+Learn how to create and assign Microsoft Intune app protection policies for users of your organization. This article also describes how to make changes to existing policies.
 
 ## Before you begin
 
 App protection policies can apply to apps running on devices that may or may not be managed by Intune. For a more detailed description of how app protection policies work and the scenarios that are supported by Intune app protection policies, see [App protection policies overview](app-protection-policy.md).
 
-The choices available in app protection policies (APP) enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
+The choices available in app protection policies enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its app protection policies data protection framework for iOS and Android mobile app management.
 
-The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
+The app protection policies data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
 
-- **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to APP.
-- **Enterprise enhanced data protection** (Level 2) introduces APP data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
-- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
+- **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to app protection policies.
+- **Enterprise enhanced data protection** (Level 2) introduces app protection policies data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
+- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and app protection policies Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
 
 To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](app-protection-framework.md).
 
@@ -205,11 +205,11 @@ To use these filters when assigning policies, browse to **Apps** > **Protection*
 
 On Android, Android devices will prompt to install the Intune Company Portal app regardless of which Device Management type is chosen. For example, if you select 'Android Enterprise' then users with unmanaged Android devices will still be prompted.
 
-For iOS/iPadOS, for the Device Management type to be enforced to Intune managed devices, additional app configuration settings are required. These settings communicate with the APP (App Protection Policy) service to indicate that the app is managed. Therefore, the APP settings will not apply until you deploy the app configuration policy. The following are the app configuration settings:
+For iOS/iPadOS, for the Device Management type to be enforced to Intune managed devices, additional app configuration settings are required. These settings communicate with the app protection policies service to indicate that the app is managed. Therefore, the app protection policies settings will not apply until you deploy the app configuration policy. The following are the app configuration settings:
 
 - **IntuneMAMUPN** and **IntuneMAMOID** must be configured for all MDM managed applications. For more information, see [How to manage data transfer between iOS/iPadOS apps in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** must be configured for all third-party and line-of-business MDM managed applications. The **IntuneMAMDeviceID** should be configured to the device ID token. For example, `key=IntuneMAMDeviceID, value={{deviceID}}`. For more information, see [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
-- If only the **IntuneMAMDeviceID** is configured, the Intune APP will consider the device as unmanaged.
+- If only the **IntuneMAMDeviceID** is configured, the Intune app protection policies will consider the device as unmanaged.
 
 > [!IMPORTANT]
 > Starting with Intune's September (2409) service release, the **IntuneMAMUPN**, **IntuneMAMOID**, and **IntuneMAMDeviceID** app configuration values will be automatically sent to managed applications on Intune enrolled iOS devices for the following apps: Microsoft Excel, Microsoft Outlook, Microsoft PowerPoint, Microsoft Teams and Microsoft Word. Intune will continue to expand this list to include additional managed apps. 

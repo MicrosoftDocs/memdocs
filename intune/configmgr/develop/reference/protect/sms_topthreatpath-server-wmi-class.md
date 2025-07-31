@@ -12,101 +12,101 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TopThreatPath Server WMI Class
-The `SMS_ThreatPath` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents summarizes the threats path found in 7 days per collection.  
+The `SMS_ThreatPath` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents summarizes the threats path found in 7 days per collection.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ThreatPath : SMS_BaseClass  
-{  
-    String CollectionID;  
-    UInt32 DuplicateCount;  
-    String Path;  
-    UInt64 ResourceID;  
-    UInt64 ThreatID;  
-    String ThreatName;  
-    UInt32 TotalCount;  
-};  
-```  
+```
+Class SMS_ThreatPath : SMS_BaseClass
+{
+    String CollectionID;
+    UInt32 DuplicateCount;
+    String Path;
+    UInt64 ResourceID;
+    UInt64 ThreatID;
+    String ThreatName;
+    UInt32 TotalCount;
+};
+```
 
-## Methods  
- The `SMS_ThreatPath` class doesn't define any methods.  
+## Methods
+ The `SMS_ThreatPath` class doesn't define any methods.
 
-## Properties  
- `CollectionID`  
- Data type: `String`  
+## Properties
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Identifier of the collection.  
+ Identifier of the collection.
 
- `DuplicateCount`  
- Data type: `UInt32`  
+ `DuplicateCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of members with a threat in that path.  
+ Count of members with a threat in that path.
 
- `Path`  
- Data type: `String`  
+ `Path`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Path of the threat.  
+ Path of the threat.
 
- `ResourceID`  
- Data type: `UInt64`  
+ `ResourceID`
+ Data type: `UInt64`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Identifier of the resource.  
+ Identifier of the resource.
 
- `ThreatID`  
- Data type: `UInt64`  
+ `ThreatID`
+ Data type: `UInt64`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Identifier of the threat.  
+ Identifier of the threat.
 
- `ThreatName`  
- Data type: `String`  
+ `ThreatName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the threat.  
+ Name of the threat.
 
- `TotalCount`  
- Data type: `UInt32`  
+ `TotalCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total count of members in the collection.  
+ Total count of members in the collection.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
