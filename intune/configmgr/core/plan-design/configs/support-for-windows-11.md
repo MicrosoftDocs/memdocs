@@ -49,9 +49,7 @@ The following table lists the versions of Windows 11 that you can use as a clien
 | Windows 11 version                         | ConfigMgr 2309 | ConfigMgr 2403 | ConfigMgr 2409 |
 |--------------------------------------------|----------------|----------------|----------------|
 | **24H2**<br>(10.0.26100) <!--2027-10-12--> | :::image type="content" source="media/red-x.png" alt-text="Windows 11 24H2 isn't supported with Configuration Manager 2309."::: | :::image type="content" source="media/red-x.png" alt-text="Windows 11 24H2 isn't supported with Configuration Manager 2403."::: | :::image type="content" source="media/green-check.png" alt-text="Windows 11 24H2 is supported with Configuration Manager 2403."::: |
-
 | **23H2**<br>(10.0.22631) <!--2026-10-31--> | :::image type="content" source="media/green-check.png" alt-text="Windows 11 23H2 is supported with Configuration Manager 2309."::: | :::image type="content" source="media/green-check.png" alt-text="Windows 11 23H2 is supported with Configuration Manager 2403."::: | :::image type="content" source="media/green-check.png" alt-text="Windows 11 23H2 is supported with Configuration Manager 2403."::: |
-
 | **22H2**<br>(10.0.22621) <!--2025-10-14--> | :::image type="content" source="media/green-check.png" alt-text="Windows 11 22H2 is supported with Configuration Manager 2309."::: | :::image type="content" source="media/green-check.png" alt-text="Windows 11 22H2 is supported with Configuration Manager 2403."::: | :::image type="content" source="media/green-check.png" alt-text="Windows 11 22H2 is supported with Configuration Manager 2403."::: |
 
 <!--
