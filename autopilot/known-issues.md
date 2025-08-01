@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: bpardi
-ms.date: 05/09/2025
+ms.date: 08/01/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -41,21 +41,20 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
-### Enrollment status page Account setup phase is not shown when signing in via FIDO2 (YubiKey) during self-deploying mode
+### Enrollment status page Account setup phase isn't shown when signing in via FIDO2 (YubiKey) during self-deploying mode
 
-Date added: *July 31, 2025*
+Date added: *August 1, 2025*
 
-When using Autopilot in self-deploying mode with Shared PC mode configured, the Enrollment status page (ESP) Account setup phase is not shown for users signing in with FIDO2 (YubiKey). Account setup is shown when users sign in via username/password sign-ins. 
+When Windows Autopilot is used in self-deploying mode with Shared PC mode configured, the Enrollment status page (ESP) Account setup phase isn't shown for users signing in with FIDO2 (YubiKey). Account setup is shown when users sign in via username/password sign-ins. The issue is being investigated.
 
 ### TPM attestation isn't working for some ST Micro and Nuvoton TPMs
 
 Date added: *May 9, 2025*
-Date updated: *July 31, 2025*
+Date updated: *August 1, 2025*
 
-The issue is resolved by the OEM. Lenovo customers should work with Lenovo support if they encounter an issue.
+The OEM has resolved the issue. Lenovo customers should work with Lenovo support if they encounter an issue.
 
-Platforms with the latest models of TPMs manufactured by ST Micro and Nuvoton which support RSA 3072bit might fail TPM attestation and cause failures during pre-provisioning and self-deploying mode. The issue is being investigated.
-
+Platforms with the latest models of TPMs manufactured by ST Micro and Nuvoton that support RSA 3072bit might fail TPM attestation and cause failures during pre-provisioning and self-deploying mode. The issue is being investigated.
 
 ### Known issues with the Intune Connector for AD version 6.2501.2000.5
 
