@@ -33,14 +33,19 @@ Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, re
 At a high level, the Microsoft Tunnel requires:
 
 - An Azure subscription.
+
 - A *Microsoft Intune Plan 1* subscription.
   > [!NOTE]
   > This prerequisite is for *Microsoft Tunnel*, and does not include [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md), which is an [Intune add-on](../fundamentals/intune-add-ons.md) that requires a *Microsoft Intune Plan 2* subscription.
+
+- To complete setup of Microsoft Tunnel, the account you'll use to register Tunnel Gateway with Microsoft Intune and your Intune tenant must be assigned the Microsoft Entra ID role of *Intune Administrator* and be assigned an Intune license.
+
 - A Linux server that runs containers. The server can be on-premises or in the cloud, and supports one of the following container types:
   - **Podman** for Red Hat Enterprise Linux (RHEL). See the [Linux server](#linux-server) requirements.
   - **Docker** for all other Linux distributions.
 
 - A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server.
+
 - Devices that run Android or iOS/iPadOS.
 
 After configuring the prerequisites, we recommend you run the [readiness tool](#run-the-readiness-tool) to help validate that your environment is well configured for a successful installation.

@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 04/17/2025
+ms.date: 06/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -53,13 +53,13 @@ The richest and broadest protection capabilities for Microsoft 365 data are avai
 
 As organizations increasingly adopt SaaS and web applications, browsers are essential tools for businesses. Users often need to access these applications from mobile browsers while on the go. Ensuring that data accessed through mobile browsers is protected from intentional or unintentional leaks is crucial. For instance, users might inadvertently share organizations’ data with personal apps, leading to data leakage, or download it to local devices, which also poses a risk. 
 
-Organizations can protect data from being leaked when users browse with Edge for mobile by configuring App Protection Policies (APP), which define what apps are allowed and the actions they can take with your organizations' data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
+Organizations can protect data from being leaked when users browse with Edge for mobile by configuring app protection policies, which define what apps are allowed and the actions they can take with your organizations' data. The choices available in app protection policies enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft introduced taxonomy for its app protection policies data protection framework for iOS and Android mobile app management.
 
-The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
+The app protection policies data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
 
 - **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to APP.
-- **Enterprise enhanced data protection** (Level 2) introduces APP data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
-- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
+- **Enterprise enhanced data protection** (Level 2) introduces app protection policies data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
+- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and app protection policies Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
 
 To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](app-protection-framework.md).
 
@@ -73,14 +73,14 @@ Regardless of whether the device is enrolled in a unified endpoint management (U
 
 > [!NOTE]
 > One of the settings related to browsers is 'Restrict web content transfer with other apps'. In **Enterprise enhanced data protection** (Level 2), the value of this setting is configured to Microsoft Edge.
-> When Outlook and Microsoft Teams are protected by App Protection Policies (APP), those apps open links in Microsoft Edge, ensuring that the links are secure and protected. 
+> When Outlook and Microsoft Teams are protected by app protection policies, those apps open links in Microsoft Edge, ensuring that the links are secure and protected. 
 > For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 > [!IMPORTANT]
 > To apply Intune app protection policies against apps on Android devices that aren't enrolled in Intune, the user must also install the Intune Company Portal.  
 
 ## Apply Conditional Access
-While it's important to protect Microsoft Edge with App Protection Policies (APP), it's also crucial to ensure Microsoft Edge is the mandatory browser for opening corporate applications. Users might otherwise use other unprotected browsers to access corporate applications, potentially leading to data leaks.
+While it's important to protect Microsoft Edge with app protection policies, it's also crucial to ensure Microsoft Edge is the mandatory browser for opening corporate applications. Users might otherwise use other unprotected browsers to access corporate applications, potentially leading to data leaks.
 
 Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Microsoft Edge for iOS and Android. To do this, you need a Conditional Access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
@@ -89,7 +89,9 @@ Follow the steps in [Require approved client apps or app protection policy with 
 >[!NOTE]
 > This policy ensures mobile users can access all Microsoft 365 endpoints from within Microsoft Edge for iOS and Android. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
 
-With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started).
+With Conditional Access, you can also target on-premises sites that you have exposed to external users via the Microsoft Entra application proxy.
+
+For more information, see [Using Microsoft Entra application proxy to publish on-premises apps for remote users](/entra/identity/app-proxy/overview-what-is-app-proxy)
 
 > [!NOTE]
 > To use app-based Conditional Access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
@@ -674,7 +676,7 @@ For more information about the URLs format, see [Enterprise policy URL pattern f
 
 ### Manage proxy configuration
 
-You can use Microsoft Edge for iOS and Android and [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started) together to give users access to intranet sites on their mobile devices. For example: 
+You can use Microsoft Edge for iOS and Android and [Microsoft Entra application proxy](/entra/identity/app-proxy/overview-what-is-app-proxy) together to give users access to intranet sites on their mobile devices. For example: 
 
 - A user is using the Outlook mobile app, which is protected by Intune. They then click a link to an intranet site in an email, and Microsoft Edge for iOS and Android recognizes that this intranet site has been exposed to the user through Application Proxy. The user is automatically routed through Application Proxy, to authenticate with any applicable multifactor authentication and Conditional Access, before reaching the intranet site. The user is now able to access internal sites, even on their mobile devices, and the link in Outlook works as expected.
 - A user opens Microsoft Edge for iOS and Android on their iOS or Android device. If Edge for iOS and Android is protected with Intune, and Application Proxy is enabled, the user can go to an intranet site by using the internal URL they're used to. Edge for iOS and Android recognizes that this intranet site has been exposed to the user through Application Proxy. The user is automatically routed through Application Proxy, to authenticate before reaching the intranet site.

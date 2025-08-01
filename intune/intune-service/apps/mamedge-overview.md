@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 03/26/2024
+ms.date: 06/12/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -88,7 +88,7 @@ Microsoft Edge for Business offers a multitude of advantages:
 
 In addition to the above benefits, you can enable protected Mobile Application Management access to corporate data on personal devices. This capability uses the following functionality:
 - Intune application configuration policies (ACP) with Microsoft Edge for Business. Using ACP allows you to leverage Edge’s settings to better enable a secure browsing experience.
-- Intune application protection policies (APP) to secure organization data and ensure the client device is healthy.
+- Intune app protection policies to secure organization data and ensure the client device is healthy.
 - Mobile Threat Protection (MTP) integrated with Intune APP to detect local health threats on personal Windows and all mobile devices.
 - Microsoft Entra Conditional Access to ensure the device is protected and healthy before granting protected services access via Microsoft Entra.
 

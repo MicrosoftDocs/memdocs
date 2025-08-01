@@ -7,7 +7,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/08/2024
+ms.date: 07/29/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -65,7 +65,7 @@ Your device must be running macOS 11 or later.
 1. On the **Install management profile** page, select **Download profile**.  
 1. Your macOS system settings open in a new window. The management profile you downloaded is shown.  
     1. Select the profile to open it.  
-    1. Select **Install...**  
+    1. Review the details of the enrollment profile. Select **Install...**  
     1. When asked to confirm installation, select **Install**.   
     1. Enter your device password to allow the profile to enroll your device. Then select **Enroll**.  
 1. Wait while the management profile installs and then enrolls your device. 
@@ -79,6 +79,16 @@ Your device must be running macOS 11 or later.
 1. When setup is complete, select **Done**.
 
 Your device is ready to use for work or school. Sign in to the Company Portal app or website anytime to view and manage it.     
+
+## Enrollment profile details 
+You can view and finish installing the enrollment profile on your device in the Apple system settings app. Before you install the enrollment profile, make sure it contains the following information:  
+
+- **Verification status**: **Verified**  
+- **Description**: **Install this profile to get access to your company apps**. 
+- **Signed**: **IOSProfileSigning.manage.microsoft.com**
+- **Received**: States the day, month, year, and time that the enrollment profile was received on the device.
+- **Settings**: **Profile Service Enrollment**  
+- **Profile service enrollment description**: **Encrypted Profile Service**    
 
 ## Troubleshooting and feedback   
 
