@@ -82,11 +82,11 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 #### New Microsoft Graph permissions for API calls to device management endpoints<!-- 20952394 -->
 
-Beginning on July 31, 2025, calls to several Microsoft Graph APIs now require one of two newer *DeviceManagement* permissions that replaced the use of previously supported permissions. The following are the two new permissions and the original permissions that the new permissions replace: 
+Calls to several Microsoft Graph APIs now require one of two newer *DeviceManagement* permissions that replace the use of previously supported permissions. The following are the two new permissions and the original permissions that the new permissions replace: 
 - **DeviceManagementScripts.Read.All** - This new permission replaces use of *DeviceManagementConfiguration.Read.All*
 - **DeviceManagementScripts.ReadWrite.All** - This new permission replaces use of the *DeviceManagementConfiguration.ReadWrite.All*
 
-Access to the following Micrdosoft Graph API calls now require use the new permissions:
+Access to the following Microsoft Graph API calls now require use the new permissions:
 
 - ~/deviceManagement/deviceShellScripts
 - ~/deviceManagement/deviceHealthScripts
@@ -94,7 +94,7 @@ Access to the following Micrdosoft Graph API calls now require use the new permi
 - ~/deviceManagement/deviceCustomAttributeShellScripts 
 - ~/deviceManagement/deviceManagementScripts 
 
-Prior to July 31, 2025, both the *DeviceManagementScripts* and the older *DeviceManagementConfiguration* permissions were functional. With this change, tools and scripts that rely on the older permissions to access the listed APIs no longer function.
+Currently both the *DeviceManagementScripts* and the older *DeviceManagementConfiguration* permissions remain functional. However, in early September 2025, tools and scripts that rely on the older permissions to access the listed APIs will fail to function.
 
 For more information, see [How to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph](../developer/Intune-graph-apis.md).
 
