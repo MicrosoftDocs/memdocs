@@ -33,7 +33,8 @@ ms.collection:
  
 # Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune
 
-Important note - When a macOS device enrolls via ADE with a configured local admin account and a targeted passcode profile, it prompts for an admin password reset—even if "Change at next auth" is not enabled. This does not affect the standard account. We're aware of the issue. As a workaround, manually rotate the admin password after the reset on the device to keep the Intune and device password state in sync.
+> [!IMPORTANT]  
+> When a macOS device enrolls via ADE with a configured local admin account and a targeted passcode profile, it prompts for an admin password reset—even if "Change at next auth" is not enabled. This does not affect the standard account. We're aware of the issue. As a workaround, manually rotate the admin password after the reset on the device to keep the Intune and device password state in sync.
 
 You can use a macOS automated device enrollment (ADE) profile to configure a newly enrolled macOS device for both admin and user account configuration alongside Microsoft local admin password solution (LAPS). **macOS account configuration with LAPS** is an optional set of configurations you can use in new and existing macOS ADE profiles with and without user device affinity. These configurations for account management only apply to new enrollments.
 
