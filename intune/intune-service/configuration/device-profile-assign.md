@@ -6,7 +6,7 @@ description: Use the Microsoft Intune admin center to assign device configuratio
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -28,7 +28,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Assign policies in Microsoft Intune

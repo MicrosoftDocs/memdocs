@@ -7,7 +7,7 @@ description: Guidelines for using Azure Virtual Desktop multi-session with Micro
 keywords:
 author: smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 02/13/2025
 ms.topic: article
 ms.service: microsoft-intune

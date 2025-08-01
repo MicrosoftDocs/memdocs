@@ -75,7 +75,7 @@ The Company Portal app expects that the user account that signed in to the Compa
 
 If an Intune device has no primary user assigned, then the Company Portal app detects it as a shared device. Shared devices are visually identifiable with a "shared" label appearing on the device tile. In this mode, the Company Portal can still be used to request and install available apps. However, uninstalling apps and self-service actions (reset/rename/retire) aren't available.
 
-To appear in the Company Portal on shared devices, available apps must be assigned to a device group. They are installed in the system context or user context, depending on how the app was configured by the IT administrator. For more information about app context, see [Installing apps on Windows 10 devices](../apps/apps-windows-10-app-deploy.md). Company Portal version 10.3.4651.0 or later is required to use this feature.
+To appear in the Company Portal on shared devices, available apps may be assigned to the device or user. They are installed in the system context or user context, depending on how the app was configured by the IT administrator. For more information about app context, see [Installing apps on Windows 10 devices](../apps/apps-windows-10-app-deploy.md). Company Portal version 10.3.4651.0 or later is required to use this feature.
 
 ## Who is assigned as the primary user?
 

@@ -7,7 +7,7 @@ description: Review China endpoints for Intune.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 06/09/2025
 ms.topic: reference
 ms.service: microsoft-intune
@@ -64,7 +64,7 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need
 
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
-|CNPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | imeswdsc-afd-pri.manage.microsoft.com<br>imeswdsc-afd-sec.manage.microsoft.com<br>imeswdsc-afd-hotfix.manage.microsoft.com<br>sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoftonline.cn) |
+|CNPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | imeswdsc-afd-pri.manage.microsoft.com<br>imeswdsc-afd-sec.manage.microsoft.com<br>imeswdsc-afd-hotfix.manage.microsoft.com<br>sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) |
 
 ## Network requirements for macOS app and script deployments
 
@@ -72,7 +72,7 @@ If you're using Intune to deploy apps or scripts on macOS, you also need to gran
 
 |Azure Scale Unit (ASU) | Storage Name | CDN |
 | --- | --- |--- |
-|CNPASU01| macsidecarap<br>macsidecarprodap |macsidecarap.manage.microsoft.com<br>macsidecarprodap.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoftonline.cn) |
+|CNPASU01| macsidecarap<br>macsidecarprodap |macsidecarap.manage.microsoft.com<br>macsidecarprodap.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) |
 
 ## Partner service endpoints
 

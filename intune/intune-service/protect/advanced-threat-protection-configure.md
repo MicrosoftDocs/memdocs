@@ -7,7 +7,7 @@ keywords: configure, manage, capabilities, attack surface reduction, next-genera
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/13/2024
+ms.date: 07/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,15 +51,15 @@ Before Intune and Defender for Endpoint can work together, you must set up the s
 
 ### Enable Intune and Microsoft Defender for Endpoint integration
 
-1. Open the Microsoft Defender for Endpoint portal at [security.microsoft.com](https://security.microsoft.com). The Intune admin center also includes a link to the Defender for Endpoint portal.
+1. Open the Microsoft Defender for Endpoint portal at [security.microsoft.com](https://security.microsoft.com). The Intune admin center also includes a link to the Defender for Endpoint portal:
 
    1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   2. Select **Endpoint security** > **Microsoft Defender for Endpoint** and review the **Connection status** at the top of the page. If it’s **Enabled**, Defender and Intune are already connected and you can skip to step #2. 
+   2. Select **Endpoint security** > **Microsoft Defender for Endpoint** and review the **Connection status** at the top of the page. If it’s **Enabled**, Defender and Intune are already connected and you can skip to step #2.
 
-      If the status is **Unavailable**, continue here. 
+      If the status is **Unavailable**, continue here.
 
-   3. Scroll down to the bottom of the *Microsoft Defender for Endpoint* page and select the link **Open the Microsoft Defender Security Center** to open the Microsoft Defender for portal and continue with the next numbered step. 
+   3. Scroll down to the bottom of the *Microsoft Defender for Endpoint* page and select the link **Open the Microsoft Defender Security Center** to open the Microsoft Defender for portal and continue with the next numbered step.
 
    > [!TIP]
    >
@@ -69,7 +69,10 @@ Before Intune and Defender for Endpoint can work together, you must set up the s
 
 2. In [**Microsoft Defender** portal](https://security.microsoft.com/):
 
-   1. Use the left-hand pane to scroll down and select **Settings** > **Endpoints** >**Advanced features**.
+   1. Use the left-hand pane to scroll down and select **Settings** > **Endpoints**. Then, on the *Endpoints* pane, select **Advanced features**.
+
+      :::image type="content" source="./media/advanced-threat-protection-configure/defender-console-settings-endpoints.png" alt-text="Screen shot of the Defender console showing the path to Settings and then Endpoints.":::
+
    2. On the advanced features pane, scroll down to locate the entry for **Microsoft Intune connection** and set the toggle to **On**.
 
       :::image type="content" source="./media/advanced-threat-protection-configure/atp-security-center-intune-toggle.png" alt-text="Screen shot of the Microsoft Intune connection setting.":::

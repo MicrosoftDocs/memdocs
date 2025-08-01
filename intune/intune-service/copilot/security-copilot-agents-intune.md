@@ -5,14 +5,14 @@ description: Learn about Security Copilot agents in Microsoft Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/19/2025
+ms.date: 07/29/2025
 ms.topic: overview
 ms.service: security-copilot
 ms.localizationpriority: high
 ms.reviewer: idaewor
 ms.collection:
 - security-copilot
-- magic-ai-copilot
+- msec-ai-copilot
 - tier1
 - essentials
 - get-started
@@ -45,14 +45,16 @@ The Vulnerability Remediation Agent runs using the identity and permissions of t
 
 #### Identity
 
-The agent persistently runs in the identity of the user who initially set up the agent. This identity refreshes with each agent run and expires if the agent has not been run for 90 consecutive days. There is no notification regarding the end of the authorized period. To change this identity or reauthorize the agent, the agent must be removed and then set up again.
+The agent persistently runs in the identity of the user who initially set up the agent. This identity refreshes with each agent run and expires if the agent has not been run for 90 consecutive days. When the expiration date nears, each *Copilot owner* and *Copilot contributor* receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until re-authentication. Renewal of the agent authentication can be performed by both owners and contributors before the expiration as well as after expiration.
+
+When the agent authentication is renewed, the agent begins use of the credentials of the individual who clicks on the *Renew authentication* button.
+
 
 #### Products
 
 The agent requires the following products:
 
 - [Microsoft Intune Plan 1 subscription](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) *This subscription provides the core Intune capabilities*.
-- [Microsoft Intune Suite](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) - *Intune Suite standalone solution add-on licenses including Intune Endpoint Privilege Management, Enterprise Application Management, and Intune Plan 2 do not meet this prerequisite.*
 - [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) - *Security Copilot must share a Tenant with Intune, and you must have sufficient SCUs to power Security Copilot workloads, including agents.*
 - [Microsoft Defender Vulnerability Management](../protect/advanced-threat-protection.md) *This capability is provided by Microsoft Defender for Endpoint P2 or Defender Vulnerability Management Standalone.*
 
@@ -73,35 +75,6 @@ When assigning RBAC roles and permissions to admins to manage and use the agent,
 | **Work with Installed Agent** | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Microsoft Entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role. | The admin must be a [Copilot contributor](/copilot/security/authentication). |
 
 > [!IMPORTANT]  
-> The Vulnerability Remediation Agent runs under the identity of the admin who set up the agent. During public preview, the identity can't be edited. To change this identity, the agent must be removed and set up again.
+> The Vulnerability Remediation Agent runs under the identity of the admin who set up the agent. During public preview, the identity can't be edited. To change this identity, the agent must be removed and set up again, or a different Copilot owner must use the *Renew Authentication* option for the Agent authorization.
 >
 > Data that is reported by the agent and visible through agent suggestions might be visible to admins with access to view the agent within the Intune admin center, even when that data is outside the admins assigned Intune roles or scope.
-
-
-<!-- ORIGINAL Presentation>
-To set up or remove the agent from the Intune admin center your account must be assigned an Intune license and have permissions equal to the following:
-
-- **Microsoft Intune**: Users must be assigned a built-in rule or custom role that includes the following permissions:  
-  - Managed apps/read
-  - Mobile apps/read
-  - Device configurations/read 
-  
-   The least privileged Intune built-in role that provides these permissions is [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator), or equivalent permissions.
-
-- **Microsoft Defender**: The user must have permissions equal to the Microsoft Entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role, which provides the required access to Microsoft Defender.
-
-- **Security Copilot**: The user must be a [Copilot owner](/copilot/security/authentication).
-
-To work with the agent in the Intune admin center after the agent is installed, your account must be assigned an Intune license and have permissions equal to the following, including running the agent, viewing results, and managing agent suggestions:
-
-- **Microsoft Intune**: Users must be assigned a built-in rule or custom role that includes the following permissions:  
-  - Managed apps/read
-  - Mobile apps/read
-  - Device configurations/read 
-    
-  The least privileged Intune built-in role that provides these permissions is [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator), or equivalent permissions.
-
-- **Microsoft Defender**: The user must have permissions equal to the Microsoft entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role, which provides the required access to Microsoft Defender.
-
-- **Security Copilot**: The user must be a [Copilot contributor](/copilot/security/authentication).
--->

@@ -6,8 +6,8 @@ description: Permissions reference for built-in roles for Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 06/09/2025
+manager: laurawi
+ms.date: 06/14/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -193,8 +193,8 @@ Endpoint Privilege Managers can manage Endpoint Privilege Management (EPM) polic
 
 | Permission | Action |
 | ---------- | ------ |
-| Endpoint Privilege Management Elevation Requests | View elevation requests |
 | Endpoint Privilege Management Elevation Requests | Modify elevation requests |
+| Endpoint Privilege Management Elevation Requests | View elevation requests |
 | Endpoint Privilege Management Policy Authoring | Assign |
 | Endpoint Privilege Management Policy Authoring | Create |
 | Endpoint Privilege Management Policy Authoring | Delete |
@@ -265,8 +265,8 @@ Manages security and compliance features such as security baselines, device comp
 | Endpoint Detection and Response | Read - *(Added with the 2406 service release)*|
 | Endpoint Detection and Response | Update - *(Added with the 2406 service release)*|
 | Endpoint Detection and Response | View reports - *(Added with the 2406 service release)*|
-| Endpoint Privilege Management Elevation Requests | View elevation requests |
 | Endpoint Privilege Management Elevation Requests | Modify elevation requests |
+| Endpoint Privilege Management Elevation Requests | View elevation requests |
 | Endpoint Privilege Management Policy Authoring | Assign |
 | Endpoint Privilege Management Policy Authoring | Create |
 | Endpoint Privilege Management Policy Authoring | Delete |
@@ -277,7 +277,6 @@ Manages security and compliance features such as security baselines, device comp
 | Enrollment programs | Read device |
 | Enrollment programs | Read profile |
 | Enrollment programs | Read token |
-| Endpoint protection reports | Read |
 | Filters | Read |
 | Intune data warehouse | Read |
 | Managed apps | Read |
@@ -373,32 +372,35 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 | Remote assistance connectors | Read |
 | Remote Help app | Elevation |
 | Remote Help app | Take full control |
+| Remote Help app | Unattended control |
 | Remote Help app | View screen |
-| Remote tasks | Update cellular data plan |
+| Remote tasks | Change \assignments |
 | Remote tasks | Clean PC |
-| Remote tasks | Initiate Configuration Manager action |
-| Remote tasks | Send custom notifications |
 | Remote tasks | Collect diagnostics |
 | Remote tasks | Disable lost mode |
 | Remote tasks | Enable lost mode |
+| Remote tasks | Indicates remote device action to initiate Mobile Device Management (MDM) attestation if device is capable for it. |
 | Remote tasks | Enable Windows IntuneAgent |
 | Remote tasks | Get filevault key. |
-| Remote tasks | Recover MDM Key |
+| Remote tasks | Initiate Configuration Manager action |
 | Remote tasks | Locate device |
 | Remote tasks | Manage shared device users |
-| Remote tasks | Run Remediation |
+| Remote tasks | Offer remote assistance |
 | Remote tasks | Play sound to locate lost devices |
 | Remote tasks | Reboot now |
+| Remote tasks | Recover MDM Key |
 | Remote tasks | Remote lock |
-| Remote tasks | Offer remote assistance |
 | Remote tasks | Reset passcode |
 | Remote tasks | Retire |
 | Remote tasks | Revoke App Licenses |
 | Remote tasks | Rotate BitLockerKeys (preview) |
 | Remote tasks | Rotate filevault key. |
+| Remote tasks | Run Remediation |
+| Remote tasks | Send custom notifications |
 | Remote tasks | Set device name |
 | Remote tasks | Shut down |
 | Remote tasks | Sync devices. |
+| Remote tasks | Update cellular data plan |
 | Remote tasks | Update device account |
 | Remote tasks | Windows defender |
 | Remote tasks | Wipe |
@@ -617,6 +619,7 @@ School Administrators can manage apps and settings for their groups. They can ta
 | Filters | Delete |
 | Filters | Read |
 | Filters | Update |
+| Intune data warehouse | Read |
 | Managed apps | Create |
 | Managed apps | Delete |
 | Managed apps | Read |
@@ -668,7 +671,6 @@ School Administrators can manage apps and settings for their groups. They can ta
 | Remote tasks | Sync devices. |
 | Remote tasks | Update cellular data plan |
 | Remote tasks | Wipe |
-| Intune data warehouse | Read |
 | ServiceNow | View Incidents |
 | Terms and conditions | Assign |
 | Terms and conditions | Create |

@@ -6,8 +6,8 @@ description: Learn more about the Intune government service offerings and featur
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 02/06/2025
+ms.date: 06/30/2025
+manager: laurawi
 ms.topic: overview
 ms.service: microsoft-intune
 ms.suite: ems
@@ -69,7 +69,7 @@ These government instances are also known as **IL4** and **IL5**, where **IL** r
 
 - Administrators can get help locking down their Intune tenants using the Secure Technical Implementation Guide (STIG).
 
-  To download this document from the `dod.cyber.mil` website, go to [https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Intune_Service_Desktop_V1R1_STIG.zip](https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/U_MS_Intune_Service_Desktop_V1R1_STIG.zip).
+  To get guidance from the `cyber.mil` website, go to the [STIGs Document Library](https://public.cyber.mil/stigs/downloads/?_dl_facet_stigs=mdm-emm) (opens the `public.cyber.mil` website).
 
 ## Feature differences in Intune GCC High and DoD
 
@@ -97,6 +97,7 @@ The following features are currently not available and aren't supported in GCC H
 | Expedited updates | For more information on this feature, go to [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md). |
 | Feature updates | For more information on this feature, go to [Feature updates for Windows in Intune](../protect/windows-10-feature-updates.md). |
 | Windows Autopilot | The following features are in the planning phase: </br></br>- Customize out-of-box experience (OOBE) and rename devices during provisioning based on organizational structure </br>- Self-deploying and pre-provisioning mode </br> - More admin-specified configurations delivered before allowing desktop access. </br> - Enhanced optional desktop onboarding experience inside the Windows Company Portal app </br> - The ability to associate a device with a tenant. </br></br>For information about Windows Autopilot, go to [Windows Autopilot overview](/autopilot/overview). |
+| Delivery Optimization for Win32 Apps | For more information on the Delivery Optimization feature in Windows, go to [What is Delivery Optimization?](/windows/deployment/do/waas-delivery-optimization). |
 | BIOS configuration policies on Windows | For more information on this feature, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](../configuration/bios-configuration.md). |
 
 ### Not available
@@ -108,6 +109,7 @@ The following features aren't available and won't be supported for GCC High and 
 | Chrome OS Connector | ❌ |
 | Microsoft Store for Business | ❌ |
 | On-premises Exchange Connector | ❌ |
+| Windows Subscription Activation | ❌ |
 | [TeamViewer connector](../remote-actions/teamviewer-support.md) </br>or TeamViewer feature | ❌ |
 
 ## Next steps

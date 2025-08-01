@@ -2,12 +2,12 @@
 # required metadata
 
 title: Microsoft Intune App SDK for iOS developer guide - Plan the integration
-description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. Plan the integration.
+description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. Plan the integration.
 keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 10/14/2024
+ms.date: 06/12/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -41,14 +41,14 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 ## Stage 1: Plan the Integration
 
-This guide is for iOS developers who are looking to add support for Microsoft Intune's App Protection Policies inside their existing iOS app.
+This guide is for iOS developers who are looking to add support for Microsoft Intune's app protection policies inside their existing iOS app.
 
 ## Stage Goals
 
-- Learn what App Protection Policy settings are available for iOS and how these policies will work inside your application.
+- Learn what app protection policy settings are available for iOS and how these policies will work inside your application.
 - Understand the key decision points during the SDK integration process and plan your app's integration.
 - Understand the requirements for applications integrating the SDK.
-- Create a test Intune tenant and configure an iOS App Protection Policy.
+- Create a test Intune tenant and configure an iOS app protection policy.
 
 ## Understanding MAM
 
@@ -123,7 +123,7 @@ Intune administrators can define CA rules that allow resource access only from d
 
 Intune supports two types of CA: **device-based CA** and **app-based CA**, also known as [App Protection CA].
 Device-based CA blocks access to protected resources until the entire device is managed by Intune.
-App-based CA blocks access to protected resources until the specific app is managed by Intune App Protection Policies.
+App-based CA blocks access to protected resources until the specific app is managed by Intune app protection policy.
 
 If your app acquires any Microsoft Entra access tokens and accesses resources that can be CA-protected, you'll need to follow [Stage 4: App Protection CA support].
 

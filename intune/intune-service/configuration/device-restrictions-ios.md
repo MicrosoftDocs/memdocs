@@ -5,7 +5,7 @@ description: Add, configure, or create settings on iOS/iPadOS devices to restric
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 03/17/2025
 ms.topic: reference
 ms.service: microsoft-intune

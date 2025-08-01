@@ -7,7 +7,7 @@ description: Learn what's new with groups in the Microsoft Intune Azure portal.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 ms.date: 03/31/2019
 ms.topic: archived
 ms.service: microsoft-intune
