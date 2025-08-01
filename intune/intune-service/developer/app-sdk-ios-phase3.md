@@ -2,12 +2,12 @@
 # required metadata
 
 title: Microsoft Intune App SDK for iOS developer guide - Intune SDK integration into your iOS app
-description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. Intune SDK integration into your iOS app
+description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. Intune SDK integration into your iOS app
 keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 10/14/2024
+ms.date: 06/12/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -252,7 +252,7 @@ ValuesToScrubFromLogging | Array of Strings | Specifies Application Configuratio
 To receive Intune app protection policy, apps must initiate an enrollment request with the Intune MAM service. Apps can be configured in the Intune admin center to receive app protection policy with or without device enrollment. [Mobile Application Management (MAM)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam), allows apps to be managed by Intune without the need for the device to be enrolled in Intune mobile device management (MDM). In both cases, enrolling with the Intune MAM service is required to receive policy.
 
 > [!Important]
-> The Intune App SDK for iOS uses 256-bit encryption keys when encryption is enabled by App Protection Policies. All apps will need to have a current SDK version to allow protected data sharing.
+> The Intune App SDK for iOS uses 256-bit encryption keys when encryption is enabled by app protection policies. All apps will need to have a current SDK version to allow protected data sharing.
 
 ### Apps that already use ADAL or MSAL
 
@@ -309,7 +309,7 @@ Example:
 
 ### Let Intune handle authentication and enrollment at launch
 
-If you want the Intune SDK to handle all authentication with ADAL/MSAL and enrollment before your app finishes launching, and your app always requires APP policy, you don't have to use `loginAndEnrollAccount` API. You can simply set the two settings below to YES in the IntuneMAMSettings dictionary in the app's Info.plist.
+If you want the Intune SDK to handle all authentication with ADAL/MSAL and enrollment before your app finishes launching, and your app always requires app protection policies, you don't have to use `loginAndEnrollAccount` API. You can simply set the two settings below to YES in the IntuneMAMSettings dictionary in the app's Info.plist.
 
 Setting  | Type  | Definition |
 --       |  --   |   --       |  

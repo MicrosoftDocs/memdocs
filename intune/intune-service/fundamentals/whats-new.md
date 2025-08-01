@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/23/2025
+ms.date: 07/31/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,29 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of July 28, 2025
+
+### Device management
+
+#### New Microsoft Graph permissions for API calls to device management endpoints<!-- 20952394 -->
+
+Calls to several Microsoft Graph APIs now require one of two newer *DeviceManagement* permissions that replace the use of previously supported permissions. The following are the two new permissions and the original permissions that the new permissions replace: 
+- **DeviceManagementScripts.Read.All** - This new permission replaces use of *DeviceManagementConfiguration.Read.All*
+- **DeviceManagementScripts.ReadWrite.All** - This new permission replaces use of the *DeviceManagementConfiguration.ReadWrite.All*
+
+Access to the following Microsoft Graph API calls now require use the new permissions:
+
+- ~/deviceManagement/deviceShellScripts
+- ~/deviceManagement/deviceHealthScripts
+- ~/deviceManagement/deviceComplianceScripts
+- ~/deviceManagement/deviceCustomAttributeShellScripts 
+- ~/deviceManagement/deviceManagementScripts 
+
+Currently both the *DeviceManagementScripts* and the older *DeviceManagementConfiguration* permissions remain functional. However, in early September 2025, tools and scripts that rely on the older permissions to access the listed APIs will fail to function.
+
+For more information, see [How to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph](../developer/Intune-graph-apis.md).
+
 ## Week of July 21, 2025 (Service release 2507)
 
 ### Microsoft Intune Suite
@@ -131,7 +154,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 **Microsoft Edge**:
 
-- The Microsoft Edge category is updated with new settings. Learn more about available macOS settings for Microsoft Edge  at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
+- The Microsoft Edge category is updated with new settings. Learn more about available macOS settings for Microsoft Edge at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
 
 ### Device management
 
@@ -187,7 +210,7 @@ The following protected apps are now available for Microsoft Intune:
 - Vault CRM by Veeva Systems Inc. (iOS)
 - Workvivo by Workvivo
 
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).  
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of July 14, 2025
 
