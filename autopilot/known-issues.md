@@ -49,7 +49,7 @@ When Windows Autopilot is used in self-deploying mode with Shared PC mode config
 
 ### TPM attestation isn't working for some ST Micro and Nuvoton TPMs
 
-Date added: *May 9, 2025*
+Date added: *May 9, 2025*<br>
 Date updated: *August 1, 2025*
 
 The OEM has resolved the issue. Lenovo customers should work with Lenovo support if they encounter an issue.
