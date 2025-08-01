@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 04/14/2025
+ms.date: 06/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -46,7 +46,7 @@ Use App protection policies with the iOS **Open-in management** feature to prote
 
 - **Devices not managed by any MDM solution:** You can set the app protection policy settings to control sharing of data with other applications via *Open-in* or *Share extensions*.  To do so, configure the **Send org data to other apps** setting to **Policy managed apps with Open-In/Share filtering** value.  The *Open-in/Share* behavior in the *policy managed app* presents only other *policy managed apps* as options for sharing. For related information, see [App protection policies for iOS/iPadOS and Android apps](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps), [Data Transfer](../apps/app-protection-policy-settings-ios.md#data-transfer), and [iOS share extension](../apps/app-protection-policy.md#ios-share-extension).
 
-- **Devices managed by MDM solutions**: For devices enrolled in Intune or third-party MDM solutions, data sharing between apps with app protection policies and other managed iOS apps deployed through MDM is controlled by Intune APP policies and the iOS **Open-in management** feature. To make sure that apps you deploy using an MDM solution are also associated with your Intune app protection policies, configure the user UPN setting as described in the following section, [Configure user UPN setting](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). To specify how you want to allow data transfer to other *policy managed apps* and iOS managed apps, configure **Send org data to other apps** setting to **Policy managed apps with OS sharing**. To specify how you want to allow an app to receive data from other apps, enable **Receive data from other apps** and then choose your preferred level of receiving data. For more information about receiving and sharing app data, see [Data relocation settings](app-protection-policy-settings-ios.md#data-protection).
+- **Devices managed by MDM solutions**: For devices enrolled in Intune or third-party MDM solutions, data sharing between apps with app protection policies and other managed iOS apps deployed through MDM is controlled by Intune app protection policies and the iOS **Open-in management** feature. To make sure that apps you deploy using an MDM solution are also associated with your Intune app protection policies, configure the user UPN setting as described in the following section, [Configure user UPN setting](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). To specify how you want to allow data transfer to other *policy managed apps* and iOS managed apps, configure **Send org data to other apps** setting to **Policy managed apps with OS sharing**. To specify how you want to allow an app to receive data from other apps, enable **Receive data from other apps** and then choose your preferred level of receiving data. For more information about receiving and sharing app data, see [Data relocation settings](app-protection-policy-settings-ios.md#data-protection).
 
 ## Configure user UPN setting for Microsoft Intune or third-party EMM
 Configuring the user UPN setting is **required** for devices that are managed by Intune or a third-party EMM solution to identify the enrolled user account for the sending *policy managed app* when transferring data to an iOS managed app. For more information about required app configuration settings, see [Device Management types](../apps/app-protection-policies.md#device-management-types). The UPN configuration works with the app protection policies you deploy from Intune. 
@@ -103,11 +103,11 @@ The following procedure is a general flow on how to configure the UPN setting an
 
 1. A user opens the Microsoft OneDrive app on an enrolled iOS device and signs-in to their work account.  The account the user enters must match the account UPN you specified in the app configuration settings for the Microsoft OneDrive app.
 
-2. After sign-in, your Administrator configured APP settings apply to the user account in Microsoft OneDrive.  This includes configuring the **Send Org data to other apps** setting to the **Policy managed apps with OS sharing** value.
+2. After sign-in, your Administrator configured app protection policies settings apply to the user account in Microsoft OneDrive.  This includes configuring the **Send Org data to other apps** setting to the **Policy managed apps with OS sharing** value.
 
 3. The user previews a work file and attempts to share via Open-in to iOS managed app.  
 
-4. The data transfer succeeds and data is now protected by **Open-in management** in the iOS managed app.  Intune APP doesn't apply to applications that aren't *policy managed apps*.
+4. The data transfer succeeds and data is now protected by **Open-in management** in the iOS managed app.  Intune app protection policies doesn't apply to applications that aren't *policy managed apps*.
 
 *Sharing from a* iOS managed app *to a* policy managed app *with incoming Org data*
 
@@ -116,14 +116,14 @@ The following procedure is a general flow on how to configure the UPN setting an
 1. The user opens a work document attachment from native Mail to Microsoft Word.
 
 1. When the Word app launches, one of two experiences occur:
-   1. The data is protected by Intune APP when:
+   1. The data is protected by Intune app protection policies when:
       - The user is signed-in to their work account that matches the account UPN you specified in the app configuration settings for the Microsoft Word app. 
-      - Your Administrator configured APP settings apply to the user account in Microsoft Word.  This includes configuring the **Receive data from other apps** setting to the **All apps with incoming Org data** value.
-      - The data transfer succeeds and the document is tagged with the work identity in the app.  Intune APP protects the user actions for the document.
-   1. The data is **not** protected by Intune APP when:
+      - Your Administrator configured app protection policies settings apply to the user account in Microsoft Word. This includes configuring the **Receive data from other apps** setting to the **All apps with incoming Org data** value.
+      - The data transfer succeeds and the document is tagged with the work identity in the app.  Intune app protection policies protects the user actions for the document.
+   1. The data is **not** protected by Intune app protection policies when:
       - The user is **not** signed-in to their work account.
       - Your Administrator configured settings are **not** applied to Microsoft Word because the user isn't signed in.
-      - The data transfer succeeds and the document is **not** tagged with the work identity in the app.  Intune APP does **not** protects the user actions for the document because it isn't active.
+      - The data transfer succeeds and the document is **not** tagged with the work identity in the app. Intune app protection policies does **not** protects the user actions for the document because it isn't active.
 
     > [!NOTE]
     > The user can add and use their personal accounts with Word. App protection policies don't apply when the user uses Word outside of a work-context. 
