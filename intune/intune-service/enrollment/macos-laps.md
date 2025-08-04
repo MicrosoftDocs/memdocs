@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/22/2025
+ms.date: 08/01/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -33,6 +33,8 @@ ms.collection:
  
 # Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune
 
+
+
 You can use a macOS automated device enrollment (ADE) profile to configure a newly enrolled macOS device for both admin and user account configuration alongside Microsoft local admin password solution (LAPS). **macOS account configuration with LAPS** is an optional set of configurations you can use in new and existing macOS ADE profiles with and without user device affinity. These configurations for account management only apply to new enrollments.
 
 With *macOS local account configuration with LAPS*, devices are provisioned with a local administrator account that has a strong, encrypted, and randomized admin password, which is stored and encrypted by Intune. Similarly, a local standard user account can also be provisioned within the enrollment profile. After enrollment, Intune automatically rotates the LAPS-managed administrator password every six months. To supplement autorotation, Intune admins with sufficient permissions can use the Intune admin center to view a devices local administrator account password and can manually rotate that password at need with remote device actions.
@@ -41,7 +43,13 @@ The Intune generated password for the admin account is 15 characters with a mixt
 
 Because *macOS local account configuration with LAPS* is enabled only during automated device enrollment (ADE), a previously enrolled device must reenroll with Intune using a LAPS enabled ADE profile to be supported for LAPS for the administrator account.
 
-> [!TIP]
+> [!IMPORTANT]  
+> When a macOS device enrolls via ADE with a configured local admin account and a targeted passcode profile, it prompts for an admin password reset—even if **Change at next auth** is not enabled. This does not affect the standard account. We're aware of the issue. As a workaround, manually rotate the admin password after the reset on the device to keep the Intune and device password state in sync.
+
+> [!IMPORTANT]  
+> The local admin account does not receive a secure token, due to platform limitations. The first account that signs in after enrollment receives the secure token, which at this time will always be the local user account.
+
+> [!TIP]  
 >
 > The Intune implementation of macOS LAPS is similar but distinct from Intune support for Windows LAPS. For information about Windows LAPS in Intune, see [Local administrator account](../enrollment/macos-laps.md#local-administrator-account).
 
@@ -112,12 +120,12 @@ Following is some guidance for the available options. Additional details are acc
   - {{serialNumber}} - for example, **F4KN99ZUG5V2** 
   - {{partialupn}} - for example, **John**
   - {{managedDeviceName}} - for example, **F2AL10ZUG4W2_14_4/15/2025_12:45PM**
-  - {{OnPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **contoso\John**
 
 - **Primary account full name** - Specify the full name for the account or use one of the following variables to dynamically create the name. Setup Assistant uses this value to prefill the Full Name field if *Prefill account info* is set to *Not configured*. By default, this field uses the *{{username}}* variable:
   - {{username}} - for example, **John@contoso.com**
   - {{serialNumber}} - for example, **F4KN99ZUG5V2** 
-  - {{OnPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **contoso\John**
 
 - **Restrict editing** - Prevent the end user from editing the full name and account name. By default, this is set to *Not configured*.
 
@@ -132,6 +140,8 @@ To view the local Administrator password of a device, your own account must be a
 1.	In the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **macOS devices** > select a **macOS device** to open its *Overview* pane > **Passwords and keys**.
 
 On the **Passwords and keys** pane, you can retrieve the admin password for the macOS device under the **Local administrator account password** section. Here you can also see the last time the password was rotated, manually or automatically.
+
+To see whether an enrolled macOS device has an Intune managed admin password, if the password can be successfully retrieved in the console, that means the password for the local administrator account is managed by Intune. 
 
 :::image type="content" source="./media/macos-laps/passwords-and-keys-pane.png" alt-text="Screen capture that shows the Passwords and keys pane, and the Rotate local admin password options.":::
 
