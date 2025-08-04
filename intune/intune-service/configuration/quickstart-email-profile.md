@@ -45,11 +45,9 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 - To configure this policy, at a minimum, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Policy and Profile Manager** built-in Intune role.
 
-  If you created an Intune Trial subscription, then the account that created the subscription is the Global Administrator.
+  If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-  The Global Administrator has more permissions than needed to create this policy. We recommend you use the least privileged role to complete this task, which is the **Policy and Profile Manager** built-in Intune role.
-
-For more information on the different roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+  [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Create an iOS/iPadOS email profile
 

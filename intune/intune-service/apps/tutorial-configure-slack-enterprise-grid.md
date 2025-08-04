@@ -58,9 +58,10 @@ Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructio
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/role-based-access-control-reference.md) with sufficient permissions. If you have created an Intune Trial subscription, the account you created the subscription with is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/role-based-access-control-reference.md) with sufficient permissions. If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-The Global Administrator built-in role is a [privileged Microsoft Entra ID role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), and isn’t recommended for daily use. As described the [sign-in to Intune artice](../fundamentals/account-sign-up.md#role-based-access-controls), you can reduce reliance on this role by assigning a less-privileged role to administrators who manage Intune and perform daily tasks.
+> [!CAUTION]  
+> [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Set up Slack for EMM on iOS devices
 
@@ -106,7 +107,7 @@ Add an app configuration policy for the iOS/iPadOS Slack for EMM app.
 8. Add `OrgDomain` as the **Configuration key**. Set the **Value type** to **String** and set the **Configuration value** to `Y`. 
 
    > [!NOTE]
-   > The `OrgDomain` configuration key provides the ability to enter your organization’s URL domain to help users sign in. 
+   > The `OrgDomain` configuration key provides the ability to enter your organization's URL domain to help users sign in. 
 
 9. Click **Next**.
 
@@ -189,7 +190,7 @@ Add an app configuration policy for Slack. App configuration policies for manage
 9. Add `Slack Enterprise Grid Domain URL` as the **Configuration key**.  Click **OK**.
 
    > [!NOTE]
-   > The `Slack Enterprise Grid Domain URL` configuration key provides the ability to enter your organization’s URL domain to help users sign in. 
+   > The `Slack Enterprise Grid Domain URL` configuration key provides the ability to enter your organization's URL domain to help users sign in. 
 
 10. Click **Next**.
 
