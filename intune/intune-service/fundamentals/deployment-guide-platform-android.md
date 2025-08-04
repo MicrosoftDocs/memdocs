@@ -42,7 +42,7 @@ Before you begin, complete these prerequisites to enable Android device manageme
 
 We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
 
-For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](../fundamentalsrole-based-access-control.md) and [Built-in role permissions for Intune](../fundamentals/role-based-access-control-reference.md).
+For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](role-based-access-control.md) and [Built-in role permissions for Intune](role-based-access-control-reference.md).
 
 ## Plan for your deployment  
 

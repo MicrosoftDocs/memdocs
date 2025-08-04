@@ -44,7 +44,7 @@ Complete the following prerequisites to enable macOS device management in Intune
 
 We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
 
-For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](../fundamentalsrole-based-access-control.md) and [Built-in role permissions for Intune](../fundamentals/role-based-access-control-reference.md).
+For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](role-based-access-control.md) and [Built-in role permissions for Intune](role-based-access-control-reference.md).
 
 For more detailed information about how to do the initial setup, onboard, or move to Microsoft Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).
 
