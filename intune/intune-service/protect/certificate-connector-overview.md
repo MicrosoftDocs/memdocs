@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2024
+ms.date: 08/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -392,7 +392,7 @@ New updates for the connector can take a week or more to become available for ea
 
 Version **6.2406.0.2002** - Changes in this release:  
 
-- Fix upgrade issue in the installer
+- Fixes the **looks like duplicate versions** issue when installing the connector
 - No functional changes from 6.2406.1001
   
 ### June 12, 2025
