@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: laurawi
-ms.date: 06/27/2024
+ms.date: 07/31/2025
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,13 +52,15 @@ Use the [Microsoft Intune planning guide](intune-planning-guide.md) to define yo
 
 ## Enroll devices  
 
-Configure the enrollment methods and experience for company-owned and personal macOS devices. This step ensures that devices receive Intune policies and configurations after they enroll. Intune supports Bring Your Own Device (BYOD) enrollment, Apple Automated Device Enrollment, and direct enrollment for corporate devices. For information about each enrollment method and how to choose one that's right for your organization, see the [macOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md). 
+Configure the enrollment methods and experience for company-owned and personal macOS devices. This step ensures that devices receive Intune policies and configurations after they enroll. Intune supports Bring Your Own Device (BYOD) enrollment, Apple Automated Device Enrollment, and direct enrollment for corporate devices. For information about each enrollment method and how to choose one that's right for your organization, see the [macOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md).
+
+
  
 
 | Task | Detail | 
 | ---- | ------ | 
 |[Set up enrollment for user-owned (BYOD) devices](../enrollment/macos-enroll.md)| Complete the prerequisites in this article to enable enrollment for user-owned devices. You'll also find enrollment resources and links to share with device users so that they're supported throughout the enrollment experience. This enrollment method is for organizations that have *Bring Your Own Device* (BYOD) policies. BYOD lets people use their personal devices for work-related things. | 
-|[Set up Apple Automated Device Enrollment (ADE)](../enrollment/device-enrollment-program-enroll-macos.md)|Set up an out-of-the-box enrollment experience that automates enrollment on corporate-owned devices purchased through Apple School Manager or Apple Business Manager. This method is ideal for organizations that have a large number of devices to enroll, because it eliminates the need to touch and configure each device individually.  |  
+|[Set up Apple Automated Device Enrollment (ADE)](../enrollment/device-enrollment-program-enroll-macos.md)|Set up an out-of-the-box enrollment experience that automates enrollment on corporate-owned devices purchased through Apple School Manager or Apple Business Manager. This method is ideal for organizations that have a large number of devices to enroll, because it eliminates the need to touch and configure each device individually. </br></br> When you use macOS ADE enrollment profiles, we recommend configuring [macOS account configuration with LAPS](../enrollment/macos-laps.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.|
 |[Set up direct enrollment for corporate devices](../enrollment/device-enrollment-direct-enroll-macos.md)| Set up an enrollment experience for corporate-owned devices that are unaffiliated with a single user, like devices used in a shared space or retail setting. Direct enrollment doesn't wipe the device so it's ideal to use when devices don't need access to local user data. You'll need to transfer the enrollment profile to the Mac directly, which requires a USB connection to a Mac computer running Apple Configurator.|  
 |[Add a device enrollment manager](../enrollment/device-enrollment-manager-enroll.md)| People designated as device enrollment managers (DEM) can enroll up to 1,000 corporate-owned mobile devices at a time. DEM accounts are useful in organizations that enroll and prepare devices before handing them out to users. | 
 | [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| You can assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
@@ -154,6 +156,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
     * [Deploying Microsoft 365 Apps for Mac with Microsoft Intune - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
 
+* When you use macOS ADE enrollment profiles, we recommend configuring [macOS account configuration with LAPS](../enrollment/macos-laps.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.
 
 * For other versions of this guide, see:   
 
