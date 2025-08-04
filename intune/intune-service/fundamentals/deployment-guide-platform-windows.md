@@ -44,7 +44,7 @@ For each section in this guide, review the associated tasks. Some tasks are requ
 
 We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
 
-For information about Microsoft Intune roles and permissions, see [Role-based access control (RBAC) with Intune](role-based-access-control.md) and [Built-in role permissions for Intune](role-based-access-control-reference.md).
+For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](../fundamentalsrole-based-access-control.md) and [Built-in role permissions for Intune](../fundamentals/role-based-access-control-reference.md).
 
 For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management, see [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md).
 

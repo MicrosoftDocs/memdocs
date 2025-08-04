@@ -57,7 +57,8 @@ To complete this evaluation step, you must:
 
   If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-  [!INCLUDE [global-admin](../includes/global-admin.md)]
+  > [!CAUTION]  
+  > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 Additionally, before you begin enrollment, confirm the version of Windows running on your device.  
 

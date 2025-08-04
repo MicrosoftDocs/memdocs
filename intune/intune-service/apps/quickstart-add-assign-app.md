@@ -47,7 +47,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/role-based-access-control-reference.md) with sufficient permissions. If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-> [!CAUTION]  
+> [!CAUTION]
 > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Add the app to Intune

@@ -98,7 +98,8 @@ Microsoft Intune automatically marks devices that meet certain criteria as corpo
 
   If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-  [!INCLUDE [global-admin](../includes/global-admin.md)]
+  > [!CAUTION]  
+  > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
   It's possible some enrollment platforms might require a more privileged Microsoft Entra role, like the **Intune Administrator** built-in role. For information on this role, go to [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
