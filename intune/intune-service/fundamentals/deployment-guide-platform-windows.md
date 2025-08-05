@@ -42,7 +42,9 @@ For each section in this guide, review the associated tasks. Some tasks are requ
 * [Assign licenses to users](licenses-assign.md)
 * [Set mobile device management authority](mdm-authority-set.md)
 
-For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. These roles are highly privileged and have more access than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged built-in role that's available to complete tasks.
+We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
+
+For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](role-based-access-control.md) and [Built-in role permissions for Intune](role-based-access-control-reference.md).
 
 For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management, see [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md).
 
@@ -115,7 +117,7 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 | ---- | ------ |
 |[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of device enrollment. This policy works in conjunction with Microsoft Entra Conditional Access policies.|
 |[Create a trusted certificate profile](../protect/certificates-trusted-root.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices and users using SCEP, PKCS, and PKCS imported certificates. |
-|[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what’s needed to use SCEP certificates with Intune, and configure the required infrastructure. Then you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).|
+|[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what's needed to use SCEP certificates with Intune, and configure the required infrastructure. Then you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).|
 |[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)|Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. |
 |[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md).
 |[Set up a derived credentials issuer](../protect/derived-credentials.md)| Provision Windows devices with certificates that are derived from user smart cards.

@@ -38,7 +38,8 @@ To create, edit, or assign roles, your account must have one of the following pe
 - Global Administrator
 - Intune Service Administrator
 
-For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
+> [!CAUTION]
+> [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## To create a custom role
 
