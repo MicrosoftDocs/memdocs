@@ -49,11 +49,16 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Prerequisites
 
-To complete this evaluation step, you must: 
+To complete this evaluation step, you must:
 
 - Have a Microsoft Intune subscription: [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md)
 - Complete the evaluation step for [setting up automatic enrollment in Intune](quickstart-setup-auto-enrollment.md).  
-- Be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). If you signed up for an Intune Trial subscription at the beginning of this quickstart, your trial account has [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) permissions and can complete all procedures in this article.  
+- Be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+
+  If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+
+  > [!CAUTION]  
+  > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 Additionally, before you begin enrollment, confirm the version of Windows running on your device.  
 
@@ -67,7 +72,7 @@ Additionally, before you begin enrollment, confirm the version of Windows runnin
 
 4. Confirm that the device version is:  
 
-  * For Windows 10: 1607 or later   
+  * For Windows 10: 1607 or later
   * For Windows 11: 21H2 or later  
 
     > [!IMPORTANT]

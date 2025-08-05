@@ -47,6 +47,9 @@ To get started, review the following steps:
 
 - You must have the Microsoft Entra Global Admin Role or Microsoft Entra Intune Admin role to make updates to the connector. To view the incidents, you must have the Microsoft Entra Global Admin Role or Microsoft Entra Intune Admin role or have an Intune Role with the Organization | Read permission. Admins that aren't assigned the Microsoft Entra roles, need one of these two permissions to either modify the connector or view incidents respectively; **Update Connector** and **View Incidents**. These permissions are part of the ServiceNow permission category. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
 
+  > [!CAUTION]  
+  > [!INCLUDE [global-admin](../includes/global-admin.md)]
+
 - You must have ServiceNow permissions to view incidents when using the **Test connection** action. You can assign the *itil* role to grant appropriate permissions to view incidents. A ServiceNow license needs to be assigned to admins who view incidents. 
 
 - You must have the Troubleshooting Preview enabled. To enable the Troubleshooting Preview, select **Preview upcoming changes to Troubleshooting and provide feedback** in the Troubleshooting pane. After reviewing the Troubleshooting preview information, select **Try it now** to enable the preview. 
