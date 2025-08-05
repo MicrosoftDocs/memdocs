@@ -6,9 +6,9 @@ ms.date: 04/23/2017
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: article
-author: sheetg09
+author: LauraWi
 manager: apoorvseth
-ms.author: sheetg
+ms.author: laurawi
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart
