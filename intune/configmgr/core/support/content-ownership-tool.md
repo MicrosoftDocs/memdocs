@@ -6,7 +6,7 @@ ms.date: 07/30/2018
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-ms.author: baladell
+ms.author: laurawi
 author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
