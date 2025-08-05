@@ -6,8 +6,8 @@ ms.date: 10/20/2021
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: install-set-up-deploy
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart

@@ -6,8 +6,8 @@ ms.date: 01/30/2023
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: whats-new
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
