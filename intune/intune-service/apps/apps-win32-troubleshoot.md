@@ -51,7 +51,11 @@ When an installation issue occurs with a Win32 app, you can choose the **Collect
 
 Agent logs on the client machine are commonly in *C:\ProgramData\Microsoft\IntuneManagementExtension\Logs*. You can use *CMTrace.exe* to view these log files. For more information, see [CMTrace](/configmgr/core/support/cmtrace).
 
-![Screenshot of the Agent logs on the client machine.](./media/apps-win32-app-management/apps-win32-app-10.png)
+
+
+![User's image](media/apps-win32-troubleshoot/image.png)
+
+
 
 > [!IMPORTANT]
 > To allow proper installation and execution of LOB Win32 apps, antimalware settings should exclude the following directories from being scanned:<p>
