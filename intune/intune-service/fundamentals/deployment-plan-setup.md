@@ -111,7 +111,7 @@ The people in your organization each need a user account before they can sign in
 
 As an administrator, you can add users individually or in bulk to Intune.
 
-You must be a license or user admin to add users to Intune. If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+You must be a Microsoft Entra [License Administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator) or [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) to add users to Intune. If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
 > [!CAUTION]  
 > [!INCLUDE [global-admin](../includes/global-admin.md)]
