@@ -41,9 +41,9 @@ If you don't have an Intune subscription, [sign up for a free trial account](fre
 
 ## Sign in to Intune
 
-Sign in to [Intune](https://aka.ms/intuneportal) as the [Microsoft Entra Intune Administrator role](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.
 
-If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
 > [!CAUTION]
 > [!INCLUDE [global-admin](../includes/global-admin.md)]
