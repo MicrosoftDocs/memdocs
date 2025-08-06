@@ -164,10 +164,7 @@ You can use the **Run remediation** device action to run a remediation script on
 
 - The built-in or custom script packages must be available for users to run a remediation on-demand, however they don't need to be assigned to a user or device. You can use **Scope tags** to limit which remediation script packages a user can see.
 
-- Users must be Global Admins, Intune Admins, or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
-
-  > [!CAUTION]  
-  > [!INCLUDE [global-admin](../includes/global-admin.md)]
+- Users must be Intune Admins or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
 
 - Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](intune-endpoints.md#windows-push-notification-services-wns-dependencies) during the remote action.
 

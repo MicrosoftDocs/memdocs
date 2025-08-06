@@ -46,10 +46,9 @@ This feature is now generally available.
 ## Prerequisites
 
 - **Licensing/Subscriptions**: You must have a Microsoft Intune Plan 1 license to use Settings insight. For more information, see [Licenses available for Microsoft Intune](../fundamentals/licenses.md)
-- **Permissions**: Global Admins or Endpoint Security Administrators can create a profile using Baselines.  
+- **Permissions**: Endpoint Security Administrators can create a profile using Baselines.
 
-  > [!CAUTION]
-  > [!INCLUDE [global-admin](../includes/global-admin.md)]
+  To learn more about this Intune built-in role, see [Role-based access control (RBAC) with Intune](../fundamentals/role-based-access-control.md) and [Built-in role permissions for Intune](../fundamentals/role-based-access-control-reference.md).
 
 ## Viewing insights
 
