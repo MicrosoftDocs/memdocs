@@ -161,7 +161,7 @@ For guidance on configuring the NDES server role for the Certificate Connector f
 
 ### Microsoft Entra user
 
-When configuring the connector, you need to use a user account that is an Intune Admin and has an Intune license assigned.
+When configuring the connector, use a user account that is the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role and has an Intune license assigned.
 
 ## Next steps
 
