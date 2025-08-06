@@ -1296,6 +1296,9 @@ items:
               - name: Platform SSO
                 displayName: single sign-on, macos
                 href: ./configuration/platform-sso-macos.md
+              - name: Platform SSO scenarios
+                displayName: single sign-on, macos
+                href: ./configuration/platform-sso-scenarios.md
               - name: Enterprise SSO app extension plug-in
                 displayName: single sign-on, macos
                 href: ./configuration/use-enterprise-sso-plug-in-macos-with-intune.md
