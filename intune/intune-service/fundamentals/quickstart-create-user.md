@@ -96,10 +96,12 @@ The new active Intune user shows that they're using an **Intune** license.
 
 The following steps allow you to assign Intune licenses to multiple users all at once:
 
-1. Sign in to the [**Microsoft Entra admin center**](https://aad.portal.azure.com).
+1. Sign in to the [**Microsoft Entra admin center**](https://aad.portal.azure.com) as a license administrator or user administrator.
 
-    > [!NOTE]
-    > To manage licenses, the admin account must be a license administrator, user administrator, or global administrator. The account you create using the Intune free trial is a global administrator.
+    If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+
+    > [!CAUTION]
+    > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 2. Select **Microsoft Entra ID** > **Licenses** > **All products** to see and manage all licensable products that you have available for your organization.
 3. Select the box next to **Intune**.
