@@ -31,7 +31,7 @@ Verify this behavior [on a client](#verify-on-a-client) or [on the server](#veri
 1. Open PowerShell and run the following command: `Get-DeliveryOptimizationStatus`.
 
     For example:
-
+   
     ```PowerShell
     PS C:\> Get-DeliveryOptimizationStatus
 
@@ -55,7 +55,7 @@ Verify this behavior [on a client](#verify-on-a-client) or [on the server](#veri
     LanConnectionCount          : 0
     GroupConnectionCount        : 0
     InternetConnectionCount     : 0
-    DownloadMode                : 99
+    DownloadMode                : Simple
     SourceURL                   : http://au.download.windowsupdate.com/c/msdownload/update/software/defu/2019/09/am_delta_p
                                 atch_1.301.664.0_ec523d49c4f7c3c4444f0d9b952286ce40fdcee4.exe
     NumPeers                    : 0
@@ -63,10 +63,48 @@ Verify this behavior [on a client](#verify-on-a-client) or [on the server](#veri
     ExpireOn                    : 9/6/2019 8:36:19 AM
     IsPinned                    : False
     ```
-
 Notice that the `BytesFromCacheServer` attribute isn't zero.
 
 If the client isn't configured correctly, or the cache server isn't installed correctly, the Delivery Optimization client falls back to the original cloud source. Then the `BytesFromCacheServer` attribute will be zero.
+
+
+```Powershell
+
+    PS C:\> Get-DeliveryOptimizationStatus
+    
+    FileId                      : 95D2EE60-C9D3-45E4-876D-BAE16D758A87_16_0_18730_20040_I640_CAB
+    FileSize                    : 32052857
+    FileSizeInCache             : 32052857
+    TotalBytesDownloaded        : 32052857
+    PercentPeerCaching          : 0
+    BytesFromPeers              : 0
+    BytesFromHttp               : 32052857
+    Status                      : Caching
+    Priority                    : Foreground
+    BytesFromCacheServer        : 0
+    BytesFromLanPeers           : 0
+    BytesFromLinkLocalPeers     : 0
+    BytesFromGroupPeers         : 0
+    BytesFromInternetPeers      : 0
+    BytesToLanPeers             : 0
+    BytesToLinkLocalPeers       : 0
+    BytesToGroupPeers           : 0
+    BytesToInternetPeers        : 0
+    DownloadDuration            : 00:00:07.0110000
+    HttpConnectionCount         : 4
+    CacheServerConnectionCount  : 0
+    LanConnectionCount          : 0
+    LinkLocalConnectionCount    : 0
+    GroupConnectionCount        : 0
+    InternetConnectionCount     : 0
+    DownloadMode                : Lan
+    SourceURL                   : http://f.c2r.ts.cdn.office.net/pr/5462eee5-1e97-495b-9370-853cd873bb07/Office/Data/16.0.1
+                                  8730.20040/i640.cab
+    CacheHost                   :
+    NumPeers                    : 0
+    PredefinedCallerApplication : Microsoft Office Click-to-Run
+    ExpireOn                    : 22/04/2025 4:56:27 PM
+    IsPinned                    : False
 
 ### Verify on the server
 
