@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 08/05/2025
+ms.date: 08/06/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -114,7 +114,7 @@ The **Global Administrator** role is a built-in role in Microsoft Entra, and has
 
 To learn more about the Microsoft Entra Global Administrator role, see [Microsoft Entra built-in roles - Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-The **Intune Administrator** role is a built-in role in Microsoft Entra, and is also known as the **Intune Service Administrator** role. It has limited scope of permissions to administer and manage only Intune. This role is suitable for admins who only need to administer Intune.
+The **Intune Administrator** role is a built-in role in Microsoft Entra, and is also known as the **Intune Service Administrator** role. It has a limited scope of permissions to administer and manage Intune, and manage related features, like user and group management. This role is suitable for admins who only need to administer Intune.
 
 **To reduce risk**:
 
