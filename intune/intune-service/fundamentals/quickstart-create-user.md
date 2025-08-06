@@ -41,9 +41,9 @@ In this article, you create a user and then assign the user an Intune license. W
 
 ## Sign in to the Microsoft Intune admin center
 
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the [Microsoft Entra User Administrator role](/entra/identity/role-based-access-control/permissions-reference#user-administrator).
+Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator)** Microsoft Entra role.
 
-If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
 > [!CAUTION]  
 > [!INCLUDE [global-admin](../includes/global-admin.md)]
@@ -98,7 +98,7 @@ The following steps allow you to assign Intune licenses to multiple users all at
 
 1. Sign in to the [**Microsoft Entra admin center**](https://aad.portal.azure.com) as a Microsoft Entra [License Administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator) or [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator).
 
-    If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+    If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
     > [!CAUTION]
     > [!INCLUDE [global-admin](../includes/global-admin.md)]

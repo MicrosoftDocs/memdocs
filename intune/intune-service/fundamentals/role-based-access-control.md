@@ -106,6 +106,9 @@ The **Global Administrator** role is a built-in role in Microsoft Entra, and has
 **To reduce risk**:
 
 - Don't use the Global Administrator role in Intune. Microsoft doesn't recommend using the Global Administrator role to administer or manage Intune.
+
+  There are some features in Intune that require the Global Administrator role, like some mobile threat defense (MTD) connectors. In these cases, use the Global Administrator role only when necessary, and then remove it when the task is complete.
+
 - Use the [Intune built-in roles](#rbac-roles) or create [custom roles](create-custom-role.md) to administer and manage Intune.
 - Assign the least privileged Intune role necessary for the admin to do their tasks.
 
