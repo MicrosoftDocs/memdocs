@@ -359,6 +359,7 @@ When you configure Platform SSO, you might see the following errors:
 
 ## Related articles
 
+- [Common Platform SSO scenarios for macOS devices](platform-sso-scenarios.md)
 - [macOS Platform Single Sign-on overview (preview)](/entra/identity/devices/macos-psso)
 - [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin)
 - [Use the Microsoft Enterprise SSO app extension on macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md)

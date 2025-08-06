@@ -32,9 +32,9 @@ ms.collection:
 
 # Common Platform SSO scenarios for macOS devices
 
-On macOS devices, you can configure [Platform SSO](platform-sso-macos.md) to enable single sign-on (SSO) using passwordless authentication with your Microsoft Entra accounts. Platform SSO allows users to access resources on their macOS devices without needing to enter their credentials repeatedly.
+On macOS devices, you can configure [Platform SSO](platform-sso-macos.md) to enable single sign-on (SSO) with your Microsoft Entra accounts. Platform SSO allows users to access resources on their macOS devices without needing to enter their credentials repeatedly.
 
-When Platform SSO is configured, you can use the scenarios described in this article to enhance security with biometrics, enable SSO on non-Microsoft apps, and improve the user experience.
+When Platform SSO is configured, you can use the scenarios described in this article to use Kerberos SSO authentication to on-premises resources, enhance security with biometrics, enable SSO on non-Microsoft apps, and improve the user experience.
 
 This feature applies to:
 
@@ -42,9 +42,9 @@ This feature applies to:
 
 ## Before you begin
 
-- You must [configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md) before you configure the scenarios in this article. When it's configured, you have an existing Platform SSO settings catalog policy that you use to add the scenarios in this article.
+- You must [configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md) before you configure the scenarios in this article. When it's configured, you have an existing Platform SSO settings catalog policy that you use to add the scenarios described in this article.
 
-- Only one SSO policy can be assigned to your groups. So if you already configured Platform SSO, then add the settings to your existing Platform SSO settings catalog policy.
+- Only one SSO policy can be assigned to your groups. So if you already configured Platform SSO, then add these scenario settings to your existing Platform SSO settings catalog policy.
 
 - To update you existing settings catalog policy, at a minimum, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the following Intune permissions:
 
@@ -58,11 +58,11 @@ Applies to:
 
 - Company Portal version 2508 and newer
 
-Microsoft Entra issues on-premises and cloud-based Kerberos Ticket Granting Tickets (TGTs). Using Platform SSO, you can configure these TGTs to access on-premises Active Directory and Microsoft Entra ID using [Apple's Kerberos SSO extension](https://support.apple.com/guide/deployment/depe6a1cda64/web).
+Microsoft Entra issues on-premises and cloud-based Kerberos Ticket Granting Tickets (TGTs). Using Platform SSO, you can configure these TGTs to access on-premises Active Directory and Microsoft Entra ID using [Apple's Kerberos SSO extension](https://support.apple.com/guide/deployment/depe6a1cda64/web) (opens Apple's website).
 
 If you want your users to have SSO access to on-premises and cloud resources that use Kerberos authentication, then this scenario is for you. To learn more about Kerberos SSO in Microsoft Entra, see [Enable Kerberos SSO to on-premises Active Directory and Microsoft Entra ID Kerberos resources in Platform SSO](/entra/identity/devices/device-join-macos-platform-single-sign-on-kerberos-configuration).
 
-Add the **Extension Data** setting to your existing Platform SSO settings catalog policy. The **Extension Data** setting is a similar concept to an open text field; you can configure any values you need.
+In your existing Platform SSO settings catalog policy, add the **Extension Data** setting. The **Extension Data** setting is a similar concept to an open text field; you can configure any values you need.
 
 1. In your existing Platform SSO settings catalog policy, add **Extension Data**:
 
@@ -89,9 +89,9 @@ Add the **Extension Data** setting to your existing Platform SSO settings catalo
 
 ## Touch ID biometric policy with Secure Enclave authentication
 
-On devices that support Touch ID biometric authentication, you can use the Secure Enclave authentication option, as described in [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md). This policy requires users to authenticate with Touch ID whenever the User Secure Enclave Key needs to be accessed.
+On devices that support Touch ID biometric authentication, you can use the Secure Enclave authentication option, as described in [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
 
-To learn more about `UserSecureEnclaveKeyBiometricPolicy`, see [UserSecureEnclaveKeyBiometricPolicy](/entra/identity/devices/macos-psso#microsoft-platform-sso-usersecureenclavekeybiometricpolicy).
+This policy requires users to authenticate with Touch ID whenever the User Secure Enclave Key needs to be accessed. To learn more about `UserSecureEnclaveKeyBiometricPolicy`, see [UserSecureEnclaveKeyBiometricPolicy](/entra/identity/devices/macos-psso#microsoft-platform-sso-usersecureenclavekeybiometricpolicy).
 
 Add the **Extension Data** setting to your existing Platform SSO settings catalog policy.
 
