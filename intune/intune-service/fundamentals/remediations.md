@@ -111,6 +111,25 @@ To assign the script package:
 1. If you would like to change the schedule, select the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
 1. When you're done, select **Review + save**.  
 
+### Schedule options for assignments
+
+When configuring the assignment of a script package, you can define how often the remediation runs by selecting one of the following **Schedule** options:
+
+- **Once** - Execute the remediation one time only, at a specified date and time
+
+- **Hourly** - Run the remediation on an hourly basis, with a configurable interval (e.g., every N hours)
+
+  > [!NOTE]
+  > The value for the hourly interval must be less than 24 hours.
+  
+- **Daily** - Execute the remediation daily at a specified time
+
+Execution behavior:
+
+- Remediations run based on the device’s local time by default. Enabling **Use UTC** schedules them by Coordinated Universal Time.
+- If a scheduled run is missed, the remediation will run as soon as possible once the device is online.
+- For non-urgent or resource-heavy scripts, less frequent schedules (e.g., every 7 days) are recommended to reduce performance impact on the device.
+
 ## Create and deploy custom script packages
 
 The **Microsoft Intune Management Extension** service gets the scripts from Intune and runs them. The scripts are rerun every 24 hours. You can copy the provided scripts and deploy them, or you can create your own script packages. To deploy script packages, follow the instructions in the next section.
