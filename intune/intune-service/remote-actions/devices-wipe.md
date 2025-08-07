@@ -33,7 +33,7 @@ ms.collection:
 
 By using the **Retire** or **Wipe** actions, you can remove devices from Intune that are no longer needed, being repurposed, or missing. Users can also issue a remote command from the Intune Company Portal to devices that are enrolled in Intune.
 
-If [multi-admin approval access policies](../fundamentals/multi-admin-approval.md) are enabled for Device Actions, some device actions might require a second administrator to approve. To learn more, see [Use Access policies to require multiple administrative approvals](../fundamentals/multi-admin-approval.md).
+If [multi-admin approval access policies](../fundamentals/multi-admin-approval.md) are enabled for device actions, then some device actions might require a second administrator to approve. To learn more, see [Use Access policies to require multiple administrative approvals](../fundamentals/multi-admin-approval.md).
 
 ## Wipe
 
