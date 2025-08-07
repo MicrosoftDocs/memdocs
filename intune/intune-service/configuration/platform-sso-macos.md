@@ -88,7 +88,11 @@ You configure Platform SSO using the Intune [settings catalog](settings-catalog.
 
   - Device Configuration **Read**, **Create**, **Update**, and **Assign** permissions
 
-  There are some built-in roles that have these permissions, including the **Policy and Profile Manager** Intune RBAC role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+  There are some built-in roles that have these permissions, including the **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+
+- In [Step 2 - Create the Platform SSO policy](#step-2---create-the-platform-sso-policy-in-intune) (this article), you create a settings catalog policy that configures the required settings for Platform SSO. There are other common scenarios and settings you can configure in this policy. For more information, go to [Common Platform SSO scenarios for macOS devices](platform-sso-scenarios.md).
+
+  We recommend you review the [scenarios](platform-sso-scenarios.md) **before** you create the settings catalog policy. This way, you can configure the settings you need/want when you initially create the policy. If you don't configure the optional scenario settings initially, you can always edit the policy later. Only one SSO policy can be assigned to your groups. So, add these scenario settings to your existing Platform SSO settings catalog policy.
 
 - In [Step 5 - Register the device](#step-5---register-the-device) (this article), users register their devices. These users must be allowed to join devices to Microsoft Entra ID. For more information, go to [Configure your device settings](/entra/identity/devices/device-join-plan#configure-your-device-settings).
 
@@ -213,7 +217,9 @@ To configure the Platform SSO policy, use the steps in this section to create an
     Close the settings picker.
 
     > [!TIP]
-    > There are more Platform SSO settings you can configure in the policy. To learn more about these scenarios, go to [Common Platform SSO scenarios for macOS devices](platform-sso-scenarios.md).
+    > There are more Platform SSO settings you can add to the policy that configure different scenarios, like enabling Kerberos SSO, using Touch ID biometric authentication, and enabling SSO on non-Microsoft apps. To learn more about these scenarios and their required settings, go to [Common Platform SSO scenarios for macOS devices](platform-sso-scenarios.md).
+    >
+    > If you don't configure the optional scenario settings initially, you can always edit the policy later.
 
 8. Configure the following required settings:
 
