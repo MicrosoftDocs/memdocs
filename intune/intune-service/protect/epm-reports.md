@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/30/2025
+ms.date: 08/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,17 +39,37 @@ Endpoint Privilege Management supports your zero-trust journey by helping your o
 
 The information available in EPM reports depends on the *reporting scope* of a device. The reporting scope for each device is configured as part of a [Windows elevation settings policy](../protect/epm-policies.md#windows-elevation-settings-policy), and different devices can have different reporting scope configurations.
 
-The EPM reports are available from the *Reports* tab of the *Endpoint Privilege Management* node from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Endpoint security** > **Endpoint Privilege Management**, and select the **Reports** tab. The report data is retained for 30 days. To view a report, select from the following tiles:
+EPM reports are found within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Endpoint security** > **Endpoint Privilege Management**, and available through the Overview tab and the Reports tab. The [**Overview** tab](#overview-dashboard) is a readiness dashboard for moving admin users to standard users. The **Reports** tab presents several report tiles for different aspects of EPM, which also help power the readiness dashboard. EPM report data is retained for 30 days. 
 
-- Elevation report
-- Managed elevations report
-- Elevation report by applications
-- Elevation report by publisher
-- Elevation report by user
+The following reports are available from the Report tab:
+
+- [Elevation report](#elevation-report)
+- [Managed elevations report](#managed-elevations-report)
+- [Elevation report by application](#elevation-report-by-application)
+- [Elevation report by publisher](#elevation-report-by-publisher)
+- [Elevation report by user](#elevation-report-by-user)
 
 > [!NOTE]
 >
-> Data is processed once every 24 hours. There may be a delay before seeing data in the elevation usage reports.
+> Data is processed once every 24 hours. There might be a delay before seeing data in the elevation usage reports.
+
+## Overview dashboard
+
+The EPM overview tab provides a dashboard that can help you assess your organization’s readiness in migrating your local admin user accounts to standard users, securely and efficiently. Information tiles on this dashboard include details pulled from the last 48 hours for the following file and elevation activities:
+
+- **Users who have only unmanaged file elevations**. This tile identifies the count of users who are running files in an elevated context that aren't managed by EPM. This information can help you create policies to close gaps in your EPM coverage.
+
+- **Users who have both managed and unmanaged file elevations**. This tile can help you identify how to refine elevation settings policy to help audit file elevations and begin to move them into a managed state.
+
+-**User with only managed elevations**. The information provided by this tile helps identify those users who might be ready to run without admin permissions assigned to their user account. To remove local admin permissions, you can deploy account protection policies to manage the local user group membership.
+
+-**Frequently unmanaged elevations**. A list of the files with the most unmanaged elevation requests in the current snapshot period. This list can help you identify files that either are unmanaged or might need refined elevation rules or have existing elevation rules applied to additional users.
+
+- **Frequently approved by support**. Use this information to understand files that currently require support approval to elevate but might be candidates for a non-support approved elevation rule. Moving such files to more direct elevation rules can reduce friction for your users.
+
+- **Frequently denied elevations**. View the files that most frequently are denied, which can help identify new files that require elevation rules.
+
+Finally, at the bottom of the dashboard you can view **Elevation trends**.
 
 ## Elevation report
 
