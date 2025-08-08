@@ -61,9 +61,9 @@ The EPM overview tab provides a dashboard that can help you assess your organiza
 
 - **Users who have both managed and unmanaged file elevations**. This tile can help you identify how to refine elevation settings policy to help audit file elevations and begin to move them into a managed state.
 
--**User with only managed elevations**. The information provided by this tile helps identify those users who might be ready to run without admin permissions assigned to their user account. To remove local admin permissions, you can deploy account protection policies to manage the local user group membership.
+- **User with only managed elevations**. The information provided by this tile helps identify those users who might be ready to run without admin permissions assigned to their user account. To remove local admin permissions, you can deploy account protection policies to manage the local user group membership.
 
--**Frequently unmanaged elevations**. A list of the files with the most unmanaged elevation requests in the current snapshot period. This list can help you identify files that either are unmanaged or might need refined elevation rules or have existing elevation rules applied to additional users.
+- **Frequently unmanaged elevations**. A list of the files with the most unmanaged elevation requests in the current snapshot period. This list can help you identify files that either are unmanaged or might need refined elevation rules or have existing elevation rules applied to additional users.
 
 - **Frequently approved by support**. Use this information to understand files that currently require support approval to elevate but might be candidates for a non-support approved elevation rule. Moving such files to more direct elevation rules can reduce friction for your users.
 
