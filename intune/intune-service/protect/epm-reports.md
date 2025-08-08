@@ -73,7 +73,7 @@ Finally, at the bottom of the dashboard you can view **Elevation trends**.
 
 ## Available reports
 
-The following section briefly describe each report tile found on the *Reports* tab for Endpoint Privilege Management.
+The following sections briefly describe each report tile found on the *Reports* tab for Endpoint Privilege Management.
 
 ### Elevation report
 
