@@ -45,7 +45,7 @@ The following reports are available from the Report tab:
 
 - [Elevation report](#elevation-report)
 - [Managed elevations report](#managed-elevations-report)
-- [Elevation report by application](#elevation-report-by-application)
+- [Elevation report by applications](#elevation-report-by-applications)
 - [Elevation report by publisher](#elevation-report-by-publisher)
 - [Elevation report by user](#elevation-report-by-user)
 
@@ -83,7 +83,7 @@ The *Elevation report* displays a list view with details about all reported elev
 
 By selecting an entry in the report, you can drill in to view more details about the elevation request and the file involved.
 
-## Managed elevation report
+## Managed elevations report
 
 The *Managed elevation report* displays the same types of detail as the *Elevation report*, but reports on only the elevations that are managed by a *Windows elevation rule policy*.
 
