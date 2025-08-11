@@ -80,12 +80,26 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need
 For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements).
 
 To support Defender for Endpoint security settings management, allow the following hostnames through your firewall.
+
 For communication between clients and the cloud service:
 
 - `*.dm.microsoft.us` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
   > [!IMPORTANT]
   > SSL Inspection is not supported on endpoints required for Microsoft Defender for Endpoint.
+
+## Microsoft Intune Endpoint Privilege Management
+
+To support Endpoint Privilege Management, allow the following hostnames through your firewall.
+
+For communication between clients and the cloud service:
+
+- `*.dm.microsoft.us` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
+
+  > [!IMPORTANT]  
+  > SSL Inspection isn't supported on endpoints required for Endpoint Privilege Management.
+
+For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
 
 ## Partner service endpoints that Intune depends on
 
