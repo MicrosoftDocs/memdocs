@@ -48,11 +48,14 @@ Managed devices require configurations that let **All Users** access services th
 
 For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../enrollment/windows-enroll.md).  
 
+> [!NOTE]  
+> Intune endpoints use Azure Front Door for communicating with the Intune service.  The IP ranges for Intune (part of Microsoft Security) are added below.  Intune specific endpoints are referenced in the JSON file by the name `AzureFrontDoor.MicrosoftSecurity`.  Refer to the Azure Front Door and Service Tags documentation for the complete list of all services that utilize Azure Front Door and instructions for using the JSON file. [Azure Front Door IP Ranges and Service Tags](https://www.microsoft.com/download/details.aspx?id=57063)
+
 The following tables list the ports and services that the Intune client accesses:
 
 | Endpoint | IP address |
 |---------------------|-----------|
-|*.manage.microsoft.us | 52.227.99.114 <br> 20.141.108.112 <br> 13.72.17.166 <br> 52.126.185.115 <br> 52.227.211.91 <br> 23.97.10.212 <br> 52.227.29.124 <br> 52.247.174.16 <br> 52.227.29.244 <br> 52.227.208.144 <br> 52.227.1.233 <br> 20.141.104.221 <br> 52.247.134.218 <br> 20.141.78.227 <br> 13.77.236.201 <br> 62.10.86.128/25 <br> 62.10.87.128/25 <br> 20.159.110.0/25 <br> 20.159.111.0/25 <br>|
+|*.manage.microsoft.us | 52.227.99.114 <br> 20.141.108.112 <br> 13.72.17.166 <br> 52.126.185.115 <br> 52.227.211.91 <br> 23.97.10.212 <br> 52.227.29.124 <br> 52.247.174.16 <br> 52.227.29.244 <br> 52.227.208.144 <br> 52.227.1.233 <br> 20.141.104.221 <br> 52.247.134.218 <br> 20.141.78.227 <br> 13.77.236.201 <br> 62.10.86.128/25 <br> 62.10.87.128/25 <br> 20.159.110.0/25 <br> 20.159.111.0/25 <br>       <br>Azure Front Door:<br>51.54.53.136/29 <br> 51.54.114.160/29 <br> 62.11.173.176/29 |
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
 
 ## US Government customer designated endpoints
