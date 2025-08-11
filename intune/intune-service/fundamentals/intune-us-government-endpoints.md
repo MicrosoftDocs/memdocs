@@ -49,7 +49,7 @@ Managed devices require configurations that let **All Users** access services th
 For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../enrollment/windows-enroll.md).  
 
 > [!NOTE]  
-> Intune endpoints use Azure Front Door for communicating with the Intune service.  The IP ranges for Intune (part of Microsoft Security) are added below.  Intune specific endpoints are referenced in the JSON file by the name `AzureFrontDoor.MicrosoftSecurity`.  Refer to the Azure Front Door and Service Tags documentation for the complete list of all services that utilize Azure Front Door and instructions for using the JSON file. [Azure Front Door IP Ranges and Service Tags](https://www.microsoft.com/download/details.aspx?id=57063)
+> Intune endpoints use *Azure Front Door* for communicating with the Intune service.  The IP ranges for Intune (part of Microsoft Security) are added to the following table.  Intune specific endpoints are referenced in the JSON file by the name `AzureFrontDoor.MicrosoftSecurity`.  Refer to the Azure Front Door and Service Tags documentation for the complete list of all services that utilize Azure Front Door and instructions for using the JSON file. [Azure Front Door IP Ranges and Service Tags](https://www.microsoft.com/download/details.aspx?id=57063)
 
 The following tables list the ports and services that the Intune client accesses:
 
