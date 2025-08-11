@@ -69,7 +69,7 @@ Intune endpoints use Azure Front Door for communicating with the Intune service.
 
 ## Network requirements for PowerShell scripts and Win32 apps  
 
-If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need to grant access to endpoints in which your tenant currently resides.
 
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
