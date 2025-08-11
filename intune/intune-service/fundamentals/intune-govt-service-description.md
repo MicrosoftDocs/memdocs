@@ -6,7 +6,7 @@ description: Learn more about the Intune government service offerings and featur
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 06/30/2025
+ms.date: 08/11/2025
 manager: laurawi
 ms.topic: overview
 ms.service: microsoft-intune
