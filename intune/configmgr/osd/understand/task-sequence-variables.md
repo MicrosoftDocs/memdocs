@@ -1633,7 +1633,7 @@ Specifies how a task sequence associates users with the destination computer. Se
 
 > [!NOTE]
 >
-> When setting the **SMSTSAssignUsersMode* variable, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
+> When setting the **SMSTSAssignUsersMode** variable, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
 > 
 > If the values don't match, then device affinity isn't set.
 >

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use the settings catalog to configure managed software updates 
+title: Use the settings catalog to configure DDM software updates 
 description: Use Microsoft Intune to configure Apple's declarative device management (DDM) settings to install a specific update by an enforced deadline. This feature uses the settings catalog to configure managed software updates for supervised iOS/iPadOS and managed macOS devices.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/14/2025
+ms.date: 07/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,9 +30,11 @@ ms.collection:
 - sub-updates
 ---
 
-# Managed software updates with the settings catalog in Microsoft Intune
+# DDM software updates with the settings catalog in Microsoft Intune
 
-You can use the Intune [settings catalog](../configuration/settings-catalog.md) to configure managed software updates for iOS/iPadOS and macOS devices. With managed software updates in Intune, you can:
+You can use the Intune [settings catalog](../configuration/settings-catalog.md) to configure managed software updates for iOS/iPadOS and macOS devices. Managed software updates uses Apple's declarative device management (DDM).
+
+With DDM managed software updates in Intune, you can:
 
 - Choose an update to install using its OS version or build version.
 - Enforce a deadline for the device to automatically install an update.
@@ -45,13 +47,16 @@ This feature applies to:
 
 Apple's declarative device management (DDM) allows you to install a specific update by an enforced deadline. The autonomous nature of DDM provides an improved user experience as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
 
-## Managed software updates vs software update policies
+## DDM software updates vs MDM software update policies
 
-On Apple devices in Intune, you can create software update policies or managed software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types.
+On Apple devices in Intune, you can create MDM-based software update policies or DDM-managed software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types.
+
+> [!NOTE]
+> Apple deprecated MDM-based software update workloads. Microsoft recommends you use DDM to install updates instead. For more information on these changes, see [support tip for moving to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/4432177).
 
 Use the following information to help you decide which policy type to use.
 
-| Feature | Managed software update policy | Software update policy|
+| Feature | Managed software update policy (DDM) | Software update policy (MDM) |
 | --- | --- | --- |
 | **Configure a specific update to install** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ✅ | ✅ |
@@ -83,22 +88,22 @@ Use the following information to help you decide which policy type to use.
 
 ### Precedence
 
-Managed software updates have precedence over other policies that configure software updates. If you configure managed software updates and also have other software update policies assigned, then it's possible the other update policies have no effect.
+DDM software updates have precedence over other policies that configure software updates. If you configure DDM software updates and also have other MDM software update policies assigned, then it's possible the other update policies have no effect.
 
 **iOS/iPadOS precedence order**:
 
-1. Managed software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
-2. Update policies (**Devices** > **Update policies for iOS/iPadOS**)
+1. DDM software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
+2. MDM update policies (**Devices** > **Update policies for iOS/iPadOS**)
 
 **macOS precedence order**:
 
-1. Managed software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
-2. Update policies (**Devices** > **Update policies for macOS**)
-3. Software updates (**Settings catalog** > **System Updates** > **Software Update**)
+1. DDM software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
+2. MDM update policies (**Devices** > **Update policies for macOS**)
+3. MDM software updates (**Settings catalog** > **System Updates** > **Software Update**)
 
-## Configure the automatic managed software updates policy
+## Configure the automatic DDM software updates policy
 
-You can use the settings catalog to configure a policy that automatically enforces the latest update available for devices, so you don’t have to manually update the target OS version and target date time settings each time that Apple releases a new update.
+You can use the settings catalog to configure a policy that automatically enforces the latest update available for devices, so you don't have to manually update the target OS version and target date time settings each time that Apple releases a new update.
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -118,7 +123,7 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 6. Choose **Select all these settings** and then close the settings picker.
 
-    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-updates-enforce-latest.png" alt-text="Screenshot that shows the settings catalog software update enforce latest settings for Apple devices in Microsoft Intune.":::
+    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-updates-enforce-latest.png" alt-text="Screenshot that shows the settings catalog software update enforce latest settings for Apple devices in Microsoft Intune." lightbox="./media/managed-software-updates-ios-macos/ddm-software-updates-enforce-latest.png":::
 
 7. Configure the settings:
 
@@ -143,7 +148,7 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 13. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
-## Configure the manual managed software updates policy
+## Configure the manual DDM software updates policy
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -163,7 +168,7 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 6. Choose **Select all these settings** and then close the settings picker.
 
-    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-update-category.png" alt-text="Screenshot that shows the settings catalog software update settings for Apple devices in Microsoft Intune.":::
+    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-update-category.png" alt-text="Screenshot that shows the settings catalog software update settings for Apple devices in Microsoft Intune." lightbox="./media/managed-software-updates-ios-macos/ddm-software-update-category.png":::
 
 7. Configure the settings:
 
@@ -196,20 +201,18 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 13. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
-## Monitoring managed software updates
+## Monitoring DDM software updates
 
-To monitor software updates for Apple devices, you can use the following mehtods:
+To monitor software updates for Apple devices, you can use the following methods:
 
-- Managed software updates use the same reporting as device configuration policies. For more information, see [Monitor device configuration policies](../configuration/device-profile-monitor.md).
+- DDM software updates use the same reporting as device configuration policies. For more information, see [Monitor device configuration policies](../configuration/device-profile-monitor.md).
 
   > [!IMPORTANT]
-  > A policy that reports Success only means that the configuration successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy will report error as the device sees this as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
-
-- Per device declarative software update reports. For more information, see [Use the per-device software update reports](../protect/software-update-report-apple-per-device.md).
+  > A policy that reports Success only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.  
 
 ## Using the Software Update Settings declarative configuration
 
-When you configure managed software updates, you might want to manage aspects of the software update process leading up to the enforcement of an update. Using this configuration, you can:
+When you configure DDM software updates, you might want to manage aspects of the software update process leading up to the enforcement of an update. Using this configuration, you can:
 
 - Require that an admin or standard user can perform updates on the device
 
@@ -226,9 +229,9 @@ Previously in MDM, these settings were spread across multiple payloads such as R
 ## Delay visibility of updates using MDM
 
 > [!NOTE]
-> As of August 2024, it's recommended to use the DDM-based Software Update Settings configuration to manage update settings such as deferrals. 
+> As of August 2024, it's recommended to use the DDM-based Software Update Settings configuration to manage update settings such as deferrals.
 
-When you configure managed software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
+When you configure DDM software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
 
 A restriction period gives you time to test an update before it's available to users. After the restriction period ends, users can see the update. If your update policies don't install it first, then users can choose to install the update.
 
@@ -239,7 +242,7 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - Enforced Software Update Minor OS Deferred Install Delay (macOS)
 - Enforced Software Update Non OS Deferred Install Delay (macOS)
 
-:::image type="content" source="./media/managed-software-updates-ios-macos/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune.":::
+:::image type="content" source="./media/managed-software-updates-ios-macos/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune." lightbox="./media/managed-software-updates-ios-macos/settings-catalog-restrictions-delay-updates.png":::
 
 ## Related articles
 

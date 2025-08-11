@@ -4,10 +4,10 @@ title: What's new in previous months in the Microsoft Intune
 titleSuffix:
 description: Review older announcements from the Intune what's new page
 keywords:
-author: dougeby
-ms.author: dougeby
+author: brenduns
+ms.author: brenduns
 manager: laurawi
-ms.date: 05/22/2025
+ms.date: 07/17/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,6 +36,145 @@ ms.collection:
 <!-- Maintenance plan:
 
      Maintain ~2 years of archived content -->
+
+## Week of January 27, 2025
+
+### Device security
+
+#### Security baselines for HoloLens 2<!-- 24914095 -->
+
+You can now deploy two distinct instances of the security baseline for HoloLens 2. These baselines represent Microsoft's best practice guidelines and experience from deploying and supporting HoloLens 2 devices to customers across various industries. The two baselines instances:
+
+- **Standard Security Baseline for HoloLens 2**:
+  The standard security baseline for HoloLens 2 represents the recommendations for configuring security settings that are applicable to all types of customers irrespective of HoloLens 2 use case scenarios. [View the default configuration of settings in the standard security baseline](../protect/security-baseline-hololens2-standard.md).
+
+- **Advanced Security Baseline for HoloLens 2**:
+  The advanced security baseline for HoloLens 2 represents the recommendations for configuring security settings for the customers who have strict security controls of their environment and require stringent security policies to be applied to any device used in their environment. [View the default configuration of settings in the advanced security baseline](../protect/security-baseline-hololens2-advanced.md).
+
+To learn more about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
+
+Applies to:
+
+- Windows
+
+## Week of January 20, 2025
+
+### Monitor and troubleshoot
+
+#### Use Support Assistant to resolve issues<!-- 29084113 -->
+
+Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt in and opt out at any time. For related information, see [How to get support in the Microsoft Intune admin center](/mem/get-support).
+
+## Week of December 30, 2024
+
+### Device enrollment
+
+#### Intune ends support for Android device administrator on devices with access to Google Mobile Services<!-- 24563742 -->
+As of December 31, 2024, Microsoft Intune no longer supports Android device administrator management on devices with access to Google Mobile Services (GMS). This change comes after Google deprecated Android device administrator management and ceased support. Intune support and help documentation remains for devices without access to GMS running Android 15 or earlier, and Microsoft Teams devices migrating to Android Open Source Project (AOSP) management. For more information about how this change impacts your tenant, see [Intune ending support for Android device administrator on devices with GMS access in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443).
+
+
+## Week of December 16, 2024 (Service release 2412)
+
+### App management
+
+#### Increased scale for Customization policies<!-- 25308499 -->
+
+You can now create up to 25 policies that customize the Company Portal and Intune app experience. The previous maximum number of Customization policies was 10. Navigate to the Intune admin center, and select **Tenant administration** > **Customization**.
+
+For more information about customizing the Company Portal and Intune apps, see [Customizing the user experience](../apps/company-portal-app.md#customizing-the-user-experience).
+
+### Device security
+
+#### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint<!-- 13204113 -->
+
+You can now manage the Microsoft Defender for Endpoint CSP setting for [tamper protection](/windows/client-management/mdm/defender-csp) on unenrolled devices you manage as part of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
+
+With this support, tamper protection configurations from *Windows Security Experience* profiles for *Antivirus* policies now apply to all devices instead of only to those that are enrolled with Intune.
+
+### Device configuration
+
+#### Ending support for administrative templates when creating a new configuration profile<!-- 29989512 -->
+
+Customers cannot create new Administrative Templates configuration profile through **Devices > Configuration > Create > New policy > Windows 10 and later > Administrative Templates**. A (retired) tag is seen next to **Administrative Templates** and the **Create** button is now greyed out. Other templates continue to be supported.
+
+However, customers can now use the Settings Catalog for creating new **Administrative Templates** configuration profile by navigating to **Devices > Configuration > Create > New policy > Windows 10 and later > Settings Catalog**.
+
+There are no changes in the following UI experiences:
+
+- Editing an existing Administrative template.
+- Deleting an existing Administrative template.
+- Adding, modifying, or deleting settings in an existing Administrative template.
+- **Imported Administrative templates (Preview)** template, which is used for Custom ADMX.
+
+For more information, see [Use ADMX templates on Windows 10/11 devices in Microsoft Intune](..\configuration\administrative-templates-windows.md).
+
+Applies to:
+
+- Windows
+
+### Device management
+
+#### More Wi-Fi configurations are now available for personally-owned work profile devices<!-- 28331156 -->
+
+Intune Wi-Fi configuration profiles for Android Enterprise personally-owned work profile devices now support configuration of pre-shared keys and proxy settings.
+
+You can find these settings in the admin console in **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**. Set **Platform** to Android Enterprise and then in the **Personally-Owned Work Profile** section, select Wi-Fi and then select the **Create** button.
+
+In the **Configuration settings** tab, when you select Basic Wi-Fi type, several new options are available:
+
+1. Security type, with options for Open (no authentication), WEP-Pre-shared key, and WPA-Pre-shared key.
+
+2. Proxy settings, with the option to select Automatic and then specify the proxy server URL.
+
+It was possible to configure these in the past with Custom Configuration policies, but going forward, we recommend setting these in the Wi-Fi Configuration profile, because [Intune is ending support for Custom policies in April 2024.](https://aka.ms/Intune/Android-customprofiles).
+
+For more information, see [Wi-Fi settings for personally-owned work profile devices.](../configuration/wi-fi-settings-android-enterprise.md).
+
+Applies to:
+
+- Android Enterprise
+
+## Week of December 9, 2024
+
+### Tenant administration
+
+#### Intune now supports Ubuntu 24.04 LTS for Linux management.<!--28363586 -->
+
+We're now supporting device management for Ubuntu 24.04 LTS. You can enroll and manage Linux devices running Ubuntu 24.04, and assign standard compliance policies, custom configuration scripts, and compliance scripts.
+
+For more information, see the following in Intune documentation:
+
+- [Deployment guide: Manage Linux devices in Microsoft Intune](../fundamentals/deployment-guide-platform-linux.md)
+- [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md). To enroll Linux devices, ensure that they're running Ubuntu 20.04 LTS or higher.
+
+Applies to:
+
+- Linux Ubuntu Desktops
+
+## Week of December 2, 2024
+
+### Device enrollment
+
+#### Change to enrollment behavior for iOS enrollment profile type<!-- 29068674 -->
+
+At Apple WWDC 2024, Apple ended support for profile-based Apple user enrollment. For more information, see [Support has ended for profile-based user enrollment with Company Portal](../fundamentals/whats-new-archive.md#support-has-ended-for-apple-profile-based-user-enrollment-with-company-portal). As a result of this change, we updated the behavior that occurs when you select **Determine based on user choice** as the enrollment profile type for bring-your-own-device (BYOD) enrollments.
+
+Now when users select **I own this device** during a BYOD enrollment, Microsoft Intune enrolls them via account-driven user enrollment, rather than profile-based user enrollment, and then secures only work-related apps. Less than one percent of Apple devices across all Intune tenants are currently enrolled this way, so this change doesn't affect most enrolled devices. There is no change for iOS users who select **My company owns this device** during a BYOD enrollment. Intune enrolls them via device enrollment with Intune Company Portal, and then secures their entire device.
+
+If you currently allow users in BYOD scenarios to determine their enrollment profile type, you must take action to ensure account-driven user enrollment works by completing all prerequisites. For more information, see [Set up account driven Apple user enrollment](../enrollment/apple-account-driven-user-enrollment.md). If you don't give users the option to choose their enrollment profile type, there are no action items.
+
+### Device management
+
+#### Device Inventory for Windows<!-- 24853010 -->
+
+Device inventory lets you collect and view additional hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
+
+You can now choose what you want to collect from your devices, using the catalog of properties and then view the collected properties in the Resource Explorer view.
+
+For more information, see:
+
+- [Properties catalog](../configuration/properties-catalog.md)
+- [Data collection platform](../../analytics/data-platform-schema.md)
 
 ## Week of November 18, 2024 (Service release 2411)
 
@@ -1134,7 +1273,7 @@ For a walkthrough of the Intune admin center, see [Tutorial: Walkthrough Microso
 
 ### RBAC changes to enrollment platform restrictions for Windows<!-- 25036419 -->
 
-We've updated role-based access controls (RBAC) for all enrollment platform restrictions in the Microsoft Intune admin center. The Global Administrator and Intune Service Administrator roles can create, edit, delete, and reprioritize enrollment platform restrictions. For all other built-in Intune roles, restrictions are read-only.
+We've updated role-based access controls (RBAC) for all enrollment platform restrictions in the Microsoft Intune admin center. The Intune Service Administrator roles can create, edit, delete, and reprioritize enrollment platform restrictions. For all other built-in Intune roles, restrictions are read-only.
 
 **Applies to:**
 

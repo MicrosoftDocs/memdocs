@@ -35,7 +35,7 @@ To help protect against a compromised administrative account, use Intune *access
 
 With MAA, you configure access policies that protect specific configurations, like Apps or Scripts for devices. Access policies specify what is protected and which group of accounts are permitted to approve changes to those resources.
 
-When any account in the Tenant is used to make a change to a resource that’s protected by an access policy, Intune doesn't apply the change until a different account explicitly approves it. Only administrators who are members of an approval group that’s assigned a protected resource in an access protection policy can approve changes. Approvers can also reject change requests.
+When any account in the Tenant is used to make a change to a resource that's protected by an access policy, Intune doesn't apply the change until a different account explicitly approves it. Only administrators who are members of an approval group that's assigned a protected resource in an access protection policy can approve changes. Approvers can also reject change requests.
 
 Access policies are supported for the following resources:
 
@@ -47,15 +47,18 @@ Access policies are supported for the following resources:
 
 To use multi administrative approval, your tenant must have at least two administrator accounts. One account is used to perform a change in the tenant, the second account is used to approve the change.
 
-To create an access policy, your account must be assigned the [*Intune Service Administrator* or *Azure Global Administrator*](../fundamentals/role-based-access-control.md) role, or be assigned the appropriate Multi Admin Approval permissions for an Intune role. Administrators who manage the access policies specifically for multi-admin approval require the *Approval for Multi Admin Approval* permission.
+To create an access policy, your account must be assigned the [*Intune Service Administrator*](../fundamentals/role-based-access-control.md) role, or be assigned the appropriate Multi Admin Approval permissions for an Intune role. Administrators who manage the access policies specifically for multi-admin approval require the *Approval for Multi Admin Approval* permission.
 
-To be an approver for access policies, an account must be in the approver group that’s assigned to the access policy for a specific type of resource.
+To be an approver for access policies, an account must be in the approver group that's assigned to the access policy for a specific type of resource.
 
 All approver groups must also be a member group of one or more Intune role assignments. There's no specific requirement for which role assignment the approver group must be added to. If the approver group isn't added to a role assignment, approver group members are removed from the group periodically.
 
+> [!CAUTION]  
+> [!INCLUDE [global-admin](../includes/global-admin.md)]
+
 ## How multi admin approval and Access policies work
 
-**When an admin edits** or creates a new object for an area that’s protected by an access policy, they see an option on the *Save + Review* surface where they can enter a description of the change as a *business justification*.
+**When an admin edits** or creates a new object for an area that's protected by an access policy, they see an option on the *Save + Review* surface where they can enter a description of the change as a *business justification*.
 
 - The *business justification* becomes part of the approval request for the change.
 - An admin who submitted a change can view the status of their requests in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Tenant administration** > **Multi Admin Approval** and viewing the **My request** page.
@@ -68,7 +71,7 @@ All approver groups must also be a member group of one or more Intune role assig
 
 **If a change is approved**, Intune processes the requested change and updates the object. While Intune processes the request, its status can display as **Approved**. The original requestor needs to view the request, and choose **Complete** to initiate the change. After being successfully processed, the status updates to **Completed**.
 
-**Each change of status** remains visible for up to 30 days after the last change of status. If a request isn’t processed further within 30 days, it becomes **Expired**, and must be resubmitted.
+**Each change of status** remains visible for up to 30 days after the last change of status. If a request isn't processed further within 30 days, it becomes **Expired**, and must be resubmitted.
 
 ## Create an access policy
 
@@ -94,7 +97,7 @@ When a request for the same object is already pending approval, you aren't able 
 
 To monitor the status of your requests, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration** > **Multi Admin Approval** > **My requests**.
 
-You can cancel a request before it’s approved by selecting it from the My requests page, and then selecting **Cancel request**.
+You can cancel a request before it's approved by selecting it from the My requests page, and then selecting **Cancel request**.
 
 ## Approve requests
 

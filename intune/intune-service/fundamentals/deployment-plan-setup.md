@@ -111,7 +111,10 @@ The people in your organization each need a user account before they can sign in
 
 As an administrator, you can add users individually or in bulk to Intune.
 
-You must be an admin (global, license, or a user admin) to add users to Intune. If you set up Intune using the free trial, you're a global admin. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
+You must be a Microsoft Entra [License Administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator) or [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) to add users to Intune. If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+
+> [!CAUTION]  
+> [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## 5 - Create groups in Intune
 
@@ -140,7 +143,7 @@ For guidance, go to [Assign licenses](licenses-assign.md).
 
 ✔️ **Unlicensed admins**
 
-You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Microsoft Entra administrators, and so on.
+You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, Microsoft Entra administrators, and so on.
 
 For guidance, go to [Unlicensed admins](unlicensed-admins.md).
 
