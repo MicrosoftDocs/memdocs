@@ -7,7 +7,7 @@ ms.subservice: fundamentals
 ms.topic: how-to
 author: smritib17
 ms.author: smbhardwaj
-manager: dougeby
+manager: laurawi
 # Customer intent: As a Microsoft Intune administrator, I want to enable and use remediations so that I can fix common support issues before end-users notice issues.
 ms.localizationpriority: high
 
@@ -164,7 +164,7 @@ You can use the **Run remediation** device action to run a remediation script on
 
 - The built-in or custom script packages must be available for users to run a remediation on-demand, however they don't need to be assigned to a user or device. You can use **Scope tags** to limit which remediation script packages a user can see.
 
-- Users must be Global Admins, Intune Admins, or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
+- Users must be Intune Admins or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
 
 - Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](intune-endpoints.md#windows-push-notification-services-wns-dependencies) during the remote action.
 
@@ -224,6 +224,10 @@ You can view the status of Remediations that are assigned or run on-demand to a 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. Select **Remediations** in the **Monitor** section.
+
+## Known Issues
+
+When applying filters such as "Author" or "Status," or using the **Export** option on the **Remediations** page of **Scripts and remediations**, only the currently loaded script packages are included. To include all scripts, scroll until the full list is loaded.
 
 ## Next steps
 

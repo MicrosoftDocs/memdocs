@@ -6,12 +6,12 @@ ms.date: 04/08/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-ms.author: sheetg
-author: sheetg09 
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # The data warehouse service point for Configuration Manager
@@ -174,7 +174,7 @@ Use the following logs to investigate problems with the installation of the data
 
 ### Set up failure
 
-When the data warehouse service point role is the first one that you install on a remote server, installation fails for the data warehouse.  
+When the data warehouse service point role is the first one that you install on a remote server, installation fails for the data warehouse.
 
 To work around this issue, make sure that the computer on which you install the data warehouse service point already hosts at least one other role.
 

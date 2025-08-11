@@ -12,49 +12,49 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # UserHasPermissions Method in Class SMS_RbacSecuredObject
-The `UserHasPermissions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines whether the current user has the requested permissions for the specified object.  
+The `UserHasPermissions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines whether the current user has the requested permissions for the specified object.
 
- The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.
 
-## Syntax  
+## Syntax
 
-```  
-Boolean UserHasPermissions(  
-     ref:SMS_BaseClass ObjectPath,  
-     UInt32 Permissions,  
-);  
-```  
+```
+Boolean UserHasPermissions(
+     ref:SMS_BaseClass ObjectPath,
+     UInt32 Permissions,
+);
+```
 
-#### Parameters  
- `ObjectPath`  
- Data type: `ref:SMS_BaseClass`  
+#### Parameters
+ `ObjectPath`
+ Data type: `ref:SMS_BaseClass`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Object being checked for access permissions, which can be a class name or instance path.  
+ Object being checked for access permissions, which can be a class name or instance path.
 
- `Permissions`  
- Data type: `UInt32`  
+ `Permissions`
+ Data type: `UInt32`
 
- Qualifiers: [in,out]  
+ Qualifiers: [in,out]
 
- The permission the user has on the object specified by `ObjectPath`.  
+ The permission the user has on the object specified by `ObjectPath`.
 
- Possible values are defined by the properties of `SMS_SecuredObject Server WMI Class`.  
+ Possible values are defined by the properties of `SMS_SecuredObject Server WMI Class`.
 
-## Return Values  
- Returns a `Boolean` data type that is `true` if the user has permissions.  
+## Return Values
+ Returns a `Boolean` data type that is `true` if the user has permissions.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_RbacSecuredObject Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_rbacsecuredobject-server-wmi-class.md)

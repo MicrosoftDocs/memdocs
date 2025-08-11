@@ -6,12 +6,12 @@ ms.date: 12/01/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: overview
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: high
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Cloud attach your Configuration Manager environment

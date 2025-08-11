@@ -6,12 +6,12 @@ ms.date: 08/15/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: overview
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: high
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Enable cloud attach for Configuration Manager
@@ -44,7 +44,7 @@ By using the recommended default settings, your eligible devices will be cloud a
 ## Cloud attach using the default settings
 
 Use the following steps to cloud attach your environment with the default settings:
-  
+
 1. From the Configuration Manager console, go to **Administration** > **Cloud services** > **Cloud Attach**.
 1. Select **Configure Cloud Attach** from the ribbon to open the wizard.
 1. Select your **Azure environment** from the following list:
@@ -54,7 +54,7 @@ Use the following steps to cloud attach your environment with the default settin
       - Endpoint analytics and device upload to Microsoft Intune admin center can't be enabled for Azure China Cloud
 
 1. Select **Sign In**. Sign into your account when prompted.
-1. Ensure that **Use default settings (recommended)** is selected, then choose **Next** and **Yes** when the app registration notice appears.  
+1. Ensure that **Use default settings (recommended)** is selected, then choose **Next** and **Yes** when the app registration notice appears.
 1. Review the summary and select **Next** to cloud attach your environment and complete the wizard.
 
 ## Cloud attach using custom settings
@@ -100,7 +100,7 @@ Use the following steps to cloud attach your environment with custom settings:
       - **Pilot**: Enrolls all eligible devices in a specified collection into Intune
          - Select **Browse** to choose the collection for **Intune auto enrollment**
       - **None**: Don't enable co-management or enroll any clients
-      
+
     > [!NOTE]
     > Enrolling devices, doesn't move any workloads to Intune. [Specify workloads to move](../comanage/how-to-switch-workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) by editing the co-management settings in the **Cloud Attach** node when you're ready.
 1. When you're finished with your selections, select **Next** to display the **Summary** page. Select **Next** after reviewing the summary to cloud attach your Configuration Manager environment.

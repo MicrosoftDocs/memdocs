@@ -3,9 +3,9 @@ title: Help desk troubleshooting dashboard
 titleSuffix: Microsoft Intune
 description: Help desk staff use the troubleshooting pane to solve users' technical problems.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 06/14/2024
 ms.topic: troubleshooting
 ms.service: microsoft-intune

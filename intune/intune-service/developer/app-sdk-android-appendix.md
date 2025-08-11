@@ -4,10 +4,10 @@
 title: Microsoft Intune App SDK for Android developer integration and testing guide
 description: The Microsoft Intune App SDK for Android lets you incorporate Intune mobile app management (MAM) into your Android app.
 keywords: SDK
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 08/08/2024
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
+ms.date: 06/12/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -32,7 +32,7 @@ ms.custom: intune-classic
 
 # Microsoft Intune App SDK for Android developer guide
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!IMPORTANT]
 > Intune regularly releases updates to the [Intune App SDK](https://github.com/microsoftconnect/ms-intune-app-sdk-android). We recommend subscribing to the [Intune App SDK](https://github.com/microsoftconnect/ms-intune-app-sdk-android) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
@@ -239,7 +239,7 @@ As discussed above, the MAM build plugin/tool will automatically rewrite classes
 
 ### Default enrollment
 
-Your application can alternately register for App Protection Policies through a simplified process called **default enrollment**.
+Your application can alternately register for app protection policies through a simplified process called **default enrollment**.
 This feature is primarily to support private line-of-business apps that haven't integrated MSAL.
 
 > [!WARNING]

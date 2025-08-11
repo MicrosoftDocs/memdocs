@@ -12,178 +12,178 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequencePackageReference_Flat Server WMI Class
-The `SMS_TaskSequencePackageReference_Flat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all classic package or application references for a task sequence. The list also includes the applications that are dependent on the applications directly referenced in the task sequence.  
+The `SMS_TaskSequencePackageReference_Flat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all classic package or application references for a task sequence. The list also includes the applications that are dependent on the applications directly referenced in the task sequence.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequencePackageReference_Flat : SMS_BaseClass  
-{  
-    String Description;  
-    String Level;  
-    String ObjectID;  
-    String ObjectName;  
-    UInt32 ObjectType;  
-    String PackageID;  
-    String RefPackageID;  
-    String SourceID;  
-    UInt32 SourceSize;  
-    String Version;  
-};  
-```  
+```
+Class SMS_TaskSequencePackageReference_Flat : SMS_BaseClass
+{
+    String Description;
+    String Level;
+    String ObjectID;
+    String ObjectName;
+    UInt32 ObjectType;
+    String PackageID;
+    String RefPackageID;
+    String SourceID;
+    UInt32 SourceSize;
+    String Version;
+};
+```
 
-## Methods  
- The `SMS_TaskSequencePackageReference_Flat` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequencePackageReference_Flat` class does not define any methods.
 
-## Properties  
- `Description`  
- Data type: `String`  
+## Properties
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The description for the reference or dependent object.  
+ The description for the reference or dependent object.
 
- `ObjectID`  
- Data type: `String`  
+ `ObjectID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- If the Task Sequence reference is to a legacy package, this property is the package identifier of the legacy package. If the Task Sequence reference is to an application, this property is the package identifier of the application.  
+ If the Task Sequence reference is to a legacy package, this property is the package identifier of the legacy package. If the Task Sequence reference is to an application, this property is the package identifier of the application.
 
- `ObjectName`  
- Data type: `String`  
+ `ObjectName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Display name for the reference or dependent object.  
+ Display name for the reference or dependent object.
 
- `ObjectType`  
- Data type: `UInt32`  
+ `ObjectType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- The type of reference or dependent object. Possible values are:  
+ The type of reference or dependent object. Possible values are:
 
-| Value | Object type |  
-| ----- | ----------- |  
-|0|Classic Package|  
-|3|Driver Package|  
-|5|Software Update Package|  
-|257|Operating System Image Package|  
-|258|Boot Image Package|  
-|259|Operating System Installer Source Package|  
-|512|Application|  
+| Value | Object type |
+| ----- | ----------- |
+|0|Classic Package|
+|3|Driver Package|
+|5|Software Update Package|
+|257|Operating System Image Package|
+|258|Boot Image Package|
+|259|Operating System Installer Source Package|
+|512|Application|
 
- `Level`  
- Data type: `String`  
+ `Level`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: read  
+ Qualifiers: read
 
- Reference or dependent object level in the dependency tree. For direct reference objects, this is 0.  
+ Reference or dependent object level in the dependency tree. For direct reference objects, this is 0.
 
- `ObjectID`  
- Data type: `String`  
+ `ObjectID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- If the Task Sequence reference is to a legacy package, this property is the package identifier of the legacy package. If the Task Sequence reference is to an application, this property is the package identifier of the application.  
+ If the Task Sequence reference is to a legacy package, this property is the package identifier of the legacy package. If the Task Sequence reference is to an application, this property is the package identifier of the application.
 
- `ObjectName`  
- Data type: `String`  
+ `ObjectName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Display name for the reference or dependent object.  
+ Display name for the reference or dependent object.
 
- `ObjectType`  
- Data type: `UInt32`  
+ `ObjectType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- The type of reference or dependent object. Possible values are:  
+ The type of reference or dependent object. Possible values are:
 
-| Value | Object type |  
-| ----- | ----------- |  
-|0|Classic Package|  
-|3|Driver Package|  
-|5|Software Update Package|  
-|257|Operating System Image Package|  
-|258|Boot Image Package|  
-|259|Operating System Installer Source Package|  
-|512|Application|  
+| Value | Object type |
+| ----- | ----------- |
+|0|Classic Package|
+|3|Driver Package|
+|5|Software Update Package|
+|257|Operating System Image Package|
+|258|Boot Image Package|
+|259|Operating System Installer Source Package|
+|512|Application|
 
- `PackageID`  
- Data type: `String`  
+ `PackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Package identifier of the task sequence.  
+ Package identifier of the task sequence.
 
- `RefPackageID`  
- Data type: `String`  
+ `RefPackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [none]  
+ Qualifiers: [none]
 
- Reference or dependent object Package ID.  
+ Reference or dependent object Package ID.
 
- `SourceID`  
- Data type: `String`  
+ `SourceID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [none]  
+ Qualifiers: [none]
 
- Source object ID for dependency. For direct reference objects this s empty.  
+ Source object ID for dependency. For direct reference objects this s empty.
 
- `SourceSize`  
- Data type: `UInt32`  
+ `SourceSize`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Package source size.  
+ Package source size.
 
- `Version`  
- Data type: `String`  
+ `Version`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [none]  
+ Qualifiers: [none]
 
- Reference or dependent object version.  
+ Reference or dependent object version.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

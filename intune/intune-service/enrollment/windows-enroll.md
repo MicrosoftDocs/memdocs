@@ -7,7 +7,7 @@ description: Enable Intune automatic enrollment for Windows devices joining or r
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 07/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -56,10 +56,12 @@ Automatic enrollment can be used in the following device management and provisio
 This article describes how to enable automatic mobile device management (MDM) enrollment for personal and corporate-owned devices.   
 
 ## Prerequisites
+
 You must have: 
+
 - A [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845) for automatic MDM enrollment and custom company branding.  
 - A Microsoft Intune subscription.  
-- A Microsoft Entra Global Administrator role. For more information about role-based-access-control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).  
+- A Microsoft Entra Global Administrator role. For more information about role-based-access-control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 [!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]  
 

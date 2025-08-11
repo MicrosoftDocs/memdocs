@@ -41,7 +41,7 @@ To support your use of certificates with Intune, you can install the Certificate
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 
-3. On the *Install the certificate connector* pane, select the *certificate connector* link to download the connector software. Save the file to a location that’s accessible from the server where you're going to install the connector.
+3. On the *Install the certificate connector* pane, select the *certificate connector* link to download the connector software. Save the file to a location that's accessible from the server where you're going to install the connector.
 
    :::image type="content" source="./media/certificate-connector-install/download-certificate-connector.png" alt-text="Download the certificate connector software.":::
 
@@ -86,7 +86,7 @@ Each time **Certificate Connector for Microsoft Intune** starts on a server you 
 :::image type="content" source="./media/certificate-connector-install/begin-connector-configuration.png" alt-text="Welcome page of the Certificate Connector for Microsoft Intune wizard.":::
 
 > [!TIP]
-> When you run **Certificate Connector for Microsoft Intune** to modify a previously configure connector, you won’t see the *Microsoft Entra sign-in* page. This is because the connector has already been authenticated to your Microsoft Entra ID.
+> When you run **Certificate Connector for Microsoft Intune** to modify a previously configure connector, you won't see the *Microsoft Entra sign-in* page. This is because the connector has already been authenticated to your Microsoft Entra ID.
 
 Use the following procedure to both configure a new connector and modify a previously configured connector.
 
@@ -116,7 +116,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
-6. On the *Microsoft Entra sign-in* page (which appears as *Azure AD Sign-In*), select the environment that hosts your Microsoft Entra ID, and then select **Sign In**. Then when prompted, authenticate your access. An Intune license is required for the account that you sign in with which can be either a Global Administrator or an Intune Administrator.
+6. On the *Microsoft Entra sign-in* page (which appears as *Azure AD Sign-In*), select the environment that hosts your Microsoft Entra ID, and then select **Sign In**. Then when prompted, authenticate your access. An Intune license is required for the account that you sign in with, which can be an Intune Administrator.
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 
@@ -130,7 +130,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
    :::image type="content" source="./media/certificate-connector-install/connector-configuration-complete.png" alt-text="Successful configuration of the certificate connector.":::
 
-   If configuration isn’t successful, the wizard displays details about the errors to help you resolve the problem.
+   If configuration isn't successful, the wizard displays details about the errors to help you resolve the problem.
 
 After the configuration completes successfully and the wizard closes, the Certificate Connector for Microsoft Intune is now ready for use.
 

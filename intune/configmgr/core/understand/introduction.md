@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 ms.collection:
     - tier3
     - essentials-overview
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # What is Configuration Manager?

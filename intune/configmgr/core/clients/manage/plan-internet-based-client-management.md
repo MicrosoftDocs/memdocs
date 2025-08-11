@@ -6,12 +6,12 @@ ms.date: 03/29/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: article
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Plan for internet-based client management in Configuration Manager
@@ -25,7 +25,7 @@ Use internet-based client management (IBCM) to manage Configuration Manager clie
 - May not require a virtual private network (VPN)
 - All costs are associated with the on-premises service
 
-Because of the higher security requirements of managing client computers on a public network, IBCM requires the use of PKI certificates. This configuration makes sure that connections are authenticated by an independent authority. When IBCM clients and site servers send data, it's encrypted and secure.  
+Because of the higher security requirements of managing client computers on a public network, IBCM requires the use of PKI certificates. This configuration makes sure that connections are authenticated by an independent authority. When IBCM clients and site servers send data, it's encrypted and secure.
 
 ## Client communications
 
@@ -116,7 +116,7 @@ IBCM in Configuration Manager has the following dependencies:
     > To support user policies, also enable the following client settings in the **Client Policy** group:
     >
     > - **Enable user policy polling on clients**
-    > - **Enable user policy requests from Internet clients**  
+    > - **Enable user policy requests from Internet clients**
 
 - A public key infrastructure (PKI) to deploy and manage the required certificates for internet-based clients and site system servers. For more information, see [PKI certificate requirements](../../plan-design/network/pki-certificate-requirements.md).
 
@@ -128,9 +128,9 @@ IBCM in Configuration Manager has the following dependencies:
 
 Intervening firewalls or proxy servers must allow the client communication for internet-based site systems:
 
-- Support HTTP 1.1  
+- Support HTTP 1.1
 
-- Allow HTTP content type of multipart MIME attachment (multipart/mixed and application/octet-stream)  
+- Allow HTTP content type of multipart MIME attachment (multipart/mixed and application/octet-stream)
 
 #### Verbs
 

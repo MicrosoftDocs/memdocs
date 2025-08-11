@@ -6,8 +6,8 @@ description: Learn the recommended processes to manage macOS devices in Microsof
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 06/27/2024
+manager: laurawi
+ms.date: 07/31/2025
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -42,9 +42,11 @@ Complete the following prerequisites to enable macOS device management in Intune
 * [Set mobile device management authority](mdm-authority-set.md) 
 * [Set up Apple MDM push (APNs) certificate](../enrollment/apple-mdm-push-certificate-get.md)  
 
-For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. The Global Administrator has more permissions than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the *Policy and Profile Manager*, a built-in Intune role.  
+We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
 
- For more detailed information about how to do the initial setup, onboard, or move to Microsoft Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
+For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](role-based-access-control.md) and [Built-in role permissions for Intune](role-based-access-control-reference.md).
+
+For more detailed information about how to do the initial setup, onboard, or move to Microsoft Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).
 
 ## Plan for your deployment  
 
@@ -52,13 +54,15 @@ Use the [Microsoft Intune planning guide](intune-planning-guide.md) to define yo
 
 ## Enroll devices  
 
-Configure the enrollment methods and experience for company-owned and personal macOS devices. This step ensures that devices receive Intune policies and configurations after they enroll. Intune supports Bring Your Own Device (BYOD) enrollment, Apple Automated Device Enrollment, and direct enrollment for corporate devices. For information about each enrollment method and how to choose one that's right for your organization, see the [macOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md). 
+Configure the enrollment methods and experience for company-owned and personal macOS devices. This step ensures that devices receive Intune policies and configurations after they enroll. Intune supports Bring Your Own Device (BYOD) enrollment, Apple Automated Device Enrollment, and direct enrollment for corporate devices. For information about each enrollment method and how to choose one that's right for your organization, see the [macOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md).
+
+
  
 
 | Task | Detail | 
 | ---- | ------ | 
 |[Set up enrollment for user-owned (BYOD) devices](../enrollment/macos-enroll.md)| Complete the prerequisites in this article to enable enrollment for user-owned devices. You'll also find enrollment resources and links to share with device users so that they're supported throughout the enrollment experience. This enrollment method is for organizations that have *Bring Your Own Device* (BYOD) policies. BYOD lets people use their personal devices for work-related things. | 
-|[Set up Apple Automated Device Enrollment (ADE)](../enrollment/device-enrollment-program-enroll-macos.md)|Set up an out-of-the-box enrollment experience that automates enrollment on corporate-owned devices purchased through Apple School Manager or Apple Business Manager. This method is ideal for organizations that have a large number of devices to enroll, because it eliminates the need to touch and configure each device individually.  |  
+|[Set up Apple Automated Device Enrollment (ADE)](../enrollment/device-enrollment-program-enroll-macos.md)|Set up an out-of-the-box enrollment experience that automates enrollment on corporate-owned devices purchased through Apple School Manager or Apple Business Manager. This method is ideal for organizations that have a large number of devices to enroll, because it eliminates the need to touch and configure each device individually. </br></br> When you use macOS ADE enrollment profiles, we recommend configuring [macOS account configuration with LAPS](../enrollment/macos-laps.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.|
 |[Set up direct enrollment for corporate devices](../enrollment/device-enrollment-direct-enroll-macos.md)| Set up an enrollment experience for corporate-owned devices that are unaffiliated with a single user, like devices used in a shared space or retail setting. Direct enrollment doesn't wipe the device so it's ideal to use when devices don't need access to local user data. You'll need to transfer the enrollment profile to the Mac directly, which requires a USB connection to a Mac computer running Apple Configurator.|  
 |[Add a device enrollment manager](../enrollment/device-enrollment-manager-enroll.md)| People designated as device enrollment managers (DEM) can enroll up to 1,000 corporate-owned mobile devices at a time. DEM accounts are useful in organizations that enroll and prepare devices before handing them out to users. | 
 | [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| You can assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
@@ -113,7 +117,7 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 | ---- | ------ | 
 |[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of enrollment.| 
 |[Create a trusted certificate profile](../protect/certificates-trusted-root.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices and users using SCEP, PKCS, and PKCS imported certificates. |
-|[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what’s needed to use SCEP certificates with Intune, and configure the required infrastructure. After you do that, you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).|  
+|[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what's needed to use SCEP certificates with Intune, and configure the required infrastructure. After you do that, you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).|  
 |[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)|Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. | 
 |[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md). 
 
@@ -154,6 +158,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
     * [Deploying Microsoft 365 Apps for Mac with Microsoft Intune - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
 
+* When you use macOS ADE enrollment profiles, we recommend configuring [macOS account configuration with LAPS](../enrollment/macos-laps.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.
 
 * For other versions of this guide, see:   
 

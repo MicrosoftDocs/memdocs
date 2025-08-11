@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/18/2024
+ms.date: 06/30/2025
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -63,7 +63,7 @@ In this tutorial, we set up an Intune [app protection policy](../apps/app-protec
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Apps** > **Protection** > **Create policy**, and then select **iOS/iPadOS**.
+2. Select **Apps** > **Manage Apps** > **Protection** > **Create**, and then select **iOS/iPadOS**.
 
 3. On the **Basics** page, configure the following settings:
 
@@ -134,7 +134,7 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** >**Conditional Access** > **Create new policy**.
+2. Select **Endpoint security** >**Conditional access** > **Create new policy**.
 
 3. For **Name**, enter **Test policy for modern auth clients**.
 

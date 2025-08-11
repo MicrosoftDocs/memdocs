@@ -7,8 +7,8 @@ description: Learn how to connect your Intune account to your Managed Google Pla
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 08/21/2024
+manager: laurawi
+ms.date: 06/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: priyar
+ms.reviewer: grwilson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -45,7 +45,7 @@ This article describes how to link your accounts in the Microsoft Intune admin c
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed, dedicated, and corporate-owned work profile scenarios.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign in to your accounts if you use two-factor verification, and is also used for Android Enterprise dedicated devices that enroll with [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices).
-- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used with Android Enterprise work profile scenarios on personal devices and Intune App Protection Policies (APP). 
+- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used with Android Enterprise work profile scenarios on personal devices and Intune app protection policies. 
 - **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Used for multi-app kiosk mode on Android Enterprise dedicated devices. [Learn more about Managed Home Screen](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
 ## Before you begin  
@@ -75,7 +75,8 @@ Complete these steps to enable Android Enterprise management options in Microsof
 
 > [!IMPORTANT]
 > - This account is used to manage the Google Admin account and associated subscriptions, as appropriate. The Microsoft Entra account must have an active mailbox to complete the validation process required by Google.
-> - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add and remove more administrators, if needed, in the Google admin console. Google recommends having at least 2 owners to an enterprise for redundancy. 
+> - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add and remove more administrators, if needed, in the Google admin console. Google recommends having at least 2 owners to an enterprise for redundancy.
+> - If the Microsoft sign-in option is missing, you might need to connect an MX record to the domain you're using for Exchange Online. For information about how to edit your domain's DNS settings, see [Add DNS records to connect your domain](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider).  
 
 8. Follow the onscreen prompts to finish creating a Google Admin account.  
 

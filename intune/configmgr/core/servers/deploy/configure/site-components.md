@@ -6,12 +6,12 @@ ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Site components for Configuration Manager
@@ -44,7 +44,7 @@ Most options for the various site components are self-explanatory when viewed in
 On the **General** tab, specify settings that modify how the site server transfers content to its distribution points. When you increase the values you use for concurrent distribution settings, content distribution can use more network bandwidth.
 
 > [!NOTE]
-> Don't increase Maximum number of packages 3 (default) in concurrent distribution settings when the content are distributed to CMG CDP. 
+> Don't increase Maximum number of packages 3 (default) in concurrent distribution settings when the content are distributed to CMG CDP.
 
 #### Pull distribution point
 
@@ -80,14 +80,14 @@ For more information, see [Specify the drive for offline OS image servicing](../
 
 On the **General** tab, set up the site to publish information about its management points to Active Directory Domain Services.
 
-Configuration Manager clients use management points to locate services, and to find site information such as boundary group membership and PKI certificate selection options. Clients also use management points to find other management points in the site, and distribution points from which to download software. Management points also help clients to complete site assignment, and to download client policy and upload client information.  
+Configuration Manager clients use management points to locate services, and to find site information such as boundary group membership and PKI certificate selection options. Clients also use management points to find other management points in the site, and distribution points from which to download software. Management points also help clients to complete site assignment, and to download client policy and upload client information.
 
 The most secure method for clients to find management points is to publish them in Active Directory Domain Services. This service location method requires the following to be true:
 
 - The schema is extended for Configuration Manager.
 - There's a **System Management** container, with appropriate security permissions for the site server to publish to this container.
 - The Configuration Manager site is set up to publish to Active Directory Domain Services.
-- Clients belong to the same Active Directory forest as the site server's forest.  
+- Clients belong to the same Active Directory forest as the site server's forest.
 
 When clients on the intranet can't use Active Directory Domain Services to find management points, use [DNS publishing](../../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#dns). This article also describes the option to **Publish selected intranet management points in DNS**.
 

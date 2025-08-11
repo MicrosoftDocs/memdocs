@@ -6,12 +6,12 @@ ms.date: 02/16/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Uninstall roles, sites, and hierarchies in Configuration Manager
@@ -58,7 +58,7 @@ After you remove the software update point, Configuration Manager updates the cl
 
 When you have more than one software update point at a primary site, and you remove the software update point that's the synchronization source, choose another software update point at the site to be the new synchronization source.
 
-## <a name="bkmk_secondary"></a> Secondary site  
+## <a name="bkmk_secondary"></a> Secondary site
 
 Other than when you're [decommissioning a hierarchy](#bkmk_hierarchy), the main reason to remove a secondary site is because of a broader infrastructure change, such as network or physical locations. Also review the reasons to [choose a secondary site](../../../plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChooseSecondary).
 
@@ -119,7 +119,7 @@ Use the following procedure to uninstall or delete a secondary site:
 
 1.  Complete the wizard.
 
-## <a name="bkmk_primary"></a> Primary site  
+## <a name="bkmk_primary"></a> Primary site
 
 You might want to uninstall a primary site from your hierarchy for the following reasons:
 
@@ -197,8 +197,8 @@ You run Configuration Manager setup to uninstall a primary site that doesn't hav
 
 1. On the **Getting Started** page, select **Uninstall a Configuration Manager site**.
 
-    > [!IMPORTANT]  
-    >  When a secondary site is attached to the primary site, you must remove the secondary site before you can uninstall the primary site.  
+    > [!IMPORTANT]
+    >  When a secondary site is attached to the primary site, you must remove the secondary site before you can uninstall the primary site.
 
 1. On the **Uninstall the Configuration Manager Site** page, both of the following options are enabled by default:
 
@@ -262,8 +262,8 @@ The administrative user who runs Configuration Manager setup needs the following
 
 1. On the **Getting Started** page, select **Uninstall a Configuration Manager site**.
 
-    > [!IMPORTANT]  
-    >  Remove all child primary sites before you can uninstall the CAS.  
+    > [!IMPORTANT]
+    >  Remove all child primary sites before you can uninstall the CAS.
 
 1. On the **Uninstall the Configuration Manager Site** page, both of the following options are enabled by default:
 

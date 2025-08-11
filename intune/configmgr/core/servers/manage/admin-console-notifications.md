@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Configuration Manager console notifications
@@ -39,15 +39,15 @@ Notifications follow the permissions of role-based administration. For example, 
 Some notifications have a related action. For example, if the console version doesn't match the site version, select **Install the new console version**. This action launches the console installer.
 
 The following notifications reevaluate every five minutes:
-- Site is in maintenance mode  
-- Site is in recovery mode  
-- Site is in upgrade mode  
+- Site is in maintenance mode
+- Site is in recovery mode
+- Site is in upgrade mode
 
-The following notifications are most applicable to the technical preview branch:  
-- Evaluation version is within 30 days of expiration (Warning): the current date is within 30 days of the expiration date of the evaluation version  
-- Evaluation version is expired (Critical): the current date is past the expiration date of the evaluation version  
-- Console version mismatch (Critical): the console version doesn't match the site version  
-- Site upgrade is available (Warning): there's a new update package available  
+The following notifications are most applicable to the technical preview branch:
+- Evaluation version is within 30 days of expiration (Warning): the current date is within 30 days of the expiration date of the evaluation version
+- Evaluation version is expired (Critical): the current date is past the expiration date of the evaluation version
+- Console version mismatch (Critical): the console version doesn't match the site version
+- Site upgrade is available (Warning): there's a new update package available
 
 Most console notifications are per session. The console evaluates queries when a user launches it. To see changes in the notifications, restart the console. If a user dismisses a non-critical notification, it notifies again when the console restarts if it's still applicable.
    - Dismissing or snoozing a notification is persistent for your user across consoles starting in version 2010.
@@ -104,8 +104,8 @@ You can configure each site to show non-critical notifications in the properties
 1. Select the site you want to configure for non-critical notifications.
 1. In the ribbon, select **Properties**.
 1. On the **Alerts** tab, select the option to **Enable console notifications for non-critical site health changes**.
-   - If you enable this setting, all console users see critical, warning, and information notifications. This setting is enabled by default.  
-   - If you disable this setting, console users only see critical notifications.  
+   - If you enable this setting, all console users see critical, warning, and information notifications. This setting is enabled by default.
+   - If you disable this setting, console users only see critical notifications.
 
 ## <a name="bkmk_msft"></a> Configure a site to receive messages from Microsoft
  <!--3953121-->
@@ -121,7 +121,7 @@ Starting in version 2006, you can choose to receive notifications from Microsoft
 
 1. Select a site, and then in the ribbon, select **Properties**.
 
-1. In the **Alerts** tab, enable the notifications by selecting **Receive messages from Microsoft**. You can deselect any of the following notifications if you prefer not to receive them:  
+1. In the **Alerts** tab, enable the notifications by selecting **Receive messages from Microsoft**. You can deselect any of the following notifications if you prefer not to receive them:
 
    - **Prevent/fix**: Known issues affecting your organization that may require you to take action.
 

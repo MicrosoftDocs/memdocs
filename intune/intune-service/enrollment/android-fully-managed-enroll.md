@@ -7,7 +7,7 @@ description: Set up enrollment in Intune for devices using the Android Enterpris
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: shthilla
+ms.reviewer: grwilson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -96,7 +96,7 @@ To create a new enrollment profile:
 
          - {{SERIAL}} for the device's serial number.  
 
-         - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
+         - {{SERIALLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
 
          - {{DEVICETYPE}} for the device type. Example: *AndroidForWork*  
 
@@ -104,7 +104,7 @@ To create a new enrollment profile:
 
          - {{UPNPREFIX}} for the user's first name. Example: *Eric*, when device is user affiliated.  
 
-         - {{USERNAME}} for the user's username when the device is user affiliated. Example: *Eric Solomon*  
+         - {{USERNAME}} for the user's username when the device is user affiliated. Example: *EricSolomon*  
 
          - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
          

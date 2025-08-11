@@ -6,11 +6,11 @@ ms.date: 03/29/2022
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -28,18 +28,18 @@ Configuration Manager integrates with Windows Hello for Business. (This feature 
 
 For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
-> [!Note]  
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->  
+> [!Note]
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->
 
-Configuration Manager integrates with Windows Hello for Business in the following ways:  
+Configuration Manager integrates with Windows Hello for Business in the following ways:
 
-- Control which gestures users can and can't use to sign in.  
+- Control which gestures users can and can't use to sign in.
 
-- Store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).  
+- Store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Certificate profiles](introduction-to-certificate-profiles.md).
 
 - Create and deploy a Windows Hello for Business profile to control its settings on domain-joined Windows 10 devices that run the Configuration Manager client. Starting in version 1910, you can't use certificate-based authentication. When using key-based authentication, you don't need to deploy a certificate profile.
 
-## Configure a profile  
+## Configure a profile
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, expand **Company Resource Access**, and select the **Windows Hello for Business Profiles** node.
 
@@ -53,9 +53,9 @@ Configuration Manager integrates with Windows Hello for Business in the followin
 
     - **Configure Windows Hello for Business**: Specify whether this profile enables, disables, or doesn't configure Hello for Business.
 
-    - **Use a Trusted Platform Module (TPM)**: A TPM provides an additional layer of data security. Choose one of the following values:  
+    - **Use a Trusted Platform Module (TPM)**: A TPM provides an additional layer of data security. Choose one of the following values:
 
-      - **Required**: Only devices with an accessible TPM can provision Windows Hello for Business.  
+      - **Required**: Only devices with an accessible TPM can provision Windows Hello for Business.
 
       - **Preferred**: Devices first attempt to use a TPM. If it's not available, they can use software encryption.
 
@@ -72,23 +72,23 @@ Configuration Manager integrates with Windows Hello for Business in the followin
 
     - **Prevent reuse of previous PINs**: Don't allow users to use PINs they have previously used.
 
-    - **Require upper-case letters in PIN**: Specifies whether users must include uppercase letters in the Windows Hello for Business PIN. Choose from:  
+    - **Require upper-case letters in PIN**: Specifies whether users must include uppercase letters in the Windows Hello for Business PIN. Choose from:
 
       - **Allowed**: Users can use uppercase characters in their PIN, but don't have to.
 
-      - **Required**: Users must include at least one uppercase character in their PIN.  
+      - **Required**: Users must include at least one uppercase character in their PIN.
 
-      - **Not allowed**: Users can't use uppercase characters in their PIN.  
+      - **Not allowed**: Users can't use uppercase characters in their PIN.
 
-    - **Require lower-case letters in PIN**: Specifies whether users must include lowercase letters in the Windows Hello for Business PIN. Choose from:  
+    - **Require lower-case letters in PIN**: Specifies whether users must include lowercase letters in the Windows Hello for Business PIN. Choose from:
 
       - **Allowed**: Users can use lowercase characters in their PIN, but don't have to.
 
-      - **Required**: Users must include at least one lowercase character in their PIN.  
+      - **Required**: Users must include at least one lowercase character in their PIN.
 
-      - **Not allowed**: Users can't use lowercase characters in their PIN.  
+      - **Not allowed**: Users can't use lowercase characters in their PIN.
 
-    - **Configure special characters**: Specifies the use of special characters in the PIN. Choose from:  
+    - **Configure special characters**: Specifies the use of special characters in the PIN. Choose from:
 
         > [!NOTE]
         > Special characters include the following set:
@@ -97,31 +97,31 @@ Configuration Manager integrates with Windows Hello for Business in the followin
         > ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~
         > ```
 
-      - **Allowed**: Users can use special characters in their PIN, but don't have to.  
+      - **Allowed**: Users can use special characters in their PIN, but don't have to.
 
-      - **Required**: Users must include at least one special character in their PIN.  
+      - **Required**: Users must include at least one special character in their PIN.
 
-      - **Not allowed**: Users can't use special characters in their PIN. This behavior is also if the setting is **Not configured**.  
+      - **Not allowed**: Users can't use special characters in their PIN. This behavior is also if the setting is **Not configured**.
 
     - **Configure the use of digits in PIN**: Specifies the use of numbers in the PIN. Choose from:
 
-      - **Allowed**: Users can use numbers in their PIN, but don't have to.  
+      - **Allowed**: Users can use numbers in their PIN, but don't have to.
 
-      - **Required**: Users must include at least one number in their PIN.  
+      - **Required**: Users must include at least one number in their PIN.
 
       - **Not allowed**: Users can't use numbers in their PIN.
 
-    - **Enable biometric gestures**: Use biometric authentication such as facial recognition or fingerprint. These modes are an alternative to a PIN for Windows Hello for Business. Users still configure a PIN in case biometric authentication fails.  
+    - **Enable biometric gestures**: Use biometric authentication such as facial recognition or fingerprint. These modes are an alternative to a PIN for Windows Hello for Business. Users still configure a PIN in case biometric authentication fails.
 
-      If set to **Yes**, Windows Hello for Business allows biometric authentication. If set to **No**, Windows Hello for Business prevents biometric authentication for all account types.  
+      If set to **Yes**, Windows Hello for Business allows biometric authentication. If set to **No**, Windows Hello for Business prevents biometric authentication for all account types.
 
-    - **Use enhanced anti-spoofing**: Configures enhanced anti-spoofing on devices that support it. If set to **Yes**, where supported, Windows requires all users to use anti-spoofing for facial features.  
+    - **Use enhanced anti-spoofing**: Configures enhanced anti-spoofing on devices that support it. If set to **Yes**, where supported, Windows requires all users to use anti-spoofing for facial features.
 
     - **Use Phone Sign In**: Configures two-factor authentication with a mobile phone.
 
 1. Complete the wizard.
 
-The following screenshot is an example of Windows Hello for Business profile settings:  
+The following screenshot is an example of Windows Hello for Business profile settings:
 
 ![Windows Hello for Business Policy wizard, showing the list of available settings](../media/hello-for-business-settings.png)
 

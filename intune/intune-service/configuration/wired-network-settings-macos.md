@@ -7,7 +7,7 @@ description: Create or add a wired network device configuration profile for macO
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 11/19/2024
 ms.topic: reference
 ms.service: microsoft-intune

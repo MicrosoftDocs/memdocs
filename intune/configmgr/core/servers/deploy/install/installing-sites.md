@@ -6,12 +6,12 @@ ms.date: 04/30/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: overview
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Resources for installing Configuration Manager sites
@@ -30,7 +30,7 @@ The following articles can help you install Configuration Manager or add sites t
 
 - [Install sites using the Setup Wizard](use-the-setup-wizard-to-install-sites.md)
 
-  This article walks you through the site installation wizard. It provides details about options that might not be clear in the wizard user interface.  
+  This article walks you through the site installation wizard. It provides details about options that might not be clear in the wizard user interface.
 
 - [Install sites using a command line and script](use-a-command-line-to-install-sites.md)
 

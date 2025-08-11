@@ -6,8 +6,8 @@ description: Configure Properties catalog policy to manage Device Inventory sett
 keywords:
 author: smbhardwaj
 ms.author: smbhardwaj
-manager: dougeby
-ms.date: 11/14/2024
+manager: laurawi
+ms.date: 07/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,7 +47,10 @@ Windows 10
 
 - For a user to view collected data about devices, they must have the Managed Devices **Read** permission.
 
-## Supported platforms
+## Supported platforms  
+
+>[!NOTE]
+> You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically.   
 
 Inventory is currently only supported on devices running Windows 10 and later. Inventory is only supported on the following minimum Windows versions:
 
@@ -148,6 +151,7 @@ Inventory supports the following entities. To learn more about what properties a
 - Memory Info
 - Network Adapter
 - Os Version
+- Sim Info
 - System Enclosure
 - Time
 - Tpm

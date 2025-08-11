@@ -6,12 +6,12 @@ ms.date: 03/28/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to synchronize collection members to Microsoft Entra groups
@@ -28,7 +28,7 @@ Synchronizations can either be full or incremental and they have slightly differ
 
 Example synchronization scenario:
 1. From Microsoft Entra ID, create a group called `Group1` and add `DeviceA`, `DeviceB`, and `DeviceC`.
-   - Ideally, objects wouldn't be added from Microsoft Entra ID since Configuration Manager should manage the group membership. 
+   - Ideally, objects wouldn't be added from Microsoft Entra ID since Configuration Manager should manage the group membership.
 1. From Configuration Manager, create a collection called `Collection1` then add `DeviceB`, and `DeviceC`.
 1. [Enable synchronization](#enable-the-collection-to-synchronize) for `Collection1` to `Group1`.
 1. The first synchronization is a full synchronization so, `Group1` now contains `DeviceB`, and `DeviceC`. `DeviceA` was removed from the group during the full synchronization.
@@ -112,7 +112,7 @@ You can use PowerShell to synchronize collections. For more information, see the
 
 1. The view lists all the collections that are enabled for cloud sync and relevant details.
 
-1. Right click on column header and add additional columns to view more information. 
+1. Right click on column header and add additional columns to view more information.
 
 1. On clicking each collection, you can view collection member status in the bottom tab.
 
@@ -120,51 +120,51 @@ You can use PowerShell to synchronize collections. For more information, see the
 
 1. On clicking Failed tab, you can find the reason for failure across each member.
 
-:::image type="content" source="media/collection-aad-group-sync.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/collection-aad-group-sync.png"::: 
+:::image type="content" source="media/collection-aad-group-sync.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/collection-aad-group-sync.png":::
 
-Default Columns: 
+Default Columns:
 
-- Collection Id – Id of Collection 
+- Collection Id – Id of Collection
 
-- Collection Name – Name of Collection 
+- Collection Name – Name of Collection
 
-- Microsoft Entra group Id – Configured Microsoft Entra group Id 
+- Microsoft Entra group Id – Configured Microsoft Entra group Id
 
-- Microsoft Entra group Name – Configured Microsoft Entra group Name  
+- Microsoft Entra group Name – Configured Microsoft Entra group Name
 
-- Cloud Sync Status 
+- Cloud Sync Status
 
-    Success: If all members are synchronized to target Microsoft Entra group 
+    Success: If all members are synchronized to target Microsoft Entra group
 
-    Partial Success: If at least one member is synchronized to target Microsoft Entra group 
+    Partial Success: If at least one member is synchronized to target Microsoft Entra group
 
-    Failed: If all members failed to synchronize to target Microsoft Entra group 
+    Failed: If all members failed to synchronize to target Microsoft Entra group
 
-    In Progress: Synchronization is in progress. 
+    In Progress: Synchronization is in progress.
 
-- Member Count – Count of members of collection 
+- Member Count – Count of members of collection
 
-- Sync Completed – Count of members successfully synchronized 
+- Sync Completed – Count of members successfully synchronized
 
-- Sync InProgress – Count of members pending synchronization 
+- Sync InProgress – Count of members pending synchronization
 
-- Sync Failed – Count of members failed to synchronize 
+- Sync Failed – Count of members failed to synchronize
 
-Optional Columns: 
+Optional Columns:
 
-- Cloud Service Id – Azure Service Id which is used for Cloud Sync 
+- Cloud Service Id – Azure Service Id which is used for Cloud Sync
 
-- Collection Type – Type of Collection (Device or User) 
+- Collection Type – Type of Collection (Device or User)
 
-- Last Full Sync Member Count – Count of members synchronized during last full sync 
+- Last Full Sync Member Count – Count of members synchronized during last full sync
 
-- Last Full Sync Status – Status of last full sync cycle 
+- Last Full Sync Status – Status of last full sync cycle
 
-- Last Full Sync Time – Time of last full sync cycle 
+- Last Full Sync Time – Time of last full sync cycle
 
-- Last Sync Member Count - Count of members synchronized during last sync 
+- Last Sync Member Count - Count of members synchronized during last sync
 
-- Last Sync Status - Status of last sync cycle 
+- Last Sync Status - Status of last sync cycle
 
 - Last Sync Time - Time of last sync cycle
 

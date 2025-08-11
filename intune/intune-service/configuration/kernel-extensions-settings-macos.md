@@ -6,7 +6,7 @@ description: Add, configure, or create settings on macOS devices to use system e
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 09/23/2024
 ms.topic: reference
 ms.service: microsoft-intune

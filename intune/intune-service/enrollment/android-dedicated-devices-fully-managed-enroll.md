@@ -7,7 +7,7 @@ description: Learn how to enroll Android Enterprise dedicated, fully managed, or
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 06/27/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: shthilla, chmaguir
+ms.reviewer: grwilson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -96,15 +96,7 @@ admin.
 8. Select **Review + save** to review your changes.  
 9. Select **Save**.  
 
-#### Step 2: Enable enrollment for corporate-owned devices  
-Verify that enrollment is enabled for corporate-owned, fully managed devices.   
-
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **By platform** > **Android**.  
-2. Select **Android enrollment**. 
-3. Under **Enrollment profiles**, choose **Corporate-owned, fully managed user devices**.  
-4. Verify that the setting for **Allow users to enroll corporate-owned user devices**, is set to **Yes**.             
-
-#### Step 3: Link zero-touch account to Intune    
+#### Step 2: Link zero-touch account to Intune    
 Link a zero-touch account with your Microsoft Intune account.   
 
 1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **By platform** > **Android**.  

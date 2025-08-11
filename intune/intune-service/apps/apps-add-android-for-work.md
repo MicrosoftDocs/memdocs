@@ -5,10 +5,10 @@ title: Add and assign Managed Google Play apps to Android Enterprise devices
 titleSuffix: Microsoft Intune
 description: Understand how to synchronize and assign apps to Android Enterprise devices from the Managed Google Play store.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 01/15/2025
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
+ms.date: 06/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,7 +41,7 @@ To make it easier for you to configure and use Android Enterprise management, up
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification. This app is automatically installed to fully managed and corporate-owned work profile devices during the device enrollment process.
-- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for App Protection Policies (APP) and Android Enterprise personally owned work profile scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
+- **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for app protection policies and Android Enterprise personally owned work profile scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
 - **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Used for both Android Enterprise dedicated multi-app kiosk and fully managed user affiliated device scenarios. IT admins should create an assignment to install this app on dedicated devices that are going to be used in multi-app kiosk scenarios.
 - **[Microsoft Launcher](https://play.google.com/store/apps/details?id=com.microsoft.launcher)** - Used for Android Enterprise fully managed scenarios. IT admins can create a policy to make the Microsoft Launcher the default launcher on fully managed devices and customize the home screen. For more information, see [Configure Microsoft Launcher](./configure-microsoft-launcher.md)
 

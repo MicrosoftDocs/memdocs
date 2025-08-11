@@ -8,7 +8,7 @@ keywords: privacy, personal data
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/07/2025
+ms.date: 06/25/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,7 +20,7 @@ ms.assetid: d1171740-936d-46a5-af37-f418bd6fa63e
 #ROBOTS:
 #audience:
 
-ms.reviewer: demerson
+ms.reviewer: bradyw
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,7 +41,7 @@ When users enroll their corporate or personal devices with Intune, Intune collec
 - Customer accounts at third party services (per admin's instructions).
 - Diagnostic, performance, and usage information.
 
-From these sources, Intune collects information that falls into the following two categories: [required](#required-data), [optional](#optional-data). Each category is divided into customer data, personal data, diagnostic data, and service-generated data.
+From these sources, Intune collects information that falls into the following two categories: **[required](#required-data)** and **[optional](#optional-data)**.
 
 > [!NOTE]
 > We don't sell any data collected by our service to any third parties for any reason.
@@ -174,6 +174,6 @@ For more information, see [Getting started enrolling devices](../fundamentals/de
 
 For more information on the data types and definition, see [How Microsoft categorizes data for online services](https://www.microsoft.com/trust-center/privacy/customer-data-definitions).
 
-## Next steps
+## Related content
 
 Learn more about how Intune [stores and processes](privacy-data-store-process.md) and [shares](privacy-data-secure-share.md) personal data.

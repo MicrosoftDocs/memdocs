@@ -6,11 +6,11 @@ ms.date: 04/05/2021
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -178,17 +178,17 @@ Use the following procedure to deploy a task sequence to the computers in a coll
 
 These options are on the **Distribution Points** tab of the task sequence deployment. They're dynamic based upon other selections in the deployment and attributes of the task sequence. You may not always see all options.
 
-> [!NOTE]  
-> When you use multicast to deploy an OS, download the content to the computers either as needed or before the task sequence runs.  
+> [!NOTE]
+> When you use multicast to deploy an OS, download the content to the computers either as needed or before the task sequence runs.
 
-- **Download content locally when needed by the running task sequence**: Specify that clients download content from the distribution point as it's needed by the task sequence. The client starts the task sequence. When a step in the task sequence requires content, it's downloaded before the step runs.  
+- **Download content locally when needed by the running task sequence**: Specify that clients download content from the distribution point as it's needed by the task sequence. The client starts the task sequence. When a step in the task sequence requires content, it's downloaded before the step runs.
 
-- **Download all content locally before starting task sequence**: Specify that clients download all the content from the distribution point before the task sequence runs. If you make the task sequence available to PXE and boot media deployments on the **Deployment Settings** page, this option isn't shown.  
+- **Download all content locally before starting task sequence**: Specify that clients download all the content from the distribution point before the task sequence runs. If you make the task sequence available to PXE and boot media deployments on the **Deployment Settings** page, this option isn't shown.
 
-- **Access content directly from a distribution point when needed by the running task sequence**: Specify that clients run the content from the distribution point. This option is only available when you enable all packages associated with the task sequence to use a package share on the distribution point. To enable content to use a package share, see the **Data Access** tab in the **Properties** for each package.  
+- **Access content directly from a distribution point when needed by the running task sequence**: Specify that clients run the content from the distribution point. This option is only available when you enable all packages associated with the task sequence to use a package share on the distribution point. To enable content to use a package share, see the **Data Access** tab in the **Properties** for each package.
 
-> [!IMPORTANT]  
-> For greatest security, select the options to **Download content locally when needed by the running task sequence** or **Download all content locally before starting task sequence**. When you select either of these options, Configuration Manager hashes the package, so that it can ensure package integrity. When you select the option to **Access content directly from a distribution point when needed by the running task sequence**, Configuration Manager doesn't verify the package hash prior to running the specified program. Because the site can't ensure package integrity, it's possible for users with administrative rights to alter or tamper with package contents.  
+> [!IMPORTANT]
+> For greatest security, select the options to **Download content locally when needed by the running task sequence** or **Download all content locally before starting task sequence**. When you select either of these options, Configuration Manager hashes the package, so that it can ensure package integrity. When you select the option to **Access content directly from a distribution point when needed by the running task sequence**, Configuration Manager doesn't verify the package hash prior to running the specified program. Because the site can't ensure package integrity, it's possible for users with administrative rights to alter or tamper with package contents.
 
 #### Example 1: One deployment option
 
@@ -238,23 +238,23 @@ For more information, see [Deploy a task sequence over the internet](deploy-task
 
 ## <a name="bkmk_high-risk"></a> High-risk deployments
 
-When you deploy a high-risk deployment, such as an OS, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**. To see all custom collections that contain fewer clients than the configured maximum size, disable the option to **Hide collections with a member count greater than the site's minimum size configuration**. For more information, see [Settings to manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).  
+When you deploy a high-risk deployment, such as an OS, the **Select Collection** window displays only the custom collections that meet the deployment verification settings that are configured in the site's properties. High-risk deployments are always limited to custom collections, collections that you create, and the built-in **Unknown Computers** collection. When you create a high-risk deployment, you can't select a built-in collection such as **All Systems**. To see all custom collections that contain fewer clients than the configured maximum size, disable the option to **Hide collections with a member count greater than the site's minimum size configuration**. For more information, see [Settings to manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).
 
-The deployment verification settings are based on the current membership of the collection. After you deploy the task sequence, Configuration Manager doesn't reevaluate the collection membership for the high-risk deployment settings.  
+The deployment verification settings are based on the current membership of the collection. After you deploy the task sequence, Configuration Manager doesn't reevaluate the collection membership for the high-risk deployment settings.
 
-For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window only displays collections that contain fewer than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window displays collections that contain fewer than 1000 clients.  
+For example, let's say you set **Default size** to 100 and the **Maximum size** to 1000. When you create a high risk deployment, the **Select Collection** window only displays collections that contain fewer than 100 clients. If you clear the **Hide collections with a member count greater than the site's minimum size configuration** setting, the window displays collections that contain fewer than 1000 clients.
 
-When you select a collection that contains a site role, the following behavior applies:  
+When you select a collection that contains a site role, the following behavior applies:
 
-- If the collection contains a site system server, and you configured the deployment verification settings to block collections with site system servers, then an error occurs. You can't continue creating the deployment.  
+- If the collection contains a site system server, and you configured the deployment verification settings to block collections with site system servers, then an error occurs. You can't continue creating the deployment.
 
-- If one of the following criteria applies, then the Deploy Software Wizard displays a high-risk warning. To continue, you need to agree to create a high-risk deployment. The site generates an audit status message.  
+- If one of the following criteria applies, then the Deploy Software Wizard displays a high-risk warning. To continue, you need to agree to create a high-risk deployment. The site generates an audit status message.
 
-  - If the collection contains a site system server, and you configured the deployment verification settings to warn on collections with site system servers  
+  - If the collection contains a site system server, and you configured the deployment verification settings to warn on collections with site system servers
 
   - If the collection exceeds the default size value
 
-  - If the collection contains a server  
+  - If the collection contains a server
 
 ## Next steps
 

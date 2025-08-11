@@ -6,12 +6,12 @@ ms.date: 12/16/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Configure the content cache for Configuration Manager clients
@@ -24,7 +24,7 @@ You can specify the cache folder size using client settings in the Configuration
 
 The default location for the Configuration Manager client cache is `%windir%\ccmcache` and the default disk space is 5120 MB.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Don't encrypt the folder used for the client cache. Configuration Manager can't download content to an encrypted folder.
 
 ## About

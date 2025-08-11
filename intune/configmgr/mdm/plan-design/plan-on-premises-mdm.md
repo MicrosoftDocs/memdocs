@@ -6,11 +6,11 @@ ms.date: 01/09/2020
 ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -30,7 +30,7 @@ There are several key areas to review when you're planning to implement on-premi
 
 Consider the following requirements before preparing the Configuration Manager infrastructure to handle on-premises MDM.
 
-## <a name="bkmk_devices"></a> Supported devices  
+## <a name="bkmk_devices"></a> Supported devices
 
 The current branch of Configuration Manager supports enrollment in on-premises mobile device management for devices running Windows 10. These device types primarily include laptops, IoT, and Surface Hub. For more information and the list of specific editions, see [Supported OS versions for clients and devices](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 

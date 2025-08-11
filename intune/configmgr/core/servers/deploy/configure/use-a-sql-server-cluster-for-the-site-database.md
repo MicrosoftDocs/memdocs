@@ -6,12 +6,12 @@ ms.date: 10/08/2020
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Use a SQL Server Always On failover cluster instance for the site database

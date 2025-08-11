@@ -6,7 +6,7 @@ description: Use the Take a Test app in a device configuration profile on Window
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune

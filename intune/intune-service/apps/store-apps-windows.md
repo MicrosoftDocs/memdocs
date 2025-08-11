@@ -5,9 +5,9 @@ title: Add Microsoft Store apps to Intune (legacy)
 titleSuffix:
 description: Learn about adding Microsoft Store (legacy) apps to Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 04/17/2024
 ms.topic: how-to
 ms.service: microsoft-intune

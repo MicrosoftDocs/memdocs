@@ -6,11 +6,11 @@ ms.date: 10/01/2021
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -18,7 +18,7 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-Use task sequences in Configuration Manager to automatically upgrade an OS on a destination computer. This upgrade can be from Windows 7 or later to Windows 10 or later, or from Windows Server 2012 or later to Windows Server 2016 or later. Create a task sequence that references an OS upgrade package or feature update and any other content to install, such as applications or software updates. The task sequence to upgrade an OS is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
+Use task sequences in Configuration Manager to automatically upgrade an OS on a destination computer. This upgrade can be from Windows 7 or later to Windows 10 or later, or from Windows Server 2012 or later to Windows Server 2016 or later. Create a task sequence that references an OS upgrade package or feature update and any other content to install, such as applications or software updates. The task sequence to upgrade an OS is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.
 
 Starting in version 2103, you can upgrade by using a feature update deployed with the task sequence. This integration combines the simplicity of Windows servicing with the flexibility of task sequences. Servicing uses content that you synchronize through the software update point. This process simplifies the need to manually get, import, and maintain the Windows image content used with a standard task sequence to upgrade Windows. The size of the servicing ESD file is generally smaller than the OS upgrade package and WIM image file.<!--3555906-->
 
@@ -49,7 +49,7 @@ Before you create the task sequence, make sure the following requirements are in
 - For a deployment package that contains the feature update, distribute it to a distribution point that the client can access. For more information, see [Download software updates](../../sum/deploy-use/download-software-updates.md).
 
     > [!NOTE]
-    > If the feature update isn't already downloaded, you can manage the deployment package when you deploy the task sequence. 
+    > If the feature update isn't already downloaded, you can manage the deployment package when you deploy the task sequence.
     >
     > When you deploy the task sequence, you can also select the option of **No deployment package** for the feature update. When clients run the task sequence, they download the feature update from peers or the Microsoft cloud.
     >

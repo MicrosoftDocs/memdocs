@@ -6,13 +6,13 @@ ms.date: 01/30/2023
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: whats-new
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 2301
@@ -36,13 +36,13 @@ The following sections describe the new features to try out in this version:
 <!--16822959-->
 Update to the default value of supersedence age in months for software updates.
 
-Removing SUP role in Admin Console does not reset the supersedence age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window. This property needs to be reset to default value on role removal. 
+Removing SUP role in Admin Console does not reset the supersedence age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window. This property needs to be reset to default value on role removal.
 <!--  [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
 
 ## Other Updates
 <!--15358429-->
-Offset for recurring monthly maintenance window schedules. 
-Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using a maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday.   
+Offset for recurring monthly maintenance window schedules.
+Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using a maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday.
 
 ## Next steps
 

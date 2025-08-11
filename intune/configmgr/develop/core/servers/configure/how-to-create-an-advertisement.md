@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to create a deployment
@@ -39,83 +39,83 @@ The following examples create an advertisement for software distribution.
 For more information about calling the sample code, see [Calling Configuration Manager code snippets](../../understand/calling-code-snippets.md).
 
 ```vbs
-Sub SWDCreateAdvertisement(connection, existingCollectionID, existingPackageID, existingProgramName, newAdvertisementName, newAdvertisementComment, newAdvertisementFlags, newRemoteClientFlags, newAdvertisementStartOfferDateTime, newAdvertisementStartOfferEnabled)  
-    Dim newAdvertisement  
-    ' Create the new advertisement object.  
-    Set newAdvertisement = connection.Get("SMS_Advertisement").SpawnInstance_  
+Sub SWDCreateAdvertisement(connection, existingCollectionID, existingPackageID, existingProgramName, newAdvertisementName, newAdvertisementComment, newAdvertisementFlags, newRemoteClientFlags, newAdvertisementStartOfferDateTime, newAdvertisementStartOfferEnabled)
+    Dim newAdvertisement
+    ' Create the new advertisement object.
+    Set newAdvertisement = connection.Get("SMS_Advertisement").SpawnInstance_
 
-    ' Populate the advertisement properties.  
-    newAdvertisement.CollectionID = existingCollectionID  
-    newAdvertisement.PackageID = existingPackageID  
-    newAdvertisement.ProgramName = existingProgramName  
-    newAdvertisement.AdvertisementName = newAdvertisementName  
-    newAdvertisement.Comment = newAdvertisementComment  
-    newAdvertisement.AdvertFlags = newAdvertisementFlags  
+    ' Populate the advertisement properties.
+    newAdvertisement.CollectionID = existingCollectionID
+    newAdvertisement.PackageID = existingPackageID
+    newAdvertisement.ProgramName = existingProgramName
+    newAdvertisement.AdvertisementName = newAdvertisementName
+    newAdvertisement.Comment = newAdvertisementComment
+    newAdvertisement.AdvertFlags = newAdvertisementFlags
     newAdvertisement.RemoteClientFlags = newRemoteClientFlags
-    newAdvertisement.PresentTime = newAdvertisementStartOfferDateTime  
-    newAdvertisement.PresentTimeEnabled = newAdvertisementStartOfferEnabled  
+    newAdvertisement.PresentTime = newAdvertisementStartOfferDateTime
+    newAdvertisement.PresentTimeEnabled = newAdvertisementStartOfferEnabled
 
-    ' Save the new advertisement and properties.  
-    newAdvertisement.Put_   
+    ' Save the new advertisement and properties.
+    newAdvertisement.Put_
 
-    ' Output new advertisement name.  
-    Wscript.Echo "Created advertisement: " & newAdvertisement.AdvertisementName  
+    ' Output new advertisement name.
+    Wscript.Echo "Created advertisement: " & newAdvertisement.AdvertisementName
 
-End Sub  
-```  
+End Sub
+```
 
-```c#  
-public void CreateSWDAdvertisement(WqlConnectionManager connection, string existingCollectionID, string existingPackageID, string existingProgramName, string newAdvertisementName, string newAdvertisementComment, int newAdvertisementFlags, int newRemoteClientFlags, string newAdvertisementStartOfferDateTime, bool newAdvertisementStartOfferEnabled)  
-{  
-    try  
-    {  
-        // Create new advertisement instance.  
-        IResultObject newAdvertisement = connection.CreateInstance("SMS_Advertisement");  
+```c#
+public void CreateSWDAdvertisement(WqlConnectionManager connection, string existingCollectionID, string existingPackageID, string existingProgramName, string newAdvertisementName, string newAdvertisementComment, int newAdvertisementFlags, int newRemoteClientFlags, string newAdvertisementStartOfferDateTime, bool newAdvertisementStartOfferEnabled)
+{
+    try
+    {
+        // Create new advertisement instance.
+        IResultObject newAdvertisement = connection.CreateInstance("SMS_Advertisement");
 
-        // Populate new advertisement values.  
-        newAdvertisement["CollectionID"].StringValue = existingCollectionID;  
-        newAdvertisement["PackageID"].StringValue = existingPackageID;  
-        newAdvertisement["ProgramName"].StringValue = existingProgramName;  
-        newAdvertisement["AdvertisementName"].StringValue = newAdvertisementName;  
-        newAdvertisement["Comment"].StringValue = newAdvertisementComment;  
-        newAdvertisement["AdvertFlags"].IntegerValue = newAdvertisementFlags;  
+        // Populate new advertisement values.
+        newAdvertisement["CollectionID"].StringValue = existingCollectionID;
+        newAdvertisement["PackageID"].StringValue = existingPackageID;
+        newAdvertisement["ProgramName"].StringValue = existingProgramName;
+        newAdvertisement["AdvertisementName"].StringValue = newAdvertisementName;
+        newAdvertisement["Comment"].StringValue = newAdvertisementComment;
+        newAdvertisement["AdvertFlags"].IntegerValue = newAdvertisementFlags;
         newAdvertisement["RemoteClientFlag"].IntegerValue = newRemoteClientFlags;
-        newAdvertisement["PresentTime"].StringValue = newAdvertisementStartOfferDateTime;  
-        newAdvertisement["PresentTimeEnabled"].BooleanValue = newAdvertisementStartOfferEnabled;  
+        newAdvertisement["PresentTime"].StringValue = newAdvertisementStartOfferDateTime;
+        newAdvertisement["PresentTimeEnabled"].BooleanValue = newAdvertisementStartOfferEnabled;
 
-        // Save the new advertisement and properties.  
-        newAdvertisement.Put();  
+        // Save the new advertisement and properties.
+        newAdvertisement.Put();
 
-        // Output new assignment name.  
-        Console.WriteLine("Created advertisement: " + newAdvertisement["AdvertisementName"].StringValue);  
-    }  
+        // Output new assignment name.
+        Console.WriteLine("Created advertisement: " + newAdvertisement["AdvertisementName"].StringValue);
+    }
 
-    catch (SmsException ex)  
-    {  
-        Console.WriteLine("Failed to assign advertisement. Error: " + ex.Message);  
-        throw;  
-    }  
-}  
-```  
+    catch (SmsException ex)
+    {
+        Console.WriteLine("Failed to assign advertisement. Error: " + ex.Message);
+        throw;
+    }
+}
+```
 
 The example method has the following parameters:
 
-|Parameter|Type|Description|  
-|---------------|----------|-----------------|  
-|`connection`<br /><br /> `swbemServices`|- Managed: `WqlConnectionManager`<br />- VBScript: [SWbemServices](/windows/desktop/WmiSdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`existingCollectionID`|String|The ID of an existing collection with which to associate the advertisement.|  
-|`existingPackageID`|String|The ID of an existing package with which to associate the advertisement.|  
-|`existingProgramName`|String|The name for the program associated with the advertisement.|  
-|`newAdvertisementName`|String|The name for the new advertisement.|  
-|`newAdvertisementComment`|String|A comment for the new advertisement.|  
-|`newAdvertisementFlags`|Integer|Flags specifying options for the new advertisement.|  
+|Parameter|Type|Description|
+|---------------|----------|-----------------|
+|`connection`<br /><br /> `swbemServices`|- Managed: `WqlConnectionManager`<br />- VBScript: [SWbemServices](/windows/desktop/WmiSdk/swbemservices)|A valid connection to the SMS Provider.|
+|`existingCollectionID`|String|The ID of an existing collection with which to associate the advertisement.|
+|`existingPackageID`|String|The ID of an existing package with which to associate the advertisement.|
+|`existingProgramName`|String|The name for the program associated with the advertisement.|
+|`newAdvertisementName`|String|The name for the new advertisement.|
+|`newAdvertisementComment`|String|A comment for the new advertisement.|
+|`newAdvertisementFlags`|Integer|Flags specifying options for the new advertisement.|
 |`newRemoteClientFlags`|Integer| Flags specifying how the program should run when the client connects either locally or remotely to a distribution point.|
-|`newAdvertisementStartOfferDateTime`|String|The time when the new advertisement is first offered.|  
-|`newAdvertisementStartOfferEnabled`|Boolean|`true` if the advertisement is offered.|  
+|`newAdvertisementStartOfferDateTime`|String|The time when the new advertisement is first offered.|
+|`newAdvertisementStartOfferEnabled`|Boolean|`true` if the advertisement is offered.|
 
 ## Compiling the code
 
-The C# example requires:  
+The C# example requires:
 
 ### Namespaces
 

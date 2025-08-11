@@ -6,8 +6,8 @@ description: Use Microsoft Intune to manage system updates for supervised macOS 
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
-ms.date: 04/07/2025
+manager: laurawi
+ms.date: 07/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,9 +30,23 @@ ms.collection:
 - sub-updates
 ---
 
-# Manage macOS software update policies in Intune
+# Manage macOS software updates using MDM-based policies in Microsoft Intune
 
-You can use Microsoft Intune to manage software updates for macOS devices that enrolled as [supervised devices](../enrollment/macos-enroll.md#user-approved-enrollment).
+> [!IMPORTANT]
+> [!INCLUDE [Apple MDM software updates deprecation](../includes/apple-mdm-updates-deprecation.md)]
+
+You can use Microsoft Intune to manage software updates for macOS devices that enrolled as [supervised devices](../enrollment/macos-enroll.md#user-approved-enrollment). With these MDM-based policies, you can:
+
+- Remotely manage how downloads, installations, and notifications should occur when the following types of updates are available:
+
+  - Critical update
+  - Firmware update
+  - Configuration file update
+  - All other updates (OS, built-in apps)
+
+- Create a schedule that determines when the update installs. Schedules can be simple, like installing updates the next time that the device checks in. Or, you can create day-time ranges when updates can install or when they're blocked from installing.
+
+By default, devices check in with [Intune about every 8 hours](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals). If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 
 This feature applies to:
 
@@ -41,28 +55,12 @@ This feature applies to:
   > [!NOTE]
   > Before the macOS 12.5 release, devices would download and install more updates before installing the latest update.
 
-> [!TIP]
-> You can use the [Intune settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage software updates with the settings catalog](managed-software-updates-ios-macos.md).
-
-With policies for macOS software updates, you can:
-
-- Remotely manage how downloads, installations, and notifications should occur when the following types of updates are available for macOS:
-
-  - *Critical update*
-  - *Firmware update*
-  - *Configuration file update*
-  - *All other updates (OS, built-in apps)*
-
-- Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in or creating day-time ranges during which updates can install or are blocked from installing.
-
-By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
-
 ## Configure the policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
     > [!TIP]  
-    > For more information on managing software updates and the update experience on devices, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/en-am/guide/deployment/depafd2fad80/1/web/1.0) at Apple's Platform Deployment site.
+    > For more information on managing software updates and the update experience on devices, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/guide/deployment/depafd2fad80/1/web/1.0) at Apple's Platform Deployment site.
 
 2. Select **Devices** > **Update policies for macOS** > **Create profile**.
 

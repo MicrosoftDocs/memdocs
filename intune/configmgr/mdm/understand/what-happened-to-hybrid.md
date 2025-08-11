@@ -6,11 +6,11 @@ ms.date: 12/30/2019
 ms.subservice: other
 ms.service: configuration-manager
 ms.topic: article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -35,9 +35,9 @@ If your Configuration Manager site had a Microsoft Intune Subscription, you need
 
 The following note is the original deprecation announcement:
 
-> [!NOTE]  
+> [!NOTE]
 > As of August 14, 2018, hybrid mobile device management is a [deprecated feature](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md). Starting with the 1902 Intune service release, expected at the end of February 2019, new customers can't create a new hybrid connection.
-> <!--Intune feature 2683117-->  
+> <!--Intune feature 2683117-->
 > Since launching on Azure over a year ago, Intune has added hundreds of new customer-requested and market-leading service capabilities. It now offers far more capabilities than those offered through hybrid mobile device management (MDM). Intune on Azure provides a more integrated, streamlined administrative experience for your enterprise mobility needs.
 >
 > As a result, most customers choose Intune on Azure over hybrid MDM. The number of customers using hybrid MDM continues to decrease as more customers move to the cloud. Therefore, on September 1, 2019, Microsoft will retire the hybrid MDM service offering.
@@ -46,13 +46,13 @@ The following note is the original deprecation announcement:
 >
 > **How does this affect me?**
 >
-> - Microsoft will support your hybrid MDM usage for the next year. The feature will continue to receive major bug fixes. Microsoft will support existing functionality on new OS versions, such as enrollment on iOS 12. There will be no new features for hybrid MDM.  
+> - Microsoft will support your hybrid MDM usage for the next year. The feature will continue to receive major bug fixes. Microsoft will support existing functionality on new OS versions, such as enrollment on iOS 12. There will be no new features for hybrid MDM.
 >
-> - If you migrate to Intune on Azure before the end of the hybrid MDM offering, there should be no end user impact.  
+> - If you migrate to Intune on Azure before the end of the hybrid MDM offering, there should be no end user impact.
 >
-> - On September 1, 2019, any remaining hybrid MDM devices will no longer receive policy, apps, or security updates.  
+> - On September 1, 2019, any remaining hybrid MDM devices will no longer receive policy, apps, or security updates.
 >
-> - Licensing remains the same. Intune on Azure licenses are included with hybrid MDM.  
+> - Licensing remains the same. Intune on Azure licenses are included with hybrid MDM.
 >
 > - The on-premises MDM feature in Configuration Manager isn't deprecated. Starting in Configuration Manager version 1810, you can use on-premises MDM without an Intune connection. For more information, see [An Intune connection is no longer required for new on-premises MDM deployments](../../core/plan-design/changes/whats-new-in-version-1810.md#bkmk_opmdm).
 >
@@ -67,7 +67,7 @@ The following note is the original deprecation announcement:
 >
 > **What do I need to do to prepare for this change?**
 >
-> - Start planning your migration for MDM from the ConfigMgr console to Azure. Many customers, including Microsoft IT, have gone through this process. For more information, see this [Microsoft case study](https://aka.ms/Intune_MSFT).  
+> - Start planning your migration for MDM from the ConfigMgr console to Azure. Many customers, including Microsoft IT, have gone through this process.
 >
 > - Contact your partner of record or FastTrack for assistance. [FastTrack for Microsoft 365](https://aka.ms/hybrid_fasttrack) can assist in your migration from hybrid MDM to Intune on Azure.
 >

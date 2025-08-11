@@ -5,9 +5,9 @@ title: Try Microsoft Intune for free
 titleSuffix: 
 description: Create a free trial subscription, understand supported configurations and networking requirements, and optionally configure your domain name.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 02/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune

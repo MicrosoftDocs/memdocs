@@ -5,9 +5,9 @@ title: Add a macOS DMG app to Microsoft Intune
 titleSuffix:
 description: Add a macOS DMG app to Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 07/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune

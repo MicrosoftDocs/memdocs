@@ -7,8 +7,8 @@ description: Set up Intune for corporate-owned userless devices built on the And
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 09/18/2024
+manager: laurawi
+ms.date: 05/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: priyar
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -63,7 +63,8 @@ You must also:
 * Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../fundamentals/licenses.md) and [Managing specialty devices with Microsoft Intune](../fundamentals/specialty-devices-with-intune.md).  
 
 
-## Create an enrollment profile  
+## Create an enrollment profile
+
 Create an enrollment profile to enable enrollment on devices. 
 
 > [!TIP]
@@ -74,25 +75,42 @@ Create an enrollment profile to enable enrollment on devices.
 3. Select the **Android** tab.  
 4. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, userless devices**.  
 5. Select **Create profile**.  
-6.	Enter the basics for your profile:  
+6. Enter the basics for your profile:
+
     - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.   
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.    
     - **Token expiration date**: Select the date the token expires, which can be up to 90 days in the future.  
     - **SSID**: Identifies the network that the device will connect to.  
 
-        > [!NOTE]
-        > Wi-Fi details are required because the RealWear device does not have a button or option that lets it automatically connect to other devices.  
+      > [!NOTE]
+      > Wi-Fi details are required because the RealWear device doesn't have a button or option that lets it automatically connect to other devices.  
 
     - **Hidden Network**: Choose whether this is a hidden network. By default, this setting is disabled. 
     - **Wi-Fi Type**: Select the type of authentication needed for this network.  
 
-        If you select **WEP Pre-Shared Key** or **WPA Pre-Shared Key**, also enter:   
+      If you select **WEP Pre-Shared Key** or **WPA Pre-Shared Key**, also enter:
 
-        - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
+      - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.
+      - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidAOSP_05/02/2025_5:09 PM*  
+
+        To create a custom naming template:
+
+        1. Under **Apply device name template**, choose **Yes**.
+        2. Enter the naming template you want to apply to the devices. Names can contain letters, numbers, and hyphens.
+
+            You can use the following strings to create your naming template. Intune replaces the strings with device-specific values.
+
+            - {{SERIAL}} for the device's serial number.
+            - {{SERIALLAST4DIGITS}} for the last 4 digits of the device's serial number.
+            - {{DEVICETYPE}} for the device type, Example: *AndroidAOSP*
+            - {{ENROLLEDDATETIME}} for the date and time of enrollment.
+            - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
+
+          Edits to the naming template only apply to new enrollments.  
 
 7. Select **Next**.
 8. Optionally, select scope tags.  
-9. Select **Next**. 
+9. Select **Next**.
 10. Review the details of your profile and then select **Create** to save the profile.  
 
 ### Access enrollment token  
@@ -116,9 +134,9 @@ You can also export the enrollment profile JSON file. To create a JSON file:
 3. Select **Token > Export**.   
 
 > [!IMPORTANT]
->- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
->- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial set up.
->- Since you're managing the device via Intune, you should skip the RealWear first time setup. The Intune QR codes is the only thing you need to set up the device.   
+>- The QR code contains any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user can't join a network from the device.  
+>- Consider using a staging network with limited permissions for provisioning devices and completing the enrollment process. For example, you could use an internet-connected network with limited permissions and no corporate access to do the initial setup.
+>- Since you're managing the device via Intune, you should skip the RealWear first time setup. The Intune QR code is the only thing you need to set up the device.   
 
 ### Replace token  
 Generate a new token to replace one that's nearing its expiration date. Replacing a token does not affect devices that are already enrolled.  
@@ -142,8 +160,8 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 2. Select the **Android** tab.  
 3. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, userless devices**.  
-4.	Choose the profile that you want to work with.
-5.	Select **Token** > **Revoke token** > **Yes**.   
+4.    Choose the profile that you want to work with.
+5.    Select **Token** > **Revoke token** > **Yes**.   
 
 ## Create a device group  
 You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about both groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
@@ -228,19 +246,19 @@ If you experience problems with enrollment or the Microsoft Intune app, you can 
 
 The following are known limitations when working with AOSP devices in Intune:  
 
-* You cannot enforce certain password types via device compliance and device restrictions profiles. Password types include:
+* You can't enforce certain password types via device compliance and device restrictions profiles. Password types include:
     * Password required, no restriction 
     * Alphabetic  
     * Alphanumeric  
     * Alphanumeric with symbols    
     * Weak biometric   
-*  Device compliance reporting is not available for Android (AOSP).   
+*  Device compliance reporting isn't available for Android (AOSP).   
 
-* Android (AOSP) management is not supported in environments using Intune operated by 21Vianet.    
+* Android (AOSP) management isn't supported in environments using Intune operated by 21Vianet.    
 
 ## Next steps  
 
-* [Create an Android (AOSP) device configuration policy](../configuration/device-restrictions-android-aosp.md) to restrict settings on devices. 
+* [Create an Android (AOSP) device configuration policy](../configuration/device-restrictions-android-for-work.md) to restrict settings on devices. 
 
 * [Create an Android (AOSP) device compliance policy](../protect/compliance-policy-create-android-aosp.md).   
 

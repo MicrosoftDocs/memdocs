@@ -12,93 +12,93 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Connect to an SMS Provider in Configuration Manager by Using WMI
-Before connecting to the SMS Provider for a local or remote Configuration Manager site server, you first need to locate the SMS Provider for the site server. The SMS Provider can be either local or remote to the Configuration Manager site server you're using. The Windows Management Instrumentation (WMI) class `SMS_ProviderLocation` is present on all Configuration Manager site servers, and one instance will contain the location for the Configuration Manager site server you're using.  
+Before connecting to the SMS Provider for a local or remote Configuration Manager site server, you first need to locate the SMS Provider for the site server. The SMS Provider can be either local or remote to the Configuration Manager site server you're using. The Windows Management Instrumentation (WMI) class `SMS_ProviderLocation` is present on all Configuration Manager site servers, and one instance will contain the location for the Configuration Manager site server you're using.
 
- You can connect to the SMS Provider on a Configuration Manager site server by using the WMI [SWbemLocator](/windows/desktop/wmisdk/swbemlocator) object or by using the Windows Script Host `GetObject` method. Both approaches work equally well on local or remote connections, with the following limitations:  
+ You can connect to the SMS Provider on a Configuration Manager site server by using the WMI [SWbemLocator](/windows/desktop/wmisdk/swbemlocator) object or by using the Windows Script Host `GetObject` method. Both approaches work equally well on local or remote connections, with the following limitations:
 
-- You must use `SWbemLocator` if you need to pass user credentials to a remote computer.  
+- You must use `SWbemLocator` if you need to pass user credentials to a remote computer.
 
-- You can't use `SWbemLocator` to explicitly pass user credentials to a local computer.  
+- You can't use `SWbemLocator` to explicitly pass user credentials to a local computer.
 
-  There are several different syntaxes that you can use to make the connection, depending on whether the connection is local or remote. After you're connected to the SMS Provider, you'll have an [SWbemServices](/windows/desktop/wmisdk/swbemservices) object that you use to access Configuration Manager objects.  
+  There are several different syntaxes that you can use to make the connection, depending on whether the connection is local or remote. After you're connected to the SMS Provider, you'll have an [SWbemServices](/windows/desktop/wmisdk/swbemservices) object that you use to access Configuration Manager objects.
 
 > [!NOTE]
->  If you need to add context qualifiers for the connection, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).  
+>  If you need to add context qualifiers for the connection, see [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md).
 
-### To connect to an SMS provider  
+### To connect to an SMS provider
 
-1.  Get a [WbemScripting.SWbemLocator](/windows/desktop/WmiSdk/swbemlocator) object.  
+1.  Get a [WbemScripting.SWbemLocator](/windows/desktop/WmiSdk/swbemlocator) object.
 
-2.  Set the authentication level to packet privacy.  
+2.  Set the authentication level to packet privacy.
 
-3.  Set up a connection to the SMS Provider by using the [SWbemLocator](/windows/desktop/wmisdk/swbemlocator) object [ConnectServer](/windows/desktop/WmiSdk/swbemlocator-connectserver) method. Supply credentials only if it's a remote computer.  
+3.  Set up a connection to the SMS Provider by using the [SWbemLocator](/windows/desktop/wmisdk/swbemlocator) object [ConnectServer](/windows/desktop/WmiSdk/swbemlocator-connectserver) method. Supply credentials only if it's a remote computer.
 
-4.  Using the [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) object *ProviderForLocalSite* property, connect to the SMS Provider for the local computer and receive a [SWbemServices object](/windows/desktop/wmisdk/swbemservices).  
+4.  Using the [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) object *ProviderForLocalSite* property, connect to the SMS Provider for the local computer and receive a [SWbemServices object](/windows/desktop/wmisdk/swbemservices).
 
-5.  Use the [SWbemServices](/windows/desktop/wmisdk/swbemservices) object to access provider objects. For more information, see [Objects overview](configuration-manager-objects-overview.md).  
+5.  Use the [SWbemServices](/windows/desktop/wmisdk/swbemservices) object to access provider objects. For more information, see [Objects overview](configuration-manager-objects-overview.md).
 
-## Examples  
- The following example connects to the server. It then attempts to connect to the SMS Provider for that server. Typically this will be the same computer. If it isn't, [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) provides the correct computer name.  
+## Examples
+ The following example connects to the server. It then attempts to connect to the SMS Provider for that server. Typically this will be the same computer. If it isn't, [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) provides the correct computer name.
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).
 
-```vbs  
-Function Connect(server, userName, userPassword)  
+```vbs
+Function Connect(server, userName, userPassword)
 
-    On Error Resume Next  
+    On Error Resume Next
 
-    Dim net  
-    Dim localConnection  
-    Dim swbemLocator  
-    Dim swbemServices  
-    Dim providerLoc  
-    Dim location  
+    Dim net
+    Dim localConnection
+    Dim swbemLocator
+    Dim swbemServices
+    Dim providerLoc
+    Dim location
 
-    Set swbemLocator = CreateObject("WbemScripting.SWbemLocator")  
+    Set swbemLocator = CreateObject("WbemScripting.SWbemLocator")
 
-    swbemLocator.Security_.AuthenticationLevel = 6 'Packet Privacy.  
+    swbemLocator.Security_.AuthenticationLevel = 6 'Packet Privacy.
 
-    ' If the server is local, do not supply credentials.  
-    Set net = CreateObject("WScript.NetWork")   
-    If UCase(net.ComputerName) = UCase(server) Then  
-        localConnection = true  
-        userName = ""  
-        userPassword = ""  
-        server = "."  
-    End If  
+    ' If the server is local, do not supply credentials.
+    Set net = CreateObject("WScript.NetWork")
+    If UCase(net.ComputerName) = UCase(server) Then
+        localConnection = true
+        userName = ""
+        userPassword = ""
+        server = "."
+    End If
 
-    ' Connect to the server.  
-    Set swbemServices= swbemLocator.ConnectServer _  
-            (server, "root\sms",userName,userPassword)  
-    If Err.Number<>0 Then  
-        Wscript.Echo "Couldn't connect: " + Err.Description  
-        Connect = null  
-        Exit Function  
-    End If  
+    ' Connect to the server.
+    Set swbemServices= swbemLocator.ConnectServer _
+            (server, "root\sms",userName,userPassword)
+    If Err.Number<>0 Then
+        Wscript.Echo "Couldn't connect: " + Err.Description
+        Connect = null
+        Exit Function
+    End If
 
-    ' Determine where the provider is and connect.  
-    Set providerLoc = swbemServices.InstancesOf("SMS_ProviderLocation")  
+    ' Determine where the provider is and connect.
+    Set providerLoc = swbemServices.InstancesOf("SMS_ProviderLocation")
 
-        For Each location In providerLoc  
-            If location.ProviderForLocalSite = True Then  
-                Set swbemServices = swbemLocator.ConnectServer _  
-                 (location.Machine, "root\sms\site_" + _  
-                    location.SiteCode,userName,userPassword)  
-                If Err.Number<>0 Then  
-                    Wscript.Echo "Couldn't connect:" + Err.Description  
-                    Connect = Null  
-                    Exit Function  
-                End If  
-                Set Connect = swbemServices  
-                Exit Function  
-            End If  
-        Next  
-    Set Connect = null ' Failed to connect.  
-End Function  
-```  
+        For Each location In providerLoc
+            If location.ProviderForLocalSite = True Then
+                Set swbemServices = swbemLocator.ConnectServer _
+                 (location.Machine, "root\sms\site_" + _
+                    location.SiteCode,userName,userPassword)
+                If Err.Number<>0 Then
+                    Wscript.Echo "Couldn't connect:" + Err.Description
+                    Connect = Null
+                    Exit Function
+                End If
+                Set Connect = swbemServices
+                Exit Function
+            End If
+        Next
+    Set Connect = null ' Failed to connect.
+End Function
+```
 
  The following sample connects to the remote server using PowerShell, and attempts an SMS connection.
  ```powerShell
@@ -115,32 +115,32 @@ $NameSpace = "root\sms\site_$siteCode"
 $SWbemLocator = New-Object -ComObject "WbemScripting.SWbemLocator"
 $SWbemLocator.Security_.AuthenticationLevel = 6
 $connection = $SWbemLocator.ConnectServer($siteServer,$Namespace,$username,$password)
-```  
+```
 
-## Compiling the Code  
- This C# example requires:  
+## Compiling the Code
+ This C# example requires:
 
-## Comments  
- The sample method has the following parameters:  
+## Comments
+ The sample method has the following parameters:
 
-|Parameter|Type|Description|  
-|---------------|----------|-----------------|  
+|Parameter|Type|Description|
+|---------------|----------|-----------------|
 |`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/desktop/wmisdk/swbemservices)
-|A valid connection to the SMS Provider.|  
-|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript:  `SWbemObject`|A valid task sequence ([SMS_TaskSequence](../../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)).|  
-|`taskSequenceXML`|-   Managed: `String`<br />-   VBScript: `String`|A valid task sequence XML.|  
+|A valid connection to the SMS Provider.|
+|`taskSequence`|-   Managed: `IResultObject`<br />-   VBScript:  `SWbemObject`|A valid task sequence ([SMS_TaskSequence](../../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)).|
+|`taskSequenceXML`|-   Managed: `String`<br />-   VBScript: `String`|A valid task sequence XML.|
 
-## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+## Robust Programming
+ For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## .NET Framework Security  
- Using script to pass the user name and password is a security risk and should be avoided where possible.  
+## .NET Framework Security
+ Using script to pass the user name and password is a security risk and should be avoided where possible.
 
- The preceding example sets the authentication to packet privacy. This is the same managed SMS Provider.  
+ The preceding example sets the authentication to packet privacy. This is the same managed SMS Provider.
 
- For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../../develop/core/servers/configure/role-based-administration.md).  
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../../develop/core/servers/configure/role-based-administration.md).
 
-## See Also  
- [SMS Provider fundamentals](sms-provider-fundamentals.md)   
- [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md)   
+## See Also
+ [SMS Provider fundamentals](sms-provider-fundamentals.md)
+ [How to Add a Configuration Manager Context Qualifier by Using WMI](../../../develop/core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md)
  [Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)

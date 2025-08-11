@@ -12,126 +12,126 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CollectionMember Server WMI Class
-The `SMS_CollectionMember` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the abstract base class for the member classes for each collection. [SMS_CM_RES_COLL_CollectionID Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md) derives from `SMS_CollectionMember` class.  
+The `SMS_CollectionMember` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the abstract base class for the member classes for each collection. [SMS_CM_RES_COLL_CollectionID Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md) derives from `SMS_CollectionMember` class.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CollectionMember : SMS_BaseClass  
-{  
-      String Domain;  
-      Boolean IsAssigned;  
-      Boolean IsClient;  
-      Boolean IsDirect;  
-      String Name;  
-      UInt32 ResourceID;  
-      UInt32 ResourceType;  
-      String SiteCode;  
-      String SMSID;  
-};  
-```  
+```
+Class SMS_CollectionMember : SMS_BaseClass
+{
+      String Domain;
+      Boolean IsAssigned;
+      Boolean IsClient;
+      Boolean IsDirect;
+      String Name;
+      UInt32 ResourceID;
+      UInt32 ResourceType;
+      String SiteCode;
+      String SMSID;
+};
+```
 
-## Methods  
- The `SMS_CollectionMember` class does not define any methods.  
+## Methods
+ The `SMS_CollectionMember` class does not define any methods.
 
-## Properties  
- `Domain`  
- Data type: `String`  
+## Properties
+ `Domain`
+ Data type: `String`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Domain to which the member class belongs.  
+ Domain to which the member class belongs.
 
- `IsAssigned`  
- Data type: `Boolean`  
+ `IsAssigned`
+ Data type: `Boolean`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` if the client is assigned to the site.  
+ `true` if the client is assigned to the site.
 
- `IsClient`  
- Data type: `Boolean`  
+ `IsClient`
+ Data type: `Boolean`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` if the resource is an installed Configuration Manager client.  
+ `true` if the resource is an installed Configuration Manager client.
 
- `IsDirect`  
- Data type: `Boolean`  
+ `IsDirect`
+ Data type: `Boolean`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` if the client is a member through a direct rule, represented by [SMS_CollectionRuleDirect Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionruledirect-server-wmi-class.md); otherwise `false` or `null`.  
+ `true` if the client is a member through a direct rule, represented by [SMS_CollectionRuleDirect Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionruledirect-server-wmi-class.md); otherwise `false` or `null`.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the resource.  
+ Name of the resource.
 
- `ResourceID`  
- Data type: `UInt32`  
+ `ResourceID`
+ Data type: `UInt32`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique Configuration Manager-supplied ID for the resource. This ID is not unique across sites.  
+ Unique Configuration Manager-supplied ID for the resource. This ID is not unique across sites.
 
- `ResourceType`  
- Data type: `UInt32`  
+ `ResourceType`
+ Data type: `UInt32`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Type of resource, for example, system or user. For more information, see [SMS_ResourceMap Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_resourcemap-server-wmi-class.md).  
+ Type of resource, for example, system or user. For more information, see [SMS_ResourceMap Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_resourcemap-server-wmi-class.md).
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: [SizeLimit("3")]  
+ Qualifiers: [SizeLimit("3")]
 
- Site code of the site that created the collection.  
+ Site code of the site that created the collection.
 
- `SMSID`  
- Data type: `String`  
+ `SMSID`
+ Data type: `String`
 
- Access type: Read Only  
+ Access type: Read Only
 
- Qualifiers: None  
+ Qualifiers: None
 
- GUID generated by the client. This property is only set if the `IsClient` property is set to `true`.  
+ GUID generated by the client. This property is only set if the `IsClient` property is set to `true`.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Abstract  
+- Abstract
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

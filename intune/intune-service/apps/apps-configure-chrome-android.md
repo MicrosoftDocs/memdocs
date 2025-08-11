@@ -5,9 +5,9 @@ title: Configure Google Chrome for Android devices using Intune
 titleSuffix: Microsoft Intune
 description: Use Intune configuration policies with Google Chrome for Android devices. 
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -6,12 +6,12 @@ ms.date: 08/02/2021
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to enable co-management in Configuration Manager
@@ -38,8 +38,8 @@ Make sure the co-management prerequisites are set up before you start this proce
 
 Now that you've enabled co-management, look at the following articles for immediate value you can gain in your environment:
 
-- [Conditional Access](quickstart-conditional-access.md)  
+- [Conditional Access](quickstart-conditional-access.md)
 
-- [Remote actions from Intune](quickstart-remote-actions.md)  
+- [Remote actions from Intune](quickstart-remote-actions.md)
 
-- [Client health](quickstart-client-health.md)  
+- [Client health](quickstart-client-health.md)

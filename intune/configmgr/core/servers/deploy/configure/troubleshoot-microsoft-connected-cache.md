@@ -6,12 +6,12 @@ ms.date: 11/23/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: troubleshooting
-ms.author: baladell
-author: BalaDelli
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Troubleshoot Microsoft Connected Cache with Configuration Manager

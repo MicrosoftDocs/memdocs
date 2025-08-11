@@ -6,12 +6,12 @@ ms.date: 05/05/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: article
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Security and privacy for Configuration Manager clients
@@ -34,7 +34,7 @@ Use the following security guidance to help protect the site from rogue or compr
 
 - Use a [certificate revocation list](../../../plan-design/security/plan-for-certificates.md#pki-certificate-revocation) (CRL). Make sure that clients and communicating servers can always access it.
 
-Mobile device clients and some internet-based clients require these certificates. Microsoft recommends these certificates for all client connections on the intranet.  
+Mobile device clients and some internet-based clients require these certificates. Microsoft recommends these certificates for all client connections on the intranet.
 
 For more information on the use of certificates in Configuration Manager, see [Plan for certificates](../../../plan-design/security/plan-for-certificates.md).
 
@@ -53,7 +53,7 @@ The most secure approval method is to automatically approve clients that are mem
 
 For more information about how to manually approve computers, see [Manage clients from the devices node](../../manage/manage-clients.md#manage-clients-from-the-devices-node).
 
-### Don't rely on blocking to prevent clients from accessing the Configuration Manager hierarchy  
+### Don't rely on blocking to prevent clients from accessing the Configuration Manager hierarchy
 
 Blocked clients are rejected by the Configuration Manager infrastructure. If clients are blocked, they can't communicate with site systems to download policy, upload inventory data, or send state or status messages.
 
@@ -233,27 +233,27 @@ For more information about how to renew the certificate, see [Renewing the macOS
 
 To help protect against elevation of privileges, configure the certificate for the trusted root certificate authority so that it's only trusted for the SSL protocol.
 
-When you enroll Mac computers, a user certificate to manage the Configuration Manager client is automatically installed. This user certificate includes the trusted root certificates in its trust chain. To restrict the trust of this root certificate to the SSL protocol only, use the following procedure:  
+When you enroll Mac computers, a user certificate to manage the Configuration Manager client is automatically installed. This user certificate includes the trusted root certificates in its trust chain. To restrict the trust of this root certificate to the SSL protocol only, use the following procedure:
 
-1. On the Mac computer, open a terminal window.  
+1. On the Mac computer, open a terminal window.
 
-2. Enter the following command: `sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access`  
+2. Enter the following command: `sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access`
 
-3. In the **Keychain Access** dialog box, in the **Keychains** section, select **System**. Then in the **Category** section, select **Certificates**.  
+3. In the **Keychain Access** dialog box, in the **Keychains** section, select **System**. Then in the **Category** section, select **Certificates**.
 
-4. Locate and open the root CA certificate for the Mac client certificate.  
+4. Locate and open the root CA certificate for the Mac client certificate.
 
-5. In the dialog box for the root CA certificate, expand the **Trust** section, and then make the following changes:  
+5. In the dialog box for the root CA certificate, expand the **Trust** section, and then make the following changes:
 
-    1. **When using this certificate**: Change the **Always Trust** setting to **Use System Defaults**.  
+    1. **When using this certificate**: Change the **Always Trust** setting to **Use System Defaults**.
 
-    2. **Secure Sockets Layer (SSL)**: Change **no value specified** to **Always Trust**.  
+    2. **Secure Sockets Layer (SSL)**: Change **no value specified** to **Always Trust**.
 
-6. Close the dialog box. When prompted, enter the administrator's password, and then select **Update Settings**.  
+6. Close the dialog box. When prompted, enter the administrator's password, and then select **Update Settings**.
 
-After you complete this procedure, the root certificate is only trusted to validate the SSL protocol. Other protocols that are now untrusted with this root certificate include Secure Mail (S/MIME), Extensible Authentication (EAP), or code signing.  
+After you complete this procedure, the root certificate is only trusted to validate the SSL protocol. Other protocols that are now untrusted with this root certificate include Secure Mail (S/MIME), Extensible Authentication (EAP), or code signing.
 
-> [!NOTE]  
+> [!NOTE]
 > Also use this procedure if you installed the client certificate independently from Configuration Manager.
 
 ## Security issues for clients

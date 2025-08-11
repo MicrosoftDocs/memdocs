@@ -12,36 +12,36 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetAutoInstallRequiredSoftwaretoNonBusinessHours Method in Class CCM_ClientUXSettings
-The `GetAutoInstallRequiredSoftwaretoNonBusinessHours` Windows Management Instrumentation (WMI) class method in Configuration Manager that gets the value for `AutomaticallyInstallSoftware`.   
+The `GetAutoInstallRequiredSoftwaretoNonBusinessHours` Windows Management Instrumentation (WMI) class method in Configuration Manager that gets the value for `AutomaticallyInstallSoftware`.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 GetAutoInstallRequiredSoftwaretoNonBusinessHours   
-{  
-    [OUT]   Boolean AutomaticallyInstallSoftware  
-};  
-```  
+```
+uint32 GetAutoInstallRequiredSoftwaretoNonBusinessHours
+{
+    [OUT]   Boolean AutomaticallyInstallSoftware
+};
+```
 
-## Parameters  
- `AutomaticallyInstallSoftware`  
- Data type: `Boolean`  
+## Parameters
+ `AutomaticallyInstallSoftware`
+ Data type: `Boolean`
 
- Qualifiers: [id("0"), out]  
+ Qualifiers: [id("0"), out]
 
- `true` if necessary software should be automatically installed during nonbusiness hours.    
+ `true` if necessary software should be automatically installed during nonbusiness hours.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

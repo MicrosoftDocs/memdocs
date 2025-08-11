@@ -4,9 +4,9 @@
 title: Licenses available for Microsoft Intune
 description: Intune is available with these licenses
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 05/09/2024
 ms.topic: article
 ms.service: microsoft-intune

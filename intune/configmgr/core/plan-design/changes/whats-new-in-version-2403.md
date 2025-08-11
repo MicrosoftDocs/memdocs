@@ -6,12 +6,12 @@ ms.date: 04/05/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: whats-new
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 2403 of Configuration Manager current branch
@@ -19,7 +19,7 @@ ms.reviewer: mstewart,aaroncz
 *Applies to: Configuration Manager (current branch)*
 
 Update 2403 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2211 or later. When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability. This article summarizes the changes and new features in Configuration Manager, version 2403.
-                                                                                                                                                                                                                                                                                                                          
+
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2403](../../servers/manage/checklist-for-installing-update-2403.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2403.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
@@ -34,7 +34,7 @@ For more information, see [New name for Azure Active Directory](/entra/fundament
 
 ### Automated diagnostic Dashboard for Software Update Issues
 
-A new dashboard is added to the console under monitoring workspace, which shows the diagnosis of the software update issues in your environment this feature can easily identify  any issues related to software updates. You can fix software update issues based on troubleshooting documentations. 
+A new dashboard is added to the console under monitoring workspace, which shows the diagnosis of the software update issues in your environment this feature can easily identify  any issues related to software updates. You can fix software update issues based on troubleshooting documentations.
 
 :::image type="content" source="media/17668422-troubleshooting-dash.png" alt-text="Screenshot of new troubleshooting dashboard in console.":::
 
@@ -48,9 +48,9 @@ Users can now use the global search box in CM console, which streamlines the sea
 
 For more information, see [Improvements to console search.](../../servers/manage/admin-console-tips.md#improvements-to-console-search)
 
-### Added Folder support for Scripts node in Software Library 
+### Added Folder support for Scripts node in Software Library
 
-You can now organize scripts by using folders. This change allows for better categorization and management of scripts. Full Administrator and Operations Administrator roles can manage the folders. 
+You can now organize scripts by using folders. This change allows for better categorization and management of scripts. Full Administrator and Operations Administrator roles can manage the folders.
 
 :::image type="content" source="media/24475159-folder-scripts.png" alt-text="Screenshot of scripts folder structure in console.":::
 
@@ -79,13 +79,13 @@ For more information, see [FAQ](../../../../configmgr/protect/plan-design/resour
 
 ### New parameter SoftwareUpdateO365Language is added to Save-CMSoftwareUpdate cmdlet
 
-A new parameter **SoftwareUpdateO365Language** is now added to PowerShell  Save-CMSoftwareUpdate cmdlet. Customers now don't have to check a specific language in the SUP Properties (causing a metadata download for that language for all updates). 
+A new parameter **SoftwareUpdateO365Language** is now added to PowerShell  Save-CMSoftwareUpdate cmdlet. Customers now don't have to check a specific language in the SUP Properties (causing a metadata download for that language for all updates).
 
 
 PowerShell Commandlet:  ``` Save-CMSoftwareUpdate – SoftwareUpdateO365Language <language name> (<region name>)" ```
 
 > [!NOTE]
-> Languages need to be in O365 format to be consistent with Admin Console UI. E.g. "Hungarian (Hungary)". 
+> Languages need to be in O365 format to be consistent with Admin Console UI. E.g. "Hungarian (Hungary)".
 
 
 
@@ -93,13 +93,13 @@ PowerShell Commandlet:  ``` Save-CMSoftwareUpdate – SoftwareUpdateO365Language
 
 ### Support for ARM 64 Operating System Deployment
 
-Configuration Manager operating system deployment support is now added on Windows 11 ARM 64 devices. Currently Importing and customizing Arm 64 boot images, Wipe and load TS, Media creation TS, WDS PXE for Arm 64 and CMPivot is supported.    
+Configuration Manager operating system deployment support is now added on Windows 11 ARM 64 devices. Currently Importing and customizing Arm 64 boot images, Wipe and load TS, Media creation TS, WDS PXE for Arm 64 and CMPivot is supported.
 
 :::image type="content" source="media/14959666-armosd.png" alt-text="Screenshot of arm 64 boot image in console.":::
 
 
 
-### Enhancement in Deploying Software Packages with Dynamic Variables  
+### Enhancement in Deploying Software Packages with Dynamic Variables
 
 When deploying a Task Sequence for installing a software package using dynamic variables, if the 'Continue on error' option is unchecked and the package is updated on distribution points while the client is installing the Task Sequence, the installation process fails due to version inconsistencies with the updated packages on the distribution points. Previously, the only recourse was to reinstall the entire Task Sequence from the software center.
 
@@ -137,14 +137,14 @@ This release includes the following improvements to Bitlocker:
 For more information on BitLocker management, see [Deploy BitLocker management.](../../../protect/deploy-use/bitlocker/recovery-service.md) and [Plan for BitLocker management.](../../../protect/plan-design/bitlocker-management.md).
 
 - From this version of Configuration Manager, the Windows 11 readiness dashboard shows charts for Windows 23H2.
-- Defender Exploit Guards policy for controlled folder now accepts regex in the file path for apps.  
+- Defender Exploit Guards policy for controlled folder now accepts regex in the file path for apps.
   For example, [C:\Folder\Subfolder\app?.exe] [C:\Folder1\Sub*Name]
 
 ## Next steps
 <!--At this time, version 2403 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2403.md#early-update-ring).-->
 
 As of May 06, 2024, version 2403 is globally available for all customers to install.
->[!NOTE] 
+>[!NOTE]
 > For exisiting Fast ring current branch 2403 customers, you will see Slow ring upgrade package in console. Install 2403 Slow ring package to be in production current branch.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2403](../../servers/manage/checklist-for-installing-update-2403.md).

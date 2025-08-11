@@ -6,12 +6,12 @@ ms.date: 11/03/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Install Power BI sample reports

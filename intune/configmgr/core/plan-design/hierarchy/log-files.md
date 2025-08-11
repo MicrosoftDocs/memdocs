@@ -11,7 +11,7 @@ ms.author: brianhun
 manager: averyspa
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Log file reference
