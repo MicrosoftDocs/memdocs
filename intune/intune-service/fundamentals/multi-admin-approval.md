@@ -47,7 +47,7 @@ Access policies are supported for the following resources:
 
 To use multi administrative approval, your tenant must have at least two administrator accounts. One account is used to perform a change in the tenant, the second account is used to approve the change.
 
-To create an access policy, your account must be assigned the [*Intune Service Administrator* or *Global Administrator*](../fundamentals/role-based-access-control.md) role, or be assigned the appropriate Multi Admin Approval permissions for an Intune role. Administrators who manage the access policies specifically for multi-admin approval require the *Approval for Multi Admin Approval* permission.
+To create an access policy, your account must be assigned the [*Intune Service Administrator*](../fundamentals/role-based-access-control.md) role, or be assigned the appropriate Multi Admin Approval permissions for an Intune role. Administrators who manage the access policies specifically for multi-admin approval require the *Approval for Multi Admin Approval* permission.
 
 To be an approver for access policies, an account must be in the approver group that's assigned to the access policy for a specific type of resource.
 
