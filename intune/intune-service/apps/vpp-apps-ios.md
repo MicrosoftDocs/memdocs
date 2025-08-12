@@ -277,8 +277,6 @@ Access to Apple Business Manager location token and apps (Apple VPP tokens and V
 
 Apple provides direct assistance to create and renew VPP tokens. For more information, see [Distribute content to your users with the Volume Purchase Program (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) as part of Apple's documentation. 
 
-If **Assigned to external MDM** is indicated in Intune, then you (the admin) must remove the VPP token from the non-Microsoft MDM before using the VPP token in Intune.
-
 If a token’s status is **Duplicate**, you uploaded multiple tokens with the same **Token Location.** Remove the duplicate token to begin syncing the token again. You can still assign and revoke licenses for tokens that are marked as duplicate. However, licenses for new apps and books purchased might not be reflected once a token is marked as duplicate.
 
 ## Frequently asked questions
