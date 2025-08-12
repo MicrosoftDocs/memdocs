@@ -89,8 +89,10 @@ To find this report, in the admin center go to *Devices* > *Monitor*, and then s
 The following image is an example of the Apple update failures report for a test tenant:
 
 *pending valid image*
+<!-- Image is pending availability 
 
 :::image type="content" source="./media/software-updates-report-apple-per-device/FILE.png" alt-text="Screen capture that shows the Apple software update failures report.":::
+-->
 
 ## Apple software update report
 
