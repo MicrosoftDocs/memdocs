@@ -158,9 +158,9 @@ App Control for Business policies are an implementation of Windows Defender Appl
 
 ### Add a managed installer to your tenant
 
-You can create one or more managed installer policies to add the managed installer to groups of devices. When creating more than one policy, consider the following that apply to devices targeted by more than a single managed installer policy: 
+You can create one or more managed installer policies to add the managed installer to groups of devices. When creating more than one policy, consider the following that apply to devices targeted by more than a single managed installer policy:
 
-- So long as one policy has the setting *Enable Intune Managed Extension as Managed Installer* set to *Enabled*, the device applies the configuration as enabled
+- So long as one policy has the setting *Enable Intune Managed Extension as Managed Installer* set to *Enabled*, the device applies the configuration as enabled.
 - Scope tags from more than one policy apply to a device as a superset of those scope tags.
 
 The following procedure guides you through adding the Intune Management Extension as a managed installer for your tenant: 
@@ -172,7 +172,7 @@ The following procedure guides you through adding the Intune Management Extensio
 2. On the **Basics** page, enter the following properties:
 
    - **Name**: Enter a descriptive name for the profile. Name profiles so you can easily identify them later.
-   - **Description**: Enter a description for the profile. This setting is optional but recommended
+   - **Description**: Enter a description for the profile. This setting is optional but recommended.
 
 3. On **Settings**, set *Enable Intune Managed Extension as Managed Installer* to *Enabled*, the default. When enabled, devices with this policy use the managed installer. When disabled, the device doesn't actively use the managed installer.
 
