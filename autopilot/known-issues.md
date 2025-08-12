@@ -41,6 +41,12 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Deployment duration in the Windows Autopilot deployment report may include the time for user to login at the Windows lock screen
+
+Date added: *August 12, 2025*
+
+The deployment duration value in the Autopilot report includes the time between enrollment and completion of the **Account setup** phase of the Enrollment status page (ESP). As a result, if the ESP is configured to show during the **Account setup** phase and a reboot has happened during OOBE, the user will have to log in again at the Windows lock screen before the **Account setup** phase can start. The time it takes for the user to log in is going to be included in the total deployment duration.
+
 ### Enrollment status page Account setup phase isn't shown when signing in via FIDO2 (YubiKey) during self-deploying mode
 
 Date added: *August 1, 2025*
