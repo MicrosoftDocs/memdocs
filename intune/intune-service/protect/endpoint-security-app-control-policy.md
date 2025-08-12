@@ -482,7 +482,7 @@ On a related note, there's no longer a limitation of 32 policies active on the s
 
 ### Does the Managed Installer opt-in capability for my tenant set apps installed from Configuration Manager with the appropriate tag?
 
-No. This release focuses on setting apps installed from Intune, using the Intune Management Extension, as the managed installer. It can't set Configuration Manager as the managed installerInstaller.
+No. This release focuses on setting apps installed from Intune, using the Intune Management Extension, as the managed installer. It can't set Configuration Manager as the managed installer.
 
 If setting Configuration Manager as the managed installer is desired, you can allow that behavior from within Configuration Manager. If you already have Configuration Manager set as the managed installer, the expected behavior is that the new Intune Management Extension AppLocker policy merges with the existing Configuration Manager policy.
 
