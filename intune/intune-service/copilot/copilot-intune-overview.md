@@ -35,7 +35,7 @@ ms.collection:
 
 # Microsoft Copilot in Intune
 
-[Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) is an generative-AI security analysis tool. It can help you and your organization get information quickly and make decisions that affect security and risk.
+[Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) is a generative-AI security analysis tool. It can help you and your organization get information quickly and make decisions that affect security and risk.
 
 Intune has capabilities that are powered by Copilot. These capabilities access your Intune data and help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
 
