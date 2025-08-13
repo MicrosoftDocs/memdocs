@@ -51,7 +51,15 @@ When an installation issue occurs with a Win32 app, you can choose the **Collect
 
 Agent logs on the client machine are commonly in *C:\ProgramData\Microsoft\IntuneManagementExtension\Logs*. You can use *CMTrace.exe* to view these log files. For more information, see [CMTrace](/configmgr/core/support/cmtrace).
 
-
+| Log File | Description |
+|----------|-------------|
+| IntuneManagementExtension.log | Main client log. Contains agent check in, policy request, policy processing and reporting activities |
+| AgentExecutor.log | Tracks PowerShell script execution details |
+| ClientHealth.log | Tracks SideCar agent client heath activities |
+| _IntuneManagementExtension.log | Saved copy of IntuneManagementExtension.log after log rolls over |
+| AppActionProcessor.log | Tracks the Application Action Processor. This includes information about detection and applicability checks |
+| AppWorkload.log | Main app workload log. This includes apps check-ins, app installs, app applicability and app detection logging |
+| HealthScripts.log | Tracks Remediation script execution details. All workloads that leverage Remediation scripts would find logging for their features here, including custom compliance scripts, managed installer, hardware configuration, and on-demand proactive remediations. |
 
 ![User's image](media/apps-win32-troubleshoot/image.png)
 
