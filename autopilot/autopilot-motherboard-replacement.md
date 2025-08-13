@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: bpardi
-ms.date: 06/13/2025
+ms.date: 08/13/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -286,14 +286,14 @@ For the **Supported** column in the following table:
 | **GPU replacement** | Yes | Replacing one or more GPUs on a damaged device doesn't negatively affect the Windows Autopilot experience on that device. No deregistration/reregistration is needed. The repair technician simply needs to replace the GPU. |
 
 > [!IMPORTANT]
+>
 > When parts are scavenged from another Windows Autopilot device, Microsoft recommends to unregister the scavenged device from Windows Autopilot, scavenge it, and then **never register the scavenged device again for Windows Autopilot**. Reusing parts in this way might cause two active devices to end up with the same ID with no possibility of distinguishing between the two.
-> > If this does happen, the customer would need to:
+>
+> To resolve the issue in scenarios where this occurs, follow these steps:
 > 
-> 
-> - Deregister affected devices from Microsoft Intune.
-> - Collect hardware hashes directly from physical devices rather than relying on OEM-provided hash data.
-> - Re-register these physical-device-collected hashes in Autopilot to ensure correct association of device serial numbers.
-
+> 1. Deregister affected devices from Microsoft Intune.
+> 1. Collect hardware hashes directly from physical devices rather than relying on OEM-provided hash data.
+> 1. To ensure correct association of device serial numbers, re-register the hashes collected from the physical devices in Windows Autopilot.
 
 The following parts can be replaced without compromising Windows Autopilot enablement or requiring special additional repair steps:
 
