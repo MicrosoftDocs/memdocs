@@ -494,10 +494,6 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
           - **Number of seconds device is inactive before automatically signing user out​**: Define the period of inactivity, in seconds, before user is automatically signed out from Managed Home Screen. By default, this value is set to 300 seconds. 
           - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds. 
 
-      - **Configure offline app access**: **Checked** lets you select which apps are available when the device connect to the network for sign in. Users can access these apps when unable to sign in due to network issues and must sign in once network access returns. This setting requires **MHS Sign-in screen** to be set to **Enable**.
-
-      - **Configure app access without sign in**: **Checked** lets you select which apps users can access from the sign-in screen without signing in. These apps are available via an entry point on the top bar, regardless of network status. The setting requires **MHS Sign-in screen** to be set to **Enable**.
-
       > [!NOTE]
       > Some of the Managed Home Screen settings are available in a device restrictions policy. To view and use all the available settings for the Managed Home Screen, create a [Managed Home Screen app configuration policy](../apps/app-configuration-managed-home-screen-app.md).
 
@@ -665,6 +661,13 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
   > If there's a conflict with one of these settings, then the conflict applies to all three settings. Make sure you give the **Allow this app to access Android security logs** and **Allow this app to access Android network activity logs** permissions to only one app. You can give these permissions to the same app, but not different apps.
   >
   > For more information, go to [Android Management API - DelegatedScope](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#delegatedscope) (opens Google's web site).
+
+- **Configure offline app access**: **Checked** lets you select which apps are available when the device connect to the network for sign in. Users can access these apps when unable to sign in due to network issues and must sign in once network access returns. This setting requires **MHS Sign-in screen** to be set to **Enable**.
+
+- **Configure app access without sign in**: **Checked** lets you select which apps users can access from the sign-in screen without signing in. These apps are available via an entry point on the top bar, regardless of network status. The setting requires **MHS Sign-in screen** to be set to **Enable**.
+
+  > [!NOTE]
+  > Some of the Managed Home Screen settings are available in a device restrictions policy. To view and use all the available settings for the Managed Home Screen, create a [Managed Home Screen app configuration policy](../apps/app-configuration-managed-home-screen-app.md).
 
 ### Dedicated devices
 
