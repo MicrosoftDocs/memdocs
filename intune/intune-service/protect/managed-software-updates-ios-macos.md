@@ -250,4 +250,4 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - [macOS software update policies in Intune](software-updates-macos.md)
 - [Software updates planning guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
 - [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
-- [Declarative Apple software update reports in Intune](software-updates-reports-apple-ddm.md)
+- [Declarative Apple software update reports in Intune](software-updates-reports-apple-declarative.md)

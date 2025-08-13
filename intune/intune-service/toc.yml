@@ -1015,7 +1015,7 @@ items:
             - name: macOS update policies
               href: ./protect/software-updates-macos.md
             - name: Apple delcarative-based software update reports
-              href: ./protect/software-updates-reports-apple-ddm.md
+              href: ./protect/software-updates-reports-apple-declarative.md
           - name: Windows updates
             items:
             - name: Use Windows Update client policies
