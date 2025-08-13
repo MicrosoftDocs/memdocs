@@ -347,7 +347,11 @@ sections:
           See [Windows Autopilot Reset: Troubleshooting](windows-autopilot-reset.md#troubleshooting) for more help if Windows Autopilot Reset fails immediately with the error:
 
           `Ran into trouble. Please sign in with an administrator account to see why and reset manually.`
-
+          
+     - question: |
+          Why are Hybrid Autopilot deployments failing during ESP with error code "80070774"?
+        answer: |
+          This issue can occur if there is a domain mismatch between where the Intune Connector is installed and where device configurations are targeted. Specifically, if the connector is installed on one Active Directory domain but devices are configured for another. To resolve this, configure the connector in the matching domain. 
 
   - name: Troubleshooting Windows OOBE issues during Windows Autopilot
     questions:
