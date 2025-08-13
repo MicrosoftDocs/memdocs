@@ -24,7 +24,7 @@ ms.collection:
 - sub-updates
 ---
 
-# Declarative device management-based software update reports for Apple devices in Microsoft Intune
+# Declarative software update reports for Apple devices in Microsoft Intune
 
 Microsoft Intune’s declarative Apple software update reports for Apple devices relies on a reporting model that's part of Apple devices that provides near real-time status for Apple software updates. Intune surfaces the update status from this reporting model through several reports that include the status information as reported directly by each Apple device, each time the device’s software update status changes.
 
