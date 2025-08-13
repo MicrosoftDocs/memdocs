@@ -1014,8 +1014,8 @@ items:
               href: ./protect/software-updates-ios.md
             - name: macOS update policies
               href: ./protect/software-updates-macos.md
-            - name: Per-device delcarative reports
-              href: ./protect/software-updates-report-apple-per-device.md
+            - name: Apple delcarative-based software update reports
+              href: ./protect/software-updates-report-apple-ddm.md
           - name: Windows updates
             items:
             - name: Use Windows Update client policies

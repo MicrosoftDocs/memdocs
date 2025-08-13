@@ -1,6 +1,6 @@
 ---
-title: View per-device software update reports for Apple devices in Microsoft Intune
-description: Use Microsoft Intune to view per-device software updates reports for managed Apple devices.
+title: View declarative device management-based software update reports for Apple devices in Microsoft Intune
+description: Use Microsoft Intune to software updates reports for managed Apple devices based on Apples declarative device management capabilities.
 author: brenduns
 ms.author: brenduns
 manager: laurawi
@@ -24,7 +24,7 @@ ms.collection:
 - sub-updates
 ---
 
-# Per-device declarative Apple software updates reports in Microsoft Intune
+# Declarative device management-based software update reports for Apple devices in Microsoft Intune
 
 Microsoft Intune’s declarative Apple software update reports for Apple devices relies on a reporting model that's part of Apple devices that provides near real-time status for Apple software updates. Available in Intune as a per-device report, these reports include the status information as reported directly by an Apple device each time the device’s software update status changes.
 
@@ -72,7 +72,7 @@ In the per-device view, Intune displays the following information about the devi
 
 The following example is taken from the *macOS software updates* report:
 
-:::image type="content" source="./media/software-updates-report-apple-per-device/per-device-macos-software-updates.png" alt-text="Screen capture that shows the per-device report for a macOS device":::
+:::image type="content" source="./media/software-updates-reports-apple-ddm/per-device-macos-software-updates.png" alt-text="Screen capture that shows the per-device report for a macOS device":::
 
 ## Apple software update failures
 
@@ -91,7 +91,7 @@ The following image is an example of the Apple update failures report for a test
 *pending valid image*
 <!-- Image is pending availability 
 
-:::image type="content" source="./media/software-updates-report-apple-per-device/FILE.png" alt-text="Screen capture that shows the Apple software update failures report.":::
+:::image type="content" source="./media/software-updates-reports-apple-ddm/FILE.png" alt-text="Screen capture that shows the Apple software update failures report.":::
 -->
 
 ## Apple software update report
@@ -110,7 +110,7 @@ To find this report, in the admin center go to *Reports* > *Device management* >
 
 The following image shows a blank report with no device details available, captured from a newly provisioned Intune tenant.
 
-:::image type="content" source="./media/software-updates-report-apple-per-device/apple-software-update-report.png" alt-text="Screen capture that shows the Apple software update report.":::
+:::image type="content" source="./media/software-updates-reports-apple-ddm/apple-software-update-report.png" alt-text="Screen capture that shows the Apple software update report.":::
 
 ## Apple software update summary report
 
@@ -127,7 +127,7 @@ To find this report, in the admin center go to *Reports* > *Device management* >
 
 The following image shows a blank summary report with no device details available, captured from a newly provisioned Intune tenant:
 
-:::image type="content" source="./media/software-updates-report-apple-per-device/apple-update-summary-report.png " alt-text="Screen capture that shows the Apple software update Summary view.":::
+:::image type="content" source="./media/software-updates-reports-apple-ddm/apple-update-summary-report.png " alt-text="Screen capture that shows the Apple software update Summary view.":::
 
 ## Related content
 
