@@ -204,6 +204,10 @@ Each device that receives Endpoint Privilege Management policies installs the EP
 
 The EPM Tools PowerShell module is available from any device that has received EPM policy. To import the EpmTools PowerShell module:
 
+  > [!NOTE]
+  >
+  > Windows running arm - you need to use Windows Powershell (x64).
+
 ```powershell
 Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
 ```
