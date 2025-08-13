@@ -183,7 +183,7 @@ When the Copilot window opens, enter your question about the device. If device q
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-device-query.png" alt-text="Screenshot that shows the Copilot window with your prompt for device query." lightbox="./media/copilot-intune-overview/copilot-device-query.png":::
 
-To use the query that Copilot generates, select **Add to editor** to add it to the query editor in device query, or select **Add and run** to add it to the editor and automatically run it. To see a Copilot-generated explanation for how COpilot created a query in response to your request, select **How was this query generated?**.
+To use the query that Copilot generates, select **Add to editor** to add it to the query editor in device query, or select **Add and run** to add it to the editor and automatically run it. To see a Copilot-generated explanation for how Copilot created a query in response to your request, select **How was this query generated?**.
 
 The following examples are some queries you can try:
 
