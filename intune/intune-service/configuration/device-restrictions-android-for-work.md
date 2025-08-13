@@ -340,6 +340,10 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
         > - In multi-app mode, every app in the policy must be a required app, and must be assigned to the devices. If an app isn't required, or isn't assigned, then the devices can lock out users, and show a `Contact your IT admin. This phone will be erased.` message.
         > - Applications added within the Managed Home Screen aren't prevented from launching other applications installed on the device. Admins should ensure that all applications allowed within the Managed Home Screen don't launch other apps that users shouldn't access. And, uninstall any apps that aren't necessary on the device.
 
+      - **Configure offline app access**: **Checked** lets you select which apps are available when the device connect to the network for sign in. Users can access these apps when unable to sign in due to network issues and must sign in once network access returns. This setting requires **MHS Sign-in screen** to be set to **Enable**.
+
+      - **Configure app access without sign in**: **Checked** lets you select which apps users can access from the sign-in screen without signing in. These apps are available via an entry point on the top bar, regardless of network status. The setting requires **MHS Sign-in screen** to be set to **Enable**.
+
       - **Lock home screen**: **Enable** prevents users from moving app icons and folders. They're locked, and can't be dragged-and-dropped to different places on the grid. When set to **Not configured**, Intune doesn't change or update this setting. By default, users can move these items.
 
       - **Folder icon**: Select the color and shape of the folder icon that's on the Managed Home Screen. Your options:
@@ -661,13 +665,6 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
   > If there's a conflict with one of these settings, then the conflict applies to all three settings. Make sure you give the **Allow this app to access Android security logs** and **Allow this app to access Android network activity logs** permissions to only one app. You can give these permissions to the same app, but not different apps.
   >
   > For more information, go to [Android Management API - DelegatedScope](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#delegatedscope) (opens Google's web site).
-
-- **Configure offline app access**: **Checked** lets you select which apps are available when the device connect to the network for sign in. Users can access these apps when unable to sign in due to network issues and must sign in once network access returns. This setting requires **MHS Sign-in screen** to be set to **Enable**.
-
-- **Configure app access without sign in**: **Checked** lets you select which apps users can access from the sign-in screen without signing in. These apps are available via an entry point on the top bar, regardless of network status. The setting requires **MHS Sign-in screen** to be set to **Enable**.
-
-  > [!NOTE]
-  > Some of the Managed Home Screen settings are available in a device restrictions policy. To view and use all the available settings for the Managed Home Screen, create a [Managed Home Screen app configuration policy](../apps/app-configuration-managed-home-screen-app.md).
 
 ### Dedicated devices
 
