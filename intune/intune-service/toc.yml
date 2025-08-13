@@ -1014,7 +1014,7 @@ items:
               href: ./protect/software-updates-ios.md
             - name: macOS update policies
               href: ./protect/software-updates-macos.md
-            - name: Apple delcarative-based software update reports
+            - name: Apple declarative-based software update reports
               href: ./protect/software-updates-reports-apple-declarative-based.md
           - name: Windows updates
             items:
