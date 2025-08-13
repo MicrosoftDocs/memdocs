@@ -31,13 +31,13 @@ Microsoft Intune’s declarative Apple software update reports for Apple devices
 
 Available reports include:
 
-- [Per-device software update report](#per-device-software-update-report) - Per-device software update reports are available in the Intune Admin center by going to *Devices* and then selecting an applicable device. Each report view is focused on update status for only the selected device. 
+- [Per-device software update report](#per-device-software-update-report) - Per-device software update reports are available in the Intune Admin center by going to *Devices* and then selecting an applicable device. Each report view is focused on update status for only the selected device.
   
 - [Apple software update failures](#apple-software-update-failures) - With this operational report, you can view details across your entire managed Apple device fleet. This includes iOS, iPadOS, and macOS devices. Details include why the update failed to install and the timestamp of the last failure.
 
-- [Apple software update report](#apple-software-update-report) - This organizational report displays details about pending and current software update information across your entire managed Apple device fleet.
+- [Apple software update report](#apple-software-update-report) - This organizational report displays details about pending and current software update information across your entire managed Apple device fleet. Intune checks with Apple once per day to identify newly-available updates.
 
-- [*Apple software update summary report*](#apple-software-update-summary-report) - The Apple software update summary report displays a high-level view of how many of your managed Apple devices report each of the available update statuses. This view is divided into separate areas for macOS, iOS, and iPadOS with each area having a platform specific chart. Each area also identifies the most recently available update version and when it was made available by Apple.
+- [*Apple software update summary report*](#apple-software-update-summary-report) - The Apple software update summary report displays a high-level view of how many of your managed Apple devices report each of the available update statuses. This view is divided into separate areas for macOS, iOS, and iPadOS with each area having a platform specific chart. Each area also identifies the most recently available update version and when it was made available by Apple. Intune checks with Apple once per day to identify newly-available updates.
 
 To learn more about the Apple declarative device management process, see [Installing and enforcing software updates for Apple devices](https://support.apple.com/guide/deployment/installing-and-enforcing-software-updates-depd30715cbb/web) in the Apple documentation.
 
