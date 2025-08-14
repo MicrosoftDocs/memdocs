@@ -217,7 +217,7 @@ Following are the available cmdlets:
 - **Get-ClientSettings**: Process all existing client settings policies to display the effective client settings used by the EPM Agent.
 - **Get-FileAttributes**: Retrieves File Attributes for an .exe file and extracts its Publisher and CA certificates to a set location that can be used to populate Elevation Rule Properties for a particular application.
 
-For more information about each cmdlet, review the **readme.txt** file from the *EpmTools* folder on the device.
+For more information about each cmdlet, review the **readme.md** file from the *EpmTools* folder on the device.
 
 ## Related articles
 
