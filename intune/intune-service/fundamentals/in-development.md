@@ -7,7 +7,7 @@ keywords:
 author: laurawi
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/31/2025
+ms.date: 08/20/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -101,82 +101,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device configuration
-
-### New settings in the Android settings catalog<!-- 32864836 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There's a new **Hide organization name** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, the enterprise name isn't shown on the device, such as lock screen.
-
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
-
-Applies to:
-
-- Android Enterprise corporate-owned devices with a work profile (COPE)
-- Android Enterprise corporate owned fully managed (COBO)
-
-### New day zero settings available in the Apple settings catalog<!-- 33437616 -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
-
-#### iOS/iPadOS
-
-**Declarative Device Management (DDM) > Audio Accessory Settings**:
-
-- Temporary Pairing Disabled
-- Temporary Pairing Unpairing Time
-- Unpairing Policy
-- Unpairing Hour
-
-**Declarative Device Management (DDM) > Safari Settings**:
-
-- Accept Cookies
-- Allow Disabling Fraud Warning
-- Allow History Clearing
-- Allow JavaScript
-- Allow Private Browsing
-- Allow Popups
-- Allow Summary
-- Page Type
-- Homepage URL
-- Extension Identifier
-
-**Restrictions**:
-
-- Allow Safari History Clearing
-- Allow Safari Private Browsing
-- Denied ICCIDs For iMessage And FaceTime
-- Denied ICCIDs For RCS
-
-#### macOS
-
-**Authentication > Extensible Single Sign On Kerberos**:
-
-- Allow Platform SSO Auth Fallback
-
-**Declarative Device Management (DDM) > Safari Settings**:
-
-- Allow History Clearing
-- Allow Private Browsing
-- Allow Summary
-- Page Type
-- Homepage URL
-- Extension Identifier
-
-**Microsoft Defender > Antivirus**:
-
-- Behavior Monitoring
-- Scheduled Scan
-- Cloud Block Level
-- Definition Update Due
-
-**Restrictions**:
-
-- Allow Safari History Clearing
-- Allow Safari Private Browsing
+<!-- ## Device configuration -->
 
 
 <!-- *********************************************** -->
@@ -207,13 +132,6 @@ When a user opens a productivity app and sees they're marked noncompliant due to
 Even if you aren't using Microsoft Defender, if you have Conditional Access turned on your users can have an improved experience. With JIT compliance remediation, users will go through an embedded flow that shows them their compliance status, noncompliance reasoning, and a list of actions right within a productivity app. This flow eliminates extra steps, the need to switch between apps, and reduces the number of authentications.
 
 As an admin, if you have JIT registration and compliance remediation set up already, you have no action items. If you don't, set it up today to get ready for this new functionality. For more information, see [Set up just-in-time registration - Microsoft Intune | Microsoft Learn](../enrollment/set-up-just-in-time-registration.md).
-
-### Remote actions with multiple administrative approvals<!-- 27043113 -->
-
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). The remote action **Wipe** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account thereby enhancing the overall security posture of the environment.
-
-For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
-
 
 <!-- *********************************************** -->
 
