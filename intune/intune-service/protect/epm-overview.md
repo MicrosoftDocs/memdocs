@@ -208,6 +208,9 @@ The EPM Tools PowerShell module is available from any device that has received E
 Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
 ```
 
+> [!NOTE]
+> Windows on Arm64 requires the use of Windows PowerShell x64.
+
 Following are the available cmdlets:
 
 - **Get-Policies**: Retrieves a list of all policies received by the Epm Agent for a given PolicyType (ElevationRules, ClientSettings).
