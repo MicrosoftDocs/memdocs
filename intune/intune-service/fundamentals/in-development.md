@@ -165,52 +165,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Monitor and troubleshoot
-
-### Declarative Apple software update operational report<!-- 25207078 -->
-You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
-
-- Pending OS update information such as OS and build version, and its status on the device
-- Current OS information for a device, including Rapid Security Responses
-- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM
-- Information about the latest public update made available by Apple
- 
-This new report will be available through the *Devices* > Select a device > *Monitor* node of the admin center.
- 
-Applies to:
- 
-- iOS/iPadOS
-- macOS
-
-### Declarative Apple software update reports<!-- 31557946 -->
-
-You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using new Apple software update reports:
-
- - *Apple software update failures report* - With this report you’ll be able to view details about update failures including why the update failed, how many times it failed, and the timestamp of the last failure.
-- *Apple software updates report* - View details about pending and current software update information across your entire device fleet.
-- *Apple software update summary report* - View a summary of the update installation status for each OS.
-
-The Apple software update failure report will be available through the *Devices* > *Monitor* node of the admin center. The Apple software updates report and summary report will be available through the *Reports* > *Apple updates* node of the admin center.
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
-
-### Declarative Apple software update operational report<!-- 25207078 -->
-You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
-
-- Pending OS update information such as OS and build version, and its status on the device
-- Current OS information for a device, including Rapid Security Responses
-- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM
-- Information about the latest public update made available by Apple
- 
-This new report will be available through the *Devices* > Select a device > *Monitor* node of the admin center.
- 
-Applies to:
- 
-- iOS/iPadOS
-- macOS
+<!-- ## Monitor and troubleshoot -->
 
 <!-- *********************************************** -->
 

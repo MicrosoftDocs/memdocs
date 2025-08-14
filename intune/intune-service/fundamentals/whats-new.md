@@ -175,6 +175,29 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
+### Monitor and troubleshoot
+
+#### Declarative software update reports for Apple devices<!-- 25207078, 31557946 -->
+
+You can now use several new [software update reports for Apple devices](../protect/software-updates-reports-apple-declarative.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
+
+- A *per-device software update report* - Per-device software update reports are available in the Intune Admin center by going to *Devices* and then selecting an applicable device. In the Devices Overview pane for that device, below Monitor, you'll find the report listed as **iOS software updates** for iOS or iPadOS devices, and as **macOS software updates** for macOS devices.
+
+  With these per-device reports available, the previously available macOS per-device **Software updates** report is now deprecated. While the deprecated report remains available in the admin center and can still be used while viewing a device, the report will be removed from Intune with a future update.
+
+- **Apple software update failures** - With this operational report, you can view details across your entire managed Apple device fleet. Details include why the update failed to install and the timestamp of the last failure. To find this report, in the admin center go to *Devices* > *Monitor*, and then select the report’s name to view the report details.
+
+- **Apple software update report** - This is an organizational report that displays details about pending and current software update information across your entire managed Apple device fleet. To find this report, in the admin center go to *Reports* > *Device management* > *Apple updates*, select the *Reports* tab, and then select the report tile.
+
+- **Apple software update summary report** - View the Apple software update summary report, in the admin center go to *Reports* > *Device management* > *Apple updates*, and then then select the *Summary* tab. Here you’ll see a roll up of update status from macOS, iOS, and iPadOS devices. This includes the version of the latest update that is available for each platform, and the date that update became available.
+
+The following Apple devices support these new reports:  
+- iOS 17 and later
+- iPadOS 17 and later
+- macOS 14 and later 
+
+For more information about the changes behind these reports, see [Support tip: Move to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/IntuneCustomerSuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/4432177).
+
 ## Week of August 11, 2025
 
 ### Device management
