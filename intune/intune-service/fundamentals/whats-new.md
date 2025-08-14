@@ -78,6 +78,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of August 18, 2025 (Service release 2508)
 
+### App management
+
+#### Android app configuration policies support new variable values<!-- 32843208 -->
+
+Android Enterprise app configuration policies in Intune now support more variable values. The new values include account name, device name, employee ID, MEID, serial number, and the last four digits of the serial number.
+
+For more information, see [Supported variables for configuration values](../apps/app-configuration-policies-use-android.md#supported-variables-for-configuration-values).
+
+**Applies to**:  
+- Android Enterprise
+
 ### Device configuration
 
 ### Managed Installer support for user and device groups <!-- 30293237 -->
