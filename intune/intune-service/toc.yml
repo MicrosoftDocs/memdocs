@@ -109,23 +109,25 @@ items:
       href: ./copilot/security-copilot-agents-intune.md
 
   - name: Intune Suite
-    href: ./fundamentals/intune-add-ons.md
     items:
-    - name: Endpoint Privilege Management
+    - name: Intune Suite overview
+      href: ./fundamentals/intune-add-ons.md
+
+    - name: Endpoint Privilege Management (EPM)
       items:
-      - name: Endpoint Privilege Management overview
+      - name: EPM Overview
         href: ./protect/epm-overview.md
-      - name: Endpoint Privilege Management guidance for rules
+      - name: Guidance for rules
         href: ./protect/epm-guidance-for-creating-rules.md
-      - name: Endpoint Privilege Management policies
+      - name: Policies
         href: ./protect/epm-policies.md
-      - name: Endpoint Privilege Management support approved requests
+      - name: Support approved requests
         href: ./protect/epm-support-approved.md
-      - name: Endpoint Privilege Management reports
+      - name: Reports
         href: ./protect/epm-reports.md
-      - name: Endpoint Privilege Management data and privacy
+      - name: Data and privacy
         href: ./protect/epm-data-collection.md
-      - name: Endpoint Privilege Management deployment considerations
+      - name: Deployment considerations
         href: ./protect/epm-deployment-considerations-ki.md
 
     - name: Enterprise App Management
@@ -198,7 +200,7 @@ items:
     items:
     - name: Supported operating systems and browsers
       items:
-      - name: Supported operating systems and browsers
+      - name: Supported OS versions and browsers
         displayName: software updates, android, ios, ipados
         href: ./fundamentals/supported-devices-browsers.md
       - name: Android Open Source Project Supported Devices
@@ -782,18 +784,20 @@ items:
           href: ./protect/app-based-conditional-access-intune-create.md
         - name: Block apps that don't use modern authentication (MSAL)
           href: ./protect/app-modern-authentication-block.md
-        - name: Use the Jamf Cloud connector
-          href: ./protect/conditional-access-jamf-cloud-connector.md
-        - name: Integrate Jamf Pro with Intune for compliance
-          href: ./protect/conditional-access-integrate-jamf.md
-        - name: Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID
-          href: ./protect/jamf-managed-device-compliance-with-entra-id.md
-        - name: Enforce compliance on Macs managed with Jamf Pro
-          href: ./protect/conditional-access-assign-jamf.md
         - name: Troubleshoot Conditional Access
           href: /troubleshoot/mem/intune/troubleshoot-conditional-access
-        - name: Troubleshoot Jamf Pro integration
-          href: /troubleshoot/mem/intune/troubleshoot-jamf
+        - name: Jamf Cloud connector
+          items:
+          - name: Use the Jamf Cloud connector
+            href: ./protect/conditional-access-jamf-cloud-connector.md
+          - name: Integrate Jamf Pro with Intune for compliance
+            href: ./protect/conditional-access-integrate-jamf.md
+          - name: Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID
+            href: ./protect/jamf-managed-device-compliance-with-entra-id.md
+          - name: Enforce compliance on Macs managed with Jamf Pro
+            href: ./protect/conditional-access-assign-jamf.md
+          - name: Troubleshoot Jamf Pro integration
+            href: /troubleshoot/mem/intune/troubleshoot-jamf
 
       - name: Software updates
         items:
@@ -843,8 +847,9 @@ items:
             displayName: delivery optimization, windows updates
 
       - name: Endpoint security
-        href: ./protect/endpoint-security.md
         items:
+        - name: Endpoint security overview
+          href: ./protect/endpoint-security.md
         - name: Manage devices
           href: ./protect/endpoint-security-manage-devices.md
         - name: Security baselines
@@ -917,12 +922,12 @@ items:
           items:
           - name: Manage BitLocker policy
             href: ./protect/encrypt-devices.md
-          - name: Troubleshoot BitLocker policies
-            href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies
           - name: Manage FileVault policy
             href: ./protect/encrypt-devices-filevault.md
           - name: Monitor disk encryption
             href: ./protect/encryption-monitor.md
+          - name: Troubleshoot BitLocker policies
+            href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies
         - name: Endpoint protection
           href: ./protect/endpoint-protection-configure.md
 
