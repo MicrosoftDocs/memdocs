@@ -15,7 +15,8 @@ ms.localizationpriority: medium
 
 # optional metadata
 
-#ROBOTS: NOINDEX
+ROBOTS: NOINDEX
+
 #audience:
 
 ms.reviewer: anuragjain

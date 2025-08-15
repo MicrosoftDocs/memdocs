@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 03/26/2024
+ms.date: 06/12/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,7 +33,7 @@ ms.topicc: troubleshooting-general
 
 # Step 6. Troubleshoot Microsoft Edge for Business data security
 
-Troubleshooting app protection policies (APP) and app configuration policies (ACP) in Microsoft Intune can involve several steps. 
+Troubleshooting app protection policies and app configuration policies (ACP) in Microsoft Intune can involve several steps. 
 
 The following list provides common issues and potential solutions:
 
