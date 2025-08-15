@@ -2,8 +2,8 @@
 title: Deploy software updates
 titleSuffix: Configuration Manager
 description: Learn how to manually or automatically deploy software updates in the Configuration Manager console.
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 04/08/2022
 ms.topic: install-set-up-deploy

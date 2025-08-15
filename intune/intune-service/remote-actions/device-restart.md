@@ -4,8 +4,8 @@
 title: Restart devices with Microsoft Intune
 description: Restart Windows and iOS/iPadOS devices using Microsoft Intune in the Azure portal using the Restart remote action.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: dougeby
 ms.date: 10/27/2023
 ms.topic: how-to

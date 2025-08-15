@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 04/01/2025
+ms.date: 06/12/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -34,7 +34,7 @@ ms.collection:
 
 # App protection policies overview
 
-Intune app protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. These policies allow you to control how data is accessed and shared by apps on mobile devices. A policy can be a rule that is enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app in Intune is a [protected app](../apps/apps-supported-intune-apps.md) that has Intune app protection policies applied to it and is managed by Intune.
+Intune app protection policies are rules that ensure an organization's data remains safe or contained in a managed app. These policies allow you to control how data is accessed and shared by apps on mobile devices. A policy can be a rule that is enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app in Intune is a [protected app](../apps/apps-supported-intune-apps.md) that has Intune app protection policies applied to it and is managed by Intune.
 
 There are several [benefits](../apps/app-protection-policy.md#benefits-of-using-app-protection-policies) of using Intune app protection policies, including protecting corporate data on mobile devices without requiring device enrollment and controlling how data is accessed and shared by apps on mobile devices.
 
@@ -70,9 +70,9 @@ App protection policies can be configured for apps that run on devices that are:
 > [!IMPORTANT]
 > You can create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. Before using this feature, make sure you meet the [Outlook for iOS/iPadOS and Android requirements](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019&preserve-view=true). App protection policies aren't supported for other apps that connect to on-premises Exchange or SharePoint services.
 
-## Benefits of using App protection policies
+## Benefits of using app protection policies
 
-The important benefits of using App protection policies are the following:
+The important benefits of using app protection policies are the following:
 
 - **Protecting your company data at the app level.** Because mobile app management doesn't require device management, you can protect company data on both managed and unmanaged devices. The management is centered on the user identity, which removes the requirement for device management.
 
@@ -85,7 +85,7 @@ The important benefits of using App protection policies are the following:
 
 - **MDM, in addition to MAM, makes sure that the device is protected**. For example, you can require a PIN to access the device, or you can deploy managed apps to the device. You can also deploy apps to devices through your MDM solution, to give you more control over app management.
 
-There are additional benefits to using MDM with App protection policies, and companies can use App protection policies with and without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by App protection policies while the personal device is protected by App protection policies only.
+There are additional benefits to using MDM with app protection policies, and companies can use app protection policies with and without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
 
 If you apply a MAM policy to the user without setting the device state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply MAM policies based on the device management state. For more information see, [Target app protection policies based on device management state](../apps/app-protection-policies.md#target-app-protection-policies-based-on-device-management-state). When you create an app protection policy, select **No** next to **Target to all app types**. Then, do any of the following:
 
@@ -105,13 +105,13 @@ In addition, you can create app protection policies for Windows devices. For det
 
 ## App protection policy data protection framework
 
-The choices available in app protection policies (APP) enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
+The choices available in app protection policies enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its app protection policies data protection framework for iOS and Android mobile app management.
 
-The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
+The app protection policies data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
 
 - **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to APP.
-- **Enterprise enhanced data protection** (Level 2) introduces APP data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
-- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
+- **Enterprise enhanced data protection** (Level 2) introduces app protection policies data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
+- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and app protection policies Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
 
 To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](app-protection-framework.md).
 
@@ -123,7 +123,7 @@ When apps are used without restrictions, company and personal data can get inter
 
 ![Conceptual image for data movement between apps with no policies in place](./media/app-protection-policy/apps-without-protection-policies.png)
 
-### Data protection with app protection policies (APP)
+### Data protection with app protection policies
 
 You can use App protection policies to prevent company data from saving to the local storage of the device (see the image below). You can also restrict data movement to other apps that aren't protected by App protection policies. App protection policy settings include:
 
@@ -389,13 +389,12 @@ Intune app protection policies for access will be applied in a specific order on
 When dealing with different types of settings, an Intune SDK version requirement would take precedence, then an app version requirement, followed by the iOS/iPadOS operating system version requirement. Then, any warnings for all types of settings in the same order are checked. We recommend the Intune SDK version requirement be configured only upon guidance from the Intune product team for essential blocking scenarios.
 
 ## App protection experience for Android devices
-
  > [!NOTE]
- > App protection policies (APP) aren't supported on Intune managed Android Enterprise dedicated devices without [Shared device mode](/azure/active-directory/develop/msal-shared-devices). On these devices, Company Portal installation is needed for an APP block policy to take effect with no impact to the user. App protection policies are supported on Intune managed Android Enterprise dedicated devices with Shared device mode, as well as on AOSP userless devices that leverage Shared device mode.
+ > App protection policies aren't supported on Intune managed Android Enterprise dedicated devices without [Shared device mode](/azure/active-directory/develop/msal-shared-devices). On these devices, Company Portal installation is needed for an app protection policies block policy to take effect with no impact to the user. App protection policies are supported on Intune managed Android Enterprise dedicated devices with Shared device mode, as well as on AOSP userless devices that leverage Shared device mode.
 
 ### Microsoft Teams Android devices
 
-The Teams app on [Microsoft Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) doesn't support APP (doesn't receive policy through the Company Portal app). This means that app protection policy settings won't be applied to Teams on Microsoft Teams Android devices. If you have app protection policies configured for these devices, consider creating a group of Teams device users and exclude that group from the related app protection policies. Additionally, consider modifying your Intune Enrollment Policy, Conditional Access Policies and Intune Compliance policies so they have supported settings. If you can't change your existing policies, you must configure (exclusion) [Device Filters](/MicrosoftTeams/devices/authentication-best-practices-for-android-devices#using-filters-for-devices). Verify each setting against the existing Conditional Access configuration and Intune Compliance policy to know if you have unsupported settings. For related information see [Supported Conditional Access and Intune device compliance policies for Microsoft Teams Rooms and Teams Android Devices](/microsoftteams/rooms/supported-ca-and-compliance-policies?tabs=mtr-a). For information related to Microsoft Teams Rooms, see [Conditional Access and Intune compliance for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices).
+The Teams app on [Microsoft Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) doesn't support app protection policies (doesn't receive policy through the Company Portal app). This means that app protection policy settings won't be applied to Teams on Microsoft Teams Android devices. If you have app protection policies configured for these devices, consider creating a group of Teams device users and exclude that group from the related app protection policies. Additionally, consider modifying your Intune Enrollment Policy, Conditional Access Policies and Intune Compliance policies so they have supported settings. If you can't change your existing policies, you must configure (exclusion) [Device Filters](/MicrosoftTeams/devices/authentication-best-practices-for-android-devices#using-filters-for-devices). Verify each setting against the existing Conditional Access configuration and Intune Compliance policy to know if you have unsupported settings. For related information see [Supported Conditional Access and Intune device compliance policies for Microsoft Teams Rooms and Teams Android Devices](/microsoftteams/rooms/supported-ca-and-compliance-policies?tabs=mtr-a). For information related to Microsoft Teams Rooms, see [Conditional Access and Intune compliance for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices).
 
 ### Device biometric authentication
 

@@ -5,8 +5,8 @@ title: Wipe a macOS device
 titleSuffix: Microsoft Intune
 description: Learn how to wipe all data, including the operating system, from a macOS device.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: dougeby
 ms.date: 04/24/2024
 ms.topic: how-to
