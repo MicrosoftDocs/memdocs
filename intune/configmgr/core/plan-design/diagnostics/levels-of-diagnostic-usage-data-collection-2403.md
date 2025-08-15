@@ -6,8 +6,8 @@ ms.date: 04/01/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

@@ -25,7 +25,7 @@ appliesto:
 
 After the [device group](enrollment-autopilot.md) is created, a Windows Autopilot deployment profile can be applied to each device in the group. Deployment profiles determine the deployment mode, and customize the out-of-box experience (OOBE) for end users.
 
-Windows utopilot profiles can be created via:
+Windows Autopilot profiles can be created via:
 
 1. [Microsoft 365 admin center](https://admin.microsoft.com/).
 1. [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
