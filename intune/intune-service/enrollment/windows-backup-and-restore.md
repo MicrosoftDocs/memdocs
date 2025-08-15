@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Enable Windows backup and restore  
+title: Enable Windows backup and restore in Microsoft Intune  
 titleSuffix: Microsoft Intune
 description: Enable Windows backup and restore in Intune for employees or students.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: laurawi
-ms.date: 08/14/2025
+ms.date: 08/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -36,7 +36,7 @@ ms.collection:
 
 Enable users to securely sync their settings to the cloud and restore them on new or reimaged devices. Together, Microsoft Intune and Windows Backup for Organization lets users back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device during enrollment. The restore option is presented to users on its own screen during device enrollment.   
 
-Windows Backup for Organizations is a feature that's comprised of the backup and restore settings and is an option that can: 
+Windows Backup for Organizations is a feature that's comprised of the [Windows backup and restore settings](/windows/configuration/windows-backup/catalog) and is an option that can: 
 
 * Reduce migration overhead
 * Minimize user disruption  
@@ -86,24 +86,69 @@ To enable Windows Backup for Organization during enrollment, configure your back
 
 Complete these steps to configure the backup settings in the settings catalog. 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
-2. Go to **Devices** > **Managed devices** > **Configuration**.
-3. Create a new policy. For **Platform**, select **Windows 10 and later**, and for **Profile type**, select **Settings Catalog**.
-4. Under the **Sync your settings** category, find the **Enable Windows backup** setting. Select the setting to enable it.
-5. Finish the remaining steps to create your policy. Then select **Save**.  
+1. Go to **Devices** > **Managed devices** > **Configuration**.
+1. Create a new policy.
+   1. For **Platform**, select **Windows 10 and later**.
+   2. For **Profile type**, select **Settings Catalog**.
+1. Under the **Sync your settings** category, find the **Enable Windows backup** setting. Select the setting to enable it.
+1. Finish the remaining steps to create your policy. Then select **Save**.  
 
 Complete these steps to configure the restore setting for enrollment. 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).  
-2. Go to **Devices** > **Enrollment**.  
-3. Select the **Windows** tab. 
-4. Under **Enrollment options**, select **Windows Backup and Restore (preview)**.  
-5. For **Show restore page**, select **On**. 
+1. Go to **Devices** > **Enrollment**.  
+1. Select the **Windows** tab. 
+1. Under **Enrollment options**, select **Windows Backup and Restore (preview)**.  
+1. For **Show restore page**, select **On**. 
 
     > [!TIP]
     > Before a user can restore a backup, you have to set up the backup settings in the settings catalog. To go to the settings catalog, select **Go to Settings Catalog to configure backup settings**. 
 
-6. Select **Save**.
+1. Select **Save**.
 
 The **Last modified** date updates to account for recent changes. Return to **Windows Backup and Restore** anytime to view and edit the setting again.   
+
+## Known issues  
+Known issues with Windows Backup for Organization include: 
+
+- This feature isn't supported in Government cloud.  
+
+- This feature doesn't work for shared or userless devices. 
+
+- The restore feature isn't supported for versions earlier than Windows 11, version 22H2.  
+
+- When corporate accounts are used on Hyper-V virtual machines (VM) with phishing-resistant multifactor authentication (MFA) enforced, users are prompted to authenticate using a security key or smart card. However, due to Hyper-V VM limitations, these authentication methods can't pass through, resulting in an undesirable UI experience and preventing users from completing the authentication process. 
+
+>[!NOTE]
+> This issue is specific to VMs, particularly when users initially sign in with weaker authentication methods (such as a password or authenticator app) and phising-resistant MFA is subsequently enforced. 
+
+- This feature isn't supported with the following provisioning methods:  
+
+  - Hybrid Azure AD Join 
+
+  - Workplace Join 
+
+  - Self-deployment mode 
+
+  - Windows Autopilot for pre-provisioned devices 
+
+  - Windows Autopilot reset flow 
+
+  - Manual enrollment through the Windows Settings app 
+
+  - Enrollment via Group Policy 
+
+  - Enrollment via Configuration Manager comanagement 
+
+- This feature isn't supported on the following SKUs.  
+ 
+  |Edition| SKU | 
+  | -----| ----- |
+  |CloudEdition |CloudEdition, Windows 11 SE (203) |
+  |CloudEditionN |CloudEditionN, Windows 11 SE N (202) |
+  |Holographic |Windows 10 Holographic (136) |
+  |IoTUAP |Windows 10 IoT Core (123) |
+  |IoTUAPCommercial |Windows 10 IoT Core Commercial (131) |
+  |PPIPro |Windows 10 TeamOS (119) |
 
 
 
