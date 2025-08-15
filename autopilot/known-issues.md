@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: bpardi
-ms.date: 08/01/2025
+ms.date: 08/13/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,6 +40,12 @@ This article describes known issues that can often be resolved with configuratio
 > For issues with Windows Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
+
+### Deployment duration in the Windows Autopilot deployment report might include the time for user to sign in at the Windows lock screen
+
+Date added: *August 13, 2025*
+
+The deployment duration value in the Windows Autopilot report includes the time between enrollment and completion of the **Account setup** phase of the Enrollment status page (ESP). As a result, if the ESP is configured to show during the **Account setup** phase and a reboot occurred during OOBE, the user has to sign in again at the Windows lock screen before the **Account setup** phase can start. The time it takes for the user to sign in is going to be included in the total deployment duration.
 
 ### Enrollment status page Account setup phase isn't shown when signing in via FIDO2 (YubiKey) during self-deploying mode
 
