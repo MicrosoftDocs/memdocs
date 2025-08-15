@@ -6,8 +6,8 @@ ms.date: 09/24/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-ms.author: baladell
-author: BalaDelli
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

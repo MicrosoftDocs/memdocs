@@ -7,7 +7,7 @@ ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
 author: baladelli
-ms.author: baladell
+ms.author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
