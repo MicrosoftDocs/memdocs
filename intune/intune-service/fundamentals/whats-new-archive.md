@@ -1273,7 +1273,7 @@ For a walkthrough of the Intune admin center, see [Tutorial: Walkthrough Microso
 
 ### RBAC changes to enrollment platform restrictions for Windows<!-- 25036419 -->
 
-We've updated role-based access controls (RBAC) for all enrollment platform restrictions in the Microsoft Intune admin center. The Global Administrator and Intune Service Administrator roles can create, edit, delete, and reprioritize enrollment platform restrictions. For all other built-in Intune roles, restrictions are read-only.
+We've updated role-based access controls (RBAC) for all enrollment platform restrictions in the Microsoft Intune admin center. The Intune Service Administrator roles can create, edit, delete, and reprioritize enrollment platform restrictions. For all other built-in Intune roles, restrictions are read-only.
 
 **Applies to:**
 
