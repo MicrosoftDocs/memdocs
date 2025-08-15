@@ -32,7 +32,8 @@ ms.collection:
 
 # Overview of shared device solutions for iOS/iPadOS
 
-Important note - Shared device mode for iOS/iPadOS is not currently available for GCC High tenants.
+> [!IMPORTANT]
+> Shared device mode for iOS/iPadOS isn't currently available for GCC High tenants.  
 
 Shared devices are organization-owned multi-user devices. These devices can be special-purpose or multi-purpose as needed in each environment. Shared devices enable front-line workers in healthcare, hospitality, retail, manufacturing, and other industries to access critical applications and tools essential to their role in the organization. In education, shared devices are used as learning aids or test-taking devices in classrooms.  
 
