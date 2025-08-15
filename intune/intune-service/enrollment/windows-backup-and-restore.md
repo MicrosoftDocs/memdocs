@@ -43,7 +43,7 @@ Windows Backup for Organizations is a feature that's comprised of the [Windows b
 * Strengthen device resilience against incidents  
 * Simplify your organization's transition to Windows 11
 
-You can enable Windows backup and restore for devices in the Microsoft Intune admin center under **Devices** > **Enrollment**. After you turn on the restore option, users turning their devices on for the first time see the corresponding restore page during device enrollment. This is a tenant wide setting, so it applies to all users.  
+You can enable Windows backup and restore for devices in the Microsoft Intune admin center under **Devices** > **Enrollment**. After you turn on the restore option, users turning on their devices for the first time see the corresponding restore page during device enrollment. This is a tenant wide setting, so it applies to all users.  
 
 ## Benefits  
 
@@ -58,7 +58,7 @@ Windows Backup for Organizations ensures that users have a consistent and person
 To use the backup functionality, devices must be:  
 
 * Microsoft Entra hybrid joined or Microsoft Entra joined.  
-* Running a current supported version of either Windows 10 or Windows 11. Supported versions include:  
+* Running a currently supported version of either Windows 10 or Windows 11. Supported versions include:  
   * Windows 10, version 22H2, build 19045.5917 or later  
   * Windows 11, version 22H2, build 22621.5413 or later   
   * Windows 11, version 23H2, build 22631.5413 or later   
@@ -71,7 +71,7 @@ The restore feature is available on devices that meet the following requirements
 - If Autopilot is used, the Autopilot profile must be configured to use [user-driven mode](), not self-deploying mode.  
 - Must be [Microsoft Entra joined]().  
 
-Additionally, you are required to configure these settings: 
+Additionally, you're required to configure these settings: 
 - [AFS configuration]()
 - [NDUP configuration]() must be turned on
 
@@ -80,7 +80,7 @@ The restore setting for Windows Backup for Organizations is a tenant-wide settin
 
 To configure the restore setting, you must have Intune Service Administrator permissions.  
 
-## Erollment    
+## Enrollment    
 
 To enable Windows Backup for Organization during enrollment, configure your backup and restore settings in the Microsoft Intune admin center. There are two areas where you need to configure settings: in the settings catalog, and under enrollment.  
 
@@ -137,7 +137,7 @@ Known issues with Windows Backup for Organization include:
 
   - Enrollment via Group Policy 
 
-  - Enrollment via Configuration Manager comanagement 
+  - Enrollment via Configuration Manager co-management 
 
 - This feature isn't supported on the following SKUs.  
  
