@@ -33,6 +33,9 @@ ms.collection:
 
 You can create a custom Intune role that includes any permissions required for a specific job function. For example, if an IT department group manages applications, policies, and configuration profiles, you can add all those permissions together in one custom role. After creating a custom role, you can [assign](assign-role.md) it to any users that need those permissions.
 
+> [!NOTE]
+> **Enhanced Security**: [!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
+
 To create, edit, or assign roles, your account must have the following role in Microsoft Entra ID:
 
 - Intune Service Administrator
