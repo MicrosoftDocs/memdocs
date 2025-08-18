@@ -141,7 +141,7 @@ The connector service account must have the following permissions:
 - [**Logon as Service**](/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2019&preserve-view=true)
 - **Issue and Manage Certificates** permissions on the Certification Authority (required only for revocation scenarios).
 - **Read** and **Enroll** permissions on any certificate template that you use to issue certificates.
-- Permissions to the **Key Storage Provider** (KSP) that’s used by PFX Import. See [Import PFX Certificates to Intune](../protect/certificates-imported-pfx-configure.md#import-pfx-certificates).
+- Permissions to the **Key Storage Provider** (KSP) that's used by PFX Import. See [Import PFX Certificates to Intune](../protect/certificates-imported-pfx-configure.md#import-pfx-certificates).
 
 The following options are supported for use as the certificate connector service account:
 
@@ -161,7 +161,7 @@ For guidance on configuring the NDES server role for the Certificate Connector f
 
 ### Microsoft Entra user
 
-When configuring the connector, you need to use a user account that: is either a Global Admin or Intune Admin and has an Intune license assigned.
+When configuring the connector, use a user account that is the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role and has an Intune license assigned.
 
 ## Next steps
 

@@ -8,6 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
 ms.date: 11/08/2024
+ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice:

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 03/04/2025
+ms.date: 07/28/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,12 +33,12 @@ ms.collection:
 
 You can create a custom Intune role that includes any permissions required for a specific job function. For example, if an IT department group manages applications, policies, and configuration profiles, you can add all those permissions together in one custom role. After creating a custom role, you can [assign](assign-role.md) it to any users that need those permissions.
 
-To create, edit, or assign roles, your account must have one of the following permissions in Microsoft Entra ID.
+> [!NOTE]
+> **Enhanced Security**: [!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
 
-- Global Administrator
+To create, edit, or assign roles, your account must have the following role in Microsoft Entra ID:
+
 - Intune Service Administrator
-
-For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 ## To create a custom role
 
@@ -178,7 +178,7 @@ The following permissions are available when creating custom roles.
 | Managed apps/Update  | Change application protection policies, or delete pending wipe requests for protected apps.    |
 | Managed apps/Wipe    | Create a wipe request to selectively remove company data from a protected app.|
 | Managed Device Cleanup Rules/Update | Change the managed device cleanup rules. |
-| Managed Device Cleanup Settings/Update | Change the managed device cleanup settings. |
+| Managed Device Cleanup Settings/Update | Change the managed device cleanup settings.<br/><br/> Note: This permission is replaced by **Managed Device Cleanup Rules/Update**, should not be used in new role configurations, and will be removed from Intune with a future update. |
 | Managed devices/Delete   | Delete Intune managed devices. Intune can no longer manage Deleted devices, and the device can no longer access company resources. Company data could be wiped from the device if a user tries to check-in after it's deleted.  |
 | Managed devices/Read | View Intune managed devices.  |
 | Managed devices/Query| Allows Intune to query a managed device for the purposes of retrieving detailed inventory information, device state, or other properties of a managed device from the device itself.|

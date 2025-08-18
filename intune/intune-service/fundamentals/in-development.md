@@ -7,7 +7,7 @@ keywords:
 author: laurawi
 ms.author: brenduns
 manager: laurawi
-ms.date: 06/27/2025
+ms.date: 07/31/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,7 +31,7 @@ ms.collection:
 
 To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. Also:
 
-- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in the Office message center.
+- If we anticipate that you need to take action before a change, we'll publish a complementary post in the Office message center.
 - When a feature enters production, whether it's in preview or generally available, the feature description moves from this article to [What's new](whats-new.md).
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
@@ -61,27 +61,26 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-###  Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334  -->
+### Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334 -->
 
-We’re working on a dashboard for Endpoint Privilege Management (EPM) that will bring you insights to support having your users run as standard users in place of running with local admin permissions. First, the dashboard will report progress towards a Standard User Status to help you understand when your admin users might be ready to be moved to standard users. The dashboard will also help you understand the file elevation trends in your organization.
-
-### Endpoint Privileged Management support on Azure Virtual Desktop<!-- 26079227 -->
-
-We're adding support to deploy Endpoint Privilege Management (EPM) policies to users on Azure Virtual Desktop (AVD) single-session virtual machines. With this support EPM elevation policies will work on AVD single-session environments.
-
-For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../protect/epm-overview.md).
-
-
-### Endpoint Privilege Management support for wildcards in elevation rules<!-- 30290730 -->
-
-Endpoint Privilege Management (EPM) will soon support the use of wildcards when defining elevation rules. Wildcards allow for more flexible rule creation with broader matching capabilities, enabling file elevations for trusted files that have names that might change with subsequent revisions.
- 
-For example, you'll be able to create a rule for a Visual Studio setup file called *VSCodeUserSetup-arm64-1.99.2.exe* using wildcards to accommodate future revisions. Several wildcard forms can be used, including `VSCodeUserSetup*`, `VSCodeUserSetup-arm64-*`, or `VSCodeUserSetup-?????-1.??.?.exe`, where an asterisk represents a string, and question marks represent single characters.
-
+We’re working on a dashboard for Endpoint Privilege Management (EPM) that brings you insights to support having your users run as standard users in place of running with local admin permissions. First, the dashboard will report progress towards a Standard User Status to help you understand when your admin users might be ready to be moved to standard users. The dashboard will also help you understand the file elevation trends in your organization.
 
 <!-- ***********************************************-->
 
 ## App management
+
+### Offline Mode and Pre-Signed In Apps for Android Enterprise Dedicated Devices<!-- 30303710, 25476290 -->
+
+We're enhancing support for Android Enterprise dedicated devices with two new features in Managed Home Screen (MHS): Offline mode and App access without sign in.
+
+Offline Mode lets users access designated apps when the device is offline or unable to connect to the network. You can also configure a grace period before requiring users to sign in once connectivity is restored.
+
+App access without sign in lets users launch specific apps from the MHS sign-in screen--regardless of network status--via the MHS top bar. This can be helpful for apps that need to be available immediately, such as help desk or emergency tools.
+
+These features are intended for use on dedicated devices enrolled in Microsoft Entra Shared device mode and will be configurable via device configuration policy.
+
+Applies to:
+- Android Enterprise
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -91,11 +90,33 @@ Applies to:
 
 - iOS/iPadOS
 
+### Android app configuration policies support new variable values<!-- 32843208 -->
+
+Intune will support more variable values for Android Enterprise app configuration policies. The new values include: account name, device name, employee ID, MEID, serial number, and last four digits of the serial number.
+
+To learn more, see [Supported variables for configuration values](../apps/app-configuration-policies-use-android.md#supported-variables-for-configuration-values).
+
+Applies to:
+- Android Enterprise
+
 <!-- *********************************************** -->
 
 ## Device configuration
 
-### New settings available in the Apple settings catalog <!-- 33064192 -->
+### New settings in the Android settings catalog<!-- 32864836 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There's a new **Hide organization name** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, the enterprise name isn't shown on the device, such as lock screen.
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
+
+Applies to:
+
+- Android Enterprise corporate-owned devices with a work profile (COPE)
+- Android Enterprise corporate owned fully managed (COBO)
+
+### New day zero settings available in the Apple settings catalog<!-- 33437616 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
@@ -103,15 +124,32 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### iOS/iPadOS
 
-**Cellular Private Network**:
+**Declarative Device Management (DDM) > Audio Accessory Settings**:
 
-- Cellular Data Preferred
-- CSG Network Identifier
-- Data Set Name
-- Enable NR Standalone
-- Geofences
-- Network Identifier
-- Version Number
+- Temporary Pairing Disabled
+- Temporary Pairing Unpairing Time
+- Unpairing Policy
+- Unpairing Hour
+
+**Declarative Device Management (DDM) > Safari Settings**:
+
+- Accept Cookies
+- Allow Disabling Fraud Warning
+- Allow History Clearing
+- Allow JavaScript
+- Allow Private Browsing
+- Allow Popups
+- Allow Summary
+- Page Type
+- Homepage URL
+- Extension Identifier
+
+**Restrictions**:
+
+- Allow Safari History Clearing
+- Allow Safari Private Browsing
+- Denied ICCIDs For iMessage And FaceTime
+- Denied ICCIDs For RCS
 
 #### macOS
 
@@ -119,86 +157,76 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 - Allow Platform SSO Auth Fallback
 
-**Microsoft Edge**:
+**Declarative Device Management (DDM) > Safari Settings**:
 
-- The Microsoft Edge category is updated with new settings. Learn more about available macOS Edge settings at [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
+- Allow History Clearing
+- Allow Private Browsing
+- Allow Summary
+- Page Type
+- Homepage URL
+- Extension Identifier
+
+**Microsoft Defender > Antivirus**:
+
+- Behavior Monitoring
+- Scheduled Scan
+- Cloud Block Level
+- Definition Update Due
+
+**Restrictions**:
+
+- Allow Safari History Clearing
+- Allow Safari Private Browsing
 
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+## Device enrollment
+
+### Intune to support Ubuntu 22.04 and later<!-- 32756619 -->
+
+Microsoft Intune and the Microsoft Intune app for Linux will support Ubuntu 22.04 and later, while ending support for Ubuntu 20.04. Devices that are currently enrolled on Ubuntu 20.04 remain enrolled even when that version is no longer supported. New devices will be unable to enroll if they're running Ubuntu 20.04. To prepare for this change, check your Intune reporting to see what devices or users might be affected. In the admin center, go to **Devices** > **All devices** and filter OS by Linux. You can add more columns to help identify who in your organization has devices running Ubuntu 20.04. Notify your users to upgrade their devices to a supported Ubuntu version.
 
 <!-- *********************************************** -->
 
 ## Device management
 
-### New Microsoft Graph permissions for API calls to device management endpoints<!-- 20952394 -->
+### Configure Windows Backup for Organizations (public preview)<!-- 29202026 -->
 
-On July 31, 2025, calls to several Microsoft Graph APIs will require one of two newly added *DeviceManagement* permissions that replace existing permissions. With this change, the older permissions will no longer function and API calls from tools and scripts that use the older permissions will fail.
+Intune administrators will be able to configure a new feature in public preview called Windows Backup for Organizations. With this feature, you can back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Announcing Windows Backup for Organizations - Windows IT Blog](https://techcommunity.microsoft.com/blog/windows-itpro-blog/announcing-windows-backup-for-organizations/4416659).
 
-The following are the Microsoft Graph API calls that are affected:
+### New resolution button improves compliance remediation experience<!-- 31370959 -->
 
-- ~/deviceManagement/deviceShellScripts
-- ~/deviceManagement/deviceHealthScripts
-- ~/deviceManagement/deviceComplianceScripts
-- ~/deviceManagement/deviceCustomAttributeShellScripts 
-- ~/deviceManagement/deviceManagementScripts 
+We're improving the Just in Time (JIT) compliance remediation experience for device users in Microsoft Intune. Intune is collaborating with Microsoft Defender to:
 
-The following are the new permissions that will soon be required, and the old permissions that will no longer function:
-- **DeviceManagementScripts.Read.All** - This new permission replaces use of *DeviceManagementConfiguration.Read.All*
+- Remove user clicks required to view and learn remediation steps.
+- Add a **Resolve** button to reduce time-to-remediation.
 
-- **DeviceManagementScripts.ReadWrite.All** - This new permission replaces use of the *DeviceManagementConfiguration.ReadWrite.All*
+When a user opens a productivity app and sees they're marked noncompliant due to Microsoft Defender, the user will now be able to select **Resolve.** This action will redirect them to Microsoft Defender, where Microsoft Defender takes steps to remediate the user and then redirect the user back to their productivity app. 
 
-Until July 31, 2025, both the *DeviceManagementScripts* and the older *DeviceManagementConfiguration* permissions will work. However, to ensure your tools and scripts continue to function, review and update them to use only the newer permissions before July 31, 2025.
+Even if you aren't using Microsoft Defender, if you have Conditional Access turned on your users can have an improved experience. With JIT compliance remediation, users will go through an embedded flow that shows them their compliance status, noncompliance reasoning, and a list of actions right within a productivity app. This flow eliminates extra steps, the need to switch between apps, and reduces the number of authentications.
 
-For more information, see [Graph APIs used to configure devices](../developer/graph-apis-used-by-intune-device-configuration-windows.md).
+As an admin, if you have JIT registration and compliance remediation set up already, you have no action items. If you don't, set it up today to get ready for this new functionality. For more information, see [Set up just-in-time registration - Microsoft Intune | Microsoft Learn](../enrollment/set-up-just-in-time-registration.md).
 
-### Remote actions with multiple administrative approval<!-- 27043113  -->
+### Remote actions with multiple administrative approvals<!-- 27043113 -->
 
 Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). The remote action **Wipe** will support MAA. Onboarding Remote device actions to MAA will help mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account thereby enhancing the overall security posture of the environment.
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
-
-We're adding a feature that allows a customer to:
-
-- Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
-- Configure a different RBAC permission and assign the permission to different RBAC roles
-
-Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
-
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
 
 <!-- *********************************************** -->
 
 ## Device security
 
-### macOS support for local administrator account configuration LAPS and password solution<!-- 25385731 -->
+### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
-We’re working on adding Intune support for macOS local administrator account configuration during ADE (automated device enrollment) enrollment, and macOS support for Microsoft Local Admin Password Solution (LAPS).
-
-With the local admin account configuration support:  
-- You’ll be able to use macOS automated device enrollment (ADE) profiles to configure the local and standard administrator accounts for a device. When configured, this capability applies to all new macOS device enrollments as well as device re-enrollments.
-- Intune automatically creates a randomized, unique, and secure password for the device’s admin account. That password is then automatically rotated every six months.
-- Previously enrolled devices won’t be affected unless or until they re-enroll with Intune if these settings are configured.
-- The following variables will be supported for the fullname and username account settings:  
-  - {{username}}
-  - {{serialNumber}}
-  - {{partialupn}}
-  - {{managedDeviceName}}
-
-With the LAPS support:  
-- For custom RBAC roles: Permissions to view and manage the admin password will require an admin be assigned new Intune role-based access control permissions for Enrollment program.
-- Admins with sufficient permissions will be able to view and manually rotate the password of devices that enrolled with the local admin account configuration through macOS ADE.
-
+We’re adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices, and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+ 
 Applies to:
+- Windows
 
-- macOS
-
-For more information about this support for macOS, see the following in the Apple developer documentation:
-- [Account Configuration | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/account_configuration)
-- [Set the Local Administrator Password | Apple Developer Documentation](https://developer.apple.com/documentation/devicemanagement/set_the_local_administrator_password)
+For information about the currently available Intune security baselines, see [Security baselines overview](../protect/security-baselines.md).
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
@@ -222,8 +250,7 @@ When this change takes effect, devices that are assigned this policy while manag
 ## Monitor and troubleshoot
 
 ### Declarative Apple software update operational report<!-- 25207078 -->
-
-You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
+You will soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
 
 - Pending OS update information such as OS and build version, and its status on the device
 - Current OS information for a device, including Rapid Security Responses
@@ -241,7 +268,7 @@ Applies to:
 
 You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using new Apple software update reports:
 
- - *Apple software update failures report* - With this report you’ll be able to view details about update failures including why the update failed, how many times it has failed, and the timestamp of the last failure.
+ - *Apple software update failures report* - With this report you’ll be able to view details about update failures including why the update failed, how many times it failed, and the timestamp of the last failure.
 - *Apple software updates report* - View details about pending and current software update information across your entire device fleet.
 - *Apple software update summary report* - View a summary of the update installation status for each OS.
 
@@ -252,9 +279,32 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
+### Declarative Apple software update operational report<!-- 25207078 -->
+You'll soon be able to view near real time, rich reporting for operating system updates on Apple devices using the new per-device Apple software updates report:
+
+- Pending OS update information such as OS and build version, and its status on the device
+- Current OS information for a device, including Rapid Security Responses
+- Install reasons that describe how an update was triggered, for example, by the user or enforced through DDM
+- Information about the latest public update made available by Apple
+ 
+This new report will be available through the *Devices* > Select a device > *Monitor* node of the admin center.
+ 
+Applies to:
+ 
+- iOS/iPadOS
+- macOS
+
 <!-- *********************************************** -->
 
 <!-- ## Role-based access control -->
+
+<!-- *********************************************** -->
+
+## Role-based access control
+
+### Multi-administrator approval support for role-based access control <!-- 26838684 -->
+
+Support for multiple administrative approval (MAA) is being expanded to include role-based access control. When this feature is enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This helps protect your organization from unauthorized or accidental role-based access control changes by enforcing dual authorization.
 
 <!-- *********************************************** -->
 
