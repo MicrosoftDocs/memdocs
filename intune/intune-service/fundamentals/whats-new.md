@@ -180,14 +180,6 @@ The **[Wipe](../remote-actions/devices-wipe.md)** remote action supports MAA. Us
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
-### Role-based access control
-
-#### Multi-administrator approval support for role-based access control <!-- 26838684 -->
-
-Multi-administrator approval (MAA) now supports role-based access control. When enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.  
-
-For more information, see [Role-based access control in Microsoft Intune](../fundamentals/role-based-access-control.md).
-
 ### Intune apps
 
 #### Newly available protected apps for Intune<!-- 33434077, 33434100, 33434308, 33434387, 33434700, 33573103, 33573273-->
@@ -226,6 +218,14 @@ The following Apple devices support these new reports:
 - macOS 14 and later 
 
 For more information about the changes behind these reports, see [Support tip: Move to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/IntuneCustomerSuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/4432177).
+
+### Role-based access control
+
+#### Multi-administrator approval support for role-based access control<!-- 26838684 -->
+
+Multi-administrator approval (MAA) now supports role-based access control. When enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.  
+
+For more information, see [Role-based access control in Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Week of August 11, 2025
 
