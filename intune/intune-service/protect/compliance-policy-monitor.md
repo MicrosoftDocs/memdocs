@@ -45,7 +45,7 @@ This article applies to:
 - Android open source platform (AOSP)   
 - Android Enterprise
 - iOS/iPadOS
-- Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
+- Linux - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
 - macOS
 - Windows 10 and later
 
