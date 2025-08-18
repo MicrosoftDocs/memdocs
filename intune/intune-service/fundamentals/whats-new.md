@@ -180,6 +180,13 @@ The **[Wipe](../remote-actions/devices-wipe.md)** remote action supports MAA. Us
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
+### Role-based access control
+
+#### Multi-administrator approval support for role-based access control <!-- 26838684 -->
+
+Multi-administrator approval (MAA) now supports role-based access control. When enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.  
+
+For more information, see [Role-based access control in Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ### Intune apps
 
