@@ -93,7 +93,7 @@ The Microsoft Entra user's access token is used during restore operations to acc
 
 To view Conditional Access policies for your tenant, sign in to entra.microsoft.com and go to **Identity** > **Protection** > **Conditional Access**.  
 
-A common policy that can block token acquisition is one that allows only cloud apps for compliant devices. Each Conditional Access policy needs to allow access to the Microsoft Activity Feed Service from noncompliant devices. Since the Microsoft Activity Feed Service token is acquired during the out-of-box-experience (OOBE), a new device is not yet compliant. You can add a Conditional Access policy to opt-in to Multi-Factor Authentication (MFA) when accessing the Microsoft Activity Feed Service, which adds another security step.   
+A common policy that can block token acquisition is one that allows only cloud apps for compliant devices. Each Conditional Access policy needs to allow access to the Microsoft Activity Feed Service from noncompliant devices. Since the Microsoft Activity Feed Service token is acquired during the out-of-box-experience (OOBE), a new device is not yet compliant. You can add a Conditional Access policy to opt in to multifactor authentication (MFA) when accessing the Microsoft Activity Feed Service, which adds another security step.   
 
 To configure access to the Microsoft Activity Feed Service, include the Microsoft Activity Feed Service in the list of cloud apps for Conditional Access. 
 
@@ -102,24 +102,24 @@ To configure access to the Microsoft Activity Feed Service, include the Microsof
   1. If prompted to, provide consent to Graph Explorer.  
 1. Select your account picture and choose **Consent to Permissions**. 
 1. A pane opens with a list of permissions. Search for and expand **APIConnectors**.  
-1. Select **Consent** for all permissions listed under APIConnectors. In the new window that opens, confirm that you are consenting to these permissions.   
+1. Select **Consent** for all permissions listed under **APIConnectors**. In the new window that opens, confirm that you're consenting to these permissions.   
 1. In Graph Explorer, change the request type to **POST**.
 1. For the URL, enter **https://graph.microsoft.com/v1.0/servicePrincipals**.  
 1. In the body of the request, enter the following JSON snippet to add the app ID for the Microsoft Activity Feed Service:  
 
-  ```json
-  { 
+   ```json
+   { 
 
-     “appId”: “d32c68ad-72d2-4acb-a0c7-46bb2cf93873” 
+      “appId”: “d32c68ad-72d2-4acb-a0c7-46bb2cf93873” 
 
-  }  
-  ```  
-1. Select **Run query**. 
+   }  
+   ```  
+10. Select **Run query**. 
 
-  > [!TIP]
-  > If the request fails, select **Modify permissions** and consent to the Application.ReadWrite.All permission. Then try the request again.  
+   > [!TIP]
+   > If the request fails, select **Modify permissions** and consent to the Application.ReadWrite.All permission. Then try the request again.  
 
-1. After the request is successful, return to the Conditional Access page in Microsoft Entra ID. You should see the Microsoft Activity Feed Service app in your Conditional Access policy list.  
+11. After the request is successful, return to the Conditional Access page in Microsoft Entra ID. You should see the Microsoft Activity Feed Service app in your Conditional Access policy list.  
 
 ## Enrollment    
 
