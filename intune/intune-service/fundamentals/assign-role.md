@@ -61,6 +61,9 @@ To manage RBAC roles and assignments in Intune, your account must have one of th
   **Organization**:  
   - Read
 
+> [!NOTE]
+> **Enhanced Security**: [!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
+
 ## Deploy Intune role assignments
 
 Before you deploy Intune roles, be familiar with [About Intune role assignments](../fundamentals/role-based-access-control.md#about-intune-role-assignments) which provides details about several aspects of Intune role assignements.

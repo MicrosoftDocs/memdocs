@@ -7,8 +7,8 @@ ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: overview
 manager: apoorvseth
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: laurawi
+author: LauraWi
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart

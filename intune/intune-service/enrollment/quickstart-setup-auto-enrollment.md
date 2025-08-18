@@ -45,12 +45,13 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 ## Prerequisites 
 
 - Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
-- To complete this step, you must:  
+
+- To complete this step, you must:
   - [Create a user](../fundamentals/quickstart-create-user.md).  
   - [Create a group](../fundamentals/quickstart-create-group.md).
   - [Have Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or the [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845). You can activate a free Premium trial subscription during setup.  
 
-To configure automatic MDM enrollment, you must be a [Microsoft Entra Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator). If you signed up for a Microsoft Intune Trial subscription at the beginning of this quickstart, your account has Global Administrator permissions and can complete all procedures in this article.  
+- To configure automatic MDM enrollment, you must be a **[Microsoft Entra Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)**. If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
 ## Set up automatic enrollment  
 
