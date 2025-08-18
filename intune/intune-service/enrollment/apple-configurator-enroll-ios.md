@@ -46,7 +46,9 @@ Apple Configurator enrollment methods can't be used with the [device enrollment 
 
 Apple Configurator enrollment supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile on the device receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
-Devices that are already enrolled do not get an ACME certificate on unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
+Before you export the ACME certificate for Apple Configurator enrollment, first preload the device serial numbers into Intune, and then assign them to the enrollment profile. Otherwise, the direct enrollment profile will fail.
+
+Devices that are already enrolled do not get an ACME certificate unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
 
 - iOS 16.0 or later  
 
