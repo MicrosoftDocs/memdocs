@@ -80,6 +80,20 @@ The restore setting for Windows Backup for Organizations is a tenant-wide settin
 
 To configure the restore setting, you must have Intune Service Administrator permissions.  
 
+## Modify Conditional Access policy  
+The Microsoft Entra user's access token is used during restore operations to access the user’s backup data. If you have a Conditional Access policy that blocks Microsoft Intune from acquiring the Microsoft Entra user’s access token from the Microsoft Activity Feed Service (AFS), you might see one of the following error messages. 
+
+  |Error title| Error description | 
+  | -----| ----- |
+  |You don't have access to this|Your sign-in was successful but you don't have the permissions to access this resource. |
+  |You can't get there from here |This application contains sensitive information and can only be accessed from: Devices or client applications that meet TenantMonkey engagement compliance policy. If this is a personal device you can choose to let TenantMonkey manage your device by going to **Settings** > **Accounts** > **Access work or school** and clicking on **Connect**. When you're done come back and try again.   |
+
+To view Conditional Access policies for your tenant, sign in to entra.microsoft.com and go to **Identity** > **Protection** > **Conditional Access**.  
+
+A common policy that can block token acquisition is one that allows cloud apps only for compliant devices. The CA policies need to allow access to the Microsoft Activity Feed Service (AFS) from non-compliant devices. Since the AFS token is acquired during OOBE, the device is not yet compliant. You can add a CA policy to opt-in to Multi-Factor Authentication (MFA) when accessing the AFS as an additional security step. 
+
+
+
 ## Enrollment    
 
 To enable Windows Backup for Organization during enrollment, configure your backup and restore settings in the Microsoft Intune admin center. There are two areas where you need to configure settings: in the settings catalog, and under enrollment.  

@@ -1623,7 +1623,7 @@ items:
           href: ./enrollment/device-enrollment-manager-enroll.md
           displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
         - name: Enable Windows backup and restore 
-          href: ./enrollment/windows-backup-and-restore.md
+          href: ./enrollment/windows-backup-restore.md
         - name: Add device categories
           href: ./enrollment/device-group-mapping.md
           displayName: group; category; categorize; security group;
