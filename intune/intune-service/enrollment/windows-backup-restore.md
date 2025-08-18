@@ -76,7 +76,7 @@ The restore feature is available on devices that meet the following requirements
 
 Additionally, you're required to configure these settings: 
 - [Add Microsoft Activity Feed Service to Conditional Access policy](#modify-conditional-access-policy).  
-- Turn on the New Device Update Page configuration.  
+- Configure the Windows quality updates setting, an [enrollment status page feature](windows-enrollment-status.md).     
 
 ## RBAC and tenant wide targeting 
 The restore setting for Windows Backup for Organizations is a tenant-wide setting. This means the restore setting is either turned on or off for all Windows devices in a tenant. The default configuration is **Not configured**, which turns off the restore setting for all devices.  
