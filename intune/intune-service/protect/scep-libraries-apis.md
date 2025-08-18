@@ -61,7 +61,7 @@ Devices contacting the SCEP server to request a certificate then give this SCEP 
 
 
 - Validates the signature of the encrypted blob
-- Validates that the challenge is activce and not expired  
+- Validates that the challenge is active and not expired  
 - Validates that the profile is still targeted to the device
 - Validates that the certificate properties requested by the device in the CSR match the expected values
 
