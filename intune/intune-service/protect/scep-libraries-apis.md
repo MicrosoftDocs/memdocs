@@ -204,7 +204,7 @@ Notifies Intune that a certificate is created as part of processing a SCEP reque
 
 - **transactionId** - The SCEP Transaction ID.  
 - **certificateRequest** - DER-encoded PKCS #10 Certificate Request Base64 encoded as a string.  
-- **certThumprint** - SHA1 hash of the thumbprint of the provisioned certificate.  
+- **certThumbprint** - SHA1 hash of the thumbprint of the provisioned certificate.  
 - **certSerialNumber** - Serial number of the provisioned certificate.  
 - **certExpirationDate** - Expiration date of the provisioned certificate. The date time string should be formatted as web UTC time (YYYY-MM-DDThh:mm:ss.sssTZD) ISO 8601.
 - **certIssuingAuthority** - Name of the authority that issued the certificate.  
