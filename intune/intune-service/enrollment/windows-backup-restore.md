@@ -174,6 +174,7 @@ Known issues with Windows Backup for Organization include:
   - Enrollment via Configuration Manager co-management  
 
 - This feature isn't supported on the following SKUs.  
+
   |Edition| SKU | 
   | -----| ----- |
   |CloudEdition |CloudEdition, Windows 11 SE (203) |
