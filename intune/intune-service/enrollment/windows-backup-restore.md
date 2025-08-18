@@ -97,7 +97,7 @@ A common policy that can block token acquisition is one that allows only cloud a
 
 To configure access to the Microsoft Activity Feed Service, include the Microsoft Activity Feed Service in the list of cloud apps for Conditional Access. 
 
-1. The service principal for the the Microsoft Activity Feed Service app needs to be registered with your tenant. 
+1. The service principal for the Microsoft Activity Feed Service app needs to be registered with your tenant. 
   1. Go to [Try Microsoft Graph APIs](https://developer.microsoft.com/graph/graph-explorer) and sign in with a tenant admin account. 
   1. If prompted to, provide consent to Graph Explorer.  
 1. Select your account picture and choose **Consent to Permissions**. 
