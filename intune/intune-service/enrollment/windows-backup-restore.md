@@ -105,14 +105,15 @@ To configure access to the Microsoft Activity Feed Service, include the Microsof
 1. Select **Consent** for all permissions listed under APIConnectors. In the new window that opens, confirm that you are consenting to these permissions.   
 1. In Graph Explorer, change the request type to **POST**.
 1. For the URL, enter **https://graph.microsoft.com/v1.0/servicePrincipals**.  
-1. In the body of the request, enter the following JSON text to add the app ID for the Microsoft Activity Feed Service:  
+1. In the body of the request, enter the following JSON snippet to add the app ID for the Microsoft Activity Feed Service:  
 
-{ 
+  ```json
+  { 
 
-    “appId”: “d32c68ad-72d2-4acb-a0c7-46bb2cf93873” 
+     “appId”: “d32c68ad-72d2-4acb-a0c7-46bb2cf93873” 
 
-}  
-
+  }  
+  ```  
 1. Select **Run query**. 
 
   > [!TIP]
@@ -163,24 +164,16 @@ Known issues with Windows Backup for Organization include:
 
 - This feature isn't supported with the following provisioning methods:  
 
-  - Hybrid Azure AD Join 
-
-  - Workplace Join 
-
-  - Self-deployment mode 
-
-  - Windows Autopilot for pre-provisioned devices 
-
-  - Windows Autopilot reset flow 
-
-  - Manual enrollment through the Windows Settings app 
-
-  - Enrollment via Group Policy 
-
-  - Enrollment via Configuration Manager co-management 
+  - Hybrid Azure AD Join  
+  - Workplace Join  
+  - Self-deployment mode  
+  - Windows Autopilot for pre-provisioned devices  
+  - Windows Autopilot reset flow  
+  - Manual enrollment through the Windows Settings app  
+  - Enrollment via Group Policy  
+  - Enrollment via Configuration Manager co-management  
 
 - This feature isn't supported on the following SKUs.  
- 
   |Edition| SKU | 
   | -----| ----- |
   |CloudEdition |CloudEdition, Windows 11 SE (203) |
