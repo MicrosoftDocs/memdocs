@@ -6,8 +6,8 @@ description: Retire or wipe a device on an Android, Android work profile, AOSP, 
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
-ms.date: 06/10/2025
+manager: laurawi
+ms.date: 07/22/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -204,7 +204,7 @@ Device owners can manually unenroll their devices as explained in the following 
 > [!TIP]
 > When a Windows device user uses the Settings app to un-enroll their device, Intune and the cleanup rules don't automatically delete the Intune device or Microsoft Entra ID records. To remove the Intune device record:
 > - Manually delete the device in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-> - Manualy delete the device record in Microsoft Entra ID.
+> - Manually delete the device record in Microsoft Entra ID.
 
 ## Delete devices from the Intune admin center
 
@@ -234,24 +234,47 @@ If you want to remove devices from the Intune admin center, you can delete them 
 
 ### Automatically hide devices with cleanup rules
 
-You can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices cleaned up in this way are concealed and hidden from Intune reports. This setting affects all devices managed by Intune, not just specific ones.
+You can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices cleaned up in this way are concealed and hidden from some Intune reports. This setting affects all devices managed by Intune, not just specific devices.
+
+#### Before you begin
+
+- The device cleanup rule doesn't trigger a BitLocker suspension when BitLocker encryption is managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
+- Device cleanup rules aren't available for Jamf-managed devices.
+- To update device cleanup rules, you need the **Managed Device Cleanup Settings** > **Update** permission set to **Yes**. This permission is part of [Intune role-based access control (RBAC)](../fundamentals/role-based-access-control.md).
+
+  :::image type="content" source="./media/devices-wipe/managed-device-cleanup-rules-permission.png" alt-text="Screenshot that shows the Managed Device Cleanup Settings permission in RBAC set to Yes in Microsoft Intune.":::
+
+#### Create a device cleanup rule
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose **Devices** > **Device cleanup rules** > **Yes**.
-3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
-4. Choose **Save**.
+2. Select **Devices** > **Organize devices** > **Device cleanup rules** > **Create**.
+3. In **Basics**, enter the following properties:
+
+    - **Name**: Enter a descriptive name for the rule.
+    - **Description**: Enter a description for the rule. This setting is optional, but recommended.
+    - **Platform**: Select the platform that the rule applies to. Your options:
+        - All platforms
+        - Android (AOSP)
+        - Android Enterprise
+        - iOS/iPadOS
+        - macOS
+        - Windows
+
+    You can create one rule per platform. The rule applies to all devices in your organization with the platform you select.
+
+4. Select **Next**.
+5. In **Rule settings** > **Remove devices that haven't checked in for this many days**, enter a number between 30 and 270.
+
+    This setting determines how many days a device must check in with the Intune service before the device is considered stale or inactive. If a device fails to check-in before the period ends, the device is cleaned up.
+
+6. Select **Next**.
+7. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the rule applies. The rule is also shown in the cleanup rules list.
 
 When a device cleanup rule runs, it conceals the device from Intune reports. This action doesn't trigger a Wipe or Retire action.
 
-If a cleaned up device checks-in before its device certification expires, it reappears in the Intune admin center. Once the device certification expires, the device must go through a re-enrollment process for it to show up in the console.
+The [Intune audit logs](../fundamentals/monitor-audit-logs.md) show the devices concealed by your device cleanup rules. In the logs, filter by **Activity name** > **Device set to be hidden from admin by Device Cleanup Rule [*YourRuleName*]**.
 
-> [!IMPORTANT]
-> The device cleanup rule doesn't trigger a Bitlocker suspension when Bitlocker encryption is managed by Intune. To create a Bitlocker profile: [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
-
-> [!NOTE]
-> Device cleanup rules aren't available for Jamf-managed devices.
->
-> You need the permission **Managed Device Cleanup Settings with Update** set to **Yes** to update the device cleanup rules. This permission is part of [Intune Roles](../fundamentals/role-based-access-control.md).
+If a cleaned up device checks in before its device certification expires, it reappears in the Intune admin center. Once the device certification expires, the device must go through a re-enrollment process for it to show in the Intune admin center.
 
 <a name='delete-devices-from-the-microsoft-entra-portal'></a>
 
@@ -278,7 +301,7 @@ If you want to completely remove an Apple automated device enrollment (ADE) devi
 
 5. Check **I understand this cannot be undone**, and then select **Continue**.
 
-    ![Screenshot for Apple reassign](./media/devices-wipe/ade-release-device.png)
+    :::image type="content" source="./media/devices-wipe/ade-release-device.png" alt-text="Screenshot that shows the release from organization prompt in Microsoft Intune.":::
 
 > [!NOTE]
 > In some cases, the iOS device must be restored with iTunes to apply this change. Please find further instructions from Apple [here](https://support.apple.com/guide/itunes/restore-to-factory-settings-itnsdb1fe305/windows).

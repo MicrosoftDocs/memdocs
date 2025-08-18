@@ -1294,8 +1294,13 @@ items:
             - name: macOS SSO
               items:
               - name: Platform SSO
-                displayName: single sign-on, macos
-                href: ./configuration/platform-sso-macos.md
+                items:
+                - name: Platform SSO overview and configuration guide
+                  displayName: single sign-on, macos
+                  href: ./configuration/platform-sso-macos.md
+                - name: Platform SSO scenarios
+                  displayName: single sign-on, macos
+                  href: ./configuration/platform-sso-scenarios.md
               - name: Enterprise SSO app extension plug-in
                 displayName: single sign-on, macos
                 href: ./configuration/use-enterprise-sso-plug-in-macos-with-intune.md
@@ -1785,6 +1790,8 @@ items:
           items:
           - name: Set up automated device enrollment for macOS
             href: ./enrollment/device-enrollment-program-enroll-macos.md
+          - name: ./Setup macOS account configuration with LAPS
+            href: ./enrollment/macos-laps.md
           - name: Set up Direct Enrollment for macOS
             href: ./enrollment/device-enrollment-direct-enroll-macos.md
         - name: Enrollment configurations

@@ -2,15 +2,15 @@
 title: Associate users with a computer
 titleSuffix: Configuration Manager
 description: Configure Configuration Manager to associate users with destination computers when deploying operating systems.
-ms.date: 08/17/2018
+ms.date: 07/17/2025
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.localizationpriority: medium
-ms.reviewer: mstewart
+ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 
@@ -26,6 +26,11 @@ For more information about user device affinity, see [Link users and devices wit
 
 There are several methods by which you can integrate user device affinity into your OS deployments. You can integrate user device affinity into PXE deployments, bootable media deployments, and pre-staged media deployments.
 
+> [!NOTE]
+>
+> When integrating user device affinity in OS deployments, the value of the **SMSTSAssignUsersMode** variable needs to match the value configured in the boot method (PXE, bootable media, pre-staged media).
+> 
+> If the values don't match, then device affinity isn't set.
 
 ### Create a task sequence that includes the **SMSTSAssignUsersMode** variable
 
