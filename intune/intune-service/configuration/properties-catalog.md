@@ -4,8 +4,8 @@
 title: Properties catalog in Microsoft Intune
 description: Configure Properties catalog policy to manage Device Inventory settings on Windows devices you manage with Intune.
 keywords:
-author: smbhardwaj
-ms.author: smbhardwaj
+author: MandiOhlinger
+ms.author: mandia
 manager: laurawi
 ms.date: 07/09/2025
 ms.topic: how-to
