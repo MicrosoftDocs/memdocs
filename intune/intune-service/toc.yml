@@ -1641,6 +1641,8 @@ items:
         - name: Set up enrollment time grouping
           href: ./enrollment/enrollment-time-grouping.md
           displayName: enrollment time grouping; security groups; Entra
+        - name: Turn on iOS/iPadOS supervised mode
+          href: ./remote-actions/device-supervised-mode.md
         - name: Configure device enrollment restrictions
           items:
           - name: Overview
@@ -1841,8 +1843,6 @@ items:
         items:
         - name: Enable iOS/iPadOS lost mode
           href: ./remote-actions/device-lost-mode.md
-        - name: Turn on iOS/iPadOS supervised mode
-          href: ./remote-actions/device-supervised-mode.md
         - name: Shutdown macOS and iOS/iPadOS devices
           href: ./remote-actions/device-shutdown.md
         - name: Wipe macOS device

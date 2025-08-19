@@ -3,9 +3,9 @@ title: Audit logs for Microsoft Intune cloud PKI
 titleSuffix: Microsoft Intune 
 description: Get audit logs for Microsoft cloud public key infrastructure (PKI) activity in the admin center.   
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
