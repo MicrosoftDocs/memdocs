@@ -5,9 +5,9 @@ title: View and correct personal data collected by Intune
 titleSuffix: Microsoft Intune
 description: Learn how to view and correct personal data that's been collected by Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 04/08/2022
 ms.topic: article
 ms.service: microsoft-intune

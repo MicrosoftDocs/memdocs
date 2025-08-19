@@ -5,9 +5,9 @@ title: Enable use of Windows diagnostic data by Intune
 titleSuffix: Microsoft Intune
 description: Enable Windows diagnostic data in processor configuration for your tenant to enable its use by Microsoft Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 02/28/2025
 ms.topic: article
 ms.service: microsoft-intune
@@ -43,7 +43,7 @@ Both configuration of the Windows diagnostic data in processor configuration and
 
 To manage Windows data configurations for your tenant, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
-On the *Windows data* page, you can configure your tenant to support Windows diagnostic data in processor configuration, and to attest ownership of the required Windows E3 or equivalent licenses. It’s possible that some features require only one of the available configurations to be enabled, while other features could require both.
+On the *Windows data* page, you can configure your tenant to support Windows diagnostic data in processor configuration, and to attest ownership of the required Windows E3 or equivalent licenses. It's possible that some features require only one of the available configurations to be enabled, while other features could require both.
 
 ### Windows data
 
