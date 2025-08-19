@@ -96,14 +96,14 @@ Following are examples of the available configuration options. Additional detail
 
 - **Admin account username** - Specify the account name or use one of the following supported variables to dynamically create the name. By default, this field uses *Admin*.
   - {{serialNumber}} - for example, **F4KN99ZUG5V2**
-  - {{partialupn}} - for example, **John**
+  - {{partialupn}} - for example, **John.Dupont**
   - {{managedDeviceName}} - for example, **F2AL10ZUG4W2_14_4/15/2025_12:45PM** 
-  - {{onPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **JDoe**
 
 - **Admin account full name** - Specify the account name or use one of the following supported variables to dynamically create the name. By default, this field uses *Admin*.
   - {{username}} - for example, **John@contoso.com**
   - {{serialNumber}} - for example, **F4KN99ZUG5V2**
-  - {{onPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **JDoe**
 - **Hide in Users & Groups** - Make the admin account hidden in the sign-in window and in Users & Groups. By default, this set to *Not Configured*.
 
 ### Local user account
