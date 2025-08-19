@@ -63,7 +63,7 @@ For Android devices, device level passcode reset is only supported on devices ru
 | Android enterprise devices enrolled with a work profile and running version 7.x and earlier | No |
 | Android devices running version 7.x and earlier | No |
 
-To create a new work profile passcode, use the Reset Passcode action. This action prompts a passcode reset and creates a new, temporary passcode for the work profile only.
+To create a new work profile passcode, use the Reset Passcode action. This action prompts a passcode reset and creates a new passcode for the work profile only.
 
 ## Reset a passcode
 
@@ -80,13 +80,13 @@ Supported Android Enterprise personally-owned and corporate-owned work profile d
 
 For Android Enterprise personally-owned work profile devices running version 8.x or later, end users get notified to activate their reset passcode right after enrollment completes. The notification is displayed if a work profile password is required and set. After their passcode is entered, the notification is dismissed.
 
-After the reset passcode is selected from the admin center, a temporary passcode is presented to the admin. This passcode is provided for the following devices when running version 8.x or later:
+After the reset passcode is selected from the admin center, a new passcode is presented to the admin. This passcode is provided for the following devices when running version 8.x or later:
 
 - Android Enterprise device owner
 - Android Enterprise personally-owned work profile
 - Android Enterprise corporate-owned work profile
 
-The temporary passcode must be entered on the device. The temporary passcode for the device is displayed in the admin center for seven days.
+The new passcode must be entered on the device. The new passcode for the device is displayed in the admin center for seven days.
 
 ## Remove iOS/iPadOS passcodes
 
