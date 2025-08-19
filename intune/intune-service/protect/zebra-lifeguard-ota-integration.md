@@ -4,9 +4,9 @@
 title: Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
 description: Use Microsoft Intune to manage firmware updates for supported Zebra devices.
 keywords:
-author: Smritib17 
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
