@@ -5,8 +5,8 @@ title: Use Intune Suite add-on capabilities
 titleSuffix: Microsoft Intune
 description: Microsoft Intune Suite unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices.  
 keywords:
-author: smritib17 
-ms.author: smbhardwaj
+author: MandiOhlinger 
+ms.author: mandia
 manager: laurawi
 ms.date: 08/01/2024
 ms.topic: how-to

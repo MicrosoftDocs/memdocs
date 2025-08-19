@@ -3,8 +3,8 @@ title: Compliance in Microsoft Intune
 titleSuffix:
 description: Learn about compliance, dependencies, and features in Microsoft Intune supporting data protection and regulatory requirements.
 keywords:
-author: nicholasswhite
-ms.author: nwhite
+author: paolomatarazzo
+ms.author: paoloma
 manager: laurawi
 ms.date: 12/03/2024
 ms.topic: overview

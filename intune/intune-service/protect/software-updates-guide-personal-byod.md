@@ -1,9 +1,9 @@
 ---
 title: Admin checklist for software updates on BYOD in Microsoft Intune
 description: Guidance and advice for administrators that create and manage software updated for BYOD and personally owned devices using Microsoft Intune. See tasks and settings that can manage updates on personal devices on Android and iOS/iPadOS platforms.
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 04/07/2025
 audience: ITPro
 ms.topic: how-to

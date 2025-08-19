@@ -4,9 +4,9 @@
 title: Configure feature updates policy for Windows 10 Windows 11 devices in Intune
 description: Create and manage Intune policy for Windows feature updates. Configure and deploy policy to maintain the Windows feature version of Windows 10/11 devices you manage with Microsoft Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 09/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
