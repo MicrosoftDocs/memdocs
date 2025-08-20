@@ -4,9 +4,9 @@
 title: Overview of Certificate Connector for Microsoft Intune - Azure | Microsoft Docs
 description: Learn about the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation. 
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 08/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: wicale
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -136,10 +136,10 @@ In the Microsoft Intune admin center, you can select a certificate connector to 
 
 3. Select a connector to view its status.
 
-When viewing the connector status:
+   When viewing the connector status:
 
-- Deprecated connectors show a **Warning**. After the six-month grace period, the warning changes to an Error.
-- Connectors that are beyond the grace period show an Error. These connectors are no longer supported and can stop working at any time.
+    - Deprecated connectors show a **Warning**. After the six-month grace period, the warning changes to an Error.
+    - Connectors that are beyond the grace period show an Error. These connectors are no longer supported and can stop working at any time.
 
 ## Logging
 
