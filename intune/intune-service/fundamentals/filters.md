@@ -106,11 +106,11 @@ There are some general restrictions when creating filters:
 ## Create a filter
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Tenant administration** > **Filters** > **Create**.
+2. Select **Tenant administration** > **Assignment filters** > **Create**.
 
     You can also create filters in:
 
-    - **Devices** > **Organize devices** > **Filters**
+    - **Devices** > **Organize devices** > **Assignment filters**
     - **Apps** > **Filters**
 
 3. Select **Managed devices** or **Managed apps**:
