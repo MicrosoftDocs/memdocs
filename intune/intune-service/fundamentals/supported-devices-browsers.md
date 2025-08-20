@@ -4,8 +4,8 @@
 title: Operating systems and browsers supported by Microsoft Intune
 description: Lists supported device platforms and browsers for Intune device management
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: MandiOhlinger
+ms.author: mandia
 manager: laurawi
 ms.date: 10/10/2024
 ms.topic: reference

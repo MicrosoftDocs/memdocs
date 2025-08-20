@@ -2176,6 +2176,8 @@ items:
         href: ./fundamentals/intune-govt-service-description.md
       - name: Intune US government endpoints
         href: ./fundamentals/intune-us-government-endpoints.md
+      - name: Deploy apps to Government environments
+        href: ./apps/apps-deploy-gcc-dod.md
 
     - name: China
       items:
