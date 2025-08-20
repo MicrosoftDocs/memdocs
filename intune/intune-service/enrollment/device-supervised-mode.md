@@ -51,10 +51,10 @@ For more information, see the [Apple support doc](https://support.apple.com/guid
 
 ## Identify a supervised device
 
-To determine if a device is supervised, check the **Settings** app:
+To determine if a device is supervised, check the **Settings** app.
 
 Users are notified that their devices are supervised in the **Settings** app. In the app at the top of the screen, a static message shows the message **This iPhone is supervised and managed by *`<your organization>`***.  
-
+ 
 ## Next steps  
 
-For other device management options, see [What is Microsoft Intune device management?](../fundamentals/what-is-device-management.md)  
+For other device management options, see [What is Microsoft Intune device management?](../fundamentals/wat-is-device-management.md)  
