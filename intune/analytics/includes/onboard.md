@@ -1,6 +1,6 @@
 ---
-author: smritib17
-ms.author: smbhardwaj
+author: MandiOhlinger
+ms.author: mandia
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: include

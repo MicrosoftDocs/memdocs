@@ -6,9 +6,9 @@ ms.date: 04/07/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: article
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 ms.localizationpriority: high
 ---
 
