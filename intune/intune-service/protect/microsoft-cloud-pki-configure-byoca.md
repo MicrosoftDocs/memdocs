@@ -352,4 +352,4 @@ Create an SCEP certificate profile for each OS platform you're targeting, like y
       > Make sure the EKU(s) you select is configured on the Cloud PKI issuing certificate authority (CA). If you select an EKU that isn't present on the Cloud PKI issuing CA, then an error occurs with the SCEP profile. And, a certificate isn't issued to the device.
 
    - **SCEP Server URLs**: Don't combine NDES/SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
-1. Assign and review the profile. When you're ready to finalize everything, select **Create**.
+1. Assign and review the profile. When you're ready to finalize everything, select **Create**.  
