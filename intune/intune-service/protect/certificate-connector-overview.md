@@ -136,10 +136,10 @@ In the Microsoft Intune admin center, you can select a certificate connector to 
 
 3. Select a connector to view its status.
 
-When viewing the connector status:
+   When viewing the connector status:
 
-- Deprecated connectors show a **Warning**. After the six-month grace period, the warning changes to an Error.
-- Connectors that are beyond the grace period show an Error. These connectors are no longer supported and can stop working at any time.
+    - Deprecated connectors show a **Warning**. After the six-month grace period, the warning changes to an Error.
+    - Connectors that are beyond the grace period show an Error. These connectors are no longer supported and can stop working at any time.
 
 ## Logging
 
