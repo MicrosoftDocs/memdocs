@@ -4,8 +4,8 @@
 title: Use Remote Help on Android to assist users authenticated by your organization. 
 description: With the Remote Help app in Android, provide remote assistance to authenticated users who also run the Remote Help app.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: lenewsad
+ms.author: lanewsad
 manager: laurawi
 ms.date: 06/24/2025
 ms.topic: how-to

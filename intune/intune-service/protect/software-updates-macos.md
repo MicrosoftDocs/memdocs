@@ -4,8 +4,8 @@
 title: Use Microsoft Intune policies to manage macOS software updates
 description: Use Microsoft Intune to manage system updates for supervised macOS devices.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: laurawi
 ms.date: 07/23/2025
 ms.topic: how-to
