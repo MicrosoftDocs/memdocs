@@ -1641,6 +1641,8 @@ items:
         - name: Get Apple MDM push certificate
           href: ./enrollment/apple-mdm-push-certificate-get.md
           displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment
+        - name: Turn on iOS/iPadOS supervised mode
+          href: ./enrollment/device-supervised-mode.md
         - name: Configure Chrome Enterprise connector
           href: ./enrollment/chrome-enterprise-connector-configure.md
           displayName: chrome os; connector; device management; google admin
@@ -1991,8 +1993,6 @@ items:
         items:
         - name: Enable iOS/iPadOS lost mode
           href: ./remote-actions/device-lost-mode.md
-        - name: Turn on iOS/iPadOS supervised mode
-          href: ./remote-actions/device-supervised-mode.md
         - name: Shutdown macOS and iOS/iPadOS devices
           href: ./remote-actions/device-shutdown.md
         - name: Wipe macOS device
