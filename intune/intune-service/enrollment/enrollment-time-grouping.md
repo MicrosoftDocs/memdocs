@@ -68,7 +68,7 @@ To add Intune first party app as a security group owner, which is a required ste
   * Must be a Microsoft Entra Group Administrator, or another role with the *microsoft.directory/groups/owners/update* permission.
   * Must be an existing owner of the Microsoft Entra security group.
     
-Lastly, the designated group should be configured as [scope group](../fundamentals/role-based-access-control.md#about-intune-role-assignments) for the admin to use it in enrollment time grouping configuration.
+Lastly, the designated group should be configured as a scope group for the admin to use it in enrollment time grouping configuration.
 
 ## Step 1: Create Microsoft Entra security group  
 
