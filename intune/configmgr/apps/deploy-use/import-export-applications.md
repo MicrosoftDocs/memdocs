@@ -6,12 +6,12 @@ ms.date: 11/30/2020
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Import and export applications

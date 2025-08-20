@@ -44,6 +44,9 @@ Requirements for the computer where you install the connector software:
   > [!NOTE]
   > The Windows Server must be configured with the Desktop Experience, and for versions 2019 or earlier, the Microsoft Edge browser must be installed manually prior to initiating the connector setup. For more information, see [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) in the Windows Server 2016 documentation.
 
+  > [!IMPORTANT]
+  > Strong mapping in the Microsoft Intune Certificate Connector is only supported for Windows Server version 2019 or later. For more information, see [Support tip: Implementing strong mapping in Microsoft Intune certificates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-implementing-strong-mapping-in-microsoft-intune-certificates/4053376).  
+
 - .NET 4.7.2
 
 - Transport Layer Security (TLS) 1.2. For more information, see [Enable support for TLS 1.2 in your environment](/troubleshoot/azure/active-directory/enable-support-tls-environment) in the Microsoft Entra documentation.
@@ -138,7 +141,7 @@ The connector service account must have the following permissions:
 - [**Logon as Service**](/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2019&preserve-view=true)
 - **Issue and Manage Certificates** permissions on the Certification Authority (required only for revocation scenarios).
 - **Read** and **Enroll** permissions on any certificate template that you use to issue certificates.
-- Permissions to the **Key Storage Provider** (KSP) that’s used by PFX Import. See [Import PFX Certificates to Intune](../protect/certificates-imported-pfx-configure.md#import-pfx-certificates).
+- Permissions to the **Key Storage Provider** (KSP) that's used by PFX Import. See [Import PFX Certificates to Intune](../protect/certificates-imported-pfx-configure.md#import-pfx-certificates).
 
 The following options are supported for use as the certificate connector service account:
 
@@ -158,7 +161,7 @@ For guidance on configuring the NDES server role for the Certificate Connector f
 
 ### Microsoft Entra user
 
-When configuring the connector, you need to use a user account that: is either a Global Admin or Intune Admin and has an Intune license assigned.
+When configuring the connector, use a user account that is the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role and has an Intune license assigned.
 
 ## Next steps
 

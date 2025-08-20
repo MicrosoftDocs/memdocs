@@ -6,11 +6,11 @@ ms.date: 04/29/2017
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Create  software updates and update bundles with Updates Publisher
@@ -27,7 +27,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 2. On the **Package** page, use the following information to help you configure the update:
 
    -   Choose **Browse** to locate the software update package you'll use as a package source. Valid sources include .MSI, .MSP, or .EXE files. Updates Publisher requires access to the file to create a file hash. The hash and file name are then used in the update metadata for the update that you're creating.
-   
+
 
    -   Specify the source location of the content for this update. Normally this is the location where the update binary will be downloaded from during publishing to a WSUS server.  If the **Use a local source to publish software update content** option is selected, then the path isn't required.
 
@@ -47,7 +47,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
        -   For .EXE updates, all arguments are valid.
 
-   >[!NOTE] 
+   >[!NOTE]
    > You can use Updates Publisher to create only packages that are smaller than 2 GB. Import options are disabled if the software update package is too large.
 
 3. On the **Information** page, specify details about the update that are included when the update is published or exported. Details include localized properties like the updates name (title) and description. Then, you specify more general details such as the classification, vendor, product, and where to learn more about the update.
@@ -152,7 +152,7 @@ Because these two wizards have a similar workflow, the procedure to create an up
 
    -   **Windows Installer –** Use this rule type to determine applicability based on an installed .MSI or Windows Installer patch (.MSP). You can also determine if specific components or features are installed as part of the requirement.
 
-       > [!IMPORTANT]  
+       > [!IMPORTANT]
        > On managed devices, the Windows Update Agent cannot detect Windows Install packages that are installed per-user. When you use this rule type, configure additional applicability rules, like file versions or registry key values, so that the Windows Installer package can be properly detected regardless of a per-user or per-system basis.
 
    -   **Saved rule –** This option lets you find and use rules you *created in the Rules Workspace*.

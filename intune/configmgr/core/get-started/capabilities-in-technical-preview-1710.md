@@ -12,16 +12,16 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1710 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1710. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1710. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-<!--  Known Issues Template   
+<!--  Known Issues Template
 **Known Issues in this Technical Preview:**
 -   **Issue Name**. Details
     Workaround details.
@@ -36,19 +36,19 @@ This article introduces the features that are available in the Technical Preview
   3. Right-click on the passive mode site server, and then choose **Delete**.
   4. After the site server uninstalls, on the active primary site server restart the service **CONFIGURATION_MANAGER_UPDATE**.
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 <!--  Section Template
 ##  FEATURE
 ### Procedure 1
-### Try it out!  
+### Try it out!
  Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
  -  Task 1
- -  Task 2              
+ -  Task 2
 -->
 
 ## Improvements for deploying PowerShell Scripts from Configuration Manager
-With this release, PowerShell scripts you deploy now support use of the following improvements: 
+With this release, PowerShell scripts you deploy now support use of the following improvements:
 - **Security Scopes**.  Scripts now use security scopes to control scripts authoring and execution. This is done through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 - **Real-time monitoring**. When you monitor the run of a script, it is now in real-time as the script runs.
 - **Parameter validation**. Each parameter in your script has a **Script Parameter Properties** dialog for you to add validation for that parameter. After adding validation, you should get errors if you are entering a value for a parameter that does not meet its validation.
@@ -70,7 +70,7 @@ With this release, you can now set the Windows 10 diagnostic data collection lev
 The Enhanced (Limited) level includes metrics from the basic level, as well as a subset of data collected from the **Enhanced** level relevant to Windows Analytics.
 
 
-## Software Center no longer distorts icons larger than 250x250  
+## Software Center no longer distorts icons larger than 250x250
 <!-- 1356194 -->
 
 With this release, Software Center will no longer distort icons that are larger than 250x250. Software Center made such icons look blurry. You can now set an icon with a pixel dimensions of up to 512x512, and it displays without distortion.
@@ -116,18 +116,18 @@ Managed devices must run Windows 10 1709 Fall Creators Update or later and satis
    - **Network protection:** Set network protection to block or audit access to suspicious domains.
 5. Complete the wizard to create the policy, which you can later deploy to devices.
 
-### Deploy an Exploit Guard policy     
+### Deploy an Exploit Guard policy
 After you create Exploit Guard policies, use the Deploy Exploit Guard Policy wizard to deploy them. To do so, open the Configuration Manager console to **Assets and compliance** > **Endpoint Protection**, and then click **Deploy Exploit Guard Policy**.
 
 ## Limited support for CNG certificates
 <!-- 1356191 -->
 Starting with this release, you may now use [Cryptography API: Next Generation (CNG)](/windows/win32/seccng/cng-features) certificate templates for the following scenarios:
 
-- Client registration and communication with an HTTPS management point.   
-- Software distribution and application deployment with an HTTPS distribution point.   
-- Operating system deployment.  
-- Client messaging SDK (with latest update) and ISV Proxy.   
-- Cloud Management Gateway configuration.  
+- Client registration and communication with an HTTPS management point.
+- Software distribution and application deployment with an HTTPS distribution point.
+- Operating system deployment.
+- Client messaging SDK (with latest update) and ISV Proxy.
+- Cloud Management Gateway configuration.
 
 To use CNG certificates, your certification authority (CA) needs to provide CNG certificate templates for target machines.  Template details vary according to the scenario; however, the following properties are required:
 
@@ -160,7 +160,7 @@ Starting with the Fall Creators Update for Windows version 1709, devices using t
 
 Restarting is the default.
 
-#### Try it out!  
+#### Try it out!
 
 If you want to turn off restarts, follow these steps:
 
@@ -176,7 +176,7 @@ Administrators now have the option to allow locked-down devices to run trusted s
 
 The devices must be running Windows Defender SmartScreen for the software to be trusted.
 
-#### Try it out!  
+#### Try it out!
 
 To let a device running Windows Defender SmartScreen run trusted software, follow these steps:
 

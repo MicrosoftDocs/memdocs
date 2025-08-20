@@ -3,8 +3,8 @@ title: Send custom notifications to users with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Use Intune to create and send custom push notifications to users of iOS/iPadOS and Android devices
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: dougeby
 ms.date: 02/27/2025
 ms.topic: how-to
@@ -60,9 +60,12 @@ If you have the Company Portal app open on an Android device, the notification r
 
 - Devices must have the Company Portal app or the Microsoft Intune app installed before users can receive custom notifications. They must also have configured permissions to allow the Company Portal app or the Microsoft Intune app to send push notifications. If needed, the Company Portal app and the Microsoft Intune app can prompt users to permit notifications.
 
-- On Android, Google Play Services is a required dependency.
+- On Android, Google Play Services is a required dependency. 
 
 - The device must be MDM enrolled.
+
+> [!NOTE]
+> For Android Fully Managed, Dedicated or Corporate Owned with Work Profile aren't supported for custom notifications.
 
 ### Permissions
 
@@ -72,7 +75,7 @@ If you have the Company Portal app open on an Android device, the notification r
 
 ### Creating notifications
 
-- To create a message, use an account that is assigned an Intune role that includes the correct permission as described in the preceding *Permissions* section. To assign permissions to a user, see [Role assignments](../fundamentals/role-based-access-control.md#role-assignments).
+- To create a message, use an account that is assigned an Intune role that includes the correct permission as described in the preceding *Permissions* section. To assign permissions to a user, see [Role assignments](../fundamentals/role-based-access-control.md#about-intune-role-assignments).
 
 - Custom notifications are limited to 50-character titles and 500-character messages.  
 

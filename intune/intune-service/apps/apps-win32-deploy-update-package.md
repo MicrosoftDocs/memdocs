@@ -3,9 +3,9 @@ title: Deploy Windows update packages in Intune
 titleSuffix: Microsoft Intune
 description: Learn how to deploy a Windows update package (.msu file) in Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune

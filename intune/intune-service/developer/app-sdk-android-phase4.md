@@ -4,10 +4,10 @@
 title: Microsoft Intune App SDK for Android developer integration and testing guide - MAM integration essentials 
 description: Understand MAM integration essentials to incorporate Intune mobile app management (MAM) into your Android app.
 keywords: SDK
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 08/07/2024
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
+ms.date: 06/12/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -32,7 +32,7 @@ ms.custom: intune-classic
 
 # Intune App SDK for Android - MAM integration essentials
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Stage 1: Plan the Integration].
@@ -138,7 +138,7 @@ See [Register for Notifications from the SDK] in [Stage 7: App Participation Fea
 
 ## Registering for App Protection Policy
 
-When admins create App Protection Policies, they target these policies to specific accounts in their organization.
+When admins create app protection policies, they target these policies to specific accounts in their organization.
 On the client, the SDK needs to know which account is using the application so it can retrieve that account's policy and enforce the settings appropriately.
 Your app is responsible for providing the SDK with this account information.
 This process is called registration.
@@ -157,7 +157,7 @@ The SDK contains functions your app must call for registering and unregistering 
 Your app doesn't need to call any functions for enrollment.
 The SDK fully handles enrollment after an account is registered.
 
-If one account is already enrolled for your application, when it registers another account, even if that account is targeted with App Protection Policies, that second account won't be enrolled and policy won't be applied.
+If one account is already enrolled for your application, when it registers another account, even if that account is targeted with app protection policies, that second account won't be enrolled and policy won't be applied.
 
 > [!NOTE]
 > The term "enrollment" can also refer to device-wide MDM enrollment

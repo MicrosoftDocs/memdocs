@@ -6,11 +6,11 @@ ms.date: 11/18/2019
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -47,6 +47,6 @@ ms.collection: tier3
 
 > [!div class="button"]
 > [Next step >](endpoint-antimalware-policies.md)
-> 
+>
 > [!div class="button"]
 > [Back >](endpoint-configure-alerts.md)

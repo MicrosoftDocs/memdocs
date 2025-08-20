@@ -5,9 +5,9 @@ title: Policies for Microsoft 365 apps
 titleSuffix: Microsoft Intune
 description: Understand the policies available for Microsoft 365 apps.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 05/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune

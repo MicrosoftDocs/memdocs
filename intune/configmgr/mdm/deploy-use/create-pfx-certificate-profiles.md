@@ -6,11 +6,11 @@ ms.date: 11/29/2019
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -28,17 +28,17 @@ To import certificate credentials from existing certificate files, see [Import P
 
 Before you start creating a certificate profile, make sure the necessary prerequisites are ready. For more information, see [Prerequisites for certificate profiles](../../protect/plan-design/prerequisites-for-certificate-profiles.md). For example, for PFX certificate profiles, you need a [certificate registration point](../../protect/deploy-use/certificate-infrastructure.md#step-2---install-and-configure-the-certificate-registration-point) site system role.
 
-## Create a profile  
+## Create a profile
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, expand **Company Resource Access**, and then select **Certificate Profiles**.
 
 1. On the **Home** tab of the ribbon, in the **Create** group, select **Create Certificate Profile**.
 
-1. On the **General** page of the **Create Certificate Profile Wizard**, specify the following information:  
+1. On the **General** page of the **Create Certificate Profile Wizard**, specify the following information:
 
-    - **Name**: Enter a unique name for the certificate profile. You can use a maximum of 256 characters.  
+    - **Name**: Enter a unique name for the certificate profile. You can use a maximum of 256 characters.
 
-    - **Description**: Provide a description that gives an overview of the certificate profile that helps to identify it in the Configuration Manager console. You can use a maximum of 256 characters.  
+    - **Description**: Provide a description that gives an overview of the certificate profile that helps to identify it in the Configuration Manager console. You can use a maximum of 256 characters.
 
 1. Select **Personal Information Exchange - PKCS #12 (PFX) settings - Create**. This option requests a certificate on behalf of a user from a connected on-premises certificate authority (CA). Choose your certificate authority: **Microsoft** or **Entrust**.
 
@@ -65,7 +65,7 @@ The settings on the **PFX Certificate** page vary depending on the selected CA o
 
 1. To use the certificate profile for S/MIME signing or encryption, enable **Certificate usage**.
 
-    When you enable this option, it delivers all PFX certificates associated with the target user to all of their devices. If you don't enable this option, each device receives a unique certificate.  
+    When you enable this option, it delivers all PFX certificates associated with the target user to all of their devices. If you don't enable this option, each device receives a unique certificate.
 
 1. Set **Subject name format** to either **Common name** or **Fully-distinguished name**. If you're unsure which one to use, contact your CA administrator.
 
@@ -83,7 +83,7 @@ The settings on the **PFX Certificate** page vary depending on the selected CA o
 
     1. Select one of the following **Key Storage Provider (KSP)**:
 
-        - **Install to Trusted Platform Module (TPM) if present**  
+        - **Install to Trusted Platform Module (TPM) if present**
         - **Install to Trusted Platform Module (TPM) otherwise fail**
         - **Install to Windows Hello for Business otherwise fail**
         - **Install to Software Key Storage Provider**
@@ -96,7 +96,7 @@ The settings on the **PFX Certificate** page vary depending on the selected CA o
 
 1. To use the certificate profile for S/MIME signing or encryption, enable **Certificate usage**.
 
-    When you enable this option, it delivers all PFX certificates associated with the target user to all of their devices. If you don't enable this option, each device receives a unique certificate.  
+    When you enable this option, it delivers all PFX certificates associated with the target user to all of their devices. If you don't enable this option, each device receives a unique certificate.
 
 1. To map Entrust **Subject name format** tokens to Configuration Manager fields, select **Format**.
 
@@ -118,7 +118,7 @@ The settings on the **PFX Certificate** page vary depending on the selected CA o
 
     1. Select one of the following **Key Storage Provider (KSP)**:
 
-        - **Install to Trusted Platform Module (TPM) if present**  
+        - **Install to Trusted Platform Module (TPM) if present**
         - **Install to Trusted Platform Module (TPM) otherwise fail**
         - **Install to Windows Hello for Business otherwise fail**
         - **Install to Software Key Storage Provider**

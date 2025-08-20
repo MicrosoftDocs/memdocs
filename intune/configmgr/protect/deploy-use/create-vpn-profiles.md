@@ -6,11 +6,11 @@ ms.date: 03/29/2022
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -71,7 +71,7 @@ For third-party VPN connections, distribute the VPN app before you deploy the VP
 
 1. The **Boundaries** page only applies to Windows 10 profiles to configure VPN boundaries. You can add the following options:
 
-    - **Network traffic rules**: Set the protocols, local port, remote port, and address ranges to enable for the VPN connection.  
+    - **Network traffic rules**: Set the protocols, local port, remote port, and address ranges to enable for the VPN connection.
 
         > [!Note]
         > If you don't create a network traffic rule, all protocols, ports, and address ranges are enabled. After you create a rule, only the protocols, ports, and address ranges that you specify in that rule or in additional rules are used by the VPN connection.
@@ -170,7 +170,7 @@ When the Windows client version supports it, the option to **Configure** the aut
 
 Depending on the selected options, you might be asked to specify more information, for example:
 
-- **Remember the user credentials at each logon**: User credentials are remembered so that users don't have to enter them each time they connect.  
+- **Remember the user credentials at each logon**: User credentials are remembered so that users don't have to enter them each time they connect.
 
 - **Select a client certificate for client authentication**: Select a previously created client SCEP certificate profile to authenticate the VPN connection. For more information, see [Create PFX certificate profiles](create-certificate-profiles.md).
 

@@ -5,9 +5,9 @@ titleSuffix: Microsoft Intune
 description: Describes steps needed for apps to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph.
 keywords: intune graphapi c# powershell permission roles
 author: dougeby
-manager: dougeby
+manager: laurawi
 ms.author: dougeby
-ms.date: 02/28/2025
+ms.date: 07/31/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -168,19 +168,21 @@ To learn more:
 When you grant permission to Microsoft Graph, you can specify the following scopes to control access to Intune features:
 The following table summarizes the Intune API permission scopes.  The first column shows the name of the feature as displayed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and the second column provides the permission scope name.
 
-_Enable Access_ setting | Scope name
-:--|---
-__Perform user-impacting remote actions on Microsoft Intune devices__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po)
-__Read and write Microsoft Intune devices__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
-__Read Microsoft Intune devices__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
-__Read and write Microsoft Intune RBAC settings__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw)
-__Read Microsoft Intune RBAC settings__ | DeviceManagementRBAC.Read.All
-__Read and write Microsoft Intune apps__ | [DeviceManagementApps.ReadWrite.All](#app-rw)
-__Read Microsoft Intune apps__ | [DeviceManagementApps.Read.All](#app-ro)
-__Read and write Microsoft Intune Device Configuration and Policies__ | DeviceManagementConfiguration.ReadWrite.All
-__Read Microsoft Intune Device Configuration and Policies__ | [DeviceManagementConfiguration.Read.All](#cfg-ro)
-__Read and write Microsoft Intune configuration__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw)
-__Read Microsoft Intune configuration__ | DeviceManagementServiceConfig.Read.All
+|_Enable Access_ setting | Scope name |
+| :--|---|
+| __Perform user-impacting remote actions on Microsoft Intune devices__ | [DeviceManagementManagedDevices.PrivilegedOperations.All](#mgd-po) |
+| __Read and write Microsoft Intune devices__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw) |
+| __Read Microsoft Intune devices__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro) |
+| __Read and write Microsoft Intune RBAC settings__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw) |
+| __Read Microsoft Intune RBAC settings__ | [DeviceManagementRBAC.Read.All](#rac-ra) |
+| __Read Microsoft Intune scripts__ | [DeviceManagementScripts.Read.All](#script-ra) |
+| __Read and write Microsoft Intune scripts__ | [DeviceManagementScripts.ReadWrite.All](#script-rw) |
+| __Read and write Microsoft Intune apps__ | [DeviceManagementApps.ReadWrite.All](#app-rw) |
+| __Read Microsoft Intune apps__ | [DeviceManagementApps.Read.All](#app-ro) |
+| __Read and write Microsoft Intune Device Configuration and Policies__ | [DeviceManagementConfiguration.ReadWrite.All](#cfg-rw)  |
+| __Read Microsoft Intune Device Configuration and Policies__ | [DeviceManagementConfiguration.Read.All](#cfg-ro) |
+| __Read and write Microsoft Intune configuration__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw) |
+| __Read Microsoft Intune configuration__ | [DeviceManagementServiceConfig.Read.All](#svc-ro) |
 
 The table lists the settings as they appear in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The following sections describe the scopes in alphabetical order.
 
@@ -218,7 +220,15 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Device Compliance Policy
   - Notification Messages
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+> [!NOTE]
+> As of July 31, 2025, Microsoft Graph replaced use of the *DeviceManagementConfiguration.Read.All* permission with *DeviceManagementScripts.ReadWrite.All* for the following API calls:  
+> - ~/deviceManagement/deviceShellScripts
+> - ~/deviceManagement/deviceHealthScripts
+> - ~/deviceManagement/deviceComplianceScripts
+> - ~/deviceManagement/deviceCustomAttributeShellScripts 
+> - ~/deviceManagement/deviceManagementScripts 
+
+### <a name="cfg-rw"></a>DeviceManagementConfiguration.ReadWrite.All
 
 - **Enable Access** setting: __Read and write Microsoft Intune device configuration and policies__
 
@@ -228,6 +238,14 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Device Configuration
   - Device Compliance Policy
   - Notification Messages
+
+> [!NOTE]
+> As of July 31, 2025, Microsoft Graph replaced use of the *DeviceManagementConfiguration.ReadWrite.All* permission with *DeviceManagementScripts.ReadWrite.All* for the following API calls:  
+> - ~/deviceManagement/deviceShellScripts
+> - ~/deviceManagement/deviceHealthScripts
+> - ~/deviceManagement/deviceComplianceScripts
+> - ~/deviceManagement/deviceCustomAttributeShellScripts 
+> - ~/deviceManagement/deviceManagementScripts 
 
 ### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
@@ -269,7 +287,7 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Disable Activation Lock
   - Request remote assistance
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="rac-ra"></a>DeviceManagementRBAC.Read.All
 
 - **Enable Access** setting: __Read Microsoft Intune RBAC settings__
 
@@ -287,6 +305,29 @@ At this time, all Intune permission scopes require administrator access.  This m
 - Apps can also create, assign, delete, and change the following entities:
   - Role Assignments
   - Role Definitions
+
+### <a name="script-ra"></a>DeviceManagementScripts.Read.All
+
+- **Enable Access** setting: **Read Microsoft Intune scripts**
+
+- Apps can view (read) a script, specifically:  
+  - Device Shell Scripts
+  - Device Health Scripts
+  - Device Compliance Scripts
+  - Device Custom Attribute Shell Scripts
+  - Device Management Scripts
+
+### <a name="script-rw"></a>DeviceManagementScripts.ReadWrite.All
+
+- **Enable Access** setting: **Read and write Microsoft Intune scripts**  
+  Allows the same operations as *DeviceManagementScripts.Read.All*
+
+- Apps can create, update or delete a script, specifically:  
+  - Device Shell Scripts
+  - Device Health Scripts
+  - Device Compliance Scripts
+  - Device Custom Attribute Shell Scripts
+  - Device Management Scripts
 
 ### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 

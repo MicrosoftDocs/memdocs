@@ -2,9 +2,9 @@
 title: Use Remote Help to assist users authenticated by your organization. 
 description: With the Remote Help app, provide remote assistance to authenticated users who also run the Remote Help app.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: lenewsad
+ms.author: lanewsad
+manager: laurawi
 ms.date: 03/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -58,10 +58,10 @@ The Remote Help app supports the following capabilities in general across the su
 >  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#remote-help-capabilities-and-requirements-on-android)
 >  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-capabilities)
 
-- **Enable Remote Help for your tenant**: By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
+- **Enable Remote Help for your tenant**: By default, Remote Help is not eneabled for Intune tenants. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 
-- **Use Remote Help with unenrolled devices**: Remote Help is supported on enrolled devices that also need to be Entra registered devices. This setting is disabled by default. To allow Remote Help on devices that aren't enrolled in Intune, you must turn on this setting.
-
+- **Use Remote Help with unenrolled devices**: This setting is turned off by default. For Windows and macOS devices, enabling this option allows help to be provided to devices that aren't enrolled in Intune. This setting does not apply to devices used by helpers.
+ 
 - **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
 
 - **Compliance Warnings**: Before a helper connects to a user's device, the helper will see a non-compliance warning about that device if it's not compliant with its assigned policies.
@@ -81,6 +81,7 @@ General prerequisites that apply to Remote Help:
 - [Intune subscription](../fundamentals/licenses.md)
   - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.
   - [Supported platforms and devices](#supported-platforms-and-devices)
+  - To support Remote Help Intune-enrolled devices must be registered with Mirosoft Entra. 
 
 For specific prerequisites based on the platform that you're using, go to:
 

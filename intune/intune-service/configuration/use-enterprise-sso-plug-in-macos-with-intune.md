@@ -6,7 +6,7 @@ description: Learn more about the Microsoft Enterprise single sign-on (SSO) app 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 05/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune

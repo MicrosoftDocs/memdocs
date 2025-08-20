@@ -5,9 +5,9 @@ title: Add Microsoft Store apps to Microsoft Intune
 titleSuffix:
 description: Learn about adding Microsoft Store apps to Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 06/07/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -58,7 +58,7 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 ## Add and deploy a Microsoft Store app
 
-An [Intune administrator](../fundamentals/users-add.md#types-of-administrators) can use the following steps to add and deploy a Microsoft Store app. 
+An [Intune administrator](../fundamentals/role-based-access-control-reference.md) with sufficient permissions can use the following steps to add and deploy a Microsoft Store app.
 
 ### Step 1: Add an app from the Microsoft Store
 

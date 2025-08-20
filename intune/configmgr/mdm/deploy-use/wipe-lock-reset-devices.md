@@ -6,11 +6,11 @@ ms.date: 08/14/2018
 ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -28,7 +28,7 @@ Mobile devices can store sensitive data and provide easy access to many organiza
 
 - **Remote lock**: Help secure a device that might be lost
 
-## Full wipe  
+## Full wipe
 
 When you need to secure a lost device or when you retire a device from active use, you can start a full wipe on it. This action restores the device to its factory defaults. It removes all organizational and user data and settings.
 
@@ -50,7 +50,7 @@ The following tables describe what data is removed and the effect on data that r
 
 #### Windows 10, Windows 8.1, Windows RT 8.1, and Windows RT
 
-|Content|Selective wipe behavior|  
+|Content|Selective wipe behavior|
 |-------|--------|
 |Apps and associated data installed by Configuration Manager|It uninstalls the apps, and removes any sideloading keys. It revokes the encryption key for apps that use Windows Selective Wipe, and the data is no longer accessible.|
 |VPN and Wi-Fi profiles|Removes the profiles|
@@ -60,38 +60,38 @@ The following tables describe what data is removed and the effect on data that r
 
 #### Windows 10 Mobile, Windows Phone 8.0, and Windows Phone 8.1
 
-|Content|Selective wipe behavior|  
+|Content|Selective wipe behavior|
 |-------|--------|
 |Company apps and associated data installed by Configuration Manager|It uninstalls the apps and removes organizational app data.|
 |VPN and Wi-Fi profiles|Removes the profiles for Windows 10 Mobile and Windows Phone 8.1|
 |Certificates|Removes the certificates for Windows Phone 8.1|
 |Email profiles|Removes the profiles (except Windows Phone 8.0)|
 
-The following settings are also removed from Windows 10 Mobile and Windows Phone 8.1 devices:  
+The following settings are also removed from Windows 10 Mobile and Windows Phone 8.1 devices:
 
-- **Require a password to unlock mobile devices**  
-- **Allow simple passwords**  
-- **Minimum password length**  
+- **Require a password to unlock mobile devices**
+- **Allow simple passwords**
+- **Minimum password length**
 - **Required password type**
-- **Password expiration (days)**  
-- **Remember password history**  
-- **Number of repeated sign-in failures to allow before the device is wiped**  
-- **Minutes of inactivity before password is required**  
-- **Required password type – minimum number of character sets**  
+- **Password expiration (days)**
+- **Remember password history**
+- **Number of repeated sign-in failures to allow before the device is wiped**
+- **Minutes of inactivity before password is required**
+- **Required password type – minimum number of character sets**
 - **Allow camera**
-- **Require encryption on mobile device**  
-- **Allow removable storage**  
-- **Allow web browser**  
-- **Allow application store**  
-- **Allow screen capture**  
-- **Allow geolocation**  
-- **Allow Microsoft Account**  
-- **Allow copy and paste**  
-- **Allow Wi-Fi tethering**  
-- **Allow automatic connection to free Wi-Fi hotspots**  
-- **Allow Wi-Fi hotspot reporting**  
+- **Require encryption on mobile device**
+- **Allow removable storage**
+- **Allow web browser**
+- **Allow application store**
+- **Allow screen capture**
+- **Allow geolocation**
+- **Allow Microsoft Account**
+- **Allow copy and paste**
+- **Allow Wi-Fi tethering**
+- **Allow automatic connection to free Wi-Fi hotspots**
+- **Allow Wi-Fi hotspot reporting**
 - **Allow factory reset**
-- **Allow Bluetooth**  
+- **Allow Bluetooth**
 - **Allow NFC**
 - **Allow Wi-Fi**
 
@@ -132,19 +132,19 @@ If a user forgets their passcode, use this action to force a new temporary passc
 
 1. Select the device or devices on which to reset the passcode.
 
-1. On the ribbon, in the Device group, select **Remote Device Actions**, and then choose **Passcode Reset**.  
+1. On the ribbon, in the Device group, select **Remote Device Actions**, and then choose **Passcode Reset**.
 
-### Show the state of the passcode reset  
+### Show the state of the passcode reset
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and choose the **Devices** node. You can also choose **Device Collections** and select a collection of which the device is a member.
 
 1. Select the device or devices on which to show the state of the passcode reset.
 
-1. On the ribbon, in the Device group, select **Remote Device Actions**, and then choose **Show Passcode State**.  
+1. On the ribbon, in the Device group, select **Remote Device Actions**, and then choose **Show Passcode State**.
 
 ## Remote lock
 
-If a user loses their device, you can lock the device remotely. The following table lists how remote lock works on different mobile platforms.  
+If a user loses their device, you can lock the device remotely. The following table lists how remote lock works on different mobile platforms.
 
 |OS version|Remote lock|
 |----------|-----------|

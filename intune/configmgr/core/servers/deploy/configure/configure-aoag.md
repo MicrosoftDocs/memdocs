@@ -2,16 +2,16 @@
 title: Configure an availability group
 titleSuffix: Configuration Manager
 description: Set up and manage a SQL Server Always On availability group for the Configuration Manager site database.
-ms.date: 10/08/2020
+ms.date: 06/12/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: sheetg09
-ms.author: sheetg
+ms.author: brianhun
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Configure a SQL Server Always On availability group for Configuration Manager
@@ -83,7 +83,6 @@ When installing a new site, after you have [created and configured the availabil
 
 If you moved an existing site database to an availability group you [created and configured](#bkmk_create), use Configuration Manager site maintenance to change the configuration with the below instructions:
 
-
 1. Run **Configuration Manager Setup**: `\BIN\X64\setup.exe` from the Configuration Manager site installation folder.
 
 1. On the **Getting Started** page, select **Perform site maintenance or reset this site**, and then select **Next**.
@@ -99,6 +98,10 @@ If you moved an existing site database to an availability group you [created and
     - **Database:** Leave the name as it appears. This name is the current site database.
 
 1. After you provide the information for the new database location, complete setup with your normal process and configurations.
+
+> [!IMPORTANT]
+>
+> If BitLocker recovery data is encrypted in the database as described in [Encrypt recovery data in the database](../../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md), see [SQL AlwaysOn when BitLocker recovery data is encrypted in the database](../../../../protect/deploy-use/bitlocker/bitlocker-keys-sql-always-on.md) for additional important and required steps and instructions.
 
 ## <a name="bkmk_sync"></a> Synchronous replica members
 

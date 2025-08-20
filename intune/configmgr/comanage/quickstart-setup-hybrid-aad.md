@@ -6,12 +6,12 @@ ms.date: 11/08/2021
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Set up hybrid Microsoft Entra ID for co-management

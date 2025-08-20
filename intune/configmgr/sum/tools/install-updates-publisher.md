@@ -6,11 +6,11 @@ ms.date: 10/20/2021
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: install-set-up-deploy
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Install Updates Publisher
@@ -22,7 +22,7 @@ The information in these articles can help you download, install, and set up Upd
 ## Prerequisites and limitations
 System Center Updates Publisher can only be used with Configuration Manager. It isn't intended for use with stand-alone WSUS hierarchies.
 
-The following sections detail requirements to install and use Updates Publisher, and limitations or known issues for its use.  
+The following sections detail requirements to install and use Updates Publisher, and limitations or known issues for its use.
 
 ### Operating systems
 Install and run Updates Publisher on a 64-bit editions of the following operating systems. There are no minimum cumulative update or service pack requirements.

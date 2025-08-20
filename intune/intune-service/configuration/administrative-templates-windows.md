@@ -6,8 +6,9 @@ description: Use Administrative templates in Microsoft Intune to create groups o
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 12/11/2024
+ms.update-cycle: 180-days
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,7 +28,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Use Windows 10/11 templates to configure group policy settings in Microsoft Intune

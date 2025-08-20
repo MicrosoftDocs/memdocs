@@ -6,12 +6,12 @@ ms.date: 08/02/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Changes to CMPivot
@@ -75,7 +75,7 @@ This message occurs in the following scenarios:
    - In this case, you'll be given an option to export results to a `.csv` file
 
 - When more than 128 KB of data is requested to be returned from a given device.
-   - For instance, `CcmLog('ciagent', 120d)` queries log results and is likely to be over the 128 KB limit. 
+   - For instance, `CcmLog('ciagent', 120d)` queries log results and is likely to be over the 128 KB limit.
    - When the results are over 128 KB, you'll get a warning, but you can't export them since they won't be returned from the client to the server.
 
 
@@ -105,7 +105,7 @@ Starting in version 2103, you can access the top CMPivot queries shared in the C
 
 1. Select one of the top queries to load it into the query pane.
 1. Edit the [query](cmpivot-overview.md) if needed then select **Run Query**.
-1. Optionally, select the folder icon to access your favorites list. Add the original query or your edited version to your favorites list to run later. Select the community hub icon to search for another query. 
+1. Optionally, select the folder icon to access your favorites list. Add the original query or your edited version to your favorites list to run later. Select the community hub icon to search for another query.
 1. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete. If the query has been sent, then clients still send a state message response to the server.
 
 ## <a name="bkmk_2006"></a> CMPivot changes for version 2006
@@ -197,9 +197,9 @@ FileContent('c:\\windows\\SMSCFG.ini')
 | project Device, SMSId= substring(Content,22)
 ```
 
-### <a name="bkmk_ProcessModule"></a> ProcessModule(\<processname>)  
+### <a name="bkmk_ProcessModule"></a> ProcessModule(\<processname>)
 
-This entity is used to enumerate the modules (dlls) loaded by a given process. ProcessModule is useful when hunting for malware that hides in legitimate processes.  
+This entity is used to enumerate the modules (dlls) loaded by a given process. ProcessModule is useful when hunting for malware that hides in legitimate processes.
 
 ``` Kusto
 ProcessModule('powershell')
@@ -243,7 +243,7 @@ When using CMPivot outside of the Configuration Manager console, you can query j
 ### <a name="bkmk_Other"></a> Other enhancements
 
 - You can do regular expression type queries using the new `like` operator. For example:<!--3056858-->
-  
+
    ```kusto
    //Find BIOS manufacture that contains any word like Micro, such as Microsoft
    Bios
@@ -256,7 +256,7 @@ When using CMPivot outside of the Configuration Manager console, you can query j
    CcmLog('Scripts',1h)
    ```
 
-- The **File()** entity has been updated to collect information about Hidden and System files, and include the MD5 hash. While an MD5 hash isn't as accurate as the SHA256 hash, it tends to be the commonly reported hash in most malware bulletins.  
+- The **File()** entity has been updated to collect information about Hidden and System files, and include the MD5 hash. While an MD5 hash isn't as accurate as the SHA256 hash, it tends to be the commonly reported hash in most malware bulletins.
 
 - You can add comments in queries.<!-- 5431463 --> This behavior is useful when sharing queries. For example:
 
@@ -402,12 +402,12 @@ To get CMPivot to work on the CAS in such a "double hop scenario", you can defin
    ![Configmgr_DviewAccess group on a primary site's SQL Server](media/cmpivot-dviewaccess-group.png)
 1. Go to Active Directory Users and Computers.
    1. For each primary site server, right click and select **Properties**.
-      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**.
       1. Choose **Use Kerberos only**.
       1. Add the CAS's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
    1. For the CAS site, right click and select **Properties**.
-      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**.
       1. Choose **Use Kerberos only**.
       1. Add each primary site's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
@@ -420,12 +420,12 @@ To get CMPivot to work on the CAS in such a "double hop scenario", you can defin
    1. Add the CAS provider machine account and the CAS site server to the [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) group.
 1. Go to Active Directory Users and Computers.
    1. Select the CAS provider machine, right click and select **Properties**.
-      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**.
       1. Choose **Use Kerberos only**.
       1. Add each primary site's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
    1. Select the CAS site server, right click and select **Properties**.
-      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**.
       1. Choose **Use Kerberos only**.
       1. Add each primary site's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
@@ -437,12 +437,12 @@ To get CMPivot to work on the CAS in such a "double hop scenario", you can defin
    1. Add the CAS site server to the [Configmgr_DviewAccess](../../plan-design/hierarchy/accounts.md#configmgr_dviewaccess) group.
 1. Go to Active Directory Users and Computers.
    1. For each primary site server, right click and select **Properties**.
-      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**.
       1. Choose **Use Kerberos only**.
       1. Add the CAS's SQL Server service accounts for the SQL Server nodes with port and instance.
       1. Make sure these changes align with your company security policy!
    1. Select the CAS site server, right click and select **Properties**.
-      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**. 
+      1. In the delegation tab, choose the third option, **Trust this computer for delegation to specified services only**.
       1. Choose **Use Kerberos only**.
       1. Add each primary site's SQL Server service with port and instance.
       1. Make sure these changes align with your company security policy!
@@ -457,11 +457,11 @@ To get CMPivot to work on the CAS in such a "double hop scenario", you can defin
 CMPivot includes the following improvements starting in Configuration Manager version 1810:
 
 - [CMPivot utility and performance](#bkmk_cmpivot-perf)
-- [Scalar functions](#bkmk_cmpivot-functions)  
-- [Rendering visualizations](#bkmk_cmpivot-charts)  
-- [Hardware inventory](#bkmk_cmpivot-hinv)  
-- [Scalar operators](#bkmk_cmpivot-operators)  
-- [Query summary](#bkmk_cmpivot-summary)  
+- [Scalar functions](#bkmk_cmpivot-functions)
+- [Rendering visualizations](#bkmk_cmpivot-charts)
+- [Hardware inventory](#bkmk_cmpivot-hinv)
+- [Scalar operators](#bkmk_cmpivot-operators)
+- [Query summary](#bkmk_cmpivot-summary)
 - [Audit status messages](#cmpivot-audit-status-messages)
 
 ### <a name="bkmk_cmpivot-perf"></a> CMPivot utility and performance
@@ -491,27 +491,27 @@ CMPivot includes the following improvements starting in Configuration Manager ve
 
 ### <a name="bkmk_cmpivot-functions"></a> Scalar functions
 CMPivot supports the following scalar functions:
-- **ago()**: Subtracts the given timespan from the current UTC clock time  
-- **datetime_diff()**: Calculates the calendar difference between two datetime values  
-- **now()**: Returns the current UTC clock time  
-- **bin()**: Rounds values down to an integer multiple of a given bin size  
+- **ago()**: Subtracts the given timespan from the current UTC clock time
+- **datetime_diff()**: Calculates the calendar difference between two datetime values
+- **now()**: Returns the current UTC clock time
+- **bin()**: Rounds values down to an integer multiple of a given bin size
 
-> [!Note]  
-> The datetime data type represents an instant in time, typically expressed as a date and time of day. Time values are measured in 1-second units. A datetime value is always in the UTC time zone. Always express date time literals in ISO 8601 format, for example, `yyyy-mm-dd HH:MM:ss`  
+> [!Note]
+> The datetime data type represents an instant in time, typically expressed as a date and time of day. Time values are measured in 1-second units. A datetime value is always in the UTC time zone. Always express date time literals in ISO 8601 format, for example, `yyyy-mm-dd HH:MM:ss`
 
 #### Examples
-- `datetime(2015-12-31 23:59:59.9)`: A specific date time literal   
-- `now()`: The current time  
-- `ago(1d)`: The current time minus one day  
+- `datetime(2015-12-31 23:59:59.9)`: A specific date time literal
+- `now()`: The current time
+- `ago(1d)`: The current time minus one day
 
 
 ### <a name="bkmk_cmpivot-charts"></a> Rendering visualizations
 
-CMPivot now includes basic support for the KQL [render operator](/azure/kusto/query/renderoperator). This support includes the following types:  
-- **barchart**: First column is x-axis, and can be text, datetime or numeric. The second columns must be numeric and is displayed as a horizontal strip.  
-- **columnchart**: Like barchart, with vertical strips instead of horizontal strips.  
-- **piechart**: First column is color-axis, second column is numeric.  
-- **timechart**: Line graph. First column is x-axis, and should be datetime. Second column is y-axis.  
+CMPivot now includes basic support for the KQL [render operator](/azure/kusto/query/renderoperator). This support includes the following types:
+- **barchart**: First column is x-axis, and can be text, datetime or numeric. The second columns must be numeric and is displayed as a horizontal strip.
+- **columnchart**: Like barchart, with vertical strips instead of horizontal strips.
+- **piechart**: First column is color-axis, second column is numeric.
+- **timechart**: Line graph. First column is x-axis, and should be datetime. Second column is y-axis.
 
 #### Example: bar chart
 The following query renders the most recently used applications as a bar chart:
@@ -566,20 +566,20 @@ LogicalDisk
 ![Example of CMPivot inventory query with column chart visualization](media/1359068-cmpivot-inventory.png)
 
 #### Limitations
-- The following hardware inventory entities aren't supported:  
-    - Array properties, for example IP address  
-    - Real32/Real64 <!--example?-->  
-    - Embedded object properties <!--example?-->  
+- The following hardware inventory entities aren't supported:
+    - Array properties, for example IP address
+    - Real32/Real64 <!--example?-->
+    - Embedded object properties <!--example?-->
 - Inventory entity names must begin with a character
-- You can't overwrite the built-in entities by creating an inventory entity of the same name  
+- You can't overwrite the built-in entities by creating an inventory entity of the same name
 
 
 ### <a name="bkmk_cmpivot-operators"></a> Scalar operators
-CMPivot includes the following scalar operators:  
+CMPivot includes the following scalar operators:
 
-> [!Note]  
-> - LHS: string to the left of the operator  
-> - RHS: string to the right of the operator  
+> [!Note]
+> - LHS: string to the left of the operator
+> - RHS: string to the right of the operator
 
 
 |Operator|Description|Example (yields true)|
@@ -598,9 +598,9 @@ CMPivot includes the following scalar operators:
 
 ### <a name="bkmk_cmpivot-summary"></a> Query summary
 
-Select the **Query Summary** tab at the bottom of the CMPivot window. This status helps you identify clients that are offline, or troubleshoot errors that may occur. Select a value in the Count column to open a list of specific devices with that status. 
+Select the **Query Summary** tab at the bottom of the CMPivot window. This status helps you identify clients that are offline, or troubleshoot errors that may occur. Select a value in the Count column to open a list of specific devices with that status.
 
-For example, select the count of devices with a Failure status. See the specific error message, and export a list of these devices. If the error is that a specific cmdlet isn't recognized, create a collection from the exported device list to deploy a Windows PowerShell update.  
+For example, select the count of devices with a Failure status. See the specific error message, and export a list of these devices. If the error is that a specific cmdlet isn't recognized, create a collection from the exported device list to deploy a Windows PowerShell update.
 
 ### CMPivot audit status messages
 
@@ -614,10 +614,10 @@ MessageId 40805: User &lt;UserName> ran script &lt;Script-Guid> with hash &lt;Sc
 - The Script-Hash can be seen in the client's scripts.log file.
 - You can also see the hash stored in the client's script store. The filename on the client is &lt;Script-Guid>_&lt;Script-Hash>.
     - Example file name: C:\Windows\CCM\ScriptStore\7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14_abc1d23e45678901fabc123d456ce789fa1b2cd3e456789123fab4c56789d0123.ps
-   
+
 
 ![CMPivot audit status message sample](media/cmpivot-audit-status-message.png)
 
 ## Next steps
- 
+
 [Troubleshooting CMPivot](cmpivot-tsg.md)

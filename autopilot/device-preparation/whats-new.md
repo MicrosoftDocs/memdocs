@@ -6,9 +6,9 @@ ms.subservice: autopilot
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
+manager: bpardi
 ms.reviewer: madakeva
-ms.date: 04/02/2025
+ms.date: 06/11/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -31,6 +31,14 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
+## Deliver Enterprise App Catalog (EAM) apps during Autopilot device preparation
+
+Date added: *June 26, 2025*
+
+Autopilot device preparation now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. With Intune's 2506 release, you can now select apps from the Enterprise App Catalog in the device preparation policy. This allows you to ensure those apps are delivered before the user can access the desktop.
+
+For related information, see [Add an Enterprise App Catalog app to Microsoft Intune](/intune/intune-service/apps/apps-add-enterprise-app).
+
 ## Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode is in public preview
 
 Date added: *April 2, 2025*
@@ -39,9 +47,12 @@ We've introduced a new flow for Windows Autopilot device preparation which can b
 
 With the new mode, admins can make sure their Cloud PCs are secured with required software and scripts before the end user logs in!
 
-> [!NOTE]
->
-> After release, it might take a few days for new the new Windows 365 Windows Autopilot device preparation feature to appear in the Microsoft Intune console.
+For a tutorial on Windows Autopilot device preparation in automatic mode for Windows 365, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](tutorial/automatic/automatic-workflow.md).
+
+For more information, see the following articles:
+
+- [Windows 365 Frontline Cloud PC in shared mode - Quick Start Guide](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905).
+- [Use automated Autopilot device preparation with Windows 365 Frontline Cloud PCs in shared mode (preview)](/windows-365/enterprise/autopilot-device-preparation).
 
 ## Diagnostics logs automatically available in Windows Autopilot device preparation deployment status report
 

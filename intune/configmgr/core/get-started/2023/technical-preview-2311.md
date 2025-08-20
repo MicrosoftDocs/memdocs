@@ -6,13 +6,13 @@ ms.date: 11/24/2023
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: whats-new
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 2311

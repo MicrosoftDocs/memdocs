@@ -6,19 +6,19 @@ ms.date: 07/30/2018
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Flowchart - Set up a site server in passive mode
 
 *Applies to: Configuration Manager (current branch)*
 
-This flowchart diagram shows the process by which the site sets up a site server in passive mode. For more information, see the following articles:  
+This flowchart diagram shows the process by which the site sets up a site server in passive mode. For more information, see the following articles:
 - [Site server high availability](site-server-high-availability.md)
 - [Flowchart - Promote site server (planned)](promote-site-server-flowchart.md)
 - [The content library](../../../plan-design/hierarchy/the-content-library.md)

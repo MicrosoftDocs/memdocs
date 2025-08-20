@@ -7,10 +7,10 @@ ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
 ms.localizationpriority: medium
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

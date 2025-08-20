@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Install and upgrade with the version 1606 baseline media
 
@@ -43,7 +43,7 @@ For more information, see [Licensing and branches for Configuration Manager](lea
 During Setup, you have the option to enter the **Software Assurance expiration date** value. This is an optional value that you can specify as a convenient reminder.
 
 > [!NOTE]
-> Microsoft does not validate the expiration date you enter and will not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered online, and your software assurance license status should be current to be eligible to use these additional updates.    
+> Microsoft does not validate the expiration date you enter and will not use this date for license validation.  Instead, you can use it as a reminder of your expiration date. This is useful because Configuration Manager periodically checks for new software updates offered online, and your software assurance license status should be current to be eligible to use these additional updates.
 
 - You can specify the date value on the **Product Key** page of the Setup Wizard when you run Setup from the Configuration Manager version 1606 baseline media.
 - You can also specify this date by selecting **Hierarchy Settings Properties** > **Licensing** in the Configuration Manager console.
@@ -52,7 +52,7 @@ For more information, see "Software Assurance agreements" in [Licensing and bran
 
 
 ### Additional pre-upgrade configurations
-Prior to starting an upgrade of System Center 2012 Configuration Manager to the LTSB, you must take the following extra steps as part of pre-upgrade checklist.  
+Prior to starting an upgrade of System Center 2012 Configuration Manager to the LTSB, you must take the following extra steps as part of pre-upgrade checklist.
 Uninstall the site system roles that the LTSB doesn't support:
 - Asset Intelligence synchronization point
 - Microsoft Intune connector
@@ -64,16 +64,16 @@ For more information, see [Upgrade to Configuration Manager](../servers/deploy/i
 ### New scripted installation options
 The version 1606 baseline media supports a new unattended script file key for scripted installations of a new top-level site. This applies to installing a new stand-alone primary site or adding a central administration site as part of a site expansion scenario.
 
-When using an unattended script to install a licensed branch, you must add the following section, key names, and values to the Options section of your script. You don't need to use these values to script the install of an Evaluation edition of the Current Branch:  
+When using an unattended script to install a licensed branch, you must add the following section, key names, and values to the Options section of your script. You don't need to use these values to script the install of an Evaluation edition of the Current Branch:
 
  **SABranchOptions**
 - **Key Name: SAActive**
-  - Values: 0 or 1.  
-  - Details:  0 installs a non-licensed Evaluation edition of Current Branch, and 1 installs a licensed edition.   
+  - Values: 0 or 1.
+  - Details:  0 installs a non-licensed Evaluation edition of Current Branch, and 1 installs a licensed edition.
 
 - **CurrentBranch**
-  - Values: 0 or 1.  
-  - Details:  0 installs the Long-Term Servicing Branch, and 1 installs the Current Branch.  
+  - Values: 0 or 1.
+  - Details:  0 installs the Long-Term Servicing Branch, and 1 installs the Current Branch.
 
 For example, to install a licensed Current Branch edition you would use:
 
@@ -82,7 +82,7 @@ For example, to install a licensed Current Branch edition you would use:
 - **CurrentBranch = 1**
 
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > **SABranchOptions** only works with Setup from the baseline media. It does not apply when you run Setup from the CD.Latest folder of a site you previously installed using the version 1606 baseline media.
 >
 > **SABranchOptions** does not apply to scripted upgrades from System Center 2012 Configuration Manager and always results in the Current Branch.
@@ -111,7 +111,7 @@ When you upgrade from System Center 2012 Configuration Manager, use the site pla
 - During Setup, you must choose the Current Branch, and you can specify details for your Software Assurance agreement.
 - New scripted installation. For more information, see "New scripted installation options" earlier in this article.
 
-**Upgrade to the LTSB:**  
+**Upgrade to the LTSB:**
 - Additional steps to following in the pre-upgrade checklist.
 - During Setup you must choose the LTSB, and you can specify details for your Software Assurance agreement.
 - You can only upgrade a site that runs System Center 2012 Configuration Manager with Service Pack 1, System Center 2012 Configuration Manager with Service Pack 2, System Center 2012 R2 Configuration Manager with Service Pack 1, or System Center 2012 R2 Configuration Manager with no service pack.
@@ -139,12 +139,12 @@ Media in the CD.Latest folder is supported for:
 - Site maintenance.
 - Installing other child primary sites.
 
-Media in the CD.Latest folder isn't supported for:  
+Media in the CD.Latest folder isn't supported for:
 - Installing a central administration site as part of a site expansion scenario.
 
 For more information, see [the CD.Latest folder](../servers/manage/the-cd.latest-folder.md).
 
 ## Backup, recovery, and site maintenance for the LTSB
-To back up, recover, or run site maintenance on a site that runs the LTSB, use the guidance and procedures from [Backup and recovery for Configuration Manager](../servers/manage/backup-and-recovery.md).  
+To back up, recover, or run site maintenance on a site that runs the LTSB, use the guidance and procedures from [Backup and recovery for Configuration Manager](../servers/manage/backup-and-recovery.md).
 
 Use Configuration Manager Setup from the CD.Latest folder of the backup of your LTSB site.

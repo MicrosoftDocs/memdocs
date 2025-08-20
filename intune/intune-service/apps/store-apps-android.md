@@ -5,9 +5,9 @@ title: Add Android store apps to Microsoft Intune
 titleSuffix: 
 description: Learn how to add Android store apps from the Google Play store to Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 01/06/2025
 ms.topic: how-to
 ms.service: microsoft-intune

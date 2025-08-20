@@ -6,12 +6,12 @@ ms.date: 11/04/2019
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: troubleshooting
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Application Deployment for Device Collections
@@ -67,13 +67,13 @@ Application installation is initiated when the deployment is enforced.
     <pre><code class="lang-text">SMSTrigger '15EF8C4000080000' for scheduler '<b>Machine/DEADLINE:{5F2FA409-C9B2-4100-8BC8-051820311DE1}</b>' will fire at 08/15/2019 03:05:00 PM without randomization.
     </code></pre>
 
-    At the deadline, Scheduler component sends the deadline message to DCM Agent. 
+    At the deadline, Scheduler component sends the deadline message to DCM Agent.
 
     <pre><code class="lang-text">Sending message for schedule '<b>Machine/DEADLINE:{5F2FA409-C9B2-4100-8BC8-051820311DE1}</b>' (Target: 'direct:DCMAgent', Name: '')
     </code></pre>
 
     DCM Agent receives the deadline message, and creates a job to enforce the application.
-  
+
     ```text
     CDCMAgent::HandleMessage - Message received for machine: '<?xml version='1.0' ?><CIAssignmentMessage MessageType='EnforcementDeadline'><AssignmentID>{5F2FA409-C9B2-4100-8BC8-051820311DE1}</AssignmentID></CIAssignmentMessage>'
     ```

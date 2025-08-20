@@ -5,9 +5,9 @@ title: Data transfer policy exceptions for apps
 titleSuffix: Microsoft Intune
 description: Create exceptions to the Intune App Protection Policy (APP) data transfer policy.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 01/06/2025
 ms.topic: article
 ms.service: microsoft-intune

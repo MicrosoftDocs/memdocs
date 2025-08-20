@@ -7,7 +7,7 @@ description: Restrict personally owned devices, and specific device platforms an
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 07/1/2024
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -6,11 +6,11 @@ ms.date: 10/31/2023
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # System Center Updates Publisher
@@ -28,12 +28,12 @@ Using Updates Publisher, you can:
 
 After you publish updates to an update server, you can then use Configuration Manager to detect and deploy those updates to your managed devices.
 
->[!Important] 
+>[!Important]
 > The System Center Updates Publisher (SCUP) and Integration with Configuration manager is unsupported starting January 31, 2024.
 >
 >"Support" in this context refers to both engineering and assisted technical support. No further engineering development will occur, and users are unable to receive phone or online assisted technical support.
 >
->The information in this section is provided to help you plan for alternatives to using this feature, and will be removed in the future. 
+>The information in this section is provided to help you plan for alternatives to using this feature, and will be removed in the future.
 
 
 ## Workspaces
@@ -60,11 +60,11 @@ Managing publications includes publishing updates to a server so your clients ca
 
 ## What's new in System Center Updates Publisher
 
->[!NOTE] 
+>[!NOTE]
 > The latest version of System Center Updates Publisher was released on November 6, 2019. For more information, see the [Release history](#release-history) section.
 
->[!Important] 
-> The System Center Updates Publisher (SCUP) and Integration with Configuration manager will be deprecated on January 31, 2024. 
+>[!Important]
+> The System Center Updates Publisher (SCUP) and Integration with Configuration manager will be deprecated on January 31, 2024.
 
 There's a new authoring mode System Center Updates Publisher to help you author your updates. When you enable authoring mode, a **Categories Workspace** is added to the start screen. A new **Detectoid** button is also added to the **Updates Workspace** when authoring mode is enabled.
 

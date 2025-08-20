@@ -12,110 +12,110 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Handle Configuration Manager Synchronous Errors by Using Managed Code
-To handle a Configuration Manager error that is raised in a synchronous query, you catch the [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)) exception. Because this exception is also caught by SMS_Exception], you can catch it and the [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) exception in the same catch block.  
+To handle a Configuration Manager error that is raised in a synchronous query, you catch the [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)) exception. Because this exception is also caught by SMS_Exception], you can catch it and the [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) exception in the same catch block.
 
- If the exception that is caught in an SMS_Exception is an [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)), you can use it to get to the underlying `__ExtendedException` or `SMS_ExtendedException`. Because the managed SMS Provider library does not wrap these exceptions, you will need to use the System.Management namespace [ManagementException](/dotnet/api/system.management.managementexception) object to access them.  
+ If the exception that is caught in an SMS_Exception is an [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)), you can use it to get to the underlying `__ExtendedException` or `SMS_ExtendedException`. Because the managed SMS Provider library does not wrap these exceptions, you will need to use the System.Management namespace [ManagementException](/dotnet/api/system.management.managementexception) object to access them.
 
 > [!NOTE]
->  For clarity, most examples in this documentation simply re-throw exceptions. You can replace them with the following example if you want more informative exception information.  
+>  For clarity, most examples in this documentation simply re-throw exceptions. You can replace them with the following example if you want more informative exception information.
 
-### To handle a synchronous query error  
+### To handle a synchronous query error
 
-1.  Write code to access the SMS Provider.  
+1.  Write code to access the SMS Provider.
 
-2.  Use the following example code to catch the [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)) and [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) exceptions.  
+2.  Use the following example code to catch the [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)) and [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) exceptions.
 
-## Example  
- The following C# example function attempts to open a nonexistent `SMS_Package` package. In the exception handler, the code determines what type of error has been raised and displays its information.  
+## Example
+ The following C# example function attempts to open a nonexistent `SMS_Package` package. In the exception handler, the code determines what type of error has been raised and displays its information.
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).
 
-```c#  
-public void ExerciseException(WqlConnectionManager connection)  
-{  
-    try  
-    {  
+```c#
+public void ExerciseException(WqlConnectionManager connection)
+{
+    try
+    {
 
-        IResultObject package = connection.GetInstance(@"SMS_Package.PackageID='UNKNOWN'");  
-        Console.WriteLine("Package Name: " + package["Name"].StringValue);  
-        Console.WriteLine("Package Description: " + package["Description"].StringValue);  
+        IResultObject package = connection.GetInstance(@"SMS_Package.PackageID='UNKNOWN'");
+        Console.WriteLine("Package Name: " + package["Name"].StringValue);
+        Console.WriteLine("Package Description: " + package["Description"].StringValue);
 
-    }  
-    catch (SmsException e)  
-    {  
-        if (e is SmsQueryException)  
-        {  
-            SmsQueryException queryException = (SmsQueryException)e;  
-            Console.WriteLine(queryException.Message);  
+    }
+    catch (SmsException e)
+    {
+        if (e is SmsQueryException)
+        {
+            SmsQueryException queryException = (SmsQueryException)e;
+            Console.WriteLine(queryException.Message);
 
-            // Get either the __ExtendedStatus or SMS_ExtendedStatus object and display various properties.  
-            ManagementException mgmtExcept = queryException.InnerException as ManagementException;  
+            // Get either the __ExtendedStatus or SMS_ExtendedStatus object and display various properties.
+            ManagementException mgmtExcept = queryException.InnerException as ManagementException;
 
-            if (mgmtExcept != null)  
-            {  
-                if (string.Equals(mgmtExcept.ErrorInformation.ClassPath.ToString(), "SMS_ExtendedStatus", StringComparison.OrdinalIgnoreCase) == true)  
-                {  
-                    Console.WriteLine("Configuration Manager provider exception");  
-                }  
+            if (mgmtExcept != null)
+            {
+                if (string.Equals(mgmtExcept.ErrorInformation.ClassPath.ToString(), "SMS_ExtendedStatus", StringComparison.OrdinalIgnoreCase) == true)
+                {
+                    Console.WriteLine("Configuration Manager provider exception");
+                }
 
-                else if (string.Equals(mgmtExcept.ErrorInformation.ClassPath.ToString(), "__ExtendedStatus", StringComparison.OrdinalIgnoreCase) == true)  
-                {  
-                    Console.WriteLine("WMI exception");  
-                }  
-                Console.WriteLine(mgmtExcept.ErrorCode.ToString());  
-                Console.WriteLine(mgmtExcept.ErrorInformation["ParameterInfo"].ToString());  
-                Console.WriteLine(mgmtExcept.ErrorInformation["Operation"].ToString());  
-                Console.WriteLine(mgmtExcept.ErrorInformation["ProviderName"].ToString());  
-            }  
+                else if (string.Equals(mgmtExcept.ErrorInformation.ClassPath.ToString(), "__ExtendedStatus", StringComparison.OrdinalIgnoreCase) == true)
+                {
+                    Console.WriteLine("WMI exception");
+                }
+                Console.WriteLine(mgmtExcept.ErrorCode.ToString());
+                Console.WriteLine(mgmtExcept.ErrorInformation["ParameterInfo"].ToString());
+                Console.WriteLine(mgmtExcept.ErrorInformation["Operation"].ToString());
+                Console.WriteLine(mgmtExcept.ErrorInformation["ProviderName"].ToString());
+            }
 
-        }  
-        if (e is SmsConnectionException)  
-        {  
-            Console.WriteLine("There was a connection error :" + ((SmsConnectionException)e).Message);  
-            Console.WriteLine(((SmsConnectionException)e).ErrorCode);  
-        }  
-    }  
-}  
+        }
+        if (e is SmsConnectionException)
+        {
+            Console.WriteLine("There was a connection error :" + ((SmsConnectionException)e).Message);
+            Console.WriteLine(((SmsConnectionException)e).ErrorCode);
+        }
+    }
+}
 
-```  
+```
 
- The example method has the following parameters:  
+ The example method has the following parameters:
 
-|Parameter|Type|Description|  
-|---------------|----------|-----------------|  
-|`connection`|-   `WqlConnectionManager`|A valid connection to the provider.|  
+|Parameter|Type|Description|
+|---------------|----------|-----------------|
+|`connection`|-   `WqlConnectionManager`|A valid connection to the provider.|
 
-## Compiling the Code  
- This C# example requires:  
+## Compiling the Code
+ This C# example requires:
 
-### Namespaces  
- System  
+### Namespaces
+ System
 
- System.Collections.Generic  
+ System.Collections.Generic
 
- System.Text  
+ System.Text
 
- Microsoft.ConfigurationManagement.ManagementProvider  
+ Microsoft.ConfigurationManagement.ManagementProvider
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
+ Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
- System.Management  
+ System.Management
 
- System.ComponentModel  
+ System.ComponentModel
 
-### Assembly  
- microsoft.configurationmanagement.managementprovider  
+### Assembly
+ microsoft.configurationmanagement.managementprovider
 
- adminui.wqlqueryengine  
+ adminui.wqlqueryengine
 
- System.Management  
+ System.Management
 
-## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+## Robust Programming
+ For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## See Also  
+## See Also
  [About errors](about-configuration-manager-errors.md)
  [How to Handle Configuration Manager Asynchronous Errors by Using Managed Code](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md)

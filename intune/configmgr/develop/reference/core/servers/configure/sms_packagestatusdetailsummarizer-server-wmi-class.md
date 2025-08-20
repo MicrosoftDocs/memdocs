@@ -12,136 +12,136 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_PackageStatusDetailSummarizer Server WMI Class
-The `SMS_PackageStatusDetailSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for a given package for a given site in a hierarchy.  
+The `SMS_PackageStatusDetailSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for a given package for a given site in a hierarchy.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_PackageStatusDetailSummarizer : SMS_BaseClass  
-{  
-      UInt32 Failed;  
-      UInt32 Installed;  
-      String Name;  
-      String PackageID;  
-      UInt32 Retrying;  
-      String SiteCode;  
-      String SiteName;  
-      UInt32 SourceVersion;  
-      DateTime SummaryDate;  
-      UInt32 Targeted;  
-};  
-```  
+```
+Class SMS_PackageStatusDetailSummarizer : SMS_BaseClass
+{
+      UInt32 Failed;
+      UInt32 Installed;
+      String Name;
+      String PackageID;
+      UInt32 Retrying;
+      String SiteCode;
+      String SiteName;
+      UInt32 SourceVersion;
+      DateTime SummaryDate;
+      UInt32 Targeted;
+};
+```
 
-## Methods  
- The `SMS_PackageStatusDetailSummarizer` class does not define any methods.  
+## Methods
+ The `SMS_PackageStatusDetailSummarizer` class does not define any methods.
 
-## Properties  
- `Failed`  
- Data type: `UInt32`  
+## Properties
+ `Failed`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Total number of distribution points in the site that have exceeded the number of retries allowed during an installation or removal operation and that are currently in a state of installation-failed or retry-failed.  
+ Total number of distribution points in the site that have exceeded the number of retries allowed during an installation or removal operation and that are currently in a state of installation-failed or retry-failed.
 
- `Installed`  
- Data type: `UInt32`  
+ `Installed`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Total number of distribution points in the site that have successfully installed the current source version of the package.  
+ Total number of distribution points in the site that have successfully installed the current source version of the package.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name assigned to the package.  
+ Name assigned to the package.
 
- `PackageID`  
- Data type: `String`  
+ `PackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [ key, SizeLimit("8")]  
+ Qualifiers: [ key, SizeLimit("8")]
 
- ID assigned by Configuration Manager for the package.  
+ ID assigned by Configuration Manager for the package.
 
- `Retrying`  
- Data type: `UInt32`  
+ `Retrying`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Total number of distribution points in the site that have had at least one failure during an installation or removal operation but have not yet exceeded the number of retries allowed and are currently in a state of installation-retrying or removal-retrying.  
+ Total number of distribution points in the site that have had at least one failure during an installation or removal operation but have not yet exceeded the number of retries allowed and are currently in a state of installation-retrying or removal-retrying.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, SizeLimit("3")]  
+ Qualifiers: [key, SizeLimit("3")]
 
- Site code for each site that has at least one distribution point specified for the package.  
+ Site code for each site that has at least one distribution point specified for the package.
 
- `SiteName`  
- Data type: `String`  
+ `SiteName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Friendly display name for the site.  
+ Friendly display name for the site.
 
- `SourceVersion`  
- Data type: `UInt32`  
+ `SourceVersion`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Version of the package source files.  
+ Version of the package source files.
 
- `SummaryDate`  
- Data type: `DateTime`  
+ `SummaryDate`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Date and time, in Universal Coordinated Time (UTC) when a change in package status for this site was most recently reported.  
+ Date and time, in Universal Coordinated Time (UTC) when a change in package status for this site was most recently reported.
 
- `Targeted`  
- Data type: `UInt32`  
+ `Targeted`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The total number of distribution points in the site that are targeted for the package.  
+ The total number of distribution points in the site that are targeted for the package.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

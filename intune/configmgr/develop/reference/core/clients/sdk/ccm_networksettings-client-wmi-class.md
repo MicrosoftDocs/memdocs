@@ -11,35 +11,35 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # CCM_NetworkSettings Client WMI Class
-The `CCM_NetworkSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents how clients behave on metered Internet connections.   
+The `CCM_NetworkSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents how clients behave on metered Internet connections.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_NetworkSettings :    
-{  
-    UInt32 MeteredNetworkUsage;  
-};  
-```  
+```
+Class CCM_NetworkSettings :
+{
+    UInt32 MeteredNetworkUsage;
+};
+```
 
-## Methods  
- The `CCM_NetworkSettings` class does not define any methods.  
+## Methods
+ The `CCM_NetworkSettings` class does not define any methods.
 
-## Properties  
- `MeteredNetworkUsage`  
- Data type: `UInt32`  
+## Properties
+ `MeteredNetworkUsage`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Client communications on metered connections. Default is **Block**. Possible values are:   
+ Client communications on metered connections. Default is **Block**. Possible values are:
 
 |Value|Metered network usage policy|
 |-|-|
@@ -48,12 +48,12 @@ Class CCM_NetworkSettings :
 |2|Limit|
 |4|Block|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

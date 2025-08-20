@@ -6,11 +6,11 @@ ms.date: 01/09/2020
 ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

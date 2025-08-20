@@ -6,12 +6,12 @@ ms.date: 12/01/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Define network locations as boundaries for Configuration Manager
@@ -49,7 +49,7 @@ The IP subnet boundary type requires a **Subnet ID**. For example, `169.254.0.0`
 
 For the **Active Directory site** boundary type, you specify the site name. You can type the name or browse the local forest of the site server.
 
-When you specify an Active Directory site for a boundary, the boundary includes each IP subnet that's a member of that Active Directory site. If the configuration of the Active Directory site changes in Active Directory, the network locations included in this boundary also change.  
+When you specify an Active Directory site for a boundary, the boundary includes each IP subnet that's a member of that Active Directory site. If the configuration of the Active Directory site changes in Active Directory, the network locations included in this boundary also change.
 
 Active Directory site boundaries don't work for pure Microsoft Entra devices, also called cloud domain-joined devices. If they roam on-premises, and you only create Active Directory site type boundaries, these devices won't be in a boundary.
 

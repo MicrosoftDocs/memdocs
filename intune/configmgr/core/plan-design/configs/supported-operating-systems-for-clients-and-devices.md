@@ -6,12 +6,12 @@ ms.date: 12/19/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: Baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Supported OS versions for clients and devices for Configuration Manager
@@ -67,14 +67,14 @@ For more information, see the following articles:
 ### Supported server OS versions
 
 - **Windows Server 2025**: IoT, Standard, Datacenter (_starting in Configuration Manager version 2409_)<!-- 10200029 -->
-          
+
 - **Windows Server 2022**: IoT, Standard, Datacenter (_starting in Configuration Manager version 2107_)<!-- 10200029 -->
     - *Windows Server IoT 2022 for Storage* is not supported
 
 - **Windows Server 2019**: IoT, Standard, Datacenter
     - *Windows Server IoT 2019 for Storage* is not supported
 
-- **Windows Server 2016**: Standard, Datacenter 
+- **Windows Server 2016**: Standard, Datacenter
 
 - **Windows Storage Server 2016**: Workgroup, Standard, IoT
 

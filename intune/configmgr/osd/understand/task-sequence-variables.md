@@ -2,15 +2,15 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 04/08/2022
+ms.date: 07/17/2025
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
-author: BalaDelli
-ms.author: baladell
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: frankroj.mstewart
 ms.collection: tier3
 ---
 
@@ -78,7 +78,7 @@ If the current running task sequence references a boot image package, this varia
 
 #### Example
 
-`ABC00001`  
+`ABC00001`
 
 ### <a name="SMSTSBootUEFI"></a> _SMSTSBootUEFI
 
@@ -139,11 +139,11 @@ Stores the return code from the last action that was run. This variable can be u
 
 ### <a name="SMSTSLastActionSucceeded"></a> _SMSTSLastActionSucceeded
 
-- If the last step succeeded, this variable is `true`.  
+- If the last step succeeded, this variable is `true`.
 
-- If the last step failed, it's `false`.  
+- If the last step failed, it's `false`.
 
-- If the task sequence skipped the last action, because the step is disabled or the associated condition evaluated to **false**, this variable isn't reset. It still holds the value for the previous action.  
+- If the task sequence skipped the last action, because the step is disabled or the associated condition evaluated to **false**, this variable isn't reset. It still holds the value for the previous action.
 
 ### <a name="SMSTSLastContentDownloadLocation"></a> _SMSTSLastContentDownloadLocation
 
@@ -152,7 +152,7 @@ This variable contains the last location where the task sequence downloaded or a
 
 ### <a name="SMSTSLaunchMode"></a> _SMSTSLaunchMode
 
-Specifies that the task sequence started via one of the following methods:  
+Specifies that the task sequence started via one of the following methods:
 
 - **SMS**: The Configuration Manager client, such as when a user starts it from Software Center
 - **UFD**: Legacy USB media
@@ -275,7 +275,7 @@ For the time zone **Eastern Time (US and Canada)**:
 
 ### <a name="SMSTSType"></a> _SMSTSType
 
-Specifies the type of the current running task sequence. It can have one of the following values:  
+Specifies the type of the current running task sequence. It can have one of the following values:
 
 - **1**: A generic task sequence
 - **2**: An OS deployment task sequence
@@ -288,9 +288,9 @@ When the task sequence uses HTTPS to communicate with the management point, this
 
 Specifies whether a user started the task sequence. This variable is set only if the task sequence is started from Software Center. For example, if [_SMSTSLaunchMode](#SMSTSLaunchMode) is set to `SMS`.
 
-This variable can have the following values:  
+This variable can have the following values:
 
-- `true`: Specifies that the task sequence is manually started by a user from Software Center.  
+- `true`: Specifies that the task sequence is manually started by a user from Software Center.
 
 - `false`: Specifies that the task sequence is initiated automatically by the Configuration Manager scheduler.
 
@@ -418,15 +418,15 @@ A read-only variable for whether the **TPM 2.0 or above is enabled** check retur
 
 ### <a name="TSAppInstallStatus"></a> _TSAppInstallStatus
 
-The task sequence sets this variable with the installation status for the application during the [Install Application](task-sequence-steps.md#BKMK_InstallApplication) step. It sets one of the following values:  
+The task sequence sets this variable with the installation status for the application during the [Install Application](task-sequence-steps.md#BKMK_InstallApplication) step. It sets one of the following values:
 
-- **Undefined**: The Install Application step hasn't run.  
+- **Undefined**: The Install Application step hasn't run.
 
-- **Error**: At least one application failed because of an error during the Install Application step.  
+- **Error**: At least one application failed because of an error during the Install Application step.
 
-- **Warning**: No errors occurred during the Install Application step. One or more applications, or a required dependency, didn't install because a requirement wasn't met.  
+- **Warning**: No errors occurred during the Install Application step. One or more applications, or a required dependency, didn't install because a requirement wasn't met.
 
-- **Success**: There are no errors or warnings detected during the Install Application step.  
+- **Success**: There are no errors or warnings detected during the Install Application step.
 
 ### <a name="TSSecureBoot"></a> _TSSecureBoot
 
@@ -502,11 +502,11 @@ Comma-delimited list of ports to be granted access permissions for TCP. This pro
 
 #### OSDAdapter0TcpipNetbiosOptions
 
-Options for NetBIOS over TCP/IP. Possible values are as follows:  
+Options for NetBIOS over TCP/IP. Possible values are as follows:
 
-- `0`: Use NetBIOS settings from DHCP server  
-- `1`: Enable NetBIOS over TCP/IP  
-- `2`: Disable NetBIOS over TCP/IP  
+- `0`: Use NetBIOS settings from DHCP server
+- `1`: Enable NetBIOS over TCP/IP
+- `2`: Disable NetBIOS over TCP/IP
 
 <!--
 #### OSDAdapter0EnableWINS
@@ -532,12 +532,12 @@ Index of the network adapter settings in the array of settings.
 
 #### Example
 
-- **OSDAdapterCount** = `1`  
-- **OSDAdapter0EnableDHCP** = `FALSE`  
-- **OSDAdapter0IPAddressList** = `192.168.0.40`  
-- **OSDAdapter0SubnetMask** = `255.255.255.0`  
-- **OSDAdapter0Gateways** = `192.168.0.1`  
-- **OSDAdapter0DNSSuffix** = `contoso.com`  
+- **OSDAdapterCount** = `1`
+- **OSDAdapter0EnableDHCP** = `FALSE`
+- **OSDAdapter0IPAddressList** = `192.168.0.40`
+- **OSDAdapter0SubnetMask** = `255.255.255.0`
+- **OSDAdapter0Gateways** = `192.168.0.1`
+- **OSDAdapter0DNSSuffix** = `contoso.com`
 
 ### <a name="OSDAdapterCount"></a> OSDAdapterCount
 
@@ -561,7 +561,7 @@ Starting this Configuration Manager 2211 HFRU Kb 16643863 and above
 
 Specifies the number of times the task sequence step tries to install an application in the case of failure. The value must be specified to trigger a retry in the case of application installation failure. Application installation retry is attempted ONLY when 'Install Next Application on Failure' option is not selected on the task.
 
-Defaults to 0 and task sequence does not retry application installation by default. 
+Defaults to 0 and task sequence does not retry application installation by default.
 
 ### <a name="OSDAppInstallRetryTimeout"></a> OSDAppInstallRetryTimeout
 
@@ -621,9 +621,9 @@ If there are multiple device drivers in the driver catalog that are compatible w
 
 #### Valid values
 
-- `true` (default): Only install the best device driver  
+- `true` (default): Only install the best device driver
 
-- `false`: Installs all compatible device drivers, and Windows chooses the best driver to use  
+- `false`: Installs all compatible device drivers, and Windows chooses the best driver to use
 
 ### <a name="OSDAutoApplyDriverCategoryList"></a> OSDAutoApplyDriverCategoryList
 
@@ -725,7 +725,7 @@ Set to the NetBIOS name of the computer. The value is set only if the [OSDMigrat
 
 (input)
 
-Specifies the file name of the OS deployment answer file associated with the OS deployment image package.  
+Specifies the file name of the OS deployment answer file associated with the OS deployment image package.
 
 ### <a name="OSDDataImageIndex"></a> OSDDataImageIndex
 
@@ -802,8 +802,8 @@ Specifies whether TCP/IP filtering is enabled.
 
 #### Valid values
 
-- `true`  
-- `false` (default)  
+- `true`
+- `false` (default)
 
 ### <a name="OSDGPTBootDisk"></a> OSDGPTBootDisk
 
@@ -815,7 +815,7 @@ Specifies whether to create an EFI partition on a GPT hard disk. EFI-based compu
 
 #### Valid values
 
-- `true`  
+- `true`
 - `false` (default)
 
 ### <a name="OSDImageCreator"></a> OSDImageCreator
@@ -865,10 +865,10 @@ For more information, see [DISM command-line options](/windows-hardware/manufact
 
 ### <a name="OSDJoinAccount"></a> OSDJoinAccount
 
-*Applies to the following steps:*  
+*Applies to the following steps:*
 
-- [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings)  
-- [Join Domain or Workgroup](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)  
+- [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings)
+- [Join Domain or Workgroup](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)
 
 (input)
 
@@ -894,14 +894,14 @@ Specifies the RFC 1779 format name of the organizational unit (OU) that the dest
 
 #### Example
 
-`LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com`  
+`LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com`
 
 ### <a name="OSDJoinPassword"></a> OSDJoinPassword
 
-*Applies to the following steps:*  
+*Applies to the following steps:*
 
-- [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings)  
-- [Join Domain or Workgroup](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)  
+- [Apply Network Settings](task-sequence-steps.md#BKMK_ApplyNetworkSettings)
+- [Join Domain or Workgroup](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)
 
 (input)
 
@@ -917,8 +917,8 @@ Specifies whether to skip restarting after the destination computer joins the do
 
 #### Valid values
 
-- `true`  
-- `false`  
+- `true`
+- `false`
 
 ### <a name="OSDJoinType"></a> OSDJoinType
 
@@ -930,8 +930,8 @@ Specifies whether the destination computer joins a Windows domain or a workgroup
 
 #### Valid values
 
-- `0`: Join the destination computer to a Windows domain  
-- `1`: Join the destination computer to a workgroup  
+- `0`: Join the destination computer to a Windows domain
+- `1`: Join the destination computer to a workgroup
 
 ### <a name="OSDJoinWorkgroupName"></a> OSDJoinWorkgroupName
 
@@ -1038,8 +1038,8 @@ Specifies whether the computer name is migrated.
 
 #### Valid values
 
-- `true` (default). The [OSDComputerName (output)](#OSDComputerName-output) variable is set to the NetBIOS name of the computer.  
-- `false`  
+- `true` (default). The [OSDComputerName (output)](#OSDComputerName-output) variable is set to the NetBIOS name of the computer.
+- `false`
 
 ### <a name="OSDMigrateConfigFiles"></a> OSDMigrateConfigFiles
 
@@ -1051,7 +1051,7 @@ Specifies the configuration files used to control the capture of user profiles. 
 
 #### Example
 
-`miguser.xml,migsys.xml,migapps.xml`  
+`miguser.xml,migsys.xml,migapps.xml`
 
 ### <a name="OSDMigrateContinueOnLockedFiles"></a> OSDMigrateContinueOnLockedFiles
 
@@ -1063,8 +1063,8 @@ If USMT can't capture some files, this variable allows the user state capture to
 
 #### Valid values
 
-- `true` (default)  
-- `false`  
+- `true` (default)
+- `false`
 
 ### <a name="OSDMigrateContinueOnRestore"></a> OSDMigrateContinueOnRestore
 
@@ -1076,15 +1076,15 @@ Continue the process, even if USMT can't restore some files.
 
 #### Valid values
 
-- `true` (default)  
-- `false`  
+- `true` (default)
+- `false`
 
 ### <a name="OSDMigrateEnableVerboseLogging"></a> OSDMigrateEnableVerboseLogging
 
-*Applies to the following steps:*  
+*Applies to the following steps:*
 
-- [Capture User State](task-sequence-steps.md#BKMK_CaptureUserState)  
-- [Restore User State](task-sequence-steps.md#BKMK_RestoreUserState)  
+- [Capture User State](task-sequence-steps.md#BKMK_CaptureUserState)
+- [Restore User State](task-sequence-steps.md#BKMK_RestoreUserState)
 
 (input)
 
@@ -1092,8 +1092,8 @@ Enables verbose logging for USMT. The step requires this value.
 
 #### Valid values
 
-- `true`  
-- `false` (default)  
+- `true`
+- `false` (default)
 
 ### <a name="OSDMigrateLocalAccounts"></a> OSDMigrateLocalAccounts
 
@@ -1105,8 +1105,8 @@ Specifies whether the local computer account is restored.
 
 #### Valid values
 
-- `true`  
-- `false` (default)  
+- `true`
+- `false` (default)
 
 ### <a name="OSDMigrateLocalAccountPassword"></a> OSDMigrateLocalAccountPassword
 
@@ -1126,9 +1126,9 @@ Allows you to customize the files that USMT captures.
 
 #### Valid values
 
-- `Simple`: The task sequence only uses the standard USMT configuration files  
+- `Simple`: The task sequence only uses the standard USMT configuration files
 
-- `Advanced`: The task sequence variable [OSDMigrateConfigFiles](#OSDMigrateConfigFiles) specifies the configuration files that USMT uses  
+- `Advanced`: The task sequence variable [OSDMigrateConfigFiles](#OSDMigrateConfigFiles) specifies the configuration files that USMT uses
 
 ### <a name="OSDMigrateNetworkMembership"></a> OSDMigrateNetworkMembership
 
@@ -1153,8 +1153,8 @@ Specifies whether the step migrates user and organization information.
 
 #### Valid values
 
-- `true` (default). The [OSDRegisteredOrgName (output)](#OSDRegisteredOrgName-output) variable is set to the registered organization name of the computer.  
-- `false`  
+- `true` (default). The [OSDRegisteredOrgName (output)](#OSDRegisteredOrgName-output) variable is set to the registered organization name of the computer.
+- `false`
 
 ### <a name="OSDMigrateSkipEncryptedFiles"></a> OSDMigrateSkipEncryptedFiles
 
@@ -1166,8 +1166,8 @@ Specifies whether encrypted files are captured.
 
 #### Valid values
 
-- `true`  
-- `false` (default)  
+- `true`
+- `false` (default)
 
 ### <a name="OSDMigrateTimeZone"></a> OSDMigrateTimeZone
 
@@ -1179,8 +1179,8 @@ Specifies whether the computer time zone is migrated.
 
 #### Valid values
 
-- `true` (default). The variable [OSDTimeZone (output)](#OSDTimeZone-output) is set to the time zone of the computer.  
-- `false`  
+- `true` (default). The variable [OSDTimeZone (output)](#OSDTimeZone-output) is set to the time zone of the computer.
+- `false`
 
 ### <a name="OSDNetworkJoinType"></a> OSDNetworkJoinType
 
@@ -1192,7 +1192,7 @@ Specifies whether the destination computer joins an Active Directory domain or a
 
 #### Value values
 
-- `0`: Join an Active Directory domain  
+- `0`: Join an Active Directory domain
 - `1`: Join a workgroup
 
 ### <a name="OSDPartitions"></a> OSDPartitions
@@ -1270,9 +1270,9 @@ Specifies a randomly generated password for the local Administrator account in t
 
 #### Valid values
 
-- `true` (default): Windows Setup disables the local Administrator account on the target computer  
+- `true` (default): Windows Setup disables the local Administrator account on the target computer
 
-- `false`: Windows Setup enables the local administrator account on the target computer, and sets the account password to the value of [OSDLocalAdminPassword](#OSDLocalAdminPassword)  
+- `false`: Windows Setup enables the local administrator account on the target computer, and sets the account password to the value of [OSDLocalAdminPassword](#OSDLocalAdminPassword)
 
 ### OSDRecoveryKeyPollingFrequency
 <!--10454717-->
@@ -1353,8 +1353,8 @@ For more information on the network access account, see [Accounts](../../core/pl
 
 #### Valid values
 
-- `true`  
-- `false` (default)  
+- `true`
+- `false` (default)
 
 ### <a name="OSDStateSMPRetryCount"></a> OSDStateSMPRetryCount
 
@@ -1374,12 +1374,12 @@ Specifies the number of seconds that the task sequence step waits between retry 
 
 ### <a name="OSDStateStorePath"></a> OSDStateStorePath
 
-*Applies to the following steps:*  
+*Applies to the following steps:*
 
-- [Capture User State](task-sequence-steps.md#BKMK_CaptureUserState)  
-- [Release State Store](task-sequence-steps.md#BKMK_ReleaseStateStore)  
-- [Request State Store](task-sequence-steps.md#BKMK_RequestStateStore)  
-- [Restore User State](task-sequence-steps.md#BKMK_RestoreUserState)  
+- [Capture User State](task-sequence-steps.md#BKMK_CaptureUserState)
+- [Release State Store](task-sequence-steps.md#BKMK_ReleaseStateStore)
+- [Request State Store](task-sequence-steps.md#BKMK_RequestStateStore)
+- [Restore User State](task-sequence-steps.md#BKMK_RestoreUserState)
 
 (input)
 
@@ -1539,8 +1539,8 @@ Specifies the network drive letter to connect to. This value is optional. If it'
 
 #### Examples
 
-- `D:`  
-- `E:`  
+- `D:`
+- `E:`
 
 ### <a name="SMSConnectNetworkFolderPassword"></a> SMSConnectNetworkFolderPassword
 
@@ -1572,8 +1572,8 @@ Specifies whether to install all updates or only mandatory updates.
 
 #### Valid values
 
-- `All`  
-- `Mandatory`  
+- `All`
+- `Mandatory`
 
 ### <a name="SMSRebootMessage"></a> SMSRebootMessage
 
@@ -1585,7 +1585,7 @@ Specifies the message to be displayed to users before restarting the destination
 
 #### Example
 
-`Save your work before the computer restarts.`  
+`Save your work before the computer restarts.`
 
 ### <a name="SMSRebootTimeout"></a> SMSRebootTimeout
 
@@ -1597,8 +1597,8 @@ Specifies the number of seconds that the warning is displayed to the user before
 
 #### Examples
 
-- `0` (default): Don't display a reboot message  
-- `60`: Display the warning for one minute  
+- `0` (default): Don't display a reboot message
+- `60`: Display the warning for one minute
 
 ### SMSTSAllowTokenAuthURLForACP
 
@@ -1623,13 +1623,21 @@ You can set this variable by using a prestart command from media or PXE.
 
 ### <a name="SMSTSAssignUsersMode"></a> SMSTSAssignUsersMode
 
-Specifies how a task sequence associates users with the destination computer. Set the variable to one of the following values:  
+Specifies how a task sequence associates users with the destination computer. Set the variable to one of the following values:
 
-- **Auto**: When the task sequence deploys the OS to the destination computer, it creates a relationship between the specified users and destination computer.  
+- **Auto**: When the task sequence deploys the OS to the destination computer, it creates a relationship between the specified users and destination computer.
 
-- **Pending**: The task sequence creates a relationship between the specified users and the destination computer. An administrator must approve the relationship to set it.  
+- **Pending**: The task sequence creates a relationship between the specified users and the destination computer. An administrator must approve the relationship to set it.
 
 - **Disabled**: The task sequence doesn't associate users with the destination computer when it deploys the OS.
+
+> [!NOTE]
+>
+> When setting the **SMSTSAssignUsersMode** variable, the value specified needs to match what is configured on the PXE enabled DP, boot media, or pre-staged media being used for imaging.
+> 
+> If the values don't match, then device affinity isn't set.
+>
+> For more information, see [Associate users with a destination computer in Configuration Manager](../get-started/associate-users-with-a-destination-computer.md).
 
 ### <a name="SMSTSDisableStatusRetry"></a> SMSTSDisableStatusRetry
 
@@ -1640,7 +1648,7 @@ Set this variable to `true` and the task sequence engine doesn't attempt to send
 
 When the task sequence restarts, the value of this variable persists. However, the task sequence tries sending an initial status message. This first attempt includes multiple retries. If successful, the task sequence continues sending status regardless of the value of this variable. If status fails to send, the task sequence uses the value of this variable.
 
-> [!NOTE]  
+> [!NOTE]
 > [Task sequence status reporting](../../core/servers/manage/list-of-reports.md#task-sequence---deployment-status) relies upon these status messages to display the progress, history, and details of each step. If status messages fail to send, they're not queued. When connectivity is restored to the management point, they're not sent at a later time. This behavior results in task sequence status reporting to be incomplete and missing items.
 
 ### <a name="SMSTSDisableWow64Redirection"></a> SMSTSDisableWow64Redirection
@@ -1711,10 +1719,10 @@ Use this variable to specify the URL or IP address of the Configuration Manager 
 
 ### <a name="SMSTSMPListRequestTimeoutEnabled"></a> SMSTSMPListRequestTimeoutEnabled
 
-*Applies to the following steps:*  
+*Applies to the following steps:*
 
-- [Install Application](task-sequence-steps.md#BKMK_InstallApplication)  
-- [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
+- [Install Application](task-sequence-steps.md#BKMK_InstallApplication)
+- [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)
 
 (input)
 
@@ -1724,10 +1732,10 @@ When clients are on the internet, set this variable to `False` to avoid unnecess
 
 ### <a name="SMSTSMPListRequestTimeout"></a> SMSTSMPListRequestTimeout
 
-*Applies to the following steps:*  
+*Applies to the following steps:*
 
-- [Install Application](task-sequence-steps.md#BKMK_InstallApplication)  
-- [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
+- [Install Application](task-sequence-steps.md#BKMK_InstallApplication)
+- [Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)
 
 (input)
 
@@ -1765,9 +1773,9 @@ Specifies how many seconds to wait before the computer restarts. If this variabl
 
 #### Example
 
-- `0`: don't display a notification  
+- `0`: don't display a notification
 
-- `60`: display a notification for one minute  
+- `60`: display a notification for one minute
 
 ### <a name="SMSTSRebootDelayNext"></a> SMSTSRebootDelayNext
 
@@ -1776,7 +1784,7 @@ Use this variable with the existing [SMSTSRebootDelay](task-sequence-variables.m
 
 #### Example
 
-You want to give users a 60-minute reboot notification at the start of a Windows in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
+You want to give users a 60-minute reboot notification at the start of a Windows in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.
 
 
 ### <a name="SMSTSRebootMessage"></a> SMSTSRebootMessage
@@ -1834,7 +1842,7 @@ Specifies the password for the account specified by the [SMSTSRunCommandLineUser
 
 ### <a name="SMSTSRunPowerShellAsUser"></a> SMSTSRunPowerShellAsUser
 
-<!-- 5573175 -->  
+<!-- 5573175 -->
 *Applies to the [Run PowerShell Script](task-sequence-steps.md#BKMK_RunPowerShellScript) step.*
 
 Use task sequence variables to configure the user context for the **Run PowerShell Script** step. You don't need to configure the **Run PowerShell Script** step with a placeholder account to use the [SMSTSRunPowerShellUserName](task-sequence-variables.md#SMSTSRunPowerShellUserName) and [SMSTSRunPowerShellUserPassword](task-sequence-variables.md#SMSTSRunPowerShellUserPassword) variables.
@@ -1932,11 +1940,11 @@ Set this variable using:
 ### <a name="TSDisableProgressUI"></a> TSDisableProgressUI
 
 <!-- 1354291 -->
-Use this variable to control when the task sequence displays progress to end users. To hide or display progress at different times, set this variable multiple times in a task sequence.  
+Use this variable to control when the task sequence displays progress to end users. To hide or display progress at different times, set this variable multiple times in a task sequence.
 
-- `true`: Hide task sequence progress  
+- `true`: Hide task sequence progress
 
-- `false`: Display task sequence progress  
+- `false`: Display task sequence progress
 
 ### <a name="TSErrorOnWarning"></a> TSErrorOnWarning
 
@@ -1948,7 +1956,7 @@ Specify whether the task sequence engine considers a detected warning as an erro
 
 ### <a name="TSProgressInfoLevel"></a> TSProgressInfoLevel
 
-<!--5932692-->  
+<!--5932692-->
 
 Specify this variable to control the type of information that the task sequence progress window displays. Use the following values for this variable:
 
@@ -1970,8 +1978,8 @@ Specifies the starting directory for a command-line action. The specified direct
 
 #### Examples
 
-- `C:\`  
-- `%SystemRoot%`  
+- `C:\`
+- `%SystemRoot%`
 
 
 ## Deprecated variables

@@ -6,7 +6,7 @@ description: Enroll Windows devices using Automatic enrollment, Windows Autopilo
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/28/2024
 ms.topic: article
 ms.service: microsoft-intune

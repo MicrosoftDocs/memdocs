@@ -7,11 +7,11 @@ ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Install and configure the Exchange connector
@@ -28,43 +28,43 @@ Decide which account will connect to the Exchange Client Access server to manage
 
 Then, configure this account in an Exchange role group to run the following Exchange Server cmdlets:
 
-- **Clear-ActiveSyncDevice**  
+- **Clear-ActiveSyncDevice**
 
-- **Get-ActiveSyncDevice**  
+- **Get-ActiveSyncDevice**
 
-- **Get-ActiveSyncDeviceAccessRule**  
+- **Get-ActiveSyncDeviceAccessRule**
 
-- **Get-ActiveSyncDeviceStatistics**  
+- **Get-ActiveSyncDeviceStatistics**
 
-- **Get-ActiveSyncMailboxPolicy**  
+- **Get-ActiveSyncMailboxPolicy**
 
-- **Get-ActiveSyncOrganizationSettings**  
+- **Get-ActiveSyncOrganizationSettings**
 
-- **Get-ExchangeServer**  
+- **Get-ExchangeServer**
 
 - **Get-Mailbox**
 
-- **Get-Recipient**  
+- **Get-Recipient**
 
-- **Set-ADServerSettings**  
+- **Set-ADServerSettings**
 
-- **Set-ActiveSyncDeviceAccessRule**  
+- **Set-ActiveSyncDeviceAccessRule**
 
-- **Set-ActiveSyncMailboxPolicy**  
+- **Set-ActiveSyncMailboxPolicy**
 
-- **Set-CASMailbox**  
+- **Set-CASMailbox**
 
-- **New-ActiveSyncDeviceAccessRule**  
+- **New-ActiveSyncDeviceAccessRule**
 
-- **New-ActiveSyncMailboxPolicy**  
+- **New-ActiveSyncMailboxPolicy**
 
-- **Remove-ActiveSyncDevice**  
+- **Remove-ActiveSyncDevice**
 
-- **Get-CasMailbox**  
+- **Get-CasMailbox**
 
-- **Get-User**  
+- **Get-User**
 
-- **Set-ActiveSyncOrganizationSettings**  
+- **Set-ActiveSyncOrganizationSettings**
 
 The following Exchange Server management roles include these cmdlets:
 
@@ -74,7 +74,7 @@ The following Exchange Server management roles include these cmdlets:
 
 For more information, see [Understanding management role groups](/exchange/understanding-management-role-groups-exchange-2013-help) in the Exchange Server 2013 documentation.
 
-> [!TIP]  
+> [!TIP]
 > If you try to install or use the Exchange Server connector without the required cmdlets, you'll see the following error in the EasDisc.log file on the site server computer: `Invoking cmdlet <cmdlet> failed`.
 
 ## Install the connector
@@ -123,8 +123,8 @@ Verify the installation of the Exchange Server connector with status messages an
 
 After you complete the installation, monitor the mobile devices that are found and managed by the connector. View the collections of mobile devices, and use the reports for mobile devices.
 
-> [!NOTE]  
-> Configuration Manager generates names for the mobile devices that it finds. It uses the format *user name*_*device type*. For example, **jdoe_WindowsPhone**. If a user has more than one mobile device that has the same device type, Configuration Manager displays the same name for these mobile devices in the console and in reports.  
+> [!NOTE]
+> Configuration Manager generates names for the mobile devices that it finds. It uses the format *user name*_*device type*. For example, **jdoe_WindowsPhone**. If a user has more than one mobile device that has the same device type, Configuration Manager displays the same name for these mobile devices in the console and in reports.
 
 ## See also
 

@@ -4,9 +4,9 @@
 title: Device query in Microsoft Intune
 description: Learn how to gain on-demand information about the state of your devices using device query.
 keywords:
-ms.author: smbhardwaj
-author: smritib17
-manager: dougeby
+ms.author: mandia
+author: MandiOhlinger
+manager: laurawi
 ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -65,7 +65,7 @@ The supported properties you can query are listed in the **Properties** section.
 For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
 
 > [!TIP]
-> You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#query-with-copilot-in-device-query).
+> You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
 ## Remote device actions
 
@@ -264,7 +264,7 @@ Device query supports the following entities. To learn more about what propertie
 
 - The WindowsRegistry entity fails to return binary ValueData.
 
-- If you’re querying devices that are running on Windows 10, they must be on a minimum quality version.
+- If you're querying devices that are running on Windows 10, they must be on a minimum quality version.
 
   - If running Windows 10 21H2, ensure that it's running version 10.0.19044.3393.
 

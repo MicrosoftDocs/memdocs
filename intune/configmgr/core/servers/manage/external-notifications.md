@@ -6,12 +6,12 @@ ms.date: 09/18/2023
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # External notifications
@@ -238,8 +238,8 @@ Use the following process to view Run Details of subscription:
 
 1. In the Configuration Manager console  click **Monitoring**.
 2. In the Monitoring workspace, click **External Service Notifications** and select the desired subscription.
-3. Click on **Show Details**. 
-4. In the dialog box, Select the Azure Environment, Microsoft Entra tenant name from the drop down and SignIn using your **Azure Admin Account**. 
+3. Click on **Show Details**.
+4. In the dialog box, Select the Azure Environment, Microsoft Entra tenant name from the drop down and SignIn using your **Azure Admin Account**.
 5. Select the Subscription ID and enter the **Resource group** name and **Workflow** name.
 6. Click on **Get Run Details** button to view the **Run Details**.
 

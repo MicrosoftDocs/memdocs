@@ -5,9 +5,9 @@ title: Add an unmanaged macOS PKG app to Microsoft Intune
 titleSuffix:
 description: Learn about how to add an unmanaged macOS PKG app to Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 07/12/2024
 ms.topic: how-to
 ms.service: microsoft-intune

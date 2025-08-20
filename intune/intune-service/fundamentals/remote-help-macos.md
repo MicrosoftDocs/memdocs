@@ -5,9 +5,9 @@ title: Using Remote Help on macOS to assist authenticated users.
 titleSuffix: Microsoft Intune 
 description: Use Remote Help to provide remote assistance to authenticated users and to troubleshoot for frontline workers (FLW).
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: lenewsad
+ms.author: lanewsad
+manager: laurawi
 ms.date: 04/02/2024
 ms.topic: how-to
 ms.service: microsoft-intune

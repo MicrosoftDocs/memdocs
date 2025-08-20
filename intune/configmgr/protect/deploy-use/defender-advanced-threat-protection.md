@@ -6,11 +6,11 @@ ms.date: 12/16/2024
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Microsoft Defender for Endpoint
@@ -131,13 +131,13 @@ The installer package will check if the following components have already been i
 1. Create custom Client Device Settings or go to the properties of the required client setting and select **Endpoint Protection**
 1. For **Microsoft Defender for Endpoint Client on Windows Server 2012 R2 and Windows Server 2016** setting, The default value is set as **Microsoft Monitoring Agent (legacy)** which needs to be changed to **MDE Client (recommended)**.
 :::image type="content" source="media/9265511-mde-downlevel-support-client-settings.png" alt-text="Screenshot of Client Settings for Endpoint Protection showing different options for down-level server operating system devices." lightbox="media/9265511-mde-downlevel-support-client-settings.png":::
-1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.  
+1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.
 1. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
-1. Specify the file samples that are collected and shared from managed devices for analysis.  
+1. Specify the file samples that are collected and shared from managed devices for analysis.
    - **None**
-   - **All file types**  
-1. Review the summary and complete the wizard.  
+   - **All file types**
+1. Review the summary and complete the wizard.
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.
 
 ### <a name="bkmk_2207_any_os"></a> Onboard devices with MDE Client and MMA to Microsoft Defender for Endpoint
@@ -151,7 +151,7 @@ The installer package will check if the following components have already been i
 1. For the operating system, select **Windows 10 and 11**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
 1. Select **Download package**.
-   
+
    :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Screenshot of onboarding configuration file download." lightbox="media/5229962-onboarding-configuration.png":::
 
 1. Download the compressed archive (.zip) file and extract the contents.
@@ -177,31 +177,31 @@ The installer package will check if the following components have already been i
    - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender for Endpoint online service. <!--8538605-->
    :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Screenshot of Microsoft Defender for Endpoint policy configuration wizard." lightbox="media/5229962-create-atp-policy-wizard.png":::
 
-1. Specify the file samples that are collected and shared from managed devices for analysis.  
+1. Specify the file samples that are collected and shared from managed devices for analysis.
    - **None**
-   - **All file types**  
-1. Review the summary and complete the wizard.  
+   - **All file types**
+1. Review the summary and complete the wizard.
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.
 
 ## Monitor
 
-1. In the Configuration Manager console, navigate **Monitoring** > **Security** and then select **Microsoft Defender ATP**.  
+1. In the Configuration Manager console, navigate **Monitoring** > **Security** and then select **Microsoft Defender ATP**.
 
-1. Review the Microsoft Defender for Endpoint dashboard.  
+1. Review the Microsoft Defender for Endpoint dashboard.
 
-    - **Microsoft Defender ATP Agent Onboarding Status**: The number and percentage of eligible managed client computers with active Microsoft Defender for Endpoint policy onboarded  
+    - **Microsoft Defender ATP Agent Onboarding Status**: The number and percentage of eligible managed client computers with active Microsoft Defender for Endpoint policy onboarded
 
-    - **Microsoft Defender ATP Agent Health**: Percentage of computer clients reporting status for their Microsoft Defender for Endpoint agent  
+    - **Microsoft Defender ATP Agent Health**: Percentage of computer clients reporting status for their Microsoft Defender for Endpoint agent
 
-        - **Healthy** - Working properly  
+        - **Healthy** - Working properly
 
-        - **Inactive** - No data sent to service during time period  
+        - **Inactive** - No data sent to service during time period
 
-        - **Agent state** - The system service for the agent in Windows isn't running  
+        - **Agent state** - The system service for the agent in Windows isn't running
 
-        - **Not onboarded** - Policy was applied but the agent hasn't reported policy onboard  
+        - **Not onboarded** - Policy was applied but the agent hasn't reported policy onboard
 
-## Create an offboarding configuration file  
+## Create an offboarding configuration file
 
 1. Sign in to the [Microsoft Defender Security Center](https://securitycenter.windows.com/).
 1. Select **Settings**, then select **Offboarding** under the **Endpoint** heading.
@@ -209,15 +209,15 @@ The installer package will check if the following components have already been i
    - Using the **Windows 10 and 11** option ensures that all devices in the collection are off boarded and the MMA is uninstalled when needed.
 1. Download the compressed archive (.zip) file and extract the contents. Offboarding files are valid for 30 days.
 
-1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.  
+1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.
 
 1. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Offboarding**.
 
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
 
-1. Review the summary and complete the wizard.  
+1. Review the summary and complete the wizard.
 
-Select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.  
+Select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.
 
 > [!IMPORTANT]
 > The Microsoft Defender for Endpoint configuration files contains sensitive information which should be kept secure.

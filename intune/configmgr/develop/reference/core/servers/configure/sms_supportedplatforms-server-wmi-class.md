@@ -12,142 +12,142 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_SupportedPlatforms Server WMI Class
-The `SMS_SupportedPlatforms` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the platforms (operating system, architecture, and versions) that Configuration Manager supports.  
+The `SMS_SupportedPlatforms` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the platforms (operating system, architecture, and versions) that Configuration Manager supports.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_SupportedPlatforms : SMS_BaseClass  
-{  
-      String CI_UniqueID;  
-      String Condition;  
-      String DisplayText;  
-      Boolean IsSupported;  
-      String OSMaxVersion;  
-      String OSMinVersion;  
-      String OSName;  
-      String OSPlatform;  
-      String ResourceDll;  
-      UInt32 StringId;  
-};  
-```  
+```
+Class SMS_SupportedPlatforms : SMS_BaseClass
+{
+      String CI_UniqueID;
+      String Condition;
+      String DisplayText;
+      Boolean IsSupported;
+      String OSMaxVersion;
+      String OSMinVersion;
+      String OSName;
+      String OSPlatform;
+      String ResourceDll;
+      UInt32 StringId;
+};
+```
 
-## Methods  
- The following table lists the methods in the `SMS_SupportedPlatforms` class.  
+## Methods
+ The following table lists the methods in the `SMS_SupportedPlatforms` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[Enable Method in Class SMS_SupportedPlatforms](../../../../../develop/reference/core/servers/configure/enable-method-in-class-sms_supportedplatforms.md)|Enables or disables the platforms.|  
+|Method|Description|
+|------------|-----------------|
+|[Enable Method in Class SMS_SupportedPlatforms](../../../../../develop/reference/core/servers/configure/enable-method-in-class-sms_supportedplatforms.md)|Enables or disables the platforms.|
 
-## Properties  
- `CI_UniqueID`  
- Data type: `String`  
+## Properties
+ `CI_UniqueID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The unique ID of the Configuration Item that defines the platform rules.  
+ The unique ID of the Configuration Item that defines the platform rules.
 
- `Condition`  
- Data type: `String`  
+ `Condition`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The XML data that specifies the WQL that the client uses to check the supported platforms.  
+ The XML data that specifies the WQL that the client uses to check the supported platforms.
 
- `DisplayText`  
- Data type: `String`  
+ `DisplayText`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the platform that humans can read. It is used if the resource string does not exist.  
+ Name of the platform that humans can read. It is used if the resource string does not exist.
 
- `IsSupported`  
- Data type: `Boolean`  
+ `IsSupported`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true`, if the platform is supported as client operating system.  
+ `true`, if the platform is supported as client operating system.
 
- `OSMaxVersion`  
- Data type: `String`  
+ `OSMaxVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, Not_null]  
+ Qualifiers: [key, Not_null]
 
- Highest version number for the platform. A version of 99.99.9999.9999 denotes all future versions.  
+ Highest version number for the platform. A version of 99.99.9999.9999 denotes all future versions.
 
- `OSMinVersion`  
- Data type: `String`  
+ `OSMinVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, Not_null]  
+ Qualifiers: [key, Not_null]
 
- Lowest version number for the platform. A version of 0.00.0000.0 denotes all previous versions.  
+ Lowest version number for the platform. A version of 0.00.0000.0 denotes all previous versions.
 
- `OSName`  
- Data type: `String`  
+ `OSName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, Not_null]  
+ Qualifiers: [key, Not_null]
 
- Name of the operating system for the platform, for example, "Win NT".  
+ Name of the operating system for the platform, for example, "Win NT".
 
- `OSPlatform`  
- Data type: `String`  
+ `OSPlatform`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, Not_null]  
+ Qualifiers: [key, Not_null]
 
- Name of the computer architecture for the platform, for example, I386.  
+ Name of the computer architecture for the platform, for example, I386.
 
- `ResourceDll`  
- Data type: `String`  
+ `ResourceDll`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the resource DLL containing the localized name of the platform.  
+ Name of the resource DLL containing the localized name of the platform.
 
- `StringId`  
- Data type: `UInt32`  
+ `StringId`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- String ID in the resource DLL containing the localized name of the platform.  
+ String ID in the resource DLL containing the localized name of the platform.
 
-## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+## Remarks
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
- This class is populated when Configuration Manager is installed. Your application cannot add, update, or delete instances of this class by using WMI. However, new instances are added to the class when a package definition file is processed that contains a platform that is not identified by a class instance.  
+ This class is populated when Configuration Manager is installed. Your application cannot add, update, or delete instances of this class by using WMI. However, new instances are added to the class when a package definition file is processed that contains a platform that is not identified by a class instance.
 
- Your application uses the information contained in this class to populate `SMS_OS_Details` objects. For more information, see the `SupportedOperatingSystems` property of [SMS_Program Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_program-server-wmi-class.md).  
+ Your application uses the information contained in this class to populate `SMS_OS_Details` objects. For more information, see the `SupportedOperatingSystems` property of [SMS_Program Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_program-server-wmi-class.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [SMS_OS_Details Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_os_details-server-wmi-class.md)   
+## See Also
+ [SMS_OS_Details Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_os_details-server-wmi-class.md)
  [SMS_Program Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_program-server-wmi-class.md)

@@ -6,11 +6,11 @@ ms.date: 02/11/2025
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -18,18 +18,18 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-For many customers, a successful path to getting and staying current with Windows monthly updates starts with a good content distribution strategy using Configuration Manager. The size of the monthly quality updates can be a cause of concern for large organizations. There are a few technologies available that are intended to help reduce bandwidth and network load to optimize update delivery. This article explains these technologies, compares them, and provides recommendations to help you make decisions on which one to use.  
- 
-Windows provides several types of updates. For more information, see [Update types in Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business). This article focuses on Windows *quality* updates with Configuration Manager. 
+For many customers, a successful path to getting and staying current with Windows monthly updates starts with a good content distribution strategy using Configuration Manager. The size of the monthly quality updates can be a cause of concern for large organizations. There are a few technologies available that are intended to help reduce bandwidth and network load to optimize update delivery. This article explains these technologies, compares them, and provides recommendations to help you make decisions on which one to use.
+
+Windows provides several types of updates. For more information, see [Update types in Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business). This article focuses on Windows *quality* updates with Configuration Manager.
 
 
 ## Express update delivery
 
-Windows quality update downloads can be large. Every package contains all previously released fixes to ensure consistency and simplicity. Microsoft has been able to reduce the size of Windows update content that each client downloads with a feature called express. Express is used today by millions of devices that pull updates directly from the Windows Update service and significantly reduces the download size. This benefit is also available to customers whose clients don't directly download from the Windows Update service. 
+Windows quality update downloads can be large. Every package contains all previously released fixes to ensure consistency and simplicity. Microsoft has been able to reduce the size of Windows update content that each client downloads with a feature called express. Express is used today by millions of devices that pull updates directly from the Windows Update service and significantly reduces the download size. This benefit is also available to customers whose clients don't directly download from the Windows Update service.
 
-Configuration Manager supports [express installation files](manage-express-installation-files-for-windows-10-updates.md) of Windows 10 or later quality updates. For the best performance in download speeds, it's also recommended that you use Windows 10, version 1703 or later. 
+Configuration Manager supports [express installation files](manage-express-installation-files-for-windows-10-updates.md) of Windows 10 or later quality updates. For the best performance in download speeds, it's also recommended that you use Windows 10, version 1703 or later.
 
-> [!NOTE]  
+> [!NOTE]
 > The express version content is considerably larger than the full-file version. An express installation file contains all of the possible variations for each file it's meant to update. As a result, the required amount of disk space increases for updates in the update package source and on distribution points when you enable express support in Configuration Manager. Even though the disk space requirement on the distribution points increases, the content size that clients download from these distribution points decreases. Clients only download the bits they require (deltas) but not the whole update.
 
 
@@ -40,7 +40,7 @@ Even though clients download only the parts of the content that they require, ex
 Configuration Manager supports many peer-to-peer technologies, including the following:
 - Windows Delivery Optimization
 - Configuration Manager peer cache
-- Windows BranchCache  
+- Windows BranchCache
 
 The next sections provide further information on these technologies.
 
@@ -48,8 +48,8 @@ The next sections provide further information on these technologies.
 
 [Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is the main download technology and peer-to-peer distribution method built into Windows 10 and later. Windows clients can get content from other devices on their local network that download the same updates. Using the [Windows options available for Delivery Optimization](/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options), you can configure clients into groups. This grouping allows your organization to identify devices that are possibly the best candidates to fulfill peer-to-peer requests. Delivery Optimization significantly reduces the overall bandwidth that's used to keep devices up-to-date while speeding up the download time.
 
-> [!NOTE]  
-> Delivery Optimization is a cloud-managed solution. Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). 
+> [!NOTE]
+> Delivery Optimization is a cloud-managed solution. Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 
 For the best results, you may need to set the Delivery Optimization [download mode](/windows/deployment/update/waas-delivery-optimization-reference#download-mode) to **Group (2)** and define *Group IDs*. In group mode, peering can cross internal subnets between devices that belong to the same group including devices in remote offices. Use the [Group ID option](/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids) to create your own custom group independently of domains and AD DS sites. Group download mode is the recommended option for most organizations looking to achieve the best bandwidth optimization with Delivery Optimization.
 
@@ -63,7 +63,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 
 - **Allow clients to download delta content when available** set to **Yes**.
 - **Port that clients use to receive requests for delta content** set to 8005 (default) or a custom port number.
- 
+
 > [!IMPORTANT]
 > - Delivery Optimization must be enabled (default) and not bypassed. For more information, see [Windows Delivery Optimization reference](/windows/deployment/update/waas-delivery-optimization-reference).
 > - Verify your [Delivery Optimization client settings](../../core/clients/deploy/about-client-settings.md#delivery-optimization) when changing your [software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates) for delta content.
@@ -73,7 +73,7 @@ To use Delivery Optimization for all Windows update installation files, enable t
 - Delivery Optimization can't be used for Microsoft 365 Apps client updates if Office COM is enabled. Office COM is used by Configuration Manager to manage updates for Microsoft 365 Apps clients. You can deregister Office COM to allow the use of Delivery Optimization for Microsoft 365 Apps updates. When Office COM is disabled, software updates for Microsoft 365 Apps are managed by the default Office Automatic Updates 2.0 scheduled task. This means that Configuration Manager doesn't dictate or monitor the installation process for Microsoft 365 Apps updates. Configuration Manager will continue to collect information from hardware inventory to populate Office 365 Client Management Dashboard in the console. For information about how to deregister Office COM, see [Enable Office 365 clients to receive updates from the Office CDN instead of Configuration Manager](/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 
  - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587-->
- 
+
 - Download of [feature updates](../get-started/configure-classifications-and-products.md) for Windows may take a long time depending on the network and if additional content is determined to be needed for installation. This additional download time may also cause the installation to fail because it exceed the [maximum runtime](../get-started/manage-settings-for-software-updates.md#BKMK_SetMaxRunTime). <!--7328656-->
 
 #### Configuration recommendations for clients downloading delta content
@@ -93,8 +93,8 @@ If either of the above options aren't viable, **Allow clients to download delta 
 
 [Peer cache](../../core/plan-design/hierarchy/client-peer-cache.md) is a feature of Configuration Manager that enables clients to share with other clients content directly from their local Configuration Manager cache. Peer cache doesn't replace the use of other peer caching solutions like Windows BranchCache. It works together with them to provide more options for extending traditional content deployment solutions such as distribution points. Peer cache doesn't rely upon BranchCache. If you don't enable or use BranchCache, peer cache still works.
 
-> [!NOTE]  
-> Clients can only download content from peer cache clients that are in their current boundary group.  
+> [!NOTE]
+> Clients can only download content from peer cache clients that are in their current boundary group.
 
 
 ### Windows BranchCache
@@ -104,7 +104,7 @@ If either of the above options aren't viable, **Allow clients to download delta 
 
 ## Selecting the right peer caching technology
 
-Selecting the right peer caching technology for express installation files depends upon your environment and requirements. Even though Configuration Manager supports all of the above peer-to-peer technologies, you should use those that make the most sense for your environment. For most customers, assuming clients can meet the internet requirements for Delivery Optimization, the Windows 10 or later built-in peer caching with Delivery Optimization should be sufficient. If your clients can't meet these internet requirements, consider using the Configuration Manager peer cache feature. If you're currently using BranchCache with Configuration Manager and it meets all your needs, then express files with BranchCache may be the right option for you. 
+Selecting the right peer caching technology for express installation files depends upon your environment and requirements. Even though Configuration Manager supports all of the above peer-to-peer technologies, you should use those that make the most sense for your environment. For most customers, assuming clients can meet the internet requirements for Delivery Optimization, the Windows 10 or later built-in peer caching with Delivery Optimization should be sufficient. If your clients can't meet these internet requirements, consider using the Configuration Manager peer cache feature. If you're currently using BranchCache with Configuration Manager and it meets all your needs, then express files with BranchCache may be the right option for you.
 
 ### Peer cache comparison chart
 
@@ -126,7 +126,7 @@ Selecting the right peer caching technology for express installation files depen
 
 ## Conclusion
 
-Microsoft recommends that you optimize Windows 10 or later quality update delivery using Configuration Manager with express installation files and a peer caching technology, as needed. This approach should alleviate the challenges associated with Windows devices downloading large content for installing quality updates. Keeping Windows devices current by deploying quality updates each month is also recommended. This practice reduces the delta of quality update content needed by devices each month. Reducing this content delta causes smaller size downloads from distribution points or peer sources. 
+Microsoft recommends that you optimize Windows 10 or later quality update delivery using Configuration Manager with express installation files and a peer caching technology, as needed. This approach should alleviate the challenges associated with Windows devices downloading large content for installing quality updates. Keeping Windows devices current by deploying quality updates each month is also recommended. This practice reduces the delta of quality update content needed by devices each month. Reducing this content delta causes smaller size downloads from distribution points or peer sources.
 
 Due to the nature of express installation files, their content size is considerably larger than traditional self-contained files. This size results in longer update download times from the Windows Update service to the Configuration Manager site server. The amount of disk space required for both the site server and distribution points also increases. The total time required to download and distribute quality updates could be longer. However, the device-side benefits should be noticeable during the download and installation of quality updates by the devices. For more information, see [Using Express Installation Files](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708456(v=ws.10)#using-express-installation-files).
 
@@ -138,40 +138,40 @@ If the server-side tradeoffs of larger-size updates are blockers for the adoptio
 
 #### How do Windows express downloads work with Configuration Manager?
 
-The Windows update agent (WUA) requests express content first. If it fails to install the express update, it can fall back to the full-file update.  
+The Windows update agent (WUA) requests express content first. If it fails to install the express update, it can fall back to the full-file update.
 
-1. The Configuration Manager client tells WUA to download the update content. When WUA initiates an express download, it first downloads a stub (for example, `Windows10.0-KB1234567-<platform>-express.cab`), which is part of the express package.  
+1. The Configuration Manager client tells WUA to download the update content. When WUA initiates an express download, it first downloads a stub (for example, `Windows10.0-KB1234567-<platform>-express.cab`), which is part of the express package.
 
-2. WUA passes this stub to the Windows update installer, component-based servicing (CBS). CBS uses the stub to do a local inventory, comparing the deltas of the file on the device with what is needed to get to the latest version of the file being offered.  
+2. WUA passes this stub to the Windows update installer, component-based servicing (CBS). CBS uses the stub to do a local inventory, comparing the deltas of the file on the device with what is needed to get to the latest version of the file being offered.
 
-3. CBS then asks WUA to download the required ranges from one or more express .psf files.  
+3. CBS then asks WUA to download the required ranges from one or more express .psf files.
 
 4. If Delivery Optimization is enabled and peers are discovered to have the needed ranges, the client will download from peers independently of the ConfigMgr client. If Delivery Optimization is disabled or no peers have the needed ranges, the ConfigMgr client will download these ranges from a local distribution point (or a peer or Microsoft Update). The ranges are passed to the Windows Update Agent which makes them available to CBS to apply the ranges.
 
 
 #### Why are the express files (.psf) so large when stored on Configuration Manager peer sources in the ccmcache folder?
 
-The express files (.psf) are sparse files. To determine the actual space being used on disk by the file, check the **Size on disk** property of the file. The Size on disk property should be considerably smaller than the Size value.  
+The express files (.psf) are sparse files. To determine the actual space being used on disk by the file, check the **Size on disk** property of the file. The Size on disk property should be considerably smaller than the Size value.
 
 
 #### Does Configuration Manager support express installation files with Windows feature updates?
 
-No, Configuration Manager currently only supports express installation files with Windows 10 or later quality updates.  
+No, Configuration Manager currently only supports express installation files with Windows 10 or later quality updates.
 
 
 #### How much disk space is needed per quality update on the site server and distribution points?
 
-It depends. For each quality update, both the full-file and express version of the update are stored on servers. Windows quality updates are cumulative, so the size of these files increases each month. Plan for a minimum of 5 GB per update per language. 
+It depends. For each quality update, both the full-file and express version of the update are stored on servers. Windows quality updates are cumulative, so the size of these files increases each month. Plan for a minimum of 5 GB per update per language.
 
 
 #### Do Configuration Manager clients still benefit from express installation files when falling back to the Windows Update service?
 
-Yes. If you use the following software update deployment option, then clients still use express updates and Delivery Optimization when they fall back to the cloud service:  
+Yes. If you use the following software update deployment option, then clients still use express updates and Delivery Optimization when they fall back to the cloud service:
 
 **If software updates are not available on distribution point in current, neighbor or site groups, download content from Microsoft Updates**
 
 
-#### Why is express file content not downloaded for existing updates after I enable express file support? 
+#### Why is express file content not downloaded for existing updates after I enable express file support?
 
 The changes only take effect for any new updates synchronized and deployed after enabling support.
 

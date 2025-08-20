@@ -6,12 +6,12 @@ ms.date: 08/23/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: troubleshooting
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Application download in Configuration Manager

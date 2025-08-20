@@ -2,8 +2,8 @@
 title: Configure a software update point to use TLS/SSL with a PKI certificate tutorial
 titleSuffix: Configuration Manager
 description: Tutorial - Configure Windows Server Update Services (WSUS) servers and the software update points to use TLS/SSL with a PKI certificate.
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 01/14/2022
 ms.topic: tutorial
@@ -11,7 +11,7 @@ ms.service: configuration-manager
 ms.subservice: software-updates
 # Customer intent: As a Configuration Manager admin, I want to enable my WSUS servers and software update points to use TLS/SSL to reduce the ability of a potential attacker to remotely compromise a client and elevate privileges.
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -59,7 +59,7 @@ This tutorial covers the most common method to obtain a certificate for use with
 ## <a name="bkmk_pki"></a> Obtain the certificate from the CA if needed
 
 If you already have an appropriate certificate in the WSUS server's **Personal** certificate store, skip this section and start with the [Bind the certificate](#bkmk_bind) section. To send a certificate request to your internal CA to install a new certificate, follow the instructions in this section.
- 
+
 1. From the WSUS server, open an administrative command prompt and run `certlm.msc`. Your user account needs to be a local administrator to manage certificates for the local computer.
 
    The Certificate Manager tool for the local device appears.
@@ -71,7 +71,7 @@ If you already have an appropriate certificate in the WSUS server's **Personal**
 
    - **Common name:** Found on the **Subject** tab, set the value to the WSUS server's FQDN.
    - **Friendly name:** Found on the **General** tab, set the value to a descriptive name to help you identify the certificate later.
-   
+
    :::image type="content" source="media/certificate-properties.png" alt-text="Certificate properties window to specify more information for enrollment":::
 
 1. Select **Enroll** then **Finish** to complete the enrollment.
@@ -90,7 +90,7 @@ Once you have the certificate in the WSUS server's personal certificate store, b
 1. In the **Site Bindings** window, select the line for **https**, then select **Edit...**.
 
    - Don't remove the HTTP site binding. WSUS uses HTTP for the update content files.
-   
+
 1. Under the **SSL certificate** option, choose the certificate to bind to the WSUS Administration site. The certificate's friendly name is shown in the drop-down menu. If a friendly name wasn't specified, then the certificate's `IssuedTo` field is shown. If you're not sure which certificate to use, select **View** and verify the thumbprint matches the one you obtained.
 
    :::image type="content" source="media/edit-site-binding.png" alt-text="Edit Site Binding window with SSL certificate selection":::
@@ -111,7 +111,7 @@ Once you have the certificate in the WSUS server's personal certificate store, b
    - SimpleAuthWebService
 
    Make the following changes:
-   
+
    1. Select **SSL Settings**.
    1. Enable the **Require SSL** option.
    1. Verify the **Client certificates** option is set to **Ignore**.
@@ -127,18 +127,18 @@ Once the web services are set to require SSL, the WSUS application needs to be n
 1. Change directory to the tools folder for WSUS:
 
    `cd "c:\Program Files\Update Services\Tools"`
-   
+
 1. Configure WSUS to use SSL with the following command:
 
     `WsusUtil.exe configuressl server.contoso.com`
-   
+
    Where *server.contoso.com* is the FQDN of the WSUS server.
-   
+
 1. WsusUtil returns the URL of the WSUS server with the port number specified at the end. The port will be either 8531 (default) or 443. Verify the URL returned is what you expected. If something was mistyped, you can run the command again.
 
    :::image type="content" source="media/wsusutil.png" alt-text="The wsusutil configuressl command returning the HTTPS URL for WSUS":::
 
-> [!TIP] 
+> [!TIP]
 > If your WSUS server is internet facing, specify the external FQDN when running `WsusUtil.exe configuressl`.
 
 ## <a name="bkmk_wsus_console"></a> Verify the WSUS console can connect using SSL
@@ -159,7 +159,7 @@ Open the WSUS console to verify you can use an SSL connection to the WSUS server
 1. The **Use Secure Sockets Layer (SSL) to connect to this server** option automatically enables when either 8531 (default) or 443 are chosen.
 
    :::image type="content" source="media/connect-wsus-console.png" alt-text="Connect to the WSUS console over the HTTPS port":::
-       
+
 1. If your Configuration Manager site server is remote from the software update point, launch the WSUS console from the site server and verify the WSUS console can connect over SSL.
    - If the remote WSUS console can't connect, it likely indicates a problem with either trusting the certificate, name resolution, or the port being blocked.
 
@@ -170,7 +170,7 @@ Once WSUS is set up to use TLS/SSL, you'll need to update the corresponding Conf
 - Verify it can configure the WSUS server for the software update point
 - Direct clients to use the SSL port when they're told to scan against this WSUS server.
 
-To configure the software update point to require SSL communication to the WSUS server, do the following steps: 
+To configure the software update point to require SSL communication to the WSUS server, do the following steps:
 
 1. Open the Configuration Manager console and connect to either your central administration site or the primary site server for the software update point you need to edit.
 1. Go to **Administration** > **Overview** > **Site Configuration** > **Servers and Site System Roles**.
@@ -179,7 +179,7 @@ To configure the software update point to require SSL communication to the WSUS 
 1. Enable the **Require SSL communication to the WSUS server** option.
 
    :::image type="content" source="media/sup-properties.png" alt-text="SUP properties showing the option for Require SSL communication to the WSUS server":::
-   
+
 1. In the [**WCM.log**](../../core/plan-design/hierarchy/log-files.md#BKMK_SUPLog) for the site, you'll see the following entries when you apply the change:
 
    ```
@@ -193,7 +193,7 @@ To configure the software update point to require SSL communication to the WSUS 
    Setting new configuration state to 2 (WSUS_CONFIG_SUCCESS)
    ```
 
-Log file examples have been edited to remove unneeded information for this scenario.  
+Log file examples have been edited to remove unneeded information for this scenario.
 
 ## <a name="bkmk_cm_verify"></a> Verify functionality with Configuration Manager
 
@@ -205,7 +205,7 @@ Log file examples have been edited to remove unneeded information for this scena
 1. Select **Yes** to the notification asking if you want to initiate a site-wide synchronization for software updates.
 
    - Since the WSUS configuration changed, a full software updates synchronization will occur rather than a delta synchronization.
-   
+
 1. Open the **wsyncmgr.log** for the site. If you're monitoring a child site, you'll need to wait for the parent site to finish synchronization first. Verify that the server syncs successfully by reviewing the log for entries similar to the following:
 
    ```
@@ -227,7 +227,7 @@ Log file examples have been edited to remove unneeded information for this scena
 ### <a name="bkmk_cm_verify-client"></a> Verify a client can scan for updates
 
 When you change the software update point to require SSL, Configuration Manager clients receive the updated WSUS URL when it makes a location request for a software update point. By testing a client, we can:
--  Determine if the client trusts the WSUS server's certificate. 
+-  Determine if the client trusts the WSUS server's certificate.
 - If the SimpleAuthWebService and the ClientWebService for WSUS are functional.
 -  That the WSUS content virtual directory is functional, if the client happened to get a EULA during the scan
 
