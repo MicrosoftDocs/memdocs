@@ -6,9 +6,9 @@ ms.date: 02/28/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: overview
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 #Customer intent: As an Intune or Configuration Manager admin, I want to have visibility into the end-user experience so that I can improve it.
 ms.localizationpriority: high
 ms.collection: highpri

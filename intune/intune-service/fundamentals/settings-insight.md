@@ -4,8 +4,8 @@
 title: Settings insight
 description: The Settings insight feature adds insights giving you confidence in configurations that are successfully adopted by similar organizations.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: BrenDuns
+ms.author: brenduns
 manager: laurawi
 ms.date: 7/31/2024
 ms.topic: article
