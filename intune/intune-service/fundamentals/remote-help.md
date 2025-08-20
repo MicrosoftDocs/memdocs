@@ -197,6 +197,9 @@ After creating the custom roles that you can use to provide different users with
 
    >[!IMPORTANT]
    >If a sharer or a sharer's device isn't in the scope of a helper, that helper cannot provide assistance. When assisting an unenrolled device, the "All Devices" scope group will not include these devices. Instead, you should use the user scope group during the assignment process.
+   > 
+   > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment scope groups, or it needs to be separately listed as a scope group in the RBAC role assignment.
+   
 6. On the **Review + Create** page, when you're done, choose **Create**. The new assignment is displayed in the list of assignments.
 
 ## Monitoring and reports

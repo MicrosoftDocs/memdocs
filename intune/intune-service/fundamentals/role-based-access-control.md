@@ -164,6 +164,8 @@ To view an existing role assignment, choose **Intune** > **Tenant administration
 
   > [!TIP]
   > When you configure a scope group, limit access by selecting only the security groups that include the user and devices that an admin with this role assignment should manage. To ensure admins with this role can't target all users or all devices, don't select *Add all users* or *Add all devices*.
+  > 
+   > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment scope groups, or it needs to be separately listed as a scope group in the RBAC role assignment.
 
 - [**Scope Tags**](scope-tags.md): Administrative users who are assigned this role assignment can see the resources that have the same scope tags. 
 
