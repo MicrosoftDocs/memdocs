@@ -4,8 +4,8 @@
 title: Legacy Intune PC software client
 description: Learn about the deprecation for the Intune PC software client.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: MandiOhlinger
+ms.author: mandia
 manager: laurawi
 ms.date: 10/15/2020
 ms.topic: archived
