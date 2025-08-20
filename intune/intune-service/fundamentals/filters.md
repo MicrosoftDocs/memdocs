@@ -103,7 +103,7 @@ There are some general restrictions when creating filters:
 
 - Sign in as an Intune administrator. For more information on Intune roles, go to [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
-## Create an assignment filter
+## Create a filter
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Assignment filters** > **Create**.
