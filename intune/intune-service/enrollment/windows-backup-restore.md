@@ -149,7 +149,7 @@ Complete these steps to configure the restore setting for enrollment.
 The **Last modified** date updates to account for recent changes. Return to **Windows Backup and Restore** anytime to view and edit the setting again.   
 
 ## Known issues  
-Known issues with Windows Backup for Organization include: 
+Known issues with Windows Backup for Organizations include: 
 
 - This feature isn't supported in Government cloud.  
 
