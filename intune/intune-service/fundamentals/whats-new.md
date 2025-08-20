@@ -601,7 +601,7 @@ Applies to:
 
 ## Week of June 2, 2025
 
-## Device security
+### Device security
 
 #### Vulnerability Remediation Agent for Intune (public preview)<!-- 33475311 -->
  
