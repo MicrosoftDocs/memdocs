@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Enable Windows backup and restore in Microsoft Intune  
+title: Enable Windows Backup for Organizations in Microsoft Intune  
 titleSuffix: Microsoft Intune
 description: Enable Windows backup and restore in Intune for employees or students.
 keywords:
@@ -37,7 +37,7 @@ ms.collection:
  > [!NOTE]
  > This feature is in public preview. For more information on what that means, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-Enable users to securely sync their settings to the cloud and restore them on new or reimaged devices. Together, Microsoft Intune and Windows Backup for Organization lets users back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device during enrollment. 
+Enable users to securely sync their settings to the cloud and restore them on new or reimaged devices. Together, Microsoft Intune and Windows Backup for Organizations lets users back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device during enrollment. 
 
 Windows Backup for Organizations is a feature that's made up of the [Windows backup and restore settings](/windows/configuration/windows-backup/catalog) and is an option that can: 
 
@@ -123,7 +123,7 @@ To configure access to the Microsoft Activity Feed Service, include the Microsof
 
 ## Enrollment    
 
-To enable Windows Backup for Organization during enrollment, configure your backup and restore settings in the Microsoft Intune admin center. There are two areas where you need to configure settings: in the settings catalog, and under enrollment.  
+To enable Windows Backup for Organizations during enrollment, configure your backup and restore settings in the Microsoft Intune admin center. There are two areas where you need to configure settings: in the settings catalog, and under enrollment.  
 
 Complete these steps to configure the backup settings in the settings catalog. 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
@@ -149,7 +149,7 @@ Complete these steps to configure the restore setting for enrollment.
 The **Last modified** date updates to account for recent changes. Return to **Windows Backup and Restore** anytime to view and edit the setting again.   
 
 ## Known issues  
-Known issues with Windows Backup for Organization include: 
+Known issues with Windows Backup for Organizations include: 
 
 - This feature isn't supported in Government cloud.  
 
