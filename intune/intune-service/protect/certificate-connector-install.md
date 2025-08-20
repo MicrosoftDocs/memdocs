@@ -66,7 +66,7 @@ To support your use of certificates with Intune, you can install the Certificate
 
    - **Close** - This option closes the connector installation without configuring the connector. If you choose to *Close* the install at this time, later you can run the **Certificate Connector for Microsoft Intune** wizard to launch the connector configuration program. By default, the wizard is found in *C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Intune*.
 
-After a connector installs, you can run the installation program again to uninstall the connector.
+   After a connector installs, you can run the installation program again to uninstall the connector.
 
 > [!TIP]
 > The installer will attempt to install the .NET Framework 4.7.2. If you experience issues during this process you can choose to pre-install the .NET Framework using the [Microsoft .NET Framework 4.7.2 offline installer for Windows](https://support.microsoft.com/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2)
@@ -132,7 +132,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
    If configuration isn't successful, the wizard displays details about the errors to help you resolve the problem.
 
-After the configuration completes successfully and the wizard closes, the Certificate Connector for Microsoft Intune is now ready for use.
+   After the configuration completes successfully and the wizard closes, the Certificate Connector for Microsoft Intune is now ready for use.
 
 > [!TIP]
 > It might be helpful to rename the connector to reference the server the connector is installed on.
