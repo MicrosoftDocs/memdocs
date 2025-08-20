@@ -5,9 +5,9 @@ title: Data collection in Intune
 titleSuffix: Microsoft Intune
 description: Learn about personal data collected in Intune.
 keywords: privacy, personal data
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 06/25/2025
 ms.topic: article
 ms.service: microsoft-intune

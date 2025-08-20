@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 07/07/2025
+ms.date: 08/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -40,8 +40,10 @@ When any account in the Tenant is used to make a change to a resource that's pro
 Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
+- Device actions - Applies to [wipe](../remote-actions/devices-wipe.md#wipe), [retire](../remote-actions/devices-wipe.md#retire) and [delete](../remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center) device actions.
 - Scripts – Applies to deploying scripts to devices that run [Windows](../apps/powershell-scripts.md).
 - Access Policies - Applies to creating or managing multiple administrative approval policies.
+- Role-based access control – Applies to changes to roles, including modifications to role permissions, admin groups, or member group assignments.
 
 ## Prerequisites for access policies and approvers
 
@@ -52,9 +54,6 @@ To create an access policy, your account must be assigned the [*Intune Service A
 To be an approver for access policies, an account must be in the approver group that's assigned to the access policy for a specific type of resource.
 
 All approver groups must also be a member group of one or more Intune role assignments. There's no specific requirement for which role assignment the approver group must be added to. If the approver group isn't added to a role assignment, approver group members are removed from the group periodically.
-
-> [!CAUTION]  
-> [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## How multi admin approval and Access policies work
 
@@ -75,7 +74,7 @@ All approver groups must also be a member group of one or more Intune role assig
 
 ## Create an access policy
 
-1. To create an access policy, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Multi Admin Administration** > **Access policies** and select **Create**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Multi Admin Administration** > **Access policies** > select **Create**.
 
 2. On the *Basics* page, provide a *Name*, and optional *Description*, and for *Profile type* select from available options. Each policy supports a single profile type.
 

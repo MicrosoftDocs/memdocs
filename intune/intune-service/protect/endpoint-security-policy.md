@@ -87,6 +87,8 @@ When you assign RBAC permission for managing aspects of endpoint security, we re
 - Update
 - View Reports
 
+For enhanced security, [!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
+
 #### Use custom RBAC roles
 
 The following permissions include rights to endpoint security workloads:
