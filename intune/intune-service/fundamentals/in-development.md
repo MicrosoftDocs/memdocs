@@ -7,7 +7,7 @@ keywords:
 author: laurawi
 ms.author: brenduns
 manager: laurawi
-ms.date: 08/20/2025
+ms.date: 08/22/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -69,7 +69,11 @@ We’re working on a dashboard for Endpoint Privilege Management (EPM) that brin
 
 ## App management
 
-### Offline Mode and Pre-Signed In Apps for Android Enterprise Dedicated Devices<!-- 30303710, 25476290 -->
+### PowerShell script support when installing Win32 apps<!-- 29857395 -->
+
+For added flexibility when installing apps, you will be able to upload a PowerShell script to install Enterprise App Catalog apps as an alternative to running a command line.
+
+### Offline Mode and Pre-Signed In Apps for Android Enterprise Dedicated Devices<!-- 30303710^^, 25476290^^-->
 
 We're enhancing support for Android Enterprise dedicated devices with two new features in Managed Home Screen (MHS): Offline mode and App access without sign in.
 
@@ -92,14 +96,134 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
 
+### Filter device configuration profiles by the policy type<!-- 33223685 -->
+
+In the Intune admin center > **Devices** > **Configuration**, you can use the **Add filters** feature to filter your list of policies by platform, scope tags, and the last modified date.
+
+**Policy type** is now available in the **Add filters** feature. So, you can filter your list of policies by their type, like the settings catalog, custom, device restrictions, and the other policy types.
+
+### New Private Space setting in the Android Enterprise settings catalog <!-- 30802944 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There's a new **Block private space** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, users are prevented from creating or using private spaces on the device. All existing private spaces will be deleted.
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md).
+
+Applies to:
+
+- Android Enterprise corporate-owned devices with a work profile (COPE)
+
+### New USB access setting in the Android Enterprise settings catalog <!-- 24213820 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There's a new **USB access** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). The setting allows admins to select what files and/or data can be transferred via USB. If admins block file transfer, only files will be blocked from being transferred and other connection (such as mouse) will still be allowed. If admins block USB data transfer, all data will be blocked.
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md).
+
+Applies to:
+
+- Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+
+### New day zero settings available in the Apple settings catalog <!-- 33806647 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+ 
+#### iOS/iPadOS
+
+**Managed Settings > Default Applications**:
+
+- Calling
+- Messaging
+
+**Restrictions**:
+
+- Allowed Camera Restriction Bundle IDs
+
+**Web > Web Content Filter**:
+
+- Safari History Retention Enabled
+
+#### macOS
+
+**Authentication > Extensible Single Sign On Kerberos**:
+
+- Use Platform SSO TGT
+
+**Microsoft Defender**:
+
+- The Microsoft Defender category is updated with new settings. Learn more about available macOS Defender settings at [Microsoft Defender - Policies](https://learn.microsoft.com/en-us/defender-endpoint/mac-preferences).
+
+**Restrictions**:
+
+- Allow Call Recording
+- Allow Live Voicemail
+
+**Web > Web Content Filter**:
+
+- Safari History Retention Enabled
+
+### Settings available in both Templates and Settings Catalog for Android Enterprise <!-- 34226745 -->
+
+Settings that have previously been supported in Templates are now also supported in the settings catalog.
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+To create a new Settings Catalog policy go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
+
+The following settings are in the settings catalog:
+
+**General**:
+
+- Block roaming data services
+- Block Bluetooth configuration
+- Block Wi-Fi access point configuration
+- Default permission policy
+- Block access to camera
+- Allow access to developer settings
+- Block beaming data from apps using NFC (work-profile level)
+
+  > [!NOTE]
+  > This setting is deprecated in A10, but the setting still configures correctly on newer devices. But, the setting doesn't do anything because the feature isn't available.
+
+- Block factory reset
+- Block tethering and access to hotspots
+- Block volume changes
+
+  > [!NOTE]
+  > This setting shows as successfully applied to corporate-owned devices with a work profile. But, the setting has no effect.
+
+**Users and accounts**:
+
+- User can configure credentials (work profile-level)
+- Block account changes
+
+**System Security**:
+
+- Require threat scan on apps
+- Require Common Criteria mode
+
+**Applications**:
+
+- Allow installation from unknown sources
+- App auto-updates (work profile-level)
+
+Applies to:
+
+- Android Enterprise
 
 <!-- *********************************************** -->
 
 ## Device enrollment
 
-### Intune to support Ubuntu 22.04 and later<!-- 32756619 -->
+### Intune to support Ubuntu 22.04 and later<!-- 32756619^^ -->
 
 Microsoft Intune and the Microsoft Intune app for Linux will support Ubuntu 22.04 and later, while ending support for Ubuntu 20.04. Devices that are currently enrolled on Ubuntu 20.04 remain enrolled even when that version is no longer supported. New devices will be unable to enroll if they're running Ubuntu 20.04. To prepare for this change, check your Intune reporting to see what devices or users might be affected. In the admin center, go to **Devices** > **All devices** and filter OS by Linux. You can add more columns to help identify who in your organization has devices running Ubuntu 20.04. Notify your users to upgrade their devices to a supported Ubuntu version.
 
@@ -107,11 +231,21 @@ Microsoft Intune and the Microsoft Intune app for Linux will support Ubuntu 22.0
 
 ## Device management
 
+### New features in Copilot for Microsoft Intune <!-- 32549162 -->
+
+- **Easier access to Copilot Chat** - Copilot Chat is embedded directly into the Intune admin center header. So, IT admins can access Copilot Chat from any screen in the admin center. This feature helps admins get faster insights and support.
+
+- **Context-aware conversations with Copilot Chat** - As you type, a dynamic prompt box provides real-time suggestions and recommends prompts relevant to what you're trying to ask. You can troubleshoot devices, manage policies, explore Windows 365 features, and more. You can also directly access the Microsoft docs to learn more.
+
+  Copilot Chat retains your conversation history and remains context aware as you move through the admin center. This continuity helps minimize repetitive prompts.
+
+- **Expanded support for Windows 365 Cloud PC** - With this general availability update, Copilot now supports Windows 365 Cloud PC management. IT admins can access important info, like licensing status, connection quality, configuration details, and performance metrics. This feature makes it easier for admins to monitor and manage Cloud PCs directly from the Intune admin center.
+
 ### Configure Windows Backup for Organizations (public preview)<!-- 29202026 -->
 
 Intune administrators will be able to configure a new feature in public preview called Windows Backup for Organizations. With this feature, you can back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Announcing Windows Backup for Organizations - Windows IT Blog](https://techcommunity.microsoft.com/blog/windows-itpro-blog/announcing-windows-backup-for-organizations/4416659).
 
-### New resolution button improves compliance remediation experience<!-- 31370959 -->
+### New resolution button improves compliance remediation experience<!-- 31370959^^ -->
 
 We're improving the Just in Time (JIT) compliance remediation experience for device users in Microsoft Intune. Intune is collaborating with Microsoft Defender to:
 
@@ -156,7 +290,11 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-<!-- ## Monitor and troubleshoot -->
+## Monitor and troubleshoot
+
+### Give feedback about multiple device query<!-- 33381301 -->
+
+You will be able to use the new feedback feature on the multiple device query page to submit feedback about multiple device query.
 
 <!-- *********************************************** -->
 
@@ -166,7 +304,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Role-based access control
 
-### Multi-administrator approval support for role-based access control <!-- 26838684 -->
+### Multi-administrator approval support for role-based access control <!-- 26838684 ^^ -->
 
 Support for multiple administrative approval (MAA) is being expanded to include role-based access control. When this feature is enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This helps protect your organization from unauthorized or accidental role-based access control changes by enforcing dual authorization.
 
