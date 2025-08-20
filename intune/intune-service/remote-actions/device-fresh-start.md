@@ -4,8 +4,8 @@
 title: Reset Windows 10 and 11 devices with Microsoft Intune
 description: Use Fresh Start to remove or uninstall apps on Windows 10 and 11 by using Microsoft Intune. 
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: dougeby
 ms.date: 04/07/2025
 ms.topic: how-to

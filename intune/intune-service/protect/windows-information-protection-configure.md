@@ -5,9 +5,9 @@ title: Windows Information Protection in Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Learn about using Windows Information Protection with Microsoft Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 04/08/2022
 ms.topic: article
 ms.service: microsoft-intune

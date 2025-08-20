@@ -121,6 +121,10 @@ The **Intune Administrator** role is a built-in role in Microsoft Entra, and is 
 - Assign the Intune Administrator role only as needed. If there's a [built-in Intune role](#rbac-roles) that meets the needs of the admin, then assign that role instead of the Intune Administrator role. Always assign the least privileged Intune role necessary for the admin to do their tasks.
 - Create [custom roles](create-custom-role.md) to further limit the scope of permissions for your admins.
 
+**Enhanced Security Controls**:
+
+[!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
+
 To learn more about the Microsoft Entra Intune Administrator role, see [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
 ## Privileged Identity Management for Intune
