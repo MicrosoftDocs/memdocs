@@ -20,7 +20,7 @@ ms.assetid: 8190814-07f0-42d8-9b3a-87c67dd2b7ed
 #ROBOTS:
 #audience:
 
-ms.reviewer: tisilver
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -57,4 +57,4 @@ Users are notified that their devices are supervised in the **Settings** app. In
 
 ## Next steps
 
-For other device management options, see [What is Microsoft Intune device management?](device-management.md)
+For other device management options, see [What is Microsoft Intune device management?](what-is-device-management.md)  
