@@ -57,6 +57,8 @@ Apps requiring user affinity, such as the Intune Company Portal app, aren't supp
 
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
+Before you export the ACME certificate for Apple Configurator enrollment, first preload the device serial numbers into Intune, and then assign them to the enrollment profile. Otherwise, the direct enrollment profile will fail.  
+
 Devices that are already enrolled in Intune do not get an ACME certificate unless they re-enroll into Microsoft Intune. ACME is supported on devices running macOS 13.1 or later.   
 
 ## Prerequisites

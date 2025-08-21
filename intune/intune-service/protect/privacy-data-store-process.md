@@ -5,9 +5,9 @@ title: Data storage and processing in Intune
 titleSuffix: Microsoft Intune
 description: Learn how personal data is stored and processed in Intune.
 keywords: data, privacy
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 06/25/2025
 ms.topic: article
 ms.service: microsoft-intune
@@ -37,7 +37,7 @@ ms.collection:
 
 ### Storage locations
 
-Microsoft Intune isn’t deployed to all Microsoft data centers globally. We make decisions on where to deploy Intune services based on the number of customers, regional affiliations, and to help customers comply with laws, regulations or industry standards that explicitly govern the location of data storage. 
+Microsoft Intune isn't deployed to all Microsoft data centers globally. We make decisions on where to deploy Intune services based on the number of customers, regional affiliations, and to help customers comply with laws, regulations or industry standards that explicitly govern the location of data storage. 
 
 Microsoft offers and operates Intune services in three major geographic regions:
 
@@ -51,7 +51,7 @@ Intune is also available in the following local geographies:
 - **India**
 - **Switzerland**
 
-When a customer first provisions Intune, the tenant’s Customer Data is hosted in the geography that best aligns with the country/region value in its Microsoft Entra directory. This value is set as part of the Microsoft Entra directory creation process and can’t be modified later.
+When a customer first provisions Intune, the tenant's Customer Data is hosted in the geography that best aligns with the country/region value in its Microsoft Entra directory. This value is set as part of the Microsoft Entra directory creation process and can't be modified later.
 
 For existing tenants, refer to endpoint.microsoft.com, Tenant Administration | Tenant Status. If you don't have an existing tenant, create a trial tenant and provision Intune.
 

@@ -5,8 +5,8 @@ ms.date: 08/11/2025
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: how-to
-author: smritib17
-ms.author: smbhardwaj
+author: nicholasswhite
+ms.author: nwhite
 manager: laurawi
 # Customer intent: As a Microsoft Intune administrator, I want to enable and use remediations so that I can fix common support issues before end users notice issues.
 ms.localizationpriority: high
@@ -126,7 +126,7 @@ When you configure the assignment of a script package, you can define how often 
 
 Execution behavior:
 
-- Remediations run based on the device’s local time, by default. To schedule by Coordinated Universal Time, select **Use UTC**.
+- Remediations run based on the device's local time, by default. To schedule by Coordinated Universal Time, select **Use UTC**.
 - If a scheduled run is missed, the remediation runs when the device is online, and as soon as possible.
 - For non-urgent or resource-heavy scripts, less frequent schedules (like every 7 days) are recommended, which helps reduce any performance impact on the device.
 

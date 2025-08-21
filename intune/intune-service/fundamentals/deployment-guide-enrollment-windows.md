@@ -268,7 +268,7 @@ With User enrollment, you can "register" the devices with Microsoft Entra ID or 
 | Feature | Use this enrollment option when |
 | --- | --- |
 | You use Windows client. | ✅ <br/><br/> Configuration Manager supports Windows Server. |
-| Devices are Microsoft Entra hybrid joined. | ✅ <br/><br/> Microsoft Entra hybrid joined devices are joined to your on-premises Active Directory, and registered with your Microsoft Entra ID. Devices in Microsoft Entra ID are available to Intune. Devices that aren't registered in Microsoft Entra ID aren't available to Intune. <br/><br/>A full Microsoft Entra joined solution might be better for your organization. For more information, go to the [Success with remote Windows Autopilot and Microsoft Entra hybrid join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353) blog. |
+| Devices are Microsoft Entra hybrid joined. | ✅ <br/><br/> A full Microsoft Entra joined solution might be better for your organization. For more information, see [Success with remote Windows Autopilot and Microsoft Entra hybrid join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353).|
 | You have Microsoft Entra ID P1 or P2. |❌ Microsoft Entra ID P1 or P2 isn't required.<br/><br/> ✅   If the devices join Microsoft Entra ID, then they can use Microsoft Entra ID P1 or P2 features, like Conditional Access. |
 | You have remote workers. | ✅ <br/><br/> Users should know that their personal devices might be managed by the organization IT. |
 | Devices are personal or BYOD. | ✅ |

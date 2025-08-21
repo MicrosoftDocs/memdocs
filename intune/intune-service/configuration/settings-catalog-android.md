@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 06/17/2025
+ms.date: 08/18/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -73,7 +73,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -81,7 +81,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -89,7 +89,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -97,7 +97,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -105,7 +105,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -113,7 +113,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -121,7 +121,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -129,7 +129,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -137,7 +137,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -145,7 +145,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -153,7 +153,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -161,7 +161,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   This feature applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -181,6 +181,13 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate-owned devices with a work profile (COPE)
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Hide organization name**: If **True**, this setting prevents the enterprise name from being shown on the device, like on the lock screen. If **False**, Intune doesn't change or update this setting. By default, the OS might display the enterprise name.
+
+  This feature applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
 
 # [AOSP](#tab/aosp)
 

@@ -5,8 +5,8 @@ title: Intune operated by 21Vianet in China
 titleSuffix: 
 description: Intune operated by 21Vianet in China.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: MandiOhlinger
+ms.author: mandia
 manager: laurawi
 ms.date: 11/25/2024
 ms.topic: article
@@ -74,11 +74,11 @@ In Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, yo
 - You control your customer data if you leave the service.
 - You have options to control the security of your customer data.
 
-With Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, you’re the owner of your data:
+With Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, you're the owner of your data:
 
-- 21Vianet doesn’t use customer data for advertising.
+- 21Vianet doesn't use customer data for advertising.
 - You control who has access to your customer data.
-- We use logical isolation to segregate each customer’s data.
+- We use logical isolation to segregate each customer's data.
 - We provide simple, transparent data-use policies, and get independent audits.
 - Our subcontractors are under contract to meet our privacy requirements.
 
