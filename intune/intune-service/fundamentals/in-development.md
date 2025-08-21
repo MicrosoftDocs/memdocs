@@ -222,6 +222,18 @@ Applies to:
 
 ## Device management
 
+### Resource explorer renamed to Device inventory <!-- 33630406 -->
+
+The **Resource explorer** pane under **Monitor** for Windows devices will be renamed to **Device inventory**. This change applies to tenants with at least one device targeted by a [properties catalog](/intune/intune-service/configuration/properties-catalog) policy. The experience and data remain unchanged—only the pane name is changed.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+> [!NOTE]
+> The **Resource explorer** pane that displays Configuration Manager data via [tenant attach](/intune/configmgr/tenant-attach/resource-explorer) will retain its current name.
+
 ### New features in Copilot for Microsoft Intune <!-- 32549162 -->
 
 - **Easier access to Copilot Chat** - Copilot Chat is embedded directly into the Intune admin center header. So, IT admins can access Copilot Chat from any screen in the admin center. This feature helps admins get faster insights and support.
