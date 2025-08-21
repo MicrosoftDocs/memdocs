@@ -113,6 +113,26 @@ For more information about configuring and using managed installers, see [Get st
 Applies to:  
 - Windows
 
+#### New Windows settings in the settings catalog <!-- 34345586 -->
+
+The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place. There are new settings in the Windows settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type).
+
+**Microsoft Edge Administrative Templates policy updates (v138)**:
+
+Intune supports ingestion of new Microsoft Edge policies including AI search, TLS 1.3 early data, and external link handling. Several legacy policies are deprecated or marked obsolete. These updates enhance browser control and security for enterprise environments.
+
+**OneDrive**:
+
+-  **Disable a toast and activity center message to encourage a user to sign in OneDrive using an existing credential that is made available to Microsoft applications** - This setting allows IT admins to prevent detection of new accounts in OneDrive, helping enforce organizational sync and access controls.
+
+**Administrative Templates\Windows Components\Sync your settings**:
+
+- **Enable Windows Backup** - This setting allows IT admins to manage syncing behavior for Windows Backup features. Specifically, this policy controls whether language preferences are included in backup sync, which helps organizations tailor backup configurations to their needs.
+
+Applies to:
+
+- Windows
+
 #### New day zero settings available in the Apple settings catalog<!-- 33437616 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
