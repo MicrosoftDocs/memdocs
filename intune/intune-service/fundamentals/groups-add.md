@@ -5,8 +5,8 @@ title: Add groups to organize users and devices for Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Create Microsoft Entra groups to organize users and devices for use with Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: paolomatarazzo
+ms.author: paoloma
 manager: laurawi
 ms.date: 06/23/2025
 ms.topic: how-to
@@ -35,7 +35,7 @@ ms.collection:
 
 Microsoft Intune uses security groups from Microsoft Entra ID for various organizational needs. These needs include the grouping of users or devices by geographic location, department, hardware characteristics, and more. To support the use of Entra groups by Intune, the Intune admin center includes the Entra Groups user interface with all its functionality. Any groups that appear in Entra and new groups that an Intune admin might create are visible in Intune, Entra, and other products that share the Entra Groups user interface like Microsoft 365.
 
-Intune admins use well-defined groups when deploying policies, deploying apps, and for assigning other administrative users’ permissions so they can help administer different aspects of the Intune subscription.
+Intune admins use well-defined groups when deploying policies, deploying apps, and for assigning other administrative users' permissions so they can help administer different aspects of the Intune subscription.
 
 This article focuses on using the Intune admin center to create groups for use with Intune, including details about the permissions required to manage and use those groups within the admin center.
 
@@ -153,7 +153,7 @@ Use the following steps to delete an existing group:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Groups** > **All groups**.
-3. Select the checkbox for each group you want to delete, and then select **Delete** from options at the top of the *All Groups* view. Alternately, you can select the name of a group to open a single group’s *Overview* page, and then select *Delete** from the top of that view.
+3. Select the checkbox for each group you want to delete, and then select **Delete** from options at the top of the *All Groups* view. Alternately, you can select the name of a group to open a single group's *Overview* page, and then select *Delete** from the top of that view.
 
 > [!TIP]  
 > After a group is deleted, it might take some time before it appears in the *Deleted groups* list.

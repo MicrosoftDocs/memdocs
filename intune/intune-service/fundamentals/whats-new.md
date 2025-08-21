@@ -7,11 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-<<<<<<< HEAD
-ms.date: 08/20/2025
-=======
-ms.date: 08/15/2025
->>>>>>> e6e4e1e35626cfcc05e5165acc99dc61deb6cc51
+ms.date: 08/21/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -93,9 +89,20 @@ For more information, see [Supported variables for configuration values](../apps
 **Applies to**:  
 - Android Enterprise
 
+#### Offline Mode and App access without sign in for Android Enterprise Dedicated Devices on Managed Home Screen<!-- 30303710, 25476290, -->
+
+Managed Home Screen (MHS) for Android Enterprise dedicated devices now supports two new features: **Offline mode** and **App access without sign in**.
+
+- **Offline mode** – Lets users access designated apps when the device is offline or unable to connect to the network. You can configure a grace period before requiring users to sign in once connectivity is restored.  
+- **App access without sign in** – Lets users launch specific apps from the MHS sign-in screen via the MHS top bar, regardless of network status. This is useful for apps that need to be available immediately, such as help desk or emergency tools.
+
+These features are designed for dedicated devices enrolled in Microsoft Entra shared device mode and can be configured via device configuration policy.
+
+Applies to: Android Enterprise dedicated devices
+
 ### Device configuration
 
-### Managed Installer support for user and device groups <!-- 30293237 -->
+#### Managed Installer support for user and device groups <!-- 30293237 -->
  
 We’ve updated our Managed Installer policy to add the capability to target individual groups of users and devices, using one or more individual policies. Until now, a Managed Installer policy was a tenant-wide configuration that applied to all Windows devices. With this update, separate policies can now be assigned to different device groups providing you more flexibility.
 
@@ -167,12 +174,21 @@ The [Settings Catalog](../configuration/settings-catalog.md) lists all the setti
 
 There's a new **Hide organization name** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, the enterprise name isn't shown on the device, such as lock screen.
 
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md).
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
 
 Applies to:
 
 - Android Enterprise corporate-owned devices with a work profile (COPE)
 - Android Enterprise corporate owned fully managed (COBO)
+
+### Device enrollment
+
+#### Intune supports Ubuntu 22.04 and later<!-- 32756619 -->
+
+Microsoft Intune and the Microsoft Intune app for Linux now support Ubuntu 22.04 LTS and Ubuntu 24.04 LTS, and has ended support for Ubuntu 20.04 LTS. Devices that are currently enrolled on Ubuntu 20.04 LTS remain enrolled even though the version is no longer supported. New devices are unable to enroll if they're running Ubuntu 20.04 LTS. To see what devices or users might be affected, check your Intune reporting. In the admin center, go to **Devices **> **All devices** and filter OS by Linux. You can add more columns to help identify who in your organization has devices running Ubuntu 20.04 LTS. Notify your users to upgrade their devices to a supported Ubuntu version. 
+
+For more information about Linux enrollment, see [Linux device enrollment guide for Microsoft Intune](deployment-guide-enrollment-linux.md).
+
 
 ### Device management
 
@@ -184,6 +200,11 @@ The **[Wipe](../remote-actions/devices-wipe.md)** remote action supports MAA. Us
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
+#### Configure Windows Backup for Organizations (public preview)<!-- 33829628 -->
+
+Intune administrators can configure a new feature in public preview called Windows Backup for Organizations. With this feature, you can back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device. Backup settings are configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device is available in the admin center under **Enrollment**. The backup setting is available now in public preview, while the restore setting will be available for public preview beginning August 26th.
+
+For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).
 
 ### Intune apps
 
@@ -205,7 +226,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Declarative software update reports for Apple devices<!-- 25207078, 31557946 -->
 
-You can now use several new [software update reports for Apple devices](../protect/software-updates-reports-apple-declarative-based.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
+You can now use several new [software update reports for Apple devices](../protect/software-updates-ios.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
 
 - A *per-device software update report* - Per-device software update reports are available in the Intune Admin center by going to *Devices* and then selecting an applicable device. In the Devices Overview pane for that device, below Monitor, you'll find the report listed as **iOS software updates** for iOS or iPadOS devices, and as **macOS software updates** for macOS devices.
 
@@ -215,7 +236,7 @@ You can now use several new [software update reports for Apple devices](../prote
 
 - **Apple software update report** - This is an organizational report that displays details about pending and current software update information across your entire managed Apple device fleet. To find this report, in the admin center go to *Reports* > *Device management* > *Apple updates*, select the *Reports* tab, and then select the report tile.
 
-- **Apple software update summary report** - View the Apple software update summary report, in the admin center go to *Reports* > *Device management* > *Apple updates*, and then then select the *Summary* tab. Here you’ll see a roll up of update status from macOS, iOS, and iPadOS devices. This includes the version of the latest update that is available for each platform, and the date that update became available.
+- **Apple software update summary report** - View the Apple software update summary report, in the admin center go to *Reports* > *Device management* > *Apple updates*, and then select the *Summary* tab. Here you’ll see a roll up of update status from macOS, iOS, and iPadOS devices. This includes the version of the latest update that is available for each platform, and the date that update became available.
 
 The following Apple devices support these new reports:  
 - iOS 17 and later
@@ -223,6 +244,14 @@ The following Apple devices support these new reports:
 - macOS 14 and later 
 
 For more information about the changes behind these reports, see [Support tip: Move to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/IntuneCustomerSuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/4432177).
+
+### Role-based access control
+
+#### Multi-administrator approval support for role-based access control<!-- 26838684 -->
+
+Multi-administrator approval (MAA) now supports role-based access control. When enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.  
+
+For more information, see [Role-based access control in Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Week of August 11, 2025
 

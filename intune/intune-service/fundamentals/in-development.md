@@ -7,7 +7,7 @@ keywords:
 author: laurawi
 ms.author: brenduns
 manager: laurawi
-ms.date: 08/22/2025
+ms.date: 08/25/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -80,19 +80,6 @@ We’re working on a dashboard for Endpoint Privilege Management (EPM) that brin
 ### PowerShell script support when installing Win32 apps<!-- 29857395 -->
 
 For added flexibility when installing apps, you will be able to upload a PowerShell script to install Enterprise App Catalog apps as an alternative to running a command line.
-
-### Offline Mode and Pre-Signed In Apps for Android Enterprise Dedicated Devices<!-- 30303710^^, 25476290^^-->
-
-We're enhancing support for Android Enterprise dedicated devices with two new features in Managed Home Screen (MHS): Offline mode and App access without sign in.
-
-Offline Mode lets users access designated apps when the device is offline or unable to connect to the network. You can also configure a grace period before requiring users to sign in once connectivity is restored.
-
-App access without sign in lets users launch specific apps from the MHS sign-in screen--regardless of network status--via the MHS top bar. This can be helpful for apps that need to be available immediately, such as help desk or emergency tools.
-
-These features are intended for use on dedicated devices enrolled in Microsoft Entra Shared device mode and will be configurable via device configuration policy.
-
-Applies to:
-- Android Enterprise
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -229,11 +216,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### Intune to support Ubuntu 22.04 and later<!-- 32756619^^ -->
-
-Microsoft Intune and the Microsoft Intune app for Linux will support Ubuntu 22.04 and later, while ending support for Ubuntu 20.04. Devices that are currently enrolled on Ubuntu 20.04 remain enrolled even when that version is no longer supported. New devices will be unable to enroll if they're running Ubuntu 20.04. To prepare for this change, check your Intune reporting to see what devices or users might be affected. In the admin center, go to **Devices** > **All devices** and filter OS by Linux. You can add more columns to help identify who in your organization has devices running Ubuntu 20.04. Notify your users to upgrade their devices to a supported Ubuntu version.
+<!-- ## Device enrollment -->
 
 <!-- *********************************************** -->
 
@@ -253,7 +236,7 @@ Microsoft Intune and the Microsoft Intune app for Linux will support Ubuntu 22.0
 
 Intune administrators will be able to configure a new feature in public preview called Windows Backup for Organizations. With this feature, you can back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Announcing Windows Backup for Organizations - Windows IT Blog](https://techcommunity.microsoft.com/blog/windows-itpro-blog/announcing-windows-backup-for-organizations/4416659).
 
-### New resolution button improves compliance remediation experience<!-- 31370959^^ -->
+### New resolution button improves compliance remediation experience<!-- 31370959 -->
 
 We're improving the Just in Time (JIT) compliance remediation experience for device users in Microsoft Intune. Intune is collaborating with Microsoft Defender to:
 
@@ -314,11 +297,7 @@ You will be able to use the new feedback feature on the multiple device query pa
 
 <!-- *********************************************** -->
 
-## Role-based access control
-
-### Multi-administrator approval support for role-based access control <!-- 26838684 ^^ -->
-
-Support for multiple administrative approval (MAA) is being expanded to include role-based access control. When this feature is enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This helps protect your organization from unauthorized or accidental role-based access control changes by enforcing dual authorization.
+<!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
 
