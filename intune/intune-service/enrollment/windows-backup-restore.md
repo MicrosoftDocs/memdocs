@@ -62,64 +62,29 @@ To use the backup functionality, devices must be:
 
 * Microsoft Entra hybrid joined or Microsoft Entra joined.  
 * Running a currently supported version of either Windows 10 or Windows 11. Supported versions include:  
-  * Windows 10, version 22H2, build 19045.5917 or later  
-  * Windows 11, version 22H2, build 22621.5413 or later   
-  * Windows 11, version 23H2, build 22631.5413 or later   
-  * Windows 11, version 24H2, build 26100.4202 or later     
+  * Windows 10 22H2 build 19044.6216 or newer
+  * Windows 11 22H2 build 22621.5768 or newer
+  * Windows 11 23H2 build 22631.5768 or newer
+  * Windows 11 24H2 build 26100.4946 or newer     
 
 The restore feature is available on devices that meet the following requirements:  
 
 - Must be [Microsoft Entra joined](/entra/identity/devices/concept-directory-join).  
-- Must be running Windows 11, version 22H2 or later. 
-- The device user must have at least one backup profile. 
+- The restore feature is available on devices that are either on August 2025 cumulative update or meet the following requirements:
+  * Windows 11 22H2 build 22621.3958 or newer
+  * Windows 11 23H2 build 22631.3958 or newer
+  * Windows 11 24H2 build 26100.1301 or newer 
+- The device user must have at least one backup profile.
+- Enable the Install Windows quality updates policy: If you are on a build older than July 2025, please verify **Install Windows quality updates** is enabled for your devices in order to leverage the feature. 
 - If Autopilot is used, the Autopilot profile must be configured to use [user-driven mode](/autopilot/user-driven), not self-deploying mode.   
 
-Additionally, you're required to configure these settings: 
-- [Add Microsoft Activity Feed Service to Conditional Access policy](#modify-conditional-access-policy).  
+Additionally, you're required to configure these settings:   
 - Configure the Windows quality updates setting, an [enrollment status page feature](windows-enrollment-status.md).     
 
 ## RBAC and tenant wide targeting 
 The restore setting for Windows Backup for Organizations is a tenant-wide setting. This means the restore setting is either turned on or off for all Windows devices in a tenant. The default configuration is **Not configured**, which turns off the restore setting for all devices.  
 
 To configure the restore setting, you must have Intune Service Administrator permissions.  
-
-## Modify Conditional Access policy  
-The Microsoft Entra user's access token is used during restore operations to access the user’s backup data. If you have a Conditional Access policy that blocks Microsoft Intune from acquiring the Microsoft Entra user’s access token from the Microsoft Activity Feed Service, you might see one of the following error messages. 
-
-  |Error title| Error description | 
-  | -----| ----- |
-  |You don't have access to this|Your sign-in was successful but you don't have the permissions to access this resource. |
-  |You can't get there from here |This application contains sensitive information and can only be accessed from: Devices or client applications that meet TenantMonkey engagement compliance policy. If this is a personal device you can choose to let TenantMonkey manage your device by going to **Settings** > **Accounts** > **Access work or school** and clicking on **Connect**. When you're done come back and try again.   |
-
-To view Conditional Access policies for your tenant, sign in to entra.microsoft.com and go to **Identity** > **Protection** > **Conditional Access**.  
-
-A common policy that can block token acquisition is one that allows only cloud apps for compliant devices. Each Conditional Access policy needs to allow access to the Microsoft Activity Feed Service from noncompliant devices. Since the Microsoft Activity Feed Service token is acquired during the out-of-box-experience (OOBE), a new device is not yet compliant. You can add a Conditional Access policy to opt in to multifactor authentication (MFA) when accessing the Microsoft Activity Feed Service, which adds another security step.   
-
-To configure access to the Microsoft Activity Feed Service, include the Microsoft Activity Feed Service in the list of cloud apps for Conditional Access. 
-
-1. The service principal for the Microsoft Activity Feed Service app needs to be registered with your tenant. 
-  1. Go to [Try Microsoft Graph APIs](https://developer.microsoft.com/graph/graph-explorer) and sign in with a tenant admin account. 
-  1. If prompted to, provide consent to Graph Explorer.  
-1. Select your account picture and choose **Consent to Permissions**. 
-1. A pane opens with a list of permissions. Search for and expand **APIConnectors**.  
-1. Select **Consent** for all permissions listed under **APIConnectors**. In the new window that opens, confirm that you're consenting to these permissions.   
-1. In Graph Explorer, change the request type to **POST**.
-1. For the URL, enter **https://graph.microsoft.com/v1.0/servicePrincipals**.  
-1. In the body of the request, enter the following JSON snippet to add the app ID for the Microsoft Activity Feed Service:  
-
-   ```json
-   { 
-
-      “appId”: “d32c68ad-72d2-4acb-a0c7-46bb2cf93873” 
-
-   }  
-   ```  
-10. Select **Run query**. 
-
-   > [!TIP]
-   > If the request fails, select **Modify permissions** and consent to the Application.ReadWrite.All permission. Then try the request again.  
-
-11. After the request is successful, return to the Conditional Access page in Microsoft Entra ID. You should see the Microsoft Activity Feed Service app in your Conditional Access policy list.  
 
 ## Enrollment    
 
@@ -151,7 +116,7 @@ The **Last modified** date updates to account for recent changes. Return to **Wi
 ## Known issues  
 Known issues with Windows Backup for Organizations include: 
 
-- This feature isn't supported in Government cloud.  
+- This feature isn't supported in Government cloud or 21Vianet.  
 
 - This feature doesn't work for shared or userless devices. 
 
@@ -162,7 +127,7 @@ Known issues with Windows Backup for Organizations include:
 >[!NOTE]
 > This issue is specific to VMs, particularly when users initially sign in with weaker authentication methods (such as a password or authenticator app) and phishing-resistant MFA is subsequently enforced. 
 
-- This feature isn't supported with the following provisioning methods:  
+- The restore feature isn't supported with the following provisioning methods:  
 
   - Hybrid Azure AD Join  
   - Workplace Join  
