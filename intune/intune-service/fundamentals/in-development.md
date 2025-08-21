@@ -105,7 +105,7 @@ The [Settings Catalog](../configuration/settings-catalog.md) lists all the setti
 
 There's a new **Block private space** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, users are prevented from creating or using private spaces on the device. All existing private spaces will be deleted.
 
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md).
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
 
 Applies to:
 
@@ -117,7 +117,7 @@ The [Settings Catalog](../configuration/settings-catalog.md) lists all the setti
 
 There's a new **USB access** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). The setting allows admins to select what files and/or data can be transferred via USB. If admins block file transfer, only files will be blocked from being transferred and other connection (such as mouse) will still be allowed. If admins block USB data transfer, all data will be blocked.
 
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md).
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
 
 Applies to:
 
@@ -154,7 +154,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 **Microsoft Defender**:
 
-- The Microsoft Defender category is updated with new settings. Learn more about available macOS Defender settings at [Microsoft Defender - Policies](https://learn.microsoft.com/en-us/defender-endpoint/mac-preferences).
+- The Microsoft Defender category is updated with new settings. Learn more about available macOS Defender settings at [Microsoft Defender - Policies](/defender-endpoint/mac-preferences).
 
 **Restrictions**:
 
