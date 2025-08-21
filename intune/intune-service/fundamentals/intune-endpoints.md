@@ -176,6 +176,9 @@ For Delivery Optimization metadata:
 
 - `*.dl.delivery.mp.microsoft.com`
 
+> [!TIP]
+> Review dependencies for client-service peer-to-peer solutions that you use to help ensure support for cloud-based management. For example, Windows BranchCache relies on locally available groups that might not be available through Microsoft Entra ID, which is Intune’s identity solution.
+
 #### Windows Push Notification Services (WNS) dependencies
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
