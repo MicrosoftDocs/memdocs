@@ -58,6 +58,8 @@ When a device receives a policy for Feature updates:
 
 - You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](windows-update-rollout-options.md).
 
+- When deploying a Windows feature update the device receives the latest cumulative update (LCU) available at the time of deployment.
+
 ## Prerequisites
 
 > [!IMPORTANT]
