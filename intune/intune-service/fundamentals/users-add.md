@@ -108,7 +108,7 @@ The following procedural steps can be used to add individual users to your Intun
    **To add an administrative unit to the new user**:  
    Most users you add to Intune will never require an Administrative Units (AUs), which in Microsoft Entra ID is a powerful way to delegate administrative control over subsets of users, groups, or devices within your organization. 
 
-   Instead, within Intune you can use [scope tags](../fundamentals/scope-tags.md) and scope groups.
+   Instead, within Intune you can use [scope tags](../fundamentals/scope-tags.md) and [scope groups](../fundamentals/role-based-access-control.md#about-intune-role-assignments).
 
    To assign an administrative unit to a user, your account must have permissions equal to the Entra [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator). 
 
@@ -175,7 +175,8 @@ For related information, see [Bulk delete users in Microsoft Entra ID](/entra/id
 > As a user with sufficient permissions to manage user accounts, there are some accounts you might not be able to delete. Reasons you can't delete a specific account can include:  
 > - Accounts that are synchronized from an on-premises Active Directory.
 > - Accounts that are assigned a higher-privileged Entra role than your account.
-> - Accounts that fall outside your current Intune scope group when using the Intune admin center.
+- what resources they can change.
+> - Accounts that fall outside your current Intune [scope group](../fundamentals/role-based-access-control.md#about-intune-role-assignments) when using the Intune admin center.
 
 ## Related content
 
