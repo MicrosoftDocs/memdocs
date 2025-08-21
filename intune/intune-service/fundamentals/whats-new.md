@@ -413,7 +413,7 @@ For more information, see [device cleanup rules](../remote-actions/devices-wipe.
 
 ### Device security
 
-#### macOS support for local administrator account configuration with LAPS (password solution) - GA <!-- 25385731 -->
+#### macOS support for local administrator account configuration with  (password solution) - GA <!-- 25385731 -->
 
 macOS automated device enrollment (ADE) profiles can configure newly enrolled macOS devices that run macOS 12 or later with both a local administrator and local user account, along with support for the Microsoft Local Admin Password Solution (LAPS).
  
@@ -427,14 +427,14 @@ For account creation, the profile supports the following variables:
 
 - **Admin account username**:
   - {{serialNumber}} - for example, F4KN99ZUG5V2
-  - {{partialupn}} - for example, John
+  - {{partialupn}} - for example, John.Dupont
   - {{managedDeviceName}} - for example, F2AL10ZUG4W2_14_4/15/2025_12:45PM
-  - {{onPremisesSamAccountName}} - for example, contoso\John
+  - {{onPremisesSamAccountName}} - for example, JDoe
 
 - **Admin account full name**:
   - {{username}} - for example, John@contoso.com
   - {{serialNumber}} - for example, F4KN99ZUG5V2
-  - {{onPremisesSamAccountName}} - for example, contoso\John
+  - {{onPremisesSamAccountName}} - for example, JDoe
 
 To support LAPS:  
 - There are two new role-based access control permissions for *Enrollment program* that can grant an administrative account permission to view a managed devices password, and to rotate that password.
