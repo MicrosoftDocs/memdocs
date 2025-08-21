@@ -327,6 +327,12 @@ Common areas for security include:
 
 ::: zone-end
 
+## Storage policies
+
+✅ Configure storage policies and assign them to devices
+
+In the educational sector, devices with limited storage capacity are sometimes deployed due to cost and portability considerations. It is essential to manage storage effectively to ensure that Windows devices remain up to date at all times. Storage Sense is a Windows feature that helps automatically free up disk space by deleting unnecessary files. For more information about Storage Sense, see [Configure Storage Sense](/windows/configuration/storage/storage-sense).
+
 ---
 
 ## Next steps
