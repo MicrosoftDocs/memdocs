@@ -118,14 +118,14 @@ Following is some guidance for the available options. Additional details are acc
 
 - **Primary account name** - Specify the account name or use one of the following supported variables to dynamically create the name. Setup Assistant uses this value to prefill the Account Name field if *Prefill account info* is set to *Not configured*. By default, this field uses the *{{partialupn}}* variable.
   - {{serialNumber}} - for example, **F4KN99ZUG5V2** 
-  - {{partialupn}} - for example, **John**
+  - {{partialupn}} - for example, **John.Dupont**
   - {{managedDeviceName}} - for example, **F2AL10ZUG4W2_14_4/15/2025_12:45PM**
-  - {{onPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **JDoe**
 
 - **Primary account full name** - Specify the full name for the account or use one of the following variables to dynamically create the name. Setup Assistant uses this value to prefill the Full Name field if *Prefill account info* is set to *Not configured*. By default, this field uses the *{{username}}* variable:
   - {{username}} - for example, **John@contoso.com**
   - {{serialNumber}} - for example, **F4KN99ZUG5V2** 
-  - {{onPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **JDoe**
 
 - **Restrict editing** - Prevent the end user from editing the full name and account name. By default, this is set to *Not configured*.
 
