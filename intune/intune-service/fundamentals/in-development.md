@@ -252,6 +252,12 @@ Intune administrators will be able to configure a new feature in public preview 
 
 ## Device security
 
+### New security baseline update experience<!-- 31607281 -->
+
+We’re updating the Intune security baseline update experience. With this change, when you choose to update an existing baseline to its newest baseline version, you’ll be able to choose between options to keep the customizations you’ve made, which will be applied to the new version instance, or to discard those customizations and create a new baseline instance using the baselines recommended values from the new version. With both options the new version is created as a new baseline instance and the original baseline instance will remain available until you choose to remove it from your tenant.
+ 
+This change will apply to updates of baseline versions created after May 2023, which use a newer settings format that wasn't available in older security baseline versions.
+
 ### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
 
 As part of Microsoft’s ongoing [Secure Future Initiative (SFI)]( https://www.microsoft.com/trust-center/security/secure-future-initiative), network service endpoints for Microsoft Intune will be moving to new IP addresses. As a result, customers might need to update network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allowlist that allows outbound traffic based on IP addresses or Azure service tags.
