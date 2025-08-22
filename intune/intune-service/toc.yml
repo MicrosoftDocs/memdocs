@@ -84,8 +84,8 @@ items:
           href: ./enrollment/set-up-just-in-time-registration.md
         - name: Use automated device enrollment to enroll iOS/iPadOS devices
           href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
-        - name: Create an ADMX template
-          href: ./configuration/tutorial-walkthrough-administrative-templates.md
+        - name: Create settings catalog policy and compare with on-premises ADMX
+          href: ./configuration/tutorial-settings-catalog-group-policy.md
           displayName: admx, administrative template, gpo, windows
 
   - name: Microsoft Copilot + Intune
@@ -2246,8 +2246,8 @@ items:
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
     - name: End-to-end macOS endpoint guide
       href: ../solutions/end-to-end-guides/macos-endpoints-get-started.md
-    - name: Create an ADMX template
-      href: ./configuration/tutorial-walkthrough-administrative-templates.md
+    - name: Create settings catalog policy and compare with on-premises ADMX
+      href: ./configuration/tutorial-settings-catalog-group-policy.md
       displayName: admx, administrative template, windows, gpo
     - name: "Zero Trust: Manage devices with Intune"
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
