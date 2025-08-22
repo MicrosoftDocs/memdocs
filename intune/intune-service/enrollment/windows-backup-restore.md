@@ -62,20 +62,20 @@ To use the backup functionality, devices must be:
 
 * Microsoft Entra hybrid joined or Microsoft Entra joined.  
 * Running a currently supported version of either Windows 10 or Windows 11. Supported versions include:  
-  * Windows 10 22H2 build 19044.6216 or newer
-  * Windows 11 22H2 build 22621.5768 or newer
-  * Windows 11 23H2 build 22631.5768 or newer
-  * Windows 11 24H2 build 26100.4946 or newer     
+  * Windows 10 22H2 build 19044.6216 or later
+  * Windows 11 22H2 build 22621.5768 or later
+  * Windows 11 23H2 build 22631.5768 or later
+  * Windows 11 24H2 build 26100.4946 or later     
 
 The restore feature is available on devices that meet the following requirements:  
 
 - Must be [Microsoft Entra joined](/entra/identity/devices/concept-directory-join).  
 - The restore feature is available on devices that are either on August 2025 cumulative update or meet the following requirements:
-  * Windows 11 22H2 build 22621.3958 or newer
-  * Windows 11 23H2 build 22631.3958 or newer
-  * Windows 11 24H2 build 26100.1301 or newer 
+  * Windows 11 22H2 build 22621.3958 or later
+  * Windows 11 23H2 build 22631.3958 or later
+  * Windows 11 24H2 build 26100.1301 or later 
 - The device user must have at least one backup profile.
-- Enable the Install Windows quality updates policy: If you are on a build older than July 2025, please verify **Install Windows quality updates** is enabled for your devices in order to leverage the feature. 
+- Enable the Install Windows quality updates policy. If you're on a build older than July 2025, verify that the setting **Install Windows quality updates** is enabled for your devices in order to leverage the feature. 
 - If Autopilot is used, the Autopilot profile must be configured to use [user-driven mode](/autopilot/user-driven), not self-deploying mode.   
 
 Additionally, you're required to configure these settings:   
