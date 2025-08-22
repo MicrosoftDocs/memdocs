@@ -1,8 +1,8 @@
 ---
 title: View declarative device management-based software update reports for Apple devices in Microsoft Intune
 description: Use Microsoft Intune to software updates reports for managed Apple devices based on Apples declarative device management capabilities.
-author: brenduns
-ms.author: brenduns
+author: paolomatarazzo
+ms.author: paoloma
 manager: laurawi
 ms.date: 08/18/2025
 audience: ITPro
