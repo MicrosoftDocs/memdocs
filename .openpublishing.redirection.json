@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/configuration/tutorial-walkthrough-administrative-templates.md",
+      "redirect_url": "/intune/intune-service/configuration/tutorial-settings-catalog-gpo",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/remote-actions/device-supervised-mode.md",
       "redirect_url": "/intune/intune-service/enrollment/device-supervised-mode",
       "redirect_document_id": false
