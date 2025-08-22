@@ -256,7 +256,7 @@ In this section, we create a settings catalog policy in Intune, look at some set
 
 8. Go to the **Microsoft Edge** category > select **SmartScreen settings**. Notice the SmartScreen policy settings with "download" in their name are filtered and shown:
 
-    :::image type="content" source="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-microsoft-edge-smartscreen-settings.png" alt-text="Screenshot that shows how to see the Microsoft Edge SmartScreen policy settings in the settings catalog in Microsoft Intune." lightbox="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-microsoft-edge-smartscreen-settings.png":::
+    :::image type="content" source="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-microsoft-edge-smartscreen-filtered-settings.png" alt-text="Screenshot that shows how to see the Microsoft Edge SmartScreen policy settings in the settings catalog in Microsoft Intune." lightbox="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-microsoft-edge-smartscreen-filtered-settings.png":::
 
 ### Compare a policy in Group Policy Management and Intune
 
@@ -284,7 +284,7 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 5. In the Intune admin center, go to your **Windows 11 student devices** settings catalog policy.
 6. Select **Configuration settings** > **Edit** > **Add settings**. Search for **Personalization** and select the `Administrative templates\Control Panel\Personalization` category. Notice the available settings:
 
-    :::image type="content" source="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-admx-personalization.png" alt-text="Screenshot that shows the ADMX personalization policy setting path in the Microsoft Intune settings catalog." lightbox="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-admx-personalization.png":::
+    :::image type="content" source="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-admx-personalization-category.png" alt-text="Screenshot that shows the ADMX personalization policy setting path in the Microsoft Intune settings catalog." lightbox="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-admx-personalization-category.png":::
 
     This path and the available settings are similar to what you see in Group Policy Management Editor. If you select the **Prevent enabling lock screen camera** setting, you see similar options that are available in Group Policy Management Editor.
 
