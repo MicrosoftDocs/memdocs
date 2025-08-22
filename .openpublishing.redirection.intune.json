@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/configuration/tutorial-walkthrough-administrative-templates.md",
+      "redirect_url": "/intune/intune-service/configuration/tutorial-walkthrough-settings-catalog-gpo",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/developer/mam-tunnel-ios-xamarin-bindings.md",
       "redirect_url": "/intune/intune-service/developer/app-sdk-get-started",
       "redirect_document_id": false

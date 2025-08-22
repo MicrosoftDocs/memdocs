@@ -32,12 +32,12 @@ ms.collection:
 #Customer intent: As an on-premises ADMX Group Policy administrator, I want to learn and use the settings catalog in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows devices.
 ---
 
-# Walkthrough: Compare on-premises ADMX templates and Intune settings catalog policies
+# Walkthrough - Create an Intune settings catalog policy and compare with on-premises ADMX
 
 > [!NOTE]
 > This walkthrough was created as a technical workshop and updated to apply to the Intune settings catalog. It has more prerequisites than typical walkthroughs, as it compares using and configuring settings catalog policies in Intune and on-premises Group Policy Administrative Templates (ADMX).
 
-Group policy and ADMX templates include settings you can configure on Windows client devices. These settings are used and managed by Mobile Device Management (MDM) providers, like Microsoft Intune, to configure features and settings on Windows devices. For example, you can turn on Design Ideas in PowerPoint, set a home page in Microsoft Edge, and more.
+Group policy and ADMX templates include settings you can configure on Windows devices. These settings are used and managed by Mobile Device Management (MDM) providers, like Microsoft Intune, to configure features and settings on Windows devices. For example, you can turn on Design Ideas in PowerPoint, set a home page in Microsoft Edge, and more.
 
 These settings are built into the Microsoft Intune [settings catalog](settings-catalog.md). In a settings catalog profile, you configure the settings you want to include, and then assign this profile to your devices.
 
@@ -73,7 +73,7 @@ This feature applies to:
 
 - On an on-premises Active Directory domain controller (DC):
 
-  1. Copy the following Office and Microsoft Edge templates to the [Central Store (sysvol folder)](https://learn.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store):
+  1. Copy the following Office and Microsoft Edge templates to the [Central Store (sysvol folder)](/troubleshoot/windows-client/group-policy/create-and-manage-central-store):
 
       - [Office administrative templates](https://www.microsoft.com/download/details.aspx?id=49030)
       - [Microsoft Edge policy file](https://www.microsoft.com/edge/business/download)
@@ -83,7 +83,7 @@ This feature applies to:
       - The group policy we created with these templates is named **OfficeandEdge**. You'll see this name in the images.
       - The Windows 11 Enterprise administrator computer we use is named the **Admin computer**.
 
-      In some organizations, a domain administrator has two accounts:  
+      In most organizations, a domain administrator has two accounts:  
         - A typical domain work account
         - A different domain administrator account used only for domain administrator tasks, like group policy
 
@@ -216,7 +216,7 @@ The users and groups created are also seen in the [Microsoft 365 admin center](h
 
 ### Review group membership
 
-1. In the Intune admin center, select **Users** > **All users** > select the name of any existing user.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All users** > select the name of any existing user.
 2. Review some of the information you can add or change. For example, look at the **Properties** you can configure, like Job Title, Department, City, Office location, and more. You can use these properties in your dynamic queries when you create dynamic groups.
 3. Select **Groups** to see the membership of this user. You can also remove the user from a group.
 4. Select some of the other options to see more information, and what you can do. For example, look at the assigned license, the user's devices, and more.
@@ -229,7 +229,7 @@ In the Intune admin center, you created new security groups, and added existing 
 
 In this section, we create a settings catalog policy in Intune, look at some settings in on-premises **Group Policy Management**, and compare the same setting in Intune. The goal is to show a setting in group policy, and show the same setting in Intune.
 
-1. In the Intune admin center, select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 2. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
@@ -286,7 +286,9 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
     :::image type="content" source="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-admx-personalization.png" alt-text="Screenshot that shows the ADMX personalization policy setting path in the Microsoft Intune settings catalog." lightbox="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-admx-personalization.png":::
 
-    This path and the available settings are similar to what you see in Group Policy Management Editor.
+    This path and the available settings are similar to what you see in Group Policy Management Editor. If you select the **Prevent enabling lock screen camera** setting, you see similar options that are available in Group Policy Management Editor.
+
+    :::image type="content" source="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-control-panel-personalization.png" alt-text="Screenshot that shows the ADMX Prevent enabling lock screen camera setting path in the Microsoft Intune settings catalog." lightbox="./media/tutorial-walkthrough-settings-catalog-gpo/settings-catalog-control-panel-personalization.png":::
 
 ### Compare a user policy in Group Policy Management and Intune
 
@@ -334,9 +336,11 @@ In this section, you create a OneDrive settings catalog policy in Intune to cont
 
 7. Configure these settings:
 
-    - **Prevent users from syncing personal OneDrive accounts (User)**: Set the value to **Enabled**.
-    - **Silently sign in users to the OneDrive sync app with their Windows credentials**: Set the value to **Enabled**.
-    - **Use OneDrive Files On-Demand**: Set the value to **Enabled**.
+    | Setting | Value |
+    |---------|-------|
+    | Prevent users from syncing personal OneDrive accounts (User) | Enabled |
+    | Silently sign in users to the OneDrive sync app with their Windows credentials | Enabled |
+    | Use OneDrive Files On-Demand | Enabled |
 
 Your settings look similar to the following settings:
 
@@ -353,7 +357,7 @@ For more information on OneDrive client settings, go to [Use Group Policy to con
 
 3. Select **Next**. In **Review + create**, select **Create** to save your changes.
 
-At this point, you created some settings catalog policies, and assigned them to groups you created. The next step is to create a settings catalog policy using Windows PowerShell and the Microsoft Graph API for Intune.
+In this section, you created some settings catalog policies, and assigned them to groups you created.
 
 ## Policy best practices
 
