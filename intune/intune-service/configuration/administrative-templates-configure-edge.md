@@ -48,7 +48,7 @@ This article applies to:
 > [!NOTE]
 > Additional ADMX settings for Edge 96 and Edge updater have been added to Administrative Templates. The additional settings include support for **Target Channel override**. **Target Channel override** allows customers to opt into the **[Extended Stable](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)** release cycle option at any point using Group Policy or through Intune.
 
-When you use Intune to manage and enforce ADMX policies, the process is similar to using Active Directory group policy. Or, similar to configuring local Group Policy Object (GPO) settings on user devices. For more information on ADMX policies in Intune, go to [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md).
+When you use Intune to manage and enforce ADMX policies, the process is similar to using Active Directory group policy. Or, similar to configuring local Group Policy Object (GPO) settings on user devices.
 
 This article shows you how to configure Microsoft Edge policy settings using administrative templates in Microsoft Intune.
 
@@ -140,14 +140,8 @@ You can also use the [Intune settings catalog](settings-catalog.md) to configure
 
     :::image type="content" source="./media/administrative-templates-configure-edge/saved-profile.png" alt-text="Screenshot of the ADMX policy setting is shown in the device configuration profile list in Microsoft Intune and Intune admin center.":::
 
-For more information about ADMX administrative templates, go to:
-
-- [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md).
-- [Tutorial: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)
-
 ## Related content
 
 - [Download Microsoft Edge for your business](https://aka.ms/EdgeEnterprise)
 - [Manage web access by using Microsoft Edge with Microsoft Intune](../apps/manage-microsoft-edge.md)
-- [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md)
 - [Deploy Microsoft Edge app using Microsoft Intune](../apps/apps-windows-edge.md)
