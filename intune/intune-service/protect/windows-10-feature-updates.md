@@ -53,12 +53,9 @@ When a device receives a policy for Feature updates:
   >   For example, for Windows 11 version 21H2, go to the Windows 11 release information and then from the left-hand pane, select *Version 21H2* and then *Known issues and notifications*. The [resultant page](/windows/release-health/status-windows-11-21h2) includes details for known issues for that Windows version that might result in safeguard hold.
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
-
 - The ability to *Uninstall* the Feature update is still honored by the Update Rings.
-
 - You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](windows-update-rollout-options.md).
-
-- When deploying a Windows feature update the device receives the latest cumulative update (LCU) available at the time of deployment.
+- When a Windows feature update is deployed to a device from the cloud service, the latest monthly quality update is automatically included.
 
 ## Prerequisites
 
