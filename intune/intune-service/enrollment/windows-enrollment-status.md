@@ -97,6 +97,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
     > [!IMPORTANT]
     >
     > - This option is only supported for [currently supported versions of Windows 11](/windows/release-health/windows11-release-information).
+    > - When this option is enabled, monthly security update releases are installed during OOBE after the ESP completes.
     > - For important detailed information regarding this option, see the section [Install Windows quality updates](#install-windows-monthly-security-update-releases) in this article.
 
     - **Block device use until all apps and profiles are installed**: Your options:
