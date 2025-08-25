@@ -6,9 +6,9 @@ ms.date: 04/10/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: article
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 ms.localizationpriority: high
 ---
 # Enhanced device timeline in Endpoint analytics

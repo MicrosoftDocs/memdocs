@@ -5,8 +5,8 @@ title: About the Microsoft Intune tenant status page
 titleSuffix: Microsoft Intune
 description: The Intune tenant status page displays details about your tenant and the status of connectors you've configured, and messages intended for tenants and about the Intune service health. 
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: laurawi
 ms.date: 02/24/2025
 ms.topic: concept-article
