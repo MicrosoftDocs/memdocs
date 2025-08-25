@@ -3,23 +3,15 @@
 
 title: Reduce help desk costs
 titleSuffix: Microsoft Intune
-description: Reducing help desk costs with self-service password reset 
-keywords: Azure Active Directory SSPR password reset
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
+description: Reducing help desk costs with self-service password reset
 ms.date: 3/6/2018
 ms.topic: archived
-ms.service: microsoft-intune
-ms.subservice: remote-actions
 ms.localizationpriority: medium
 # optional metadata
 
-#ROBOTS: 
+#ROBOTS:
 #audience:
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
@@ -37,7 +29,7 @@ You can allow employees to reset work and school account passwords without help 
 
 ## Action plan
 
-1. Understand [Microsoft Entra self-service password reset](/azure/active-directory/active-directory-passwords-overview). 
+1. Understand [Microsoft Entra self-service password reset](/azure/active-directory/active-directory-passwords-overview).
 2. Ask employees and students to [register for self-service password reset](/azure/active-directory/active-directory-passwords-reset-register).
 3. For future reference, give employees and students instructions for [how to reset or change a password](/azure/active-directory/active-directory-passwords-update-your-own-password).
 4. [Enable self-service password reset](/azure/active-directory/active-directory-passwords-getting-started).
@@ -46,7 +38,7 @@ You can allow employees to reset work and school account passwords without help 
 
 Learn more about the following articles:
 
-* [Password best practices](/azure/active-directory/active-directory-secure-passwords) 
+* [Password best practices](/azure/active-directory/active-directory-secure-passwords)
 * [Licensing self-service password reset](/azure/active-directory/active-directory-secure-passwords)
 
 Want help enabling this or other EMS or Microsoft 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Microsoft Entra ID P1 or P2, use your [FastTrack benefits](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

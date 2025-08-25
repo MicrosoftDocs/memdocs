@@ -1,17 +1,11 @@
 ---
 # required metadata
 
-title: Remote actions for ChromeOS devices | Microsoft Intune  
-description: Remotely run Microsoft Intune device actions on ChromeOS devices in the Microsoft Intune admin center.   
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: laurawi
+title: Remote actions for ChromeOS devices | Microsoft Intune
+description: Remotely run Microsoft Intune device actions on ChromeOS devices in the Microsoft Intune admin center.
 ms.date: 10/09/2024
 ms.topic: how-to
-ms.service: microsoft-intune
 ms.subservice: protect
-ms.localizationpriority: high
 
 # optional metadata
 
@@ -19,8 +13,6 @@ ms.localizationpriority: high
 #audience:
 
 ms.reviewer: shsivak
-ms.suite: ems
-search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
@@ -30,7 +22,7 @@ ms.collection:
 
 # Remote device actions for ChromeOS
 
-Remotely run device actions on ChromeOS devices synced with Microsoft Intune. There are four remote actions supported on ChromeOS devices:  
+Remotely run device actions on ChromeOS devices synced with Microsoft Intune. There are four remote actions supported on ChromeOS devices:
 
 - Deprovision
 - Lost mode, known in Chrome Enterprise as *disabling a device*
@@ -47,7 +39,7 @@ Permission requirements are provided in the sections that follow.
 
 ## Deprovision
 
-Select **Deprovision** to remove Google Admin policies from devices your organization no longer uses. To deprovision a ChromeOS device, you must be assigned a role that has the *Remote tasks: Retire* permission.  
+Select **Deprovision** to remove Google Admin policies from devices your organization no longer uses. To deprovision a ChromeOS device, you must be assigned a role that has the *Remote tasks: Retire* permission.
 
 After you deprovision a device, it remains in the Intune admin center and the Google Admin console. Then on the admin center **System info** page, the device status changes to **DEPROVISIONED**. The device can't be enrolled again until you restore it to factory settings. For more information about the deprovision action, such as how to select the best reason for deprovisioning, see the [Chrome Enterprise and Education Help documentation](https://support.google.com/chrome/a/answer/3523633?).
 
@@ -85,4 +77,4 @@ You can issue all of these remote actions as part of a bulk device action. For m
 
 ## Known issues
 
-In some cases, device commands remain in a pending state, even if they’ve already completed or failed.
+In some cases, device commands remain in a pending state, even if they've already completed or failed.

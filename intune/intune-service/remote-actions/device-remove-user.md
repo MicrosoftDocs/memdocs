@@ -1,55 +1,62 @@
 ---
 # required metadata
 
-title: Remove a user from an iOS/iPadOS device with Microsoft Intune 
+title: Remove a User From an iPadOS Device With Microsoft Intune
 titleSuffix:
 description: Learn how to remove a user from a shared iOS/iPadOS device with Intune.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
 ms.date: 04/10/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: 2ea5941c-a69b-4e1c-b42c-a1fc0c3a7de7
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite: ems
-search.appverid: MET150
+ms.reviewer:
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+appliesto:
+  - ✅ iPadOS
 ---
 
 # Remove a user from a shared iOS/iPadOS device
 
-The **Remove user** action deletes a user that you select from the local cache on a shared iPad device. The iPad device must be set up to manage the iOS/iPadOS Classroom app by using an [iOS/iPadOS education profile](../fundamentals/education-settings-configure-ios.md).
+The **Remove user** action deletes a user that you select from the local cache on a shared iPad device.
 
-## Supported platforms
+## Requirements
 
-- Windows - Not supported
-- Windows Phone - Not supported
-- iOS/iPadOS - Supported on iOS/iPadOS 9.3 and later (shared iPad devices only)
-- macOS - Not supported
-- Android - Not supported
+### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+
+> [!div class="checklist"]
+> This remote action is supported on the following platform:
+>
+> - iPadOS (shared iPad devices only)
+
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [Custom role][INT-RC] with the permission:
+>   - Remote tasks/Manage shared device users
 
 ## Remove a user
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **All devices**.
-3. In the list of devices that you manage, select an iOS/iPadOS device.
-4. In the pane for the device, select **Users**.
-5. In the list, right-click the user that you want to remove, and then select **Remove user**.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
+    > [!div class="nextstepaction"]
+    > [All devices][INT-AC1]
+1. From the devices list, select a shared iPadOS device.
+1. Select **Users**.
+1. In the list, right-click the user that you want to remove, and then select **Remove user**.
 
-## Next steps
+## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
 
-- To see the status of the **Remove user** action, select **Devices** > **Device actions**.
+For more information about the API used for this action, see [deleteUserFromSharedAppleDevice action][GRAPH-1].
+
+<!--links-->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-deleteuserfromsharedappledevice

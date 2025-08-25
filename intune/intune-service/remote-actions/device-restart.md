@@ -3,25 +3,10 @@
 
 title: Restart devices with Microsoft Intune
 description: Restart Windows and iOS/iPadOS devices using Microsoft Intune in the Azure portal using the Restart remote action.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
 ms.date: 10/27/2023
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
@@ -31,34 +16,77 @@ ms.collection:
 
 # Remotely restart devices with Intune
 
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 The **Restart** device action causes the device you choose to be restarted (within 5 minutes). The device owner isn't automatically notified of the restart, and they might lose work.
 
-## Supported platforms
+## Requirements
 
-- Windows - Supported on Windows 8.1 and later
-    > [!Note] 
-    > Windows attempts to show the user a message with the following text: "Your device administrator has scheduled a reboot." The message is shown when the 5 minute restart counter is started. Restart of Windows devices immediately requires push notifications via Windows Notification Services (WNS). 
+### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+
+> [!div class="checklist"]
+> This remote action is supported on the following platforms:
+>
+> - Android
+>     - Corporate owned Fully Managed (COBO)
+>     - Corporate-owned Dedicated (COSU)
+>     - Android Open Source Project (AOSP)
+> - iOS/iPadOS in [supervised mode][IOS-SUP]
+> - macOS
+> - Windows 10/11
+> - ChromeOS
+
+    > [!Note]
+    > Windows attempts to show the user a message with the following text: "Your device administrator has scheduled a reboot." The message is shown when the 5 minute restart counter is started. Restart of Windows devices immediately requires push notifications via Windows Notification Services (WNS).
     > For more information on WNS, see [Network Endpoint Requirements](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
-- Android Enterprise dedicated devices - Supported on Android 8.0 and later
-- Android Enterprise fully managed devices - Supported on Android 8.0 and later
-- Android Enterprise corporate-owned with work profile devices - Not supported 
-- Android Open Source Project (AOSP) devices - Supported 
-- iOS/iPadOS - Supported
 
-    > [!Note]  
-    > This command requires a supervised device and the **Device Lock** access right. The device restarts immediately. Passcode-locked iOS/iPadOS devices don't rejoin a Wi-Fi network after restart. After restart, the device might not be able to communicate with the server.
-- macOS - Supported
-- Android Enterprise personally owned work profile devices - Not supported
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
-## Restart a device
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - Endpoint Security Manager
+> - [Custom role][INT-RC] with the permissions:
+>   - Remote tasks/Reboot now
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **All devices**.
-4. In the list of devices that you manage, select a device > **Restart** > **Yes**.
+## How to restart a device
 
-## Next steps
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
+    > [!div class="nextstepaction"]
+    > [All devices][INT-AC1]
+1. From devices list, select a device, and then select **Restart** > **Yes**.
 
-- To see the status of the **Restart** device action, select **Devices** > **Device actions**.
+## User experience
+
+::: zone pivot="ios"
+
+>[!NOTE]
+>A passcode-locked iOS/iPadOS device doesn't automatically reconnect to Wi-Fi after a restart. This behavior is part of Apple's security model, which encrypts sensitive data—including saved Wi-Fi credentials—until the user unlocks the device. This behavior interrupts communication with Microsoft Intune until the device is unlocked.
+
+:::endzone
+
+## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+
+For more information about the API used for this action, see [rebootNow action][GRAPH-1].
+
+<!--links-->
+
+<!-- graph -->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-rebootnow
+
+<!-- admin center -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+
+<!-- roles -->
+
+[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
+
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+
+[IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode

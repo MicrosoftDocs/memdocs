@@ -1,28 +1,12 @@
 ---
 # required metadata
 
-title: Collect diagnostics from an Intune managed device
+title: "Intune Remote Actions: Collect Diagnostics"
 titleSuffix: Microsoft Intune
-description: Learn how to collect diagnostics from an Intune managed device.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
+description: Learn how to collect diagnostics with Microsoft Intune.
 ms.date: 03/04/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jlynn
-ms.suite: ems
-search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
@@ -30,7 +14,27 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Collect diagnostics from an Intune managed device
+# Collect diagnostics with Microsoft Intune
+
+Collecting diagnostics in Microsoft Intune is a powerful remote action that enables IT administrators to gather troubleshooting data from managed devices without interrupting the end user. This feature is essential for identifying and resolving issues related to device compliance, app performance, or enrollment failures—especially in large or distributed environments where hands-on access to devices is limited. For example, if a Windows 11 device fails during Autopilot provisioning, Intune can automatically collect logs from the device and upload them for review, helping admins pinpoint the root cause quickly. Supported on Windows 10 (1909+) and Windows 11, this capability can also be used in bulk across up to 25 devices at once, streamlining diagnostics at scale.
+
+
+## Requirements
+
+### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+
+> [!div class="checklist"]
+> This remote action is supported on the following platforms:
+
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Custom role][INT-RC] with the permissions:
+>   - Remote tasks/Collect diagnostics
 
 The **Collect diagnostics** remote action lets you collect and download managed device diagnostics without interrupting the user. Only nonuser locations and file types are accessed.
 
@@ -128,7 +132,7 @@ To use the *Collect diagnostics* action:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
-3. On the device’s **Overview** page, select **…** >  **Collect diagnostics** > **Yes**. A pending notification appears on the device’s **Overview** page.
+3. On the device's **Overview** page, select **…** >  **Collect diagnostics** > **Yes**. A pending notification appears on the device's **Overview** page.
 4. To see the status of the action, select **Device diagnostics monitor**.
 5. After the  action completes, select **Download** in the row for the action > **Yes**.
 6. The data zip file is added to your download tray and you can save it to your computer.
@@ -158,94 +162,104 @@ If you install [KB5011543](https://support.microsoft.com/topic/march-22-2022-kb5
 
 This following list is the same order as the diagnostic zip. Each collection contains the following data:
 
-Registry Keys:
+# [:::image type="icon" source="../media/icons/windows/registry.svg"::: **Registry keys**](#tab/reg)
 
-- HKLM\SOFTWARE\Microsoft\CloudManagedUpdate
-- HKLM\SOFTWARE\Microsoft\EPMAgent
-- HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceHealthMonitoring
-- HKLM\SOFTWARE\Microsoft\IntuneManagementExtension
-- HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
-- HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection
-- HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
-- HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
-- HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
-- HKLM\SOFTWARE\Microsoft\DeviceInventory
-- HKLM\SOFTWARE\Policies
-- HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
-- HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
-- HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
-- HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
-- HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm
-- HKLM\SYSTEM\Setup\SetupDiag\Results
+|Registry key|
+|-|
+|`HKLM\SOFTWARE\Microsoft\CloudManagedUpdate`|
+|`HKLM\SOFTWARE\Microsoft\EPMAgent`|
+|`HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceHealthMonitoring`|
+|`HKLM\SOFTWARE\Microsoft\IntuneManagementExtension`|
+|`HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot`|
+|`HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection`|
+|`HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI`|
+|`HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings`|
+|`HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall`|
+|`HKLM\SOFTWARE\Microsoft\DeviceInventory`|
+|`HKLM\SOFTWARE\Policies`|
+|`HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL`|
+|`HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`|
+|`HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall`|
+|`HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`|
+|`HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm`|
+|`HKLM\SYSTEM\Setup\SetupDiag\Results`|
 
-Commands:
+# [:::image type="icon" source="../media/icons/windows/cmd.svg"::: **Commands**](#tab/cmds)
 
-- %programfiles%\windows defender\mpcmdrun.exe -GetFiles
-- %windir%\system32\certutil.exe -store
-- %windir%\system32\certutil.exe -store -user my
-- %windir%\system32\Dsregcmd.exe /status
-- %windir%\system32\ipconfig.exe /all
-- %windir%\system32\mdmdiagnosticstool.exe
-- %windir%\system32\msinfo32.exe /report %temp%\MDMDiagnostics\msinfo32.log
-- %windir%\system32\netsh.exe advfirewall show allprofiles
-- %windir%\system32\netsh.exe advfirewall show global
-- %windir%\system32\netsh.exe lan show profiles
-- %windir%\system32\netsh.exe winhttp show proxy
-- %windir%\system32\netsh.exe wlan show profiles
-- %windir%\system32\netsh.exe wlan show wlanreport
-- %windir%\system32\ping.exe -n 50 localhost
-- %windir%\system32\pnputil.exe /enum-drivers
-- %windir%\system32\powercfg.exe /batteryreport /output %temp%\MDMDiagnostics\battery-report.html
-- %windir%\system32\powercfg.exe /energy /output %temp%\MDMDiagnostics\energy-report.html
+|Command|
+|-|
+|`%programfiles%\windows defender\mpcmdrun.exe -GetFiles`|
+|`%windir%\system32\certutil.exe -store`|
+|`%windir%\system32\certutil.exe -store -user my`|
+|`%windir%\system32\Dsregcmd.exe /status`|
+|`%windir%\system32\ipconfig.exe /all`|
+|`%windir%\system32\mdmdiagnosticstool.exe`|
+|`%windir%\system32\msinfo32.exe /report %temp%\MDMDiagnostics\msinfo32.log`|
+|`%windir%\system32\netsh.exe advfirewall show allprofiles`|
+|`%windir%\system32\netsh.exe advfirewall show global`|
+|`%windir%\system32\netsh.exe lan show profiles`|
+|`%windir%\system32\netsh.exe winhttp show proxy`|
+|`%windir%\system32\netsh.exe wlan show profiles`|
+|`%windir%\system32\netsh.exe wlan show wlanreport`|
+|`%windir%\system32\ping.exe -n 50 localhost`|
+|`%windir%\system32\pnputil.exe /enum-drivers`|
+|`%windir%\system32\powercfg.exe /batteryreport /output %temp%\MDMDiagnostics\battery-report.html`|
+|`%windir%\system32\powercfg.exe /energy /output %temp%\MDMDiagnostics\energy-report.html`|
 
-Event Viewers:
+# [:::image type="icon" source="../media/icons/windows/eventvwr.svg"::: **Event Viewer**](#tab/events)
 
-- Application
-- Microsoft-Windows-AppLocker/EXE and DLL
-- Microsoft-Windows-AppLocker/MSI and Script
-- Microsoft-Windows-AppLocker/Packaged app-Deployment
-- Microsoft-Windows-AppLocker/Packaged app-Execution
-- Microsoft-Windows-AppxPackaging/Operational
-- Microsoft-Windows-Bitlocker/Bitlocker Management
-- Microsoft-Windows-HelloForBusiness/Operational
-- Microsoft-Windows-SENSE/Operational
-- Microsoft-Windows-SenseIR/Operational
-- Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
-- Microsoft-Windows-WinRM/Operational
-- Microsoft-Windows-WMI-Activity/Operational
-- Microsoft-Windows-AppXDeployment/Operational
-- Microsoft-Windows-AppXDeploymentServer/Operational
-- Setup
-- System
+|Event|
+|-|
+|`Application`|
+|`Microsoft-Windows-AppLocker/EXE and DLL`|
+|`Microsoft-Windows-AppLocker/MSI and Script`|
+|`Microsoft-Windows-AppLocker/Packaged app-Deployment`|
+|`Microsoft-Windows-AppLocker/Packaged app-Execution`|
+|`Microsoft-Windows-AppxPackaging/Operational`|
+|`Microsoft-Windows-Bitlocker/Bitlocker Management`|
+|`Microsoft-Windows-HelloForBusiness/Operational`|
+|`Microsoft-Windows-SENSE/Operational`|
+|`Microsoft-Windows-SenseIR/Operational`|
+|`Microsoft-Windows-Windows Firewall With Advanced Security/Firewall`|
+|`Microsoft-Windows-WinRM/Operational`|
+|`Microsoft-Windows-WMI-Activity/Operational`|
+|`Microsoft-Windows-AppXDeployment/Operational`|
+|`Microsoft-Windows-AppXDeploymentServer/Operational`|
+|`Setup`|
+|`System`|
 
-Files:
+# [:::image type="icon" source="../media/icons/windows/explorer.svg"::: **Files**](#tab/files)
 
-- %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\\*.etl
-- %ProgramFiles%\Microsoft EPM Agent\Logs\\\*.*
-- %Program Files%\Microsoft Device Inventory Agent\Logs
-- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\\\*.*
-- %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
-- %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
-- %ProgramData%\USOShared\logs\system\\*.etl
-- %ProgramData Microsoft Update Health Tools\Logs\\*.etl
-- %temp%\CloudDesktop\*.log
-- %temp%\MDMDiagnostics\battery-report.html
-- %temp%\MDMDiagnostics\energy-report.html
-- %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
-- %temp%\MDMDiagnostics\msinfo32.log
-- %windir%\ccm\logs\\*.log
-- %windir%\ccmsetup\logs\\*.log
-- %windir%\logs\CBS\cbs.log
-- %windir%\logs\measuredboot\\\*.*
-- %windir%\logs\Panther\unattendgc\setupact.log
-- %windir%\logs\SoftwareDistribution\ReportingEvent\measuredboot\\*.log
-- %windir%\Logs\SetupDiag\SetupDiagResults.xml
-- %windir%\logs\WindowsUpdate\\*.etl
-- %windir%\SensorFramework\*.etl
-- %windir%\system32\config\systemprofile\AppData\Local\mdm\\\*.log
-- %windir%\temp\%computername%*.log
-- %windir%\temp\officeclicktorun*.log
-- %TEMP%\winget\defaultstate*.log
+|Path|
+|-|
+|`%ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl`|
+|`%ProgramFiles%\Microsoft EPM Agent\Logs\*.*`|
+|`%Program Files%\Microsoft Device Inventory Agent\Logs`|
+|`%ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*`|
+|`%ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab`|
+|`%ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html`|
+|`%ProgramData%\USOShared\logs\system\*.etl`|
+|`%ProgramData Microsoft Update Health Tools\Logs\*.etl`|
+|`%temp%\CloudDesktop\*.log`|
+|`%temp%\MDMDiagnostics\battery-report.html`|
+|`%temp%\MDMDiagnostics\energy-report.html`|
+|`%temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab`|
+|`%temp%\MDMDiagnostics\msinfo32.log`|
+|`%windir%\ccm\logs\*.log`|
+|`%windir%\ccmsetup\logs\*.log`|
+|`%windir%\logs\CBS\cbs.log`|
+|`%windir%\logs\measuredboot\*.*`|
+|`%windir%\logs\Panther\unattendgc\setupact.log`|
+|`%windir%\logs\SoftwareDistribution\ReportingEvent\measuredboot\*.log`|
+|`%windir%\Logs\SetupDiag\SetupDiagResults.xml`|
+|`%windir%\logs\WindowsUpdate\*.etl`|
+|`%windir%\SensorFramework\*.etl`|
+|`%windir%\system32\config\systemprofile\AppData\Local\mdm\*.log`|
+|`%windir%\temp\%computername%*.log`|
+|`%windir%\temp\officeclicktorun*.log`|
+|`%TEMP%\winget\defaultstate*.log`|
+
+---
 
 ### Disable device diagnostics
 
@@ -255,7 +269,7 @@ The **Collect diagnostics** remote action is enabled by default. You can disable
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11.** to **Disabled**.
 
-     :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled." lightbox="./media/collect-diagnostics/disable-device-diagnostics.png":::
+     :::image type="content" source="images/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled." lightbox="images/disable-device-diagnostics.png":::
 
 ### Disable Windows Autopilot automatic collection of diagnostics
 <!--1895390-->
@@ -266,7 +280,7 @@ Windows Autopilot automatic diagnostic capture is enabled by default. You can di
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
 
-     :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Windows Autopilot automatic diagnostics collection set to Disabled." lightbox="./media/collect-diagnostics/disable-autopilot-diagnostics.png":::
+     :::image type="content" source="images/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Windows Autopilot automatic diagnostics collection set to Disabled." lightbox="images/disable-autopilot-diagnostics.png":::
 
 ### Known issues with device diagnostics
 
@@ -274,3 +288,33 @@ Currently there are the two main issues that could cause device diagnostics to f
 
 1. A time-out could occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde). These patches contain a fix to the DiagnosticLog CSP that prevents time out during upload. After the update installs, make sure to reboot your device.
 2. The device wasn't able to receive the device action within a 24-hour window. If the device is offline or turned off, it could cause a failure.
+
+## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+
+For more information about the APIs used for this action, see:
+
+- [downloadAppDiagnostics action][GRAPH-1]
+- [appDiagnostics function][GRAPH-2]
+
+<!--links-->
+
+<!-- graph -->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-downloadappdiagnostics
+[GRAPH-2]: /graph/api/intune-devices-manageddevice-appdiagnostics
+
+<!-- admin center -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+
+
+<!-- roles -->
+
+[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
+
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+

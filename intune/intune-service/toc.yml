@@ -564,7 +564,7 @@ items:
                 - name: Windows LOB apps
                   href: ./apps/lob-apps-windows.md
                 - name: Intune management extension for Windows
-                  href: ./apps/intune-management-extension.md                  
+                  href: ./apps/intune-management-extension.md
                 - name: Enterprise App Management
                   items:
                   - name: Enterprise App Management overview
@@ -827,7 +827,7 @@ items:
           - name: Feature updates policy
             href: ./protect/windows-10-feature-updates.md
           - name: Windows quality updates policy
-            href: ./protect/windows-quality-update-policy.md  
+            href: ./protect/windows-quality-update-policy.md
           - name: Expedite updates policy
             href: ./protect/windows-10-expedite-updates.md
           - name: Windows driver updates
@@ -898,7 +898,7 @@ items:
               href: ./protect/mde-security-integration.md
             - name: Manage endpoint security policies in Microsoft Defender
               href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
-        - name: Vulnerability Remediation Agent 
+        - name: Vulnerability Remediation Agent
           href: ./protect/vulnerability-remediation-agent.md
         - name: Endpoint Privilege Management
           items:
@@ -1428,7 +1428,7 @@ items:
           href: ./configuration/apple-settings-catalog-configurations.md
         - name: Android
           displayName: Android
-          href: ./configuration/settings-catalog-android.md  
+          href: ./configuration/settings-catalog-android.md
 
       - name: Device Configuration template settings lists
         items:
@@ -1482,7 +1482,7 @@ items:
             - name: Wi-Fi
               displayName: wifi, wireless, android, device administrator, da
               href: ./configuration/wi-fi-settings-android.md
-            
+
         - name: iOS/iPadOS
           items:
           - name: Custom
@@ -1557,7 +1557,7 @@ items:
         - name: Windows 10/11
           items:
           - name: BIOS configurations and other settings
-            href: ./configuration/bios-configuration.md            
+            href: ./configuration/bios-configuration.md
           - name: Custom (OMA-URI)
             displayName: oma uri, windows
             href: ./configuration/custom-settings-windows-10.md
@@ -1652,7 +1652,7 @@ items:
         - name: Add device enrollment manager
           href: ./enrollment/device-enrollment-manager-enroll.md
           displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
-        - name: Enable Windows backup and restore 
+        - name: Enable Windows backup and restore
           href: ./enrollment/windows-backup-restore.md
         - name: Add device categories
           href: ./enrollment/device-group-mapping.md
@@ -2039,6 +2039,8 @@ items:
         items:
         - name: Troubleshoot device actions
           href: /troubleshoot/mem/intune/troubleshoot-device-actions
+      - name: 🆕 Remote device actions
+        href: ./remote-actions/toc.yml
 
   - name: Support your end users
     items:

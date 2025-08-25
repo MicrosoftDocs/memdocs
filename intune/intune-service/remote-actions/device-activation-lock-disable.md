@@ -1,28 +1,12 @@
 ---
 # required metadata
 
-title: Disable Activation Lock on Apple devices with Intune
-titleSuffix: Microsoft Intune
-description: Learn how to use Intune to disable Activation Lock on Apple devices to access locked devices.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
+title: "Intune Remote Actions: Disable Activation Lock"
+description: Learn how to use Microsoft Intune to disable Activation Lock on Apple devices.
 ms.date: 02/27/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
@@ -30,20 +14,29 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Disable Activation Lock on Apple devices with Intune
+# Disable Activation Lock in Intune
 
 > [!TIP]
 > You can now turn off Activation Lock directly in Apple Business Manager and Apple School Manager. Learn more on [Apple's User Guide site.](https://support.apple.com/guide/apple-business-manager/axm812df1dd8/web)
+
+
 Microsoft Intune can help you manage Activation Lock, a feature of the Find My iPhone app for iOS/iPadOS and macOS devices. Activation Lock is enabled automatically when a user sets up the Find My iPhone app on a device. After it's enabled, the user's Apple ID and password must be entered before anyone can:
 
 - Turn off Find My iPhone
 - Erase the device
 - Reactivate the device
 
-Supported platforms:
 
-- iOS/iPadOS 7.1 or later (supervised through ADE)
-- macOS 10.15 or later (supervised through ADE)
+## Requirements
+
+### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+
+> [!div class="checklist"]
+> This remote action is supported on the following platforms:
+>
+> - iOS/iPadOS supervised through Automated Device Enrollment (ADE)
+> - macOS supervised through Automated Device Enrollment (ADE)
+
 
 ## How Activation Lock affects you
 
@@ -54,8 +47,6 @@ While Activation Lock helps secure Apple devices and improves the chances of rec
 
 To help solve these problems, Apple introduced the ability to disable Activation Lock for supervised devices, without the user's Apple ID and password. Supervised devices generate a device-specific Activation Lock bypass code, which is stored on Apple's activation server.
 
->[!TIP]
-> Supervised mode can be configured through Apple Configurator to lock down a device and limit functionality to specific business purposes. This action is only supported on Supervised devices enrolled using Automated Device Enrollment program. [Apple's web site](https://developer.apple.com/documentation/devicemanagement/clear_the_bypass_code_for_activation_lock).
 
 You can read more about Activation Lock on [Apple's web site](https://support.apple.com/HT201365).
 
@@ -64,11 +55,10 @@ You can read more about Activation Lock on [Apple's web site](https://support.ap
 There are two methods to disabling Activation Lock on devices:
 
 - Manually entering the Activation Lock bypass code on the device
-
 - Using the Disable Activation Lock device action
 
 For supervised devices, Intune stores the Activation Lock bypass code, which can be entered on the device to manually disable Activation Lock. If the device has been wiped, you can directly access the device by using a blank username and the code as the password.
-Additionally, Intune can directly issue the bypass code to Apple's activation server to disable Activation Lock without having to interact with the device.  
+Additionally, Intune can directly issue the bypass code to Apple's activation server to disable Activation Lock without having to interact with the device.
 
 **The business benefits of using Intune to manage Activation Lock are:**
 

@@ -1,58 +1,71 @@
 ---
 # required metadata
-
 title: Update cellular data plan for iOS/iPadOS devices with Microsoft Intune
 description: Learn how to update the cellular data plan for iOS/iPadOS devices that support eSIM.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
 ms.date: 05/10/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: 126a7489-fe3e-43fd-a681-defb2fe0bb66
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 
 ms.reviewer: rashok
-ms.suite: ems
-search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+appliesto:
+  - ✅ iOS/iPadOS
 ---
 
-# Update cellular data plan (public preview)
+# Update cellular data plan
 
 The **Update cellular data plan** remote action lets you remotely activate eSIM cellular plan on iOS/iPadOS devices that support it.
 
-## Supported platforms
+## Requirements
 
-- iOS 14 and later
-- iPadOS 13.0 or later
+### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
 
-For more information about devices that support eSIM, see the Apple support article [Using Dual SIM with an eSIM](https://support.apple.com/HT209044).
+> [!div class="checklist"]
+> This remote action is supported on the following platforms:
+>
+> - iOS
+> - iPadOS
+
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, at a minimum, use an account that has one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Custom role][INT-RC] with the permission:
+>   - RRemote tasks/Update cellular data plan
 
 ## Remotely update the cellular data plan
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **By platform** > **iOS/iPadOS** > select a device.
-    ![Screenshot of selecting a device](./media/update-cellular-data-plan/select-device.png)
-2. Select **...** > **Update cellular data plan (preview)**.
-    ![Screenshot of updating cellular data plan](./media/update-cellular-data-plan/update-cellular-data-plan.png)
-3. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
+    > [!div class="nextstepaction"]
+    > [All devices][INT-AC1]
+1. From the devices list, select a device, and then select **...** > **Update cellular data plan (preview)**.
+    ![Screenshot of updating cellular data plan](./media/images/update-cellular-data-plan.png)
+1. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
 
-After the command is successfully applied and the data plan is activated:
+## User experience
+
+When you select the **Update cellular data plan** action, the device receives a command to activate the eSIM cellular data plan. The user experience on the device is as follows:
 
 - Cellular data starts working.
 - The active cellular data plan is listed in the cellular section of the **Settings** app on the device.
 
-## Next steps
+For more information about devices that support eSIM, see the Apple support article [Using Dual SIM with an eSIM](https://support.apple.com/HT209044).
 
-To see the status of the **Update cellular data plan** device action, check the **Overview** page for the device.
+## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+
+For more information about the API used for this action, see [activateDeviceEsim action][GRAPH-1].
+
+<!--links-->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-activateDeviceEsim

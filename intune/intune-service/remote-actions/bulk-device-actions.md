@@ -1,28 +1,17 @@
 ---
 # required metadata
 
-title: Use bulk device actions in Microsoft Intune device.
-titleSuffix:
-description: Use bulk remote device actions.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
+title: Bulk Device Actions In Microsoft Intune
+description: Learn how to use bulk remote device actions in Microsoft Intune.
 ms.date: 02/27/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: 
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: jlynn 
-ms.suite: ems
-search.appverid: MET150
+ms.reviewer: jlynn
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
@@ -30,32 +19,114 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Use bulk device actions
+## Bulk device actions in Microsoft Intune
 
-You can use bulk device actions for the following remote actions:
+Managing devices at scale is a common challenge for IT pros, especially in environments like schools, enterprises, or frontline operations. Microsoft Intune supports bulk remote actions, allowing IT admins to perform tasks on up to 100 devices simultaneously. This capability streamlines operations, reduces manual effort, and ensures consistent policy enforcement across large device fleets.
 
-- [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
-- [Collect diagnostics](collect-diagnostics.md)
-- [Custom notifications](custom-notifications.md#send-a-custom-notification-to-a-single-device)
-- [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center)
-- [Rename](device-rename.md)
-- [Restart](device-restart.md)
-- [Retire](devices-wipe.md#retire)
-- [Sync](device-sync.md)
-- [Wipe](devices-wipe.md#wipe)
-- [Update cellular data plan](update-cellular-data-plan.md)
+For example, at the end of a school year, IT admins can use bulk wipe to securely reset student devices before reassigning them for the next term. This saves time and ensures that sensitive data is removed efficiently across all devices.
 
-Most actions support up to 100 devices. For specific details of each remote action, like options or platform support, see the help page for each.
+Select one of the following tabs to learn more about the available bulk remote actions for each platform:
 
-## Use a bulk device action
+# [:::image type="icon" source="../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose **Devices** > **All devices** > **Bulk Device Actions**.
-![Bulk device actions](./media/bulk-device-actions/bulk-device-actions.png)
-3. On the **Bulk device action** page, select an **OS** and **Device action**. Some device actions have more options or fields to populate. Choose **Next**.
-4. On the **Devices** page, select up to maximum number of devices that the action supports > **Next**.
-5. On the **Review + create** page, select **Create**.
+| Bulk action                    | Description                                                                                      |
+|--------------------------------|--------------------------------------------------------------------------------------------------|
+| [Autopilot reset][RA-APRESET]  | Restores a device to its original settings and removes personal files, apps, and settings.       |
+| [Collect diagnostics][RA-DIAG] | Collects diagnostic logs from a device and uploads the logs to Intune.                           |
+| [Delete][RA-DELETE]            | Removes a device from Intune management, any company data is removed, and the device is retired. |
+| [Rename][RA-REN]               | Changes the device name in Intune.                                                               |
+| [Restart][RA-RESTART]          | Restarts a device.                                                                               |
+| [Retire][RA-RETIRE]            | Removes company data and settings from a device, and leaves personal data intact.                |
+| [Sync][RA-SYNC]                | Syncs a device with Intune to apply the latest policies and configurations.                      |
+| [Wipe][RA-WIPE]                | This action restores a device to its factory settings and removes all data and settings.         |
 
-## Next steps
+# [:::image type="icon" source="../media/icons/platforms/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
 
-[Device management overview.](device-management.md)
+| Bulk action                              | Description                                                                                      |
+|------------------------------------------|--------------------------------------------------------------------------------------------------|
+| [Delete][RA-DELETE]                      | Removes a device from Intune management, any company data is removed, and the device is retired. |
+| [Rename][RA-REN]                         | Changes the device name in Intune.                                                               |
+| [Restart][RA-RESTART]                    | Restarts a device.                                                                               |
+| [Retire][RA-RETIRE]                      | Removes company data and settings from a device, and leaves personal data intact.                |
+| [Send custom notification][RA-NOTIFY]    | Sends a custom notification message to a device that can be viewed in the Company Portal app.    |
+| [Sync][RA-SYNC]                          | Syncs a device with Intune to apply the latest policies and configurations.                      |
+| [Update cellular data plan][RA-CELLULAR] | Updates the cellular data plan settings for a device that uses an eSIM profile.                  |
+| [Wipe][RA-WIPE]                          | This action restores a device to its factory settings and removes all data and settings.         |
+
+# [:::image type="icon" source="../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+
+| Bulk action                              | Description                                                                                      |
+|------------------------------------------|--------------------------------------------------------------------------------------------------|
+| [Delete][RA-DELETE]                      | Removes a device from Intune management, any company data is removed, and the device is retired. |
+| [Rename device][RA-REN]                  | Changes the device name in Intune.                                                               |
+| [Restart][RA-RESTART]                    | Restarts a device.                                                                               |
+| [Retire][RA-RETIRE]                      | Removes company data and settings from a device, and leaves personal data intact.                |
+| [Sync][RA-SYNC]                          | Syncs a device with Intune to apply the latest policies and configurations.                      |
+| [Wipe][RA-WIPE]                          | This action restores a device to its factory settings and removes all data and settings.         |
+
+# [:::image type="icon" source="../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+
+| Bulk action           | Description                                                                                      |
+|-----------------------|--------------------------------------------------------------------------------------------------|
+| [Delete][RA-DELETE]   | Removes a device from Intune management, any company data is removed, and the device is retired. |
+| [Rename][RA-REN]      | Changes the device name in Intune.                                                               |
+| [Restart][RA-RESTART] | Restarts a device.                                                                               |
+| [Wipe][RA-WIPE]       | This action restores a device to its factory settings and removes all data and settings.         |
+
+# [:::image type="icon" source="../media/icons/platforms/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
+
+| Bulk action           | Description                                                                              |
+|-----------------------|------------------------------------------------------------------------------------------|
+| Deprovision           |                                                                                          |
+| Lost mode             |                                                                                          |
+| [Restart][RA-RESTART] | Restarts a device.                                                                       |
+| [Wipe][RA-WIPE]       | This action restores a device to its factory settings and removes all data and settings. |
+
+---
+
+## Execute a bulk device action
+
+Every bulk remote action has its own steps, which are detailed in the respective documentation. In general:
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices** > **Bulk device actions**, or use the following shortcut:
+    > [!div class="nextstepaction"]
+    > [Bulk device actions][INT-AC2]
+1. On the **Basics** page, select an **OS** and **Device action** from the dropdowns. Some device actions have more options or fields to populate. Select **Next**.
+1. On the **Devices** page, select up to maximum number of devices that the action supports. Select **Next**.
+1. On the **Review + create** page, select **Create**.
+
+<!--links-->
+
+[RA-ACTLOCK]: device-activation-lock-disable.md
+[RA-APPCON]: remove-apps-config.md
+[RA-APRESET]: /windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset
+[RA-BL]: device-rotate-bitlocker-keys.md
+[RA-CELLULAR]: update-cellular-data-plan.md
+[RA-DEFAV]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
+[RA-DELETE]: devices-wipe.md#delete-devices-from-the-intune-admin-center
+[RA-DIAG]: collect-diagnostics.md
+[RA-FRESHSTART]: device-fresh-start.md
+[RA-FV]: rotate-filevault-recovery-key.md
+[RA-LOCATE]: device-locate.md
+[RA-LOCATE]: device-locate.md
+[RA-LOCK]: device-remote-lock.md
+[RA-LOGOUT]: device-logout-user.md
+[RA-LOSTMODE]: device-lost-mode.md
+[RA-NOTIFY]: custom-notifications.md
+[RA-PAUSECR]: pause-config-refresh.md
+[RA-PLAY]: device-play-lost-mode-sound.md
+[RA-PREST]: device-passcode-reset.md
+[RA-REN]: device-rename.md
+[RA-RESTART]: device-restart.md
+[RA-REMED]: device-run-remediation.md
+[RA-REMOVEUSER]: device-remove-user.md
+[RA-RETIRE]: device-retire.md
+[RA-ROTLAP]: ../protect/windows-laps-policy.md#manually-rotate-passwords
+[RA-SCAN]: device-scan-defender.md
+[RA-SYNC]: device-sync.md
+[RA-TVIEW]: teamviewer-support.md
+[RA-WIPE]: devices-wipe.md
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/BulkActionWizardBlade

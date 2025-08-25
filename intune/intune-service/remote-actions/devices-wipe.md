@@ -3,24 +3,10 @@
 
 title: Retire or wipe devices using Microsoft Intune
 description: Retire or wipe a device on an Android, Android work profile, AOSP, iOS/iPadOS, macOS, or Windows device using Microsoft Intune. Also delete a device from Microsoft Entra ID.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: laurawi
 ms.date: 08/18/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
@@ -92,106 +78,25 @@ If the device is on and connected, the **Wipe** action propagates across all dev
 
 ## Supported platforms for Wipe device action
 
-**Wipe** is supported on the following platforms:
+> [!div class="checklist"]
+> This remote action is supported on the following platforms:
+>
 
 - Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
 - Android Open Source Project (AOSP) devices
 - iOS/iPadOS
 - macOS
-- Windows
+- Windows 10/11
 
-**Wipe** isn't supported on:
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
-- Android Enterprise personally owned devices with a work profile
-- Linux
-
-## Retire
-
-The **Retire** action removes managed app data (where applicable), settings, and email profiles that were assigned by using Intune. The device is removed from Intune management. Removal happens the next time the device checks in and receives the remote **Retire** action. The device still shows up in Intune until the device checks in. If you want to remove stale devices immediately, use the [Delete action](devices-wipe.md#delete-devices-from-the-intune-admin-center) instead.
-
-### Retire a device
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In the **Devices** pane, select **All devices**.
-3. Select the name of the device that you want to retire.
-4. In the pane that shows the device name, select **Retire**. To confirm, select **Yes**.
-
-If the device is on and connected, the **Retire** action propagates across all device types in less than 15 minutes.
-
-### Effect of the **Retire** action on data that remains on the device
-
-When you use the **Retire** device action, the user's personal data is not removed from the device.
-
-The following tables describe what data is removed, and the effect of the **Retire** action on data that remains on the device after company data is removed.
-
-#### iOS
-
-> [!IMPORTANT]
-> Retired devices might not be automatically deleted resulting in the device record remaining in Intune for 180 days unless issued a **Delete** action.
-
-|Data type|iOS|
-|-------------|-------|
-|Company apps and associated data installed by Intune|**Apps installed using Company Portal:** For apps that are pinned to the management profile, all app data and the apps are removed. These apps include apps originally installed from App Store and later managed as company apps unless the app is configured to not be uninstalled on device removal. <br /><br /> **Microsoft apps that use App Protection Policies and were installed from App Store:** Intune triggers a [selective wipe](../apps/apps-selective-wipe.md) for apps protected by an [App Protection Policy](../apps/app-protection-policy.md) when a Retire action is initiated against an enrolled device. This wipe includes apps installed from the App Store that have work or school account data. The next time the app is launched, the selective wipe removes the protected work or school account data. In order for the selective wipe to occur, an App Protection Policy check-in must occur between the MDM enrollment and retire events. Personal app data and the apps aren't removed after a selective wipe.|
-|Settings|Configurations set by Intune policy are no longer enforced. Users can change the settings.|
-|Wi-Fi and VPN profile settings|Removed.|
-|Certificate profile settings|Certificates are removed and revoked.|
-|Management agent|The management profile is removed.|
-|Email|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
-|Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
-
-> [!NOTE]
-> Users that reinstall the Outlook Mobile app following a **Retire** device action might need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries. Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
-
-#### Android device administrator
+> [!div class="checklist"]
+> To execute this remote action, at a minimum, use an account that has one of the following roles:
+>
 
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-|Data type|Android|Android Samsung Knox Standard|
-|-------------|-----------|------------------------|
-|Web links|Removed.|Removed.|
-|Unmanaged Google Play apps|Apps and data remain installed. <br /> <br />Company app data that's protected by Mobile Application Management (MAM) encryption within the app local storage is removed. Data that's protected by MAM encryption outside the app remains encrypted and unusable, but isn't removed. |Apps and data remain installed. <br /> <br />Company app data that's protected by Mobile Application Management (MAM) encryption within the app local storage is removed. Data that's protected by MAM encryption outside the app remains encrypted and unusable, but isn't removed.|
-|Unmanaged line-of-business apps|Apps and data remain installed.|Apps are uninstalled and data that's local to the app is removed. No data that's outside the app (for example, on an SD card) is removed.|
-|Managed Google Play apps|App data is removed. The app isn't removed. Data that's protected by Mobile Application Management (MAM) encryption outside the app (for example, an SD card) remains encrypted and unusable, but isn't removed.|App data is removed. The app isn't removed. Data that's protected by MAM encryption outside the app (for example, an SD card) remains encrypted, but isn't removed.|
-|Managed line-of-business apps|App data is removed. The app isn't removed. Data that's protected by MAM encryption outside the app (for example, an SD card) remains encrypted and unusable, but isn't removed.|App data is removed. The app isn't removed. Data that's protected by MAM encryption outside the app (for example, an SD card) remains encrypted and unusable, but isn't removed.|
-|Settings|Configurations set by Intune policy are no longer enforced. Users can change the settings.|Configurations set by Intune policy are no longer enforced. Users can change the settings.|
-|Wi-Fi and VPN profile settings|Removed.|Removed.|
-|Certificate profile settings|Certificates are revoked but not removed.|Certificates are removed and revoked.|
-|Management agent|Device Administrator privilege is revoked.|Device Administrator privilege is revoked.|
-|Email|N/A (Android devices don't support Email profiles)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
-|Microsoft Entra unjoin|The Microsoft Entra ID record is removed.|The Microsoft Entra ID record is removed.|
 
-#### Android Enterprise personally owned devices with a work profile
-
-Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune.
-
-#### macOS
-
-|Data type|macOS|
-|-------------|-------|
-|Settings|Configurations set by Intune policy are no longer enforced. Users can change the settings.|
-|Wi-Fi and VPN profile settings|Removed.|
-|Certificate profile settings|Certificates that were deployed through MDM are removed and revoked.|
-|Management agent|The management profile is removed.|
-|Outlook|If Conditional Access is enabled, the device doesn't receive new mail.|
-|Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
-
-#### Windows
-
-|Data type|Windows 8.1 (MDM) and Windows RT 8.1|Windows RT|Windows 10|
-|-------------|----------------------------------------------------------------|--------------|-----------------------------------------|
-|Company apps and associated data installed by Intune|Keys are revoked for files that are protected by EFS. The user can't open the files.|Company apps aren't removed.|Apps are uninstalled. Sideloading keys are removed.<br>For Windows 10 version 1709 (Creators Update) and later, Microsoft 365 Apps aren't removed. Intune management extension installed Win32 apps aren't uninstalled on unenrolled devices. Admins can use assignment exclusion to not offer Win32 apps to BYOD Devices.|
-|Settings|Configurations set by Intune policy are no longer enforced. Users can change the settings.|Configurations set by Intune policy are no longer enforced. Users can change the settings.|Configurations set by Intune policy are no longer enforced. Users can change the settings.|
-|Wi-Fi and VPN profile settings|Removed.|Removed.|Removed.|
-|Certificate profile settings|Certificates are removed and revoked.|Certificates are removed and revoked.|Certificates are removed and revoked.|
-|Email|Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows.|Not supported.|Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows. Removes mail accounts provisioned by Intune.|
-|Microsoft Entra unjoin|No.|No.|The Microsoft Entra ID record is removed.|
-
-> [!IMPORTANT]
-> Windows devices that are not registered in the Windows Autopilot Service, upon being deleted or retired from Intune are removed from Microsoft Entra ID. Before performing these commands consider backing up the BitLocker Recovery Key and/or a local administrator user account credentials. On the other hand, although Windows Autopilot registered devices leave Microsoft Entra ID, their computer object is retained alongside their properties (e.g. Windows LAPS, BitLocker Recovery Key, Entra ID groups memberships).
-
-> [!NOTE]
-> For Windows 10 devices that join Microsoft Entra ID during initial Setup (OOBE), the retire command will remove all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) to login as a local admin and regain access to the user's local data.
 
 
 ## Manually unenroll devices
@@ -212,18 +117,18 @@ Device owners can manually unenroll their devices as explained in the following 
 
 If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. Intune issues a **Retire** or **Wipe** action depending on the OS/Enrollment type. Not all enrollment types support the **Retire** action. See the following table for the expected behavior based on the device platform and the enrollment type.
 
-| OS  | Enrollment Type  | Action triggered   |
-|---|---|---|
-| Android | Device administrator                       | RETIRE - All Profiles are deleted, Company Portal (CP) app is signed out.           |
-| Android | Personally owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                               |
-| Android | Corporate-owned devices with work profile  | WIPE                                                                       |
-| Android | Dedicated devices                          | WIPE                                                                       |
-| Android | Dedicated w/ Entra ID Shared Mode          | WIPE                                  |
-| Android | Fully managed user devices                 | WIPE                                                                       |
-| Android | AOSP Userless/AOSP User-Associated         | WIPE                                                                       |
-| iOS     | All                                        | RETIRE - All Profiles are deleted, CP app is signed out                            |
-| Windows | All                                        | RETIRE - All Profiles are deleted, work and school account is signed out                   |
-| macOS   | All                                        | RETIRE - All Profiles are deleted, CP app is deleted                              |
+| OS      | Enrollment Type                            | Action triggered                                                          |
+|---------|--------------------------------------------|---------------------------------------------------------------------------|
+| Android | Device administrator                       | RETIRE - All Profiles are deleted, Company Portal (CP) app is signed out. |
+| Android | Personally owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                     |
+| Android | Corporate-owned devices with work profile  | WIPE                                                                      |
+| Android | Dedicated devices                          | WIPE                                                                      |
+| Android | Dedicated w/ Entra ID Shared Mode          | WIPE                                                                      |
+| Android | Fully managed user devices                 | WIPE                                                                      |
+| Android | AOSP Userless/AOSP User-Associated         | WIPE                                                                      |
+| iOS     | All                                        | RETIRE - All Profiles are deleted, CP app is signed out                   |
+| Windows | All                                        | RETIRE - All Profiles are deleted, work and school account is signed out  |
+| macOS   | All                                        | RETIRE - All Profiles are deleted, CP app is deleted                      |
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
@@ -244,13 +149,13 @@ You can configure Intune to automatically clean up devices that appear to be ina
 - Device cleanup rules aren't available for Jamf-managed devices.
 - To update device cleanup rules, you need the **Managed Device Cleanup Settings** > **Update** permission set to **Yes**. This permission is part of [Intune role-based access control (RBAC)](../fundamentals/role-based-access-control.md).
 
-  :::image type="content" source="./media/devices-wipe/managed-device-cleanup-rules-permission.png" alt-text="Screenshot that shows the Managed Device Cleanup Settings permission in RBAC set to Yes in Microsoft Intune.":::
+  :::image type="content" source="images/managed-device-cleanup-rules-permission.png" alt-text="Screenshot that shows the Managed Device Cleanup Settings permission in RBAC set to Yes in Microsoft Intune.":::
 
 #### Create a device cleanup rule
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Organize devices** > **Device cleanup rules** > **Create**.
-3. In **Basics**, enter the following properties:
+1. Select **Devices** > **Organize devices** > **Device cleanup rules** > **Create**.
+1. In **Basics**, enter the following properties:
 
     - **Name**: Enter a descriptive name for the rule.
     - **Description**: Enter a description for the rule. This setting is optional, but recommended.
@@ -264,13 +169,13 @@ You can configure Intune to automatically clean up devices that appear to be ina
 
     You can create one rule per platform. The rule applies to all devices in your organization with the platform you select.
 
-4. Select **Next**.
-5. In **Rule settings** > **Remove devices that haven't checked in for this many days**, enter a number between 30 and 270.
+1. Select **Next**.
+1. In **Rule settings** > **Remove devices that haven't checked in for this many days**, enter a number between 30 and 270.
 
     This setting determines how many days a device must check in with the Intune service before the device is considered stale or inactive. If a device fails to check-in before the period ends, the device is cleaned up.
 
-6. Select **Next**.
-7. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the rule applies. The rule is also shown in the cleanup rules list.
+1. Select **Next**.
+1. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the rule applies. The rule is also shown in the cleanup rules list.
 
 When a device cleanup rule runs, it conceals the device from Intune reports. This action doesn't trigger a Wipe or Retire action.
 
@@ -285,37 +190,59 @@ If a cleaned up device checks in before its device certification expires, it rea
 You might need to delete devices from Microsoft Entra ID due to communication issues or missing devices. You can use the **Delete** action to remove device records from the Azure portal for devices that you know are unreachable and unlikely to communicate with Azure again. The **Delete** action doesn't remove a device from management.
 
 1. Sign in to [Microsoft Entra ID in the Azure portal](https://azure.microsoft.com/services/active-directory/) by using your admin credentials. You can also sign in to the [Microsoft 365 admin center](https://admin.microsoft.com). From the menu, select **Admin centers** > **Microsoft Entra ID**.
-2. Create an Azure subscription if you don't have one. The subscription shouldn't require a credit card or payment if you have a paid account (select the **Register your free Microsoft Entra ID** subscription link).
-3. Select **Microsoft Entra ID**, and then select your organization.
-4. Select the **Users** tab.
-5. Select the user that's associated with the device that you want to delete.
-6. Select **Devices**.
-7. Remove devices as appropriate. For example, you might remove devices that are no longer in use, or devices that have inaccurate definitions.
+1. Create an Azure subscription if you don't have one. The subscription shouldn't require a credit card or payment if you have a paid account (select the **Register your free Microsoft Entra ID** subscription link).
+1. Select **Microsoft Entra ID**, and then select your organization.
+1. Select the **Users** tab.
+1. Select the user that's associated with the device that you want to delete.
+1. Select **Devices**.
+1. Remove devices as appropriate. For example, you might remove devices that are no longer in use, or devices that have inaccurate definitions.
 
 ## Retire an Apple ADE device from Intune
 
 If you want to completely remove an Apple automated device enrollment (ADE) device from management by Intune, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose **Devices** > **All devices** > choose the device > **Retire**.
-3. Visit [business.apple.com](http://business.apple.com), go to the **Devices** section, and search for the device by its serial number.
-4. Select the device, open the **...** menu, and then select **Release from Organization**.
-
-5. Check **I understand this cannot be undone**, and then select **Continue**.
-
-    :::image type="content" source="./media/devices-wipe/ade-release-device.png" alt-text="Screenshot that shows the release from organization prompt in Microsoft Intune.":::
+1. Select **Devices** > **All devices** > select the device > **Retire**.
+1. Visit [business.apple.com](http://business.apple.com), go to the **Devices** section, and search for the device by its serial number.
+1. Select the device, open the **...** menu, and then select **Release from Organization**.
+1. Check **I understand this cannot be undone**, and then select **Continue**.
 
 > [!NOTE]
 > In some cases, the iOS device must be restored with iTunes to apply this change. Please find further instructions from Apple [here](https://support.apple.com/guide/itunes/restore-to-factory-settings-itnsdb1fe305/windows).
 
-## Device states
+---
+<!--merged content-->
 
-For a description of device states, see the [managementStates collection](../developer/intune-data-warehouse-collections.md#managementstates).
+## Wipe all data from a macOS device
 
-## Fresh Start
+Intune gives you the ability to use the **Wipe** remote device action to wipe data from macOS devices, including the operating system.
 
-Applicable for Windows 10 devices. Read more about [Fresh Start](device-fresh-start.md).
+> [!IMPORTANT]
+> When you use **Wipe**, the device is also removed from Intune management and no warning is given to the end user once a wipe is initiated.
 
-## Next steps
+> [!NOTE]
+> The behavior for **Wipe** on iOS devices is that it restores the device to factory defaults and removes the management profile, including any configuration profiles that were installed.
 
-If you want to reenroll a deleted device, see [Enrollment options](../fundamentals/deployment-guide-enrollment.md).
+## Before you start
+
+- For devices running macOS 12.0.1 and later, review the requirements for erasing devices available on the [Apple Support site](https://support.apple.com/en-ph/guide/deployment/dep0a819891e/web).
+
+- For devices running a version of macOS earlier to 12.0.1, macOS must be reinstalled. Steps covering how to reinstall macOS are available on the [Apple Support site](https://support.apple.com/en-us/HT204904).
+
+## How to use Wipe
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > and select the device you want to wipe. Select **Wipe**.
+2. Provide a 6-digit number for the **Recovery PIN**. The six-digit PIN is required to reinstall the operating system on the device, if the device isn't equipped with T2 security chip enabled (that is, the model year of the device is 2018 and earlier, or the device is running macOS 10.14 or earlier). Be sure to make a note of this PIN and give it to the device owner as it won't be visible after the wipe action completes.
+
+    :::image type="content" source="images/obliteration-behavior.png" alt-text="Screen shot that shows where to provide a pin and select an option for obliteration behavior." lightbox="images/obliteration-behavior.png":::
+
+3. Select an option from **Obliteration Behavior**, which is used to define the fallback for devices when Erase All Contents and Settings (EACS) fails. The following options can be configured:
+
+    - **Default**: If Erase All Content and Settings (EACS) preflight fails, the device responds to Intune with an Error status and then attempts to erase itself. If EACS preflight succeeds but EACS fails, then the device attempts to erase itself.
+    - **Do not obliterate**: If Erase All Content and Settings (EACS) preflight fails, the device responds to Intune with an Error status and doesn't attempt to erase itself. If EACS preflight succeeds but EACS fails, then the device doesn't attempt to erase itself.
+    - **Obliterate with warning**: If Erase All Content and Settings (EACS) preflight fails, the device responds with a Success status and then attempts to erase itself. If EACS preflight succeeds but EACS fails, then the device attempts to erase itself.
+    - **Always obliterate**: The system doesn't attempt Erase All Content and Settings (EACS). T2 and later devices always obliterate.
+
+4. Select **Wipe** to erase the device.
+
+

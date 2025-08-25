@@ -4,16 +4,8 @@
 title: Wipe a macOS device
 titleSuffix: Microsoft Intune
 description: Learn how to wipe all data, including the operating system, from a macOS device.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
 ms.date: 04/24/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: ab396092-907a-44b7-a157-aabee62176a9
 
 # optional metadata
 
@@ -21,8 +13,6 @@ ms.assetid: ab396092-907a-44b7-a157-aabee62176a9
 #audience:
 
 ms.reviewer: Beflamm
-ms.suite: ems
-search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
@@ -58,12 +48,12 @@ Intune gives you the ability to use the **Wipe** remote device action to wipe da
 
 3. Select an option from **Obliteration Behavior**, which is used to define the fallback for devices when Erase All Contents and Settings (EACS) fails. The following options can be configured:
 
-    - **Default**: If Erase All Content and Settings (EACS) preflight fails, the device responds to Intune with an Error status and then attempts to erase itself. If EACS preflight succeeds but EACS fails, then the device attempts to erase itself.  
+    - **Default**: If Erase All Content and Settings (EACS) preflight fails, the device responds to Intune with an Error status and then attempts to erase itself. If EACS preflight succeeds but EACS fails, then the device attempts to erase itself.
 
     - **Do not obliterate**: If Erase All Content and Settings (EACS) preflight fails, the device responds to Intune with an Error status and doesn't attempt to erase itself. If EACS preflight succeeds but EACS fails, then the device doesn't attempt to erase itself.
 
     - **Obliterate with warning**: If Erase All Content and Settings (EACS) preflight fails, the device responds with a Success status and then attempts to erase itself. If EACS preflight succeeds but EACS fails, then the device attempts to erase itself.
 
-    - **Always obliterate**: The system doesn't attempt Erase All Content and Settings (EACS). T2 and later devices always obliterate.  
+    - **Always obliterate**: The system doesn't attempt Erase All Content and Settings (EACS). T2 and later devices always obliterate.
 
 4. Select **Wipe** to erase the device.

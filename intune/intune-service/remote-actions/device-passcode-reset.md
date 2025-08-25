@@ -3,25 +3,10 @@
 
 title: Reset device passcodes with Microsoft Intune
 description: Remove or reset the passcode by using the remove passcode action on devices you manage or monitor with Intune.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
 ms.date: 02/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 #SME:ileanawu
@@ -33,6 +18,16 @@ ms.collection:
 # Reset or remove a device passcode in Intune
 
 This document discusses both device level passcode reset and work profile passcode reset on Android enterprise (formerly called Android for Work, or AfW) devices. It's important to note this distinction as requirements for each can vary. A device level passcode reset resets the passcode for the entire device. A work profile passcode reset resets the passcode only for the user's work profile on Android enterprise devices.
+
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Custom role][INT-RC] with the permissions:
+>   - `Microsoft.Intune_RemoteTasks_ResetPasscode`
 
 ## Supported platforms for device level passcode reset
 
@@ -74,7 +69,18 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 > [!NOTE]
 > To successfully reset a passcode for the Work Profile of an Android device, you must configure the device passcode within device restrictions. Any attempts to reset the passcode without configuration will fail.
 
-## Reset Android work profile and Device Owner passcodes
+# [:::image type="icon" source="../media/icons/platforms/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
+
+### Remove iOS/iPadOS passcodes
+
+Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device prompts the user to set a new passcode in Settings.
+
+> [!IMPORTANT]
+> If the Remove passcode action fails, Intune might have stored the wrong unlock token, and you need to **Wipe** the device to regain access.
+
+# [:::image type="icon" source="../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+
+### Reset Android work profile and Device Owner passcodes
 
 Supported Android Enterprise personally-owned and corporate-owned work profile devices enrolled with a work profile receive a new managed profile unlock password or a managed profile challenge for the end user.
 
@@ -88,12 +94,7 @@ After the reset passcode is selected from the admin center, a new passcode is pr
 
 The new passcode must be entered on the device. The new passcode for the device is displayed in the admin center for seven days.
 
-## Remove iOS/iPadOS passcodes
-
-Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device prompts the user to set a new passcode in Settings.
-
-> [!IMPORTANT]
-> If the Remove passcode action fails, Intune might have stored the wrong unlock token, and you need to **Wipe** the device to regain access.
+---
 
 ## Troubleshooting remote lock failures
 

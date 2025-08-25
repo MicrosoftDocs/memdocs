@@ -1,52 +1,61 @@
 ---
 # required metadata
 
-title: Log out the user of an iOS/iPadOS device 
+title: Log out the user of an iOS/iPadOS device
 titleSuffix: Microsoft Intune
 description: Learn how to log out the current user of an iOS/iPadOS device with Intune.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
 ms.date: 02/27/2020
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: 702bc46c-1a6f-4689-bd53-3b778a447baa
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite: ems
-search.appverid: MET150
+ms.reviewer:
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+appliesto:
+  - ✅ iPadOS
 ---
 
-# Logout the current user on Intune-managed iOS/iPadOS devices
+# Sign out the current user
 
-The **Logout current user** action logs out the current user on a shared iPad device. 
+The **Logout current user** action logs out the current user on a shared iPad device.
 
-## Supported platforms
+## Requirements
 
-- Windows - Not supported
-- Windows Phone - Not supported
-- iOS/iPadOS - Supported on iOS/iPadOS 9.3 and later (shared iPad devices only)
-- macOS - Not supported
-- Android - Not supported
+### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
 
-## How to log out the current user
+> [!div class="checklist"]
+> This remote action is supported on the following platform:
+>
+> - iPadOS (shared iPad devices only)
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
-2. Choose an iOS/iPadOS device > **...** > **Logout current user**.
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
-## Next steps
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [Custom role][INT-RC] with the permission:
+>   - Remote tasks/Manage shared device users
 
-To see the status of the action you just took, on the **Devices and groups** blade, choose **Device Actions**.
+## Log out the current user
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
+    > [!div class="nextstepaction"]
+    > [All devices][INT-AC1]
+1. From the devices list, select a device, and then select **...** > **Logout current user**.
+
+## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+
+For more information about the API used for this action, see [logoutSharedAppleDeviceActiveUser action][GRAPH-1].
+
+<!--links-->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-logoutsharedappledeviceactiveuser
