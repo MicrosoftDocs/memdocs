@@ -79,7 +79,7 @@ We’re working on a dashboard for Endpoint Privilege Management (EPM) that brin
 
 ### PowerShell script support when installing Win32 apps<!-- 29857395 -->
 
-For added flexibility when installing apps, you will be able to upload a PowerShell script to install Enterprise App Catalog apps as an alternative to running a command line.
+For added flexibility when installing apps, you'll be able to upload a PowerShell script to install Enterprise App Catalog apps as an alternative to running a command line.
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -171,7 +171,7 @@ Settings that have previously been supported in Templates are now also supported
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-To create a new Settings Catalog policy go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
+To create a new Settings Catalog policy, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
 
 The following settings are in the settings catalog:
 
@@ -226,6 +226,21 @@ A new feature called *Windows Backup for Organizations* will be soon be generall
 
 ## Device management
 
+### End of support for older versions of the Intune Company Portal app<!--  33827426 -->
+ 
+On October 1, 2025, support for all Intune Company Portal versions that are older than 5.0.5421.0 ends. When support ends, users with a device that runs an older version of the Intune Company Portal might not be able to successfully maintain that device's registration status and those devices could be identified as noncompliant. For devices to remain registered and in compliance, the Company Portal version must be updated to a version that remains in support.
+ 
+To update the version of the Company Portal app, see the following available guidance:
+
+**For administrators:**  
+- Use Intune to deploy the latest version: [Windows Company Portal app by using Microsoft Intune](../apps/store-apps-company-portal-app.md)
+ 
+**For device users:**  
+- Get the latest version of the Intune Company Portal from your device's app store:
+  - [Apple App Store](https://apps.apple.com/app/intune-company-portal/id719171358)
+  - [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)
+  - [Microsoft Store](https://apps.microsoft.com/detail/9wzdncrfj3pz)
+
 ### Resource explorer renamed to Device inventory <!-- 33630406 -->
 
 The **Resource explorer** pane under **Monitor** for Windows devices will be renamed to **Device inventory**. This change applies to tenants with at least one device targeted by a [properties catalog](/intune/intune-service/configuration/properties-catalog) policy. The experience and data remain unchanged—only the pane name is changed.
@@ -254,7 +269,7 @@ The **Resource explorer** pane under **Monitor** for Windows devices will be ren
 
 ### New security baseline update experience<!-- 31607281 -->
 
-We’re updating the Intune security baseline update experience. With this change, when you choose to update an existing baseline to its newest baseline version, you’ll be able to choose between options to keep the customizations you’ve made, which will be applied to the new version instance, or to discard those customizations and create a new baseline instance using the baselines recommended values from the new version. With both options the new version is created as a new baseline instance and the original baseline instance will remain available until you choose to remove it from your tenant.
+We’re updating the Intune security baseline update experience. With this change, when you choose to update an existing baseline to its newest baseline version, you’ll be able to choose between options to keep the customizations you’ve made, which will be applied to the new version instance, or to discard those customizations and create a new baseline instance using the baselines recommended values from the new version. With both options, the new version is created as a new baseline instance and the original baseline instance remains available until you choose to remove it from your tenant.
  
 This change will apply to updates of baseline versions created after May 2023, which use a newer settings format that wasn't available in older security baseline versions.
 
