@@ -117,6 +117,10 @@
         "intune-service/remote-actions//**/*.md": "paoloma",
         "intune-service/remote-actions//**/*.yml": "paoloma"
       },
+      "manager": {
+        "intune-service/remote-actions//**/*.md": "laurawi",
+        "intune-service/remote-actions//**/*.yml": "laurawi"
+      },
       "ms.service": {
         "intune-service/remote-actions//**/*.md": "microsoft-intune",
         "intune-service/remote-actions//**/*.yml": "microsoft-intune"
@@ -132,6 +136,10 @@
       "search.appverid": {
         "intune-service/remote-actions//**/*.md": "MET150",
         "intune-service/remote-actions//**/*.yml": "MET150"
+      },
+      "ms.reviewer": {
+        "intune-service/remote-actions//**/*.md": "mattcall",
+        "intune-service/remote-actions//**/*.yml": "mattcall"
       }
     },
     "template": [],
