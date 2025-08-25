@@ -226,17 +226,17 @@ A new feature called *Windows Backup for Organizations* will be soon be generall
 
 ## Device management
 
-### End of support for older versions of the Intune Company Portal app<!--  33827426 -->
- 
-On October 1, 2025, support for all Intune Company Portal versions that are older than 5.0.5421.0 ends. When support ends, users with a device that runs an older version of the Intune Company Portal might not be able to successfully maintain that device's registration status and those devices could be identified as noncompliant. For devices to remain registered and in compliance, the Company Portal version must be updated to a version that remains in support.
- 
+### End of support for older versions of the Intune Company Portal app<!-- 33827426 -->
+
+On October 1, 2025, support for all Intune Company Portal versions that are older than 5.0.5421.0 ends. When support ends, users with a device that runs an older version of the Intune Company Portal might not be able to successfully maintain that device's registration status and those devices could be identified as non-compliant. For devices to remain registered and in compliance, the Company Portal version must be updated to a version that remains in support.
+
 To update the version of the Company Portal app, see the following available guidance:
 
 **For administrators:**  
 - Use Intune to deploy the latest version: [Windows Company Portal app by using Microsoft Intune](../apps/store-apps-company-portal-app.md)
- 
+
 **For device users:**  
-- Get the latest version of the Intune Company Portal from your device's app store:
+- Get the latest version of the Company Portal from your device's app store:
   - [Apple App Store](https://apps.apple.com/app/intune-company-portal/id719171358)
   - [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)
   - [Microsoft Store](https://apps.microsoft.com/detail/9wzdncrfj3pz)
