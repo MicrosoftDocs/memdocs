@@ -121,7 +121,7 @@ The Intune [settings catalog](../configuration/settings-catalog.md) lists all th
 
 - **v138** - Intune supports the following new ADMX-backed policies:
 
-  | Setting name | CSP |
+  | Setting | CSP |
   | --- | --- |
   | **Microsoft Edge** > **Allow pages to use the built-in AI APIs** | BuiltInAIAPIsEnabled |
   | **Microsoft Edge** > **Control access to AI-enhanced search in History** | EdgeHistoryAISearchEnabled |
@@ -131,18 +131,17 @@ The Intune [settings catalog](../configuration/settings-catalog.md) lists all th
   | **Microsoft Edge** > **Allow pages to use the built-in AI APIs** | BuiltInAIAPIsEnabled |
   | **Microsoft Edge** > **Allow SpeculationRules prefetch for ServiceWorker-controlled URLs** | PrefetchWithServiceWorkerEnabled |
 
-  The following legacy settings are deprecated or obsolete:
+  The following legacy settings are deprecated, and should not be used:
 
-  | Setting name | CSP |
+  | Setting | CSP |
   | --- | --- |
   | **Microsoft Edge\ Private Network Request Settings** | InsecurePrivateNetworkRequestsAllowed |
-  | **Microsoft Edge\ Private Network Request Settings** > **Allow the listed sites to make requests to more-private network endpoints from insecure contexts** | InsecurePrivateNetworkRequestsAllowedForUrls |
   | **Microsoft Edge Network Settings** > **Enable zstd content encoding support** | ZstdContentEncodingEnabled |
   | **Microsoft Edge Network Settings** > **Specifies whether to block requests from public websites to devices on a user's local network** (deprecated) | LocalNetworkAccessRestrictionsEnabled | 
 
 - **v139** - Intune supports the following new ADMX-backed policies for Microsoft Edge:
 
-  | Setting name | CSP |
+  | Setting | CSP |
   | --- | --- |
   | **Microsoft Edge** > **Identity and sign-in** > **Prioritize app-specified profile to open external links** | EdgeOpenExternalLinksWithAppSpecifiedProfile |
   | **Microsoft Edge** > **Extensions** > **Specify extensions users must allow in order to navigate using InPrivate mode** | MandatoryExtensionsForIncognitoNavigation |
@@ -150,11 +149,11 @@ The Intune [settings catalog](../configuration/settings-catalog.md) lists all th
   | **Microsoft Edge** > **Configuration policy for Microsoft Edge for Business Reporting Connectors** | OnSecurityEventEnterpriseConnector |
   | **Microsoft Edge** > **Allow software WebGL fallback using SwiftShader** | EnableUnsafeSwiftShader |
 
-  The following legacy settings are deprecated or obsolete:
+  The following legacy settings are deprecated, and should not be used:
 
-  | Setting name | CSP |
+  | Setting | CSP |
   | --- | --- |
-  | **Microsoft Edge** > **Controls whether the new HTML parser behavior for the <select> element is enabled** | SelectParserRelaxationEnabled |
+  | **Microsoft Edge** > **Controls whether the new HTML parser behavior for the `<select>` element is enabled** | SelectParserRelaxationEnabled |
   | **Microsoft Edge** > **Enable keyboard focusable scrollers** | KeyboardFocusableScrollersEnabled |
 
 - Some existing policies have string updates that reflect the latest browser behavior and terminology.
