@@ -1,11 +1,11 @@
 ---
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
-ms.subservice: itpro-deploy
+manager: bpardi
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 03/26/2024
+ms.date: 06/13/2025
 ms.localizationpriority: medium
 ---
 

@@ -6,7 +6,7 @@ Anyone who is interested can contribute to the topics. When you contribute, your
 
 ### Quickly update an article using GitHub.com
 
-Contributors who only make infrequent or small updates can edit the file directly on GitHub.com without having to install any additional software. This article shows you how. [This two-minute video](https://www.microsoft.com/videoplayer/embed/RE1XQTG) also covers how to contribute.
+Contributors who only make infrequent or small updates can edit the file directly on GitHub.com without having to install any additional software. This article shows you how. [This two-minute video](https://learn-video.azurefd.net/vod/player?id=b5167c5a-9c69-499b-99ac-e5467882bc92) also covers how to contribute.
 
 1. Make sure you're signed in to GitHub.com with your GitHub account.
 2. Browse to the page you want to edit on Microsoft Learn.

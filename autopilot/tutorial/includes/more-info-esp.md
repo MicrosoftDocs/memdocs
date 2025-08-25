@@ -1,11 +1,11 @@
 ---
 author: frankroj
 ms.author: frankroj
-manager: aaroncz
-ms.subservice: itpro-deploy
+manager: bpardi
+ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 04/24/2023
+ms.date: 06/13/2025
 ms.localizationpriority: medium
 ---
 
@@ -19,7 +19,7 @@ user-driven/hybrid-azure-ad-join-esp.md
 
 Headings are driven by article context. -->
 
-For more information on the Enrollment Status Page (ESP), see the following article(s):
+For more information on the Enrollment Status Page (ESP), see the following articles:
 
-- [Windows Autopilot Enrollment Status Page](/mem/autopilot/enrollment-status)
-- [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status)
+- [Windows Autopilot Enrollment Status Page](/autopilot/enrollment-status).
+- [Set up the Enrollment Status Page](/mem/intune-service/enrollment/windows-enrollment-status).
