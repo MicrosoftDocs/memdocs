@@ -119,7 +119,7 @@ The Intune [settings catalog](../configuration/settings-catalog.md) lists all th
 
 **Microsoft Edge Administrative Templates policy updates (v138)**:
 
-Intune supports ingestion of new Microsoft Edge policies including AI search, TLS 1.3 early data, and external link handling. Several legacy policies are deprecated or marked obsolete. These updates enhance browser control and security for enterprise environments.
+- Intune supports ingestion of new Microsoft Edge policies including AI search, TLS 1.3 early data, and external link handling. Several legacy policies are deprecated or marked obsolete. These updates enhance browser control and security for enterprise environments.
 
 **OneDrive**:
 

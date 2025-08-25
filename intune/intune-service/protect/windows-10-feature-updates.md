@@ -53,10 +53,9 @@ When a device receives a policy for Feature updates:
   >   For example, for Windows 11 version 21H2, go to the Windows 11 release information and then from the left-hand pane, select *Version 21H2* and then *Known issues and notifications*. The [resultant page](/windows/release-health/status-windows-11-21h2) includes details for known issues for that Windows version that might result in safeguard hold.
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
-
 - The ability to *Uninstall* the Feature update is still honored by the Update Rings.
-
 - You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](windows-update-rollout-options.md).
+- When a Windows feature update is deployed to a device from the cloud service, the latest monthly quality update is automatically included.
 
 ## Prerequisites
 
@@ -91,7 +90,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - Devices must:
   - Run a version of Windows 10/11 that remains in support.
-  - Be enrolled in Intune MDM and be Microsft Entra hybrid joined or Microsoft Entra joined.
+  - Be enrolled in Intune MDM and be Microsoft Entra hybrid joined or Microsoft Entra joined.
   - Have Telemetry turned on, with a minimum setting of [*Required*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
 
     Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy.
@@ -225,7 +224,7 @@ If you're already using Endpoint analytics, navigate to the [Work from anywhere 
 
 Windows 11 includes a new license agreement, which can be viewed at [https://www.microsoft.com/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
 
-When you use configure a policy in the Microsoft Intune admin center to deploy any Windows 11 version, the Microsoft Intune admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won't see or need to accept the license agreement, making the update process seamless.
+When you configure a policy in the Microsoft Intune admin center to deploy any Windows 11 version, the Microsoft Intune admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won't see or need to accept the license agreement, making the update process seamless.
 
 This license reminder appears each time you select a Windows 11 build, even if all your Windows devices already run Windows 11. This prompt is provided because Intune doesn't track which devices will receive the policy, and its possible new devices that run Windows 10 might later enroll and be targeted by the policy.
 
