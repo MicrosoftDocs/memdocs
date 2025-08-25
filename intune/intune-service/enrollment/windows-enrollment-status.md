@@ -90,7 +90,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
        - **No**: The enrollment status page is shown during the device phase and the out-of-box experience (OOBE). The page is also shown during the [user phase](#account-setup) to every user who signs into the device for the first time.
        - **Yes**: The enrollment status page is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign into the device.
 
-    - **Install Windows quality updates (might restart the device)**: Use this setting to control whether to check and install available quality updates, also known as monthly security update releases, from Windows Update. Your options:
+    - **Install Windows quality updates (might restart the device)**: Use this setting to control to check and install from Windows Updates available quality updates, also known as monthly security update releases. Your options:
        - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page is displayed to the user showing update progress.
        - **No**: The device continues to the desktop as usual at the end of OOBE. Installation of monthly security update releases isn't triggered during OOBE. Messages regarding installation of monthly security update releases isn't displayed since they aren't installed.
 
