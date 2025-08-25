@@ -94,11 +94,11 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
        - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page is displayed to the user showing update progress.
        - **No**: The device continues to the desktop as usual at the end of OOBE. Installation of monthly security update releases isn't triggered during OOBE. Messages regarding installation of monthly security update releases isn't displayed since they aren't installed.
 
-    > [!IMPORTANT]
-    >
-    > - This option is only supported for [currently supported versions of Windows 11](/windows/release-health/windows11-release-information).
-    > - When this option is enabled, monthly security update releases are installed during OOBE after the ESP completes.
-    > - For important detailed information regarding this option, see the section [Install Windows quality updates](#install-windows-monthly-security-update-releases) in this article.
+        > [!IMPORTANT]
+        >
+        > - This option is only supported for [currently supported versions of Windows 11](/windows/release-health/windows11-release-information).
+        > - When this option is enabled, monthly security update releases are installed during OOBE after the ESP completes.
+        > - For important detailed information regarding this option, see the section [Install Windows quality updates](#install-windows-monthly-security-update-releases) in this article.
 
     - **Block device use until all apps and profiles are installed**: Your options:
        - **No**: Users can leave the ESP before Intune is finished setting up the device.
