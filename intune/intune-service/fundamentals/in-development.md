@@ -109,7 +109,7 @@ For a list of existing settings you can configure in the settings catalog, see [
 
 Applies to:
 
-- Android Enterprise corporate-owned devices with a work profile (COPE)
+- Android Enterprise corporate-owned devices with a work profile
 
 ### New USB access setting in the Android Enterprise settings catalog <!-- 24213820 -->
 
@@ -121,9 +121,9 @@ For a list of existing settings you can configure in the settings catalog, see [
 
 Applies to:
 
-- Android Enterprise corporate-owned devices with a work profile (COPE) (At work profile level)
-- Android Enterprise corporate owned fully managed (COBO)
-- Android Enterprise corporate owned dedicated devices (COSU)
+- Android Enterprise corporate-owned devices with a work profile (At work profile level)
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
 
 ### New day zero settings available in the Apple settings catalog <!-- 33806647 -->
 
