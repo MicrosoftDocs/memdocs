@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/18/2025
+ms.date: 08/26/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -184,7 +184,7 @@ The following procedure guides you through adding the Intune Management Extensio
 5. For **Assignments**, you can *Include* and *Exclude* device groups from the policy. To continue, select **Next**.
 
    > [!TIP]  
-   > Although you can target security groups that might include users, if they're using a device that's not targeted directly, the device doesn't receive the managed installer policy. This is because WDAC policies apply to only the device scope.
+   > Although you can target security groups that might include users, only the devices in the security group will be targeted and receive the managed installer policy. This is because managed installer policies only apply to the device scope.
 
 6. For **Review + create**, review your settings and then select **Create** to save your changes and deploy the policy to members of the assigned groups. The policy is also shown in the policy list.
 
