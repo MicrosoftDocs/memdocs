@@ -27,7 +27,7 @@ ms.collection:
 
 Using the [settings catalog](settings-catalog.md) in Microsoft Intune, you can create and manage Microsoft Edge policy settings on your Windows and macOS devices. The Microsoft Edge settings are ADMX-backed policy settings, similar to on-premises Group Policy Objects (GPO).
 
-These settings let you control how Microsoft Edge works and configure Microsoft Edge features for users in your organization. For example, you can:
+With these settings, you can control how Microsoft Edge works and configure Microsoft Edge features for users in your organization. For example, you can:
 
 - Allow specific extensions
 - Add download restrictions
@@ -80,11 +80,11 @@ This section shows you how to create, search, and configure Microsoft Edge setti
 
     :::image type="content" source="./media/settings-catalog-configure-edge/settings-catalog-search-edge.png" alt-text="Screenshot that shows Microsoft Edge settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog-configure-edge/settings-catalog-search-edge.png":::
 
-    Select the **Microsoft Edge** category. The settings with `(User)` in the name apply to apply to all users signed into the device. The other setting applies to the device, even if no one is signed in.
+    Select the **Microsoft Edge** category. The settings with `(User)` in the name apply to all users signed into the device. The other settings apply to the device, even if no one is signed in.
 
     :::image type="content" source="./media/settings-catalog-configure-edge/settings-catalog-edge-user-device.png" alt-text="Screenshot that shows Microsoft Edge user and device settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog-configure-edge/settings-catalog-edge-user-device.png":::
 
-8. In search, find a specific Microsoft Edge setting you want to configure. For example, search for "home page", and select the **Configure the home page URL** setting:
+8. In search, find a specific Microsoft Edge setting you want to configure. For example, search for `home page`, and select the **Configure the home page URL** setting:
 
     :::image type="content" source="./media/settings-catalog-configure-edge/settings-catalog-edge-home-page-url.png" alt-text="Screenshot that shows home page URL settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog-configure-edge/settings-catalog-edge-home-page-url.png":::
 

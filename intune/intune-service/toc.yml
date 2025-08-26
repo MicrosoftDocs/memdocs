@@ -1282,8 +1282,8 @@ items:
           - name: Universal Print policy
             displayName: printers, gpo, admx, windows
             href: ./configuration/settings-catalog-printer-provisioning.md
-          - name: Create Microsoft Edge policy using settings catalog
-            displayName: gpo, windows
+          - name: Configure Microsoft Edge
+            displayName: gpo, windows, macos, admx
             href: ./configuration/settings-catalog-configure-edge.md
         - name: Properties catalog
           displayName: windows
@@ -1351,7 +1351,7 @@ items:
             displayName: gpo, windows
             href: ./configuration/administrative-templates-update-office.md
           - name: Create Microsoft Edge policy using settings catalog
-            displayName: gpo, windows
+            displayName: gpo, windows, macos,admx
             href: ./configuration/settings-catalog-configure-edge.md
           - name: Restrict USB devices using ADMX
             displayName: gpo, windows
