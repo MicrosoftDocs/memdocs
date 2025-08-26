@@ -12,12 +12,15 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+
+zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 ---
 
-# Collect diagnostics with Microsoft Intune
+# Collect diagnostics with Intune
 
-Collecting diagnostics in Microsoft Intune is a powerful remote action that enables IT administrators to gather troubleshooting data from managed devices without interrupting the end user. This feature is essential for identifying and resolving issues related to device compliance, app performance, or enrollment failures—especially in large or distributed environments where hands-on access to devices is limited. For example, if a Windows 11 device fails during Autopilot provisioning, Intune can automatically collect logs from the device and upload them for review, helping admins pinpoint the root cause quickly. Supported on Windows 10 (1909+) and Windows 11, this capability can also be used in bulk across up to 25 devices at once, streamlining diagnostics at scale.
+Collecting diagnostics in Microsoft Intune is a powerful remote action that enables IT administrators to gather troubleshooting data from managed devices without interrupting users. This feature is essential for identifying and resolving issues related to device compliance, app performance, or enrollment failures—especially in large or distributed environments where hands-on access to devices is limited. For example, if a Windows device fails during Autopilot provisioning, Intune can automatically collect logs from the device and upload them for review, helping admins pinpoint the root cause quickly. This feature can also be used in bulk across up to 25 devices at once, streamlining diagnostics at scale.
 
+The **Collect diagnostics** remote action lets you collect and download managed device diagnostics without interrupting the user. Only nonuser locations and file types are accessed.
 
 ## Requirements
 
@@ -25,6 +28,11 @@ Collecting diagnostics in Microsoft Intune is a powerful remote action that enab
 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
+>
+> - Windows 10, Windows 11
+>   - Intune or co-managed devices
+>   - Microsoft HoloLens 2 2004 and later
+>   - Corporate-owned devices
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -36,7 +44,18 @@ Collecting diagnostics in Microsoft Intune is a powerful remote action that enab
 > - [Custom role][INT-RC] with the permissions:
 >   - Remote tasks/Collect diagnostics
 
-The **Collect diagnostics** remote action lets you collect and download managed device diagnostics without interrupting the user. Only nonuser locations and file types are accessed.
+### Connectivity requirements
+
+For diagnostics to be able to upload successfully from the client, make sure that the URL for your region isn't blocked on the network:
+
+- Europe: `lgmsapeweu.blob.core.windows.net`
+- Americas: `lgmsapewus2.blob.core.windows.net`
+- East Asia: `lgmsapesea.blob.core.windows.net`
+- Australia: `lgmsapeaus.blob.core.windows.net`
+- India: `lgmsapeind.blob.core.windows.net`
+
+Devices must be online and able to communicate with the service during diagnostics.
+
 
 > [!NOTE]
 >  Intune App Protection logs are available to download from the diagnostics tab in the **Troubleshooting** pane. However, M365 remote application diagnostics are only available to their specific support engineers.
@@ -45,23 +64,42 @@ The **Collect diagnostics** remote action lets you collect and download managed 
 >
 > The data is stored in Microsoft support systems and isn't subject to Intune data management policies or protections. Some applications might collect and store data using systems other than Intune.
 
-## Collect diagnostics for Microsoft 365 remote applications
+## How to collect diagnostics
 
-The Microsoft 365 remote application diagnostics allows Intune admins to request Intune app protection diagnostics and Microsoft 365 application diagnostics (where applicable) directly from the Intune console. Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application.
+::: zone pivot="android,ios"
+
+The Microsoft 365 remote application diagnostics enables admins to request Intune app protection diagnostics and Microsoft 365 application diagnostics (where applicable).
+
+Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application.
 
 Applications with support for M365 application diagnostics:
 
-- Outlook iOS/Android
-- Teams iOS/Android
-- OneDrive iOS/Android
-- Microsoft Edge iOS/Android
-- Microsoft Word iOS
-- Microsoft Excel iOS
-- Microsoft PowerPoint iOS
-- OneNote iOS
-- Microsoft 365 (Office) iOS
+::: zone-end
 
-### Collect diagnostics from a M365 Application
+::: zone pivot="android"
+
+- Outlook
+- Teams
+- OneDrive
+- Microsoft Edge
+
+::: zone-end
+
+::: zone pivot="ios"
+
+- Outlook
+- Teams
+- OneDrive
+- Microsoft Edge
+- Microsoft Word
+- Microsoft Excel
+- Microsoft PowerPoint
+- OneNote
+- Microsoft 365 (Office)
+
+::: zone-end
+
+::: zone pivot="android,ios"
 
 Requirements to collect diagnostics from an M365 application:
 
@@ -93,9 +131,12 @@ To download diagnostics:
 
 Diagnostics take approximately 30 minutes to be delivered from an end user's device. The user might be required to close and reopen the app if prompted for a pin when opening the app for the diagnostics request to prompt.
 
-## Collect diagnostics from a Windows device
+::: zone-end
+
+::: zone pivot="windows"
 
 <!--1895390-->
+
 The **Collect diagnostics** remote action can also be configured to automatically collect and upload Windows devices logs upon a Windows Autopilot failure on a device. When a Windows Autopilot failure occurs, logs are processed on the failed device and then automatically captured and uploaded to Intune. A device can automatically capture one set of logs per day.
 
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
@@ -104,29 +145,6 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 
 > [!NOTE]
 > Microsoft personnel might access device diagnostics to help troubleshooting and resolving incidents.
-
-### Requirements for Windows devices
-
-The *Collect diagnostics* remote action is supported for:
-
-- Intune or co-managed devices
-- Windows 10 version 1909 and later
-- Windows 11
-- Microsoft HoloLens 2 2004 and later
-- Roles with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions
-- Corporate-owned devices
-- Devices that are online and able to communicate with the service during diagnostics
-
-> [!NOTE]
-> For diagnostics to be able to upload successfully from the client, make sure that the URL for your region isn't blocked on the network:
-> - `Europe - lgmsapeweu.blob.core.windows.net`
-> - `Americas - lgmsapewus2.blob.core.windows.net`
-> - `East Asia - lgmsapesea.blob.core.windows.net`
-> - `Australia - lgmsapeaus.blob.core.windows.net`
-> - `India - lgmsapeind.blob.core.windows.net`
-
-
-### Collect diagnostics
 
 To use the *Collect diagnostics* action:
 
@@ -287,7 +305,9 @@ Windows Autopilot automatic diagnostic capture is enabled by default. You can di
 Currently there are the two main issues that could cause device diagnostics to fail:
 
 1. A time-out could occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde). These patches contain a fix to the DiagnosticLog CSP that prevents time out during upload. After the update installs, make sure to reboot your device.
-2. The device wasn't able to receive the device action within a 24-hour window. If the device is offline or turned off, it could cause a failure.
+1. The device wasn't able to receive the device action within a 24-hour window. If the device is offline or turned off, it could cause a failure.
+
+::: zone-end
 
 ## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
 
