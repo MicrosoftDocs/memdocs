@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Find lost devices with Microsoft Intune
+title: "Intune Remote Device Action: Find lost devices"
 description: Locate lost or stolen devices by using the locate device feature in Microsoft Intune. Get details on security and privacy information when using the locate device action.
 ms.date: 02/28/2025
 ms.topic: how-to
@@ -178,7 +178,7 @@ For more information about the APIs used for this action, see:
 [GRAPH-2]: /graph/api/intune-devices-manageddevice-playlostmodesound
 
 <!--
-This feature is intended to be used to locate lost or stolen devices. When the action is triggered, the end user will receive a notification that the device is lost and its location has been queried. Before you continue, make sure you're following local laws and regulations around receiving location data. By requesting the device location, Intune will send the device's latitude and longitude to Bing Maps to retrieve and display an address. Location data is visible in Intune for 24 hours once received.​
+This feature is intended to be used to locate lost or stolen devices. When the action is triggered, the end user will receive a notification that the device is lost and its location has been queried. Before you continue, make sure you're following local laws and regulations around receiving location data. By requesting the device location, Intune will send the device's latitude and longitude to Bing Maps to retrieve and display an address. Location data is visible in Intune for 24 hours once received.
 -->
 
 ::: zone pivot="windows"

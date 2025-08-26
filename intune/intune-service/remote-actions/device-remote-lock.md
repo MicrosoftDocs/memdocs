@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Remotely lock devices with Microsoft Intune
-description: Use the Remote lock action in Microsoft Intune to lock a device that is protected by a PIN or password.
-ms.date: 07/31/2024
+title: "Intune Remote Device Action: Remote Lock"
+description: Use the remote lock action in Microsoft Intune to lock a managed device that has a passcode or PIN.
+ms.date: 08/26/2025
 ms.topic: how-to
 
 ms.reviewer:
@@ -18,14 +18,10 @@ zone_pivot_groups: bf632d5b-6209-46d2-8c9c-8d76b1f704cc
 
 # Remotely lock devices with Intune
 
-::: zone pivot="ios,macos,android"
-::: zone-end
+The **Remote lock** device action locks a managed device so the user must enter the existing passcode or PIN to regain access. Use this action when a device is misplaced, left unattended, or suspected of unauthorized use, without wiping data or removing enrollment.
 
-The **Remote lock** device action in Microsoft Intune allows IT administrators to immediately lock a managed device, helping protect sensitive data when a device is lost, left unattended, or suspected of unauthorized access. Once locked, the device requires the user to enter their passcode or PIN to regain access.
-
-This action is only effective on devices that have a PIN or password configured. If the device lacks a passcode, Remote lock turns off the screen, allowing the user to wake and use the device without authentication. To ensure Remote lock provides meaningful protection, enforce a PIN or password policy on devices before using this action.
-
-Remote lock enables IT pros to respond quickly to potential threats without wiping data or removing device enrollment.
+> [!IMPORTANT]
+> Remote lock is only effective when the device already has a passcode or PIN. If no passcode exists, the screen may simply turn off and the user can still access the device. Enforce a passcode policy before relying on this action for protection.
 
 ## Requirements
 
@@ -81,5 +77,7 @@ For more information about the API used for this action, see [remoteLock action]
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
 [INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+
+<!-- API links -->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-remotelock
