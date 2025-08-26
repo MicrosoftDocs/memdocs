@@ -31,7 +31,7 @@ The **Restart** device action causes the device you choose to be restarted (with
 >     - Android Open Source Project (AOSP)
 > - iOS/iPadOS in [supervised mode][IOS-SUP]
 > - macOS
-> - Windows 10/11
+> - Windows
 > - ChromeOS
 
     > [!Note]
@@ -54,7 +54,7 @@ The **Restart** device action causes the device you choose to be restarted (with
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
     > [!div class="nextstepaction"]
     > [All devices][INT-AC1]
-1. From devices list, select a device, and then select **Restart** > **Yes**.
+1. From the devices list, select a device, and then select **Restart** > **Yes**.
 
 ## User experience
 

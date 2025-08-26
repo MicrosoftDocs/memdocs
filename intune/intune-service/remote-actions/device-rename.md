@@ -42,7 +42,7 @@ For more information, on modifying the Management name and renaming in the Compa
 > - iOS/iPadOS in [supervised mode][IOS-SUP]
 > - macOS
 > - macOS (corporate-owned)
-> - Windows 10/11 (corporate-owned)
+> - Windows (corporate-owned)
 
 > [!NOTE]
 > Renaming Android Enterprise devices only changes the **Device name** in the Intune admin center and not on the device itself. The Device name in Intune is a friendly name that users can change.

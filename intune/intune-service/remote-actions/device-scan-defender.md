@@ -15,7 +15,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 AppliesTo:
-  - ✅ Windows 10/11
+  - ✅ Windows
 ---
 
 
@@ -28,7 +28,7 @@ AppliesTo:
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
-> - Windows 10/11
+> - Windows
 
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements

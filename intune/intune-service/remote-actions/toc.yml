@@ -7,13 +7,13 @@ items:
   href: /troubleshoot/mem/intune/troubleshoot-device-actions
 - name: Actions list
   items:
-  - name: 🟢 BitLocker key rotation
+  - name: BitLocker key rotation
     href: device-rotate-bitlocker-keys.md
   - name: 🟡 Collect diagnostics
     href: collect-diagnostics.md
   - name: ⚠️ Disable Activation Lock
     href: device-activation-lock-disable.md
-  - name: 🟡 Fresh Start
+  - name: Fresh Start
     href: device-fresh-start.md
   - name: 🟡 Locate device
     href: device-locate.md

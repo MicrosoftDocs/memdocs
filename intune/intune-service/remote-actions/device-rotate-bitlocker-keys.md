@@ -15,7 +15,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 appliesto:
-  - ✅ Windows 10/11
+  - ✅ Windows
 ---
 
 # BitLocker key rotation in Microsoft Intune
@@ -31,7 +31,7 @@ BitLocker key rotation is important in environments where devices are frequently
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
-> - Windows 10/11
+> - Windows
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -48,7 +48,7 @@ BitLocker key rotation is important in environments where devices are frequently
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
     > [!div class="nextstepaction"]
     > [All devices][INT-AC1]
-1. From devices list, select a device, and then select **...** > **BitLocker key rotation**.
+1. From the devices list, select a device, and then select **...** > **BitLocker key rotation**.
 1. Select **Yes** to confirm the action.
 
 ## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
