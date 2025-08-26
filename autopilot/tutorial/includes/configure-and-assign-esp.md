@@ -5,7 +5,7 @@ manager: bpardi
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 06/13/2025
+ms.date: 08/29/2025
 ms.localizationpriority: medium
 ---
 
@@ -37,6 +37,12 @@ Device ESP runs first followed by the User ESP.
 ## Windows Autopilot Enrollment Status Page (ESP) configuration options
 
 When the Enrollment Status Page (ESP) is configured, it has several options that can be configured to meet the needs of the organization. The following lists the different options and their possible configurations:
+
+- **Show app and profile configuration progress**:
+
+  - **No**: The enrollment status page doesn't appear during device setup. To disable the configuration progress to users during the provisioning process, select **No**.
+
+  - **Yes**: The enrollment status page appears during device setup. More options become available when this option is selected. Microsoft recommends selecting **Yes** and enabling displaying the enrollment status page configuration progress when using Windows Autopilot.
 
 - **Show an error when installation takes longer than specified number of minutes**:
 
