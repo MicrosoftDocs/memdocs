@@ -18,10 +18,12 @@ zone_pivot_groups: bf632d5b-6209-46d2-8c9c-8d76b1f704cc
 
 # Remotely lock devices with Intune
 
-The **Remote lock** device action locks a managed device so the user must enter the existing passcode or PIN to regain access. Use this action when a device is misplaced, left unattended, or suspected of unauthorized use, without wiping data or removing enrollment.
+The **Remote lock** device action locks a managed device so the user must enter the existing passcode or PIN to continue. Use this action when a device is misplaced, left unattended, or suspected of unauthorized use without wiping data or removing enrollment.
 
 > [!IMPORTANT]
-> Remote lock is only effective when the device already has a passcode or PIN. If no passcode exists, the screen may simply turn off and the user can still access the device. Enforce a passcode policy before relying on this action for protection.
+> Remote lock is only effective if a passcode or PIN is already set:
+> - If no passcode exists, the screen may just turn off and the user can still access the device.
+> - Enforce a passcode policy before relying on this action.
 
 ## Requirements
 
@@ -49,19 +51,16 @@ The **Remote lock** device action locks a managed device so the user must enter 
 > - [Custom role][INT-RC] with the permission:
 >   - Remote tasks/Remote lock
 
-## Remote lock a device
-
-Here's how to remotely lock a device using the Intune admin center:
+## How to remote lock a device
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
     > [!div class="nextstepaction"]
     > [All devices][INT-AC1]
 1. From the devices list, select a device, and then select **Remote lock**.
 ::: zone pivot="macos"
-4. Set a six-digit recovery PIN.
+3. Set a six-digit recovery PIN.
 
->[!NOTE]
->When the device is locked, the **Device overview** displays the PIN until another device action is sent. Make sure to write down the pin since it will only be available for 30 days after the remote lock command is sent. After the 30 days, Intune will no longer have the PIN. Also, you get a *failed* status in reporting if you initiate this command again for the same device while the original pin hasn't been used to successfully unlock the device. You should only send this command once, write down the pin, and until you use it to get into the macOS device successfully, don't try to send this command to the same device again.
+> [!NOTE] The recovery PIN is shown on the device overview pane for up to 30 days, or until another device action is sent. Record it securely; it can't be retrieved afterward. Don't resend remote lock to the same macOS device until that PIN is used—additional attempts show a **Failed** status in reporting.
 
 ::: zone-end
 

@@ -101,6 +101,21 @@ groups:
 
 #### Zone pivots used in remote actions
 
+- id: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
+  title: Device platform
+  prompt: "Choose the platform to run remote actions on:"
+  pivots:
+  - id: windows
+    title: Windows
+  - id: ios
+    title: iOS/iPadOS
+  - id: macos
+    title: macOS
+  - id: android
+    title: Android
+  - id: chrome
+    title: ChromeOS
+
 - id: 51e33912-415a-402f-8201-8acebf3e4991
   title: Device platform
   prompt: "Choose the platform to run remote actions on:"
