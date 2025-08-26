@@ -166,12 +166,12 @@ Devices that meet all of the following conditions honor the **Install Windows qu
   - Assigned to devices that are registered for Windows Autopilot.
   - For devices that aren't registered with Windows Autopilot, devices that are assigned using the **All Devices** assignment.
 
-Devices that don't meet these conditions always install monthly security update releases during OOBE.
+Devices that don't meet these conditions don't honor the **Install Windows quality updates (might restart the device)** setting and they always install monthly security update releases during OOBE.
 
-The following scenarios also aren't supported and the **Install Windows quality updates (might restart the device)** setting has no effect:
+The following specific scenarios aren't supported and the **Install Windows quality updates (might restart the device)** setting isn't honored:
 
-- **Windows Autopilot device preparation** - Windows Autopilot device preparation doesn't use ESP, so this setting isn't applicable. Therefore, monthly security update releases are installed during OOBE.
-- **Windows Autopilot for pre-provisioned deployment Technician mode** - Monthly security update releases aren't installed while in Technician mode during Windows Autopilot for pre-provisioned deployment.
+- **Windows Autopilot device preparation** - Windows Autopilot device preparation doesn't use ESP, so this setting isn't applicable. Therefore, monthly security update releases are always installed during OOBE.
+- **Windows Autopilot for pre-provisioned deployment Technician mode** - Monthly security update releases aren't installed while in Technician mode during a Windows Autopilot for pre-provisioned deployment.
 
 #### Update rings and Windows Autopatch
 
@@ -186,7 +186,7 @@ Expedited updates aren't part of the installation of monthly security update rel
 
 > [!TIP]
 >
- By using Update Rings to manage updates, administrators don't need to go to both the ESP and Update Rings to pause an update. Pausing an update via Update Rings pauses the update on both devices being provisioned, for example running Windows Autopilot, and devices that are already enrolled.
+> By using Update Rings to manage updates, administrators don't need to go to both the ESP and Update Rings to pause an update. Pausing an update via Update Rings pauses the update on both devices being provisioned, for example running Windows Autopilot, and devices that are already enrolled.
 
 ## Edit default profile
 
