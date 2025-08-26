@@ -55,6 +55,7 @@ By the end of this lab, you can use Intune to manage your users, and deploy sett
 This feature applies to:
 
 - Windows
+- Microsoft Edge version 77 and newer
 
 > [!TIP]
 >

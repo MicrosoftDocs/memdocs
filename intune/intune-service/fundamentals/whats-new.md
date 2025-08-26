@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 08/20/2025
+ms.date: 08/25/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -19,7 +19,7 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: intuner
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -89,17 +89,6 @@ For more information, see [Supported variables for configuration values](../apps
 **Applies to**:  
 - Android Enterprise
 
-#### Offline Mode and App access without sign in for Android Enterprise Dedicated Devices on Managed Home Screen<!-- 30303710, 25476290, -->
-
-Managed Home Screen (MHS) for Android Enterprise dedicated devices now supports two new features: **Offline mode** and **App access without sign in**.
-
-- **Offline mode** – Lets users access designated apps when the device is offline or unable to connect to the network. You can configure a grace period before requiring users to sign in once connectivity is restored.  
-- **App access without sign in** – Lets users launch specific apps from the MHS sign-in screen via the MHS top bar, regardless of network status. This is useful for apps that need to be available immediately, such as help desk or emergency tools.
-
-These features are designed for dedicated devices enrolled in Microsoft Entra shared device mode and can be configured via device configuration policy.
-
-Applies to: Android Enterprise dedicated devices
-
 ### Device configuration
 
 #### Managed Installer support for user and device groups <!-- 30293237 -->
@@ -113,13 +102,50 @@ For more information about configuring and using managed installers, see [Get st
 Applies to:  
 - Windows
 
-#### New Windows settings in the settings catalog <!-- 34345586 -->
+#### New Windows settings in the settings catalog <!-- 34345586 34545262-->
 
 The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place. There are new settings in the Windows settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type).
 
-**Microsoft Edge Administrative Templates policy updates (v138)**:
+**Microsoft Edge Administrative Templates policy updates**:
 
-- Intune supports ingestion of new Microsoft Edge policies including AI search, TLS 1.3 early data, and external link handling. Several legacy policies are deprecated or marked obsolete. These updates enhance browser control and security for enterprise environments.
+- **v138** - Intune supports the following new ADMX-backed policies:
+
+  | Setting | CSP |
+  | --- | --- |
+  | **Microsoft Edge** > **Allow pages to use the built-in AI APIs** | BuiltInAIAPIsEnabled |
+  | **Microsoft Edge** > **Control access to AI-enhanced search in History** | EdgeHistoryAISearchEnabled |
+  | **Microsoft Edge - Default Settings (users can override)\ Identity and sign-in** > **Use Primary Work Profile as default to open external links** | EdgeOpenExternalLinksWithPrimaryWorkProfileEnabled |
+  | **Microsoft Edge** > **Allow SpeculationRules prefetch for ServiceWorker-controlled URLs** | PrefetchWithServiceWorkerEnabled |
+  | **Microsoft Edge** > **Control whether TLS 1.3 Early Data is enabled in Microsoft Edge** | TLS13EarlyDataEnabled |
+  | **Microsoft Edge** > **Allow pages to use the built-in AI APIs** | BuiltInAIAPIsEnabled |
+  | **Microsoft Edge** > **Allow SpeculationRules prefetch for ServiceWorker-controlled URLs** | PrefetchWithServiceWorkerEnabled |
+
+  The following legacy settings are deprecated, and should not be used:
+
+  | Setting | CSP |
+  | --- | --- |
+  | **Microsoft Edge\ Private Network Request Settings** | InsecurePrivateNetworkRequestsAllowed |
+  | **Microsoft Edge Network Settings** > **Enable zstd content encoding support** | ZstdContentEncodingEnabled |
+  | **Microsoft Edge Network Settings** > **Specifies whether to block requests from public websites to devices on a user's local network** (deprecated) | LocalNetworkAccessRestrictionsEnabled | 
+
+- **v139** - Intune supports the following new ADMX-backed policies for Microsoft Edge:
+
+  | Setting | CSP |
+  | --- | --- |
+  | **Microsoft Edge** > **Identity and sign-in** > **Prioritize app-specified profile to open external links** | EdgeOpenExternalLinksWithAppSpecifiedProfile |
+  | **Microsoft Edge** > **Extensions** > **Specify extensions users must allow in order to navigate using InPrivate mode** | MandatoryExtensionsForIncognitoNavigation |
+  | **Microsoft Edge** > **Control whether Microsoft 365 Copilot Chat shows in the Microsoft Edge for Business toolbar** | Microsoft365CopilotChatIconEnabled |
+  | **Microsoft Edge** > **Configuration policy for Microsoft Edge for Business Reporting Connectors** | OnSecurityEventEnterpriseConnector |
+  | **Microsoft Edge** > **Allow software WebGL fallback using SwiftShader** | EnableUnsafeSwiftShader |
+
+  The following legacy settings are deprecated, and should not be used:
+
+  | Setting | CSP |
+  | --- | --- |
+  | **Microsoft Edge** > **Controls whether the new HTML parser behavior for the `<select>` element is enabled** | SelectParserRelaxationEnabled |
+  | **Microsoft Edge** > **Enable keyboard focusable scrollers** | KeyboardFocusableScrollersEnabled |
+
+- Some existing policies have string updates that reflect the latest browser behavior and terminology.
 
 **OneDrive**:
 
