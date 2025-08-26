@@ -167,6 +167,7 @@ In your existing Platform SSO settings catalog policy, use the following optiona
 | **New User Authorization Mode** | **Standard**, **Admin**, or **Groups** | One-time permissions the user has at sign-in when the account is created using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
 | **User Authorization Mode** | **Standard**, **Admin**, or **Groups** | Persistent permissions the user has at sign-in each time the user authenticates using Platform SSO. Currently, **Standard** and **Admin** values are supported. At least one **Admin** user is required on the device before **Standard** mode can be used.|
 | **Non Platform SSO Accounts** | Enter the local account names you want to exclude from Platform SSO. | This list of local accounts aren't prompted to register for Platform SSO. This setting is appropriate for accounts that shouldn't be registered with a Microsoft Entra account, like the local admin account. The accounts listed in this policy aren't subject to the `FileVaultPolicy`, `LoginPolicy`, or `UnlockPolicy`. |
+| **FileVault Policy** | **AttemptAuthentication**, **RequireAuthentication**, **AllowOfflineGracePeriod** or **AllowAuthenticationGracePeriod** | Use **AttemptAuthentication** to force the device to check Microsoft Entra ID password when a Mac is turned on (macOS 15 and later).
 
 ## Related articles
 
