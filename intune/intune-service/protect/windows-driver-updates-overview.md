@@ -4,9 +4,9 @@
 title: Learn about Windows Driver updates policy for Windows 10 Windows 11 devices in Intune
 description: Learn about using Microsoft Intune policy to manage Windows driver updates on your Windows 10 and Windows 11 devices.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 09/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune

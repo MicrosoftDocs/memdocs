@@ -2,8 +2,8 @@
 title: Use Remote Help to assist users authenticated by your organization. 
 description: With the Remote Help app, provide remote assistance to authenticated users who also run the Remote Help app.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: lenewsad
+ms.author: lanewsad
 manager: laurawi
 ms.date: 03/18/2025
 ms.topic: how-to
@@ -197,6 +197,9 @@ After creating the custom roles that you can use to provide different users with
 
    >[!IMPORTANT]
    >If a sharer or a sharer's device isn't in the scope of a helper, that helper cannot provide assistance. When assisting an unenrolled device, the "All Devices" scope group will not include these devices. Instead, you should use the user scope group during the assignment process.
+   > 
+   > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](role-based-access-control.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
+   
 6. On the **Review + Create** page, when you're done, choose **Create**. The new assignment is displayed in the list of assignments.
 
 ## Monitoring and reports

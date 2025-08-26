@@ -5,8 +5,8 @@ title: Configure a custom domain name
 titleSuffix: Microsoft Intune
 description: Add a custom domain name for your Microsoft Intune subscription
 keywords:
-author: brenduns
-ms.author: brenduns
+author: paolomatarazzo
+ms.author: paoloma
 manager: laurawi
 ms.date: 05/21/2025
 ms.topic: article

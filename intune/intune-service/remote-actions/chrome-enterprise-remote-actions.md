@@ -4,9 +4,9 @@
 title: Remote actions for ChromeOS devices | Microsoft Intune  
 description: Remotely run Microsoft Intune device actions on ChromeOS devices in the Microsoft Intune admin center.   
 keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 10/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune

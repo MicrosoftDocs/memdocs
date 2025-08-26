@@ -5,9 +5,9 @@ title: Use Windows Update for Business reports for Windows Updates in Microsoft 
 titleSuffix: Microsoft Intune
 description: Use Windows Update for Business reports to view data for Windows Updates you deploy with Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -66,7 +66,7 @@ To support reporting, you must configure the following data collection settings:
 - At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
 >[!NOTE]
-> The [Windows update distribution reports](#windows-update-distribution-report) don’t require any additional configuration for client data reporting.
+> The [Windows update distribution reports](#windows-update-distribution-report) don't require any additional configuration for client data reporting.
 
 ## Reports for Update rings for Windows 10 and later policy
 
@@ -233,7 +233,7 @@ To use the report:
      - **Canceled**:
        - **Admin Cancelled** – The update offer was canceled by explicit Administrator action.
        - **Service Cancelled** – The update was canceled by Windows Update for one of the following reasons:  
-          - The *end of service* for the selected content was reached and it’s no longer offered by Windows Update. For example, the device might have been added to a deployment after the content’s availability expired, or the content reached its end of service date before it could install on the device.
+          - The *end of service* for the selected content was reached and it's no longer offered by Windows Update. For example, the device might have been added to a deployment after the content's availability expired, or the content reached its end of service date before it could install on the device.
           - The deployment content has been superseded for the device. This can happen when the device is targeted by another deployment that deploys newer content. For example, one deployment targets the Windows 10 device to install version 2004 and a second deployment targets that same device with version 21H1. In this event, 2004 is superseded by the 21H1 deployment and Windows Update cancels the 2004 deployment to the device.
        - **Removed from Deployment** – The update offer was canceled because it was removed from the Deployment by explicit Administrator action.
        - **Not Supported** - The update was canceled by Windows Update as the device cannot be found in Azure Entra and is an invalid device. This can happen if the device is not Azure Entra joined or does not have a valid Device ID, Global Device ID.
@@ -398,7 +398,7 @@ Intune ranks the following statuses in order of priority, from best (Success) to
 
 For example: A policy might have three applicable driver updates for an assigned device. If one of the three fails to install on that device while the other two updates install successfully, the device is identified by adding one to the *Error* column. Once all three updates install successfully, the device is represented by adding one to the *Success* column and reducing the count of the *Error* column by one.
 
-This report doesn’t support drilling in for more details about devices, driver updates, or policy details.
+This report doesn't support drilling in for more details about devices, driver updates, or policy details.
 
 ### Windows Driver updates report
 
@@ -442,7 +442,7 @@ While most of the column details should be clear, the following warrant some exp
 As devices across all your updates policies install the latest versions of a driver update, older driver update versions that are no longer needed by any device drops off the driver updates list. However, this isn't necessarily an immediate event. Reporting data for driver updates remains available until the end of a data retention period is reached. This period is six months since the last time an event for the update is received.
 
 - If the update is approved and all applicable devices have installed the update, then six months after the last device updates is status, the update is removed from reporting details.
-- Similarly, if an update is paused and shows no activity for the retention period, that update is also dropped from reporting details after six months. After an updates data ages out, if a paused update that remains applicable to a device is reapproved, subsequent status for that update begins to appear in reports. Previous data that aged out of reports won’t be restored or available.
+- Similarly, if an update is paused and shows no activity for the retention period, that update is also dropped from reporting details after six months. After an updates data ages out, if a paused update that remains applicable to a device is reapproved, subsequent status for that update begins to appear in reports. Previous data that aged out of reports won't be restored or available.
 
 ### Windows Driver update failures
 
@@ -487,7 +487,7 @@ The Windows update distribution report includes three nested reports:
 
 The report displays the distribution of devices against different Quality Updates (QUs) for the selected scope. It shows the counts of devices corresponding to the displayed QUs.
 
-Select one or more scope tags from the drop-down list to generate the report. The drop-down list shows all the scope tags the user has access to, based on the user’s assigned scope tags.
+Select one or more scope tags from the drop-down list to generate the report. The drop-down list shows all the scope tags the user has access to, based on the user's assigned scope tags.
 
 :::image type="content" source="./media/windows-update-reports/windows-quality-updates-page1.png" alt-text="Screen capture of the Windows quality update distribution report." lightbox="./media/windows-update-reports/windows-quality-updates-page1.png":::
 
@@ -541,7 +541,7 @@ Select **Columns** at the top of the table to toggle the visibility of columns, 
 - **Devices on this update**: Number of devices where the target quality update is installed.
 
 - **Devices need update**: Number of devices that are applicable for the update but do not currently have it installed.
-KB article: External link to target quality update’s KB Article for the corresponding Windows feature version.
+KB article: External link to target quality update's KB Article for the corresponding Windows feature version.
 
 When you select any device count, the [Windows quality update device version report](#windows-quality-update-device-version) is displayed.
 
@@ -572,7 +572,7 @@ The report offers sortable columns and search options, along with an export feat
 
 - **Last check-in**: Device last check-in date time
 
-The search bar enables the search for a specific device or UPN. Select a device from the list to view the device’s details.
+The search bar enables the search for a specific device or UPN. Select a device from the list to view the device's details.
 
 All these reports are cached, and have an expiry time of three days, after which you must generate a new report. Select **Generate Again** to get fresh data.
 

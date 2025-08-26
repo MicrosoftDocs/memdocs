@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 07/29/2025
+ms.date: 08/21/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -89,7 +89,14 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 ### Fully managed, dedicated, and corporate-owned work profile devices
 
-- **Screen capture (work profile-level)**: **Block** prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
+- **Screen capture (work profile-level)**: **Block**:
+  - Prevents screenshots or screen captures on the device.
+  - Prevents the content from being shown on display devices that don't have a secure video output.
+  - Prevents apps from using the system screenshot capabilities.
+  - Affects screen sharing.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
+
 - **Camera (work profile-level)**: **Block** prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
 
   Intune only manages access to the device camera. It doesn't have access to pictures or videos.
@@ -761,7 +768,13 @@ These settings apply to corporate-owned work profiles.
 ## Personal profile
 
 - **Camera**: **Block** prevents access to the camera during personal use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the camera in the personal profile.
-- **Screen capture**: **Block** prevents screen captures during personal use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to get screen captures or screenshots in the personal profile.
+- **Screen capture**: **Block**:
+  - Prevents screen captures during personal use
+  - Prevents apps from using the system screenshot capabilities.
+  - Affects screen sharing.
+  
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to get screen captures or screenshots in the personal profile.
+
 - **Allow users to enable app installation from unknown sources in the personal profile**: Select **Allow** so users can install apps from unknown sources in the personal profile. It allows users to install apps from sources other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from installing apps from unknown sources in the personal profile.
 - **Type of restricted apps list**: Select **Allow apps** to create a list of Managed Google Play apps that are allowed and approved to install and run in the personal profile on the device. Select **Blocked apps** to create a list of Managed Google Play apps that are prohibited and prevented from installing and running in the personal profile on the device. When set to **Not configured** (default), Intune doesn't include a list of apps to allow or block.  
 
@@ -913,7 +926,13 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   - Android 8.0 and newer personally owned devices with a work profile
 
-- **Screen capture**: **Block** prevents screenshots or screen captures on the device in the work profile. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow getting screenshots.
+- **Screen capture**: **Block**:
+  - Prevents screenshots or screen captures on the device in the work profile.
+  - Prevents the content from being shown on display devices that don't have a secure video output.
+  - Prevents apps from using the system screenshot capabilities.
+  - Affects screen sharing.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow getting screenshots.
 
 - **Display work contact caller-id in personal profile**: **Block** doesn't show the work contact caller number in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show work contact caller details.
 
