@@ -61,13 +61,13 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 
 ::: zone pivot="ios"
 A passcode-locked device can't reconnect to Wi-Fi until the user unlocks it. Apple encrypts saved Wi-Fi credentials until unlock. Until then, Intune can't communicate with the device.
-:::endzone
+::: zone-end
 
 ::: zone pivot="windows"
 When the 5‑minute restart timer starts, Windows attempts to show the notification: *Your device administrator has scheduled a reboot.* Delivering the restart command requires Windows Notification Services (WNS).
 
 For more information about WNS, see [Network endpoint requirements](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
-:::endzone
+::: zone-end
 
 ## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
 
@@ -94,4 +94,4 @@ For more information about the API used for this action, see [rebootNow action][
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
 
 ::: zone pivot="windows,ios,macos,android,chrome"
-::: endzone
+::: zone-end
