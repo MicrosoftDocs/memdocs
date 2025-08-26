@@ -79,7 +79,7 @@ We’re working on a dashboard for Endpoint Privilege Management (EPM) that brin
 
 ### PowerShell script support when installing Win32 apps<!-- 29857395 -->
 
-For added flexibility when installing apps, you'll be able to upload a PowerShell script to install Enterprise App Catalog apps as an alternative to running a command line.
+For added flexibility when installing apps, you'll be able to upload a PowerShell script to install Enterprise App Catalog apps as an alternative to running a command line. Support for other Win32 app types will be added soon.
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
