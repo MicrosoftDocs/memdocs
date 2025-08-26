@@ -19,7 +19,7 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 #ROBOTS:
 #audience:
 
-ms.reviewer: lebacon
+ms.reviewer: intuner
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -88,17 +88,6 @@ For more information, see [Supported variables for configuration values](../apps
 
 **Applies to**:  
 - Android Enterprise
-
-#### Offline Mode and App access without sign in for Android Enterprise Dedicated Devices on Managed Home Screen<!-- 30303710, 25476290, -->
-
-Managed Home Screen (MHS) for Android Enterprise dedicated devices now supports two new features: **Offline mode** and **App access without sign in**.
-
-- **Offline mode** – Lets users access designated apps when the device is offline or unable to connect to the network. You can configure a grace period before requiring users to sign in once connectivity is restored.  
-- **App access without sign in** – Lets users launch specific apps from the MHS sign-in screen via the MHS top bar, regardless of network status. This is useful for apps that need to be available immediately, such as help desk or emergency tools.
-
-These features are designed for dedicated devices enrolled in Microsoft Entra shared device mode and can be configured via device configuration policy.
-
-Applies to: Android Enterprise dedicated devices
 
 ### Device configuration
 

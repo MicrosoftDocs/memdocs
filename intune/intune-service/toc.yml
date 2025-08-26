@@ -1282,6 +1282,9 @@ items:
           - name: Universal Print policy
             displayName: printers, gpo, admx, windows
             href: ./configuration/settings-catalog-printer-provisioning.md
+          - name: Configure Microsoft Edge
+            displayName: gpo, windows, macos, admx
+            href: ./configuration/settings-catalog-configure-edge.md
         - name: Properties catalog
           displayName: windows
           href: ./configuration/properties-catalog.md
@@ -1347,9 +1350,9 @@ items:
           - name: Update Microsoft 365 using ADMX
             displayName: gpo, windows
             href: ./configuration/administrative-templates-update-office.md
-          - name: Create Microsoft Edge policy using ADMX
-            displayName: gpo, windows
-            href: ./configuration/administrative-templates-configure-edge.md
+          - name: Create Microsoft Edge policy using settings catalog
+            displayName: gpo, windows, macos,admx
+            href: ./configuration/settings-catalog-configure-edge.md
           - name: Restrict USB devices using ADMX
             displayName: gpo, windows
             href: ./configuration/administrative-templates-restrict-usb.md
@@ -1968,6 +1971,15 @@ items:
         - name: Device configuration profile status
           href: ./configuration/device-profile-monitor.md
 
+    - name: Get device details
+      items:
+      - name: Find the primary user
+        href: ./remote-actions/find-primary-user.md
+      - name: View device details
+        href: ./remote-actions/device-inventory.md
+      - name: View ChromeOS device information
+        href: ./remote-actions/chrome-enterprise-device-details.md
+
     - name: Remote device actions
       items:
       - name: Remote device actions
@@ -2007,8 +2019,6 @@ items:
           href: ./remote-actions/device-logout-user.md
         - name: Remove user
           href: ./remote-actions/device-remove-user.md
-        - name: Find primary user
-          href: ./remote-actions/find-primary-user.md
       - name: Other actions
         items:
         - name: Remote actions for ChromeOS
@@ -2023,10 +2033,6 @@ items:
           href: ./remote-actions/teamviewer-support.md
         - name: Synchronize device
           href: ./remote-actions/device-sync.md
-        - name: Examine device inventory
-          href: ./remote-actions/device-inventory.md
-        - name: View ChromeOS device information
-          href: ./remote-actions/chrome-enterprise-device-details.md
         - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
         - name: Remove apps and configuration
