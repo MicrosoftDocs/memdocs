@@ -502,7 +502,7 @@
     },
     {
       "source_path": "intune/intune/configuration/administrative-templates-configure-edge.md",
-      "redirect_url": "/intune/intune-service/configuration/administrative-templates-configure-edge",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-configure-edge",
       "redirect_document_id": false
     },
     {
