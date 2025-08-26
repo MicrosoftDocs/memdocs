@@ -14,8 +14,6 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-appliesto:
-- ✅ Windows 11
 ---
 
 # Pause Config Refresh in Intune

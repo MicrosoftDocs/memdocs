@@ -13,8 +13,6 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-appliesto:
-  - ✅ iPadOS
 ---
 
 # Remove a user from a shared iOS/iPadOS device

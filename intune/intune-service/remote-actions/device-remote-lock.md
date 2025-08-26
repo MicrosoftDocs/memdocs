@@ -47,7 +47,7 @@ The **Remote lock** device action locks a managed device so the user must enter 
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
-> - Endpoint Security Manager
+> - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] with the permission:
 >   - Remote tasks/Remote lock
 
@@ -60,7 +60,8 @@ The **Remote lock** device action locks a managed device so the user must enter 
 ::: zone pivot="macos"
 3. Set a six-digit recovery PIN.
 
-> [!NOTE] The recovery PIN is shown on the device overview pane for up to 30 days, or until another device action is sent. Record it securely; it can't be retrieved afterward. Don't resend remote lock to the same macOS device until that PIN is used—additional attempts show a **Failed** status in reporting.
+> [!NOTE]
+> The recovery PIN is shown on the device overview pane for up to 30 days, or until another device action is sent. Record it securely; it can't be retrieved afterward. Don't resend remote lock to the same macOS device until that PIN is used—additional attempts show a **Failed** status in reporting.
 
 ::: zone-end
 
@@ -76,6 +77,7 @@ For more information about the API used for this action, see [remoteLock action]
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
 [INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
 
 <!-- API links -->
 

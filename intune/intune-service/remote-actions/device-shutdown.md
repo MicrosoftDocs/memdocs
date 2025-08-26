@@ -12,9 +12,6 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-appliesto:
-  - ✅ iOS/iPadOS
-  - ✅ macOS
 ---
 
 # Remotely shut down devices using Intune
@@ -38,7 +35,7 @@ With the **shut down** action, IT administrators can remotely power off managed 
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
-> - Endpoint Security Manager
+> - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] with the permission:
 >   - Remote tasks/Shut down
 
@@ -63,6 +60,7 @@ For more information about the API used for this action, see [shutDown action][G
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
 [INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
 

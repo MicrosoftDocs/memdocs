@@ -57,7 +57,9 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
     > [All devices][INT-AC1]
 1. From the devices list, select a device, and then select **Restart** > **Yes**.
 
+::: zone pivot="windows,ios"
 ## User experience
+::: zone-end
 
 ::: zone pivot="ios"
 A passcode-locked device can't reconnect to Wi-Fi until the user unlocks it. Apple encrypts saved Wi-Fi credentials until unlock. Until then, Intune can't communicate with the device.

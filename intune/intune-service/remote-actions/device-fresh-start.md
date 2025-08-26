@@ -13,8 +13,6 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-appliesto:
-  - ✅ Windows
 ---
 
 # Fresh Start in Microsoft Intune
@@ -37,7 +35,7 @@ The **Fresh Start** device action removes apps from managed Windows devices, hel
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
-> - Endpoint Security Manager
+> - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] with the permissions:
 >   - Remote tasks/Clean PC
 
@@ -54,7 +52,7 @@ The **Fresh Start** device action removes apps from managed Windows devices, hel
    - Preserve the contents of the user's Home folder, while removing apps and settings.
 
    > [!IMPORTANT]
-  > If you don't retain user data, the device is restored to the default out-of-box experience (OOBE) completed state retaining the built-in administrator account.
+   > If you don't retain user data, the device is restored to the default out-of-box experience (OOBE) completed state retaining the built-in administrator account.
    > BYOD devices are removed from Microsoft Entra ID and mobile device management.
 
 1. Select **OK**.
@@ -73,6 +71,7 @@ For more information about the API used for this action, see [cleanWindowsDevice
 <!-- role links -->
 
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
 [INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 

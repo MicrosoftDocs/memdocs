@@ -13,8 +13,6 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 
-appliesto:
-  - ✅ iOS/iPadOS
 ---
 
 # Use Lost Mode with Microsoft Intune
