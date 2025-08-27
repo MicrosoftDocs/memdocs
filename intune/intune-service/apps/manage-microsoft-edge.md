@@ -861,6 +861,17 @@ If you want to clear the old logs, select the **Clear** icon at the top-right wh
 > [!NOTE]
 > Saving logs also respects the Intune App Protection Policy. Therefore, you might not be allowed to save diagnostic data to local devices.
 
+
+## Deeplink methods to force launch Edge app on mobile
+
+There are specific deeplinks that are designed for Edge mobile.
+
+|Scheme  |Host  |Path  |Behavior   |
+|:---------|:---------|:---------|:---------|
+|microsoft-edge-http:// | `<any>` | `<any>` | Open the url http://`<any>` |
+|microsoft-edge-https:// | `<any>` | `<any>` | Open the url http://`<any>` |
+
+
 ## Next steps
 
 - [What are app protection policies?](app-protection-policy.md) 
