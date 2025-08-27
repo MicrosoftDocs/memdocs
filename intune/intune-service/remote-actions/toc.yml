@@ -1,60 +1,60 @@
 items:
   - name: Remote device actions
-    href: ./remote-actions/device-management.md
+    href: device-management.md
   - name: Locks and passwords
     items:
     - name: Remotely Lock device
-      href: ./remote-actions/device-remote-lock.md
+      href: device-remote-lock.md
     - name: Reset passcode
-      href: ./remote-actions/device-passcode-reset.md
+      href: device-passcode-reset.md
   - name: Remove and restart
     items:
     - name: Remove devices
-      href: ./remote-actions/devices-wipe.md
+      href: devices-wipe.md
     - name: Manage Windows Fresh Start
-      href: ./remote-actions/device-fresh-start.md
+      href: device-fresh-start.md
     - name: Restart device
-      href: ./remote-actions/device-restart.md
+      href: device-restart.md
   - name: Apple device actions
     items:
     - name: Enable iOS/iPadOS lost mode
-      href: ./remote-actions/device-lost-mode.md
+      href: device-lost-mode.md
     - name: Shutdown macOS and iOS/iPadOS devices
-      href: ./remote-actions/device-shutdown.md
+      href: device-shutdown.md
     - name: Wipe macOS device
-      href: ./remote-actions/device-wipe-macos.md
+      href: device-wipe-macos.md
     - name: Disable Activation Lock
-      href: ./remote-actions/device-activation-lock-disable.md
+      href: device-activation-lock-disable.md
     - name: Update cellular data plan
-      href: ./remote-actions/update-cellular-data-plan.md
+      href: update-cellular-data-plan.md
   - name: User actions
     items:
     - name: Sign out current user
-      href: ./remote-actions/device-logout-user.md
+      href: device-logout-user.md
     - name: Remove user
-      href: ./remote-actions/device-remove-user.md
+      href: device-remove-user.md
   - name: Other actions
     items:
     - name: Remote actions for ChromeOS
-      href: ./remote-actions/chrome-enterprise-remote-actions.md
+      href: chrome-enterprise-remote-actions.md
     - name: Locate device
-      href: ./remote-actions/device-locate.md
+      href: device-locate.md
     - name: Rename device
-      href: ./remote-actions/device-rename.md
+      href: device-rename.md
     - name: Send notifications
-      href: ./remote-actions/custom-notifications.md
+      href: custom-notifications.md
     - name: Use TeamViewer for remote administration
-      href: ./remote-actions/teamviewer-support.md
+      href: teamviewer-support.md
     - name: Synchronize device
-      href: ./remote-actions/device-sync.md
+      href: device-sync.md
     - name: Collect diagnostics
-      href: ./remote-actions/collect-diagnostics.md
+      href: collect-diagnostics.md
     - name: Remove apps and configuration
-      href: ./remote-actions/remove-apps-config.md
+      href: remove-apps-config.md
     - name: Pause config refresh
-      href: ./remote-actions/pause-config-refresh.md
+      href: pause-config-refresh.md
   - name: Bulk device actions
-    href: ./remote-actions/bulk-device-actions.md
+    href: bulk-device-actions.md
   - name: Troubleshooting
     items:
     - name: Troubleshoot device actions
