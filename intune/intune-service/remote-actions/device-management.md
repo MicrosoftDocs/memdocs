@@ -114,7 +114,7 @@ The following list includes some common device actions:
 | [Wipe](devices-wipe.md#wipe) | This action restores a device to its factory settings and removes all data and settings. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 
 > [!NOTE]
-> The **Retire**, **Wipe**, and **Delete** actions take precendence over all other actions. A device with multiple pending actions only carry out a Retire, Wipe, or Delete. All other pending actions are ignored.
+> The **Retire**, **Wipe**, and **Delete** actions take precedence over all other actions. A device with multiple pending actions only carries out a Retire, Wipe, or Delete. All other pending actions are ignored.
 
 You can also:
 
