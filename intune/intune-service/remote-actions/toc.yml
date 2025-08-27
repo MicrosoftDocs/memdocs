@@ -35,6 +35,14 @@ items:
     href: device-passcode-reset.md
   - name: Restart device
     href: device-restart.md
+  - name: 🔴 Retire
+    href: device-retire.md
+  - name: 🔴 Rotate local admin password
+    href: device-rotate-local-admin-password.md
+  - name: 🔴 Rotate FileVault recovery key
+    href: device-rotate-filevault.md
+  - name: 🔴 Run remediation
+    href: device-run-remediation.md
   - name: 🔴 Scan with Microsoft Defender
     href: device-scan-defender.md
   - name: 🟡 Send notifications
@@ -47,23 +55,7 @@ items:
     href: device-sync.md
   - name: 🟡 Update cellular data plan
     href: update-cellular-data-plan.md
-  - name: 🔴 Retire
-    href: device-retire.md
-  - name: 🔴 Rotate local admin password
-    href: device-rotate-local-admin-password.md
-  - name: 🔴 Rotate FileVault recovery key
-    href: device-rotate-filevault.md
-  - name: 🔴 Run remediation
-    href: device-run-remediation.md
   - name: ⚠️ Use TeamViewer for remote administration
     href: teamviewer-support.md
   - name: 🟠 Wipe (split to device-retire.md)
     href: device-wipe.md
-- name: 🫸 To move
-  items:
-  - name: Examine device inventory
-    href: tomove/device-inventory.md
-  - name: Find primary user
-    href: tomove/find-primary-user.md
-  - name: View ChromeOS device information
-    href: tomove/chrome-enterprise-device-details.md

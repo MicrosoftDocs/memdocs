@@ -62,8 +62,6 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 >   - Remote tasks/Locate device
 >   - Remote tasks/Play sound to locate lost devices
 
-
-
 ::: zone pivot="android"
 
 >[!NOTE]
