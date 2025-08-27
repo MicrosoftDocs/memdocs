@@ -6,7 +6,7 @@ description: Learn how to use Intune policy to manage Microsoft Defender securit
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 06/27/2025
+ms.date: 08/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
