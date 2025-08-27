@@ -70,7 +70,7 @@ This article shows you how to see the available remote actions, and lists some o
 
       Use the **Export** feature to create a `.zip`` list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
 
-      Select any device to [view more details about that device](device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
+      Select any device to [view more details about that device](../fundamentals/device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
 
     - **By platform**: View lists of devices by the specific platform.
     - **Enrollment**: Opens the enrollment page and lists the different enrollment options for each platform.
@@ -118,7 +118,7 @@ The following list includes some common device actions:
 
 You can also:
 
-- See a [full device inventory](device-inventory.md) of all the devices (**Devices** > **All devices**).
+- See a [full device inventory](../fundamentals/device-inventory.md) of all the devices (**Devices** > **All devices**).
 - Run [bulk device actions](bulk-device-actions.md) on multiple devices at the same time (**Devices** > **All devices** > **Bulk Device Actions**).
 
 ## Resources
