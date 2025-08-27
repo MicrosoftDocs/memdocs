@@ -53,7 +53,7 @@ items:
     href: device-logout-user.md
   - name: 🟡 Synchronize device
     href: device-sync.md
-  - name: 🟡 Update cellular data plan
+  - name: Update cellular data plan
     href: update-cellular-data-plan.md
   - name: ⚠️ Use TeamViewer for remote administration
     href: teamviewer-support.md

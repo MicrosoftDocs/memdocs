@@ -82,7 +82,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 ::: zone pivot="android"
    - Android Enterprise dedicated devices that aren't currently online can display their [last known location](#last-known-location) when the device last checked in within seven days.
 
-   ![Screenshot of Locate device using Intune in Azure](./media/images/locate-device.png)
+   ![Screenshot of Locate device using Intune in Azure](images/locate-device.png)
 
 
 Android use of **Locate device** is managed using a device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).

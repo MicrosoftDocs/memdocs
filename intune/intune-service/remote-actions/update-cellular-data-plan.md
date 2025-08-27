@@ -15,7 +15,7 @@ ms.collection:
 
 # Update cellular data plan
 
-The **Update cellular data plan** remote action lets you remotely activate eSIM cellular plan on iOS/iPadOS devices that support it.
+The **Update cellular data plan** remote action lets you remotely activate an eSIM cellular plan on supported iOS/iPadOS devices, making it easier to manage connectivity for users without physical SIM cards.
 
 ## Requirements
 
@@ -24,8 +24,7 @@ The **Update cellular data plan** remote action lets you remotely activate eSIM 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
-> - iOS
-> - iPadOS
+> - iOS/iPadOS
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -35,7 +34,7 @@ The **Update cellular data plan** remote action lets you remotely activate eSIM 
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] with the permission:
->   - RRemote tasks/Update cellular data plan
+>   - Remote tasks/Update cellular data plan
 
 ## Remotely update the cellular data plan
 
@@ -43,7 +42,7 @@ The **Update cellular data plan** remote action lets you remotely activate eSIM 
     > [!div class="nextstepaction"]
     > [All devices][INT-AC1]
 1. From the devices list, select a device, and then select **...** > **Update cellular data plan (preview)**.
-    ![Screenshot of updating cellular data plan](./media/images/update-cellular-data-plan.png)
+    ![Screenshot of updating cellular data plan](images/update-cellular-data-plan.png)
 1. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
 
 ## User experience
@@ -61,9 +60,18 @@ For more information about the API used for this action, see [activateDeviceEsim
 
 <!--links-->
 
+<!-- admin center links -->
+
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
+<!-- role links -->
+
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+
+<!-- API links -->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-activateDeviceEsim
