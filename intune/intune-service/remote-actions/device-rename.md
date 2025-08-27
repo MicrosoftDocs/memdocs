@@ -3,7 +3,7 @@
 
 title: Rename a device with Microsoft Intune
 description: Rename a device by using Microsoft Intune.
-ms.date: 04/07/2025
+ms.date: 08/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,10 +16,6 @@ ms.assetid:
 #audience:
 
 ms.reviewer: Elcox
-ms.suite: ems
-search.appverid: MET150
-ms.reviewer: Elcox
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2

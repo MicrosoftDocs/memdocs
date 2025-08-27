@@ -3,11 +3,10 @@
 
 title: Remote Device Actions In Microsoft Intune
 description: Use Microsoft Intune to run remote actions on Android, iOS/iPadOS, macOS, and Windows devices. You can reset the password, lock the device, wipe or reset the OS, scan for viruses, and more. Use this feature to remotely manage devices and have help desk run common tasks.
-ms.date: 02/20/2025
+ms.date: 08/27/2025
 ms.topic: overview
 
 ms.reviewer: ankitanangia
-#ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
 ms.collection:
 - tier1

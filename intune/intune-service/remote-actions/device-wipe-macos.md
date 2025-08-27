@@ -2,9 +2,8 @@
 # required metadata
 
 title: Wipe a macOS device
-titleSuffix: Microsoft Intune
 description: Learn how to wipe all data, including the operating system, from a macOS device.
-ms.date: 04/24/2024
+ms.date: 08/27/2025
 ms.topic: how-to
 
 # optional metadata
@@ -13,7 +12,6 @@ ms.topic: how-to
 #audience:
 
 ms.reviewer: Beflamm
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2

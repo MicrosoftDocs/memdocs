@@ -1,15 +1,11 @@
 ---
 # required metadata
 
-title: Sync devices with Microsoft Intune
-description: Synchronize devices that are registered or managed with Microsoft Intune to get the latest policies and actions. Includes the steps to sync by using the Azure portal, and lists the error codes that can be retried.
-ms.date: 02/27/2025
+title: "Intune Remote Device Action: Sync"
+description: Learn how to use the device sync remote action in Intune to immediately apply policy, app, and configuration updates to managed devices.
+ms.date: 08/27/2025
 ms.topic: how-to
 
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2

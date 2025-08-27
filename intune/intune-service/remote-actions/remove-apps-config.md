@@ -2,13 +2,11 @@
 # required metadata
 
 title: Remove Apps and Configuration
-titleSuffix: Microsoft Intune
 description: Learn how apps and configurations can be removed temporarily, then restored automatically or manually using the Remove apps and configuration device action by the IT administrator.
-ms.date: 07/10/2024
+ms.date: 08/27/2025
 ms.topic: how-to
 #customerIntent: As an IT admin, I want to remove an app or a configuration using the Remove apps and configuration device action so that I can make changes on a device for troubleshooting or maintenance.
 ms.reviewer: Jack Poehlman
-#ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
 ms.collection:
 - tier1

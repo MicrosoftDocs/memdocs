@@ -3,11 +3,9 @@
 
 title: Shut down devices with Microsoft Intune
 description: Shut down iOS/iPadOS devices using remote actions in Microsoft Intune.
-ms.date: 06/13/2022
+ms.date: 08/27/2025
 ms.topic: how-to
 
-ms.reviewer:
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2

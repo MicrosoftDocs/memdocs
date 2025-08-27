@@ -3,11 +3,9 @@
 
 title: "Intune Remote Device Action: Remote Lock"
 description: Use the remote lock action in Microsoft Intune to lock a managed device that has a passcode or PIN.
-ms.date: 08/26/2025
+ms.date: 08/27/2025
 ms.topic: how-to
 
-ms.reviewer:
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2

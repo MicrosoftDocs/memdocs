@@ -3,11 +3,9 @@
 
 title: Use iOS/iPadOS Lost Mode With Microsoft Intune
 description: Learn how to use lost mode in Microsoft Intune to remotely lock and display a custom message on the screen of a lost or stolen iOS or iPadOS device. This article explains how to configure the lock screen message and phone number, and provides important details about the security and privacy implications of using lost mode.
-ms.date: 08/12/2025
+ms.date: 08/27/2025
 ms.topic: how-to
 
-ms.reviewer:
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2

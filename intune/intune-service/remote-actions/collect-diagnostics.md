@@ -2,12 +2,10 @@
 # required metadata
 
 title: "Intune Remote Actions: Collect Diagnostics"
-titleSuffix: Microsoft Intune
 description: Learn how to collect diagnostics with Microsoft Intune.
-ms.date: 03/04/2025
+ms.date: 08/27/2025
 ms.topic: how-to
 ms.reviewer: jlynn
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2

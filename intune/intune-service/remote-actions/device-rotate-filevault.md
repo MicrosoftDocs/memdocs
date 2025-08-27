@@ -2,13 +2,10 @@
 # required metadata
 
 title: "Intune Remote Action: Rotate FileVault Recovery Key"
-titleSuffix: Microsoft Intune
 description: Learn how to rotate the BitLocker recovery keys with Microsoft Intune.
-ms.date: 08/14/2025
+ms.date: 08/27/2025
 ms.topic: how-to
 
-ms.reviewer:
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier1
