@@ -346,9 +346,9 @@ In the Microsoft Defender portal, as a security administrator:
    >
    > If you have the *Manage security settings in Security Center* permission in the Microsoft Defender portal, and are simultaneously enabled to view devices from all Device Groups (no [role-based access control](/microsoft-365/security/defender-endpoint/rbac) limits on your user permissions), you can also perform this action.
 
-1. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
+2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
 
-      > [!TIP]
+   > [!TIP]
    > Use the proper device tags to test and validate your rollout on a small number of devices.
    > 
    > When you deploy to the *All devices* group, any device that falls into the scope configured will automatically be enrolled.
@@ -356,7 +356,7 @@ In the Microsoft Defender portal, as a security administrator:
    > While most devices complete enrollment and apply assigned policy within a few minutes, a device can sometimes take up to 24 hours to complete enrollment.
    
    > [!IMPORTANT]
-   > As of July 3rd, 2025, dynamic asset rules are supported for defining the devices in the MDE-Management tag in public preview
+   > As of July 3rd, 2025, dynamic asset rules are supported for defining the devices in the MDE-Management tag in public preview.
    
    
 3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
