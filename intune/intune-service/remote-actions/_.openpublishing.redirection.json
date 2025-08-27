@@ -6,11 +6,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/remote-actions/password-reset.md",
-      "redirect_url": "/entra/identity/authentication/concept-sspr-howitworks",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "intune/intune-service/remote-actions/device-wipe-macos.md",
       "redirect_url": "/intune/intune-service/remote-actions/device-wipe",
       "redirect_document_id": false

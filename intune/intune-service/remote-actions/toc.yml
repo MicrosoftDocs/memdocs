@@ -1,0 +1,61 @@
+items:
+- name: Remote device actions overview
+  href: index.md
+- name: Bulk device actions
+  href: bulk-device-actions.md
+- name: 🤔 Troubleshoot device actions
+  href: /troubleshoot/mem/intune/troubleshoot-device-actions
+- name: Actions list
+  items:
+  - name: BitLocker key rotation
+    href: device-rotate-bitlocker-keys.md
+  - name: 🟡 Collect diagnostics
+    href: collect-diagnostics.md
+  - name: ⚠️ Disable Activation Lock
+    href: device-activation-lock-disable.md
+  - name: Fresh Start
+    href: device-fresh-start.md
+  - name: 🟡 Locate device
+    href: device-locate.md
+  - name: 🔴 Play Lost Mode sound
+    href: device-play-lost-mode-sound.md
+  - name: 🟡 Lost Mode
+    href: device-lost-mode.md
+  - name: 🟡 Pause config refresh
+    href: pause-config-refresh.md
+  - name: Remote lock
+    href: device-remote-lock.md
+  - name: 🟡 Remove apps and configuration
+    href: remove-apps-config.md
+  - name: 🟡 Remove user
+    href: device-remove-user.md
+  - name: 🟡Rename device
+    href: device-rename.md
+  - name: 🟡 Reset passcode
+    href: device-passcode-reset.md
+  - name: Restart device
+    href: device-restart.md
+  - name: 🔴 Retire
+    href: device-retire.md
+  - name: 🔴 Rotate local admin password
+    href: device-rotate-local-admin-password.md
+  - name: 🔴 Rotate FileVault recovery key
+    href: device-rotate-filevault.md
+  - name: 🔴 Run remediation
+    href: device-run-remediation.md
+  - name: 🔴 Scan with Microsoft Defender
+    href: device-scan-defender.md
+  - name: 🟡 Send notifications
+    href: custom-notifications.md
+  - name: 🟡 Shutdown
+    href: device-shutdown.md
+  - name: 🟡 Logout active user
+    href: device-logout-user.md
+  - name: 🟡 Synchronize device
+    href: device-sync.md
+  - name: 🟡 Update cellular data plan
+    href: update-cellular-data-plan.md
+  - name: ⚠️ Use TeamViewer for remote administration
+    href: teamviewer-support.md
+  - name: 🟠 Wipe (split to device-retire.md)
+    href: device-wipe.md
