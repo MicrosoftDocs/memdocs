@@ -40,22 +40,7 @@ This article shows you how to view all your devices, and their properties in the
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > select one of your listed devices to open its details:
 
-   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can perform the following actions on the device (depending on the device platform):
-      - [Retire](devices-wipe.md#retire)
-      - [Wipe](devices-wipe.md#wipe)
-      - [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center)
-      - [Remote lock](device-remote-lock.md)
-      - [Sync](device-sync.md)
-      - [Reset passcode](device-passcode-reset.md)
-      - [Restart](device-restart.md)
-      - [Fresh Start](device-fresh-start.md) (Windows 10/11)
-      - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows only)
-      - [Quick scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
-      - [Full scan](../configuration/device-restrictions-windows-10.md) (Windows 10 only)
-      - [Update Windows Defender security intelligence](/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
-      - [BitLocker key rotation](../protect/encrypt-devices.md#to-rotate-the-bitlocker-recovery-key)
-      - [Rename device](device-rename.md)
-      - [New Remote Assistance Session](./teamviewer-support.md)
+   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. Depending on the device platform, you can perform different actions. For more information, see [Use remote actions to manage devices using Intune](../remote-actions/device-management.md).
    - Use **Properties** to assign a [device category you create](../enrollment/device-group-mapping.md), and change ownership of the device to a personal device, or a corporate device.
    - **Hardware** includes many details about the device, like the device ID, operating system and version, storage space, and more details.
    - **Discovered apps** lists all the apps that Intune found installed on the device, and the app versions. For more information, see [Intune discovered apps](../apps/app-discovered-apps.md).
@@ -78,7 +63,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Detail|Description|Platform|
 |--------------|----------------------|----|
 |Name|The name of the device.|Windows, macOS, iOS, Android|
-|Management name|An easily recognizable device name used only in the Intune admin center. Changing this name does not change the device name or the name in the Company Portal. For more information on how to change the device name, see [Rename a device with Microsoft Intune](device-rename.md).|Windows, macOS, iOS, Android <br/><br/> NOTE: Management names won't automatically populate for Android Enterprise dedicated, fully managed, and corporate-owned with work profile devices that were enrolled before November 2021. However, the admin may still edit the management name.|
+|Management name|An easily recognizable device name used only in the Intune admin center. Changing this name does not change the device name or the name in the Company Portal.|Windows, macOS, iOS, Android <br/><br/> NOTE: Management names won't automatically populate for Android Enterprise dedicated, fully managed, and corporate-owned with work profile devices that were enrolled before November 2021. However, the admin may still edit the management name.|
 |UDID|The device's Unique Device identifier.|macOS, iOS|
 |Intune Device ID|A GUID that uniquely identifies the device.|Windows, macOS, iOS, Android|
 |Serial number|The device's serial number from the manufacturer.|Windows, macOS, iOS, iPadOS, Android <br/><br/> NOTE: Intune might not be able to display the serial number for personally owned work profile devices running Android 12 and newer due to platform limitations.|
@@ -131,7 +116,3 @@ Depending on the carrier used by the devices, not all details might be collected
    > - CT Subscription Slot One
      > - CT Subscription Slot Two
        >  - Top-level ICCID, IMEI, MEID, and Phone number properties (deprecated)
-
-## Next steps
-
-See what else you can do to [manage your devices](device-management.md) with Intune.
