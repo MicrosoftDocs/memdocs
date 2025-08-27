@@ -1974,79 +1974,14 @@ items:
     - name: Get device details
       items:
       - name: Find the primary user
-        href: ./remote-actions/find-primary-user.md
+        href: ./fundamentals/find-primary-user.md
       - name: View device details
-        href: ./remote-actions/device-inventory.md
+        href: ./fundamentals/device-inventory.md
       - name: View ChromeOS device information
-        href: ./remote-actions/chrome-enterprise-device-details.md
+        href: ./fundamentals/chrome-enterprise-device-details.md
 
     - name: Remote device actions
-      items:
-      - name: Remote device actions
-        href: ./remote-actions/device-management.md
-
-      - name: Locks and passwords
-        items:
-        - name: Remotely Lock device
-          href: ./remote-actions/device-remote-lock.md
-        - name: Reset passcode
-          href: ./remote-actions/device-passcode-reset.md
-        - name: Self-service password reset
-          href: ./remote-actions/password-reset.md
-      - name: Remove and restart
-        items:
-        - name: Remove devices
-          href: ./remote-actions/devices-wipe.md
-        - name: Manage Windows Fresh Start
-          href: ./remote-actions/device-fresh-start.md
-        - name: Restart device
-          href: ./remote-actions/device-restart.md
-      - name: Apple device actions
-        items:
-        - name: Enable iOS/iPadOS lost mode
-          href: ./remote-actions/device-lost-mode.md
-        - name: Shutdown macOS and iOS/iPadOS devices
-          href: ./remote-actions/device-shutdown.md
-        - name: Wipe macOS device
-          href: ./remote-actions/device-wipe-macos.md
-        - name: Disable Activation Lock
-          href: ./remote-actions/device-activation-lock-disable.md
-        - name: Update cellular data plan
-          href: ./remote-actions/update-cellular-data-plan.md
-      - name: User actions
-        items:
-        - name: Sign out current user
-          href: ./remote-actions/device-logout-user.md
-        - name: Remove user
-          href: ./remote-actions/device-remove-user.md
-      - name: Other actions
-        items:
-        - name: Remote actions for ChromeOS
-          href: ./remote-actions/chrome-enterprise-remote-actions.md
-        - name: Locate device
-          href: ./remote-actions/device-locate.md
-        - name: Rename device
-          href: ./remote-actions/device-rename.md
-        - name: Send notifications
-          href: ./remote-actions/custom-notifications.md
-        - name: Use TeamViewer for remote administration
-          href: ./remote-actions/teamviewer-support.md
-        - name: Synchronize device
-          href: ./remote-actions/device-sync.md
-        - name: Collect diagnostics
-          href: ./remote-actions/collect-diagnostics.md
-        - name: Remove apps and configuration
-          href: ./remote-actions/remove-apps-config.md
-        - name: Pause config refresh
-          href: ./remote-actions/pause-config-refresh.md
-      - name: Bulk device actions
-        href: ./remote-actions/bulk-device-actions.md
-      - name: Troubleshooting
-        items:
-        - name: Troubleshoot device actions
-          href: /troubleshoot/mem/intune/troubleshoot-device-actions
-      - name: 🆕 Remote device actions
-        href: ./remote-actions/toc.yml
+      href: ./remote-actions/toc.yml
 
   - name: Support your end users
     items:

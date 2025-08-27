@@ -7,6 +7,8 @@ ms.date: 02/27/2025
 ms.topic: how-to
 
 ms.reviewer:
+ms.suite: ems
+search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
