@@ -67,6 +67,7 @@ The following compliance partners are supported as generally available:
 - Kandji
 - Ivanti Neurons for MDM
 - Ivanti EPMM
+- Mobiconnect
 - Mosyle Fuse
 - Mosyle Onek12
 - SOTI MobiControl
@@ -142,6 +143,7 @@ To enable a device compliance partner to work with Intune, you must complete con
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
 - [CLOMO MDM](https://support.clomo.com/?page_id=61477)
 - [Kandji Device Compliance](https://support.kandji.io/support/solutions/articles/72000630314)
+- [Mobiconnect](https://help.mobi-connect.net/function/function_category/c0119/?func_os=ios-ipados)
 - [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
   
 
