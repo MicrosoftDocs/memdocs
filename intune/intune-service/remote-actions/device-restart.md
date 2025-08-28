@@ -45,8 +45,9 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Endpoint Security Manager][INT-R4]
-> - [Custom role][INT-RC] with the permissions:
->   - Remote tasks/Reboot now
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Reboot now**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## Restart a device
 

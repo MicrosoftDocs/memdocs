@@ -34,8 +34,9 @@ The **Fresh Start** device action removes apps from managed Windows devices, hel
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Endpoint Security Manager][INT-R4]
-> - [Custom role][INT-RC] with the permissions:
->   - Remote tasks/Clean PC
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Clean PC**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to execute Fresh Start
 

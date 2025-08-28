@@ -33,13 +33,14 @@ ms.collection:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] with the permissions:
->   - `Microsoft.Intune_RemoteAssistance_Read`
+> - [Custom role][INT-RC] that includes:
+>   - The permissions `Microsoft.Intune_RemoteAssistance_Read`
 >   - `Microsoft.Intune_RemoteAssistanceApp_Elevation`
 >   - `Microsoft.Intune_RemoteAssistanceApp_TakeFullControl`
 >   - `Microsoft.Intune_RemoteAssistanceApp_Unattended`
 >   - `Microsoft.Intune_RemoteAssistanceApp_ViewScreen`
 >   - `Microsoft.Intune_RemoteTasks_RequestRemoteAssistance`
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to offer remote assistance
 

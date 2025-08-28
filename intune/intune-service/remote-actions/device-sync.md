@@ -36,8 +36,9 @@ The **Sync** device action forces the selected device to immediately check in wi
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Endpoint Security Manager][INT-R4]
-> - [Custom role][INT-RC] with the permissions:
->   - Remote tasks/Sync devices
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Sync devices**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to sync a device
 

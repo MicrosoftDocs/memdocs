@@ -38,9 +38,9 @@ Lost mode is a lightweight but powerful tool that helps organizations safeguard 
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] with the permissions:
->   - Remote tasks/Enable lost mode
->   - Remote tasks/Disable lost mode
+> - [Custom role][INT-RC] that includes:
+>   - The permissions **Remote tasks/Enable lost mode**, **Remote tasks/Disable lost mode**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## Enable lost mode
 

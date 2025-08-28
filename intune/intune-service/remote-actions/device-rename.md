@@ -59,8 +59,9 @@ If a device isn't listed here, it isn't supported. This feature doesn't support 
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] with the permissions:
->   - Remote tasks/Set device name
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Set device name**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to rename a device
 

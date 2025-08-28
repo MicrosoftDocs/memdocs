@@ -24,8 +24,9 @@ This document discusses both device level passcode reset and work profile passco
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] with the permissions:
->   - `Microsoft.Intune_RemoteTasks_ResetPasscode`
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote Tasks/Reset Passcode**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## Supported platforms for device level passcode reset
 

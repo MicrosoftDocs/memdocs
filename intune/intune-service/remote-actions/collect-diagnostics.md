@@ -39,8 +39,9 @@ The **Collect diagnostics** remote action lets you collect and download managed 
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] with the permissions:
->   - Remote tasks/Collect diagnostics
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Collect diagnostics**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ### Connectivity requirements
 
