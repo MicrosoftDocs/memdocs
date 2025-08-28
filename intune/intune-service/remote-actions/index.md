@@ -167,7 +167,7 @@ To wipe a device, you must be assigned a role that has the *Remote tasks: Wipe* 
 
 Every remote device action has its own steps, which are detailed in the respective documentation. In general:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select an action from the list of available actions.
 1. Complete any required fields, and then confirm the action.
 
@@ -226,5 +226,5 @@ Some remote actions can also be executed in bulk. To learn more, see [Bulk devic
 [RA-WIPE]: devices-wipe.md
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 [INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/BulkActionWizardBlade

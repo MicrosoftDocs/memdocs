@@ -50,7 +50,7 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 
 ## Restart a device
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **Restart** > **Yes**.
 
 ::: zone pivot="windows,ios"
@@ -80,7 +80,7 @@ For more information about the API used for this action, see [rebootNow action][
 <!-- admin center -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 
 <!-- roles -->
 

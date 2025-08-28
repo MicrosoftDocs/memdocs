@@ -34,11 +34,11 @@ The **Remove user** action deletes a user that you select from the local cache o
 > - [Help Desk Operator][INT-R1]
 > - [Custom role][INT-RC] that includes:
 >   - The permission: **Remote tasks/Manage shared device users**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Read device, Update devices)
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## Remove a user
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a shared iPadOS device.
 1. Select **Users**.
 1. In the list, right-click the user that you want to remove, and then select **Remove user**.
@@ -50,7 +50,7 @@ For more information about the API used for this action, see [deleteUserFromShar
 <!--links-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
 [INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator

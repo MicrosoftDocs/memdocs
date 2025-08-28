@@ -150,7 +150,7 @@ For more information about the API used for this action, see [sendCustomNotifica
 <!--links-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-sendcustomnotificationtocompanyportal

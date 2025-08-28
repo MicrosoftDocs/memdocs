@@ -36,11 +36,11 @@ With the **shut down** action, IT administrators can remotely power off managed 
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission: **Remote tasks/Shut down**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Read device, Update devices)
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to shut down a device
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **...** > **Shut down** > **Yes**.
 
 > [!NOTE]
@@ -64,4 +64,4 @@ For more information about the API used for this action, see [shutDown action][G
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-shutdown
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814

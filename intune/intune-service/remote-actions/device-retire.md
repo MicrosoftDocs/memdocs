@@ -38,11 +38,11 @@ The **Retire** action removes managed app data (where applicable), settings, and
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission: **Remote tasks/Wipe**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Read device, Update devices)
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to retire a device
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **Retire**. To confirm, select **Yes**.
 
 ###Effect of the **Retire** action on data that remains on the device
@@ -131,7 +131,7 @@ For more information about the API used for this action, see [wipe action][GRAPH
 <!-- admin center links -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 
 <!-- role links -->
 

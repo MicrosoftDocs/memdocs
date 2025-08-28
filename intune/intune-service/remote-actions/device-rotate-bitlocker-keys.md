@@ -37,19 +37,19 @@ BitLocker key rotation is important in environments where devices are frequently
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission: **Remote tasks/Rotate BitLockerKeys**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Read device, Update devices)
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 
 ## How to rotate BitLocker keys
 https://go.microsoft.com/fwlink/?linkid=2333814
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **...** > **BitLocker key rotation**.
 1. Select **Yes** to confirm the action.
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: CSP reference
+## :::image type="icon" source="../media/icons/headers/csp.svg" border="false"::: CSP reference
 
-For more information about the CSPs used for this action, see [BitLocker CSP][CSP-1].
+For more information about the CSP used for this action, see [BitLocker CSP][CSP-1].
 
 ## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
 
@@ -64,7 +64,7 @@ To learn more about BitLocker, see [BitLocker overview][WIN-1].
 <!-- admin center links -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 
 <!-- role links -->
 

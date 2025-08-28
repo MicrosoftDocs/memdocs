@@ -34,11 +34,11 @@ The **Update cellular data plan** remote action lets you remotely activate an eS
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission: **Remote tasks/Update cellular data plan**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Read device, Update devices)
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## Remotely update the cellular data plan
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **...** > **Update cellular data plan (preview)**.
     ![Screenshot of updating cellular data plan](images/update-cellular-data-plan.png)
 1. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
@@ -61,7 +61,7 @@ For more information about the API used for this action, see [activateDeviceEsim
 <!-- admin center links -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 
 <!-- role links -->
 
