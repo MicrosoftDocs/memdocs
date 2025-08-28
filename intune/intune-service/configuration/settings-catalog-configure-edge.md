@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 #ROBOTS:
 
-ms.reviewer: mikedano
+ms.reviewer: mayurjadhav
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection:
