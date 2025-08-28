@@ -2003,6 +2003,8 @@ items:
         href: ./fundamentals/remote-help-android.md
       - name: Troubleshooting Remote Help on Android
         href: ./fundamentals/remote-help-android-troubleshoot.md
+    - name: Use TeamViewer for remote administration
+      href: ./fundamentals/teamviewer-support.md
     - name: Remediations that fix common support issues
       items:
       - name: Use Remediations

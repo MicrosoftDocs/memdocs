@@ -3,8 +3,24 @@
 
 title: Remotely administer devices in Microsoft Intune
 description: View the required roles to use TeamViewer, how to install the TeamViewer connector, and step-by-step guidance to remotely administer devices using Microsoft Intune in the Azure portal
-ms.date: 08/27/2025
+keywords:
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
+ms.date: 03/04/2025
 ms.topic: how-to
+ms.service: microsoft-intune
+ms.subservice: fundamentals
+ms.localizationpriority: high
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+ms.reviewer:
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier1
@@ -29,9 +45,9 @@ This feature applies to:
 
 ## Prerequisites
 
-- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
+- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](unlicensed-admins.md).
 
-- Users must be assigned the Remote assistance connectors/Read and Remote assistance connectors/Update permissions in the Intune admin center to onboard TeamViewer. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- Users must be assigned the Remote assistance connectors/Read and Remote assistance connectors/Update permissions in the Intune admin center to onboard TeamViewer. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 - Use a supported Intune-managed device:
 
@@ -53,21 +69,6 @@ By using TeamViewer, you're allowing the TeamViewer for Intune Connector to crea
 
 > [!NOTE]
 > - TeamViewer is not supported on GCC High environments.
-
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
-
-> [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
->
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] with the permissions:
->   - `Microsoft.Intune_RemoteAssistance_Read`
->   - `Microsoft.Intune_RemoteAssistanceApp_Elevation`
->   - `Microsoft.Intune_RemoteAssistanceApp_TakeFullControl`
->   - `Microsoft.Intune_RemoteAssistanceApp_Unattended`
->   - `Microsoft.Intune_RemoteAssistanceApp_ViewScreen`
->   - `Microsoft.Intune_RemoteTasks_RequestRemoteAssistance`
 
 ## Configure the TeamViewer connector
 
@@ -96,7 +97,7 @@ When finished, close the TeamViewer window.
 
 When you start a remote session, users see a notification flag on the Company Portal app icon on their device. A notification also appears when the app opens. Users can then accept the remote assistance request.
 
-:::image type="content" source="images/android-teamviewer.png" alt-text="Use TeamViewer connector to remotely administer Android device in Microsoft Intune and Intune admin center":::
+:::image type="content" source="./media/teamviewer-support/android-teamviewer.png" alt-text="Use TeamViewer connector to remotely administer Android device in Microsoft Intune and Intune admin center":::
 
 > [!NOTE]
 > Windows devices that are enrolled using "userless" methods, such as Device Enrollment Manager (DEM) and Windows Configuration Designer (WCD), don't show the TeamViewer notification in the Company Portal app. In these scenarios, it's recommended to use the TeamViewer portal to generate the session.
