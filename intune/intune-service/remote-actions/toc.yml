@@ -5,14 +5,20 @@ items:
   href: bulk-device-actions.md
 - name: Actions list
   items:
+  - name: Autopilot Reset 🔗
+    href: /windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset
   - name: BitLocker key rotation ✅
     href: device-rotate-bitlocker-keys.md
   - name: Collect diagnostics
     href: collect-diagnostics.md
   - name: Disable Activation Lock
     href: device-activation-lock-disable.md
+  - name: Delete 🔴
+    href: device-delete.md
   - name: Fresh Start ✅
     href: device-fresh-start.md
+  - name: Full Scan 🔗
+    href: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
   - name: Locate device
     href: device-locate.md
   - name: Logout active user
@@ -23,6 +29,8 @@ items:
     href: remote-assist.md
   - name: Pause config refresh
     href: pause-config-refresh.md
+  - name: Quick Scan 🔗
+    href: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
   - name: Play Lost Mode sound 🔴
     href: device-play-lost-mode-sound.md
   - name: Remote lock ✅

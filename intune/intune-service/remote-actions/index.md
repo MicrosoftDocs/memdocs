@@ -201,7 +201,7 @@ Some remote actions can also be executed in bulk. To learn more, see [Bulk devic
 [RA-BL]: device-rotate-bitlocker-keys.md
 [RA-CELLULAR]: update-cellular-data-plan.md
 [RA-DEFAV]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
-[RA-DELETE]: devices-wipe.md#delete-devices-from-the-intune-admin-center
+[RA-DELETE]: devices-delete.md
 [RA-DIAG]: collect-diagnostics.md
 [RA-FRESHSTART]: device-fresh-start.md
 [RA-FV]: device-rotate-filevault.md
