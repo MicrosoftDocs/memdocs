@@ -43,8 +43,6 @@ items:
       href: device-rename.md
     - name: Send notifications
       href: custom-notifications.md
-    - name: Use TeamViewer for remote administration
-      href: teamviewer-support.md
     - name: Synchronize device
       href: device-sync.md
     - name: Collect diagnostics
