@@ -146,25 +146,27 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 
 To use the *Collect diagnostics* action:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
-3. On the device's **Overview** page, select **…** >  **Collect diagnostics** > **Yes**. A pending notification appears on the device's **Overview** page.
-4. To see the status of the action, select **Device diagnostics monitor**.
-5. After the  action completes, select **Download** in the row for the action > **Yes**.
-6. The data zip file is added to your download tray and you can save it to your computer.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
+    > [!div class="nextstepaction"]
+    > [All devices][INT-AC1]
+1. From the devices list, select a device, and then select **…** >  **Collect diagnostics**
+1. To confirm, select **Yes**. A pending notification appears on the device's **Overview** page.
+1. To check the status of the action, select **Monitor** > **Device diagnostics**.
+1. After the action completes, select **...** > **Download** in the row for the action > **Yes**.
+1. The data zip file is added to your download tray and you can save it to your computer.
 
 ### Diagnostics collection on Windows Autopilot failure
 <!--1895390-->
 
- For Windows Autopilot diagnostics collection, no other action is required. Windows Autopilot diagnostics are automatically captured when devices experience a failure as long as the Windows Autopilot automatic capture diagnostic feature is enabled.
+Windows Autopilot diagnostics are automatically captured when devices experience a failure as long as the Windows Autopilot automatic capture diagnostic feature is enabled.
 
 To view the diagnostics collected after a Windows Autopilot failure:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **By platform** > **Windows**.
-3. Select a device.
-4. Select **Diagnostics** > **Download**.
-5. The data zip file is added to your download tray and you can save it to your computer.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
+    > [!div class="nextstepaction"]
+    > [All devices][INT-AC1]
+1. From the devices list, select a device, and then select **Diagnostics** > **Download**.
+1. The data zip file is added to your download tray and you can save it to your computer.
 
 ### Data collected
 
@@ -311,15 +313,19 @@ Currently there are the two main issues that could cause device diagnostics to f
 
 For more information about the APIs used for this action, see:
 
-- [downloadAppDiagnostics action][GRAPH-1]
-- [appDiagnostics function][GRAPH-2]
+- [createdevicelogcollectionrequest action][GRAPH-1]
+- [createdownloadurl action][GRAPH-2]
+- [downloadAppDiagnostics action][GRAPH-3]
+- [appDiagnostics function][GRAPH-4]
 
 <!--links-->
 
 <!-- graph -->
 
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-downloadappdiagnostics
-[GRAPH-2]: /graph/api/intune-devices-manageddevice-appdiagnostics
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-createdevicelogcollectionrequest
+[GRAPH-2]: /graph/api/intune-devices-applogcollectionrequest-createdownloadurl
+[GRAPH-3]: /graph/api/intune-devices-manageddevice-downloadappdiagnostics
+[GRAPH-4]: /graph/api/intune-devices-manageddevice-appdiagnostics
 
 <!-- admin center -->
 

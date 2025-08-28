@@ -28,9 +28,9 @@ This action aims to resolve the issues that customers face outside of Intune and
 > This remote action is supported on the following platforms:
 >
 > - Android
->     - Android Enterprise corporate owned dedicated (COSU)
->     - Android Enterprise corporate owned fully managed (COBO)
->     - Android Enterprise corporate owned work profile (COPE)
+>     - Android Enterprise corporate-owned dedicated (COSU)
+>     - Android Enterprise corporate-owned fully managed (COBO)
+>     - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
