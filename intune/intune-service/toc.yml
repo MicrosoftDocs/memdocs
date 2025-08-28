@@ -121,19 +121,19 @@ items:
         href: ./protect/epm-plan.md
       - name: Data and privacy
         href: ./protect/epm-data-collection.md
-      - name: Deploying EPM
+      - name: Deploy EPM
         items:
-        - name: Deploying EPM
+        - name: Deploy EPM Overview
           href: ./protect/epm-deploy.md
         - name: Create elevation settings policy
           href: ./protect/epm-deploy-create-policy.md
         - name: Create elevation rules policy
-          href: ./protect/epm-deploy-create-policy.md
-      - name: Using EPM
+          href: ./protect/epm-deploy-create-rules.md
+      - name: Use EPM
         items:
         - name: Support approved requests
           href: ./protect/epm-support-approved.md
-      - name: Using EPM
+      - name: Troubleshoot and Monitor EPM
         items:
         - name: Reports
           href: ./protect/epm-reports.md

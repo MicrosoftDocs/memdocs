@@ -1,5 +1,5 @@
 ---
-title: Configure policies to manage Endpoint Privilege Management with Microsoft Intune
+title: Deploy Endpoint Privilege Management with Microsoft Intune
 description: Configure policies that define how Endpoint Privilege Management functions in your tenant, and behaviors when elevating files to run in administrative context.
 keywords:
 author: brenduns
