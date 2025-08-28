@@ -1,8 +1,8 @@
 {
   "redirections": [
     {
-      "source_path": "intune/intune-service/configuration/administrative-templates-update-office.md",
-      "redirect_url": "/intune/intune-service/configuration/settings-catalog-update-office",
+      "source_path": "intune/intune-service/remote-actions/teamviewer-support.md",
+      "redirect_url": "/intune/intune-service/fundamentals/teamviewer-support",
       "redirect_document_id": false
     },
     {
@@ -23,6 +23,11 @@
     {
       "source_path": "intune/intune-service/remote-actions/password-reset.md",
       "redirect_url": "/entra/identity/authentication/concept-sspr-howitworks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/administrative-templates-update-office.md",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-update-office",
       "redirect_document_id": false
     },
     {
