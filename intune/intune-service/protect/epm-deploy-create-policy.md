@@ -1,5 +1,5 @@
 ---
-title: Guidance for creating elevation rules with Endpoint Privilege Management
+title: Guidance for creating elevation policies with Endpoint Privilege Management
 description: View guidance on how to create strong file elevation rules with Microsoft Intune Endpoint Privilege Management
 keywords:
 author: brenduns
@@ -82,10 +82,3 @@ A device must have an elevation settings policy that enables support for EPM bef
 > [!div class="nextstepaction"]
 > [Next: Create an elevation rules policy >](epm-deploy-create-rules.md)
 
-## Related content
-
-- [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
-- [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
-- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
-- [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)

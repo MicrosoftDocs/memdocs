@@ -33,7 +33,7 @@ ms.collection:
 
 *Elevation reports for Endpoint Privilege Management are currently in preview.*
 
-With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization’s users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
+With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization's users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
@@ -105,11 +105,3 @@ The information in this report can help identify applications on a per-user basi
 
 In addition to the dedicated reports, you can view basic details about EPM policies from the Policies tab of the Endpoint Privilege Management node. This node is the same location in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) where you create policies for EPM: In the admin center, go to **Endpoint security** > **Endpoint Privilege Management**, and select the **Policies** node.
 
-## Related content
-
-- [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
-- [Security considerations for elevation rules](../protect/epm-overview.md#security-considerations)
-- [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Approving elevation requests](../protect/epm-support-approved.md)
-- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
-- [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)

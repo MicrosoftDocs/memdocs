@@ -97,42 +97,6 @@ Endpoint Privilege Management is supported with the following sovereign cloud en
 
 For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
-## Role-based access controls for Endpoint Privilege Management
-
-To manage Endpoint Privilege Management, your account must be assigned an Intune role-based access control (RBAC) role that includes the following permission with sufficient rights to complete the desired task:
-
-- **Endpoint Privilege Management Policy Authoring** – This permission is required to work with policy or data and reports for Endpoint Privilege Management, and supports the following rights:
-  - View Reports
-  - Read
-  - Create
-  - Update
-  - Delete
-  - Assign
-
-- **Endpoint Privilege Management Elevation Requests** - This permission is required to work with support approved elevation requests that are submitted by users for approval, and supports the following rights:
-  - View elevation requests
-  - Modify elevation requests
-
-You can add this permission with one or more rights to your own custom RBAC roles, or use a built-in RBAC role dedicated to managing Endpoint Privilege Management:
-
-- **Endpoint Privilege Manager** – This built-in role is dedicated to managing Endpoint Privilege Management in the Intune console. This role includes all rights for *Endpoint Privilege Management Policy Authoring* and *Endpoint Privilege Management Elevation Requests*.
-
-- **Endpoint Privilege Reader** - Use this built-in role to view Endpoint Privilege Management policies in the Intune console, including reports. This role includes the following rights:
-  - View Reports
-  - Read
-  - View elevation requests
-
-In addition to the dedicated roles, the following built-in roles for Intune also include rights for *Endpoint Privilege Management Policy Authoring*:
-
-- **Endpoint Security Manager** - This role includes all rights for *Endpoint Privilege Management Policy Authoring* and *Endpoint Privilege Management Elevation Requests*.
-
-- **Read Only Operator** - This role includes the following rights:
-  - View Reports
-  - Read
-  - View elevation requests
-
- For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
-
 ## Important concepts for Endpoint Privilege Management
 
 When you configure the *elevation settings* and *elevation rules* policies that were mentioned previously, there are some important concepts to understand ensuring you configure EPM to meet the needs of your organization. Before you widely deploy EPM, the following concepts should be well understood as well as the effect they have on your environment:
@@ -303,13 +267,13 @@ To help ensure a secure deployment of Endpoint Privilege Management, consider th
 
 ### Set a secure default elevation response
 
-Set the [default elevation response](../protect/epm-policies.md#about-windows-elevation-settings-policy) to **Support Approval** or **Deny** rather than **User Confirmed**. This ensures that elevation is governed by predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
+Set the [default elevation response](../protect/epm-plan.md#about-windows-elevation-settings-policy) to **Support Approval** or **Deny** rather than **User Confirmed**. This ensures that elevation is governed by predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
 
 ### Require file path restrictions in all rule types
 
-When [configuring an elevation rule](../protect/epm-policies.md#windows-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that leverage automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced prior to elevation.
+When [configuring an elevation rule](../protect/epm-plan.md#windows-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that leverage automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced prior to elevation.
 
-This recommendation applies to rules created [automatically](../protect/epm-policies.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](../protect/epm-reports.md) or [support approved](../protect/epm-support-approved.md) request, and for elevation rules that you create [manually](../protect/epm-policies.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
+This recommendation applies to rules created [automatically](../protect/epm-deploy-create-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](../protect/epm-reports.md) or [support approved](../protect/epm-support-approved.md) request, and for elevation rules that you create [manually](../protect/epm-deploy-create-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
 
 > [!IMPORTANT]  
 > Files located on network shares aren't supported and shouldn't be used in rule definitions.
@@ -322,71 +286,41 @@ Be intentional about elevation for installer files versus application runtime. E
 
 Use more restrictive elevation rules for applications with broader access or scripting capabilities, such as web browsers and PowerShell. For PowerShell, consider using script-specific rules to ensure only trusted scripts are allowed to run with elevated privileges.
 
-## Known Issues
+## Role-based access controls for Endpoint Privilege Management
 
-### Windows 10 devices might not immediately receive confirmation of support approvals
+To manage Endpoint Privilege Management, your account must be assigned an Intune role-based access control (RBAC) role that includes the following permission with sufficient rights to complete the desired task:
 
-We're working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations). We're working with the owner to resolve this as quickly as possible.
+- **Endpoint Privilege Management Policy Authoring** – This permission is required to work with policy or data and reports for Endpoint Privilege Management, and supports the following rights:
+  - View Reports
+  - Read
+  - Create
+  - Update
+  - Delete
+  - Assign
 
-### Organizations that disable User Account Control (UAC) might experience issues with Endpoint Privilege Management
+- **Endpoint Privilege Management Elevation Requests** - This permission is required to work with support approved elevation requests that are submitted by users for approval, and supports the following rights:
+  - View elevation requests
+  - Modify elevation requests
 
-Endpoint Privilege Management doesn't support UAC being explicitly disabled. Windows policy controls for UAC Prompt Behavior exist to control the behavior of UAC. If organizations take extra steps to disable UAC outside of the existing policy controls, like disabling Windows services, they might experience issues with Endpoint Privilege Management.
+You can add this permission with one or more rights to your own custom RBAC roles, or use a built-in RBAC role dedicated to managing Endpoint Privilege Management:
 
-### Organizations that enable Administrator Protection might experience issues with Endpoint Privilege Management
+- **Endpoint Privilege Manager** – This built-in role is dedicated to managing Endpoint Privilege Management in the Intune console. This role includes all rights for *Endpoint Privilege Management Policy Authoring* and *Endpoint Privilege Management Elevation Requests*.
 
-Administrator Protection doesn't currently support elevations initiated from Endpoint Privilege Management. If organizations enable Administrator Protection on devices where standard users rely on EPM to handle elevation, the elevation will fail. We're working to resolve this issue in a future release.
+- **Endpoint Privilege Reader** - Use this built-in role to view Endpoint Privilege Management policies in the Intune console, including reports. This role includes the following rights:
+  - View Reports
+  - Read
+  - View elevation requests
 
-### Organizations using Application Control for Business might experience issues running Endpoint Privilege Management
+In addition to the dedicated roles, the following built-in roles for Intune also include rights for *Endpoint Privilege Management Policy Authoring*:
 
-Application Control for Business policies that don't account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function. For more information about troubleshooting application control, see [WDAC debugging and troubleshooting](/windows/security/application-security/application-control/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting).
+- **Endpoint Security Manager** - This role includes all rights for *Endpoint Privilege Management Policy Authoring* and *Endpoint Privilege Management Elevation Requests*.
 
-> [!Note]
-> EPM is not included in default policies for Application Control and may require creating custom policies.
+- **Read Only Operator** - This role includes the following rights:
+  - View Reports
+  - Read
+  - View elevation requests
 
-### Organizations restricting users who can sign in interactively might see issues with Endpoint Privilege Management
-
-Endpoint Privilege Management uses an isolated account to facilitate elevations. This account requires the ability to create an interactive logon session. Organizations who limit the ability for users to create interactive sessions need to make changes for EPM to function properly.
-
-### Users requesting support approval for elevation must be the primary user on the device
-
-Endpoint Privilege Management currently requires the user requesting an elevation to be the primary user of the device. We're working to remove this limitation in a future release.
-
-### Authoring files with a file name as one of the sole attributes for identification
-
-File name is an attribute that can be utilized to detect an application that needs to be elevated. However, it isn't protected by the signature of the file.
-
-File names are *highly susceptible* to change, and files that are signed with a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which might not be your intended behavior.
-
-> [!IMPORTANT]
-> Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
-
-### Elevation settings policies might show conflict if changed in quick succession
-
-Endpoint Privilege Management reports status of individual settings applied using the *Elevation Settings* profile. If settings in this profile (Default elevation behavior for instance) are changed multiple times in quick succession, it might result device reporting conflict or falling back to the default behavior of *Denying* the elevation. This is a transient state and resolves without further action (in less than 60 minutes). This issue will be fixed in a future release.
-
-### Blocked files downloaded from the internet fail to elevate
-
-Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated, it might fail to elevate. 
-
-To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
-
-### Network and cloud resource access limitations
-
-Apps elevated with Endpoint Privilege Management (EPM) run in an isolated security context and can't access resources that require user authentication, including access to network shares and cloud services like OneDrive, SharePoint, and Azure.
-
-If access to these resources is needed, consider whether elevation is required at runtime.
-
-### Windows devices that are "workplace joined" fail to enable Endpoint Privilege Management
-
-Devices that are workplace joined aren't supported by Endpoint Privilege Management. These devices won't show success or process EPM policies (elevation settings or elevation rules) when deployed to the device.
-
-### Rules for a network file might fail to elevate
-
-Endpoint Privilege Management supports executing files that are locally stored on disk. Executing files from a network location, such as a network share or mapped drive, is not supported.
-
-### Endpoint Privilege Management doesn't receive policy when I use a 'SSL-inspection' on my network infrastructure
-
-Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
+ For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## EpmTools PowerShell module
 
@@ -417,14 +351,7 @@ Following are the available cmdlets:
 
 For more information about each cmdlet, review the **readme.md** file from the *EpmTools* folder on the device.
 
+## Next Steps
+
 > [!div class="nextstepaction"]
 > [Next: Review privacy data collection >](epm-data-collection.md)
-
-## Related articles
-
-- [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
-- [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Approving elevation requests](../protect/epm-support-approved.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
-- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
-- [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)

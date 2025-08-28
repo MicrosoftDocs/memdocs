@@ -117,18 +117,30 @@ items:
       items:
       - name: EPM Overview
         href: ./protect/epm-overview.md
-      - name: Guidance for rules
-        href: ./protect/epm-guidance-for-creating-rules.md
-      - name: Policies
-        href: ./protect/epm-policies.md
-      - name: Support approved requests
-        href: ./protect/epm-support-approved.md
-      - name: Reports
-        href: ./protect/epm-reports.md
+      - name: Plan for EPM
+        href: ./protect/epm-plan.md
       - name: Data and privacy
         href: ./protect/epm-data-collection.md
-      - name: Deployment considerations
-        href: ./protect/epm-deployment-considerations-ki.md
+      - name: Deploying EPM
+        items:
+        - name: Deploying EPM
+          href: ./protect/epm-deploy.md
+        - name: Create elevation settings policy
+          href: ./protect/epm-deploy-create-policy.md
+        - name: Create elevation rules policy
+          href: ./protect/epm-deploy-create-policy.md
+      - name: Using EPM
+        items:
+        - name: Support approved requests
+          href: ./protect/epm-support-approved.md
+      - name: Using EPM
+        items:
+        - name: Reports
+          href: ./protect/epm-reports.md
+        - name: FAQs
+          href: ./protect/epm-faqs.md
+        - name: Known Issues
+          href: ./protect/epm-known-issues.md
 
     - name: Enterprise App Management
       items:

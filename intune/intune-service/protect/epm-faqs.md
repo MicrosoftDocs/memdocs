@@ -66,11 +66,3 @@ Certain items that reside in the start menu or taskbar have a curated right-clic
 
 Only one file can be elevated at a time. To launch multiple files elevated, right-click each file individually and select *Run with elevated access*.
 
-## Next steps
-
-- [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
-- [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
-- [Security considerations for elevation rules](../protect/epm-overview.md#security-considerations)
-- [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
-- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)

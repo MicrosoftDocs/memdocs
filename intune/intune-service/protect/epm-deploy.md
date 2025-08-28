@@ -69,10 +69,3 @@ Repeat phases 2 to 5 continuously to ensure your users have least privelge in li
 
 > [!div class="nextstepaction"]
 > [Next: Create an elevation settings policy >](epm-deploy-create-policy.md)
-
-- [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
-- [Security considerations for elevation rules](../protect/epm-overview.md#security-considerations)
-- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
-- [Approving elevation requests](../protect/epm-support-approved.md)
-- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
-- [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)

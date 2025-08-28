@@ -37,7 +37,7 @@ With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization'
 
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
-In addition to the information in this article, remain aware of important [security considerations](../protect/epm-overview.md#security-considerations) when managing elevation rules.
+In addition to the information in this article, remain aware of important [security recommendations](../protect/epm-plan.md#security-recommendations) when managing elevation rules.
 
 ## Defining rules for use with Endpoint Privilege Management
 
@@ -96,7 +96,7 @@ CompanyName   : Microsoft Corporation
 > [!NOTE]
 > The certificate chain for msinfo32.exe is output to the C:\CertsForMsInfo directory listed in the command example.
 
-For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
+For more information, see [EpmTools PowerShell module](../protect/epm-plan.md#epmtools-powershell-module).
 
 ### Controlling child process behavior
 
@@ -110,7 +110,7 @@ Windows automatically delegates the context of a parent to a child, so take spec
 
 ## Deploying rules created with Endpoint Privilege Management
 
-Endpoint Privilege Management rules are deployed like any other policy in Microsoft Intune. This means that rules can be deployed to users or devices, and rules are merged on the client side and selected at run time. Any conflicts are resolved based on the [policy conflict behavior](../protect/epm-policies.md#policy-conflict-handling-for-endpoint-privilege-management).
+Endpoint Privilege Management rules are deployed like any other policy in Microsoft Intune. This means that rules can be deployed to users or devices, and rules are merged on the client side and selected at run time. Any conflicts are resolved based on the [policy conflict behavior](../protect/epm-plan.md#policy-conflict-handling-for-endpoint-privilege-management).
 
 Rules deployed to a device apply to *every user* that uses that device. Rules that are deployed to a *user* apply only to that user on each device that they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This behavior allows you to deploy a set of rules to devices that might apply to all users on that device, and a more permissive set of rules to a support admin to allow them to elevate a broader set of applications when they sign-in to the device temporarily.
 
@@ -124,7 +124,6 @@ When moving users to run as standard users and utilizing Endpoint Privilege Mana
 
 > [!NOTE]
 > Endpoint Privilege Management doesn't interfere with user account control actions (or UAC) that's run by an Administrator on the device. It's possible to create rules that apply to Administrators on the device, so give special consideration to rules that are applied to all users on a device and the impact on users with Administrator rights.
-
 
 ## Windows elevation rules policy
 
@@ -157,7 +156,7 @@ Use either of the following methods to create new elevation rules, which are add
   - Can add one or more file arguments that must be part of the elevation request before EPM allows file elevation.
 
 > [!TIP]  
-> For both automatically configured and manually configured elevation rules, we [recommend use of a *File path*](../protect/epm-overview.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
+> For both automatically configured and manually configured elevation rules, we [recommend use of a *File path*](../protect/epm-plan.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
 
 ### Automatically configure elevation rules for Windows elevation rules policy
 
@@ -198,7 +197,7 @@ Use either of the following methods to create new elevation rules, which are add
    When you select this checkbox, the File Path field in the rule is set to the file path as seen in the report. If the checkbox isn't selected, the path remains empty.
 
    > [!TIP]  
-   > While optional, we [recommend use of a *File path*](../protect/epm-overview.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
+   > While optional, we [recommend use of a *File path*](../protect/epm-plan.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
 
    :::image type="content" source="./media/epm-policies/create-a-rule.png" alt-text="Image from the admin center UI of the create a rule pane." lightbox="./media/epm-policies/create-a-rule.png":::
 
@@ -349,11 +348,3 @@ To create the reusable settings group for Endpoint Privilege Management:
    :::image type="content" source="./media/epm-policies/add-a-certificate.png" alt-text="Screen capture of the UI for browsing to a certificate." lightbox="./media/epm-policies/add-a-certificate.png":::
 
 4. In **Review + create**, review your settings, and then select **Add**. When you select *Add*, your configuration is saved, and group is then shown in the reusable settings group list for Endpoint Privilege Management.
-
-## Related content
-
-- [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
-- [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
-- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
-- [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)

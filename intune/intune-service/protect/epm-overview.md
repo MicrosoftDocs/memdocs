@@ -47,7 +47,7 @@ Applies to:
 
 ## Key Features and Benefits
 
-- **Standard Users by Default**. Users operate without local admin rights enhancing security without disrupting productivity by allowing users to perform necessary tasks with EPM without waiting for IT – reducing helpdesk tickets and delays.
+- **Standard Users by Default**. Users can operate without local admin rights enhancing security without disrupting productivity by allowing users to perform necessary tasks with EPM without waiting for IT – reducing helpdesk tickets and delays.
 - **Support for Just-in-time elevation**. Users elevate temporarily for specific IT-approved tasks, with automatic, user confirmed or support approved elevations.
 - **Policy-Based Control**. Admins define settings and rules to control elevation conditions and behaviour, with granular rule creation capabilities to suit organizational needs.
 - **Audit Logging and Reporting**. Intune logs every elevation with detailed metadata.
@@ -124,12 +124,3 @@ Endpoint Privilege Management (EPM) is built into Microsoft Intune, which means 
 
 > [!div class="nextstepaction"]
 > [Next: Plan for EPM >](epm-plan.md)
-
-## Related articles
-
-- [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
-- [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Approving elevation requests](../protect/epm-support-approved.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
-- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
-- [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)
