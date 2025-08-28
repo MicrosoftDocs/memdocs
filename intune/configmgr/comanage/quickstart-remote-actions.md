@@ -49,7 +49,7 @@ For more information on how to use these remote actions, see [Available device a
 
 ## Value proposition
 
-When a Configuration Manager device is co-managed, it immediately adds these functions that Configuration Manager doesn't natively have. Now you can now do any remote action that's supported by Intune.
+When a Configuration Manager device is co-managed, it immediately adds these functions that Configuration Manager doesn't natively have. Now you can do any remote action that's supported by Intune.
 
 With co-management, the Configuration Manager devices are now just like any other Intune-managed device. For example, they have a full presence in the cloud, and you can reach them as long as they have internet access. You can do all of these actions without taking any additional steps beyond enabling co-management.
 
