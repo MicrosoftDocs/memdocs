@@ -36,7 +36,7 @@ BitLocker key rotation is important in environments where devices are frequently
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Remote tasks/Rotate BitLockerKeys**
+>   - The permission **Remote tasks/Rotate BitLockerKeys**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 

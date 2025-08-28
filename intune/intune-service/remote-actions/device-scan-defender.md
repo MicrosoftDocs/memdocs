@@ -34,7 +34,7 @@ ms.collection:
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Remote tasks/Windows defender**
+>   - The permission **Remote tasks/Windows defender**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to initiate a full scan or quick scan

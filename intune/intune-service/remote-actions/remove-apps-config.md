@@ -41,7 +41,7 @@ This action aims to resolve the issues that customers face outside of Intune and
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Ramote tasks/Change assignments**
+>   - The permission **Ramote tasks/Change assignments**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## Supported items

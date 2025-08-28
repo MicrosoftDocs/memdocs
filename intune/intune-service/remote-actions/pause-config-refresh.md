@@ -40,7 +40,7 @@ This is typically used for troubleshooting scenarios where you don't want the de
 >
 > - [Intune Administrator][ENT-R1]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Remote tasks/Run Pause Configuration Refresh**
+>   - The permission **Remote tasks/Run Pause Configuration Refresh**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to pause Config Refresh

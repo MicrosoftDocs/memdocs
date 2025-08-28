@@ -33,7 +33,7 @@ The **Update cellular data plan** remote action lets you remotely activate an eS
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Remote tasks/Update cellular data plan**
+>   - The permission **Remote tasks/Update cellular data plan**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## Remotely update the cellular data plan

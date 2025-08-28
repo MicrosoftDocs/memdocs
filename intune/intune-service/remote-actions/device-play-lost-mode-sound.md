@@ -41,7 +41,7 @@ With Microsoft Intune, you can help users locate lost or misplaced devices by re
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Remote tasks/Play sound to locate lost devices**
+>   - The permission **Remote tasks/Play sound to locate lost devices**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to play lost mode sound

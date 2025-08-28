@@ -32,7 +32,7 @@ ms.collection:
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Remote tasks/Rotate filevault key**
+>   - The permission **Remote tasks/Rotate filevault key**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## Reference links

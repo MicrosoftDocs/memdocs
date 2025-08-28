@@ -37,7 +37,7 @@ The **Retire** action removes managed app data (where applicable), settings, and
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Remote tasks/Wipe**
+>   - The permission **Remote tasks/Wipe**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to retire a device

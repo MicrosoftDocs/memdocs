@@ -32,7 +32,7 @@ The **Logout current user** action logs out the current user on a shared iPad de
 >
 > - [Help Desk Operator][INT-R1]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Remote tasks/Manage shared device users**
+>   - The permission **Remote tasks/Manage shared device users**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## Log out the current user

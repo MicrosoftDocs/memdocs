@@ -35,7 +35,7 @@ With the **shut down** action, IT administrators can remotely power off managed 
 > - [School Administrator][INT-R2]
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Remote tasks/Shut down**
+>   - The permission **Remote tasks/Shut down**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to shut down a device

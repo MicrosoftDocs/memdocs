@@ -47,7 +47,7 @@ The **Remote lock** device action locks a managed device so the user must enter 
 > - [School Administrator][INT-R2]
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
->   - The permission: **Remote tasks/Remote lock**
+>   - The permission **Remote tasks/Remote lock**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 ## How to remote lock a device
