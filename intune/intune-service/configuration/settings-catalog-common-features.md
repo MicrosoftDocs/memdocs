@@ -17,7 +17,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: laarrizz, mikedano, beflamm
+ms.reviewer: laarrizz, mayurjadhav, beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
