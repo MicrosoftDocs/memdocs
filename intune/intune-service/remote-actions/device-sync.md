@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -71,5 +71,5 @@ When an administrator runs the **Sync** device action, iOS/iPadOS and Android ap
 
 ## Next steps
 
-You can [check the details](device-inventory.md) of the device.
- 
+You can [check the details](../fundamentals/device-inventory.md) of the device.
+

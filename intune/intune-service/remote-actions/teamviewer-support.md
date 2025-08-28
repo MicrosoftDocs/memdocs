@@ -82,7 +82,7 @@ To provide remote assistance to devices, configure the Intune TeamViewer connect
 
 ## Remotely administer a device
 
-After the connector is configured, you're ready to remotely administer a device. 
+After the connector is configured, you're ready to remotely administer a device.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices**.
@@ -106,4 +106,4 @@ When you start a remote session, users see a notification flag on the Company Po
 
 [Use Remote Help with Intune](../fundamentals/remote-help.md)
 
-[See device details in Intune](device-inventory.md)
+[See device details in Intune](../fundamentals/device-inventory.md)
