@@ -47,7 +47,7 @@ This feature applies to:
 
 - To configure the settings catalog policy, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-- [Enable Microsoft 365 Apps Automatic Updates](/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can enable automatic updates using Group Policy, or the Intune Office settings catalog settings:
+- Add and enable [Microsoft 365 Apps Automatic Updates](/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can enable automatic updates using Group Policy, or the Intune Office settings catalog settings:
 
   :::image type="content" source="./media/settings-catalog-update-office/settings-catalog-search-enable-automatic-updates.png" alt-text="Screenshot that shows searching for the Enable Office updates using the settings catalog in Microsoft Intune." lightbox="./media/settings-catalog-update-office/settings-catalog-search-enable-automatic-updates.png":::
 
@@ -87,19 +87,19 @@ After you assign the policy and the device syncs, you can confirm the Intune pol
 
     - `L_UpdatePath`
 
-    Looking at the following example, you see `L_UpdatePath` has a value similar to `<enabled/><data id="L_UpdatePathID" value="http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114" />`. This value means the update channel is set to Semi-Annual Enterprise Channel:
+    Looking at the following example, you see `L_UpdatePath` has a value similar to `<enabled/><data id="L_UpdatePathID" value="http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114" />`. This value means the update channel is set similar to the following image:
 
     :::image type="content" source="./media/settings-catalog-update-office/settings-catalog-update-path-registry-key.png" alt-text="Microsoft Intune settings catalog L_UpdatePath registry key example for Microsoft Office" lightbox="./media/settings-catalog-update-office/settings-catalog-update-path-registry-key.png":::
 
     > [!TIP]
     > [Manage Microsoft 365 Apps with Configuration Manager](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) lists the values, and what they mean. The registry values are based on the distribution channel selected:
     >
-    >- Current Channel                - value="http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60"
-    >- Current Channel (preview)      - value="http://officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be"
-    >- Monthly Enterprise Channel     - value="http://officecdn.microsoft.com/pr/55336b82-a18d-4dd6-b5f6-9e5095c314a6"
-    >- Semi-Annual Enterprise Channel - value="http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114"
-    >- Semi-Annual Enterprise Channel (preview) - value="http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf"
-    >- Beta                   - value="http://officecdn.microsoft.com/pr/5440fd1f-7ecb-4221-8110-145efaa6372f"
+    >- Current Channel                - value=`http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`
+    >- Current Channel (preview)      - value=`http://officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be`
+    >- Monthly Enterprise Channel     - value=`http://officecdn.microsoft.com/pr/55336b82-a18d-4dd6-b5f6-9e5095c314a6`
+    >- Semi-Annual Enterprise Channel - value=`http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114`
+    >- Semi-Annual Enterprise Channel (preview) - value=`http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf`
+    >- Beta                   - value=`http://officecdn.microsoft.com/pr/5440fd1f-7ecb-4221-8110-145efaa6372f`
 
 At this point, the Intune policy is successfully applied to the device.
 
