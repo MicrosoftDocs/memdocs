@@ -74,11 +74,9 @@ For **Android Enterprise corporate-owned work profile devices**, and **Android E
 
 ::: zone-end
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the APIs used for this action, see:
-
-- [playLostModeSound action][GRAPH-1]
+- Microsoft Graph API reference: [playLostModeSound action][GRAPH-1]
 
 <!--links-->
 

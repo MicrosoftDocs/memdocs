@@ -81,9 +81,11 @@ Here's how to diable lost mode on a device using the Intune admin center:
 - The data is stored in Intune for 24 hours, then removed. You can't manually remove the location data.
 - Location data is encrypted, both while stored, and while in transit.
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for these actions, see [enableLostMode action][GRAPH-1] and [disableLostMode action][GRAPH-2] in the Microsoft Graph API documentation.
+- Microsoft Graph API references:
+  - [enableLostMode action][GRAPH-1]
+  - [disableLostMode action][GRAPH-2]
 
 <!--links-->
 

@@ -151,12 +151,11 @@ To start a lost device sound alert:
 - For iOS/iPadOS devices, when you configure lost mode, you can customize a message that appears on the lock screen. In this message, to help the person that finds the device, be sure to include specific details to return the lost device.
 - For fully-managed and corporate-owned work profile scenarios, end users receive a notification when the administrator uses this feature, if notifications are enabled.
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the APIs used for this action, see:
-
-- [locateDevice action][GRAPH-1]
-- [playLostModeSound action][GRAPH-2]
+- Microsoft Graph API references:
+  - [locateDevice action][GRAPH-1]
+  - [playLostModeSound action][GRAPH-2]
 
 
 <!--links-->

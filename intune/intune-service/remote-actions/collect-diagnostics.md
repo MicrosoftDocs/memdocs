@@ -305,14 +305,13 @@ Currently there are the two main issues that could cause device diagnostics to f
 
 ::: zone-end
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the APIs used for this action, see:
-
-- [createdevicelogcollectionrequest action][GRAPH-1]
-- [createdownloadurl action][GRAPH-2]
-- [downloadAppDiagnostics action][GRAPH-3]
-- [appDiagnostics function][GRAPH-4]
+- Microsoft Graph API references:
+  - [createdevicelogcollectionrequest action][GRAPH-1]
+  - [createdownloadurl action][GRAPH-2]
+  - [downloadAppDiagnostics action][GRAPH-3]
+  - [appDiagnostics function][GRAPH-4]
 
 <!--links-->
 
