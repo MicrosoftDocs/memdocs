@@ -62,9 +62,9 @@ The **Remote lock** device action locks a managed device so the user must enter 
 
 ::: zone-end
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [remoteLock action][GRAPH-1].
+- Microsoft Graph API reference: [remoteLock action][GRAPH-1]
 
 <!--links-->
 

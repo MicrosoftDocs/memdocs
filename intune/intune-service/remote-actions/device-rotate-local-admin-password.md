@@ -21,9 +21,9 @@ Initiates a rotation for the local admin password on the device.
 > To execute this remote action, you must use an account that has a [Custom role][INT-RC] with the permission:
 >   - Remote tasks/Rotate Local Admin Password
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [rotatelocaladminpassword action][GRAPH-1].
+- Microsoft Graph API reference: [rotatelocaladminpassword action][GRAPH-1]
 
 
 <!--links-->

@@ -42,9 +42,9 @@ ms.collection:
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **...** > **Quick scan** or **Full scan**.
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [windowsDefenderScan action][GRAPH-1].
+- Microsoft Graph API reference: [windowsDefenderScan action][GRAPH-1]
 
 <!--links-->
 

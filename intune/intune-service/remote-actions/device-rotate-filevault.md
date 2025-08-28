@@ -35,9 +35,9 @@ ms.collection:
 >   - The permission: **Remote tasks/Rotate filevault key**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [rotateFileVaultKey action][GRAPH-1].
+- Microsoft Graph API reference: [rotateFileVaultKey action][GRAPH-1]
 
 
 <!--links-->

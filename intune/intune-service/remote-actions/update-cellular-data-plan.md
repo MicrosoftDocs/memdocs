@@ -52,9 +52,9 @@ When you select the **Update cellular data plan** action, the device receives a 
 
 For more information about devices that support eSIM, see the Apple support article [Using Dual SIM with an eSIM](https://support.apple.com/HT209044).
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [activateDeviceEsim action][GRAPH-1].
+- Microsoft Graph API reference: [activateDeviceEsim action][GRAPH-1]
 
 <!--links-->
 

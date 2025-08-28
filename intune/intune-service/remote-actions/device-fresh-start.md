@@ -53,9 +53,9 @@ The **Fresh Start** device action removes apps from managed Windows devices, hel
 
 1. Select **OK**.
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [cleanWindowsDevice action][GRAPH-1].
+- Microsoft Graph API reference: [cleanWindowsDevice action][GRAPH-1]
 
 <!--links-->
 

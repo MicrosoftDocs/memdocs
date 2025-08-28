@@ -143,9 +143,9 @@ The notification remains until the user dismisses it.
 > For Android devices, users must update to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) to receive custom notifications. If users don't update before Intune's November (2111) service release and they're sent a custom notification, they'll instead receive a notification telling them to update their app to view the notification. Once they update their app, they'll see the message sent by your organization in the Notifications section in the app.
 
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [sendCustomNotificationToCompanyPortal action][GRAPH-1].
+- Microsoft Graph API reference: [sendCustomNotificationToCompanyPortal action][GRAPH-1]
 
 <!--links-->
 

@@ -163,9 +163,9 @@ The monitoring page displays the following information:
 
 ---
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [changeAssignments action][GRAPH-1] in the Microsoft Graph API documentation.
+- Microsoft Graph API reference: [changeAssignments action][GRAPH-1] in the Microsoft Graph API documentation.
 
 <!--links-->
 

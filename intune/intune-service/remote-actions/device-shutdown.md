@@ -46,9 +46,9 @@ With the **shut down** action, IT administrators can remotely power off managed 
 > [!NOTE]
 > iOS/iPadOS devices that are Passcode-locked will not rejoin a Wi-Fi network after restarting. After restarting, the device might not be able to communicate with the server.
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [shutDown action][GRAPH-1].
+- Microsoft Graph API reference: [shutDown action][GRAPH-1]
 
 <!-- links -->
 

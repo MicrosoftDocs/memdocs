@@ -55,9 +55,9 @@ This is typically used for troubleshooting scenarios where you don't want the de
 > If you pause a device that does not have Config Refresh enabled it has no effect.
 > If Config Refresh is paused and you want to resume, then select Pause again for 0 minutes to resume Config Refresh enforcement.
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [pauseConfigurationRefresh action][GRAPH-1] in the Microsoft Graph API documentation.
+- Microsoft Graph API reference: [pauseConfigurationRefresh action][GRAPH-1] in the Microsoft Graph API documentation.
 
 <!--links-->
 

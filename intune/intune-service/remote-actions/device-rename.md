@@ -106,9 +106,9 @@ To use the bulk rename action:
 
 To see the status of the **Rename** device action, check the **Overview** page for the device.
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [setDeviceName action][GRAPH-1].
+- Microsoft Graph API reference: [setDeviceName action][GRAPH-1]
 
 
 <!--links-->

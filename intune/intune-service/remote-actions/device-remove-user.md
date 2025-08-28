@@ -43,9 +43,9 @@ The **Remove user** action deletes a user that you select from the local cache o
 1. Select **Users**.
 1. In the list, right-click the user that you want to remove, and then select **Remove user**.
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [deleteUserFromSharedAppleDevice action][GRAPH-1].
+- Microsoft Graph API reference: [deleteUserFromSharedAppleDevice action][GRAPH-1]
 
 <!--links-->
 

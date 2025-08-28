@@ -65,9 +65,9 @@ When you execute the **Sync** remote action, iOS/iPadOS and Android apps that fa
 | 2016330889 | The secure connection failed. Reset your connection. | Yes|
 | 2016330888 | The server trust evaluation has failed. | No|
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [syncDevice action][GRAPH-1].
+- Microsoft Graph API reference: [syncDevice action][GRAPH-1]
 
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

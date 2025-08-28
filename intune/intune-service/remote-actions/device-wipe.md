@@ -243,9 +243,9 @@ Intune gives you the ability to use the **Wipe** remote device action to wipe da
     - **Always obliterate**: The system doesn't attempt Erase All Content and Settings (EACS). T2 and later devices always obliterate.
 1. Select **Wipe** to erase the device.
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [wipe action][GRAPH-1].
+- Microsoft Graph API reference: [wipe action][GRAPH-1]
 
 <!--
 Initiates a wipe of the device. Also called a factory reset. The Factory reset action restores a device to its factory default settings. The user data is kept or wiped depending on whether or not you choose the Retain enrollment state and user account checkbox.

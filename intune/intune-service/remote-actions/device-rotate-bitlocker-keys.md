@@ -47,17 +47,11 @@ https://go.microsoft.com/fwlink/?linkid=2333814
 1. From the devices list, select a device, and then select **...** > **BitLocker key rotation**.
 1. Select **Yes** to confirm the action.
 
-## :::image type="icon" source="../media/icons/headers/csp.svg" border="false"::: CSP reference
+## Reference links
 
-For more information about the CSP used for this action, see [BitLocker CSP][CSP-1].
-
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
-
-For more information about the API used for this action, see [rotateBitLockerKeys action][GRAPH-1].
-
-## Related articles
-
-To learn more about BitLocker, see [BitLocker overview][WIN-1].
+- Configuration service provider (CSP) used to initiate the remote action: [BitLocker CSP][CSP-1]
+- Microsoft Graph API reference: [rotateBitLockerKeys action][GRAPH-1]
+- [BitLocker overview][WIN-1]
 
 <!--links-->
 

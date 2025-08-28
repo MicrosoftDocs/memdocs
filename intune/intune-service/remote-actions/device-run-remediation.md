@@ -29,9 +29,9 @@ ms.collection:
 
 
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [initiateOnDemandProactiveRemediation action][GRAPH-1].
+- Microsoft Graph API reference: [initiateOnDemandProactiveRemediation action][GRAPH-1]
 
 
 <!--links-->

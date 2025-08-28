@@ -67,9 +67,9 @@ When the 5‑minute restart timer starts, Windows attempts to show the notificat
 For more information about WNS, see [Network endpoint requirements](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
 ::: zone-end
 
-## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+## Reference links
 
-For more information about the API used for this action, see [rebootNow action][GRAPH-1].
+- Microsoft Graph API reference: [rebootNow action][GRAPH-1]
 
 <!--links-->
 
