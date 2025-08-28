@@ -43,6 +43,7 @@ Applies to:
 - Windows 11
 
 ## Common deployment scenarios
+
 The table below lists the common deployment scenarios for EPM. We can choose to focus on all scenarios, or mainly scenario 2 (scenario 1 is very quickly/easy).
 
 | Scenario | Local User (Before) | Local User (After) | Example Role | Use Case |
@@ -68,4 +69,4 @@ Repeat phases 2 to 5 continuously to ensure your users have least privelge in li
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Next: Create an elevation settings policy >](epm-deploy-create-policy.md)
+> [Next: Create an elevation settings policy >](epm-elevation-settings.md)

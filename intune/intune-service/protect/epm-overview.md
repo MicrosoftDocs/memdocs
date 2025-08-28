@@ -60,11 +60,18 @@ Elevation can be triggered by EPM, or by a user right clicking on a supported fi
 - **Elevation rules policy** - defines elevation behavior for apps based on criteria.
 - **Elevation settings policy** - controls the EPM client, reporting level and default elevation capability.
 
-Both rules and policies can be targeted at groups of users or devices. To perform the elevation on the device, the EPM service uses a virtual account, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group. 
+Both rules and policies can be targeted at groups of users or devices. To perform the elevation on the device, the EPM service uses a virtual account, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group.
 
 EPM does not require an agent to be installed – the client is initiated by deploying an Elevation settings policy from Intune, which creates a 'Microsoft EPM Agent Service' and a "C:\Program Files\Microsoft EPM Agent" directory.
 
 ## INSERT PICTURE HERE
+
+### Elevation Triggers
+
+EPM elevation can be triggered using two methods:
+
+- Automatically, or;
+- User selected "Run with elevated access".
 
 ### Elevation Types
 
@@ -94,9 +101,9 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
 
 EPM supports elevating these types of files:
 
-- Executable files with a .exe extension.
-- Windows installer files with a .msi extension.
-- PowerShell scripts with the .ps1 extension.
+- Executable files with a `.exe` extension.
+- Windows installer files with a `.msi` extension.
+- PowerShell scripts with the `.ps1` extension.
 
 ### Reporting
 

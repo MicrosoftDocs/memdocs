@@ -65,4 +65,3 @@ Certain items that reside in the start menu or taskbar have a curated right-clic
 ### Can I launch multiple files as elevated with the "Run with elevated access" right-click context menu?
 
 Only one file can be elevated at a time. To launch multiple files elevated, right-click each file individually and select *Run with elevated access*.
-
