@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/remote-actions/teamviewer-support.md",
+      "redirect_url": "/intune/intune-service/fundamentals/teamviewer-support",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/remote-actions/device-inventory.md",
       "redirect_url": "/intune/intune-service/fundamentals/device-inventory",
       "redirect_document_id": false

@@ -104,10 +104,10 @@ For more information, see [Use Fresh Start to reset Windows devices with Intune]
 
 Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com/). TeamViewer is a third-party program that you acquire separately.
 
-For more information, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/remote-actions/teamviewer-support.md).
+For more information, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/fundamentals/teamviewer-support.md).
 
 ## Configure
 
 Other than remote control via TeamViewer, to start using these remote device actions in Intune, no additional setup is required after you [enable co-management](how-to-enable.md).
 
-For more information on using TeamViewer for remote control, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/remote-actions/teamviewer-support.md).
+For more information on using TeamViewer for remote control, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/fundamentals/teamviewer-support.md).
