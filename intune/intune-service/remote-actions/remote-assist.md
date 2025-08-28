@@ -48,5 +48,36 @@ ms.collection:
     > [All devices][INT-AC1]
 1. From the devices list, select a device, and then select **...** > **New Remote Assistance Session**
 
+## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
+
+For more information about the APIs used for this action, see:
+
+- [action][GRAPH-1]
+
+
+
+
 [Use Remote Help with Intune](../fundamentals/remote-help.md)
 [See device details in Intune](../fundamentals/device-inventory.md)
+
+<!--links-->
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-AC1]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+
+<!-- role links -->
+
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+
+<!-- API links -->
+
+[GRAPH-1]: /graph/api/
+
+
+<!-- MSLearn links -->
+
+[WIN-1]: /windows/security/operating-system-security/data-protection/bitlocker/

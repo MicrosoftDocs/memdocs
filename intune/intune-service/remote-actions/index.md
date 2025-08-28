@@ -56,7 +56,7 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="../media/icons/remote-actions/locate-device.svg" border="false"::: | [Locate device][RA-LOCATE] | Shows the approximate location of a device on a map. |
 | :::image type="icon" source="../media/icons/remote-actions/pause-config-refresh.svg" border="false"::: | [Pause Config Refresh][RA-PAUSECR] | Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes. |
 | :::image type="icon" source="../media/icons/remote-actions/quick-scan.svg" border="false"::: | [Quick Scan][RA-SCAN] | Initiates a quick scan of the device by Microsoft Defender Antivirus. |
-| :::image type="icon" source="../media/icons/remote-actions/new-remote-assistance-session.svg" border="false"::: | New remote assistance session| Allows you to remotely control a device using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
+| :::image type="icon" source="../media/icons/remote-actions/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
 | :::image type="icon" source="../media/icons/remote-actions/rename-device.svg" border="false"::: | [Rename device][RA-REN] | Changes the device name in Intune. |
 | :::image type="icon" source="../media/icons/remote-actions/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
 | :::image type="icon" source="../media/icons/remote-actions/retire.svg" border="false"::: | [Retire][RA-RETIRE] | Removes company data and settings from a device, and leaves personal data intact. |
@@ -75,7 +75,7 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="../media/icons/remote-actions/locate-device.svg" border="false"::: | [Locate device][RA-LOCATE] | Shows the approximate location of a device on a map. |
 | :::image type="icon" source="../media/icons/remote-actions/logout-current-user.svg" border="false"::: | [Logout current user][RA-LOGOUT] | Signs out the current user from a shared iPad. |
 | :::image type="icon" source="../media/icons/remote-actions/lost-mode.svg" border="false"::: | [Lost mode][RA-LOSTMODE] | Locks a device with a custom message and disables sound and vibration. |
-| :::image type="icon" source="../media/icons/remote-actions/new-remote-assistance-session.svg" border="false"::: | New remote assistance session| Allows you to remotely control a device using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
+| :::image type="icon" source="../media/icons/remote-actions/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
 | :::image type="icon" source="../media/icons/remote-actions/play-lost-mode-sound.svg" border="false"::: | [Play Lost Mode sound][RA-PLAY] | Plays Lost Mode sound on a lost device to help locate it. |
 | :::image type="icon" source="../media/icons/remote-actions/remote-lock.svg" border="false"::: | [Remote lock][RA-LOCK] | Locks a device and resets its password. |
 | :::image type="icon" source="../media/icons/remote-actions/remove-apps-and-configuration.svg" border="false"::: | [Remove apps and configuration][RA-APPCON] | Temporarily remove applications and configuration from a device.|
@@ -95,7 +95,7 @@ Select one of the following tabs to learn more about the available remote action
 |--|--|--|
 | :::image type="icon" source="../media/icons/remote-actions/delete.svg" border="false"::: | [Delete][RA-DELETE] | Removes a device from Intune management, any company data is removed, and the device is retired. |
 | :::image type="icon" source="../media/icons/remote-actions/disable-activation-lock.svg" border="false"::: | [Disable Activation Lock][RA-ACTLOCK] | Removes the Activation Lock from a device that is enrolled with a device enrollment manager (DEM) account. |
-| :::image type="icon" source="../media/icons/remote-actions/new-remote-assistance-session.svg" border="false"::: | New remote assistance session| Allows you to remotely control a device using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
+| :::image type="icon" source="../media/icons/remote-actions/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
 | :::image type="icon" source="../media/icons/remote-actions/remote-lock.svg" border="false"::: | [Remote lock][RA-LOCK] | Locks a device and resets its password. |
 | :::image type="icon" source="../media/icons/remote-actions/rename-device.svg" border="false"::: | [Rename device][RA-REN] | Changes the device name in Intune. |
 | :::image type="icon" source="../media/icons/remote-actions/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
@@ -110,7 +110,7 @@ Select one of the following tabs to learn more about the available remote action
 |--|--|--|
 | :::image type="icon" source="../media/icons/remote-actions/delete.svg" border="false"::: | [Delete][RA-DELETE] | Removes a device from Intune management, any company data is removed, and the device is retired. |
 | :::image type="icon" source="../media/icons/remote-actions/locate-device.svg" border="false"::: | [Locate device][RA-LOCATE] | Shows the approximate location of a device on a map. |
-| :::image type="icon" source="../media/icons/remote-actions/new-remote-assistance-session.svg" border="false"::: | New remote assistance session| Allows you to remotely control a device using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
+| :::image type="icon" source="../media/icons/remote-actions/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
 | :::image type="icon" source="../media/icons/remote-actions/play-lost-mode-sound.svg" border="false"::: | [Play lost device sound][RA-PLAY] | Plays a sound on a lost device to help locate it. |
 | :::image type="icon" source="../media/icons/remote-actions/remote-lock.svg" border="false"::: | [Remote lock][RA-LOCK] | Locks a device and resets its password. |
 | :::image type="icon" source="../media/icons/remote-actions/remove-apps-and-configuration.svg" border="false"::: | [Remove apps and configuration][RA-APPCON] | Temporarily remove applications and configuration from a device.|
@@ -199,6 +199,7 @@ Some remote actions can also be executed in bulk. To learn more, see [Bulk devic
 [RA-ACTLOCK]: device-activation-lock-disable.md
 [RA-APPCON]: remove-apps-config.md
 [RA-APRESET]: /windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset
+[RA-ASSIST]: remote-assist.md
 [RA-BL]: device-rotate-bitlocker-keys.md
 [RA-CELLULAR]: update-cellular-data-plan.md
 [RA-DEFAV]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
