@@ -70,6 +70,9 @@ For more information about WNS, see [Network endpoint requirements](../fundament
 
 ## Reference links
 
+::: zone pivot="windows"
+- Configuration service provider (CSP) used to initiate the remote action: [Reboot CSP][CSP-1]
+::: zone-end
 - Microsoft Graph API reference: [rebootNow action][GRAPH-1]
 
 <!--links-->
@@ -91,6 +94,8 @@ For more information about WNS, see [Network endpoint requirements](../fundament
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
+
+[CSP-1]: /windows/client-management/mdm/reboot-csp
 
 ::: zone pivot="windows,ios,macos,android,chrome"
 ::: zone-end

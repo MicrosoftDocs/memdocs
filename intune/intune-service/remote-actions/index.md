@@ -196,7 +196,7 @@ Some remote actions can also be executed in bulk. To learn more, see [Bulk devic
 
 [RA-ACTLOCK]: device-activation-lock-disable.md
 [RA-APPCON]: remove-apps-config.md
-[RA-APRESET]: /windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset
+[RA-APRESET]: /autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset
 [RA-ASSIST]: remote-assist.md
 [RA-BL]: device-rotate-bitlocker-keys.md
 [RA-CELLULAR]: update-cellular-data-plan.md
