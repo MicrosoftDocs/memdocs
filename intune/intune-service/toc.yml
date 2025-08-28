@@ -1290,6 +1290,9 @@ items:
             - name: Update Microsoft 365
               displayName: gpo, windows, admx, update channel
               href: ./configuration/settings-catalog-update-office.md
+            - name: Restrict USB devices
+              displayName: gpo, windows
+              href: ./configuration/settings-catalog-restrict-usb.md
         - name: Properties catalog
           displayName: windows
           href: ./configuration/properties-catalog.md
@@ -1358,9 +1361,9 @@ items:
           - name: Create Microsoft Edge policy using settings catalog
             displayName: gpo, windows, macos, admx
             href: ./configuration/settings-catalog-configure-edge.md
-          - name: Restrict USB devices using ADMX
+          - name: Restrict USB devices using settings catalog
             displayName: gpo, windows
-            href: ./configuration/administrative-templates-restrict-usb.md
+            href: ./configuration/settings-catalog-restrict-usb.md
         - name: BIOS & DFCI on Windows
           items:
           - name: Configure the BIOS

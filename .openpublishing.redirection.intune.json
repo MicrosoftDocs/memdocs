@@ -512,7 +512,7 @@
     },
     {
       "source_path": "intune/intune/configuration/administrative-templates-restrict-usb.md",
-      "redirect_url": "/intune/intune-service/configuration/administrative-templates-restrict-usb",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-restrict-usb",
       "redirect_document_id": false
     },
     {
