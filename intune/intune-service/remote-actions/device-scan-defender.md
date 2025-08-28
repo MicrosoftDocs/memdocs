@@ -33,14 +33,13 @@ ms.collection:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
-> - [Custom role][INT-RC] with the permission:
->   - Remote tasks/Windows defender
+> - [Custom role][INT-RC] that includes:
+>   - The permission: **Remote tasks/Windows defender**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Read device, Update devices)
 
 ## How to initiate a full scan or quick scan
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
-    > [!div class="nextstepaction"]
-    > [All devices][INT-AC1]
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
 1. From the devices list, select a device, and then select **...** > **Quick scan** or **Full scan**.
 
 ## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference

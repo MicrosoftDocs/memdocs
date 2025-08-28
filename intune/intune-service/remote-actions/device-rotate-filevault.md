@@ -31,8 +31,9 @@ ms.collection:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
-> - [Custom role][INT-RC] with the permission:
->   - Remote tasks/Rotate filevault key.
+> - [Custom role][INT-RC] that includes:
+>   - The permission: **Remote tasks/Rotate filevault key**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Read device, Update devices)
 
 ## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference
 

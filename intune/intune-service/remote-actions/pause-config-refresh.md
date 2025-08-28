@@ -39,14 +39,13 @@ This is typically used for troubleshooting scenarios where you don't want the de
 > To execute this remote action, you must use an account that has at least one of the following roles:
 >
 > - [Intune Administrator][ENT-R1]
-> - [Custom role][INT-RC] with the permission:
->   - Remote tasks/Run Pause Configuration Refresh
+> - [Custom role][INT-RC] that includes:
+>   - The permission: **Remote tasks/Run Pause Configuration Refresh**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Read device, Update devices)
 
 ## How to pause Config Refresh
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
-    > [!div class="nextstepaction"]
-    > [All devices][INT-AC1]
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
 1. From the devices list, select a device.
 1. Select **Pause Config Refresh**.
 1. Specify the number of minutes to pause Config Refresh in the **Time period to Pause Config Refresh**. The maximum is 1,440 minutes (24 hours).

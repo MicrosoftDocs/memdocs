@@ -31,14 +31,13 @@ The **Logout current user** action logs out the current user on a shared iPad de
 > To execute this remote action, you must use an account that has at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
-> - [Custom role][INT-RC] with the permission:
->   - Remote tasks/Manage shared device users
+> - [Custom role][INT-RC] that includes:
+>   - The permission: **Remote tasks/Manage shared device users**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Read device, Update devices)
 
 ## Log out the current user
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
-    > [!div class="nextstepaction"]
-    > [All devices][INT-AC1]
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
 1. From the devices list, select a device, and then select **...** > **Logout current user**.
 
 ## :::image type="icon" source="../media/icons/headers/microsoft-graph.svg" border="false"::: Microsoft Graph API reference

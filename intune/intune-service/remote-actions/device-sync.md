@@ -41,9 +41,7 @@ The **Sync** device action forces the selected device to immediately check in wi
 
 ## How to sync a device
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
-    > [!div class="nextstepaction"]
-    > [All devices][INT-AC1]
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
 1. From the devices list, select a device, and then select **Sync**.
 1. To confirm, select **Yes**.
 

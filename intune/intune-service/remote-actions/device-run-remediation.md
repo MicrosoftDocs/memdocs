@@ -23,8 +23,9 @@ ms.collection:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] with the permission:
->   - Remote tasks/Run Remediation
+> - [Custom role][INT-RC] that includes:
+>   - The permission: **Remote tasks/Run Remediation**
+>   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Read device, Update devices)
 
 
 

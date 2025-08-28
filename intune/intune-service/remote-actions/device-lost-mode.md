@@ -46,9 +46,7 @@ Lost mode is a lightweight but powerful tool that helps organizations safeguard 
 
 Here's how to enable lost mode on a device using the Intune admin center:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
-    > [!div class="nextstepaction"]
-    > [All devices][INT-AC1]
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
 1. From the devices list, select a device, and then select **Lost mode (supervised only)**.
 1. Under **Lost mode**, select **Enable**.
 1. In the **Message to display on lock screen**, type a message to display on the device's lock screen.
@@ -71,9 +69,7 @@ While lost mode is enabled, use the [Locate device](device-locate.md) action to 
 
 Here's how to diable lost mode on a device using the Intune admin center:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices**, or use the following shortcut:
-    > [!div class="nextstepaction"]
-    > [All devices][INT-AC1]
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**](https://go.microsoft.com/fwlink/?linkid=2333814)
 1. From the devices list, select a device, and then **Lost mode (supervised only)**.
 1. Under **Lost mode**, select **Disable**.
 1. Select **OK** to save your changes.
