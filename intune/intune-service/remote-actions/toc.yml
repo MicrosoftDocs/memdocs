@@ -5,7 +5,7 @@ items:
   href: bulk-device-actions.md
 - name: Actions list
   items:
-  - name: ✅ BitLocker key rotation
+  - name: BitLocker key rotation ✅
     href: device-rotate-bitlocker-keys.md
   - name: Collect diagnostics
     href: collect-diagnostics.md

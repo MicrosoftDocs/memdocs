@@ -118,7 +118,7 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="../media/icons/remote-actions/reset-passcode.svg" border="false"::: | [Reset passcode][RA-PREST] | Resets the device passcode. |
 | :::image type="icon" source="../media/icons/remote-actions/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
 | :::image type="icon" source="../media/icons/remote-actions/retire.svg" border="false"::: | [Retire][RA-RETIRE] | Removes company data and settings from a device, and leaves personal data intact. |
-| :::image type="icon" source="../media/icons/remote-actions/send-custom-notification.svg" border="false"::: | [Send custom notification][RA-NOTIF] | Sends a custom notification message to a device that can be viewed in the Company Portal app. |
+| :::image type="icon" source="../media/icons/remote-actions/send-custom-notification.svg" border="false"::: | [Send custom notification][RA-NOTIFY] | Sends a custom notification message to a device that can be viewed in the Company Portal app. |
 | :::image type="icon" source="../media/icons/remote-actions/sync.svg" border="false"::: | [Sync][RA-SYNC] | Syncs a device with Intune to apply the latest policies and configurations. |
 | :::image type="icon" source="../media/icons/remote-actions/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | This action restores a device to its factory settings and removes all data and settings. |
 
