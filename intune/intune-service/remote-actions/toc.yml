@@ -65,5 +65,7 @@ items:
     href: update-cellular-data-plan.md
   - name: Wipe
     href: device-wipe.md
+  - name: Cleanup rules
+    href: _cleanup-rules.md
 - name: Troubleshoot device actions
   href: /troubleshoot/mem/intune/troubleshoot-device-actions

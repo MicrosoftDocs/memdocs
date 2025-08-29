@@ -50,7 +50,7 @@ MDM policies will be reapplied the next time the device connects to Intune.
 
 A wipe is useful for resetting a device before you give the device to a new user, or when the device has been lost or stolen. Be careful about selecting **Wipe**. Data on the device can't be recovered. The method that "Wipe" uses to remove data is simple file deletion, and the drive is BitLocker decrypted as part of this process.
 
-### Wiping a device
+### How to wipe a device
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices**.
@@ -92,11 +92,6 @@ If the device is on and connected, the **Wipe** action propagates across all dev
 > To execute this remote action, at a minimum, use an account that has one of the following roles:
 >
 
-
-
-
-
-
 ## Manually unenroll devices
 
 Device owners can manually unenroll their devices as explained in the following end user help articles:
@@ -111,105 +106,6 @@ Device owners can manually unenroll their devices as explained in the following 
 > - Manually delete the device in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 > - Manually delete the device record in Microsoft Entra ID.
 
-## Delete devices from the Intune admin center
-
-If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. Intune issues a **Retire** or **Wipe** action depending on the OS/Enrollment type. Not all enrollment types support the **Retire** action. See the following table for the expected behavior based on the device platform and the enrollment type.
-
-| OS      | Enrollment Type                            | Action triggered                                                          |
-|---------|--------------------------------------------|---------------------------------------------------------------------------|
-| Android | Device administrator                       | RETIRE - All Profiles are deleted, Company Portal (CP) app is signed out. |
-| Android | Personally owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                     |
-| Android | Corporate-owned devices with work profile  | WIPE                                                                      |
-| Android | Dedicated devices                          | WIPE                                                                      |
-| Android | Dedicated w/ Entra ID Shared Mode          | WIPE                                                                      |
-| Android | Fully managed user devices                 | WIPE                                                                      |
-| Android | AOSP Userless/AOSP User-Associated         | WIPE                                                                      |
-| iOS     | All                                        | RETIRE - All Profiles are deleted, CP app is signed out                   |
-| Windows | All                                        | RETIRE - All Profiles are deleted, work and school account is signed out  |
-| macOS   | All                                        | RETIRE - All Profiles are deleted, CP app is deleted                      |
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
-
-> [!IMPORTANT]
-> The **Delete** action triggers the following actions:
->
-> * Depending on the device platform, it can retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](devices-wipe.md#retire) section for the expected behavior.
-> * BitLocker encryption is suspended if managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
-
-### Automatically hide devices with cleanup rules
-
-You can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices cleaned up in this way are concealed and hidden from some Intune reports. This setting affects all devices managed by Intune, not just specific devices.
-
-#### Before you begin
-
-- The device cleanup rule doesn't trigger a BitLocker suspension when BitLocker encryption is managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
-- Device cleanup rules aren't available for Jamf-managed devices.
-- To update device cleanup rules, you need the **Managed Device Cleanup Settings** > **Update** permission set to **Yes**. This permission is part of [Intune role-based access control (RBAC)](../fundamentals/role-based-access-control.md).
-
-  :::image type="content" source="images/managed-device-cleanup-rules-permission.png" alt-text="Screenshot that shows the Managed Device Cleanup Settings permission in RBAC set to Yes in Microsoft Intune.":::
-
-#### Create a device cleanup rule
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **Organize devices** > **Device cleanup rules** > **Create**.
-1. In **Basics**, enter the following properties:
-
-    - **Name**: Enter a descriptive name for the rule.
-    - **Description**: Enter a description for the rule. This setting is optional, but recommended.
-    - **Platform**: Select the platform that the rule applies to. Your options:
-        - All platforms
-        - Android (AOSP)
-        - Android Enterprise
-        - iOS/iPadOS
-        - macOS
-        - Windows
-
-    You can create one rule per platform. The rule applies to all devices in your organization with the platform you select.
-
-1. Select **Next**.
-1. In **Rule settings** > **Remove devices that haven't checked in for this many days**, enter a number between 30 and 270.
-
-    This setting determines how many days a device must check in with the Intune service before the device is considered stale or inactive. If a device fails to check-in before the period ends, the device is cleaned up.
-
-1. Select **Next**.
-1. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the rule applies. The rule is also shown in the cleanup rules list.
-
-When a device cleanup rule runs, it conceals the device from Intune reports. This action doesn't trigger a Wipe or Retire action.
-
-The [Intune audit logs](../fundamentals/monitor-audit-logs.md) show the devices concealed by your device cleanup rules. In the logs, filter by **Activity name** > **Device set to be hidden from admin by Device Cleanup Rule [*YourRuleName*]**.
-
-If a cleaned up device checks in before its device certification expires, it reappears in the Intune admin center. Once the device certification expires, the device must go through a re-enrollment process for it to show in the Intune admin center.
-
-<a name='delete-devices-from-the-microsoft-entra-portal'></a>
-
-## Delete devices from the Microsoft Entra admin center
-
-You might need to delete devices from Microsoft Entra ID due to communication issues or missing devices. You can use the **Delete** action to remove device records from the Azure portal for devices that you know are unreachable and unlikely to communicate with Azure again. The **Delete** action doesn't remove a device from management.
-
-1. Sign in to [Microsoft Entra ID in the Azure portal](https://azure.microsoft.com/services/active-directory/) by using your admin credentials. You can also sign in to the [Microsoft 365 admin center](https://admin.microsoft.com). From the menu, select **Admin centers** > **Microsoft Entra ID**.
-1. Create an Azure subscription if you don't have one. The subscription shouldn't require a credit card or payment if you have a paid account (select the **Register your free Microsoft Entra ID** subscription link).
-1. Select **Microsoft Entra ID**, and then select your organization.
-1. Select the **Users** tab.
-1. Select the user that's associated with the device that you want to delete.
-1. Select **Devices**.
-1. Remove devices as appropriate. For example, you might remove devices that are no longer in use, or devices that have inaccurate definitions.
-
-## Retire an Apple ADE device from Intune
-
-If you want to completely remove an Apple automated device enrollment (ADE) device from management by Intune, follow these steps:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **All devices** > select the device > **Retire**.
-1. Visit [business.apple.com](http://business.apple.com), go to the **Devices** section, and search for the device by its serial number.
-1. Select the device, open the **...** menu, and then select **Release from Organization**.
-1. Check **I understand this cannot be undone**, and then select **Continue**.
-
-> [!NOTE]
-> In some cases, the iOS device must be restored with iTunes to apply this change. Please find further instructions from Apple [here](https://support.apple.com/guide/itunes/restore-to-factory-settings-itnsdb1fe305/windows).
-
----
-<!--merged content-->
 
 ## Wipe all data from a macOS device
 

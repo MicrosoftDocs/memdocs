@@ -37,7 +37,7 @@ When working with Android devices, it's important to understand the two types of
 - **Device-level passcode reset**: The action resets the passcode for the entire device.
 - **Work profile passcode reset**: The action resets the passcode for the user's work profile only.
 
-The following table summarizes the passcode reset types for Android devices:
+The following table summarizes the passcode reset types based on platform:
 
 | Platform | Device-level passcode reset | Work profile passcode reset |
 |--|:-:|:-:|
@@ -48,7 +48,7 @@ The following table summarizes the passcode reset types for Android devices:
 | Android Open Source Project (AOSP) | ✅ | ❌ |
 
 > [!IMPORTANT]
-> Before initiating a passcode reset on Android devices, ensure that the passcode requirement is enforced via [device configuration policies][INT-1]—otherwise, the reset fails.
+> Before initiating a passcode reset, ensure that the passcode requirement is enforced via [device configuration policies][INT-1]—otherwise, the reset fails.
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -61,8 +61,7 @@ The following table summarizes the passcode reset types for Android devices:
 >   - The permission **Remote Tasks/Reset Passcode**
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
-
-## Reset a passcode
+## How to reset a passcode
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **...** > **Reset passcode**.

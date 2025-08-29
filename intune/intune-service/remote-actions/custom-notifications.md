@@ -11,13 +11,19 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+
+zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Send custom notifications in Intune
+# Send custom notifications with Intune
 
 Use Microsoft Intune to send custom notifications to the users of managed iOS/iPadOS and Android devices. These messages appear as standard push notifications from the Company Portal app and the Microsoft Intune app on the user's device, similar to notifications from other applications.
 
 Custom notification messages include a short title and a message body of 500 characters or fewer. These messages can be customized for any general communication purpose.
+
+- Notify all employees of a change in schedule, such as building closures because of inclement weather.
+- Send a notification to the user of a single device to communicate an urgent request, such as restarting the device to complete installation of an update.
+
 
 ## Requirements
 
@@ -36,37 +42,35 @@ Custom notification messages include a short title and a message body of 500 cha
 > - [Custom role][INT-R3] with the permission:
 >   - `Microsoft.Intune_RemoteTasks_CustomNotification`
 
-### What the notification looks like on an iOS/iPadOS device
+
+- Devices must have the Company Portal app or the Microsoft Intune app installed before users can receive custom notifications. They must also have configured permissions to allow the Company Portal app or the Microsoft Intune app to send push notifications. If needed, the Company Portal app and the Microsoft Intune app can prompt users to permit notifications.
+
+- On Android, Google Play Services is a required dependency.
+- The device must be MDM enrolled.
+
+> [!NOTE]
+> For Android Fully Managed, Dedicated or Corporate Owned with Work Profile aren't supported for custom notifications.
+
+
+## User experience
+
+::: zone pivot="ios"
 
 If you have the Company Portal app open on an iOS/iPadOS device, and the device is locked, then the  notification resembles the following screenshot:
 
 > [!div class="mx-imgBorder"]
 > ![Locked Device iOS/iPadOS Custom notification](images/locked-device-custom-notif.png)
 
-### What the notification looks like on an Android device
+::: zone-end
+
+::: zone pivot="android"
 
 If you have the Company Portal app open on an Android device, the notification resembles the following screenshot:
 
 > [!div class="mx-imgBorder"]
 > ![Android Test notification](images/105046-3.png)
 
-## Common scenarios for sending custom notifications
-
-- Notify all employees of a change in schedule, such as building closures because of inclement weather.
-- Send a notification to the user of a single device to communicate an urgent request, such as restarting the device to complete installation of an update.
-
-## Considerations for using custom notifications
-
-### Device configuration
-
-- Devices must have the Company Portal app or the Microsoft Intune app installed before users can receive custom notifications. They must also have configured permissions to allow the Company Portal app or the Microsoft Intune app to send push notifications. If needed, the Company Portal app and the Microsoft Intune app can prompt users to permit notifications.
-
-- On Android, Google Play Services is a required dependency.
-
-- The device must be MDM enrolled.
-
-> [!NOTE]
-> For Android Fully Managed, Dedicated or Corporate Owned with Work Profile aren't supported for custom notifications.
+::: zone-end
 
 ### Permissions
 

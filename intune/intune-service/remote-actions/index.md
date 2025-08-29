@@ -52,10 +52,10 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="../media/icons/remote-actions/collect-diagnostics.svg" border="false"::: | [Collect diagnostics][RA-DIAG] | Collects diagnostic logs from a device and uploads the logs to Intune. |
 | :::image type="icon" source="../media/icons/remote-actions/delete.svg" border="false"::: | [Delete][RA-DELETE] | Removes a device from Intune management, any company data is removed, and the device is retired. |
 | :::image type="icon" source="../media/icons/remote-actions/fresh-start.svg" border="false"::: | [Fresh Start][RA-FRESHSTART] | Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed. |
-| :::image type="icon" source="../media/icons/remote-actions/full-scan.svg" border="false"::: | [Full Scan][RA-SCAN] | Initiates a full scan of the device by Microsoft Defender Antivirus. |
+| :::image type="icon" source="../media/icons/remote-actions/full-scan.svg" border="false"::: | [Full Scan][RA-SCANF] | Initiates a full scan of the device by Microsoft Defender Antivirus. |
 | :::image type="icon" source="../media/icons/remote-actions/locate-device.svg" border="false"::: | [Locate device][RA-LOCATE] | Shows the approximate location of a device on a map. |
 | :::image type="icon" source="../media/icons/remote-actions/pause-config-refresh.svg" border="false"::: | [Pause Config Refresh][RA-PAUSECR] | Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes. |
-| :::image type="icon" source="../media/icons/remote-actions/quick-scan.svg" border="false"::: | [Quick Scan][RA-SCAN] | Initiates a quick scan of the device by Microsoft Defender Antivirus. |
+| :::image type="icon" source="../media/icons/remote-actions/quick-scan.svg" border="false"::: | [Quick Scan][RA-SCANQ] | Initiates a quick scan of the device by Microsoft Defender Antivirus. |
 | :::image type="icon" source="../media/icons/remote-actions/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
 | :::image type="icon" source="../media/icons/remote-actions/rename-device.svg" border="false"::: | [Rename device][RA-REN] | Changes the device name in Intune. |
 | :::image type="icon" source="../media/icons/remote-actions/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
@@ -198,7 +198,7 @@ Some remote actions can also be executed in bulk. To learn more, see [Bulk devic
 [RA-BL]: device-rotate-bitlocker-keys.md
 [RA-CELLULAR]: update-cellular-data-plan.md
 [RA-DEFAV]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
-[RA-DELETE]: devices-delete.md
+[RA-DELETE]: device-delete.md
 [RA-DIAG]: collect-diagnostics.md
 [RA-FRESHSTART]: device-fresh-start.md
 [RA-FV]: device-rotate-filevault.md
@@ -217,7 +217,8 @@ Some remote actions can also be executed in bulk. To learn more, see [Bulk devic
 [RA-RESTART]: device-restart.md
 [RA-RETIRE]: device-retire.md
 [RA-ROTLAP]: ../protect/windows-laps-policy.md#manually-rotate-passwords
-[RA-SCAN]: device-scan-defender.md
+[RA-SCANF]: device-quick-scan.md
+[RA-SCANQ]: device-quick-scan.md
 [RA-SYNC]: device-sync.md
 [RA-HELP]: ../fundamentals/remote-help.md
 [RA-TVIEW]: teamviewer-support.md

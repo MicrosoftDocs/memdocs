@@ -38,7 +38,7 @@ With the **remove passcode** action in Microsoft Intune, you can remotely remove
 >   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
 
 
-## Remove a passcode
+## How to remove a passcode
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **...** > **Remove passcode**.

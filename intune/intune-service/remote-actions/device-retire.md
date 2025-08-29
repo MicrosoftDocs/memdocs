@@ -121,6 +121,19 @@ Removing company data from an Android personally owned work profile device remov
 
 ---
 
+## Retire an Apple ADE device from Intune
+
+If you want to completely remove an Apple automated device enrollment (ADE) device from management by Intune, follow these steps:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Select **Devices** > **All devices** > select the device > **Retire**.
+1. Visit [business.apple.com](http://business.apple.com), go to the **Devices** section, and search for the device by its serial number.
+1. Select the device, open the **...** menu, and then select **Release from Organization**.
+1. Check **I understand this cannot be undone**, and then select **Continue**.
+
+> [!NOTE]
+> In some cases, the iOS device must be restored with iTunes to apply this change. Please find further instructions from Apple [here](https://support.apple.com/guide/itunes/restore-to-factory-settings-itnsdb1fe305/windows).
+
 
 ## Reference links
 

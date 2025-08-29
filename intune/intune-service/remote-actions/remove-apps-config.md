@@ -89,7 +89,7 @@ For more information on custom roles, see: [Create a custom role in Intune]( ../
 
 **Scope Tags**: Remove Apps and Configuration will limit an admin's view of applications and configurations based on the Scope Tag assignments of the admin's role. For more information on Scope tags, see [Use role-based access control and scope tags for distributed IT]( ../fundamentals/scope-tags.md).
 
-## How to remove apps and configuration?
+## How to remove apps and configuration
 
 1. Sign in to the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices**, and then select **All devices or the device platform**.
