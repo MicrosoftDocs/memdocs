@@ -54,6 +54,8 @@ Applies to:
 
 ## Prerequisites
 
+✅ Find out what you need for EPM
+
 ### Licensing
 
 Endpoint Privilege Management requires an add-on license beyond the *Microsoft Intune Plan 1* license. You can choose between a stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
@@ -133,6 +135,8 @@ When you configure the *elevation settings* and *elevation rules* policies that 
 
 ## EPM Policies
 
+✅ Understand EPM policy types
+
 Endpoint Privilege Management uses two policy types that you configure to manage how a file elevation request is handled. Together, the policies configure the behavior for file elevations when standard users request to *run with administrative privileges*.
 
 These policies are:
@@ -143,6 +147,8 @@ These policies are:
 EPM also supports a reusable settings group to store publisher certificates that can be referenced across multiple rules or rules policies.
 
 ## Policy conflict handling for Endpoint Privilege Management
+
+✅ Learn about policy conflicts
 
 Except for the following situations, conflicting policies for EPM are handled like any other [policy conflict](../configuration/device-profile-troubleshoot.md#conflicts).
 
@@ -169,6 +175,8 @@ If a device receives two rules targeting the same application, both rules are co
 
 ## Endpoint Privilege Management and User Account Control
 
+✅ Understand interaction between EPM and User Account Control
+
 Endpoint Privilege Management and Windows built-in user account control (UAC) are separate products with separate functionality.
 
 When moving users to run as standard users and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
@@ -177,6 +185,8 @@ When moving users to run as standard users and utilizing Endpoint Privilege Mana
 > Endpoint Privilege Management doesn't interfere with user account control actions (or UAC) that's run by an Administrator on the device.
 
 ## Security recommendations
+
+✅ Understand the most secure way to use EPM
 
 To help ensure a secure deployment of Endpoint Privilege Management, consider these recommendations when configuring elevation behavior and rules:
 
@@ -206,6 +216,8 @@ Use more restrictive elevation rules for applications with broader access or scr
 EPM operates differently to third-party products and as a result, it's recommended to start with an audit policy to detect unmanaged elevations and create rules based on what you need. Then, you can easily iterate on your rules by adding rules from reports and enabling support approved elevation for when a rules doesn't exist and a user needs to elevate to get their job done.
 
 ## Role-based access controls for Endpoint Privilege Management
+
+✅ Learn how to delegate access to EPM
 
 To manage Endpoint Privilege Management, your account must be assigned an Intune role-based access control (RBAC) role that includes the following permission with sufficient rights to complete the desired task:
 
@@ -242,6 +254,8 @@ In addition to the dedicated roles, the following built-in roles for Intune also
  For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## EpmTools PowerShell module
+
+✅ Learn how to use the EPM PowerShell module
 
 Each device that receives Endpoint Privilege Management policies installs the EPM Microsoft Agent to manage those policies. The agent includes the *EpmTools* PowerShell module, a set of cmdlets that you can import to a device. You can use the cmdlets from EpmTools to:
 

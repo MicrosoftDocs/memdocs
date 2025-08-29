@@ -47,6 +47,8 @@ Applies to:
 
 ## Key Features and Benefits
 
+✅ Find out the key features and benefits of EPM
+
 - **Standard Users by Default**. Users can perform their tasks without local admin rights.
 - **Support for Just-in-time elevation**. Users elevate temporarily for specific IT-approved tasks, with automatic, user confirmed, or support approved elevations.
 - **Policy-Based Control**. Admins define settings and rules to control elevation conditions and behaviour, with granular rule creation capabilities to suit organizational needs.
@@ -54,6 +56,8 @@ Applies to:
 - **Alignment to Zero Trust principles** by enabling least privilege access and minimizing lateral movement risks.
 
 ## EPM Fundamentals
+
+✅ Learn how EPM works
 
 EPM elevation can be triggered using two methods:
 
@@ -69,7 +73,8 @@ Both rules and policies can be targeted at groups of users or devices. To perfor
 
 EPM doesn't require an agent to be installed – the client is initiated by deploying an Elevation settings policy from Intune, which creates a 'Microsoft EPM Agent Service' and a "C:\Program Files\Microsoft EPM Agent" directory.
 
-## INSERT PICTURE HERE
+> [!NOTE]
+> Add photo here
 
 ### Elevation Types
 
@@ -112,6 +117,8 @@ EPM includes reports to help you prepare for, monitor and use the service. Repor
 - **Managed elevation**: Any elevation that Endpoint Privilege Management facilitates. Managed elevations include all elevations that EPM ends up facilitating for the standard user. These managed elevations could include elevations that happen as the result of an elevation rule or as part of default elevation action.
 
 ## Getting started with Endpoint Privilege Management
+
+✅ Start using EPM
 
 Endpoint Privilege Management (EPM) is built into Microsoft Intune, which means that all configuration is completed within the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the following high-level process:
 
