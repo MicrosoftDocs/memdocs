@@ -138,7 +138,7 @@ items:
         - name: Reports
           href: ./protect/epm-reports.md
         - name: FAQs
-          href: ./protect/epm-faqs.md
+          href: ./protect/epm-frequently-asked-questions.md
         - name: Known Issues
           href: ./protect/epm-known-issues.md
 

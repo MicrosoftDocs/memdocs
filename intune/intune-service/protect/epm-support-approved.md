@@ -50,7 +50,7 @@ Use EPM policies with the *support approved* elevation type for files that need 
 
 > [!TIP]
 >
-> To review the three elevation types and other policy options, see [Windows elevation rules policy](../protect/epm-elevation-rules.md#windows-elevation-settings-policy).
+> To review the four elevation types and other policy options, see [Windows elevation rules policy](epm-elevation-rules.md#about-windows-elevation-rules-policy).
 
 The following subjects are details to plan for and expect when you use the support approved elevation type:
 

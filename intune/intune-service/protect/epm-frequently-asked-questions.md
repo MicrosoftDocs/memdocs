@@ -65,3 +65,15 @@ Certain items that reside in the start menu or taskbar have a curated right-clic
 ### Can I launch multiple files as elevated with the "Run with elevated access" right-click context menu?
 
 Only one file can be elevated at a time. To launch multiple files elevated, right-click each file individually and select *Run with elevated access*.
+
+### What is the difference between Microsoft EPM and Windows Administrator protection?
+
+EPM allows standard users to perform tasks that require elevated privileges without granting them full admin rights. Windows Administrator protection secures admin accounts from token theft.
+
+### Do I need additional licensing for EPM?
+
+Yes, Endpoint Privilege Management requires specific licensing. For more information, see [Intune add-ons](../fundamentals/intune-add-ons.md).
+
+### How does EPM and Windows Defender Application Control (WDAC) differ?
+
+EPM and WDAC compliment each other. EPM allows apps to elevate, while WDAC ensures only approved/blocked apps (elevated or not) can run.

@@ -201,6 +201,10 @@ Be intentional about elevation for installer files versus application runtime. E
 
 Use more restrictive elevation rules for applications with broader access or scripting capabilities, such as web browsers and PowerShell. For PowerShell, consider using script-specific rules to ensure only trusted scripts are allowed to run with elevated privileges.
 
+### Start fresh, even when migrating from a third-party product
+
+EPM operates differently to third-party products and as a result, it's recommended to start with an audit policy to detect unmanaged elevations and create rules based on what you need. Then, you can easily iterate on your rules by adding rules from reports and enabling support approved elevation for when a rules doesn't exist and a user needs to elevate to get their job done.
+
 ## Role-based access controls for Endpoint Privilege Management
 
 To manage Endpoint Privilege Management, your account must be assigned an Intune role-based access control (RBAC) role that includes the following permission with sufficient rights to complete the desired task:
