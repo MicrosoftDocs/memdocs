@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Shut down devices with Microsoft Intune
-description: Shut down iOS/iPadOS devices using remote actions in Microsoft Intune.
+title: "Intune Remote Device Action: Shutdown"
+description: Learn how to shutdown Apple devices with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -12,9 +12,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Remotely shut down devices using Intune
+# Remotely shut down devices with Intune
 
-With the **shut down** action, IT administrators can remotely power off managed devices. This action doesn't prompt or warn the user before the device powers down
+With the **shut down** action, IT administrators can remotely power off managed devices. This action doesn't prompt or warn the user before the device powers down.
 
 ## Requirements
 

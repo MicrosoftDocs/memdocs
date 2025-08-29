@@ -2,7 +2,7 @@
 # required metadata
 
 title: "Intune Remote Device Action: Sync"
-description: Learn how to use the device sync remote action in Intune to immediately apply policy, app, and configuration updates to managed devices.
+description: Learn how to use the device sync remote action in Intune to apply policy, app, and configuration updates to managed devices.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -10,11 +10,15 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+
+zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
 # Sync devices to get the latest policies and actions with Intune
 
-The **Sync** device action forces the selected device to immediately check in with Intune. When a device checks in, it immediately receives any pending actions or policies assigned to it. This feature can help you immediately validate and troubleshoot policies you're assigned to, without waiting for the next scheduled check-in.
+The **Sync** device action forces a device to check in with Intune. When a device checks in, it receives any pending actions or policies assigned to it. This action is useful for validating and troubleshooting policy deployment without waiting for the next scheduled check-in.
+
+For more information about the standard Intune policy check-in frequencies, see [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
 ## Requirements
 
@@ -45,7 +49,7 @@ The **Sync** device action forces the selected device to immediately check in wi
 1. From the devices list, select a device, and then select **Sync**.
 1. To confirm, select **Yes**.
 
-You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+::: zone pivot="ios,android"
 
 ## Retryable error codes
 
@@ -65,6 +69,8 @@ When you execute the **Sync** remote action, iOS/iPadOS and Android apps that fa
 | 2016330889 | The secure connection failed. Reset your connection. | Yes|
 | 2016330888 | The server trust evaluation has failed. | No|
 
+::: zone-end
+
 ## Reference links
 
 - Microsoft Graph API: [syncDevice action][GRAPH-1]
@@ -78,3 +84,6 @@ When you execute the **Sync** remote action, iOS/iPadOS and Android apps that fa
 [INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-syncdevice
+
+::: zone pivot="windows,ios,macos,android"
+::: zone-end

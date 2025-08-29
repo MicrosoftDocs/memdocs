@@ -50,13 +50,13 @@ When working with Android devices, it's important to understand the two types of
 
 The following table summarizes the passcode reset types for Android devices:
 
-| Platform                                                        | Device-level passcode reset | Work profile passcode reset |
-|-----------------------------------------------------------------|:---------------------------:|:---------------------------:|
-| Android Enterprise corporate-owned dedicated (COSU)             | ✅                          | ❌                         |
-| Android Enterprise corporate-owned fully managed (COBO)         | ❌                          | ✅                         |
-| Android Enterprise corporate-owned work profile (COPE)          | ❌                          | ✅                         |
-| Android Enterprise personally-owned work profile (BYOD)         | ❌                          | ✅                         |
-| Android Open Source Project (AOSP): device-level passcode reset | ✅                          | ❌                         |
+| Platform | Device-level passcode reset | Work profile passcode reset |
+|--|:-:|:-:|
+| Android Enterprise corporate-owned dedicated (COSU) | ✅ | ❌ |
+| Android Enterprise corporate-owned fully managed (COBO) | ❌ | ✅ |
+| Android Enterprise corporate-owned work profile (COPE) | ❌ | ✅ |
+| Android Enterprise personally-owned work profile (BYOD) | ❌ | ✅ |
+| Android Open Source Project (AOSP) | ✅ | ❌ |
 
 > [!IMPORTANT]
 > Before initiating a passcode reset on Android devices, ensure that the passcode requirement is enforced via [device configuration policies][INT-1]—otherwise, the reset fails.

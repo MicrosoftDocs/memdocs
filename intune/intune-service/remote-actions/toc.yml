@@ -57,7 +57,7 @@ items:
     href: device-scan-defender.md
   - name: Send notifications
     href: custom-notifications.md
-  - name: Shutdown
+  - name: Shutdown ✅
     href: device-shutdown.md
   - name: Synchronize device
     href: device-sync.md
