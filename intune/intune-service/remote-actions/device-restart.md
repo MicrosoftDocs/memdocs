@@ -27,11 +27,9 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
->
-> - Android
->     - Corporate owned Fully Managed (COBO)
->     - Corporate-owned Dedicated (COSU)
->     - Android Open Source Project (AOSP)
+> - Android Enterprise corporate-owned Fully Managed (COBO)
+> - Android Enterprise corporate-owned Dedicated (COSU)
+> - Android Open Source Project (AOSP)
 > - iOS/iPadOS in [supervised mode][IOS-SUP]
 > - macOS
 > - Windows

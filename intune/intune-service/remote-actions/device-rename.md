@@ -37,11 +37,9 @@ For more information, on modifying the Management name and renaming in the Compa
 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
->
-> - Android
->     - Corporate owned Fully Managed (COBO)
->     - Corporate-owned Dedicated (COSU)
->     - Corporate-owned Work Profile (COPE)
+> - Android Enterprise corporate-owned Fully Managed (COBO)
+> - Android Enterprise corporate-owned Dedicated (COSU)
+> - Android Enterprise corporate-owned Work Profile (COPE)
 > - iOS/iPadOS in [supervised mode][IOS-SUP]
 > - macOS
 > - macOS (corporate-owned)

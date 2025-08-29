@@ -25,33 +25,39 @@ With the **reset passcode** action in Microsoft Intune, you can remotely reset a
 With the **remove passcode** action in Microsoft Intune, you can remotely remove a device passcode to help users regain access to their devices without requiring a full device wipe. This remote action is especially useful when a user forgets their passcode or is locked out of their device.
 ::: zone-end
 
-## Requirements
-
 ::: zone pivot="android"
 
-When working with Android Enterprise devices, it's important to understand the two types of passcode resets available:
+## Passcode reset types
 
-- Device-level passcode reset: The action resets the passcode for the entire device.
-- Work profile passcode reset: The action resets the passcode for the user's work profile only. It's supported on Android Enterprise devices, provided the work profile passcode is configured through device configuration policies.
+When working with Android devices, it's important to understand the two types of passcode resets available:
 
-Before initiating a passcode reset, verify the device's enrollment type to ensure compatibility. For work profile resets, confirm that the passcode requirement is enforced via device configuration policies—otherwise, the reset will fail.
+- **Device-level passcode reset**: The action resets the passcode for the entire device.
+- **Work profile passcode reset**: The action resets the passcode for the user's work profile only.
 
 ::: zone-end
+
+## Requirements
 
 ### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
-> - Android (device-level passcode reset)
->     - Corporate-owned dedicated (COSU)
->     - Open Source Project (AOSP)
-> - Android (work profile passcode reset)
->     - Personally-owned work profile (BYOD)
->     - Corporate-owned fully managed (COBO)
->     - Corporate-owned work profile (COPE)
->     - All must be running Android 8.0 or later and have passcode configured via device restrictions.
+> - Device-level passcode reset:
+> - Android Enterprise corporate-owned dedicated (COSU)
+> - Android Open Source Project (AOSP)
+> - Work profile passcode reset:
+> - Android Enterprise personally-owned work profile (BYOD)
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS (corporate-owned)
+
+::: zone pivot="android"
+
+> [!IMPORTANT]
+> Before initiating a passcode reset on Android devices, ensure that the passcode requirement is enforced via [device configuration policies][INT-1]—otherwise, the reset fails.
+
+::: zone-end
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -98,7 +104,7 @@ Passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance 
 For work profile passcode reset, users get notified to activate their reset passcode. After their passcode is entered, the notification is dismissed.
 
 >[!NOTE]
->If the remote lock action failed on an Android (AOSP) device, confirm that you have a device passcode policy assigned to the device. If the device doesn't have a device passcode assigned, the remote lock action doesn't succeed.
+>If the remote lock action fails, confirm that you have a device passcode policy assigned to the device. If the device doesn't have a device passcode assigned, the remote lock action doesn't succeed.
 
 ::: zone-end
 
@@ -109,6 +115,7 @@ For work profile passcode reset, users get notified to activate their reset pass
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 [INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
+[INT-1]:/intune/intune-service/configuration/settings-catalog-android
 
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator

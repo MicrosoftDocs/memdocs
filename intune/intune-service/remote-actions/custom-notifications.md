@@ -25,8 +25,6 @@ Custom notification messages include a short title and a message body of 500 cha
 
 > [!div class="checklist"]
 > This remote action is supported on the following platform:
->
-> - Android
 > - iOS/iPadOS
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements

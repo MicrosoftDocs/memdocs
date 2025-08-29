@@ -22,7 +22,6 @@ The **Sync** device action forces the selected device to immediately check in wi
 
 > [!div class="checklist"]
 > This remote action is supported on the following platform:
->
 > - Android
 > - iOS/iPadOS
 > - macOS

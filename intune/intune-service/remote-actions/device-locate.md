@@ -33,21 +33,17 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
->
-> - Android
->     - Android Enterprise corporate-owned dedicated (COSU)
->     - Android Enterprise corporate-owned fully managed (COBO)
->     - Android Enterprise corporate-owned work profile (COPE)
+> - Android Enterprise corporate-owned dedicated (COSU)
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS in [supervised mode](/intune/intune-service/remote-actions/device-supervised-mode) and [lost mode](device-lost-mode.md)
 > - Windows
 
 > [!div class="checklist"]
 > The **lost device sound alert** action is supported on the following platforms:
->
-> - Android
->     - Android Enterprise corporate-owned dedicated (COSU)
->     - Android Enterprise corporate-owned fully managed (COBO)
->     - Android Enterprise corporate-owned work profile (COPE)
+> - Android Enterprise corporate-owned dedicated (COSU)
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS in [supervised mode](/intune/intune-service/remote-actions/device-supervised-mode) and [lost mode](device-lost-mode.md)
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
