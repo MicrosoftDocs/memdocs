@@ -27,7 +27,7 @@ Make sure the co-management prerequisites are set up before you start this proce
 ## Enable co-management
 
 
-Starting in Configuration Manager version 2111, the co-management onboarding experience changed. The Cloud Attach Configuration Wizard makes it easier to enable co-management and other cloud features. You can choose a streamlined set of recommended defaults, or customize your cloud attach features. There's also a new built-in device collection for **Co-management Eligible Devices** to help you identify clients. For more information on enabling co-management, see [Enable cloud attach](../../cloud-attach/enable.md).
+Starting in Configuration Manager version 2111, the co-management onboarding experience changed. The Cloud Attach Configuration Wizard makes it easier to enable co-management and other cloud features. You can choose a streamlined set of recommended defaults, or customize your cloud attach features. There's also a new built-in device collection for **Co-management Eligible Devices** to help you identify clients. For more information on enabling co-management, see [Enable cloud attach](https://learn.microsoft.com/en-us/intune/configmgr/cloud-attach/enable).
 
 > [!NOTE]
 > With the new wizard, you don't move workloads at the same time that you enable co-management. To move workloads, you'll edit the co-management properties after enabling cloud attach.
@@ -43,7 +43,7 @@ To enable co-management, follow these instructions:
    - Azure public cloud
    - Azure US Government cloud
       
-   When you select Azure Government cloud, the **Upload to Microsoft Endpoint Manager admin center** option for [tenant attach](../../tenant-attach/device-sync-actions.md) is disabled.
+   When you select Azure Government cloud, the **Upload to Microsoft Endpoint Manager admin center** option for [tenant attach](https://learn.microsoft.com/en-us/intune/configmgr/tenant-attach/device-sync-actions) is disabled.
    
 1. Select **Sign In**. Sign in as a Microsoft Entra Global Administrator, and then select **Next**. You sign in this one time for the purposes of this wizard. The credentials aren't stored or reused elsewhere.
 
@@ -59,9 +59,9 @@ To enable co-management, follow these instructions:
       
    Automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, when you enable this setting, enrollment occurs over several days.
    
-1. A new co-managed device is now automatically enrolled in the Microsoft Intune service based on its Microsoft Entra device token. It doesn't need to wait for a user to sign in to the device for automatic enrollment to start. This change helps to reduce the number of devices with the enrollment status. For more information, see [Co-management enrollment status](../how-to-monitor.md#co-management-enrollment-status).
+1. A new co-managed device is now automatically enrolled in the Microsoft Intune service based on its Microsoft Entra device token. It doesn't need to wait for a user to sign in to the device for automatic enrollment to start. This change helps to reduce the number of devices with the enrollment status. For more information, see [Co-management enrollment status](https://learn.microsoft.com/en-us/intune/configmgr/comanage/how-to-monitor#co-management-enrollment-status).
 
-   If you already have devices enrolled in co-management, new devices are now enrolled immediately after they meet the [prerequisites](../overview.md#prerequisites).
+   If you already have devices enrolled in co-management, new devices are now enrolled immediately after they meet the [prerequisites](https://learn.microsoft.com/en-us/intune/configmgr/comanage/overview#prerequisites).
    
 1. For internet-based devices that are already enrolled in Intune, copy and save the command on the **Enablement** page. You'll use this command to install the Configuration Manager client as an app in Intune for internet-based devices. If you don't save this command now, you can review the co-management configuration at any time to get this command.
 
@@ -69,8 +69,8 @@ To enable co-management, follow these instructions:
    > The command appears only if you've met all of the prerequisites, such as setting up a cloud management gateway.
    
    
-1. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](../workloads.md). 
-   If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](../how-to-switch-workloads.md).  
+1. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](https://learn.microsoft.com/en-us/intune/configmgr/comanage/workloads). 
+   If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](https://learn.microsoft.com/en-us/intune/configmgr/comanage/how-to-switch-workloads).  
    
    - **Pilot Intune**: Switches the associated workload only for the devices in the pilot collections that you'll specify on the **Staging** page. Each workload can have a different pilot collection.
    - **Intune**: Switches the associated workload for all co-managed Windows 10 or later devices.  
@@ -82,5 +82,15 @@ To enable co-management, follow these instructions:
 1. On the **Staging** page, specify the pilot collection for each of the workloads that are set to **Pilot Intune**.
 
 1. To enable co-management, complete the wizard.
+
+## Next steps
+
+Now that you've enabled co-management, look at the following articles for immediate value you can gain in your environment:
+
+- [Conditional Access](quickstart-conditional-access.md)
+
+- [Remote actions from Intune](quickstart-remote-actions.md)
+
+- [Client health](quickstart-client-health.md)
 
 
