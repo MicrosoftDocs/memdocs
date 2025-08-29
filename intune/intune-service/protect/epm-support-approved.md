@@ -190,3 +190,8 @@ Copilot reviews the file and reports back the following details:
 :::image type="content" source="./media/epm-support-approved/malicious-file-results.png" alt-text="Screen capture that displays an example of results from use of the Analyze with Copilot option." lightbox="./media/epm-support-approved/malicious-file-results.png":::
 
 The preceding image shows a screen capture of the Copilot report on the reputation of that *InstallPrinter.msi* file. In this example, the file is identified as malicious and shouldn't be approved to run in an elevated context. The results also include additional information and links to references for the malicious file that was identified.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Next: Reports >](epm-reports.md)

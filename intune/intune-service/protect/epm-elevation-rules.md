@@ -385,3 +385,8 @@ To create the reusable settings group for Endpoint Privilege Management:
    :::image type="content" source="./media/epm-policies/add-a-certificate.png" alt-text="Screen capture of the UI for browsing to a certificate." lightbox="./media/epm-policies/add-a-certificate.png":::
 
 4. In **Review + create**, review your settings, and then select **Add**. When you select *Add*, your configuration is saved, and group is then shown in the reusable settings group list for Endpoint Privilege Management.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Next: Use Endpoint Privilege Management to transition users from administrator to standard user >](epm-transition-administrator-to-standard-user.md)
