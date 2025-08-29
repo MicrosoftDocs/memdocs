@@ -37,6 +37,8 @@ items:
     href: device-remote-lock.md
   - name: Remove apps and configuration
     href: remove-apps-config.md
+  - name: Remove passcode ✅
+    href: device-passcode-reset.md
   - name: Remove user
     href: device-remove-user.md
   - name: Rename device
@@ -59,7 +61,7 @@ items:
     href: custom-notifications.md
   - name: Shutdown ✅
     href: device-shutdown.md
-  - name: Synchronize device
+  - name: Synchronize device ✅
     href: device-sync.md
   - name: Update cellular data plan ✅
     href: update-cellular-data-plan.md
