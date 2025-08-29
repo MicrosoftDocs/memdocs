@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: "Intune Remote Actions: Full Scan and Quick Scan"
-description: Learn how to initiate on demand Microsoft Defender full scans and quick scans with Microsoft Intune.
+title: "Intune Remote Actions: Quick Scan"
+description: Learn how to initiate on demand Microsoft Defender full scan with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -13,8 +13,10 @@ ms.collection:
 - highpri
 ---
 
+# Quick scan with Microsoft Defender
 
-# Full scan and quick scan with Microsoft Defender
+The **Quick Scan** remote action in Microsoft Intune allows IT administrators to initiate a targeted malware scan on managed Windows devices using Microsoft Defender Antivirus. This action scans key system areas where threats are commonly found—such as memory, startup folders, and running processes—without performing a full system sweep.
+Quick scans are especially useful for routine health checks, validating recent policy deployments, or responding to low-risk alerts. By triggering a scan remotely from the Intune admin center, IT teams can quickly assess device health and ensure protection is up to date—without waiting for the next scheduled scan or relying on user intervention.
 
 ## Requirements
 
@@ -24,7 +26,6 @@ ms.collection:
 > This remote action is supported on the following platforms:
 >
 > - Windows
-
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -40,11 +41,12 @@ ms.collection:
 ## How to initiate a full scan or quick scan
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **...** > **Quick scan** or **Full scan**.
+1. From the devices list, select a device, and then select **...** > **Quick scan**.
 
 ## Reference links
 
 - Microsoft Graph API: [windowsDefenderScan action][GRAPH-1]
+- Configuration service provider (CSP) used to initiate the remote action: [Defender CSP][CSP-1]
 
 <!--links-->
 
@@ -63,7 +65,4 @@ ms.collection:
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-windowsdefenderscan
 
-
-<!--to add link
-/defender-endpoint/run-scan-microsoft-defender-antivirus#use-microsoft-intune-to-run-a-scan
--->
+[CSP-1]: /windows/client-management/mdm/defender-csp
