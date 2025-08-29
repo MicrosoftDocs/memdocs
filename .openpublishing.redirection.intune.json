@@ -517,7 +517,7 @@
     },
     {
       "source_path": "intune/intune/configuration/administrative-templates-update-office.md",
-      "redirect_url": "/intune/intune-service/configuration/administrative-templates-update-office",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-update-office",
       "redirect_document_id": false
     },
     {
@@ -3417,7 +3417,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/teamviewer-support.md",
-      "redirect_url": "/intune/intune-service/remote-actions/teamviewer-support",
+      "redirect_url": "/intune/intune-service/fundamentals/teamviewer-support",
       "redirect_document_id": false
     },
     {
