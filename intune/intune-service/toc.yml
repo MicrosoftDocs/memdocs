@@ -126,9 +126,9 @@ items:
         - name: Deploy Overview
           href: ./protect/epm-deploy.md
         - name: Create elevation settings policy
-          href: ./protect/epm-deploy-create-policy.md
+          href: ./protect/epm-elevation-settings-policy.md
         - name: Create elevation rules policy
-          href: ./protect/epm-deploy-create-rules.md
+          href: ./protect/epm-elevation-rules.md
       - name: Use
         items:
         - name: Support approved requests

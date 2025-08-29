@@ -1,6 +1,6 @@
 ---
-title: Guidance for creating elevation policies with Endpoint Privilege Management
-description: View guidance on how to create strong file elevation rules with Microsoft Intune Endpoint Privilege Management
+title: Managing Endpoint Settings Poilices for Endpoint Privilege Management
+description: View guidance on how to manage the Endpoint Privilege Management client, including reporting level and default elevation response. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -62,7 +62,7 @@ Use *Windows elevation settings policy* when you want to:
   - **Require support approval** - When support approval is required, an administrator must approve elevation requests without a matching rule prior to the elevation being required.
 
   > [!TIP]  
-  > We [recommend use of *Support Approved*](../protect/epm-overview.md#set-a-secure-default-elevation-response) as a default elevation response.
+  > We [recommend use of *Support Approved*](../protect/epm-plan.md#security-recommendations) as a default elevation response.
 
   > [!NOTE]  
   > Default responses are only processed for requests coming through the *Run with elevated access* right-click menu.

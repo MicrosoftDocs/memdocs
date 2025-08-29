@@ -1,6 +1,6 @@
 ---
-title: Deployment considerations for Endpoint Privilege Management
-description: A list of deployment considerations and frequently asked questions for customers deploying Microsoft Intune Endpoint Privilege Management
+title: Frequently asked questions for Endpoint Privilege Management
+description: A list of frequently asked questions for customers deploying Microsoft Intune Endpoint Privilege Management
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -48,7 +48,7 @@ Support for Windows 365 (Cloud PCs) was added in September 2023.
 
 ### Why is my elevation settings policy showing error/not applicable?
 
-The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error or shows not applicable, it indicates the device had an issue enabling EPM. The two most common reasons are missing the [required Windows updates](../protect/epm-overview.md#requirements) or failure to communicate with required [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error or shows not applicable, it indicates the device had an issue enabling EPM. The two most common reasons are missing the [required Windows updates](../protect/epm-plan.md#requirements) or failure to communicate with required [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ### What happens when someone with administrative privileges uses a device that is enabled for EPM?
 

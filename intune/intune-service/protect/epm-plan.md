@@ -1,6 +1,6 @@
 ---
 title: Plan and Prepare for Endpoint Privilege Management Deployment
-description: To enhance the security of your organization, set your users to run with standard permissions while Endpoint Privilege Management ensures those users can seamlessly run specified files with elevated rights. 
+description: Plan your Endpoint Privilege Management deploying by understanding requirements, fundamentals and security recommendations. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -184,13 +184,13 @@ To help ensure a secure deployment of Endpoint Privilege Management, consider th
 
 ### Set a secure default elevation response
 
-Set the [default elevation response](../protect/epm-plan.md#about-windows-elevation-settings-policy) to **Support Approval** or **Deny** rather than **User Confirmed**. This ensures that elevation is governed by predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
+Set the [default elevation response](../protect/epm-elevation-settings.md#about-windows-elevation-settings-policy) to **Support Approval** or **Deny** rather than **User Confirmed**. This ensures that elevation is governed by predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
 
 ### Require file path restrictions in all rule types
 
-When [configuring an elevation rule](../protect/epm-plan.md#windows-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that leverage automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced prior to elevation.
+When [configuring an elevation rule](../protect/epm-elevation-rules.md#creating-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that leverage automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced prior to elevation.
 
-This recommendation applies to rules created [automatically](../protect/epm-deploy-create-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](../protect/epm-reports.md) or [support approved](../protect/epm-support-approved.md) request, and for elevation rules that you create [manually](../protect/epm-deploy-create-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
+This recommendation applies to rules created [automatically](../protect/epm-elevation-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](../protect/epm-reports.md) or [support approved](../protect/epm-support-approved.md) request, and for elevation rules that you create [manually](../protect/epm-elevation-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
 
 > [!IMPORTANT]  
 > Files located on network shares aren't supported and shouldn't be used in rule definitions.

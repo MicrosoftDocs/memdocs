@@ -86,7 +86,7 @@ Endpoint Privilege Management reports status of individual settings applied usin
 
 ### Blocked files downloaded from the internet fail to elevate
 
-Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated, it might fail to elevate. 
+Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated, it might fail to elevate.
 
 To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
 
