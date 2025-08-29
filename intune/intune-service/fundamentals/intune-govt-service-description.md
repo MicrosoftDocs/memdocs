@@ -60,9 +60,9 @@ These government instances are also known as **IL4** and **IL5**, where **IL** r
 - GCC is the same instance as Microsoft Intune in the commercial space. Other services, like Microsoft 365, have a separate GCC instance. Intune doesn't have a separate GCC instance.
 
   So, when you see **GCC** in this Intune article, it refers to the commercial service. When you see **GCC High** or **DoD**, it refers to the government cloud.
-  
+
   GCC instances are commonly used by state and local government customers that require extra accreditation for the cloud services they use.
-  
+
 - Intune is now Common Criteria certified and is on the National Information Assurance Partnership (NIAP) Product Compliance List (PCL).
 
   To see the certification materials, go to [NIAP - Product Details](https://www.niap-ccevs.org/products/11298).
@@ -111,7 +111,7 @@ The following features aren't available and won't be supported for GCC High and 
 | Microsoft Store for Business | ❌ |
 | On-premises Exchange Connector | ❌ |
 | Windows Subscription Activation | ❌ |
-| [TeamViewer connector](../remote-actions/teamviewer-support.md) </br>or TeamViewer feature | ❌ |
+| [TeamViewer connector](../fundamentals/teamviewer-support.md) </br>or TeamViewer feature | ❌ |
 
 ## Next steps
 
