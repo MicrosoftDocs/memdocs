@@ -188,7 +188,7 @@ When moving users to run as standard users and utilizing Endpoint Privilege Mana
 
 ✅ Understand the most secure way to use EPM
 
-To help ensure a secure deployment of Endpoint Privilege Management, consider these recommendations when configuring elevation behavior and rules:
+To help ensure a secure deployment of Endpoint Privilege Management, consider these recommendations when configuring elevation behavior and rules.
 
 ### Set a secure default elevation response
 

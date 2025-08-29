@@ -101,15 +101,11 @@ Example persona mapping:
 |------------------|---------------------------|---------------------------------------------------|-------------------|
 | Power Users      | IT Support Technicians, IT Power Users | Automatic elevation for defined rules             | Deny all requests |
 | Developers       | Engineering               | Automatic elevation for defined low risk apps; User justified for higher risk apps | Support Approved  |
-| Standard Users   | Finance, HR               | Automatic elevation for defined rules             | Deny all requests |
+| Standard Users   | Finance, HR               | Automatic elevation for defined rules             | Deny all requests or support approved |
 
 ### How do personas help design elevation settings and rules?
 
 Mapping out the user needs allows you to define elevation strategy for each user cohort.
-
-### Consider augmenting your elevation rules with deny rules
-
-Using deny rules on top of your personas for applications or processes considered high risk or legacy will take precedence over any default elevation setting.
 
 ## Phase 3: Create rules
 
