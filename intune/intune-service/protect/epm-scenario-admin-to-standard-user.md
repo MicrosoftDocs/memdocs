@@ -1,6 +1,6 @@
 ---
-title: Use Endpoint Privlege Management to transition users from administrator to standard user
-description: Understand the steps and phases for using Endpoint Privlege Management to transition users from administrators to standard users.
+title: Use Endpoint Privilege Management to transition users from administrator to standard user
+description: Understand the steps and phases for using Endpoint Privilege Management to transition users from administrators to standard users.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -27,7 +27,7 @@ ms.collection:
 - sub-intune-suite
 ---
 
-# Configure policies for Endpoint Privilege Management
+# Use Endpoint Privilege Management to transition users from administrator to standard user
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 

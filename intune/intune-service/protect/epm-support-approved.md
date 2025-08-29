@@ -101,7 +101,7 @@ For more information about all the permissions for managing EPM, see [Role-based
 
 ## Create policy for support approved file elevations
 
-To create support-approved elevation policy, use the same workflow for creating other EPM elevation rule policies. See [Windows elevation rules policy](../protect/epm-elevation-rules.md#create-elevation-rules-policy) in *Configure policies for Endpoint Privilege Management*.
+To use support-approved elevation, use the same workflow for creating other EPM settings. You can set the default elevation behavior using an [elevation settings policy](../protect/epm-elevation-settings.md), or create or modify rules for specific apps using an [elevation rules policy](../protect/epm-elevation-rules.md)
 
 ## Manage pending elevation requests
 
