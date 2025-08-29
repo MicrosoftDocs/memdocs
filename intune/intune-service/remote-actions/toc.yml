@@ -29,10 +29,10 @@ items:
     href: remote-assist.md
   - name: Pause config refresh
     href: pause-config-refresh.md
-  - name: Quick Scan 🔗
-    href: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
   - name: Play Lost Mode sound 🔴
     href: device-play-lost-mode-sound.md
+  - name: Quick Scan 🔗
+    href: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
   - name: Remote lock ✅
     href: device-remote-lock.md
   - name: Remove apps and configuration

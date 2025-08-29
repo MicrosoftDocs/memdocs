@@ -87,9 +87,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 
 Every bulk remote action has its own steps, which are detailed in the respective documentation. In general:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices** > **Bulk device actions**, or use the following shortcut:
-    > [!div class="nextstepaction"]
-    > [Bulk device actions][INT-AC2]
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices** > [**Bulk device actions**][INT-AC2].
 1. On the **Basics** page, select an **OS** and **Device action** from the dropdowns. Some device actions have more options or fields to populate. Select **Next**.
 1. On the **Devices** page, select up to maximum number of devices that the action supports. Select **Next**.
 1. On the **Review + create** page, select **Create**.
