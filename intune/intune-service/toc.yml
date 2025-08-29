@@ -361,7 +361,6 @@ items:
         href: ./protect/zero-trust-sub 1.md
       - name: Sub 2  
         href: ./protect/zero-trust-sub 2.md
-           
  
   - name: Create and deploy Intune policies
     items:
