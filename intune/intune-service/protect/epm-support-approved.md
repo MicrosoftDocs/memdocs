@@ -50,7 +50,7 @@ Use EPM policies with the *support approved* elevation type for files that need 
 
 > [!TIP]
 >
-> To review the three elevation types and other policy options, see [Windows elevation rules policy](../protect/epm-elevationrules.md#windows-elevation-settings-policy).
+> To review the three elevation types and other policy options, see [Windows elevation rules policy](../protect/epm-elevation-rules.md#windows-elevation-settings-policy).
 
 The following subjects are details to plan for and expect when you use the support approved elevation type:
 
@@ -101,7 +101,7 @@ For more information about all the permissions for managing EPM, see [Role-based
 
 ## Create policy for support approved file elevations
 
-To create support-approved elevation policy, use the same workflow for creating other EPM elevation rule policies. See [Windows elevation rules policy](../protect/epm-elevation-rules.md#windows-elevation-rules-policy) in *Configure policies for Endpoint Privilege Management*.
+To create support-approved elevation policy, use the same workflow for creating other EPM elevation rule policies. See [Windows elevation rules policy](../protect/epm-elevation-rules.md#create-elevation-rules-policy) in *Configure policies for Endpoint Privilege Management*.
 
 ## Manage pending elevation requests
 

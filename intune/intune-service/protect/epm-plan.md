@@ -188,7 +188,7 @@ Set the [default elevation response](../protect/epm-elevation-settings.md#about-
 
 ### Require file path restrictions in all rule types
 
-When [configuring an elevation rule](../protect/epm-elevation-rules.md#creating-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that leverage automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced prior to elevation.
+When [configuring an elevation rule](../protect/epm-elevation-rules.md#create-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that leverage automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced prior to elevation.
 
 This recommendation applies to rules created [automatically](../protect/epm-elevation-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](../protect/epm-reports.md) or [support approved](../protect/epm-support-approved.md) request, and for elevation rules that you create [manually](../protect/epm-elevation-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
 

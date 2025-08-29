@@ -49,7 +49,7 @@ Endpoint Privilege Management on devices can be configured to report on the foll
 - Diagnostic data
 - Usage data
 
-When configuring EPM, you configure the *Send elevation data for reporting* and *Reporting scope* settings in an Intune [Windows elevation settings policy](epm-elevation-settings-poilicy.md) to determine which data Intune reports to Microsoft.
+When configuring EPM, you configure the *Send elevation data for reporting* and *Reporting scope* settings in an Intune [Windows elevation settings policy](epm-elevation-settings.md) to determine which data Intune reports to Microsoft.
 
 ## Diagnostic Data
 

@@ -27,7 +27,7 @@ ms.collection:
 - sub-intune-suite
 ---
 
-## Windows elevation settings policy
+# Windows elevation settings policy
 
 To configure the following options on devices, deploy *Windows elevation settings policy* to users or devices:
 
@@ -37,7 +37,7 @@ To configure the following options on devices, deploy *Windows elevation setting
 
 A device must have an elevation settings policy that enables support for EPM before the device can process an elevation rules policy or manage elevation requests. When support is enabled, the `C:\Program Files\Microsoft EPM Agent` folder is added to the device along with the EPM Microsoft Agent, which is responsible for processing the EPM policies.
 
-### About Windows elevation settings policy
+## About Windows elevation settings policy
 
 Use *Windows elevation settings policy* when you want to:
 
@@ -84,7 +84,7 @@ Use *Windows elevation settings policy* when you want to:
   - **Diagnostic data and all endpoint elevations** - This option sends diagnostic data to Microsoft about the health of the client components **AND** data about *all* elevations happening on the endpoint.
   - **Diagnostic data only** - This option sends only the diagnostic data to Microsoft about the health of the client components.
 
-### Create a Windows elevation settings policy
+## Create a Windows elevation settings policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
    Set the *Platform* to **Windows**, *Profile* to **Windows elevation settings policy**, and then select **Create**.

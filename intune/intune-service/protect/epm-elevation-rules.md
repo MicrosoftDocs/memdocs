@@ -270,7 +270,7 @@ Use either of the following methods to create new elevation rules, which are add
 
        > [!CAUTION]
        >
-       > Only use automatic elevation for files you trust. These files will automatically elevate without user interaction. Rules that aren't well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](../protect/epm-guidance-for-creating-rules.md).
+       > Only use automatic elevation for files you trust. These files will automatically elevate without user interaction. Rules that aren't well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](#defining-rules-for-use-with-endpoint-privilege-management).
 
      - **Deny**: A *deny* rule prevents the identified file from being run in an elevated context. The following behaviors apply:
        - *Deny* rules support the same configuration options as other elevation types with the exception of child processes, which aren't used even though the configuration option remains visible when configuring the rule.
@@ -294,7 +294,7 @@ Use either of the following methods to create new elevation rules, which are add
    - **File path** (Optional): Specify the location of the file. If the file can be run from any location or is unknown, you can leave this blank. You can also use a variable.
 
      > [!TIP]  
-     > While optional, we [recommend use of a *File path*](../protect/epm-overview.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
+     > While optional, we [recommend use of a *File path*](epm-plan.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
 
    - **Signature source**: Choose one of the following options:
 

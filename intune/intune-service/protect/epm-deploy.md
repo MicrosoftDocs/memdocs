@@ -49,7 +49,7 @@ The table below lists the common deployment scenarios for EPM. We can choose to 
 | Scenario | Local User (Before) | Local User (After) | Example Role | Use Case |
 |---|---|---|---|---|
 |1|Admin|Admin|IT Support Technicians|A certain subset of users required ongoing local admin – but you want to gain security improvements by using EPM.|
-|2|Admin|Standard User|Information Workers|You want to move users with local admin rights to standard users, without big disruptions. You want to allow them to request an app to run as admin on occasion.</br></br> For step by step instructions on how to achieve thsi scenario with EPM, see [Using EPM to transition users from administrator to standard users](epm-scenario.md)|
+|2|Admin|Standard User|Information Workers|You want to move users with local admin rights to standard users, without big disruptions. You want to allow them to request an app to run as admin on occasion.</br></br> For step by step instructions on how to achieve thsi scenario with EPM, see [Using EPM to transition users from administrator to standard users](epm-scenario-admin-to-standard-user.md)|
 |2|Standard User|Standard User|Developers|You want to allow specific users to 'elevate up' without granting local admin rights or using LAPS.|
 
 EPM can help control the elevation of applications in Intune and [Local Users and Groups](endpoint-security-account-protection-policy.md) can be used to control the local administrators group and transition users from administrators to standard users.
