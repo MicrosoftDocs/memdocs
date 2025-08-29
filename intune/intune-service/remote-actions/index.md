@@ -81,7 +81,7 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="../media/icons/remote-actions/remove-apps-and-configuration.svg" border="false"::: | [Remove apps and configuration][RA-APPCON] | Temporarily remove applications and configuration from a device.|
 | :::image type="icon" source="../media/icons/remote-actions/remove-user.svg" border="false"::: | [Remove user][RA-REMOVEUSER] | Deletes a user from the cache of a shared iPad. |
 | :::image type="icon" source="../media/icons/remote-actions/rename-device.svg" border="false"::: | [Rename device][RA-REN] | Changes the device name in Intune. |
-| :::image type="icon" source="../media/icons/remote-actions/reset-passcode.svg" border="false"::: | [Remove passcode][RA-PREST] | Removes the device passcode. |
+| :::image type="icon" source="../media/icons/remote-actions/reset-passcode.svg" border="false"::: | [Remove passcode][RA-PREM] | Removes the device passcode. |
 | :::image type="icon" source="../media/icons/remote-actions/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
 | :::image type="icon" source="../media/icons/remote-actions/retire.svg" border="false"::: | [Retire][RA-RETIRE] | Removes company data and settings from a device, and leaves personal data intact. |
 | :::image type="icon" source="../media/icons/remote-actions/send-custom-notification.svg" border="false"::: | [Send custom notification][RA-NOTIFY] | Sends a custom notification message to a device that can be viewed in the Company Portal app. |
@@ -209,6 +209,7 @@ Some remote actions can also be executed in bulk. To learn more, see [Bulk devic
 [RA-NOTIFY]: custom-notifications.md
 [RA-PAUSECR]: pause-config-refresh.md
 [RA-PLAY]: device-play-lost-mode-sound.md
+[RA-PREM]: device-remove-passcode.md
 [RA-PREST]: device-passcode-reset.md
 [RA-REMED]: device-run-remediation.md
 [RA-REMOVEUSER]: device-remove-user.md

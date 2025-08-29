@@ -38,7 +38,7 @@ items:
   - name: Remove apps and configuration
     href: remove-apps-config.md
   - name: Remove passcode ✅
-    href: device-passcode-reset.md
+    href: device-remove-passcode.md
   - name: Remove user
     href: device-remove-user.md
   - name: Rename device
