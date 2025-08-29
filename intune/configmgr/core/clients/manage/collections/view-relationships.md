@@ -7,8 +7,8 @@ ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: article
 ms.localizationpriority: medium
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.collection: tier3
 ms.reviewer: mstewart

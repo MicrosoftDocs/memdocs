@@ -127,4 +127,4 @@ Compliance reports are currently not available for Android (AOSP) devices. This 
 ## Next steps
 
 * [Add actions for noncompliant devices](actions-for-noncompliance.md)
-* [Set device restrictions for AOSP devices](../configuration/device-restrictions-android-aosp.md)
+* [Set device restrictions for AOSP devices](../configuration/device-restrictions-android-for-work.md)

@@ -7,7 +7,7 @@ description: Set up Intune for personal devices and bring-your-own-device scenar
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 10/28/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: jieyan
+ms.reviewer: grwilso
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -38,8 +38,11 @@ Set up enrollment for bring-your-own-device (BYOD) and personal device scenarios
 For more information about Android Enterprise work profile features, see [Work profiles](https://support.google.com/work/android/answer/9563584) (opens Android Enterprise Help).  
 
 ## Requirements  
-* [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md)
-* Review [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012) (opens Google support)   
+* [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).  
+* Review [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012) (opens Google support).     
+* Make sure Android Enterprise is supported on devices. For more information, see:   
+    * [Android Enterprise help - General FAQs](https://support.google.com/work/android/answer/14772109?hl=en#zippy=%2cif-my-device-is-not-android-enterprise-recommended-aer-can-i-still-use-android-enterprise)  
+    * [Check & fix Play Protect certification status](https://support.google.com/googleplay/answer/7165974?hl=en#zippy=%2Cdevice-isnt-certified) 
 
 ## Set up enrollment  
 

@@ -6,7 +6,7 @@ description: Enroll Linux devices in Intune using the Intune app. Set an overvie
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 01/09/2025
 ms.topic: article
 ms.service: microsoft-intune
@@ -48,7 +48,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You use Ubuntu Desktop (24.04, 22.04, or 20.04 LTS on x86/64). | ✅ |
+| You use Ubuntu Desktop (24.04 LTS or 22.04 LTS on x86/64). | ✅ |
 | You use Ubuntu Server. | ❌ |
 | You use RedHat Enterprise Linux 8 or 9. |✅ |
 | Devices are owned by the organization or school. | ✅ |

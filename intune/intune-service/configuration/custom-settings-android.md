@@ -6,7 +6,7 @@ description: Add or create a custom profile for Android device administrator (DA
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune

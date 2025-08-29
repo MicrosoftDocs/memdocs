@@ -2,9 +2,9 @@
 title: Configure infrastructure to support SCEP certificate profiles with Microsoft Intune
 description: To use Simple Certificate Enrollment Protocol (SCEP) with Microsoft Intune, configure your on-premises AD domain, create a certification authority, and set up the NDES server to support use of the Certificate Connector.
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 06/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -16,7 +16,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: wicale
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -80,7 +80,7 @@ To support SCEP, the following on-premises infrastructure must run on servers th
 
 #### Support for NDES on the internet
 
-To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use a reverse proxy like *Microsoft Entra application proxy*, *Microsoft’s Web Application Proxy Server*, or a third-party reverse proxy service or device.
+To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use a reverse proxy like *Microsoft Entra application proxy*, *Microsoft's Web Application Proxy Server*, or a third-party reverse proxy service or device.
 
 - **Microsoft Entra application proxy** – You can use the Microsoft Entra application proxy instead of a dedicated Web Application Proxy (WAP) Server to publish your NDES URL to the internet. This solution allows both intranet and internet facing devices to get certificates. For more information, see [Integrate with Microsoft Entra application proxy on a Network Device Enrollment Service (NDES) server](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
 
@@ -141,17 +141,17 @@ For Android Enterprise, the version of encryption on a device determines whether
 
 - **Full-disk encryption**, which requires the device have a PIN configured.
 
-- **File-based encryption**, which is required on devices that are installed by the OEM with Android 10 or later. These devices won’t require a PIN. Devices that upgrade to Android 10 might still require a PIN.
+- **File-based encryption**, which is required on devices that are installed by the OEM with Android 10 or later. These devices won't require a PIN. Devices that upgrade to Android 10 might still require a PIN.
 
 > [!NOTE]
 >
-> Microsoft Intune can’t identify the type of encryption on an Android device.
+> Microsoft Intune can't identify the type of encryption on an Android device.
 
 The version of Android on a device can affect the available encryption type:
 
 - **Android 10 and later:** Devices installed with Android 10 or later by the OEM use file-based encryption and won't require a PIN for SCEP to provision a certificate. Devices that upgrade to version 10 or later and begin to use file-based encryption might still require a PIN.
 
-- **Android 8 to 9**: These versions of Android support the use of file-based encryption, but it’s not required. Each OEM chooses which encryption type to implement for a device. It’s also possible that OEM modifications will result in a PIN not being required even when full-disk encryption is in use.
+- **Android 8 to 9**: These versions of Android support the use of file-based encryption, but it's not required. Each OEM chooses which encryption type to implement for a device. It's also possible that OEM modifications will result in a PIN not being required even when full-disk encryption is in use.
 
 For more information, see the following articles in the Android documentation:  
 
@@ -284,7 +284,7 @@ After you [create the SCEP certificate template](#create-the-scep-certificate-te
 
 By default, Intune uses the value configured in the template, but you can configure the CA to allow the requester to enter a different value, so that value can be set from within the Microsoft Intune admin center.
 
-Plan to use a validity period of five days or greater. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed.
+Plan to use a validity period of five days or greater. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it's installed.
 
 > [!IMPORTANT]
 > For iOS/iPadOS and macOS, always use a value set in the template.
@@ -488,7 +488,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 7. In the **Certificate Connector** UI:
 
-   1. Select **Sign In**, and enter your Intune service administrator credentials, or credentials for a tenant administrator with the global administration permission.
+   1. Select **Sign In**, and enter your Intune Administrator credentials.
 
    2. The account you use must be assigned a valid Intune license.
 

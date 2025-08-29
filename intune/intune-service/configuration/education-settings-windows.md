@@ -6,7 +6,7 @@ description: See a list of all the education settings for Windows 10 devices. Us
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/29/2021
 ms.topic: reference
 ms.service: microsoft-intune

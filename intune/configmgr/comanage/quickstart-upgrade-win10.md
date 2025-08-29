@@ -6,8 +6,8 @@ ms.date: 11/08/2021
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -44,7 +44,7 @@ Here are some tips we've learned from helping thousands of customers get current
 
 ## Case studies
 
-Microsoft IT deployed Windows 10 to 96,000 distributed users at Microsoft. The deployment included both remote users and users on the corporate network. The deployment completed in nine weeks. For more information on their experience, see [Deploying Windows 10 at Microsoft as an in-place upgrade](https://www.microsoft.com/insidetrack/deploying-windows-10-at-microsoft-as-an-in-place-upgrade).
+Microsoft IT deployed Windows 10 to 96,000 distributed users at Microsoft. The deployment included both remote users and users on the corporate network. The deployment completed in nine weeks. For more information on their experience, see [Deploying Windows 10 at Microsoft as an in-place upgrade](https://www.microsoft.com/insidetrack/blog/preparing-your-organization-for-a-seamless-windows-10-deployment/).
 
 A large European software manufacturer successfully uses an early adopter group. After initial testing and piloting groups, approximately 2,000 employees receive the first update, upgrades, and software. This group includes IT staff and opt-in volunteers. This level of engagement with their users gives them a greater level of confidence when testing, and more credibility when mass rollouts begin.
 

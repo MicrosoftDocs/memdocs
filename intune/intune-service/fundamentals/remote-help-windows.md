@@ -5,9 +5,9 @@ title: Using Remote Help on Windows to assist authenticated users.
 titleSuffix: Microsoft Intune 
 description: Use the Remote Help app to provide remote assistance to authenticated users who also run the Remote Help app, and to troubleshoot for frontline workers (FLW).
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: lenewsad
+ms.author: lanewsad
+manager: laurawi
 ms.date: 04/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune

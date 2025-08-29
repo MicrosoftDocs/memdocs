@@ -4,9 +4,9 @@
 title: Learn about using Windows Update client policies in Microsoft Intune
 description: Manage Windows 10 and Windows 11 software updates by using Intune policy for Update rings for Windows and Windows feature updates for Windows Update client policies in Microsoft Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 02/27/2025
 ms.topic: overview
 ms.service: microsoft-intune

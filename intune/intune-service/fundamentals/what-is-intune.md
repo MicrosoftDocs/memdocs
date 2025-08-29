@@ -6,7 +6,7 @@ description: Microsoft Intune manages users and devices, simplifies app manageme
 keywords: what is Intune, mobile endpoint management, mobile application management
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/30/2025
 ms.topic: overview
 ms.service: microsoft-intune
@@ -203,7 +203,7 @@ The Intune admin center makes it easy to connect to different partner services, 
 
 - **TeamViewer for remote assist**: When you connect to your TeamViewer account, you can use TeamViewer to remotely assist devices.
 
-  For more information, go to [Use TeamViewer to remotely administer Intune devices](../remote-actions/teamviewer-support.md).
+  For more information, go to [Use TeamViewer to remotely administer Intune devices](../fundamentals/teamviewer-support.md).
 
 With these services, Intune:
 

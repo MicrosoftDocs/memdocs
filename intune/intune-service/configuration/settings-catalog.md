@@ -2,12 +2,13 @@
 # required metadata
 
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get impact What If analysis, and learn more about each setting.
+description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
 keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 04/15/2025
+manager: laurawi
+ms.date: 06/17/2025
+ms.update-cycle: 180-days
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano, beflamm, rashok
+ms.reviewer: mayurjadhav, beflamm, cchristenson, rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,13 +30,13 @@ ms.collection:
 - msec-ai-copilot
 ---
 
-# Use the settings catalog to configure settings on Windows, iOS/iPadOS, macOS, and Android devices
+# Use the Intune settings catalog to configure settings
 
 The settings catalog lists all the settings you can configure all in one place. This feature simplifies how you create a policy and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 
 You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md). When you use the Copilot features with the settings catalog, you can use Copilot to:
 
-- Learn more about each setting, get impact *what if* analysis, and find potential conflicts.
+- Learn more about each setting, get *what if* analysis, and find potential conflicts.
 - Summarize existing policies and get impact analysis on users and security.
 
 If you prefer to configure settings at a granular level, similar to using on-premises Group Policy Objects (GPOs), the settings catalog is a natural transition to cloud-based policy.
@@ -46,11 +47,15 @@ To manage and secure devices in your organization, use the settings catalog as p
 
 This feature applies to:
 
+- **Android**
+
+    Settings catalog for Android lists settings available for Android (AOSP) and corporate-owned Android Enterprise devices. More settings for Android devices are continually added to the settings catalog.
+
 - **iOS/iPadOS**
 
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more, see [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) on Apple's website.
 
-  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/apple-user-enrollment-with-company-portal.md), you're automatically using DDM. If DDM doesn't work, these devices will use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
+  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/apple-user-enrollment-with-company-portal.md), you're automatically using DDM. If DDM doesn't work, these devices use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
 
 - **macOS**
 
@@ -68,11 +73,6 @@ This feature applies to:
   - Configure earlier versions of Microsoft Edge.
   - Configure Microsoft Edge browser settings that aren't in the settings catalog.
 
-- **Android**
-
-    Settings catalog for Android lists settings available for Android (AOSP) and corporate-owned Android Enterprise devices. More settings for Android devices will be added continually to Settings catalog.
-
-
 - **Windows 10/11**
 
   There are thousands of settings, including settings that weren't previously available. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
@@ -80,7 +80,7 @@ This feature applies to:
 > [!TIP]
 >
 > - For a list of the settings in the settings catalog, see the [IntunePMFiles/DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
-> - To see the Microsoft Edge policies you have configured, open Microsoft Edge and go to `edge://policy`.
+> - To see the Microsoft Edge policies you configured, open Microsoft Edge and go to `edge://policy`.
 
 This article describes the steps to create a policy, shows how to search and filter the settings in Intune, and shows how to use Copilot.
 
@@ -92,11 +92,19 @@ For information about features you can configure using the settings catalog, see
 
 You create the policy by using the settings catalog profile type.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Policy and Profile Manager** built-in role, at a minimum.
+
+    For more information on the built-in roles, go to [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **iOS/iPadOS**, **macOS**, **Android Enterprise**, **Android (AOSP)**, or **Windows 10 and later**.
+    - **Platform**: Select your platform:
+            - **Android Enterprise**
+            - **Android (AOSP)**
+            - **iOS/iPadOS**
+            - **macOS**
+            - **Windows 10 and later**
     - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.
@@ -142,7 +150,7 @@ You create the policy by using the settings catalog profile type.
    > - When a setting allows multiple values, we recommend that you add each value separately. For example, you can enter multiple values in the **Bluetooth** > **Services Allowed List** setting. Enter each value on a separate line:
    >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Intune admin center.":::
    >
-   >    You can add multiple values in a single field, but you may experience a character limit.
+   >    You can add multiple values in a single field, but you might experience a character limit.
 
 9. Select **Next**.
 10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -180,7 +188,7 @@ When you create a new policy or update an existing policy, there are built-in se
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="Screenshot that shows the settings catalog when you filter the settings list by Windows edition in Microsoft Intune and Intune admin center.":::
 
   > [!NOTE]
-  > For the Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, the Edge, Office, and OneDrive settings aren't shown.
+  > For the Microsoft Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, the Microsoft Edge, Office, and OneDrive settings aren't shown.
 
   You can also *filter the settings by device or user scope*. For more information, see [Device scope vs. user scope settings](#device-scope-vs-user-scope-settings) (in this article):
 
@@ -190,7 +198,7 @@ When you create a new policy or update an existing policy, there are built-in se
 
 When you use settings catalog policies, you can use Copilot to get more information about a specific setting.
 
-1. In your policy, select **Add settings**. In the settings Ppicker, select some settings. For example, in a macOS policy, expand **Declarative Device Management** > **Software Update** > **Select all these settings**. Close the settings picker.
+1. In your policy, select **Add settings**. In the settings picker, select some settings. For example, in a macOS policy, expand **Declarative Device Management** > **Software Update** > **Select all these settings**. Close the settings picker.
 
 2. For the settings, notice the Copilot tooltip:
 
@@ -229,7 +237,7 @@ When you create a settings catalog policy, you can export the policy to a `.json
 
 1. Go to **Devices** > **Manage devices** > **Configuration**.
 
-2. To export an existing policy, select the Windows settings catalog policy and then select the ellipsis/context menu (`…`) > **Export JSON**:
+2. To export an existing policy, select the Windows settings catalog policy, and then select the ellipsis/context menu (`…`) > **Export JSON**:
 
     :::image type="content" source="./media/settings-catalog/export-settings-catalog-policy.png" alt-text="Screenshot that shows how to export a settings catalog policy as JSON in Microsoft Intune and Intune admin center.":::
 
@@ -338,7 +346,7 @@ The following list includes some possible combinations of scope, assignment, and
 
 If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, you can see some user scope settings marked as *not applicable*. This behavior happens in the early moments of device activity before a user is present.
 
-## Next steps
+## Related articles
 
 - [Tasks you can complete using the settings catalog in Intune](settings-catalog-common-features.md)
 - [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md)

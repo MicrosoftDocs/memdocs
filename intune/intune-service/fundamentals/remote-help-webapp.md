@@ -4,9 +4,9 @@ title: Using Remote Help Web App.
 titleSuffix: Microsoft Intune 
 description: Use the Remote Help web app to provide remote assistance to authenticated users and to troubleshoot for frontline workers (FLW).
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: lenewsad
+ms.author: lanewsad
+manager: laurawi
 ms.date: 04/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -47,9 +47,9 @@ Use Remote Help with unenrolled devices: Disabled by default, you can choose to 
 
 - **Conditional Access**: Administrators can now utilize Conditional Access capability when setting up policies and conditions for Remote Help. For more information on setting up Conditional Access, go to [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
 
-- **Compliance Warnings**: Before connecting to a user's device, a helper will see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.  
+- **Compliance Warnings**: Before connecting to a user's device, a helper will see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.  
 
-If the user’s device that they're trying to connect to isn't enrolled, the helper sees a prompt that the user’s device is unenrolled.
+If the user's device that they're trying to connect to isn't enrolled, the helper sees a prompt that the user's device is unenrolled.
 
 - **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-windows.md#languages-supported).
 
@@ -109,11 +109,11 @@ Both the helper and sharer must be able to reach Remote Help endpoints over port
  
 ## Using Remote Help web app
 
-The web app allows support teams to view the sharer’s device during a connected session. The use of Remote Help depends on whether you’re requesting help or providing help. In this section, we cover both scenarios.
+The web app allows support teams to view the sharer's device during a connected session. The use of Remote Help depends on whether you're requesting help or providing help. In this section, we cover both scenarios.
 
 ## Establishing a session
 
-During a session there are two roles, a helper, and a sharer. The helper obtains the security code, and then provides it to the sharer. After the session is established, the helper can view the Sharer’s screen.
+During a session there are two roles, a helper, and a sharer. The helper obtains the security code, and then provides it to the sharer. After the session is established, the helper can view the Sharer's screen.
 
 ### Enrolled macOS device
 
@@ -137,7 +137,7 @@ During a session there are two roles, a helper, and a sharer. The helper obtains
 
 - If the user isn't already logged in to the application, they're prompted to do so.
 
-4. At the start of the session, the trust screen is displayed which shows the other person’s full name, job title, company, profile picture, and verified domain.
+4. At the start of the session, the trust screen is displayed which shows the other person's full name, job title, company, profile picture, and verified domain.
 
 - Helpers can see information about the sharer.
 
@@ -157,11 +157,11 @@ If the device that you're trying to help isn't enrolled in Intune, follow the pr
 
 3. Copy and share the 8-digit security code with the person to be helped.
 
-4. The sharer then navigates to https://aka.ms/rh and logs in with their organization’s credentials.
+4. The sharer then navigates to https://aka.ms/rh and logs in with their organization's credentials.
 
 5. After the sharer enters the code, and both users accept the prompts, the sessions begin.
 
-Remote Help displays a warning if the sharer’s device isn't enrolled in Microsoft Intune. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+Remote Help displays a warning if the sharer's device isn't enrolled in Microsoft Intune. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
 More details are outlined in [Provide help](#establishing-a-session).
 

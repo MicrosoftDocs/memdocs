@@ -6,9 +6,9 @@ ms.date: 10/23/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: reference
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 ms.localizationpriority: high
 ---
 
@@ -64,7 +64,7 @@ Endpoint analytics data collection falls into the [optional](../intune-service/p
   - **ver:** The version of the current OS.
 
 > [!IMPORTANT]  
-> Our data handling policies are described in the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
+> Our data handling policies are described in [Privacy and personal data in Intune](../intune-service/protect/privacy-personal-data.md). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
 
 ## <a name="bkmk_stop"></a> Stop gathering data
 

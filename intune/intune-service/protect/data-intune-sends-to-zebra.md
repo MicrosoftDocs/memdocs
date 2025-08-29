@@ -5,9 +5,9 @@ title: Data Intune sends to Zebra
 titleSuffix: Microsoft Intune
 description: List of data that Intune sends to Zebra.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 12/07/2023
 ms.topic: reference
 ms.service: microsoft-intune

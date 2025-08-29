@@ -7,7 +7,7 @@ description: Learn about scaling guidelines for Microsoft Intune when you have a
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 05/28/2025
 ms.topic: article
 ms.service: microsoft-intune
@@ -44,7 +44,7 @@ Each local admin can set up groups to suit their local organizational needs. The
 
 - **Least privilege**: Securing access to your organization is an essential security step. Intune uses role-based access controls (RBAC) to assign administrative users permissions within Intune to administer different tasks. With the principle of *least privilege* access, your admins can perform their assigned tasks on only those users and devices that they should be empowered to manage.
 
-- **Central team**: The Central team or group includes the global admins or primary admins in your tenant. These admins can oversee all the local admins and can provide guidance to the local admins.
+- **Central team**: The Central team or group includes the primary admins in your tenant. These admins can oversee all the local admins and can provide guidance to the local admins.
 
 - **Local admins**: The local admins are local and focus on policies and profiles for their specific locations; schools, hospitals, and so on.
 

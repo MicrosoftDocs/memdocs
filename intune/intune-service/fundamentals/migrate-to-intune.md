@@ -7,7 +7,7 @@ description: Learn how to migrate your mobile device management from Microsoft 3
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 06/25/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -228,8 +228,7 @@ The **Number of sign-in failures before device is wiped** setting isn't migrated
 
 **Workaround**: If this setting was enabled in the Basic Mobility and Security policy, then this setting must be manually added to Intune device configuration profiles. For more information on the similar settings you can configure in Intune, go to:
 
-- [Android Enterprise corporate-owned devices: Settings list to allow or restrict features](../configuration/device-restrictions-android-for-work.md)
-- [Android Enterprise personally owned devices: Settings list to allow or restrict features](../configuration/device-restrictions-android-enterprise-personal.md)
+- [Android Enterprise: Settings list to allow or restrict features](../configuration/device-restrictions-android-for-work.md)
 - [iOS/iPadOS devices: Settings list to allow or restrict features](../configuration/device-restrictions-ios.md)
 - [Windows 10/11 device: Settings list to allow or restrict features](../configuration/device-restrictions-windows-10.md)
 

@@ -6,7 +6,7 @@ titleSuffix: Microsoft Intune
 description: Description for configuring compliance policies
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/22/2023
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -2,9 +2,9 @@
 title: Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune
 description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, and use device configuration profiles for a PKCS Certificate.
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 11/19/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -16,7 +16,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: sheetg
+ms.reviewer: wicale
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

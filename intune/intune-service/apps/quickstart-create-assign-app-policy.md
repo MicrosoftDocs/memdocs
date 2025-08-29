@@ -45,7 +45,12 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune
 
-Sign in to the [Intune](https://aka.ms/intuneportal) as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[Application Manager](../fundamentals/role-based-access-control-reference.md#application-manager)** Intune role.
+
+If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+
+> [!CAUTION]  
+> [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Create an app protection policy
 

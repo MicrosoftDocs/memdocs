@@ -6,8 +6,8 @@ description: Use the settings catalog in Microsoft Intune to configure common fe
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 05/29/2024
+manager: laurawi
+ms.date: 08/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,7 +17,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: laarrizz, mikedano, beflamm
+ms.reviewer: laarrizz, mayurjadhav, beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -44,7 +44,7 @@ This feature applies to:
 
 ## Configure Microsoft Edge and Google Chrome
 
-<!-- ms.reviewer: mikedano -->
+<!-- ms.reviewer: mayurjadhav -->
 
 This feature applies to:
 
@@ -57,6 +57,8 @@ These web browser settings are built in, and can be configured & deployed to you
 :::image type="content" source="./media/settings-catalog-common-features/google-chrome-settings.png" alt-text="Screenshot that shows the Google Chrome settings in the settings catalog that are built in to Microsoft Intune and Intune admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
 
 Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
+
+For a sample Microsoft Edge scenario, see [Create a Microsoft Edge policy](settings-catalog-configure-edge.md).
 
 ## Add universal printers
 

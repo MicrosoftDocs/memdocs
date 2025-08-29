@@ -7,7 +7,7 @@ keywords: intune group policy, import gpo into Intune, Group Policy analytics
 author: MandiOhlinger
 
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 11/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
