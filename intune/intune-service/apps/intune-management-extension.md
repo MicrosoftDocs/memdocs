@@ -154,6 +154,18 @@ To check if the device is automatically enrolled:
 
 [Enable Windows automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment) includes the steps to configure automatic enrollment in Intune.
 
+### Issue: Microsoft Intune Windows Agent AAD app gets automatically disabled
+
+Microsoft Intune Windows Agent is a first party Entra ID app the IME agent uses to authenticate against the gateway to get apps, scripts and other critical payloads. This first party application isn't linked to any subscription-based lifecycle flow, and under some conditions it will fail subscription validity checks, getting continuously disabled by Microsoft Online Services, even after the admin enables it back. When disabled, the  IME agent can't retrieve tokens against this first party application and user targetted payloads will stop working.
+
+**Possible resolutions**:
+Delete the service principal from the organization using Microsoft Graph API, preferably through Graph Explorer:
+
+1. Sign in to Graph Explorer using your an organization's admin credentails (ensure the top-right corner shows your tenant name, not "sample tenant".
+2. Select `servicePrincipals / {servicePrincipal-id} / DELETE`, replacing {servicePrincipal-id} with the actual ID of the service principal.
+3. click on **Run Query** to execute the deletion. 
+
+
 ## Intune management extension logs
 
 IME logs on the client machine are typically in `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Use [CMTrace.exe](/configmgr/core/support/cmtrace) to view these log files.
