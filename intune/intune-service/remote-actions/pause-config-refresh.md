@@ -57,7 +57,7 @@ This is typically used for troubleshooting scenarios where you don't want the de
 
 ## Reference links
 
-- Microsoft Graph API reference: [pauseConfigurationRefresh action][GRAPH-1] in the Microsoft Graph API documentation.
+- Microsoft Graph API: [pauseConfigurationRefresh action][GRAPH-1] in the Microsoft Graph API documentation.
 
 <!--links-->
 

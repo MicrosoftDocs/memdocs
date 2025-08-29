@@ -73,7 +73,7 @@ For more information about WNS, see [Network endpoint requirements](../fundament
 ::: zone pivot="windows"
 - Configuration service provider (CSP) used to initiate the remote action: [Reboot CSP][CSP-1]
 ::: zone-end
-- Microsoft Graph API reference: [rebootNow action][GRAPH-1]
+- Microsoft Graph API: [rebootNow action][GRAPH-1]
 
 <!--links-->
 

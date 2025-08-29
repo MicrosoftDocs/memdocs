@@ -124,7 +124,7 @@ Removing company data from an Android personally owned work profile device remov
 
 ## Reference links
 
-- Microsoft Graph API reference: [wipe action][GRAPH-1]
+- Microsoft Graph API: [wipe action][GRAPH-1]
 
 <!--links-->
 

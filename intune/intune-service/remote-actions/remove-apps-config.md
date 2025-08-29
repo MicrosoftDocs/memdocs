@@ -165,7 +165,7 @@ The monitoring page displays the following information:
 
 ## Reference links
 
-- Microsoft Graph API reference: [changeAssignments action][GRAPH-1] in the Microsoft Graph API documentation.
+- Microsoft Graph API: [changeAssignments action][GRAPH-1] in the Microsoft Graph API documentation.
 
 <!--links-->
 

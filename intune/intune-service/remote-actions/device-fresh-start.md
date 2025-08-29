@@ -57,7 +57,7 @@ The **Fresh Start** device action removes apps from managed Windows devices, hel
 ## Reference links
 
 - Configuration service provider (CSP) used to initiate the remote action: [CleanPC CSP][CSP-1]
-- Microsoft Graph API reference: [cleanWindowsDevice action][GRAPH-1]
+- Microsoft Graph API: [cleanWindowsDevice action][GRAPH-1]
 
 <!--links-->
 

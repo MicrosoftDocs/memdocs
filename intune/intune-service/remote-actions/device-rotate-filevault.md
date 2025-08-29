@@ -37,7 +37,7 @@ ms.collection:
 
 ## Reference links
 
-- Microsoft Graph API reference: [rotateFileVaultKey action][GRAPH-1]
+- Microsoft Graph API: [rotateFileVaultKey action][GRAPH-1]
 
 
 <!--links-->

@@ -109,7 +109,7 @@ To see the status of the **Rename** device action, check the **Overview** page f
 
 ## Reference links
 
-- Microsoft Graph API reference: [setDeviceName action][GRAPH-1]
+- Microsoft Graph API: [setDeviceName action][GRAPH-1]
 
 
 <!--links-->

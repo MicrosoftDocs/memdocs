@@ -64,7 +64,7 @@ The **Remote lock** device action locks a managed device so the user must enter 
 
 ## Reference links
 
-- Microsoft Graph API reference: [remoteLock action][GRAPH-1]
+- Microsoft Graph API: [remoteLock action][GRAPH-1]
 
 <!--links-->
 

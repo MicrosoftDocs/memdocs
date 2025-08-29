@@ -68,7 +68,7 @@ When you execute the **Sync** remote action, iOS/iPadOS and Android apps that fa
 
 ## Reference links
 
-- Microsoft Graph API reference: [syncDevice action][GRAPH-1]
+- Microsoft Graph API: [syncDevice action][GRAPH-1]
 
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

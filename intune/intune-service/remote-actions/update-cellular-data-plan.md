@@ -54,7 +54,7 @@ For more information about devices that support eSIM, see the Apple support arti
 
 ## Reference links
 
-- Microsoft Graph API reference: [activateDeviceEsim action][GRAPH-1]
+- Microsoft Graph API: [activateDeviceEsim action][GRAPH-1]
 
 <!--links-->
 

@@ -245,7 +245,7 @@ Intune gives you the ability to use the **Wipe** remote device action to wipe da
 
 ## Reference links
 
-- Microsoft Graph API reference: [wipe action][GRAPH-1]
+- Microsoft Graph API: [wipe action][GRAPH-1]
 
 <!--
 Initiates a wipe of the device. Also called a factory reset. The Factory reset action restores a device to its factory default settings. The user data is kept or wiped depending on whether or not you choose the Retain enrollment state and user account checkbox.

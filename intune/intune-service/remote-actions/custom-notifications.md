@@ -145,7 +145,7 @@ The notification remains until the user dismisses it.
 
 ## Reference links
 
-- Microsoft Graph API reference: [sendCustomNotificationToCompanyPortal action][GRAPH-1]
+- Microsoft Graph API: [sendCustomNotificationToCompanyPortal action][GRAPH-1]
 
 <!--links-->
 

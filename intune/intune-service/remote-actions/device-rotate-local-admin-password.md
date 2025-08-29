@@ -23,7 +23,7 @@ Initiates a rotation for the local admin password on the device.
 
 ## Reference links
 
-- Microsoft Graph API reference: [rotatelocaladminpassword action][GRAPH-1]
+- Microsoft Graph API: [rotatelocaladminpassword action][GRAPH-1]
 
 
 <!--links-->

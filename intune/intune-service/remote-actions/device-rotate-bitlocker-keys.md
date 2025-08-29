@@ -49,7 +49,7 @@ BitLocker key rotation is important in environments where devices are frequently
 ## Reference links
 
 - Configuration service provider (CSP) used to initiate the remote action: [BitLocker CSP][CSP-1]
-- Microsoft Graph API reference: [rotateBitLockerKeys action][GRAPH-1]
+- Microsoft Graph API: [rotateBitLockerKeys action][GRAPH-1]
 - [BitLocker overview][WIN-1]
 
 <!--links-->

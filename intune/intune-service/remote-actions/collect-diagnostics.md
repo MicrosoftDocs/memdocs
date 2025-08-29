@@ -308,9 +308,9 @@ Currently there are the two main issues that could cause device diagnostics to f
 
 ## Reference links
 
-- Microsoft Graph API references:
-  - [createdevicelogcollectionrequest action][GRAPH-1]
-  - [createdownloadurl action][GRAPH-2]
+- Microsoft Graph API:
+  - [createDeviceLogCollectionRequest action][GRAPH-1]
+  - [createDownloadUrl action][GRAPH-2]
   - [downloadAppDiagnostics action][GRAPH-3]
   - [appDiagnostics function][GRAPH-4]
 

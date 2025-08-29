@@ -49,7 +49,7 @@ ms.collection:
 
 ## Reference links
 
-- Microsoft Graph API reference: [action][GRAPH-1]
+- Microsoft Graph API: [action][GRAPH-1]
 
 
 

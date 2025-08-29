@@ -153,7 +153,7 @@ To start a lost device sound alert:
 
 ## Reference links
 
-- Microsoft Graph API references:
+- Microsoft Graph API:
   - [locateDevice action][GRAPH-1]
   - [playLostModeSound action][GRAPH-2]
 

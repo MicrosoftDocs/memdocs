@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: "Intune Remote Device Action: Remove or reset passcode"
-description: Remove or reset the passcode by using the remove passcode action on devices you manage or monitor with Intune.
+title: "Intune Remote Device Action: Reset or remove passcode"
+description: Learn how to remove or reset a passcode with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -15,7 +15,7 @@ ms.collection:
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Reset or remove a device passcode in Intune
+# Reset or remove a device passcode with Intune
 
 ::: zone pivot="android"
 With the **reset passcode** action in Microsoft Intune, you can remotely reset a device passcode to help users regain access to their devices without requiring a full device wipe. This remote action is especially useful when a user forgets their passcode or is locked out of their device or work profile.
@@ -44,7 +44,7 @@ Before initiating a passcode reset, verify the device's enrollment type to ensur
 > This remote action is supported on the following platforms:
 >
 > - Android (device-level passcode reset)
->     - Corporate-owned dedicated (COSU) — only in kiosk mode
+>     - Corporate-owned dedicated (COSU)
 >     - Open Source Project (AOSP)
 > - Android (work profile passcode reset)
 >     - Personally-owned work profile (BYOD)
@@ -52,7 +52,6 @@ Before initiating a passcode reset, verify the device's enrollment type to ensur
 >     - Corporate-owned work profile (COPE)
 >     - All must be running Android 8.0 or later and have passcode configured via device restrictions.
 > - iOS/iPadOS (corporate-owned)
->   - Passcodes are removed, not reset. After removal, users are prompted to set a new passcode if required by compliance policy.
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -103,6 +102,10 @@ For work profile passcode reset, users get notified to activate their reset pass
 
 ::: zone-end
 
+## Reference links
+
+- Microsoft Graph API: [resetPasscode action][GRAPH-1]
+
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 [INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
@@ -111,4 +114,4 @@ For work profile passcode reset, users get notified to activate their reset pass
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
 [INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
 
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-playlostmodesound
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-resetpasscode

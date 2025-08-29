@@ -83,7 +83,7 @@ Here's how to diable lost mode on a device using the Intune admin center:
 
 ## Reference links
 
-- Microsoft Graph API references:
+- Microsoft Graph API:
   - [enableLostMode action][GRAPH-1]
   - [disableLostMode action][GRAPH-2]
 

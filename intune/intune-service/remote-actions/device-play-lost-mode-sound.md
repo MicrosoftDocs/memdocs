@@ -76,7 +76,7 @@ For **Android Enterprise corporate-owned work profile devices**, and **Android E
 
 ## Reference links
 
-- Microsoft Graph API reference: [playLostModeSound action][GRAPH-1]
+- Microsoft Graph API: [playLostModeSound action][GRAPH-1]
 
 <!--links-->
 

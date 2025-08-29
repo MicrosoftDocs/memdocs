@@ -44,7 +44,7 @@ ms.collection:
 
 ## Reference links
 
-- Microsoft Graph API reference: [windowsDefenderScan action][GRAPH-1]
+- Microsoft Graph API: [windowsDefenderScan action][GRAPH-1]
 
 <!--links-->
 

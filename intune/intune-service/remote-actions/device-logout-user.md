@@ -42,7 +42,7 @@ The **Logout current user** action logs out the current user on a shared iPad de
 
 ## Reference links
 
-- Microsoft Graph API reference: [logoutSharedAppleDeviceActiveUser action][GRAPH-1]
+- Microsoft Graph API: [logoutSharedAppleDeviceActiveUser action][GRAPH-1]
 
 <!--links-->
 

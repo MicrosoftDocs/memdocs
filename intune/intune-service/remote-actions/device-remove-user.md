@@ -45,7 +45,7 @@ The **Remove user** action deletes a user that you select from the local cache o
 
 ## Reference links
 
-- Microsoft Graph API reference: [deleteUserFromSharedAppleDevice action][GRAPH-1]
+- Microsoft Graph API: [deleteUserFromSharedAppleDevice action][GRAPH-1]
 
 <!--links-->
 

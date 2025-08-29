@@ -48,7 +48,7 @@ With the **shut down** action, IT administrators can remotely power off managed 
 
 ## Reference links
 
-- Microsoft Graph API reference: [shutDown action][GRAPH-1]
+- Microsoft Graph API: [shutDown action][GRAPH-1]
 
 <!-- links -->
 

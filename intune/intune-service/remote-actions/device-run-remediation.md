@@ -31,7 +31,7 @@ ms.collection:
 
 ## Reference links
 
-- Microsoft Graph API reference: [initiateOnDemandProactiveRemediation action][GRAPH-1]
+- Microsoft Graph API: [initiateOnDemandProactiveRemediation action][GRAPH-1]
 
 
 <!--links-->
