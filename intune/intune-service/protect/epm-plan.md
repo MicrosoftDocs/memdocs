@@ -1,6 +1,6 @@
 ---
 title: Plan and Prepare for Endpoint Privilege Management Deployment
-description: Plan your Endpoint Privilege Management deploying by understanding requirements, fundamentals and security recommendations. 
+description: Plan your Endpoint Privilege Management deploying by understanding requirements, fundamentals, and security recommendations. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -31,7 +31,7 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-The following sections of this article discuss requirements to use EPM and introduce important concepts for EPM.
+This article covers the information required to plan for a Endpoint Privilege Management (EPM) deployment. This includes requirements, important concepts, security recommendations, and role based access control.
 
 Applies to:
 
@@ -40,23 +40,23 @@ Applies to:
 
 ## Planning Checklist
 
-- Review technical and licensing pre-requisites in your tenant.
+- Review technical and licensing prerequisites in your tenant.
 - Define your target user personas to enable you to build rules with logical grouping on these personas.
 - Ensure you have a good understanding of elevation settings and elevation rules policies, including:
   - Default elevation settings and diagnostic data collection.
-  - Defining elevation files using file hash, metadata, or certificates
+  - Defining elevation files using file hash, metadata, or certificates.
   - How certificate rules can allow any app signed by that certificate to elevate. Exercise caution for vendors who may sign all their apps with the same certificate.
-  - Rules argument support, and child process behaviour options
-  - Elevation types and the expected behaviour of each
-  - How rule conflicts are handled when you have overlapping rule assignments
-- Consider your EPM Settings Policies and Rules design carefully, finding the right balance between security and flexibility for your organization and user personas.
-- Ensure you have a robust rollout strategy, with clear stakeholder management, end user communication and training plans, and monitoring and exception plans.
+  - Rules argument support, and child process behavior options.
+  - Elevation types.
+  - How rule conflicts are handled when you have overlapping rule assignments.
+- Find the right balance between security and flexibility for your organization and user personas.
+- Ensure you have a robust rollout strategy. This includes stakeholder management, end user communication and training plans, and monitoring.
 
 ## Prerequisites
 
 ### Licensing
 
-Endpoint Privilege Management requires an additional license beyond the *Microsoft Intune Plan 1* license. You can choose between a stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+Endpoint Privilege Management requires an add-on license beyond the *Microsoft Intune Plan 1* license. You can choose between a stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
 ### Requirements
 
@@ -69,9 +69,8 @@ Endpoint Privilege Management has the following requirements:
 
 > [!NOTE]
 >
-> - Windows 365 (CloudPC) is supported using a supported operating system version
-> - Workplace-join devices are not supported by Endpoint Privilege Management
-> - Azure Virtual Desktop is not supported by Endpoint Privilege Management
+> - Windows 365 is supported using a supported operating system version
+> - Workplace-join devices and Azure Virtual Desktop aren't supported by Endpoint Privilege Management
 
 Endpoint Privilege Management supports the following operating systems:
 
@@ -84,9 +83,8 @@ Endpoint Privilege Management supports the following operating systems:
 
 > [!IMPORTANT]
 >
-> - Elevation settings policy will show as not applicable for devices that don't run a supported operating system version.
-> - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures. This includes devices running Windows on Arm64.
-> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+> - Elevation settings policies report as 'not applicable' for devices that don't run a supported operating system version.
+> - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures, including Arm64.
 
 ### Government cloud support
 
@@ -109,9 +107,9 @@ When you configure the *elevation settings* and *elevation rules* policies that 
 
   - **Automatic**: For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
 
-  - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an extra layer of protection by making the user acknowledge that the app will run in an elevated context, before that elevation occurs.
+  - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules can aslo require validation with authentication or business justification. Requiring validation provides an extra layer of protection by making the user acknowledge the elevation.
 
-  - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While we recommend use of file elevation rules to allow users to elevate specific files, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
+  - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. We recommend using file elevation rules to let users elevate specific files. To block known or potentially harmful software from running with elevated privileges, you can use a deny rule.
 
   - **Support approved**: For support approved rules, end users must submit a request to approve an application. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can complete the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md)
 
@@ -167,7 +165,7 @@ If a device receives two rules targeting the same application, both rules are co
 - If applying the proceeding logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved, and then Automatic.
 
 > [!NOTE]
-> If a rule does not exist for an elevation and that elevation was requested through the *Run with elevated access* right-click context menu, then the *Default Elevation Behavior* is used.
+> If a rule doesn't exist for an elevation and that elevation was requested through the *Run with elevated access* right-click context menu, then the *Default Elevation Behavior* is used.
 
 ## Endpoint Privilege Management and User Account Control
 
@@ -176,7 +174,7 @@ Endpoint Privilege Management and Windows built-in user account control (UAC) ar
 When moving users to run as standard users and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
 
 > [!NOTE]
-> Endpoint Privilege Management doesn't interfere with user account control actions (or UAC) that's run by an Administrator on the device. It's possible to create rules that apply to Administrators on the device, so give special consideration to rules that are applied to all users on a device and the impact on users with Administrator rights.
+> Endpoint Privilege Management doesn't interfere with user account control actions (or UAC) that's run by an Administrator on the device.
 
 ## Security recommendations
 
@@ -184,11 +182,11 @@ To help ensure a secure deployment of Endpoint Privilege Management, consider th
 
 ### Set a secure default elevation response
 
-Set the [default elevation response](../protect/epm-elevation-settings.md#about-windows-elevation-settings-policy) to **Support Approval** or **Deny** rather than **User Confirmed**. This ensures that elevation is governed by predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
+Set the [default elevation response](../protect/epm-elevation-settings.md#about-windows-elevation-settings-policy) to **Support Approval** or **Deny** rather than **User Confirmed**. This ensures that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
 
 ### Require file path restrictions in all rule types
 
-When [configuring an elevation rule](../protect/epm-elevation-rules.md#create-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that leverage automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced prior to elevation.
+When [configuring an elevation rule](../protect/epm-elevation-rules.md#create-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that use automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced before elevation.
 
 This recommendation applies to rules created [automatically](../protect/epm-elevation-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](../protect/epm-reports.md) or [support approved](../protect/epm-support-approved.md) request, and for elevation rules that you create [manually](../protect/epm-elevation-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
 

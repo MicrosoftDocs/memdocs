@@ -35,7 +35,7 @@ With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization'
 
 Endpoint Privilege Management supports your [Zero Trust](/security/zero-trust/zero-trust-overview) journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive. For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust-with-microsoft-intune.md).
 
-The following sections of this article provide an overview of EPM and it's key features.
+This overview provides information about EPM including the benefits, how it works, and how to get started.
 
 Applies to:
 
@@ -47,31 +47,29 @@ Applies to:
 
 ## Key Features and Benefits
 
-- **Standard Users by Default**. Users can operate without local admin rights enhancing security without disrupting productivity by allowing users to perform necessary tasks with EPM without waiting for IT – reducing helpdesk tickets and delays.
-- **Support for Just-in-time elevation**. Users elevate temporarily for specific IT-approved tasks, with automatic, user confirmed or support approved elevations.
+- **Standard Users by Default**. Users can perform their tasks without local admin rights.
+- **Support for Just-in-time elevation**. Users elevate temporarily for specific IT-approved tasks, with automatic, user confirmed, or support approved elevations.
 - **Policy-Based Control**. Admins define settings and rules to control elevation conditions and behaviour, with granular rule creation capabilities to suit organizational needs.
 - **Audit Logging and Reporting**. Intune logs every elevation with detailed metadata.
 - **Alignment to Zero Trust principles** by enabling least privilege access and minimizing lateral movement risks.
 
 ## EPM Fundamentals
 
-Elevation can be triggered by EPM, or by a user right clicking on a supported file type and selecting the 'Run with elevated access' context menu option. EPM is controlled by two types of policies:
+EPM elevation can be triggered using two methods:
+
+- Automatically, or;
+- User selected "Run with elevated access".
+
+EPM can be configured using two types of policies:
 
 - **Elevation rules policy** - defines elevation behavior for apps based on criteria.
 - **Elevation settings policy** - controls the EPM client, reporting level and default elevation capability.
 
 Both rules and policies can be targeted at groups of users or devices. To perform the elevation on the device, the EPM service uses a virtual account, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group.
 
-EPM does not require an agent to be installed – the client is initiated by deploying an Elevation settings policy from Intune, which creates a 'Microsoft EPM Agent Service' and a "C:\Program Files\Microsoft EPM Agent" directory.
+EPM doesn't require an agent to be installed – the client is initiated by deploying an Elevation settings policy from Intune, which creates a 'Microsoft EPM Agent Service' and a "C:\Program Files\Microsoft EPM Agent" directory.
 
 ## INSERT PICTURE HERE
-
-### Elevation Triggers
-
-EPM elevation can be triggered using two methods:
-
-- Automatically, or;
-- User selected "Run with elevated access".
 
 ### Elevation Types
 
@@ -81,7 +79,7 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
 
 - **Automatic**: For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
 
-- **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an extra layer of protection by making the user acknowledge that the app will run in an elevated context, before that elevation occurs.
+- **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. Administrators can require the user to perform extra validation using an authentication prompt, business justification, or both.
 
 - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While we recommend use of file elevation rules to allow users to elevate specific files, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
 
@@ -91,7 +89,7 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
 
 - **Child process controls** - When processes are elevated by EPM, you can control how the creation of child processes is governed by EPM, which allows you to have granular control over any subprocesses that might be created by your elevated application.
 
-- **Argument support** - Allow only certain parameters for applications to be elevated. This enables an administrator to allow parameters that are considered safe and disallow others when elevating.
+- **Argument support** - Allow only certain parameters for applications to be elevated. 
 
 - **File Hash support** - Match the application based on the hash of the file.
 
@@ -119,15 +117,9 @@ Endpoint Privilege Management (EPM) is built into Microsoft Intune, which means 
 
 - **License EPM** - Before you can use Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-- **Plan for EPM** - Before your start using EPM, there are some key requirements and concepts you should consider. To plan for EPM, see [Plan for EPM](epm-plan.md).
+- **Plan for EPM** - Before your start using EPM, there are some key requirements and concepts you should consider. For more information, see [Plan for EPM](epm-plan.md).
 
-- **Deploy EPM** - For most customers, the high-level process of deploying EPM will include the following phases. More specific details on how to implement each of these phases is covered in [Deploy EPM](epm-deploy.md).
-
-  - **Phase 1: Auditing** - Enable EPM client and silently gather reporting information
-  - **Phase 2: Persona identification** - Identity groups of users with common requirements – likely focused on their personas
-  - **Phase 3: Build rules** - Use reporting data (Phase 1) to create rules for different personas
-  - **Phase 4: Remove local admin rights** - Move users from local administrators to std users on their device. Consider enabling 'Support Approved' so that users can request elevation for apps that aren't covered by rules.
-  - **Phase 5: Monitoring** - Iterate and refine rules, identify new scenarios.
+- **Deploy EPM** - To deploy EPM, enable auditing, create rules, and monitor the deployment. For more information, see [Deploy EPM](epm-deploy.md).
 
 > [!div class="nextstepaction"]
 > [Next: Plan for EPM >](epm-plan.md)
