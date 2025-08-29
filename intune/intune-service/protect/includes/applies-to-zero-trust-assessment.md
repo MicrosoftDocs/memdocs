@@ -1,4 +1,6 @@
 ---
+title: Include - Applies to Zero Trust Assessment
+description: Include file for applies to with green check symbol.
 ms.author: brenduns
 author: brenduns
 ms.manager: laurawi
