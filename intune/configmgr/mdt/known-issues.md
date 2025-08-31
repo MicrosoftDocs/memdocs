@@ -5,8 +5,8 @@ ms.date: 03/08/2022
 ms.subservice: mdt
 ms.service: configuration-manager
 ms.topic: troubleshooting-known-issue
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3

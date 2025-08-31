@@ -4,10 +4,10 @@
 title: Overview of Certificate Connector for Microsoft Intune - Azure | Microsoft Docs
 description: Learn about the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation. 
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
-ms.date: 09/19/2024
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
+ms.date: 08/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,7 +19,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: wicale
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -136,10 +136,10 @@ In the Microsoft Intune admin center, you can select a certificate connector to 
 
 3. Select a connector to view its status.
 
-When viewing the connector status:
+   When viewing the connector status:
 
-- Deprecated connectors show a **Warning**. After the six-month grace period, the warning changes to an Error.
-- Connectors that are beyond the grace period show an Error. These connectors are no longer supported and can stop working at any time.
+    - Deprecated connectors show a **Warning**. After the six-month grace period, the warning changes to an Error.
+    - Connectors that are beyond the grace period show an Error. These connectors are no longer supported and can stop working at any time.
 
 ## Logging
 
@@ -388,6 +388,19 @@ New updates for the connector can take a week or more to become available for ea
 > [!IMPORTANT]  
 > Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. Starting August 2022, these connector versions **won't** be able to revoke certificates. Starting September 2022, these connector versions **won't** be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
 
+### July 22, 2025
+
+Version **6.2406.0.2002** - Changes in this release:  
+
+- Fixes the **looks like duplicate versions** issue when installing the connector
+- No functional changes from 6.2406.1001
+  
+### June 12, 2025
+
+Version **6.2406.0.1002** - Changes in this release:  
+
+- Updated code signing
+- No functional changes from 6.2406.1001
 
 ### September 19, 2024  
 

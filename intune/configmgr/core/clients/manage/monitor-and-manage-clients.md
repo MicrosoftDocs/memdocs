@@ -6,8 +6,8 @@ ms.date: 10/01/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: article
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

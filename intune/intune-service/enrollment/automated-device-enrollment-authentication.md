@@ -7,8 +7,8 @@ description: Describes the Intune-supported authentication methods you can use w
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 02/05/2025
+manager: laurawi
+ms.date: 06/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -139,6 +139,9 @@ The following sequence of events describes an example of what a successful authe
 8. The device user opens Teams and is automatically signed in.
    
 ## Option 4: Setup Assistant (legacy)
+
+> [!IMPORTANT]
+> We recommend using **Setup Assistant with modern authentication** for all Automated Device Enrollment (ADE) scenarios with user device affinity. Avoid using legacy authentication.
 
 Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This option installs standard preconfigured settings when the device enrolls in Intune. Use this option for authentication when: 
 

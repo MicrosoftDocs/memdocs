@@ -6,7 +6,7 @@ description: Use Microsoft Intune to upgrade Windows 10/11 client devices to a d
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 04/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -6,7 +6,7 @@ description: See a list of all the settings and their descriptions for creating 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 11/16/2023
 ms.topic: reference
 ms.service: microsoft-intune
@@ -358,7 +358,7 @@ These settings use the [messaging policy CSP](/windows/client-management/mdm/pol
 These settings use the [browser policy CSP](/windows/client-management/mdm/policy-csp-browser), which also lists the supported Windows editions.
 
 > [!NOTE]
-> Using the browser policy CSP applies to Microsoft Edge version 45 and older. For Microsoft Edge version 77 and newer, see [Configure Microsoft Edge policy settings in Microsoft Intune](administrative-templates-configure-edge.md).
+> Using the browser policy CSP applies to Microsoft Edge version 45 and older. For Microsoft Edge version 77 and newer, see [Configure Microsoft Edge policy settings in Microsoft Intune](settings-catalog-configure-edge.md).
 
 ### Use Microsoft Edge kiosk mode
 

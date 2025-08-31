@@ -3,8 +3,8 @@
 title: Assign Microsoft Intune licenses
 description: Assign licenses to users so they can enroll in Intune
 keywords:
-author: nicholasswhite
-ms.author: nwhite
+author: paolomatarazzo
+ms.author: paoloma
 manager: laurawi
 ms.date: 01/24/2025
 ms.topic: how-to
@@ -146,7 +146,7 @@ Connect-MgGraph
 
 New-MgUser -DisplayName "Test User" -FirstName FName -LastName LName -UserPrincipalName user@<TenantName>.onmicrosoft.com –Department DName -UsageLocation US
 
-$CustomEMS = 	Set-MgUserLicense -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
+$CustomEMS =     Set-MgUserLicense -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
 Set-MgUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -AddLicenses <TenantName>:EMS -LicenseOptions $CustomEMS
 ```
 
@@ -162,7 +162,7 @@ Disable the Intune portion of EMS license for a user that is already assigned wi
 ```powershell
 Connect-MgGraph
 
-$CustomEMS = 	Set-MgUserLicense -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
+$CustomEMS =     Set-MgUserLicense -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
 Set-MgUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -LicenseOptions $CustomEMS
 ```
 
@@ -173,3 +173,9 @@ Verify with:
 ```
 
 ![Command line sample of PowerShell verification alt-text="Command line sample"](./media/licenses-assign/posh-addlic-verify.png)
+
+## Related content
+
+- [Assign Microsoft Intune roles to groups of users for role-based access control](../fundamentals/assign-role.md)
+- [Set the MDM authority](../fundamentals/mdm-authority-set.md)
+

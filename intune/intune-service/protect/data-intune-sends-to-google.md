@@ -5,10 +5,10 @@ title: Data Intune sends to Google
 titleSuffix: Microsoft Intune
 description: List of data that Intune sends to Google when Android enterprise device management is enabled with Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.date: 12/07/2023
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
+ms.date: 06/26/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,7 +47,7 @@ The following table lists the data that Microsoft Intune sends to Google when de
 | Device Data | Devices for Android Enterprise Corporate-Owned Personally-Owned Work Profile scenarios begin with enrollment in Intune. Devices for Managed device scenarios begin with enrollment into Google. | Device Data information is sent between Intune and Google for various actions such as applying policies, managing the device and general reporting. | **Unique identifier to represent Device Name.** Example: enterprises/LC04ebru7b/devices/3592d971168f9ae4<br>**Unique Identifier to represent User Name.** Example: Enterprises/LC04ebru7b/users/116838519924207449711<br>**Device state.** Examples: Active, Disabled, Provisioning.<br>**Compliance states.** Examples: Setting not supported, missing required apps<br>**Software Info.** Examples: software versions & patch level.<br>**Network Info.** Examples: IMEI, MEID, WifiMacAddress<br>**Device Settings.** Examples: Information on encryption levels & whether device allows unknown apps.<br> See the following example of a JSON message. |
 | newPassword | Originated in Intune. | Resetting device passcode. | String representing new password. |
 | Google User | Google | Managing the work profile for Personally-Owned Work Profile (BYOD) scenarios. | Unique identifier to represent the linked Gmail account. Example: 114223373813435875042 |
-| Application Data | Originated in Intune when saving application policy. |  | Application Name string. Example: app:com.microsoft.windowsintune.companyportal |
+| Application Data | Originated in Intune when saving application policy. |  | Application Name string. Example: app:com.microsoft.windowsintune.companyportal <br/>APK signing certificate hash |
 | Enterprise Service Account | Originated in Google upon Intune request. | Used for authentication between Intune and Google for transactions involving this customer. | There are several parts:<br> **Enterprise Id**: documented previously.<br>**UPN**: generated UPN used in authentication on behalf of customer.<br>Example: w49d77900526190e26708c31c9e8a0@pfwp-commicrosoftonedfmdm2.google.com.iam.gserviceaccount.com<br>**Key**: Base64 encoded blob used in auth requests, stored encrypted in the service, but this is what the blob looks like:<br> Unique Identifier to represent the customer's key<br>Example: a70d4d53eefbd781ce7ad6a6495c65eb15e74f1f |
 | Registration Token | Originated in Google upon device enrollment. | Used to identify device when sending push notifications to the Company Portal app. |  |
 | User Principal Name (UPN) | Only the UPN of the user signed-in to the Intune console initiating the [process to connect Google and Intune](../enrollment/connect-intune-android-enterprise.md) is sent as a pre-filled hint. | Used to prefill the admin email address field of the Google enterprise signup form. |  |

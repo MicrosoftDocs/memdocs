@@ -6,8 +6,9 @@ description: See and manage the device configuration policy details in Microsoft
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 05/09/2024
+ms.update-cycle: 180-days
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,7 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Monitor device configuration policies in Microsoft Intune

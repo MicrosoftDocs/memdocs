@@ -5,13 +5,14 @@ manager: bpardi
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 11/20/2024
+ms.date: 06/11/2025
 ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:
 
 device-preparation/tutorial/user-driven/entra-join-device group.md
+device-preparation/tutorial/automatic/automatic-device group.md
 
 Headings are driven by article context. -->
 

@@ -5,8 +5,8 @@ title: Remove apps and configurations from devices
 titleSuffix: Microsoft Intune
 description: Learn how apps and configurations can be removed temporarily, then restored automatically or manually using the Remove apps and configuration device action by the IT administrator.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: dougeby
 ms.date: 07/10/2024
 ms.topic: how-to

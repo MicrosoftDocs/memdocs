@@ -7,7 +7,7 @@ description: Sync and distribute Apple School Manager devices enrolled in Micros
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/06/2025
 ms.topic: how-to
 ms.service: microsoft-intune
