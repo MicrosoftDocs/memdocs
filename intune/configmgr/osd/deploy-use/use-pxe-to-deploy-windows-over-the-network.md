@@ -49,6 +49,9 @@ When you enable a PXE responder on a distribution point without Windows Deployme
 - Set DHCP option 60 to `PXEClient`.
 - Restart the SCCMPXE and DHCP services on the server.
 
+> [!NOTE]
+> If you require PXE or multicast support, you need an on-premises distribution point to respond to these boot requests.
+
 ## Prepare a PXE-enabled boot image
 
 To use PXE to deploy an OS, distribute both x86 and x64 PXE-enabled boot images to one or more PXE-enabled distribution points.
