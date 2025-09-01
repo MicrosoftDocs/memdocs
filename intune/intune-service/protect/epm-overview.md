@@ -71,10 +71,11 @@ EPM can be configured using two types of policies:
 
 Both rules and policies can be targeted at groups of users or devices. To perform the elevation on the device, the EPM service uses a virtual account, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group.
 
-EPM doesn't require an agent to be installed – the client is initiated by deploying an Elevation settings policy from Intune, which creates a 'Microsoft EPM Agent Service' and a "C:\Program Files\Microsoft EPM Agent" directory.
+The EPM client is installed automatically when an *Elevation settings policy* is assigned to devices or users. The EPM client uses the 'Microsoft EPM Agent Service' service and stores it's binaries in the `"C:\Program Files\Microsoft EPM Agent"` directory.
 
-> [!NOTE]
-> Add photo here
+This diagram shows a high level architecture of how the EPM client is triggered, checks for rules and then facilitates elevation:
+
+:::image type="content" source="media/epm-overview/EPM-Elevation-Architecture.png" alt-text="A diagram representing how an EPM elevation starts, is matched against a rule and then elevated.":::
 
 ### Elevation Types
 
@@ -88,15 +89,19 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
 
 - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While we recommend use of file elevation rules to allow users to elevate specific files, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
 
-- **Support approved**: For support approved rules, end users must submit a request to approve an application. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can complete the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md)
+- **Support approved**: For support approved rules, end users must submit a request to approve an application. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can complete the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md).
+  
+  :::image type="content" source="media/epm-overview/epm-support-approval-screenshot.png" alt-text="A screenshot showing the prompt a user receives when they request to run an application as administrator using support approval.":::
 
 ### Rule Capabilities
 
+EPM elevation rules can be created based on one or more attributes including file name, path, etc. These are some examples of additional rule capabilities:
+
 - **Child process controls** - When processes are elevated by EPM, you can control how the creation of child processes is governed by EPM, which allows you to have granular control over any subprocesses that might be created by your elevated application.
 
-- **Argument support** - Allow only certain parameters for applications to be elevated. 
+- **Argument support** - Allow only certain parameters for applications to be elevated.
 
-- **File Hash support** - Match the application based on the hash of the file.
+- **File hash support** - Match the application based on the hash of the file.
 
 - **Publisher certificate support** - Create rules that are based of trusting the publisher certificate of the application alongside other attributes.
 
