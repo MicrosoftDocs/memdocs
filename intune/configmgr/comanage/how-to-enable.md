@@ -32,7 +32,14 @@ Starting in Configuration Manager version 2111, the co-management onboarding exp
 > [!NOTE]
 > With the new wizard, you don't move workloads at the same time that you enable co-management. To move workloads, you'll edit the co-management properties after enabling cloud attach.
 
-When you're enabling co-management, you can use the Azure public cloud or Azure Government cloud
+# Clean up duplicate device objects in Microsoft Entra ID
+
+It's recommended to detect and clean up all duplicate devices in Microsoft Entra ID before attempting co-management auto enrollment.
+
+Duplicate objects in Entra ID can happen for several reasons, but mainly this occurs when a device is initially connected to Microsoft Entra ID as an Entra *registered* device. When you enable Microsoft Entra hybrid join, the same device is connected twice to Microsoft Entra ID but as a Hybrid Microsoft Entra device. In the dual state, you end up having two Microsoft Entra device records with different join types for the same device.
+
+> [!WARN]
+> If you don't clean up stale devices in Microsoft Entra ID before attempting co-management, you might end up with devices failing to enroll with Intune.
 
 To enable co-management, follow these instructions:
 
