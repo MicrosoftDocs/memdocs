@@ -130,7 +130,7 @@ items:
         - name: Create elevation rules policy
           href: ./protect/epm-elevation-rules.md
         - name: Tutorial - Shift Administrators to Standard User
-          href: ./protect/epm-transition-administrator-to-standard-user
+          href: ./protect/epm-transition-administrator-to-standard-user.md
       - name: Use
         items:
         - name: Support approved requests
