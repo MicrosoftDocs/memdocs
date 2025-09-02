@@ -26,6 +26,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "intune/intune-service/configuration/administrative-templates-restrict-usb.md",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-restrict-usb",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/administrative-templates-update-office.md",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-update-office",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/configuration/administrative-templates-configure-edge.md",
       "redirect_url": "/intune/intune-service/configuration/settings-catalog-configure-edge",
       "redirect_document_id": false
