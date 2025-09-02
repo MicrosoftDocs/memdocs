@@ -86,12 +86,13 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
 - **Automatic**: For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
 
 - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. Administrators can require the user to perform extra validation using an authentication prompt, business justification, or both.
-
-- **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While we recommend use of file elevation rules to allow users to elevate specific files, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
+  :::image type="content" source="media/epm-overview/epm-user-confirmed-inline.png" alt-text="A screenshot showing the prompt a user receives when they use user confirmed elevation." lightbox="media/epm-overview/epm-user-confirmed-expanded.png":::
 
 - **Support approved**: For support approved rules, end users must submit a request to approve an application. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can complete the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md).
   
-  :::image type="content" source="media/epm-overview/epm-support-approval-screenshot.png" alt-text="A screenshot showing the prompt a user receives when they request to run an application as administrator using support approval.":::
+  :::image type="content" source="media/epm-overview/epm-support-approval-inline.png" alt-text="A screenshot showing the prompt a user receives when they request to run an application as administrator using support approval." lightbox="media/epm-overview/epm-support-approval-expanded.png":::
+
+- **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While we recommend use of file elevation rules to allow users to elevate specific files, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
 
 ### Rule Capabilities
 
