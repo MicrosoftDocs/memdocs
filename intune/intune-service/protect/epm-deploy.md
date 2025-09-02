@@ -31,6 +31,8 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
+[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
+
 The information in this article can help you to configure the following policies and reusable settings for EPM:
 
 - Windows elevation settings policy.

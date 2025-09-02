@@ -31,17 +31,15 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-## Overview
+[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
-With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization's users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
-
-Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
+A device must have an elevation settings policy that enables support for EPM before the device can process an elevation rules policy or manage elevation requests. When support is enabled, the `C:\Program Files\Microsoft EPM Agent` folder is added to the device along with the EPM Microsoft Agent, which is responsible for processing the EPM policies. For more information, see [EPM elevation settings](epm-elevation-settings.md).
 
 In addition to the information in this article, remain aware of important [security recommendations](../protect/epm-plan.md#security-recommendations) when managing elevation rules.
 
-### About Windows elevation rules policy
+## About elevation rules policy
 
-Use profiles for *Windows elevation rules policy* to manage the identification of specific files, and how elevation requests for those files are handled. Each *Windows elevation rule policy* includes one or more *elevation rules*. It's with elevation rules that you configure details about the file being managed and requirements for it to be elevated.
+An *elevation rules policy* is used to manage the identification of specific files, and how elevation requests for those files are handled. Each *elevation rule policy* includes one or more *elevation rules*. It's with elevation rules that you configure details about the file being managed and requirements for it to be elevated.
 
 The following types of files are supported:
 

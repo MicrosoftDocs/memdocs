@@ -31,6 +31,8 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
+[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
+
 This article lists known issues with Endpoint Privelege Management.
 
 Applies to:

@@ -31,6 +31,8 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
+[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
+
 The following sections of this article discuss frequently asked questions for Endpoint Privilege Management (EPM).
 
 Applies to:

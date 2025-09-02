@@ -914,22 +914,8 @@ items:
               href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
         - name: Vulnerability Remediation Agent
           href: ./protect/vulnerability-remediation-agent.md
-        - name: Endpoint Privilege Management
-          items:
-          - name: Endpoint Privilege Management overview
-            href: ./protect/epm-overview.md
-          - name: Endpoint Privilege Management planning
-            href: ./protect/epm-plan.md
-          - name: Endpoint Privilege Management elevation settings
-            href: ./protect/epm-elevation-settings.md
-          - name: Endpoint Privilege Management elevation rules
-            href: ./protect/epm-elevation-rules.md
-          - name: Endpoint Privilege Management support approved requests
-            href: ./protect/epm-support-approved.md
-          - name: Endpoint Privilege Management reports
-            href: ./protect/epm-reports.md
-          - name: Endpoint Privilege Management data and privacy
-            href: ./protect/epm-data-collection.md
+        - name: Endpoint Privilege Management overview
+          href: ./protect/epm-overview.md
         - name: Tenant attach
           href: ./protect/tenant-attach-intune.md
         - name: Encrypt disks

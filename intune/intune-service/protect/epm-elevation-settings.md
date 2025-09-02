@@ -27,7 +27,9 @@ ms.collection:
 - sub-intune-suite
 ---
 
-# Windows elevation settings policy
+# Creating elevation settings with Endpoint Privilege Management
+
+[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
 To configure the following options on devices, deploy *Windows elevation settings policy* to users or devices:
 

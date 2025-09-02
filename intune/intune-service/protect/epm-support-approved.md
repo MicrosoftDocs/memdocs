@@ -31,7 +31,7 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-With Microsoft Intune Endpoint Privilege Management (EPM) your organization's users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
+[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
 This article explains how to use the **support approved** workflow with Endpoint Privilege Management.
 

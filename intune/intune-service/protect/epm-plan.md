@@ -31,6 +31,8 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
+[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
+
 This article covers the information required to plan for a Endpoint Privilege Management (EPM) deployment. This includes requirements, important concepts, security recommendations, and role based access control.
 
 Applies to:

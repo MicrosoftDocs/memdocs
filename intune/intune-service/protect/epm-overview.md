@@ -42,9 +42,6 @@ Applies to:
 - Windows 10
 - Windows 11
 
-> [!NOTE]
-> Add photo here
-
 ## Key Features and Benefits
 
 ✅ Find out the key features and benefits of EPM
