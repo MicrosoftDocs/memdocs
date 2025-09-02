@@ -326,6 +326,18 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
+- **USB access**: Select if files and/or data can be transferred using USB. Your options:
+
+  - **Allow USB transfer**: All files and data are allowed to be transferred to and from USB. All USB connections are allowed, like a mouse.
+  - **Disallow USB transfer**: Files are blocked from being transferred to and from USB. Other USB connections are allowed, like a mouse.
+  - **Disallow USB data transfer**: All data is blocked to and from USB. No USB connections are allowed, like a mouse.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices at work profile level (COSU)
+
 #### Users and Accounts
 
 - **Block account changes**: If **True**, prevents users from updating or changing accounts when in kiosk mode. If **False**, Intune doesn't change or update this setting. By default, the OS might allow users to update user accounts on the device.
@@ -341,18 +353,6 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
-
-- **USB access**: Select if files and/or data can be transferred using USB. Your options:
-
-  - **Allow USB transfer**: All files and data are allowed to be transferred to and from USB. All USB connections are allowed, like a mouse.
-  - **Disallow USB transfer**: Files are blocked from being transferred to and from USB. Other USB connections are allowed, like a mouse.
-  - **Disallow USB data transfer**: All data is blocked to and from USB. No USB connections are allowed, like a mouse.
-
-  Applies to:
-
-  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
-  - Android Enterprise corporate owned fully managed (COBO)
-  - Android Enterprise corporate owned dedicated devices at work profile level (COSU)
 
 # [AOSP](#tab/aosp)
 
