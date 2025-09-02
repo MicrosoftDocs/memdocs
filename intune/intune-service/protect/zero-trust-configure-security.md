@@ -47,3 +47,12 @@ Set up Microsoft Intune
    > Sub 2  [../protect/zero-trust-group2.md]
    
 -->
+
+## Security guidance
+
+### Windows Firewall policy is created and assigned
+[!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
+
+[!INCLUDE [24540](./includes/secure-recommendations/24540.md)]
+
+ 
