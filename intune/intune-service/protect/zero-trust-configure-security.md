@@ -68,4 +68,4 @@ Set up Microsoft Intune
 ### App protection policy for iOS devices is created and assigned<!-- 24548 -->
 [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
 
-[!INCLUDE [24542](./includes/secure-recommendations/24542.md)]
+[!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
