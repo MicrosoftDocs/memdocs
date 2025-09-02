@@ -50,9 +50,22 @@ Set up Microsoft Intune
 
 ## Security guidance
 
-### Windows Firewall policy is created and assigned
+### Windows Firewall policy is created and assigned<!-- 24540 -->
 [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
 
 [!INCLUDE [24540](./includes/secure-recommendations/24540.md)]
 
- 
+### Compliance policy for Windows devices is created and assigned<!-- 24541 -->
+[!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
+
+[!INCLUDE [24541](./includes/secure-recommendations/24541.md)]
+
+### Compliance policy for macOS devices is created and assigned<!-- 24542 -->
+[!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
+
+[!INCLUDE [24542](./includes/secure-recommendations/24542.md)]
+
+### App protection policy for iOS devices is created and assigned<!-- 24548 -->
+[!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
+
+[!INCLUDE [24542](./includes/secure-recommendations/24542.md)]
