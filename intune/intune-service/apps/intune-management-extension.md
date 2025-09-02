@@ -156,9 +156,9 @@ To check if the device is automatically enrolled:
 
 ### Issue: Microsoft Intune Windows Agent app gets automatically disabled
 
-When Windows devices enroll in Microsoft Intune, the Microsoft Intune Windows Agent installs some apps that are used internally by Intune. These apps handle the communication between the device and Intune that allows Intune to assign and enforce policies, deploy apps, do inventory reporting, and more.
+Microsoft Intune Windows Agent is a Microsoft Entra ID app. The IME agent uses the Microsoft Intune Windows Agent app to authenticate against the gateway to get other apps, scripts, and other critical payloads. This application isn't linked to any subscription-based lifecycle flow.
 
-If you create service principals for these apps in your Microsoft Entra tenant, then under some conditions, these apps can fail subscription validity checks and get continuously disabled by Microsoft Online Services, even when the admin re-enables the app. When disabled, user targeted Intune payloads stop working.
+Under some conditions, the Microsoft Intune Windows Agent app can fail subscription validity checks and get continuously disabled by Microsoft Online Services, even when the admin re-enables the app. When disabled, the IME agent can't retrieve tokens against the Microsoft Intune Windows Agent application and user targetted payloads stop working.
 
 **Possible resolution**:
 
