@@ -156,15 +156,21 @@ To check if the device is automatically enrolled:
 
 ### Issue: Microsoft Intune Windows Agent app gets automatically disabled
 
-Microsoft Intune Windows Agent is a first party Microsoft Entra ID app. The IME agent uses the app to authenticate against the gateway to get other apps, scripts, and other critical payloads. This first party application isn't linked to any subscription-based lifecycle flow. Under some conditions, the app can fail subscription validity checks and get continuously disabled by Microsoft Online Services, even when the admin re-enables the app. When disabled, the IME agent can't retrieve tokens against this first party application and user targetted payloads stop working.
+When Windows devices enroll in Microsoft Intune, the Microsoft Intune Windows Agent installs some apps that are used internally by Intune. These apps handle the communication between the device and Intune that allows Intune to assign and enforce policies, deploy apps, do inventory reporting, and more.
 
-**Possible resolutions**:
+If you create service principals for these apps in your Microsoft Entra tenant, then under some conditions, these apps can fail subscription validity checks and get continuously disabled by Microsoft Online Services, even when the admin re-enables the app. When disabled, user targeted Intune payloads stop working.
 
-Delete the service principal from the organization using Microsoft Graph API, preferably through Graph Explorer:
+**Possible resolution**:
 
-1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) using your an organization's admin credentials. Make sure the top-right corner shows your tenant name, not "sample tenant".
-2. Select **API Explorer** > `servicePrincipals / {servicePrincipal-id} / DELETE`, replacing `{servicePrincipal-id}` with the actual ID of the service principal.
-3. Select **Run Query** to execute the deletion.
+Delete the service principal from your organization tenant using Microsoft Graph API, preferably through Graph Explorer:
+
+1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) using an organization admin account that can delete service principals, like the **[Application Administrator](/entra/identity/role-based-access-control/permissions-reference#application-administrator)** role. Make sure the top-right corner shows your tenant name, not "sample tenant".
+
+    For a list of Microsoft Entra built-in roles, and what they can do, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
+
+2. Select **API Explorer** > `servicePrincipals` > `{servicePrincipal-id}` > `DELETE`.
+3. In the Graph URL syntax, replace `{servicePrincipal-id}` with the ID of the service principal.
+4. Select **Run Query** to execute the deletion.
 
 > [!NOTE]
 > These steps should be completed by someone who is familiar with Graph Explorer. To learn more about Graph Explorer, see [Use Graph Explorer to try Microsoft Graph APIs](/graph/graph-explorer/graph-explorer-overview).
