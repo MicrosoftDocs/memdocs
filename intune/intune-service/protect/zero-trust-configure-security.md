@@ -51,6 +51,9 @@ Set up Microsoft Intune
 ## Security guidance
 
 ### Windows Firewall policy is created and assigned
+**Applies to**: ![Green circle with a white check mark symbol.](./media/common/applies-to-yes.png) Zero Trust Assessment
+
+
 [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
 
 [!INCLUDE [24540](./includes/secure-recommendations/24540.md)]
