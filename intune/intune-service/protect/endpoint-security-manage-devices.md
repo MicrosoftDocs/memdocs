@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage devices with endpoint security in Microsoft Intune
-description: Learn how Security Administrators can use the Endpoint Security node to view devices and manage them in Microsoft Intune. 
+description: Learn how Security Administrators can use the Endpoint Security node to view devices and manage them in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -94,7 +94,7 @@ Consider the following fields:
 To view information about the device configuration policies that apply to a device that's managed by MDM and Intune, see [**Security reports**](../fundamentals/reports.md#security-reports). Both *endpoint security* and *security baseline* policies are device configuration policies.
 
 To view the report, select a device and then select **Device configuration**, which is found below the *Monitor* category.
-  
+
 ![View endpoint security policy details](./media/endpoint-security-manage-devices/view-policy-details.png)
 
 Devices that are managed by Configuration Manager don’t display policy details in the report. To view additional information for these devices, use the Configuration Manager console.
@@ -119,7 +119,7 @@ Remote actions display across the top of the devices *Overview* page. Actions th
 
 The remote actions that are available depend on how the device is managed:
 
-- **Intune**: All [Intune remote actions](../remote-actions/device-management.md) that apply to the device platform are available.  
+- **Intune**: All [Intune remote actions](../remote-actions/device-management.md) that apply to the device platform are available.
 - **Configuration Manager**: You can use the following Configuration Manager actions:
 
   - Sync Machine Policy
@@ -138,7 +138,7 @@ Some of the Intune remote actions can help secure devices or safeguard data that
 - Scan for malware outside of a scheduled run
 - Rotate BitLocker keys
 
-The following Intune remote actions are of interest to the security admin, and are a subset of the [full list](../remote-actions/device-inventory.md#view-the-device-details). Not all actions are available for all device platforms. The links go to content that provides in-depth details for each action.
+The following Intune remote actions are of interest to the security admin, and are a subset of the [full list](../fundamentals/device-inventory.md#view-the-device-details). Not all actions are available for all device platforms. The links go to content that provides in-depth details for each action.
 
 - [Synchronize device](../remote-actions/device-sync.md) – Have the device immediately check-in with Intune. When a device checks in, it receives any pending actions or policies that are assigned to it.
 

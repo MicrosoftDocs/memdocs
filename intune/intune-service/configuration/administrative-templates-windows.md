@@ -8,6 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
 ms.date: 12/11/2024
+ms.update-cycle: 180-days
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -36,7 +37,7 @@ ms.collection:
 > Starting with the December 2412 release, you can't create new Administrative Templates policies from the **Templates** > **Administrative Templates** profile type in the Intune admin center. To create ADMX template profiles, use the **[settings catalog](settings-catalog.md)**. For more information on this change, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
 > 
 > There will be no changes to the following UI experiences:
-> - ‘Imported Administrative templates (Preview)’ template which is used for Custom ADMX templates. 
+> - 'Imported Administrative templates (Preview)' template which is used for Custom ADMX templates. 
 
 **Administrative Templates** in Microsoft Intune include thousands of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Google Chrome, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings enable administrators to create group policies using the cloud.
 
@@ -196,8 +197,8 @@ For more information about KIR, see:
 The template is created but might not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
 
 See also:
-- [Update Office using administrative templates](administrative-templates-update-office.md).
-- [Restrict USB devices using administrative templates](administrative-templates-restrict-usb.md).
-- [Create Microsoft Edge policy using ADMX](administrative-templates-configure-edge.md).
+
+- [Update Office using the settings catalog](settings-catalog-update-office.md).
+- [Restrict USB devices using the settings catalog](settings-catalog-restrict-usb.md).
+- [Create Microsoft Edge policy using the settings catalog](settings-catalog-configure-edge.md).
 - [Import custom or partner ADMX files](administrative-templates-import-custom.md).
-- [Tutorial: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

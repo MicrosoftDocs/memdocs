@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
 manager: bpardi
-ms.date: 10/09/2024
+ms.date: 08/13/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -41,8 +41,7 @@ The Windows Autopilot Reset process automatically keeps information from the exi
 Windows Autopilot Reset blocks the user from accessing the desktop until this information is restored, including reapplying any provisioning packages. For devices enrolled in an MDM service, Windows Autopilot Reset also blocks until an MDM sync is completed.
 
 > [!NOTE]
->
-> Windows Autopilot Reset doesn't support Microsoft Entra hybrid joined devices. For Microsoft Entra hybrid joined devices, a full device wipe is required. When a hybrid device goes through a full device reset, it might take up to 24 hours for it to be ready to be deployed again. The request can be expedited by re-registering the device.
+> Windows Autopilot Reset doesn't support Microsoft Entra hybrid joined devices or Surface Hub devices. For Microsoft Entra hybrid joined devices and Surface Hub devices, a full device wipe is required. When a hybrid device goes through a full device reset, it might take up to 24 hours for it to be ready to be deployed again. The request can be expedited by re-registering the device.
 
 ## Scenarios
 

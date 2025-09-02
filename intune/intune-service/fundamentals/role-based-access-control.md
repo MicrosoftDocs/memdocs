@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 08/06/2025
+ms.date: 08/20/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -121,6 +121,10 @@ The **Intune Administrator** role is a built-in role in Microsoft Entra, and is 
 - Assign the Intune Administrator role only as needed. If there's a [built-in Intune role](#rbac-roles) that meets the needs of the admin, then assign that role instead of the Intune Administrator role. Always assign the least privileged Intune role necessary for the admin to do their tasks.
 - Create [custom roles](create-custom-role.md) to further limit the scope of permissions for your admins.
 
+**Enhanced Security Controls**:
+
+[!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
+
 To learn more about the Microsoft Entra Intune Administrator role, see [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
 ## Privileged Identity Management for Intune
@@ -160,6 +164,8 @@ To view an existing role assignment, choose **Intune** > **Tenant administration
 
   > [!TIP]
   > When you configure a scope group, limit access by selecting only the security groups that include the user and devices that an admin with this role assignment should manage. To ensure admins with this role can't target all users or all devices, don't select *Add all users* or *Add all devices*.
+  > 
+   > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment scope groups, or it needs to be separately listed as a scope group in the RBAC role assignment.
 
 - [**Scope Tags**](scope-tags.md): Administrative users who are assigned this role assignment can see the resources that have the same scope tags. 
 

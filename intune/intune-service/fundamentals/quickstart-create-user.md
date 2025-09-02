@@ -4,13 +4,13 @@
 title: Create a user in Intune
 description: Create a user in Intune.
 services: microsoft-intune
-author: Smritib17
+author: paolomatarazzo
+ms.author: paoloma
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.topic: how-to
 ms.date: 04/07/2025
-ms.author: smbhardwaj
 manager: laurawi
 ms.assetid: 820fcb18-0927-4ebd-be79-dce92b51c261
 

@@ -8,6 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
 ms.date: 06/17/2025
+ms.update-cycle: 180-days
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano, beflamm, rashok
+ms.reviewer: mayurjadhav, beflamm, cchristenson, rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
