@@ -356,7 +356,7 @@ items:
     - name: Configure security recommendations using Zero Trust
       items:
       - name: Configure security recommendations using Zero Trust
-        href: ./protect/security-recommendations/zero-trust-configure-security.md
+        href: ./protect/zero-trust-configure-security.md
  
   - name: Create and deploy Intune policies
     items:
