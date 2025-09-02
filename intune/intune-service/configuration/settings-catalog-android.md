@@ -348,7 +348,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - **Disallow USB transfer**: Files are blocked from being transferred to and from USB. Other USB connections are allowed, like a mouse.
   - **Disallow USB data transfer**: All data is blocked to and from USB. No USB connections are allowed, like a mouse.
 
-Applies to:
+  Applies to:
 
   - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
