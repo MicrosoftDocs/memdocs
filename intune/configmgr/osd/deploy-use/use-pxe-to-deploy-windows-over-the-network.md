@@ -2,7 +2,7 @@
 title: Use PXE for OSD over the network
 titleSuffix: Configuration Manager
 description: Use PXE-initiated OS deployments to refresh a computer's operating system or to install a new version of Windows on a new computer.
-ms.date: 07/15/2021
+ms.date: 09/02/2025
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
@@ -49,8 +49,12 @@ When you enable a PXE responder on a distribution point without Windows Deployme
 - Set DHCP option 60 to `PXEClient`.
 - Restart the SCCMPXE and DHCP services on the server.
 
-> [!NOTE]
-> If you require PXE or multicast support, you need an on-premises distribution point to respond to these boot requests.
+> [!IMPORTANT]
+>
+> An on-premises distribution point is required in the following scenarios:
+>
+> 1. Responding to PXE boot requests.
+> 1. When using multicast.
 
 ## Prepare a PXE-enabled boot image
 
