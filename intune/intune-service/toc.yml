@@ -117,21 +117,21 @@ items:
       items:
       - name: EPM Overview
         href: ./protect/epm-overview.md
-      - name: Plan
+      - name: Planning EPM
         href: ./protect/epm-plan.md
-      - name: Data and privacy
+      - name: Data and privacy for EPM
         href: ./protect/epm-data-collection.md
-      - name: Deploy
+      - name: Deploying EPM
         items:
-        - name: Deploy Overview
+        - name: Deploying EPM
           href: ./protect/epm-deploy.md
         - name: Create elevation settings policy
           href: ./protect/epm-elevation-settings.md
         - name: Create elevation rules policy
           href: ./protect/epm-elevation-rules.md
-        - name: Tutorial - Shift Administrators to Standard User
+        - name: EPM Tutorial - Shift Administrators to Standard User
           href: ./protect/epm-transition-administrator-to-standard-user.md
-      - name: Use
+      - name: Using EPM
         items:
         - name: Support approved requests
           href: ./protect/epm-support-approved.md
