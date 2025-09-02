@@ -4,8 +4,8 @@
 title: Android Open Source Project Supported Devices
 description: Lists Android open source project devices (AOSP) supported devices
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: MandiOhlinger
+ms.author: mandia
 manager: laurawi
 ms.date: 05/12/2025
 ms.topic: reference

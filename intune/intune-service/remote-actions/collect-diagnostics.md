@@ -5,8 +5,8 @@ title: Collect diagnostics from an Intune managed device
 titleSuffix: Microsoft Intune
 description: Learn how to collect diagnostics from an Intune managed device.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: dougeby
 ms.date: 03/04/2025
 ms.topic: how-to

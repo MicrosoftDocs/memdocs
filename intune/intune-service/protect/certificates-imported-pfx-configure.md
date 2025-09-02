@@ -2,9 +2,9 @@
 title: Use imported PFX certificates in Microsoft Intune
 description: Use imported Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune. Import certificates, configure certificate templates, and create an Imported PKCS Certificate profile.
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 04/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -15,7 +15,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda; rimarram
+ms.reviewer: wicale
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

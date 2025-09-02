@@ -3,9 +3,9 @@ title: Microsoft Intune cloud PKI fundamentals
 titleSuffix: Microsoft Intune 
 description: Describes fundamentals for Microsoft Intune cloud PKI. 
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune

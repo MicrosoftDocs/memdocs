@@ -2,12 +2,12 @@
 # required metadata
 
 title: Microsoft Intune App SDK for iOS developer guide - App participation features
-description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. App participation features
+description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. App participation features
 keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 04/04/2024
+ms.date: 06/12/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -32,7 +32,7 @@ ms.collection:
 
 # Intune App SDK for iOS - App participation features
 
-The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native iOS app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Plan the Integration].
@@ -78,11 +78,11 @@ The rest of this guide describes the remaining set of app participation features
 
 ## Customize your app's behavior with APIs
 
-The Intune App SDK has several APIs you can call to get information about the Intune APP policy deployed to the app. You can use this data to customize your app's behavior. The following table provides information on some essential Intune classes you use.
+The Intune App SDK has several APIs you can call to get information about the Intune app protection policies deployed to the app. You can use this data to customize your app's behavior. The following table provides information on some essential Intune classes you use.
 
 Class | Description
 ----- | -----------
-IntuneMAMPolicyManager.h | The IntuneMAMPolicyManager class exposes the Intune APP policy deployed to the application. Notably, it exposes APIs that are useful for [Enabling multi-identity]. |
+IntuneMAMPolicyManager.h | The IntuneMAMPolicyManager class exposes the Intune app protection policies deployed to the application. Notably, it exposes APIs that are useful for [Enabling multi-identity]. |
 IntuneMAMPolicy.h | The IntuneMAMPolicy class exposes some MAM policy settings that apply to the app. Most of these policy settings are exposed so the app can customize its UI. Most policy settings are enforced by the SDK and not the app. However, there are some exceptions. App developers should review the comments in this header to determine which APIs are applicable to their application's scenarios. |
 IntuneMAMFileProtectionManager.h | The IntuneMAMFileProtectionManager class exposes APIs the app can use to explicitly secure files and directories based on a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply the appropriate MAM policy. Using this class is optional. |
 IntuneMAMDataProtectionManager.h | The IntuneMAMDataProtectionManager class exposes APIs the app can use to secure data buffers given a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply encryption appropriately. |

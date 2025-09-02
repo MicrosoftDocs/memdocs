@@ -68,6 +68,7 @@ The following compliance partners are supported as generally available:
 - Kandji
 - Ivanti Neurons for MDM
 - Ivanti EPMM
+- mobiconnect
 - Mosyle Fuse
 - Mosyle Onek12
 - SOTI MobiControl

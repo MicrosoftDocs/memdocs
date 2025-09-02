@@ -6,8 +6,8 @@ ms.date: 12/01/2021
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: concept-article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart

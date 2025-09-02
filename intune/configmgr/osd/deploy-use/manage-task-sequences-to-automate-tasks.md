@@ -6,8 +6,8 @@ ms.date: 04/08/2022
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: overview
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart

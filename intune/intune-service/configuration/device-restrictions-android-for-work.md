@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Corporate-owned Android Enterprise device restriction settings in Microsoft Intune
+title: Device restriction settings for Android in Microsoft Intune
 description: On Android Enterprise or Android for Work devices owned by your organization, you can restrict settings on the device using Microsoft Intune. Allow copy and paste, notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 06/17/2025
+ms.date: 08/27/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #audience:
 params:
   siblings_only: true
-ms.reviewer: cchristenson,arnab
+ms.reviewer: cchristenson, arnab
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -89,7 +89,14 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 ### Fully managed, dedicated, and corporate-owned work profile devices
 
-- **Screen capture (work profile-level)**: **Block** prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
+- **Screen capture (work profile-level)**: **Block**:
+  - Prevents screenshots or screen captures on the device.
+  - Prevents the content from being shown on display devices that don't have a secure video output.
+  - Prevents apps from using the system screenshot capabilities.
+  - Affects screen sharing.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
+
 - **Camera (work profile-level)**: **Block** prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
 
   Intune only manages access to the device camera. It doesn't have access to pictures or videos.
@@ -340,6 +347,10 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
         > - In multi-app mode, every app in the policy must be a required app, and must be assigned to the devices. If an app isn't required, or isn't assigned, then the devices can lock out users, and show a `Contact your IT admin. This phone will be erased.` message.
         > - Applications added within the Managed Home Screen aren't prevented from launching other applications installed on the device. Admins should ensure that all applications allowed within the Managed Home Screen don't launch other apps that users shouldn't access. And, uninstall any apps that aren't necessary on the device.
 
+      - **Configure offline app access**: **Checked** lets you select which apps are available when the device connect to the network for sign in. Users can access these apps when unable to sign in due to network issues and must sign in once network access returns. This setting requires **MHS Sign-in screen** to be set to **Enable**.
+
+      - **Configure app access without sign in**: **Checked** lets you select which apps users can access from the sign-in screen without signing in. These apps are available via an entry point on the top bar, regardless of network status. The setting requires **MHS Sign-in screen** to be set to **Enable**.
+
       - **Lock home screen**: **Enable** prevents users from moving app icons and folders. They're locked, and can't be dragged-and-dropped to different places on the grid. When set to **Not configured**, Intune doesn't change or update this setting. By default, users can move these items.
 
       - **Folder icon**: Select the color and shape of the folder icon that's on the Managed Home Screen. Your options:
@@ -493,6 +504,9 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
         - **Automatically sign-out of MHS and Shared device mode applications after inactivity**: Select **Enable** to auto sign out of the Managed Home Screen based on inactivity. This setting must be enabled to show the subsettings.
           - **Number of seconds device is inactive before automatically signing user out​**: Define the period of inactivity, in seconds, before user is automatically signed out from Managed Home Screen. By default, this value is set to 300 seconds. 
           - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds. 
+
+      > [!NOTE]
+      > Some of the Managed Home Screen settings are available in a device restrictions policy. To view and use all the available settings for the Managed Home Screen, create a [Managed Home Screen app configuration policy](../apps/app-configuration-managed-home-screen-app.md).
 
 - **Microsoft launcher (fully managed only)**: Configures the Microsoft Launcher app on fully managed devices. This option is best suited for devices which should provide the end user access to all applications and settings on the device.
 
@@ -761,7 +775,13 @@ These settings apply to corporate-owned work profiles.
 ## Personal profile
 
 - **Camera**: **Block** prevents access to the camera during personal use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the camera in the personal profile.
-- **Screen capture**: **Block** prevents screen captures during personal use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to get screen captures or screenshots in the personal profile.
+- **Screen capture**: **Block**:
+  - Prevents screen captures during personal use
+  - Prevents apps from using the system screenshot capabilities.
+  - Affects screen sharing.
+  
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to get screen captures or screenshots in the personal profile.
+
 - **Allow users to enable app installation from unknown sources in the personal profile**: Select **Allow** so users can install apps from unknown sources in the personal profile. It allows users to install apps from sources other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from installing apps from unknown sources in the personal profile.
 - **Type of restricted apps list**: Select **Allow apps** to create a list of Managed Google Play apps that are allowed and approved to install and run in the personal profile on the device. Select **Blocked apps** to create a list of Managed Google Play apps that are prohibited and prevented from installing and running in the personal profile on the device. When set to **Not configured** (default), Intune doesn't include a list of apps to allow or block.  
 
@@ -913,7 +933,13 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   - Android 8.0 and newer personally owned devices with a work profile
 
-- **Screen capture**: **Block** prevents screenshots or screen captures on the device in the work profile. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow getting screenshots.
+- **Screen capture**: **Block**:
+  - Prevents screenshots or screen captures on the device in the work profile.
+  - Prevents the content from being shown on display devices that don't have a secure video output.
+  - Prevents apps from using the system screenshot capabilities.
+  - Affects screen sharing.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow getting screenshots.
 
 - **Display work contact caller-id in personal profile**: **Block** doesn't show the work contact caller number in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show work contact caller details.
 

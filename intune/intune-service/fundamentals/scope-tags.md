@@ -55,7 +55,7 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 ## To create a scope tag
 
-Creating, updating, or deleting scope tags requires an administrator assigned the Global Administrator or Intune Administrator Entra ID role. Administrators with a scope tag in their role assignment can't update or delete the scope tag from the master list of scope tags.
+Creating, updating, or deleting scope tags requires an administrator assigned the Microsoft Entra Intune Administrator role. Administrators with a scope tag in their role assignment can't update or delete the scope tag from the master list of scope tags.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **Scope (Tags)** > **Create**.
 2. On the **Basics** page, provide a **Name** and optional **Description**. Choose **Next**.
@@ -78,6 +78,9 @@ Creating, updating, or deleting scope tags requires an administrator assigned th
     - **Add groups**: Select the groups containing the users/devices that you want to manage. All users/devices in the selected groups are managed by the users in the Admin Groups.
     - **Add All users**: Users in the Admin Groups can manage all users.
     - **Add All devices**: Users in the Admin Groups can manage all devices.
+
+   > [!TIP]  
+   > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](role-based-access-control.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
 
 5. Choose **Next**
 6. On the **Scope tags** page, select the tags that you want to add to this role. Users in the Admin Groups have access to Intune objects that also have the same scope tag. You can assign a maximum of 100 scope tags to a role.
@@ -104,7 +107,7 @@ When working with scope tags, remember these details:
   - Jamf devices
 - Volume Purchase Program (VPP) apps and ebooks associated with the VPP token inherit the scope tags assigned to the associated VPP token.
 - When an admin creates an object in Intune, all scope tags assigned to that admin are automatically assigned to the new object.
-- Intune RBAC doesn't apply to Microsoft Entra roles. So, the Intune Service Admins and Global Admins roles have full admin access to Intune no matter what scope tags they have.
+- Intune RBAC doesn't apply to Microsoft Entra roles. So, the Intune Service Admins role has full admin access to Intune no matter what scope tags they have.
 - If a role assignment has no scope tag, that IT admin can see all objects based on the IT admins permissions. Admins that have no scope tags essentially have all scope tags.
 - You can only assign a scope tag that you have in your role assignments.
 - You can only target groups that are listed in the Scope (Groups) of your role assignment.

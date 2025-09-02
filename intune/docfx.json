@@ -9,7 +9,7 @@
         "exclude": [
           "**/obj/**",
           "**/includes/**",
-          "sccm/**"          
+          "sccm/**"
         ]
       }
     ],
@@ -36,7 +36,7 @@
       "uhfHeaderId": "MSDocsHeader-Intune",
       "feedback_system": "Standard",
             "brand": "Microsoft Endpoint Manager",
-      "searchScope": ["Intune"],     
+      "searchScope": ["Intune"],
       "contributors_to_exclude": [
         "PRMerger9",
         "PRMerger17",
@@ -74,7 +74,7 @@
         "tfosmark",
         "sdwheeler",
         "meganbradley",
-        "rjagiewich",        
+        "rjagiewich",
         "rmca14",
         "garycentric",
         "jborsecnik",
@@ -87,14 +87,14 @@
         "padmagit77",
         "aditisrivastava07",
         "Ruchika-mittal01"
-      ]          
+      ]
     },
     "fileMetadata": {
       "feedback_product_url": {
         "configmgr/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
         "configmgr/**/*.yml": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
         "intune/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472"
-      }, 
+      },
       "searchScope": {
         "configmgr/**/*.md": ["ConfigMgr"],
         "configmgr/**/*.yml": ["ConfigMgr"],
@@ -108,6 +108,38 @@
       },
       "feedback_system": {
         "configmgr/core/misc/**/*": "None"
+      },
+      "author": {
+        "intune-service/remote-actions//**/*.md": "paolomatarazzo",
+        "intune-service/remote-actions//**/*.yml": "paolomatarazzo"
+      },
+      "ms.author": {
+        "intune-service/remote-actions//**/*.md": "paoloma",
+        "intune-service/remote-actions//**/*.yml": "paoloma"
+      },
+      "manager": {
+        "intune-service/remote-actions//**/*.md": "laurawi",
+        "intune-service/remote-actions//**/*.yml": "laurawi"
+      },
+      "ms.service": {
+        "intune-service/remote-actions//**/*.md": "microsoft-intune",
+        "intune-service/remote-actions//**/*.yml": "microsoft-intune"
+      },
+      "ms.subservice": {
+        "intune-service/remote-actions//**/*.md": "remote-actions",
+        "intune-service/remote-actions//**/*.yml": "remote-actions"
+      },
+      "ms.suite": {
+        "intune-service/remote-actions//**/*.md": "ems",
+        "intune-service/remote-actions//**/*.yml": "ems"
+      },
+      "search.appverid": {
+        "intune-service/remote-actions//**/*.md": "MET150",
+        "intune-service/remote-actions//**/*.yml": "MET150"
+      },
+      "ms.reviewer": {
+        "intune-service/remote-actions//**/*.md": "mattcall",
+        "intune-service/remote-actions//**/*.yml": "mattcall"
       }
     },
     "template": [],
@@ -128,7 +160,7 @@
         "exclude": [
           "intune-service/configuration/android-pulse-secure-per-app-vpn.md"
           ]
-      } 
+      }
     }
   }
 }
