@@ -158,7 +158,7 @@ To check if the device is automatically enrolled:
 
 Microsoft Intune Windows Agent is a Microsoft Entra ID app. The IME agent uses the Microsoft Intune Windows Agent app to authenticate against the gateway to get other apps, scripts, and other critical payloads. This application isn't linked to any subscription-based lifecycle flow.
 
-Under some conditions, the Microsoft Intune Windows Agent app can fail subscription validity checks and get continuously disabled by Microsoft Online Services, even when the admin re-enables the app. When disabled, the IME agent can't retrieve tokens against the Microsoft Intune Windows Agent application and user targetted payloads stop working.
+Under some conditions, the Microsoft Intune Windows Agent app can fail subscription validity checks and get continuously disabled, even when the admin re-enables the app. When disabled, the IME agent can't retrieve tokens against the Microsoft Intune Windows Agent application and user targetted payloads stop working.
 
 **Possible resolution**:
 
