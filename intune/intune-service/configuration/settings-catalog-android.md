@@ -248,6 +248,12 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
+- **Block private space**: If **True**, users are prevented from creating or using private spaces on the device. All existing private spaces are deleted. If **False**, Intune doesn't change or update this setting. By default, the OS might allow private spaces.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+
 - **Block roaming data services**: If **True**, prevents data roaming over the cellular network. If **False**, Intune doesn't change or update this setting. By default, the OS might allow data roaming when the device is on a cellular network.
 
   Applies to:
