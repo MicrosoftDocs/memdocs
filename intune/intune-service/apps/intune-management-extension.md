@@ -7,7 +7,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 08/26/2025
+ms.date: 09/02/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -154,17 +154,20 @@ To check if the device is automatically enrolled:
 
 [Enable Windows automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment) includes the steps to configure automatic enrollment in Intune.
 
-### Issue: Microsoft Intune Windows Agent AAD app gets automatically disabled
+### Issue: Microsoft Intune Windows Agent app gets automatically disabled
 
-Microsoft Intune Windows Agent is a first party Entra ID app the IME agent uses to authenticate against the gateway to get apps, scripts and other critical payloads. This first party application isn't linked to any subscription-based lifecycle flow, and under some conditions it will fail subscription validity checks, getting continuously disabled by Microsoft Online Services, even after the admin enables it back. When disabled, the  IME agent can't retrieve tokens against this first party application and user targetted payloads will stop working.
+Microsoft Intune Windows Agent is a first party Microsoft Entra ID app. The IME agent uses the app to authenticate against the gateway to get other apps, scripts, and other critical payloads. This first party application isn't linked to any subscription-based lifecycle flow. Under some conditions, the app can fail subscription validity checks and get continuously disabled by Microsoft Online Services, even when the admin re-enables the app. When disabled, the IME agent can't retrieve tokens against this first party application and user targetted payloads stop working.
 
 **Possible resolutions**:
+
 Delete the service principal from the organization using Microsoft Graph API, preferably through Graph Explorer:
 
-1. Sign in to Graph Explorer using your an organization's admin credentails (ensure the top-right corner shows your tenant name, not "sample tenant".
-2. Select `servicePrincipals / {servicePrincipal-id} / DELETE`, replacing {servicePrincipal-id} with the actual ID of the service principal.
-3. click on **Run Query** to execute the deletion. 
+1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) using your an organization's admin credentials. Make sure the top-right corner shows your tenant name, not "sample tenant".
+2. Select **API Explorer** > `servicePrincipals / {servicePrincipal-id} / DELETE`, replacing `{servicePrincipal-id}` with the actual ID of the service principal.
+3. Select **Run Query** to execute the deletion.
 
+> [!NOTE]
+> These steps should be completed by someone who is familiar with Graph Explorer. To learn more about Graph Explorer, see [Use Graph Explorer to try Microsoft Graph APIs](/graph/graph-explorer/graph-explorer-overview).
 
 ## Intune management extension logs
 
