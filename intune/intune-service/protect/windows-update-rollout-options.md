@@ -61,7 +61,7 @@ To configure this option, you set the following values. Windows Update uses thes
 
 The following behaviors apply to the management of offer groups:
 
-- Windows Update assigns targeted devices to the groups randomly, keeping groups evenly sized.
+- Windows Update assigns targeted devices to groups randomly, keeping groups evenly sized, with a minimum unit of 100 devices per group.
 
 - If you edit a policy to change the date for the first or final group availability, or change the number of days between groups for the policy:
   - Windows Update recalculates the number of groups to use, if necessary.
