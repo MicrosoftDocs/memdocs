@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 08/27/2025
+ms.date: 09/03/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,6 +75,26 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of September 1, 2025
+
+### Device security
+
+
+### Device configuration recommendations from the Security Copilot Vulnerability Remediation Intune agent<!-- 34346149 -->
+
+To help reduce your organization’s attack surface against vulnerabilities, the Security Copilot Vulnerability Remediation Intune agent now provides recommended configurations for settings related to a reported vulnerability.
+ 
+You can find the recommended configurations after selecting *Agent suggestions* for a reported vulnerability, which opens the *Suggested action* pane.  On the suggested action pane there is a new section of information titled **Configurations**.
+
+If the Intune settings catalog contains relevant settings for the reported vulnerability, the Configurations section provides information to help you configure device policies. These policies can help minimize future risk from that vulnerability. This includes:
+
+- A list of the settings that are relevant to the current vulnerability, which can be deployed through an Intune settings catalog policy. Only the specific settings that are relevant to the vulnerability are listed.
+- Each setting is presented with a recommended configuration.
+- Selecting the citation icon next to a setting displays that settings description. The description can also include a link to content for the Configuration Service Provider (CSP) that the setting represents.
+
+If there are no recommended device configuration settings to deploy, the Configurations section will indicate that no recommended settings catalog policy configurations are available.
+
+To learn more about Agent suggestions, remediation guidance, and the new recommended configurations, see [Agent suggestions](../protect/vulnerability-remediation-agent.md#agent-suggestions) in Vulnerability Remediation Agent for Security Copilot in Microsoft Intune.
 
 ## Week of August 25, 2025
 
