@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create device profiles in Microsoft Intune
+title: Configure device configuration profiles in Microsoft Intune
 description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, and add a scope tag. Learn more about applicability rules, and the policy refresh cycle times.
 keywords:
 author: MandiOhlinger
@@ -32,9 +32,9 @@ ms.collection:
 - msec-ai-copilot
 ---
 
-# Create a device profile in Microsoft Intune
+# Create a device configuration profile in Microsoft Intune
 
-Device profiles allow you to add and configure settings, and then push these settings to devices in your organization. You have some options when creating policies:
+Device configuration profiles allow you to add and configure device settings, and then push these settings to devices in your organization. You have some options when creating policies:
 
 - **Baselines**: On Windows devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then use security baselines.
 
@@ -75,8 +75,10 @@ In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), s
 :::image type="content" source="./media/device-profile-create/devices-overview.png" alt-text="Screenshot that shows how to select Devices to see what you can configure and manage in Microsoft Intune." lightbox="./media/device-profile-create/devices-overview.png":::
 
 - **Overview**: Lists the status of some of your profiles, and provides more details on the profiles you assigned to users and devices.
-- **Monitor**: Lists all devices monitoring reports. Use these reports to check configuration policy assignment failures, incomplete user enrollments, noncompliant devices, update installation failures, and more.
-- **By platform**: Expand this option to get a list of supported platforms, like Android and Linux. When you select a platform, you can create and view policies and profiles for the platform you choose. This view can also show features specific to the platform. For example, select **Windows**. You see Windows-specific features, like **Scripts and remediations** and **Group policy analytics**.
+- **Monitor**: Lists all device monitoring reports. Use these reports to check configuration policy assignment failures, incomplete user enrollments, noncompliant devices, update installation failures, and more.
+- **By platform**: Expand this option to get a list of supported platforms, like Android and Linux. When you select a platform, you can create and view policies and profiles for the platform you choose.
+
+  This view can also show features specific to the platform. For example, select **Windows**. You see Windows-specific features, like **Scripts and remediations** and **Group policy analytics**.
 - **Manage devices**: Expand this option to see the policies you can create, like compliance and configuration policies.
 
 When you create a profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**), choose your platform:
@@ -179,7 +181,7 @@ When you assign the profile to the groups, the applicability rules act as a filt
 
 ### Add a rule
 
-Use the following steps to create an applicability rule:
+Use the following steps to create an applicability rule.
 
 1. In your policy, select **Applicability Rules**. You can choose the **Rule**, and **Property**:
 

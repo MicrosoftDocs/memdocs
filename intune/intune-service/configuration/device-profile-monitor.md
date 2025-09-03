@@ -58,11 +58,11 @@ For information on the built-in roles in Intune, and what they can do, go to [Ro
 ## View and filter existing policies
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Manage devices** > **Configuration** > **Policies** tab.
+2. Select **Devices** > **Manage devices** > **Configuration** > **Policies** tab. All of your policies are shown. You also see the platform, the type of policy, and more properties.
 
-    All of your policies are shown. You also see the platform, the type of policy, and if the policy is assigned.
+    :::image type="content" source="./media/device-profile-monitor/configuration-policy-list.png" alt-text="Screenshot that shows all the device configuration profiles, their profile type, and the last modified date in Microsoft Intune and Intune admin center." lightbox="./media/device-profile-monitor/configuration-policy-list.png":::
 
-3. If you have many policies, you can filter by the policy type, like the settings catalog of software updates. Select **Add filters** > **Policy type** > **Apply**:
+3. If you have many policies, you can filter by the policy type, like the settings catalog or software updates. Select **Add filters** > **Policy type** > **Apply**:
 
     :::image type="content" source="./media/device-profile-monitor/filter-policies.png" alt-text="Screenshot that shows the Add filter option to filter existing policies in Microsoft Intune and Intune admin center.":::
 
