@@ -6,11 +6,11 @@ description: View the required roles to use TeamViewer, how to install the TeamV
 keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: dougeby
+manager: laurawi
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.service: microsoft-intune
-ms.subservice: remote-actions
+ms.subservice: fundamentals
 ms.localizationpriority: high
 
 # optional metadata
@@ -45,9 +45,9 @@ This feature applies to:
 
 ## Prerequisites
 
-- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
+- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](unlicensed-admins.md).
 
-- Users must be assigned the Remote assistance connectors/Read and Remote assistance connectors/Update permissions in the Intune admin center to onboard TeamViewer. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- Users must be assigned the Remote assistance connectors/Read and Remote assistance connectors/Update permissions in the Intune admin center to onboard TeamViewer. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 - Use a supported Intune-managed device:
 
@@ -82,7 +82,7 @@ To provide remote assistance to devices, configure the Intune TeamViewer connect
 
 ## Remotely administer a device
 
-After the connector is configured, you're ready to remotely administer a device. 
+After the connector is configured, you're ready to remotely administer a device.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices**.
@@ -106,4 +106,4 @@ When you start a remote session, users see a notification flag on the Company Po
 
 [Use Remote Help with Intune](../fundamentals/remote-help.md)
 
-[See device details in Intune](device-inventory.md)
+[See device details in Intune](../fundamentals/device-inventory.md)

@@ -1,23 +1,23 @@
 ---
 # required metadata
 
-title: Restrict USB devices using administrative templates in Microsoft Intune
-description: Use ADMX administrative templates in Microsoft Intune to restrict USB devices, including thumb drives, flash drives, USB cameras, and more. Use other settings to allow specific USB devices on Windows 10/11 devices.
+title: Restrict USB devices using settings catalog in Microsoft Intune
+description: Use the settings catalog in Microsoft Intune to restrict USB devices, including thumb drives, flash drives, USB cameras, and more. Use other settings to allow specific USB devices on Windows 10/11 devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 07/24/2024
+ms.date: 08/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
-ms.localizationpriority: high
+ms.localizationpriority: medium
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano, kufang
+ms.reviewer: mayurjadhav, kufang
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -27,21 +27,25 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Restrict USB devices and allow specific USB devices using Administrative Templates in Microsoft Intune
+# Restrict USB devices and allow specific USB devices using the settings catalog in Microsoft Intune
 
 Many organizations want to block specific types of USB devices, such as USB flash drives or cameras. You might also want to allow specific USB devices, such as a keyboard or mouse.
 
-You can use Administrative Templates (ADMX) templates to configure these settings in a policy, and then deploy this policy to your Windows devices. For more information on Administrative Templates, and what they are, see [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md).
+You can use the settings catalog in Microsoft Intune to configure these settings in a policy, and then deploy this policy to your Windows devices. For more information on the settings catalog, see [Use the settings catalog to configure device settings in Microsoft Intune](settings-catalog.md).
 
 This article shows you:
 
-- How to create an ADMX policy with USB settings in the Intune admin center
+- How to create a settings catalog policy with USB settings in the Intune admin center
 - How to use a log file to troubleshoot devices that shouldn't be blocked
 
 This article applies to:
 
 - Windows 11
 - Windows 10
+
+## Prerequisites
+
+- To configure the settings catalog policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Create the profile
 
@@ -52,7 +56,7 @@ This policy gives an example of how to block (or allow) features that affect USB
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Templates** > **Administrative Templates**.
+    - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -61,38 +65,40 @@ This policy gives an example of how to block (or allow) features that affect USB
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
-7. In **Configuration settings**, configure the following settings:
+7. In **Configuration settings**, select **Add settings**. In the settings picker, go to **Administrative templates** > **System** > **Device installation** > **Device Installation Restrictions**. Select the following settings:
 
-    - **Prevent installation of devices not described by other policy settings**: Select **Enabled** > **OK**:
+    - **Allow installation of devices that match any of these Device IDs**
+    - **Allow installation of devices using drivers that match these device setup classes**
+    - **Prevent installation of devices not described by other policy settings**
 
-      :::image type="content" source="media/administrative-templates-restrict-usb/prevent-installation-of-devices-not-described-setting.png" alt-text="In Intune, set the Prevent installation of devices not described by other policy settings setting to Enabled.":::
+    :::image type="content" source="./media/settings-catalog-restrict-usb/settings-catalog-select-device-installation-restrictions.png" alt-text="Screenshot that shows the Device Installation Restrictions settings in the settings catalog in Microsoft Intune." lightbox="./media/settings-catalog-restrict-usb/settings-catalog-select-device-installation-restrictions.png":::
 
-    - **Allow installation of devices using drivers that match these device setup classes**: Select **Enabled**. Then, add the [class GUID of the device classes](/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors) you want to allow.
+8. Close the settings picker. Configure the settings you selected:
 
-      In the following example, the **Keyboard**, **Mouse**, and **Multimedia** classes are allowed:
-
-      :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-using-drivers-setting.png" alt-text="Screenshot that shows how to use Microsoft Intune to set the Allow installation of devices using drivers that match these device setup classes setting with your class GUIDs.":::
-
-      Select **OK**.
-
-    - **Allow installation of devices that match any of these Device IDs**: Select **Enabled**. Then, add the device/hardware IDs for devices you want to allow:
-
-       :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-that-match-setting.png" alt-text="Screenshot that shows how to use Intune to set the Allow installation of devices that match any of these Device IDs setting with your hardware IDs.":::
+    - **Allow installation of devices that match any of these Device IDs**: Select **Enabled**. Add the device/hardware IDs for devices you want to allow.
 
       To get the device/hardware ID, you can use Device Manager, find the device, and look at the properties. For the specific steps, see [find the hardware ID on a Windows device](/windows-hardware/drivers/install/hardware-ids).
 
-      There's also some helpful device ID information at [Microsoft Defender for Endpoint Device Control Device Installation: Deploying and managing policy via Intune](/microsoft-365/security/defender-endpoint/mde-device-control-device-installation#deploying-and-managing-policy-via-intune).
+      There's also some helpful device ID information at [Deploy and manage device control in Microsoft Defender for Endpoint with Microsoft Intune](/defender-endpoint/device-control-deploy-manage-intune).
 
-      Select **OK**.
+    - **Allow installation of devices using drivers that match these device setup classes**: Select **Enabled**. Add the [System-defined device setup classes available to vendors](/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors) you want to allow.
 
-8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+      In the following image, the **Keyboard**, **Mouse**, and **Multimedia** classes are allowed.
+
+    - **Prevent installation of devices not described by other policy settings**: Select **Enabled**.
+
+    When the settings are enabled and configured, your policy looks similar to the following policy settings:
+
+    :::image type="content" source="./media/settings-catalog-restrict-usb/settings-catalog-restrict-usb-settings-enabled.png" alt-text="Screenshot that shows the restrict USB settings in the settings catalog in Microsoft Intune." lightbox="./media/settings-catalog-restrict-usb/settings-catalog-restrict-usb-settings-enabled.png":::
+
+9. Select **Next**.
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the device groups that will receive the profile. Select **Next**.
+11. In **Assignments**, select the device groups that will receive the profile. Select **Next**.
 
-11. In **Review + create**, review your settings. When you select **Create**, your changes are saved and the profile is assigned.
+12. In **Review + create**, review your settings. When you select **Create**, your changes are saved and the profile is assigned.
 
 ## Verify on Windows devices
 
@@ -104,7 +110,7 @@ If a USB device is blocked from installing, then you see a message similar to th
 
 In the following example, the iPad is blocked because its device ID isn't in the allowed device ID list:
 
-:::image type="content" source="media/administrative-templates-restrict-usb/device-status.png" alt-text="Device blocked by group policy.":::
+:::image type="content" source="./media/settings-catalog-restrict-usb/device-status.png" alt-text="Screenshot that shows a device blocked by an Intune policy." lightbox="./media/settings-catalog-restrict-usb/device-status.png":::
 
 ## A device is blocked but should be allowed
 
@@ -112,9 +118,9 @@ Some USB devices have multiple GUIDs, and it's common to miss some GUIDs in your
 
 In the following example, in the **Allow installation of devices using drivers that match these device setup classes** setting, the Multimedia class GUID is entered, and the camera is blocked:
 
-:::image type="content" source="media/administrative-templates-restrict-usb/camera-blocked.png" alt-text="Windows can't find your camera message on a Windows device.":::
+:::image type="content" source="./media/settings-catalog-restrict-usb/camera-blocked.png" alt-text="Screenshot that shows the Windows can't find your camera message on a Windows device." lightbox="./media/settings-catalog-restrict-usb/camera-blocked.png":::
 
-:::image type="content" source="media/administrative-templates-restrict-usb/cam-blocked.png" alt-text="The camera is blocked by group policy message on a Windows device.":::
+:::image type="content" source="./media/settings-catalog-restrict-usb/cam-blocked.png" alt-text="Screenshot that shows the camera is blocked by group policy message on a Windows device." lightbox="./media/settings-catalog-restrict-usb/cam-blocked.png":::
 
 **Resolution**:
 
@@ -198,4 +204,4 @@ To find the GUID of your device, use the following steps:
 
 ## Related articles
 
-- [Learn more about ADMX templates in Microsoft Intune](administrative-templates-windows.md)
+- [Use the Intune settings catalog to configure settings](settings-catalog.md)
