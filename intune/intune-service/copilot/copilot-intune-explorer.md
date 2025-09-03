@@ -12,7 +12,7 @@ ms.update-cycle: 180-days
 ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
-ms.localizationpriority: high
+ms.localizationpriority: medium
 
 # optional metadata
 
@@ -77,12 +77,12 @@ Select the prompt that best matches your request, or continue typing for more su
 #### What data can I explore?
 You can explore several Intune resources and the relationships between them. The areas you can ask about along with the queries and query capabilities available will all evolve as we add more data coverage and exploration functionality. The areas you can explore today include:
 
-- Devices (device properties)
-- Device OS updates
-- Apps
 - App configuration and app protection
-- Configuration policies
-- Compliance policies
+- Apps
+- Compliance
+- Device Configuration
+- Device updates
+- Devices (device properties)
 - Windows Autopilot deployments
 - [Endpoint Privilege Management](../protect/epm-overview.md)
 - [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
