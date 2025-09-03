@@ -66,24 +66,24 @@ Create an Apple automated device enrollment profile in Microsoft Intune for devi
   > [!NOTE]
   > You cannot change the user affinity setting in an existing enrollment profile. If you need to modify this setting, you must create a new Apple enrollment profile.
 
- For more information about how-to create an enrollment policy, see [Create an Apple enrollment profile](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).  
+ For more information about how-to create an enrollment profile, see [Create an Apple enrollment profile](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).  
 
 <a name='step-2-create-a-dynamic-azure-ad-group'></a>
 
 ## Step 2: Create a dynamic Microsoft Entra group
-Create a dynamic Microsoft Entra group using the `enrollmentProfileName` property to automatically group devices that enroll with a specific enrollment policy. In this case, we want to group devices that are in share device mode and enrolling with the policy you created in Step 1. Include these configurations in your dynamic group policy:  
+Create a dynamic Microsoft Entra group using the `enrollmentProfileName` property to automatically group devices that enroll with a specific enrollment profile. In this case, we want to group devices that are in share device mode and enrolling with the profile you created in Step 1. Include these configurations when creating your dynamic group:  
 * **Group type**: Security
 * **Membership type**: Dynamic Device  
 * Add a dynamic query with the following rule: 
     * **Property**: enrollmentProfileName
     * **Operator**: Equals
-    * **Value**: Enter the name of the enrollment policy you created for devices in  shared device mode. 
+    * **Value**: Enter the name of the enrollment profile you created for devices in shared device mode. 
 
 For more information about how to create a dynamic group for shared devices in Microsoft Entra ID, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
 
 ## Step 3: Create an assignment filter
 
-Create an assignment filter to quickly target devices assigned to your enrollment policy. Add a rule with the following parameters:   
+Create an assignment filter to quickly target devices assigned to your enrollment profile. Add a rule with the following parameters:   
 * **Property**: enrollmentProfileName  
 * **Operator**: Equals
 * **Value**: Enter the name of the enrollment profile you created for devices in shared device mode.  
