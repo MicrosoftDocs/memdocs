@@ -80,7 +80,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device management
 
-#### Enrollment Status Page support for installing Windows security updates during Windows OOBE <!-- 7183120 wnready -->    
+#### Enrollment Status Page support for installing Windows security updates during Windows OOBE <!-- 7183120 -->    
 
 We've updated the Intune enrollment status page (ESP) with a new setting to help manage the automatic installation of the most recently available monthly security updates for Windows during the Windows out-of-box experience (OOBE). These security updates, also known as Windows quality updates in Intune, are installed by default during the Windows out-of-box experience OOBE that's used by Intune and by Windows Autopilot scenarios that use the Intune ESP configurations.
 
