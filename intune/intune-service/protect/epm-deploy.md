@@ -33,13 +33,27 @@ ms.collection:
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
-The information in this article can help you to configure the following policies and reusable settings for EPM:
+To deploy EPM you will use a combination of reports and policies. This article describes some common deployment scenarios and outlines the recommended deployment phases for your organization.
 
 - [Windows elevation settings policy](epm-elevation-settings.md).
 - [Windows elevation rules policy](epm-elevation-rules.md).
 - [Reusable settings groups](epm-elevation-rules.md#reusable-settings-groups), which are optional configurations for your elevation rules.
 
-## Common deployment scenarios
+## Deployment overview
+
+EPM can help control the elevation of applications in Intune and [Local Users and Groups](endpoint-security-account-protection-policy.md) can be used to control the local administrators group and transition users from administrators to standard users.
+
+Microsoft anticipates customers adopting EPM will go through the following phases:
+
+:::image type="content" source="media/epm-deploy/epm-deploy-phases.png" alt-text="The five phases to deploy EPM." border="false":::
+
+- **Phase 1: Auditing** - Enable EPM client and enable reporting collection using an [elevation settings policy](epm-elevation-settings.md).
+- **Phase 2: Persona identification** - Identity groups of users with common requirements.
+- **Phase 3: Build rules** - Use [EPM reports](epm-reports.md) to create [elevation rules](epm-elevation-rules.md) for different personas.
+- **Phase 4: Monitoring** - Iterate and refine rules, identify new scenarios.
+- **Phase 5: Review user privileges** - Identify and optionally move users from administrator to standard user using [Local Users and Groups](endpoint-security-account-protection-policy.md#manage-local-groups-on-windows-devices). Consider enabling [support approved elevation](epm-support-approved.md) so that users can request elevation for apps that aren't covered by rules.
+
+Repeat phases 2 to 5 continuously to ensure your users have least privilege in line with [Zero Trust principles](/intune/intune-service/fundamentals/zero-trust-with-microsoft-intune).
 
 The table below lists the common deployment scenarios for EPM. We can choose to focus on all scenarios, or mainly scenario 2 (scenario 1 is very quickly/easy).
 
@@ -48,20 +62,6 @@ The table below lists the common deployment scenarios for EPM. We can choose to 
 |1|Admin|Admin|IT Support Technicians|A certain subset of users required ongoing local admin – but you want to gain security improvements by using EPM.|
 |2|Admin|Standard User|Information Workers|You want to move users with local admin rights to standard users, with minimal disruption. You want to allow them to request an app to run as admin on occasion.</br></br> For step by step instructions on how to achieve this scenario with EPM, see [Using EPM to transition users from administrator to standard users](epm-transition-administrator-to-standard-user.md)|
 |2|Standard User|Standard User|Developers|You want to allow specific users to 'elevate up' without granting local admin rights or using LAPS.|
-
-EPM can help control the elevation of applications in Intune and [Local Users and Groups](endpoint-security-account-protection-policy.md) can be used to control the local administrators group and transition users from administrators to standard users.
-
-Regardless of deployment scenario, we should start by enabling the EPM client for reporting.
-
-Microsoft anticipates customers adopting EPM will go through the following phases:
-
-- **Phase 1: Auditing** - Enable EPM client and enable reporting collection.
-- **Phase 2: Persona identification** - Identity groups of users with common requirements.
-- **Phase 3: Build rules** - Use reporting data to create rules for different personas.
-- **Phase 4: Monitoring** - Iterate and refine rules, identify new scenarios.
-- **Phase 5: Review user privileges** - Identify and optionally move users from administrator to standard user. Consider enabling 'Support Approved' so that users can request elevation for apps that aren't covered by rules.
-
-Repeat phases 2 to 5 continuously to ensure your users have least privilege in line with Zero Trust principles.
 
 ## Next steps
 
