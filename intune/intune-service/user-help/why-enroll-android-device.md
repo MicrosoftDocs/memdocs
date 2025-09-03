@@ -6,8 +6,8 @@ description: Learn about device enrollment for Android devices, including the be
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 01/27/2025
+manager: laurawi
+ms.date: 09/03/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user

@@ -6,7 +6,7 @@ description: Use the Intune app to confirm that the settings on your device meet
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/07/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
