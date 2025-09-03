@@ -6,7 +6,7 @@ description: Start a status check to confirm that a device meets requirements fo
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/27/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
