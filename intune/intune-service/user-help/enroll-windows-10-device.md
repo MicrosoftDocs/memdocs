@@ -6,7 +6,7 @@ description: Set up your Windows 10/11 device in Intune Company Portal to get re
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 06/28/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
