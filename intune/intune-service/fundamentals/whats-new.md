@@ -80,11 +80,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device management
 
-#### Enrollment Status Page support for installing Windows security updates during Windows OOBE <!-- 7183120 -->    
+#### Enrollment Status Page support for installing Windows security updates during Windows OOBE <!-- 7183120 -->
 
-We've updated the Intune enrollment status page (ESP) with a new setting to help manage the automatic installation of the most recently available monthly security updates for Windows during the Windows out-of-box experience (OOBE). These security updates, also known as Windows quality updates in Intune, are installed by default during the Windows out-of-box experience OOBE that's used by Intune and by Windows Autopilot scenarios that use the Intune ESP configurations.
+Starting on September 9, 2025, by default, the Windows out-of-box experience (OOBE) installs the latest available security updates to help ensure devices are secure and up to date from day one. Windows OOBE is used by Intune and by Windows Autopilot scenarios through the Intune enrollment status page (ESP) configurations. Intune refers to these security updates Windows quality updates.
 
-The new setting on the enrollment status page is named **Install Windows quality updates**. By default, it's set to *Yes* in all new ESP profiles you create, which results in the most recent security updates being installed. In all your previously created ESP profiles this setting is set to *No* until you choose to edit those profiles to change it. When set to *No*, OOBE doesn't install the updates which can give your internal teams time to test the updates before allowing them to install on new devices you provision.
+To help you manage this behavior, we've updated the Intune enrollment status page with a new setting you can use to allow or block the automatic installation of these updates.
+ 
+The new setting is **Install Windows quality updates**. These security updates, also known as Windows quality updates in Intune, are installed by default during the Windows out-of-box experience OOBE that's used by Intune and by Windows Autopilot.
+
+By default, this setting is set to *Yes* in all new ESP profiles you create, which results in the most recent security updates being installed. In all your previously created ESP profiles this setting is set to *No* until you choose to edit those profiles to change it. When set to *No*, OOBE doesn't install the updates which can give your internal teams time to test the updates before allowing them to install on new devices you provision.
 
 For more information about the Intune enrollment status page, see [Set up Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status). For information about Windows quality updates, see [Windows quality update policy](/intune/intune-service/protect/windows-quality-update-policy).
 
