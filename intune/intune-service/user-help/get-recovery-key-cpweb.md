@@ -6,7 +6,7 @@ description: Get the recovery key for your work or school device on the Company 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/08/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
