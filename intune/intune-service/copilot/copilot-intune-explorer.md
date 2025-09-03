@@ -78,15 +78,14 @@ Select the prompt that best matches your request, or continue typing for more su
 You can explore several Intune resources and the relationships between them. The areas you can ask about along with the queries and query capabilities available will all evolve as we add more data coverage and exploration functionality. The areas you can explore today include:
 
 - Devices (device properties)
-- Device updates
+- Device OS updates
 - Apps
+- App configuration and app protection
 - Configuration policies
-- Compliance
-- App configuration
-- App protection
-- Windows Autopilot
+- Compliance policies
+- Windows Autopilot deployments
 - [Endpoint Privilege Management](../protect/epm-overview.md)
-- [Advanced Analytics](../analytics/advanced-endpoint-analytics.md)
+- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
 
 ### 3 - Use the built-in examples
 
