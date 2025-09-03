@@ -6,12 +6,12 @@ ms.date: 07/12/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: sample
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # CMPivot sample scripts

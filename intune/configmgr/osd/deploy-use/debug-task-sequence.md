@@ -6,11 +6,11 @@ ms.date: 05/04/2022
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -42,12 +42,12 @@ The task sequence debugger is a troubleshooting tool. You deploy a task sequence
 
 1. Select a task sequence. In the Deployment group of the ribbon, select **Debug**.
 
-    > [!Tip]  
+    > [!Tip]
     > Alternatively, set the variable **TSDebugMode** to `TRUE` on a collection or computer object to which the task sequence is deployed. Any device that has this variable set will put any task sequence deployed to it into debug mode.
 
 1. Create a debug deployment. The deployment settings are the same as a normal task sequence deployment. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md#process).
 
-    > [!Note]  
+    > [!Note]
     > You can only select a small collection for a debug deployment. It only displays device collections with 10 or less members.
 
 Use the task sequence variable **TSDebugOnError** to automatically start the debugger when the task sequence returns an error.<!-- 5012536 --> For more information, see [Task sequence variables - TSDebugOnError](../understand/task-sequence-variables.md#TSDebugOnError).
@@ -60,19 +60,19 @@ When the task sequence runs on the device, the Task Sequence Debugger window ope
 
 The debugger includes the following controls:
 
-- **Step**: From the *current* position, run only the next step in the task sequence.  
+- **Step**: From the *current* position, run only the next step in the task sequence.
 
-    > [!Note]  
+    > [!Note]
     > When the task sequence is in debug mode, if a step returns a fatal error, the task sequence doesn't fail as normal. This behavior gives you the option to retry a step after you make an external change.
 
 - **Run**: From the *current* position, run the task sequence normally to the end, the next *break* point, or if a step fails. Before you use this action, make sure to set any break points with the **Set Break** action.
 
-- **Set Current**: Select a step in the debugger and then select **Set Current**. This action moves the *current* pointer to that step. This action allows you to skip steps or move backwards.  
+- **Set Current**: Select a step in the debugger and then select **Set Current**. This action moves the *current* pointer to that step. This action allows you to skip steps or move backwards.
 
-    > [!Warning]  
-    > The debugger doesn't consider the type of step when you change the current position in the sequence. Some steps may set task sequence variables that are required for condition evaluation by later steps. If run out of order, some steps may fail or cause significant damage to a device. Use this option at your own risk.  
+    > [!Warning]
+    > The debugger doesn't consider the type of step when you change the current position in the sequence. Some steps may set task sequence variables that are required for condition evaluation by later steps. If run out of order, some steps may fail or cause significant damage to a device. Use this option at your own risk.
 
-- **Set Break**: Select a step in the debugger and then select **Set Break**. This action adds a *break* point in the debugger. When you **Run** the task sequence, it stops at a *break*.  
+- **Set Break**: Select a step in the debugger and then select **Set Break**. This action adds a *break* point in the debugger. When you **Run** the task sequence, it stops at a *break*.
 
   - Before you use the **Run** action, set break points.
 

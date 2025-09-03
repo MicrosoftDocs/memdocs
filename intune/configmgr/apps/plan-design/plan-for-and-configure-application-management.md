@@ -6,19 +6,19 @@ ms.date: 08/02/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Plan for and configure application management in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use the information in this article to help you implement the necessary dependencies to deploy applications in Configuration Manager.  
+Use the information in this article to help you implement the necessary dependencies to deploy applications in Configuration Manager.
 
 ## Dependencies external to Configuration Manager
 
@@ -60,7 +60,7 @@ Clients contact a management point to download client policy and to locate conte
 
 Before you can deploy applications to clients, you need at least one distribution point in the hierarchy. By default, the site server has a distribution point site role enabled during a standard installation. The number and location of distribution points vary according to the specific requirements of your environment.
 
-For more information about how to install distribution points and manage content, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+For more information about how to install distribution points and manage content, see [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).
 
 ### Reporting services point
 

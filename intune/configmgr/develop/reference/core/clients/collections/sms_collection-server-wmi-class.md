@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_Collection server WMI class
@@ -21,7 +21,7 @@ The `SMS_Collection` WMI class is an SMS Provider server class in Configuration 
 
 The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
 ```MOF
 Class SMS_Collection : SMS_BaseClass
@@ -529,7 +529,7 @@ When you run a query against a dynamic collection represented by `SMS_Collection
 
 The application should use the `SMS_Collection` methods to add, update, or delete membership rules defined by the `CollectionRules` property. This property isn't retrieved when your application enumerates `SMS_Collection`. To obtain the collection rules for a collection, your application must use `IWbemServices::GetObject` or `SWbemServices::Get`. For more information, see [Configuration Manager context qualifiers](../../../../core/understand/context-qualifiers.md).
 
-## Requirements  
+## Requirements
 
 ### Runtime requirements
 

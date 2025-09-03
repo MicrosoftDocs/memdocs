@@ -5,12 +5,12 @@ ms.date: 08/12/2022
 ms.subservice: mdt
 ms.service: configuration-manager
 ms.topic: release-notes
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: frankroj,mstewart,aaroncz
+ms.reviewer: frankroj,mstewart
 ---
 
 # Microsoft Deployment Toolkit release notes

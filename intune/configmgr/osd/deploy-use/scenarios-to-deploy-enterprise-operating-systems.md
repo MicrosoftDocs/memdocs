@@ -6,11 +6,11 @@ ms.date: 10/01/2021
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: install-set-up-deploy
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -18,11 +18,11 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-The following OS deployment scenarios are available in Configuration Manager:  
+The following OS deployment scenarios are available in Configuration Manager:
 
 ## Upgrade Windows to the latest version
 
-This scenario upgrades the OS on computers that run an earlier version of Windows. The upgrade process keeps the applications, settings, and user data on the computer. There are no external dependencies, such as the Windows ADK. This process can be faster and more resilient than traditional OS deployments.  
+This scenario upgrades the OS on computers that run an earlier version of Windows. The upgrade process keeps the applications, settings, and user data on the computer. There are no external dependencies, such as the Windows ADK. This process can be faster and more resilient than traditional OS deployments.
 
 This scenario applies to all [supported versions](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) of Windows client and Windows Server.
 

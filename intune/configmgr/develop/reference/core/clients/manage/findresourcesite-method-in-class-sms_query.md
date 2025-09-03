@@ -12,57 +12,57 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # FindResourceSite Method in Class SMS_Query
-The `FindResourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets site code information for resources from SQL.  
+The `FindResourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets site code information for resources from SQL.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 FindResourceSite(  
-   Boolean IncludeSubCollections,  
-   String SiteCode[],  
-   UInt32 ResourceNumber[]  
-);  
-```  
+```
+SInt32 FindResourceSite(
+   Boolean IncludeSubCollections,
+   String SiteCode[],
+   UInt32 ResourceNumber[]
+);
+```
 
-#### Parameters  
- `IncludeSubCollections`  
- Data type: `Boolean`  
+#### Parameters
+ `IncludeSubCollections`
+ Data type: `Boolean`
 
- Qualifiers: [in, optional]  
+ Qualifiers: [in, optional]
 
- `true` if subcollections should be included. The default value is `false`.   
+ `true` if subcollections should be included. The default value is `false`.
 
- `SiteCode`  
- Data type: `String` Array  
+ `SiteCode`
+ Data type: `String` Array
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Site code of the Configuration Manager site.   
+ Site code of the Configuration Manager site.
 
- `ResourceNumber`  
- Data type: `UInt32` Array  
+ `ResourceNumber`
+ Data type: `UInt32` Array
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
  The resource number.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_Query Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_query-server-wmi-class.md)

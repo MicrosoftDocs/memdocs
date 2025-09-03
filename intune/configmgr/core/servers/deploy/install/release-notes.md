@@ -11,7 +11,7 @@ ms.author: brianhun
 manager: dougeby
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 
@@ -60,13 +60,13 @@ To work around this issue, disable branch cache.
 <!-- 27951696 -->
 _Applies to: version 2309 with KB25858444 and later_
 
-Microsoft Defender security configurations are no longer managed with Microsoft Intune after updating to Configuration Manager version 2403, or installing the [Update Rollup for 2309](../../../../hotfix/2309/25858444.md). 
+Microsoft Defender security configurations are no longer managed with Microsoft Intune after updating to Configuration Manager version 2403, or installing the [Update Rollup for 2309](../../../../hotfix/2309/25858444.md).
 
-The symptom is seen as a drop in the Microsoft Security Score values when viewed in Intune. This issue happens because security policy configuration data is incorrectly removed from clients after Configuration Manager clients are upgraded. 
+The symptom is seen as a drop in the Microsoft Security Score values when viewed in Intune. This issue happens because security policy configuration data is incorrectly removed from clients after Configuration Manager clients are upgraded.
 
 An updated version of the Microsoft Security Client Policy Configuration Tool, ConfigSecurityPolicy.exe, is available to resolve the Endpoint Protection policy issue described in this note.
 
-The updated tool, version 4.18.24040.4, is distributed with the April 2024 monthly Microsoft Defender platform update. At the time of this writing, the platform update is in the process of global distribution, and should be broadly available in all regions by May 17, 2024.   
+The updated tool, version 4.18.24040.4, is distributed with the April 2024 monthly Microsoft Defender platform update. At the time of this writing, the platform update is in the process of global distribution, and should be broadly available in all regions by May 17, 2024.
 Once the platform update is installed on affected clients, Endpoint Protection policies are reapplied from Intune within 8 hours. The "Manage Endpoint Protection client on client computers" setting in Configuration Manager can be changed back to "Yes" as required.
 #### Additional references
 
@@ -79,7 +79,7 @@ Once the platform update is installed on affected clients, Endpoint Protection p
 ### ODBC driver check
 _Applies to: version 2503 and later_
 
-During site installation, the prerequisite checker looks for the minimum required version of the Microsoft ODBC driver. 
+During site installation, the prerequisite checker looks for the minimum required version of the Microsoft ODBC driver.
 If the correct driver isn't detected the following message is recorded:
    ```text
    [Failed]: Install the Microsoft ODBC driver 18 for SQL setup from https://go.microsoft.com/fwlink/?linkid=2220989.
@@ -112,11 +112,11 @@ For more information, see [internet access requirements](../../../plan-design/ne
 _Applies to: version 2403_
 
 After upgrading to 2403, site servers serving as a PXE responder might see failures due to incorrect configuration of the registry keys. We can observe the below failures in **distmgr.log** indicating that the registry keys weren't configured correctly.
- 
+
 ```log
 Failed to get OS platform for server DP2.CONTOSO2.COM.Either a permissions issue or the server is not supported OS SMS_DISTRIBUTION_MANAGER
 CDistributionManager::SetDpRegistry failed; 0x80070005 SMS_DISTRIBUTION_MANAGER
-``` 
+```
 This happened due to currently unexplained failures in platform architecture identification that were introduced during the addition of support for arm64 machines to serve as remote distribution points.
 
 ## Software updates
@@ -130,11 +130,11 @@ Removing SUP role in Admin Console doesn't reset the superseding age property in
 
 <!--3479337, SCCMDocs-pr issue 3095-->
 
-The **OS Deployment Manager** built-in security role has permissions to [phased deployments](../../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md). The following roles are missing these permissions:  
+The **OS Deployment Manager** built-in security role has permissions to [phased deployments](../../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md). The following roles are missing these permissions:
 
-- **Application Administrator**  
-- **Application Deployment Manager**  
-- **Software Update Manager**  
+- **Application Administrator**
+- **Application Deployment Manager**
+- **Software Update Manager**
 
 The **App Author** role can appear to have some permissions to phased deployments, but can't create deployments.
 
@@ -142,10 +142,10 @@ A user with one these roles can start the Create Phased Deployment wizard, and c
 
 To work around this issue, create a custom security role. Copy an existing security role, and add the following permissions on the **Phased Deployment** object class:
 
-- Create  
-- Delete  
-- Modify  
-- Read  
+- Create
+- Delete
+- Modify
+- Read
 
 For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#create-custom-security-roles)
 
@@ -176,39 +176,39 @@ AS
        SELECT *,
            RN = ROW_NUMBER()OVER(PARTITION BY ID ORDER BY Version DESC)
        FROM ConsoleExtensionMetadata
-    ) 
-    SELECT 
-        m.ID, 
-        m.Name, 
-        m.Description, 
-        m.Author, 
-        m.Version, 
-        m.IsEnabled, 
-        m.IsApproved, 
-        m.CreatedTime, 
-        m.CreatedBy, 
-        m.UpdateTime, 
-        m.IsTombstoned, 
-        m.IsRequired, 
-        m.IsSigned, 
-        m.IsUnsignedAllowed, 
-        CASE m.IsRequired 
-            WHEN 0 THEN ''  
-            ELSE  
-            ( 
-                SELECT top(1) author FROM ConsoleExtensionRevisionHistory h 
-                WHERE m.ID=h.ExtensionId AND m.Version=h.Version AND h.Changes & 1=1 
-                ORDER BY h.RevisionTime DESC 
-            ) 
-        END AS RequiredBy, 
-        m.IsSetupDefined 
+    )
+    SELECT
+        m.ID,
+        m.Name,
+        m.Description,
+        m.Author,
+        m.Version,
+        m.IsEnabled,
+        m.IsApproved,
+        m.CreatedTime,
+        m.CreatedBy,
+        m.UpdateTime,
+        m.IsTombstoned,
+        m.IsRequired,
+        m.IsSigned,
+        m.IsUnsignedAllowed,
+        CASE m.IsRequired
+            WHEN 0 THEN ''
+            ELSE
+            (
+                SELECT top(1) author FROM ConsoleExtensionRevisionHistory h
+                WHERE m.ID=h.ExtensionId AND m.Version=h.Version AND h.Changes & 1=1
+                ORDER BY h.RevisionTime DESC
+            )
+        END AS RequiredBy,
+        m.IsSetupDefined
     FROM m
     WHERE RN = 1
 GO
 ```
 ## Boundaries and Boundary groups
 
-### Clients not belonging to any boundary group can fail to download due to SQL issue 
+### Clients not belonging to any boundary group can fail to download due to SQL issue
 <!--22760249-->
 *Applies to: version 2303, 2309 RTM*
 

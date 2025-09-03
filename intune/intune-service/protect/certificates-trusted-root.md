@@ -4,9 +4,9 @@
 title: Create trusted certificate profiles in Microsoft Intune
 description: Create and deploy trusted certificate profiles to deploy a trusted root certificate to managed devices in Intune. Trusted certificate profiles support use of Simple Certificate Enrollment Protocol (SCEP) and Public Key Cryptography Standards (PKCS) certificate profiles with Microsoft Intune.
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 09/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: lacranda
+ms.reviewer: wicale
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -50,7 +50,7 @@ You use this `.cer` file when you [create trusted certificate profiles](#create-
 
 ## Create trusted certificate profiles
 
-Before you create a SCEP, PKCS, or PKCS imported certificate profile, create and deploy a trusted certificate profile. Deploy the trusted certificate profile to the same groups that receive the other certificate profile types. This step makes sure that each device can recognize the legitimacy of your CA, including profiles VPN, Wi-Fi, and email profiles.
+Before you create a SCEP, PKCS, or PKCS imported certificate profile, create and deploy a trusted certificate profile. Deploy the trusted certificate profile to the same groups that receive the other certificate profile types. This step makes sure that each device can recognize the legitimacy of your CA, including VPN, Wi-Fi, and email profiles.
 
 SCEP certificate profiles directly reference a trusted certificate profile. PKCS certificate profiles don't directly reference the trusted certificate profile but do directly reference the server that hosts your CA. PKCS imported certificate profiles don't directly reference the trusted certificate profile but can use it on the device. Deploying a trusted certificate profile to devices ensures this trust is established. When a device doesn't trust the root CA, the SCEP or PKCS certificate profile policy fails.
 

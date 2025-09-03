@@ -6,11 +6,11 @@ ms.date: 12/01/2021
 ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -23,11 +23,11 @@ ms.collection: tier3
 
 Configuration Manager on-premises mobile device management (MDM) is a device management solution that relies on the built-in management capabilities of Windows. This feature is based on the Open Mobile Alliance (OMA) Device Management (DM) standard. It uses your organization's Configuration Manager infrastructure to manage and maintain the devices. Your organization requires Microsoft Intune licenses to use this feature, but it doesn't require any cloud connection. Configuration Manager stores all data about your devices in your on-premises site database.
 
-On-premises MDM differs from Microsoft Intune, which also relies on built-in OMA DM capabilities. All of the management functions in Intune are delivered through cloud services. On-premises MDM also differs from the client-based management solution traditionally offered by Configuration Manager. It relies on similar infrastructure, but doesn't use separately installed client software on the devices it manages.  
+On-premises MDM differs from Microsoft Intune, which also relies on built-in OMA DM capabilities. All of the management functions in Intune are delivered through cloud services. On-premises MDM also differs from the client-based management solution traditionally offered by Configuration Manager. It relies on similar infrastructure, but doesn't use separately installed client software on the devices it manages.
 
 ## Comparison
 
-The following sections list the advantages and disadvantages of on-premises MDM as compared to traditional client-based management:  
+The following sections list the advantages and disadvantages of on-premises MDM as compared to traditional client-based management:
 
 ### Advantages
 
@@ -48,4 +48,4 @@ The following sections list the advantages and disadvantages of on-premises MDM 
 Learn about what to consider when setting up the Configuration Manager infrastructure and planning for device enrollment in on-premises MDM.
 
 > [!div class="nextstepaction"]
-> [Plan for on-premises MDM](../plan-design/plan-on-premises-mdm.md)  
+> [Plan for on-premises MDM](../plan-design/plan-on-premises-mdm.md)

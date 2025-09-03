@@ -6,11 +6,11 @@ ms.date: 04/29/2017
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -28,9 +28,9 @@ You manage applicability rules from the **Rules Workspace**. When you create a r
 For example, the following is a rule set that contains three rules. The first rule verifies that the *MyFile* file exists, and the second and third rules verify that the language of the Windows operating system is either English or Japanese.
 
 ``` Example
-And  
-  File '\[PROGRAM\_FILES\] \\Microsoft\\MyFile' exists  
-  Or  
+And
+  File '\[PROGRAM\_FILES\] \\Microsoft\\MyFile' exists
+  Or
     Windows Language is English
     Windows Language is Japanese
 ```
@@ -62,7 +62,7 @@ The following information is similar to how you create rules from within the [Cr
 
    - **Windows Installer –** Use this rule type to determine applicability based on an installed .MSI or Windows Installer patch (.MSP). You can also determine if specific components or features are installed as part of the requirement.
 
-     > [!IMPORTANT]   
+     > [!IMPORTANT]
      > On managed deices, the Windows Update Agent cannot detect Windows Install packages that are installed per-user. When you use this rule type, configure additional applicability rules, like file versions or registry key values, so that the Windows Installer package can be properly detected regardless of a per-user or per-system basis.
 
    - **Saved rule –** This option lets you find and use rules that you previously configured and saved.

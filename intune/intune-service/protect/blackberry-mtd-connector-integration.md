@@ -53,6 +53,9 @@ The following subscriptions and accounts are required to integrate UES with Micr
 
   - Send device information to Intune
 
+  > [!CAUTION]
+  > [!INCLUDE [global-admin](../includes/global-admin.md)]
+
 - Admin sign-in credentials to access the UES management console
 
 ### App authorization

@@ -6,9 +6,9 @@ ms.date: 04/10/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: article
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 ms.localizationpriority: high
 ---
 
@@ -18,7 +18,7 @@ Understanding how your devices contribute to your end user's experience is criti
 
 ## Endpoint analytics page in the Adoption Score report
 
-Endpoint analytics contains great insights, but it requires access to the Microsoft Intune admin center. If you're an Intune Admin or a Global Administrator, you can display the analytics. However, other users of Microsoft Adoption Score might be unaware this information exists. Displaying these insights to Microsoft Adoption Score users allows them to use the data to help drive transformation efforts across your organization.
+Endpoint analytics contains great insights, but it requires access to the Microsoft Intune admin center. If you're an Intune Administrator, you can display the analytics. However, other users of Microsoft Adoption Score might be unaware this information exists. Displaying these insights to Microsoft Adoption Score users allows them to use the data to help drive transformation efforts across your organization.
 
 :::image type="content" source="media/8529842-endpoint-analytics-microsoft-365-admin-center.png" alt-text="Endpoint analytics in the Microsoft 365 admin center" lightbox="media/8529842-endpoint-analytics-microsoft-365-admin-center.png":::
 

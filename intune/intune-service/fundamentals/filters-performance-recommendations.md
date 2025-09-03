@@ -6,7 +6,7 @@ description: When using filters in Microsoft Intune, use Intune virtual groups t
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 12/11/2024
 ms.topic: article
 ms.service: microsoft-intune
@@ -57,7 +57,7 @@ Intune almost exclusively uses Microsoft Entra groups for grouping and targeting
 Microsoft Entra groups are an important part of Intune because these groups are:
 
 - The objects used for assigning apps, policies, and other workloads to users and devices
-- Used to define the devices that admins can view and manage in the Intune admin center, like scope groups in role-based access control (RBAC)
+- Used to define the devices that admins can view and manage in the Intune admin center, like [scope groups](../fundamentals/role-based-access-control.md#about-intune-role-assignments) in role-based access control (RBAC)
 
 ### Virtual groups
 

@@ -2,8 +2,8 @@
 title: Software Center user guide
 titleSuffix: Configuration Manager
 description: Learn about the features and functionality of Software Center
-ms.author: baladell 
-author: BalaDelli
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.date: 10/18/2024
 ms.topic: end-user-help
@@ -11,7 +11,7 @@ ms.subservice: core-infra
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Software Center user guide
@@ -118,9 +118,9 @@ To share a link to a specific app, after you select the app, select the **Share*
 
 ### Featured Apps
 
-**Featured** tab in Software Center displays featured apps. With this tab, IT admin can mark apps as "featured" and encourage end users to use these apps. 
-Currently, this feature is available only for "User Available" apps. 
-Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings. 
+**Featured** tab in Software Center displays featured apps. With this tab, IT admin can mark apps as "featured" and encourage end users to use these apps.
+Currently, this feature is available only for "User Available" apps.
+Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings.
 
 If an app is marked as **Featured** and it's deployed to a User Collection as an Available app, it will show under the **Featured** pivot in Software Center.
 
@@ -131,7 +131,7 @@ If an app is marked as **Featured** and it's deployed to a User Collection as an
 
 :::image type="content" source="media/software-center-updates.png" alt-text="Software Center Updates tab" lightbox="media/software-center-updates.png":::
 
-Select the **Updates** tab (1) to view and install software updates that your IT admin deploys to this computer.  
+Select the **Updates** tab (1) to view and install software updates that your IT admin deploys to this computer.
 
 - **All** (2): Shows all updates that you can install
 
@@ -150,7 +150,7 @@ Check the updates to install, and then select **Install Selected**.
 
 :::image type="content" source="media/software-center-os.png" alt-text="Software Center Operating Systems tab" lightbox="media/software-center-os.png":::
 
-Select the **Operating Systems** tab (1) to view and install versions of Windows that your IT admin deploys to this computer.  
+Select the **Operating Systems** tab (1) to view and install versions of Windows that your IT admin deploys to this computer.
 
 - **All** (2): Shows all Windows versions that you can install
 

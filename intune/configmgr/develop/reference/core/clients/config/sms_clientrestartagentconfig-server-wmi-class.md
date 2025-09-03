@@ -12,61 +12,61 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ClientRestartAgentConfig Server WMI Class
-The `SMS_ClientRestartAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the settings and properties used by the client restart agent.  
+The `SMS_ClientRestartAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the settings and properties used by the client restart agent.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ClientRestartAgentConfig : SMS_ClientAgentConfig_BaseClass  
-{  
-    UInt32 AgentID;  
-    UInt32 RebootLogoffNotificationCountdownDuration;  
-    UInt32 RebootLogoffNotificationFinalWindow;  
-};  
-```  
+```
+Class SMS_ClientRestartAgentConfig : SMS_ClientAgentConfig_BaseClass
+{
+    UInt32 AgentID;
+    UInt32 RebootLogoffNotificationCountdownDuration;
+    UInt32 RebootLogoffNotificationFinalWindow;
+};
+```
 
-## Methods  
- The `SMS_ClientRestartAgentConfig` class does not define any methods.  
+## Methods
+ The `SMS_ClientRestartAgentConfig` class does not define any methods.
 
-## Properties  
- `AgentID`  
- Data type: `UInt32`  
+## Properties
+ `AgentID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Identifies the client agent component. The SMS_ClientRestartAgentConfig Agent ID is 21.  
+ Identifies the client agent component. The SMS_ClientRestartAgentConfig Agent ID is 21.
 
- `RebootLogoffNotificationCountdownDuration`  
- Data type: `UInt32`  
+ `RebootLogoffNotificationCountdownDuration`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes).  
+ Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes).
 
- `RebootLogoffNotificationFinalWindow`  
- Data type: `UInt32`  
+ `RebootLogoffNotificationFinalWindow`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes).  
+ Display a dialog box that the user cannot close, which displays the countdown interval before the user is logged off or the computer restarts (minutes).
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

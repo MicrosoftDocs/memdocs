@@ -6,12 +6,12 @@ ms.date: 05/02/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Use the setup wizard to install a central administration or primary site
@@ -180,7 +180,7 @@ If you're installing a CAS as part of a site expansion scenario, first read [Exp
 
     - If you selected **All site system roles accept only HTTPS communication from clients** on the previous page, the wizard automatically configures the client connection settings for HTTPS. You can't change this setting unless you go back to the previous page.
 
-    > [!NOTE]  
+    > [!NOTE]
     > To install site system roles, Setup uses the **site system installation account**. By default, it uses the primary site's computer account. This account must be a local administrator on the remote computer to install the role. If this account lacks the required permissions, don't install the roles during Setup. After you configure additional accounts to use as site system installation accounts, install the roles from the Configuration Manager console. For more information, see [Accounts](../../../plan-design/hierarchy/accounts.md#site-system-installation-account).
 
 1. On the **Usage Data** page, review the information about data that Microsoft collects, and then choose **Next**. For more information, see [Diagnostics and usage data](../../../plan-design/diagnostics/diagnostics-and-usage-data.md).

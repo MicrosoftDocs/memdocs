@@ -7,8 +7,8 @@ description: Set up Android Enterprise work profile for corporate-owned devices 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 04/15/2025
+manager: laurawi
+ms.date: 05/08/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: grwilson
+ms.reviewer: grwilso
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -48,6 +48,9 @@ Devices must meet these requirements to be managed as Android Enterprise corpora
 
 - Android OS version 8.0 and above.
 - Devices must run a distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.  
+- Make sure Android Enterprise is supported on devices. For more information, see:   
+    * [Android Enterprise help - General FAQs](https://support.google.com/work/android/answer/14772109?hl=en#zippy=%2cif-my-device-is-not-android-enterprise-recommended-aer-can-i-still-use-android-enterprise)  
+    * [Check & fix Play Protect certification status](https://support.google.com/googleplay/answer/7165974?hl=en#zippy=%2Cdevice-isnt-certified)  
 
 
 ## Set up Android Enterprise corporate-owned work profile device management
@@ -112,15 +115,15 @@ You must create an enrollment profile so that users can enroll corporate-owned w
 
         - {{SERIAL}} for the device's serial number.  
 
-        - {{SERIALNUMBERLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
+        - {{SERIALLAST4DIGITS}} for the last 4 digits of the device’s serial number.  
 
         - {{DEVICETYPE}} for the device type. Example: *AndroidForWork*  
 
-        - {{ENROLLEDDATETIME}} for the date and time of enrollment.  
+        - {{ENROLLMENTDATETIME}} for the date and time of enrollment.  
 
         - {{UPNPREFIX}} for the user's first name. Example: *Eric*, when device is user affiliated.  
 
-        - {{USERNAME}} for the user's username when the device is user affiliated. Example: *Eric Solomon*  
+        - {{USERNAME}} for the user's username when the device is user affiliated. Example: *EricSolomon*  
         
         - {{RAND:x}} for a random string of numbers, where *x* is between 1 and 9 and indicates the number of digits to add. Intune adds the random digits to the end of the name.  
 

@@ -4,9 +4,9 @@
 title: Windows Delivery Optimization settings in Microsoft Intune
 description: Configure device configuration policy to manage Delivery Optimization settings on Windows devices you manage with Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 ms.date: 04/23/2025
 ms.topic: how-to
 ms.service: microsoft-intune

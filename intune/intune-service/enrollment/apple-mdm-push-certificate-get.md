@@ -7,8 +7,8 @@ description: Get an Apple MDM Push certificate to manage iOS/iPadOS devices with
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 04/11/2024
+manager: laurawi
+ms.date: 05/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -36,7 +36,7 @@ ms.collection:
 Upload and renew your Apple MDM push certificates in Microsoft Intune. An Apple MDM Push certificate is required to manage iOS/iPadOS and macOS devices in Microsoft Intune, and enables devices to enroll via: 
 
 - The Intune Company Portal app.
-- Apple bulk enrollment methods, such as the Device Enrollment Program, Apple School Manager, and Apple Configurator.
+- Apple bulk enrollment methods, such as Apple Business Manager, Apple School Manager, and Apple Configurator.
 
 Certificates must be renewed annually. This article describes how to use Intune to create and renew an Apple MDM push certificate. 
 
@@ -47,9 +47,10 @@ Use an [Intune-supported web browser](../fundamentals/supported-devices-browsers
 Access your Apple MDM push certificate settings in Microsoft Intune.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Enrollment**.     
-3. Select the **Apple** tab.
-4. Select **Apple MDM Push Certificate**. Your MDM push certificate settings open.   
+2. Go to **Devices**.
+3. Expand **Device onboarding**, and then select **Enrollment**.     
+4. Select the **Apple** tab.
+5. Select **Apple MDM Push Certificate**. Your MDM push certificate settings open.   
 
 ### Step 1: Grant Microsoft permission to send user and device information to Apple
 Select **I agree** to give Microsoft permission to send data to Apple.  
@@ -90,19 +91,20 @@ The Apple MDM push certificate is valid for 365 days. You must renew it annually
 Renew the MDM push certificate with the same Apple account you used to create it.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Device onboarding** > **Enrollment**.     
-3. Select the **Apple** tab.  
-4. Select **Apple MDM Push Certificate**. Your MDM push certificate settings open. 
-5. Select **Download your CSR** to download and save the request file locally. The file is used to request a trust relationship certificate from the Apple Push Certificates Portal.
-6. Select **Create your MDM push Certificate** to go to the [Apple Push Certificates Portal](https://identity.apple.com/).  
-7. In the Apple portal, find the certificate you want to renew and select **Renew**.  
-8. Select **Choose File**. Choose the new CSR file you downloaded.  
-9. In the provided field, enter a unique note about the certificate so that you can easily identify it later.  
+2. Go to **Devices**.
+3. Go to **Device onboarding** > **Enrollment**.     
+4. Select the **Apple** tab.  
+5. Select **Apple MDM Push Certificate**. Your MDM push certificate settings open. 
+6. Select **Download your CSR** to download and save the request file locally. The file is used to request a trust relationship certificate from the Apple Push Certificates Portal.
+7. Select **Create your MDM push Certificate** to go to the [Apple Push Certificates Portal](https://identity.apple.com/).  
+8. In the Apple portal, find the certificate you want to renew and select **Renew**.  
+9. Select **Choose File**. Choose the new CSR file you downloaded.  
+10. In the provided field, enter a unique note about the certificate so that you can easily identify it later.  
    > [!TIP]
    > Each certificate has a unique UID. To find it, look for the subject ID, which shows the GUID portion of the UID, in the certificate details. You can also find this information on the enrolled iOS/iPadOS device. Go to **Settings** > **General** > **Device Management** > **Management Profile** > **More Details** > **Management Profile**. The **Topic** value contains the unique GUID that you can match up to the certificate in the Apple Push Certificates portal.  
-10. Select **Upload**.    
-11. On the **Confirmation** screen, select **Download**.  
-12. Return to the admin center > **Configure MDM Push Certificate**. Upload your certificate file. 
+11. Select **Upload**.    
+12. On the **Confirmation** screen, select **Download**.  
+13. Return to the admin center and upload your certificate file. 
 
 Renewal is complete when your Apple MDM push certificate status appears active in both the admin center and Apple Push Certificates portal. 
 

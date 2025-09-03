@@ -7,10 +7,10 @@ ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: reference
 author: BalaDelli
-ms.author: baladell
+ms.author: brianhun
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 

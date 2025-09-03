@@ -6,12 +6,12 @@ ms.date: 08/10/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: article
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Security and privacy for application management in Configuration Manager
@@ -35,7 +35,7 @@ If you configure the deployment to run directly from a distribution point, the C
 If you must run deployments directly from distribution points, use NTFS least permissions on the packages on the distribution points. Also use internet protocol security (IPsec) to secure the channel between the client and the distribution points, and between the distribution points and the site server.
 
 ### <a name="bkmk_interact"></a> Don't let users interact with elevated processes
-  
+
 If you enable the options to **Run with administrative rights** or **Install for system**, don't let users interact with those applications. When you configure an application, you can set the option to **Allow users to view and interact with the program installation**. This setting allows users to respond to any required prompts in the user interface. If you also configure the application to **Run with administrative rights** or **Install for system**, an attacker at the computer that runs the program could use the user interface to escalate privileges on the client computer.
 
 Use programs that use Windows Installer for setup and per-user elevated privileges for software deployments that require administrative credentials. Setup must be run in the context of a user who doesn't have administrative credentials. Windows Installer per-user elevated privileges provide the most secure way to deploy applications that have this requirement.
@@ -120,7 +120,7 @@ If you configure a web application deployment type, use HTTPS to secure the conn
 
 - App-V packages aren't signed.
 
-    App-V packages in Configuration Manager don't support signing. Digital signatures verify the content is from a trusted source and wasn't altered in transit. There's no mitigation for this security issue. Follow the security best practice to download the content from a trusted source and from a secure location.  
+    App-V packages in Configuration Manager don't support signing. Digital signatures verify the content is from a trusted source and wasn't altered in transit. There's no mitigation for this security issue. Follow the security best practice to download the content from a trusted source and from a secure location.
 
 - Published App-V applications can be installed by all users on the computer.
 

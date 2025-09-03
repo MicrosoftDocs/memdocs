@@ -5,10 +5,10 @@ title: Add web apps to Microsoft Intune
 titleSuffix: 
 description: Learn about adding web apps (client-server applications) to Microsoft Intune.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 05/10/2024
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
+ms.date: 06/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -86,6 +86,8 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name will be visible to people signed in to the admin center.
     - **Notes**: Add additional notes about the app. Notes will be visible to people signed in to the admin center.
     - **Logo**: Upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
+    > [!NOTE]
+    > On Windows devices it is expected that the configured icon does not apply within the start menu. The Microsoft Edge logo is displayed instead. 
 6. Click **Next** to display the **Scope tags** page.
 7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 8. Click **Next** to display the **Assignments** page.

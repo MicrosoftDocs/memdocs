@@ -6,8 +6,9 @@ description: Common questions, answers, and scenarios with device policies and p
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 04/23/2025
+manager: laurawi
+ms.date: 04/28/2025
+ms.update-cycle: 180-days
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,7 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-- magic-ai-copilot
+- msec-ai-copilot
 ---
 
 # Common questions, answers, and scenarios with policies and profiles in Microsoft Intune
@@ -66,7 +67,10 @@ There are 4 main types of check-ins:
 **Notification-based check-ins** - These check-ins happen through different actions that trigger a notification. For example, when a policy, profile, or app is assigned (or unassigned), updated, deleted, or when certain behind the scenes changes like Microsoft Entra group membership updates are made. Other changes don't cause an immediate notification to devices, like adding an app as available to your users.
 
 > [!IMPORTANT]
-> To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).
+> To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md#intune-dependencies).
+> - For Windows, see [Windows dependencies](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
+> - For Apple, see [Apple dependencies](../fundamentals/intune-endpoints.md#apple-dependencies).
+> - For Android, see [Android dependencies](../fundamentals/intune-endpoints.md#android-aosp-dependencies).
 
 Intune notifies online devices to check-in with the Intune service. The notification times vary from immediately up to a few hours.
 These notification times also vary between platforms.

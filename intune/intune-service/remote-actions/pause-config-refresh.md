@@ -5,8 +5,8 @@ title: Pause Config Refresh
 titleSuffix: Microsoft Intune
 description: Learn how Config Refresh can be paused for a configurable period of time, after which it's automatically re-enabled, or can be manually turned back on at any time by an IT administrator.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: dougeby
 ms.date: 04/10/2025
 ms.topic: how-to

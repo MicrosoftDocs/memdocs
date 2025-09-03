@@ -7,7 +7,7 @@ description: Learn about Shared iOS and iPadOS devices.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 09/16/2024
 ms.topic: overview
 ms.service: microsoft-intune
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,6 +31,9 @@ ms.collection:
 ---
 
 # Overview of shared device solutions for iOS/iPadOS
+
+> [!IMPORTANT]
+> Shared device mode for iOS/iPadOS isn't currently available for GCC High tenants.  
 
 Shared devices are organization-owned multi-user devices. These devices can be special-purpose or multi-purpose as needed in each environment. Shared devices enable front-line workers in healthcare, hospitality, retail, manufacturing, and other industries to access critical applications and tools essential to their role in the organization. In education, shared devices are used as learning aids or test-taking devices in classrooms.  
 

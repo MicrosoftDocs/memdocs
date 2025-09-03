@@ -6,12 +6,12 @@ ms.date: 04/08/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Cost of CMG
@@ -138,6 +138,6 @@ For more information, see [Fundamental concepts for content management](../../..
 ## Next steps
 
 Now that you have your CMG design, understand the supported configurations and cost, you're ready to set up the CMG:
-  
+
 > [!div class="nextstepaction"]
 > [Set up checklist for cloud management gateway](set-up-checklist.md)

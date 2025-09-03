@@ -6,7 +6,7 @@ description: See an overview of the steps to start using Intune. Plan your move 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
+manager: laurawi
 ms.date: 02/19/2025
 ms.topic: overview
 ms.service: microsoft-intune
@@ -76,6 +76,8 @@ This article provides an overview of the steps to start your Intune deployment.
     - [**iOS/iPadOS** enrollment guide](deployment-guide-enrollment-ios-ipados.md)
     - [**macOS** enrollment guide](deployment-guide-enrollment-macos.md)
     - [**Windows** enrollment guide](deployment-guide-enrollment-windows.md)
+
+- Review and determine [Network endpoints](intune-endpoints.md) necessary for the successful deployment and management of Microsoft Intune. Review the IP addresses, port settings, and domain names that need to be configured to allow communication between managed devices and Intune services.
 
 ## Step 1 - Set up Intune
 

@@ -5,7 +5,7 @@ ms.service: windows-client
 ms.subservice: autopilot
 ms.localizationpriority: medium
 ms.reviewer: madakeva
-manager: aaroncz
+manager: bpardi
 author: frankroj
 ms.author: frankroj
 ms.date: 04/09/2025

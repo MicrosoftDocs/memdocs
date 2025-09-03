@@ -12,142 +12,142 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_SCI_Component Server WMI Class
-The `SMS_SCI_Component` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a Configuration Manager server component installed on one or more servers at a site.  
+The `SMS_SCI_Component` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a Configuration Manager server component installed on one or more servers at a site.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_SCI_Component : SMS_SiteControlItem   
-{  
-     String ComponentName;  
-     UInt32 FileType;  
-     UInt32 Flag;  
-     String ItemName;  
-     String ItemType;  
-     String Name;  
-     SMS_EmbeddedProperty Props[];  
-     SMS_EmbeddedPropertyList PropLists[];  
-     String SiteCode;  
-};  
-```  
+```
+Class SMS_SCI_Component : SMS_SiteControlItem
+{
+     String ComponentName;
+     UInt32 FileType;
+     UInt32 Flag;
+     String ItemName;
+     String ItemType;
+     String Name;
+     SMS_EmbeddedProperty Props[];
+     SMS_EmbeddedPropertyList PropLists[];
+     String SiteCode;
+};
+```
 
-## Methods  
- The `SMS_SCI_Component` class does not define any methods.  
+## Methods
+ The `SMS_SCI_Component` class does not define any methods.
 
-## Properties  
- `ComponentName`  
- Data type: `String`  
+## Properties
+ `ComponentName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the Configuration Manager server component. The default value is "".  
+ Name of the Configuration Manager server component. The default value is "".
 
- `FileType`  
- Data type: `UInt32`  
+ `FileType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, enumeration:ToSubClass]  
+ Qualifiers: [key, enumeration:ToSubClass]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `Flag`  
- Data type: `UInt32`  
+ `Flag`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Flag identifying the component. Possible values are listed below. The default value is NAMED_SERVER_INSTALLED (6).  
+ Flag identifying the component. Possible values are listed below. The default value is NAMED_SERVER_INSTALLED (6).
 
-|Value|Description|  
-|-----------|-----------------|  
-|1|ROLE_NOT_INSTALLED. If the flag is set to this value, the `Name` property specifies the server role. The component is installed on every server having the specified role.|  
-|2|NAMED_SERVER_NOT_INSTALLED. If the flag is set to this value, the `Name` property specifies a particular server on which the component is installed. The server name does not include backslashes.|  
-|5|ROLE_INSTALLED. If the flag is set to this value, the `Name` property specifies the server role. The component is installed on every server having the specified role.|  
-|6|NAMED_SERVER_INSTALLED. If the flag is set to this value, the `Name` property specifies a particular server on which the component is installed. The server name does not include backslashes.|  
+|Value|Description|
+|-----------|-----------------|
+|1|ROLE_NOT_INSTALLED. If the flag is set to this value, the `Name` property specifies the server role. The component is installed on every server having the specified role.|
+|2|NAMED_SERVER_NOT_INSTALLED. If the flag is set to this value, the `Name` property specifies a particular server on which the component is installed. The server name does not include backslashes.|
+|5|ROLE_INSTALLED. If the flag is set to this value, the `Name` property specifies the server role. The component is installed on every server having the specified role.|
+|6|NAMED_SERVER_INSTALLED. If the flag is set to this value, the `Name` property specifies a particular server on which the component is installed. The server name does not include backslashes.|
 
- `ItemName`  
- Data type: `String`  
+ `ItemName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `ItemType`  
- Data type: `String`  
+ `ItemType`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Configuration Manager role or server name, depending on the value of `Flag`. The default value is "".  
+ Configuration Manager role or server name, depending on the value of `Flag`. The default value is "".
 
- `Props`  
- Data type: `SMS_EmbeddedProperty` Array  
+ `Props`
+ Data type: `SMS_EmbeddedProperty` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md) objects for the component.  
+ [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md) objects for the component.
 
- `PropLists`  
- Data type: `SMS_EmbeddedPropertyList` Array  
+ `PropLists`
+ Data type: `SMS_EmbeddedPropertyList` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) objects for the component.  
+ [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) objects for the component.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, SizeLimit("3")]  
+ Qualifiers: [key, SizeLimit("3")]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
-## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+## Remarks
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
- Run the following query for a complete list of Configuration Manager server components defined for your site server.  
+ Run the following query for a complete list of Configuration Manager server components defined for your site server.
 
-```  
-SELECT * FROM SMS_SCI_Component  
-WHERE SiteCode = "<sitecode>"  
-```  
+```
+SELECT * FROM SMS_SCI_Component
+WHERE SiteCode = "<sitecode>"
+```
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)   
- [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md)   
- [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md)   
+## See Also
+ [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)
+ [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md)
+ [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md)
  [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md)

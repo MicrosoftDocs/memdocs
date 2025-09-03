@@ -2,15 +2,15 @@
 title: Use PXE for OSD over the network
 titleSuffix: Configuration Manager
 description: Use PXE-initiated OS deployments to refresh a computer's operating system or to install a new version of Windows on a new computer.
-ms.date: 07/15/2021
+ms.date: 09/02/2025
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -48,6 +48,13 @@ When you enable a PXE responder on a distribution point without Windows Deployme
 - Set the DWord value **DoNotListenOnDhcpPort** to `1` in the following registry key: `HKLM\Software\Microsoft\SMS\DP`.
 - Set DHCP option 60 to `PXEClient`.
 - Restart the SCCMPXE and DHCP services on the server.
+
+> [!IMPORTANT]
+>
+> An on-premises distribution point is required in the following scenarios:
+>
+> 1. Responding to PXE boot requests.
+> 1. When using multicast.
 
 ## Prepare a PXE-enabled boot image
 
@@ -120,18 +127,18 @@ You can redeploy a required PXE deployment by clearing the status of the last PX
 
 When a client boots with PXE, Configuration Manager provides the client with a boot image to use. Configuration Manager uses a boot image with an exact architecture match. If a boot image with the exact architecture isn't available, Configuration Manager uses a boot image with a compatible architecture.
 
-The following list provides details about how a boot image is selected for clients booting with PXE:  
+The following list provides details about how a boot image is selected for clients booting with PXE:
 
-1. Configuration Manager looks in the site database for the system record that matches the MAC address or SMBIOS of the client that's trying to boot.  
+1. Configuration Manager looks in the site database for the system record that matches the MAC address or SMBIOS of the client that's trying to boot.
 
-    > [!NOTE]  
-    > If a computer that's assigned to a site boots to PXE for a different site, the policies aren't visible for the computer. For example, if a client is already assigned to site A, the management point and distribution point for site B aren't able to access the policies from site A. The client doesn't successfully PXE boot.  
+    > [!NOTE]
+    > If a computer that's assigned to a site boots to PXE for a different site, the policies aren't visible for the computer. For example, if a client is already assigned to site A, the management point and distribution point for site B aren't able to access the policies from site A. The client doesn't successfully PXE boot.
 
-2. Configuration Manager looks for task sequences that are deployed to the system record found in step 1.  
+2. Configuration Manager looks for task sequences that are deployed to the system record found in step 1.
 
-3. In the list of task sequences found in step 2, Configuration Manager looks for a boot image that matches the architecture of the client that's trying to boot. If a boot image is found with the same architecture, that boot image is used.  
+3. In the list of task sequences found in step 2, Configuration Manager looks for a boot image that matches the architecture of the client that's trying to boot. If a boot image is found with the same architecture, that boot image is used.
 
-    If it finds more than one boot image, it uses the *highest* or most recent task sequence deployment ID. In the case of a multi-site hierarchy, the *higher* letter site would take precedence in that string comparison. For example, if they're both matched otherwise, a year-old deployment from site ZZZ is selected over yesterday's deployment from site AAA.<!-- SCCMDocs issue 877 -->  
+    If it finds more than one boot image, it uses the *highest* or most recent task sequence deployment ID. In the case of a multi-site hierarchy, the *higher* letter site would take precedence in that string comparison. For example, if they're both matched otherwise, a year-old deployment from site ZZZ is selected over yesterday's deployment from site AAA.<!-- SCCMDocs issue 877 -->
 
 4. If a boot image isn't found with the same architecture, Configuration Manager looks for a boot image that's compatible with the architecture of the client. It looks in the list of task sequences found in step 2. For example, a 64-bit BIOS/MBR client is compatible with 64-bit boot images. UEFI clients are only compatible with matching architecture. A 64-bit UEFI client is compatible with only 64-bit boot images and Arm64 bit UEFI client is compatible with only Arm64 boot images.
 

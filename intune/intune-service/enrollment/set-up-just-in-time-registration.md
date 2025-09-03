@@ -7,7 +7,7 @@ description: Set up JIT registration in Intune for devices enrolling via a suppo
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 07/22/2024
 ms.topic: install-set-up-deploy
 ms.service: microsoft-intune

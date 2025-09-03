@@ -12,109 +12,109 @@ manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about how to update the OverrideServiceWindows property of deployment to configure software updates to override maintenance windows.
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Configure Software Updates to Override Maintenance Windows
-You configure software updates to override maintenance windows, in Configuration Manager, by updating the `OverrideServiceWindows` property of an assignment (deployment).  
+You configure software updates to override maintenance windows, in Configuration Manager, by updating the `OverrideServiceWindows` property of an assignment (deployment).
 
-### To configure software updates to override maintenance windows  
+### To configure software updates to override maintenance windows
 
-1.  Set up a connection to the SMS Provider.  
+1.  Set up a connection to the SMS Provider.
 
-2.  Load the specific assignment (deployment) to modify using the `SMS_UpdatesAssignment` class.  
+2.  Load the specific assignment (deployment) to modify using the `SMS_UpdatesAssignment` class.
 
-3.  Set the `OverrideServiceWindows` value to `true`.  
+3.  Set the `OverrideServiceWindows` value to `true`.
 
-4.  Save the assignment (deployment) and properties.  
+4.  Save the assignment (deployment) and properties.
 
-## Example  
- The following example method shows how to configure software updates to override maintenance windows by using the `SMS_UpdatesAssignment` class and class properties.  
+## Example
+ The following example method shows how to configure software updates to override maintenance windows by using the `SMS_UpdatesAssignment` class and class properties.
 
 > [!NOTE]
->  This task only applies to mandatory deployments.  
+>  This task only applies to mandatory deployments.
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).
 
-```vbs  
+```vbs
 
-Sub ConfigureSoftwareUpdatestoOverrideMaintenanceWindow(connection, existingAssignmentID)  
+Sub ConfigureSoftwareUpdatestoOverrideMaintenanceWindow(connection, existingAssignmentID)
 
-    ' Get the specific SMS_UpdatesAssignment instance to modify.   
-    Set assignmentToModify = connection.Get("SMS_UpdatesAssignment.AssignmentID=" & existingAssignmentID & "")    
+    ' Get the specific SMS_UpdatesAssignment instance to modify.
+    Set assignmentToModify = connection.Get("SMS_UpdatesAssignment.AssignmentID=" & existingAssignmentID & "")
 
-    ' Set the new property value.  
-    assignmentToModify.OverrideServiceWindows = true  
+    ' Set the new property value.
+    assignmentToModify.OverrideServiceWindows = true
 
-    ' Save the assignment.  
-    assignmentToModify.Put_   
+    ' Save the assignment.
+    assignmentToModify.Put_
 
-    ' Output the new property values.  
-    Wscript.Echo " "  
-    Wscript.Echo "Set assignment " & existingAssignmentID & " to override service windows."  
+    ' Output the new property values.
+    Wscript.Echo " "
+    Wscript.Echo "Set assignment " & existingAssignmentID & " to override service windows."
 
-End Sub  
+End Sub
 
-```  
+```
 
-```c#  
+```c#
 
-public void ConfigureSoftwareUpdatestoOverrideMaintenanceWindow(WqlConnectionManager connection, int existingAssignmentID)  
-{  
-    try  
-    {  
-        // Get the specific SMS_UpdatesAssignment instance to change.  
-        IResultObject updatesAssignmentToChange = connection.GetInstance(@"SMS_UpdatesAssignment.AssignmentID=" + existingAssignmentID);  
+public void ConfigureSoftwareUpdatestoOverrideMaintenanceWindow(WqlConnectionManager connection, int existingAssignmentID)
+{
+    try
+    {
+        // Get the specific SMS_UpdatesAssignment instance to change.
+        IResultObject updatesAssignmentToChange = connection.GetInstance(@"SMS_UpdatesAssignment.AssignmentID=" + existingAssignmentID);
 
-        // Set OverrideServiceWindows property.  
-        updatesAssignmentToChange["OverrideServiceWindows"].BooleanValue = true;  
+        // Set OverrideServiceWindows property.
+        updatesAssignmentToChange["OverrideServiceWindows"].BooleanValue = true;
 
-        // Save property changes.  
-        updatesAssignmentToChange.Put();  
+        // Save property changes.
+        updatesAssignmentToChange.Put();
 
-        // Output success message.  
-        Console.WriteLine("Set assignment " + existingAssignmentID + " to override service windows.");  
-    }  
+        // Output success message.
+        Console.WriteLine("Set assignment " + existingAssignmentID + " to override service windows.");
+    }
 
-    catch (SmsException ex)  
-    {  
-        Console.WriteLine("Failed to .... Error: " + ex.Message);  
-        throw;  
-    }  
-}  
+    catch (SmsException ex)
+    {
+        Console.WriteLine("Failed to .... Error: " + ex.Message);
+        throw;
+    }
+}
 
-```  
+```
 
- The example method has the following parameters:  
+ The example method has the following parameters:
 
 |Parameter|Type|Description|
-|---------|----|-----------| 
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`existingAssignmentID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|An existing Assignment ID to modify.|  
+|---------|----|-----------|
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|
+|`existingAssignmentID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|An existing Assignment ID to modify.|
 
-## Compiling the Code  
- This C# example requires:  
+## Compiling the Code
+ This C# example requires:
 
-### Namespaces  
- System  
+### Namespaces
+ System
 
- System.Collections.Generic  
+ System.Collections.Generic
 
- System.Text  
+ System.Text
 
- Microsoft.ConfigurationManagement.ManagementProvider  
+ Microsoft.ConfigurationManagement.ManagementProvider
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
+ Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
-### Assembly  
- adminui.wqlqueryengine  
+### Assembly
+ adminui.wqlqueryengine
 
- microsoft.configurationmanagement.managementprovider  
+ microsoft.configurationmanagement.managementprovider
 
-## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
+## Robust Programming
+ For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).
 
-## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).  
+## .NET Framework Security
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).
 
 ## See also
 

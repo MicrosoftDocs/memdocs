@@ -3,9 +3,9 @@ title: Microsoft Cloud PKI for Microsoft Intune
 titleSuffix: Microsoft Intune 
 description: An overview of the Microsoft Cloud PKI service, available with Microsoft Intune Suite or as an Intune add-on. 
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -188,4 +188,5 @@ For the latest changes and additions, see [What's new in Microsoft Intune](../fu
   * Cloud PKI Root CA  
   * Cloud PKI Issuing CA  
   * BYOCA Issuing CA
-* In the admin center, when you select **View all certificates** for an issuing CA, Intune only shows the first 1,000 issued certificates. We're actively working to address this limitation. As a workaround, go to **Devices** > **Monitor**. Then select **Certificates** to view all issued certificates.  
+* In the admin center, when you select **View all certificates** for an issuing CA, Intune only shows the first 1,000 issued certificates. We're actively working to address this limitation. As a workaround, go to **Devices** > **Monitor**. Then select **Certificates** to view all issued certificates.
+* A [data residency option](../protect/privacy-data-store-process.md#data-residency-option) is currently not available to customers using Cloud PKI.   

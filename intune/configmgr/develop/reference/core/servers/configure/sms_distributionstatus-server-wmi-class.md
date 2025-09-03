@@ -12,118 +12,118 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DistributionStatus Server WMI Class
-The `SMS_DistributionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents the status of a package that has been assigned to a distribution point.  
+The `SMS_DistributionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents the status of a package that has been assigned to a distribution point.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DistributionStatus : SMS_BaseClass  
-{  
-    UInt32 Assets;  
-    DateTime LastUpdateDate;  
-    UInt32 MessageCategory;  
-    String ObjectID;  
-    UInt32 ObjectTypeID;  
-    String PackageID;  
-    UInt32 Type;  
-};  
-```  
+```
+Class SMS_DistributionStatus : SMS_BaseClass
+{
+    UInt32 Assets;
+    DateTime LastUpdateDate;
+    UInt32 MessageCategory;
+    String ObjectID;
+    UInt32 ObjectTypeID;
+    String PackageID;
+    UInt32 Type;
+};
+```
 
-## Methods  
- The `SMS_DistributionStatus` class doesn't define any methods.  
+## Methods
+ The `SMS_DistributionStatus` class doesn't define any methods.
 
-## Properties  
- `Assets`  
- Data type: `UInt32`  
+## Properties
+ `Assets`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Number of distribution points in this status.  
+ Number of distribution points in this status.
 
- `LastUpdateDate`  
- Data type: `DateTime`  
+ `LastUpdateDate`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Last status update date.  
+ Last status update date.
 
- `MessageCategory`  
- Data type: `UInt32`  
+ `MessageCategory`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Status message category.  
+ Status message category.
 
- `ObjectID`  
- Data type: `String`  
+ `ObjectID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- PackageID or ModelName.  
+ PackageID or ModelName.
 
- `ObjectTypeID`  
- Data type: `UInt32`  
+ `ObjectTypeID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [enumeration, read]  
+ Qualifiers: [enumeration, read]
 
- Secured object class ID.  
+ Secured object class ID.
 
-|Value|Object type|  
-|-|-|  
-|2|SMS_DistributionStatus|  
-|14|SMS_OperatingSystemInstallPackage|  
-|18|SMS_ImagePackage|  
-|19|SMS_BootImagePackage|  
-|21|SMS_DeviceSettingPackage|  
-|23|SMS_DriverPackage|  
-|24|SMS_SoftwareUpdatesPackage|  
-|31|SMS_Application|  
+|Value|Object type|
+|-|-|
+|2|SMS_DistributionStatus|
+|14|SMS_OperatingSystemInstallPackage|
+|18|SMS_ImagePackage|
+|19|SMS_BootImagePackage|
+|21|SMS_DeviceSettingPackage|
+|23|SMS_DriverPackage|
+|24|SMS_SoftwareUpdatesPackage|
+|31|SMS_Application|
 
- `PackageID`  
- Data type: `String`  
+ `PackageID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- PackageID.  
+ PackageID.
 
- `Type`  
- Data type: `UInt32`  
+ `Type`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [enumeration, read]  
+ Qualifiers: [enumeration, read]
 
- Status Type.  
+ Status Type.
 
-|Value|Status type|  
-|-|-|  
-|1|Success|  
-|2|InProgress|  
-|3|Error|  
+|Value|Status type|
+|-|-|
+|1|Success|
+|2|InProgress|
+|3|Error|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

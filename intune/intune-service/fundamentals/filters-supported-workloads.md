@@ -6,8 +6,8 @@ description: See the supported apps, compliance policies, and device configurati
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 07/18/2024
+manager: laurawi
+ms.date: 07/28/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -254,7 +254,8 @@ You can use filters for some common app policies on the following platforms. For
 | PKCS certificate | ✅ |
 | PKCS imported certificate | ✅ |
 | SCEP certificate | ✅ |
-| Settings catalog | N/A |
+| Settings catalog (MDM) | ✅ |
+| Settings catalog (DDM) | ❌ |
 | Trusted certificate | ✅ |
 | VPN | ✅ |
 | Wi-Fi | ✅ |
@@ -286,7 +287,8 @@ You can use filters for some common app policies on the following platforms. For
 | PKCS imported certificate | ✅ |
 | Preference file | ✅ |
 | SCEP certificate | ✅ |
-| Settings catalog | ✅ |
+| Settings catalog (MDM) | ✅ |
+| Settings catalog (DDM) | ❌ |
 | Trusted certificate | ✅ |
 | VPN | ✅ |
 | Wi-Fi | ✅ |

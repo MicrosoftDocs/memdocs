@@ -2,15 +2,15 @@
 title: Office 365 Client Management dashboard
 titleSuffix: Configuration Manager
 description: Review Microsoft 365 Apps client information from the Office 365 Client Management dashboard
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 04/05/2024
 ms.topic: article
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -31,13 +31,13 @@ Beginning in Configuration Manager version 1802, you can review Microsoft 365 Ap
 ### Enable hardware inventory
 
 The data that is displayed in the Office 365 Client Management dashboard comes from hardware inventory. Enable hardware inventory and select the **Office 365 Configurations** hardware inventory class for data to display in the dashboard.
- 
+
 1. Enable hardware inventory, if it isn't yet enabled. For details, see [Configure hardware inventory](../../core/clients/manage/inventory/configure-hardware-inventory.md).
-2. In the Configuration Manager console, navigate to **Administration** > **Client Settings** > **Default Client Settings**.  
-3. On the **Home** tab, in the **Properties** group, click **Properties**.  
-4. In the **Default Client Settings** dialog box, click **Hardware Inventory**.  
-5. In the **Device Settings** list, click **Set Classes**.  
-6. In the **Hardware Inventory Classes** dialog box, select **Office 365 Configurations**.  
+2. In the Configuration Manager console, navigate to **Administration** > **Client Settings** > **Default Client Settings**.
+3. On the **Home** tab, in the **Properties** group, click **Properties**.
+4. In the **Default Client Settings** dialog box, click **Hardware Inventory**.
+5. In the **Device Settings** list, click **Set Classes**.
+6. In the **Hardware Inventory Classes** dialog box, select **Office 365 Configurations**.
 7. Click **OK** to save your changes and close the **Hardware Inventory Classes** dialog box.
 
 The Office 365 Client Management dashboard starts displaying data as hardware inventory is reported.
@@ -106,17 +106,17 @@ Select a state to drill-through to a device list. This readiness report shows mo
 
 ### Prerequisites for Microsoft 365 Apps readiness integration
 
-- Enable hardware inventory in client settings. For more information, see the [Prerequisites](#prerequisites) section.  
+- Enable hardware inventory in client settings. For more information, see the [Prerequisites](#prerequisites) section.
 
-- The device needs connectivity to the Office content delivery network (CDN) to download an add-in readiness file. For more information, see [Content delivery networks](/office365/enterprise/content-delivery-networks). If the device can't download this file, the add-ins state is *Needs review*.  
+- The device needs connectivity to the Office content delivery network (CDN) to download an add-in readiness file. For more information, see [Content delivery networks](/office365/enterprise/content-delivery-networks). If the device can't download this file, the add-ins state is *Needs review*.
 
-    > [!Note]  
-    > No data is sent to Microsoft for this feature.  
+    > [!Note]
+    > No data is sent to Microsoft for this feature.
 
 ### <a name="bkmk_ort"></a> Detailed macro readiness
 
 By default, the scanning agent looks at the most recently used (MRU) files list on each device. It counts the files in this list that support macros. These files include the following types:
-- Macro-enabled Office file formats, such as Excel macro-enabled workbooks (.xlsm) or Word macro-enabled document (.docm)  
+- Macro-enabled Office file formats, such as Excel macro-enabled workbooks (.xlsm) or Word macro-enabled document (.docm)
 - Older Office formats that don't indicate whether there's macro content. For example, an Excel 97-2003 workbook (.xls).
 
 ## <a name="bkmk_readiness-dash"></a> Microsoft 365 Apps readiness dashboard
@@ -144,7 +144,7 @@ The following video is a session from Ignite 2019, which includes more informati
 ### Using the Microsoft 365 Apps upgrade readiness dashboard
 
 After verifying you have the [prerequisites](#prerequisites), use the following instructions to use the dashboard:
- 
+
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Office 365 Client Management**.
 1. Select the **Microsoft 365 Apps Upgrade Readiness** node.
 1. Change the **Collection** and **Target Office Architecture** to change the information relayed in the dashboard.

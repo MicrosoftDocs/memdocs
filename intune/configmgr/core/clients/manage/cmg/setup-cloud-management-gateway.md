@@ -2,8 +2,8 @@
 title: Set up CMG
 titleSuffix: Configuration Manager
 description: Use this step-by-step process for setting up a cloud management gateway (CMG).
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 09/18/2022
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Set up CMG for Configuration Manager
@@ -64,7 +64,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
         - In version 2107 and later, only use this option if you can't deploy with a virtual machine scale set because of one of the [limitations](plan-cloud-management-gateway.md#limitations-with-versions-2107-and-later).
 
         - In versions 2010 and 2103, most customers should use this deployment method.
-     
+
 1. Starting in version 2309,  select **Microsoft Entra tenant name**,  **Microsoft Entra app name** automatically populates. Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
    > [!NOTE]
@@ -195,6 +195,6 @@ Manage content on a CMG the same as any other distribution point. These actions 
 ## Next steps
 
 Continue your CMG setup by configuring clients for CMG:
-  
+
 > [!div class="nextstepaction"]
 > [Configure clients for CMG](configure-clients.md)

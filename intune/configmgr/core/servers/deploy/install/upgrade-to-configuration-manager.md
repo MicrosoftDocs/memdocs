@@ -6,12 +6,12 @@ ms.date: 04/11/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Upgrade to Configuration Manager current branch
@@ -306,7 +306,7 @@ This process only applies when you're upgrading a prior version like System Cent
 
 Before you upgrade a site, test a copy of that site's database for the upgrade.
 
-To test the database for an upgrade, you first restore a copy of the site database to an instance of SQL Server that doesn't host a Configuration Manager site. The version of SQL Server that you use to host the database copy must be a version of SQL Server that Configuration Manager supports.  
+To test the database for an upgrade, you first restore a copy of the site database to an instance of SQL Server that doesn't host a Configuration Manager site. The version of SQL Server that you use to host the database copy must be a version of SQL Server that Configuration Manager supports.
 
 After you restore the site database, on the SQL Server computer, run Configuration Manager Setup from the source media folder for Configuration Manager.
 

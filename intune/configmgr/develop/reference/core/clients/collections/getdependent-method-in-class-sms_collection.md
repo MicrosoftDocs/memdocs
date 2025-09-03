@@ -6,13 +6,13 @@ ms.date: 11/30/2020
 ms.subservice: sdk
 ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 
+ms.assetid:
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # GetDependent method in class SMS_Collection
@@ -21,7 +21,7 @@ Starting in version 2010, the `GetDependent` WMI class method in Configuration M
 
 The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
 ```MOF
 sint32 GetDependent(

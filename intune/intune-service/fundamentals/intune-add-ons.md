@@ -5,9 +5,9 @@ title: Use Intune Suite add-on capabilities
 titleSuffix: Microsoft Intune
 description: Microsoft Intune Suite unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices.  
 keywords:
-author: smritib17 
-ms.author: smbhardwaj
-manager: dougeby
+author: MandiOhlinger 
+ms.author: mandia
+manager: laurawi
 ms.date: 08/01/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -55,6 +55,9 @@ The following table provides a list of add-on capabilities and associated Intune
 |Microsoft Cloud PKI |✅  ||✅ |
 |Firmware-over-the-air update| |✅  |✅  |
 |Specialized devices management| |✅ |✅ |
+
+> [!TIP]
+> As a companion to this article, see our [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314425) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.  
 
 ### Microsoft Intune Endpoint Privilege Management
 

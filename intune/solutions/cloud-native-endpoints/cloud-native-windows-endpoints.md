@@ -9,7 +9,7 @@ author: scottbreenmsft
 
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2025
+ms.date: 07/24/2025
 ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
@@ -29,6 +29,7 @@ ms.collection:
   - highpri
   - highseo
   - intune-scenario
+  - graph-interactive
 ---
 
 # Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune
@@ -198,7 +199,7 @@ Now we can create the Windows Autopilot profile and assign it to our test device
 
 3. Select **Create profile** > **Windows PC**.
 
-4. Enter the name **Autopilot Cloud-Native Windows Endpoint**, and then select **Next**.
+1. Enter the name **Autopilot Cloud Native Windows Endpoint**, and then select **Next**.
 
 5. Review and leave the default settings and select **Next**.
 
@@ -311,41 +312,48 @@ This phase is designed to help you build out security settings for your organiza
 
 ### Microsoft Defender Antivirus (MDAV)
 
-The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Policy** > **Windows and later** > **Profile type** = **Microsoft Defender Antivirus**.
+The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
-**Cloud Protection**:
+#### [:::image type="icon" source="../../intune-service/media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
 
-- Turn on cloud-delivered protection: **Yes**
-- Cloud-delivered protection level: **Not configured**
-- Defender Cloud Extended Timeout In Seconds: **50**
+In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Policy** > **Windows and later** > **Profile type** = **Microsoft Defender Antivirus**.
 
-**Real-time protection**:
+**Defender**:
 
-- Turn on real-time protection: **Yes**
-- Enable on access protection: **Yes**
-- Monitoring for incoming and outgoing files: **Monitor all files**
-- Turn on behavior monitoring: **Yes**
-- Turn on intrusion prevention: **Yes**
-- Enable network protection: **Enable**
-- Scan all downloaded file and attachments: **Yes**
-- Scan scripts that are used in Microsoft browsers: **Yes**
-- Scan network files: **Not Configured**
-- Scan emails: **Yes**
+- Allow Behavior Monitoring: **Allowed. Turns on real-time behavior monitoring.**
+- Allow Cloud Protection: **Allowed. Turns on Cloud Protection.**
+- Allow Email Scanning : **Allowed. Turns on email scanning.**
+- Allow scanning of all downloaded files and attachments: **Allowed.**
+- Allow Realtime Monitoring: **Allowed. Turns on and runs the real-time monitoring service.**
+- Allow Scanning Network Files: **Allowed. Scans network files.**
+- Allow Script Scanning: **Allowed.**
+- Cloud Extended Timeout: **50**
+- Days To Retain Cleaned Malware: **30**
+- Enable Network Protection: **Enabled (audit mode)**
+- PUA Protection: **PUA Protection on. Detected items are blocked. They will show in history along with other threats.**
+- Real Time Scan Direction: **Monitor all files (bi-directional).**
+- Submit Samples Consent: **Send safe samples automatically.**
+- Allow On Access Protection: **Allowed.**
+- Remediation action for Severe threats: **Quarantine. Moves files to quarantine.**
+- Remediation action for Low severity threat: **Quarantine. Moves files to quarantine.**
+- Remediation action for Moderate severity threats: **Quarantine. Moves files to quarantine.**
+- Remediation action for High severity threats: **Quarantine. Moves files to quarantine.**
 
-**Remediation**:
+#### [:::image type="icon" source="../../intune-service/media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
 
-- Number of days (0-90) to keep quarantined malware: **30**
-- Submit samples consent: **Send safe samples automatically**
-- Action to take on potentially unwanted apps: **Enable**
-- Actions for detected threats: **Configure**
-  - Low threat: **Quarantine**
-  - Moderate threat: **Quarantine**
-  - High threat: **Quarantine**
-  - Severe threat: **Quarantine**
+[!INCLUDE [graph-explorer-introduction](../../intune-service/includes/graph-explorer-intro.md)]
 
-Settings configured in the MDAV profile within Endpoint Security:
+This will create a policy in your tenant with the name **_MSLearn_Example_Windows - Defender Antivirus** under **Endpoint Security** > **Antivirus**.
 
-:::image type="content" source="../media/cloud-native-windows-endpoints/defender-antivirus-policy.png" alt-text="Screenshot that shows an example of a Microsoft Defender Antivirus profile in Microsoft Intune.":::
+```msgraph-interactive
+POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
+Content-Type: application/json
+
+{"name":"_MSLearn_Example_Windows - Defender Antivirus","description":"","settings":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"905921da-95e2-4a10-9e30-fe5540002ce1"},"value":"device_vendor_msft_policy_config_defender_allowbehaviormonitoring_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowbehaviormonitoring","settingInstanceTemplateReference":{"settingInstanceTemplateId":"8eef615a-1aa0-46f4-a25a-12cbe65de5ab"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"16fe8afd-67be-4c50-8619-d535451a500c"},"value":"device_vendor_msft_policy_config_defender_allowcloudprotection_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowcloudprotection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"7da139f1-9b7e-407d-853a-c2e5037cdc70"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"fdf107fd-e13b-4507-9d8f-db4d93476af9"},"value":"device_vendor_msft_policy_config_defender_allowemailscanning_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowemailscanning","settingInstanceTemplateReference":{"settingInstanceTemplateId":"b0d9ee81-de6a-4750-86d7-9397961c9852"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"df4e6cbd-f7ff-41c8-88cd-fa25264a237e"},"value":"device_vendor_msft_policy_config_defender_allowioavprotection_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowioavprotection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"fa06231d-aed4-4601-b631-3a37e85b62a0"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"0492c452-1069-4b91-9363-93b8e006ab12"},"value":"device_vendor_msft_policy_config_defender_allowrealtimemonitoring_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowrealtimemonitoring","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f0790e28-9231-4d37-8f44-84bb47ca1b3e"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"7b8c858c-a17d-4623-9e20-f34b851670ce"},"value":"device_vendor_msft_policy_config_defender_allowscanningnetworkfiles_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowscanningnetworkfiles","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f8f28442-0a6b-4b52-b42c-d31d9687c1cf"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"ab9e4320-c953-4067-ac9a-be2becd06b4a"},"value":"device_vendor_msft_policy_config_defender_allowscriptscanning_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowscriptscanning","settingInstanceTemplateReference":{"settingInstanceTemplateId":"000cf176-949c-4c08-a5d4-90ed43718db7"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_defender_cloudextendedtimeout","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f61c2788-14e4-4e80-a5a7-bf2ff5052f63"},"simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationIntegerSettingValue","settingValueTemplateReference":{"settingValueTemplateId":"608f1561-b603-46bd-bf5f-0b9872002f75"},"value":50}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_defender_daystoretaincleanedmalware","settingInstanceTemplateReference":{"settingInstanceTemplateId":"6f6d741c-1186-42e2-b2f2-8582febcfd60"},"simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationIntegerSettingValue","settingValueTemplateReference":{"settingValueTemplateId":"214b6feb-c9b2-4a17-af54-d51c805473e4"},"value":30}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"ee58fb51-9ae5-408b-9406-b92b643f388a"},"value":"device_vendor_msft_policy_config_defender_enablenetworkprotection_2"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_enablenetworkprotection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f53ab20e-8af6-48f5-9fa1-46863e1e517e"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"2d790211-18cb-4e32-b8cc-97407e2c0b45"},"value":"device_vendor_msft_policy_config_defender_puaprotection_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_puaprotection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"c0135c2a-f802-44f4-9b71-b0b976411b8c"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"6b4e3497-cfbb-4761-a152-de935bbf3f07"},"value":"device_vendor_msft_policy_config_defender_realtimescandirection_0"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_realtimescandirection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f5ff00a4-e5c7-44cf-a650-9c7619ff1561"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"826ed4b6-e04f-4975-9d23-6f0904b0d87e"},"value":"device_vendor_msft_policy_config_defender_submitsamplesconsent_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_submitsamplesconsent","settingInstanceTemplateReference":{"settingInstanceTemplateId":"bc47ce7d-a251-4cae-a8a2-6e8384904ab7"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"ed077fee-9803-44f3-b045-aab34d8e6d52"},"value":"device_vendor_msft_policy_config_defender_allowonaccessprotection_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowonaccessprotection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"afbc322b-083c-4281-8242-ebbb91398b41"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"764256b4-e4d7-46d9-bbc8-003bf23591a1"},"value":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_highseveritythreats_quarantine"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_highseveritythreats","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f55b8c9c-d831-460e-a041-e47e29f2aa17"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_severethreats","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"value":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_severethreats_quarantine"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_lowseveritythreats","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"value":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_lowseveritythreats_quarantine"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_moderateseveritythreats","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"value":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_moderateseveritythreats_quarantine"}}]}],"settingInstanceTemplateReference":{"settingInstanceTemplateId":"f6394bc5-6486-4728-b510-555f5c161f2b"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction"}}],"roleScopeTagIds":["0"],"platforms":"windows10","technologies":"mdm,microsoftSense","templateReference":{"templateId":"804339ad-1553-4478-a742-138fb5807418_1"}}
+```
+[!INCLUDE [graph-explorer-steps](../../intune-service/includes/graph-explorer-steps.md)]
+
+---
 
 For more information on Windows Defender configuration, including Microsoft Defender for Endpoint for customer's licensed for E3 and E5, go to:
 
@@ -378,55 +386,62 @@ These settings can be enabled in the [Microsoft Intune admin center](https://go.
 
 When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../intune-service/protect/encrypt-devices.md) for more settings.
 
-**BitLocker – Base Settings**:
+**BitLocker**:
 
-- Enable full disk encryption for OS and fixed data drives: **Yes**
-- Require storage cards to be encrypted (mobile only): **Not configured**
-- Hide prompt about third-party encryption: **Yes**
-  - Allow standard users to enable encryption during Autopilot: **Yes**
-- Configure client-driven recovery password rotation: **Enable rotation on Microsoft Entra-joined devices**
+- Require Device Encryption: **Enabled**
+- Allow Warning For Other Disk Encryption: **Disabledd**
+  - Allow Standard User Encryption: **Enabled**
+- Configure Recovery Password Rotation: **Refresh on for Azure AD-joined devices**
 
-**BitLocker – Fixed Drive Settings**:
+**BitLocker Drive Encryption**:
 
-- BitLocker fixed drive policy: **Configure**
-- Fixed drive recovery: **Configure**
-  - Recovery key file creation: **Blocked**
-  - Configure BitLocker recovery package: **Password and key**
-  - Require device to back up recovery information to Azure AD: **Yes**
-  - Recovery password creation: **Allowed**
-  - Hide recovery options during BitLocker setup: **Not configured**
-  - Enable BitLocker after recovery information to store: **Not configured**
-  - Block the use of certificate-based data recovery agent (DRA): **Not configured**
-  - Block write access to fixed data-drives not protected by BitLocker: **Not configured**
-  - Configure encryption method for fixed data-drives: **Not configured**
+- Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later): **Not Configured**
+- Provide the unique identifiers for your organization: **Not Configured**
+ 
+**Operating System Drives**:
 
-**BitLocker – OS Drive Settings**:
+- Enforce drive encryption type on operating system drives: **Enabled**
+  - Select the encryption type: (Device) : **Used Space Only encryption**
+- Require additional authentication at startup: **Enabled**
+  - Allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive): **False**
+  - Configure TPM startup key and PIN: **Allow startup key and PIN with TPM**
+  - Configure TPM startup key: **Allow startup key with TPM**
+  - Configure TPM startup PIN: **Allow startup PIN with TPM**
+  - Configure TPM startup: **Require TPM**
+  - Configure minimum PIN length for startup: **Not configured**
+  - Allow enhanced PINs for startup: **Not configured**
+- Disallow standard users from changing the PIN or password: **Not configured**
+- Allow devices compliant with InstantGo or HSTI to opt out of pre-boot PIN: **Not configured**
+- Enable use of BitLocker authentication requiring preboot keyboard input on slates: **Not configured**
+- Choose how BitLocker-protected operating system drives can be recovered: **Enabled**
+  - Configure user storage of BitLocker recovery information: **Require 48-digit recovery password**
+  - Allow data recovery agent: **False**
+  - Configure storage of BitLocker recovery information to AD DS: **Store recovery passwords and key packages**
+  - Do not enable BitLocker until recovery information is stored to AD DS for operating system drives: **True**
+  - Omit recovery options from the BitLocker setup wizard: **True**
+  - Save BitLocker recovery information to AD DS for operating system drives: **True**
+- Configure pre-boot recovery message and URL: **Not configured**
+  
+**Fixed Data Drives**:
 
-- BitLocker system drive policy: **Configure**
-  - Startup authentication required: **Yes**
-  - Compatible TPM startup: **Required**
-  - Compatible TPM startup PIN: **Block**
-  - Compatible TPM startup key: **Block**
-  - Compatible TPM startup key and PIN: **Block**
-  - Disable BitLocker on devices where TPM is incompatible: **Not configured**
-  - Enable preboot recovery message and url: **Not configured**
-- System drive recovery: **Configure**
-  - Recovery key file creation: **Blocked**
-  - Configure BitLocker recovery package: **Password and key**
-  - Require device to back up recovery information to Azure AD: **Yes**
-  - Recovery password creation: **Allowed**
-  - Hide recovery options during BitLocker setup: **Not configured**
-  - Enable BitLocker after recovery information to store: **Not configured**
-  - Block the use of certificate-based data recovery agent (DRA): **Not configured**
-  - Minimum PIN length: *leave blank*
-  - Configure encryption method for Operating System drives: **Not configured**
+- Enforce drive encryption type on fixed data drives: **Enabled**
+  - Select the encryption type: (Device):  **Allow user to choose (default)**
+- Choose how BitLocker-protected fixed drives can be recovered: **Enabled**
+  - Configure user storage of BitLocker recovery information: **Require 48-digit recovery password**
+  - Allow data recovery agent: **False**
+  - Configure storage of BitLocker recovery information to AD DS: **Backup recovery passwords and key packages**
+  - Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives: **True**
+  - Omit recovery options from the BitLocker setup wizard: **True**
+  - Save BitLocker recovery information to AD DS for fixed data drives: **True**
+- Deny write access to fixed drives not protected by BitLocker: **Not configured**
 
-**BitLocker – Removable Drive Settings**:
+**Removable Data Drives**:
 
-- BitLocker removable drive policy: **Configure**
-  - Configure encryption method for removable data-drives: **Not configured**
-  - Block write access to removable data-drives not protected by BitLocker: **Not configured**
-  - Block write access to devices configured in another organization: **Not configured**
+- Control use of BitLocker on removable drives: **Enabled**
+  - Allow users to apply BitLocker protection on removable data drives (Device): **False**
+  - Allow users to suspend and decrypt BitLocker protection on removable data drives (Device): **False**
+- Deny write access to removable drives not protected by BitLocker: **Not configured**
+
 
 ### Windows Local Administrator Password Solution (LAPS)
 
@@ -435,7 +450,7 @@ By default, the built-in local administrator account ([well known SID](/windows-
 Windows Local Administrator Password Solution (LAPS) is one of the features you can use to randomize and securely store the password in Microsoft Entra. If you're using Intune as your MDM service, then use the following steps to enable [Windows LAPS](/windows-server/identity/laps/laps-overview).
 
 > [!IMPORTANT]
-> Windows LAPS assumes that the default local administrator account is enabled, even if it's renamed or if you create another local admin account. Windows LAPS doesn't create or enable any local accounts for you.
+> Windows LAPS assumes that the default local administrator account is enabled, even if it's renamed or if you create another local admin account. Windows LAPS doesn't create or enable any local accounts for you unless you configure [Automatic account management mode](/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode).
 >
 > You need to create or enable any local accounts separately from configuring Windows LAPS. You can script this task or use the Configuration Service Providers (CSP's), such as the [Accounts CSP](/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
 
@@ -584,7 +599,7 @@ Following are some settings available in the settings catalog that might be rele
     - Require Private Store Only - **Only Private store is enabled**
 
       > [!NOTE]
-      > This setting applies to Windows 10. On Windows 11, this setting blocks access to the public Microsoft store. A private store is coming to Windows 11. For more information, go to:
+      > This setting applies to Windows 10. On Windows 11, this setting blocks access to the public Microsoft store. For more information, go to:
       >
       > - [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077)
       > - [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286)
@@ -594,12 +609,6 @@ Following are some settings available in the settings catalog that might be rele
   For additional information on the settings page visibility, go to the [CSP documentation](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) and the ms-settings [URI scheme reference](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
   - Settings
     - Page Visibility List – **hide:gaming-gamebar;gaming-gamedvr;gaming-broadcasting;gaming-gamemode;gaming-trueplay;gaming-xboxnetworking;quietmomentsgame**
-
-- **Control Chat Icon Visibility in Taskbar**
-  The visibility of the Chat icon in the Windows 11 taskbar can be controlled using the [Policy CSP](/windows/client-management/mdm/policy-csp-Experience#experience-configurechaticonvisibilityonthetaskbar).
-
-  - Experience
-    - Configure Chat Icon - **Disabled**
 
 - **Control which tenants the Teams desktop client can sign in to**
 

@@ -7,7 +7,7 @@ description: Utilize Apple device enrollment to enroll and manage user-owned iOS
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/14/2025
 ms.topic: concept-article
 ms.service: microsoft-intune

@@ -6,12 +6,12 @@ ms.date: 11/30/2020
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to configure Wake on LAN in Configuration Manager
 
@@ -31,15 +31,15 @@ Starting in Configuration Manager 1810, there's a new way to wake up sleeping ma
    - 802.1x network authentication
       - 802.1x network authentication may work with additional configuration depending on the hardware and its configuration.
 - DHCP lease durations can't be set to infinite. <!--8018584-->
-   - With Configuration Manager version 2010 and later, if the DHCP lease is set to infinite a client won't be woken up or used as a peer to wake other devices. 
-   - With Configuration Manager version 2006 and earlier, you may see the SleepAgent_&lt;*domain*\>@SYSTEM_0.log become very large and possibly a broadcast storm in environments where DHCP leases are set to infinite. 
+   - With Configuration Manager version 2010 and later, if the DHCP lease is set to infinite a client won't be woken up or used as a peer to wake other devices.
+   - With Configuration Manager version 2006 and earlier, you may see the SleepAgent_&lt;*domain*\>@SYSTEM_0.log become very large and possibly a broadcast storm in environments where DHCP leases are set to infinite.
 
 Limitations for Configuration Manager version 2006 and earlier:
 - Machines only wake when you notify them through the **Wake Up** client notification.
    - For wake-up when a deadline occurs, the older version of Wake on LAN is used.
       - Starting in Configuration Manager version 2010, you can wake up at deadline with the new version of WoL. For more information, see [Notify client to wake when a deployment deadline occurs](#bkmk_deadline).
    - If the older version isn't enabled, client wake-up won't occur for deployments created with the settings **Use Wake-on-LAN to wake up clients for required deployments** or **Send wake-up packets**.
- 
+
 ### Security role permissions
 
 - **Notify resource** under the Collection category
@@ -53,11 +53,11 @@ Previously you had to manually enable the client for wake on LAN in the properti
 1. Under the **Power Management** client settings, select **Enable** for the **Allow network wake-up** setting. For more information about this setting, see [About client settings](about-client-settings.md#power-management).
 
 4. Starting in Configuration Manager 1902, the new version of Wake on LAN honors the custom UDP port you specify for the **Wake On LAN port number (UDP)** [client setting](about-client-settings.md#power-management). This setting is shared by both the new and older version of Wake on LAN.
- 
+
 <!--3605925-->
 
 ### Wake up a client using client notification starting in 1810
- 
+
 You can wake up a single client or any sleeping clients in a collection. For devices that are already awake in the collection, no action is taken for them. Only clients that are asleep will be sent a Wake on LAN request. For more information on how to notify a client to wake, see [Client notification](../manage/client-notification.md).
 
 - **To wake up a single client:**

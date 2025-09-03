@@ -5,9 +5,9 @@ title: Step 5. Understand Microsoft Edge for Business end user experience for Wi
 titleSuffix:
 description: Step 5. Understand Microsoft Edge for Business end user experience Windows.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 03/26/2024
 ms.topic: how-to
 ms.service: microsoft-intune

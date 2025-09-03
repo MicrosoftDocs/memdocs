@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Licensing and branches for Configuration Manager
@@ -99,9 +99,9 @@ If you have an active SA on Configuration Manager licenses or equivalent subscri
 
 LTSB is based on current branch version 1606, and has the following limitations:
 
-- There's no support to convert a current branch to the LTSB. If you currently have a current branch site, you must install the LTSB as a new site.  
+- There's no support to convert a current branch to the LTSB. If you currently have a current branch site, you must install the LTSB as a new site.
 
-- LTSB doesn't support all the capabilities of the current branch. For more information, see [Introduction to the long-term servicing branch](introduction-to-the-ltsb.md). These limitations include a limited feature set, limited upgrade options, and a separate product support lifecycle.  
+- LTSB doesn't support all the capabilities of the current branch. For more information, see [Introduction to the long-term servicing branch](introduction-to-the-ltsb.md). These limitations include a limited feature set, limited upgrade options, and a separate product support lifecycle.
 
 ### Software Assurance expiration date
 
@@ -133,7 +133,7 @@ To learn more about product licensing details, use the following resources.
 
 - For training videos on how VLSC works, go to [Microsoft Volume Licensing Service Center training and resources](https://www.microsoft.com/licensing/existing-customer/vlsc-training-and-resources) and select **How-to videos**.
 
-- [Where to look up your active Software Assurance agreement](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0) (starting at 43 seconds)  
+- [Where to look up your active Software Assurance agreement](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0) (starting at 43 seconds)
 
 - [How to get permissions for VLSC](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4). You can delegate VLSC read and write permissions to other people in your organization.
 

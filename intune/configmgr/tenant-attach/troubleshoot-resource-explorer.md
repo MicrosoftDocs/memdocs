@@ -10,7 +10,7 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -49,7 +49,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 
 ### <a name="bkmk_sync"></a> The site information hasn't yet synchronized
 
-**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Intune admin center. 
+**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Intune admin center.
 
 **Possible causes:**
 - This error typically occurs when newly onboarding to tenant attach. Wait an hour for the information to synchronize.

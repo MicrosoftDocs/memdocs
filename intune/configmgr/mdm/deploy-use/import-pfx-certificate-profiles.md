@@ -6,11 +6,11 @@ ms.date: 11/29/2019
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -24,8 +24,8 @@ Configuration Manager supports different kinds of certificate stores for differe
 
 Use Configuration Manager to import certificate credentials and then provision PFX files to devices. You can use these files to generate user-specific certificates to support encrypted data exchange.
 
-> [!TIP]  
-> For a step-by-step walk-through of this process, see the blog post [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager).  
+> [!TIP]
+> For a step-by-step walk-through of this process, see the blog post [How to Create and Deploy PFX Certificate Profiles in Configuration Manager](/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager).
 
 ## Create a profile
 
@@ -33,11 +33,11 @@ Use Configuration Manager to import certificate credentials and then provision P
 
 1. On the **Home** tab of the ribbon, in the **Create** group, select **Create Certificate Profile**.
 
-1. On the **General** page of the **Create Certificate Profile Wizard**, specify the following information:  
+1. On the **General** page of the **Create Certificate Profile Wizard**, specify the following information:
 
-    - **Name**: Enter a unique name for the certificate profile. You can use a maximum of 256 characters.  
+    - **Name**: Enter a unique name for the certificate profile. You can use a maximum of 256 characters.
 
-    - **Description**: Provide a description that gives an overview of the certificate profile that helps to identify it in the Configuration Manager console. You can use a maximum of 256 characters.  
+    - **Description**: Provide a description that gives an overview of the certificate profile that helps to identify it in the Configuration Manager console. You can use a maximum of 256 characters.
 
 1. Select **Personal Information Exchange - PKCS #12 (PFX) settings - Import**. This option imports information from an existing certificate to create a certificate profile.
 
@@ -46,7 +46,7 @@ Use Configuration Manager to import certificate credentials and then provision P
 
 1. On the **PFX Certificate** page of the **Create Certificate Profile Wizard**, specify the device key storage provider (KSP):
 
-    - **Install to Trusted Platform Module (TPM) if present**  
+    - **Install to Trusted Platform Module (TPM) if present**
     - **Install to Trusted Platform Module (TPM) otherwise fail**
     - **Install to Windows Hello for Business otherwise fail**
     - **Install to Software Key Storage Provider**

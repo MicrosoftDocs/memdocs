@@ -6,12 +6,12 @@ ms.date: 04/27/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Database replicas for management points for Configuration Manager
@@ -252,129 +252,129 @@ Use the following procedures as an example of how to configure the self-signed c
     > If you're configuring more than one database replica on a single SQL Server, for each subsequent replica you configure, use a modified version of this script for this procedure. For more information, see [Supplemental script for additional database replicas on a single SQL Server](#bkmk_supscript).
 
     ``` PowerShell
-    # Script for creating a self-signed certificate for the local machine and configuring SQL Server to use it.  
+    # Script for creating a self-signed certificate for the local machine and configuring SQL Server to use it.
 
-    Param($SQLInstance)  
+    Param($SQLInstance)
 
-    $ConfigMgrCertFriendlyName = "ConfigMgr SQL Server Identification Certificate"  
+    $ConfigMgrCertFriendlyName = "ConfigMgr SQL Server Identification Certificate"
 
-    # Get local computer name  
-    $computerName = "$env:computername"  
+    # Get local computer name
+    $computerName = "$env:computername"
 
-    # Get the SQL Server name  
-    #$key="HKLM:\SOFTWARE\Microsoft\SMS\MP"  
-    #$value="SQL Server Name"  
-    #$sqlServerName= (Get-ItemProperty $key).$value  
-    #$dbValue="Database Name"  
-    #$sqlInstance_DB_Name= (Get-ItemProperty $key).$dbValue  
+    # Get the SQL Server name
+    #$key="HKLM:\SOFTWARE\Microsoft\SMS\MP"
+    #$value="SQL Server Name"
+    #$sqlServerName= (Get-ItemProperty $key).$value
+    #$dbValue="Database Name"
+    #$sqlInstance_DB_Name= (Get-ItemProperty $key).$dbValue
 
-    $sqlServerName = [System.Net.Dns]::GetHostByName("localhost").HostName   
-    $sqlInstanceName = "MSSQLSERVER"  
-    $SQLServiceName = "MSSQLSERVER"  
+    $sqlServerName = [System.Net.Dns]::GetHostByName("localhost").HostName
+    $sqlInstanceName = "MSSQLSERVER"
+    $SQLServiceName = "MSSQLSERVER"
 
-    if ($SQLInstance -ne $Null)  
-    {  
-        $sqlInstanceName = $SQLInstance  
-        $SQLServiceName = "MSSQL$" + $SQLInstance  
-    }  
+    if ($SQLInstance -ne $Null)
+    {
+        $sqlInstanceName = $SQLInstance
+        $SQLServiceName = "MSSQL$" + $SQLInstance
+    }
 
-    # Delete existing cert if one exists  
-    function Get-Certificate($storename, $storelocation)  
-    {   
-        $store=new-object System.Security.Cryptography.X509Certificates.X509Store($storename,$storelocation)   
-        $store.Open([Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)   
-        $store.Certificates   
-    }   
+    # Delete existing cert if one exists
+    function Get-Certificate($storename, $storelocation)
+    {
+        $store=new-object System.Security.Cryptography.X509Certificates.X509Store($storename,$storelocation)
+        $store.Open([Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
+        $store.Certificates
+    }
 
-    $cert = Get-Certificate "My" "LocalMachine" | ?{$_.FriendlyName -eq $ConfigMgrCertFriendlyName}   
-    if($cert -is [Object])  
-    {  
-        $store = new-object System.Security.Cryptography.X509Certificates.X509Store("My","LocalMachine")   
-        $store.Open([Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)   
-        $store.Remove($cert)  
-        $store.Close()  
+    $cert = Get-Certificate "My" "LocalMachine" | ?{$_.FriendlyName -eq $ConfigMgrCertFriendlyName}
+    if($cert -is [Object])
+    {
+        $store = new-object System.Security.Cryptography.X509Certificates.X509Store("My","LocalMachine")
+        $store.Open([Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
+        $store.Remove($cert)
+        $store.Close()
 
-        # Remove this cert from Trusted People too...  
-        $store = new-object System.Security.Cryptography.X509Certificates.X509Store("TrustedPeople","LocalMachine")   
-        $store.Open([Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)   
-        $store.Remove($cert)  
-        $store.Close()      
-    }  
+        # Remove this cert from Trusted People too...
+        $store = new-object System.Security.Cryptography.X509Certificates.X509Store("TrustedPeople","LocalMachine")
+        $store.Open([Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
+        $store.Remove($cert)
+        $store.Close()
+    }
 
-    # Create the new cert  
-    $name = new-object -com "X509Enrollment.CX500DistinguishedName.1"  
-    $name.Encode("CN=" + $sqlServerName, 0)  
+    # Create the new cert
+    $name = new-object -com "X509Enrollment.CX500DistinguishedName.1"
+    $name.Encode("CN=" + $sqlServerName, 0)
 
-    $key = new-object -com "X509Enrollment.CX509PrivateKey.1"  
-    $key.ProviderName = "Microsoft RSA SChannel Cryptographic Provider"  
-    $key.KeySpec = 1  
-    $key.Length = 1024  
-    $key.SecurityDescriptor = "D:PAI(A;;0xd01f01ff;;;SY)(A;;0xd01f01ff;;;BA)(A;;0x80120089;;;NS)"  
-    $key.MachineContext = 1  
-    $key.Create()  
+    $key = new-object -com "X509Enrollment.CX509PrivateKey.1"
+    $key.ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+    $key.KeySpec = 1
+    $key.Length = 1024
+    $key.SecurityDescriptor = "D:PAI(A;;0xd01f01ff;;;SY)(A;;0xd01f01ff;;;BA)(A;;0x80120089;;;NS)"
+    $key.MachineContext = 1
+    $key.Create()
 
-    $serverauthoid = new-object -com "X509Enrollment.CObjectId.1"  
-    $serverauthoid.InitializeFromValue("1.3.6.1.5.5.7.3.1")  
-    $ekuoids = new-object -com "X509Enrollment.CObjectIds.1"  
-    $ekuoids.add($serverauthoid)  
-    $ekuext = new-object -com "X509Enrollment.CX509ExtensionEnhancedKeyUsage.1"  
-    $ekuext.InitializeEncode($ekuoids)  
+    $serverauthoid = new-object -com "X509Enrollment.CObjectId.1"
+    $serverauthoid.InitializeFromValue("1.3.6.1.5.5.7.3.1")
+    $ekuoids = new-object -com "X509Enrollment.CObjectIds.1"
+    $ekuoids.add($serverauthoid)
+    $ekuext = new-object -com "X509Enrollment.CX509ExtensionEnhancedKeyUsage.1"
+    $ekuext.InitializeEncode($ekuoids)
 
-    $cert = new-object -com "X509Enrollment.CX509CertificateRequestCertificate.1"  
-    $cert.InitializeFromPrivateKey(2, $key, "")  
-    $cert.Subject = $name  
-    $cert.Issuer = $cert.Subject  
-    $cert.NotBefore = get-date  
-    $cert.NotAfter = $cert.NotBefore.AddDays(3650)  
-    $cert.X509Extensions.Add($ekuext)  
-    $cert.Encode()  
+    $cert = new-object -com "X509Enrollment.CX509CertificateRequestCertificate.1"
+    $cert.InitializeFromPrivateKey(2, $key, "")
+    $cert.Subject = $name
+    $cert.Issuer = $cert.Subject
+    $cert.NotBefore = get-date
+    $cert.NotAfter = $cert.NotBefore.AddDays(3650)
+    $cert.X509Extensions.Add($ekuext)
+    $cert.Encode()
 
-    $enrollment = new-object -com "X509Enrollment.CX509Enrollment.1"  
-    $enrollment.InitializeFromRequest($cert)  
-    $enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"  
-    $certdata = $enrollment.CreateRequest(0x1)  
-    $enrollment.InstallResponse(0x2, $certdata, 0x1, "")  
+    $enrollment = new-object -com "X509Enrollment.CX509Enrollment.1"
+    $enrollment.InitializeFromRequest($cert)
+    $enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"
+    $certdata = $enrollment.CreateRequest(0x1)
+    $enrollment.InstallResponse(0x2, $certdata, 0x1, "")
 
-    # Add this cert to the trusted peoples store  
-    [Byte[]]$bytes = [System.Convert]::FromBase64String($certdata)  
+    # Add this cert to the trusted peoples store
+    [Byte[]]$bytes = [System.Convert]::FromBase64String($certdata)
 
-    $trustedPeople = new-object System.Security.Cryptography.X509certificates.X509Store "TrustedPeople", "LocalMachine"  
-    $trustedPeople.Open([Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)  
-    $trustedPeople.Add([Security.Cryptography.X509Certificates.X509Certificate2]$bytes)  
-    $trustedPeople.Close()  
+    $trustedPeople = new-object System.Security.Cryptography.X509certificates.X509Store "TrustedPeople", "LocalMachine"
+    $trustedPeople.Open([Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
+    $trustedPeople.Add([Security.Cryptography.X509Certificates.X509Certificate2]$bytes)
+    $trustedPeople.Close()
 
-    # Get thumbprint from cert  
-    $sha = new-object System.Security.Cryptography.SHA1CryptoServiceProvider  
-    $certHash = $sha.ComputeHash($bytes)  
-    $certHashCharArray = "";  
-    $certThumbprint = "";  
+    # Get thumbprint from cert
+    $sha = new-object System.Security.Cryptography.SHA1CryptoServiceProvider
+    $certHash = $sha.ComputeHash($bytes)
+    $certHashCharArray = "";
+    $certThumbprint = "";
 
-    # Format the bytes into a hexadecimal string  
-    foreach($byte in $certHash)  
-    {  
-        $temp = ($byte | % {"{0:x}" -f $_}) -join ""  
-        $temp = ($temp | % {"{0,2}" -f $_})  
-        $certHashCharArray = $certHashCharArray+ $temp;  
-    }  
-    $certHashCharArray = $certHashCharArray.Replace(' ', '0');  
+    # Format the bytes into a hexadecimal string
+    foreach($byte in $certHash)
+    {
+        $temp = ($byte | % {"{0:x}" -f $_}) -join ""
+        $temp = ($temp | % {"{0,2}" -f $_})
+        $certHashCharArray = $certHashCharArray+ $temp;
+    }
+    $certHashCharArray = $certHashCharArray.Replace(' ', '0');
 
-    # SQL Server needs the thumbprint in lower case  
-    foreach($char in $certHashCharArray)  
-    {  
-        [System.String]$myString = $char;  
-        $certThumbprint = $certThumbprint + $myString.ToLower();  
-    }  
+    # SQL Server needs the thumbprint in lower case
+    foreach($char in $certHashCharArray)
+    {
+        [System.String]$myString = $char;
+        $certThumbprint = $certThumbprint + $myString.ToLower();
+    }
 
-    # Configure SQL Server to use this cert  
-    $path = "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL"  
-    $subKey = (Get-ItemProperty $path).$sqlInstanceName  
-    $realPath = "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\" + $subKey + "\MSSQLServer\SuperSocketNetLib"  
-    $certKeyName = "Certificate"  
-    Set-ItemProperty -path $realPath -name $certKeyName -Type string -Value $certThumbprint  
+    # Configure SQL Server to use this cert
+    $path = "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL"
+    $subKey = (Get-ItemProperty $path).$sqlInstanceName
+    $realPath = "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\" + $subKey + "\MSSQLServer\SuperSocketNetLib"
+    $certKeyName = "Certificate"
+    Set-ItemProperty -path $realPath -name $certKeyName -Type string -Value $certThumbprint
 
-    # restart SQL Server service  
-    Restart-Service $SQLServiceName -Force  
-    ```  
+    # restart SQL Server service
+    Restart-Service $SQLServiceName -Force
+    ```
 
 1. On the database replica server, run the following command that applies to the configuration of your SQL Server:
 

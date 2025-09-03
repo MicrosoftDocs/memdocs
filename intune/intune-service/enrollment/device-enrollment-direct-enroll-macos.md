@@ -7,7 +7,7 @@ description: Deploy and enroll macOS devices in Microsoft Intune using direct en
 keywords:
 author: Lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 04/03/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -56,6 +56,8 @@ Apps requiring user affinity, such as the Intune Company Portal app, aren't supp
 > Downloading the ACME profile is not supported at this time and will result in an error. Download the SCEP profile for all devices only until we fix this problem and restore support.  
 
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
+
+Before you export the ACME certificate for Apple Configurator enrollment, first preload the device serial numbers into Intune, and then assign them to the enrollment profile. Otherwise, the direct enrollment profile will fail.  
 
 Devices that are already enrolled in Intune do not get an ACME certificate unless they re-enroll into Microsoft Intune. ACME is supported on devices running macOS 13.1 or later.   
 

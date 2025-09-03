@@ -6,9 +6,9 @@ ms.date: 04/30/2024
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: reference
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.localizationpriority: high
 ---
 

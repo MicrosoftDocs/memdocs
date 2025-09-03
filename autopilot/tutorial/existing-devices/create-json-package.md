@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 06/19/2024
+manager: bpardi
+ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -115,7 +115,7 @@ Once the package containing the Windows Autopilot profile JSON file is created, 
 
    1. When the **Distribute Content Wizard** completes with **The task "Distribute Content Wizard" completed successfully** message, select the **Close** button.
 
-1. With the package still selected under **Packages**, in the lower pane of the Configuration Manager console under **Related Objects**, select **Content Status** .
+1. With the package still selected under **Packages**, in the lower pane of the Configuration Manager console under **Related Objects**, select **Content Status**.
 
 1. Monitor the distribution of the package until it successfully distributes to all distribution points. For details of the distribution status to each distribution point, under **Completion Statistics** in the lower pane of the Configuration Manager console, select the **View Status** option.
 

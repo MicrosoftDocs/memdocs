@@ -6,12 +6,12 @@ ms.date: 04/08/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Integrate with Power BI Report Server
@@ -43,7 +43,7 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
    > - You might experience delays updating the data source on newly updated reports.
    > - You may receive `The remote server returned an error; (400) Bad Request.` errors in the **SRSRP.log**.
    > For more information about the relevant change to Power BI Desktop (optimized for Power BI Report Server) May 2021, see [Change data source connection strings in Power BI reports](/power-bi/report-server/connect-data-source-apis). The version before the connection change ocurred is January 2021.
- 
+
 - Power BI integration uses the same role-based administration for reporting.
    - Power BI Report Server doesn't support reports that are enabled for role-based access. All report viewers will see the same results, whatever their assigned scope.
 

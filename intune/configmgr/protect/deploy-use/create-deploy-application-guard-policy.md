@@ -6,18 +6,18 @@ ms.date: 12/05/2022
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: install-set-up-deploy
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
 # Create and deploy Microsoft Defender Application Guard policy
 
 *Applies to: Configuration Manager (current branch)*
-<!-- 1351960, 14059872 -->  
+<!-- 1351960, 14059872 -->
 You can create and deploy [Microsoft Defender Application Guard (Application Guard)](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) policies by using the Configuration Manager endpoint protection. These policies help protect your users by opening untrusted web sites in a secure isolated container that isn't accessible by other parts of the operating system.
 
 ## Prerequisites
@@ -32,7 +32,7 @@ To create and deploy a Microsoft Defender Application Guard policy, you must use
 4. Using the [article](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) as a reference, you can browse and configure the available settings. Configuration Manager allows you to set certain policy settings:
    - [Application behavior](#bkmk_ABS)
    - [Host interaction settings](#bkmk_HIS)
-   
+
 5. On the **Network Definition** page, specify the corporate identity, and define your corporate network boundary.
 
     > [!NOTE]

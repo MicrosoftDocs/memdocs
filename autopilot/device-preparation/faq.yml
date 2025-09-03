@@ -8,7 +8,7 @@ metadata:
   author: frankroj
   ms.author: frankroj
   ms.reviewer: madakeva
-  manager: aaroncz
+  manager: bpardi
   ms.date: 04/04/2025
   ms.collection:
     - M365-modern-desktop
@@ -46,7 +46,7 @@ sections:
           What scenarios does Windows Autopilot device preparation support?
         answer: |
           Currently Windows Autopilot device preparation supports the following scenarios:
-          
+
           - User-driven scenario for physical devices.
           - Automatic deployment for Windows 365 Frontline for shared devices (in preview).
 
@@ -116,6 +116,7 @@ sections:
           - [Win32](/mem/intune-service/apps/apps-win32-prepare).
           - [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
           - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
+          - [Enterprise App Catalog](/intune/intune-service/apps/apps-add-enterprise-app).
 
       - question: |
           Do devices need to be pre-staged with Windows Autopilot device preparation?

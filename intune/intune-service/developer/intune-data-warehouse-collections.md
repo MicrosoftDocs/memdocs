@@ -4,9 +4,9 @@ title:  Intune Data Warehouse Collections
 titleSuffix: Microsoft Intune
 description: The Intune Data Warehouse collections provide details related to the Data Warehouse API.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/18/2024
 ms.topic: reference
 ms.service: microsoft-intune

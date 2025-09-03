@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Choose a device management solution
@@ -59,18 +59,18 @@ This section compares the following four client management solutions:
 - [Co-management with Microsoft Intune](#bkmk_comanage)
 - [Microsoft Exchange](#bkmk_exchange)
 
-You can use these solutions by themselves or in combination with each other. For example, use the client-based management approach to manage the computers and servers in your organization, and also use co-management to manage internet-based laptops. By combining approaches this way, you can cover all of your device management needs.  
+You can use these solutions by themselves or in combination with each other. For example, use the client-based management approach to manage the computers and servers in your organization, and also use co-management to manage internet-based laptops. By combining approaches this way, you can cover all of your device management needs.
 
 There are also two tables that compare the management solutions by the following factors:
 
 - [Compare by supported platforms](#bkmk_comp1)
 - [Compare by management functionality](#bkmk_comp2)
 
-### <a name="bkmk_sccm"></a> Configuration Manager client  
+### <a name="bkmk_sccm"></a> Configuration Manager client
 
 This option requires installation of the Configuration Manager client on devices. It provides the most features for managing PCs, servers, and other devices in your environment.
 
-For more information, see [Client installation methods](../clients/deploy/plan/client-installation-methods.md).  
+For more information, see [Client installation methods](../clients/deploy/plan/client-installation-methods.md).
 
 ### Security Management for Microsoft Defender for Endpoint
 
@@ -82,15 +82,15 @@ For more information, see [Security Management for Microsoft Defender for Endpoi
 
 Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It enables you to concurrently manage Windows devices by using both Configuration Manager and Microsoft Intune. Co-management lets you cloud-attach your existing investment in Configuration Manager by adding new functionality.
 
-For more information, see [What is co-management?](../../comanage/overview.md).  
+For more information, see [What is co-management?](../../comanage/overview.md).
 
-### <a name="bkmk_exchange"></a> Microsoft Exchange  
+### <a name="bkmk_exchange"></a> Microsoft Exchange
 
 This option uses the Exchange Server connector to connect multiple Exchange servers to Configuration Manager. It centralizes management of devices that can connect to Exchange ActiveSync. You can configure Exchange mobile device management features from the Configuration Manager console. Example features include remote device wipe and the settings control for multiple Exchange servers.
 
-For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).  
+For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 
-### <a name="bkmk_comp1"></a> Compare solutions by supported platforms  
+### <a name="bkmk_comp1"></a> Compare solutions by supported platforms
 
 |Platform|Configuration Manager client|On-premises MDM|Configuration Manager with Exchange| Intune |
 |--------|----------------------------|---------------|-----------------------------------|--------|
@@ -110,10 +110,10 @@ For a complete list of supported platforms, see the following articles:
 
 Microsoft recommends using Intune to manage Android, iOS, and Windows 10/11 mobile devices. For more information, see [What is Microsoft Intune?](/mem/intune-service/fundamentals/what-is-intune).
 
-### <a name="bkmk_comp2"></a> Compare solutions by management functionality  
+### <a name="bkmk_comp2"></a> Compare solutions by management functionality
 
-|Management functionality|Configuration Manager client|On-premises MDM|Configuration Manager with Exchange|  
-|--------|----------------------------|---------------|-----------------------------------|  
+|Management functionality|Configuration Manager client|On-premises MDM|Configuration Manager with Exchange|
+|--------|----------------------------|---------------|-----------------------------------|
 |Certificate-based mutual authentication|Yes|Yes| |
 |Client installation|Yes| | |
 |Support over the internet|Yes| | |

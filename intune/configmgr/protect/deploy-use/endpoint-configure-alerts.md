@@ -6,11 +6,11 @@ ms.date: 03/23/2017
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -80,7 +80,7 @@ ms.collection: tier3
 
         -   **Interval for detection (hours):** Specify the detection interval, in hours, in which the number of malware detections must occur. Specify a number from **1** through **168**.
 
-9. Click **OK** to close the _<Collection Name\>_ **Properties** dialog box.  
+9. Click **OK** to close the _<Collection Name\>_ **Properties** dialog box.
 
 ## Alert for outdated malware client
 
@@ -90,6 +90,6 @@ To configure the percentage at which the alert is generated, expand **Monitoring
 
 > [!div class="button"]
 > [Next step >](endpoint-definition-updates.md)
-> 
+>
 > [!div class="button"]
 > [Back >](endpoint-protection-site-role.md)

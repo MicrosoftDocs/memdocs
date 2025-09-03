@@ -12,52 +12,52 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # IAppManagementHandler::EnumerateApps Method
-The `IAppManagementHandler::EnumerateApps` method, in Configuration Manager, runs a synchronous discovery operation for the provided synclet.  
+The `IAppManagementHandler::EnumerateApps` method, in Configuration Manager, runs a synchronous discovery operation for the provided synclet.
 
-## Syntax  
+## Syntax
 
-```  
-[IDL]  
-HRESULT EnumerateApps(  
-     HANDLE hUserToken,  
-     AppDeploymentTypeData* pDetectResult  
-);  
-```  
+```
+[IDL]
+HRESULT EnumerateApps(
+     HANDLE hUserToken,
+     AppDeploymentTypeData* pDetectResult
+);
+```
 
-#### Parameters  
- `hUserToken`  
- Data type: `HANDLE`  
+#### Parameters
+ `hUserToken`
+ Data type: `HANDLE`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The user token. If it's null, the action is for computer. If it isn't NULL, the action is for the user.  
+ The user token. If it's null, the action is for computer. If it isn't NULL, the action is for the user.
 
- `pDetectResult`  
- Data type: `AppDeploymentTypeData`  
+ `pDetectResult`
+ Data type: `AppDeploymentTypeData`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- .   
+ .
 
-## Return Values  
- An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
+## Return Values
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:
 
- S_OK  
- Success implies that discovery was triggered successfully.  All other return values indicate failure.  
+ S_OK
+ Success implies that discovery was triggered successfully.  All other return values indicate failure.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
- [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md)   
- [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)   
- [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+## See Also
+ [IAppManagementHandler Interface](../../../../../develop/reference/core/clients/client-classes/iappmanagementhandler-interface.md)
+ [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

@@ -6,10 +6,10 @@ ms.date: 11/29/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.localizationpriority: medium
 ms.collection: tier3
 ---
@@ -134,7 +134,7 @@ The following features are available with the most recent Configuration Manager 
 - [Enhanced Security for CMG](2024/technical-preview-2411.md)
 - [SQL 2012 and 2014 support is deprecated](2024/technical-preview-2411.md)
 - [Software metering support in Arm64 devices](2024/technical-preview-2411.md)
-  
+
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
 
@@ -176,7 +176,7 @@ The following features were released with previous versions of the Configuration
 - [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](2024/technical-preview-2401.md)
 - [Improvements to Bitlocker](2024/technical-preview-2401.md)
 
-  
+
 ### Technical preview version 2311
 
 - [Folder support for Scripts node in Software Library](2023/technical-preview-2311.md)

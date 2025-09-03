@@ -5,9 +5,9 @@ title: Add app configuration policies for managed iOS/iPadOS devices
 titleSuffix: Microsoft Intune
 description: Learn how to use app configuration policies to provide configuration data to an iOS/iPadOS app when it's run.
 keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
+manager: laurawi
 ms.date: 11/20/2024
 ms.topic: how-to
 ms.service: microsoft-intune

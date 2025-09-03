@@ -4,9 +4,9 @@
 title: Learn about Windows Driver updates policy for Windows 10 Windows 11 devices in Intune
 description: Learn about using Microsoft Intune policy to manage Windows driver updates on your Windows 10 and Windows 11 devices.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 09/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -193,7 +193,7 @@ For more information about planning deployments, see [Create a deployment plan](
 
 ### Can I apply driver updates policy during Windows Autopilot?
 
-- No. Driver Updates aren't supported during autopilot at this time.
+- No. Driver Updates aren't supported during Windows Autopilot at this time.
 
 > [!NOTE]
 > Windows applies critical updates during Windows Autopilot. These updates may include critical driver updates that have not yet been approved by an admin.
@@ -327,6 +327,9 @@ Here are some more details on when deadlines are applied to drivers:
 ### How do I set deferrals for drivers?
 
 - The deferral period set for Quality Updates within the Update Rings policy does not apply to drivers that are approved using the Driver Update Policy. Instead, use the deferral setting in the Driver policy to set a deferral.  In fact, using multiple driver policies with different deferral settings to create driver deployment rings is highly recommended. Remember to only assign a device to one driver policy.
+  
+> [!NOTE]
+> The deferral period only applies to automatically approved driver and firmware updates. An admin must specify the date to start offering a driver with any manual approval.
 
 ### Are the user experience settings from an Update Ring policy applied for driver updates?
 

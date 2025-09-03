@@ -6,12 +6,12 @@ ms.date: 11/08/2021
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Remote actions with co-management
@@ -49,7 +49,7 @@ For more information on how to use these remote actions, see [Available device a
 
 ## Value proposition
 
-When a Configuration Manager device is co-managed, it immediately adds these functions that Configuration Manager doesn't natively have. Now you can now do any remote action that's supported by Intune.
+When a Configuration Manager device is co-managed, it immediately adds these functions that Configuration Manager doesn't natively have. Now you can do any remote action that's supported by Intune.
 
 With co-management, the Configuration Manager devices are now just like any other Intune-managed device. For example, they have a full presence in the cloud, and you can reach them as long as they have internet access. You can do all of these actions without taking any additional steps beyond enabling co-management.
 
@@ -104,10 +104,10 @@ For more information, see [Use Fresh Start to reset Windows devices with Intune]
 
 Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com/). TeamViewer is a third-party program that you acquire separately.
 
-For more information, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/remote-actions/teamviewer-support.md).
+For more information, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/fundamentals/teamviewer-support.md).
 
 ## Configure
 
 Other than remote control via TeamViewer, to start using these remote device actions in Intune, no additional setup is required after you [enable co-management](how-to-enable.md).
 
-For more information on using TeamViewer for remote control, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/remote-actions/teamviewer-support.md).
+For more information on using TeamViewer for remote control, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/fundamentals/teamviewer-support.md).

@@ -12,149 +12,149 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_AssociatedSecuredCategory Server WMI Class
-The `SMS_AssociatedSecuredCategory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the list of RBA security categories associated with the current admin user.  
+The `SMS_AssociatedSecuredCategory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the list of RBA security categories associated with the current admin user.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_AssociatedSecuredCategory : SMS_BaseClass  
-{  
-    String CategoryDescription;  
-    String CategoryID;  
-    String CategoryName;  
-    String CreatedBy;  
-    DateTime CreatedDate;  
-    Boolean IsBuiltIn;  
-    String LastModifiedBy;  
-    DateTime LastModifiedDate;  
-    UInt32 NumberOfAdmins;  
-    UInt32 NumberOfObjects;  
-    UInt32 ObjectTypeID;  
-    String SourceSite;  
-};  
-```  
+```
+Class SMS_AssociatedSecuredCategory : SMS_BaseClass
+{
+    String CategoryDescription;
+    String CategoryID;
+    String CategoryName;
+    String CreatedBy;
+    DateTime CreatedDate;
+    Boolean IsBuiltIn;
+    String LastModifiedBy;
+    DateTime LastModifiedDate;
+    UInt32 NumberOfAdmins;
+    UInt32 NumberOfObjects;
+    UInt32 ObjectTypeID;
+    String SourceSite;
+};
+```
 
-## Methods  
- The `SMS_AssociatedSecuredCategory` class does not define any methods.  
+## Methods
+ The `SMS_AssociatedSecuredCategory` class does not define any methods.
 
-## Properties  
- `CategoryDescription`  
- Data type: `String`  
+## Properties
+ `CategoryDescription`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read, sizelimit("512")]  
+ Qualifiers: [read, sizelimit("512")]
 
- Description of the RBA security category.  
+ Description of the RBA security category.
 
- `CategoryID`  
- Data type: `String`  
+ `CategoryID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- ID of the RBA security category.  
+ ID of the RBA security category.
 
- `CategoryName`  
- Data type: `String`  
+ `CategoryName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read, sizelimit("256")]  
+ Qualifiers: [not_null, read, sizelimit("256")]
 
- Name of the RBA security category.  
+ Name of the RBA security category.
 
- `CreatedBy`  
- Data type: `String`  
+ `CreatedBy`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read, SizeLimit("512")]  
+ Qualifiers: [not_null, read, SizeLimit("512")]
 
- The user who created the RBA security category.  
+ The user who created the RBA security category.
 
- `CreatedDate`  
- Data type: `DateTime`  
+ `CreatedDate`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- The date when the RBA security category was created.  
+ The date when the RBA security category was created.
 
- `IsBuiltIn`  
- Data type: `Boolean`  
+ `IsBuiltIn`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- `true`, if this is a built-in RBA security category (All or Default).  
+ `true`, if this is a built-in RBA security category (All or Default).
 
- `LastModifiedBy`  
- Data type: `String`  
+ `LastModifiedBy`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read, SizeLimit("512")]  
+ Qualifiers: [not_null, read, SizeLimit("512")]
 
- The user who last modified this RBA security category.  
+ The user who last modified this RBA security category.
 
- `LastModifiedDate`  
- Data type: `DateTime`  
+ `LastModifiedDate`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- The date when this RBA security category was last modified.  
+ The date when this RBA security category was last modified.
 
- `NumberOfAdmins`  
- Data type: `UInt32`  
+ `NumberOfAdmins`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Number of RBA admins associated with this RBA security category.  
+ Number of RBA admins associated with this RBA security category.
 
- `NumberOfObjects`  
- Data type: `UInt32`  
+ `NumberOfObjects`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Number of objects associated with this RBA security category.  
+ Number of objects associated with this RBA security category.
 
- `ObjectTypeID`  
- Data type: `UInt32`  
+ `ObjectTypeID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- The object type of the object which the current user can assign to this RBA security category.  
+ The object type of the object which the current user can assign to this RBA security category.
 
- `SourceSite`  
- Data type: `String`  
+ `SourceSite`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read, SizeLimit("3")]  
+ Qualifiers: [not_null, read, SizeLimit("3")]
 
- The source site of the RBA security category.  
+ The source site of the RBA security category.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
