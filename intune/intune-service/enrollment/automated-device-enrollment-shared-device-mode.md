@@ -48,13 +48,13 @@ In this article, you will:
 * Assign Microsoft Authenticator app (VPP version)     
 
 ## Prerequisites 
-Before you create an enrollment policy in Microsoft Intune:  
+Before you create an enrollment profile in Microsoft Intune:  
 
 * Complete all [prerequisites for Apple Automated Device Enrollment](device-enrollment-program-enroll-ios.md#prerequisites).  
 * Read [Before you begin](device-enrollment-program-enroll-ios.md#before-you-begin) for best practices and recommendations for automated device enrollment.  
 
-## Step 1: Create an Apple enrollment policy  
-Create an Apple automated device enrollment policy in Microsoft Intune for devices enrolling in shared device mode. Include these configurations:    
+## Step 1: Create an Apple enrollment profile  
+Create an Apple automated device enrollment profile in Microsoft Intune for devices enrolling in shared device mode. Include these configurations:    
 * **User affinity**: Enroll with Microsoft Entra ID shared mode  
 * **Locked enrollment**: Yes  
 * **Apply device name template**: Yes (optional)  
@@ -62,6 +62,9 @@ Create an Apple automated device enrollment policy in Microsoft Intune for devic
 * **Toggle All** (optional): Hide 
 
  Although optional, we recommend applying a device name template with the recommended formatting. You can also hide all or some Setup Assistant screens to speed up provisioning and user onboarding. When you're done configuring the rest of the enrollment profile, assign it to devices. 
+
+  > [!NOTE]
+  > You cannot change the user affinity setting in an existing enrollment profile. If you need to modify this setting, you must create a new Apple enrollment profile.
 
  For more information about how-to create an enrollment policy, see [Create an Apple enrollment profile](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).  
 
