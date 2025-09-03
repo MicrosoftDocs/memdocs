@@ -91,7 +91,7 @@ When you create a profile (**Devices** > **Manage devices** > **Configuration** 
 - **Windows 10 and later**
 - **Windows 8.1 and later**
 
-Then, choose your profile type. Depending on the platform you choose, the profile types are different. If the settings catalog is available for your platform, then we recommend you use the settings catalog. The following articles describe the different profiles:
+Then, choose your profile type. Depending on the platform you choose, the profile types are different. The following articles describe the different profiles:
 
 # [Settings catalog](#tab/sc)
 
