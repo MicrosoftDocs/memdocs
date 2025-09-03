@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 06/24/2025
+ms.date: 08/21/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
