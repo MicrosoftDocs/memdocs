@@ -35,11 +35,6 @@ ms.collection:
 
 This article covers the information required to plan for a Endpoint Privilege Management (EPM) deployment. This includes requirements, important concepts, security recommendations, and role based access control.
 
-Applies to:
-
-- Windows 10
-- Windows 11
-
 ## Planning Checklist
 
 - Review technical and licensing prerequisites in your tenant.

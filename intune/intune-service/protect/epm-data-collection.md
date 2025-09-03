@@ -35,11 +35,6 @@ ms.collection:
 
 This article provides information about the data that EPM can collect from devices.
 
-Applies to:
-
-- Windows 10
-- Windows 11
-
 ## Overview of data collection
 
 Endpoint Privilege Management on devices can be configured to report on the following data types:

@@ -35,11 +35,6 @@ ms.collection:
 
 A common scenario for customers who want to use Endpoint Privlege Management is to reduce the number of local administrators in their environment. This scenario adheres to the Zero Trust principle of least privelege. This document steps through the steps a customer could follow to use EPM to move users from administrators to standard users with minimal disruption.
 
-Applies to:
-
-- Windows 10
-- Windows 11
-
 ## Phase 1: Auditing
 
 Regardless of whether you're migrating from another endpoint privilege management product or starting fresh, it's recommended to enable auditing as the first step. Enabling auditing enables the EPM client and devices send diagnostic data to Intune, where it can be viewed in various reports. Gathering this elevation data provides insights into which processes users are applying elevation for, and help to identify common patterns – ideally aligned to your personas, such as developers, IT support technicians, etc. The deployment of this policy for auditing is seamless, and can be targeted to a group of users or devices of your choosing, as per any regular Intune policy assignment.

@@ -35,11 +35,6 @@ ms.collection:
 
 This article lists known issues with Endpoint Privelege Management.
 
-Applies to:
-
-- Windows 10
-- Windows 11
-
 ## Windows 10 devices might not immediately receive confirmation of support approvals
 
 We're working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations). We're working with the owner to resolve this as quickly as possible.

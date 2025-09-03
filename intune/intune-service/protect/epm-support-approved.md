@@ -39,18 +39,13 @@ Support approved elevations allow you to require approval before an elevation be
 
 When a user tries to run a file in an elevated context, and that file is managed by the *support approved* file elevation type, Intune shows a prompt to the user to submit an elevation request. The elevation request is then sent to Intune for review by an Intune admin. When an admin approves the elevation request, the user on the device is notified, and the file can then be run in the elevated context. To approve requests, the Intune admin's account must have extra permissions that are specific to the review and approval task.
 
-Applies to:
-
-- Windows 10
-- Windows 11
-
 ## About support approved elevations
 
 Use EPM policies with the *support approved* elevation type for files that need an admin's approval before they can run with higher access. They're similar to other EPM  elevation rules, but they have some differences that need extra planning.
 
 > [!TIP]
 >
-> To review the four elevation types and other policy options, see [Windows elevation rules policy](epm-elevation-rules.md#about-windows-elevation-rules-policy).
+> To review the four elevation types and other policy options, see [Windows elevation rules policy](epm-elevation-rules.md).
 
 The following subjects are details to plan for and expect when you use the support approved elevation type:
 

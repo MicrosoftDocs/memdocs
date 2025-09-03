@@ -35,7 +35,7 @@ ms.collection:
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
-The information available in EPM reports depends on the *reporting scope* of a device. The reporting scope for each device is configured as part of a [Windows elevation settings policy](../protect/epm-elevation-settings.md#windows-elevation-settings-policy), and different devices can have different reporting scope configurations.
+The information available in EPM reports depends on the *reporting scope* of a device. The reporting scope for each device is configured as part of a [Windows elevation settings policy](../protect/epm-elevation-settings.md), and different devices can have different reporting scope configurations.
 
 The EPM reports are available from the *Reports* tab of the *Endpoint Privilege Management* node from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Endpoint security** > **Endpoint Privilege Management**, and select the **Reports** tab. The report data is retained for 30 days. To view a report, select from the following tiles:
 

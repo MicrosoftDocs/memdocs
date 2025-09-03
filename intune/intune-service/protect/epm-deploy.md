@@ -35,14 +35,9 @@ ms.collection:
 
 The information in this article can help you to configure the following policies and reusable settings for EPM:
 
-- Windows elevation settings policy.
-- Windows elevation rules policy.
-- Reusable settings groups, which are optional configurations for your elevation rules.
-
-Applies to:
-
-- Windows 10
-- Windows 11
+- [Windows elevation settings policy](epm-elevation-settings.md).
+- [Windows elevation rules policy](epm-elevation-rules.md).
+- [Reusable settings groups](epm-elevation-rules.md#reusable-settings-groups), which are optional configurations for your elevation rules.
 
 ## Common deployment scenarios
 

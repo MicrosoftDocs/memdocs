@@ -35,11 +35,6 @@ ms.collection:
 
 The following sections of this article discuss frequently asked questions for Endpoint Privilege Management (EPM).
 
-Applies to:
-
-- Windows 10
-- Windows 11
-
 ## Frequently asked questions
 
 ### Why is my virtual device not onboarding to Endpoint Privilege Management?
