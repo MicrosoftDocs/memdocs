@@ -132,5 +132,7 @@ Endpoint Privilege Management (EPM) is built into Microsoft Intune, which means 
 
 - **Deploy EPM** - To deploy EPM, enable auditing, create rules, and monitor the deployment. For more information, see [Deploy EPM](epm-deploy.md).
 
+---
+
 > [!div class="nextstepaction"]
 > [Next: Plan for EPM >](epm-plan.md)

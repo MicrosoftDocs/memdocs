@@ -384,6 +384,8 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 4. In **Review + create**, review your settings, and then select **Add**. When you select *Add*, your configuration is saved, and group is then shown in the reusable settings group list for Endpoint Privilege Management.
 
+---
+
 ## Next steps
 
 > [!div class="nextstepaction"]

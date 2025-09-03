@@ -63,6 +63,8 @@ The table below lists the common deployment scenarios for EPM. We can choose to 
 |2|Admin|Standard User|Information Workers|You want to move users with local admin rights to standard users, with minimal disruption. You want to allow them to request an app to run as admin on occasion.</br></br> For step by step instructions on how to achieve this scenario with EPM, see [Using EPM to transition users from administrator to standard users](epm-transition-administrator-to-standard-user.md)|
 |2|Standard User|Standard User|Developers|You want to allow specific users to 'elevate up' without granting local admin rights or using LAPS.|
 
+---
+
 ## Next steps
 
 > [!div class="nextstepaction"]

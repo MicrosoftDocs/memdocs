@@ -186,6 +186,8 @@ Copilot reviews the file and reports back the following details:
 
 The preceding image shows a screen capture of the Copilot report on the reputation of that *InstallPrinter.msi* file. In this example, the file is identified as malicious and shouldn't be approved to run in an elevated context. The results also include additional information and links to references for the malicious file that was identified.
 
+---
+
 ## Next steps
 
 > [!div class="nextstepaction"]

@@ -126,6 +126,8 @@ Use *Windows elevation settings policy* when you want to:
 
 6. For **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 
+---
+
 ## Next Steps
 
 > [!div class="nextstepaction"]

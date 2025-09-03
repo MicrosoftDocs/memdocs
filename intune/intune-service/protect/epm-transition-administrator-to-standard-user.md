@@ -178,6 +178,8 @@ For more details on the Local Users and Groups profiles, see [Account protection
 - Update rules when file versions or certs change
 - Retire or tighten outdated rules
 
+---
+
 ## Next steps
 
 > [!div class="nextstepaction"]
