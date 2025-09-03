@@ -4,10 +4,10 @@
 title: Retire or wipe devices using Microsoft Intune
 description: Retire or wipe a device on an Android, Android work profile, AOSP, iOS/iPadOS, macOS, or Windows device using Microsoft Intune. Also delete a device from Microsoft Entra ID.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: laurawi
-ms.date: 07/22/2025
+ms.date: 08/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -32,6 +32,8 @@ ms.collection:
 # Remove devices by using wipe, retire, or manually unenrolling the device
 
 By using the **Retire** or **Wipe** actions, you can remove devices from Intune that are no longer needed, being repurposed, or missing. Users can also issue a remote command from the Intune Company Portal to devices that are enrolled in Intune.
+
+If [multi-admin approval access policies](../fundamentals/multi-admin-approval.md) are enabled for device actions, then some device actions might require a second administrator to approve. To learn more, see [Use Access policies to require multiple administrative approvals](../fundamentals/multi-admin-approval.md).
 
 ## Wipe
 
@@ -82,7 +84,7 @@ A wipe is useful for resetting a device before you give the device to a new user
     |User data outside of the user profile||
     |User autologon||
 
-6. The **Wipe device, and continue to wipe even if device loses power** option makes sure that the wipe action can't be circumvented by turning off the device. This option keeps trying to reset the device until successful. In some configurations, this action may leave the device [unable to reboot](/troubleshoot/mem/intune/troubleshoot-device-actions#wipe-action).
+6. The **Wipe device, and continue to wipe even if device loses power** option makes sure that the wipe action can't be circumvented by turning off the device. This option keeps trying to reset the device until successful. In some configurations, this action can leave the device [unable to reboot](/troubleshoot/mem/intune/troubleshoot-device-actions#wipe-action).
 7. For iOS/iPadOS eSIM devices, the cellular data plan is preserved by default when you wipe a device. If you want to remove the data plan from the device when you wipe the device, select the **Also remove the devices data plan...** option.
 8. To confirm the wipe, select **Yes**.
 
@@ -138,7 +140,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
 
 > [!NOTE]
-> Users that reinstall the Outlook Mobile app following a **Retire** device action may need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries.  Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
+> Users that reinstall the Outlook Mobile app following a **Retire** device action might need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries. Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
 
 #### Android device administrator
 
@@ -229,7 +231,7 @@ If you want to remove devices from the Intune admin center, you can delete them 
 > [!IMPORTANT]
 > The **Delete** action triggers the following actions:
 >
-> * Depending on the device platform, it may retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](devices-wipe.md#retire) section for the expected behavior.
+> * Depending on the device platform, it can retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](devices-wipe.md#retire) section for the expected behavior.
 > * BitLocker encryption is suspended if managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
 
 ### Automatically hide devices with cleanup rules

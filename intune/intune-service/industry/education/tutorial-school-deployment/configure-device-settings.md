@@ -86,9 +86,6 @@ There are two ways to manage settings in Intune for Education:
 
 With Express Configuration, you can get Intune for Education up and running in just a few steps. You can select a group of devices or users, select applications to distribute, and choose settings from the most commonly used in schools.
 
-> [!TIP]
-> To learn more, and practice step-by-step Express Configuration in Intune for Education, try [this interactive demo](https://www.microsoft.com/education/interactive-demos/deploy-apps-and-policies).
-
 ::: zone-end
 
 ## Device settings
@@ -326,6 +323,12 @@ Common areas for security include:
 > If you require more sophisticated security settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/mem/intune-service/configuration/device-profiles).
 
 ::: zone-end
+
+## Storage policies
+
+✅ Configure storage policies and assign them to devices
+
+In the educational sector, devices with limited storage capacity are sometimes deployed due to cost and portability considerations. It is essential to manage storage effectively to ensure that Windows devices remain up to date at all times. Storage Sense is a Windows feature that helps automatically free up disk space by deleting unnecessary files. For more information about Storage Sense, see [Configure Storage Sense](/windows/configuration/storage/storage-sense).
 
 ---
 
