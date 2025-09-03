@@ -116,13 +116,13 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
          - **All**: All assigned apps must be installed before users can use their devices.
          - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list with more settings related to blocking apps.
 
-    - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](/autopilot/pre-provision). This setting is only available if *blocking apps* are added and only applies to devices going through pre-provisioning. Your options:
+    - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [Technician Flow](/autopilot/pre-provision#technician-flow). This setting is only available if *blocking apps* are added and only applies to devices going through pre-provisioning. Your options:
          - **No**: An attempt is made to install the blocking apps. Windows Autopilot deployment fails if a blocking app fails to install. No attempt is made to install nonblocking apps. When the end user receives the resealed device and signs in for the first time, the ESP attempts to install the nonblocking apps.
-         - **Yes**: An attempt is made to install all required apps. Windows Autopilot deployment fails if a blocking app fails to install. If a nonblocking app targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP reattempts to install the apps that it couldn't in the technician phase. This setting is the default setting for pre-provisioned deployments.
+         - **Yes**: An attempt is made to install all required apps. Windows Autopilot deployment fails if a blocking app fails to install. If a nonblocking app targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP reattempts to install the apps that it couldn't during the Technician Flow. This setting is the default setting for pre-provisioned deployments.
 
          > [!TIP]
          >
-         > When using this feature, expect provisioning time to increase during the technician phase. The more apps assigned, the longer it could take. If you're using a non-Microsoft provider to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.
+         > When using this feature, expect provisioning time to increase during the Technician Flow. The more apps assigned, the longer it could take. If you're using a non-Microsoft provider to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.
 
 1. Select **Next**.
 1. In **Assignments**, select the groups to receive your profile. Optionally, select **Edit filter** to restrict the assignment further.
@@ -171,7 +171,7 @@ Devices that don't meet these conditions don't honor the **Install Windows quali
 The following specific scenarios aren't supported and the **Install Windows quality updates (might restart the device)** setting isn't honored:
 
 - **Windows Autopilot device preparation** - Windows Autopilot device preparation doesn't use ESP, so this setting isn't applicable. Therefore, monthly security update releases are always installed during OOBE.
-- **Windows Autopilot for pre-provisioned deployment Technician Flow** - Monthly security update releases aren't installed during the Technician Flow portion of a Windows Autopilot for pre-provisioned deployment. However, the **Install Windows quality updates (might restart the device)** setting is honored during the User Flow portion of a Windows Autopilot for pre-provisioned deployment.
+- **Windows Autopilot for pre-provisioned deployment Technician Flow** - Monthly security update releases aren't installed during the [Technician Flow](/autopilot/pre-provision#technician-flow) portion of a Windows Autopilot for pre-provisioned deployment. However, the **Install Windows quality updates (might restart the device)** setting is honored during the [User Flow](/autopilot/pre-provision#user-flow) portion of a Windows Autopilot for pre-provisioned deployment.
 
 #### Update rings and Windows Autopatch
 
