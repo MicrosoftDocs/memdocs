@@ -5,7 +5,7 @@ manager: bpardi
 ms.subservice: autopilot
 ms.service: windows-client
 ms.topic: include
-ms.date: 08/29/2025
+ms.date: 09/03/2025
 ms.localizationpriority: medium
 ---
 
@@ -76,7 +76,7 @@ When the Enrollment Status Page (ESP) is configured, it has several options that
     >
     > - This option is only supported for [currently supported versions of Windows 11](/windows/release-health/windows11-release-information).
     > - When this option is enabled, monthly security update releases are installed during OOBE after the ESP completes.
-    > - For important detailed information regarding this option, see [Install Windows quality updates](intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
+    > - For important detailed information regarding this option, see [Install Windows quality updates](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
 
 - **Block device use until all apps and profiles are installed**:
 

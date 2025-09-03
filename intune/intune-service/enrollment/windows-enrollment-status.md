@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: laurawi
-ms.date: 08/29/2025
+ms.date: 09/03/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -90,9 +90,9 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
        - **No**: The enrollment status page is shown during the device phase and the out-of-box experience (OOBE). The page is also shown during the [user phase](#account-setup) to every user who signs into the device for the first time.
        - **Yes**: The enrollment status page is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign into the device.
 
-    - **Install Windows quality updates (might restart the device)**: Use this setting to control to check and install from Windows Updates available quality updates, also known as monthly security update releases. Your options:
+    - **Install Windows quality updates (might restart the device)**: Use this setting to control checking and installation from Windows Updates the available quality updates, also known as monthly security update releases. Your options:
        - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page is displayed to the user showing update progress.
-       - **No**: Monthly security update releases aren't installed during OOBE and the device instead continues to the desktop as usual. Messages regarding installation of monthly security update releases isn't displayed since they aren't installed.
+       - **No**: Monthly security update releases aren't installed during OOBE and the device instead continues to the desktop as usual. Messages regarding installation of monthly security update releases aren't displayed since they aren't installed.
 
         > [!IMPORTANT]
         >
@@ -142,9 +142,9 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 ### Install Windows monthly security update releases
 
-Installation of [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release) quality updates, also known as quality updates, are controlled via the option **Install Windows quality updates (might restart the device)**. This setting only installs monthly security update releases. It doesn't install other types of updates as listed at [Types of update releases](/windows/deployment/update/release-cycle#types-of-update-releases).
+Installation of [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as quality updates, are controlled via the option **Install Windows quality updates (might restart the device)**. This setting only installs monthly security update releases. It doesn't install other types of updates as listed at [Types of update releases](/windows/deployment/update/release-cycle#types-of-update-releases).
 
-Installation of monthly security update releases during the Windows 11 out-of-box experience (OOBE) was added via the 2025-06 D updates:
+The control to disable the installation of monthly security update releases during the Windows 11 out-of-box experience (OOBE) was added via the 2025-06 D updates:
 
 - [KB5060829](https://support.microsoft.com/topic/june-26-2025-kb5060829-os-build-26100-4484-preview-e31ba7c2-ff65-4863-a462-a66e30840b1a) for Windows 11, version 24H2.
 - [KB5060826](https://support.microsoft.com/topic/june-26-2025-kb5060826-os-builds-22621-5549-and-22631-5549-preview-65d38dd2-e149-4462-9699-e2482f60b16b) for Windows 11, version 23H2 and Windows 11, version 22H2.
@@ -171,7 +171,7 @@ Devices that don't meet these conditions don't honor the **Install Windows quali
 The following specific scenarios aren't supported and the **Install Windows quality updates (might restart the device)** setting isn't honored:
 
 - **Windows Autopilot device preparation** - Windows Autopilot device preparation doesn't use ESP, so this setting isn't applicable. Therefore, monthly security update releases are always installed during OOBE.
-- **Windows Autopilot for pre-provisioned deployment Technician mode** - Monthly security update releases aren't installed while in Technician mode during a Windows Autopilot for pre-provisioned deployment.
+- **Windows Autopilot for pre-provisioned deployment Technician Flow** - Monthly security update releases aren't installed during the Technician Flow portion of a Windows Autopilot for pre-provisioned deployment. However, the **Install Windows quality updates (might restart the device)** setting is honored during the User Flow portion of a Windows Autopilot for pre-provisioned deployment.
 
 #### Update rings and Windows Autopatch
 
@@ -182,7 +182,7 @@ If using Windows Autopatch, Update rings policies need to be configured as descr
 - Use Update Rings policies from the **Devices | Windows Updates** screen with **All Devices** assigned.
 - Use groups of devices registered with Windows Autopilot s in Autopatch Groups.
 
-Expedited updates aren't part of the installation of monthly security update releases during OOBE. Unless an expedited update is part of a monthly security update release, expedited updates aren't applied during provisioning. Devices assigned to an expedited update policy will initiate the expedited update sometime after OOBE completes if the expedited updates aren't part of monthly security update releases.
+Expedited updates aren't part of the installation of monthly security update releases during OOBE. Devices assigned to an expedited update policy will initiate the expedited update sometime after OOBE completes if the expedited updates aren't part of monthly security update releases.
 
 > [!TIP]
 >
