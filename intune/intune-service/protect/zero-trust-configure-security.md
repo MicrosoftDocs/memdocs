@@ -69,3 +69,5 @@ Set up Microsoft Intune
 [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
 
 [!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
+
+### 
