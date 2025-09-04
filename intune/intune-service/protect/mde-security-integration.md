@@ -6,7 +6,7 @@ description: Learn how to use Intune policy to manage Microsoft Defender securit
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 06/27/2025
+ms.date: 08/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -356,7 +356,8 @@ In the Microsoft Defender portal, as a security administrator:
    > While most devices complete enrollment and apply assigned policy within a few minutes, a device can sometimes take up to 24 hours to complete enrollment.
    
    > [!IMPORTANT]
-   > Dynamic asset rules are not currently supported for this task. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
+   > As of July 3rd, 2025, dynamic asset rules are supported for defining the devices in the MDE-Management tag in public preview.
+   
    
 3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
 
