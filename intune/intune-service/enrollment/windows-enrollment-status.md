@@ -122,7 +122,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
          > [!TIP]
          >
-         > When using this feature, expect provisioning time to increase during the Technician Flow. The more apps assigned, the longer it could take. If you're using a non-Microsoft provider to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.
+         > When using this feature, expect provisioning time to increase during the Technician Flow. The more apps assigned, the longer it could take. If you're using a non-Microsoft provider to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time-out.
 
 1. Select **Next**.
 1. In **Assignments**, select the groups to receive your profile. Optionally, select **Edit filter** to restrict the assignment further.
