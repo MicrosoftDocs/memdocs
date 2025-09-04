@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: bpardi
 ms.reviewer: madakeva
-ms.date: 04/21/2025
+ms.date: 09/03/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -31,6 +31,18 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+## Enrollment Status Page support for installing Windows security updates during Windows OOBE
+
+Date added: *September 3, 2025*
+
+Starting on September 9, 2025, by default, the Windows out-of-box experience (OOBE) installs the latest available monthly security update releases to help ensure devices are secure and up to date from day one. Windows OOBE is used by Intune and by Windows Autopilot scenarios through the Intune enrollment status page (ESP) configurations. Intune refers to these monthly security update releases as quality updates.
+
+To help manage this behavior, the Intune enrollment status page (ESP) is updated with a new setting that can be used to allow or block the automatic installation of monthly security update releases. The new setting is **Install Windows quality updates (might restart the device)**. Monthly security update releases are installed by default during the Windows out-of-box experience OOBE that's used by Intune and by Windows Autopilot
+
+By default, this setting is set to **Yes** in all new ESP profiles that are created. Configuring this setting to **Yes** results in the most recent monthly security update releases to be installed. In all previously created ESP profiles, this setting is set to **No** until those profiles are edited and changed. When set to **No**, OOBE doesn't install the monthly security update releases. Delaying the install of monthly security update releases can give internal teams time to test the monthly security update releases before allowing them to install on new devices during provisioning.
+
+For more information about the Intune enrollment status page, see [Set up Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status). For information about Windows quality updates, see [Windows quality update policy](/windows/deployment/update/release-cycle#monthly-security-update-release).
 
 ## Deliver Enterprise App Catalog (EAM) apps during the Enrollment status page
 
