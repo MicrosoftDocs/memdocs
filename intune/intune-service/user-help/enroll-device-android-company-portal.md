@@ -6,7 +6,7 @@ description: Describes how to set up an Android device for work or school with t
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/13/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
