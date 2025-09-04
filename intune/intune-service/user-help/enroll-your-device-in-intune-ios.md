@@ -6,7 +6,7 @@ description: Describes how to enroll and register a personal iPhone or iPad for 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 03/13/2025
 ms.topic: end-user-help
 ms.localizationpriority: high
