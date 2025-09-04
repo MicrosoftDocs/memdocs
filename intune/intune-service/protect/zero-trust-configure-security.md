@@ -31,22 +31,6 @@ In Microsoft Intune, the following security recommendations are presented across
 
 > [!TIP]
 > Some organizations might take these recommendations exactly as written, while others might choose to make modifications based on their own business needs.
->
-> These recommendations should be considered distinct from the recommendations as found in the various security baselines that you might deploy with Intune.
-
-
-<!-- Subsequent articles to use a similar name structure with actual names to TBD.  Initial proposed ToC structure:
-
-Set up Microsoft Intune
- > URLs and IPI address endpoints
- > Set up Intune subscription
- > Manage roles and permissions
- > Configure security recommendations using Zero Trust  
-   > Configure security recommendations using Zero Trust [../protect/zero-trust-configure-security.md]
-   > Sub 1  [../protect/zero-trust-group1.md]
-   > Sub 2  [../protect/zero-trust-group2.md]
-   
--->
 
 ## Security guidance
 
