@@ -4,7 +4,7 @@ description: Disconnect your work or school account from device running Windows 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 04/30/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
