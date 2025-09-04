@@ -6,7 +6,7 @@ description: If you've been disconnected from Wi-Fi for an extended period of ti
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/07/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune

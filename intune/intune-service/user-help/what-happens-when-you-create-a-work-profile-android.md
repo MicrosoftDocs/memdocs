@@ -6,7 +6,7 @@ description: Describes how to navigate a work profile and find work apps on your
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 07/01/2024
 ms.topic: end-user-help
 ms.localizationpriority: high

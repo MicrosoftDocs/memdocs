@@ -6,7 +6,7 @@ description: Learn how to remove a device from Company Portal for Android and un
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 07/01/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
