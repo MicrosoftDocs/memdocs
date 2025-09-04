@@ -96,6 +96,10 @@ Set up Microsoft Intune
 
 [!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
 
+### macOS Update policy is configured and assigned<!-- 24690 -->
+[!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
+
+[!INCLUDE [24690](./includes/secure-recommendations/24690.md)]
 
 
 
@@ -109,7 +113,7 @@ Set up Microsoft Intune
 ### PENDING 24550<!-- 24550 -->
 [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
 
-v[!INCLUDE [24550](./includes/secure-recommendations/24550.md)]
+[!INCLUDE [24550](./includes/secure-recommendations/24550.md)]
 
 
 
@@ -138,15 +142,13 @@ v[!INCLUDE [24550](./includes/secure-recommendations/24550.md)]
 [!INCLUDE [24545](./includes/secure-recommendations/24545.md)]
 
 
-
-
 ### PENDING - Windows automatic enrollment is configured<!-- 24546 -->
 [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
 
 [!INCLUDE [24546](./includes/secure-recommendations/24546.md)]
 
 
-### PENDING - Compliance policies for Android Enterprise (Personally-owned profiles<!--  24547 -->
+### PENDING - Compliance policies for Android Enterprise (personally-owned profiles)<!--  24547 -->
 [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
 
 [!INCLUDE [24547](./includes/secure-recommendations/24547.md)]
