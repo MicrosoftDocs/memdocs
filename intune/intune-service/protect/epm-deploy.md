@@ -55,7 +55,7 @@ Microsoft anticipates customers adopting EPM will go through the following phase
 
 Repeat phases 2 to 5 continuously to ensure your users have least privilege in line with [Zero Trust principles](/intune/intune-service/fundamentals/zero-trust-with-microsoft-intune).
 
-The table below lists the common deployment scenarios for EPM. We can choose to focus on all scenarios, or mainly scenario 2 (scenario 1 is very quickly/easy).
+The table below lists the common deployment scenarios for EPM.
 
 | Scenario | Local User (Before) | Local User (After) | Example Role | Use Case |
 |---|---|---|---|---|

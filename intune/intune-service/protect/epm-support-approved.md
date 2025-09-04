@@ -71,7 +71,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
   - **For approvals**: When an admin approves an elevation request, Intune sends a policy to the device where the user submitted the request, which enables that user to run the file as elevated for the next 24 hours. This period begins at the time the admin approves the request. There's no current support for a custom time period or cancellation of the approved elevation before the 24-hour period expires.
 
-    Once the request is approved, Intune notifies the device and initiates a sync. *This can take some time.* Intune uses a notification on the device to alert the user that they can now successfully run the file with the *Run with elevated* access right-click option.
+    Once the request is approved, Intune notifies the device and initiates a sync. *This can take some time.* Intune displays a toast notification on the device to alert the user that they can now successfully run the file with the *Run with elevated* access right-click option.
 
   - **For denials**: Intune doesn't notify the user. The administrator should manually notify the user that their request was denied.
 
@@ -157,7 +157,7 @@ For example, when viewing the file properties for an elevation request, you can 
 
 ### Prerequisites for using Security Copilot with EPM
 
-To use Microsoft Security Copilot with Endpoint Privilege Management, your tenant must be licensed to use Security Copilot(/copilot/security/get-started-security-copilot#minimum-requirements). This requirement is in addition to the [prerequisites](../protect/epm-plan.md#prerequisites) for using Endpoint Privilege Management.
+To use Microsoft Security Copilot with Endpoint Privilege Management, your tenant must be licensed to use [Security Copilot](/copilot/security/get-started-security-copilot#minimum-requirements). This requirement is in addition to the [prerequisites](../protect/epm-plan.md#prerequisites) for using Endpoint Privilege Management.
 
 If your Tenant is already licensed for EPM and for Security Copilot, no additional license or configuration is required.  
 

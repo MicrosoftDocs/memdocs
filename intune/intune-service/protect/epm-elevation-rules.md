@@ -106,12 +106,12 @@ Certificate rules are a strong type of attribute and should be paired with other
 
 ### Rules containing file name
 
-File name is an attribute that can be utilized to detect an application that needs to be elevated. However, file names aren't protected by the signature of the file.
+File name is an attribute that can be utilized to detect an application that needs to be elevated. However, file names are easily changed and don't make up part of the hash or attributes signed by the publisher certificate.
 
 This means that file names are *highly susceptible* to change. Files that are signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated*, which might not be your intended behavior.
 
 > [!IMPORTANT]
-> Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
+> Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature (for example, product name) are good indicators that the file you intend is likely the one being elevated.
 
 ### Rules based on attributes gathered by PowerShell
 
@@ -167,7 +167,8 @@ Deploy a *Elevation rules policy* to users or devices to deploy one or more rule
 - Can include one or more manually added [file arguments or command line switches](#use-file-arguments-for-elevation-rules). When file arguments are added to a rule, EPM only allows file elevation of requests that include one of the defined command lines. If a defined command line isn't part of the file elevation request, EPM denies that request.
 - Specifies if the elevation type of the file is automatic (silently), or if it requires user confirmation. With user confirmation, you can add additional user actions that must be completed before the file is run.
 
-In addition to this policy, a device must also be assigned a Windows elevation settings policy that enables Endpoint Privilege Management.
+> [!NOTE]
+> In addition to this policy, a device must also be assigned a Windows elevation settings policy that enables Endpoint Privilege Management.
 
 Use either of the following methods to create new elevation rules, which are added to elevation rules policy:
 
