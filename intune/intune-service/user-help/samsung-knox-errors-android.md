@@ -6,7 +6,7 @@ description: Troubleshoot your Samsung Knox device.
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 02/07/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
