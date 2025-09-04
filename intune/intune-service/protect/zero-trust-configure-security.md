@@ -171,7 +171,7 @@ Set up Microsoft Intune
 
 
 ### PENDING - Cloud LAPS policy is enforced for Windows<!-- 24560 -->
-[!INPENDINGCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
+[!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
 
 [!INCLUDE [24560](./includes/secure-recommendations/24560.md)]
 
