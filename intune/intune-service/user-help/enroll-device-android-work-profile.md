@@ -6,7 +6,7 @@ description: How create a work profile and enroll device with Intune Company Por
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/13/2024  
 ms.topic: end-user-help
 ms.service: microsoft-intune

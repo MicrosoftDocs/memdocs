@@ -6,7 +6,7 @@ description: Enroll your personal Mac for work using the Company Portal app.
 keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 07/29/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
