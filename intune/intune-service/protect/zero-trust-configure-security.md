@@ -136,7 +136,7 @@ Set up Microsoft Intune
 
 
 
-### PENDING - Compliance policies for Android Enterprise (Fully managed and corporate-owned work profile) - <!-- 24545 -->
+### PENDING - Compliance policies for Android Enterprise (Fully managed and corporate owned work profile) - <!-- 24545 -->
 [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
 
 [!INCLUDE [24545](./includes/secure-recommendations/24545.md)]
@@ -148,7 +148,7 @@ Set up Microsoft Intune
 [!INCLUDE [24546](./includes/secure-recommendations/24546.md)]
 
 
-### PENDING - Compliance policies for Android Enterprise (personally-owned profiles)<!--  24547 -->
+### PENDING - Compliance policies for Android Enterprise (personally owned profiles)<!--  24547 -->
 [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]
 
 [!INCLUDE [24547](./includes/secure-recommendations/24547.md)]
