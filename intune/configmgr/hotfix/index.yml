@@ -27,6 +27,8 @@ landingContent:
             url: 2503/32480179.md
           - text: KB 33177653 Azure for US Government Update
             url: 2503/33177653.md
+          - text: KB 34503768 Revised security update for Microsoft Configuration Manager
+            url: 2503/34503768.md
   - title: Configuration Manager 2409
     linkLists:
       - linkListType: overview
@@ -41,6 +43,8 @@ landingContent:
             url: 2503/33177653.md
           - text: KB 33926600 Security update for Microsoft Configuration Manager
             url: 2409/33926600.md
+          - text: KB 34503768 Revised security update for Microsoft Configuration Manager
+            url: 2503/34503768.md
   - title: Configuration Manager 2403
     linkLists:
       - linkListType: overview
@@ -57,6 +61,8 @@ landingContent:
             url: 2503/33177653.md
           - text: KB 33926600 Security update for Microsoft Configuration Manager
             url: 2409/33926600.md
+          - text: KB 34503768 Revised security update for Microsoft Configuration Manager
+            url: 2503/34503768.md
   - title: Configuration Manager 2309
     linkLists:
       - linkListType: overview
