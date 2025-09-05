@@ -101,7 +101,7 @@ To avoid re-locking the device, make sure you have physical possession of the de
 1. Select **Hardware**, then find and copy the **Activation Lock bypass code** value under **Conditional Access**.
 
     >[!IMPORTANT]
-    >If you reset the device settings before you copy the code, the code is removed from Intune and is inaccessible. Ensure to copy the bypass code before you wipe the device.
+    >If you reset the device settings before you copy the code, the code is removed from Intune and is inaccessible. **Ensure to copy the bypass code before you wipe the device.**
 
 To retrieve the `activationLockBypassCode` property using Microsoft Graph, you must explicitly include it in your query.
 If you send an unfiltered request for the device object, Graph returns a default set of properties—and `activationLockBypassCode` will be `null`.
@@ -113,9 +113,13 @@ If you send an unfiltered request for the device object, Graph returns a default
 ::: zone pivot="ios"
 3. After the device is reset, you're prompted for the Apple ID and password. Leave the ID field blank, and then enter the **Activation Lock bypass code** for the password. This step removes the account from the device.
 ::: zone-end
-::: zone pivot="ios"
+::: zone pivot="macos"
 3. After the device is reset, select **Recovery Assistant** in the menu bar and then select **Activate with MDM key** option to enter the bypass code.
 ::: zone-end
+
+## Reference links
+
+- Microsoft Graph API: [bypassActivationLock action][GRAPH-1]
 
 <!-- admin center links -->
 
@@ -134,3 +138,5 @@ If you send an unfiltered request for the device object, Graph returns a default
 [MAC-SUP]: /intune/intune-service/fundamentals/deployment-guide-enrollment-macos#automated-device-enrollment-ade-supervised
 [APL-1]: https://support.apple.com/guide/apple-business-manager/axm812df1dd8
 [APL-2]: https://support.apple.com/HT201365
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-bypassactivationlock
