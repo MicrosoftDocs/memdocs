@@ -160,4 +160,12 @@ groups:
   - id: android
     title: Android
 
+- id: e5de148b-1c4f-40a3-8ecb-0f8a7724d927
+  title: Device platform
+  prompt: "Choose the platform to run remote actions on:"
+  pivots:
+  - id: ios
+    title: iOS/iPadOS
+  - id: macos
+    title: macOS
 ####

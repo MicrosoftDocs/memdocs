@@ -11,7 +11,7 @@ items:
     href: device-rotate-bitlocker-keys.md
   - name: Collect diagnostics
     href: collect-diagnostics.md
-  - name: Disable Activation Lock
+  - name: Disable Activation Lock ✅
     href: device-activation-lock-disable.md
   - name: Delete 🔴
     href: device-delete.md
@@ -65,7 +65,7 @@ items:
     href: update-cellular-data-plan.md
   - name: Wipe
     href: device-wipe.md
-  - name: Cleanup rules
-    href: _cleanup-rules.md
+  - name: Device cleanup rules
+    href: _device-cleanup-rules.md
 - name: Troubleshoot device actions
   href: /troubleshoot/mem/intune/troubleshoot-device-actions
