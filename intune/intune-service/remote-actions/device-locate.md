@@ -16,12 +16,9 @@ zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 
 # Locate devices with Intune
 
-For supported device platforms, you can use a remote device action from within the Microsoft Intune admin center to locate a device should it be lost or stolen.
+The **Locate device** device remote action in Microsoft Intune enables IT administrators to pinpoint the physical location of managed devices when they are lost, stolen, or simply misplaced. This feature is especially valuable in organizations where devices are distributed across multiple sites or used by mobile users. By triggering the Locate device action from the Intune admin center, admins can view the device's location on a map, helping accelerate recovery, reduce downtime, and improve compliance.
 
-In addition to identifying the location a lost or stolen device on a map, some platforms support other capabilities to help you find them, including:
-
-- Use a *lost device sound alert* on a phone to help a user locate the device should it be behind a chair or otherwise out-of-sight.
-- Report on the time and location of a devices *last known location*, which can help when the device is off-line, or can't be reached to verify where it is at. *(Android Enterprise dedicated devices only)*
+Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](device-play-lost-mode-sound.md), or display custom messages.
 
 ## Requirements
 
@@ -35,13 +32,6 @@ In addition to identifying the location a lost or stolen device on a map, some p
 > - iOS/iPadOS in [supervised mode](/intune/intune-service/remote-actions/device-supervised-mode) and [lost mode](device-lost-mode.md)
 > - Windows
 
-> [!div class="checklist"]
-> The **lost device sound alert** action is supported on the following platforms:
-> - Android Enterprise corporate-owned dedicated (COSU)
-> - Android Enterprise corporate-owned fully managed (COBO)
-> - Android Enterprise corporate-owned work profile (COPE)
-> - iOS/iPadOS in [supervised mode](/intune/intune-service/remote-actions/device-supervised-mode) and [lost mode](device-lost-mode.md)
-
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
@@ -53,16 +43,35 @@ In addition to identifying the location a lost or stolen device on a map, some p
 >   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
+
+
+::: zone pivot="windows,adroid"
+### Device configuration
+::: zone-end
+
 ::: zone pivot="android"
 
->[!NOTE]
-> Android devices require *Google Play Services* version **20.06.16** or later. Location services and *Google Location Accuracy* must be enabled. The "Google Location Accuracy" setting can be found under **Settings** > **Location** > **Location Services**. Corporate-owned work profile devices running Android 12 or above require the end user to grant Intune app location permission by going to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**
+Before you can use the locate device functionality, location services and *Google Location Accuracy* must be enabled.
+
+The "Google Location Accuracy" setting can be found under **Settings** > **Location** > **Location Services**. Corporate-owned work profile devices running Android 12 or above require the end user to grant Intune app location permission by going to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**
+
+<!-- *last known location* *(Android Enterprise dedicated devices only)* -->
+
+
+Android use of **Locate device** is managed using a device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
+
+There are two separate toggles, one for dedicated and one for fully managed and corporate-owned work profile devices.
+
+For fully managed and corporate-owned work profile, **Locate device** is set to **Not configured** as the default and it blocks the feature. To allow this feature, use device restrictions within Device Configuration and configure the toggle for **Locate device** to Allow. For corporate-owned work profile devices running Android 12 or above, also have the user of the device enable location permissions by navigating to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
+
+For dedicated devices, **Locate device** is set to **Not configured** as the default, which allows the feature. To turn off this feature, use device restrictions within **Device Configuration** and configure the toggle for **Locate device** to **Block**. When **Locate device** is allowed, users receive a one-time notification, "Intune can access your location", indicating that Intune has the ability to use location permissions on the device.
+
+For more information on the policy settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
+
 
 ::: zone-end
 
 ::: zone pivot="windows"
-
-### Device configuration
 
 Before you can use the locate functionality, you must configure your devices to allow it.
 
@@ -83,21 +92,17 @@ Before you can use the locate functionality, you must configure your devices to 
 1. After the device is located, its location is shown in **Locate device**.
 
    - You can select the location pin on the map to view a location address and coordinates.
+
 ::: zone pivot="android"
-   - Android Enterprise dedicated devices that aren't currently online can display their [last known location](#last-known-location) when the device last checked in within seven days.
+
+> [!NOTE]
+> Android Enterprise corporate-owned dedicated (COSU) that aren't currently online can display their [last known location](#last-known-location) when the device last checked in within seven days.
+
+::: zone-end
 
    ![Screenshot of Locate device using Intune in Azure](images/locate-device.png)
 
-
-Android use of **Locate device** is managed using a device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
-
-There are two separate toggles, one for dedicated and one for fully managed and corporate-owned work profile devices.
-
-For fully managed and corporate-owned work profile, **Locate device** is set to **Not configured** as the default and it blocks the feature. To allow this feature, use device restrictions within Device Configuration and configure the toggle for **Locate device** to Allow. For corporate-owned work profile devices running Android 12 or above, also have the user of the device enable location permissions by navigating to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
-
-For dedicated devices, **Locate device** is set to **Not configured** as the default, which allows the feature. To turn off this feature, use device restrictions within **Device Configuration** and configure the toggle for **Locate device** to **Block**. When **Locate device** is allowed, users receive a one-time notification, "Intune can access your location", indicating that Intune has the ability to use location permissions on the device.
-
-For more information on the policy settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
+::: zone pivot="android"
 
 ### Last known location
 
@@ -118,35 +123,9 @@ Later, this default status updates to reflect the actual date and time that an a
 
 ::: zone-end
 
-::: zone pivot="android,ios"
 
-## Activate lost device sound alert
 
-For supported device platforms, you can remotely trigger the device to play an alert sound so the user can find it. The sound plays until the user disables the sound on the device or the device is removed from lost mode.
 
-To start a lost device sound alert:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices**, and then select **All devices**.
-3. Select the device you want to activate.
-4. On the devices *Overview* pane:
-   - For **iOS/iPadOS**: select **Play Lost mode sound (supervise only)**. The sound plays on an iOS/iPadOS device until the device is removed from lost mode.
-
-::: zone-end
-
-::: zone pivot="android"
-
-   - For **Android Enterprise dedicated devices**, **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise fully managed devices** : select **Play Lost device sound**. The sound plays on an Android Enterprise dedicated device for the set duration or if notifications are enabled, until a user on the device turns it off.
-
-   -  For **Android Enterprise dedicated devices**:
-      - devices running on operating systems below version 10, a full screen activity with a **Stop Sound** button pops up.
-      - devices running on operating systems version 10 or higher, if notifications are enabled, a notification with a **Stop Sound** button shows up.
-      - To configure system notifications for devices in kiosk mode, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
-
-   - For **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise fully managed devices** :
-     - To configure system notifications for devices, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
-
-::: zone-end
 
 ## Security and privacy information for lost mode and locate device actions
 
