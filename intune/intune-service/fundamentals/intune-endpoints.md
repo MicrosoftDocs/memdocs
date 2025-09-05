@@ -96,7 +96,7 @@ The data columns shown in the tables are:
 > If the firewall that you're using allows you to create firewall rules using a domain name, then use the `*.manage.microsoft.com` and `manage.microsoft.com` domain. However, if the firewall provider that you're using, doesn't allow you to create a firewall rule using a domain name, we recommend that you use the approved list of all subnets in this section.
 
 > [!NOTE]  
-> Intune endpoints use *Azure Front Door* for communicating with the Intune service. The IP ranges for Intune (part of Microsoft Security) are added to the following table.  Intune specific endpoints are referenced in the JSON file by the name `AzureFrontDoor.MicrosoftSecurity`. Refer to the Azure Front Door and Service Tags documentation for the complete list of all services that utilize Azure Front Door and instructions for using the JSON file. [Azure Front Door IP Ranges and Service Tags](https://www.microsoft.com/download/details.aspx?id=56519)
+> Intune endpoints also use *Azure Front Door* for communicating with the Intune service. The IP ranges for Intune (part of Microsoft Security) are added to the following table.  Intune specific endpoints are referenced in the JSON file by the name `AzureFrontDoor.MicrosoftSecurity`. Refer to the Azure Front Door and Service Tags documentation for the complete list of all services that utilize Azure Front Door and instructions for using the JSON file. [Azure Front Door IP Ranges and Service Tags](https://www.microsoft.com/download/details.aspx?id=56519)
 
 | ID | Desc | Category | ER | Addresses | Ports |
 |----|------|----------|----|-----------|-------|
