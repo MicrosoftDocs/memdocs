@@ -31,7 +31,7 @@ ms.collection:
 - highpri
 ---
 
-# Create a Settings Catalog policy using your imported GPOs in Microsoft Intune (public preview)
+# Create a Settings Catalog policy using your imported GPOs in Microsoft Intune
 
 You can import your on-premises Group Policy Objects (GPOs), and create an Intune policy using these imported settings. This policy can be deployed to users and devices managed by your organization.
 
@@ -61,8 +61,6 @@ This article shows you how to create the policy from your imported GPOs. For mor
   For the specific steps, go to [Import and analyze your on-premises GPOs using Group Policy analytics in Intune](group-policy-analytics.md#import-gpos-and-run-analytics).
 
 - Only admins scoped to the GPO can create a settings catalog policy from that imported GPO. Scope tags are first applied during import of the GPO and can be edited. If a scope tag isn't or wasn't selected during the GPO import, then the **Default** scope tag is automatically used.
-
-- This feature is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
 ## Review and migrate your GPOs to a Settings Catalog policy
 
@@ -176,5 +174,4 @@ When you create the Settings Catalog profile, any settings that can be included 
 ## Related articles
 
 - [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md)
-- [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md)
 - [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md)
