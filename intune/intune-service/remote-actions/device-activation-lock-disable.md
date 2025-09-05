@@ -79,17 +79,17 @@ The business benefits of using Intune to manage Activation Lock are:
 Before you can manage Activation Lock, you must configure your devices to allow it.
 
 ::: zone pivot="ios"
-[Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS platform and use the following setting:
+1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS platform and use the following setting:
 ::: zone-end
 ::: zone pivot="macos"
-[Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the macOS platform and use the following setting:
+1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the macOS platform and use the following setting:
 ::: zone-end
 
-| Category | Setting name | Value |
-|--|--|--|
-| **Managed Setting** > **MDM Options** | Activation Lock Allowed While Supervised| Allowed|
+    | Category | Setting name | Value |
+    |--|--|--|
+    | **Managed Setting** > **MDM Options** | Activation Lock Allowed While Supervised| Allowed|
 
-Assign the policy to a group that contains as members the devices that you want to configure.
+2. Assign the policy to a group that contains as members the devices that you want to configure.
 
 ## How to use disable Activation Lock
 
