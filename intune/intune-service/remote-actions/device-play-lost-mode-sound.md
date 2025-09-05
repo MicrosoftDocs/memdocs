@@ -65,7 +65,7 @@ For **Android Enterprise dedicated devices**:
 
 To configure system notifications for devices in kiosk mode, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
-For **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise fully managed devices** :
+For **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise fully managed devices**:
    - To configure system notifications for devices, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 ::: zone-end

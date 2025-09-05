@@ -18,7 +18,7 @@ zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 
 The **Locate device** device remote action in Microsoft Intune enables IT administrators to pinpoint the physical location of managed devices when they are lost, stolen, or simply misplaced. This feature is especially valuable in organizations where devices are distributed across multiple sites or used by mobile users. By triggering the Locate device action from the Intune admin center, admins can view the device's location on a map, helping accelerate recovery, reduce downtime, and improve compliance.
 
-Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](device-play-lost-mode-sound.md), or display custom messages.
+Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](device-play-lost-mode-sound.md), or [display custom messages](device-lost-mode.md).
 
 ## Requirements
 
@@ -43,31 +43,27 @@ Depending on the platform, Intune can also report the last known location if the
 >   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-
-
 ::: zone pivot="windows,adroid"
 ### Device configuration
 ::: zone-end
 
 ::: zone pivot="android"
 
-Before you can use the locate device functionality, location services and *Google Location Accuracy* must be enabled.
-
-The "Google Location Accuracy" setting can be found under **Settings** > **Location** > **Location Services**. Corporate-owned work profile devices running Android 12 or above require the end user to grant Intune app location permission by going to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**
-
-<!-- *last known location* *(Android Enterprise dedicated devices only)* -->
-
+Before you can use the locate device functionality, Google Location Services must be enabled.
 
 Android use of **Locate device** is managed using a device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
 
-There are two separate toggles, one for dedicated and one for fully managed and corporate-owned work profile devices.
+#### Fully managed and corporate-owned work profile
 
-For fully managed and corporate-owned work profile, **Locate device** is set to **Not configured** as the default and it blocks the feature. To allow this feature, use device restrictions within Device Configuration and configure the toggle for **Locate device** to Allow. For corporate-owned work profile devices running Android 12 or above, also have the user of the device enable location permissions by navigating to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
+For fully managed and corporate-owned work profile, **Locate device** is set to **Not configured** as the default and it blocks the feature. To allow this feature, use device restrictions within Device Configuration and configure the toggle for **Locate device** to **Allow**.
 
-For dedicated devices, **Locate device** is set to **Not configured** as the default, which allows the feature. To turn off this feature, use device restrictions within **Device Configuration** and configure the toggle for **Locate device** to **Block**. When **Locate device** is allowed, users receive a one-time notification, "Intune can access your location", indicating that Intune has the ability to use location permissions on the device.
+For corporate-owned work profile devices, the user of the device must also enable location permissions by navigating to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
 
-For more information on the policy settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
+#### Dedicated devices
 
+For dedicated devices, **Locate device** is set to **Not configured** as the default, which allows the feature.
+
+If you want to turn off this feature, use device restrictions within **Device Configuration** and configure the toggle for **Locate device** to **Block**. When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
 
 ::: zone-end
 
@@ -89,9 +85,7 @@ Before you can use the locate functionality, you must configure your devices to 
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **...** > **Locate device**.
-1. After the device is located, its location is shown in **Locate device**.
-
-   - You can select the location pin on the map to view a location address and coordinates.
+1. After the device is located, its location is shown in **Locate device**. You can select the location pin on the map to view a location address and coordinates.
 
 ::: zone pivot="android"
 
@@ -122,10 +116,6 @@ The date and time of this default status varies:
 Later, this default status updates to reflect the actual date and time that an admin runs the Locate device action for that device.
 
 ::: zone-end
-
-
-
-
 
 ## Security and privacy information for lost mode and locate device actions
 
