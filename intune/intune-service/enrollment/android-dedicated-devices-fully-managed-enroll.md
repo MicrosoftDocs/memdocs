@@ -49,7 +49,10 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 > Corporate-owned work profile (COPE) device management is available on Android version 8.0 and newer.
 
 > [!NOTE]
-> If you have a Microsoft Entra Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Microsoft Entra Conditional Access documentation](/azure/active-directory/conditional-access/).  
+> If you have a Microsoft Entra Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Microsoft Entra Conditional Access documentation](/azure/active-directory/conditional-access/).
+
+> [!NOTE]
+If you configure **Factory reset protection emails**, **COPE** devices can require those accounts after a factory reset, including **Settings** resets on Android 15. Plan your reprovisioning workflow (e.g., admin wipe vs. Settings reset) accordingly. Learn more: https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced.
 
 ## Enroll by using a QR code  
 
