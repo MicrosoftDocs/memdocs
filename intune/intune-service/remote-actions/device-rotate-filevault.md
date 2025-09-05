@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Action: Rotate FileVault Recovery Key"
 description: Learn how to rotate the BitLocker recovery keys with Microsoft Intune.
 ms.date: 08/27/2025
@@ -33,7 +31,7 @@ ms.collection:
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Rotate filevault key**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## Reference links
 

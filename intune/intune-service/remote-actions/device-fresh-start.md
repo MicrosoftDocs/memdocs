@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: Fresh Start"
 description: Learn how to use Fresh Start to remove or uninstall apps with Microsoft Intune.
 ms.date: 08/27/2025
@@ -36,7 +34,7 @@ The **Fresh Start** device action removes apps from managed Windows devices, hel
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Clean PC**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to execute Fresh Start
 

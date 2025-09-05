@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Actions: Disable Activation Lock"
 description: Learn how to use Microsoft Intune to disable Activation Lock on Apple devices.
 ms.date: 08/27/2025

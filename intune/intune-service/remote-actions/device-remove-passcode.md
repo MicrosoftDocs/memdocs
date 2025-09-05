@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: Remove Passcode"
 description: Learn how to remove a passcode with Microsoft Intune.
 ms.date: 08/27/2025
@@ -35,7 +33,7 @@ With the **remove passcode** action in Microsoft Intune, you can remotely remove
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote Tasks/Reset Passcode**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 
 ## How to remove a passcode

@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Pause Config Refresh
 description: Learn how Config Refresh can be paused for a configurable period of time, after which it's automatically re-enabled, or can be manually turned back on at any time by an IT administrator.
 ms.date: 08/27/2025
@@ -41,7 +39,7 @@ This is typically used for troubleshooting scenarios where you don't want the de
 > - [Intune Administrator][ENT-R1]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Run Pause Configuration Refresh**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to pause Config Refresh
 

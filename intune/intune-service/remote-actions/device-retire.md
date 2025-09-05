@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Retire devices using Microsoft Intune
 description: Learn how to retire device using Microsoft Intune.
 ms.date: 07/22/2025
@@ -38,7 +36,7 @@ The **Retire** action removes managed app data (where applicable), settings, and
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Wipe**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to retire a device
 

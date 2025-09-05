@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: Sync"
 description: Learn how to use the device sync remote action in Intune to apply policy, app, and configuration updates to managed devices.
 ms.date: 08/27/2025
@@ -41,7 +39,7 @@ For more information about the standard Intune policy check-in frequencies, see 
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Sync devices**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to sync a device
 

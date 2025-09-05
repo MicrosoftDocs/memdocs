@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Actions: Quick Scan"
 description: Learn how to initiate on demand Microsoft Defender full scan with Microsoft Intune.
 ms.date: 08/27/2025
@@ -36,7 +34,7 @@ Quick scans are especially useful for routine health checks, validating recent p
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Windows defender**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to initiate a quick scan
 

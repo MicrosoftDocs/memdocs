@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: BitLocker Key Rotation"
 description: Learn how to rotate the BitLocker recovery keys with Microsoft Intune.
 ms.date: 08/27/2025
@@ -37,7 +35,7 @@ BitLocker key rotation is important in environments where devices are frequently
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Rotate BitLockerKeys**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 
 ## How to rotate BitLocker keys

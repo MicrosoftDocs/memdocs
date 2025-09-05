@@ -1,15 +1,8 @@
 ---
-# required metadata
-
 title: Bulk Device Actions In Microsoft Intune
 description: Learn how to use bulk remote device actions in Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 
 ms.reviewer: jlynn
 ms.custom: intune-azure

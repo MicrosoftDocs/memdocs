@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: Delete"
 description: Learn how to delete devices with Microsoft Intune.
 ms.date: 08/27/2025

@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Remove a User From an iPadOS Device With Microsoft Intune
 titleSuffix:
 description: Learn how to remove a user from a shared iOS/iPadOS device with Intune.
@@ -34,7 +32,7 @@ The **Remove user** action deletes a user that you select from the local cache o
 > - [Help Desk Operator][INT-R1]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Manage shared device users**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## Remove a user
 

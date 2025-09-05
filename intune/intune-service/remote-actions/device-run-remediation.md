@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Run Remediation
 description: Learn how to initiate on demand proactive remediation with Microsoft Intune.
 ms.date: 08/27/2025
@@ -25,7 +23,7 @@ ms.collection:
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Run Remediation**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 
 

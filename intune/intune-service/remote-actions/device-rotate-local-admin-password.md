@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Rotate local admin password
 description: Learn how to rotate the local admin password on Windows and macOS devices with Microsoft Intune.
 ms.date: 08/27/2025

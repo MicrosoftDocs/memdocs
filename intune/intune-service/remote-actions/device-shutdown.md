@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: Shutdown"
 description: Learn how to shutdown Apple devices with Microsoft Intune.
 ms.date: 08/27/2025
@@ -36,7 +34,7 @@ With the **shut down** action, IT administrators can remotely power off managed 
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Shut down**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to shut down a device
 

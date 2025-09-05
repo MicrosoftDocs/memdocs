@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Rename a device with Microsoft Intune
 description: Rename a device by using Microsoft Intune.
 ms.date: 08/27/2025
@@ -9,11 +7,6 @@ ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
 ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 
 ms.reviewer: Elcox
 ms.custom: intune-azure
@@ -59,7 +52,7 @@ If a device isn't listed here, it isn't supported. This feature doesn't support 
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Set device name**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to rename a device
 

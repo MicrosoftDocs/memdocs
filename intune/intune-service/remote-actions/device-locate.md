@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: Find lost devices"
 description: Locate lost or stolen devices by using the locate device feature in Microsoft Intune. Get details on security and privacy information when using the locate device action.
 ms.date: 08/27/2025
@@ -55,7 +53,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ::: zone pivot="android"
 

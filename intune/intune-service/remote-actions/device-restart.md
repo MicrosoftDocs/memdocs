@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: Restart"
 description: Learn how to restart managed devices with Microsoft Intune.
 ms.date: 08/27/2025
@@ -45,7 +43,7 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Reboot now**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## Restart a device
 

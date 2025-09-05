@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: Reset Passcode"
 description: Learn how to reset a passcode with Microsoft Intune.
 ms.date: 08/27/2025
@@ -59,7 +57,7 @@ The following table summarizes the passcode reset types based on platform:
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote Tasks/Reset Passcode**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to reset a passcode
 

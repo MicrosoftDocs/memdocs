@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Play Lost Mode Sound With Microsoft Intune
 description: Learn how to use the play lost device sound action in Microsoft Intune to remotely trigger a sound alert on a lost or stolen device.
 ms.date: 08/27/2025
@@ -40,7 +38,7 @@ With Microsoft Intune, you can help users locate lost or misplaced devices by re
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Play sound to locate lost devices**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to play lost mode sound
 

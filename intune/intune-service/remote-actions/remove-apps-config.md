@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Remove Apps and Configuration
 description: Learn how apps and configurations can be removed temporarily, then restored automatically or manually using the Remove apps and configuration device action by the IT administrator.
 ms.date: 08/27/2025
@@ -40,7 +38,7 @@ This action aims to resolve the issues that customers face outside of Intune and
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Ramote tasks/Change assignments**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## Supported items
 

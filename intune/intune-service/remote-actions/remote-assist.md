@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: New Remote Assistance Session"
 description: Learn how to use the the new remote assistance session action in Intune to offer support to your users.
 ms.date: 08/27/2025
@@ -40,7 +38,7 @@ ms.collection:
 >   - `Microsoft.Intune_RemoteAssistanceApp_Unattended`
 >   - `Microsoft.Intune_RemoteAssistanceApp_ViewScreen`
 >   - `Microsoft.Intune_RemoteTasks_RequestRemoteAssistance`
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to offer remote assistance
 

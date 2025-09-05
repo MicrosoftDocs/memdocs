@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Actions: Collect Diagnostics"
 description: Learn how to collect diagnostics with Microsoft Intune.
 ms.date: 08/27/2025
@@ -41,7 +39,7 @@ The **Collect diagnostics** remote action lets you collect and download managed 
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Collect diagnostics**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ### Connectivity requirements
 

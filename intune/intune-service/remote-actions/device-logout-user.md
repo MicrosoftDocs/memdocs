@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Log out the user of an iOS/iPadOS device
 description: Learn how to log out the current user of an iOS/iPadOS device with Intune.
 ms.date: 08/27/2025
@@ -33,7 +31,7 @@ The **Logout current user** action logs out the current user on a shared iPad de
 > - [Help Desk Operator][INT-R1]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Manage shared device users**
->   - Appropriate permissions that grant visibility into and access to devices within Intune (e.g., Managed devices/Read, Update)
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## Log out the current user
 

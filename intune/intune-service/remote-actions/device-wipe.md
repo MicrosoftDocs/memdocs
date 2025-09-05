@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Intune Remote Device Action: Wipe"
 description: Learn how to wipe devices with Microsoft Intune.
 ms.date: 08/27/2025
