@@ -63,6 +63,17 @@ The business benefits of using Intune to manage Activation Lock are:
 > - iOS/iPadOS in [supervised mode][IOS-SUP] through Automated Device Enrollment (ADE)
 > - macOS in [supervised mode][MAC-SUP] through Automated Device Enrollment (ADE)
 
+
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - Intune Service Administrator
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Bypass activation lock**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+
 ### Device configuration
 
 Before you can manage Activation Lock, you must configure your devices to allow it.
@@ -100,11 +111,24 @@ If you send an unfiltered request for the device object, Graph returns a default
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **Wipe**.
 ::: zone pivot="ios"
-1. After the device is reset, you're prompted for the Apple ID and password. Leave the ID field blank, and then enter the **Activation Lock bypass code** for the password. This step removes the account from the device.
+3. After the device is reset, you're prompted for the Apple ID and password. Leave the ID field blank, and then enter the **Activation Lock bypass code** for the password. This step removes the account from the device.
 ::: zone-end
 ::: zone pivot="ios"
-1. After the device is reset, select **Recovery Assistant** in the menu bar and then select **Activate with MDM key** option to enter the bypass code.
+3. After the device is reset, select **Recovery Assistant** in the menu bar and then select **Activate with MDM key** option to enter the bypass code.
 ::: zone-end
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+
+<!-- role links -->
+
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
 [MAC-SUP]: /intune/intune-service/fundamentals/deployment-guide-enrollment-macos#automated-device-enrollment-ade-supervised
