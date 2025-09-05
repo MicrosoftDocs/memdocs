@@ -23,8 +23,6 @@ In addition to identifying the location a lost or stolen device on a map, some p
 - Use a *lost device sound alert* on a phone to help a user locate the device should it be behind a chair or otherwise out-of-sight.
 - Report on the time and location of a devices *last known location*, which can help when the device is off-line, or can't be reached to verify where it is at. *(Android Enterprise dedicated devices only)*
 
-You need to enable Windows location services in Windows Out of Box Experience (OOBE) or by using the [Privacy > LetAppsAccessLocation](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccesslocation) policy to be able to locate the device.
-
 ## Requirements
 
 ### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
@@ -62,6 +60,21 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 ::: zone-end
 
+::: zone pivot="windows"
+
+### Device configuration
+
+Before you can use the locate functionality, you must configure your devices to allow it.
+
+1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the Windows platform and use the following setting:
+
+    | Category | Setting name | Value |
+    |--|--|--|
+    | **Privacy** | Let Apps Access Location| Force allow|
+
+1. Assign the policy to a group that contains as members the devices that you want to configure.
+
+::: zone-end
 
 ## Locate a device
 
@@ -150,6 +163,7 @@ To start a lost device sound alert:
 - Microsoft Graph API:
   - [locateDevice action][GRAPH-1]
   - [playLostModeSound action][GRAPH-2]
+
 
 
 <!--links-->
