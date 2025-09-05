@@ -6,7 +6,7 @@ description: Use the device compliance dashboard to understand overall device co
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune

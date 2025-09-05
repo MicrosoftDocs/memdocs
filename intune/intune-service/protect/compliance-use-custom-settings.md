@@ -6,7 +6,7 @@ description: Manage custom compliance settings for Linux and Windows devices by 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/15/2024
 ms.topic: concept-article
 ms.service: microsoft-intune
