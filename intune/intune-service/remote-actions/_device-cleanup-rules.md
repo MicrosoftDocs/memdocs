@@ -74,28 +74,30 @@ You can configure Intune to automatically clean up devices that appear to be ina
 
 ## Before you begin
 
-- The device cleanup rule doesn't trigger a BitLocker suspension when BitLocker encryption is managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
+- The device cleanup rule doesn't trigger a BitLocker suspension when BitLocker encryption is managed by Intune.
 - Device cleanup rules aren't available for Jamf-managed devices.
-- To update device cleanup rules, you need the **Managed Device Cleanup Settings** > **Update** permission set to **Yes**. This permission is part of [Intune role-based access control (RBAC)](../fundamentals/role-based-access-control.md).
 
-  :::image type="content" source="images/managed-device-cleanup-rules-permission.png" alt-text="Screenshot that shows the Managed Device Cleanup Settings permission in RBAC set to Yes in Microsoft Intune.":::
+## How to create a device cleanup rule
 
-## Create a device cleanup rule
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **Organize devices** > **Device cleanup rules** > **Create**.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Organize devices** > **Device cleanup rules**.
+1. Select > **Create**.
 1. In **Basics**, enter the following properties:
 
     - **Name**: Enter a descriptive name for the rule.
-    - **Description**: Enter a description for the rule. This setting is optional, but recommended.
-    - **Platform**: Select the platform that the rule applies to. Your options:
+    - **Description**: Enter a description for the rule. This setting is optional.
+    - **Platform**: Select the platform that the rule applies to. The options are:
         - All platforms
         - Android (AOSP)
-        - Android Enterprise
+        - Android (fully managed/dedicated/corporate-owned work profile)
+        - Android (device administrator)
+        - Android (personally-owned work profile)
+        - ChromeOS
         - iOS/iPadOS
         - macOS
         - Windows
-
+        - Windows Holographic
+        - visionOS
+        - tvOS
     You can create one rule per platform. The rule applies to all devices in your organization with the platform you select.
 
 1. Select **Next**.
@@ -103,20 +105,21 @@ You can configure Intune to automatically clean up devices that appear to be ina
 
     This setting determines how many days a device must check in with the Intune service before the device is considered stale or inactive. If a device fails to check-in before the period ends, the device is cleaned up.
 
-    Tip: Select **Preview affected devices** to obtain a list of devices that haven't checked in the specified number of 30 days.
+    > [!TIP]
+    > Select **Preview affected devices** to obtain a list of devices that haven't checked in the specified number of 30 days.
 
 1. Select **Next**.
-1. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the rule applies. The rule is also shown in the cleanup rules list.
+1. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the rule applies.
 
 ## Device cleanup rules behavior
 
-When a device cleanup rule runs, it conceals the device from Intune reports. It doesn't trigger any actions on the device.
+When a device cleanup rule runs, it conceals the affected devices from Intune reports. It doesn't trigger any actions on the devices.
 
 If a cleaned up device checks in before its device certification expires, it reappears in the Intune admin center. Once the device certification expires, the device must go through a re-enrollment process for it to show in the Intune admin center.
 
 ## Device cleanup rules logging
 
-The [Intune audit logs](../fundamentals/monitor-audit-logs.md) show the devices concealed by the device cleanup rules. In the logs, filter by **Activity name** > **Device set to be hidden from admin by Device Cleanup Rule [*YourRuleName*]**.
+The [Intune audit logs](../fundamentals/monitor-audit-logs.md) show the devices concealed by the device cleanup rules. In the logs, filter by **Activity name** > **Device set to be hidden from admin by Device Cleanup Rule [*Your Rule Name*]**.
 
 <!--links-->
 

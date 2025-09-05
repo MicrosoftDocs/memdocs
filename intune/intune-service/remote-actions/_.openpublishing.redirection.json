@@ -19,6 +19,13 @@
       "source_path": "intune/intune-service/remote-actions/chrome-enterprise-remote-actions.md",
       "redirect_url": "/intune/intune-service/remote-actions/index",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules",
+      "redirect_url": "/intune/intune-service/fundamentals/device-cleanup-rules",
+      "redirect_document_id": false
+    },
+
+
   ]
 }
