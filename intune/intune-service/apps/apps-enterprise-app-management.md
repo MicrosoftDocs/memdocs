@@ -140,7 +140,6 @@ Enterprise App Management is only provided by Microsoft Intune. Configuration Ma
 Occasionally, app vendors might request removal of their applications from the Enterprise App Catalog. When this happens:
 
 - **Existing deployments remain unaffected**: Apps that are already deployed to your tenant and user devices continue to function normally.
-- **App management continues**: You can continue to manage existing installations, including updates if you have the app packages.
 - **No new deployments**: You can't deploy new instances of the removed app from the Enterprise App Catalog.
 - **Alternative solutions**: For future deployments, work directly with the app vendor or use traditional Win32 app deployment methods.
 
