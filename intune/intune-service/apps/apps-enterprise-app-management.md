@@ -30,9 +30,6 @@ Microsoft Intune Enterprise App Management enables you to easily discover and de
 > [!IMPORTANT]
 > Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-> [!NOTE]
-> **think-cell apps removed from Enterprise App Catalog**: At the request of think-cell, their applications are removed from the Enterprise App Catalog. This removal **does not affect** existing think-cell installations in your tenant or on user devices. Customers who currently have think-cell apps deployed through the Enterprise App Catalog can continue to manage these installations normally.
-
 ## Benefits of Enterprise App Management
 
 The Enterprise App Management provides the following benefits:
@@ -168,8 +165,10 @@ Yes, the Managed Apps report provides a report of apps on a specific device that
 
 There are various applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see [Add a Windows catalog app (Win32) to Intune](../apps/apps-add-enterprise-app.md#add-a-windows-catalog-app-win32-to-intune).
 
+More apps will be available on an ongoing basis in the Enterprise App Catalog.
+
 > [!NOTE]
-> More apps will be available on an ongoing basis in the Enterprise App Catalog.
+> **think-cell apps removed from Enterprise App Catalog**: At the request of think-cell, their applications are removed from the Enterprise App Catalog. This removal **does not affect** existing think-cell installations in your tenant or on user devices. Customers who currently have think-cell apps deployed through the Enterprise App Catalog can continue to manage these installations normally.
 
 The following table of Enterprise Apps is available within Intune:
 
