@@ -80,14 +80,20 @@ Before you can manage Activation Lock, you must configure your devices to allow 
 
 ::: zone pivot="ios"
 1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS platform and use the following setting:
+  | Category | Setting name | Value |
+  |--|--|--|
+  | **Managed Setting** > **MDM Options** | Activation Lock Allowed While Supervised| Allowed|
 ::: zone-end
 ::: zone pivot="macos"
 1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the macOS platform and use the following setting:
-::: zone-end
-
     | Category | Setting name | Value |
     |--|--|--|
     | **Managed Setting** > **MDM Options** | Activation Lock Allowed While Supervised| Allowed|
+::: zone-end
+
+  | Category | Setting name | Value |
+  |--|--|--|
+  | **Managed Setting** > **MDM Options** | Activation Lock Allowed While Supervised| Allowed|
 
 2. Assign the policy to a group that contains as members the devices that you want to configure.
 
