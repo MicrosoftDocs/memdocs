@@ -69,17 +69,6 @@ You can create a baseline of profiles that all devices must have, or you can con
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
-## Administrative templates and Group policy
-
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office apps. These templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.
-
-[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs. It's a tool that helps you determine how your GPOs translate in the cloud. The output shows any deprecated settings and the settings that are available (or not available) to MDM providers, including Microsoft Intune.
-
-This feature supports:
-
-- Windows 11
-- Windows 10
-
 ## Certificates
 
 You use [certificates in Intune](../protect/certificates-configure.md) to authenticate your users so they can access applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users don't need to enter usernames and passwords.
@@ -301,7 +290,7 @@ This feature supports:
 > [!TIP]
 > macOS settings are continually being added to the [settings catalog](settings-catalog.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
 
-## Settings catalog
+## Settings catalog and Group Policy analytics
 
 The [settings catalog](settings-catalog.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but is cloud native.
 
@@ -315,6 +304,13 @@ This feature supports:
 - macOS
 - Android Enterprise
 - Android (AOSP)
+- Windows 11
+- Windows 10
+
+[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs. It's a tool that helps you determine how your GPOs translate in the cloud. The output shows any deprecated settings and the settings that are available (or not available) to MDM providers, including Microsoft Intune.
+
+This feature supports:
+
 - Windows 11
 - Windows 10
 
