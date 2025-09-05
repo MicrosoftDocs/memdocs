@@ -98,6 +98,7 @@ You can configure Intune to automatically clean up devices that appear to be ina
         - Windows Holographic
         - visionOS
         - tvOS
+    
     You can create one rule per platform. The rule applies to all devices in your organization with the platform you select.
 
 1. Select **Next**.
