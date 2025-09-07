@@ -76,6 +76,8 @@ This diagram shows a high level architecture of how the EPM client is triggered,
 
 ### Elevation Types
 
+✅ Control how EPM elevates files
+
 EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
 
 When you use Endpoint Privilege Management, there are a few options for elevation behavior:
@@ -92,7 +94,11 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
 
 - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While we recommend use of file elevation rules to allow users to elevate specific files, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
 
+The EPM client can be configured with a default elevation response, which by default is *deny*, or with specific rules can be created to match files and allow the specified elevation response.
+
 ### Rule Capabilities
+
+✅ Granular targeting of files for elevation
 
 EPM elevation rules can be created based on one or more attributes including file name, path, etc. These are some examples of additional rule capabilities:
 
@@ -113,6 +119,8 @@ EPM supports elevating these types of files:
 - PowerShell scripts with the `.ps1` extension.
 
 ### Reporting
+
+✅ Track elevations in your environment
 
 EPM includes reports to help you prepare for, monitor and use the service. Reports are provided for unmanaged and managed elevations:
 

@@ -65,7 +65,10 @@ Use *Windows elevation settings policy* when you want to:
 
   > [!TIP]  
   > We [recommend the use of *Support Approved*](../protect/epm-plan.md#security-recommendations) as a default elevation response.
-
+  
+  > [!CAUTION]
+  > The *default elevation response* applies to all files that don't match an elevation rule, as a result the *Require user confirmation* setting allows all files to be elevated by default. If you're not seeking additional auditing or credential prompts, we recommend use of *Deny all requests* or *Require support approval*.
+  
   > [!NOTE]  
   > Default responses are only processed for requests coming through the *Run with elevated access* right-click menu.
 
@@ -108,6 +111,9 @@ Use *Windows elevation settings policy* when you want to:
      - **Require user confirmation**: The user receives a simple prompt to confirm their intent to run the file. You can also require more prompts that are available from the *Validation* drop down:
        - **Business justification**: Require the user to enter a justification for running the file. There's no required format for this justification. User input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - **Windows authentication**: This option requires the user to authenticate using their organization credentials.
+       
+       > [!CAUTION]
+       > The *default elevation response* applies to all files that don't match an elevation rule, as a result the *Require user confirmation* setting allows all files to be elevated by default. If you're not seeking additional auditing or credential prompts, we recommend use of *Deny all requests* or *Require support approval*.
 
    - **Send elevation data for reporting**: By default, this behavior is set to **Yes**. When set to yes, you can then configure a *Reporting scope*. When set to **No**, a device doesn't report diagnostic data or information about file elevations to Intune.
    - **Reporting scope**: Choose what type of information a device reports to Intune:

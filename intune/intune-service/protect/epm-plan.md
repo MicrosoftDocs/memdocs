@@ -189,7 +189,7 @@ To help ensure a secure deployment of Endpoint Privilege Management, consider th
 
 ### Set a secure default elevation response
 
-Set the [default elevation response](../protect/epm-elevation-settings.md#about-windows-elevation-settings-policy) to **Support Approved** or **Deny** rather than **User Confirmed**. This ensures that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
+Set the [default elevation response](../protect/epm-elevation-settings.md#about-windows-elevation-settings-policy) to **Require support approval** or **Deny** rather than **Require user confirmation**. This ensures that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
 
 ### Require file path restrictions in all rule types
 
