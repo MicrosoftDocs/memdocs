@@ -23,7 +23,7 @@ items:
     href: device-locate.md
   - name: Logout active user
     href: device-logout-user.md
-  - name: Lost Mode
+  - name: Lost Mode ✅
     href: device-lost-mode.md
   - name: New remote assistance session 🔴
     href: remote-assist.md
