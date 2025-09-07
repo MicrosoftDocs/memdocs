@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 08/21/2025
+ms.date: 09/05/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -168,6 +168,10 @@ For corporate-owned devices with a work profile, some settings only apply in the
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from turning on the network escape hatch feature on the device.
 
 - **Notification windows**: When set to **Disable**, window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors aren't shown on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show notifications.
+
+  > [!NOTE]
+  > If **Notification windows** is set to **Disable**, any configuration that depends on the Overlay permission will not function as expected. This includes features such as the virtual home button, screen saver and automatic sign-out on Managed Home Screen.
+
 - **Skip first use hints**: **Enable** hides or skips suggestions from apps that step through tutorials, or hints when the app starts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show these suggestions when the app starts.
 
 ### Fully managed and corporate-owned work profile devices
@@ -347,6 +351,10 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
         > - In multi-app mode, every app in the policy must be a required app, and must be assigned to the devices. If an app isn't required, or isn't assigned, then the devices can lock out users, and show a `Contact your IT admin. This phone will be erased.` message.
         > - Applications added within the Managed Home Screen aren't prevented from launching other applications installed on the device. Admins should ensure that all applications allowed within the Managed Home Screen don't launch other apps that users shouldn't access. And, uninstall any apps that aren't necessary on the device.
 
+      - **Configure offline app access**: **Checked** lets you select which apps are available when the device connect to the network for sign in. Users can access these apps when unable to sign in due to network issues and must sign in once network access returns. This setting requires **MHS Sign-in screen** to be set to **Enable**.
+
+      - **Configure app access without sign in**: **Checked** lets you select which apps users can access from the sign-in screen without signing in. These apps are available via an entry point on the top bar, regardless of network status. The setting requires **MHS Sign-in screen** to be set to **Enable**.
+
       - **Lock home screen**: **Enable** prevents users from moving app icons and folders. They're locked, and can't be dragged-and-dropped to different places on the grid. When set to **Not configured**, Intune doesn't change or update this setting. By default, users can move these items.
 
       - **Folder icon**: Select the color and shape of the folder icon that's on the Managed Home Screen. Your options:
@@ -500,6 +508,9 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
         - **Automatically sign-out of MHS and Shared device mode applications after inactivity**: Select **Enable** to auto sign out of the Managed Home Screen based on inactivity. This setting must be enabled to show the subsettings.
           - **Number of seconds device is inactive before automatically signing user out​**: Define the period of inactivity, in seconds, before user is automatically signed out from Managed Home Screen. By default, this value is set to 300 seconds. 
           - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds. 
+
+      > [!NOTE]
+      > Some of the Managed Home Screen settings are available in a device restrictions policy. To view and use all the available settings for the Managed Home Screen, create a [Managed Home Screen app configuration policy](../apps/app-configuration-managed-home-screen-app.md).
 
 - **Microsoft launcher (fully managed only)**: Configures the Microsoft Launcher app on fully managed devices. This option is best suited for devices which should provide the end user access to all applications and settings on the device.
 

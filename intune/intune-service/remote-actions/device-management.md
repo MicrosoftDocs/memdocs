@@ -70,7 +70,7 @@ This article shows you how to see the available remote actions, and lists some o
 
       Use the **Export** feature to create a `.zip`` list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
 
-      Select any device to [view more details about that device](device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
+      Select any device to [view more details about that device](../fundamentals/device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
 
     - **By platform**: View lists of devices by the specific platform.
     - **Enrollment**: Opens the enrollment page and lists the different enrollment options for each platform.
@@ -100,7 +100,7 @@ The following list includes some common device actions:
 | [Lost mode](device-lost-mode.md) | Locks a device with a custom message and disables sound and vibration. | iOS/iPadOS |
 | [Pause Config Refresh](pause-config-refresh.md)|Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes.| Windows 11 |
 | [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) | Initiates a quick scan of the device by Microsoft Defender Antivirus. | Windows |
-| [Remote control with Team Viewer](teamviewer-support.md) | Allows you to remotely control a device using TeamViewer. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+| [Remote control with Team Viewer](../fundamentals/teamviewer-support.md) | Allows you to remotely control a device using TeamViewer. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 | [Remote lock](device-remote-lock.md) | Locks a device and resets its password. | - Android <br/>- iOS/iPadOS <br/>- macOS  |
 | [Rename device](device-rename.md) | Changes the device name in Intune. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 | [Reset passcode](device-passcode-reset.md) | Resets the device passcode. | - Android <br/>- iOS/iPadOS |
@@ -114,11 +114,11 @@ The following list includes some common device actions:
 | [Wipe](devices-wipe.md#wipe) | This action restores a device to its factory settings and removes all data and settings. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 
 > [!NOTE]
-> The **Retire**, **Wipe**, and **Delete** actions take precendence over all other actions. A device with multiple pending actions only carry out a Retire, Wipe, or Delete. All other pending actions are ignored.
+> The **Retire**, **Wipe**, and **Delete** actions take precedence over all other actions. A device with multiple pending actions only carries out a Retire, Wipe, or Delete. All other pending actions are ignored.
 
 You can also:
 
-- See a [full device inventory](device-inventory.md) of all the devices (**Devices** > **All devices**).
+- See a [full device inventory](../fundamentals/device-inventory.md) of all the devices (**Devices** > **All devices**).
 - Run [bulk device actions](bulk-device-actions.md) on multiple devices at the same time (**Devices** > **All devices** > **Bulk Device Actions**).
 
 ## Resources

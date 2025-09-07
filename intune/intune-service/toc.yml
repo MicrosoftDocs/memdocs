@@ -564,7 +564,7 @@ items:
                 - name: Windows LOB apps
                   href: ./apps/lob-apps-windows.md
                 - name: Intune management extension for Windows
-                  href: ./apps/intune-management-extension.md                  
+                  href: ./apps/intune-management-extension.md
                 - name: Enterprise App Management
                   items:
                   - name: Enterprise App Management overview
@@ -827,7 +827,7 @@ items:
           - name: Feature updates policy
             href: ./protect/windows-10-feature-updates.md
           - name: Windows quality updates policy
-            href: ./protect/windows-quality-update-policy.md  
+            href: ./protect/windows-quality-update-policy.md
           - name: Expedite updates policy
             href: ./protect/windows-10-expedite-updates.md
           - name: Windows driver updates
@@ -898,7 +898,7 @@ items:
               href: ./protect/mde-security-integration.md
             - name: Manage endpoint security policies in Microsoft Defender
               href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
-        - name: Vulnerability Remediation Agent 
+        - name: Vulnerability Remediation Agent
           href: ./protect/vulnerability-remediation-agent.md
         - name: Endpoint Privilege Management
           items:
@@ -1256,7 +1256,7 @@ items:
         - name: Deprecated certificate connectors
           href: ./protect/certificate-connectors.md
 
-    - name: Configure device settings
+    - name: Configure devices
       items:
       - name: Device configuration overview
         displayName: android, ios, ipados, macos, windows
@@ -1276,12 +1276,23 @@ items:
           - name: Overview and get started
             displayName: gpo, admx, ios, ipados, macos, windows
             href: ./configuration/settings-catalog.md
-          - name: Common tasks
-            displayName: gpo, admx, ios, ipados, macos, windows
-            href: ./configuration/settings-catalog-common-features.md
-          - name: Universal Print policy
-            displayName: printers, gpo, admx, windows
-            href: ./configuration/settings-catalog-printer-provisioning.md
+          - name: Common tasks for the settings catalog
+            items:
+            - name: Sample tasks
+              displayName: gpo, admx, ios, ipados, macos, windows
+              href: ./configuration/settings-catalog-common-features.md
+            - name: Create Universal Print policy
+              displayName: printers, gpo, admx, windows
+              href: ./configuration/settings-catalog-printer-provisioning.md
+            - name: Configure Microsoft Edge
+              displayName: gpo, windows, macos, admx
+              href: ./configuration/settings-catalog-configure-edge.md
+            - name: Update Microsoft 365
+              displayName: gpo, windows, admx, update channel
+              href: ./configuration/settings-catalog-update-office.md
+            - name: Restrict USB devices
+              displayName: gpo, windows
+              href: ./configuration/settings-catalog-restrict-usb.md
         - name: Properties catalog
           displayName: windows
           href: ./configuration/properties-catalog.md
@@ -1344,15 +1355,15 @@ items:
           - name: Import custom ADMX and ADML
             displayName: gpo, windows
             href: ./configuration/administrative-templates-import-custom.md
-          - name: Update Microsoft 365 using ADMX
+          - name: Update Microsoft 365 using settings catalog
+            displayName: gpo, windows, admx
+            href: ./configuration/settings-catalog-update-office.md
+          - name: Create Microsoft Edge policy using settings catalog
+            displayName: gpo, windows, macos, admx
+            href: ./configuration/settings-catalog-configure-edge.md
+          - name: Restrict USB devices using settings catalog
             displayName: gpo, windows
-            href: ./configuration/administrative-templates-update-office.md
-          - name: Create Microsoft Edge policy using ADMX
-            displayName: gpo, windows
-            href: ./configuration/administrative-templates-configure-edge.md
-          - name: Restrict USB devices using ADMX
-            displayName: gpo, windows
-            href: ./configuration/administrative-templates-restrict-usb.md
+            href: ./configuration/settings-catalog-restrict-usb.md
         - name: BIOS & DFCI on Windows
           items:
           - name: Configure the BIOS
@@ -1428,7 +1439,7 @@ items:
           href: ./configuration/apple-settings-catalog-configurations.md
         - name: Android
           displayName: Android
-          href: ./configuration/settings-catalog-android.md  
+          href: ./configuration/settings-catalog-android.md
 
       - name: Device Configuration template settings lists
         items:
@@ -1482,7 +1493,7 @@ items:
             - name: Wi-Fi
               displayName: wifi, wireless, android, device administrator, da
               href: ./configuration/wi-fi-settings-android.md
-            
+
         - name: iOS/iPadOS
           items:
           - name: Custom
@@ -1557,7 +1568,7 @@ items:
         - name: Windows 10/11
           items:
           - name: BIOS configurations and other settings
-            href: ./configuration/bios-configuration.md            
+            href: ./configuration/bios-configuration.md
           - name: Custom (OMA-URI)
             displayName: oma uri, windows
             href: ./configuration/custom-settings-windows-10.md
@@ -1652,7 +1663,7 @@ items:
         - name: Add device enrollment manager
           href: ./enrollment/device-enrollment-manager-enroll.md
           displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
-        - name: Enable Windows backup and restore 
+        - name: Enable Windows backup and restore
           href: ./enrollment/windows-backup-restore.md
         - name: Add device categories
           href: ./enrollment/device-group-mapping.md
@@ -1968,77 +1979,17 @@ items:
         - name: Device configuration profile status
           href: ./configuration/device-profile-monitor.md
 
-    - name: Remote device actions
+    - name: Get device details
       items:
-      - name: Remote device actions
-        href: ./remote-actions/device-management.md
+      - name: Find the primary user
+        href: ./fundamentals/find-primary-user.md
+      - name: View device details
+        href: ./fundamentals/device-inventory.md
+      - name: View ChromeOS device information
+        href: ./fundamentals/chrome-enterprise-device-details.md
 
-      - name: Locks and passwords
-        items:
-        - name: Remotely Lock device
-          href: ./remote-actions/device-remote-lock.md
-        - name: Reset passcode
-          href: ./remote-actions/device-passcode-reset.md
-        - name: Self-service password reset
-          href: ./remote-actions/password-reset.md
-      - name: Remove and restart
-        items:
-        - name: Remove devices
-          href: ./remote-actions/devices-wipe.md
-        - name: Manage Windows Fresh Start
-          href: ./remote-actions/device-fresh-start.md
-        - name: Restart device
-          href: ./remote-actions/device-restart.md
-      - name: Apple device actions
-        items:
-        - name: Enable iOS/iPadOS lost mode
-          href: ./remote-actions/device-lost-mode.md
-        - name: Shutdown macOS and iOS/iPadOS devices
-          href: ./remote-actions/device-shutdown.md
-        - name: Wipe macOS device
-          href: ./remote-actions/device-wipe-macos.md
-        - name: Disable Activation Lock
-          href: ./remote-actions/device-activation-lock-disable.md
-        - name: Update cellular data plan
-          href: ./remote-actions/update-cellular-data-plan.md
-      - name: User actions
-        items:
-        - name: Sign out current user
-          href: ./remote-actions/device-logout-user.md
-        - name: Remove user
-          href: ./remote-actions/device-remove-user.md
-        - name: Find primary user
-          href: ./remote-actions/find-primary-user.md
-      - name: Other actions
-        items:
-        - name: Remote actions for ChromeOS
-          href: ./remote-actions/chrome-enterprise-remote-actions.md
-        - name: Locate device
-          href: ./remote-actions/device-locate.md
-        - name: Rename device
-          href: ./remote-actions/device-rename.md
-        - name: Send notifications
-          href: ./remote-actions/custom-notifications.md
-        - name: Use TeamViewer for remote administration
-          href: ./remote-actions/teamviewer-support.md
-        - name: Synchronize device
-          href: ./remote-actions/device-sync.md
-        - name: Examine device inventory
-          href: ./remote-actions/device-inventory.md
-        - name: View ChromeOS device information
-          href: ./remote-actions/chrome-enterprise-device-details.md
-        - name: Collect diagnostics
-          href: ./remote-actions/collect-diagnostics.md
-        - name: Remove apps and configuration
-          href: ./remote-actions/remove-apps-config.md
-        - name: Pause config refresh
-          href: ./remote-actions/pause-config-refresh.md
-      - name: Bulk device actions
-        href: ./remote-actions/bulk-device-actions.md
-      - name: Troubleshooting
-        items:
-        - name: Troubleshoot device actions
-          href: /troubleshoot/mem/intune/troubleshoot-device-actions
+    - name: Remote device actions
+      href: ./remote-actions/toc.yml
 
   - name: Support your end users
     items:
@@ -2060,6 +2011,8 @@ items:
         href: ./fundamentals/remote-help-android.md
       - name: Troubleshooting Remote Help on Android
         href: ./fundamentals/remote-help-android-troubleshoot.md
+    - name: Use TeamViewer for remote administration
+      href: ./fundamentals/teamviewer-support.md
     - name: Remediations that fix common support issues
       items:
       - name: Use Remediations

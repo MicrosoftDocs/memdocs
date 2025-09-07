@@ -6,8 +6,8 @@ description: Check device access to find out if your device meets requirements, 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 10/16/2024
+manager: laurawi
+ms.date: 09/03/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,7 +20,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: 
+ms.reviewer: madakeva
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser

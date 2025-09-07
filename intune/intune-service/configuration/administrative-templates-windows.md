@@ -197,7 +197,8 @@ For more information about KIR, see:
 The template is created but might not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
 
 See also:
-- [Update Office using administrative templates](administrative-templates-update-office.md).
-- [Restrict USB devices using administrative templates](administrative-templates-restrict-usb.md).
-- [Create Microsoft Edge policy using ADMX](administrative-templates-configure-edge.md).
+
+- [Update Office using the settings catalog](settings-catalog-update-office.md).
+- [Restrict USB devices using the settings catalog](settings-catalog-restrict-usb.md).
+- [Create Microsoft Edge policy using the settings catalog](settings-catalog-configure-edge.md).
 - [Import custom or partner ADMX files](administrative-templates-import-custom.md).

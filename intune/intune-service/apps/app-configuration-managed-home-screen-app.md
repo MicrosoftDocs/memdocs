@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 08/21/2025
+ms.date: 09/05/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -134,6 +134,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 
 > [!NOTE]
 > The virtual home button requires granting overlay permission to MHS. The notification badge functionality requires granting notification permission to MHS.The brightness slider, adaptive brightness toggle, and autorotate toggle require granting write settings permission to MHS. Users are prompted for permission upon startup of MHS, which requires the user to make device permission updates in the Settings application. When possible, use [OEMConfig](../configuration/oemconfig-managed-home-screen-permissions-android.md?tabs=samsung-app%2Csamsung-policy) to autogrant these permissions to MHS to prevent possible breakout scenarios when using the Settings application. However, only configure access to features that require permission when necessary. Depending on the device's OS version, a notification might appear to alert the user that the permission was granted, even if it was autogranted.
+>
+> [!NOTE]
+> If **Notification windows** is set to **Disable** in device restrictions, features which rely on the Overlay permission including the virtual home button feature will not function properly.
 
 > [!NOTE]
 > When Overlay permission is granted on a device, certain Chromium based browsers might prevent users from granting camera and microphone permissions to websites. To allow users to grant these permissions on Microsoft Edge, create an app configuration policy for Microsoft Edge with [Overlay permission detection](/deployedge/microsoft-edge-mobile-policies#overlaypermissiondetectionenabled) set to False. For all other chromium based browsers, refer to their documentation for guidance.
@@ -155,6 +158,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 
 > [!NOTE]
 > The screensaver requires granting both [overlay permission](https://techcommunity.microsoft.com/t5/intune-customer-success/granting-overlay-permissions-to-managed-home-screen-for-android/ba-p/3247041) and exact alarm permission (OS 14+) to MHS. Users are prompted for permission upon startup of MHS, which requires the user to make device permission updates in the Settings application. When possible, use [OEMConfig](../configuration/oemconfig-managed-home-screen-permissions-android.md?tabs=samsung-app%2Csamsung-policy) to autogrant overlay and exact alarm permission to MHS to prevent possible breakout scenarios when using the Settings application. However, only configure access to notifications and features that require permissions when necessary. Depending on the device's OS version, a notification might appear to alert the user that these permissions were granted, even if they were autogranted.
+>
+> [!NOTE]
+> If **Notification windows** is set to **Disable** in device restrictions, features which rely on the Overlay permission including the screensaver feature will not function properly.
 
 > [!NOTE]
 > When Overlay permission is granted on a device, certain Chromium based browsers might prevent users from granting camera and microphone permissions to websites. To allow users to grant these permissions on Microsoft Edge, create an app configuration policy for Microsoft Edge with [Overlay permission detection](/deployedge/microsoft-edge-mobile-policies#overlaypermissiondetectionenabled) set to False. For all other chromium based browsers, refer to their documentation for guidance.
@@ -198,6 +204,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 |     Count down time on auto sign out dialog    |     integer    |     60    |     The amount of time, in seconds, to give   notice to user before signing them out of Managed Home Screen. This setting can only be used if **Enable   auto sign-out** and **Enable sign in** is set to True.      |     ✔️          |
 |     Privacy statement title    |     string    |          |     Optionally display your organization's   custom privacy statement on Managed Home Screen, next to Microsoft's privacy   statement. Use this setting to name the link containing your organization's   privacy statement, which is specified in **Privacy statement link**.    |     ❌          |
 |     Privacy statement link    |     string    |          |     Optionally display your organization's   custom privacy statement on Managed Home Screen, next to Microsoft's privacy   statement. If you set a link but don't set **Privacy statement title**, the   title reads "Custom privacy statement".    |     ❌          |
+|     Configure offline app access    |     bundleArray    |     See **Enter JSON Data** section of this document    |     Select which apps are available when users can't sign in due to network issues. Users must sign in once network access returns. This setting can only be used if **Enable sign in** is set to true.    |     ✔️          |
+|     Offline work time before required sign-in    |     Integer    |     60    |     Set the time (in seconds) users can stay offline after the network is detected before they must sign in. This setting only applies when **Configure offline app access** is set to true for at least one application.    |     ❌          |
+|     Configure app access without sign in    |     bundleArray    |     See **Enter JSON Data** section of this document    |     Select which apps are available to users from the sign-in screen before signing in to Managed Home Screen. These apps are available via entry point on the top bar regardless of network status. This setting can only be used if **Enable sign in** is set to true.    |     ✔️          |
 
 > [!NOTE]
 > Managed Home Screen uses the exact alarm permission to do the following actions:
@@ -210,6 +219,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 
 > [!NOTE]
 > The automatic sign out feature requires granting both [overlay permission](https://techcommunity.microsoft.com/t5/intune-customer-success/granting-overlay-permissions-to-managed-home-screen-for-android/ba-p/3247041) and exact alarm permission (OS 14+) to MHS. Users are prompted for permission upon startup of MHS, which requires the user to make device permission updates in the Settings application. When possible, use [OEMConfig](../configuration/oemconfig-managed-home-screen-permissions-android.md?tabs=samsung-app%2Csamsung-policy) to autogrant overlay and exact alarm permission to MHS to prevent possible breakout scenarios when using the Settings application. However, only configure access to notifications and features that require permissions when necessary. Depending on the device's OS version, a notification might appear to tell the user these permissions were granted, even if they were autogranted.
+>
+> [!NOTE]
+> If **Notification windows** is set to **Disable** in device restrictions, features which rely on the Overlay permission including the automatic sign out feature will not function properly.
 
 > [!NOTE]
 > When Overlay permission is granted on a device, certain Chromium based browsers might prevent users from granting camera and microphone permissions to websites. To allow users to grant these permissions on Microsoft Edge, create an app configuration policy for Microsoft Edge with [Overlay permission detection](/deployedge/microsoft-edge-mobile-policies#overlaypermissiondetectionenabled) set to False. For all other chromium based browsers, refer to their documentation for guidance.
@@ -227,8 +239,10 @@ In addition to the list of configurable settings listed in the **Configuration D
 
 |    Configuration   Key    |    Value   Type    |    Details    |    Description    |
 |-|-|-|-|
-|    Set allow-listed applications    |    bundleArray    | See [JSON Data Examples](#json-data-examples). |    Allows you to define the set of   apps visible on the home screen from all the apps installed on the   device. You can define the apps by entering the app package name of the apps   that you want to make visible. For example, `com.android.settings` would make settings accessible on the home screen. The apps that you allowlist in this section   should already be installed on the device to be visible on the home   screen.    |
+|    Set allow-listed applications    |    bundleArray    | See [JSON Data Examples](#json-data-examples). |    Allows you to define the set of   apps visible on the home screen from all the apps installed on the   device. You can define the apps by entering the app package name of the apps   that you want to make visible. For example, `com.android.settings` would make settings accessible on the home screen. The apps that you allowlist in this section   should already be installed on the device to be visible on the home   screen.<br><br>Additionally, for each app you can configure `enable_app_offline` and `app_available_prior_to_sign_in`.    |
 |    Set pinned web links    |    bundleArray    | See [JSON Data Examples](#json-data-examples). |    Allows you to pin websites as   quick launch icons on the home screen. With this configuration, you can define   the URL and add it to the home screen for the end user to launch in the   browser with a single tap. <br\>**Note:** We recommend that you create, assign, and approve [Managed Google Play web links](./apps-add-android-for-work.md#managed-google-play-web-links) to your devices. When you do, they're treated like allow-listed applications.    |
+|    Configure offline app access    |    bundleArray    | See [JSON Data Examples](#json-data-examples) |    Allows you to specify which apps are available when users can't sign in due to network issues. Users must sign in once network access returns. You can configure per-app by setting `"enable_app_offline: true"` within each application's managedProperty bundle.<br><br>**Note:** This setting can only be used if **Enable sign in** is set to true.    |
+|    Configure app access without sign in    |    bundleArray    | See [JSON Data Examples](#json-data-examples) |    Allows you to specify which apps are available to users from the sign-in screen before signing in to Managed Home Screen. These apps are available via entry point on the top bar regardless of network status. You can configure per-app by setting `"app_available_prior_to_sign_in: true"` within each application's managedProperty bundle.<br><br>**Note:** This setting can only be used if **Enable sign in** is set to true.    |
 |    Create Managed Folder for grouping   apps    |    bundleArray    | See [JSON Data Examples](#json-data-examples). |    Allows you to create and name   folders and group apps within these folders. End users can't move folders, rename the folders, or move the apps within the folders.   Folders appear in the order created, and apps within the folders appear alphabetically.<p>**Note:** All apps that you group into folders must be assigned as required to the device and added to the Managed Home Screen.    |
 |    Widget    |    bundleArray    | See [JSON Data Examples](#json-data-examples). | Allows you to add widgets to the home screen. Managed Home Screen provides and maintains a **Time** and **Weather** widget. You can also add a custom LOB widget or a non-Microsoft widget using JSON data. You can define the widget to be exposed by entering the app package name and widget class name. For example, to expose the **Time** widget, define the package name as `com.microsoft.launcher.enterprise` and widget class as **Time**.      |
 
@@ -269,10 +283,22 @@ The following syntax is an example JSON script with all the available configurat
                         {
                             "key": "package",
                             "valueString": "app package name here"
+                        },
+                        {
+                            "key": "enable_app_offline",
+                            "valueBool": true
+                        },
+                        {
+                            "key": "app_available_prior_to_sign_in",
+                            "valueBool": false
                         }
                     ]
                 }
             ]
+        },
+        {
+            "key": "offline_work_time_before_required_sign_in",
+            "valueInteger": 30
         },
         {
             "key": "weblinks",
