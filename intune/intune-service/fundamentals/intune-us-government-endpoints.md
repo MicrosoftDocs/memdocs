@@ -53,7 +53,7 @@ For more information about Windows 10 auto-enrollment and device registration fo
 
 The following table lists the service endpoints, IP addresses, and ports that the Intune client accesses.
 
-Intune endpoints use Azure Front Door for communicating with the Intune service. Intune specific endpoints are referenced in the `AzureFrontDoor.MicrosoftSecurity` JSON file. For the complete list of all services that utilize Azure Front Door and instructions to use the JSON file, see [Azure Front Door IP Ranges and Service Tags](https://www.microsoft.com/download/details.aspx?id=57063).
+Intune endpoints also use Azure Front Door for communicating with the Intune service. Intune specific endpoints are referenced by `AzureFrontDoor.MicrosoftSecurity` in the JSON file. For the complete list of all services that utilize Azure Front Door and instructions to use the JSON file, see [Azure Front Door IP Ranges and Service Tags](https://www.microsoft.com/download/details.aspx?id=57063).
 
 | Endpoint | IP address |
 |---------------------|-----------|

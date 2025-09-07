@@ -6,7 +6,7 @@ description: Describes how to enroll a company or school-owned iOS/iPadOS device
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/21/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune

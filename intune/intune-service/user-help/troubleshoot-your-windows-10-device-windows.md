@@ -5,9 +5,8 @@ title: Troubleshoot Windows 10/11 device access for school or work | Microsoft I
 description: Resolve access or account connection issues for an enrolled Windows device. 
 keywords:
 author: lenewsad
-
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 04/30/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune

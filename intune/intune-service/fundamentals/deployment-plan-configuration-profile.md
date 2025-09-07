@@ -446,10 +446,6 @@ Microsoft recommends the following level 2 security policies:
     - macOS
     - Windows
 
-  - **[Use the built-in administrative templates](../configuration/administrative-templates-windows.md)**, similar to configuring ADMX templates on-premises. You can use the ADMX templates on the following platform:
-
-    - Windows
-
 - If you use **on-premises GPOs** and want to know if these same settings are available in Intune, then use [Group Policy analytics](../configuration/group-policy-analytics.md). This feature analyzes your GPOs and depending on the analysis, can import them into an Intune settings catalog policy.
 
   For more information, go to [Analyze your on-premises GPOs and import them in Intune](../configuration/group-policy-analytics.md).

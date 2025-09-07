@@ -140,7 +140,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   Policy and security management is core in endpoint management. Endpoint policies allow your organization to enforce a specific security baseline and a standard configuration on your managed endpoints. There are many settings you can manage and control on your endpoints. **DO** create policies that only configure what's required in your baseline. **DON'T** create policies that control common user preferences.
 
-  - Traditional policy enforcement using group policy isn't possible with cloud-native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](../../intune-service/configuration/settings-catalog.md) and [administrative templates](../../intune-service/configuration/administrative-templates-windows.md).
+  - Traditional policy enforcement using group policy isn't possible with cloud-native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](../../intune-service/configuration/settings-catalog.md).
 
     You can reference and analyze existing GPOs using [Group Policy analytics in Intune](../../intune-service/configuration/group-policy-analytics.md), which allows you to see if settings within your GPOs are supported in the cloud. Group Policy analytics also allows you to create Intune policies from GPOs, if that's the right step for your organization. In general, we recommend that customers implement policies that conform to their requirements, instead of directly migrating existing GPOs to Intune. When you create policies based off your requirements, then you rationalize, optimize, and streamline your Intune policies.
 
@@ -458,21 +458,6 @@ Intune also has built-in features that can help you configure your cloud-native 
   When combined with [Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md), you can deploy the policies you used on-premises to your cloud-native endpoints.
 
   For more information, go to [Settings catalog in Intune](../../intune-service/configuration/settings-catalog.md).
-
-- **[Administrative templates](../../intune-service/configuration/administrative-templates-windows.md)**: These templates are similar to the ADMX templates used on-premises, and are built in to Intune. You don't download them. These templates include many settings that control features in Microsoft Edge, Internet Explorer, Microsoft Office apps, remote desktop, OneDrive, passwords, PINs, and more.
-
-  If you use administrative templates on-premises, then using them in Intune is a natural transition.
-
-  For more information, go to [Administrative templates in Intune](../../intune-service/configuration/administrative-templates-windows.md).
-
-  You can also ingest an existing set of ADMX policies for Win32 and Desktop Bridge apps. For more information, go to:
-
-  - [Understanding ADMX policies - Windows Client Management](/windows/client-management/mdm/understanding-admx-backed-policies)
-  - [Enable ADMX policies in MDM - Windows Client Management](/windows/client-management/mdm/enable-admx-backed-policies-in-mdm)
-  - [Win32 and Desktop Bridge app ADMX policy Ingestion - Windows Client Management](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview)
-
-  > [!NOTE]
-  > Starting in Windows 10 version 1703, Mobile Device Management (MDM) policy configuration support was expanded to allow access of [selected set of Group Policy administrative templates (ADMX policies)](/windows/client-management/mdm/policies-in-policy-csp-admx-backed) for Windows PCs using the [Policy configuration service provider (CSP)](/windows/client-management/mdm/policy-configuration-service-provider). Configuring ADMX policies in Policy CSP is different from the typical way you configure a traditional MDM policy.
 
 - **[Security baselines](../../intune-service/protect/security-baselines.md)**: A security baseline is a group of pre-configured Windows settings. They help you apply and enforce granular security settings that are recommended by the security teams. When you create a security baseline, you can also customize each baseline to enforce only the settings you want.
 

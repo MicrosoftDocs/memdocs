@@ -6,7 +6,7 @@ description: Learn how to connect over VPN using Microsoft Tunnel for iOS.
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/14/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune

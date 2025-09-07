@@ -6,7 +6,7 @@ description: Get the latest version of the Company Portal app on Android, iOS, m
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 10/08/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
