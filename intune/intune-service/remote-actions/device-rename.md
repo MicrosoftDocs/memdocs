@@ -21,6 +21,20 @@ The **Rename device** remote action in Microsoft Intune allows IT administrators
 
 Renaming a device can help improve clarity and consistency across your device inventory—especially in environments with shared devices, standardized naming conventions, or large-scale deployments. It's useful for aligning device names with asset tags, user roles, or location-based identifiers, making it easier to manage and troubleshoot devices at scale.
 
+::: zone pivot="android"
+
+> [!NOTE]
+> Renaming Android Enterprise devices only changes the **Device name** in the Intune admin center and not on the device itself. The Device name in Intune is a friendly name that users can change.
+
+::: zone-end
+
+::: zone pivot="windows"
+
+> [!NOTE]
+> Renaming Microsoft Entra hybrid joined devices from Intune is not supported. To rename hybrid joined devices, use domain-based methods outside of Intune.
+
+::: zone-end
+
 ## Requirements
 
 ### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
@@ -33,19 +47,6 @@ Renaming a device can help improve clarity and consistency across your device in
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP]
 > - macOS (corporate-owned)
 > - Windows (corporate-owned)
-
-::: zone pivot="android"
-
-> [!NOTE]
-> Renaming Android Enterprise devices only changes the **Device name** in the Intune admin center and not on the device itself. The Device name in Intune is a friendly name that users can change.
-
-::: zone-end
-
-::: zone pivot="windows"
-
-This feature doesn't support renaming hybrid Microsoft Entra Windows devices.
-
-::: zone-end
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -89,7 +90,7 @@ This feature doesn't support renaming hybrid Microsoft Entra Windows devices.
 
 ::: zone pivot="android"
 > [!NOTE]
-> It could take 10 minutes or more for a renamed Android Enterprise device to update in the **Devices** area.
+> It could take 10 minutes or more for a renamed Android Enterprise device to update in the **Devices** list.
 ::: zone-end
 
 ## How to bulk rename devices
