@@ -74,7 +74,7 @@ The business benefits of using Intune to manage Activation Lock are:
 >   - The permission **Remote tasks/Bypass activation lock**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-### Device configuration
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
 
 Before you can manage Activation Lock, you must configure your devices to allow it.
 

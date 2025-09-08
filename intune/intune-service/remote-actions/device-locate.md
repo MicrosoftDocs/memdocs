@@ -44,7 +44,7 @@ Depending on the platform, Intune can also report the last known location if the
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ::: zone pivot="windows,adroid"
-### Device configuration
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
 ::: zone-end
 
 ::: zone pivot="android"
