@@ -85,7 +85,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 Starting on September 9, 2025, by default, the Windows out-of-box experience (OOBE) installs the latest available security updates to help ensure devices are secure and up to date from day one. Windows OOBE is used by Intune and by Windows Autopilot scenarios through the Intune enrollment status page (ESP) configurations. Intune refers to these security updates Windows quality updates.
 
 To help you manage this behavior, we've updated the Intune enrollment status page with a new setting you can use to allow or block the automatic installation of these updates.
- 
+
 The new setting is **Install Windows quality updates**. These security updates, also known as Windows quality updates in Intune, are installed by default during the Windows out-of-box experience OOBE that's used by Intune and by Windows Autopilot.
 
 By default, this setting is set to *Yes* in all new ESP profiles you create, which results in the most recent security updates being installed. In all your previously created ESP profiles this setting is set to *No* until you choose to edit those profiles to change it. When set to *No*, OOBE doesn't install the updates which can give your internal teams time to test the updates before allowing them to install on new devices you provision.
@@ -100,7 +100,7 @@ Applies to:
 ### Device configuration recommendations from the Security Copilot Vulnerability Remediation Intune agent<!-- 34346149 -->
 
 To help reduce your organization’s attack surface against vulnerabilities, the Security Copilot Vulnerability Remediation Intune agent now provides recommended configurations for settings related to a reported vulnerability.
- 
+
 You can find the recommended configurations after selecting *Agent suggestions* for a reported vulnerability, which opens the *Suggested action* pane.  On the suggested action pane there is a new section of information titled **Configurations**.
 
 If the Intune settings catalog contains relevant settings for the reported vulnerability, the Configurations section provides information to help you configure device policies. These policies can help minimize future risk from that vulnerability. This includes:
@@ -121,7 +121,7 @@ To learn more about Agent suggestions, remediation guidance, and the new recomme
 
 Managed Home Screen (MHS) for Android Enterprise dedicated devices now supports two new features: **Offline mode** and **App access without sign in**.
 
-- **Offline mode** – Lets users access designated apps when the device is offline or unable to connect to the network. You can configure a grace period before requiring users to sign in once connectivity is restored.  
+- **Offline mode** – Lets users access designated apps when the device is offline or unable to connect to the network. You can configure a grace period before requiring users to sign in once connectivity is restored.
 - **App access without sign in** – Lets users launch specific apps from the MHS sign-in screen via the MHS top bar, regardless of network status. This is useful for apps that need to be available immediately, such as help desk or emergency tools.
 
 These features are designed for dedicated devices enrolled in Microsoft Entra shared device mode and can be configured via device configuration policy.
@@ -295,7 +295,7 @@ For more information about Linux enrollment, see [Linux device enrollment guide 
 
 When you use the multiple administrative approval (MAA) feature, you require a second admin account to approve a change before the change is applied.
 
-The **[Wipe](../remote-actions/devices-wipe.md)** remote action supports MAA. Use MAA with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
+The **[Wipe](../remote-actions/device-wipe.md)** remote action supports MAA. Use MAA with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
@@ -480,7 +480,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### Platform support for Device Cleanup rules<!-- 13835920 -->
 
-Using [cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules), you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
+Using [cleanup rules](../remote-actions/_device-cleanup-rules), you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
 
 With this feature, you can:
 
@@ -488,7 +488,7 @@ With this feature, you can:
 - Use the [Audit logs](monitor-audit-logs.md) to see the devices that the device cleanup rules conceal from the Intune reports.
 - Use [role-based access control (RBAC)](role-based-access-control.md) to customize the user roles that can create device cleanup rules.
 
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
+For more information, see [device cleanup rules](../remote-actions/_device-cleanup-rules).
 
 ### Device security
 

@@ -28,7 +28,7 @@ search/replace
       "old path": "/intune/intune-service/remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules",
       "new path": "/intune/intune-service/fundamentals/device-cleanup-rules",
 
-      "old path": "/intune/intune-service/remote-actions/devices-wipe.md#retire",
+      "old path": "/intune/intune-service/remote-actions/device-retire.md",
       "new path": "/intune/intune-service/fundamentals/device-retire",
 
       "old path": "/intune/intune-service/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center",

@@ -46,7 +46,7 @@ If you want to remove devices from the Intune admin center, you can delete them 
 > [!IMPORTANT]
 > The **Delete** action triggers the following actions:
 >
-> * Depending on the device platform, it can retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](devices-wipe.md#retire) section for the expected behavior.
+> * Depending on the device platform, it can retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](device-retire.md) section for the expected behavior.
 > * BitLocker encryption is suspended if managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
 
 <a name='delete-devices-from-the-microsoft-entra-portal'></a>

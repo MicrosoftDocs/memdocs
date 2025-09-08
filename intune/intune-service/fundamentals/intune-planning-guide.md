@@ -185,7 +185,7 @@ When data is stored on mobile devices, the data should be protected from acciden
 Some sample scenarios:
 
 - A device is lost or stolen, or no longer being used. A user leaves the organization.
-  - In Intune, you can [remove devices by using wipe, retire, or manually unenroll them](../remote-actions/devices-wipe.md). You can also automatically remove devices that haven't checked in with Intune for *x* number of days.
+  - In Intune, you can [remove devices by using wipe, retire, or manually unenroll them](../remote-actions/device-wipe.md). You can also automatically remove devices that haven't checked in with Intune for *x* number of days.
   - At the app level, you can [remove organization data from Intune-managed apps](../apps/apps-selective-wipe.md). A selective wipe is great for personal devices, as it keeps personal data on the device, and only removes organization data.
 
 - On personal devices, you might want to prevent users from copy/paste, taking screenshots, or forwarding emails. [App protection policies](../apps/app-protection-policy.md) can block these features on devices you don't manage.
@@ -330,7 +330,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Microsoft Purview** (included in the **Microsoft 365 E5** license) classifies and protects documents and emails by applying labels. On Microsoft 365 apps, you can use this service to [prevent unauthorized access to organization data](/microsoft-365/compliance/information-protection), including apps on personal devices.
 
-- **[Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.  
+- **[Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
 
   Copilot in Intune is licensed through Microsoft Security Copilot. For more information, go to [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 

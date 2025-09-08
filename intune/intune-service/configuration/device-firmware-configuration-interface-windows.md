@@ -27,7 +27,7 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 ---
- 
+
 # Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune
 
 When you use Intune to manage Windows Autopilot devices, you can manage UEFI (BIOS) settings after they're enrolled using the Device Firmware Configuration Interface (DFCI). For an overview of benefits, scenarios, and prerequisites, go to [Overview of DFCI](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/).
@@ -169,7 +169,7 @@ For example, you want to only allow Wi-Fi radios. In this scenario, you:
 
 ### Reuse
 
-If you plan to reset Windows to repurpose the device, then [wipe the device](../remote-actions/devices-wipe.md). Do **not** remove the Windows Autopilot device record.
+If you plan to reset Windows to repurpose the device, then [wipe the device](../remote-actions/device-wipe.md). Do **not** remove the Windows Autopilot device record.
 
 After wiping the device, move the device to the group assigned the new DFCI and Windows Autopilot profiles. Be sure to reboot the device to rerun Windows setup.
 

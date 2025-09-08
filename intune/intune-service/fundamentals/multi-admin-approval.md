@@ -40,7 +40,7 @@ When any account in the Tenant is used to make a change to a resource that's pro
 Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
-- Device actions - Applies to [wipe](../remote-actions/devices-wipe.md#wipe), [retire](../remote-actions/devices-wipe.md#retire) and [delete](../remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center) device actions.
+- Device actions - Applies to [wipe](../remote-actions/device-wipe.md), [retire](../remote-actions/device-retire.md) and [delete](../remote-actions/devices-delete.md) device actions.
 - Scripts – Applies to deploying scripts to devices that run [Windows](../apps/powershell-scripts.md).
 - Access Policies - Applies to creating or managing multiple administrative approval policies.
 - Role-based access control – Applies to changes to roles, including modifications to role permissions, admin groups, or member group assignments.
@@ -106,7 +106,7 @@ You can cancel a request before it's approved by selecting it from the My reques
 
 3. After reviewing the details, enter relevant details in the Approver notes field, and then select **Approve request** or **Reject request**.
 
-4. After you approve a request, the requestor needs select **Complete**. Intune processes the change, and changes the status to *Completed.* Verify the approval succeeded (or failed) by reviewing the console notification upon completion. 
+4. After you approve a request, the requestor needs select **Complete**. Intune processes the change, and changes the status to *Completed.* Verify the approval succeeded (or failed) by reviewing the console notification upon completion.
 
    To verify if the approval succeeded (or failed), look at the notifications in the Intune admin center. A message shows if the approval succeeded or failed.
 
