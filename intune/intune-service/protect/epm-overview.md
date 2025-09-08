@@ -63,8 +63,8 @@ EPM elevation can be triggered using two methods:
 
 EPM can be configured using two types of policies:
 
-- **Elevation rules policy** - defines elevation behavior for binaries or scripts based on criteria.
 - **Elevation settings policy** - controls the EPM client, reporting level and default elevation capability.
+- **Elevation rules policy** - defines elevation behavior for binaries or scripts based on criteria.
 
 Both rules and policies can be targeted at groups of users or devices. To perform the elevation on the device, the EPM service uses a virtual account, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group.
 

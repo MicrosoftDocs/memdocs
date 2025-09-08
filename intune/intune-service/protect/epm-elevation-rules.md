@@ -337,10 +337,10 @@ The following wildcard characters are supported:
 
 The following are examples of supported wildcard use:
 
-- *File name* for a Visual Studio setup file called `VSCodeUserSetup-arm64-1.99.2.exe`:  
-  - `VSCodeUserSetup*.exe`
-  - `VSCodeUserSetup-arm64-*.exe`
-  - `VSCodeUserSetup-?????-1.??.?.exe`
+- *File name* for a Visual Studio setup file called `VSCodeSetup-arm64-1.99.2.exe`:  
+  - `VSCodeSetup*.exe`
+  - `VSCodeSetup-arm64-*.exe`
+  - `VSCodeSetup-?????-1.??.?.exe`
 
 - *File path* for the same file, typically found in `C:\Users\<username>\Downloads\`:
   - `C:\Users\*\Downloads\`
