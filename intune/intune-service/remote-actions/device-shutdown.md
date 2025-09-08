@@ -21,7 +21,7 @@ With the **shut down** action, IT administrators can remotely power off managed 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
-> - iOS/iPadOS in [supervised mode][IOS-SUP]
+> - iOS/iPadOS in [Supervised Mode][IOS-SUP]
 > - macOS
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements

@@ -27,7 +27,7 @@ With Microsoft Intune, you can help users locate lost or misplaced devices by re
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
-> - iOS/iPadOS in [supervised mode](/intune/intune-service/remote-actions/device-supervised-mode) and [Lost Mode](device-lost-mode.md)
+> - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode) and [Lost Mode](device-lost-mode.md)
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 

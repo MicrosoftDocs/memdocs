@@ -60,8 +60,8 @@ The business benefits of using Intune to manage Activation Lock are:
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
-> - iOS/iPadOS in [supervised mode][IOS-SUP] through Automated Device Enrollment (ADE)
-> - macOS in [supervised mode][MAC-SUP] through Automated Device Enrollment (ADE)
+> - iOS/iPadOS in [Supervised Mode][IOS-SUP] through Automated Device Enrollment (ADE)
+> - macOS in [Supervised Mode][MAC-SUP] through Automated Device Enrollment (ADE)
 
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements

@@ -1,6 +1,6 @@
 ---
-title: Log out the user of an iOS/iPadOS device
-description: Learn how to log out the current user of an iOS/iPadOS device with Intune.
+title: "Intune Remote Device Action: Logout current user"
+description: Learn how to use the Logout current user remote action in Microsoft Intune to sign out users from Shared iPads.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -12,7 +12,8 @@ ms.collection:
 
 # Sign out the current user
 
-The **Logout current user** action logs out the current user on a shared iPad device.
+The **Logout current user** remote device action in Microsoft Intune allows IT administrators to remotely sign out the active user from a Shared iPad.
+This remote action is useful in environments where multiple users access the same device throughout the day. Logging out the current user helps maintain privacy, ensures session cleanup, and prepares the device for the next user—supporting secure and efficient device turnover in shared-use scenarios.
 
 ## Requirements
 
@@ -21,7 +22,7 @@ The **Logout current user** action logs out the current user on a shared iPad de
 > [!div class="checklist"]
 > This remote action is supported on the following platform:
 >
-> - iPadOS (shared iPad devices only)
+> - iPadOS (Shared iPad mode only)
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 

@@ -33,7 +33,7 @@ For more information, on modifying the Management name and renaming in the Compa
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
 > - Android Enterprise corporate-owned Work Profile (COPE)
-> - iOS/iPadOS in [supervised mode][IOS-SUP]
+> - iOS/iPadOS in [Supervised Mode][IOS-SUP]
 > - macOS
 > - macOS (corporate-owned)
 > - Windows (corporate-owned)

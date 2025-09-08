@@ -29,7 +29,7 @@ Depending on the platform, Intune can also report the last known location if the
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
-> - iOS/iPadOS in [supervised mode](/intune/intune-service/remote-actions/device-supervised-mode) and [lost mode](device-lost-mode.md)
+> - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode) and [Lost Mode](device-lost-mode.md)
 > - Windows
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
@@ -124,7 +124,7 @@ Later, this default status updates to reflect the actual date and time that an a
 - The data is stored for 24 hours, then removed. You can't manually remove the location data.
 - The data for last known locations is stored for up to seven days, and then removed.
 - Location data is encrypted, both while stored and while being transmitted.
-- For iOS/iPadOS devices, when you configure lost mode, you can customize a message that appears on the lock screen. In this message, to help the person that finds the device, be sure to include specific details to return the lost device.
+- For iOS/iPadOS devices, when you configure Lost Mode, you can customize a message that appears on the lock screen. In this message, to help the person that finds the device, be sure to include specific details to return the lost device.
 - For fully-managed and corporate-owned work profile scenarios, end users receive a notification when the administrator uses this feature, if notifications are enabled.
 
 ## Reference links

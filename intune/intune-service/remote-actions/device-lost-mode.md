@@ -1,6 +1,6 @@
 ---
 title: "Intune Remote Actions: Lost Mode"
-description: Learn how to enable Lost mode in Microsoft Intune to remotely lock a lost or stolen iOS or iPadOS device and display a custom message and phone number on the lock screen.
+description: Learn how to enable Lost Mode in Microsoft Intune to remotely lock a lost or stolen iOS or iPadOS device and display a custom message and phone number on the lock screen.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -13,11 +13,11 @@ ms.collection:
 
 # Use Lost Mode with Microsoft Intune
 
-The **Lost Mode** device action in Microsoft Intune allows IT administrators to remotely lock and track lost or stolen iOS/iPadOS devices. When activated, lost mode displays a custom message and contact phone number on the device's lock screen—helping facilitate recovery while protecting corporate data.
+The **Lost Mode** device action in Microsoft Intune allows IT administrators to remotely lock and track lost or stolen iOS/iPadOS devices. When activated, Lost Mode displays a custom message and contact phone number on the device's lock screen—helping facilitate recovery while protecting corporate data.
 
-Once enabled, the device is locked and can't be accessed until lost mode is disabled by an administrator. While in lost mode, the device's location can also be tracked, making it easier to locate and recover.
+Once enabled, the device is locked and can't be accessed until Lost Mode is disabled by an administrator. While in Lost Mode, the device's location can also be tracked, making it easier to locate and recover.
 
-Lost mode is a lightweight but powerful tool that helps organizations safeguard sensitive information, support device recovery, and maintain compliance—all without wiping or unenrolling the device.
+Lost Mode is a lightweight but powerful tool that helps organizations safeguard sensitive information, support device recovery, and maintain compliance—all without wiping or unenrolling the device.
 
 ## Requirements
 
@@ -26,8 +26,7 @@ Lost mode is a lightweight but powerful tool that helps organizations safeguard 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
-> - iOS in supervised mode
-> - iPadOS in supervised mode
+> - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -40,9 +39,9 @@ Lost mode is a lightweight but powerful tool that helps organizations safeguard 
 >   - The permissions **Remote tasks/Enable lost mode**, **Remote tasks/Disable lost mode**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## Enable lost mode
+## Enable Lost Mode
 
-Here's how to enable lost mode on a device using the Intune admin center:
+Here's how to enable Lost Mode on a device using the Intune admin center:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **Lost mode (supervised only)**.
@@ -56,16 +55,16 @@ Here's how to enable lost mode on a device using the Intune admin center:
 
 ## User experience
 
-When you enable lost mode, the device is locked. The custom message and phone number you specify are displayed on the lock screen, helping facilitate recovery. While Lost mode is active, the user can't access the device.
+When you enable Lost Mode, the device is locked. The custom message and phone number you specify are displayed on the lock screen, helping facilitate recovery. While Lost Mode is active, the user can't access the device.
 
 To locate the device during this time, use the [Locate device](device-locate.md) action in the admin center.
 
 > [!NOTE]
 > Some built-in device functionalities might still work. For example, Siri might still be used to make calls unless it's disabled.
 
-## Disable lost mode
+## Disable Lost Mode
 
-Here's how to disable lost mode on a device using the Intune admin center:
+Here's how to disable Lost Mode on a device using the Intune admin center:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then **Lost mode (supervised only)**.

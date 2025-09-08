@@ -71,13 +71,13 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="../media/icons/remote-actions/delete.svg" border="false"::: | [Delete][RA-DELETE] | Removes a device from Intune management, any company data is removed, and the device is retired. |
 | :::image type="icon" source="../media/icons/remote-actions/disable-activation-lock.svg" border="false"::: | [Disable Activation Lock][RA-ACTLOCK] | Removes the Activation Lock from a device that is enrolled with a device enrollment manager (DEM) account. |
 | :::image type="icon" source="../media/icons/remote-actions/locate-device.svg" border="false"::: | [Locate device][RA-LOCATE] | Shows the approximate location of a device on a map. |
-| :::image type="icon" source="../media/icons/remote-actions/logout-current-user.svg" border="false"::: | [Logout current user][RA-LOGOUT] | Signs out the current user from a shared iPad. |
+| :::image type="icon" source="../media/icons/remote-actions/logout-current-user.svg" border="false"::: | [Logout current user][RA-LOGOUT] | Signs out the current user from a Shared iPad. |
 | :::image type="icon" source="../media/icons/remote-actions/lost-mode.svg" border="false"::: | [Lost mode][RA-LOSTMODE] | Locks a device with a custom message and disables sound and vibration. |
 | :::image type="icon" source="../media/icons/remote-actions/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
 | :::image type="icon" source="../media/icons/remote-actions/play-lost-mode-sound.svg" border="false"::: | [Play Lost Mode sound][RA-PLAY] | Plays Lost Mode sound on a lost device to help locate it. |
 | :::image type="icon" source="../media/icons/remote-actions/remote-lock.svg" border="false"::: | [Remote lock][RA-LOCK] | Locks a device and resets its password. |
 | :::image type="icon" source="../media/icons/remote-actions/remove-apps-and-configuration.svg" border="false"::: | [Remove apps and configuration][RA-APPCON] | Temporarily remove applications and configuration from a device.|
-| :::image type="icon" source="../media/icons/remote-actions/remove-user.svg" border="false"::: | [Remove user][RA-REMOVEUSER] | Deletes a user from the cache of a shared iPad. |
+| :::image type="icon" source="../media/icons/remote-actions/remove-user.svg" border="false"::: | [Remove user][RA-REMOVEUSER] | Deletes a user from the cache of a Shared iPad. |
 | :::image type="icon" source="../media/icons/remote-actions/rename-device.svg" border="false"::: | [Rename device][RA-REN] | Changes the device name in Intune. |
 | :::image type="icon" source="../media/icons/remote-actions/reset-passcode.svg" border="false"::: | [Remove passcode][RA-PREM] | Removes the device passcode. |
 | :::image type="icon" source="../media/icons/remote-actions/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
