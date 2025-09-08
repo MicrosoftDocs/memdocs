@@ -52,6 +52,7 @@ Use *Windows elevation settings policy* when you want to:
   Options include:
 
   - **Deny all requests** - This option blocks the *elevate request* action for files that aren't defined in a *Windows elevation rules policy*.
+  - **Require support approval** - When support approval is required, an administrator must approve elevation requests without a matching rule prior to the elevation being required.
   - **Require user confirmation** - When user confirmation is required, you can choose from the same validation options as found for Windows elevation rules policy.
 
     - **Validation options** - Set validation options when the default elevation response is defined as *Require user confirmation*. Options include:
@@ -61,10 +62,8 @@ Use *Windows elevation settings policy* when you want to:
      >[!NOTE]
      > Multiple validation options can be selected to satisfy the needs of the organization. If no options are selected, then the user is only required to select *continue* to complete the elevation.
 
-  - **Require support approval** - When support approval is required, an administrator must approve elevation requests without a matching rule prior to the elevation being required.
-
   > [!TIP]  
-  > We [recommend the use of *Support Approved*](../protect/epm-plan.md#security-recommendations) as a default elevation response.
+  > We [recommend the use of *Support Approved*](../protect/epm-plan.md#security-recommendations) or *deny all requests* as a default elevation response.
   
   > [!CAUTION]
   > The *default elevation response* applies to all files that don't match an elevation rule, as a result the *Require user confirmation* setting allows all files to be elevated by default. If you're not seeking additional auditing or credential prompts, we recommend use of *Deny all requests* or *Require support approval*.
