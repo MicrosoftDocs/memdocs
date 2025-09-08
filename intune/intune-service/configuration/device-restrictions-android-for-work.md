@@ -181,6 +181,10 @@ For corporate-owned devices with a work profile, some settings only apply in the
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from turning on the network escape hatch feature on the device.
 
 - **Notification windows**: When set to **Disable**, window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors aren't shown on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show notifications.
+
+  > [!NOTE]
+  > If **Notification windows** is set to **Disable**, any configuration that depends on the Overlay permission will not function as expected. This includes features such as the virtual home button, screen saver and automatic sign-out on Managed Home Screen.
+
 - **Skip first use hints**: **Enable** hides or skips suggestions from apps that step through tutorials, or hints when the app starts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show these suggestions when the app starts.
 
 ### Fully managed and corporate-owned work profile devices
