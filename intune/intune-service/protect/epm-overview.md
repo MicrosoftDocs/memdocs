@@ -33,7 +33,7 @@ ms.collection:
 
 With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization's users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
-Endpoint Privilege Management supports your [Zero Trust](/security/zero-trust/zero-trust-overview) journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive. For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust-with-microsoft-intune.md).
+Endpoint Privilege Management supports your [Zero Trust](/security/zero-trust/zero-trust-overview) journey by helping your organization achieve a broad user base running with least privilege, while still elevating selected tasks when necessary to remain productive. For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust-with-microsoft-intune.md).
 
 This overview provides information about EPM including the benefits, how it works, and how to get started.
 
@@ -47,7 +47,7 @@ Applies to:
 ✅ Find out the key features and benefits of EPM
 
 - **Standard Users by Default**. Users can perform their tasks without local admin rights.
-- **Support for Just-in-time elevation**. Users elevate temporarily for specific IT-approved tasks, with automatic, user confirmed, or support approved elevations.
+- **Support for just-in-time elevation**. Users can trigger specific IT-approved binaries or scripts to elevate temporarily, with automatic with automatic, user confirmed, or support approved elevations.
 - **Policy-Based Control**. Admins define settings and rules to control elevation conditions and behaviour, with granular rule creation capabilities to suit organizational needs.
 - **Audit Logging and Reporting**. Intune logs every elevation with detailed metadata.
 - **Alignment to Zero Trust principles** by enabling least privilege access and minimizing lateral movement risks.
@@ -63,7 +63,7 @@ EPM elevation can be triggered using two methods:
 
 EPM can be configured using two types of policies:
 
-- **Elevation rules policy** - defines elevation behavior for apps based on criteria.
+- **Elevation rules policy** - defines elevation behavior for binaries or scripts based on criteria.
 - **Elevation settings policy** - controls the EPM client, reporting level and default elevation capability.
 
 Both rules and policies can be targeted at groups of users or devices. To perform the elevation on the device, the EPM service uses a virtual account, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group.
@@ -88,11 +88,11 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
   
   :::image type="content" source="media/epm-overview/epm-user-confirmed-inline.png" alt-text="A screenshot showing the prompt a user receives when they use user confirmed elevation." lightbox="media/epm-overview/epm-user-confirmed-expanded.png":::
 
-- **Support approved**: For support approved rules, end users must submit a request to approve an application. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can complete the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md).
+- **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md).
   
   :::image type="content" source="media/epm-overview/epm-support-approval-inline.png" alt-text="A screenshot showing the prompt a user receives when they request to run an application as administrator using support approval." lightbox="media/epm-overview/epm-support-approval-expanded.png":::
 
-- **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While we recommend use of file elevation rules to allow users to elevate specific files, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
+- **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While the use of file elevation rules allowing users to elevate specific files is typically recommended, in certain scenarios deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
 The EPM client can be configured with a default elevation response, which by default is *deny*, or with specific rules can be created to match files and allow the specified elevation response.
 
@@ -108,7 +108,7 @@ EPM elevation rules can be created based on one or more attributes including fil
 
 - **File hash support** - Match the application based on the hash of the file.
 
-- **Publisher certificate support** - Create rules that are based of trusting the publisher certificate of the application alongside other attributes.
+- **Publisher certificate support** - Create rules that are based on trusting the publisher certificate of the application alongside other attributes.
 
 ### Supported file types
 
@@ -132,7 +132,7 @@ EPM includes reports to help you prepare for, monitor and use the service. Repor
 
 ✅ Start using EPM
 
-Endpoint Privilege Management (EPM) is built into Microsoft Intune, which means that all configuration is completed within the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the following high-level process:
+Endpoint Privilege Management (EPM) is administered from the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the following high-level process:
 
 - **License EPM** - Before you can use Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 

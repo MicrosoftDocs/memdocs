@@ -108,9 +108,9 @@ When you configure the *elevation settings* and *elevation rules* policies that 
 
   - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules can aslo require validation with authentication or business justification. Requiring validation provides an extra layer of protection by making the user acknowledge the elevation.
 
-  - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. We recommend using file elevation rules to let users elevate specific files. To block known or potentially harmful software from running with elevated privileges, you can use a deny rule.
+  - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While the use of file elevation rules allowing users to elevate specific files is typically recommended, in certain scenarios deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
-  - **Support approved**: For support approved rules, end users must submit a request to approve an application. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can complete the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md)
+  - **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md)
 
   > [!NOTE]
   >
@@ -174,7 +174,7 @@ If a device receives two rules targeting the same application, both rules are co
 
 ✅ Understand interaction between EPM and User Account Control
 
-Endpoint Privilege Management and Windows built-in user account control (UAC) are separate products with separate functionality.
+Endpoint Privilege Management and Windows built-in user account control (UAC) are separate features with different functionality.
 
 When moving users to run as standard users and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
 
