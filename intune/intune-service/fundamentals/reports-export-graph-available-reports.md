@@ -1679,7 +1679,6 @@ The following table contains the possible output when calling the `DeviceRunStat
 | UserId |
 | UserName |
 
-[!INCLUDE [platform-scripts-export-api](../includes/platform-scripts-export-api.md)]
 [!INCLUDE [platform-scripts-column-mappings](../includes/platform-scripts-column-mappings.md)]
 
 There are no filters for this report.
