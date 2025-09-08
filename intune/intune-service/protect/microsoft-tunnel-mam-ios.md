@@ -4,8 +4,8 @@ description: Add support for Mobile Application Management (MAM) for iOS to the 
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 03/04/2025
+manager: laurawi
+ms.date: 09/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -421,6 +421,10 @@ You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunn
 For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel App configuration policy setting while other apps use MDM Tunnel configurations.
 
 **Workaround**: To use MAM Tunnel with enrolled devices, ensure, the Defender for Endpoint iOS app doesn't have an App configuration policy with Microsoft Tunnel settings configured.
+
+### JavaScript WebSockets support
+
+By default, Microsoft Tunnel for MAM iOS supports use of JavaScript WebSockets initiated from web views. However, there is no support for native WebSocket APIs or apps that rely on them.
 
 ### Firebase Integration with Tunnel for MAM iOS
 
