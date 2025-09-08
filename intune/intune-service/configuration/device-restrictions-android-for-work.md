@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 08/27/2025
+ms.date: 09/08/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -120,12 +120,15 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-> [!IMPORTANT]
-> On **COPE** devices with **Factory reset protection emails** configured, **Settings → Factory data reset** on **Android 15** (and later) **enforces FRP** and requires one of the specified Google accounts to complete setup.  
-> On **fully managed (COBO)** and **dedicated (COSU)** devices, **Settings** resets **don’t** trigger FRP; **Recovery/bootloader** resets **do**.  
-> **Admin wipes** for fully managed (COBO), dedicated (COSU), and corporate owned devices with work profile (COPE) in Intune **don’t preserve** FRP data by default, so FRP is **not** enforced after that flow.
->
-> For background and guidance, see **Factory reset protection (FRP) enforcement behavior for Android Enterprise** (https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced)
+  When the **Factory reset protection emails** setting is configured, there is different factory reset protection (FRP) behavior:
+
+  - On Android 15 (and later) **corporate-owned devices with work profile** (COPE), the **Settings** app > **Factory data reset** setting enforces factory reset protection and requires one of the specified Google accounts to complete setup.  
+  - On **fully managed** (COBO) and **dedicate** (COSU) devices:
+    - The **Settings** app > **Factory data reset** setting **doesn't** trigger factory reset protection.
+    - The **Settings** app > **Recovery/bootloader** setting **does** trigger factory reset protection.
+  - On **fully managed** (COBO), **dedicated** (COSU), and **corporate owned devices with work profile** (COPE), when you [wipe](../remote-actions/devices-wipe.md#wipe) the device in the Intune admin center, the wipe action doesn’t preserve factory reset protection data by default. So, factory reset protection isn't enforced.
+
+  For background and guidance, see **[Factory reset protection (FRP) enforcement behavior for Android Enterprise](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced)**.
 
 - **System update**: Choose an option to define how the device handles over-the-air updates. Your options
   - **Device Default** (default): Use the device's default setting. By default, if the device is connected to Wi-Fi, is charging, and is idle, then the OS updates automatically. For app updates, the OS also validates if the app isn't running in the foreground.
@@ -164,9 +167,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **Volume changes**: **Block** prevents users from changing the device's volume, and also mutes the main volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the volume settings on the device.
 - **Factory reset**: **Block** prevents users from using the factory reset option in the device's settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use this setting on the device.
 
-> [!IMPORTANT]
-
-> For background and guidance, see **Factory reset protection (FRP) enforcement behavior for Android Enterprise** (https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced)
+  For background and guidance on this feature, see [Factory reset protection (FRP) enforcement behavior for Android Enterprise](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced).
 
 - **Status bar**: **Block** prevents access to the status bar, including notifications and quick settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users access to the status bar.
 - **Wi-Fi setting changes**: **Block** prevents users from changing Wi-Fi settings created by the device owner. Users can create their own Wi-Fi configurations. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the Wi-Fi settings on the device.
