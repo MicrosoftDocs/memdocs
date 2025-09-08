@@ -6,7 +6,7 @@ description: Evaluate WSL attributes on a host device for compliance.
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby 
+manager: laurawi
 ms.date: 11/19/2024 
 ms.topic: how-to
 ms.service: microsoft-intune
