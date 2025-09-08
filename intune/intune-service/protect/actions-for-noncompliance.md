@@ -20,7 +20,7 @@ ms.localizationpriority: high
 #ms.devlang:
 ms.suite: ems
 search.appverid: MET150
-ms.reviewer: tycast
+ms.reviewer: ilwu
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
