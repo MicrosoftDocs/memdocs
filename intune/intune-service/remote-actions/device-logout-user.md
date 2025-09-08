@@ -1,6 +1,6 @@
 ---
 title: "Intune Remote Device Action: Logout current user"
-description: Learn how to use the Logout current user remote action in Microsoft Intune to sign out users from Shared iPads.
+description: Learn how to use the logout the current user from a Shared iPad with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Sign out the current user
+# Logoutthe current user from a Shared iPad with Intune
 
 The **Logout current user** remote device action in Microsoft Intune allows IT administrators to remotely sign out the active user from a Shared iPad.
 This remote action is useful in environments where multiple users access the same device throughout the day. Logging out the current user helps maintain privacy, ensures session cleanup, and prepares the device for the next user—supporting secure and efficient device turnover in shared-use scenarios.
@@ -34,7 +34,7 @@ This remote action is useful in environments where multiple users access the sam
 >   - The permission **Remote tasks/Manage shared device users**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## Log out the current user
+## How to logout the current user
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then select **...** > **Logout current user**.

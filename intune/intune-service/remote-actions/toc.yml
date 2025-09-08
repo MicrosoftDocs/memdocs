@@ -21,7 +21,7 @@ items:
     href: device-full-scan.md
   - name: Locate device
     href: device-locate.md
-  - name: Logout active user
+  - name: Logout active user ✅
     href: device-logout-user.md
   - name: Lost Mode ✅
     href: device-lost-mode.md
@@ -39,7 +39,7 @@ items:
     href: remove-apps-config.md
   - name: Remove passcode ✅
     href: device-remove-passcode.md
-  - name: Remove user
+  - name: Remove user ✅
     href: device-remove-user.md
   - name: Rename device
     href: device-rename.md
