@@ -33,7 +33,7 @@ ms.collection:
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
-A device must have an elevation settings policy that enables support for EPM before the device can process an elevation rules policy or manage elevation requests. When support is enabled, the `C:\Program Files\Microsoft EPM Agent` folder is added to the device along with the EPM Microsoft Agent, which is responsible for processing the EPM policies. For more information, see [EPM elevation settings](epm-elevation-settings.md).
+Elevation rules policies allow Endpoint Privilege Management (EPM) to identify specific files and scripts and perform the associated elevation action. For elevation rules to take effect, devices must have an *elevation settings policy* targeted that enables EPM. For more information, see [EPM elevation settings](epm-elevation-settings.md).
 
 In addition to the information in this article, remain aware of important [security recommendations](../protect/epm-plan.md#security-recommendations) when managing elevation rules.
 
@@ -51,13 +51,13 @@ Each elevation rule instructs EPM on how to:
 - **Identify the file using**:
 
   - *File name (including extension).* The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions are used to further validate the file when elevation is attempted. The file name (excluding extensions) can include use of [variables](#use-variables-in-elevation-rules) for single characters through use of a question mark `?` or strings through use of an asterisk `*`.
-  - *Certificate.* Certificates can be added directly to a rule, or by using a reusable settings group. When a certificate is used in a rule, it's also required to be valid. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see [Reusable settings groups](epm-elevation-rules.md#reusable-settings-groups).
+  - *Certificate.* Certificates can be added directly to a rule, or by using a reusable settings group. Certificates must be trusted and valid. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see [Reusable settings groups](epm-elevation-rules.md#reusable-settings-groups).
 
 - **Validate the file**:
 
   - *File hash.* A file hash is required for automatic rules. For user confirmed rules, you can choose to either use a certificate or a file hash, in which case the file hash becomes optional.
-  - *Certificate.* If a certificate is provided Windows APIs are used to validate the certificate and revocation status.
-  - *Additional Properties.* Any additional properties specified in the rules must match.
+  - *Certificate.* File properties can be validated alongside the publisher certificate used to sign the file. Certificates are validated using Windows APIs which check attributes such as trust, certificate expiry and revocation status.
+  - *File properties.* Any other properties specified in the rules must match.
 
 - **Configure the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*.
   - **Deny**: Deny rules prevent the identified file from being run in an elevated context.
@@ -101,13 +101,13 @@ File hash can be gathered from the direct binary using the [Get-Filehash PowerSh
 Certificate rules are a strong type of attribute and should be paired with other attributes. Pairing a certificate with attributes like product name, internal name, and description, drastically improves the security of the rule. These attributes are protected by a files signature, and often indicate specifics about the signed file.
 
 > [!CAUTION]
-> Using just a certificate and a file name provides very limited protection for misuse of a rule. Any *standard user* with access to a directory where the file resides can change the file name. This issue might not be a concern for files that reside in a write-protected directory.
+> Using only a certificate and a file name to identify files isn't recommended. Any *standard user* with access to a directory where the file resides can change the file name. This issue might not be a concern for files that reside in a write-protected directory.
 
 ### Rules containing file name
 
 File name is an attribute that can be utilized to detect an application that needs to be elevated. However, file names are easily changed and don't make up part of the hash or attributes signed by the publisher certificate.
 
-This means that file names are *highly susceptible* to change. Files that are signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated*, which might not be your intended behavior.
+This means that file names are *highly susceptible* to change. Files you don't intentionally target signed by a certificate that you trust can be renamed to be *detected* and *elevated*.
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature (for example, product name) are good indicators that the file you intend is likely the one being elevated.
@@ -141,7 +141,7 @@ For more information, see [EpmTools PowerShell module](../protect/epm-plan.md#ep
 
 ### Controlling child process behavior
 
-Child process behavior allows you to control the context when a process elevated with EPM creates a child process. This behavior allows you to further restrict processes which normally would be automatically delegated the context of its parent process.
+Child process behavior allows you to control the context when a process elevated with EPM creates a child process. This behavior allows you to control processes that would be automatically delegated the context of its parent process.
 
 Windows automatically delegates the context of a parent to a child, so take special care in controlling the behavior for your allowed applications. Ensure you evaluate what is needed when you create elevation rules, and implement the principle of least privilege.
 
@@ -153,25 +153,25 @@ Windows automatically delegates the context of a parent to a child, so take spec
 
 Endpoint Privilege Management rules are deployed like any other policy in Microsoft Intune. This means that rules can be deployed to users or devices, and rules are merged on the client side and selected at run time. Any conflicts are resolved based on the [policy conflict behavior](epm-plan.md#policy-conflict-handling-for-endpoint-privilege-management).
 
-Rules deployed to a device apply to *every user* that uses that device. Rules that are deployed to a *user* apply only to that user on each device that they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This behavior allows you to deploy a set of rules to devices that might apply to all users on that device, and a more permissive set of rules to a support admin to allow them to elevate a broader set of applications when they sign-in to the device temporarily.
+Rules deployed to a device apply to *every user* that uses that device. Rules that are deployed to a *user* apply only to that user on each device that they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This behavior allows you to deploy a set of rules to all users of a device, and a more permissive set of rules to a specific user (such as a support admin). This would allow the support administrator to elevate a broader set of applications when they sign-in to the device.
 
-*Default Elevation behavior* is used only when no rule match can be found. This also requires use of the *Run with elevated access* right-click menu, which is interpreted as a user *explicitly* asking for an application to be elevated.
+*Default Elevation behavior* is used only when no rule match can be found. The default elevation behavior only applies when an elevation is trigged with the *Run with elevated access* right-click menu.
 
 ## Create elevation rules policy
 
 Deploy a *Elevation rules policy* to users or devices to deploy one or more rules for files that are managed for elevation by Endpoint Privilege Management. Each rule you add to this policy:
 
 - Identifies a file by file name and file extension for which you want to manage elevation requests.
-- Can include a certificate to help validate that file's integrity before it's run. You can also add a reusable group that contains a certificate that you then use with one or more rules or policies.
+- Can include a certificate to help validate the file's integrity. You can also add a reusable group that contains a certificate that you then use with one or more rules or policies.
 - Can include one or more manually added [file arguments or command line switches](#use-file-arguments-for-elevation-rules). When file arguments are added to a rule, EPM only allows file elevation of requests that include one of the defined command lines. If a defined command line isn't part of the file elevation request, EPM denies that request.
-- Specifies if the elevation type of the file is automatic (silently), or if it requires user confirmation. With user confirmation, you can add additional user actions that must be completed before the file is run.
+- Specifies if the elevation type of the file is automatic (silently), or if it requires user confirmation. With user confirmation, you can require validation with a credential prompt, or business justification, or both.
 
 > [!NOTE]
 > In addition to this policy, a device must also be assigned a Windows elevation settings policy that enables Endpoint Privilege Management.
 
 Use either of the following methods to create new elevation rules, which are added to elevation rules policy:
 
-- [**Automatically configure elevation rules**](#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) – Use this method to save time when creating an elevation rule by autopopulating the file detection details that Intune has already collected. The file details are identified by Intune from either The *[Elevation report](../protect/epm-reports.md#elevation-report)* or from a *[support approved](../protect/epm-support-approved.md)* elevation requests record.
+- [**Automatically configure elevation rules**](#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) – Use this method to save time when creating an elevation rule by adding files details from reporting. Rules can be created using the *[Elevation report](../protect/epm-reports.md#elevation-report)* or from a *[support approved](../protect/epm-support-approved.md)* elevation requests record.
 
   With this method, you:  
 
@@ -217,8 +217,8 @@ Use either of the following methods to create new elevation rules, which are add
    This option creates a new policy that includes an elevation rule for the file you selected.
 
    1. For the rule, configure the **Type** and **Child process behavior**, and then select **OK** to create the policy.
-   2. When prompted, provide a **Policy name** for the new policy and confirm creation of what will be a new and unassigned elevation rules policy.
-   3. After the policy is created, you can edit the policy to assign it and add additional configurations if needed.
+   2. When prompted, provide a **Policy name** for the new policy and confirm to create it.
+   3. After the policy is created, you can edit the policy to assign it and make any other changes.
 
    **Add to an existing policy:**  
    With this option, use the drop-down list and select an existing elevation policy to which the new elevation rule is added.
@@ -232,7 +232,7 @@ Use either of the following methods to create new elevation rules, which are add
    > [!TIP]  
    > While optional, we [recommend use of a *File path*](../protect/epm-plan.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
 
-   :::image type="content" source="./media/epm-policies/create-a-rule.png" alt-text="Image from the admin center UI of the create a rule pane." lightbox="./media/epm-policies/create-a-rule.png":::
+   :::image type="content" source="./media/epm-policies/create-a-rule.png" alt-text="Image from the admin center UI of the 'create a rule' pane." lightbox="./media/epm-policies/create-a-rule.png":::
 
 ### Manually configure elevation rules for Windows elevation rules policy
 
@@ -257,21 +257,21 @@ Use either of the following methods to create new elevation rules, which are add
 
    *Elevation conditions* are conditions that define how a file runs, and user validations that must be met before the file this rule applies to can be run.
 
-   - **Elevation type**: By default, this option is set to *User confirmed*, which is the elevation type most commonly used as it allows elevation, but requires user acknowledgement.
+   - **Elevation type**: By default, this option is set to *User confirmed*, which is the elevation type most commonly used as it allows elevation, but requires user acknowledgment.
 
      - **Deny**: A *deny* rule prevents the identified file from being run in an elevated context. The following behaviors apply:
-       - *Deny* rules support the same configuration options as other elevation types with the exception of child processes, which aren't used even though the configuration option remains visible when configuring the rule.
-       - When a user attempts to elevate a file for which they are assigned a deny rule, the elevation fails. EPM displays a message that indicates the app can't be run as administrator. Should that user also be assigned a rule that allows elevation of that same file, the [deny rule takes precedence](epm-plan.md#policy-conflict-handling-for-endpoint-privilege-management).
+       - *Deny* rules support the same configuration options as other elevation types with the exception of the child process options. Child process options aren't used from this rule even if configured.
+       - When a user attempts to elevate a file that matches a deny rule, the elevation fails. EPM displays a message that indicates the app can't be run as administrator. Should that user also be assigned a rule that allows elevation of that same file, the [deny rule takes precedence](epm-plan.md#policy-conflict-handling-for-endpoint-privilege-management).
        - Denied elevations appear in the elevation report as denied, similar to a rejected *support approved* request.
        - EPM doesn't currently support automatic configuration of a deny rule from the evaluation report.
 
-     - **Support approved**: This elevation type requires an administrator to approve a request prior to the elevation being allowed to complete. For more information, see [Support approved elevation requests](../protect/epm-support-approved.md).
+     - **Support approved**: This elevation type requires an administrator to approve an elevation request. For more information, see [Support approved elevation requests](../protect/epm-support-approved.md).
 
        > [!Important]
        >
        > Use of support approved elevation for files requires that Admins with additional permissions review and approve each file elevation request before that file on the device with administrator permissions. For information about using the support approved elevation type, see [Support approved file elevations for Endpoint Privilege Management](../protect/epm-support-approved.md).
 
-     - **User confirmed**: Most commonly used for files with rules that require elevation because it allows elevation, but requires user acknowledgement. When a file is run, the user receives a simple prompt to confirm their intent to run the file. The rule can also include other prompts that are available from the *Validation* drop down:
+     - **User confirmed**: Most commonly used for files with rules that require elevation because it allows elevation, but requires user acknowledgment. When a file is run, the user receives a simple prompt to confirm their intent to run the file. The rule can also include other prompts that are available from the *Validation* drop down:
 
        - *Business justification*: Require the user to enter a justification for running the file. There's no required format for the entry. The user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
@@ -316,7 +316,7 @@ Use either of the following methods to create new elevation rules, which are add
 
 5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md). Select **Next**.
 
-6. In **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
+6. In **Review + create**, review your settings, and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 
 ### Use variables in elevation rules
 
@@ -325,7 +325,8 @@ When you manually configure file elevation rules, you can use wildcard character
 - **File name**: Wildcards are supported as part of a file name when configuring the *File name* field.
 - **Folder path**: Wildcards are supported as part of a folder path when configuring the *Folder path* field.
 
-Currently, wildcards aren't supported by automatically created elevation rules.  
+> [!NOTE]
+> Wildcards aren't supported in *automatic* elevation rules.  
 
 Use of wildcards provides flexibility in your rules to support trusted files that have names that might change frequently with subsequent revisions, or for which the file path might also change.
 
@@ -344,23 +345,23 @@ The following are examples of supported wildcard use:
 - *File path* for the same file, typically found in `C:\Users\<username>\Downloads\`:
   - `C:\Users\*\Downloads\`
 
-> [!TIP]  
-> When using variables in a file name, avoid use of rule properties that might conflict, like a *File hash* that would match only a single instance of the variable file name you seek to support. Similarly, for use in a folder name, limit the configuration of wildcard so only valid locations for the file are supported.
+> [!TIP]
+> When using variables in a file name, avoid use of rule properties that might conflict. For example a *File hash* would match only a file and so a file name wildcard might be redundant.
 
 ### Use file arguments for elevation rules
 
-When you manually configure or edit a [file elevation rule](#create-elevation-rules-policy), you can add one or more file command lines or arguments to help you control how that file is used, and what it can do when it's run in an elevated context.
+[File elevation rule's](#create-elevation-rules-policy) can also be limited to allow elevation with specific arguments.
 
-For example, you might have an elevation rule for the troubleshooting tool [**dsregcmd**](/entra/identity/devices/troubleshoot-device-dsregcmd) that can be useful for investigating the state of a device in Microsoft Entra ID. To help support this files use for investigation, you can configure the rule with a list of arguments for *dsregcmd* that includes the switches for **/status**, **/listaccounts**, and more. However, to prevent a destructive action like unregistering a device you choose to not include a switch like [**/leave**](/troubleshoot/entra/entra-id/dir-dmns-obj/pending-devices#the-state-of-a-registered-device-is-changed-to-pending). With this configuration, the rule then requires the elevation request include one of the defined switches (*/status*, or */listaccounts*) before it can be run in the elevated context. At the same time, users can't accidentally (or with intent) use *dsregcmd* with the */leave* switch, to remove the device from Microsoft Entra ID.
+For example, [**dsregcmd**](/entra/identity/devices/troubleshoot-device-dsregcmd) can be useful for investigating the state of a device in Microsoft Entra ID, but requires elevation. To help support this files use for investigation, you can configure the rule with a list of arguments for *dsregcmd* that includes the switches for **/status**, **/listaccounts**, and more. However, to prevent a destructive action like unregistering a device you exclude arguments like [**/leave**](/troubleshoot/entra/entra-id/dir-dmns-obj/pending-devices#the-state-of-a-registered-device-is-changed-to-pending). With this configuration, the rule will only allow elevation if the arguments */status*, or */listaccounts* are used. *dsregcmd* with the */leave* switch, which removes the device from Microsoft Entra ID, would be denied.
 
-To add one or more arguments to an elevation rule, set **Restrict arguments** to **Allow list**. With this set, you can then select Add and then configure individual command line options. By adding multiple arguments, you provide multiple command lines that are supported by elevation requests.
+To add one or more arguments to an elevation rule, set **Restrict arguments** to **Allow list**. Select Add and configure the allowed command line options. By adding multiple arguments, you provide multiple command lines that are supported by elevation requests.
 
 > [!IMPORTANT]
 > Considerations for file arguments:
 >
-> - EPM uses file argument lists as allow lists, allowing elevation when no arguments are used, or only the specified arguments are used, and blocking elevation if any arguments are used which aren't found in the specified arguments.
+> - EPM uses file argument lists as allow lists. When configured, EPM will allow elevation when no arguments are used, or only the specified arguments are used. Elevation is blocked if any arguments are used which aren't found in the specified arguments.
 > - File arguments are case sensitive; users must match the case exactly as defined in the rules.
-> - Do not define secrets as a file argument.
+> - Don't define secrets as a file argument.
 
 :::image type="content" source="./media/epm-policies/add-argument.png" alt-text="Screen capture of the UI for configuring command line arguments.":::
 

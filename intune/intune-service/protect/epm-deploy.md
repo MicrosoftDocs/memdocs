@@ -33,7 +33,7 @@ ms.collection:
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
-To deploy EPM you will use a combination of reports and policies. This article describes some common deployment scenarios and outlines the recommended deployment phases for your organization.
+To deploy Endpoint Privilege Management (EPM), start by enabling reporting, then use that reporting to create rules for elevation. This article describes some common deployment scenarios and outlines the recommended deployment phases for your organization.
 
 - [Windows elevation settings policy](epm-elevation-settings.md).
 - [Windows elevation rules policy](epm-elevation-rules.md).
@@ -43,7 +43,7 @@ To deploy EPM you will use a combination of reports and policies. This article d
 
 EPM can help control the elevation of applications in Intune and [Local Users and Groups](endpoint-security-account-protection-policy.md) can be used to control the local administrators group and transition users from administrators to standard users.
 
-Microsoft anticipates customers adopting EPM will go through the following phases:
+These are the common deployment phases:
 
 :::image type="content" source="media/epm-deploy/epm-deploy-phases.png" alt-text="The five phases to deploy EPM." border="false":::
 

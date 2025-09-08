@@ -45,12 +45,12 @@ Use *Windows elevation settings policy* when you want to:
 
 - **Enable Endpoint Privilege Management** on devices. By default, this policy enables EPM. When first enabled for EPM, a device provisions the components that collect usage data on elevation requests and that enforce elevation rules.
 
-  If a device has EPM disabled, the client components immediately disable. There's a delay of seven days before the EPM component is completely removed. The delay helps to reduce the time it takes to restore EPM should a device accidentally have EPM disabled or its elevation settings policy unassigned.
+  If a device has EPM disabled, the client components are deactivated on the next policy sync. There's a delay of seven days before the EPM component is completely removed. The delay helps to reduce the time it takes to restore EPM should a device accidentally have EPM disabled or its elevation settings policy unassigned.
 
 - **Default elevation response** - Set a default response for an *elevation request* of any file that isn't managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must *explicitly request* elevation through the *Run with elevated access* right-click menu. By default, this option is set to *Not Configured*. If no setting is configured, the EPM components fall back to their built-in default, which is to **deny all requests**.
 
   > [!TIP]  
-  > We [recommend the use of *Support Approved*](../protect/epm-plan.md#security-recommendations) or *deny all requests* as a default elevation response.
+  > We [recommend the use of *Require support approval*](../protect/epm-plan.md#security-recommendations) or *Deny all requests* as a default elevation response.
 
   Options include:
 
