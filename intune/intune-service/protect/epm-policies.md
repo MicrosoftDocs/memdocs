@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/22/2025
+ms.date: 09/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -119,13 +119,14 @@ Each elevation rule instructs EPM on how to:
 
 - **Validate the file**:
 
-  - *File hash.* A file hash is required for automatic rules. For user confirmed rules, you can choose to either use a certificate or a file hash, in which case the file hash becomes optional.
+  - *File hash.* A file hash is required for *automatic* rules. For *user confirmed* and *user confirmed user* rules, you can choose to either use a certificate or a file hash, in which case the file hash becomes optional.
   - *Certificate.* If a certificate is provided Windows APIs are used to validate the certificate and revocation status.
   - *Additional Properties.* Any additional properties specified in the rules must match.
 
 - **Configure the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*, which is our recommendation for elevations.
 
   - **User confirmed** (Recommended): A user confirmed elevation always requires the user to select on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
+  - **User confirmed user**: This elevation type always requires the user to select on a confirmation prompt and reauthenticate to Windows to run the file. Files elevated in this way run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings, helping to ensure that installers and tools which rely on the active user profile function correctly.
   - **Automatic**: An automatic elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
   - **Deny**: Deny rules prevent the identified file from being run in an elevated context.
   - **Support approved**: An administrator must approve any [support-required elevation request](../protect/epm-support-approved.md) that doesn't have a matching rule, before the application is allowed to run with elevated privileges.
@@ -289,7 +290,7 @@ Use either of the following methods to create new elevation rules, which are add
    - **Name**: Enter a descriptive name for the profile. Name profiles so you can easily identify them later.
    - **Description**: Enter a description for the profile. This setting is optional but recommended.
 
-3. On **Configuration settings**, add a rule for each file that this policy manages. When you create a new policy, the policy starts includes a blank rule with an elevation type of *User confirmed* and no rule name. Start by configuring this rule, and later you can select **Add** to add more rules to this policy. Each new rule you add has an elevation type of User confirmed, which can be changed when you configure the rule.
+3. On **Configuration settings**, add a rule for each file that this policy manages. When you create a new policy, the policy starts includes a blank rule with an elevation type of *User confirmed* and no rule name. Start by configuring this rule, and later you can select **Add** to add more rules to this policy. Each new rule you add has a default elevation type of User confirmed, which can be changed when you configure the rule.
 
    :::image type="content" source="./media/epm-policies/new-elevation-rules-policy.png" alt-text="Image from the admin center UI of a new elevation rules policy." lightbox="./media/epm-policies/new-elevation-rules-policy.png":::
 
@@ -308,6 +309,8 @@ Use either of the following methods to create new elevation rules, which are add
 
        - *Business justification*: Require the user to enter a justification for running the file. There's no required format for the entry. The user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
+
+     - **User confirmed user**: Use this option when a file relies on a user's profile paths, environment variables, and personalized settings. The user must respond to a prompt and reauthenticate to Windows to confirm their intent to run the file. The prompt supports Multi-Factor Authentication (MFA) for enhanced security.
 
      - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. Automatic elevation is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
 

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/30/2025
+ms.date: 09/15/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -76,7 +76,7 @@ Endpoint Privilege Management supports the following operating systems:
 >
 > - Elevation settings policy will show as not applicable for devices that don't run a supported operating system version.
 > - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures. This includes devices running Windows on Arm64.
-> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ## Government cloud support
 
@@ -146,6 +146,8 @@ When you configure the *elevation settings* and *elevation rules* policies that 
 
   - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an extra layer of protection by making the user acknowledge that the app will run in an elevated context, before that elevation occurs.
 
+  - **User confirmed user**: With this elevation method, files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings, helping to ensure that installers and tools which rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate. Prior to elevation, the user is required to re-authenticate to Windows with valid credentials, and this process supports Multi-Factor Authentication (MFA) for enhanced security.
+
   - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While we recommend use of file elevation rules to allow users to elevate specific files, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
 
   - **Support approved**: For support approved rules, end users must submit a request to approve an application. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can complete the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md)
@@ -174,7 +176,7 @@ To help ensure a secure deployment of Endpoint Privilege Management, consider th
  
 ### Set a secure default elevation response
 
-Set the [default elevation response](../protect/epm-policies.md#about-windows-elevation-settings-policy) to **Support Approval** or **Deny** rather than **User Confirmed**. This ensures that elevation is governed by predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
+Set the [default elevation response](../protect/epm-policies.md#about-windows-elevation-settings-policy) to **Support approved** or **Deny** rather than **User confirmed** or **User confirmed user**. This ensures that elevation is governed by predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
  
 ### Require file path restrictions in all rule types
 
