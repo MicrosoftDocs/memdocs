@@ -59,12 +59,11 @@ Each elevation rule instructs EPM on how to:
   - *Certificate.* If a certificate is provided Windows APIs are used to validate the certificate and revocation status.
   - *Additional Properties.* Any additional properties specified in the rules must match.
 
-- **Configure the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*, which is our recommendation for elevations.
-
-  - **User confirmed** (Recommended): A user confirmed elevation always requires the user to select on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
-  - **Automatic**: An automatic elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
+- **Configure the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*.
   - **Deny**: Deny rules prevent the identified file from being run in an elevated context.
-  - **Support approved**: An administrator must approve any [support-required elevation request](../protect/epm-support-approved.md) that doesn't have a matching rule, before the application is allowed to run with elevated privileges.
+  - **Support approved**: An administrator must approve the [support-required elevation request](../protect/epm-support-approved.md) before the application is allowed to run with elevated privileges.
+  - **User confirmed**: A user confirmed elevation always requires the user to select on a confirmation prompt to run the file. The confirmation can only be configured to require a user authentication, a business justification (visible in reporting), or both.
+  - **Automatic**: An automatic elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
 
 - **Manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the elevated process creates.
 
@@ -258,18 +257,7 @@ Use either of the following methods to create new elevation rules, which are add
 
    *Elevation conditions* are conditions that define how a file runs, and user validations that must be met before the file this rule applies to can be run.
 
-   - **Elevation type**: By default, this option is set to *User confirmed*, which is the elevation type we recommend for most files.
-
-     - **User confirmed**: We recommend this option for most rules. When a file is run, the user receives a simple prompt to confirm their intent to run the file. The rule can also include other prompts that are available from the *Validation* drop down:
-
-       - *Business justification*: Require the user to enter a justification for running the file. There's no required format for the entry. The user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
-       - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
-
-     - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. Automatic elevation is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
-
-       > [!CAUTION]
-       >
-       > Only use automatic elevation for files you trust. These files will automatically elevate without user interaction. Rules that aren't well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](#defining-rules-for-use-with-endpoint-privilege-management).
+   - **Elevation type**: By default, this option is set to *User confirmed*, which is the elevation type most commonly used as it allows elevation, but requires user acknowledgement.
 
      - **Deny**: A *deny* rule prevents the identified file from being run in an elevated context. The following behaviors apply:
        - *Deny* rules support the same configuration options as other elevation types with the exception of child processes, which aren't used even though the configuration option remains visible when configuring the rule.
@@ -282,6 +270,17 @@ Use either of the following methods to create new elevation rules, which are add
        > [!Important]
        >
        > Use of support approved elevation for files requires that Admins with additional permissions review and approve each file elevation request before that file on the device with administrator permissions. For information about using the support approved elevation type, see [Support approved file elevations for Endpoint Privilege Management](../protect/epm-support-approved.md).
+
+     - **User confirmed**: Most commonly used for files with rules that require elevation because it allows elevation, but requires user acknowledgement. When a file is run, the user receives a simple prompt to confirm their intent to run the file. The rule can also include other prompts that are available from the *Validation* drop down:
+
+       - *Business justification*: Require the user to enter a justification for running the file. There's no required format for the entry. The user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
+       - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
+
+     - **Automatic**: This elevation type automatically runs the file with elevated permissions. Automatic elevation is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
+
+       > [!CAUTION]
+       >
+       > Only use automatic elevation by exception and for files you trust. These files will automatically elevate without user interaction. Rules that aren't well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](#defining-rules-for-use-with-endpoint-privilege-management).
 
    - **Child process behavior**: By default, this option is set to *Require rule to elevate*, which requires the child process to match the same rule as process that creates it. Other options include:
      - *Allow all child processes to run elevated*: This option should be used with caution as it allows applications to create child processes unconditionally.
