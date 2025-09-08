@@ -1,7 +1,6 @@
 ---
-title: Remove a User From an iPadOS Device With Microsoft Intune
-titleSuffix:
-description: Learn how to remove a user from a shared iOS/iPadOS device with Intune.
+title: "Intune Remote Device Action: Remove User"
+description: Learn how to remove a user from a shared iPad with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -11,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Remove a user from a shared iOS/iPadOS device
+# Remove a user from a shared iPad
 
 The **Remove user** action deletes a user that you select from the local cache on a shared iPad device.
 

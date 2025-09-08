@@ -115,7 +115,7 @@ Every bulk remote action has its own steps, which are detailed in the respective
 [RA-SCAN]: device-scan-defender.md
 [RA-SYNC]: device-sync.md
 [RA-TVIEW]: teamviewer-support.md
-[RA-WIPE]: devices-wipe.md
+[RA-WIPE]: device-wipe.md
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
