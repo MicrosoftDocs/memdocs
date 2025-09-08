@@ -6,8 +6,8 @@ description: Resolve encryption status in Company Portal and Microsoft Intune ap
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 06/28/2024
+manager: laurawi
+ms.date: 09/03/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,7 +20,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: arnab
+ms.reviewer: rishitasarin
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser

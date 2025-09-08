@@ -223,8 +223,6 @@ At any time, you can delete imported GPOs:
 
 - [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](group-policy-analytics-migrate.md)
 
-- [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md)
-
 ## See also
 
 Learn more about [Configuration Service Providers (CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
