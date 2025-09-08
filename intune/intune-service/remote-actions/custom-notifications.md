@@ -3,7 +3,6 @@ title: "Intune Remote Actions: Send Custom Notifications"
 description: Use Intune to create and send custom push notifications to users of iOS/iPadOS and Android devices
 ms.date: 08/27/2025
 ms.topic: how-to
-ms.assetid:
 
 ms.reviewer: petermt
 ms.custom: intune-azure

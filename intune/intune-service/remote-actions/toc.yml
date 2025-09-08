@@ -41,7 +41,7 @@ items:
     href: device-remove-passcode.md
   - name: Remove user
     href: device-remove-user.md
-  - name: Rename device 🟠
+  - name: Rename device ✅
     href: device-rename.md
   - name: Reset passcode
     href: device-passcode-reset.md
