@@ -102,7 +102,7 @@ When you manage devices running Windows Holographic for Business, the following 
 
 - **[Sync devices to get the latest policies and actions](../remote-actions/device-sync.md)**: The **Sync** action forces the device to immediately check in with Intune. When a device checks in, the device receives any pending actions or policies that are assigned. This feature helps you validate and troubleshoot policies you assigned, without waiting for the next scheduled check-in.
 
-For information about managing devices using the Intune admin center, go to [What is Microsoft Intune device management?](../remote-actions/device-management.md).
+For information about managing devices using the Intune admin center, go to [What is Microsoft Intune device management?](../remote-actions/index.md).
 
 ## Device categories and groups
 

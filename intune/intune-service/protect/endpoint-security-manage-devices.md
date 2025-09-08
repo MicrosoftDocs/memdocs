@@ -119,7 +119,7 @@ Remote actions display across the top of the devices *Overview* page. Actions th
 
 The remote actions that are available depend on how the device is managed:
 
-- **Intune**: All [Intune remote actions](../remote-actions/device-management.md) that apply to the device platform are available.
+- **Intune**: All [Intune remote actions](../remote-actions/index.md) that apply to the device platform are available.
 - **Configuration Manager**: You can use the following Configuration Manager actions:
 
   - Sync Machine Policy

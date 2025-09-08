@@ -93,7 +93,7 @@ Every bulk remote action has its own steps, which are detailed in the respective
 [RA-BL]: device-rotate-bitlocker-keys.md
 [RA-CELLULAR]: update-cellular-data-plan.md
 [RA-DEFAV]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
-[RA-DELETE]: devices-wipe.md#delete-devices-from-the-intune-admin-center
+[RA-DELETE]: device-delete.md
 [RA-DIAG]: collect-diagnostics.md
 [RA-FRESHSTART]: device-fresh-start.md
 [RA-FV]: rotate-filevault-recovery-key.md

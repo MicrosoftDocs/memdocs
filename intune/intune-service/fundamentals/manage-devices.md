@@ -6,7 +6,7 @@ titleSuffix: Microsoft Intune
 description: Get an overview of the concepts and features you should know when managing devices that access organization resources in Microsoft Intune. You can manage new and existing devices, including BYOD personal devices, check health compliance and view reports, configure device features, and secure devices using mobile threat solutions.
 keywords:
 author: MandiOhlinger
-  
+
 ms.author: mandia
 manager: laurawi
 ms.date: 02/20/2025
@@ -14,9 +14,9 @@ ms.topic: article
 ms.service: microsoft-intune
 ms.subservice:
 ms.localizationpriority: high
-ms.assetid: 
+ms.assetid:
 # optional metadata
- 
+
 #audience:
 #ms.devlang:
 ms.reviewer:
@@ -151,7 +151,7 @@ In Intune, some common security tasks include:
 
 - **Manage devices remotely** using the Intune admin center. You can remotely lock, restart, locate a lost device, and restore a device to its factory settings. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
 
-  For more information, go to [Remote actions in Intune](../remote-actions/device-management.md).
+  For more information, go to [Remote actions in Intune](../remote-actions/index.md).
 
 ## Related articles
 

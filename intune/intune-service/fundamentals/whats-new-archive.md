@@ -123,7 +123,7 @@ Applies to:
 
 #### Manage the DefaultEnforcement configuration for Microsoft Defender Device Control on Windows devices<!-- 30253799 -->
 
-You can now use Intune to manage the configuration of the Microsoft Defender CSP for [DefaultEnforcement](/windows/client-management/mdm/defender-csp#configurationdefaultenforcement) for Device Control. 
+You can now use Intune to manage the configuration of the Microsoft Defender CSP for [DefaultEnforcement](/windows/client-management/mdm/defender-csp#configurationdefaultenforcement) for Device Control.
 
 DefaultEnforcement manages the configuration of Device Control:
 
@@ -2264,7 +2264,7 @@ The remote action **Pause configuration refresh** can be accessed from the devic
 
 For more information, see:
 
-- [Remote actions](../remote-actions/device-management.md)
+- [Remote actions](../remote-actions/index.md)
 - [Pause Config Refresh Remote action](../remote-actions/pause-config-refresh.md)
 
 ### Device security

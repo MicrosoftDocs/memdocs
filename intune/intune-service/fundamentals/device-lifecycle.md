@@ -57,8 +57,8 @@ In the modern IT world, protecting devices from unauthorized access is one of th
 
 ## Retire
 
-When a device gets lost or stolen, when it needs to be replaced, or when users move to another position, it's usually time to [retire or wipe](../remote-actions/device-management.md) the device. There are a number of ways you can do this—including resetting the device, removing it from management, and wiping the corporate data on it.
+When a device gets lost or stolen, when it needs to be replaced, or when users move to another position, it's usually time to [retire or wipe](../remote-actions/index.md) the device. There are a number of ways you can do this—including resetting the device, removing it from management, and wiping the corporate data on it.
 
 ## Next steps
 
-- Learn about [device management in Microsoft Intune](../remote-actions/device-management.md)
+- Learn about [device management in Microsoft Intune](../remote-actions/index.md)
