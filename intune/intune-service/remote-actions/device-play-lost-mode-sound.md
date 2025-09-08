@@ -28,7 +28,7 @@ These remote actions are especially useful in environments where devices are sha
 ### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
 
 > [!div class="checklist"]
-> These remote actions are supported on the following platforms:
+> This remote action is supported on the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
@@ -64,16 +64,9 @@ The sound plays until the user disables the sound or the duration you set expire
 ::: zone-end
 ::: zone pivot="android"
 
-For **Android Enterprise dedicated devices**:
+If system notifications are enabled, the device displays a notification with a **Stop Sound** button. The alert plays for the configured duration or until a user on the device manually stops it using the notification.
 
-- If notifications are enabled, a notification with a **Stop Sound** button shows up.
-- The sound plays for the set duration or, if notifications are enabled, until a user on the device turns it off.
-
-To configure system notifications for devices in kiosk mode, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
-
-For **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise fully managed devices**:
-
-- To configure system notifications for devices, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+Notification behavior might vary based on system settings. To configure system notifications, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 ::: zone-end
 
