@@ -6,7 +6,7 @@ description: Export Windows management log diagnostics to share with your suppor
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 02/20/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
