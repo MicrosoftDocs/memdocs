@@ -49,6 +49,9 @@ Use *Windows elevation settings policy* when you want to:
 
 - **Default elevation response** - Set a default response for an *elevation request* of any file that isn't managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must *explicitly request* elevation through the *Run with elevated access* right-click menu. By default, this option is set to *Not Configured*. If no setting is configured, the EPM components fall back to their built-in default, which is to **deny all requests**.
 
+  > [!TIP]  
+  > We [recommend the use of *Support Approved*](../protect/epm-plan.md#security-recommendations) or *deny all requests* as a default elevation response.
+
   Options include:
 
   - **Deny all requests** - This option blocks the *elevate request* action for files that aren't defined in a *Windows elevation rules policy*.
@@ -59,18 +62,12 @@ Use *Windows elevation settings policy* when you want to:
       - **Business justification** - This option requires the end user to provide a justification before completing an elevation that is facilitated by the default elevation response.
       - **Windows authentication** - This option requires the end user to authenticate before completing an elevation that is facilitated by the default elevation response.
 
-     >[!NOTE]
-     > Multiple validation options can be selected to satisfy the needs of the organization. If no options are selected, then the user is only required to select *continue* to complete the elevation.
+      > [!NOTE]
+      > Multiple validation options can be selected to satisfy the needs of the organization. If no options are selected, then the user is only required to select *continue* to complete the elevation.
 
-  > [!TIP]  
-  > We [recommend the use of *Support Approved*](../protect/epm-plan.md#security-recommendations) or *deny all requests* as a default elevation response.
-  
   > [!CAUTION]
   > The *default elevation response* applies to all files that don't match an elevation rule, as a result the *Require user confirmation* setting allows all files to be elevated by default. If you're not seeking additional auditing or credential prompts, we recommend use of *Deny all requests* or *Require support approval*.
   
-  > [!NOTE]  
-  > Default responses are only processed for requests coming through the *Run with elevated access* right-click menu.
-
 - **Send elevation data for reporting** - This setting controls whether your device shares diagnostic and usage data with Microsoft. When enabled to share data, the type of data is configured by the *Reporting scope* setting.
 
   Diagnostic data is used by Microsoft to measure the health of the EPM client components. Usage data is used to show you elevations that happen within your tenant. For more information about the types of data and how it's stored, see [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md).
