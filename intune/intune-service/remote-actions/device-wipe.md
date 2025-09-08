@@ -36,7 +36,10 @@ The **Wipe** device action restores a device to its factory default settings. Th
 > - [Use OEM Config Data Wipe Configuration](https://techdocs.zebra.com/oemconfig/latest/mc/)
 
 > [!NOTE]
-> For fully managed Samsung devices (Android Enterprise), make sure that you do NOT have **Factory Reset** set to **Block** under **Device Restrictions**. If the **Factory Reset** toggle is set to **Block** and a **Wipe** action is in initiated, the device will lose contact with Intune and will also be prevented from being factory reset.
+> For fully managed Samsung devices (Android Enterprise), make sure that you do NOT have **Factory Reset** set to **Block** under **Device Restrictions**. If the **Factory Reset** toggle is set to **Block** and a **Wipe** action is initiated, the device will lose contact with Intune and will also be prevented from being factory reset.
+
+> [!NOTE]
+> **Factory Reset Protection (FRP) considerations (Android Enterprise):** Whether a device prompts for Google account credentials after reset depends on ownership (**Corporate owned with work profile/Fully managed/Dedicated**), the reset method (**Settings**, **Recovery**, or **admin wipe**), and whether FRP is configured. By default, Intune's admin wipe **does not** preserve FRP data. For more information, see [Factory reset protection emails setting isn't enforced after you reset an Android Enterprise device](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced).
 
 > [!IMPORTANT]
 >
