@@ -6,7 +6,7 @@ description: Go to the Company Portal website to reset a lost or forgotten PIN o
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 02/04/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune

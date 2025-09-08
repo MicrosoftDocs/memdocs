@@ -7,7 +7,7 @@ description: Move your work device to the new device management setup.
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/27/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
