@@ -6,7 +6,7 @@ description: Describes how to enroll an macOS device in Intune that was purchase
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 08/29/2018
 ms.topic: end-user-help
 ms.service: microsoft-intune

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: bpardi
 ms.reviewer: madakeva
-ms.date: 06/11/2025
+ms.date: 09/03/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -30,6 +30,12 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+## Installation of monthly security update releases during Windows Autopilot device preparation
+
+Starting with the monthly security update release on September 9, 2025, [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as Windows quality updates, are installed during the Windows out-of-box experience (OOBE) portion of a Windows Autopilot device preparation deployment. These updates can't be disabled for Windows Autopilot device preparation deployments. Installation of monthly security update releases during OOBE normally adds 20-40 minutes to the provisioning process. Installation of monthly security update releases also might require restarts.
+
+More details regarding automatic installation of monthly security update releases can be found at [Install Windows monthly security update releases](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases). However, this article is in regards to using the Enrollment Status Page (ESP) with Windows Autopilot. Windows Autopilot device preparation doesn't use the ESP, so the **Install Windows quality updates (might restart the device)** setting mentioned in this article isn't applicable to Windows Autopilot device preparation.
 
 ## Deliver Enterprise App Catalog (EAM) apps during Autopilot device preparation
 
