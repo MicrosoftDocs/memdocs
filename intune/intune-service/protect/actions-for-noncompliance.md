@@ -6,7 +6,7 @@ description: Configure your compliance policies with one or more actions for non
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 1/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune

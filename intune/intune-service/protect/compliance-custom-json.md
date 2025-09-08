@@ -6,7 +6,7 @@ description: Create the JSON file that defines custom settings and values for us
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 08/15/2025
 ms.topic: concept-article
 ms.service: microsoft-intune
@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
