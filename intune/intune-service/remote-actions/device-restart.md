@@ -48,7 +48,8 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 ## Restart a device
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **Restart** > **Yes**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Restart** > **Yes**.
 
 ::: zone pivot="windows,ios"
 ## User experience

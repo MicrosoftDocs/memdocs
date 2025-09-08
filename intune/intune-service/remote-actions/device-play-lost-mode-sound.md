@@ -44,10 +44,10 @@ With Microsoft Intune, you can help users locate lost or misplaced devices by re
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 ::: zone pivot="ios"
-2. From the devices list, select a device, and then select **...** > **Play Lost Mode sound (supervised only)**.
+2. From the devices list, select a device, and then select **Play Lost Mode sound (supervised only)**.
 ::: zone-end
 ::: zone pivot="android"
-2. From the devices list, select a device, and then select **...** > **Play lost device sound**.
+2. From the devices list, select a device, and then select **Play lost device sound**.
 ::: zone-end
 3. Select the duration for the sound to play on the device, and then select **Yes**.
 

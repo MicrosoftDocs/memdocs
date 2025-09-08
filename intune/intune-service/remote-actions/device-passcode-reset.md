@@ -62,7 +62,8 @@ The following table summarizes the passcode reset types based on platform:
 ## How to reset a passcode
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **...** > **Reset passcode**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Reset passcode**.
 1. A new passcode is presented to the admin.
 
 The new passcode must be entered on the device, and it's displayed in the admin center for seven days.

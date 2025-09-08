@@ -146,7 +146,8 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 To use the *Collect diagnostics* action:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **…** >  **Collect diagnostics**
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Collect diagnostics**.
 1. To confirm, select **Yes**. A pending notification appears on the device's **Overview** page.
 1. To check the status of the action, select **Monitor** > **Device diagnostics**.
 1. After the action completes, select **...** > **Download** in the row for the action > **Yes**.
@@ -160,7 +161,8 @@ Windows Autopilot diagnostics are automatically captured when devices experience
 To view the diagnostics collected after a Windows Autopilot failure:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **Diagnostics** > **Download**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Diagnostics** > **Download**.
 1. The data zip file is added to your download tray and you can save it to your computer.
 
 ### Data collected

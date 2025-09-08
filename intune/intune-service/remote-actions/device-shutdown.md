@@ -39,7 +39,8 @@ With the **shut down** action, IT administrators can remotely power off managed 
 ## How to shut down a device
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **...** > **Shut down** > **Yes**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Shut down** > **Yes**.
 
 > [!NOTE]
 > iOS/iPadOS devices that are Passcode-locked will not rejoin a Wi-Fi network after restarting. After restarting, the device might not be able to communicate with the server.

@@ -49,7 +49,8 @@ The **Remote lock** device action locks a managed device so the user must enter 
 ## How to remote lock a device
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **Remote lock**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Remote lock**.
 ::: zone pivot="macos"
 3. Set a six-digit recovery PIN.
 

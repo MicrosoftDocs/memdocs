@@ -45,7 +45,7 @@ This is typically used for troubleshooting scenarios where you don't want the de
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. Select **Pause Config Refresh**.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Pause Config Refresh**.
 1. Specify the number of minutes to pause Config Refresh in the **Time period to Pause Config Refresh**. The maximum is 1,440 minutes (24 hours).
 1. Select **Pause**.
 

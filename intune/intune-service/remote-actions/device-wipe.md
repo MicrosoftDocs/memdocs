@@ -127,7 +127,8 @@ Intune gives you the ability to use the **Wipe** remote device action to wipe da
 ## How to wipe a device
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **Wipe**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Wipe**.
 1. Provide a 6-digit number for the **Recovery PIN**. The six-digit PIN is required to reinstall the operating system on the device, if the device isn't equipped with T2 security chip enabled (that is, the model year of the device is 2018 and earlier, or the device is running macOS 10.14 or earlier). Be sure to make a note of this PIN and give it to the device owner as it won't be visible after the wipe action completes.
 
     :::image type="content" source="images/obliteration-behavior.png" alt-text="Screen shot that shows where to provide a pin and select an option for obliteration behavior." lightbox="images/obliteration-behavior.png":::

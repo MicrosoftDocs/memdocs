@@ -39,7 +39,8 @@ This capability is especially useful in scenarios where a device is suspected of
 ## How to initiate a full scan
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **...** > **Full scan**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Full scan**.
 
 ## Reference links
 

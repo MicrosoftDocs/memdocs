@@ -120,7 +120,7 @@ Intune doesn't track the custom notifications you send, and devices don't log th
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and then go to **Devices** > **All devices**.
 1. Double-click the name of the managed device to which you want to send a notification, to open that devices *Overview* page.
-1. On the devices **Overview** page, select the **Send Custom Notification** device action to open the *Send Custom Notification* pane. If this option isn't available, select the **...** (ellipses) option from the upper right side of the page and then select **Send Custom Notification**.
+1. On the devices **Overview** page, select the **Send Custom Notification** device action to open the *Send Custom Notification* pane.
 1. On the **Send Custom Notification** pane, specify the following message details:
    - **Title**: Specify a title for this notification. Titles are limited to 50 characters.
    - **Body**: Specify the message. Messages are limited to 500 characters.

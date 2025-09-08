@@ -41,7 +41,8 @@ The **Retire** action removes managed app data (where applicable), settings, and
 ## How to retire a device
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **Retire**. To confirm, select **Yes**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Retire**. To confirm, select **Yes**.
 
 ###Effect of the **Retire** action on data that remains on the device
 

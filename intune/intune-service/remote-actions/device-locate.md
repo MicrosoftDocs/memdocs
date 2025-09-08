@@ -84,7 +84,8 @@ Before you can use the locate functionality, you must configure your devices to 
 ## Locate a device
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **...** > **Locate device**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Locate device**.
 1. After the device is located, its location is shown in **Locate device**. You can select the location pin on the map to view a location address and coordinates.
 
 ::: zone pivot="android"

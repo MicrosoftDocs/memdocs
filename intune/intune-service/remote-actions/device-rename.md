@@ -57,7 +57,8 @@ If a device isn't listed here, it isn't supported. This feature doesn't support 
 ## How to rename a device
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **...** > **Rename device**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Rename device**.
 1. In the **Rename device** pane, type the new name in the text box. You can use letters, numbers, and hyphens. The name must contain at least one letter or hyphen. Android Enterprise dedicated, fully managed, and corporate-owned work profile devices are an exception, and don't require a letter or hyphen.
 1. If you want to restart the device after renaming it, Select **Yes** next to **Restart after rename**.
 1. Select **Rename**.

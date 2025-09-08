@@ -39,7 +39,8 @@ The **Fresh Start** device action removes apps from managed Windows devices, hel
 ## How to execute Fresh Start
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **Fresh Start**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Fresh Start**.
 1. Select **Retain user data on this device** to:
 
    - Keep the device Microsoft Entra joined.

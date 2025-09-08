@@ -44,7 +44,8 @@ Lost Mode is a lightweight but powerful tool that helps organizations safeguard 
 Here's how to enable Lost Mode on a device using the Intune admin center:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **Lost mode (supervised only)**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Lost mode (supervised only)**.
 1. Under **Lost mode**, select **Enable**.
 1. In the **Message to display on lock screen**, type a message to display on the device's lock screen.
 1. Optionally, enter a phone number in the **Phone number to display** box.

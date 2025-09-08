@@ -41,7 +41,8 @@ BitLocker key rotation is important in environments where devices are frequently
 ## How to rotate BitLocker keys
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device, and then select **...** > **BitLocker key rotation**.
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **BitLocker key rotation**..
 1. Select **Yes** to confirm the action.
 
 ## Reference links
