@@ -120,13 +120,13 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-  When the **Factory reset protection emails** setting is configured, there is different factory reset protection (FRP) behavior:
+  Factory reset protection (FRP) helps prevent unauthorized access to your device after it's been factory reset. If the device is reset without your permission, only the email addresses you enter can unlock the device. When the **Factory reset protection emails** setting is configured, there is different factory reset protection (FRP) behavior:
 
-  - On Android 15 (and later) **corporate-owned devices with work profile** (COPE), the **Settings** app > **Factory data reset** setting enforces factory reset protection and requires one of the specified Google accounts to complete setup.  
-  - On **fully managed** (COBO) and **dedicate** (COSU) devices:
-    - The **Settings** app > **Factory data reset** setting **doesn't** trigger factory reset protection.
-    - The **Settings** app > **Recovery/bootloader** setting **does** trigger factory reset protection.
-  - On **fully managed** (COBO), **dedicated** (COSU), and **corporate owned devices with work profile** (COPE), when you [wipe](../remote-actions/devices-wipe.md#wipe) the device in the Intune admin center, the wipe action doesn’t preserve factory reset protection data by default. So, factory reset protection isn't enforced.
+  | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../remote-actions/devices-wipe.md#wipe) |
+  | --- | --- | --- | --- |
+  | **Corporate-owned devices with work profile** (COPE) | ✅ factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
+  | **Fully managed** (COBO) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
+  | **Dedicate** (COSU) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
 
   For background and guidance, see **[Factory reset protection (FRP) enforcement behavior for Android Enterprise](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced)**.
 
