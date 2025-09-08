@@ -29,7 +29,7 @@ items:
     href: remote-assist.md
   - name: Pause config refresh
     href: pause-config-refresh.md
-  - name: Play Lost Mode sound 🔴
+  - name: Play Lost Mode sound ⚠️
     href: device-play-lost-mode-sound.md
   - name: Quick Scan ✅
     href: device-quick-scan.md

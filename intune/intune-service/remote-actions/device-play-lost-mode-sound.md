@@ -1,5 +1,5 @@
 ---
-title: Play Lost Mode Sound With Microsoft Intune
+title: "Intune Remote Device Action: Play Lost Mode Sound"
 description: Learn how to use the play lost device sound action in Microsoft Intune to remotely trigger a sound alert on a lost or stolen device.
 ms.date: 08/27/2025
 ms.topic: how-to
@@ -16,14 +16,19 @@ zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 
 # Play lost mode sound with Microsoft Intune
 
-With Microsoft Intune, you can help users locate lost or misplaced devices by remotely triggering a sound alert.
+Microsoft Intune provides platform-specific remote actions to help locate a lost or misplaced device by triggering an audible alert—even if the device is locked or silenced.
+
+- On iOS/iPadOS, use the **Play Lost Mode sound** action. This action is available when the device is in [Lost Mode](device-lost-mode.md) and supervised.
+- On Android Enterprise devices, use the **Play lost device sound** action. This action is supported for corporate-owned devices enrolled with Android Enterprise.
+
+These remote actions are especially useful in environments where devices are shared or frequently moved—such as classrooms, labs, or enterprise workspaces. Playing a sound helps users or administrators locate the device quickly and securely, supporting recovery efforts when a device is lost.
 
 ## Requirements
 
 ### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
 
 > [!div class="checklist"]
-> The **Play lost mode sound** action is supported on the following platforms:
+> These remote actions are supported on the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
@@ -43,13 +48,14 @@ With Microsoft Intune, you can help users locate lost or misplaced devices by re
 ## How to play lost mode sound
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. From the devices list, select a device.
 ::: zone pivot="ios"
-2. From the devices list, select a device, and then select **Play Lost Mode sound (supervised only)**.
+3. At the top of the device overview pane, locate the row of remote action icons. Select **Play Lost Mode sound (supervised only)**.
 ::: zone-end
 ::: zone pivot="android"
-2. From the devices list, select a device, and then select **Play lost device sound**.
+3. At the top of the device overview pane, locate the row of remote action icons. Select **Play lost device sound**.
 ::: zone-end
-3. Select the duration for the sound to play on the device, and then select **Yes**.
+4. Select the duration for the sound to play on the device, and then select **Yes**.
 
 ## User experience
 
@@ -60,13 +66,14 @@ The sound plays until the user disables the sound or the duration you set expire
 
 For **Android Enterprise dedicated devices**:
 
-   - If notifications are enabled, a notification with a **Stop Sound** button shows up.
-   - The sound plays for the set duration or, if notifications are enabled, until a user on the device turns it off.
+- If notifications are enabled, a notification with a **Stop Sound** button shows up.
+- The sound plays for the set duration or, if notifications are enabled, until a user on the device turns it off.
 
 To configure system notifications for devices in kiosk mode, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 For **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise fully managed devices**:
-   - To configure system notifications for devices, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+- To configure system notifications for devices, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 ::: zone-end
 
