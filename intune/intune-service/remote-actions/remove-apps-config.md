@@ -10,6 +10,8 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+
+zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
 # Remove apps and configuration from devices
@@ -46,7 +48,7 @@ This action aims to resolve the issues that customers face outside of Intune and
 
 **Configuration**: Intune delivered configuration profiles.
 
-#### [iOS](#tab/iOS)
+::: zone pivot="ios"
 
 - Profile type, Settings catalog: All
 - Profile type
@@ -61,7 +63,9 @@ This action aims to resolve the issues that customers face outside of Intune and
   - VPN
   - Wi-Fi
 
-#### [Android](#tab/android)
+::: zone-end
+
+::: zone pivot="android"
 
 - Profile Type:
   - Device restrictions
@@ -72,7 +76,7 @@ This action aims to resolve the issues that customers face outside of Intune and
   - VPN
   - Wi-Fi
 
----
+::: zone-end
 
 ## Permissions for Remove apps and configurations
 
@@ -82,8 +86,6 @@ The administrator can:
 - select and restore previously removed applications and configuration from a device.
 
 For more information on custom roles, see: [Create a custom role in Intune]( ../fundamentals/create-custom-role.md)
-
-
 
 **Scope Tags**: Remove Apps and Configuration will limit an admin's view of applications and configurations based on the Scope Tag assignments of the admin's role. For more information on Scope tags, see [Use role-based access control and scope tags for distributed IT]( ../fundamentals/scope-tags.md).
 
@@ -122,42 +124,28 @@ Removed items are automatically restored to devices in 8-24 hours in cases where
 
 The monitoring page displays the following information:
 
-#### [Available actions](#tab/available-actions)
+- Available actions
 
-**Add**: add more items for removal.
+    | Action | Description |
+    |--|--|
+    | **Add** | Add more items for removal |
+    | **Refresh** | Refresh the list and track progression of remove/ restore. |
+    | **Columns** | Enable/disable columns. |
+    | **Restore all** | Restore all removed items in the list. When you select the **Restore all** button in the table header, a confirmation     box is displayed. When ready, select **Restore all** initiate restoration of all Removed apps or configurations to the device. |
+    | **Restore select items** | Restore selected items in the list. Select one or more items using the selection check box and then select     the **Restore** button to initiate the restore of selected items or Configurations to the device. |
+    | **Last refreshed on** | Shows the timestamp of when the list was last refreshed. |
 
-**Refresh**: refresh the list and track progression of remove / restore.
+- Display columns:
 
-**Columns**: disable / enable columns.
-
-**Restore all**: restore all removed items in the list. When you select the **Restore all** button in the table header, a confirmation box is displayed. When ready, select **Restore all** initiate restoration of all Removed apps or configurations to the device.
-
-**Restore select items**: restore selected items in the list. Select one or more items using the selection check box and then select the **Restore** button to initiate the restore of selected items or Configurations to the device.
-
-**Last refreshed on**: shows the timestamp of when the list was last refreshed.
-
-#### [Display columns](#tab/display-columns)
-
-**Name**: application or policy name
-
-**Item type**: application or policy type
-
-**Action**: current action for the item
-
-**Started**: date/time stamp when the action was initiated
-
-**Status**:
-
-- **In Progress**: remove attempt to device initiated, pending response
-- **Removed**: item removed from device
-- **Restored**: item restored to device
-- **Error**: action resulted in error, see status details
-
-**Status time**: date/timestamp when the status was updated
-
-**Status detail**: when populated, shows more details for the status
-
----
+    | Column name | Description |
+    |--|--|
+    | **Name** | Application or policy name |
+    | **Item type** | Application or policy type |
+    | **Action** | Current action for the item |
+    | **Started** | Date/time stamp when the action was initiated |
+    | **Status** | - **In Progress**: remove attempt to device initiated, pending response<br>- **Removed**: item removed from device<br>-     **Restored**: item restored to device<br>- **Error**: action resulted in error, see status details |
+    | **Status time** | Date/timestamp when the status was updated |
+    | **Status detail** | When populated, shows more details for the status |
 
 ## Reference links
 
