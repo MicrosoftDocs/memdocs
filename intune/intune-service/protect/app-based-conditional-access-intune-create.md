@@ -7,7 +7,7 @@ description: Create Conditional Access policies that work with Intune app protec
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 04/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune

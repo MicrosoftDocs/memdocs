@@ -6,7 +6,7 @@ description: Learn how to enroll an iOS or iPadOS device and set up derived cred
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 10/31/2019
 ms.topic: end-user-help
 ms.service: microsoft-intune

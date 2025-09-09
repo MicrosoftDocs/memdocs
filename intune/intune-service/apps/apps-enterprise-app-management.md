@@ -6,7 +6,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 06/17/2025
+ms.date: 09/05/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,7 +36,7 @@ The Enterprise App Management provides the following benefits:
 
 - **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
 - **Stay current with updates**: You're able to keep apps up-to-date by easily creating apps for the new versions of products as they're available in the catalog. Use the **Enterprise App Catalog apps with updates** report.
-- **Windows Autopilot integration**: Enterprise App Catalog apps are supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you can select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions.
+- **Windows Autopilot integration**: Enterprise App Catalog apps are supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you can select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This feature allows you to update apps more easily without needing to update those profiles with the latest versions.
 
 When you add an Enterprise App Catalog app, Intune prefills the following installation details:
 
@@ -68,7 +68,7 @@ You can also configure app specific rules used to detect the presence of the Ent
 The Enterprise App Catalog includes apps that self update. Intune ensures the app is at least at a target minimum version, and considers the app installed if the detected version of the app is at or above the minimum version. Self-updating apps update on client devices based on the vendor's process. Intune reports the version of the app detected on the device.
 
 > [!IMPORTANT]
-> Self-updating apps may require that your tenant has network rules configured to allow an update from the app vendor.
+> Self-updating apps might require that your tenant has network rules configured to allow an update from the app vendor.
 
 ## Frequently asked questions (FAQ)
 
@@ -89,7 +89,7 @@ Include the following details when requesting to add an application:
 You can also upvote an application previously submitted by someone else. Applications with large numbers of votes receive the most consideration and effort to be added to the catalog. However, priority depends on complexity of the applications mechanics.
 
 > [!IMPORTANT]
-> Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprise App Catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise App Catalog. Microsoft doesn't offer or assume any Service Level Agreement (SLA) or timeline regarding adding an app to the Enterprise App Catalog.
+> Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprise App Catalog. After Microsoft reviews the submission form, the app might be added. Microsoft doesn't offer or assume any Service Level Agreement (SLA) or timeline regarding adding an app to the Enterprise App Catalog.
 
 ### Where are the devices downloading the app content from?
 
@@ -133,7 +133,15 @@ Yes. Enterprise App Management can be purchased as a standalone SKU or as part o
 
 ### Can Enterprise App Management be used with Microsoft Configuration Manager?
 
-Enterprise App Management is only provided by Microsoft Intune. Configuration Manager doesn't directly support Enterprise App Management apps, however co-managed clients can get Enterprise App Catalog apps when targeted from Microsoft Intune.
+Enterprise App Management is only provided by Microsoft Intune. Configuration Manager doesn't directly support Enterprise App Management apps. However, co-managed clients can get Enterprise App Catalog apps when targeted from Microsoft Intune.
+
+### What happens if an app is removed from the Enterprise App Catalog?
+
+Occasionally, app vendors might request removal of their applications from the Enterprise App Catalog. When this happens:
+
+- **Existing deployments remain unaffected**: Apps that are already deployed to your tenant and user devices continue to function normally.
+- **No new deployments**: You can't deploy new instances of the removed app from the Enterprise App Catalog.
+- **Alternative solutions**: For future deployments, work directly with the app vendor or use traditional Win32 app deployment methods.
 
 ### Does Enterprise App Management use **Winget**?
 
@@ -156,8 +164,10 @@ Yes, the Managed Apps report provides a report of apps on a specific device that
 
 There are various applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see [Add a Windows catalog app (Win32) to Intune](../apps/apps-add-enterprise-app.md#add-a-windows-catalog-app-win32-to-intune).
 
+More apps will be available on an ongoing basis in the Enterprise App Catalog.
+
 > [!NOTE]
-> Additional apps will be available on an ongoing basis in the Enterprise App Catalog.
+> **think-cell apps removed from Enterprise App Catalog**: At the request of think-cell, their applications are removed from the Enterprise App Catalog. This removal **does not affect** existing think-cell installations in your tenant or on user devices. Customers who currently have think-cell apps deployed through the Enterprise App Catalog can continue to manage these installations normally.
 
 The following table of Enterprise Apps is available within Intune:
 

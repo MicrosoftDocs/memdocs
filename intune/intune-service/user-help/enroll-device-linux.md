@@ -6,7 +6,7 @@ description: Enroll a work provided Linux device in Microsoft Intune to get secu
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 08/15/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
