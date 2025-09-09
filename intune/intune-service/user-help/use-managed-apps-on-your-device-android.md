@@ -6,7 +6,7 @@ description: Learn about managed apps and where to get Android apps for work or 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/27/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune

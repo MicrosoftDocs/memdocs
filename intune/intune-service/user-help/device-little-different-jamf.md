@@ -6,8 +6,8 @@ description: Resolve Intune Company Portal device registration issues on Macs ma
 keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 10/08/2024
+manager: laurawi
+ms.date: 09/03/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -20,7 +20,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: 
+ms.reviewer: beflamm 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser

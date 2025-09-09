@@ -6,7 +6,7 @@ description: Describes how to install, update, and remove the Microsoft Intune a
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/04/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune

@@ -1,7 +1,7 @@
 ---
 title: Use Remediations to detect and fix support issues
 description: Learn more about Remediations in Microsoft Intune, including what Remediations are and view any prerequisites and licensing requirements. Also, learn how to deploy built-in and custom remediation scripts, and learn how to monitor your scripts.
-ms.date: 08/11/2025
+ms.date: 09/08/2025
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: how-to
@@ -58,7 +58,7 @@ Whether enrolling devices via Intune or Configuration Manager, Remediation scrip
 
 - Devices must be Microsoft Entra joined or Microsoft Entra hybrid joined and meet one of the following conditions:
 
-  - Device is MDM enrolled in Intune and runs Windows 10 or later Enterprise, Professional, or Education edition.
+  - Device is Mobile Device Management (MDM) enrolled in Intune and runs Windows 10 or later Enterprise, Professional, or Education edition.
 
     **OR**
 
@@ -66,7 +66,7 @@ Whether enrolling devices via Intune or Configuration Manager, Remediation scrip
 
 ### Licensing
 
-Remediations requires users of the devices to have one of the following licenses:
+Remediations require users of the devices to have one of the following licenses:
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 
@@ -86,16 +86,16 @@ Remediations requires users of the devices to have one of the following licenses
 - A script package can contain a detection script only or both a detection script and a remediation script. 
   - A remediation script only runs if the detection script uses exit code `exit 1`, meaning the issue was detected.
 - Ensure the scripts are encoded in UTF-8.
-  - In the [Settings](#deploy-built-in-script-packages) page of creating a script package, if the **Enforce script signature check** option is enabled, then make sure that the scripts are encoded in UTF-8, not UTF-8 BOM.
-- The maximum allowed output size limit is 2048 characters.
+  - In the [Settings](#deploy-built-in-script-packages) page of creating a script package, if the **Enforce script signature check** option is enabled, then make sure that the scripts are encoded in UTF-8, not UTF-8 BOM (Byte Order Mark).
+- The maximum allowed output size limit is 2,048 characters.
 - In the [Settings](#deploy-built-in-script-packages) page of creating a script package, if the **Enforce script signature check** option is enabled, then the script runs using the device's PowerShell execution policy. The default execution policy for Windows client computers is **Restricted**. The default execution for Windows Server devices is **RemoteSigned**. For more information, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
   - Scripts built into Remediations are signed and the certificate is added to the **Trusted Publishers** certificate store of the device.
-  - When using third-party scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the certificate authority must be trusted by the device.
+  - When using non-Microsoft scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the device must trust the certificate authority.
   - Scripts without **Enforce script signature check** use the **Bypass** execution policy.
 - Don't put reboot commands in detection or remediations scripts. <!--13957089-->
-- Do not include any type of sensitive information in scripts (such as passwords)
-- Do not include Personally Identifiable Information (PII) in scripts
-- Do not use scripts to collect PII from devices
+- Don't include any type of sensitive information in scripts (such as passwords)
+- Don't include personal data in scripts
+- Don't use scripts to collect personal data from devices
 - Always follow privacy best practices
 
 ## Deploy built-in script packages
@@ -128,7 +128,7 @@ Execution behavior:
 
 - Remediations run based on the device's local time, by default. To schedule by Coordinated Universal Time, select **Use UTC**.
 - If a scheduled run is missed, the remediation runs when the device is online, and as soon as possible.
-- For non-urgent or resource-heavy scripts, less frequent schedules (like every 7 days) are recommended, which helps reduce any performance impact on the device.
+- For nonurgent or resource-heavy scripts, use less frequent schedules (such as every seven days) to reduce performance effects on the device.
 
 ## Create and deploy custom script packages
 
@@ -157,7 +157,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
    1. Browse to the `.ps1` file.
    1. Choose the file and select **Open** to upload it.
 
-    The detection script must use exit code `exit 1` if the target issue is detected. If there's any other exit code, the remediation script won't run. Including an empty output, since it results in an *issue is not found* state. Review the [Sample detection script](powershell-scripts-remediation.md#script-descriptions) for an example of exit code usage.
+    The detection script must use exit code `exit 1` if the target issue is detected. If there's any other exit code, the remediation script won't run. Including an empty output, since it results in an *issue isn't found* state. Review the [Sample detection script](powershell-scripts-remediation.md#script-descriptions) for an example of exit code usage.
 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
 
@@ -185,7 +185,7 @@ You can use the **Run remediation** device action to run a remediation script on
 
 - Remediations must already be configured before a remediation script can be used on-demand.
 
-- The built-in or custom script packages must be available for users to run a remediation on-demand, however they don't need to be assigned to a user or device. You can use **Scope tags** to limit which remediation script packages a user can see.
+- The built-in or custom script packages must be available for users to run a remediation on-demand. However, they don't need to be assigned to a user or device. You can use **Scope tags** to limit which remediation script packages a user can see.
 
 - Users must be Intune Admins or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
 
@@ -253,6 +253,8 @@ You can view the status of Remediations that are assigned or run on-demand to a 
 ## Known Issues
 
 When you apply filters such as "Author" or "Status," or using the **Export** option on the **Remediations** page of **Scripts and remediations**, only the currently loaded script packages are included. To include all scripts, scroll until the full list is loaded.
+
+[!INCLUDE [platform-scripts-export-api](../includes/platform-scripts-export-api.md)]
 
 ## Next steps
 

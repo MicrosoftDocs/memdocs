@@ -6,7 +6,7 @@ description: Learn how to retrieve Intune Company Portal app logs off your devic
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 03/05/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune

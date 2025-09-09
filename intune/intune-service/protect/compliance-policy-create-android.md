@@ -6,8 +6,8 @@ description: View the device compliance settings that are available for Android 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 09/23/2024
+manager: laurawi
+ms.date: 09/04/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
