@@ -11,9 +11,14 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+
+zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
-# Retire
+# Retire devices with Intune
+
+::: zone pivot="macos,ios,windows,android"
+::: zone-end
 
 The **Retire** action removes managed app data (where applicable), settings, and email profiles that were assigned by using Intune. The device is removed from Intune management. Removal happens the next time the device checks in and receives the remote **Retire** action. The device still shows up in Intune until the device checks in. If you want to remove stale devices immediately, use the [Delete action](device-delete.md) instead.
 
@@ -35,7 +40,7 @@ The **Retire** action removes managed app data (where applicable), settings, and
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
->   - The permission **Remote tasks/Wipe**
+>   - The permission **Remote tasks/Retire**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to retire a device
@@ -44,18 +49,18 @@ The **Retire** action removes managed app data (where applicable), settings, and
 1. From the devices list, select a device.
 1. At the top of the device overview pane, locate the row of remote action icons. Select **Retire**. To confirm, select **Yes**.
 
-###Effect of the **Retire** action on data that remains on the device
+> [!IMPORTANT]
+> Retired devices might not be automatically deleted resulting in the device record remaining in Intune for 180 days unless issued a [Delete](device-delete.md) action.
+
+### Effect of the **Retire** action on data that remains on the device
 
 When you use the **Retire** device action, the user's personal data is not removed from the device.
 
-The following tables describe what data is removed, and the effect of the **Retire** action on data that remains on the device after company data is removed.
+::: zone pivot="ios"
 
-# [:::image type="icon" source="../media/icons/platforms/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
+The following table shows what data is removed and what remains on the device after the **Retire** action is applied.
 
-> [!IMPORTANT]
-> Retired devices might not be automatically deleted resulting in the device record remaining in Intune for 180 days unless issued a **Delete** action.
-
-|Data type|iOS|
+| Data type | iOS |
 |-------------|-------|
 |Company apps and associated data installed by Intune|**Apps installed using Company Portal:** For apps that are pinned to the management profile, all app data and the apps are removed. These apps include apps originally installed from App Store and later managed as company apps unless the app is configured to not be uninstalled on device removal. <br /><br /> **Microsoft apps that use App Protection Policies and were installed from App Store:** Intune triggers a [selective wipe](../apps/apps-selective-wipe.md) for apps protected by an [App Protection Policy](../apps/app-protection-policy.md) when a Retire action is initiated against an enrolled device. This wipe includes apps installed from the App Store that have work or school account data. The next time the app is launched, the selective wipe removes the protected work or school account data. In order for the selective wipe to occur, an App Protection Policy check-in must occur between the MDM enrollment and retire events. Personal app data and the apps aren't removed after a selective wipe.|
 |Settings|Configurations set by Intune policy are no longer enforced. Users can change the settings.|
@@ -66,9 +71,15 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
 
 > [!NOTE]
-> Users that reinstall the Outlook Mobile app following a **Retire** device action may need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries.  Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
+> Users that reinstall the Outlook Mobile app following a **Retire** device action may need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries. Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
 
-# [:::image type="icon" source="../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+::: zone-end
+
+::: zone pivot="android"
+
+#### Android Enterprise personally owned devices with a work profile
+
+Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune.
 
 #### Android device administrator
 
@@ -86,39 +97,45 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Certificate profile settings|Certificates are revoked but not removed.|Certificates are removed and revoked.|
 |Management agent|Device Administrator privilege is revoked.|Device Administrator privilege is revoked.|
 |Email|N/A (Android devices don't support Email profiles)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
-|Microsoft Entra unjoin|The Microsoft Entra ID record is removed.|The Microsoft Entra ID record is removed.|
-
-#### Android Enterprise personally owned devices with a work profile
-
-Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune.
-
-# [:::image type="icon" source="../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+|Microsoft Entra Device Record|The Microsoft Entra ID record is removed.|The Microsoft Entra ID record is removed.|
 
 
-- Settings: Configurations set by Intune policy are no longer enforced. Users can change the settings.
-- Wi-Fi and VPN profile settings: Removed.
-- Certificate profile settings: Certificates that were deployed through MDM are removed and revoked.
-- Management agent: The management profile is removed.
-- Outlook: If Conditional Access is enabled, the device doesn't receive new mail.
-- Microsoft Entra Device Record: The Microsoft Entra ID record isn't removed.
+::: zone-end
 
 
-# [:::image type="icon" source="../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+::: zone pivot="macos"
 
-- Company apps and associated data installed by Intune: Apps are uninstalled. Sideloading keys are removed.<br>For Windows 10 version 1709 (Creators Update) and later, Microsoft 365 Apps aren't removed. Intune management extension installed Win32 apps aren't uninstalled on unenrolled devices. Admins can use assignment exclusion to not offer Win32 apps to BYOD Devices.
-- Settings: Configurations set by Intune policy are no longer enforced. Users can change the settings.
-- Wi-Fi and VPN profile settings: Removed.
-- Certificate profile settings: Certificates are removed and revoked.
-- Email: Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows. Removes mail accounts provisioned by Intune.
-- Microsoft Entra unjoin: The Microsoft Entra ID record is removed.
+| Data type | macOS |
+|-------------|-------|
+|Settings| Configurations set by Intune policy are no longer enforced. Users can change the settings.|
+|Wi-Fi and VPN profile settings| Removed.|
+|Certificate profile settings| Certificates are removed and revoked.|
+|Management agent| The management profile is removed.|
+|Outlook| If Conditional Access is enabled, the device doesn't receive new mail.|
+|Microsoft Entra Device Record| The Microsoft Entra ID record isn't removed.|
+
+::: zone-end
+
+::: zone pivot="windows"
+
+| Data type | Windows |
+|-------------|-------|
+|Company apps and associated data installed by Intune| - Apps are uninstalled<br>-Sideloading keys are removed<br> Microsoft 365 Apps aren't removed<br>- Intune management extension installed Win32 apps aren't uninstalled on unenrolled devices. Admins can use assignment exclusion to not offer Win32 apps to BYOD Devices.|
+| Settings|Configurations set by Intune policy are no longer enforced. Users can change the settings.|
+|Wi-Fi and VPN profile settings| Removed.|
+|Certificate profile settings| Certificates are removed and revoked.|
+| Email: Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows. Removes mail accounts provisioned by Intune|
+|Microsoft Entra Device Record| The Microsoft Entra ID record is removed.|
 
 > [!IMPORTANT]
 > Windows devices that are not registered in the Windows Autopilot Service, upon being deleted or retired from Intune are removed from Microsoft Entra ID. Before performing these commands consider backing up the BitLocker Recovery Key and/or a local administrator user account credentials. On the other hand, although Windows Autopilot registered devices leave Microsoft Entra ID, their computer object is retained alongside their properties (e.g. Windows LAPS, BitLocker Recovery Key, Entra ID groups memberships).
 
 > [!NOTE]
-> For Windows 10 devices that join Microsoft Entra ID during initial Setup (OOBE), the retire command will remove all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) to login as a local admin and regain access to the user's local data.
+> For Windows devices that join Microsoft Entra ID during initial Setup (OOBE), the retire command will remove all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/topic/1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) to login as a local admin and regain access to the user's local data.
 
----
+::: zone-end
+
+::: zone pivot="ios,macos"
 
 ## Retire an Apple ADE device from Intune
 
@@ -133,10 +150,11 @@ If you want to completely remove an Apple automated device enrollment (ADE) devi
 > [!NOTE]
 > In some cases, the iOS device must be restored with iTunes to apply this change. Please find further instructions from Apple [here](https://support.apple.com/guide/itunes/restore-to-factory-settings-itnsdb1fe305/windows).
 
+::: zone-end
 
 ## Reference links
 
-- Microsoft Graph API: [wipe action][GRAPH-1]
+- Microsoft Graph API: [retire action][GRAPH-1]
 
 <!--links-->
 
@@ -153,4 +171,4 @@ If you want to completely remove an Apple automated device enrollment (ADE) devi
 
 <!-- API links -->
 
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-wipe
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-retire

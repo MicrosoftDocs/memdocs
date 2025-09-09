@@ -26,29 +26,33 @@ A wipe is useful for resetting a device before you give the device to a new user
 
 The **Wipe** device action restores a device to its factory default settings.
 
+::: zone pivot="macos,android"
 ## Before you start
+::: zone-end
 
 ::: zone pivot="macos"
 
-- For devices running macOS 12.0.1 and later, review the requirements for erasing devices available on the [Apple Support site](https://support.apple.com/guide/deployment/dep0a819891e).
+For devices running macOS 12.0.1 and later, review the requirements for erasing devices available on the [Apple Support site](https://support.apple.com/guide/deployment/dep0a819891e).
 
-- For devices running a version of macOS earlier to 12.0.1, macOS must be reinstalled. Steps covering how to reinstall macOS are available on the [Apple Support site](https://support.apple.com/HT204904).
+For devices running a version of macOS earlier than 12.0.1, macOS must be reinstalled. Steps covering how to reinstall macOS are available on the [Apple Support site](https://support.apple.com/HT204904).
 
 ::: zone-end
 
 ::: zone pivot="android"
 
-### Factory Reset Protection (FRP) considerations (Android Enterprise)
+### Factory Reset Protection (FRP) considerations
 
-Whether a device prompts for Google account credentials after reset depends on ownership (**Corporate owned with work profile/Fully managed/Dedicated**), the reset method (**Settings**, **Recovery**, or **admin wipe**), and whether FRP is configured. By default, Intune's admin wipe **does not** preserve FRP data. For more information, see [Factory reset protection emails setting isn't enforced after you reset an Android Enterprise device](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced).
+Whether a device prompts for Google account credentials after reset depends on ownership (Android Enterprise corporate-owned work profile/fully managed/dedicated), the reset method (Settings, Recovery, or admin wipe), and whether FRP is configured. By default, Intune's admin wipe doesn't preserve FRP data.
 
-### Samsung Android devices
+For more information, see [Factory reset protection emails setting isn't enforced after you reset an Android Enterprise device](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced).
+
+### Samsung devices
 
 For Android Enterprise fully managed Samsung devices, make sure the **Factory Reset** setting under **Device Restrictions** is not set to **Block**.
 
 If **Factory Reset** is blocked and a **Wipe** action is initiated, the device will lose contact with Intune and be unable to complete the factory reset.
 
-### Zebra Android devices
+### Zebra devices
 
 On Zebra Android devices, the **Wipe** remote action is designed to remove only corporate data. It doesn't perform a factory reset.
 
@@ -76,8 +80,13 @@ To factory reset a Zebra Android device, use one of the following methods:
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
-> To execute this remote action, at a minimum, use an account that has one of the following roles:
+> To execute these remote actions, you must use an account that has at least one of the following roles:
 >
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Wipe**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ### How to wipe a device
 
