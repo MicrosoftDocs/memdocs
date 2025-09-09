@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # What is Microsoft Intune Advanced Analytics
 
-[!INCLUDE [intune-add-on-note](/intune/intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
 Microsoft Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. With Intune Advanced Analytics, your organization can proactively detect and resolve endpoint issues, streamline troubleshooting process, and improve your users' technology experience.
 

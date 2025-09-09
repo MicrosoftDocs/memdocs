@@ -14,9 +14,9 @@ ms.localizationpriority: high
 
 # Plan for Advanced Analytics
 
-[!INCLUDE [intune-add-on-note](/intune/intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-[!INCLUDE [advanced-analytics-overview](/intune/analytics/includes/advanced-analytics-overview.md)]
+[!INCLUDE [advanced-analytics-overview](../includes/advanced-analytics-overview.md)]
 
 ## Planning Checklist
 

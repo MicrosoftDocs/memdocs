@@ -31,9 +31,9 @@ ms.collection:
 
 # Device query for multiple devices
 
-[!INCLUDE [intune-add-on-note](/intune/intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-[!INCLUDE [advanced-analytics-overview](/intune/analytics/includes/advanced-analytics-overview.md)]
+[!INCLUDE [advanced-analytics-overview](../includes/advanced-analytics-overview.md)]
 
 Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
 

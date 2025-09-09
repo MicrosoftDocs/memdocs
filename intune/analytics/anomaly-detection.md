@@ -14,9 +14,9 @@ ms.localizationpriority: high
 
 # Anomaly Detection in Endpoint analytics
 
-[!INCLUDE [intune-add-on-note](/intune/intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-[!INCLUDE [advanced-analytics-overview](/intune/analytics/includes/advanced-analytics-overview.md)]
+[!INCLUDE [advanced-analytics-overview](../includes/advanced-analytics-overview.md)]
 
 This article explains how anomaly detection in Endpoint analytics works as an early warning system.
 
