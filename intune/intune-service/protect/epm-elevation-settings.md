@@ -1,5 +1,5 @@
 ---
-title: Managing Endpoint Settings Poilices for Endpoint Privilege Management
+title: Managing Elevation Settings for Endpoint Privilege Management
 description: View guidance on how to manage the Endpoint Privilege Management client, including reporting level and default elevation response. 
 keywords:
 author: brenduns
@@ -27,27 +27,27 @@ ms.collection:
 - sub-intune-suite
 ---
 
-# Creating elevation settings with Endpoint Privilege Management
+# Managing elevation settings with Endpoint Privilege Management
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
-To configure the following options on devices, deploy *Windows elevation settings policy* to users or devices:
+To configure Endpoint Privilege Management (EPM) on devices, deploy *Windows elevation settings policy* to users or devices:
 
-- Enable Endpoint Privilege Management on a device.
-- Set default rules for elevation requests for any file that's not managed by an Endpoint Privilege Management elevation rule on that device.
+- Enable or disbale EPM on a device.
+- Set default rules for elevation requests for any file doesn't match an elevation rule.
 - Configure what information EPM reports back to Intune.
 
-A device must have an elevation settings policy that enables support for EPM before the device can process an elevation rules policy or manage elevation requests. When support is enabled, the `C:\Program Files\Microsoft EPM Agent` folder is added to the device along with the EPM Microsoft Agent, which is responsible for processing the EPM policies.
+When EPM is enabled, the `C:\Program Files\Microsoft EPM Agent` folder is created along with the 'Microsoft EPM Agent Service' service, which is responsible for processing the EPM policies.
 
 ## About Windows elevation settings policy
 
 Use *Windows elevation settings policy* when you want to:
 
-- **Enable Endpoint Privilege Management** on devices. By default, this policy enables EPM. When first enabled for EPM, a device provisions the components that collect usage data on elevation requests and that enforce elevation rules.
+- **Enable or Disable Endpoint Privilege Management** on devices. When first enabled for EPM, the EPM components are installed.
 
-  If a device has EPM disabled, the client components are deactivated on the next policy sync. There's a delay of seven days before the EPM component is completely removed. The delay helps to reduce the time it takes to restore EPM should a device accidentally have EPM disabled or its elevation settings policy unassigned.
+  If a device has EPM disabled, the client components are deactivated on the next policy sync. There's a delay of seven days before the EPM components are removed. The delay helps to reduce the time it takes to restore EPM should a device accidentally have EPM disabled or its elevation settings policy unassigned.
 
-- **Default elevation response** - Set a default response for an *elevation request* of any file that isn't managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must *explicitly request* elevation through the *Run with elevated access* right-click menu. By default, this option is set to *Not Configured*. If no setting is configured, the EPM components fall back to their built-in default, which is to **deny all requests**.
+- **Set a Default elevation response** - Set a default response for an *elevation request* of any file that isn't managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must *explicitly request* elevation through the *Run with elevated access* right-click menu. By default, this option is set to *Not Configured*. If no setting is configured, the EPM components fall back to their built-in default, which is to **deny all requests**.
 
   > [!TIP]  
   > We [recommend the use of *Require support approval*](../protect/epm-plan.md#security-recommendations) or *Deny all requests* as a default elevation response.
@@ -55,7 +55,7 @@ Use *Windows elevation settings policy* when you want to:
   Options include:
 
   - **Deny all requests** - This option blocks the *elevate request* action for files that aren't defined in a *Windows elevation rules policy*.
-  - **Require support approval** - When support approval is required, an administrator must approve elevation requests without a matching rule prior to the elevation being required.
+  - **Require support approval** - When support approval is required, an administrator must review elevation requests before a the elevation is allowed.
   - **Require user confirmation** - When user confirmation is required, you can choose from the same validation options as found for Windows elevation rules policy.
 
     - **Validation options** - Set validation options when the default elevation response is defined as *Require user confirmation*. Options include:
@@ -66,9 +66,9 @@ Use *Windows elevation settings policy* when you want to:
       > Multiple validation options can be selected to satisfy the needs of the organization. If no options are selected, then the user is only required to select *continue* to complete the elevation.
 
   > [!CAUTION]
-  > The *default elevation response* applies to all files that don't match an elevation rule, as a result the *Require user confirmation* setting allows all files to be elevated by default. If you're not seeking additional auditing or credential prompts, we recommend use of *Deny all requests* or *Require support approval*.
+  > The *default elevation response* applies to all files that don't match an elevation rule, as a result the *Require user confirmation* setting allows all files to be elevated by default. If you're not seeking business justifications or credential prompts for elevations, we recommend use of *Deny all requests* or *Require support approval*.
   
-- **Send elevation data for reporting** - This setting controls whether your device shares diagnostic and usage data with Microsoft. When enabled to share data, the type of data is configured by the *Reporting scope* setting.
+- **Send elevation data for reporting** - This setting controls whether your device shares diagnostic and usage data with Microsoft. Use the *Reporting scope* setting to control the data collected.
 
   Diagnostic data is used by Microsoft to measure the health of the EPM client components. Usage data is used to show you elevations that happen within your tenant. For more information about the types of data and how it's stored, see [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md).
 
@@ -100,7 +100,7 @@ Use *Windows elevation settings policy* when you want to:
    :::image type="content" source="./media/epm-policies/evaluation-settings-policy.png" alt-text="Image of the evaluation settings configuration page." lightbox="./media/epm-policies/evaluation-settings-policy.png":::
 
    - **Endpoint Privilege Management**: Set to **Enabled** (default). When Enabled, a device uses Endpoint Privilege Management. When set to Disabled, the device doesn't use Endpoint Privilege Management, and immediately disables EPM if it was previously enabled. After seven days, the device will deprovision the components for Endpoint Privilege Management.
-   - **Default elevation response**: Configure how this device manages elevation requests for files that aren't directly managed by a rule:
+   - **Default elevation response**: Configure how this device manages elevation requests for files that don't match a rule:
      - **Not Configured**: This option functions the same as *Deny all requests*.
      - **Deny all requests**: EPM doesn't facilitate the elevation of files and the user is shown a pop-up window with information about the denial. This configuration doesn't prevent users with administrative permissions from using *Run as administrator* to run unmanaged files.
      - **Require support approval**: This behavior instructs EPM to prompt the user to submit a support approved request.
@@ -117,7 +117,7 @@ Use *Windows elevation settings policy* when you want to:
 
        This level of information can help you identify other files that aren't yet managed by an elevation rule that users seek to run in an elevated context.
 
-     - **Diagnostic data and managed elevations only**: The device reports diagnostic data and details about file elevations for only those files that are managed by an elevation rule policy. File requests for unmanaged files, and files that are elevated through the Windows default action of *Run as administrator*, aren't reported as managed elevations.
+     - **Diagnostic data and managed elevations only**: The device reports diagnostic data and details about file elevations controlled by EPM. EPM elevations include elevations that match an elevation rule or are intiated by the *Run with elevated access* right-click context menu. File requests for unmanaged files, and files that are elevated through the Windows default action of *Run as administrator*, aren't reported as managed elevations.
      - **Diagnostic data only**: Only diagnostic data for the operation of Endpoint Privilege Management is collected. Information about file elevations isn't reported to Intune.
 
    When ready, select **Next** to continue.

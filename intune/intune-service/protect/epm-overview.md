@@ -92,7 +92,7 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
   
   :::image type="content" source="media/epm-overview/epm-support-approval-inline.png" alt-text="A screenshot showing the prompt a user receives when they request to run an application as administrator using support approval." lightbox="media/epm-overview/epm-support-approval-expanded.png":::
 
-- **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. In certain scenarios deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
+- **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. In certain scenarios, deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
 The EPM client can be configured with a default elevation response, or with specific rules that allow the specified elevation response.
 
@@ -100,7 +100,7 @@ The EPM client can be configured with a default elevation response, or with spec
 
 ✅ Granular targeting of files for elevation
 
-EPM elevation rules can be created based on one or more attributes including file name, path, etc. These are some examples of rule capabilities:
+EPM elevation rules can be created based on one or more attributes including file name, path, etc. Some examples of rule capabilities are:
 
 - **Child process controls** - When processes are elevated by EPM, you can control how the creation of child processes is governed by EPM, which allows you to have granular control over any subprocesses that might be created by your elevated application.
 
