@@ -43,7 +43,7 @@ To use device query for multiple devices, go to the **Devices** pane and select 
 
 You can expand the view on the left side to see all the properties that can be queried. Select any one to populate into your query. You can select and drag the edges of both the left side and the query window to make any adjustments.  
 
-After running a query, select **Export** to save results to a .CSV file. You have the option to export all columns in the query result or just the columns you select. You can export up to 50,000 results to a file. 
+After running a query, select **Export** to save results to a .CSV file. You have the option to export all columns in the query result or just the columns you select. You can export up to 50,000 results to a file.
 
 > [!TIP]
 > You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#query-multiple-devices).
@@ -136,15 +136,15 @@ Table operators can be used to filter, summarize, and transform data streams. Th
 
 | **Table Operators** | **Description** |
 | --- | --- |
-| count | Returns a table with a single record containing the number of records. |
-| distinct | Produces a table with the distinct combination of the provided columns of the input table. |
-| join | Merge the rows of two tables to form a new table by matching row for the same device. Only the join types of `innerunique`, `Leftouter`, `Fullouter`, `Rightouter`, and inner are supported. If you type in a join type other than the ones supported, they're ignored. Join statements support `on` syntax if joined with `Device` or `Device.Deviceid`. Common syntax for join is LeftEntity \| join [hints] (RightEntity) on Conditions. For more info, see [Join](/kusto/query/join-operator) documentation.|
-| order by | Sort the rows of the input table into order by one or more columns. |
-| project | Select the columns to include, rename or drop, and insert new computed columns. |
-| take | Return up to the specified number of rows. |
-| top | Returns the first N records sorted by the specified columns. |
-| where | Filter a table to the subset of rows that satisfy a predicate. |
-| Summarize | produces a table that aggregates the contents of the input table. |
+| `count` | Returns a table with a single record containing the number of records. |
+| `distinct` | Produces a table with the distinct combination of the provided columns of the input table. |
+| `join` | Merge the rows of two tables to form a new table by matching row for the same device. Only the join types of `innerunique`, `Leftouter`, `Fullouter`, `Rightouter`, and inner are supported. If you type in a join type other than the ones supported, they're ignored. Join statements support `on` syntax if joined with `Device` or `Device.Deviceid`. Common syntax for join is LeftEntity \| join [hints] (RightEntity) on Conditions. For more info, see [Join](/kusto/query/join-operator) documentation.|
+| `order by` | Sort the rows of the input table into order by one or more columns. |
+| `project` | Select the columns to include, rename or drop, and insert new computed columns. |
+| `take` | Return up to the specified number of rows. |
+| `top` | Returns the first N records sorted by the specified columns. |
+| `where` | Filter a table to the subset of rows that satisfy a predicate. |
+| `summarize` | produces a table that aggregates the contents of the input table. |
 
 ### Scalar operators
 
@@ -152,26 +152,26 @@ Scalar operators can be used to perform operations on individual values. The fol
 
 | **Operators** | **Description** | **Example** |
 | --- | --- | --- |
-| == | Equal | 1 == 1, 'aBc' == 'AbC' |
-| != | Not Equal | 1 != 2, 'abc' != 'abcd' |
-| < | Less | 1 < 2, 'abc' < 'DEF' |
-| > | Greater | 2 > 1, 'xyz' > 'XYZ' |
-| <= | Less or Equal | 1 <= 2, 'abc' <= 'abc' |
-| >= | Greater or Equal | 2 >= 1, 'abc' >= 'ABC' |
-| + | Add | 2 + 1, now() + 1d |
-| - | Subtract | 2 - 1, now() - 1h |
-| * | Multiply | 2 * 2 |
-| / | Divide | 2 / 1 |
-| % | Modulo | 2 % 1 |
-| like | LHS contains a match for RHS | 'abc' like '%B%' |
-| contains | RHS occurs as a subsequence of LHS | 'abc' contains 'b' |
-| !contains | RHS doesn't occur in LHS | 'team' !contains 'i' |
-| startswith | RHS is an initial subsequence of LHS | 'team' startswith 'tea' |
-| !startswith | RHS isn't an initial subsequence of LHS | 'abc' !startswith 'bc' |
-| endswith | RHS is a closing subsequence of LHS | 'abc' endswith 'bc' |
-| !endswith | RHS isn't a closing subsequence of LHS | 'abc' !endswith 'a' |
-| and | True if and only if RHS and LHS are true | (1 == 1) and (2 == 2) |
-| or | True if and only if RHS or LHS is true | (1 == 1) or (1 == 2) |
+| `==` | Equal | `1 == 1`, `'aBc' == 'AbC'` |
+| `!=` | Not Equal | `1 != 2`, `'abc' != 'abcd'` |
+| `<` | Less | `1 < 2`, `'abc' < 'DEF'` |
+| `>` | Greater | `2 > 1`, `'xyz' > 'XYZ'` |
+| `<=` | Less or Equal | `1 <= 2`, `'abc' <= 'abc'` |
+| `>=` | Greater or Equal | `2 >= 1`, `'abc' >= 'ABC'` |
+| `+` | Add | `2 + 1`, `now() + 1d` |
+| `-` | Subtract | `2 - 1`, `now() - 1h` |
+| `*` | Multiply | `2 * 2` |
+| `/` | Divide | `2 / 1` |
+| `%` | Modulo | `2 % 1` |
+| `like` | LHS contains a match for RHS | `'abc' like '%B%'` |
+| `contains` | RHS occurs as a subsequence of LHS | `'abc' contains 'b'` |
+| `!contains` | RHS doesn't occur in LHS | `'team' !contains 'i'` |
+| `startswith` | RHS is an initial subsequence of LHS | `'team' startswith 'tea'` |
+| `!startswith` | RHS isn't an initial subsequence of LHS | `'abc' !startswith 'bc'` |
+| `endswith` | RHS is a closing subsequence of LHS | `'abc' endswith 'bc'` |
+| `!endswith` | RHS isn't a closing subsequence of LHS | `'abc' !endswith 'a'` |
+| `and` | True if and only if RHS and LHS are true | `(1 == 1) and (2 == 2)` |
+| `or` | True if and only if RHS or LHS is true | `(1 == 1) or (1 == 2)` |
 
 ### Aggregation functions
 
@@ -179,17 +179,17 @@ Aggregation functions can be used to summarize data. The following functions are
 
 | **Function** | **Description** |
 | --- | --- |
-| avg() | Returns the average of the values across the group |
-| count() | Returns a count of the records per summarization group |
-| countif() | Returns a count of rows for which Predicate evaluates to true |
-| dcount() | Returns the number of distinct values in the group |
-| max() | Returns the maximum value across the group |
-| maxif() | Returns the maximum value across the group for which Predicate evaluates to true |
-| min() | Returns the minimum value across the group |
-| minif() | Returns the minimum value across the group for which Predicate evaluates to true |
-| percentile() | Returns an estimate for the specified nearest-rank percentile of the population defined by Expr |
-| sum() | Returns the sum of the values across the group |
-| sumif() | Returns a sum of Expr for which Predicate evaluates to true |
+| `avg()` | Returns the average of the values across the group |
+| `count()` | Returns a count of the records per summarization group |
+| `countif()` | Returns a count of rows for which Predicate evaluates to true |
+| `dcount()` | Returns the number of distinct values in the group |
+| `max()` | Returns the maximum value across the group |
+| `maxif()` | Returns the maximum value across the group for which Predicate evaluates to true |
+| `min()` | Returns the minimum value across the group |
+| `minif()` | Returns the minimum value across the group for which Predicate evaluates to true |
+| `percentile()` | Returns an estimate for the specified nearest-rank percentile of the population defined by Expr |
+| `sum()` | Returns the sum of the values across the group |
+| `sumif()` | Returns a sum of Expr for which Predicate evaluates to true |
 
 ### Scalar functions
 
@@ -197,29 +197,29 @@ Scalar functions can be used to perform operations on individual values. The fol
 
 | **Function** | **Description** |
 | --- | --- |
-| ago() | Subtracts the given timespan from the current UTC clock time. |
-| bin() | Rounds values down to a number of datetime multiple of a given bin size. |
-| case() | Evaluates a list of predicates and returns the first result expression whose predicate is satisfied. |
-| datetime_add() | Calculates a new datetime from a specified datepart multiplied by a specified amount, added to a specified datetime. Negative values for the amount parameter aren't supported. |
-| datetime_diff() | Calculates the difference between two datetime values. |
-| iif() | Evaluates the first argument and returns the value of either the second or third arguments depending on whether the predicate evaluated to true (second) or false (third). |
-| indexof() | Reports the zero-based index of the first occurrence of a specified string within the input string. |
-| isnotnull() | Evaluates its sole argument and returns a Boolean value indicating if the argument evaluates to a non-null value. |
-| isnull() | Evaluates its sole argument and returns a Boolean value indicating if the argument evaluates to a null value. |
-| now() | Returns the current UTC clock time. |
-| strcat() | Concatenates between 1 and 64 arguments. |
-| strlen() | Returns the length, in characters, of the input string. |
-| substring() | Extracts a substring from a source string starting from some index to the end of the string. |
-| tostring() | Converts input to a string representation. |
+| `ago()` | Subtracts the given timespan from the current UTC clock time. |
+| `bin()` | Rounds values down to a number of datetime multiple of a given bin size. |
+| `case()` | Evaluates a list of predicates and returns the first result expression whose predicate is satisfied. |
+| `datetime_add()` | Calculates a new datetime from a specified datepart multiplied by a specified amount, added to a specified datetime. Negative values for the amount parameter aren't supported. |
+| `datetime_diff()` | Calculates the difference between two datetime values. |
+| `iif()` | Evaluates the first argument and returns the value of either the second or third arguments depending on whether the predicate evaluated to true (second) or false (third). |
+| `indexof()` | Reports the zero-based index of the first occurrence of a specified string within the input string. |
+| `isnotnull()` | Evaluates its sole argument and returns a Boolean value indicating if the argument evaluates to a non-null value. |
+| `isnull()` | Evaluates its sole argument and returns a Boolean value indicating if the argument evaluates to a null value. |
+| `now()` | Returns the current UTC clock time. |
+| `strcat()` | Concatenates between 1 and 64 arguments. |
+| `strlen()` | Returns the length, in characters, of the input string. |
+| `substring()` | Extracts a substring from a source string starting from some index to the end of the string. |
+| `tostring()` | Converts input to a string representation. |
 
 ## Supported properties
 
 Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
 
-- Apple Auto Setup Admin Accounts 
-- Apple Device States 
-- Apple Update Settings 
-- Battery 
+- Apple Auto Setup Admin Accounts
+- Apple Device States
+- Apple Update Settings
+- Battery
 - Bios Info
 - Bluetooth  
 - Cellular  
@@ -241,11 +241,11 @@ Device query supports the following entities. To learn more about what propertie
 
 ### Device entity
 
-Device query for multiple devices supports a linked entity which can be used with all other supported entities. The device entity supports the following properties:
+Device query for multiple devices supports a linked entity. The Device entity can be used with all other supported entities. The device entity supports the following properties:
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
-| DeviceId | String | A unique ID generated by Intune as part of MDM enrollment. |
+| DeviceId | String | A unique ID generated by Intune as part of device enrollment. |
 | EntraDeviceId | String | Unique ID generated by Microsoft Entra as part of Microsoft Entra registration or join. |
 | ManagementName | String | An easily recognizable device name used only in the Intune admin center. Changing this name doesn't change the device name or the name in the Company Portal. |
 | DeviceName | String | Name of the device |
@@ -267,11 +267,12 @@ Device query for multiple devices supports a linked entity which can be used wit
 
 Device entity allows you to reference the device associated with a resulting row without needing to write a separate query to join them together. Essentially, it acts as an automatic join to include device information in your query results.
 
-The device entity is automatically joined to every other entity for ease of use. The device entity shows up in query results as the first column in query results by default, unless the query updates the return type (through use of operators like a project, summarize, or distinct).
-Using Device by itself in a query parses to Device.DeviceId. In the Device column returned by default, the DeviceId is translated to DeviceName to allow for easier identification of devices.
+The device entity is automatically joined to every other entity for ease of use. The device entity is the first column in they query results, unless the query updates the return type through use of operators like a `project`, `summarize`, or `distinct`.
+
+Using Device by itself in a query parses to `Device.DeviceId`. In the Device column returned by default, the DeviceId is translated to DeviceName to allow for easier identification of devices.
 The device entity and its properties can also be referenced in queries by referencing Device.[Insert property].
 
-The following query returns all the DiskDrive information for all devices with serial number 123.:
+The following query returns all the DiskDrive information for all devices with serial number 123:
 
 ```kusto
 DiskDrive 
@@ -317,7 +318,7 @@ Cpu | where Device.DeviceName == 'Desktop123"
 
 - A max of ~50,000 records are returned for a query.  
 
-- A maximum of 10 queries can be submitted per minute. Additional queries will fail.
+- A maximum of 10 queries can be submitted per minute. Any other queries within the same minute fail.
 
 - A maximum of 1,000 queries can be submitted per month.
 
