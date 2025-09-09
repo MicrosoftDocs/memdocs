@@ -16,7 +16,7 @@ ms.localizationpriority: high
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-[!INCLUDE [advanced-analytics-overview](../includes/advanced-analytics-overview.md)]
+[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
 ## Planning Checklist
 
@@ -113,7 +113,7 @@ When license requirements are met, then Advanced Analytics capabilities are auto
 > [!NOTE]
 > It may take up to 48 hours after you buy licenses or start a trial to see Advanced Analytics features in your tenant.
 
-For the extra reports and capabiltiies on Windows devices, devices need to be enrolled into Intune and onboarded to Endpoint analytics and meet the [Prerequisites](Prerequisites):
+For the extra reports and capabiltiies on Windows devices, devices need to be enrolled into Intune and onboarded to Endpoint analytics and meet the [Prerequisites](#prerequisites):
 
 - [Onboard and enroll your Intune-managed devices to Endpoint analytics](enroll-intune.md)
 - [Onboard and enroll your co-managed devices to Endpoint analytics](enroll-configmgr.md)

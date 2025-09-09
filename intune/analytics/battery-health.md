@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-[!INCLUDE [advanced-analytics-overview](../includes/advanced-analytics-overview.md)]
+[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
 The battery health report provides visibility into the health of batteries in your organization's devices and its influence on user experience.
 
