@@ -6,8 +6,8 @@ description: View the device compliance settings for Android (AOSP) that you can
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 05/15/2024
+manager: laurawi
+ms.date: 09/04/2025
 ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice: protect
