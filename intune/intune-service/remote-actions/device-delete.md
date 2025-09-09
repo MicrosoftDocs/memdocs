@@ -9,15 +9,15 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+
+zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
 # Delete devices using Intune
 
-By using **Delete** actions, you can remove devices from Intune that are no longer needed, being repurposed, or missing.
+Use the **Delete** remote action in Intune to permanently remove devices that are no longer needed, being repurposed, or missing. This action helps clean up your device inventory and ensures that unmanaged or obsolete devices no longer appear in the admin center.
 
-<!--
-
-If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. Intune issues a **Retire** or **Wipe** action depending on the OS/Enrollment type. Not all enrollment types support the **Retire** action. See the following table for the expected behavior based on the device platform and the enrollment type.
+When using the **Delete** action, Intune issues a **Retire** or **Wipe** action depending on the platfrom and enrollment type. The following table details the expected behavior based on the device platform and the enrollment type.
 
 | OS      | Enrollment Type                            | Action triggered                                                          |
 |---------|--------------------------------------------|---------------------------------------------------------------------------|
@@ -29,18 +29,34 @@ If you want to remove devices from the Intune admin center, you can delete them 
 | Android | Fully managed user devices                 | WIPE                                                                      |
 | Android | AOSP Userless/AOSP User-Associated         | WIPE                                                                      |
 | iOS     | All                                        | RETIRE - All Profiles are deleted, CP app is signed out                   |
-| Windows | All                                        | RETIRE - All Profiles are deleted, work and school account is signed out  |
+| Windows | All                                        | RETIRE - All Profiles are deleted, work or school account is signed out  |
 | macOS   | All                                        | RETIRE - All Profiles are deleted, CP app is deleted                      |
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
+::: zone pivot="windows"
+
+## Before you start
+
+Before retiring a Microsoft Entra ID joined device, make sure to back up any critical data that may be lost during the process, such as:
+
+- BitLocker recovery key
+- Local administrator account credentials
+
+::: zone-end
 
 > [!IMPORTANT]
 > The **Delete** action triggers the following actions:
 >
 > * Depending on the device platform, it can retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](device-retire.md) section for the expected behavior.
-> * BitLocker encryption is suspended if managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
 
+<!-->
+⚠️ Important Note on Deletion vs. Retire
+If you delete the Intune object for a Microsoft Entra joined device that is protected by BitLocker, Intune triggers a sync that removes key protectors, which suspends BitLocker on the OS volume. This is a safeguard to prevent unrecoverable encryption scenarios when the Entra object is deleted.
+
+✅ Best Practice
+Before retiring or deleting a device:
+
+Back up the BitLocker recovery key to a secure location (Microsoft account, Azure AD, USB, or file).
+Ensure access to the Microsoft Entra ID object if recovery is needed later.
 -->
 
 ## Requirements

@@ -221,7 +221,7 @@ The following Windows 10 or Windows 11 desktop device remote actions aren't supp
 Deleting VMs from Azure will leave orphaned device records in the Microsoft Intune admin center. AVD machines are deleted automatically after 30 days and removed permanently after 60 days.
 For more information, see:
 - [Using Intune device cleanup rules](https://techcommunity.microsoft.com/t5/device-management-in-microsoft/using-intune-device-cleanup-rules-updated-version/ba-p/3760854).
-- [Automatically remove devices with cleanup rules](../remote-actions/_device-cleanup-rules.md)
+- [Automatically remove devices with cleanup rules](../remote-actions/device-cleanup-rules.md)
 
 ## Security baselines
 

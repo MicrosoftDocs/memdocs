@@ -25,7 +25,7 @@
 
 search/replace
 
-      "old path": "/intune/intune-service/remote-actions/_device-cleanup-rules.md",
+      "old path": "/intune/intune-service/remote-actions/device-cleanup-rules.md",
       "new path": "/intune/intune-service/fundamentals/device-cleanup-rules",
 
       "old path": "/intune/intune-service/remote-actions/device-retire.md",

@@ -3,6 +3,8 @@ items:
   href: index.md
 - name: Bulk device actions 🟠
   href: bulk-device-actions.md
+- name: Device cleanup rules 🟠
+  href: device-cleanup-rules.md
 - name: Actions list
   items:
   - name: Autopilot Reset 🔗🟠
@@ -65,7 +67,5 @@ items:
     href: update-cellular-data-plan.md
   - name: Wipe 🟠
     href: device-wipe.md
-  - name: Device cleanup rules 🟠
-    href: _device-cleanup-rules.md
 - name: Troubleshoot device actions
   href: /troubleshoot/mem/intune/troubleshoot-device-actions

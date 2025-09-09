@@ -141,11 +141,13 @@ The following table shows what data is removed and what remains on the device af
 | Wi-Fi and VPN profile settings | Removed. |
 | Certificate profile settings | Certificates are removed and revoked. |
 | Email | Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows. Removes mail accounts provisioned by Intune |
-| Microsoft Entra Device Record | - If the device is not registered in the Autopilot service, the Microsoft Entra ID record is removed.<br> - If the device is registered in Autopilot, the Microsoft Entra ID record is not removed.|
+| Microsoft Entra Device Record | - If the device is registered in Autopilot, the Microsoft Entra ID record is not removed.<br>- If the device is Microsoft Entra joined, the device is unjoined from Microsoft Entra and its record is removed.<br>- If the device is Microsoft Entra registered, the work or school account is signed out and the Microsoft Entra ID record is removed.|
 
-For Microsoft Entra ID joined devices, the **Retire** command removes all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/topic/1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) to sign in with a local admin account and regain access to the user's local data.
+For Microsoft Entra ID joined devices, after the **Retire** command is executed, you can't sign in wih a Microsoft Entra account. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/topic/1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) to sign in with a local admin account and regain access to the user's local data.
 
 ::: zone-end
+
+[!INCLUDE [remove-device-from-entra-id](includes/remove-device-from-entra-id.md)]
 
 ::: zone pivot="ios,macos"
 
