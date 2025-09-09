@@ -7,7 +7,7 @@ keywords: security copilot, intune, microsoft intune, copilot, faq
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 11/08/2024
+ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -112,11 +112,9 @@ To use Copilot with your Intune data, you can use Copilot in Intune or Security 
 
 ### Copilot appears to show the wrong info. How can I debug and validate?
 
-If you think that the output is incorrect, submit feedback and include details about what you're seeing. This feedback helps improve the Copilot experience.
+If you think that the output is incorrect, submit feedback and include details about what you're seeing.
 
-In the Copilot prompt window in the Intune admin center, there's a **Feedback** button.
-
-:::image type="content" source="./media/copilot-intune-overview/feedback-message-icon.png" alt-text="Screenshot that shows how to provide Copilot feedback in Microsoft Intune and Intune admin center.":::
+Every Copilot response has two feedback buttons – a thumbs up when the response is what you expect, and a thumbs down when the response isn't what you expect. This feedback helps improve the Copilot experience.
 
 Other things you can try:
 
@@ -126,6 +124,8 @@ Other things you can try:
 
   - Use the F12 developer tools in your browser. This information shows the capabilities that Copilot uses.
   - In the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989), you can view the prompt sessions and session IDs from the Intune embedded experience.
+
+To learn more about privacy and data security, what data is collected as part of feedback, and how to disable feedback, see [Privacy and data security in Microsoft Security Copilot](/copilot/security/privacy-data-security).
 
 ## Related articles
 
