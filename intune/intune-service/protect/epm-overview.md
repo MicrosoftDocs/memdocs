@@ -47,7 +47,7 @@ Applies to:
 ✅ Find out the key features and benefits of EPM
 
 - **Standard Users by Default**. Users can perform their tasks without local admin rights.
-- **Support for just-in-time elevation**. Users can trigger specific IT-approved binaries or scripts to elevate temporarily, with automatic with automatic, user confirmed, or support approved elevations.
+- **Support for just-in-time elevation**. Users can trigger specific IT-approved binaries or scripts to elevate temporarily.
 - **Policy-Based Control**. Admins define settings and rules to control elevation conditions and behaviour, with granular rule creation capabilities to suit organizational needs.
 - **Audit Logging and Reporting**. Intune logs every elevation with detailed metadata.
 - **Alignment to Zero Trust principles** by enabling least privilege access and minimizing lateral movement risks.
@@ -59,7 +59,7 @@ Applies to:
 EPM elevation can be triggered using two methods:
 
 - Automatically, or;
-- User selected "Run with elevated access".
+- User initiated.
 
 EPM can be configured using two types of policies:
 
@@ -68,7 +68,7 @@ EPM can be configured using two types of policies:
 
 Both rules and policies can be targeted at groups of users or devices. To perform the elevation on the device, the EPM service uses a virtual account, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group.
 
-The EPM client is installed automatically when an *Elevation settings policy* is assigned to devices or users. The EPM client uses the 'Microsoft EPM Agent Service' service and stores it's binaries in the `"C:\Program Files\Microsoft EPM Agent"` directory.
+The EPM client is installed automatically when an *Elevation settings policy* is assigned to devices or users. The EPM client uses the 'Microsoft EPM Agent Service' service and stores its binaries in the `"C:\Program Files\Microsoft EPM Agent"` directory.
 
 This diagram shows a high level architecture of how the EPM client is triggered, checks for rules and then facilitates elevation:
 
@@ -92,15 +92,15 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
   
   :::image type="content" source="media/epm-overview/epm-support-approval-inline.png" alt-text="A screenshot showing the prompt a user receives when they request to run an application as administrator using support approval." lightbox="media/epm-overview/epm-support-approval-expanded.png":::
 
-- **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While the use of file elevation rules allowing users to elevate specific files is typically recommended, in certain scenarios deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
+- **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. In certain scenarios deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
-The EPM client can be configured with a default elevation response, which by default is *deny*, or with specific rules can be created to match files and allow the specified elevation response.
+The EPM client can be configured with a default elevation response, or with specific rules that allow the specified elevation response.
 
 ### Rule Capabilities
 
 ✅ Granular targeting of files for elevation
 
-EPM elevation rules can be created based on one or more attributes including file name, path, etc. These are some examples of additional rule capabilities:
+EPM elevation rules can be created based on one or more attributes including file name, path, etc. These are some examples of rule capabilities:
 
 - **Child process controls** - When processes are elevated by EPM, you can control how the creation of child processes is governed by EPM, which allows you to have granular control over any subprocesses that might be created by your elevated application.
 
@@ -122,7 +122,7 @@ EPM supports elevating these types of files:
 
 ✅ Track elevations in your environment
 
-EPM includes reports to help you prepare for, monitor and use the service. Reports are provided for unmanaged and managed elevations:
+EPM includes reports to help you prepare for, monitor, and use the service. Reports are provided for unmanaged and managed elevations:
 
 - **Unmanaged elevation**: All file elevations that happen without use of Endpoint Privilege Management. These elevations can happen when a user with administrative rights uses the Windows default action of *Run as administrator*.
 

@@ -33,7 +33,7 @@ ms.collection:
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
-This article covers the information required to plan for a Endpoint Privilege Management (EPM) deployment. This includes requirements, important concepts, security recommendations, and role based access control.
+This article covers the information required to plan for Endpoint Privilege Management (EPM) deployment including requirements, important concepts, security recommendations, and role based access control.
 
 ## Planning Checklist
 
@@ -108,7 +108,7 @@ When you configure the *elevation settings* and *elevation rules* policies that 
 
   - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules can aslo require validation with authentication or business justification. Requiring validation provides an extra layer of protection by making the user acknowledge the elevation.
 
-  - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. While the use of file elevation rules allowing users to elevate specific files is typically recommended, in certain scenarios deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
+  - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. Deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
   - **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md)
 
@@ -151,7 +151,7 @@ When a device receives two separate elevation settings policies with conflicting
 
 > [!NOTE]
 >
-> If *Enable Endpoint Privilege Management* is in conflict, the default behavior of the client is to *Enable* EPM. This means the client components continue to function until an explicit value is delivered to the device.
+> If *Enable Endpoint Privilege Management* is in conflict, the default behavior of the client is to *Enable* EPM. 
 
 **Windows elevation rules policy**:
 
@@ -206,7 +206,7 @@ Use more restrictive elevation rules for applications with broader access or scr
 
 ### Start fresh, even when migrating from a third-party product
 
-EPM operates differently to third-party products and as a result, it's recommended to start with an audit policy to detect unmanaged elevations and create rules based on what you need. Then, you can easily iterate on your rules by adding rules from reports and enabling support approved elevation for when a rules doesn't exist and a user needs to elevate to get their job done.
+EPM operates differently to third-party products and as a result, it's recommended to start with an audit policy. Then, you can create new rules from reports and take advantage of *support approved* elevation for when a rule hasn't been created and a user needs to elevate to get their job done.
 
 ## Role-based access controls for Endpoint Privilege Management
 
@@ -268,11 +268,11 @@ Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
 
 Following are the available cmdlets:
 
-- **Get-Policies**: Retrieves a list of all policies received by the Epm Agent for a given PolicyType (ElevationRules, ClientSettings).
+- **Get-Policies**: Retrieves a list of all policies received by EPM for a given 'PolicyType' ('ElevationRules' or 'ClientSettings').
 - **Get-DeclaredConfiguration**: Retrieves a list of WinDC documents that identify the policies targeted to the device.
 - **Get-DeclaredConfigurationAnalysis**: Retrieves a list of WinDC documents of type MSFTPolicies and checks if the policy is already present in Epm Agent (Processed column).
 - **Get-ElevationRules**: Query the EpmAgent lookup functionality and retrieves rules given lookup and target. Lookup is supported for FileName and CertificatePayload.
-- **Get-ClientSettings**: Process all existing client settings policies to display the effective client settings used by the EPM Agent.
+- **Get-ClientSettings**: Process all existing client settings policies to display the effective client settings used by EPM.
 - **Get-FileAttributes**: Retrieves File Attributes for an .exe file and extracts its Publisher and CA certificates to a set location that can be used to populate Elevation Rule Properties for a particular application.
 
 For more information about each cmdlet, review the **readme.md** file from the *EpmTools* folder on the device.
