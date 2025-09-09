@@ -51,8 +51,15 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 > [!NOTE]
 > If you have a Microsoft Entra Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Microsoft Entra Conditional Access documentation](/azure/active-directory/conditional-access/).
 
-> [!NOTE]
-If you configure **Factory reset protection emails**, **COPE** devices can require those accounts after a factory reset, including **Settings** resets on Android 15. Plan your reprovisioning workflow (e.g., admin wipe vs. Settings reset) accordingly. Learn more: https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced.
+*Factory reset protection* helps prevent unauthorized access to your device after it's been factory reset. If the device is reset without your permission, in some situations, only the Google email addresses you enter can unlock the device. When the **Factory reset protection emails** setting is configured, there is different factory reset protection behavior: 
+
+| Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../remote-actions/devices-wipe.md#wipe) |
+| --- | --- | --- | --- |
+| **Corporate-owned devices with work profile** (COPE) | ✅ factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
+| **Fully managed** (COBO) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
+| **Dedicated** (COSU) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
+
+For corporate owned devices with a work profile running Android 15, you will need to re-enter the Google account associated with the configuration after any reset done via the Settings app. It's important to plan your reprovisioning workflow (such as applying an Intune wipe or resetting via the Settings app) accordingly so that you can provide the required credentials if needed. For background and guidance, see [Factory reset protection (FRP) enforcement behavior for Android Enterprise](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced).  
 
 ## Enroll by using a QR code  
 
