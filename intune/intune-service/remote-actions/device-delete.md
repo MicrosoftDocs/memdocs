@@ -17,47 +17,54 @@ zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 
 Use the **Delete** remote action in Intune to permanently remove devices that are no longer needed, being repurposed, or missing. This action helps clean up your device inventory and ensures that unmanaged or obsolete devices no longer appear in the admin center.
 
-When using the **Delete** action, Intune issues a **Retire** or **Wipe** action depending on the platfrom and enrollment type. The following table details the expected behavior based on the device platform and the enrollment type.
+When using the **Delete** action, Intune issues a **Retire** or **Wipe** action depending on the platfrom and enrollment type.
 
-| OS      | Enrollment Type                            | Action triggered                                                          |
-|---------|--------------------------------------------|---------------------------------------------------------------------------|
-| Android | Device administrator                       | RETIRE - All Profiles are deleted, Company Portal (CP) app is signed out. |
-| Android | Personally owned devices with work profile | RETIRE - All Profiles are deleted, CP app is deleted.                     |
-| Android | Corporate-owned devices with work profile  | WIPE                                                                      |
-| Android | Dedicated devices                          | WIPE                                                                      |
-| Android | Dedicated w/ Entra ID Shared Mode          | WIPE                                                                      |
-| Android | Fully managed user devices                 | WIPE                                                                      |
-| Android | AOSP Userless/AOSP User-Associated         | WIPE                                                                      |
-| iOS     | All                                        | RETIRE - All Profiles are deleted, CP app is signed out                   |
-| Windows | All                                        | RETIRE - All Profiles are deleted, work or school account is signed out  |
-| macOS   | All                                        | RETIRE - All Profiles are deleted, CP app is deleted                      |
+::: zone pivot="android"
+
+The following table details the expected behavior for each Android enrollment type.
+
+| Enrollment Type                            | Action triggered           |
+|--------------------------------------------|----------------------------|
+| Device administrator                       | [Retire](device-retire.md) |
+| Personally owned devices with work profile | [Retire](device-retire.md) |
+| Corporate-owned devices with work profile  | [Wipe](device-wipe.md)     |
+| Dedicated devices                          | [Wipe](device-wipe.md)     |
+| Dedicated w/ Entra ID Shared Mode          | [Wipe](device-wipe.md)     |
+| Fully managed user devices                 | [Wipe](device-wipe.md)     |
+| AOSP Userless/AOSP User-Associated         | [Wipe](device-wipe.md)     |
+
+::: zone-end
+
+::: zone pivot="ios"
+
+When you delete an iOS device, a [Retire](device-retire.md) action is triggered.
+
+::: zone-end
+
+::: zone pivot="macos"
+
+When you delete a macOS device, a [Retire](device-retire.md) action is triggered.
+
+::: zone-end
 
 ::: zone pivot="windows"
 
-## Before you start
+When you delete a Windows device, a [Retire](device-retire.md) action is triggered.
 
-Before retiring a Microsoft Entra ID joined device, make sure to back up any critical data that may be lost during the process, such as:
+::: zone-end
+
+::: zone pivot="windows"
+
+## Before retiring or deleting a Microsoft Entra joined device
+
+If you delete or retire the Intune object for a Microsoft Entra joined device that is protected by BitLocker, Intune triggers a sync that removes key protectors. This action suspends BitLocker on the OS volume as a safeguard to prevent unrecoverable encryption scenarios when the Entra object is deleted.
+
+Before retiring a Microsoft Entra joined device, make sure to back up any critical data that may be lost during the process, such as:
 
 - BitLocker recovery key
 - Local administrator account credentials
 
 ::: zone-end
-
-> [!IMPORTANT]
-> The **Delete** action triggers the following actions:
->
-> * Depending on the device platform, it can retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](device-retire.md) section for the expected behavior.
-
-<!-->
-⚠️ Important Note on Deletion vs. Retire
-If you delete the Intune object for a Microsoft Entra joined device that is protected by BitLocker, Intune triggers a sync that removes key protectors, which suspends BitLocker on the OS volume. This is a safeguard to prevent unrecoverable encryption scenarios when the Entra object is deleted.
-
-✅ Best Practice
-Before retiring or deleting a device:
-
-Back up the BitLocker recovery key to a secure location (Microsoft account, Azure AD, USB, or file).
-Ensure access to the Microsoft Entra ID object if recovery is needed later.
--->
 
 ## Requirements
 
@@ -66,7 +73,10 @@ Ensure access to the Microsoft Entra ID object if recovery is needed later.
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
-> - All platforms
+> - Android
+> - iOS/iPadOS
+> - macOS
+> - Windows
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 

@@ -23,9 +23,11 @@ Unlike the **Wipe** action, which resets the device to factory settings, **Retir
 
 ::: zone pivot="windows"
 
-## Before you start
+## Before retiring or deleting a Microsoft Entra joined device
 
-Before retiring a Microsoft Entra ID joined device, make sure to back up any critical data that may be lost during the process, such as:
+If you delete or retire the Intune object for a Microsoft Entra joined device that is protected by BitLocker, Intune triggers a sync that removes key protectors. This action suspends BitLocker on the OS volume as a safeguard to prevent unrecoverable encryption scenarios when the Entra object is deleted.
+
+Before retiring a Microsoft Entra joined device, make sure to back up any critical data that may be lost during the process, such as:
 
 - BitLocker recovery key
 - Local administrator account credentials
@@ -80,7 +82,7 @@ The following table shows what data is removed and what remains on the device af
 |Certificate profile settings|Certificates are removed and revoked.|
 |Management agent|The management profile is removed.|
 |Email|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
-|Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
+|Microsoft Entra device record |The Microsoft Entra ID record isn't removed.|
 
 > [!NOTE]
 > Users that reinstall the Outlook Mobile app following a **Retire** device action might need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries. Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
@@ -111,7 +113,7 @@ The following table shows what data is removed and what remains on the device af
 | Certificate profile settings | Certificates are revoked but not removed. | Certificates are removed and revoked. |
 | Management agent | Device Administrator privilege is revoked. | Device Administrator privilege is revoked. |
 | Email | N/A (Android devices don't support Email profiles) | Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted. |
-| Microsoft Entra Device Record | The Microsoft Entra ID record is removed. | The Microsoft Entra ID record is removed. |
+| Microsoft Entra device record | The Microsoft Entra ID record is removed. | The Microsoft Entra ID record is removed. |
 
 ::: zone-end
 
@@ -126,7 +128,7 @@ The following table shows what data is removed and what remains on the device af
 | Certificate profile settings | Certificates are removed and revoked. |
 | Management agent | The management profile is removed. |
 | Outlook | If Conditional Access is enabled, the device doesn't receive new mail. |
-| Microsoft Entra Device Record | The Microsoft Entra ID record isn't removed. |
+| Microsoft Entra device record | The Microsoft Entra ID record isn't removed. |
 
 ::: zone-end
 
@@ -141,7 +143,8 @@ The following table shows what data is removed and what remains on the device af
 | Wi-Fi and VPN profile settings | Removed. |
 | Certificate profile settings | Certificates are removed and revoked. |
 | Email | Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows. Removes mail accounts provisioned by Intune |
-| Microsoft Entra Device Record | - If the device is registered in Autopilot, the Microsoft Entra ID record is not removed.<br>- If the device is Microsoft Entra joined, the device is unjoined from Microsoft Entra and its record is removed.<br>- If the device is Microsoft Entra registered, the work or school account is signed out and the Microsoft Entra ID record is removed.|
+| Microsoft Entra join status | - If the device is Microsoft Entra joined, the device is unjoined from Microsoft Entra.<br>- If the device is Microsoft Entra registered, the work or school account is disconnected and the device is unregistered from Microsoft Entra ID.|
+| Microsoft Entra device record | - If the device is registered in Autopilot, the Microsoft Entra ID record is not removed.<br>- If the device is Microsoft Entra joined, the record is removed.<br>- If the device is Microsoft Entra registered, the record is removed.|
 
 For Microsoft Entra ID joined devices, after the **Retire** command is executed, you can't sign in wih a Microsoft Entra account. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/topic/1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) to sign in with a local admin account and regain access to the user's local data.
 
