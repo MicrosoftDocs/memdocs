@@ -14,7 +14,7 @@ ms.collection:
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Send custom notifications with Intune
+# Send custom notifications using Intune
 
 Use Microsoft Intune to send custom notifications to the users of managed iOS/iPadOS and Android devices. These messages appear as standard push notifications from the Company Portal app and the Microsoft Intune app on the user's device, similar to notifications from other applications.
 

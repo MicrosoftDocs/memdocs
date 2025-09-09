@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# BitLocker key rotation with Intune
+# BitLocker key rotation using Intune
 
 BitLocker key rotation is a security feature that allows IT administrators to remotely refresh the recovery keys used to unlock BitLocker-encrypted Windows devices. This process ensures that once a recovery key is used, or potentially exposed, it can be replaced with a new one, reducing the risk of unauthorized access.
 

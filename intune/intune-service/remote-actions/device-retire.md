@@ -1,5 +1,5 @@
 ---
-title: Retire devices using Microsoft Intune
+title: "Intune Remote Device Action: Retire"
 description: Learn how to retire device using Microsoft Intune.
 ms.date: 07/22/2025
 ms.topic: how-to
@@ -15,12 +15,24 @@ ms.collection:
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
-# Retire devices with Intune
+# Retire devices using Intune
 
-::: zone pivot="macos,ios,windows,android"
+The **Retire** remote action in Intune removes company data from a device without performing a full wipe or factory reset. This action is ideal for personally owned devices or when transitioning a device out of organizational control. It unenrolls the device from Intune and removes managed apps, settings, and profiles deployed through mobile device management (MDM), while preserving personal data.
+
+Unlike the **Wipe** action, which resets the device to factory settings, **Retire** keeps user content intact. The action is triggered the next time the device checks in with Intune. Until then, the device might still appear in the admin center. If you need to remove a device immediately, consider using the [Delete action](device-delete.md) instead.
+
+::: zone pivot="windows"
+
+## Before you start
+
+When retiring a Windows device, keep in mind:
+
+- If the device isn't registered with the Autopilot service, its Microsoft Entra ID record will be removed.
+- Back up important data before retiring the device, such as:
+  - BitLocker recovery key
+  - Local administrator account credentials
+
 ::: zone-end
-
-The **Retire** action removes managed app data (where applicable), settings, and email profiles that were assigned by using Intune. The device is removed from Intune management. Removal happens the next time the device checks in and receives the remote **Retire** action. The device still shows up in Intune until the device checks in. If you want to remove stale devices immediately, use the [Delete action](device-delete.md) instead.
 
 ## Requirements
 
@@ -29,8 +41,11 @@ The **Retire** action removes managed app data (where applicable), settings, and
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
-> -
-
+> - Android device administrator
+> - Android Enterprise personally-owned work profile (BYOD)
+> - iOS/iPadOS
+> - macOS
+> - Windows
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -52,13 +67,13 @@ The **Retire** action removes managed app data (where applicable), settings, and
 > [!IMPORTANT]
 > Retired devices might not be automatically deleted resulting in the device record remaining in Intune for 180 days unless issued a [Delete](device-delete.md) action.
 
-### Effect of the **Retire** action on data that remains on the device
+## User experience
 
-When you use the **Retire** device action, the user's personal data is not removed from the device.
+When you use the **Retire** device action, the user's personal data isn't removed from the device.
 
 ::: zone pivot="ios"
 
-The following table shows what data is removed and what remains on the device after the **Retire** action is applied.
+The following table shows what data is removed and what remains on the device after the action is applied.
 
 | Data type | iOS |
 |-------------|-------|
@@ -71,84 +86,73 @@ The following table shows what data is removed and what remains on the device af
 |Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
 
 > [!NOTE]
-> Users that reinstall the Outlook Mobile app following a **Retire** device action may need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries. Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
+> Users that reinstall the Outlook Mobile app following a **Retire** device action might need to choose to **Delete All Saved Contacts** before re-exporting contacts to avoid duplicate contact entries. Previously exported contacts from Outlook Mobile are considered personal data and are not removed by the **Retire** device action.
 
 ::: zone-end
 
 ::: zone pivot="android"
 
-#### Android Enterprise personally owned devices with a work profile
+### Android Enterprise personally owned devices with a work profile
 
-Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune.
+Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device.
 
-#### Android device administrator
+### Android device administrator
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-|Data type|Android|Android Samsung Knox Standard|
-|-------------|-----------|------------------------|
-|Web links|Removed.|Removed.|
-|Unmanaged Google Play apps|Apps and data remain installed. <br /> <br />Company app data that's protected by Mobile Application Management (MAM) encryption within the app local storage is removed. Data that's protected by MAM encryption outside the app remains encrypted and unusable, but isn't removed. |Apps and data remain installed. <br /> <br />Company app data that's protected by Mobile Application Management (MAM) encryption within the app local storage is removed. Data that's protected by MAM encryption outside the app remains encrypted and unusable, but isn't removed.|
-|Unmanaged line-of-business apps|Apps and data remain installed.|Apps are uninstalled and data that's local to the app is removed. No data that's outside the app (for example, on an SD card) is removed.|
-|Managed Google Play apps|App data is removed. The app isn't removed. Data that's protected by Mobile Application Management (MAM) encryption outside the app (for example, an SD card) remains encrypted and unusable, but isn't removed.|App data is removed. The app isn't removed. Data that's protected by MAM encryption outside the app (for example, an SD card) remains encrypted, but isn't removed.|
-|Managed line-of-business apps|App data is removed. The app isn't removed. Data that's protected by MAM encryption outside the app (for example, an SD card) remains encrypted and unusable, but isn't removed.|App data is removed. The app isn't removed. Data that's protected by MAM encryption outside the app (for example, an SD card) remains encrypted and unusable, but isn't removed.|
-|Settings|Configurations set by Intune policy are no longer enforced. Users can change the settings.|Configurations set by Intune policy are no longer enforced. Users can change the settings.|
-|Wi-Fi and VPN profile settings|Removed.|Removed.|
-|Certificate profile settings|Certificates are revoked but not removed.|Certificates are removed and revoked.|
-|Management agent|Device Administrator privilege is revoked.|Device Administrator privilege is revoked.|
-|Email|N/A (Android devices don't support Email profiles)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
-|Microsoft Entra Device Record|The Microsoft Entra ID record is removed.|The Microsoft Entra ID record is removed.|
+The following table shows what data is removed and what remains on the device after the action is applied.
 
+| Data type | Android | Android Samsung Knox Standard |
+|--|--|--|
+| Web links | Removed. | Removed. |
+| Unmanaged Google Play apps | Apps and data remain installed. <br /> <br />Company app data that's protected by Mobile Application Management (MAM) encryption within the app local storage is removed. Data that's protected by MAM encryption outside the app remains encrypted and unusable, but isn't removed. | Apps and data remain installed. <br /> <br />Company app data that's protected by Mobile Application Management (MAM) encryption within the app local storage is removed. Data that's protected by MAM encryption outside the app remains encrypted and unusable, but isn't removed. |
+| Unmanaged line-of-business apps | Apps and data remain installed. | Apps are uninstalled and data that's local to the app is removed. No data that's outside the app (for example, on an SD card) is removed. |
+| Managed Google Play apps | App data is removed. The app isn't removed. Data that's protected by Mobile Application Management (MAM) encryption outside the app (for example, an SD card) remains encrypted and unusable, but isn't removed. | App data is removed. The app isn't removed. Data that's protected by MAM encryption outside the app (for example, an SD card) remains encrypted, but isn't removed. |
+| Managed line-of-business apps | App data is removed. The app isn't removed. Data that's protected by MAM encryption outside the app (for example, an SD card) remains encrypted and unusable, but isn't removed. | App data is removed. The app isn't removed. Data that's protected by MAM encryption outside the app (for example, an SD card) remains encrypted and unusable, but isn't removed. |
+| Settings | Configurations set by Intune policy are no longer enforced. Users can change the settings. | Configurations set by Intune policy are no longer enforced. Users can change the settings. |
+| Wi-Fi and VPN profile settings | Removed. | Removed. |
+| Certificate profile settings | Certificates are revoked but not removed. | Certificates are removed and revoked. |
+| Management agent | Device Administrator privilege is revoked. | Device Administrator privilege is revoked. |
+| Email | N/A (Android devices don't support Email profiles) | Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted. |
+| Microsoft Entra Device Record | The Microsoft Entra ID record is removed. | The Microsoft Entra ID record is removed. |
 
 ::: zone-end
 
-
 ::: zone pivot="macos"
 
+The following table shows what data is removed and what remains on the device after the action is applied.
+
 | Data type | macOS |
-|-------------|-------|
-|Settings| Configurations set by Intune policy are no longer enforced. Users can change the settings.|
-|Wi-Fi and VPN profile settings| Removed.|
-|Certificate profile settings| Certificates are removed and revoked.|
-|Management agent| The management profile is removed.|
-|Outlook| If Conditional Access is enabled, the device doesn't receive new mail.|
-|Microsoft Entra Device Record| The Microsoft Entra ID record isn't removed.|
+|--|--|
+| Settings | Configurations set by Intune policy are no longer enforced. Users can change the settings. |
+| Wi-Fi and VPN profile settings | Removed. |
+| Certificate profile settings | Certificates are removed and revoked. |
+| Management agent | The management profile is removed. |
+| Outlook | If Conditional Access is enabled, the device doesn't receive new mail. |
+| Microsoft Entra Device Record | The Microsoft Entra ID record isn't removed. |
 
 ::: zone-end
 
 ::: zone pivot="windows"
 
+The following table shows what data is removed and what remains on the device after the action is applied.
+
 | Data type | Windows |
-|-------------|-------|
-|Company apps and associated data installed by Intune| - Apps are uninstalled<br>-Sideloading keys are removed<br> Microsoft 365 Apps aren't removed<br>- Intune management extension installed Win32 apps aren't uninstalled on unenrolled devices. Admins can use assignment exclusion to not offer Win32 apps to BYOD Devices.|
-| Settings|Configurations set by Intune policy are no longer enforced. Users can change the settings.|
-|Wi-Fi and VPN profile settings| Removed.|
-|Certificate profile settings| Certificates are removed and revoked.|
-| Email: Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows. Removes mail accounts provisioned by Intune|
-|Microsoft Entra Device Record| The Microsoft Entra ID record is removed.|
+|--|--|
+| Company apps and associated data installed by Intune | - Apps are uninstalled<br>-Sideloading keys are removed<br> Microsoft 365 Apps aren't removed<br>- Intune management extension installed Win32 apps aren't uninstalled on unenrolled devices. Admins can use assignment exclusion to not offer Win32 apps to BYOD Devices. |
+| Settings | Configurations set by Intune policy are no longer enforced. Users can change the settings. |
+| Wi-Fi and VPN profile settings | Removed. |
+| Certificate profile settings | Certificates are removed and revoked. |
+| Email | Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows. Removes mail accounts provisioned by Intune |
+| Microsoft Entra Device Record | - If the device is not registered in the Autopilot service, the Microsoft Entra ID record is removed.<br> - If the device is registered in Autopilot, the Microsoft Entra ID record is not removed.|
 
-> [!IMPORTANT]
-> Windows devices that are not registered in the Windows Autopilot Service, upon being deleted or retired from Intune are removed from Microsoft Entra ID. Before performing these commands consider backing up the BitLocker Recovery Key and/or a local administrator user account credentials. On the other hand, although Windows Autopilot registered devices leave Microsoft Entra ID, their computer object is retained alongside their properties (e.g. Windows LAPS, BitLocker Recovery Key, Entra ID groups memberships).
-
-> [!NOTE]
-> For Windows devices that join Microsoft Entra ID during initial Setup (OOBE), the retire command will remove all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/topic/1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) to login as a local admin and regain access to the user's local data.
+For Windows devices that join Microsoft Entra ID during initial Setup (OOBE), the **Retire** command removes all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/topic/1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) to sign in with a local admin account and regain access to the user's local data.
 
 ::: zone-end
 
 ::: zone pivot="ios,macos"
 
-## Retire an Apple ADE device from Intune
-
-If you want to completely remove an Apple automated device enrollment (ADE) device from management by Intune, follow these steps:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **All devices** > select the device > **Retire**.
-1. Visit [business.apple.com](http://business.apple.com), go to the **Devices** section, and search for the device by its serial number.
-1. Select the device, open the **...** menu, and then select **Release from Organization**.
-1. Check **I understand this cannot be undone**, and then select **Continue**.
-
-> [!NOTE]
-> In some cases, the iOS device must be restored with iTunes to apply this change. Please find further instructions from Apple [here](https://support.apple.com/guide/itunes/restore-to-factory-settings-itnsdb1fe305/windows).
+[!INCLUDE [remove-apple-ade-device](includes/remove-apple-ade-device.md)]
 
 ::: zone-end
 

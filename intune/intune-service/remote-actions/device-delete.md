@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# Delete devices with Intune
+# Delete devices using Intune
 
 By using **Delete** actions, you can remove devices from Intune that are no longer needed, being repurposed, or missing.
 
@@ -63,18 +63,13 @@ You might need to delete devices from Microsoft Entra ID due to communication is
 1. Select **Devices**.
 1. Remove devices as appropriate. For example, you might remove devices that are no longer in use, or devices that have inaccurate definitions.
 
-## Retire an Apple ADE device from Intune
+::: zone-end
 
-If you want to completely remove an Apple automated device enrollment (ADE) device from management by Intune, follow these steps:
+::: zone pivot="ios,macos"
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **All devices** > select the device > **Retire**.
-1. Visit [business.apple.com](http://business.apple.com), go to the **Devices** section, and search for the device by its serial number.
-1. Select the device, open the **...** menu, and then select **Release from Organization**.
-1. Check **I understand this cannot be undone**, and then select **Continue**.
+[!INCLUDE [remove-apple-ade-device](includes/remove-apple-ade-device.md)]
 
-> [!NOTE]
-> In some cases, the iOS device must be restored with iTunes to apply this change. Please find further instructions from Apple [here](https://support.apple.com/guide/itunes/restore-to-factory-settings-itnsdb1fe305/windows).
+::: zone-end
 
 ## Reference links
 

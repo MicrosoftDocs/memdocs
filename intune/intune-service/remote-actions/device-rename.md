@@ -15,7 +15,7 @@ ms.collection:
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
-# Rename a device remotely with Intune
+# Rename a device remotely using Intune
 
 The **Rename device** remote action in Microsoft Intune allows IT administrators to change the **Device name** displayed in the Intune admin center for a managed device. This action does not affect the *Management name* in Intune or the *Device name* shown in the Company Portal.
 

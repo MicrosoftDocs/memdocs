@@ -12,7 +12,7 @@ ms.collection:
 zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 ---
 
-# Remotely restart devices with Intune
+# Remotely restart devices using Intune
 
 The **Restart** remote action triggers a restart (usually begins within 5 minutes) and might not show a warning to the signed-in user.
 
