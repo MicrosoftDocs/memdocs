@@ -25,12 +25,10 @@ Unlike the **Wipe** action, which resets the device to factory settings, **Retir
 
 ## Before you start
 
-When retiring a Windows device, keep in mind:
+Before retiring a Microsoft Entra ID joined device, make sure to back up any critical data that may be lost during the process, such as:
 
-- If the device isn't registered with the Autopilot service, its Microsoft Entra ID record will be removed.
-- Back up important data before retiring the device, such as:
-  - BitLocker recovery key
-  - Local administrator account credentials
+- BitLocker recovery key
+- Local administrator account credentials
 
 ::: zone-end
 
@@ -146,7 +144,7 @@ The following table shows what data is removed and what remains on the device af
 | Email | Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows. Removes mail accounts provisioned by Intune |
 | Microsoft Entra Device Record | - If the device is not registered in the Autopilot service, the Microsoft Entra ID record is removed.<br> - If the device is registered in Autopilot, the Microsoft Entra ID record is not removed.|
 
-For Windows devices that join Microsoft Entra ID during initial Setup (OOBE), the **Retire** command removes all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/topic/1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) to sign in with a local admin account and regain access to the user's local data.
+For Microsoft Entra ID joined devices, the **Retire** command removes all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/topic/1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) to sign in with a local admin account and regain access to the user's local data.
 
 ::: zone-end
 
@@ -159,6 +157,7 @@ For Windows devices that join Microsoft Entra ID during initial Setup (OOBE), th
 ## Reference links
 
 - Microsoft Graph API: [retire action][GRAPH-1]
+- Configuration service provider (CSP) used to initiate the remote action: [Defender CSP][CSP-1]
 
 <!--links-->
 
@@ -176,3 +175,4 @@ For Windows devices that join Microsoft Entra ID during initial Setup (OOBE), th
 <!-- API links -->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-retire
+[CSP-1]: /windows/client-management/mdm/defender-csp
