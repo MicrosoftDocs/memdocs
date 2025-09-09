@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 11/08/2024
+ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: rashok
+ms.reviewer: ankurgoyal, rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -56,16 +56,19 @@ There are Intune capabilities built into Security Copilot, and you can use promp
 - Information about your devices, apps, compliance & configuration policies, and policy assignments managed in Intune
 - Managed device attributes and hardware details
 - Issue with specific devices and compare a working & non-working device
+- Cloud PC insights on licensing, connection quality, configurations, and performance
 
 This article shows you how to access your Microsoft Intune data in Security Copilot and includes sample prompts.
 
 ## Key features
 
-There are three areas to use Copilot in Intune:
+There are several ways to use Copilot in Intune:
 
 - [Data exploration using natural language](../copilot/copilot-intune-overview.md#data-exploration)
+- [Copilot Chat prompt suggestions](../copilot/copilot-intune-overview.md#copilot-chat-prompt-suggestions)
 - [Policy and setting management](../copilot/copilot-intune-overview.md#policy-and-setting-management)
 - [Device details and troubleshooting](../copilot/copilot-intune-overview.md#device-details-and-troubleshooting)
+- [Windows 365 Cloud PC insights](/windows-365/enterprise/copilot-in-intune-for-windows365) – Link to the new page for Windows 365 – PR https://github.com/MicrosoftDocs/windows-cloud-pr/pull/637 (We should also add this to the menu item on the left as a dedicated page above Copilot in Surface Management Portal. Title – Copilot for Windows 365 Cloud PCs 
 
 ### Security admin focus
 
