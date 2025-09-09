@@ -39,9 +39,7 @@ Lost Mode is a lightweight but powerful tool that helps organizations safeguard 
 >   - The permissions **Remote tasks/Enable lost mode**, **Remote tasks/Disable lost mode**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## Enable Lost Mode
-
-Here's how to enable Lost Mode on a device using the Intune admin center:
+## How to enable Lost Mode from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
@@ -63,9 +61,7 @@ To locate the device during this time, use the [Locate device](device-locate.md)
 > [!NOTE]
 > Some built-in device functionalities might still work. For example, Siri might still be used to make calls unless it's disabled.
 
-## Disable Lost Mode
-
-Here's how to disable Lost Mode on a device using the Intune admin center:
+## How to disable Lost Mode from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device, and then **Lost mode (supervised only)**.

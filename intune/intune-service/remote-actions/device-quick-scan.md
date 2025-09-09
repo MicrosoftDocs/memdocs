@@ -28,7 +28,7 @@ Quick scans are especially useful for routine health checks, validating recent p
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
-> To execute these remote actions, you must use an account that has at least one of the following roles:
+> To execute this remote action, you must use an account that has at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
@@ -36,7 +36,7 @@ Quick scans are especially useful for routine health checks, validating recent p
 >   - The permission **Remote tasks/Windows defender**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## How to initiate a quick scan
+## How to initiate a quick scan from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.

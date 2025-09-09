@@ -34,7 +34,7 @@ The **Update cellular data plan** remote action lets you remotely activate an eS
 >   - The permission **Remote tasks/Update cellular data plan**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## Remotely update the cellular data plan
+## Remotely update the cellular data plan from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.

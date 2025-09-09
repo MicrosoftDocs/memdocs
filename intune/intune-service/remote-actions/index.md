@@ -161,7 +161,7 @@ To wipe a device, you must be assigned a role that has the *Remote tasks: Wipe* 
 
 ---
 
-## Execute a remote device action
+## Execute a remote device action from the Intune admin center
 
 Every remote device action has its own steps, which are detailed in the respective documentation. In general:
 

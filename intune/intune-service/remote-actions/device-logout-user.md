@@ -34,7 +34,7 @@ This remote action is useful in environments where multiple users access the sam
 >   - The permission **Remote tasks/Manage shared device users**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## How to logout the current user
+## How to logout the current user from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.

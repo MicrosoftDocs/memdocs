@@ -41,7 +41,7 @@ For more information about the standard Intune policy check-in frequencies, see 
 >   - The permission **Remote tasks/Sync devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## How to sync a device
+## How to sync a device from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.

@@ -80,7 +80,7 @@ To factory reset a Zebra Android device, use one of the following methods:
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
-> To execute these remote actions, you must use an account that has at least one of the following roles:
+> To execute this remote action, you must use an account that has at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -88,7 +88,7 @@ To factory reset a Zebra Android device, use one of the following methods:
 >   - The permission **Remote tasks/Wipe**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-### How to wipe a device
+### How to wipe a device from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.

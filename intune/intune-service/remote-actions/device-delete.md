@@ -15,15 +15,7 @@ ms.collection:
 
 By using **Delete** actions, you can remove devices from Intune that are no longer needed, being repurposed, or missing.
 
-If [multi-admin approval access policies](../fundamentals/multi-admin-approval.md) are enabled for device actions, then some device actions might require a second administrator to approve. To learn more, see [Use Access policies to require multiple administrative approvals](../fundamentals/multi-admin-approval.md).
-
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
-
-> [!div class="checklist"]
-> To execute this remote action, at a minimum, use an account that has one of the following roles:
->
-
-## Delete devices from the Intune admin center
+<!--
 
 If you want to remove devices from the Intune admin center, you can delete them from the specific device pane. Intune issues a **Retire** or **Wipe** action depending on the OS/Enrollment type. Not all enrollment types support the **Retire** action. See the following table for the expected behavior based on the device platform and the enrollment type.
 
@@ -49,21 +41,37 @@ If you want to remove devices from the Intune admin center, you can delete them 
 > * Depending on the device platform, it can retire the Microsoft Entra device record / unjoin the device from Microsoft Entra ID. For more information, see [Retire](device-retire.md) section for the expected behavior.
 > * BitLocker encryption is suspended if managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
 
-<a name='delete-devices-from-the-microsoft-entra-portal'></a>
+-->
 
-## Delete devices from the Microsoft Entra admin center
+## Requirements
 
-You might need to delete devices from Microsoft Entra ID due to communication issues or missing devices. You can use the **Delete** action to remove device records from the Azure portal for devices that you know are unreachable and unlikely to communicate with Azure again. The **Delete** action doesn't remove a device from management.
+### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
 
-1. Sign in to [Microsoft Entra ID in the Azure portal](https://azure.microsoft.com/services/active-directory/) by using your admin credentials. You can also sign in to the [Microsoft 365 admin center](https://admin.microsoft.com). From the menu, select **Admin centers** > **Microsoft Entra ID**.
-1. Create an Azure subscription if you don't have one. The subscription shouldn't require a credit card or payment if you have a paid account (select the **Register your free Microsoft Entra ID** subscription link).
-1. Select **Microsoft Entra ID**, and then select your organization.
-1. Select the **Users** tab.
-1. Select the user that's associated with the device that you want to delete.
-1. Select **Devices**.
-1. Remove devices as appropriate. For example, you might remove devices that are no longer in use, or devices that have inaccurate definitions.
+> [!div class="checklist"]
+> This remote action is supported on the following platforms:
+>
+> - All platforms
 
-::: zone-end
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - [School Administrator][INT-R2]
+> - [Endpoint Security Manager][INT-R4]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Managed devices/Delete**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+
+## How to delete a device from the Intune admin center
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Delete**. To confirm, select **Yes**.
+
+[!INCLUDE [multiple-administrative-approval](includes/multiple-administrative-approval.md)]
+
+[!INCLUDE [remove-device-from-entra-id](includes/remove-device-from-entra-id.md)]
 
 ::: zone pivot="ios,macos"
 
@@ -75,3 +83,22 @@ You might need to delete devices from Microsoft Entra ID due to communication is
 
 - Microsoft Graph API: [delete action][GRAPH-1]
 
+<!--links-->
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+
+<!-- role links -->
+
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+
+<!-- API links -->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-cleanwindowsdevice
+
+[CSP-1]: /windows/client-management/mdm/cleanpc-csp

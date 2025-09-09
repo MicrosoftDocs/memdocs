@@ -41,7 +41,7 @@ This is typically used for troubleshooting scenarios where you don't want the de
 >   - The permission **Remote tasks/Run Pause Configuration Refresh**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## How to pause Config Refresh
+## How to pause Config Refresh from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.

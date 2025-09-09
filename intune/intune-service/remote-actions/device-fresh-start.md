@@ -36,7 +36,7 @@ The **Fresh Start** device action removes apps from managed Windows devices, hel
 >   - The permission **Remote tasks/Clean PC**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## How to execute Fresh Start
+## How to execute Fresh Start from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.

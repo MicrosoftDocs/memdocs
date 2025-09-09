@@ -59,7 +59,7 @@ The following table summarizes the passcode reset types based on platform:
 >   - The permission **Remote Tasks/Reset Passcode**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## How to reset a passcode
+## How to reset a passcode from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.

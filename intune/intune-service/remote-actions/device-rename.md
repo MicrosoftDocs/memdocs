@@ -59,7 +59,7 @@ Renaming a device can help improve clarity and consistency across your device in
 >   - The permission **Remote tasks/Set device name**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## How to rename a device
+## How to rename a device from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
@@ -93,7 +93,7 @@ Renaming a device can help improve clarity and consistency across your device in
 > It could take 10 minutes or more for a renamed Android Enterprise device to update in the **Devices** list.
 ::: zone-end
 
-## How to bulk rename devices
+## How to bulk rename devices from the Intune admin center
 
 You can choose to rename devices in bulk, based on the device platform. The bulk rename option uses the same rules as renaming a single device. However, you must also include one of the following variables as part of the device name:
 

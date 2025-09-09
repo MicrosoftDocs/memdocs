@@ -48,7 +48,7 @@ Before retiring a Microsoft Entra ID joined device, make sure to back up any cri
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
-> To execute these remote actions, you must use an account that has at least one of the following roles:
+> To execute this remote action, you must use an account that has at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -62,8 +62,7 @@ Before retiring a Microsoft Entra ID joined device, make sure to back up any cri
 1. From the devices list, select a device.
 1. At the top of the device overview pane, locate the row of remote action icons. Select **Retire**. To confirm, select **Yes**.
 
-> [!IMPORTANT]
-> Retired devices might not be automatically deleted resulting in the device record remaining in Intune for 180 days unless issued a [Delete](device-delete.md) action.
+[!INCLUDE [multiple-administrative-approval](includes/multiple-administrative-approval.md)]
 
 ## User experience
 

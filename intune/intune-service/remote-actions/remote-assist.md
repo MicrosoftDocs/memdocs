@@ -40,7 +40,7 @@ ms.collection:
 >   - `Microsoft.Intune_RemoteTasks_RequestRemoteAssistance`
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## How to offer remote assistance
+## How to offer remote assistance from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
