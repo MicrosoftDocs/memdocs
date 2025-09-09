@@ -43,7 +43,7 @@ Depending on the platform, Intune can also report the last known location if the
 >   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-::: zone pivot="windows,adroid"
+::: zone pivot="windows,android"
 ### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
 ::: zone-end
 
