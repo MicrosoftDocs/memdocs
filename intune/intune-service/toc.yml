@@ -177,17 +177,17 @@ items:
 
     - name: Advanced Analytics
       items:
-      - name: What is Advanced Analytics?
+      - name: Advanced Analytics Overview
         href: ../analytics/advanced-analytics.md
-      - name: Plan for Advanced Analytics?
+      - name: Planning Advanced Analytics
         href: ../analytics/advanced-analytics-plan.md
       
       - name: Advanced Analytics Features
         items:
         - name: Anomaly detection
           href: ../analytics/anomaly-detection.md
-        - name: Enhanced device timeline
-          href: ../analytics/enhanced-device-timeline.md
+        - name: Battery health
+          href: ../analytics/battery-health.md
         - name: Device scopes
           href: ../analytics/device-scopes.md
         - name: Device query
@@ -196,8 +196,8 @@ items:
           href: ../analytics/device-query-multiple-devices.md
         - name: Data platform schema
           href: ../analytics/data-platform-schema.md
-        - name: Battery health
-          href: ../analytics/battery-health.md
+        - name: Enhanced device timeline
+          href: ../analytics/enhanced-device-timeline.md
         - name: Resource Performance
           href: ../analytics/resource-performance-report.md
 
