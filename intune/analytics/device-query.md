@@ -176,7 +176,7 @@ Aggregation functions can be used with the `summarize` table operator to calcula
 |`countif()`|Returns a count of rows for which Predicate evaluates to true|
 |`dcount()`|Returns the number of distinct values in the group|
 |`max()`|Returns the maximum value across the group|
-|`maxif()`|Starting in version 2107, you can use [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) with the summarize table operator. <!--9966861--> </br></br>Returns the maximum value across the group for which *Predicate* evaluates to `true`. |
+|`maxif()`|Starting in version 2107, you can use [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) with the `summarize` table operator. <!--9966861--> </br></br>Returns the maximum value across the group for which *Predicate* evaluates to `true`. |
 |`min()`|Returns the minimum value across the group|
 |`minif()`|Starting in version 2107, you can use [minif](/azure/data-explorer/kusto/query/minif-aggfunction) with the summarize table operator. <!--9966861--> </br></br>Returns the minimum value across the group for which *Predicate* evaluates to `true`. |
 |`percentile()`|Returns an estimate for the specified nearest-rank percentile of the population defined by Expr|
@@ -263,11 +263,11 @@ Device query supports the following entities. To learn more about what propertie
 - The !like operator isn't supported.
 
 - The input window auto-recommends double quotes when only single quotes are supported on the following operators:
-  - contains
-  - !contains
-  - startswith
-  - !startswith
-  - endswith
+  - `contains`
+  - `!contains`
+  - `startswith`
+  - `!startswith`
+  - `endswith`
 
 - The WindowsRegistry entity fails to return the RegistryKey for root.
 
@@ -287,7 +287,7 @@ Device query supports the following entities. To learn more about what propertie
 
 - If a file is currently in use on the machine, then FileInfo queries returns an error.
 
-- If the end user has admin access to the device, they might be able to change client-based information that show up in the query results. For example, OS version and registry.
+- If the end user has admin access to the device, they might be able to change client-based information returned in query results. For example, OS version and registry.
 
 ## Next Steps
 
