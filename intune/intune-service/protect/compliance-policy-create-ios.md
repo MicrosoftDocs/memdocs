@@ -6,8 +6,8 @@ description: View the device compliance settings for iOS/iPadOS that you can man
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 01/29/2025
+manager: laurawi
+ms.date: 09/04/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect

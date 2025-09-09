@@ -6,7 +6,7 @@ description: Describes how to remove an iOS device from Intune and how to delete
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 
 ms.date: 02/18/2025
 ms.topic: end-user-help

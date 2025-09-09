@@ -6,7 +6,7 @@ description: Learn how to access work or school apps on your iOS device.
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/15/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
