@@ -76,6 +76,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
+## Week of September 8, 2025
+
+### Device security
+
+#### JavaScript WebSockets support with Microsoft Tunnel for Mobile Application Management for iOS <!-- 28660712 wndraft    -->
+ 
+Microsoft Tunnel for Mobile Application Management (MAM) for iOS now supports JavaScript WebSockets from web views. This support helps improve communications for apps that require real-time communications that rely on WebSockets.
+ 
+While JavaScript WebSockets are now supported, Tunnel for MAM iOS does not support native WebSocket APIs or apps that rely on them.  
+ 
+For more information, see [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide](../protect/microsoft-tunnel-mam-ios.md).
+
 ## Week of September 1, 2025
 
 ### Device management
