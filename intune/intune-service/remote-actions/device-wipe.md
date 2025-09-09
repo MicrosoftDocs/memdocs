@@ -128,6 +128,7 @@ To factory reset a Zebra Android device, use one of the following methods:
       > If you select this option, be aware that it might prevent some devices from starting up again. The persistent wipe process can interfere with boot recovery or firmware-level protections, potentially leaving the device in an unrecoverable state. Use this option only on corporate-owned devices where full data destruction is necessary and recovery procedures are in place.
 
 6. To confirm the wipe, select **Yes**.
+::: zone-end
 ::: zone pivot="ios"
 1. For iOS/iPadOS eSIM devices, the cellular data plan is preserved by default when you wipe a device. If you want to remove the data plan from the device when you wipe the device, select the **Also remove the devices data plan...** option.
 ::: zone-end
