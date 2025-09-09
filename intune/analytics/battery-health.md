@@ -15,26 +15,15 @@ ms.localizationpriority: high
 
 # Battery health
 
+[!INCLUDE [intune-add-on-note](/intune/intune-service/includes/intune-add-on-note.md)]
+
+[!INCLUDE [advanced-analytics-overview](/intune/analytics/includes/advanced-analytics-overview.md)]
+
 The battery health report provides visibility into the health of batteries in your organization's devices and its influence on user experience.
 
 The score helps you identify emerging hardware issues that might be impacting user productivity so you can proactively make improvements before users generate support tickets.
 
 The insights show how much your score can improve by replacing batteries in affected devices. They also help you identify quickly failing batteries that can be replaced under warranty before they expire.
-
-## Licensing Requirements
-
-The battery health report is part of Intune Advanced Analytics features and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md). It requires an extra cost to the licensing options that include Microsoft Intune.
-
-## Prerequisites
-
-In addition to the prerequisites for [Advanced Analytics](advanced-endpoint-analytics.md#prerequisites), this report also requires that devices need to be battery-powered for them to show up in this report.
-
-For Advanced Analytics capabilities, including battery health, battery-powered devices should be either Intune-only managed or Co-managed.
-
-After enrollment, client devices require a restart to fully enable all analytics.
-
-> [!NOTE]
-> It might take up to 48 hours after you buy licenses or start a trial to see Battery health data in your tenant.
 
 ## Battery health report
 
@@ -44,6 +33,12 @@ After enrollment, client devices require a restart to fully enable all analytics
 
 
    :::image type="content" source="media/battery-health/battery-health.png" lightbox="media/battery-health/battery-health.png" alt-text="This is a screenshot of the Battery Health tab in Advanced analytics":::
+
+The battery health report can be used to:
+
+- Plan battery replacements proactively to reduce downtime and improve user experience.
+- Identify devices with poor battery still under warranty, and proactively repair/replace them.
+- For devices with high battery capacity scores, review their associated resource performance report and consider extending their lifecycle usage to reduce costs.
 
 ## Battery Health Score
 

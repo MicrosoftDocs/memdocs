@@ -44,6 +44,8 @@ General requirements:
 - Network connectivity to required Microsoft endpoints
  For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy does not need to be deployed.
 
+
+
 Windows capability requirements:
 
 - Windows 10/11 (minimum build 1903 or later recommended).
@@ -54,6 +56,36 @@ Windows capability requirements:
   - [Onboard and enroll your co-managed devices to Endpoint analytics](enroll-configmgr.md)
 - Multi Device query requires a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) to be configured and deployed.
 - Single device query requires the device to be marked as corporate.
+- Anamoly detection:
+  - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
+  - Devices enrolled from Configuration Manager need client version 2006, or later installed
+
+### Device Query
+
+> [!NOTE]
+> You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically.
+
+- To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
+
+  - The Intune Advanced Analytics add-on
+  - Microsoft Intune Suite
+
+- For a user to use Device query, you must assign the Managed Devices > Query and Organization > Read permissions to them.
+
+- Devices must be Intune managed and corporate owned.
+
+- Device query for multiple devices only works on devices that are already collecting device inventory data from an assigned [Properties catalog](../intune-service/configuration/properties-catalog.md) profile. 
+
+Device query for multiple devices is supported on devices running:  
+
+- Windows 10 and later  
+- Android  
+  - Android Enterprise corporate owned dedicated devices (COSU)  
+  - Android Enterprise corporate owned fully managed (COBO)  
+  - Android Enterprise corporate owned work profile (COPE)  
+- Apple  
+  - iOS/iPadOS  
+  - macOS  
 
 ## Government cloud support
 
@@ -76,10 +108,15 @@ Currently, the highest functional subscription sets the Endpoint analytics exper
 
 ## Enabling Advanced Analytics in Microsoft Intune
 
-When license requirements are met, then Advanced Analytics features are automatically enabled in your tenant. If licenses expire or you change your subscription to one that doesn't include Advanced Analytics, your tenant is automatically reverted to the base Endpoint analytics experience.
+When license requirements are met, then Advanced Analytics capabilities are automatically enabled in your tenant. If licenses expire or you change your subscription to one that doesn't include Advanced Analytics, your tenant is automatically reverted to the base Endpoint analytics experience.
 
 > [!NOTE]
 > It may take up to 48 hours after you buy licenses or start a trial to see Advanced Analytics features in your tenant.
+
+For the extra reports and capabiltiies on Windows devices, devices need to be enrolled into Intune and onboarded to Endpoint analytics and meet the [Prerequisites](Prerequisites):
+
+- [Onboard and enroll your Intune-managed devices to Endpoint analytics](enroll-intune.md)
+- [Onboard and enroll your co-managed devices to Endpoint analytics](enroll-configmgr.md)
 
 ---
 

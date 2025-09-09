@@ -13,8 +13,9 @@ ms.localizationpriority: high
 ---
 # Enhanced device timeline in Endpoint analytics
 
-> [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](/intune/intune-service/includes/intune-add-on-note.md)]
+
+[!INCLUDE [advanced-analytics-overview](/intune/analytics/includes/advanced-analytics-overview.md)]
 
 The enhanced device timeline allows you to see a history of events that have occurred on a specific device. When you're viewing a specific device in Endpoint analytics, the enhanced device timeline is viewable on the **Device timeline** tab.
 
@@ -32,6 +33,14 @@ Currently, the enhanced device timeline contains app crash, app unresponsive, de
 
 > [!NOTE]
 > Event timestamps are localized according to the time zone of the logged on Intune user.  
+
+## Using Enhanced Device Timeline
+
+- Access the device timeline by going to **Devices** > **Windows** > Select device > **User Experience** > **Device Timeline**.
+- Filter events by date, device, or user to focus on relevant incidents.
+- Best practices:
+  - Use device timeline to correlate software updates, user actions, and system events during troubleshooting.
+
 
 ## Limitations
 

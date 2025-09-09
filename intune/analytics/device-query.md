@@ -31,6 +31,10 @@ ms.collection:
 
 # Device query
 
+[!INCLUDE [intune-add-on-note](/intune/intune-service/includes/intune-add-on-note.md)]
+
+[!INCLUDE [advanced-analytics-overview](/intune/analytics/includes/advanced-analytics-overview.md)]
+
 Device query allows you to quickly gain on-demand information about the state of your devices. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
 
 ## Prerequisites
@@ -66,6 +70,13 @@ For more information on Kusto Query Language, see [Learn more about Kusto Query 
 
 > [!TIP]
 > You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+
+Best practices:
+
+- Consider how device queries can be used to help your L1/L2 engineers quicker resolve support tickets, while minimizing disruption to end users.
+- Review support processes and tasks that normally require a remote control session to the end user's device. Check if these can be completed using single device query – for example – checking a running service, checking a registry key value for an application configuration, checking an application version, or reporting on top processes by CPU consumption.
+- Create saved queries for recurring investigations in your ITSM knowledge base, for L1/L2 engineers to quickly access.
+- Update processes to use remote actions for quick issue resolution. Either rebooting a device, or running a proactive remediation script to resolve a known issue.
 
 ## Remote device actions
 

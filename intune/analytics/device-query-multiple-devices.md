@@ -31,36 +31,11 @@ ms.collection:
 
 # Device query for multiple devices
 
+[!INCLUDE [intune-add-on-note](/intune/intune-service/includes/intune-add-on-note.md)]
+
+[!INCLUDE [advanced-analytics-overview](/intune/analytics/includes/advanced-analytics-overview.md)]
+
 Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
-
-## Prerequisites  
-
-> [!NOTE]
-> You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically. 
-
-- To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
-
-  - The Intune Advanced Analytics add-on
-  - Microsoft Intune Suite
-
-- For a user to use Device query, you must assign the Managed Devices > Query and Organization > Read permissions to them.
-
-- Devices must be Intune managed and corporate owned.
-
-- Device query for multiple devices only works on devices that are already collecting device inventory data from an assigned [Properties catalog](../intune-service/configuration/properties-catalog.md) profile. 
-
-## Supported platforms
-
-Device query for multiple devices is supported on devices running:  
-
-- Windows 10 and later  
-- Android  
-  - Android Enterprise corporate owned dedicated devices (COSU)  
-  - Android Enterprise corporate owned fully managed (COBO)  
-  - Android Enterprise corporate owned work profile (COPE)  
-- Apple  
-  - iOS/iPadOS  
-  - macOS  
 
 ## How to use device query for multiple devices
 
@@ -79,7 +54,7 @@ For more information on Kusto Query Language, see [Learn more about Kusto Query 
 
 To help you get started, some sample queries are provided in this section. To access the sample queries, expand the **example queries** section under the Getting started page, and select the one you want to add to the query window. The following section shows the list of sample queries.
 
-#### Top processors by Core Count
+### Top processors by Core Count
 
 This query lists the top five CPUs sorted by core count.
 
@@ -87,7 +62,7 @@ This query lists the top five CPUs sorted by core count.
 Cpu| project Device, ProcessorId, Model, Architecture, CpuStatus, ProcessorType, CoreCount, LogicalProcessorCount, Manufacturer, AddressWidth| order by CoreCount asc| take 5
 ```
 
-#### Devices with unprotected disks
+### Devices with unprotected disks
 
 This query lists devices with unencrypted disks.
 
@@ -95,7 +70,7 @@ This query lists devices with unencrypted disks.
 EncryptableVolume| where ProtectionStatus != "PROTECTED"| join LogicalDrive
 ```
 
-#### Arm64 devices
+### Arm64 devices
 
 This query lists all devices with an ARM64 processor.
 
@@ -103,7 +78,7 @@ This query lists all devices with an ARM64 processor.
 Cpu | where Architecture == "ARM64"
 ```
 
-#### Device count by processor architecture
+### Device count by processor architecture
 
 This query provides a summary of devices by CPU architecture.
 
@@ -111,7 +86,7 @@ This query provides a summary of devices by CPU architecture.
 Cpu| summarize DeviceCount=count() by Architecture  
 ```
 
-#### Top devices by battery capacity
+### Top devices by battery capacity
 
 This query lists the top 10 devices by fully charged battery capacity.
 
@@ -119,7 +94,7 @@ This query lists the top 10 devices by fully charged battery capacity.
 Battery| project Device, InstanceName, Manufacturer, Model, SerialNumber, CycleCount, DesignedCapacity, FullChargedCapacity, FullChargedCapacityPercent = (FullChargedCapacity*100)/DesignedCapacity| top 10 by FullChargedCapacityPercent asc
 ```
 
-#### Devices memory information
+### Devices memory information
 
 This query lists devices with physical and virtual memory in GB.
 
@@ -127,7 +102,7 @@ This query lists devices with physical and virtual memory in GB.
 MemoryInfo| project Device, PhysicalMemoryGB = PhysicalMemoryTotalBytes/(1000*1000*1000), VirtualMemoryGB = VirtualMemoryTotalBytes/(1000*1000*1000) | order by PhysicalMemoryGB asc  
 ```
 
-#### Device count by OS version
+### Device count by OS version
 
 This query provides a summary of devices by OS version.
 
@@ -135,7 +110,7 @@ This query provides a summary of devices by OS version.
 OsVersion| summarize DevicesCount = count() by OsVersion
 ```
 
-#### Devices Bios Information
+### Devices Bios Information
 
 This query lists devices based on BIOS manufacturer.
 
@@ -143,7 +118,7 @@ This query lists devices based on BIOS manufacturer.
 BiosInfo| where Manufacturer contains "Microsoft"
 ```
 
-#### TPM disabled devices
+### TPM disabled devices
 
 This query lists devices that have TPM disabled.
 
@@ -319,13 +294,13 @@ MemoryInfo | order by Device
 Similarly, this query returns no results unless the device ID is Desktop123. It doesn't query on device name:
 
 ```kusto
-Cpu | where Device == “Desktop123”
+Cpu | where Device == "Desktop123"
 ```
 
 Use the following example to query on device name:  
 
 ```kusto
-Cpu | where Device.DeviceName == ‘Desktop123”
+Cpu | where Device.DeviceName == 'Desktop123"
 ```
 
 ## Known limitations

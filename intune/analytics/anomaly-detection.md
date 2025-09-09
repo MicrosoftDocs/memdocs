@@ -14,8 +14,9 @@ ms.localizationpriority: high
 
 # Anomaly Detection in Endpoint analytics
 
-> [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](/intune/intune-service/includes/intune-add-on-note.md)]
+
+[!INCLUDE [advanced-analytics-overview](/intune/analytics/includes/advanced-analytics-overview.md)]
 
 This article explains how anomaly detection in Endpoint analytics works as an early warning system.
 
@@ -64,6 +65,22 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 7. Select **View Affected Devices** to display a list of devices with key attributes relevant to each device. You can filter to view devices in specific correlation groups or show all devices affected by that anomaly in your organization. Additionally, the device timeline shows more anomalous events.
 
    :::image type="content" source="media/anomaly-detection/affected-devices.png" lightbox="media/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
+
+## Reviewing Anomaly Detection Data
+
+Investigate flagged Device correlation groups using device timeline and resource reports to determine root cause. Device correlation groups identify root causes for high & medium severity anomalies, along with at risk devices which may be impacted in the future.
+
+- Best practices:
+  - IT administrators should periodically review the anomaly detection dashboard, to understand the current baseline and prioritise investigations and resolutions of new issues.
+  - Investigate any new reported issues, to identify common factors, as displayed in advanced analytics such as common device hardware.
+  - Prioritise the anomalies to investigate based on severity, and internal knowledge like application criticality.
+  - Leverage [device timeline](enhanced-device-timeline.md) to review if there is a specific pattern, such as a device restart or update tied to the anomaly.
+  - Work with IT teams to understand any other factors that could be impacting this, such as recent application updates.
+  - Review possible remediation actions as noted in the Anomaly report (Driver Updates, Application Updates).
+  - Integrate the resolution into L1/L2 support, to keep teams aware of current known issues. Consider working with your ITSM team to record known anomalies currently under investigation.
+  - Test remediation actions on a subset of devices and monitor before rolling out to wider impacted devices. After remediation has been performed on impacted devices, proactively roll out to at risk devices that may be impacted in the future. 
+  - Review anomaly detection after any major update or incident to check for possible new issues that need investigation and resolution.
+  - To better understand the detection methods, consider reviewing the [Statistical Models](#statistical-models-for-determining-anomalies) used by Anomaly Detection.
 
 ## Statistical Models for determining anomalies
 

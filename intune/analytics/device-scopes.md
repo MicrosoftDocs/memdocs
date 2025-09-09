@@ -13,19 +13,17 @@ ms.localizationpriority: high
 ---
 # Device scopes in Endpoint analytics
 
-> [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](/intune/intune-service/includes/intune-add-on-note.md)]
+
+[!INCLUDE [advanced-analytics-overview](/intune/analytics/includes/advanced-analytics-overview.md)]
 
 Custom device scopes use Scope tags to slice Endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of your enrolled devices.
 
 Custom device scopes are supported on the following Endpoint analytics reports:
 
 - [Startup performance](startup-performance.md)
-
 - [Work from anywhere](work-from-anywhere.md)
-
 - [Application reliability](app-reliability.md)
- 
 - [Battery health](battery-health.md)
 
 ## Permissions  
