@@ -76,7 +76,7 @@ Best practices:
 - Consider how device queries can be used to help your L1/L2 engineers quicker resolve support tickets, while minimizing disruption to end users.
 - Review support processes and tasks that normally require a remote control session to the end user's device. Check if these can be completed using single device query – for example – checking a running service, checking a registry key value for an application configuration, checking an application version, or reporting on top processes by CPU consumption.
 - Create saved queries for recurring investigations in your ITSM knowledge base, for L1/L2 engineers to quickly access.
-- Update processes to use remote actions for quick issue resolution. Either rebooting a device, or running a proactive remediation script to resolve a known issue.
+- Update processes to use remote actions for quick issue resolution. Either reboot a device, or run a proactive remediation script to resolve a known issue.
 
 ## Remote device actions
 
@@ -176,9 +176,9 @@ Aggregation functions can be used with the `summarize` table operator to calcula
 |`countif()`|Returns a count of rows for which Predicate evaluates to true|
 |`dcount()`|Returns the number of distinct values in the group|
 |`max()`|Returns the maximum value across the group|
-|`maxif()`|Starting in version 2107, you can use [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) with the `summarize` table operator. <!--9966861--> </br></br>Returns the maximum value across the group for which *Predicate* evaluates to `true`. |
+|`maxif()`|Starting in version 2107, you can use [`maxif`](/azure/data-explorer/kusto/query/maxif-aggfunction) with the `summarize` table operator. <!--9966861--> </br></br>Returns the maximum value across the group for which *Predicate* evaluates to `true`. |
 |`min()`|Returns the minimum value across the group|
-|`minif()`|Starting in version 2107, you can use [minif](/azure/data-explorer/kusto/query/minif-aggfunction) with the summarize table operator. <!--9966861--> </br></br>Returns the minimum value across the group for which *Predicate* evaluates to `true`. |
+|`minif()`|Starting in version 2107, you can use [`minif`](/azure/data-explorer/kusto/query/minif-aggfunction) with the `summarize` table operator. <!--9966861--> </br></br>Returns the minimum value across the group for which *Predicate* evaluates to `true`. |
 |`percentile()`|Returns an estimate for the specified nearest-rank percentile of the population defined by Expr|
 |`sum()`|Returns the sum of the values across the group|
 |`sumif()`|Returns a sum of Expr for which Predicate evaluates to true|
@@ -260,7 +260,7 @@ Device query supports the following entities. To learn more about what propertie
 
 - The now() scalar function doesn't support the offset parameter.
 
-- The !like operator isn't supported.
+- The `!like` operator isn't supported.
 
 - The input window auto-recommends double quotes when only single quotes are supported on the following operators:
   - `contains`
