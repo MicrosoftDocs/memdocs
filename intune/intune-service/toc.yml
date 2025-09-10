@@ -119,18 +119,32 @@ items:
       items:
       - name: EPM Overview
         href: ./protect/epm-overview.md
-      - name: Guidance for rules
-        href: ./protect/epm-guidance-for-creating-rules.md
-      - name: Policies
-        href: ./protect/epm-policies.md
-      - name: Support approved requests
-        href: ./protect/epm-support-approved.md
-      - name: Reports
-        href: ./protect/epm-reports.md
-      - name: Data and privacy
+      - name: Planning EPM
+        href: ./protect/epm-plan.md
+      - name: Data and privacy for EPM
         href: ./protect/epm-data-collection.md
-      - name: Deployment considerations
-        href: ./protect/epm-deployment-considerations-ki.md
+      - name: Deploying EPM
+        items:
+        - name: Deploying EPM
+          href: ./protect/epm-deploy.md
+        - name: Create elevation settings policy
+          href: ./protect/epm-elevation-settings.md
+        - name: Create elevation rules policy
+          href: ./protect/epm-elevation-rules.md
+        - name: EPM Tutorial - Shift Administrators to Standard User
+          href: ./protect/epm-transition-administrator-to-standard-user.md
+      - name: Using EPM
+        items:
+        - name: Support approved requests
+          href: ./protect/epm-support-approved.md
+      - name: Troubleshoot and Monitor
+        items:
+        - name: Reports
+          href: ./protect/epm-reports.md
+        - name: FAQs
+          href: ./protect/epm-frequently-asked-questions.md
+        - name: Known Issues
+          href: ./protect/epm-known-issues.md
 
     - name: Enterprise App Management
       items:
@@ -902,22 +916,8 @@ items:
               href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
         - name: Vulnerability Remediation Agent
           href: ./protect/vulnerability-remediation-agent.md
-        - name: Endpoint Privilege Management
-          items:
-          - name: Endpoint Privilege Management overview
-            href: ./protect/epm-overview.md
-          - name: Endpoint Privilege Management guidance for rules
-            href: ./protect/epm-guidance-for-creating-rules.md
-          - name: Endpoint Privilege Management policies
-            href: ./protect/epm-policies.md
-          - name: Endpoint Privilege Management support approved requests
-            href: ./protect/epm-support-approved.md
-          - name: Endpoint Privilege Management reports
-            href: ./protect/epm-reports.md
-          - name: Endpoint Privilege Management data and privacy
-            href: ./protect/epm-data-collection.md
-          - name: Endpoint Privilege Management deployment considerations
-            href: ./protect/epm-deployment-considerations-ki.md
+        - name: Endpoint Privilege Management overview
+          href: ./protect/epm-overview.md
         - name: Tenant attach
           href: ./protect/tenant-attach-intune.md
         - name: Encrypt disks
