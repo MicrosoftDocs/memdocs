@@ -48,7 +48,7 @@ items:
   - name: Reset passcode
     href: device-passcode-reset.md
   - name: Restart device
-    href: device-restart.md
+    href: device-restart.m22d
   - name: Retire
     href: device-retire.md
   - name: Rotate local admin password 🔴
@@ -65,7 +65,7 @@ items:
     href: device-sync.md
   - name: Update cellular data plan
     href: update-cellular-data-plan.md
-  - name: Wipe 🟠
+  - name: Wipe 🟢
     href: device-wipe.md
 - name: Troubleshoot device actions
   href: /troubleshoot/mem/intune/troubleshoot-device-actions

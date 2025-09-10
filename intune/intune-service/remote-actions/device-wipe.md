@@ -15,16 +15,9 @@ zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 
 # Wipe devices using Intune
 
-::: zone pivot="macos,ios,windows,android"
-::: zone-end
+Use the **Wipe** remote action in Intune to factory reset a device, restoring it to its default settings. This action removes all personal and organizational data, apps, and configurations. It's commonly used when a device needs to be retired, repurposed, reset for troubleshooting, or securely erased if lost or stolen.
 
-<!--By using the **Retire** or **Wipe** actions, you can remove devices from Intune that are no longer needed, being repurposed, or missing. Users can also issue a remote command from the Intune Company Portal to devices that are enrolled in Intune.
-MDM policies will be reapplied the next time the device connects to Intune.
-
-A wipe is useful for resetting a device before you give the device to a new user, or when the device has been lost or stolen. Be careful about selecting **Wipe**. Data on the device can't be recovered. The method that "Wipe" uses to remove data is simple file deletion, and the drive is BitLocker decrypted as part of this process.
--->
-
-The **Wipe** device action restores a device to its factory default settings.
+Depending on the platform, you can customize the wipe behavior to meet your organization's needs.
 
 ::: zone pivot="macos,android"
 ## Before wiping a device
@@ -32,9 +25,7 @@ The **Wipe** device action restores a device to its factory default settings.
 
 ::: zone pivot="macos"
 
-For devices running macOS 12.0.1 and later, review the requirements for erasing devices available on the [Apple Support site](https://support.apple.com/guide/deployment/dep0a819891e).
-
-For devices running a version of macOS earlier than 12.0.1, macOS must be reinstalled. Steps covering how to reinstall macOS are available on the [Apple Support site](https://support.apple.com/HT204904).
+Review the requirements for erasing macOS devices available on the [Apple Support site](https://support.apple.com/guide/deployment/dep0a819891e).
 
 ::: zone-end
 
@@ -135,13 +126,27 @@ To factory reset a Zebra Android device, use one of the following methods:
       > If you select this option, be aware that it might prevent some devices from starting up again. The persistent wipe process can interfere with boot recovery or firmware-level protections, potentially leaving the device in an unrecoverable state. Use this option only on corporate-owned devices where full data destruction is necessary and recovery procedures are in place.
 
 6. To confirm the wipe, select **Yes**.
+
+
+dowipe:
+A remote reset is equivalent to running Reset this PC > Remove everything from the Settings app, with Clean Data set to No and Delete Files set to Yes. If a doWipe reset is started and then interrupted, the PC will attempt to roll-back to the pre-reset state. If the PC can't be rolled-back, the recovery environment will take no additional actions and the PC could be in an unusable state and Windows will have to be reinstalled.
+
+doWipeCloudPersistProvisionedData: Exec on this node will back up provisioning data to a persistent location and perform a cloud-based remote wipe on the device. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command.
+
+
+doWipeCloudPersistUserData: Exec on this node will perform a cloud-based remote reset on the device and persist user accounts and data. The return status code shows whether the device accepted the Exec command.
+
+doWipePersistProvisionedData: Exec on this node will back up provisioning data to a persistent location and perform a remote wipe on the device. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command. When used with OMA Client Provisioning, a dummy value of "1" should be included for this element. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command. Provisioning packages are persisted in %SystemDrive%\ProgramData\Microsoft\Provisioning directory.
+
+doWipeProtected: Exec on this node will perform a remote wipe on the device and fully clean the internal drive. In some device configurations, this command may leave the device unable to boot. The return status code shows whether the device accepted the Exec command. The doWipeProtected is functionally similar to doWipe. But unlike doWipe, which can be easily circumvented by simply power cycling the device, doWipeProtected will keep trying to reset the device until it's done.
+Note: Because doWipeProtected will clean the partitions in case of failure or interruption, use doWipeProtected in lost/stolen device scenarios.
+
 ::: zone-end
 ::: zone pivot="ios"
 1. For iOS/iPadOS eSIM devices, the cellular data plan is preserved by default when you wipe a device. If you want to remove the data plan from the device when you wipe the device, select the **Also remove the devices data plan...** option.
 ::: zone-end
 
 ## User experience
-
 
 ::: zone pivot="macos"
 When you use **Wipe**, the device is also removed from Intune management and no warning is given to the end user once a wipe is initiated.
@@ -162,43 +167,10 @@ The behavior for **Wipe** on iOS devices is that it restores the device to facto
 
 [!INCLUDE [remove-device-from-entra-id](includes/remove-device-from-entra-id.md)]
 
-
 ## Reference links
 
 - Configuration service provider (CSP) used to initiate the remote action: [RemoteWipe CSP][CSP-1]
 - Microsoft Graph API: [wipe action][GRAPH-1]
-
-
-<!--
-Initiates a wipe of the device. Also called a factory reset. The Factory reset action restores a device to its factory default settings. The user data is kept or wiped depending on whether or not you choose the Retain enrollment state and user account checkbox.
-
-
-Are you sure you want to wipe CLIENT
-Factory reset returns the device to its default settings. This removes all personal and company data and settings from this device. You can choose whether to keep the device enrolled and the user account associated with this device. You cannot revert this action.
-
-Wipe device, but keep enrollment state and associated user account
-
-{
-  "keepEnrollmentData": true,
-  "keepUserData": true,
-  "macOsUnlockCode": "Mac Os Unlock Code value",
-  "obliterationBehavior": "doNotObliterate",
-  "persistEsimDataPlan": true,
-}
--->
-
-dowipe: Exec on this node will perform a remote wipe on the device. The return status code shows whether the device accepted the Exec command. When used with OMA Client Provisioning, a dummy value of "1" should be included for this element.
-A remote reset is equivalent to running Reset this PC > Remove everything from the Settings app, with Clean Data set to No and Delete Files set to Yes. If a doWipe reset is started and then interrupted, the PC will attempt to roll-back to the pre-reset state. If the PC can't be rolled-back, the recovery environment will take no additional actions and the PC could be in an unusable state and Windows will have to be reinstalled.
-
-doWipeCloudPersistProvisionedData: Exec on this node will back up provisioning data to a persistent location and perform a cloud-based remote wipe on the device. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command.
-
-
-doWipeCloudPersistUserData: Exec on this node will perform a cloud-based remote reset on the device and persist user accounts and data. The return status code shows whether the device accepted the Exec command.
-
-doWipePersistProvisionedData: Exec on this node will back up provisioning data to a persistent location and perform a remote wipe on the device. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command. When used with OMA Client Provisioning, a dummy value of "1" should be included for this element. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command. Provisioning packages are persisted in %SystemDrive%\ProgramData\Microsoft\Provisioning directory.
-
-doWipeProtected: Exec on this node will perform a remote wipe on the device and fully clean the internal drive. In some device configurations, this command may leave the device unable to boot. The return status code shows whether the device accepted the Exec command. The doWipeProtected is functionally similar to doWipe. But unlike doWipe, which can be easily circumvented by simply power cycling the device, doWipeProtected will keep trying to reset the device until it's done.
-Note: Because doWipeProtected will clean the partitions in case of failure or interruption, use doWipeProtected in lost/stolen device scenarios.
 
 <!-- role links -->
 
