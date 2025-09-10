@@ -54,8 +54,8 @@ Use *Windows elevation settings policy* when you want to:
 
   Options include:
 
-  - **Deny all requests** - This option blocks the *elevate request* action for files that aren't defined in a *Windows elevation rules policy*.
-  - **Require support approval** - When support approval is required, an administrator must review elevation requests before a the elevation is allowed.
+  - **Deny all requests** (recommended) - This option blocks the *elevate request* action for files that aren't defined in a *Windows elevation rules policy*.
+  - **Require support approval** (recommended) - When support approval is required, an administrator must review elevation requests before a the elevation is allowed.
   - **Require user confirmation** - When user confirmation is required, you can choose from the same validation options as found for Windows elevation rules policy.
 
     - **Validation options** - Set validation options when the default elevation response is defined as *Require user confirmation*. Options include:
