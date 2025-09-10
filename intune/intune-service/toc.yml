@@ -201,6 +201,9 @@ items:
         - name: Resource Performance
           href: ../analytics/resource-performance-report.md
 
+      - name: Advanced Analytics Troubleshooting and Frequently Asked Questions
+        href: ../analytics/advanced-analytics-troubleshooting-and-faqs.md
+    
   - name: Plan and prepare for Intune
     items:
     - name: Supported operating systems and browsers
