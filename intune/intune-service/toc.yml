@@ -202,7 +202,7 @@ items:
           href: ../analytics/resource-performance-report.md
 
       - name: Advanced Analytics Troubleshooting and Frequently Asked Questions
-        href: ../analytics/advanced-analytics-troubleshooting-and-faqs.md
+        href: ../analytics/advanced-analytics-troubleshooting-faqs.md
     
   - name: Plan and prepare for Intune
     items:
