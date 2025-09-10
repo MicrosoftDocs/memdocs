@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 09/03/2025
+ms.date: 09/09/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -81,11 +81,11 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Device security
 
 #### JavaScript WebSockets support with Microsoft Tunnel for Mobile Application Management for iOS <!-- 28660712 wndraft    -->
- 
+
 Microsoft Tunnel for Mobile Application Management (MAM) for iOS now supports JavaScript WebSockets from web views. This support helps improve communications for apps that require real-time communications that rely on WebSockets.
- 
-While JavaScript WebSockets are now supported, Tunnel for MAM iOS does not support native WebSocket APIs or apps that rely on them.  
- 
+
+While JavaScript WebSockets are now supported, Tunnel for MAM iOS does not support native WebSocket APIs or apps that rely on them.
+
 For more information, see [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide](../protect/microsoft-tunnel-mam-ios.md).
 
 ## Week of September 1, 2025
@@ -94,10 +94,14 @@ For more information, see [Microsoft Tunnel for Mobile Application Management fo
 
 #### Enrollment Status Page support for installing Windows security updates during Windows OOBE <!-- 7183120 -->
 
-Starting on September 9, 2025, by default, the Windows out-of-box experience (OOBE) installs the latest available security updates to help ensure devices are secure and up to date from day one. Windows OOBE is used by Intune and by Windows Autopilot scenarios through the Intune enrollment status page (ESP) configurations. Intune refers to these security updates Windows quality updates.
+> [!IMPORTANT]
+>
+> As of September 9, 2025, this capability is delayed to help ensure delivery of the best possible experience. The new setting on the Enrollment Status Page (ESP) can be configured on both new and existing ESP profiles, but the automatic installation of monthly security update releases and the new user interface isn't available yet. This post will be updated with a revised timeline as soon as it's available.
+
+The Windows out-of-box experience (OOBE) by default installs the latest available security updates to help ensure devices are secure and up to date from day one. Windows OOBE is used by Intune and by Windows Autopilot scenarios through the Intune enrollment status page (ESP) configurations. Intune refers to these security updates Windows quality updates.
 
 To help you manage this behavior, we've updated the Intune enrollment status page with a new setting you can use to allow or block the automatic installation of these updates.
- 
+
 The new setting is **Install Windows quality updates**. These security updates, also known as Windows quality updates in Intune, are installed by default during the Windows out-of-box experience OOBE that's used by Intune and by Windows Autopilot.
 
 By default, this setting is set to *Yes* in all new ESP profiles you create, which results in the most recent security updates being installed. In all your previously created ESP profiles this setting is set to *No* until you choose to edit those profiles to change it. When set to *No*, OOBE doesn't install the updates which can give your internal teams time to test the updates before allowing them to install on new devices you provision.
@@ -112,7 +116,7 @@ Applies to:
 ### Device configuration recommendations from the Security Copilot Vulnerability Remediation Intune agent<!-- 34346149 -->
 
 To help reduce your organization’s attack surface against vulnerabilities, the Security Copilot Vulnerability Remediation Intune agent now provides recommended configurations for settings related to a reported vulnerability.
- 
+
 You can find the recommended configurations after selecting *Agent suggestions* for a reported vulnerability, which opens the *Suggested action* pane.  On the suggested action pane there is a new section of information titled **Configurations**.
 
 If the Intune settings catalog contains relevant settings for the reported vulnerability, the Configurations section provides information to help you configure device policies. These policies can help minimize future risk from that vulnerability. This includes:
@@ -133,7 +137,7 @@ To learn more about Agent suggestions, remediation guidance, and the new recomme
 
 Managed Home Screen (MHS) for Android Enterprise dedicated devices now supports two new features: **Offline mode** and **App access without sign in**.
 
-- **Offline mode** – Lets users access designated apps when the device is offline or unable to connect to the network. You can configure a grace period before requiring users to sign in once connectivity is restored.  
+- **Offline mode** – Lets users access designated apps when the device is offline or unable to connect to the network. You can configure a grace period before requiring users to sign in once connectivity is restored.
 - **App access without sign in** – Lets users launch specific apps from the MHS sign-in screen via the MHS top bar, regardless of network status. This is useful for apps that need to be available immediately, such as help desk or emergency tools.
 
 These features are designed for dedicated devices enrolled in Microsoft Entra shared device mode and can be configured via device configuration policy.
