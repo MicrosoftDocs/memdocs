@@ -27,7 +27,7 @@ A wipe is useful for resetting a device before you give the device to a new user
 The **Wipe** device action restores a device to its factory default settings.
 
 ::: zone pivot="macos,android"
-## Before you start
+## Before wiping a device
 ::: zone-end
 
 ::: zone pivot="macos"

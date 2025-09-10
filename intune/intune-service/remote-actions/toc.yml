@@ -15,7 +15,7 @@ items:
     href: collect-diagnostics.md
   - name: Disable Activation Lock
     href: device-activation-lock-disable.md
-  - name: Delete 🟢
+  - name: Delete
     href: device-delete.md
   - name: Fresh Start
     href: device-fresh-start.md
