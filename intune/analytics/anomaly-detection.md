@@ -39,12 +39,6 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 > [!NOTE]
 > Device cohorts are only identified for medium and high severity anomalies.
 
-## Prerequisites
-
-- Licensing/Subscriptions: The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
-
-- Permissions: Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)  
-
 ## Anomalies tab
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

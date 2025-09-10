@@ -104,6 +104,10 @@ A mixed licenisng scenario occurs when some users in your tenant have access to 
 
 Currently, the highest functional subscription sets the Endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint analytics for all enrolled devices.
 
+## Role based access control
+
+- Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)  
+
 ## Enabling Advanced Analytics in Microsoft Intune
 
 When license requirements are met, then Advanced Analytics capabilities are automatically enabled in your tenant. If licenses expire or you change your subscription to one that doesn't include Advanced Analytics, your tenant is automatically reverted to the base Endpoint analytics experience.

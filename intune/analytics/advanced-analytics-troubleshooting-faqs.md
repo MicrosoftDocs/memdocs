@@ -60,11 +60,11 @@ Baseline scores are shown on charts as triangle markers. There's a built-in base
 
 ### Analytics Data Not Updating
 
-Ensure devices are online and have connectivity to required Microsoft endpoints. Verify data collection settings and licensing status.
+Ensure devices are online and have connectivity to required Microsoft endpoints. Verify data collection settings and licensing status. Devices will need to restart at least once after the policy arrives for data to properly display.
 
 ### Incomplete Device Reports
 
-Check that targeted devices meet OS and configuration requirements. Re-enroll or update devices as needed.
+Check that targeted devices meet the [prerequisites](advanced-analytics-plan.md#prerequisites). In some cases, end-to-end latency might exceed 24 hours when event details aren't able to upload from the client right away. Events such as restarts and stop errors experience this when the device doesn't immediately reboot after the shut-down or stop error event. In this case, the event details are uploaded at the next available opportunity, and the event appears on the timeline with a timestamp equal to the time the event occurred.
 
 ---
 

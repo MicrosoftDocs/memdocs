@@ -31,7 +31,6 @@ The insights show how much your score can improve by replacing batteries in affe
 2. Select **Report** > **Endpoint analytics** > **Battery health**.
 3. The Battery health report page shows an **Overview** tab, **Device performance** tab, **Model performance** tab, **OS performance** tab, and an **App impact** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
 
-
    :::image type="content" source="media/battery-health/battery-health.png" lightbox="media/battery-health/battery-health.png" alt-text="This is a screenshot of the Battery Health tab in Advanced analytics":::
 
 The battery health report can be used to:

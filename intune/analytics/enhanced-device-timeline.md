@@ -41,7 +41,6 @@ Currently, the enhanced device timeline contains app crash, app unresponsive, de
 - Best practices:
   - Use device timeline to correlate software updates, user actions, and system events during troubleshooting.
 
-
 ## Limitations
 
 - When your tenant has Advanced Analytics features in Intune, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill-down views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score, use the table on the **Device performance** tab and search for the desired device.
