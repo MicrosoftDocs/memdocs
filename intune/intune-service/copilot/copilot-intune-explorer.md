@@ -105,13 +105,13 @@ The **Get results** button runs your query. Copilot summarizes and helps you und
 
 In the query results, you can export the results and select an item to go to its individual resource page and get more information. If your query results are a list of users or devices, you can add them to a group, and target apps and policies to this group to complete management tasks.
 
-:::image type="content" source="./media/copilot-intune-explorer/explorer-query-results.png" alt-text="When exploring data, you can export the query results and add users or devices to groups in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/copilot-intune-explorer/explorer-query-results.png" alt-text="When exploring data, you can export the query results and add users or devices to groups in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-query-results.png":::
 
 When you add to a group, you can select an existing group or create a new group. When finished, a progress report is automatically created. If you want to keep the report, export it now, as the report isn't available again.
 
 In the following example, a query found noncompliant devices that are out of the grace period. These devices are added to a group. Some devices failed to be added to the group, and the **Status detail** shows the reason why. You can use the **Add filters** option to filter the results, like the devices that were successfully added to the group.
 
-:::image type="content" source="./media/copilot-intune-explorer/explorer-add-to-group-report.png" alt-text="When exploring data, add the device query results to a group and view the report status in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/copilot-intune-explorer/explorer-add-to-group-report.png" alt-text="When exploring data, add the device query results to a group and view the report status in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-add-to-group-report.png":::
 
 ## Feedback and future updates
 

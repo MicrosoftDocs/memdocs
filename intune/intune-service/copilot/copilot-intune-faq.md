@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Copilot in Intune FAQ
-description: Get answers to common questions when using Copilot in Microsoft Intune.
+title: FAQ for Microsoft Copilot in Intune
+description: Get answers to common questions when using Copilot in Microsoft Intune, inlcluding accessing Copilot, licensing, and more.
 keywords: security copilot, intune, microsoft intune, copilot, faq
 author: MandiOhlinger
 ms.author: mandia
@@ -32,23 +32,27 @@ ms.collection:
 
 # Microsoft Copilot in Intune FAQ
 
-This article answers common questions about using Microsoft Copilot in Intune. For more information, see [Microsoft Copilot in Intune overview](copilot-intune-overview.md).
+This article answers common questions about using Microsoft Copilot in Intune. To learn more about Copilot in Intune and to get started, see [Microsoft Copilot in Intune overview](copilot-intune-overview.md).
 
 ## Access to Copilot
 
 ### How can I control access to Copilot in Intune?
 
-When you set up Security Copilot, you determine the Copilot role that your admins can have (owner or contributor), as described in [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication). There are also Microsoft Entra roles that can control access to Security Copilot.
+When you set up Security Copilot, you determine the Copilot role that your admins can have (**owner** or **contributor**), as described in [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication). There are also Microsoft Entra roles that can control access to Security Copilot.
 
 The Security Copilot roles or the Microsoft Entra roles that you configure control access to Copilot in Intune. There aren't any Intune-specific roles-based access controls (RBAC) for Copilot in Intune.
 
-After you enable Intune in Security Copilot,  your Intune admins can see the Copilot features in the Intune admin center. But they can only access the data that they have permission to. Copilot honors existing [Intune RBAC roles](../fundamentals/role-based-access-control.md) and [Intune scope tags](../fundamentals/scope-tags.md) that are assigned to your admins.
+After you enable Intune in Security Copilot, your Intune admins can see the Copilot features in the Intune admin center. But they can only access the data that they have permission to. Copilot honors existing [Intune RBAC roles](../fundamentals/role-based-access-control.md) and [Intune scope tags](../fundamentals/scope-tags.md) that are assigned to your admins.
 
 So, if an admin tries to access Intune data that they don't have permissions to, they get the following error message:
 
 `You don't have permission to access this feature. Reach out to your IT administrator for help.`
 
-If you want access to Copilot in Intune, contact the Security Copilot workspace owner in your organization. If you want access to all your Intune data, contact your Intune administrator.
+**Key info**:
+
+- If you want access to Copilot in Intune, contact the Security Copilot workspace owner in your organization. Other roles can be assigned access to Copilot in Intune through Security Copilot.
+
+- If you want access to all your Intune data, contact your Intune administrator. By default, the **Intune Administrator** role in Microsoft Entra ID has access to Copilot in Intune.
 
 ### Can I use Security Copilot if I'm not an Intune admin, and vice versa?
 
@@ -84,7 +88,7 @@ You need Security Copilot enabled to access Copilot in Intune features. Some Cop
 
 For more information about SCUs, see:
 
-- [Get started with Microsoft Copilot](/copilot/security/get-started-security-copilot)
+- [Get started with Security Copilot](/copilot/security/get-started-security-copilot)
 - [Manage capacity in Security Copilot](/copilot/security/manage-usage)
 
 ### Is there a limit on the prompt output?
@@ -112,7 +116,7 @@ To use Copilot with your Intune data, you can use Copilot in Intune or Security 
 
 ### Copilot appears to show the wrong info. How can I debug and validate?
 
-If you think that the output is incorrect, submit feedback and include details about what you're seeing.
+If you think that the output is incorrect, submit feedback in your Copilot Chat session in Intune, and include details about what you're seeing.
 
 Every Copilot response has two feedback buttons – a thumbs up when the response is what you expect, and a thumbs down when the response isn't what you expect. This feedback helps improve the Copilot experience.
 
@@ -125,9 +129,9 @@ Other things you can try:
   - Use the F12 developer tools in your browser. This information shows the capabilities that Copilot uses.
   - In the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989), you can view the prompt sessions and session IDs from the Intune embedded experience.
 
-To learn more about privacy and data security, what data is collected as part of feedback, and how to disable feedback, see [Privacy and data security in Microsoft Security Copilot](/copilot/security/privacy-data-security).
+To learn more about privacy and data security, what data is collected as part of feedback, and how to disable feedback, see [Privacy and data security in Security Copilot](/copilot/security/privacy-data-security).
 
 ## Related articles
 
-- [Microsoft Security Copilot FAQ](/copilot/security/faq-security-copilot)
-- [Microsoft Copilot in Intune](copilot-intune-overview.md)
+- [Security Copilot FAQ](/copilot/security/faq-security-copilot)
+- [Copilot in Intune](copilot-intune-overview.md)
