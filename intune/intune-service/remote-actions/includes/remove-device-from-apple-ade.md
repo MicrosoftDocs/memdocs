@@ -7,7 +7,7 @@ ms.date: 09/9/2025
 
 ## Remove an Apple ADE device from Apple Business Manager
 
-After retiring or deleting an Apple Automated Device Enrollment (ADE) device from Intune, you might also need to release it from Apple Business Manager to complete its removal from organizational control. This process is irreversible and should only be done when the device is no longer needed for management.
+After executing the remote action on an Apple Automated Device Enrollment (ADE) device in Intune, you might also need to release the device from Apple Business Manager to fully remove it from organizational control.
 
 Follow these steps:
 

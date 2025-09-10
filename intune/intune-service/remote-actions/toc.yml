@@ -7,8 +7,8 @@ items:
   href: device-cleanup-rules.md
 - name: Actions list
   items:
-  - name: Autopilot Reset 🔗🟠
-    href: /autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset
+  - name: Autopilot Reset 🟠
+    href: device-autopilot-reset.md
   - name: BitLocker key rotation
     href: device-rotate-bitlocker-keys.md
   - name: Collect diagnostics

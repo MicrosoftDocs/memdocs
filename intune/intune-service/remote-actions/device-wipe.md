@@ -165,8 +165,8 @@ The behavior for **Wipe** on iOS devices is that it restores the device to facto
 
 ## Reference links
 
+- Configuration service provider (CSP) used to initiate the remote action: [RemoteWipe CSP][CSP-1]
 - Microsoft Graph API: [wipe action][GRAPH-1]
-
 
 
 <!--
@@ -187,6 +187,19 @@ Wipe device, but keep enrollment state and associated user account
 }
 -->
 
+dowipe: Exec on this node will perform a remote wipe on the device. The return status code shows whether the device accepted the Exec command. When used with OMA Client Provisioning, a dummy value of "1" should be included for this element.
+A remote reset is equivalent to running Reset this PC > Remove everything from the Settings app, with Clean Data set to No and Delete Files set to Yes. If a doWipe reset is started and then interrupted, the PC will attempt to roll-back to the pre-reset state. If the PC can't be rolled-back, the recovery environment will take no additional actions and the PC could be in an unusable state and Windows will have to be reinstalled.
+
+doWipeCloudPersistProvisionedData: Exec on this node will back up provisioning data to a persistent location and perform a cloud-based remote wipe on the device. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command.
+
+
+doWipeCloudPersistUserData: Exec on this node will perform a cloud-based remote reset on the device and persist user accounts and data. The return status code shows whether the device accepted the Exec command.
+
+doWipePersistProvisionedData: Exec on this node will back up provisioning data to a persistent location and perform a remote wipe on the device. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command. When used with OMA Client Provisioning, a dummy value of "1" should be included for this element. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command. Provisioning packages are persisted in %SystemDrive%\ProgramData\Microsoft\Provisioning directory.
+
+doWipeProtected: Exec on this node will perform a remote wipe on the device and fully clean the internal drive. In some device configurations, this command may leave the device unable to boot. The return status code shows whether the device accepted the Exec command. The doWipeProtected is functionally similar to doWipe. But unlike doWipe, which can be easily circumvented by simply power cycling the device, doWipeProtected will keep trying to reset the device until it's done.
+Note: Because doWipeProtected will clean the partitions in case of failure or interruption, use doWipeProtected in lost/stolen device scenarios.
+
 <!-- role links -->
 
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
@@ -195,3 +208,4 @@ Wipe device, but keep enrollment state and associated user account
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-wipe
+[CSP-1]: /windows/client-management/mdm/remotewipe-csp
