@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 05/30/2025
+ms.date: 09/10/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ ms.collection:
 
 To configure Endpoint Privilege Management (EPM) on devices, deploy *Windows elevation settings policy* to users or devices:
 
-- Enable or disbale EPM on a device.
+- Enable or disable EPM on a device.
 - Set default rules for elevation requests for any file doesn't match an elevation rule.
 - Configure what information EPM reports back to Intune.
 

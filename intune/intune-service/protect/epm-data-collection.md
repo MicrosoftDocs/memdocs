@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 10/08/2024
+ms.date: 09/10/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
