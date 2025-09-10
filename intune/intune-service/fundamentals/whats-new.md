@@ -99,7 +99,8 @@ Apple released macOS 26 (Tahoe). With this release, Microsoft Intune, the Compan
 
 For more information on this change, go to [Plan for change:  Intune is moving to support macOS 14 and later](#plan-for-change-intune-is-moving-to-support-macos-14-and-higher-later-this-year).
 
-macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
+> [!NOTE]
+> macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
 
 For a list of supported OS version, see [Supported operating systems and browsers in Intune](supported-devices-browsers.md).
 
@@ -121,7 +122,6 @@ Apple has released iOS 26 and iPadOS 26. With this update, Purebred (version 3) 
 > Applies to:
 >
 > - iOS/iPadOS
-
 
 ## Week of September 8, 2025
 
