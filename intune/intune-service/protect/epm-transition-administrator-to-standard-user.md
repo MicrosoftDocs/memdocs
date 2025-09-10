@@ -4,7 +4,7 @@ description: Understand the steps and phases for using Endpoint Privilege Manage
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 08/29/2025
 ms.topic: how-to
 ms.service: microsoft-intune

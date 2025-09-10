@@ -4,7 +4,7 @@ description: Configure policies that define how Endpoint Privilege Management fu
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 07/22/2025
 ms.topic: how-to
 ms.service: microsoft-intune

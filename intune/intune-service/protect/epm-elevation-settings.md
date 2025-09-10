@@ -4,7 +4,7 @@ description: View guidance on how to manage the Endpoint Privilege Management cl
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 05/30/2025
 ms.topic: article
 ms.service: microsoft-intune

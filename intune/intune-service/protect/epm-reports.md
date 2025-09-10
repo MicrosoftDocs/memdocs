@@ -4,7 +4,7 @@ description: View reports for managed and unmanaged file elevations when you use
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 05/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune

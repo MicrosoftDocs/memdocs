@@ -4,7 +4,7 @@ description: To enhance the security of your organization, set your users to run
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 05/30/2025
 ms.topic: how-to
 ms.service: microsoft-intune

@@ -4,7 +4,7 @@ description: Manage support approvals for elevation requests when you use Endpoi
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 02/12/2025
 ms.topic: how-to
 ms.service: microsoft-intune

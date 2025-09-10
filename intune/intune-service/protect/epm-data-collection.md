@@ -4,7 +4,7 @@ description: View details about the type of data Endpoint Privilege Management c
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
+manager: laurawi
 ms.date: 10/08/2024
 ms.topic: article
 ms.service: microsoft-intune
