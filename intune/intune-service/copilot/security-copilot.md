@@ -68,19 +68,19 @@ There are several ways to use Copilot in Intune:
 - [Copilot Chat prompt suggestions](../copilot/copilot-intune-overview.md#copilot-chat-prompt-suggestions)
 - [Policy and setting management](../copilot/copilot-intune-overview.md#policy-and-setting-management)
 - [Device details and troubleshooting](../copilot/copilot-intune-overview.md#device-details-and-troubleshooting)
-- [Windows 365 Cloud PC insights](/windows-365/enterprise/copilot-in-intune-for-windows365) – Link to the new page for Windows 365 – PR https://github.com/MicrosoftDocs/windows-cloud-pr/pull/637 (We should also add this to the menu item on the left as a dedicated page above Copilot in Surface Management Portal. Title – Copilot for Windows 365 Cloud PCs 
+- [Windows 365 Cloud PC insights](/windows-365/enterprise/copilot-in-intune-for-windows365)
 
 ### Security admin focus
 
 Security Copilot has a Security Operations Center (SOC) or security admin focus. So, if you're a SOC analyst or security admin, then you can use Security Copilot to get the security posture of devices that Intune manages.
 
-For example, there's a user or device that is showing signs of malicious intent. Also, you notice some events are happening after the malicious intent, like an unknown device enrolling in Intune. Maybe someone is trying to use stolen credentials to enroll and get access. You need to get more information.
+For example, there's a user or device that is showing signs of malicious intent. You notice some events are happening after the malicious intent, like an unknown device enrolling in Intune. Maybe someone is trying to use stolen credentials to enroll and get access. You need to get more information.
 
 In Security Copilot, you can use the Intune capabilities to get more information, like:
 
 - Ask about a specific device, get all the properties about that device, including the device name, device ID, and device manufacturer.
 - Determine when the device is enrolled in Intune.
-- Find the primary user of a device
+- Find the primary user of a device.
 - Determine the type of device, like a laptop or mobile phone.
 - Check the compliance status, especially if a device is noncompliant, and why it's noncompliant.
 

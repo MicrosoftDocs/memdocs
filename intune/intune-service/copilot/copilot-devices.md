@@ -51,8 +51,6 @@ This article describes how to use Copilot to manage and troubleshoot device issu
   - [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md#before-you-begin)
   - [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)
 
-- When you use the Copilot prompts to troubleshoot your devices, you are within the scope of the device you select.
-
 - Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Intune Administrator** Microsoft Entra role.
 
   For more information, see:
@@ -81,7 +79,7 @@ As you type your question in Copilot Chat, an intelligent search matches your re
 This section guides you through some Copilot prompts that you can use.
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **All devices**, and then select any device.
+2. Select **Devices** > **All devices**.
 3. Select **Copilot**:
 
     :::image type="content" source="./media/copilot-devices/copilot-banner.png" alt-text="Screenshot that shows to select Copilot in the banner in Microsoft Intune or Intune admin center." lightbox="./media/copilot-devices/copilot-banner.png":::
@@ -92,7 +90,7 @@ This section guides you through some Copilot prompts that you can use.
 
     The results show all noncompliant devices in your organization, including the device name, device ID, and more.
 
-Let's walk through some prompts.
+Let's walk through some other prompts.
 
 ### Summarize a device
 
@@ -104,7 +102,7 @@ When you submit the prompt, it asks for the device name or ID. The summary inclu
 
 ### Compare devices
 
-In your Copilot Chat session, enter `compare` and select the **Compare an Intune device** prompt.
+In your Copilot Chat session, enter `compare` and select the **Compare two Intune devices** prompt.
 
 :::image type="content" source="./media/copilot-devices/compare-intune-device-prompt.png" alt-text="Screenshot that shows the compare an Intune device Copilot prompt in Microsoft Intune or Intune admin center.":::
 

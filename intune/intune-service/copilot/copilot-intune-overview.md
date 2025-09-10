@@ -92,7 +92,7 @@ To use Copilot in Intune, you should know the following information:
 
 ## Start using Copilot
 
-To access Copilot in Intune, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The home screen lists the ways to get started with Copilot.
+To access Copilot in Intune, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the banner at the top, select **Copilot**.
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-banner.png" alt-text="Screenshot that shows the Intune admin center banner with the Copilot button in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-banner.png":::
 
@@ -103,7 +103,7 @@ You can use Copilot in Intune for:
 - Device details and troubleshooting
 - Analyzing Endpoint Privilege Management requests
 - Troubleshooting Surface devices
-- Gain insights about Windows 365 Cloud PCs
+- Gaining insights about Windows 365 Cloud PCs
 
 ## Data exploration
 
@@ -115,7 +115,7 @@ To learn more, see [Explore Intune data and get Microsoft Copilot recommendation
 
 ## Copilot Chat prompt suggestions
 
-Copilot Chat can be accessed from any page on Intune by selecting the Copilot button on the top banner.
+Copilot Chat can be accessed from any page in Intune by selecting the Copilot button on the top banner.
 
 When the Copilot Chat pane opens, use natural language to ask Copilot a question. An intelligent search matches your request to available prompts that are built into Intune. These prompts are offered as suggestions.
 
@@ -169,7 +169,7 @@ When you select the Copilot tooltip, the Copilot prompt window opens and provide
 
 :::image type="content" source="./media/copilot-intune-overview/compliance-policy-setting-prompt-results.png" alt-text="Screenshot that shows more information about a setting when you select the Copilot tooltip in a compliance policy in Microsoft Intune admin center.":::
 
-You can get more insights about this setting by asking for questions like:
+You can get more insights about this setting by asking questions like:
 
 - Has this setting been configured in any other policies?
 - Does Microsoft recommend any particular value for this setting?
@@ -198,7 +198,7 @@ You can use this feature on device configuration policies, including the setting
 
 On your existing Intune compliance policies, you can use Copilot to analyze different aspects of the policy. The prompt guide can help summarize what the policy does, effect of the policy and its settings on your users, and security. You can also use Copilot to help get compliance policies that have conflicting settings.  
 
-:::image type="content" source="./media/copilot-intune-overview/compliance-policy-prompt-options.png" alt-text="Screenshot that shows the Copilot prompt options for compliance policies in Microsoft Intune or Intune admin center.":::
+:::image type="content" source="./media/copilot-intune-overview/compliance-policy-prompt-options.png" alt-text="Screenshot that shows the Copilot prompt options for compliance policies in Microsoft Intune or Intune admin center." lightbox="./media/copilot-intune-overview/compliance-policy-prompt-options.png":::
 
 ## Device details and troubleshooting
 
