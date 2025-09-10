@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft Copilot in Intune features overview
-description: Microsoft Copilot in Intune is an AI platform. It can help you create policies, get information about existing policies, and show more details on specific settings, including their impacts on users and devices. You can also use Copilot to troubleshoot device issues and query devices.
+title: Security Copilot in Intune features overview
+description: Microsoft Security Copilot in Intune is an AI platform. It can help you create policies, get information about existing policies, and show more details on specific settings, including their impacts on users and devices. You can also use Copilot to troubleshoot device issues and query devices.
 keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings catalog, policies, device details, troubleshooting
 author: MandiOhlinger
 ms.author: mandia
@@ -37,9 +37,9 @@ ms.collection:
 
 [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) is a generative-AI security analysis tool. It can help you and your organization get information quickly and make decisions that affect security and risk.
 
-Intune has capabilities that are powered by Copilot. These capabilities access your Intune data and help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
+Intune has capabilities that are powered by Security Copilot. These capabilities access your Intune data and help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
 
-There are two ways to access your Intune data by using Copilot:
+There are two ways to access your Intune data using Copilot:
 
 - **Microsoft Copilot in Intune** (this article): Copilot is embedded in Intune and is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The Copilot prompts and their output are in the context of Intune and your Intune data.
 
@@ -47,7 +47,7 @@ There are two ways to access your Intune data by using Copilot:
 
 - **Microsoft Security Copilot**: This option is a standalone Copilot and is available in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989). You can use this portal to get insights from Security Copilot for all your enabled services, like Intune, Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and more.
 
-  This experience has a Security Operations Center (SOC) focus and can be used by IT admins. For more information, see [Access your Microsoft Intune data in Security Copilot](security-copilot.md).
+  This experience has a Security Operations Center (SOC) focus and can be used by IT admins. For more information, see [Security Copilot in Microsoft Intune](security-copilot.md).
 
 This article focuses on Copilot in Intune and describes the Intune features that you can use with Copilot.
 
@@ -59,10 +59,10 @@ To use Copilot in Intune, you should know the following information:
 
   For more information about SCUs, see:
 
-  - [Get started with Microsoft Copilot](/copilot/security/get-started-security-copilot)
+  - [Get started with Security Copilot](/copilot/security/get-started-security-copilot)
   - [Manage capacity in Security Copilot](/copilot/security/manage-usage)
 
-- **Copilot configuration**: Before you can use the Copilot features in Intune, Microsoft Security Copilot must be configured, and you must complete the first run tour in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989). For the setup tasks, see [Get started with Microsoft Copilot](/copilot/security/get-started-security-copilot).
+- **Copilot configuration**: Before you can use the Copilot features in Intune, Security Copilot must be configured, and you must complete the first run tour in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989). For the setup tasks, see [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 
   You can check the status in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Copilot**.
 
@@ -70,17 +70,19 @@ To use Copilot in Intune, you should know the following information:
 
 - **Copilot roles**: Access to Copilot in Intune is managed through Security Copilot or Microsoft Entra ID. To use Copilot in Intune, you or your admin team must be assigned the appropriate role in Security Copilot or Microsoft Entra ID. There isn't a built-in Intune role that has access to Copilot.
 
+  The **Intune Administrator** role in Microsoft Entra ID has access to Copilot in Intune by default. Other roles can be assigned access to Copilot in Intune through Security Copilot.
+
   For more information, see [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication).
 
 - **Intune plug-in source**: To use Copilot in Intune, you need the Intune plug-in enabled in Security Copilot. This plug-in allows you to access your Intune data and use Copilot in the Intune admin center.
 
   Go to the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) and select **Sources** (prompt bar > right corner).
 
-  :::image type="content" source="./media/copilot-intune-overview/security-copilot-sources.png" alt-text="Screenshot that shows the plugin sources that are available, enabled, and disabled in Microsoft Security Copilot.":::
+  :::image type="content" source="./media/copilot-intune-overview/security-copilot-sources.png" alt-text="Screenshot that shows the plugin sources that are available, enabled, and disabled in Microsoft Security Copilot." lightbox="./media/copilot-intune-overview/security-copilot-sources.png":::
 
   In **Manage sources**, enable Microsoft Intune.
 
-  :::image type="content" source="./media/copilot-intune-overview/intune-plug-in-enabled.png" alt-text="Screenshot that shows the Microsoft Intune plug-in source is enabled in the Microsoft Security Copilot portal.":::
+  :::image type="content" source="./media/copilot-intune-overview/intune-plug-in-enabled.png" alt-text="Screenshot that shows the Microsoft Intune plug-in source is enabled in the Microsoft Security Copilot portal." lightbox="./media/copilot-intune-overview/intune-plug-in-enabled.png":::
 
   > [!TIP]
   > Some roles can enable or disable plug-ins. For more information, see [Manage plug-ins in Microsoft Security Copilot](/copilot/security/manage-plugins).
@@ -88,7 +90,7 @@ To use Copilot in Intune, you should know the following information:
 - **Your Intune data**: Copilot uses your Intune data. When an Intune admin submits a prompt, Copilot can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
 
 > [!TIP]
-> For some common questions asked about Copilot in Intune, go to [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
+> For some common questions asked about Copilot in Intune, go to [Copilot in Intune FAQ](copilot-intune-faq.md).
 
 ## Start using Copilot
 
@@ -96,13 +98,17 @@ To access Copilot in Intune, sign into the [Intune admin center](https://go.micr
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-banner.png" alt-text="Screenshot that shows the Intune admin center banner with the Copilot button in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-banner.png":::
 
+When Copilot Chat opens, there are some sample prompts ready for you to try.
+
+:::image type="content" source="./media/copilot-intune-overview/copilot-chat-prompt-box.png" alt-text="Screenshot that shows some sample prompts in Copilot Chat in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-chat-prompt-box.png":::
+
 You can use Copilot in Intune for:
 
 - Data exploration using natural language
 - Policy and setting management
 - Device details and troubleshooting
-- Analyzing Endpoint Privilege Management requests
-- Troubleshooting Surface devices
+- Analyzing Endpoint Privilege Management (EPM) requests
+- Troubleshooting Microsoft Surface devices
 - Gaining insights about Windows 365 Cloud PCs
 
 ## Data exploration
@@ -111,29 +117,29 @@ Using natural language, you can query and explore your Intune data, including da
 
 When you run a query, Copilot summarizes the results and recommends actions you can take based on the query results. You can also use the query output to add users or devices to groups, and create custom reports.
 
-To learn more, see [Explore Intune data and get Microsoft Copilot recommendations](copilot-intune-explorer.md).
+To learn more, see [Explore Intune data and get Copilot recommendations](copilot-intune-explorer.md).
 
 ## Copilot Chat prompt suggestions
 
 Copilot Chat can be accessed from any page in Intune by selecting the Copilot button on the top banner.
 
-When the Copilot Chat pane opens, use natural language to ask Copilot a question. An intelligent search matches your request to available prompts that are built into Intune. These prompts are offered as suggestions.
+When Copilot Chat opens, use natural language to ask Copilot a question. An intelligent search matches your request to available prompts that are built into Intune. These prompts are offered as suggestions.
 
-:::image type="content" source="./media/copilot-intune-overview/copilot-chat-prompt-box.png" alt-text="Screenshot that shows the Copilot Chat prompt box and suggested prompts in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-chat-prompt-box.png":::
+:::image type="content" source="./media/copilot-intune-overview/copilot-chat-sample-suggestion.png" alt-text="Screenshot that shows the Copilot Chat prompt box and suggested prompts in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-chat-sample-suggestion.png":::
 
 The suggestions are dynamic and update as you type your question. You can continue typing to make your request more specific, or try a different natural language wording if you can't find what you're looking for.
 
-The prompt suggestions are broken into three sections:
+The prompt suggestions are broken into three sections - **Suggestions**, **Explore your data**, and **Check documentation**.
 
 ### ✅ Suggestions
 
-The prompts on this section are specific to Intune scenarios, like device troubleshooting and policy & setting management. This list also includes prompts to troubleshoot Surface devices and get insights about your Windows 365 Cloud PCs.
+The prompts on this section are specific to Intune scenarios, like device troubleshooting and policy & setting management. This list also includes prompts to troubleshoot Microsoft Surface devices and get insights about your Windows 365 Cloud PCs.
 
 For example, you can enter `summarize` to see a list of summarize-related suggestions:
 
 :::image type="content" source="./media/copilot-intune-overview/summarize-show-suggestions.png" alt-text="Screenshot that shows the Copilot Chat prompt box when you enter summarize and show the suggested prompts in Microsoft Intune." lightbox="./media/copilot-intune-overview/summarize-show-suggestions.png":::
 
-If a prompt requires more information, you're prompted to enter that information. For example, if you select the **Summarize an Intune device** suggestion, you prompted to enter the device ID:
+If a prompt requires more information, you're prompted to enter that information. For example, if you select the **Summarize an Intune device** suggestion, you're prompted to enter the device ID:
 
 :::image type="content" source="./media/copilot-intune-overview/copilot-chat-prompt-enter-device-id.png" alt-text="Screenshot that shows the Copilot Chat prompt box when you enter the device ID for the Summarize an Intune device suggestion in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-chat-prompt-enter-device-id.png":::
 
@@ -210,7 +216,7 @@ To use this feature in Intune, select a device, and then select **Summarize with
 
 :::image type="content" source="./media/copilot-intune-overview/summarize-with-copilot.png" alt-text="Screenshot that shows you can select any device and then select Summarize with Copilot in Microsoft Intune and Intune admin center.":::
 
-For more information about using Copilot with your devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
+For more information about using Copilot with your devices, go to [Use Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 
 ### ✅ Use Copilot to create KQL queries to get device details
 
@@ -223,7 +229,7 @@ You can use this feature for an individual device or for many devices.
 
 #### Query a single device
 
-To query a single device in Intune, select a device, and then select **Monitor** > **Device query**.
+To query a single device in Intune, go to **Devices** > **All devices** > select a device, and then select **Monitor** > **Device query**.
 
 In Copilot Chat, enter your question about the device. If device query supports the properties needed to answer the question, then Copilot generates a KQL query that you can use.
 
@@ -265,6 +271,6 @@ The following examples are some queries you can try:
 
 ## Related content
 
-- [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
+- [Use Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 - [Use the settings catalog to create device configuration policies](../configuration/settings-catalog.md).
 - [Learn more about Intune capabilities in Microsoft Security Copilot](security-copilot.md).

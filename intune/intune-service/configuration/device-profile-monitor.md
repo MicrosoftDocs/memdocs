@@ -118,13 +118,13 @@ After you create your device configuration policy, Intune provides reporting dat
 
     The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the effect of a policy and its settings on your users and devices.
 
-    For more information on the different ways you can use Copilot in Intune, go to [Microsoft Copilot in Intune overview](../copilot/copilot-intune-overview.md).
+    For more information on the different ways you can use Copilot in Intune, go to [Copilot in Intune overview](../copilot/copilot-intune-overview.md).
 
 3. Go to **Devices** > **All devices** > select an existing device.
 
-4. Select **Summarize with Copilot**. Copilot shows device-specific information, like the device properties and group membership.
+4. Select **Summarize with Copilot**. Copilot shows device-specific information, like the device properties, group membership, and more.
 
-    For information on using Copilot to troubleshoot devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
+    For information on using Copilot to troubleshoot devices, go to [Use Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 
 ---
 

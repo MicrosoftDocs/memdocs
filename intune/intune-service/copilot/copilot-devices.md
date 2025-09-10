@@ -2,7 +2,7 @@
 # required metadata
 
 title: Copilot in Intune shows device information and helps troubleshoot
-description: Microsoft Copilot in Intune can help you get information about your devices, compare devices, and get error information. Use this information to help you manage and troubleshoot device issues.
+description: Microsoft Security Copilot in Intune can help you get information about your devices, compare devices, and get error information. Use this information to help you manage and troubleshoot device issues.
 keywords: security copilot, intune, microsoft intune, copilot, device information, device errors, device troubleshooting, analyze error code, compare devices, AI, generative-AI
 author: MandiOhlinger
 ms.author: mandia
@@ -34,7 +34,7 @@ ms.collection:
 
 Microsoft Security Copilot is a generative-AI security analysis tool that can help your organization get information quickly. Copilot is [built into Microsoft Intune](copilot-intune-overview.md). It can help IT admins manage and troubleshoot devices.
 
-Copilot uses your Intune data. Admins can only access the data that they have permissions to, which includes the [role based access control (RBAC) roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them. For more information, see [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
+Copilot uses your Intune data. Admins can only access the data that they have permissions to, which includes the [role based access control (RBAC) roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them. For more information, see [Copilot in Intune FAQ](copilot-intune-faq.md).
 
 With Copilot in Intune, you can:
 
@@ -48,10 +48,10 @@ This article describes how to use Copilot to manage and troubleshoot device issu
 
 - To use Copilot in Intune, make sure Copilot is enabled. For more information, see:
 
-  - [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md#before-you-begin)
+  - [Copilot in Intune](../copilot/copilot-intune-overview.md#before-you-begin)
   - [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)
 
-- Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Intune Administrator** Microsoft Entra role.
+- Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Intune Administrator** Microsoft Entra ID role.
 
   For more information, see:
 
@@ -72,7 +72,7 @@ The prompts include:
 - Show group memberships.
 - Show the primary user of this device. 
 
-As you type your question in Copilot Chat, an intelligent search matches your request to available prompts built into Intune. These prompts are shown as suggestions that you can select. You also ask questions about a Surface device, or troubleshoot issues in a Windows 365 Cloud PC.
+As you type your question in Copilot Chat, an intelligent search matches your request to available prompts built into Intune. These prompts are shown as suggestions that you can select. You can also ask questions about a Microsoft Surface device, or troubleshoot issues in a Windows 365 Cloud PC.
 
 ## Get details and troubleshoot a device
 
@@ -116,7 +116,7 @@ The results show the differences and similarities between the two devices.
 
 ### Show policies assigned to this device
 
-In the admin center, select any device. In your Copilot Chat session, enter `show policies` and select the **Show me device configuration policies assigned to a device** prompt.
+In the admin center, go to **Devices** > **All devices** and select any device. In your Copilot Chat session, enter `show policies` and select the **Show me device configuration policies assigned to a device** prompt.
 
 :::image type="content" source="./media/copilot-devices/show-policies-prompt.png" alt-text="Screenshot that shows the device configuration policies assigned to a device in Copilot in Microsoft Intune or Intune admin center." lightbox="./media/copilot-devices/show-policies-prompt.png":::
 
@@ -128,5 +128,5 @@ This prompt shows all the policies that are assigned to the device. Use this pro
 
 ## Related articles
 
-- [Microsoft Copilot in Intune](copilot-intune-overview.md)
-- [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md)
+- [Copilot in Intune](copilot-intune-overview.md)
+- [Copilot in Intune FAQ](copilot-intune-faq.md)

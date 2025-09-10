@@ -37,17 +37,7 @@ ms.collection:
 
 Microsoft Security Copilot is a cloud-based AI platform that provides a natural language Copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot)
 
-## Know before you begin
-
-If you're new to Security Copilot, you should familiarize yourself with it by reading these articles:
-
-- [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot)
-- [Microsoft Security Copilot experiences](/copilot/security/experiences-security-copilot)
-- [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)
-- [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication)
-- [Prompting in Microsoft Security Copilot](/copilot/security/prompting-security-copilot)
-
-## Security Copilot integration in Microsoft Intune
+**Security Copilot integrates with Microsoft Intune**.
 
 If you use [Microsoft Intune](../fundamentals/what-is-intune.md) in the same tenant as Security Copilot, then you can use Security Copilot to get insights about your Intune data.
 
@@ -59,6 +49,16 @@ There are Intune capabilities built into Security Copilot, and you can use promp
 - Cloud PC insights on licensing, connection quality, configurations, and performance
 
 This article shows you how to access your Microsoft Intune data in Security Copilot and includes sample prompts.
+
+## Before you begin
+
+If you're new to Security Copilot, you should familiarize yourself with it by reading these articles:
+
+- [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot)
+- [Microsoft Security Copilot experiences](/copilot/security/experiences-security-copilot)
+- [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)
+- [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication)
+- [Prompting in Microsoft Security Copilot](/copilot/security/prompting-security-copilot)
 
 ## Key features
 
