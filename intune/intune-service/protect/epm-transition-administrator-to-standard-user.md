@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 08/29/2025
+ms.date: 09/10/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,14 +33,14 @@ ms.collection:
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
-A common scenario for customers who want to use Endpoint Privlege Management is to reduce the number of local administrators in their environment. This scenario adheres to the Zero Trust principle of least privelege. This document steps through the steps a customer could follow to use EPM to move users from administrators to standard users with minimal disruption.
+A common scenario for customers who want to use Endpoint Privilege Management is to reduce the number of local administrators in their environment. This scenario adheres to the Zero Trust principle of least privilege. This document steps through the steps a customer could follow to use EPM to move users from administrators to standard users with minimal disruption.
 
 ## Phase 1: Auditing
 
-Regardless of whether you're migrating from another endpoint privilege management product or starting fresh, it's recommended to enable auditing as the first step. Enabling auditing enables the EPM client and devices send diagnostic data to Intune, where it can be viewed in various reports. Gathering this elevation data provides insights into which processes users are applying elevation for, and help to identify common patterns – ideally aligned to your personas, such as developers, IT support technicians, etc. The deployment of this policy for auditing is seamless, and can be targeted to a group of users or devices of your choosing, as per any regular Intune policy assignment.
+Regardless of whether you're migrating from another endpoint privilege management product or starting fresh, we recommend enabling auditing as the first step. Enabling auditing enables the EPM client and devices to send diagnostic data to Intune, where it can be viewed in various reports. Gathering this elevation data provides insights into which processes users are seeking to elevate, and help to identify common patterns. Ideally, these align to your personas, such as developers, IT support technicians, etc. The deployment of this policy for auditing is seamless, and can be targeted to a group of users or devices of your choosing, as per any regular Intune policy assignment.
 
 > [!NOTE]
-> Once enabled, usage data can take 24 hrs to be returned and for the Intune portal reports to be updated. Depending on usage patterns, you may want to view reporting data over a period of many weeks to gather a better understanding of your environment.
+> Once enabled, usage data can take 24 hrs to be returned and for the Intune portal reports to be updated. Depending on usage patterns, you might want to view reporting data over a period of many weeks to gather a better understanding of your environment.
 
 **Steps to create the policy:**
 
@@ -122,7 +122,7 @@ For more security recommendations, see [Security Recommendations](epm-plan.md#se
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint Security** > **Endpoint Privilege Management** > **Policies**
 3. Select **Elevation report**
-4. Click on an application or process (for example. `C:\Program Files\Notepad++\`)
+4. Select an application or process (for example. `C:\Program Files\Notepad++\`)
 5. Select **Create a rule with these details**:
    - Create a new policy
    - **Type:** User-confirmed
@@ -158,8 +158,8 @@ For more details on creating a rule, see [Create elevation rules](epm-elevation-
    - **Local group**: Administrators
    - **Group and user action**: Add (Replace)
    - **User selection type:** Manual
-6. Click **Select users(s)**
-7. Add the 2 Security Identifiers (SIDs) for:
+6. Select **Select users(s)**
+7. Add the two Security Identifiers (SIDs) for:
    - Global Administrator
    - Microsoft Entra Joined Device Local Administrator
 
@@ -168,7 +168,7 @@ For more details on creating a rule, see [Create elevation rules](epm-elevation-
 8. Assign to a group (for example `Developers`)
 9. Select **Save**
 
-For more details on the Local Users and Groups profiles, see [Account protection](endpoint-security-account-protection-policy.md)
+For more information on the Local Users and Groups profiles, see [Account protection](endpoint-security-account-protection-policy.md)
 
 ## Phase 5: Monitoring
 

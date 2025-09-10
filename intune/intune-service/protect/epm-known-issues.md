@@ -33,11 +33,11 @@ ms.collection:
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
-This article lists known issues with Endpoint Privelege Management.
+This article lists known issues with Endpoint Privilege Management.
 
 ## Windows 10 devices might not immediately receive confirmation of support approvals
 
-We're working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations). We're working with the owner to resolve this as quickly as possible.
+We're working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations).
 
 ## Organizations that disable User Account Control (UAC) might experience issues with Endpoint Privilege Management
 
@@ -45,7 +45,7 @@ Endpoint Privilege Management doesn't support UAC being explicitly disabled. Win
 
 ## Organizations that enable Administrator Protection might experience issues with Endpoint Privilege Management
 
-Administrator Protection doesn't currently support elevations initiated from Endpoint Privilege Management. If organizations enable Administrator Protection on devices where standard users rely on EPM to handle elevation, the elevation will fail. We're working to resolve this issue in a future release.
+Administrator Protection doesn't currently support elevations initiated from Endpoint Privilege Management. If organizations enable Administrator Protection on devices where standard users rely on Endpoint Privilege Management (EPM) to handle elevation, the elevation fails. We're working to resolve this issue in a future release.
 
 ## Organizations using Application Control for Business might experience issues running Endpoint Privilege Management
 
@@ -56,7 +56,7 @@ Application Control for Business policies that don't account for the EPM client 
 
 ## Organizations restricting users who can sign in interactively might see issues with Endpoint Privilege Management
 
-Endpoint Privilege Management uses an isolated account to facilitate elevations. This account requires the ability to create an interactive logon session. Organizations who limit the ability for users to create interactive sessions need to make changes for EPM to function properly.
+Endpoint Privilege Management uses an isolated account to facilitate elevations. This account requires the ability to create an interactive sign-in session. Organizations who limit the ability for users to create interactive sessions need to make changes for EPM to function properly.
 
 ## Users requesting support approval for elevation must be the primary user on the device
 
@@ -66,14 +66,14 @@ Endpoint Privilege Management currently requires the user requesting an elevatio
 
 File name is an attribute that can be utilized to detect an application that needs to be elevated. However, it isn't protected by the signature of the file.
 
-File names are *highly susceptible* to change, and files that are signed with a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which might not be your intended behavior.
+File names are *highly susceptible* to change, and files that are signed with a certificate that you trust could have their name changed to be *detected* and then *elevated*, which might not be your intended behavior.
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
 
 ## Elevation settings policies might show conflict if changed in quick succession
 
-Endpoint Privilege Management reports status of individual settings applied using the *Elevation Settings* profile. If settings in this profile (Default elevation behavior for instance) are changed multiple times in quick succession, it might result device reporting conflict or falling back to the default behavior of *Denying* the elevation. This is a transient state and resolves without further action (in less than 60 minutes). This issue will be fixed in a future release.
+Endpoint Privilege Management reports status of individual settings applied using the *Elevation Settings* profile. If settings in this profile (Default elevation behavior for instance) are changed multiple times in quick succession, it might result in devices reporting a conflict or falling back to the default behavior of *Denying* the elevation. These results are a transient state and resolve without further action in less than 60 minutes. This issue will be fixed in a future release.
 
 ## Blocked files downloaded from the internet fail to elevate
 
@@ -83,17 +83,17 @@ To correct this behavior, unblock the file by unblocking the file from the file 
 
 ## Network and cloud resource access limitations
 
-Apps elevated with Endpoint Privilege Management (EPM) run in an isolated security context and can't access resources that require user authentication, including access to network shares and cloud services like OneDrive, SharePoint, and Azure.
+Apps elevated with Endpoint Privilege Management run in an isolated security context and can't access resources that require user authentication. This includes access to network shares and cloud services like OneDrive, SharePoint, and Azure.
 
 If access to these resources is needed, consider whether elevation is required at runtime.
 
 ## Windows devices that are "workplace joined" fail to enable Endpoint Privilege Management
 
-Devices that are workplace joined aren't supported by Endpoint Privilege Management. These devices won't show success or process EPM policies (elevation settings or elevation rules) when deployed to the device.
+Endpoint Privilege Management doesn't support devices that are workplace joined. These devices won't show success or process EPM policies (elevation settings or elevation rules) when deployed to the device.
 
 ## Rules for a network file might fail to elevate
 
-Endpoint Privilege Management supports executing files that are locally stored on disk. Executing files from a network location, such as a network share or mapped drive, is not supported.
+Endpoint Privilege Management supports running files that are locally stored on disk. EPM doesn't support running files from a network location, such as a network share or mapped drive.
 
 ## Endpoint Privilege Management doesn't receive policy when I use a 'SSL-inspection' on my network infrastructure
 
@@ -101,8 +101,8 @@ Endpoint Privilege Management doesn't support SSL inspection, which is known as 
 
 ### Certain Windows functions, such as control panel items or configurations in the settings app can't be elevated with EPM
 
-EPM can elevate Executables (.exe), Windows Installer (.msi) and PowerShell scripts (.ps1). Some functions in Windows are executed in ways that EPM can't detect and elevate. As a workaround, some of these things could be packaged as scripts and approved for elevation with EPM.
+EPM can elevate Executables (.exe), Windows Installer (.msi), and PowerShell scripts (.ps1). Some functions in Windows are executed in ways that EPM can't detect and elevate. As a workaround, some of these things could be packaged as scripts and approved for elevation with EPM.
 
 ### Certificate based rules only work for valid certificates
 
-EPM checks the certificate expiry date hasn't passed before allowing elevation. Rules based on certificates that have expired will fail to elevate.
+EPM checks the certificate expiry date to ensure it hasn't passed before allowing elevation. Rules based on certificates that are expired will fail to elevate.

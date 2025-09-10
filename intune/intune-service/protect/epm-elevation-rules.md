@@ -155,11 +155,11 @@ Endpoint Privilege Management rules are deployed like any other policy in Micros
 
 Rules deployed to a device apply to *every user* that uses that device. Rules that are deployed to a *user* apply only to that user on each device that they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This behavior allows you to deploy a set of rules to all users of a device, and a more permissive set of rules to a specific user (such as a support admin). This would allow the support administrator to elevate a broader set of applications when they sign-in to the device.
 
-*Default Elevation behavior* is used only when no rule match can be found. The default elevation behavior only applies when an elevation is trigged with the *Run with elevated access* right-click menu.
+*Default Elevation behavior* is used only when no rule match can be found. The default elevation behavior only applies when an elevation is triggered with the *Run with elevated access* right-click menu.
 
 ## Create elevation rules policy
 
-Deploy a *Elevation rules policy* to users or devices to deploy one or more rules for files that are managed for elevation by Endpoint Privilege Management. Each rule you add to this policy:
+Deploy an *Elevation rules policy* to users or devices to deploy one or more rules for files that are managed for elevation by Endpoint Privilege Management. Each rule you add to this policy:
 
 - Identifies a file by file name and file extension for which you want to manage elevation requests.
 - Can include a certificate to help validate the file's integrity. You can also add a reusable group that contains a certificate that you then use with one or more rules or policies.

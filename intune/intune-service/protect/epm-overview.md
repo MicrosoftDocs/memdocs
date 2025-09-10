@@ -48,7 +48,7 @@ Applies to:
 
 - **Standard Users by Default**. Users can perform their tasks without local admin rights.
 - **Support for just-in-time elevation**. Users can trigger specific IT-approved binaries or scripts to elevate temporarily.
-- **Policy-Based Control**. Admins define settings and rules to control elevation conditions and behaviour, with granular rule creation capabilities to suit organizational needs.
+- **Policy-Based Control**. Admins define settings and rules to control elevation conditions and behavior, with granular rule creation capabilities to suit organizational needs.
 - **Audit Logging and Reporting**. Intune logs every elevation with detailed metadata.
 - **Alignment to Zero Trust principles** by enabling least privilege access and minimizing lateral movement risks.
 
@@ -132,7 +132,7 @@ EPM includes reports to help you prepare for, monitor, and use the service. Repo
 
 ✅ Start using EPM
 
-:::image type="content" source="media/epm-overview/epm-lifecycle.png" alt-text="A diagram showing the lifecycle of deploying EPM by licensing and planning, deploying and managing.":::
+:::image type="content" source="media/epm-overview/epm-lifecycle.png" alt-text="A diagram showing the lifecycle of deploying EPM by licensing and planning, deploying, and managing.":::
 
 Endpoint Privilege Management (EPM) is administered from the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the following high-level process:
 
@@ -141,7 +141,7 @@ Endpoint Privilege Management (EPM) is administered from the [Microsoft Intune A
   - **Plan for EPM** - Before you start using EPM, there are some key requirements and concepts you should consider. For more information, see [Plan for EPM](epm-plan.md).
 
 - **Deploy EPM** - To deploy EPM, enable auditing, create rules, and monitor the deployment. For more information, see [Deploy EPM](epm-deploy.md).
-- **Manage EPM** - Once you've deployed EPM, you can monitor [support approved requests](epm-support-approved.md) and [elevations](epm-reports.md). You can [maintain and update your rules](epm-elevation-rules.md) and [review user privileges](endpoint-security-account-protection-policy.md).
+- **Manage EPM** - After you deploy EPM, you can monitor [support approved requests](epm-support-approved.md) and [elevations](epm-reports.md). You can [maintain and update your rules](epm-elevation-rules.md) and [review user privileges](endpoint-security-account-protection-policy.md).
 
 ---
 

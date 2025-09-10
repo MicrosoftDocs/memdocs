@@ -49,7 +49,7 @@ Each reusable settings group is a single object that can include multiple settin
 
 To manage groups of reusable settings, in the Microsoft Intune admin center you use the *Reusable settings* tab that's associated with the policy and profiles you want to use a group with. On the tab, you can create a group, edit the settings in a group, and view the count of policies that inherit settings from each group. Each reusable settings group is used with only its related profile type.
 
-For example, the following image shows the Reusable settings tab you would use to manage reusable groups for the Windows Firewall Firewall Rules profile:
+For example, the following image shows the Reusable settings tab you would use to manage reusable groups for the Windows Firewall Rules profile:
 
 :::image type="content" source="./media/reusable-settings-groups/reusable-setting-tab.png" alt-text="Screenshot that shows the Reusable settings tab for Firewall policies in the Microsoft Intune admin center.":::
 

@@ -42,7 +42,7 @@ This article covers the information required to plan for Endpoint Privilege Mana
 - Ensure you have a good understanding of elevation settings and elevation rules policies, including:
   - Default elevation settings and diagnostic data collection.
   - Defining elevation files using file hash, metadata, or certificates.
-  - How certificate rules can allow any app signed by that certificate to elevate. Exercise caution for vendors who may sign all their apps with the same certificate.
+  - How certificate rules can allow any app signed by that certificate to elevate. Exercise caution for vendors who might sign all their apps with the same certificate.
   - Rules argument support, and child process behavior options.
   - Elevation types.
   - How rule conflicts are handled when you have overlapping rule assignments.
@@ -69,7 +69,7 @@ Endpoint Privilege Management has the following requirements:
 > [!NOTE]
 >
 > - Windows 365 is supported using a supported operating system version
-> - Workplace-join devices and Azure Virtual Desktop aren't supported by Endpoint Privilege Management
+> - EPM doesn't support workplace-join devices and Azure Virtual Desktop
 
 Endpoint Privilege Management supports the following operating systems:
 
@@ -106,7 +106,7 @@ When you configure the *elevation settings* and *elevation rules* policies that 
 
   - **Automatic**: For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
 
-  - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules can aslo require validation with authentication or business justification. Requiring validation provides an extra layer of protection by making the user acknowledge the elevation.
+  - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules can also require validation with authentication or business justification. Requiring validation provides an extra layer of protection by making the user acknowledge the elevation.
 
   - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. Deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
@@ -175,7 +175,7 @@ Endpoint Privilege Management and Windows built-in user account control (UAC) ar
 When moving users to run as standard users and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
 
 > [!NOTE]
-> Endpoint Privilege Management doesn't interfere with user account control actions (or UAC) that's run by an Administrator on the device.
+> Endpoint Privilege Management doesn't interfere with user account control actions (or UAC) that are run by an Administrator on the device.
 
 ## Security recommendations
 
@@ -185,7 +185,7 @@ To help ensure a secure deployment of Endpoint Privilege Management, consider th
 
 ### Set a secure default elevation response
 
-Set the [default elevation response](../protect/epm-elevation-settings.md#about-windows-elevation-settings-policy) to **Require support approval** or **Deny** rather than **Require user confirmation**. This ensures that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
+Set the [default elevation response](../protect/epm-elevation-settings.md#about-windows-elevation-settings-policy) to **Require support approval** or **Deny** rather than **Require user confirmation**. These options ensure that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
 
 ### Require file path restrictions in all rule types
 
@@ -206,7 +206,7 @@ Use more restrictive elevation rules for applications with broader access or scr
 
 ### Start fresh, even when migrating from a third-party product
 
-EPM operates differently to third-party products and as a result, it's recommended to start with an audit policy. Then, you can create new rules from reports and take advantage of *support approved* elevation for when a rule hasn't been created and a user needs to elevate to get their job done.
+EPM operates differently to third-party products and as a result, we recommended starting with an audit policy. Then, you can create new rules from reports and take advantage of *support approved* elevation when a file doesn't have a rule but a user needs to elevate that file to get their job done.
 
 ## Role-based access controls for Endpoint Privilege Management
 
