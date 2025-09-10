@@ -34,7 +34,7 @@ ms.collection:
 To configure Endpoint Privilege Management (EPM) on devices, deploy *Windows elevation settings policy* to users or devices:
 
 - Enable or disable EPM on a device.
-- Set default rules for elevation requests for any file doesn't match an elevation rule.
+- Set default rules for elevation requests for any files that don't match an elevation rule.
 - Configure what information EPM reports back to Intune.
 
 When EPM is enabled, the `C:\Program Files\Microsoft EPM Agent` folder is created along with the 'Microsoft EPM Agent Service' service, which is responsible for processing the EPM policies.
@@ -55,7 +55,7 @@ Use *Windows elevation settings policy* when you want to:
   Options include:
 
   - **Deny all requests** (recommended) - This option blocks the *elevate request* action for files that aren't defined in a *Windows elevation rules policy*.
-  - **Require support approval** (recommended) - When support approval is required, an administrator must review elevation requests before a the elevation is allowed.
+  - **Require support approval** (recommended) - When support approval is required, an administrator must review elevation requests before the elevation is allowed.
   - **Require user confirmation** - When user confirmation is required, you can choose from the same validation options as found for Windows elevation rules policy.
 
     - **Validation options** - Set validation options when the default elevation response is defined as *Require user confirmation*. Options include:
@@ -117,7 +117,7 @@ Use *Windows elevation settings policy* when you want to:
 
        This level of information can help you identify other files that aren't yet managed by an elevation rule that users seek to run in an elevated context.
 
-     - **Diagnostic data and managed elevations only**: The device reports diagnostic data and details about file elevations controlled by EPM. EPM elevations include elevations that match an elevation rule or are intiated by the *Run with elevated access* right-click context menu. File requests for unmanaged files, and files that are elevated through the Windows default action of *Run as administrator*, aren't reported as managed elevations.
+     - **Diagnostic data and managed elevations only**: The device reports diagnostic data and details about file elevations controlled by EPM. EPM elevations include elevations that match an elevation rule or are initiated by the *Run with elevated access* right-click context menu. File requests for unmanaged files, and files that are elevated through the Windows default action of *Run as administrator*, aren't reported as managed elevations.
      - **Diagnostic data only**: Only diagnostic data for the operation of Endpoint Privilege Management is collected. Information about file elevations isn't reported to Intune.
 
    When ready, select **Next** to continue.
