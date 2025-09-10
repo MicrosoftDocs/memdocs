@@ -60,7 +60,7 @@ This feature applies to:
 - Be sure you have the correct role that can assign policies and profiles. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 - Consider using Microsoft Copilot in Intune. Some benefits include:
 
-  - When you create a policy and configure settings, Copilot provides more information on each setting, can recommend a value, and find potential conflicts.
+  - When you create a policy and configure settings, Copilot provides more information on each setting and find potential conflicts.
   - When you assign a policy, Copilot can tell you the groups the policy is assigned to and help you understand the effect of the policy.
 
   For more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).

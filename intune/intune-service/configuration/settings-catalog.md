@@ -7,7 +7,7 @@ keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 06/17/2025
+ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -36,7 +36,7 @@ The settings catalog lists all the settings you can configure all in one place. 
 
 You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md). When you use the Copilot features with the settings catalog, you can use Copilot to:
 
-- Learn more about each setting, get *what if* analysis, and find potential conflicts.
+- Learn more about each setting and find potential conflicts.
 - Summarize existing policies and get impact analysis on users and security.
 
 If you prefer to configure settings at a granular level, similar to using on-premises Group Policy Objects (GPOs), the settings catalog is a natural transition to cloud-based policy.
@@ -208,9 +208,9 @@ When you use settings catalog policies, you can use Copilot to get more informat
 
     :::image type="content" source="./media/settings-catalog/copilot-settings-catalog-policy-details.png" alt-text="Screenshot that shows Copilot giving more detailed information on any setting in the settings catalog in Microsoft Intune and Intune admin center.":::
 
-4. You can also select the prompt guide and choose from an existing list of options:
+4. In Copilot Chat, you can also start typing a prompt, and Copilot suggests relevant prompts:
 
-    :::image type="content" source="./media/settings-catalog/copilot-setting-prompt-guide.png" alt-text="Screenshot that shows the Copilot settings prompt guide and a list of the available prompts in the settings catalog in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/settings-catalog/recommended-value-prompt.png" alt-text="Screenshot that shows the Copilot suggestion prompts in the settings catalog in Microsoft Intune and Intune admin center.":::
 
 ---
 
@@ -303,9 +303,7 @@ Copilot can help you find the status of your existing policies, find the status 
 
     A summary is automatically shown that includes the settings in the policy & their values.
 
-3. You can also select the prompt guide and choose from an existing list of options:
-
-    :::image type="content" source="./media/settings-catalog/copilot-policy-prompt-guide.png" alt-text="Screenshot that shows the Copilot policy prompt guide and a list of the available prompts in the settings catalog in Microsoft Intune and Intune admin center.":::
+3. In Copilot Chat, you can enter `conflicts` and select a prompt.
 
 ---
 
