@@ -37,7 +37,7 @@ ms.collection:
 
 Microsoft Security Copilot is a cloud-based AI platform that provides a natural language Copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot)
 
-Security Copilot integrates with Microsoft Intune.
+**Security Copilot integrates with Microsoft Intune**.
 
 If you use [Microsoft Intune](../fundamentals/what-is-intune.md) in the same tenant as Security Copilot, then you can use Security Copilot to get insights about your Intune data.
 

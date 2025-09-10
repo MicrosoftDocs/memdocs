@@ -78,11 +78,11 @@ To use Copilot in Intune, you should know the following information:
 
   Go to the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) and select **Sources** (prompt bar > right corner).
 
-  :::image type="content" source="./media/copilot-intune-overview/security-copilot-sources.png" alt-text="Screenshot that shows the plugin sources that are available, enabled, and disabled in Microsoft Security Copilot.":::
+  :::image type="content" source="./media/copilot-intune-overview/security-copilot-sources.png" alt-text="Screenshot that shows the plugin sources that are available, enabled, and disabled in Microsoft Security Copilot." lightbox="./media/copilot-intune-overview/security-copilot-sources.png":::
 
   In **Manage sources**, enable Microsoft Intune.
 
-  :::image type="content" source="./media/copilot-intune-overview/intune-plug-in-enabled.png" alt-text="Screenshot that shows the Microsoft Intune plug-in source is enabled in the Microsoft Security Copilot portal.":::
+  :::image type="content" source="./media/copilot-intune-overview/intune-plug-in-enabled.png" alt-text="Screenshot that shows the Microsoft Intune plug-in source is enabled in the Microsoft Security Copilot portal." lightbox="./media/copilot-intune-overview/intune-plug-in-enabled.png":::
 
   > [!TIP]
   > Some roles can enable or disable plug-ins. For more information, see [Manage plug-ins in Microsoft Security Copilot](/copilot/security/manage-plugins).
@@ -100,7 +100,7 @@ To access Copilot in Intune, sign into the [Intune admin center](https://go.micr
 
 When Copilot Chat opens, there are some sample prompts ready for you to try.
 
-:::image type="content" source="./media/copilot-intune-overview/copilot-chat-prompt-box.png" alt-text="Screenshot that shows the Copilot Chat prompt box and suggested prompts in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-chat-prompt-box.png":::
+:::image type="content" source="./media/copilot-intune-overview/copilot-chat-prompt-box.png" alt-text="Screenshot that shows some sample prompts in Copilot Chat in Microsoft Intune." lightbox="./media/copilot-intune-overview/copilot-chat-prompt-box.png":::
 
 You can use Copilot in Intune for:
 
@@ -216,7 +216,7 @@ To use this feature in Intune, select a device, and then select **Summarize with
 
 :::image type="content" source="./media/copilot-intune-overview/summarize-with-copilot.png" alt-text="Screenshot that shows you can select any device and then select Summarize with Copilot in Microsoft Intune and Intune admin center.":::
 
-For more information about using Copilot with your devices, go to [Use Microsoft Security Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
+For more information about using Copilot with your devices, go to [Use Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 
 ### ✅ Use Copilot to create KQL queries to get device details
 
@@ -271,6 +271,6 @@ The following examples are some queries you can try:
 
 ## Related content
 
-- [Use Microsoft Security Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
+- [Use Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 - [Use the settings catalog to create device configuration policies](../configuration/settings-catalog.md).
 - [Learn more about Intune capabilities in Microsoft Security Copilot](security-copilot.md).
