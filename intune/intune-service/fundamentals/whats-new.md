@@ -84,7 +84,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 Apple released iOS 26 and iPadOS 26. With this release, Microsoft Intune—including the Intune Company Portal and app protection policies (APP, also known as MAM)—now requires iOS/iPadOS 17 or later.
 
-For more information on this change, go to [Plan for change: Intune is moving to support iOS/iPadOS 17 and later](whats-new#plan-for-change-intune-is-moving-to-support-iosipados-17-and-later).
+For more information on this change, go to [Plan for change: Intune is moving to support iOS/iPadOS 17 and later](#plan-for-change-intune-is-moving-to-support-iosipados-17-and-later).
 
 > [!NOTE]
 > Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
