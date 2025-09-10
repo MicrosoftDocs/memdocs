@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: rashok
+ms.reviewer: ankurgoyal, rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

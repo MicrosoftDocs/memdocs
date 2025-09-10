@@ -7,7 +7,7 @@ keywords: security copilot, intune, microsoft intune, copilot, faq
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 11/08/2024
+ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: rashok
+ms.reviewer: ankurgoyal, rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -54,7 +54,7 @@ If you want access to Copilot in Intune, contact the Security Copilot workspace 
 
 Yes. Access to Security Copilot is managed by using Security Copilot or Microsoft Entra roles. For more information, see [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication).
 
-If you're an Intune admin and have the correct Security Copilot or Microsoft Entra role assigned to you, you can use Security Copilot to get insights about your Intune data.
+If you're an admin for Intune and have the correct Security Copilot or Microsoft Entra role assigned to you, you can use Security Copilot to get insights about your Intune data.
 
 Security Copilot is scoped to all your embedded services.
 
@@ -104,7 +104,7 @@ To use Copilot with your Intune data, you can use Copilot in Intune or Security 
 | Feature | Copilot in Intune | Security Copilot |
 |---|---|---|
 | **Access and data insights** |  This Copilot is embedded in the Intune admin center and is scoped to only show Intune data.<br/><br/> Intune admins should use Copilot in Intune for Intune-only tasks. | This Copilot is a standalone experience. It can access other embedded services, like Microsoft Defender, Microsoft Entra ID, Microsoft Purview, and Microsoft Intune. <br/><br/>It accesses the same Intune capabilities as Copilot in Intune. |
-| **Open prompting** |  Intune provides a set of prompts you can use. There isn't an open prompt. There are plans to include an open prompt in the future (no ETA).| Can use open prompts or use [promptbooks](/copilot/security/using-promptbooks). |
+| **Open prompting** |  Intune has built-in prompts you can use and access from Copilot Chat in Intune. In Copilot Chat, you can enter a query. Copilot summarizes the results and recommends built-in prompts based on the text you enter. <br/><br/>There isn't an open prompt. There are plans to include an open prompt in the future (no ETA). | Can use open prompts or use [promptbooks](/copilot/security/using-promptbooks). |
 | **Prompt history** |  The prompt/response history isn't available in the Intune admin center. To view the prompt history, use Security Copilot.<br/><br/>The prompts can look different compared with the prompts shown in Intune, as Intune enters the prompt for you. | You can review the prompt/response history even when the prompt is submitted in the standalone or embedded experience. |
 | **Target audience** | Focus is the IT admin/IT Pro. | Focus is the Security Operations Center (SOC) and can be used by IT admins. |
 
@@ -112,11 +112,9 @@ To use Copilot with your Intune data, you can use Copilot in Intune or Security 
 
 ### Copilot appears to show the wrong info. How can I debug and validate?
 
-If you think that the output is incorrect, submit feedback and include details about what you're seeing. This feedback helps improve the Copilot experience.
+If you think that the output is incorrect, submit feedback and include details about what you're seeing.
 
-In the Copilot prompt window in the Intune admin center, there's a **Feedback** button.
-
-:::image type="content" source="./media/copilot-intune-overview/feedback-message-icon.png" alt-text="Screenshot that shows how to provide Copilot feedback in Microsoft Intune and Intune admin center.":::
+Every Copilot response has two feedback buttons – a thumbs up when the response is what you expect, and a thumbs down when the response isn't what you expect. This feedback helps improve the Copilot experience.
 
 Other things you can try:
 
@@ -126,6 +124,8 @@ Other things you can try:
 
   - Use the F12 developer tools in your browser. This information shows the capabilities that Copilot uses.
   - In the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989), you can view the prompt sessions and session IDs from the Intune embedded experience.
+
+To learn more about privacy and data security, what data is collected as part of feedback, and how to disable feedback, see [Privacy and data security in Microsoft Security Copilot](/copilot/security/privacy-data-security).
 
 ## Related articles
 
