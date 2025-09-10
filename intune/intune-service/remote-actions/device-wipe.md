@@ -1,6 +1,6 @@
 ---
 title: "Intune Remote Device Action: Wipe"
-description: Learn how to wipe devices with Microsoft Intune.
+description: Learn how to wipe, or factory reset, devices with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -97,8 +97,6 @@ To factory reset a Zebra Android device, use one of the following methods:
 ::: zone pivot="macos"
 4. Provide a 6-digit number for the **Recovery PIN**. The six-digit PIN is required to reinstall the operating system on the device, if the device isn't equipped with T2 security chip enabled (that is, the model year of the device is 2018 and earlier, or the device is running macOS 10.14 or earlier). Be sure to make a note of this PIN and give it to the device owner as it won't be visible after the wipe action completes.
 
-    :::image type="content" source="images/obliteration-behavior.png" alt-text="Screen shot that shows where to provide a pin and select an option for obliteration behavior." lightbox="images/obliteration-behavior.png":::
-
 5. Select an option from **Obliteration Behavior**, which is used to define the fallback for devices when Erase All Contents and Settings (EACS) fails. The following options can be configured:
 
     - **Default**: If Erase All Content and Settings (EACS) preflight fails, the device responds to Intune with an Error status and then attempts to erase itself. If EACS preflight succeeds but EACS fails, then the device attempts to erase itself.
@@ -142,15 +140,28 @@ To factory reset a Zebra Android device, use one of the following methods:
 1. For iOS/iPadOS eSIM devices, the cellular data plan is preserved by default when you wipe a device. If you want to remove the data plan from the device when you wipe the device, select the **Also remove the devices data plan...** option.
 ::: zone-end
 
-## Wipe all data from a macOS device
+## User experience
 
-Intune gives you the ability to use the **Wipe** remote device action to wipe data from macOS devices, including the operating system.
 
-> [!IMPORTANT]
-> When you use **Wipe**, the device is also removed from Intune management and no warning is given to the end user once a wipe is initiated.
+::: zone pivot="macos"
+When you use **Wipe**, the device is also removed from Intune management and no warning is given to the end user once a wipe is initiated.
+::: zone-end
 
-> [!NOTE]
-> The behavior for **Wipe** on iOS devices is that it restores the device to factory defaults and removes the management profile, including any configuration profiles that were installed.
+::: zone pivot="ios"
+The behavior for **Wipe** on iOS devices is that it restores the device to factory defaults and removes the management profile, including any configuration profiles that were installed.
+::: zone-end
+
+
+[!INCLUDE [multiple-administrative-approval](includes/multiple-administrative-approval.md)]
+
+::: zone pivot="windows"
+
+[!INCLUDE [remove-device-from-autopilot](includes/remove-device-from-autopilot.md)]
+
+::: zone-end
+
+[!INCLUDE [remove-device-from-entra-id](includes/remove-device-from-entra-id.md)]
+
 
 ## Reference links
 
@@ -167,8 +178,6 @@ Factory reset returns the device to its default settings. This removes all perso
 
 Wipe device, but keep enrollment state and associated user account
 
-
-
 {
   "keepEnrollmentData": true,
   "keepUserData": true,
@@ -177,12 +186,6 @@ Wipe device, but keep enrollment state and associated user account
   "persistEsimDataPlan": true,
 }
 -->
-
-## Next steps
-
-::: zone pivot="windows"
-The Wipe action doesn't remove the Windows Autopilot registration from the device. To remove the Windows Autopilot registration from the device, see [Deregister from Windows Autopilot using Intune](/autopilot/registration-overview#deregister-from-autopilot-using-intune)
-::: zone-end
 
 <!-- role links -->
 

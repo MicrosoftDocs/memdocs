@@ -17,18 +17,24 @@ zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 
 Use the **Delete** remote action in Intune to permanently remove devices that are no longer needed, being repurposed, or missing. This action helps clean up your device inventory and ensures that unmanaged or obsolete devices no longer appear in the admin center.
 
-When you use the **Delete** remote action for **iOS/iPadOS**, **macOS**, and **Windows** devices, the **Delete** remote action triggers a [Retire](device-retire.md) command.
+### Delete remote action behavior by platform
 
-For an Android device, Intune issues either a **Retire** or **Wipe** command depending on the device's enrollment type.
+When you use the **Delete** remote action in Intune, the command that is triggered depends on the device platform and, for Android, the enrollment type.
 
-| Enrollment Type                                         | Action triggered           |
-|---------------------------------------------------------|----------------------------|
-| Device administrator                                    | [Retire](device-retire.md) |
-| Android Enterprise personally-owned work profile (BYOD) | [Retire](device-retire.md) |
-| Android Enterprise corporate-owned fully managed (COBO) | [Wipe](device-wipe.md)     |
-| Android Enterprise corporate-owned dedicated (COSU)     | [Wipe](device-wipe.md)     |
-| Android Enterprise corporate-owned work profile (COPE)  | [Wipe](device-wipe.md)     |
-| Android Open Source Project (AOSP)                      | [Wipe](device-wipe.md)     |
+- For **iOS/iPadOS**, **macOS**, and **Windows** devices, the Delete action always triggers a **Retire** command.
+- For **Android** devices, the Delete action triggers either a **Retire** or **Wipe** command depending on the enrollment type.
+
+| Platform   | Enrollment Type                      | Action Triggered           |
+|------------|--------------------------------------|----------------------------|
+| Windows    | Any                                  | [Retire](device-retire.md) |
+| iOS/iPadOS | Any                                  | [Retire](device-retire.md) |
+| macOS      | Any                                  | [Retire](device-retire.md) |
+| Android    | Device administrator                 | [Retire](device-retire.md) |
+| Android    | Personally-owned work profile (BYOD) | [Retire](device-retire.md) |
+| Android    | Corporate-owned Fully managed (COBO) | [Wipe](device-wipe.md)     |
+| Android    | Corporate-owned Dedicated (COSU)     | [Wipe](device-wipe.md)     |
+| Android    | Corporate-owned Work profile (COPE)  | [Wipe](device-wipe.md)     |
+| Android    | Open Source Project (AOSP)           | [Wipe](device-wipe.md)     |
 
 ::: zone pivot="windows"
 
@@ -78,7 +84,7 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 ::: zone pivot="ios,macos"
 
-[!INCLUDE [remove-apple-ade-device](includes/remove-apple-ade-device.md)]
+[!INCLUDE [remove-device-from-apple-ade](includes/remove-device-from-apple-ade.md)]
 
 ::: zone-end
 

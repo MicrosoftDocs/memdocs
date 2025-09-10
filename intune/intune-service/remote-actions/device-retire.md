@@ -154,7 +154,7 @@ For Microsoft Entra ID joined devices, after the **Retire** command is executed,
 
 ::: zone pivot="ios,macos"
 
-[!INCLUDE [remove-apple-ade-device](includes/remove-apple-ade-device.md)]
+[!INCLUDE [remove-device-from-apple-ade](includes/remove-device-from-apple-ade.md)]
 
 ::: zone-end
 
