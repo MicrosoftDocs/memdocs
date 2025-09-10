@@ -6,7 +6,7 @@ description: View the device compliance settings for Linux that you can manage w
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 08/15/2025
 ms.topic: concept-article
 ms.service: microsoft-intune

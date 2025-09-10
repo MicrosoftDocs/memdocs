@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: laurawi
-ms.date: 09/03/2025
+ms.date: 09/09/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -142,6 +142,10 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 ### Install Windows monthly security update releases
 
+> [!IMPORTANT]
+>
+> As of September 9, 2025, this capability is delayed to help ensure delivery of the best possible experience. The new setting on the Enrollment Status Page (ESP) can be configured on both new and existing ESP profiles, but the automatic installation of monthly security update releases and the new user interface isn't available yet. This post will be updated with a revised timeline as soon as it's available.
+
 Installation of [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as quality updates, are controlled via the option **Install Windows quality updates (might restart the device)**. This setting only installs monthly security update releases. It doesn't install other types of updates as listed at [Types of update releases](/windows/deployment/update/release-cycle#types-of-update-releases).
 
 The control to disable the installation of monthly security update releases during the Windows 11 out-of-box experience (OOBE) was added via the 2025-06 D updates:
@@ -151,7 +155,7 @@ The control to disable the installation of monthly security update releases duri
 
 Versions of Windows 11 that already have these or later updates installed have the feature of installing monthly security update releases during OOBE built-in. For supported versions of Windows 11 that lack these or later updates, the feature is automatically added via a zero day package (ZDP) before the ESP is displayed.
 
-Monthly security update releases on supported versions of Windows 11 are installed by default during OOBE starting with updates on September 9, 2025 (2025 9B). This behavior can be managed using the **Install Windows quality updates (might restart the device)** setting of the ESP profile. Newly created ESP Profiles will default to **Yes**, while existing ESP profiles default to **No**. To enable installing monthly security update releases during OOBE on existing ESP profiles, edit the existing ESP profile so that the **Install Windows quality updates (might restart the device)** setting is set to **Yes**.
+Monthly security update releases on supported versions of Windows 11 are installed by default during OOBE. This behavior can be managed using the **Install Windows quality updates (might restart the device)** setting of the ESP profile. Newly created ESP Profiles will default to **Yes**, while existing ESP profiles default to **No**. To enable installing monthly security update releases during OOBE on existing ESP profiles, edit the existing ESP profile so that the **Install Windows quality updates (might restart the device)** setting is set to **Yes**.
 
 Installation of monthly security update releases during OOBE normally adds 20-40 minutes to the provisioning process. Installation of monthly security update releases also might require restarts. If a restart occurs, the user isn't automatically logged into Windows. Restarts might break some autologon provisioning scenarios. Setting the setting **Install Windows quality updates (might restart the device)** to **No** is recommended in these scenarios.
 
