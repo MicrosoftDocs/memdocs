@@ -17,7 +17,9 @@ zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 
 Use the **Delete** remote action in Intune to permanently remove devices that are no longer needed, being repurposed, or missing. This action helps clean up your device inventory and ensures that unmanaged or obsolete devices no longer appear in the admin center.
 
-When you use the **Delete** remote action for an Android device, Intune issues either a **Retire** or **Wipe** command depending on the device's enrollment type.
+When you use the **Delete** remote action for **iOS/iPadOS**, **macOS**, and **Windows** devices, the **Delete** remote action triggers a [Retire](device-retire.md) command.
+
+For an Android device, Intune issues either a **Retire** or **Wipe** command depending on the device's enrollment type.
 
 | Enrollment Type                                         | Action triggered           |
 |---------------------------------------------------------|----------------------------|
@@ -27,8 +29,6 @@ When you use the **Delete** remote action for an Android device, Intune issues e
 | Android Enterprise corporate-owned dedicated (COSU)     | [Wipe](device-wipe.md)     |
 | Android Enterprise corporate-owned work profile (COPE)  | [Wipe](device-wipe.md)     |
 | Android Open Source Project (AOSP)                      | [Wipe](device-wipe.md)     |
-
-For **iOS/iPadOS**, **macOS**, and **Windows** devices, the **Delete** remote action triggers a [Retire](device-retire.md) command.
 
 ::: zone pivot="windows"
 
