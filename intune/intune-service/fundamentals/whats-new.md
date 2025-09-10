@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 09/09/2025
+ms.date: 09/10/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -112,7 +112,7 @@ For a list of supported OS version, see [Supported operating systems and browser
 
 #### Company Portal supports Purebred's new derived credentials experience<!--31973776-->
 
-Apple has released iOS 26 and iPadOS 26. With this update, Purebred (version 3) introduces a new and improved derived credentials experience. As part of day 0 support, Company Portal will support Purebred's updated workflow.
+Apple has released iOS 26 and iPadOS 26. With this update, Purebred (version 3) introduces a new and improved derived credentials experience. As part of day zero support, Company Portal will support Purebred's updated workflow.
 
 - If your organization plans to continue using the older version of Purebred, there will be no changes to your derived credentials experience in Purebred or Company Portal—even if you upgrade to the latest version of Company Portal.
 - If your organization plans to upgrade to the new version of Purebred, make sure to update to Company Portal version 5.2509.0 to ensure compatibility.
