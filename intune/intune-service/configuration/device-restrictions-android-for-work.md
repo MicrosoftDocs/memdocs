@@ -112,6 +112,10 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **Bluetooth configuration**: **Block** prevents users from configuring Bluetooth on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using Bluetooth on the device.
 - **Tethering and access to hotspots**: **Block** prevents tethering and access to portable hotspots. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow tethering and access to portable hotspots.
 - **USB file transfer**: **Block** prevents transferring files over USB. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow transferring files.
+
+  > [!NOTE]
+  > To manage USB access more precisely, go to the **USB access** setting in the Settings catalog. Learn more here: https://review.learn.microsoft.com/en-us/intune/intune-service/configuration/settings-catalog-android?branch=release-intune-2509&tabs=ae#general.
+  
 - **External media**: **Block** prevents using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
 - **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.  
 - **Developer settings**: Choose **Allow** to let users access developer settings on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.
