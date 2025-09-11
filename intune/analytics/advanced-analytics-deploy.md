@@ -20,7 +20,7 @@ ms.localizationpriority: high
 
 ## Enabling Advanced Analytics in Microsoft Intune
 
-When license requirements are met, then Advanced Analytics capabilities are automatically enabled in your tenant. If licenses expire or you change your subscription to one that doesn't include Advanced Analytics, your tenant is automatically reverted to the base Endpoint analytics experience.
+When license requirements are met, then Advanced Analytics capabilities are automatically enabled in your tenant.
 
 > [!NOTE]
 > It may take up to 48 hours after you buy licenses or start a trial to see Advanced Analytics features in your tenant.
@@ -34,13 +34,13 @@ For the extra reports and capabilities on Windows devices, devices need to be en
 
 1. Update role based access control for custom roles to include new permissions such as **Managed Devices** > **Query** for [Device Query](device-query.md). For more information, see [Role-based access control](/intune/intune-service/fundamentals/role-based-access-control.md)
 1. Update support processes to:
-    1. Leverage [device timeline](enhanced-device-timeline.md) to review if there is a specific pattern, such as a device restart or update tied to the anomaly.
-    1. Leverage [device query](device-query.md) retrieve live information from a device to aid troubleshooting.
+    1. Use [device timeline](enhanced-device-timeline.md) to review if there's a specific pattern, such as a device restart or update tied to the anomaly.
+    1. Use [device query](device-query.md) retrieve live information from a device to aid troubleshooting.
 
 1. Implement processes to periodically review:
-    1. [Anomaly Detection Data](anomaly-detection.md). For example after application or operating system updates are applied to proactively identify issues.
+    1. [Anomaly Detection Data](anomaly-detection.md). For example, after application or operating system updates are applied to proactively identify issues.
     1. [Battery health data](battery-health.md) to identify devices that may need attention to ensure long battery life and good user experience.
-    1. [Resource performance reports](resource-performance-report.md) to identify challenges with resource performance by device, model and manufacturer to aid in future purchasing decisions.
+    1. [Resource performance reports](resource-performance-report.md) to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
 
 ---
 
