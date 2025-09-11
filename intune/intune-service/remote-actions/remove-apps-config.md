@@ -40,19 +40,6 @@ Use the **Remove apps and configuration** remote action in Intune to uninstall a
 >   - The permission **Ramote tasks/Change assignments**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-#### Admin capabilities
-
-Admins with the required permissions can:
-
-- Remove assigned apps and configuration profiles from a device.
-- Restore previously removed apps and configuration profiles.
-
-##### Scope tags
-
-Scope tags limit which apps and configurations an admin can view and manage. Visibility is based on the scope tag assignments defined in the admin's role.
-For more information, see ../fundamentals/scope-tags.md.
-
-
 #### Admin permissions and scope tags for Remove apps and configuration
 
 Admins can use the **Remove apps and configuration** remote action to:
@@ -63,7 +50,6 @@ Admins can use the **Remove apps and configuration** remote action to:
 ##### Scope tags
 
 Scope tags limit which apps and configurations an admin can view and manage. The visibility is based on the scope tag assignments defined in the admin's role. For more information, see [Use role-based access control and scope tags for distributed IT]( ../fundamentals/scope-tags.md).
-
 
 ## Supported apps and configuration profiles
 
