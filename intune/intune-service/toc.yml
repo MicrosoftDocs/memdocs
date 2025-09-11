@@ -215,7 +215,7 @@ items:
         - name: Device query for multiple devices
           href: ../analytics/device-query-multiple-devices.md
         - name: Data platform schema
-          href: ../analytics/data-platform-schema.md\
+          href: ../analytics/data-platform-schema.md
 
       - name: Troubleshoot and Monitor
         items:
