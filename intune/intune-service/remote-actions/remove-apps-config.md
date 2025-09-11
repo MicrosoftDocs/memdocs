@@ -18,8 +18,6 @@ zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 
 Use the **Remove apps and configuration** remote action in Intune to uninstall apps and remove configuration profiles from a device. This action is useful for troubleshooting or temporarily removing settings that might be causing issues.
 
-You can manually restore the removed items using the **Restore** action. If no restore is initiated, Intune automatically reapplies the apps and configurations within 8-24 hours to ensure the device remains aligned with assignment intent.
-
 ## Requirements
 
 ### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
@@ -102,33 +100,28 @@ The **Remove apps and configuration** remote action supports the following items
 
 ::: zone-end
 
-## How to remove apps and configuration
+## How to remove apps and configuration from the Intune admin center
 
-1. Sign in to the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices**, and then select **All devices or the device platform**.
-1. From the list of devices you manage, select a device.
-1. From the buttons, choose **Remove apps and configuration**. Use the **⋯** overflow menu.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Remove apps and configuration**.
 
   :::image type="content" alt-text="Remove apps and configuration" source="images/remove-apps-config.png" lightbox="images/remove-apps-config.png":::
 
 1. Select **+ Add**, then select the type of item to remove; **Configuration Item** or **App**.
-
-  :::image type="content" alt-text="Add apps or configuration to remove" source="images/remove-apps-config-add.png" lightbox="images/remove-apps-config-add.png":::
 1. A list of applicable items is displayed with its current state on the device. Select an item to remove, and then use **Select**.
 1. The list of selected items is displayed for review; add or delete using the check boxes and header controls. When satisfied with the item list, select **Next**.
-1. The Review + Remove page is displayed for review, when ready to initiate the remove action, select **Remove**.
-1. After the action is initiated, you'll be directed to the **Monitor and restore** page. The **Remove** action is initiated for devices that are powered and actively connected to an internet-enabled network; the selected items are removed as soon as possible.
-
-  :::image type="content" alt-text="Status and action" source="images/remove-apps-config-action.png" lightbox="images/remove-apps-config-action.png":::
+1. The **Review + Remove** page is displayed for review, when ready to initiate the remove action, select **Remove**.
+1. After the action is initiated, you're redirected to the **Monitor and restore** page. The **Remove** action is initiated for devices that are powered and actively connected to an internet-enabled network; the selected items are removed as soon as possible.
 
 > [!IMPORTANT]
-> Removal of items such as Wi-Fi, VPN, and Certificates could impact device connectivity, if the items are ultimately used for connectivity to the Intune service. **Remove apps and configuration** is intended to be used interactively by Intune admins working with impacted end users.  If connectivity is lost, end users may need to take actions on devices to restore connectivity; connect the device to a guest or alternate Wi-Fi or Cellular network.
+> Removal of items such as Wi-Fi, VPN, and Certificates could impact device connectivity, if the items are ultimately used for connectivity to the Intune service. **Remove apps and configuration** is intended to be used interactively by Intune admins working with impacted users.  If connectivity is lost, users might need to take actions on devices to restore connectivity; connect the device to a guest or alternate Wi-Fi or cellular network.
 
 ## Monitoring the device action remove apps and configuration
 
 After you initiate the **Remove apps and configuration** action on a device, the **Status** column of the **Overview** page displays the status of the action. The status is updated as the action progresses.
 
-Removed items are automatically restored to devices in 8-24 hours in cases where an admin does not initiate a **Restore** action to ensure that devices remain consistent with assignment intents.
+You can manually restore the removed items using the **Restore** action. If no restore is initiated, Intune automatically reapplies the apps and configurations within 8-24 hours to ensure the device remains aligned with assignment intent.
 
 :::image type="content" alt-text="Monitor the device action - Remove apps and configuration" source="images/remove-apps-config-monitor.png" lightbox="images/remove-apps-config-monitor.png":::
 

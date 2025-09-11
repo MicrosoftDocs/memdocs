@@ -37,7 +37,7 @@ items:
     href: device-quick-scan.md
   - name: Remote lock
     href: device-remote-lock.md
-  - name: Remove apps and configuration 🟠
+  - name: Remove apps and configuration
     href: remove-apps-config.md
   - name: Remove passcode
     href: device-remove-passcode.md
