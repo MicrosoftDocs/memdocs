@@ -75,7 +75,7 @@ Find out what you need to manage Intune security baselines.
 
 ### Role-based access controls for managing Intune security baselines
 
-To manage security baselines in Intune, your account must assigned an Intune role-based access control (RBAC) role that includes following categories and permissions sufficient to complete the desired task:
+To manage security baselines in Intune, your account must be assigned an Intune role-based access control (RBAC) role that includes following categories and permissions sufficient to complete the desired task:
 
 - **Organization**:
     - Read
