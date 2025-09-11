@@ -19,6 +19,32 @@ Use the **Wipe** remote action in Intune to factory reset a device, restoring it
 
 Depending on the platform, you can customize the wipe behavior to meet your organization's needs.
 
+## Requirements
+
+### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+
+> [!div class="checklist"]
+> This remote action is supported on the following platforms:
+>
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned dedicated (COSU)
+> - Android Enterprise corporate-owned work profile (COPE)
+> - Android Open Source Project (AOSP)
+> - iOS/iPadOS (corporate-owned)
+> - macOS
+> - Windows
+
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Wipe**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+
 ::: zone pivot="macos,android"
 ## Before wiping a device
 ::: zone-end
@@ -53,33 +79,7 @@ To factory reset a Zebra Android device, use one of the following methods:
 - [Use OEM Config Data Wipe Configuration](https://techdocs.zebra.com/oemconfig/latest/mc2/)
 ::: zone-end
 
-## Requirements
-
-### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
-
-> [!div class="checklist"]
-> This remote action is supported on the following platforms:
->
-> - Android Enterprise corporate-owned fully managed (COBO)
-> - Android Enterprise corporate-owned dedicated (COSU)
-> - Android Enterprise corporate-owned work profile (COPE)
-> - Android Open Source Project (AOSP)
-> - iOS/iPadOS (corporate-owned)
-> - macOS
-> - Windows
-
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
-
-> [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
->
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
->   - The permission **Remote tasks/Wipe**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
-### How to wipe a device from the Intune admin center
+## How to wipe a device from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
@@ -97,65 +97,27 @@ To factory reset a Zebra Android device, use one of the following methods:
 6. Select **Wipe** to erase the device.
 ::: zone-end
 
-[!INCLUDE [multiple-administrative-approval](includes/multiple-administrative-approval.md)]
-
 ::: zone pivot="windows"
+4. You can customize the wipe behavior with the following options:
 
-4. **Wipe device, but keep enrollment state and associated user account** option. If this option is selected, the following user account details are retained:
-
-    |Retained during a wipe |Not retained|
-    | -------------|------------|
-    |User accounts associated with the device|User files|
-    |Machine state \(domain join, Microsoft Entra joined)| User-installed apps \(store and Win32 apps)|
-    |Mobile device management (MDM) enrollment|Non-default device settings|
-    |OEM-installed apps \(store and Win32 apps)||
-    |User profile||
-    |User data outside of the user profile||
-    |User autologon||
-
-    |Wipe action|**Wipe device, but keep enrollment state and associated user account**|Removed from Intune management|Description|
-    |:-------------:|:------------:|:------------:|------------|
-    |**Wipe**| Not checked | Yes | Wipes all user accounts, data, MDM policies, and settings. Resets the operating system to its default state and settings.|
-    |**Wipe**| Checked | No | Wipes all MDM Policies. Keeps user accounts and data. Resets user settings back to default. Resets the operating system to its default state and settings.|
-
-5. The **Wipe device, and continue to wipe even if device loses power** option makes sure that the wipe action can't be circumvented by turning off the device. This option keeps trying to reset the device until successful. In some configurations, this action can leave the device [unable to reboot](/troubleshoot/mem/intune/troubleshoot-device-actions#wipe-action).
-
-  - **Wipe device, and continue to wipe even if device loses power**: When selected, it ensures the wipe continues even if the device loses power during the process. This helps prevent users from interrupting the wipe by turning off the device, making it useful in high-security scenarios where guaranteed data removal is required.
+  - **Wipe device, but keep enrollment state and associated user account**
+    - When selected, the wipe removes all MDM policies but retains user accounts and data. User settings are reset to default, and the device remains enrolled in Intune.
+    - When not selected, the wipe removes all user accounts, data, MDM policies, and settings. The device is reset to its factory default state.
+  - **Wipe device, and continue to wipe even if device loses power**
+    - Ensures the wipe continues even if the device loses power during the process. This prevents users from interrupting the wipe, which is useful in high-security scenarios such as lost or stolen devices.
 
       > [!IMPORTANT]
-      > If you select this option, be aware that it might prevent some devices from starting up again. The persistent wipe process can interfere with boot recovery or firmware-level protections, potentially leaving the device in an unrecoverable state. Use this option only on corporate-owned devices where full data destruction is necessary and recovery procedures are in place.
-
-6. To confirm the wipe, select **Yes**.
+      > Selecting this option might prevent some devices from starting up again. The wipe process can interfere with boot recovery or     firmware protections, potentially leaving the device in an unrecoverable state. Use this option only on corporate-owned devices     where full data destruction is required and recovery procedures are in place.
 
 
-dowipe:
-A remote reset is equivalent to running Reset this PC > Remove everything from the Settings app, with Clean Data set to No and Delete Files set to Yes. If a doWipe reset is started and then interrupted, the PC will attempt to roll-back to the pre-reset state. If the PC can't be rolled-back, the recovery environment will take no additional actions and the PC could be in an unusable state and Windows will have to be reinstalled.
+    - When not selected, if the wipe is interrupted, the device attempts to roll back to its previous state. If rollback fails, the device may become unusable and require a full reinstallation of Windows.
 
-doWipeCloudPersistProvisionedData: Exec on this node will back up provisioning data to a persistent location and perform a cloud-based remote wipe on the device. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command.
-
-
-doWipeCloudPersistUserData: Exec on this node will perform a cloud-based remote reset on the device and persist user accounts and data. The return status code shows whether the device accepted the Exec command.
-
-doWipePersistProvisionedData: Exec on this node will back up provisioning data to a persistent location and perform a remote wipe on the device. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command. When used with OMA Client Provisioning, a dummy value of "1" should be included for this element. The information that was backed up will be restored and applied to the device when it resumes. The return status code shows whether the device accepted the Exec command. Provisioning packages are persisted in %SystemDrive%\ProgramData\Microsoft\Provisioning directory.
-
-doWipeProtected: Exec on this node will perform a remote wipe on the device and fully clean the internal drive. In some device configurations, this command may leave the device unable to boot. The return status code shows whether the device accepted the Exec command. The doWipeProtected is functionally similar to doWipe. But unlike doWipe, which can be easily circumvented by simply power cycling the device, doWipeProtected will keep trying to reset the device until it's done.
-Note: Because doWipeProtected will clean the partitions in case of failure or interruption, use doWipeProtected in lost/stolen device scenarios.
+5. To confirm the wipe, select **Yes**.
 
 ::: zone-end
 ::: zone pivot="ios"
 1. For iOS/iPadOS eSIM devices, the cellular data plan is preserved by default when you wipe a device. If you want to remove the data plan from the device when you wipe the device, select the **Also remove the devices data plan...** option.
 ::: zone-end
-
-## User experience
-
-::: zone pivot="macos"
-When you use **Wipe**, the device is also removed from Intune management and no warning is given to the end user once a wipe is initiated.
-::: zone-end
-
-::: zone pivot="ios"
-The behavior for **Wipe** on iOS devices is that it restores the device to factory defaults and removes the management profile, including any configuration profiles that were installed.
-::: zone-end
-
 
 [!INCLUDE [multiple-administrative-approval](includes/multiple-administrative-approval.md)]
 
@@ -172,12 +134,21 @@ The behavior for **Wipe** on iOS devices is that it restores the device to facto
 - Configuration service provider (CSP) used to initiate the remote action: [RemoteWipe CSP][CSP-1]
 - Microsoft Graph API: [wipe action][GRAPH-1]
 
+<!--links-->
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+
 <!-- role links -->
 
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
 [INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
 [INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+
+<!-- API links -->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-wipe
 [CSP-1]: /windows/client-management/mdm/remotewipe-csp

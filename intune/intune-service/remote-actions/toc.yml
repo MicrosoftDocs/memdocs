@@ -7,7 +7,7 @@ items:
   href: device-cleanup-rules.md
 - name: Actions list
   items:
-  - name: Autopilot Reset 🟠
+  - name: Autopilot Reset
     href: device-autopilot-reset.md
   - name: BitLocker key rotation
     href: device-rotate-bitlocker-keys.md
@@ -67,5 +67,5 @@ items:
     href: update-cellular-data-plan.md
   - name: Wipe 🟢
     href: device-wipe.md
-- name: Troubleshoot device actions
+- name: Troubleshoot device actions 🔗
   href: /troubleshoot/mem/intune/troubleshoot-device-actions
