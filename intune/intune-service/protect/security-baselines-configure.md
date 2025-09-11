@@ -61,6 +61,8 @@ Common tasks when working with security baselines include:
 
 ## Prerequisites
 
+### Licensing
+
 - Use of Intune to deploy security baselines requires a Microsoft Intune Plan 1 subscription.
 
   > [!TIP]
@@ -69,7 +71,23 @@ Common tasks when working with security baselines include:
 
 - Use of baselines through Intune requires you to have an active subscription for the managed product, when applicable. For example, use of the Microsoft Defender for Endpoint baseline doesn't grant rights to use Microsoft Defender. Instead, the baseline provides a method to configure and manage settings that are present on devices that are licensed for and managed by Microsoft Defender for Endpoint.
 
-- To manage baselines in Intune, your account must have the [Policy and Profile Manager](../fundamentals/role-based-access-control.md#built-in-roles) built-in role.
+### Role-based access controls for security baseline management
+
+To manage security baselines in Intune, your account must assigned an Intune role-based access control (RBAC) role that includes one or more of the following categories and permissions sufficient to complete the desired task:
+
+- **Organization**:
+    - Read
+
+- **Security baselines**:
+  - Assign
+  - Create
+  - Delete
+  - Read
+  - Update
+
+You can add these permissions to your own custom RBAC roles, or use a built-in RBAC role. 
+
+The least privileged built-in Intune role that supports managing security baselines is the [Policy and Profile Manager](../fundamentals/role-based-access-control.md#built-in-roles).
 
 ## Create a profile for a security baseline
 
