@@ -1,9 +1,9 @@
 ---
-title: Remove Apps and Configuration
-description: Learn how apps and configurations can be removed temporarily, then restored automatically or manually using the Remove apps and configuration device action by the IT administrator.
+title: "Intune Remote Device Action: Remove Apps and Configuration"
+description: Learn how apps and configurations can be removed temporarily, then restored automatically or manually using the Remove apps and configuration device action with Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
-#customerIntent: As an IT admin, I want to remove an app or a configuration using the Remove apps and configuration device action so that I can make changes on a device for troubleshooting or maintenance.
+
 ms.reviewer: Jack Poehlman
 ms.custom: intune-azure; get-started
 ms.collection:
@@ -14,11 +14,11 @@ ms.collection:
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Remove apps and configuration from devices
+# Remove apps and configuration using Intune
 
-**Remove apps and configuration** is a remote action used to uninstall applications and remove configurations from a device. With this action, Intune can temporarily remove apps and configurations from a single device. When ready, you can initiate a **Restore** action to return the removed item to the device. Removed items are automatically restored to devices in 8-24 hours in cases where an admin does not initiate a **Restore** action to ensure that devices remain consistent with assignment intents.
+Use the **Remove apps and configuration** remote action in Intune to uninstall apps and remove configuration profiles from a device. This action is useful for troubleshooting or temporarily removing settings that might be causing issues.
 
-This action aims to resolve the issues that customers face outside of Intune and swiftly bring back end-user efficiency.
+You can manually restore the removed items using the **Restore** action. If no restore is initiated, Intune automatically reapplies the apps and configurations within 8-24 hours to ensure the device remains aligned with assignment intent.
 
 ## Requirements
 
@@ -42,16 +42,41 @@ This action aims to resolve the issues that customers face outside of Intune and
 >   - The permission **Ramote tasks/Change assignments**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## Supported items
+#### Admin capabilities
 
-**Applications**: Any Intune delivered application on the supported device platforms.
+Admins with the required permissions can:
 
-**Configuration**: Intune delivered configuration profiles.
+- Remove assigned apps and configuration profiles from a device.
+- Restore previously removed apps and configuration profiles.
+
+##### Scope tags
+
+Scope tags limit which apps and configurations an admin can view and manage. Visibility is based on the scope tag assignments defined in the admin's role.
+For more information, see ../fundamentals/scope-tags.md.
+
+
+#### Admin permissions and scope tags for Remove apps and configuration
+
+Admins can use the **Remove apps and configuration** remote action to:
+
+- Select and remove assigned apps and configuration profiles from a device.
+- Restore previously removed apps and configuration profiles.
+
+##### Scope tags
+
+Scope tags limit which apps and configurations an admin can view and manage. The visibility is based on the scope tag assignments defined in the admin's role. For more information, see [Use role-based access control and scope tags for distributed IT]( ../fundamentals/scope-tags.md).
+
+
+## Supported apps and configuration profiles
+
+The **Remove apps and configuration** remote action supports the following items:
+
+- **Applications**: Any Intune-delivered app on supported device platforms.
+- **Configuration profiles**: Intune-delivered profiles, including:
 
 ::: zone pivot="ios"
 
-- Profile type, Settings catalog: All
-- Profile type
+  - Settings catalog: All
   - Custom
   - Devices features
   - Device restrictions
@@ -67,7 +92,6 @@ This action aims to resolve the issues that customers face outside of Intune and
 
 ::: zone pivot="android"
 
-- Profile Type:
   - Device restrictions
   - PKCS certificate
   - PKCS import certificate
@@ -77,17 +101,6 @@ This action aims to resolve the issues that customers face outside of Intune and
   - Wi-Fi
 
 ::: zone-end
-
-## Permissions for Remove apps and configurations
-
-The administrator can:
-
-- select and remove assigned applications and configuration from a device.
-- select and restore previously removed applications and configuration from a device.
-
-For more information on custom roles, see: [Create a custom role in Intune]( ../fundamentals/create-custom-role.md)
-
-**Scope Tags**: Remove Apps and Configuration will limit an admin's view of applications and configurations based on the Scope Tag assignments of the admin's role. For more information on Scope tags, see [Use role-based access control and scope tags for distributed IT]( ../fundamentals/scope-tags.md).
 
 ## How to remove apps and configuration
 

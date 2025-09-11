@@ -48,7 +48,7 @@ items:
   - name: Reset passcode
     href: device-passcode-reset.md
   - name: Restart device
-    href: device-restart.m22d
+    href: device-restart.md
   - name: Retire
     href: device-retire.md
   - name: Rotate local admin password 🔴
