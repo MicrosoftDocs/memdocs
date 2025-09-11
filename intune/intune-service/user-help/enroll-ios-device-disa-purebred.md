@@ -94,14 +94,15 @@ You'll also need to contact a Purebred agent or representative during setup.
     > ![Example screenshot of the Company Portal prompt to open DISA Purebred app.](./media/enroll-ios-device-disa-purebred/open-registration.png)  
 
 ## Step 2: Set up Purebred app 
-Set up the Purebred app on your device. The following versions are supported with Intune Company Portal:  
+Set up the Purebred app on your device. We recommend installing the latest version of the app. The following versions are supported with Intune Company Portal:  
 
 - Purebred, version 3
 - Purebred, version 2  
 
-We recommend installing the latest version of the app. Install only one version on your device. Installing more than one instance of the Purebred app could cause problems.  
+Install only one version on your device. Installing more than one instance of the Purebred app could cause problems. 
 
 ### Purebred version 3 
+Use these instructions to set up Purebred, version 3 on your work device.  
 1. Work with your organization's Purebred agent to enroll your device in the Purebred system.  
 1. After the setup is complete, return to the Company Portal app.
 1. On the **Setup mobile smart card access** screen, tap **Continue**.  
@@ -130,6 +131,7 @@ We recommend installing the latest version of the app. Install only one version 
 1. Wait for the success message in the Purebred app. It should appear within a few minutes. Tap **Done** to end setup. 
 
 ### Purebred version 2 
+Use these instructions to set up Purebred, version 2 on your work device. 
 1. Work with your organization's Purebred agent to configure and download the Purebred pre-enrollment configuration profile.   
 1. Go to the Settings app > **General** > **Profiles & Device Management** > **Install Profile** and tap **Install**.  
 1. Enter your device passcode.  
