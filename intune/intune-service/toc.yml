@@ -206,16 +206,16 @@ items:
           href: ../analytics/battery-health.md
         - name: Device scopes
           href: ../analytics/device-scopes.md
+        - name: Enhanced device timeline
+          href: ../analytics/enhanced-device-timeline.md
+        - name: Resource Performance
+          href: ../analytics/resource-performance-report.md
         - name: Device query
           href: ../analytics/device-query.md
         - name: Device query for multiple devices
           href: ../analytics/device-query-multiple-devices.md
         - name: Data platform schema
-          href: ../analytics/data-platform-schema.md
-        - name: Enhanced device timeline
-          href: ../analytics/enhanced-device-timeline.md
-        - name: Resource Performance
-          href: ../analytics/resource-performance-report.md
+          href: ../analytics/data-platform-schema.md\
 
       - name: Troubleshoot and Monitor
         items:

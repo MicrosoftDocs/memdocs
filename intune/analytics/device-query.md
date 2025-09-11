@@ -289,7 +289,14 @@ Device query supports the following entities. To learn more about what propertie
 
 - If the end user has admin access to the device, they might be able to change client-based information returned in query results. For example, OS version and registry.
 
+---
+
 ## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Device Query for multiple devices >](device-query-multiple-devices.md)
+
+---
 
 For more information, go to:
 

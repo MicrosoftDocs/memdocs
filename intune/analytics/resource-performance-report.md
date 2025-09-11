@@ -154,7 +154,14 @@ The device-level details page includes the CPU and RAM spike-time history over t
 
 - Column MachineType in the generated .csv file can take values Physical, CPC, and Others whereas the corresponding column Device Type in the report takes values physical, virtual, and unknown respectively.
 
-## Next steps
+---
+
+## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Device Query >](device-query.md)
+
+---
 
 For more information, go to:
 

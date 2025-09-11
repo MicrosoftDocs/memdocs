@@ -93,7 +93,14 @@ To return to viewing all devices, navigate to the **Device scope** menu, select 
 
 - Only one Scope tag can be used to create a custom device scope. To create a custom device scope that includes devices from multiple Scope tags, you must create a new Scope tag and assign it to the full set of devices that you require.
 
+---
+
 ## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Enhanced Device Timeline >](enhanced-device-timeline.md)
+
+---
 
 For more information, go to:
 

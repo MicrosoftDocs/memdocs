@@ -32,7 +32,14 @@ The Microsoft Intune Suite includes features for Advanced Analytics, such as:
 
 Intune Advanced Analytics is automatically integrated into the existing base Endpoint analytics experience in the Intune admin center under **Reports** > **Endpoint analytics**.
 
+---
+
 ## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Plan Advanced Analytics >](advanced-analytics-plan.md)
+
+---
 
 For more information, go to:
 

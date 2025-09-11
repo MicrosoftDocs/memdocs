@@ -325,3 +325,10 @@ Cpu | where Device.DeviceName == 'Desktop123"
 - Negative values for the amounts parameter of the datetime_add() function aren't supported.  
 
 - Referencing a variable that has been summarized by an aggregation function throws an error. Explicitly naming the variable allows the query to succeed again. For example, the query Device | summarize dcount(DeviceId) | order by dcount_DeviceId will fail. Device | summarize DCountDeviceIdRename=dcount(DeviceId) | order by DCountDeviceIdRename succeeds.
+
+---
+
+## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Data Platform schema >](data-platform-schema.md)

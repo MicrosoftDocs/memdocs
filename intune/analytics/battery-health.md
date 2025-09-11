@@ -112,14 +112,18 @@ Some data points in the report might say *Not available*. When you export the re
 
 Batteries that have low design capacity (For example, devices designed to hold limited charge) show up as having low runtime although this feature is by design. Such devices are counted under low runtime insights and the only solution is to replace the battery with one that holds more charge.
 
+---
+
 ## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Device Scopes >](device-scopes.md)
+
+---
 
 For more information, go to:
 
 - [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
-
 - [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
-
 - [Device scopes](device-scopes.md)
-
 - [Device query](device-query.md)

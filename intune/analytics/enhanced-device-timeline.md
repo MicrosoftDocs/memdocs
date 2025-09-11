@@ -47,7 +47,14 @@ Currently, the enhanced device timeline contains app crash, app unresponsive, de
 
 - As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline isn't currently available for Configuration Manager-only devices in tenants that have Advanced Analytics features in Intune.
 
+---
+
 ## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Resource Performance Report >](resource-performance-report.md)
+
+---
 
 For more information, go to:
 
