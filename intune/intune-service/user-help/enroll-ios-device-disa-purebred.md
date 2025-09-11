@@ -65,12 +65,13 @@ Derived credentials are an implementation of the National Institute of Standards
 
 You'll also need to contact a Purebred agent or representative during setup.  
 
-## Enroll device  
+## Step 1: Enroll device  
 1. Open the Company Portal app for iOS/iPadOS on your mobile device and sign in with your work account.  
 
 1. Write down the onscreen code.  
 
-    ![Example image of Company Portal app with onscreen message and code.](./media/enroll-ios-device-intercede/copy-code-intercede.png)  
+    > [!div class="mx-imgBorder"]
+    > ![Example image of Company Portal app with onscreen message and code.](./media/enroll-ios-device-intercede/copy-code-intercede.png)  
 
 1. Switch to your smart card-enabled device and go to https://microsoft.com/devicelogin. If you're a government employee signing in from another device, you'll need to change the settings on your device so that you're redirected to the government cloud for authentication. For more information about the setting changes you need to make, see [Troubleshoot iOS/iPadOS enrollment errors](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors#authentication-doesnt-redirect-to-the-government-cloud).  
 1. Enter the code you previously wrote down.  
@@ -78,42 +79,58 @@ You'll also need to contact a Purebred agent or representative during setup.
 1. Return to the Company Portal app on your mobile device and follow the onscreen instructions to enroll your device.  
 1. After enrollment is complete, Company Portal will notify you to set up your smart card. Tap the notification. If you don't get a notification, check your email.   
 
-    ![Example screenshot of the Company Portal push notification on device home screen.](./media/enroll-ios-device-intercede/action-required-in-app-intercede.png)  
+    > [!div class="mx-imgBorder"]
+    > ![Example screenshot of the Company Portal push notification on device home screen.](./media/enroll-ios-device-disa-purebred/notification-banner.png)  
     
 1. On the **Setup mobile smart card access** screen:  
     a. Tap the link to your organization's set up instructions. If your organization doesn't provide additional instructions, you'll be sent to this article.  
     b. Select **Open** to open the Purebred app.  
 
-    ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/enroll-ios-device-disa-purebred/smart-card-open-disa-purebred.png)  
+    > [!div class="mx-imgBorder"]
+    > ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/enroll-ios-device-disa-purebred/open-purebred-app.png)  
 1. When prompted to allow Company Portal to open the Purebred Registration app, select **Open**.   
 
-    ![Example screenshot of the Company Portal prompt to open DISA Purebred app.](./media/enroll-ios-device-disa-purebred/open-app-prompt-disa-purbred.png)  
+    > [!div class="mx-imgBorder"]
+    > ![Example screenshot of the Company Portal prompt to open DISA Purebred app.](./media/enroll-ios-device-disa-purebred/open-registration.png)  
 
-## Set up Purebred app 
+## Step 2: Set up Purebred app 
 Set up the Purebred app on your device. The following versions are supported with Intune Company Portal:  
 
-- Version 3
-- Version 2  
+- Purebred, version 3
+- Purebred, version 2  
 
 We recommend installing the latest version of the app. Install only one version on your device. Installing more than one instance of the Purebred app could cause problems.  
 
 ### Purebred version 3 
-1. When the app works, work with your organization's Purebred agent to enroll your device in the Purebred system.  
+1. Work with your organization's Purebred agent to enroll your device in the Purebred system.  
 1. After the setup is complete, return to the Company Portal app.
 1. On the **Setup mobile smart card access** screen, tap **Continue**.  
+    > [!div class="mx-imgBorder"]
+    > ![Example screenshot of the Set up mobile smart card screen, highlighting the Continue button.](./media/enroll-ios-device-disa-purebred/set-up-mobile-smart-card.png) 
 1. From the **Import certificates** screen, retrieve and import the derived credential you got from DISA Purebred. 
    1. Tap **Continue**.  
-   1. Tap **Browse**, and then tap the three dots **(…)** to open the overflow menu. 
+       > [!div class="mx-imgBorder"]
+       > ![Example screenshot of the Import certificates screen, highlighting the Continue button.](./media/enroll-ios-device-disa-purebred/import-certificates.png) 
+   1. Tap the three dots **(…)** to open the overflow menu. If you're on an iPhone, you have to select **Browse** first to get to the three dots.  
+       > [!div class="mx-imgBorder"]
+       > ![Example screenshot highlighting the overflow menu in Company Portal.](./media/enroll-ios-device-disa-purebred/select-overflow-menu.png) 
    1. Tap **Edit Sidebar**. 
-   1. Turn on **PurebredRegistration**. Then tap the check mark. 
-   1. Tap **PurebredRegistration** on the sidebar. 
-   1. A list of certificates and zip files should appear. The zip files contain different combinations of certificates. Once you know which certificate or zip file you want to use, tap the zip file or certificate to import it. 
+       > [!div class="mx-imgBorder"]
+       > ![Example screenshot of the Edit sidebar option](./media/enroll-ios-device-disa-purebred/edit-sidebar.png) 
+   1. Turn on **PurebredRegistration**. Then tap the check mark.
+       > [!div class="mx-imgBorder"]
+       > ![Example screenshot of the sidebar, highlighting the PurbredRegistration option and check mark.](./media/enroll-ios-device-disa-purebred/turn-on-registration.png)  
+   1. Tap **PurebredRegistration** on the sidebar. A list of certificates and zip files should appear. 
+       > [!div class="mx-imgBorder"]
+       > ![Example screenshot highlighting the PurbredRegistration option and subsequent screen with certificates and zip files.](./media/enroll-ios-device-disa-purebred/browse-files.png)  
+
+       The zip files contain different combinations of certificates. Once you know which certificate or zip file you want to use, tap the zip file or certificate to import it.  
       > [!CAUTION] 
       > Examine the contents of the zip file or certificate to confirm that you are selecting the right one. If you accidentally tap the wrong zip file or certificate, it will be imported and you won’t be able to go back without starting over. To see the contents of a zip file, press and hold the zip file, and then tap **View zip Details**. Tap **Dismiss** when you're ready to move on from the details. To view the details of an individual certificate, press and hold a certificate file, and then tap **View certificate details**.  
 1. Wait for the success message in the Purebred app. It should appear within a few minutes. Tap **Done** to end setup. 
 
 ### Purebred version 2 
-1. When the app works, work with your organization's Purebred agent to configure and download the Purebred pre-enrollment configuration profile.   
+1. Work with your organization's Purebred agent to configure and download the Purebred pre-enrollment configuration profile.   
 1. Go to the Settings app > **General** > **Profiles & Device Management** > **Install Profile** and tap **Install**.  
 1. Enter your device passcode.  
 1. Install the profile. You might need to tap **Install** more than once to start the installation. 
