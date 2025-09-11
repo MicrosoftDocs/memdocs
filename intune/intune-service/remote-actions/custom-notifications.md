@@ -51,7 +51,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 > For users to receive notifications, the following requirements must be met:
 >
 > - Devices must be enrolled in Intune.
-> - The Company Portal app or the Microsoft Intune app must be installed.
+> - The Company Portal app or the Microsoft Intune app (Android only) must be installed.
 > - Users must have granted permission for the apps to send push notifications.
 
 ## How to send custom notifications from the Intune admin center
@@ -98,22 +98,19 @@ Group notifications target users, not devices. Each supported device enrolled by
 Intune processes the message immediately. A confirmation appears in the admin center once the notification is sent.
 
 > [!NOTE]
-> Intune doesn't track sent custom notifications, and devices don't log receipt outside of the notification center. The message might appear in a temporary diagnostic log if the user requests support through the Company Portal or Intune app.2. Select the device from the list.
+> Intune doesn't track sent custom notifications, and devices don't log receipt outside of the notification center. The message might appear in a temporary diagnostic log if the user requests support through the Company Portal or Intune app.
 
 ## User experience
 
-When a custom notification is sent, users receive it as a push alert from the Company Portal or Intune app on their enrolled device. The experience varies slightly depending on platform and app state.
-
-- Intune sends messages to the user's Company Portal or Intune app, which then generates the push notification. Users don't need to be signed in to the app, but the device must be enrolled by the targeted user.
+::: zone pivot="ios"
+When a custom notification is sent, users receive it as a push alert from the Company Portal on their enrolled device. The experience varies slightly depending on the app state.
+:::row:::
+:::column span="3":::
+- Intune sends messages to the Company Portal app, which then generates the push notification. Users don't need to be signed in to the app, but the device must be enrolled by the targeted user.
 - Delivery isn't guaranteed. Notifications might be delayed or not delivered at all, so they shouldn't be used for urgent communication.
 - Users might still receive notifications even after being removed from a group or unenrolling a device. Similarly, users added to a group after a notification is sent might receive that previously sent message.
 - Notification visibility depends on device settings. Messages might appear on the lock screen or within the app.
-
-::: zone pivot="ios"
-
-:::row:::
-:::column span="3":::
-If the app is open when the notification is received, it displays in-app rather than as a push notification. Users can view it by navigating to the **Notifications** tab and pulling to refresh.
+- If the app is open when the notification is received, it displays in-app rather than as a push notification. Users can view it by navigating to the **Notifications** tab and pulling to refresh.
 
 If the device is locked, the notification resembles the following screenshot:
 :::column-end:::
@@ -125,10 +122,14 @@ If the device is locked, the notification resembles the following screenshot:
 ::: zone-end
 
 ::: zone pivot="android"
-
+When a custom notification is sent, users receive it as a push alert from the Company Portal or Intune app on their enrolled device. The experience varies slightly depending on platform and app state.
 :::row:::
 :::column span="3":::
-If the app is open when the notification is received, it displays in-app rather than as a push notification. Users can view it by navigating to the **Notifications** tab and pulling to refresh.
+- Intune sends messages to the user's Company Portal or Intune app, which then generates the push notification. Users don't need to be signed in to the app, but the device must be enrolled by the targeted user.
+- Delivery isn't guaranteed. Notifications might be delayed or not delivered at all, so they shouldn't be used for urgent communication.
+- Users might still receive notifications even after being removed from a group or unenrolling a device. Similarly, users added to a group after a notification is sent might receive that previously sent message.
+- Notification visibility depends on device settings. Messages might appear on the lock screen or within the app.
+- If the app is open when the notification is received, it displays in-app rather than as a push notification.
 
 If the device is locked, the notification resembles the following screenshot:
 :::column-end:::
