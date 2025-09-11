@@ -135,28 +135,26 @@ The following guidance can be used anytime you create a new security baseline pr
 
 When a new version for a baseline becomes available, plan to update your existing profiles to the new version. 
 
-**When a new version of any baseline type is released:** 
-- Existing profiles for that baseline type don’t automatically upgrade to the new version. 
-- The settings in your existing profiles become read-only. While you can continue using those profiles and editing their name, description, and assignments, you can’t modify the configuration any settings in them.
+**When a new version of any baseline type is released:**  
+- Existing profiles for that baseline type don’t automatically upgrade to the new version.
+- The settings in your existing profiles become read-only. While you can continue to use those profiles and edit their name, description, and assignments, you can’t modify the configuration of any settings in them.
 
-- Any new profile you create for that baseline type uses the latest baseline version. Creating  create new profiles that use an older baseline version. 
+**When you update the version of a baseline profile:**  
+- Updates always use the latest available version of the same baseline type. You can't update a baseline to anything other than the most recently released version.
+- The update process creates a new instance of the baseline based on the latest version as a side-by-side copy of the original profile. As part of the update, you have the choice to:
 
-Before you update an older baseline version, review THING to understand which settings are new or removed from the new baseline version, and what the default configuration is for each setting in the new baseline. 
+  - **Keep customizations** – Intune applies all the settings customizations from the original baseline that you're upgrading to the new baselines template. The result is that the new  baseline instance retains (includes) all your organization's specific modifications.
+  - **Discard customizations** – Intune creates a new 'default' baseline instance using the new version. None of your settings customizations are automatically applied.
 
-**When you update the version of a baseline profile, Intune creates a new profile based on the latest baseline version:**  
-- Updates always use the latest available version of the same baseline type. 
-- The update process creates a new instance of the baseline using the latest version as a side-by-side copy of the original profile. As part of the update, you have the choice to:
-  - **Keep customizations** – Intune applies all the settings customizations from the original baseline that you're upgrading to the new baselines template. The result is that the new  baseline instance retains (includes) all your organization's specific modifications. 
-  - **Discard customizations** – Intune creates a new 'default' baseline instance using the new version. None of your settings customizations are automatically applied.  
 - During the update, you must provide the new instance with a *name* but can't edit the other details in the profile until after it's created. Both scope tags and assignments aren't carried over and remain blank. However, you can review the configuration settings of the profile before saving it.
 
-**After the update process completes:**
-- You can edit the new baseline instance including customizing settings, adding assignments, and configuring scope tags.  
-- The original baseline is left unchanged and retains its setting configurations, name, scope tags, and assignments. To avoid configuration conflicts, be sure to remove configurations like scope tags and assignments from the original baseline instance when adding the same to the updated baseline. 
+**After the update process completes:**  
+- You can edit the new baseline instance including customizing settings, adding assignments, and configuring scope tags.
+- The original baseline is left unchanged and retains its setting configurations, name, scope tags, and assignments. To avoid configuration conflicts, be sure to remove configurations like scope tags and assignments from the original baseline instance when adding the same to the updated baseline.
 - Once the older baseline version is no longer assigned to any groups, you can delete it from your tenant if you choose.
 
 ### Update a baseline to the latest version  
-*Applies to updating a baseline profile that was created in May 2023  or later.* 
+*Applies to updating a baseline profile that was created in May 2023 or later.* 
 
 1. Sign in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Endpoint security** > **Security baselines** > *select the baseline type* with the profile you want to update. On the baselines Profiles page, select the checkbox for the baseline instance that you want to update and then select **Update Version**. Intune displays the *Update Version* pane.
 
