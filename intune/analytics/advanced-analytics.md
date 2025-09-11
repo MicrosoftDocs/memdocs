@@ -32,7 +32,7 @@ The Microsoft Intune Suite includes features for Advanced Analytics, such as:
     :::image type="content" source="media/advanced-analytics/enhanced-device-timeline.png" alt-text="Enhanced device timeline in endpoint analytics" lightbox="media/advanced-analytics/enhanced-device-timeline-expanded.png":::
 
 - A **Resource Performance** report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions. For more information, see [Resource Performance report](resource-performance-report.md).
-    :::image type="content" source="media/resource-perf-report/report-home.png" lightbox="media/resource-perf-report/report-home.png" alt-text="This is a screenshot of the Resource performance report page":::
+    :::image type="content" source="media/advanced-analytics/report-home.png" lightbox="media/advanced-analytics/report-home-expanded.png" alt-text="This is a screenshot of the Resource performance report page":::
 
 - **Device query** enables you to get near-real time access to data about the state and configuration of devices. For more information, see [Device query](device-query.md).
 
