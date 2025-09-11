@@ -70,10 +70,8 @@ Scope tags limit which apps and configurations an admin can view and manage. The
 The **Remove apps and configuration** remote action supports the following items:
 
 - **Applications**: Any Intune-delivered app on supported device platforms.
-- **Configuration profiles**: Intune-delivered profiles, including:
-
 ::: zone pivot="ios"
-
+- **Configuration profiles**: Intune-delivered profiles, including:
   - Settings catalog: All
   - Custom
   - Devices features
@@ -85,11 +83,9 @@ The **Remove apps and configuration** remote action supports the following items
   - Trusted certificate
   - VPN
   - Wi-Fi
-
 ::: zone-end
-
 ::: zone pivot="android"
-
+- **Configuration profiles**: Intune-delivered profiles, including:
   - Device restrictions
   - PKCS certificate
   - PKCS import certificate
@@ -97,7 +93,6 @@ The **Remove apps and configuration** remote action supports the following items
   - Trusted certificate
   - VPN
   - Wi-Fi
-
 ::: zone-end
 
 ## How to remove apps and configuration from the Intune admin center
