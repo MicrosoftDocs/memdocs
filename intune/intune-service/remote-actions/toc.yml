@@ -65,7 +65,7 @@ items:
     href: device-sync.md
   - name: Update cellular data plan
     href: update-cellular-data-plan.md
-  - name: Wipe 🟢
+  - name: Wipe
     href: device-wipe.md
 - name: Troubleshoot device actions 🔗
   href: /troubleshoot/mem/intune/troubleshoot-device-actions

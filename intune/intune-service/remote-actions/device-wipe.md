@@ -59,15 +59,15 @@ Review the requirements for erasing macOS devices available on the [Apple Suppor
 
 ### Factory Reset Protection (FRP) considerations
 
-Whether a device prompts for Google account credentials after reset depends on ownership (Android Enterprise corporate-owned work profile/fully managed/dedicated), the reset method (Settings, Recovery, or admin wipe), and whether FRP is configured. By default, Intune's admin wipe doesn't preserve FRP data.
+Whether a device requires Google account credentials after reset depends on ownership (Android Enterprise corporate-owned work profile/fully managed/dedicated), the reset method (Settings, Recovery, or admin wipe), and whether FRP is configured. By default, Intune's admin wipe doesn't preserve FRP data.
 
 For more information, see [Factory reset protection emails setting isn't enforced after you reset an Android Enterprise device](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced).
 
 ### Samsung devices
 
-For Android Enterprise fully managed Samsung devices, make sure the **Factory Reset** setting under **Device Restrictions** is not set to **Block**.
+For Android Enterprise fully managed Samsung devices, make sure the **Factory Reset** setting under **Device Restrictions** isn't set to **Block**.
 
-If **Factory Reset** is blocked and a **Wipe** action is initiated, the device will lose contact with Intune and be unable to complete the factory reset.
+If **Factory Reset** is blocked and a **Wipe** action is initiated, the device loses contact with Intune and be unable to complete the factory reset.
 
 ### Zebra devices
 
@@ -86,8 +86,7 @@ To factory reset a Zebra Android device, use one of the following methods:
 1. At the top of the device overview pane, locate the row of remote action icons. Select **Wipe**.
 
 ::: zone pivot="macos"
-4. Provide a 6-digit number for the **Recovery PIN**. The six-digit PIN is required to reinstall the operating system on the device, if the device isn't equipped with T2 security chip enabled (that is, the model year of the device is 2018 and earlier, or the device is running macOS 10.14 or earlier). Be sure to make a note of this PIN and give it to the device owner as it won't be visible after the wipe action completes.
-
+4. Enter a 6-digit **Recovery PIN**. This PIN is required to reinstall the operating system on devices that don't have the T2 security chip—typically models from 2018 or earlier, or devices running macOS 10.14 or earlier. Make sure to record the PIN and share it with the device owner. The PIN won't be visible after the wipe completes.
 5. Select an option from **Obliteration Behavior**, which is used to define the fallback for devices when Erase All Contents and Settings (EACS) fails. The following options can be configured:
 
     - **Default**: If Erase All Content and Settings (EACS) preflight fails, the device responds to Intune with an Error status and then attempts to erase itself. If EACS preflight succeeds but EACS fails, then the device attempts to erase itself.
@@ -100,17 +99,16 @@ To factory reset a Zebra Android device, use one of the following methods:
 ::: zone pivot="windows"
 4. You can customize the wipe behavior with the following options:
 
-  - **Wipe device, but keep enrollment state and associated user account**
-    - When selected, the wipe removes all MDM policies but retains user accounts and data. User settings are reset to default, and the device remains enrolled in Intune.
-    - When not selected, the wipe removes all user accounts, data, MDM policies, and settings. The device is reset to its factory default state.
-  - **Wipe device, and continue to wipe even if device loses power**
-    - Ensures the wipe continues even if the device loses power during the process. This prevents users from interrupting the wipe, which is useful in high-security scenarios such as lost or stolen devices.
+    - **Wipe device, but keep enrollment state and associated user account**
+      - When selected, the wipe removes all MDM policies but retains user accounts and data. User settings are reset to default, and the device remains enrolled in Intune.
+      - When not selected, the wipe removes all user accounts, data, MDM policies, and settings. The device is reset to its factory default state.
+    - **Wipe device, and continue to wipe even if device loses power**
+      - Ensures the wipe continues even if the device loses power during the process. This prevents users from interrupting the wipe, which is useful in high-security scenarios such as lost or stolen devices.
 
-      > [!IMPORTANT]
-      > Selecting this option might prevent some devices from starting up again. The wipe process can interfere with boot recovery or     firmware protections, potentially leaving the device in an unrecoverable state. Use this option only on corporate-owned devices     where full data destruction is required and recovery procedures are in place.
+        > [!IMPORTANT]
+        > Selecting this option might prevent some devices from starting up again. The wipe process can interfere with boot recovery or     firmware protections, potentially leaving the device in an unrecoverable state. Use this option only on corporate-owned devices     where full data destruction is required and recovery procedures are in place.
 
-
-    - When not selected, if the wipe is interrupted, the device attempts to roll back to its previous state. If rollback fails, the device may become unusable and require a full reinstallation of Windows.
+      - When not selected, if the wipe is interrupted, the device attempts to roll back to its previous state. If rollback fails, the device may become unusable and require a full reinstallation of Windows.
 
 5. To confirm the wipe, select **Yes**.
 
@@ -131,8 +129,11 @@ To factory reset a Zebra Android device, use one of the following methods:
 
 ## Reference links
 
-- Configuration service provider (CSP) used to initiate the remote action: [RemoteWipe CSP][CSP-1]
+
 - Microsoft Graph API: [wipe action][GRAPH-1]
+::: zone pivot="windows"
+- Configuration service provider (CSP) used to initiate the remote action: [RemoteWipe CSP][CSP-1]
+::: zone-end
 
 <!--links-->
 
