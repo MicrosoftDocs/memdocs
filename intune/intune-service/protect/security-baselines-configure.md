@@ -56,7 +56,7 @@ We recommend updating older baseline versions to the latest version as soon as i
 Common tasks when working with security baselines include:
 
 - [Create a new profile instance](#create-a-profile-for-a-security-baseline) – Configure the settings you want to use and assign the baseline to groups.
-- [Update an older version baseline to the most current baseline version](#update-a-profile-to-the-latest-version) – Change the baseline version in use by a profile.
+- [Update an older version baseline to the most current baseline version](#update-a-baseline-profile-to-the-latest-version) – Change the baseline version in use by a profile.
 - [Remove a baseline assignment](#remove-a-security-baseline-assignment) - Learn what happens when you stop managing settings with a security baseline.
 
 ## Prerequisites
