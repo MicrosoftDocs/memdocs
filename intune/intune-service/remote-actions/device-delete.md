@@ -15,7 +15,7 @@ zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 
 # Delete devices in Intune
 
-Use the **Delete** remote action in Intune to permanently remove devices that are no longer needed, being repurposed, or missing. This action helps clean up your device inventory and ensures that unmanaged or obsolete devices no longer appear in the admin center.
+Use the **Delete** remote action in Intune to permanently remove devices that are no longer needed, being repurposed, or missing. This action helps cleanup your device inventory and ensures that unmanaged or obsolete devices no longer appear in the admin center.
 
 ### Delete remote action behavior by platform
 
@@ -42,7 +42,7 @@ When you use the **Delete** remote action in Intune, the command that is trigger
 
 If you delete or retire the Intune object for a Microsoft Entra joined device that is protected by BitLocker, Intune triggers a sync that removes key protectors. This action suspends BitLocker on the OS volume as a safeguard to prevent unrecoverable encryption scenarios when the Entra object is deleted.
 
-Before retiring a Microsoft Entra joined device, make sure to back up any critical data that may be lost during the process, such as:
+Before retiring a Microsoft Entra joined device, make sure to back up any critical data that might be lost during the process, such as:
 
 - BitLocker recovery key
 - Local administrator account credentials

@@ -112,13 +112,13 @@ When a custom notification is sent, users receive it as a push alert from the Co
 ::: zone pivot="ios"
 
 :::row:::
-:::column span="2":::
+:::column span="3":::
 If the app is open when the notification is received, it displays in-app rather than as a push notification. Users can view it by navigating to the **Notifications** tab and pulling to refresh.
 
 If the device is locked, the notification resembles the following screenshot:
 :::column-end:::
-:::column span="2":::
-:::image type="content" source="images/ios-custom-notification.png" alt-text="Locked device iOS/iPadOS custom notification." border="false":::
+:::column span="1":::
+:::image type="content" source="images/ios-custom-notification.png" lightbox="images/ios-custom-notification.png" alt-text="Locked device iOS/iPadOS custom notification." border="false":::
 :::column-end:::
 :::row-end:::
 
@@ -127,13 +127,13 @@ If the device is locked, the notification resembles the following screenshot:
 ::: zone pivot="android"
 
 :::row:::
-:::column span="2":::
+:::column span="3":::
 If the app is open when the notification is received, it displays in-app rather than as a push notification. Users can view it by navigating to the **Notifications** tab and pulling to refresh.
 
 If the device is locked, the notification resembles the following screenshot:
 :::column-end:::
-:::column span="2":::
-:::image type="content" source="images/android-custom-notification.png" alt-text="Locked device Android custom notification.":::
+:::column span="1":::
+:::image type="content" source="images/android-custom-notification.png" lightbox="images/android-custom-notification.png" alt-text="Locked device Android custom notification.":::
 
 :::column-end:::
 :::row-end:::
