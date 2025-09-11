@@ -1,5 +1,5 @@
 ---
-title: Bulk Device Actions In Microsoft Intune
+title: Bulk Device Actions in Microsoft Intune
 description: Learn how to use bulk remote device actions in Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Bulk device actions in Microsoft Intune
+# Bulk device actions in Intune
 
 Managing devices at scale is a common challenge for IT pros, especially in environments like schools, enterprises, or frontline operations. Microsoft Intune supports bulk remote actions, allowing IT admins to perform tasks on up to 100 devices simultaneously. This capability streamlines operations, reduces manual effort, and ensures consistent policy enforcement across large device fleets.
 

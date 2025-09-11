@@ -15,7 +15,7 @@ ms.collection:
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
-# Retire devices using Intune
+# Retire devices in Intune
 
 The **Retire** remote action in Intune removes company data from a device without performing a full wipe or factory reset. This action is ideal for personally owned devices or when transitioning a device out of organizational control. It unenrolls the device from Intune and removes managed apps, settings, and profiles deployed through mobile device management (MDM), while preserving personal data.
 

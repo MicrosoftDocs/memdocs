@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# Fresh Start in Microsoft Intune
+# Fresh Start in Intune
 
 The **Fresh Start** device action removes apps from managed Windows devices, helping you remove preinstalled (OEM) apps that typically ship with a new PC.
 

@@ -12,7 +12,7 @@ ms.collection:
 zone_pivot_groups: bf632d5b-6209-46d2-8c9c-8d76b1f704cc
 ---
 
-# Remotely lock devices using Intune
+# Remotely lock devices in Intune
 
 The **Remote lock** device action locks a managed device so the user must enter the existing passcode or PIN to continue. Use this action when a device is misplaced, left unattended, or suspected of unauthorized use without wiping data or removing enrollment.
 

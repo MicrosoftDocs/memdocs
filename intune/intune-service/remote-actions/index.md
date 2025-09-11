@@ -12,7 +12,7 @@ ms.collection:
 - highpri
 ---
 
-# Remote device actions in Microsoft Intune
+# Remote device actions in Intune
 
 In today's hybrid work environment, IT professionals are expected to manage and secure devices across diverse locations and platforms—often without physical access. Microsoft Intune's remote device actions provide a powerful toolkit to meet this challenge. These actions enable IT pros to respond quickly to incidents, enforce compliance, and maintain productivity, all from the cloud. Whether it's locking a lost device, resetting a password, or triggering a malware scan, remote actions help ensure that users stay protected and supported—wherever they are.
 
