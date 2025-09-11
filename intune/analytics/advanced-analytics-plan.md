@@ -108,21 +108,14 @@ Currently, the highest functional subscription sets the Endpoint analytics exper
 
 - Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)  
 
-## Enabling Advanced Analytics in Microsoft Intune
-
-When license requirements are met, then Advanced Analytics capabilities are automatically enabled in your tenant. If licenses expire or you change your subscription to one that doesn't include Advanced Analytics, your tenant is automatically reverted to the base Endpoint analytics experience.
-
-> [!NOTE]
-> It may take up to 48 hours after you buy licenses or start a trial to see Advanced Analytics features in your tenant.
-
-For the extra reports and capabilities on Windows devices, devices need to be enrolled into Intune and onboarded to Endpoint analytics and meet the [Prerequisites](#prerequisites):
-
-- [Onboard and enroll your Intune-managed devices to Endpoint analytics](enroll-intune.md)
-- [Onboard and enroll your co-managed devices to Endpoint analytics](enroll-configmgr.md)
-
 ---
 
 ## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Deploy Advanced Analytics >](advanced-analytics-deploy.md)
+
+---
 
 For more information, go to:
 

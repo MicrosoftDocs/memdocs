@@ -195,6 +195,8 @@ items:
         href: ../analytics/advanced-analytics.md
       - name: Planning Advanced Analytics
         href: ../analytics/advanced-analytics-plan.md
+      - name: Deploying Advanced Analytics
+        href: ../analytics/advanced-analytics-deploy.md
       
       - name: Advanced Analytics Features
         items:
@@ -215,8 +217,10 @@ items:
         - name: Resource Performance
           href: ../analytics/resource-performance-report.md
 
-      - name: Advanced Analytics Troubleshooting and Frequently Asked Questions
-        href: ../analytics/advanced-analytics-troubleshooting-faqs.md
+      - name: Troubleshoot and Monitor
+        items:
+        - name: Advanced Analytics Troubleshooting and Frequently Asked Questions
+          href: ../analytics/advanced-analytics-troubleshooting-faqs.md
     
   - name: Plan and prepare for Intune
     items:
