@@ -41,9 +41,9 @@ With the **Pause Config Refresh** action, IT admins can suspend policy refresh f
 ### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
 
 > [!div class="checklist"]
-> For users to receive notifications, the following requirements must be met:
+> To use this remote action, make sure devices meet the following requirements:
 >
-> - Devices must have Config Refresh enabled for this remote action to take effect.
+> - Config Refresh is enabled.
 
 To learn more, see [Config Refresh][LEARN-1].
 
@@ -72,5 +72,5 @@ To learn more, see [Config Refresh][LEARN-1].
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-pauseconfigurationrefresh
 
 [CSP-1]: /windows/client-management/mdm/dmclient-csp#deviceproviderprovideridconfigrefresh
-[LEARN-1]: /windows/security/book/operating-system-security-system-security#-config-refresh)
+[LEARN-1]: /windows/security/book/operating-system-security-system-security#-config-refresh
 

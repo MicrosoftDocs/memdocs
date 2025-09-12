@@ -11,7 +11,7 @@ ms.collection:
 
 ---
 
-# Use Lost Mode with Microsoft Intune
+# Use Lost Mode using Intune
 
 The **Lost Mode** device action in Microsoft Intune allows IT administrators to remotely lock and track lost or stolen iOS/iPadOS devices. When activated, Lost Mode displays a custom message and contact phone number on the device's lock screen—helping facilitate recovery while protecting corporate data.
 
