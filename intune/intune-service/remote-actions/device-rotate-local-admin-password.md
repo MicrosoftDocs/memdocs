@@ -15,7 +15,7 @@ zone_pivot_groups: 2fce401c-16eb-4314-8d26-844d8612f9c5
 
 # Rotate local admin password using Intune
 
-The **Rotate local admin password** remote action in Microsoft Intune allows to manually rotate the password of a device's local administrator account. This action helps improve security by ensuring that credentials are refreshed outside of the scheduled rotation defined by Windows LAPS policies. It's especially useful when responding to potential compromise, performing audits, or resetting access for support scenarios.
+The **Rotate local admin password** remote action in Microsoft Intune lets IT admins manually rotate the password of a device's local administrator account. This helps improve security by refreshing credentials outside the scheduled rotation defined by the Microsoft Local Administrator Password Solution (LAPS). It's especially useful when responding to potential compromise, conducting audits, or resetting access during support scenarios.
 
 ## Requirements
 
@@ -26,7 +26,7 @@ The **Rotate local admin password** remote action in Microsoft Intune allows to 
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
 > - Windows (corporate-owned)
 
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
 
 ::: zone pivot="windows"
 
@@ -69,7 +69,9 @@ For more information, see [Configure support for macOS ADE local account with LA
 ## Reference links
 
 - Microsoft Graph API: [rotatelocaladminpassword action][GRAPH-1]
+::: zone pivot="windows"
 - Configuration service provider (CSP) used to initiate the remote action: [LAPS CSP][CSP-1]
+::: zone-end
 
 <!--links-->
 

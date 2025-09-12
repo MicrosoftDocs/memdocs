@@ -34,7 +34,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 > - Android Enterprise personally-owned work profile (BYOD)
 > - iOS/iPadOS
 
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
 
 > [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:

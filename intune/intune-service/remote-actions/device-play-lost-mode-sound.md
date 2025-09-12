@@ -35,7 +35,7 @@ These remote actions are especially useful in environments where devices are sha
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode) and [Lost Mode](device-lost-mode.md)
 
 ::: zone pivot="android"
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
 
 > [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:

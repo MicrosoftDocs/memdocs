@@ -33,7 +33,7 @@ Depending on the platform, Intune can also report the last known location if the
 > - Windows
 
 ::: zone pivot="windows,android"
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
 ::: zone-end
 
 ::: zone pivot="android"
