@@ -28,6 +28,15 @@ With the **Pause Config Refresh** action, IT admins can suspend policy refresh f
 >
 > - Windows 11
 
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
+
+> [!div class="checklist"]
+> To use this remote action, make sure devices meet the following requirements:
+>
+> - Config Refresh is enabled.
+
+To learn more, see [Config Refresh][LEARN-1].
+
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
@@ -37,15 +46,6 @@ With the **Pause Config Refresh** action, IT admins can suspend policy refresh f
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Run Pause Configuration Refresh**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
-
-> [!div class="checklist"]
-> To use this remote action, make sure devices meet the following requirements:
->
-> - Config Refresh is enabled.
-
-To learn more, see [Config Refresh][LEARN-1].
 
 ## How to pause Config Refresh from the Intune admin center
 

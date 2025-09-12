@@ -34,6 +34,15 @@ You can send notifications to individual devices or to users in groups. Custom n
 > - Android Enterprise personally-owned work profile (BYOD)
 > - iOS/iPadOS
 
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
+
+> [!div class="checklist"]
+> To use this remote action, make sure devices meet the following requirements:
+>
+> - Enrolled in Intune.
+> - The Company Portal app or Microsoft Intune app (Android only) is installed.
+> - Push notification permissions for the apps are granted by the user.
+
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
@@ -44,16 +53,6 @@ You can send notifications to individual devices or to users in groups. Custom n
 >   - The permission **Remote tasks/Send custom notifications**—to send notifications to devices
 >   - The permission **Organization/Update**—to send notifications to groups
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
-
-> [!div class="checklist"]
-> To use this remote action, make sure devices meet the following requirements:
->
-> - Enrolled in Intune.
-> - The Company Portal app or Microsoft Intune app (Android only) is installed.
-> - Push notification permissions for the apps are granted by the user.
-
 
 ## How to send custom notifications from the Intune admin center
 

@@ -51,7 +51,7 @@ items:
     href: device-restart.md
   - name: Retire
     href: device-retire.md
-  - name: Rotate local admin password 🔴
+  - name: Rotate local admin password 🟢
     href: device-rotate-local-admin-password.md
   - name: Rotate FileVault recovery key 🔴
     href: device-rotate-filevault.md

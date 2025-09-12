@@ -32,17 +32,6 @@ Depending on the platform, Intune can also report the last known location if the
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode) and [Lost Mode](device-lost-mode.md)
 > - Windows
 
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
-
-> [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
->
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
->   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
 ::: zone pivot="windows,android"
 ### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
 ::: zone-end
@@ -86,6 +75,17 @@ Before you can use the locate functionality, you must configure your devices to 
 1. Assign the policy to a group that contains as members the devices that you want to configure.
 
 ::: zone-end
+
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Custom role][INT-RC] that includes:
+>   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## Locate a device
 

@@ -9,10 +9,11 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+
+zone_pivot_groups: 2fce401c-16eb-4314-8d26-844d8612f9c5
 ---
 
 # Rotate local admin password using Intune
-
 
 The **Rotate local admin password** remote action in Microsoft Intune allows to manually rotate the password of a device's local administrator account. This action helps improve security by ensuring that credentials are refreshed outside of the scheduled rotation defined by Windows LAPS policies. It's especially useful when responding to potential compromise, performing audits, or resetting access for support scenarios.
 
@@ -24,15 +25,6 @@ The **Rotate local admin password** remote action in Microsoft Intune allows to 
 > This remote action is supported on the following platforms:
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
 > - Windows (corporate-owned)
-
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
-
-> [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
->
-> - [Custom role][INT-RC] that includes:
->   - The permission **Remote tasks/Rotate Local Admin Password**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
 
@@ -58,6 +50,15 @@ For more information, see [What is Windows LAPS?][LEARN-1].
 For more information, see [Configure support for macOS ADE local account with LAPS][LEARN-2].
 
 ::: zone-end
+
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Rotate Local Admin Password**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to rotate the local admin password from the Intune admin center
 

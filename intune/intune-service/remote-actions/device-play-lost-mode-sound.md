@@ -34,6 +34,16 @@ These remote actions are especially useful in environments where devices are sha
 > - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode) and [Lost Mode](device-lost-mode.md)
 
+::: zone pivot="android"
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
+
+> [!div class="checklist"]
+> To use this remote action, make sure devices meet the following requirements:
+>
+> - Intune app is installed.
+
+::: zone-end
+
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
@@ -44,16 +54,6 @@ These remote actions are especially useful in environments where devices are sha
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Play sound to locate lost devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
-::: zone pivot="android"
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
-
-> [!div class="checklist"]
-> To use this remote action, make sure devices meet the following requirements:
->
-> - Intune app is installed.
-
-::: zone-end
 
 ## How to play lost mode sound from the Intune admin center
 

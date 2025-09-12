@@ -63,16 +63,6 @@ The business benefits of using Intune to manage Activation Lock are:
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP] through Automated Device Enrollment (ADE)
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
 
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
-
-> [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
->
-> - Intune Service Administrator
-> - [Custom role][INT-RC] that includes:
->   - The permission **Remote tasks/Bypass activation lock**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
 ### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
 
 Before you can manage Activation Lock, you must configure your devices to allow it.
@@ -95,6 +85,16 @@ Before you can manage Activation Lock, you must configure your devices to allow 
 ::: zone-end
 
 2. Assign the policy to a group that contains as members the devices that you want to configure.
+
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - Intune Service Administrator
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Bypass activation lock**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to use disable Activation Lock
 
