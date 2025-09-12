@@ -54,20 +54,25 @@ Depending on the platform, Intune can also report the last known location if the
 >
 > - Location services must be turned on.
 > - Intune app is installed.
->
+
+
 > **Fully Managed Devices**:
 > - The Locate Device feature must be explicitly enabled via device configuration profile in Intune.
->
+
+
 > **Corporate-Owned Work Profile Devices**:
 >
 > - The Locate Device feature must be explicitly enabled via device configuration profile in Intune.
-- Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
->
+> - Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
+
+
 > **Dedicated Devices**:
 > - The feature is enabled by default unless explicitly blocked in the device configuration profile.
 
 > [!NOTE]
 > When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
+
+For more information on the policy settings you can configure, go to Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune.
 
 ::: zone-end
 
