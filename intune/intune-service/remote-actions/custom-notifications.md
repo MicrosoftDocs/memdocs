@@ -36,12 +36,24 @@ You can send notifications to individual devices or to users in groups. Custom n
 
 ### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
 
+::: zone pivot="android"
+
 > [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
-> - Enrolled in Intune.
-> - The Company Portal app or Microsoft Intune app (Android only) is installed.
+> - The Company Portal app or Microsoft Intune app is installed.
 > - Push notification permissions for the apps are granted by the user.
+
+::: zone-end
+::: zone pivot="ios"
+
+> [!div class="checklist"]
+> To use this remote action, make sure devices meet the following requirements:
+>
+> - The Company Portal app is installed.
+> - Push notification permissions for the app is granted by the user.
+
+::: zone-end
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
