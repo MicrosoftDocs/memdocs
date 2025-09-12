@@ -29,11 +29,18 @@ Depending on the platform, Intune can also report the last known location if the
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
-> - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode) and [Lost Mode](device-lost-mode.md)
+> - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 > - Windows
 
-::: zone pivot="windows,android"
 ### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
+
+::: zone pivot="ios"
+
+> [!div class="checklist"]
+> To use this remote action, make sure devices meet the following requirements:
+>
+> - Enable [Lost Mode](device-lost-mode.md)
+
 ::: zone-end
 
 ::: zone pivot="android"
