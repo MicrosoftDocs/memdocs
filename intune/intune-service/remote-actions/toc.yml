@@ -17,6 +17,8 @@ items:
     href: device-activation-lock-disable.md
   - name: Delete
     href: device-delete.md
+  - name: Deprovision
+    href: device-deprovision.md
   - name: Fresh Start
     href: device-fresh-start.md
   - name: Full Scan

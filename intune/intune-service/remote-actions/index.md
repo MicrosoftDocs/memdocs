@@ -130,10 +130,6 @@ Select one of the following tabs to learn more about the available remote action
 
 ### Deprovision
 
-Select **Deprovision** to remove Google Admin policies from devices your organization no longer uses. To deprovision a ChromeOS device, you must be assigned a role that has the *Remote tasks: Retire* permission.
-
-After you deprovision a device, it remains in the Intune admin center and the Google Admin console. Then on the admin center **System info** page, the device status changes to **DEPROVISIONED**. The device can't be enrolled again until you restore it to factory settings. For more information about the deprovision action, such as how to select the best reason for deprovisioning, see the [Chrome Enterprise and Education Help documentation](https://support.google.com/chrome/a/answer/3523633?).
-
 ### Lost mode
 
 Select **Lost mode** to prevent other people from using a lost or stolen ChromeOS device. Devices in lost mode display the contact information and message you configured in the Google Admin console. To deprovision a device, you must be assigned a role that has the following permissions:
@@ -158,7 +154,7 @@ Restart is only available for kiosk devices and managed guest session devices. T
 Select **Wipe** to remove data from a device. With this action, you can either:
 
 - **Remove user profiles only**: This option removes all user account data. Device and enrollment policies remain on the device.
-- **Factory reset (powerwash)**: This option fully restores a device to its factory state, removing all personal and work data. Before using this action, [deprovision](chrome-enterprise-remote-actions.md#deprovision) the device. Otherwise, once it connects to Wi-Fi, it will automatically enroll again.
+- **Factory reset (powerwash)**: This option fully restores a device to its factory state, removing all personal and work data. Before using this action, [deprovision](device-deprovision.md) the device. Otherwise, once it connects to Wi-Fi, it will automatically enroll again.
 
 To wipe a device, you must be assigned a role that has the *Remote tasks: Wipe* permission. For more information about wiping ChromeOS devices, see [Wipe ChromeOS device data](https://support.google.com/chrome/a/answer/1360642) (opens Google Chrome Enterprise Help).
 
@@ -202,6 +198,7 @@ Some remote actions can also be executed in bulk. To learn more, see [Bulk devic
 [RA-CELLULAR]: update-cellular-data-plan.md
 [RA-DEFAV]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
 [RA-DELETE]: device-delete.md
+[RA-DEPR]: device-deprovision.md
 [RA-DIAG]: collect-diagnostics.md
 [RA-FRESHSTART]: device-fresh-start.md
 [RA-FV]: device-rotate-filevault.md

@@ -69,8 +69,8 @@ Select one of the following tabs to learn more about the available bulk remote a
 
 | Bulk action           | Description                                                                              |
 |-----------------------|------------------------------------------------------------------------------------------|
-| Deprovision           |                                                                                          |
-| Lost mode             |                                                                                          |
+| [Deprovision][RA-DEPR]           | Deprovision a device.                                                                    |
+| [Lost mode][RA-LOSTMODE]             | Put a device in lost mode.                                                               |
 | [Restart][RA-RESTART] | Restarts a device.                                                                       |
 | [Wipe][RA-WIPE]       | This action restores a device to its factory settings and removes all data and settings. |
 
@@ -94,10 +94,10 @@ Every bulk remote action has its own steps, which are detailed in the respective
 [RA-CELLULAR]: update-cellular-data-plan.md
 [RA-DEFAV]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
 [RA-DELETE]: device-delete.md
+[RA-DEPR]: device-deprovision.md
 [RA-DIAG]: collect-diagnostics.md
 [RA-FRESHSTART]: device-fresh-start.md
 [RA-FV]: rotate-filevault-recovery-key.md
-[RA-LOCATE]: device-locate.md
 [RA-LOCATE]: device-locate.md
 [RA-LOCK]: device-remote-lock.md
 [RA-LOGOUT]: device-logout-user.md
