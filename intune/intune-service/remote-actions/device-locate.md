@@ -52,20 +52,22 @@ Depending on the platform, Intune can also report the last known location if the
 > [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
-> - Location services and Google Location Accuracy must be turned on.
+> - Location services must be turned on.
 > - Intune app is installed.
 >
 > **Fully Managed Devices**:
 > - The Locate Device feature must be explicitly enabled via device configuration profile in Intune.
-> - Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
 >
 > **Corporate-Owned Work Profile Devices**:
-> - Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
+>
+> - The Locate Device feature must be explicitly enabled via device configuration profile in Intune.
+- Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
 >
 > **Dedicated Devices**:
 > - The feature is enabled by default unless explicitly blocked in the device configuration profile.
->   [!NOTE]
->   When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
+
+> [!NOTE]
+> When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
 
 ::: zone-end
 
