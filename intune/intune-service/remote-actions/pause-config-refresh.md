@@ -1,9 +1,8 @@
 ---
-title: Pause Config Refresh
-description: Learn how Config Refresh can be paused for a configurable period of time, after which it's automatically re-enabled, or can be manually turned back on at any time by an IT administrator.
+title: "Intune Remote Actions: Pause Config Refresh"
+description: Learn how to temporarily pause policy enforcement on Windows 11 devices using Intune's Pause Config Refresh remote action to support troubleshooting and manual changes.
 ms.date: 08/27/2025
 ms.topic: how-to
-#customerIntent: As an IT admin, I want to pause Config Refresh so that I can make changes or run remediation on a device for troubleshooting or maintenance.
 ms.reviewer: Mike Danoski
 ms.custom: intune-azure; get-started
 ms.collection:
@@ -12,15 +11,13 @@ ms.collection:
 - highpri
 ---
 
-# Pause Config Refresh in Intune
+# Pause Config Refresh using Intune
 
-With Config Refresh, you can ensure that your settings are retained the way you configured them. Use the Windows [settings catalog](../configuration/settings-catalog.md) to set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune every 90 minutes by default, or every 30 minutes if desired.
+Use the **Pause Config Refresh** remote action in Microsoft Intune to temporarily suspend automatic policy enforcement on Windows 11 devices. This action is helpful when you need to troubleshoot, perform maintenance, or apply manual changes that shouldn't be overwritten by Intune policies.
 
-To support this feature, there's a remote action that allows for a pause. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue the Pause action from Intune for a specified period. When the period expires, the settings are enforced again.
+**Config Refresh** is a Windows feature that periodically reapplies policy settings to ensure devices stay compliant with your defined configurations. IT admins can configure the refresh cadence to run as frequently as every 30 minutes or as infrequently as once every 24 hours (1,440 minutes).
 
-<!--It allows an Intune admin (or a custom role with this permission) to pause the periodic configuration refresh on a managed device.
-This is typically used for troubleshooting scenarios where you don't want the device to reapply policies temporarily.
--->
+With the **Pause Config Refresh** action, IT admins can suspend policy refresh for a specified duration—up to 1,440 minutes. After the pause period ends, Config Refresh resumes automatically.
 
 ## Requirements
 
@@ -41,6 +38,15 @@ This is typically used for troubleshooting scenarios where you don't want the de
 >   - The permission **Remote tasks/Run Pause Configuration Refresh**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
+
+> [!div class="checklist"]
+> For users to receive notifications, the following requirements must be met:
+>
+> - Devices must have Config Refresh enabled for this remote action to take effect.
+
+To learn more, see [Config Refresh][LEARN-1].
+
 ## How to pause Config Refresh from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
@@ -50,12 +56,12 @@ This is typically used for troubleshooting scenarios where you don't want the de
 1. Select **Pause**.
 
 > [!Note]
-> If you pause a device that does not have Config Refresh enabled it has no effect.
-> If Config Refresh is paused and you want to resume, then select Pause again for 0 minutes to resume Config Refresh enforcement.
+> If Config Refresh is paused and you want to resume, then select **Pause** again for 0 minutes to resume Config Refresh enforcement.
 
 ## Reference links
 
 - Microsoft Graph API: [pauseConfigurationRefresh action][GRAPH-1] in the Microsoft Graph API documentation.
+- Configuration service provider (CSP) used to initiate the remote action: [DMClient CSP][CSP-1]
 
 <!--links-->
 
@@ -64,4 +70,7 @@ This is typically used for troubleshooting scenarios where you don't want the de
 [ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-pauseconfigurationrefresh
+
+[CSP-1]: /windows/client-management/mdm/dmclient-csp#deviceproviderprovideridconfigrefresh
+[LEARN-1]: /windows/security/book/operating-system-security-system-security#-config-refresh)
 

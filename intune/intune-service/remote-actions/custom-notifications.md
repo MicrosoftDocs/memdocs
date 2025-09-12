@@ -14,7 +14,7 @@ ms.collection:
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Send custom notifications in Intune
+# Send custom notifications using Intune
 
 
 Use the **Send custom notifications** remote action in Intune to deliver short messages directly to users of managed devices. Notifications appear as standard push alerts from the Company Portal or Intune app, similar to messages from other mobile applications.
@@ -68,7 +68,7 @@ You can send custom notifications in Intune to individual devices or to users in
 ::: zone pivot="android"
 
 > [!CAUTION]
-> Other apps may have access to the data in your custom notifications. Avoid using them for sensitive communications.
+> Other apps might have access to the data in your custom notifications. Avoid using them for sensitive communications.
 
 ::: zone-end
 
@@ -112,7 +112,6 @@ When a custom notification is sent, users receive it as a push alert from the Co
 - Notification visibility depends on device settings. Messages might appear on the lock screen or within the app.
 - If the app is open when the notification is received, it displays in-app rather than as a push notification. Users can view it by navigating to the **Notifications** tab and pulling to refresh.
 
-If the device is locked, the notification resembles the following screenshot:
 :::column-end:::
 :::column span="1":::
 :::image type="content" source="images/ios-custom-notification.png" lightbox="images/ios-custom-notification.png" alt-text="Locked device iOS/iPadOS custom notification." border="false":::
@@ -131,7 +130,6 @@ When a custom notification is sent, users receive it as a push alert from the Co
 - Notification visibility depends on device settings. Messages might appear on the lock screen or within the app.
 - If the app is open when the notification is received, it displays in-app rather than as a push notification.
 
-If the device is locked, the notification resembles the following screenshot:
 :::column-end:::
 :::column span="1":::
 :::image type="content" source="images/android-custom-notification.png" lightbox="images/android-custom-notification.png" alt-text="Locked device Android custom notification.":::

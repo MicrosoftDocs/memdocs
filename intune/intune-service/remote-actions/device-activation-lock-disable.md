@@ -12,7 +12,7 @@ ms.collection:
 zone_pivot_groups: e5de148b-1c4f-40a3-8ecb-0f8a7724d927
 ---
 
-# Disable Activation Lock in Intune
+# Disable Activation Lock using Intune
 
 Activation Lock is a security feature built into the *Find My* app on iOS/iPadOS and macOS devices. When enabled, it prevents unauthorized access by requiring the user's Apple ID and password to:
 

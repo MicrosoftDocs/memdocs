@@ -14,7 +14,7 @@ ms.collection:
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Remove apps and configuration in Intune
+# Remove apps and configuration using Intune
 
 Use the **Remove apps and configuration** remote action in Intune to uninstall apps and remove configuration profiles from a device. This action is useful for troubleshooting or temporarily removing settings that might be causing issues.
 

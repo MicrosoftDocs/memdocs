@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Remove a user from a Shared iPad in Intune
+# Remove a user from a Shared iPad using Intune
 
 The **Remove user** remote device action in Microsoft Intune deletes a selected user's cached session from a Shared iPad. This helps free up storage, support privacy, and prepare the iPad for other users. The removed user can sign in again if needed.
 

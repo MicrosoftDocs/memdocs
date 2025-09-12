@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# Full scan with Microsoft Defender in Intune
+# Full scan with Microsoft Defender using Intune
 
 The **Full Scan** remote action in Microsoft Intune allows IT administrators to initiate a comprehensive malware scan on managed Windows devices using Microsoft Defender Antivirus. This action triggers a full system scan that checks all files and running programs, helping to detect and remediate threats that may not be caught during routine quick scans.
 This capability is especially useful in scenarios where a device is suspected of being compromised, or when you need to validate that security baselines and threat protection policies are functioning as expected. Instead of waiting for the next scheduled scan or relying on user-initiated actions, you can proactively launch a full scan directly from the Intune admin center—ensuring faster response and greater control.

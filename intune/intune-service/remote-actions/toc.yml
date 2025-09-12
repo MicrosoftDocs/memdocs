@@ -29,7 +29,7 @@ items:
     href: device-lost-mode.md
   - name: New remote assistance session 🔴
     href: device-remote-assist.md
-  - name: Pause config refresh 🟠
+  - name: Pause config refresh 🟢
     href: pause-config-refresh.md
   - name: Play Lost Mode sound
     href: device-play-lost-mode-sound.md
@@ -57,7 +57,7 @@ items:
     href: device-rotate-filevault.md
   - name: Run remediation 🔴
     href: device-run-remediation.md
-  - name: Send notifications 🟠
+  - name: Send custom notifications
     href: custom-notifications.md
   - name: Shutdown
     href: device-shutdown.md
