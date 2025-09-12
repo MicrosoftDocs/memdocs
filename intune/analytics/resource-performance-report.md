@@ -27,7 +27,7 @@ The insights show not only how much your score can improve by upgrading the CPU 
 
 The resource performance report is available for:
 
-- Windows 365 Cloud PCs, and;
+- Windows 365 Cloud PCs and;
 - Other supported Windows devices with users licensed by Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Resource performance report

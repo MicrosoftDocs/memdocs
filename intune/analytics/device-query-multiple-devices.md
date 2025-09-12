@@ -46,7 +46,7 @@ You can expand the view on the left side to see all the properties that can be q
 After running a query, select **Export** to save results to a .CSV file. You have the option to export all columns in the query result or just the columns you select. You can export up to 50,000 results to a file.
 
 > [!TIP]
-> You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#query-multiple-devices).
+> You can now use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#query-multiple-devices).
 
 For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
 

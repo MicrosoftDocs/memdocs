@@ -18,7 +18,7 @@ ms.localizationpriority: high
 
 Microsoft Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. With Intune Advanced Analytics, your organization can proactively detect and resolve endpoint issues, streamline troubleshooting process, and improve your users' technology experience.
 
-The Microsoft Intune Suite includes features for Advanced Analytics, such as:
+Advanced Analytics, includes the following features:
 
 - **Anomalies** monitors the health of devices in your organization for user experience and productivity regressions following configuration changes. For more information, see [Anomaly detection](anomaly-detection.md).
     :::image type="content" source="media/advanced-analytics/anomalies-tab.png" lightbox="media/advanced-analytics/anomalies-tab-expanded.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint analytics":::

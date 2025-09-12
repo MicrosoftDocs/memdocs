@@ -18,22 +18,15 @@ ms.localizationpriority: high
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
-## Planning Checklist
-
 For a successful deployment of Advanced Analytics, the following activities are recommended:
 
-- Review licensing and enable required features in your Microsoft 365 tenant
-- Identify target device groups for analytics rollout
-- Assess your organization's privacy and compliance requirements for device data. Review the Intune data platform schema to understand the full list of data captured
-- Communicate planned changes and benefits to stakeholders and end users
-- Ensure the right stakeholders from IT functions are part of the implementation project, to allow realization of the benefits through IT process optimization.
-- Establish escalation and support procedures for analytics findings
-- Define reporting and monitoring objectives (e.g., proactive device health, security anomaly tracking)
+- Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](data-platform-schema.md) to understand the full list of data captured.
+- Establish escalation and support procedures for analytics findings.
 - Review and train staff on IT processes you aim to optimize with the implementation of Advanced Analytics. Examples include help desk triage, hardware refresh cycles and application updates. Think of this as a continuous improvement cycle, with faster issue resolution and proactive issue resolution.
 
 ## Prerequisites
 
-Intune Advanced Analytics features build on top of the existing base Endpoint analytics experience.
+Intune Advanced Analytics features build on top of the base Endpoint analytics experience.
 
 > [!NOTE]
 > The Advanced Analytics features are only available for Intune-managed (including co-managed) devices.
@@ -41,8 +34,7 @@ Intune Advanced Analytics features build on top of the existing base Endpoint an
 General requirements:
 
 - Advanced Analytics features are included in [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
-- Network connectivity to required Microsoft endpoints
- For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
+- Network connectivity to required Microsoft endpoints. For more information, see [Microsoft Intune URLs and IP address ranges](https://learn.microsoft.com/mem/intune/fundamentals/intune-endpoints).
 
 Windows capability requirements:
 
@@ -58,21 +50,8 @@ Windows capability requirements:
   - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
   - Devices enrolled from Configuration Manager need client version 2006, or later installed
 
-### Device Query
-
 > [!NOTE]
-> You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically.
-
-- To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
-
-  - The Intune Advanced Analytics add-on
-  - Microsoft Intune Suite
-
-- For a user to use Device query, you must assign the Managed Devices > Query and Organization > Read permissions to them.
-
-- Devices must be Intune managed and corporate owned.
-
-- Device query for multiple devices only works on devices that are already collecting device inventory data from an assigned [Properties catalog](../intune-service/configuration/properties-catalog.md) profile. 
+> For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
 
 Device query for multiple devices is supported on devices running:  
 
@@ -106,7 +85,8 @@ Currently, the highest functional subscription sets the Endpoint analytics exper
 
 ## Role based access control
 
-- Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)  
+- Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)
+- For a user to use Device query, you must assign the Managed Devices > Query and Organization > Read permissions to them.
 
 ---
 
