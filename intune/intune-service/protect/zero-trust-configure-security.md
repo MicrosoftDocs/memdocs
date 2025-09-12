@@ -98,9 +98,11 @@ We recommend that all of the following controls be implemented where licenses ar
 
 [!INCLUDE [24690](./includes/secure-recommendations/24690.md)]
 
+## Related content
 
-
-
+- [Deployment guide for Microsoft Intune](/intune/intune-service/fundamentals/get-started-with-intune)
+- [Protect data and devices with Microsoft Intune](/intune/intune-service/protect/device-protect)
+- [Configure Microsoft Entra for increased security (Preview)](/entra/fundamentals/configure-security)
 
 
 
