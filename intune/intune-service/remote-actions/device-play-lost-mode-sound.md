@@ -45,6 +45,16 @@ These remote actions are especially useful in environments where devices are sha
 >   - The permission **Remote tasks/Play sound to locate lost devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
+::: zone pivot="android"
+### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration
+
+> [!div class="checklist"]
+> To use this remote action, make sure devices meet the following requirements:
+>
+> - Intune app is installed.
+
+::: zone-end
+
 ## How to play lost mode sound from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

@@ -49,21 +49,23 @@ Depending on the platform, Intune can also report the last known location if the
 
 ::: zone pivot="android"
 
-Before you can use the locate device functionality, Google Location Services must be enabled.
-
-Android use of **Locate device** is managed using a device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
-
-#### Fully managed and corporate-owned work profile
-
-For fully managed and corporate-owned work profile, **Locate device** is set to **Not configured** as the default and it blocks the feature. To allow this feature, use device restrictions within Device Configuration and configure the toggle for **Locate device** to **Allow**.
-
-For corporate-owned work profile devices, the user of the device must also enable location permissions by navigating to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
-
-#### Dedicated devices
-
-For dedicated devices, **Locate device** is set to **Not configured** as the default, which allows the feature.
-
-If you want to turn off this feature, use device restrictions within **Device Configuration** and configure the toggle for **Locate device** to **Block**. When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
+> [!div class="checklist"]
+> To use this remote action, make sure devices meet the following requirements:
+>
+> - Location services and Google Location Accuracy must be turned on.
+> - Intune app is installed.
+>
+> **Fully Managed Devices**:
+> - The Locate Device feature must be explicitly enabled via device configuration profile in Intune.
+> - Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
+>
+> **Corporate-Owned Work Profile Devices**:
+> - Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
+>
+> **Dedicated Devices**:
+> The feature is enabled by default unless explicitly blocked in the device configuration profile.
+> [!NOTE]
+> When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
 
 ::: zone-end
 
@@ -118,23 +120,23 @@ Later, this default status updates to reflect the actual date and time that an a
 
 ::: zone-end
 
-## Security and privacy information for lost mode and locate device actions
+## Security and privacy information
 
-- No device location information is sent to Intune until you turn on this action.
-- When you use the locate device action, the latitude and longitude coordinates of the device can be retrieved by using the Graph API.
-- The data is stored for 24 hours, then removed. You can't manually remove the location data.
-- The data for last known locations is stored for up to seven days, and then removed.
-- Location data is encrypted, both while stored and while being transmitted.
-- For iOS/iPadOS devices, when you configure Lost Mode, you can customize a message that appears on the lock screen. In this message, to help the person that finds the device, be sure to include specific details to return the lost device.
-- For fully-managed and corporate-owned work profile scenarios, end users receive a notification when the administrator uses this feature, if notifications are enabled.
+Intune is designed to respect user privacy while providing powerful device management capabilities. When using the Locate Device action, here's what you need to know about how location data is handled:
+
+- Location data is only collected when you initiate the Locate Device action—never before.
+- Once triggered, the device's latitude and longitude are retrieved via the Graph API.
+- All location data is encrypted in transit and at rest, ensuring secure handling.
+- Data is stored for 24 hours and automatically deleted. Manual deletion is not supported.
+- The last known location might be retained for up to seven days before being removed.
+- On iOS/iPadOS devices, you can [enable Lost Mode](device-lost-mode.md) to remotely lock the device and display a custom message on the lock screen—helpful for recovery.
+- In fully managed and corporate-owned work profile scenarios, users receive a notification when the Locate Device action is used—if notifications are enabled on the device.
 
 ## Reference links
 
 - Microsoft Graph API:
   - [locateDevice action][GRAPH-1]
   - [playLostModeSound action][GRAPH-2]
-
-
 
 <!--links-->
 
