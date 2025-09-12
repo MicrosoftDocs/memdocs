@@ -98,7 +98,7 @@ The following list includes supported device actions:
 |[Synchronize device](../intune-service/remote-actions/device-sync.md)|Syncs a device with Intune to apply the latest policies and configurations.|
 |[Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)|Updates the security intelligence files for Microsoft Defender Antivirus.|
 |[Microsoft PIN reset service](/windows/security/identity-protection/hello-for-business/pin-reset)|Microsoft PIN reset service enables your users to recover a forgotten Windows Hello for Business PIN, and how to configure it.|
-|[Wipe](../intune/remote-actions/device-wipe.md)|This action restores a device to its factory settings and removes all data and settings.|
+|[Wipe](../intune-service/remote-actions/device-wipe.md)|This action restores a device to its factory settings and removes all data and settings.|
 
 ## Supported Operators 
 

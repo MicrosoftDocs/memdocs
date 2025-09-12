@@ -64,6 +64,9 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="../media/icons/remote-actions/update-windows-defender-security-intelligence.svg" border="false"::: | [Update Windows Defender security intelligence][RA-DEFAV] | Updates the security intelligence files for Microsoft Defender Antivirus. |
 | :::image type="icon" source="../media/icons/remote-actions/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | This action restores a device to its factory settings and removes all data and settings. |
 
+> [!TIP]
+> For Intel vPro devices, Intune also integrates with Intel vPro Fleet Services to provide hardware-level remote management capabilities, including out-of-band management that works even when the operating system is unresponsive or the device is powered off.
+
 # [:::image type="icon" source="../media/icons/platforms/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
 
 | Icon | Action | Description |
