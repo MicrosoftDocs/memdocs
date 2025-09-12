@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 08/27/2025
+ms.date: 09/05/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -134,6 +134,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 
 > [!NOTE]
 > The virtual home button requires granting overlay permission to MHS. The notification badge functionality requires granting notification permission to MHS.The brightness slider, adaptive brightness toggle, and autorotate toggle require granting write settings permission to MHS. Users are prompted for permission upon startup of MHS, which requires the user to make device permission updates in the Settings application. When possible, use [OEMConfig](../configuration/oemconfig-managed-home-screen-permissions-android.md?tabs=samsung-app%2Csamsung-policy) to autogrant these permissions to MHS to prevent possible breakout scenarios when using the Settings application. However, only configure access to features that require permission when necessary. Depending on the device's OS version, a notification might appear to alert the user that the permission was granted, even if it was autogranted.
+>
+> [!NOTE]
+> If **Notification windows** is set to **Disable** in device restrictions, features which rely on the Overlay permission including the virtual home button feature will not function properly.
 
 > [!NOTE]
 > When Overlay permission is granted on a device, certain Chromium based browsers might prevent users from granting camera and microphone permissions to websites. To allow users to grant these permissions on Microsoft Edge, create an app configuration policy for Microsoft Edge with [Overlay permission detection](/deployedge/microsoft-edge-mobile-policies#overlaypermissiondetectionenabled) set to False. For all other chromium based browsers, refer to their documentation for guidance.
@@ -155,6 +158,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 
 > [!NOTE]
 > The screensaver requires granting both [overlay permission](https://techcommunity.microsoft.com/t5/intune-customer-success/granting-overlay-permissions-to-managed-home-screen-for-android/ba-p/3247041) and exact alarm permission (OS 14+) to MHS. Users are prompted for permission upon startup of MHS, which requires the user to make device permission updates in the Settings application. When possible, use [OEMConfig](../configuration/oemconfig-managed-home-screen-permissions-android.md?tabs=samsung-app%2Csamsung-policy) to autogrant overlay and exact alarm permission to MHS to prevent possible breakout scenarios when using the Settings application. However, only configure access to notifications and features that require permissions when necessary. Depending on the device's OS version, a notification might appear to alert the user that these permissions were granted, even if they were autogranted.
+>
+> [!NOTE]
+> If **Notification windows** is set to **Disable** in device restrictions, features which rely on the Overlay permission including the screensaver feature will not function properly.
 
 > [!NOTE]
 > When Overlay permission is granted on a device, certain Chromium based browsers might prevent users from granting camera and microphone permissions to websites. To allow users to grant these permissions on Microsoft Edge, create an app configuration policy for Microsoft Edge with [Overlay permission detection](/deployedge/microsoft-edge-mobile-policies#overlaypermissiondetectionenabled) set to False. For all other chromium based browsers, refer to their documentation for guidance.
@@ -213,6 +219,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 
 > [!NOTE]
 > The automatic sign out feature requires granting both [overlay permission](https://techcommunity.microsoft.com/t5/intune-customer-success/granting-overlay-permissions-to-managed-home-screen-for-android/ba-p/3247041) and exact alarm permission (OS 14+) to MHS. Users are prompted for permission upon startup of MHS, which requires the user to make device permission updates in the Settings application. When possible, use [OEMConfig](../configuration/oemconfig-managed-home-screen-permissions-android.md?tabs=samsung-app%2Csamsung-policy) to autogrant overlay and exact alarm permission to MHS to prevent possible breakout scenarios when using the Settings application. However, only configure access to notifications and features that require permissions when necessary. Depending on the device's OS version, a notification might appear to tell the user these permissions were granted, even if they were autogranted.
+>
+> [!NOTE]
+> If **Notification windows** is set to **Disable** in device restrictions, features which rely on the Overlay permission including the automatic sign out feature will not function properly.
 
 > [!NOTE]
 > When Overlay permission is granted on a device, certain Chromium based browsers might prevent users from granting camera and microphone permissions to websites. To allow users to grant these permissions on Microsoft Edge, create an app configuration policy for Microsoft Edge with [Overlay permission detection](/deployedge/microsoft-edge-mobile-policies#overlaypermissiondetectionenabled) set to False. For all other chromium based browsers, refer to their documentation for guidance.

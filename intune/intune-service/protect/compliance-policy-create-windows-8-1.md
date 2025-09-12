@@ -6,7 +6,7 @@ description: View the device compliance settings for Windows 8.1 that you can ma
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/15/2024
 ms.topic: reference
 ms.service: microsoft-intune

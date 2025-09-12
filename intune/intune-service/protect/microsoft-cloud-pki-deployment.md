@@ -55,7 +55,7 @@ Identify your relying parties. The relying party is a user or system that consum
 
 - A Wi-Fi access point using radius certificate-based authentication.  
 - A VPN server authenticating a remote user.
-- A user visiting an TLS/LLS protected web site in a web browser.
+- A user visiting an TLS/SSL protected web site in a web browser.
 
 ### Determine location for trust anchor
 

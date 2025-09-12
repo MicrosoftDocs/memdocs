@@ -5,7 +5,7 @@ description: Learn what it means to enroll your device with the Company Portal a
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/27/2025
 ms.topic: end-user-help
 ms.localizationpriority: high
