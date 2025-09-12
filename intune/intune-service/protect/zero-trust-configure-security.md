@@ -27,16 +27,21 @@ ms.collection:
  
 # Configure Microsoft Intune for increased security (Preview)
 
-The security recommendations in this document are designed to help you improve your organizations security posture by using Microsoft Intune. These recommendations are influenced by accepted industry standards like those developed by NIST, the configuration baselines we use internally at Microsoft, and our experiences with customers. The recommendations in this article are guided by the following Microsoft [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) pillar:
+The security recommendations in this document are designed to help you improve your organizations security posture by using Microsoft Intune. These recommendations are influenced by accepted industry standards like those developed by NIST, the configuration baselines we use internally at Microsoft, and our experiences with customers. The recommendations in this article are guided by the following Microsoft [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) pillars:
 
+- Protect identities and secrets
 - Protect tenants and isolate production systems
+- Protect networks
+- Protect engineering systems
+- Monitor and detect cyberthreats
+- Accelerate response and remediation
 
 > [!TIP]
 > Some organizations might take these recommendations exactly as written, while others might choose to make modifications based on their own business needs.
 
 We recommend that all of the following controls be implemented where licenses are available. These patterns and practices help to provide a secure foundation for other resources built on top of this solution. More controls will be added to this document over time.
 
-## Security guidance
+## Protect tenants and isolate production systems
 
 ### Windows Firewall policies are configured and assigned<!-- 24540 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
