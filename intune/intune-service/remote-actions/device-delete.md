@@ -88,6 +88,8 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 ::: zone-end
 
+::: zone pivot="android"
+::: zone-end
 
 ## Reference links
 

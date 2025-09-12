@@ -58,6 +58,8 @@ The **Remote lock** device action locks a managed device so the user must enter 
 > The recovery PIN is shown on the device overview pane for up to 30 days, or until another device action is sent. Record it securely; it can't be retrieved afterward. Don't resend remote lock to the same macOS device until that PIN is used—additional attempts show a **Failed** status in reporting.
 
 ::: zone-end
+::: zone pivot="ios,android"
+::: zone-end
 
 ## Reference links
 
