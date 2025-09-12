@@ -113,6 +113,10 @@ We recommend that all of the following controls be implemented where licenses ar
 
 [!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
 
+### macOS Update policy is configured and assigned<!-- 24690 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
+
+[!INCLUDE [24690](./includes/secure-recommendations/24690.md)]
 <!-- 24568 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24568](./includes/secure-recommendations/24568.md)]-->
@@ -184,21 +188,6 @@ We recommend that all of the following controls be implemented where licenses ar
 
 [!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
 
-
-
-
-
-
-
-
-
-
-
-
-### macOS Update policy is configured and assigned<!-- 24690 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-
-[!INCLUDE [24690](./includes/secure-recommendations/24690.md)]
 
 ## Related content
 
