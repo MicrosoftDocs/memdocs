@@ -21,7 +21,7 @@ items:
     href: device-fresh-start.md
   - name: Full Scan
     href: device-full-scan.md
-  - name: Locate device ⚠️
+  - name: Locate device
     href: device-locate.md
   - name: Logout active user
     href: device-logout-user.md

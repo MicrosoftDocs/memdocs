@@ -55,24 +55,21 @@ Depending on the platform, Intune can also report the last known location if the
 > - Location services must be turned on.
 > - Intune app is installed.
 
-
 > **Fully Managed Devices**:
-> - The Locate Device feature must be explicitly enabled via device configuration profile in Intune.
-
+> - The **Locate Device** feature must be explicitly enabled with a device restrictions profile.
 
 > **Corporate-Owned Work Profile Devices**:
 >
-> - The Locate Device feature must be explicitly enabled via device configuration profile in Intune.
+> - The **Locate Device** feature must be explicitly enabled with a device restrictions profile.
 > - Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
 
-
 > **Dedicated Devices**:
-> - The feature is enabled by default unless explicitly blocked in the device configuration profile.
+> - The **Locate Device** feature is enabled by default, unless explicitly blocked with a device restriction profile.
 
 > [!NOTE]
 > When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
 
-For more information on the policy settings you can configure, go to Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune.
+For more information about device restrictions, see [Android template device settings list to restrict features using Intune](/intune/intune-service/configuration/device-restrictions-android-for-work).
 
 ::: zone-end
 
@@ -157,10 +154,3 @@ Intune is designed to respect user privacy while providing powerful device manag
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-locatedevice
 [GRAPH-2]: /graph/api/intune-devices-manageddevice-playlostmodesound
-
-<!--
-This feature is intended to be used to locate lost or stolen devices. When the action is triggered, the end user will receive a notification that the device is lost and its location has been queried. Before you continue, make sure you're following local laws and regulations around receiving location data. By requesting the device location, Intune will send the device's latitude and longitude to Bing Maps to retrieve and display an address. Location data is visible in Intune for 24 hours once received.
--->
-
-::: zone pivot="windows"
-::: zone-end

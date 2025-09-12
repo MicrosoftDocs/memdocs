@@ -61,8 +61,7 @@ The business benefits of using Intune to manage Activation Lock are:
 > This remote action is supported on the following platforms:
 >
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP] through Automated Device Enrollment (ADE)
-> - macOS in [Supervised Mode][MAC-SUP] through Automated Device Enrollment (ADE)
-
+> - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
@@ -143,7 +142,7 @@ If you send an unfiltered request for the device object, Graph returns a default
 
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
-[MAC-SUP]: /intune/intune-service/fundamentals/deployment-guide-enrollment-macos#automated-device-enrollment-ade-supervised
+[MAC-ADE]: /intune/intune-service/enrollment/device-enrollment-program-enroll-macos
 [APL-1]: https://support.apple.com/guide/apple-business-manager/axm812df1dd8
 [APL-2]: https://support.apple.com/HT201365
 
