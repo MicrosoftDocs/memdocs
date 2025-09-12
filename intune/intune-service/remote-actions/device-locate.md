@@ -63,9 +63,9 @@ Depending on the platform, Intune can also report the last known location if the
 > - Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
 >
 > **Dedicated Devices**:
-> The feature is enabled by default unless explicitly blocked in the device configuration profile.
-> [!NOTE]
-> When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
+> - The feature is enabled by default unless explicitly blocked in the device configuration profile.
+>   [!NOTE]
+>   When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
 
 ::: zone-end
 
@@ -129,8 +129,8 @@ Intune is designed to respect user privacy while providing powerful device manag
 - All location data is encrypted in transit and at rest, ensuring secure handling.
 - Data is stored for 24 hours and automatically deleted. Manual deletion is not supported.
 - The last known location might be retained for up to seven days before being removed.
-- On iOS/iPadOS devices, you can [enable Lost Mode](device-lost-mode.md) to remotely lock the device and display a custom message on the lock screen—helpful for recovery.
-- In fully managed and corporate-owned work profile scenarios, users receive a notification when the Locate Device action is used—if notifications are enabled on the device.
+- On iOS/iPadOS devices, you can enable [Lost Mode](device-lost-mode.md) to remotely lock the device and display a custom message on the lock screen—helpful for recovery.
+- In Android fully managed and corporate-owned work profile scenarios, users receive a notification when the Locate Device action is used—if notifications are enabled on the device.
 
 ## Reference links
 
