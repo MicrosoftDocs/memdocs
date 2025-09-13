@@ -1,5 +1,5 @@
 ---
-title: Run Remediation
+title: "Intune Remote Device Action: Run Remediation"
 description: Learn how to initiate on demand proactive remediation with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
@@ -15,6 +15,16 @@ ms.collection:
 # Run remediation
 
 
+## Requirements
+
+### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+
+> [!div class="checklist"]
+> This remote action is supported on the following platforms:
+>
+> - Windows
+
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
 > To execute this remote action, you must use an account that has at least one of the following roles:
@@ -25,7 +35,12 @@ ms.collection:
 >   - The permission **Remote tasks/Run Remediation**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
+## How to run a remediation from the Intune admin center
 
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Action**.
+1. Select **Yes** to confirm the action.
 
 ## Reference links
 

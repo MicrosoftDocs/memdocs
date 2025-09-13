@@ -11,11 +11,11 @@ ms.collection:
 - highpri
 ---
 
-# Rotate FileVault recovery key
+# Rotate FileVault recovery key using Intune
 
-The **Rotate FileVault recovery key** remote action in Microsoft Intune allows IT admins to manually generate a new personal recovery key for a macOS device encrypted with FileVault. This action is useful when the current key is lost, potentially exposed, or needs to be refreshed for compliance or support reasons.
+The **Rotate FileVault recovery key** remote action in Microsoft Intune allows IT admins to manually generate a new personal recovery key for a macOS device encrypted with FileVault.
 
-Once triggered, the new recovery key is securely stored in Intune and made available to the user through the Company Portal app or website. This action is only supported for corporate-owned macOS devices that are encrypted with FileVault via Intune policy.
+This action is useful when the current key is lost, potentially exposed, or needs to be refreshed for compliance or support reasons.
 
 ## Requirements
 
@@ -32,8 +32,7 @@ Once triggered, the new recovery key is securely stored in Intune and made avail
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Are encrypted with FileVault using an Intune disk encryption policy.
-> - Are marked as *corporate-owned* in Intune.
-> - Have the FileVault personal recovery key escrowed to Intune.
+> - Have the FileVaultpersonal recovery key escrowed to Intune.
 
 For more information, see Use [FileVault disk encryption for macOS with Intune][LEARN-1].
 
