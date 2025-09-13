@@ -112,11 +112,11 @@ The following table provides enrollment-specific configuration details:
 
 Support for the device enrollment setting requires end users have these Company Portal versions:
 - Company Portal on iOS/iPadOS: version 4.4 or later
-- Company Portal on Android: version 5.0.4715.0 or later 
+- Company Portal on Android: version 5.0.4715.0 or later
 
 > [!IMPORTANT]
 > The following settings do not apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of how these setting are configured, iOS/iPadOS devices configured to enroll with Automated Device Enrollment will enroll during the out of box flow and users will be prompted to sign in when they launch the Company Portal.
-> 
+>
 > The following settings do apply to Android devices configured with [Samsung Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md) (KME). If a device has been configured for KME and device enrollment is set to Unavailable, the device will not be able to enroll during the out of box flow.
 >
 > For the Android Company Portal app, if Intune detects that the user's device is set up for [app protection policies without enrollment](../fundamentals/deployment-guide-enrollment-mamwe.md), the user will not get prompted to enroll in the Company Portal, even if the device enrollment setting is configured to prompt enrollment. This applies to all Android device types except Surface Duo devices.
@@ -137,15 +137,15 @@ The following table provides privacy-specific configuration details:
 | Privacy message about what support can't see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
 | Privacy message about what support can see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
 
-For related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).  
+For related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
 
-### Device categories  
+### Device categories
 
-You can allow or block the device category prompt in Intune Company Portal.  
+You can allow or block the device category prompt in Intune Company Portal.
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Let users select device categories in the Company Portal| N/A | If your tenant has device categories set up, users on targeted devices are prompted to choose a category when they sign in to Company Portal. Select **Block** to hide the prompt across all platforms. Select **Allow** to show the prompt.   <br> <br> The category selection prompt goes away once someone chooses a category, and doesn't reappear. This setting is intended to be used with device categories. If there are no device categories in your tenant, no selection prompt will appear. For more information about creating device categories, see [Categorize devices into groups](../enrollment/device-group-mapping.md).  
+| Let users select device categories in the Company Portal| N/A | If your tenant has device categories set up, users on targeted devices are prompted to choose a category when they sign in to Company Portal. Select **Block** to hide the prompt across all platforms. Select **Allow** to show the prompt.   <br> <br> The category selection prompt goes away once someone chooses a category, and doesn't reappear. This setting is intended to be used with device categories. If there are no device categories in your tenant, no selection prompt will appear. For more information about creating device categories, see [Categorize devices into groups](../enrollment/device-group-mapping.md).
 
 ### App sources
 
@@ -167,9 +167,9 @@ The following table provides app source specific configuration details:
 > [!NOTE]
 > The display of apps from the **Configuration Manager Applications** app source is only displayed in the Windows Company Portal. However, the display of apps from either the **Microsoft Entra Enterprise Applications** app source or the **Office Online Applications** app source are displayed in the Windows Company Portal and the Company Portal website.
 
-You can hide or show **Microsoft Entra Enterprise applications**, **Office Online applications**, and **Configuration Manager applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Microsoft Entra Enterprise applications** are registered and assigned via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
+You can hide or show **Microsoft Entra Enterprise applications**, **Office Online applications**, and **Configuration Manager applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Microsoft Entra Enterprise applications** are registered and assigned via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**.
 
-### Customizing Remove and Reset device actions 
+### Customizing Remove and Reset device actions
 
 You can customize visibility of the **Remove** and **Reset** self-service device actions for Windows and iOS devices that are shown to end users across platforms in the Company Portal app, Company Portal website, and Intune app on Android. To prevent users from removing or resetting corporate Windows and iOS devices, you can hide these actions in **Tenant Administration** > **Customization**.
 
@@ -181,14 +181,14 @@ The following actions are available:
 
 > [!NOTE]
 > These actions can be used to restrict device actions in the Company Portal app and website and do not implement any device restriction policies. To restrict users from performing factory reset or MDM removal from settings, you must configure device restriction policies.
-> 
+>
 > Also, these customizations are only available in the default Customization policy, not in the group targeted Customization policies.
 
 ### Device compliance status in Company Portal website
 End users can see the compliance status of their devices from the Company Portal website. End users can navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**. For related information, see [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md).
 
 ## Opening Web Company Portal applications
-For Web Company Portal applications, if the end user has the Company Portal application installed, the end users will see a dialog box asking how they want to open the application when opening outside of the browser. If the app is not in the path of the Company Portal, then the Company Portal will open the homepage. If the app is in the path, then the Company Portal will open the specific app. 
+For Web Company Portal applications, if the end user has the Company Portal application installed, the end users will see a dialog box asking how they want to open the application when opening outside of the browser. If the app is not in the path of the Company Portal, then the Company Portal will open the homepage. If the app is in the path, then the Company Portal will open the specific app.
 
 Upon selecting the Company Portal, the user will be directed to the corresponding page in the application when the URI path is one of the following:
 
@@ -196,10 +196,10 @@ Upon selecting the Company Portal, the user will be directed to the correspondin
 - `/apps/[appID]` - The Web Company Portal will open the Details page of the corresponding app.
 - *The URI path is different or unexpected* - The Web Company Portal home page will be displayed.
 
-If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal. 
+If the user does not have the Company Portal app installed, the user will be taken to the Web Company Portal.
 
 > [!NOTE]
-> To improve page load performance on the Company Portal website, app icons will now load in batches. End users may temporarily see a placeholder icon for some of their applications while loading the Company Portal website. 
+> To improve page load performance on the Company Portal website, app icons will now load in batches. End users may temporarily see a placeholder icon for some of their applications while loading the Company Portal website.
 
 For feedback related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
 
@@ -207,7 +207,7 @@ For feedback related information, see [Configure feedback settings for Company P
 
 For iOS/iPadOS devices running 13.0 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from authenticating with the Company Portal but avoids the issue of leaving end users stuck on a device that they can't use while the Company Portal installs on the device. The user has to authenticate using Microsoft Entra credentials during the setup assistant screens. This will require an additional Microsoft Entra login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS, which we recommend choosing a VPP token for from the enrollment profile.
 
-Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when users complete the additional Microsoft Entra login into the Company Portal app on the device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed. 
+Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when users complete the additional Microsoft Entra login into the Company Portal app on the device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during enrollment during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed.
 
 ## Company Portal derived credentials for iOS/iPadOS devices
 
@@ -254,7 +254,7 @@ End users will also be able to see the available shortcuts in the Windows Compan
 
 ## User self-service device actions from the Company Portal
 
-Users can perform actions on their local or remote devices via the Company Portal app, Company Portal website, or the Intune app on Android. The actions that a user can perform vary based on device platform and configuration. In all cases, the remote device actions can only be performed by device's Primary User.  
+Users can perform actions on their local or remote devices via the Company Portal app, Company Portal website, or the Intune app on Android. The actions that a user can perform vary based on device platform and configuration. In all cases, the remote device actions can only be performed by device's Primary User.
 
 Available self-service device actions include the following:
 
@@ -264,7 +264,7 @@ Available self-service device actions include the following:
 - **Sync** – This action initiates a device check-in with the Intune service. This shows as **Check Status** in the Company Portal.
 - **Remote Lock** – This locks the device, requiring a PIN to unlock it.
 - **Reset Passcode** – This action is used to reset device passcode. On iOS/iPadOS devices the passcode will be removed and the end user will be required to enter a new code in settings. On supported Android devices, a new passcode is generated by Intune and temporarily displayed in the Company Portal.
-- **Key Recovery** – This action is used to recover a personal recovery key for encrypted macOS devices from the Company Portal website. 
+- **Key Recovery** – This action is used to recover a personal recovery key for encrypted macOS devices from the Company Portal website.
 
 To customize the available user self-service actions, see [Customizing user self-service actions for the Company Portal](../apps/company-portal-app.md#customizing-remove-and-reset-device-actions).
 
@@ -290,11 +290,11 @@ Some platforms and configurations do not allow self-service device actions. This
 <sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS/iPadOS devices.<br>
 <sup>(9)</sup>All iOS/iPadOS Automated Device Enrollment devices (formerly known as DEP)  have **Retire** and **Wipe** options disabled.
 
-### App logs  
+### App logs
 
 App users can share their logs with you when requesting help through the Intune Company Portal app or Microsoft Intune app. If you're using Azure Government, users get to select their sharing preference when they initiate the sharing process. If you're not using Azure Government, user-submitted logs are sent directly to Microsoft support or the admin center.
 
-You can download user-submitted mobile app diagnostics in the admin center for the Android, AOSP, and Windows versions of the Company Portal app. To download user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).   
+You can download user-submitted mobile app diagnostics in the admin center for the Android, AOSP, and Windows versions of the Company Portal app. To download user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).
 
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
@@ -308,7 +308,7 @@ The Company Portal app can store, as well as display, push notifications sent to
 
 Notifications from the iOS/iPadOS Company Portal app are now delivered to devices using the default Apple sound, rather than being delivered silently. To turn the notification sound off from the iOS/iPadOS Company Portal app, select **Settings** > **Notifications** > **Comp Portal** and select the **Sound** toggle.
 
-For more information about notifications, see [Receive a custom notification](../remote-actions/custom-notifications.md#receive-a-custom-notification).
+For more information about notifications, see [Send custom notifications using Intune](../remote-actions/custom-notifications.md).
 
 ## Configure feedback settings for Company Portal and Microsoft Intune apps
 

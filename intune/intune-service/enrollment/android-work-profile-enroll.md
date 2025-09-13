@@ -83,7 +83,7 @@ Communicate enrollment steps to device users. Users typically don't like enrolli
 Users must be signed in to the primary user account on their device when enrolling. Enrollment isn't supported on secondary user accounts. Personal devices previously enrolled with Android device administrator can unenroll, and then re-enroll using the work profile solution.
 
 > [!TIP]
-> You can remotely return a device to a state where it's ready to enroll again by using the **Retire** function in the admin center. To use this remote action, go to **Devices** > **All devices**, and select a device. For more information, see [Retire Android device administrator](../remote-actions/device-wipe.md#android-device-administrator).
+> You can remotely return a device to a state where it's ready to enroll again by using the **Retire** function in the admin center. For more information, see [Retire devices using Intune](../remote-actions/device-retire?pivots=android).
 
 For more information and screenshots of the end user experience, see [Enroll device with Android work profile](../user-help/enroll-device-android-work-profile.md) in the Intune user help docs.
 

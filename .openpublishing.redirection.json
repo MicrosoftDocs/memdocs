@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/remote-actions/device-management.md",
+      "redirect_url": "/intune/intune-service/remote-actions/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-wipe-macos.md",
+      "redirect_url": "/intune/intune-service/remote-actions/device-wipe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/devices-wipe.md",
+      "redirect_url": "/intune/intune-service/remote-actions/device-wipe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/chrome-enterprise-remote-actions.md",
+      "redirect_url": "/intune/intune-service/remote-actions/index",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/remote-actions/teamviewer-support.md",
       "redirect_url": "/intune/intune-service/fundamentals/teamviewer-support",
       "redirect_document_id": false
