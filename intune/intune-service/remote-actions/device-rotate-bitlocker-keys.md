@@ -1,6 +1,6 @@
 ---
 title: "Intune Remote Device Action: BitLocker Key Rotation"
-description: Learn how to rotate the BitLocker recovery keys with Microsoft Intune.
+description: Learn how to rotate the BitLocker recovery key with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -13,9 +13,9 @@ ms.collection:
 
 # BitLocker key rotation using Intune
 
-BitLocker key rotation is a security feature that allows IT administrators to remotely refresh the recovery keys used to unlock BitLocker-encrypted Windows devices. This process ensures that once a recovery key is used, or potentially exposed, it can be replaced with a new one, reducing the risk of unauthorized access.
+The **BitLocker key rotation** remote action in Microsoft Intune lets IT admins remotely refresh the recovery key for the operating system drive on BitLocker-encrypted Windows devices. This helps reduce the risk of unauthorized access if a recovery key has been used or potentially exposed.
 
-BitLocker key rotation is important in environments where devices are frequently serviced, reassigned, or exposed to potential threats. For example, if a helpdesk technician provides a recovery key to a user during a support call, key rotation can be initiated from Intune, ensuring it can't be reused.
+Key rotation is especially useful in environments where devices are frequently serviced, reassigned, or exposed to support scenarios. For example, if a helpdesk technician shares a recovery key during a support call, you can rotate the key from Intune to ensure it can't be reused.
 
 ## Requirements
 
@@ -37,11 +37,11 @@ BitLocker key rotation is important in environments where devices are frequently
 >   - The permission **Remote tasks/Rotate BitLockerKeys**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## How to rotate BitLocker keys from the Intune admin center
+## How to rotate the BitLocker key from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **BitLocker key rotation**..
+1. At the top of the device overview pane, locate the row of remote action icons. Select **BitLocker key rotation**.
 1. Select **Yes** to confirm the action.
 
 ## Reference links

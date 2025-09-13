@@ -106,7 +106,7 @@ The following are examples of protections and restrictions you can set with app 
 
 ## Use device actions to protect devices and data
 
-From the Microsoft Intune admin center, you can run [device actions](../remote-action/index.md) that help keep a selected device protected. You can run a subset of these actions as [bulk device actions](../remote-actions/bulk-device-actions.md) to affect multiple devices at the same time. And several [remote actions from Intune](../../configmgr/comanage/quickstart-remote-actions.md) can also be used with co-managed devices.
+From the Microsoft Intune admin center, you can run [device actions](../remote-actions/index.md) that help keep a selected device protected. You can run a subset of these actions as [bulk device actions](../remote-actions/bulk-device-actions.md) to affect multiple devices at the same time. And several [remote actions from Intune](../../configmgr/comanage/quickstart-remote-actions.md) can also be used with co-managed devices.
 
 Device actions aren't policy and take effect a single time when invoked. They apply either immediately if the device is accessible on-line, or when the device next boots up or checks in with Intune. Considered these actions as supplemental to the use of policies that configure and maintain security configurations for a population of devices.
 
