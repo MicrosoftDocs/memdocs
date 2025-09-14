@@ -113,7 +113,7 @@ groups:
     title: macOS
   - id: android
     title: Android
-  - id: chrome
+  - id: chromeos
     title: ChromeOS
 
 - id: 51e33912-415a-402f-8201-8acebf3e4991

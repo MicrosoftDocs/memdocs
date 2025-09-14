@@ -128,14 +128,12 @@ Select one of the following tabs to learn more about the available remote action
 > [!NOTE]
 > To manage ChromeOS devices with Intune, you must first [set up the Chrome Enterprise connector](../enrollment/chrome-enterprise-connector-configure.md) and enroll devices using the Google Admin console. This integration allows you to manage ChromeOS devices alongside other platforms in Intune.
 
-# [:::image type="icon" source="../media/icons/platforms/android.svg"::: **Android**](#tab/android)
-
 | Icon | Action | Description |
 |--|--|--|
-| :::image type="icon" source="../media/icons/remote-actions/retire.svg" border="false"::: | [Deprovision][RA-DEPR] | . |
-| :::image type="icon" source="../media/icons/remote-actions/lost-mode.svg" border="false"::: | [Lost mode][RA-LOSTMODE] | . |
-| :::image type="icon" source="../media/icons/remote-actions/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
-| :::image type="icon" source="../media/icons/remote-actions/retire.svg" border="false"::: | [Retire][RA-WIPE] | . |
+| :::image type="icon" source="../media/icons/remote-actions/retire.svg" border="false"::: | [Deprovision][RA-DEPR] | Removes Google Admin policies from a ChromeOS device that is no longer in use. |
+| :::image type="icon" source="../media/icons/remote-actions/lost-mode.svg" border="false"::: | [Lost mode][RA-LOSTMODE] | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this is referred to as **Disabled**. |
+| :::image type="icon" source="../media/icons/remote-actions/restart.svg" border="false"::: | [Restart][RA-RESTART] | Reboots the device remotely. This action is only supported for kiosk-mode and managed guest session devices. |
+| :::image type="icon" source="../media/icons/remote-actions/retire.svg" border="false"::: | [Retire][RA-WIPE] | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment. |
 
 ---
 

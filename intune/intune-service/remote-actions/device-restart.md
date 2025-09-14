@@ -33,6 +33,12 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 > - Windows
 > - ChromeOS
 
+::: zone pivot="chrome"
+
+> [!NOTE]
+> Restart is only available for kiosk devices and managed guest session devices. The restart fails on any other type of device. For more information, see [Kiosk apps, managed guest sessions, and smart cards](https://support.google.com/chrome/a/topic/6128720?) (opens Google Chrome Enterprise Help).
+::: zone-end
+
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
@@ -96,12 +102,3 @@ For more information about WNS, see [Network endpoint requirements](../fundament
 
 ::: zone pivot="windows,ios,macos,android,chrome"
 ::: zone-end
-
-
-<!--
->[!IMPORTANT]
-> Device users aren't automatically notified of restarts, and might lose unsaved work if you don't tell them about it ahead of time.
-
-Restart is only available for kiosk devices and managed guest session devices. The restart fails on any other type of device. For more information, see [Kiosk apps, managed guest sessions, and smart cards](https://support.google.com/chrome/a/topic/6128720?) (opens Google Chrome Enterprise Help).
-
--->

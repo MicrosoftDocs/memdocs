@@ -67,13 +67,12 @@ Select one of the following tabs to learn more about the available bulk remote a
 
 # [:::image type="icon" source="../media/icons/platforms/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
-| Bulk action           | Description                                                                              |
-|-----------------------|------------------------------------------------------------------------------------------|
-| [Deprovision][RA-DEPR]           | Deprovision a device.                                                                    |
-| [Lost mode][RA-LOSTMODE]             | Put a device in lost mode.                                                               |
-| [Restart][RA-RESTART] | Restarts a device.                                                                       |
-| [Wipe][RA-WIPE]       | This action restores a device to its factory settings and removes all data and settings. |
-
+| Bulk action              | Description                                                                                                                                                                              |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Deprovision][RA-DEPR]   | Removes Google Admin policies from a ChromeOS device that is no longer in use.                                                                                                           |
+| [Lost mode][RA-LOSTMODE] | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this is referred to as **Disabled**. |
+| [Restart][RA-RESTART]    | Reboots the device remotely. This action is only supported for kiosk-mode and managed guest session devices.                                                                             |
+| [Retire][RA-WIPE]        | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment.                  |
 ---
 
 ## Execute a bulk device action
