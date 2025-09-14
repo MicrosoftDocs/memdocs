@@ -17,7 +17,7 @@ items:
     href: device-activation-lock-disable.md
   - name: Delete
     href: device-delete.md
-  - name: Deprovision
+  - name: Deprovision 🟢
     href: device-deprovision.md
   - name: Fresh Start
     href: device-fresh-start.md
@@ -27,7 +27,7 @@ items:
     href: device-locate.md
   - name: Logout active user
     href: device-logout-user.md
-  - name: Lost Mode
+  - name: Lost Mode 🟢
     href: device-lost-mode.md
   - name: New remote assistance session 🔴
     href: device-remote-assist.md
@@ -49,7 +49,7 @@ items:
     href: device-rename.md
   - name: Reset passcode
     href: device-passcode-reset.md
-  - name: Restart device
+  - name: Restart device 🟢
     href: device-restart.md
   - name: Retire
     href: device-retire.md
@@ -67,7 +67,7 @@ items:
     href: device-sync.md
   - name: Update cellular data plan
     href: update-cellular-data-plan.md
-  - name: Wipe
+  - name: Wipe 🟢
     href: device-wipe.md
 - name: Troubleshoot device actions 🔗
   href: /troubleshoot/mem/intune/troubleshoot-device-actions

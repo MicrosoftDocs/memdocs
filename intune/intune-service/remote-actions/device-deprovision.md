@@ -8,16 +8,12 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-- highpri
 ---
 
 
 # Deprovision chromeOS device
 
-Select **Deprovision** to remove Google Admin policies from devices your organization no longer uses. To deprovision a ChromeOS device, you must be assigned a role that has the *Remote tasks: Retire* permission.
-
-After you deprovision a device, it remains in the Intune admin center and the Google Admin console. Then on the admin center **System info** page, the device status changes to **DEPROVISIONED**. The device can't be enrolled again until you restore it to factory settings. For more information about the deprovision action, such as how to select the best reason for deprovisioning, see the [Chrome Enterprise and Education Help documentation](https://support.google.com/chrome/a/answer/3523633?).
-
+The **Deprovision** device action in Microsoft Intune enables IT administrators to remove Google Admin policies from ChromeOS devices that are no longer in use by the organization.
 
 ## Requirements
 
@@ -28,16 +24,28 @@ After you deprovision a device, it remains in the Intune admin center and the Go
 >
 > - ChromeOS
 
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 
 > [!div class="checklist"]
 > To execute this remote action, you must use an account that has at least one of the following roles:
 >
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Retire**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
+## How to retire a device from the Intune admin center
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. From the devices list, select a device.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Deprovision**. To confirm, select **Yes**.
+
+After you deprovision a device, it remains in the Intune admin center and the Google Admin console. Then on the admin center **System info** page, the device status changes to **DEPROVISIONED**. The device can't be enrolled again until you restore it to factory settings. For more information about the deprovision action, such as how to select the best reason for deprovisioning, see the [Chrome Enterprise and Education Help documentation](https://support.google.com/chrome/a/answer/3523633?).
 
 ## Reference links
 
-- Microsoft Graph API: [ action][GRAPH-1]
-
+- Microsoft Graph API: [deprovision action][GRAPH-1]
 
 <!--links-->
 
@@ -54,4 +62,4 @@ After you deprovision a device, it remains in the Intune admin center and the Go
 
 <!-- API links -->
 
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-rotateFileVaultKey
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-deprovision

@@ -177,4 +177,14 @@ groups:
     title: Windows
   - id: macos
     title: macOS
+
+- id: 46b8d067-28e2-43a6-97b2-ffcc8414e503
+  title: Device platform
+  prompt: "Choose the platform to run remote actions on:"
+  pivots:
+  - id: ios
+    title: iOS/iPadOS
+  - id: chromeos
+    title: ChromeOS
+
 ####

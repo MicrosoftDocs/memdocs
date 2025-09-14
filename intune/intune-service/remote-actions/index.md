@@ -128,35 +128,14 @@ Select one of the following tabs to learn more about the available remote action
 > [!NOTE]
 > To manage ChromeOS devices with Intune, you must first [set up the Chrome Enterprise connector](../enrollment/chrome-enterprise-connector-configure.md) and enroll devices using the Google Admin console. This integration allows you to manage ChromeOS devices alongside other platforms in Intune.
 
-### Deprovision
+# [:::image type="icon" source="../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
-### Lost mode
-
-Select **Lost mode** to prevent other people from using a lost or stolen ChromeOS device. Devices in lost mode display the contact information and message you configured in the Google Admin console. To deprovision a device, you must be assigned a role that has the following permissions:
-
-- *Remote tasks: Enable lost mode*
-- *Remote tasks: Disable lost mode*
-
->[!TIP]
-> Chrome Enterprise and the Google Admin console refer to devices in lost mode as *disabled*. For more information about how to disable a device, see the Chrome Enterprise and Education Help documentation.
-
-### Restart
-
-Select **Restart** to restart a device. To restart a device, you must be assigned a role that has the *Remote tasks: Reboot now* permission.
-
->[!IMPORTANT]
-> Device users aren't automatically notified of restarts, and might lose unsaved work if you don't tell them about it ahead of time.
-
-Restart is only available for kiosk devices and managed guest session devices. The restart fails on any other type of device. For more information, see [Kiosk apps, managed guest sessions, and smart cards](https://support.google.com/chrome/a/topic/6128720?) (opens Google Chrome Enterprise Help).
-
-### Wipe
-
-Select **Wipe** to remove data from a device. With this action, you can either:
-
-- **Remove user profiles only**: This option removes all user account data. Device and enrollment policies remain on the device.
-- **Factory reset (powerwash)**: This option fully restores a device to its factory state, removing all personal and work data. Before using this action, [deprovision](device-deprovision.md) the device. Otherwise, once it connects to Wi-Fi, it will automatically enroll again.
-
-To wipe a device, you must be assigned a role that has the *Remote tasks: Wipe* permission. For more information about wiping ChromeOS devices, see [Wipe ChromeOS device data](https://support.google.com/chrome/a/answer/1360642) (opens Google Chrome Enterprise Help).
+| Icon | Action | Description |
+|--|--|--|
+| :::image type="icon" source="../media/icons/remote-actions/retire.svg" border="false"::: | [Deprovision][RA-DEPR] | . |
+| :::image type="icon" source="../media/icons/remote-actions/lost-mode.svg" border="false"::: | [Lost mode][RA-LOSTMODE] | . |
+| :::image type="icon" source="../media/icons/remote-actions/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
+| :::image type="icon" source="../media/icons/remote-actions/retire.svg" border="false"::: | [Retire][RA-WIPE] | . |
 
 ---
 

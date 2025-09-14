@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 
-zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
+zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 ---
 
 # Wipe devices using Intune
@@ -30,6 +30,7 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned work profile (COPE)
 > - Android Open Source Project (AOSP)
+> - ChromeOS
 > - iOS/iPadOS (corporate-owned)
 > - macOS
 > - Windows
@@ -114,7 +115,18 @@ To factory reset a Zebra Android device, use one of the following methods:
 
 ::: zone-end
 ::: zone pivot="ios"
-1. For iOS/iPadOS eSIM devices, the cellular data plan is preserved by default when you wipe a device. If you want to remove the data plan from the device when you wipe the device, select the **Also remove the devices data plan...** option.
+4. For iOS/iPadOS eSIM devices, the cellular data plan is preserved by default when you wipe a device. If you want to remove the data plan from the device when you wipe the device, select the **Also remove the devices data plan...** option.
+::: zone-end
+
+::: zone pivot="chromeos"
+
+4. Select on of the following options:
+
+    - **Remove user profiles only**: To remove all user account data. Device and enrollment policies remain on the device.
+    - **Factory reset (powerwash)**: To restore a device to its factory state, removing all personal and work data. Before using this action, [deprovision](device-deprovision.md) the device. Otherwise, once it connects to Wi-Fi, it will automatically enroll again.
+
+For more information about wiping ChromeOS devices, see [Wipe ChromeOS device data](https://support.google.com/chrome/a/answer/1360642).
+
 ::: zone-end
 
 [!INCLUDE [multiple-administrative-approval](includes/multiple-administrative-approval.md)]
@@ -125,7 +137,9 @@ To factory reset a Zebra Android device, use one of the following methods:
 
 ::: zone-end
 
+::: zone pivot="android,ios,macos,windows"
 [!INCLUDE [remove-device-from-entra-id](includes/remove-device-from-entra-id.md)]
+::: zone-end
 
 ## Reference links
 

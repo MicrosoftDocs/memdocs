@@ -9,15 +9,29 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 
+zone_pivot_groups: 46b8d067-28e2-43a6-97b2-ffcc8414e503
 ---
 
-# Use Lost Mode using Intune
+# Enable Lost Mode using Intune
 
 The **Lost Mode** device action in Microsoft Intune allows IT administrators to remotely lock and track lost or stolen iOS/iPadOS devices. When activated, Lost Mode displays a custom message and contact phone number on the device's lock screen—helping facilitate recovery while protecting corporate data.
 
 Once enabled, the device is locked and can't be accessed until Lost Mode is disabled by an administrator. While in Lost Mode, the device's location can also be tracked with the **[Locate device](device-locate.md)** action, making it easier to recover.
 
 Lost Mode is a lightweight but powerful tool that helps organizations safeguard sensitive information, support device recovery, and maintain compliance—all without wiping or unenrolling the device.
+
+::: zone pivot="ios"
+::: zone-end
+
+::: zone pivot="chromeos"
+::: zone-end
+
+<!--
+Select **Lost mode** to prevent other people from using a lost or stolen ChromeOS device. Devices in lost mode display the contact information and message you configured in the Google Admin console.
+
+>[!TIP]
+> Chrome Enterprise and the Google Admin console refer to devices in lost mode as *disabled*. For more information about how to disable a device, see the Chrome Enterprise and Education Help documentation.
+-->
 
 ## Requirements
 
