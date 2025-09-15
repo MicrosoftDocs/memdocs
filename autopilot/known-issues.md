@@ -147,6 +147,10 @@ The Windows Autopilot deployment report was updated to a new infrastructure that
 ### Auto logon for Kiosk device profile only partially fixed
 
 Date added: *August 21, 2024*
+Date updated: *September 15, 2025*
+> [!NOTE]
+>
+> This issue has been fixed in Windows 11, version 24H2 on systems that have been patched with [KB5058411](https://support.microsoft.com/en-us/topic/may-13-2025-kb5058411-os-build-26100-4061-356568c2-c730-469e-819d-b680d43b1265) or later.
 
 The known issue of [Kiosk device profiles not auto logging in when auto logon was enabled](#kiosk-device-profile-not-auto-logging-in) was previously reported as fixed. However, there are scenarios where the issue might still occur when using autologon with Kiosks and [Assigned Access](/windows/configuration/assigned-access/overview). If multiple reboots or unexpected reboots occur during the Windows out-of-box experience (OOBE) when initially configuring the Kiosk, the autologon entries in the registry might be deleted. The issue is being investigated.
 
