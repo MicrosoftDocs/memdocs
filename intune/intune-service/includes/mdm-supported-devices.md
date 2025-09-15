@@ -36,7 +36,7 @@ ms.localizationpriority: high
 - Android Enterprise corporate owned work profile
 - Android Enterprise fully managed
 - Android Open Source Project (AOSP) user-based
-- Android device administrator (Note that [Intune ended support for Android device administrator on devices with GMS in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443)
+- Android device administrator (Note that [Intune ended support for Android device administrator on devices with GMS in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443))
 
 **Android 8.0 and later for userless management methods**. These methods are:
 - Android Enterprise dedicated
