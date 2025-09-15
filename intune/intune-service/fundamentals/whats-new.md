@@ -248,7 +248,6 @@ References in Intune documentation and the Intune admin center have been updated
 > [!NOTE]
 > The **Resource explorer** pane that displays Configuration Manager data via [tenant attach](/intune/configmgr/tenant-attach/resource-explorer) still retains its original name.
 
-
 ## Week of September 8, 2025
 
 ### Device security
@@ -368,8 +367,7 @@ The Intune [settings catalog](../configuration/settings-catalog.md) lists all th
   | **Microsoft Edge** > **Allow SpeculationRules prefetch for ServiceWorker-controlled URLs** | PrefetchWithServiceWorkerEnabled |
   | **Microsoft Edge** > **Control whether TLS 1.3 Early Data is enabled in Microsoft Edge** | TLS13EarlyDataEnabled |
   | **Microsoft Edge** > **Allow pages to use the built-in AI APIs** | BuiltInAIAPIsEnabled |
-  | **Microsoft Edge** > **Allow SpeculationRules prefetch for ServiceWorker-controlled URLs** | PrefetchWithServiceWorkerEnabled |
-
+ 
   The following legacy settings are deprecated, and should not be used:
 
   | Setting | CSP |
