@@ -58,10 +58,10 @@ Derived credentials are an implementation of the National Institute of Standards
 
  To complete enrollment, you must have:
 
-* Your school or work-provided smart card
-* Access to a computer or kiosk where you can sign in with your smart card
-* Your mobile device
-* The Intune Company Portal app for iOS and iPadOS installed on your device   
+* Your school or work-provided smart card.  
+* Access to a computer or kiosk where you can sign in with your smart card.  
+* Your mobile device.  
+* The Intune Company Portal app for iOS and iPadOS installed on your device. Company Portal, app version 5.2509.0, is required with the use of Purebred, version 3. We recommend installing the latest version of Company Portal on your device.   
 
 You'll also need to contact a Purebred agent or representative during setup.  
 
@@ -101,8 +101,8 @@ Set up the Purebred app on your device. We recommend installing the latest versi
 
 Install only one version on your device. Installing more than one instance of the Purebred app could cause problems. 
 
-### Purebred version 3 
-Use these instructions to set up Purebred, version 3 on your work device.  
+### Purebred version 3  
+Use these instructions to set up Purebred, version 3 on your work device. 
 1. Work with your organization's Purebred agent to enroll your device in the Purebred system.  
 1. After the setup is complete, return to the Company Portal app.
 1. On the **Setup mobile smart card access** screen, tap **Continue**.  
