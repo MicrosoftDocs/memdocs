@@ -35,7 +35,8 @@ ms.collection:
 
 This article goes over the properties supported in the Intune Data Platform. The Intune Data Platform can be accessed via Device query for single devices, Inventory, and Device query for Multiple Devices.
 
-Each table (entity) in this page lists the types of queries that are supported with the following information:  
+Each table (entity) in this page lists the types of queries that are supported with the following information:
+
 - Property: The name of the variable we collect and store.  
 - Type: The data type you can expect to see, such as *string* or *boolean*.  
 - Description: The purpose of the property. 
@@ -76,7 +77,7 @@ For entities that include Android data, the following platforms are supported:
 |  MdmLostModeEnabled  |  bool  |  Specifies if Managed Lost Mode is enabled  |iOS, iPadOS|
 |  PinRequiredForDeviceLock  |  bool  |  Is a PIN required for device lock scenarios  |macOS|
 |  PinRequiredForEraseDevice  |  bool  |  Is a PIN required before erasing the device  |macOS|
-|  Supervised  |  bool  |  If true, it’s a supervised device. |iOS, iPadOS, macOS|
+|  Supervised  |  bool  |  If true, it's a supervised device. |iOS, iPadOS, macOS|
 |  SupportsiOSAppInstalls  |  bool  |  Are iOS app installs supported on this device  |macOS|
 |  SystemIntegrityProtectionEnabled  |  bool  |  System Integrity Protection (SIP) is a security technology on Mac that prevents malicious software from modifying protected resources  |macOS|
 
@@ -99,7 +100,7 @@ For entities that include Android data, the following platforms are supported:
 | IsDefaultCatalog | bool | If true, CatalogURL is the default catalog. |macOS|
 | PerformPeriodicCheck | bool | If true, start a new scan. |macOS|
 | PreviousScanDateTime | DateTime | The date of the last software update scan. |macOS|
-| PreviousScanResult | string | The result code of last software update scan; ”0” = success. |macOS|
+| PreviousScanResult | string | The result code of last software update scan; "0" = success. |macOS|
 
 ## Battery
 
@@ -165,7 +166,7 @@ For entities that include Android data, the following platforms are supported:
 | --- | --- | --- | --- |
 | CellularTechnology | string | The cellular technology type. |Android, iOS, iPadOS|
 | DataRoamingEnabled | bool | If true, the device enables data roaming. |iOS, iPadOS|
-| HotspotEnabled | bool | If true, the device enables Personal Hotspot, which isn’t available for all carriers. |iOS, iPadOS|
+| HotspotEnabled | bool | If true, the device enables Personal Hotspot, which isn't available for all carriers. |iOS, iPadOS|
 | ModemFirmwareVersion | string | The modem firmware version. |iOS, iPadOS|
 | NetworkTethered | bool | If true, the device is network-tethered. |iOS, iPadOS|
 
@@ -450,8 +451,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | QuotaSizeBytes | long | The quota size in bytes for each user on this shared iPad device |iPadOS|
 | ResidentUsersCount | long | The number of users currently on this shared iPad device. |iPadOS|
 | SkipLanguageAndLocaleSetupForNewUsers | bool | If true, skip the language and country/region panes for new users on Shared iPad. |iPadOS|
-| TemporarySessionTimeoutSeconds | long | The timeout interval for the temporary session. A value of 0 indicates that there’s no timeout. |iPadOS|
-| UserSessionTimeoutSeconds | long | The timeout interval for the user session. A value of 0 indicates that there’s no timeout. |iPadOS|  
+| TemporarySessionTimeoutSeconds | long | The timeout interval for the temporary session. A value of 0 indicates that there's no timeout. |iPadOS|
+| UserSessionTimeoutSeconds | long | The timeout interval for the user session. A value of 0 indicates that there's no timeout. |iPadOS|  
 
 ## SystemEnclosure
 
@@ -678,7 +679,3 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | ModulePath | string (max 4,096 characters) | Path to ServiceDll |Windows|
 | ServiceDescription | string (max 256 characters) | Service Description |Windows|
 | WindowsUserAccount | string (max 256 characters) | The name of the account that the service process is logged on as when it runs. This name can be of the form Domain\UserName |Windows|
-
-
-
-
