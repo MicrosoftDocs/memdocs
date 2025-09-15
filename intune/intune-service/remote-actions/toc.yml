@@ -1,7 +1,7 @@
 items:
-- name: Remote device actions overview 🟠
+- name: Remote device actions overview
   href: index.md
-- name: Bulk device actions 🟠
+- name: Bulk device actions
   href: bulk-device-actions.md
 - name: Device cleanup rules 🟠
   href: device-cleanup-rules.md

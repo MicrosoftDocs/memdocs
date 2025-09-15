@@ -31,7 +31,7 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP]
 > - macOS
 > - Windows
-> - ChromeOS
+> - ChromeOS (kiosk mode or managed guest session)
 
 ::: zone pivot="chrome"
 

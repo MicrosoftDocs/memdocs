@@ -32,6 +32,7 @@ Chrome Enterprise and the Google Admin console refer to devices in lost mode as 
 > This remote action is supported on the following platforms:
 >
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
+> - ChromeOS
 
 ### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
 

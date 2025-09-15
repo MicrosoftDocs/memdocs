@@ -10,8 +10,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-
-# Deprovision chromeOS device
+# Deprovision devices using Intune
 
 The **Deprovision** device action in Microsoft Intune enables IT administrators to remove Google Admin policies from ChromeOS devices that are no longer in use by the organization.
 
@@ -35,13 +34,13 @@ The **Deprovision** device action in Microsoft Intune enables IT administrators 
 >   - The permission **Remote tasks/Retire**
 >   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-## How to retire a device from the Intune admin center
+## How to deprovision a device from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, locate the row of remote action icons. Select **Deprovision**. To confirm, select **Yes**.
 
-After you deprovision a device, it remains in the Intune admin center and the Google Admin console. Then on the admin center **System info** page, the device status changes to **DEPROVISIONED**. The device can't be enrolled again until you restore it to factory settings. For more information about the deprovision action, such as how to select the best reason for deprovisioning, see the [Chrome Enterprise and Education Help documentation](https://support.google.com/chrome/a/answer/3523633?).
+After you deprovision a device, it remains in the Intune admin center and the Google Admin console. In the **System info** pane, the device status changes to **Deprovisioned**. The device can't be enrolled again until you restore it to factory settings. For more information about the deprovision action, such as how to select the best reason for deprovisioning, see the [Chrome Enterprise and Education Help documentation](https://support.google.com/chrome/a/answer/3523633?).
 
 ## Reference links
 
@@ -57,6 +56,7 @@ After you deprovision a device, it remains in the Intune admin center and the Go
 <!-- role links -->
 
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
 [INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 
