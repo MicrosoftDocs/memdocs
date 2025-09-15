@@ -61,7 +61,7 @@ You can configure Intune to automatically clean up devices that appear to be ina
 
 ## Requirements
 
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To configure device cleanup rules, you must use an account that has at least one of the following roles:
@@ -98,7 +98,7 @@ You can configure Intune to automatically clean up devices that appear to be ina
         - Windows Holographic
         - visionOS
         - tvOS
-    
+
     You can create one rule per platform. The rule applies to all devices in your organization with the platform you select.
 
 1. Select **Next**.

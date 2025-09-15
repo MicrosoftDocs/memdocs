@@ -21,7 +21,7 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 
 ## Requirements
 
-### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
@@ -35,7 +35,7 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 > - macOS
 > - Windows
 
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To execute this remote action, you must use an account that has at least one of the following roles:
@@ -167,6 +167,3 @@ For more information about wiping ChromeOS devices, see [Wipe ChromeOS device da
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-wipe
 [CSP-1]: /windows/client-management/mdm/remotewipe-csp
-
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]

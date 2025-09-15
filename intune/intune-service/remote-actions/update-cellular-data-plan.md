@@ -17,14 +17,14 @@ The **Update cellular data plan** remote action lets you remotely activate an eS
 
 ## Requirements
 
-### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
 > - iOS/iPadOS
 
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To execute this remote action, at a minimum, use an account that has one of the following roles:

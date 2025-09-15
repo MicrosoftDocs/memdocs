@@ -21,7 +21,7 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 
 ## Requirements
 
-### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
@@ -39,7 +39,7 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 > Restart is only available for kiosk devices and managed guest session devices. The restart fails on any other type of device. For more information, see [Kiosk apps, managed guest sessions, and smart cards](https://support.google.com/chrome/a/topic/6128720?) (opens Google Chrome Enterprise Help).
 ::: zone-end
 
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To execute this remote action, you must use an account that has at least one of the following roles:
