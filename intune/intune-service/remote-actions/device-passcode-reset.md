@@ -28,6 +28,17 @@ With the **reset passcode** action in Microsoft Intune, you can remotely reset a
 > - Android Enterprise personally-owned work profile (BYOD)
 > - Android Open Source Project (AOSP)
 
+### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+
+> [!div class="checklist"]
+> To execute this remote action, you must use an account that has at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote Tasks/Reset Passcode**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+
 ## Passcode reset types
 
 When working with Android devices, it's important to understand the two types of passcode resets available:
@@ -47,17 +58,6 @@ The following table summarizes the passcode reset types based on platform:
 
 > [!IMPORTANT]
 > Before initiating a passcode reset, ensure that the passcode requirement is enforced via [device configuration policies][INT-1]—otherwise, the reset fails.
-
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
-
-> [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
->
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
->   - The permission **Remote Tasks/Reset Passcode**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
 ## How to reset a passcode from the Intune admin center
 
