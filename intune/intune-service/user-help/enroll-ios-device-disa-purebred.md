@@ -125,7 +125,7 @@ Use these instructions to set up Purebred, version 3 on your work device.
        > [!div class="mx-imgBorder"]
        > ![Example screenshot highlighting the PurbredRegistration option and subsequent screen with certificates and zip files.](./media/enroll-ios-device-disa-purebred/browse-files.png)  
 
-       The zip files contain different combinations of certificates. Once you know which certificate or zip file you want to use, tap the zip file or certificate to import it.  
+       The zip files contain different combinations of certificates. Tap the `all.zip` file to import it.  
       > [!CAUTION] 
       > Examine the contents of the zip file or certificate to confirm that you are selecting the right one. If you accidentally tap the wrong zip file or certificate, it will be imported and you won’t be able to go back without starting over. To see the contents of a zip file, press and hold the zip file, and then tap **View zip Details**. Tap **Dismiss** when you're ready to move on from the details. To view the details of an individual certificate, press and hold a certificate file, and then tap **View certificate details**.  
 1. Wait for the success message in the Purebred app. It should appear within a few minutes. Tap **Done** to end setup. 
