@@ -248,6 +248,50 @@ References in Intune documentation and the Intune admin center have been updated
 > [!NOTE]
 > The **Resource explorer** pane that displays Configuration Manager data via [tenant attach](/intune/configmgr/tenant-attach/resource-explorer) still retains its original name.
 
+
+#### Intune supports iOS/iPadOS 17.x as the minimum version<!--33405397-->
+
+Apple released iOS 26 and iPadOS 26. With this release, Microsoft Intune—including the Intune Company Portal and app protection policies (APP, also known as MAM)—now requires iOS/iPadOS 17 or later.
+
+For more information on this change, go to [Plan for change: Intune is moving to support iOS/iPadOS 17 and later](#plan-for-change-intune-is-moving-to-support-iosipados-17-and-later).
+
+> [!NOTE]
+> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
+
+> [!div class="checklist"]
+> Applies to:
+> - iOS/iPadOS
+
+#### Intune supports macOS 14.x as the minimum version<!--33412147 -->
+
+Apple released macOS 26 (Tahoe). With this release, Microsoft Intune, the Company Portal app, and the Intune MDM agent now require macOS 14 (Sonoma) or later.
+
+For more information on this change, go to [Plan for change:  Intune is moving to support macOS 14 and later](#plan-for-change-intune-is-moving-to-support-macos-14-and-higher-later-this-year).
+
+> [!NOTE]
+> macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
+
+For a list of supported OS version, see [Supported operating systems and browsers in Intune](supported-devices-browsers.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
+
+### Device security
+
+#### Company Portal supports Purebred's new derived credentials experience<!--31973776-->
+
+Apple has released iOS 26 and iPadOS 26. With this update, Purebred (version 3) introduces a new and improved derived credentials experience. As part of day zero support, Company Portal will support Purebred's updated workflow.
+
+- If your organization plans to continue using the older version of Purebred, there will be no changes to your derived credentials experience in Purebred or Company Portal—even if you upgrade to the latest version of Company Portal.
+- If your organization plans to upgrade to the new version of Purebred, make sure to update to Company Portal version 5.2509.0 to ensure compatibility.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+
 ## Week of September 8, 2025
 
 ### Device security
@@ -289,7 +333,7 @@ For more information about the Intune enrollment status page, see [Set up Enroll
 
 ### Device configuration recommendations from the Security Copilot Vulnerability Remediation Intune agent<!-- 34346149 -->
 
-To help reduce your organization’s attack surface against vulnerabilities, the Security Copilot Vulnerability Remediation Intune agent now provides recommended configurations for settings related to a reported vulnerability.
+To help reduce your organization's attack surface against vulnerabilities, the Security Copilot Vulnerability Remediation Intune agent now provides recommended configurations for settings related to a reported vulnerability.
 
 You can find the recommended configurations after selecting *Agent suggestions* for a reported vulnerability, which opens the *Suggested action* pane. On the suggested action pane there is a new section of information titled **Configurations**.
 
