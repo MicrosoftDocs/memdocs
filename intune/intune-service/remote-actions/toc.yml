@@ -29,7 +29,7 @@ items:
     href: device-logout-user.md
   - name: Lost Mode
     href: device-lost-mode.md
-  - name: New remote assistance session 🔴
+  - name: New remote assistance session
     href: device-remote-assist.md
   - name: Pause config refresh
     href: pause-config-refresh.md

@@ -10,70 +10,23 @@ ms.collection:
 - highpri
 ---
 
-# New Remote Assistance Session
+# Remotely assist users with Intune
 
-## Requirements
+Microsoft Intune provides remote assistance capabilities to help IT support teams troubleshoot and resolve issues on user devices. This functionality is available through two integration paths: **Remote Help** (part of the Intune Suite) and **TeamViewer**. Each option offers different features, licensing requirements, and setup steps.
 
-### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+## How It Works
 
-> [!div class="checklist"]
-> This remote action is supported on the following platform:
->
-> -
-> -
-> -
-> -
+When selecting the **New remote assistance session** action in Intune:
 
-### :::image type="icon" source="../media/icons/headers/rbac.svg" border="false"::: Role and permission requirements
+- If your tenant is configured for **Remote Help**, the session will launch using Microsoft's Remote Help app.
+- If your tenant is configured for **TeamViewer**, the session will launch using TeamViewer's remote support interface.
 
-> [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
->
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
->   - The permissions `Microsoft.Intune_RemoteAssistance_Read`
->   - `Microsoft.Intune_RemoteAssistanceApp_Elevation`
->   - `Microsoft.Intune_RemoteAssistanceApp_TakeFullControl`
->   - `Microsoft.Intune_RemoteAssistanceApp_Unattended`
->   - `Microsoft.Intune_RemoteAssistanceApp_ViewScreen`
->   - `Microsoft.Intune_RemoteTasks_RequestRemoteAssistance`
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+## Learn More
 
-## How to offer remote assistance from the Intune admin center
+Every solution has its own requirements and options. For more information, see:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
-1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **New Remote Assistance Session**.
+- [Remote Help][RA-HELP]
+- [TeamViewer][RA-TVIEW]
 
-## Reference links
-
-- Microsoft Graph API: [action][GRAPH-1]
-
-
-
-
-[Use Remote Help with Intune](../fundamentals/remote-help.md)
-[See device details in Intune](../fundamentals/device-inventory.md)
-
-<!--links-->
-
-<!-- admin center links -->
-
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
-
-<!-- role links -->
-
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-
-<!-- API links -->
-
-[GRAPH-1]: /graph/api/
-
-
-<!-- MSLearn links -->
-
-[WIN-1]: /windows/security/operating-system-security/data-protection/bitlocker/
+[RA-HELP]: ../fundamentals/remote-help.md
+[RA-TVIEW]: ../fundamentals/teamviewer-support.md

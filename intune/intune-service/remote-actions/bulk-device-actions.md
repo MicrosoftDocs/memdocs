@@ -114,7 +114,7 @@ Every bulk remote action has its own steps, which are detailed in the respective
 [RA-ROTLAP]: ../protect/windows-laps-policy.md#manually-rotate-passwords
 [RA-SCAN]: device-scan-defender.md
 [RA-SYNC]: device-sync.md
-[RA-TVIEW]: teamviewer-support.md
+[RA-TVIEW]: ../fundamentals/teamviewer-support.md
 [RA-WIPE]: device-wipe.md
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

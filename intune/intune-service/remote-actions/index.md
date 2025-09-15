@@ -198,7 +198,7 @@ Some remote actions can also be executed in bulk. To learn more, see [Bulk devic
 [RA-SCANQ]: device-quick-scan.md
 [RA-SYNC]: device-sync.md
 [RA-HELP]: ../fundamentals/remote-help.md
-[RA-TVIEW]: teamviewer-support.md
+[RA-TVIEW]: ../fundamentals/teamviewer-support.md
 [RA-WIPE]: device-wipe.md
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
