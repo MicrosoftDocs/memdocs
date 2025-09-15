@@ -34,7 +34,7 @@ Intune Advanced Analytics features build on top of the base Endpoint analytics e
 General requirements:
 
 - Advanced Analytics features are included in [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
-- Network connectivity to required Microsoft endpoints. For more information, see [Microsoft Intune URLs and IP address ranges](https://learn.microsoft.com/mem/intune/fundamentals/intune-endpoints).
+- Network connectivity to required Microsoft endpoints. For more information, see [Microsoft Intune URLs and IP address ranges](/mem/intune/fundamentals/intune-endpoints).
 
 Windows capability requirements:
 
