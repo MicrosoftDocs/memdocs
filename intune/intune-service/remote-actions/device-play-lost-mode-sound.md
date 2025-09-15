@@ -34,7 +34,7 @@ These remote actions are especially useful in environments where devices are sha
 > - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
+[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
 
 ::: zone pivot="ios"
 

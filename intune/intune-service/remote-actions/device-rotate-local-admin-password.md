@@ -26,7 +26,7 @@ The **Rotate local admin password** remote action in Microsoft Intune lets IT ad
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
 > - Windows (corporate-owned)
 
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
+[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
 
 ::: zone pivot="windows"
 

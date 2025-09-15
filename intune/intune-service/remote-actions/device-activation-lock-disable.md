@@ -63,7 +63,7 @@ The business benefits of using Intune to manage Activation Lock are:
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP] through Automated Device Enrollment (ADE)
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
 
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
+[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
 
 Before you can manage Activation Lock, you must configure your devices to allow it.
 

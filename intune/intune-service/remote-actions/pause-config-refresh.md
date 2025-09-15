@@ -28,7 +28,7 @@ With the **Pause Config Refresh** action, IT admins can suspend policy refresh f
 >
 > - Windows 11
 
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
+[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
 
 > [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:

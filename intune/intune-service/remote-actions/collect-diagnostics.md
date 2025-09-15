@@ -25,10 +25,11 @@ The **Collect diagnostics** remote action lets you collect and download managed 
 > [!div class="checklist"]
 > This remote action is supported on the following platforms:
 >
-> - Windows 10, Windows 11
->   - Intune or co-managed devices
->   - Microsoft HoloLens 2 2004 and later
->   - Corporate-owned devices
+> - Android (via app protection)
+> - iOS/iPadOS (via app protection)
+> - Windows (corporate-owned)
+> - Windows Holographic
+
 
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 

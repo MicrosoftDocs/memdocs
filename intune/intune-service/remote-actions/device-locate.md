@@ -32,7 +32,7 @@ Depending on the platform, Intune can also report the last known location if the
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 > - Windows
 
-### :::image type="icon" source="../media/icons/headers/config.svg" border="false"::: Device configuration requirements
+[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
 
 ::: zone pivot="ios"
 
