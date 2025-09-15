@@ -21,18 +21,22 @@ Microsoft Intune Advanced Analytics provides comprehensive visibility of the end
 Advanced Analytics includes the following features:
 
 - **Anomalies** monitors the health of devices in your organization for user experience and productivity regressions following configuration changes. For more information, see [Anomaly detection](anomaly-detection.md).
-    :::image type="content" source="media/advanced-analytics/anomalies-tab.png" lightbox="media/advanced-analytics/anomalies-tab-expanded.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint analytics":::
+
+      :::image type="content" source="media/advanced-analytics/anomalies-tab.png" lightbox="media/advanced-analytics/anomalies-tab-expanded.png" alt-text="Screenshot of the Anomaly tab in Overview section of Endpoint analytics":::
 
 - **Battery health** report helps you understand the battery health of your Windows devices to ensure long battery life and good user experience. For more information, see [Battery health](battery-health.md).
-    :::image type="content" source="media/advanced-analytics/battery-health.png" lightbox="media/advanced-analytics/battery-health-expanded.png" alt-text="This is a screenshot of the Battery Health tab in Advanced analytics":::
+
+      :::image type="content" source="media/advanced-analytics/battery-health.png" lightbox="media/advanced-analytics/battery-health-expanded.png" alt-text="Screenshot of the Battery Health tab in Advanced analytics":::
 
 - **Custom device scopes** allow you to use [Scope tags](../intune-service/fundamentals/scope-tags.md) to slice Endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region. For more information, see [Device scopes](device-scopes.md).
 
 - An **Enhanced device timeline** includes more events and lower data latency to assist with troubleshooting device issues. For more information, see [Enhanced device timeline](enhanced-device-timeline.md).
-    :::image type="content" source="media/advanced-analytics/enhanced-device-timeline.png" alt-text="Enhanced device timeline in endpoint analytics" lightbox="media/advanced-analytics/enhanced-device-timeline-expanded.png":::
+
+      :::image type="content" source="media/advanced-analytics/enhanced-device-timeline.png" alt-text="Screenshot of Enhanced device timeline in endpoint analytics" lightbox="media/advanced-analytics/enhanced-device-timeline-expanded.png":::
 
 - A **Resource Performance** report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions. For more information, see [Resource Performance report](resource-performance-report.md).
-    :::image type="content" source="media/advanced-analytics/report-home.png" lightbox="media/advanced-analytics/report-home-expanded.png" alt-text="This is a screenshot of the Resource performance report page":::
+
+      :::image type="content" source="media/advanced-analytics/report-home.png" lightbox="media/advanced-analytics/report-home-expanded.png" alt-text="Screenshot of the Resource performance report page":::
 
 - **Device query** enables you to get near-real time access to data about the state and configuration of devices. For more information, see [Device query](device-query.md).
 
