@@ -33,7 +33,7 @@ The **Restart** remote action triggers a restart (usually begins within 5 minute
 > - Windows
 > - ChromeOS (kiosk mode or managed guest session)
 
-::: zone pivot="chrome"
+::: zone pivot="chromeos"
 
 > [!NOTE]
 > Restart is only available for kiosk devices and managed guest session devices. The restart fails on any other type of device. For more information, see [Kiosk apps, managed guest sessions, and smart cards](https://support.google.com/chrome/a/topic/6128720?) (opens Google Chrome Enterprise Help).
@@ -100,5 +100,5 @@ For more information about WNS, see [Network endpoint requirements](../fundament
 
 [CSP-1]: /windows/client-management/mdm/reboot-csp
 
-::: zone pivot="windows,ios,macos,android,chrome"
+::: zone pivot="windows,ios,macos,android,chromeos"
 ::: zone-end
