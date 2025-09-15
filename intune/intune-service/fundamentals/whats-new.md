@@ -116,7 +116,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 **Microsoft Defender**:
 
-- The Microsoft Defender category is updated with new settings. Learn more about available macOS Defender settings at [Microsoft Defender - Policies](https://learn.microsoft.com/en-us/defender-endpoint/mac-preferences).
+- The Microsoft Defender category is updated with new settings. Learn more about available macOS Defender settings at [Microsoft Defender - Policies](/defender-endpoint/mac-preferences).
 
 **Restrictions**:
 
@@ -201,7 +201,7 @@ There are new settings (**Devices** > **Manage devices** > **Configuration** > *
   > - Android Enterprise corporate owned fully managed (COBO)
   > - Android Enterprise corporate owned dedicated devices (COSU)
 
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md).
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
 
 #### New prompts available to explore your Intune data<!-- 34601881 -->
 
@@ -210,7 +210,7 @@ You can use Microsoft Copilot in Intune to explore new prompts related to your I
 - Android and Apple device updates
 - Windows Autopilot
 - [Endpoint Privilege Management](../protect/epm-overview.md)
-- [Advanced Analytics](../analytics/advanced-endpoint-analytics.md)
+- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
 
 When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
 
