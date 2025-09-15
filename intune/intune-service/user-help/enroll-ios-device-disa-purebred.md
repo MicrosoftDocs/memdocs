@@ -101,10 +101,7 @@ Set up the Purebred app on your device. We recommend installing the latest versi
 
 Install only one version on your device. Installing more than one instance of the Purebred app could cause problems. 
 
-### Purebred version 3 
-> ![NOTE]
-> Intune Company Portal, app version 5.2509.0 is required with Purebred, version 3.
-
+### Purebred version 3  
 Use these instructions to set up Purebred, version 3 on your work device. 
 1. Work with your organization's Purebred agent to enroll your device in the Purebred system.  
 1. After the setup is complete, return to the Company Portal app.
