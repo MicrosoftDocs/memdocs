@@ -65,9 +65,9 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 Investigate flagged Device correlation groups using device timeline and resource reports to determine root cause. Device correlation groups identify root causes for high & medium severity anomalies, along with at risk devices which may be impacted in the future.
 
 - Best practices:
-  - IT administrators should periodically review the anomaly detection dashboard, to understand the current baseline and prioritise investigations and resolutions of new issues.
+  - IT administrators should periodically review the anomaly detection dashboard, to understand the current baseline and prioritize investigations and resolutions of new issues.
   - Investigate any new reported issues, to identify common factors, as displayed in advanced analytics such as common device hardware.
-  - Prioritise the anomalies to investigate based on severity, and internal knowledge like application criticality.
+  - Prioritize the anomalies to investigate based on severity, and internal knowledge like application criticality.
   - Leverage [device timeline](enhanced-device-timeline.md) to review if there is a specific pattern, such as a device restart or update tied to the anomaly.
   - Work with IT teams to understand any other factors that could be impacting this, such as recent application updates.
   - Review possible remediation actions as noted in the Anomaly report (Driver Updates, Application Updates).
