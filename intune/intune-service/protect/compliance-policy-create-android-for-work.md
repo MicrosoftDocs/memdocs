@@ -6,8 +6,8 @@ description: See a list of all the settings you can use when setting compliance 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 05/12/2025
+manager: laurawi
+ms.date: 09/04/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
