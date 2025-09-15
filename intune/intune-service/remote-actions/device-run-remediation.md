@@ -1,6 +1,6 @@
 ---
 title: "Intune Remote Device Action: Run Remediation"
-description: Learn how to initiate on demand proactive remediation with Microsoft Intune.
+description: Learn how to initiate on demand remediations with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
 
@@ -11,9 +11,11 @@ ms.collection:
 - highpri
 ---
 
+# Run remediations using Intune
 
-# Run remediation
+The **Run remediation** remote action in Microsoft Intune allows IT administrators to proactively detect and resolve support issues on managed devices. This action triggers a remediation script that checks for specific conditions and applies a fix if needed—without requiring user interaction.
 
+Use this action to address common problems such as configuration drift, missing settings, or compliance gaps. It's especially useful for maintaining device health across large environments.
 
 ## Requirements
 
@@ -39,13 +41,15 @@ ms.collection:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Action**.
-1. Select **Yes** to confirm the action.
+1. At the top of the device overview pane, locate the row of remote action icons. Select **Run remediation (preview)**.
+1. In the **Run remediation (preview)** pane, select the Script package you want to run from the list.
+1. To run the remediation, select **Run remediation**.
+
+To learn more about remediations in Microsoft Intune—including what they are, along with prerequisites and licensing requirements—see [Use Remediations to detect and fix support issues][LEARN-1].
 
 ## Reference links
 
 - Microsoft Graph API: [initiateOnDemandProactiveRemediation action][GRAPH-1]
-
 
 <!--links-->
 
@@ -63,3 +67,5 @@ ms.collection:
 <!-- API links -->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-initiateondemandproactiveremediation
+
+[LEARN-1]: ../fundamentals/remediations.md

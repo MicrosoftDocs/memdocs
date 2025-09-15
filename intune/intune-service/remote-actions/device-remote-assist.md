@@ -25,8 +25,8 @@ When selecting the **New remote assistance session** action in Intune:
 
 Every solution has its own requirements and options. For more information, see:
 
-- [Remote Help][RA-HELP]
-- [TeamViewer][RA-TVIEW]
+- [Use Remote Help with Microsoft Intune][RA-HELP]
+- [Use TeamViewer to remotely administer Intune devices][RA-TVIEW]
 
 [RA-HELP]: ../fundamentals/remote-help.md
 [RA-TVIEW]: ../fundamentals/teamviewer-support.md
