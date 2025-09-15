@@ -55,7 +55,7 @@ items:
     href: device-rotate-local-admin-password.md
   - name: Rotate FileVault recovery key
     href: device-rotate-filevault.md
-  - name: Run remediation 🔴
+  - name: Run remediation
     href: device-run-remediation.md
   - name: Send custom notifications
     href: custom-notifications.md
