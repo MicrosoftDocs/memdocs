@@ -298,8 +298,6 @@ PowerShell script installers are available for Enterprise App Catalog apps, prov
 - Intune will still enforce the app's detection rules to confirm installation success
 - Test scripts thoroughly as incorrect scripts could cause app installation to fail
 
-For comprehensive PowerShell script installer guidance, see [Add, assign, and monitor a Win32 app in Microsoft Intune](apps-win32-add.md#powershell-script-installer-best-practices).
-
 ## Next steps
 
 - [App relationship viewer](../apps/apps-win32-app-management.md#app-relationship-viewer)
