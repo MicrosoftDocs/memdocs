@@ -55,7 +55,7 @@ Each elevation rule instructs EPM on how to:
 
 - **Validate the file**:
 
-  - *File hash.* A file hash is required for automatic rules. For user confirmed rules, you can choose to either use a certificate or a file hash, in which case the file hash becomes optional.
+  - *File hash.* A file hash is required for automatic rules. For rules with an elevation type of *User confirmed* or *Elevate as current user*, you can choose to either use a certificate or a file hash, in which case the file hash becomes optional.
   - *Certificate.* File properties can be validated alongside the publisher certificate used to sign the file. Certificates are validated using Windows APIs which check attributes such as trust, certificate expiry and revocation status.
   - *File properties.* Any other properties specified in the rules must match.
 
@@ -63,6 +63,7 @@ Each elevation rule instructs EPM on how to:
   - **Deny**: Deny rules prevent the identified file from being run in an elevated context.
   - **Support approved**: An administrator must approve the [support-required elevation request](../protect/epm-support-approved.md) before the application is allowed to run with elevated privileges.
   - **User confirmed**: A user confirmed elevation always requires the user to select on a confirmation prompt to run the file. The confirmation can only be configured to require a user authentication, a business justification (visible in reporting), or both.
+  - **Elevate as current user**: This type of elevation requires the user to re-authenticate to Windows with valid credentials. The prompt supports Multi-Factor Authentication (MFA). Files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings. , helping to ensure that installers and tools which rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate.
   - **Automatic**: An automatic elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
 
 - **Manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the elevated process creates.
