@@ -146,7 +146,10 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 12. Select **Next**.
 
-13. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+1. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+> [!NOTE]
+> The `retrieveDeviceConfigurationAvailableOptions` function of the [deviceManagementConfigurationSettingDefinition resource type](/graph/api/resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition?view=graph-rest-beta) requires delegated user authentication. Application permissions cannot be used for this endpoint. 
 
 ## Configure the manual DDM software updates policy
 
