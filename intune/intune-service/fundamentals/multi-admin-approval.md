@@ -41,10 +41,10 @@ Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
 - Device actions - Applies to [wipe](../remote-actions/devices-wipe.md#wipe), [retire](../remote-actions/devices-wipe.md#retire) and [delete](../remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center) device actions.
-- Device categories - Applies to managing [device categories](../enrollment/device-group-mapping.md), including creating, editing or deleting them.
 - Role-based access control – Applies to changes to roles, including modifications to role permissions, admin groups, or member group assignments.
 - Scripts – Applies to deploying scripts to devices that run [Windows](../apps/powershell-scripts.md).
 - Access Policies - Applies to creating or managing multiple administrative approval policies.
+- Tenant Configuration - Applies to managing [device categories](../enrollment/device-group-mapping.md), including creating, editing or deleting them.
 
 ## Prerequisites for access policies and approvers
 
