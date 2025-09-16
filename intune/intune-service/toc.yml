@@ -367,6 +367,11 @@ items:
         href: ./fundamentals/multi-admin-approval.md
         displayName: multi-admin approval, maa
 
+    - name: Configure security recommendations using Zero Trust
+      items:
+      - name: Configure security recommendations using Zero Trust
+        href: ./protect/zero-trust-configure-security.md
+ 
   - name: Create and deploy Intune policies
     items:
 
