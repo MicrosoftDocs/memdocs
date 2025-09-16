@@ -24,26 +24,33 @@ After you synchronize software updates in Configuration Manager, configure and v
 After you install the software update point, software updates is enabled on clients by default, and the settings on the **Software Updates** page in client settings have default values. The client settings are used site-wide and affect when software updates are scanned for compliance, and how and when software updates are installed on client computers. Before you deploy software updates, verify that the client settings are appropriate for software updates at your site.
 
 > [!IMPORTANT]
-> - The **Enable software updates on clients** setting is enabled by default. If you clear this setting, Configuration Manager removes the existing deployment policies from the client.
->
-> - Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../core/clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../get-started/software-update-point-ssl.md).
+> - The **Enable software updates on clients** setting is enabled by default. If you clear this setting, Configuration Manager removes the existing deployment policies from the client under certain conditions.
+> 
+- Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../core/clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../get-started/software-update-point-ssl.md).
+
 
 For information about how to configure client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
 
 For more information about the client settings, see [About client settings](../../core/clients/deploy/about-client-settings.md).
 
 
-##  <a name="BKMK_GroupPolicy"></a> Group policy settings for software updates
-There are specific group policy settings that are used by Windows Update Agent (WUA) on client computers to connect to WSUS that runs on the software updates point. These group policy settings are also used to successfully scan for software update compliance, and to automatically update the software updates and the WUA.
+## <a name="BKMK_GroupPolicy"></a>Software Updates Best Practices
 
-### Specify Intranet Microsoft Update Service Location local policy
-When the software update point is created for a site, clients receive a machine policy that provides the software update point server name and configures the **Specify intranet Microsoft update service location** local policy on the computer. The WUA retrieves the server name that is specified in the **Set the intranet update service for detecting updates** setting, and then it connects to this server when it scans for software updates compliance. When a domain policy is created for the **Specify intranet Microsoft update service location** setting, it overrides the local policy, and the WUA might connect to a server other than the software update point. If this happens, the client might scan for software update compliance based on different products, classifications, and languages. Therefore, you should not configure the Active Directory policy for client computers.
+### Conflicting Configurations
 
-### Allow Signed Content from Intranet Microsoft Update Service Location group policy
-You must enable the **Allow signed content from intranet Microsoft update service location** Group Policy setting before the WUA on computers will scan for software updates that were created and published with System Center Updates Publisher. When the policy setting is enabled, WUA will accept software updates that are received through an intranet location if the software updates are signed in the **Trusted Publishers** certificate store on the local computer. For more information about the Group Policy settings that are required for Updates Publisher, see [Updates Publisher 2011 Documentation Library](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).
+The Configuration Manager client sets local group policies to control the software update workflow and scan for update compliance. When domain GPO's are used for Windows Updates, it will override the equivalent setting used by our client. The client expects specific registry values to remain in place without any other platform changing the settings. Domain GPO's can cause the component to go into an error state, even if the setting is perceived to be the same. For example, if a domain group policy sets the WSUS Server, Configuration Manager can't configure or access the setting and may not operate properly. This behavior causes clients to have scan failures and issues reporting compliance back to the site.
 
-### Automatic updates configuration
-Automatic Updates allows security updates and other important downloads to be received on client computers. Automatic Updates is configured through the **Configure Automatic Updates** Group Policy setting or through the Control Panel on the local computer. When Automatic Updates is enabled, client computers will receive update notifications and, depending on the configured settings, the client computers will download and install the required updates. When Automatic Updates coexists with software updates, each client computer might display notification icons and popup display notifications for the same update. Also, when a restart is required, each client computer might display a restart dialog box for the same update.
+### Remove older deployments and software update groups to optimize site performance and improve compliance accuracy
+
+Since updates are cumulative, there is no need to keep older updates deployed, in fact it will actually have a negative impact on the environment
+
+### Remove any unnecessary Products & Categories in the Software Update Properties
+
+Selecting too many products & categories for sync will cause negative performance impacts. Remember that devices have to scan every update in the SUSDB, whether it is deployed or not, so only select products that are relevant and necessary. Many products and categories displayed in the list are only for WSUS and cannot be deployed by Configuration Manager (examples: Dynamic Updates, Servicing Drivers, Silverlight, legacy operating systems that are no longer supported (Windows 7, Windows 8, etc.) - 'Rollups' category, 'Feature Packs' category,  'Service Packs' category, etc.) Do Not Select these items
+
+### Software Updates Scan Cycle and Deployment Cycle
+
+When the scan cycle or deployment cycle client settings are reduced below the default of once per 7 days, be aware that it may have negative impact on performance due to excessive scanning. In general, it is not necessary to scan more than once a week because devices already have a built-in mechanism to scan for updates when they receive a deployment.
 
 ### Self Update
 When Automatic Updates is enabled on client computers, the WUA automatically performs a self-update when a newer version becomes available or when there are problems with a WUA component. When Automatic Updates is not configured or is disabled, and client computers have an earlier version of the WUA, the client computers must run the WUA installation file.
