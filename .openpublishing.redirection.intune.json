@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/protect/windows-information-protection-configure.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/developer/mam-tunnel-ios-xamarin-bindings.md",
       "redirect_url": "/intune/intune-service/developer/app-sdk-get-started",
       "redirect_document_id": false
@@ -3227,7 +3232,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-information-protection-configure.md",
-      "redirect_url": "/intune/intune-service/protect/windows-information-protection-configure",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip",
       "redirect_document_id": false
     },
     {
