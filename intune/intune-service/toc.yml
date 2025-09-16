@@ -2498,5 +2498,3 @@ items:
       href: ./protect/privacy-data-view-correct.md
     - name: Audit, export, delete
       href: ./protect/privacy-data-audit-export-delete.md
-    - name: Windows Information Protection
-      href: ./protect/windows-information-protection-configure.md
