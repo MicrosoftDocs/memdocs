@@ -120,6 +120,8 @@ If you think that the output is incorrect, submit feedback in your Copilot Chat 
 
 Every Copilot response has two feedback buttons – a thumbs up when the response is what you expect, and a thumbs down when the response isn't what you expect. This feedback helps improve the Copilot experience.
 
+:::image type="content" source="./media/copilot-intune-faq/thumbs-up-thumbs-down.png" alt-text="Screenshot that shows how to provide Copilot feedback in Microsoft Intune and Intune admin center.":::
+
 Other things you can try:
 
 - In Microsoft Edge, you can use the F12 developer tools to debug the issue. In the developer debug tool, select the **Network** view. In Copilot, select the prompt to get the output. In the developer debug tool, use the **logs** entries to look more closely at the steps between the prompt input and output.
@@ -130,6 +132,14 @@ Other things you can try:
   - In the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989), you can view the prompt sessions and session IDs from the Intune embedded experience.
 
 To learn more about privacy and data security, what data is collected as part of feedback, and how to disable feedback, see [Privacy and data security in Security Copilot](/copilot/security/privacy-data-security).
+
+### Can I use Give Feedback to submit feedback?
+
+In the admin center, if you select the three dots (...) in the top right corner, you see the **Give Feedback** option. This option is for general feedback about Microsoft Azure, not for Copilot in Intune. Don't use this option to provide any feedback related to Security Copilot in Intune.
+
+:::image type="content" source="./media/copilot-intune-faq/azure-give-feedback.png" alt-text="Screenshot that shows how the Azure feedback option in Microsoft Intune and Intune admin center.":::
+
+To disable the Microsoft Azure **Give Feedback** form, see [Manage access to Microsoft Copilot in Azure](/azure/copilot/manage-access).
 
 ## Related articles
 

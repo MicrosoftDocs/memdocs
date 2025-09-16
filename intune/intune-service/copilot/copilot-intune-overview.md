@@ -41,7 +41,7 @@ Intune has capabilities that are powered by Security Copilot. These capabilities
 
 There are two ways to access your Intune data using Copilot:
 
-- **Microsoft Copilot in Intune** (this article): Copilot is embedded in Intune and is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The Copilot prompts and their output are in the context of Intune and your Intune and Windows 365 Cloud PC data. These capabilities access your Intune and Windows 365 Cloud PC data and help you manage your policies and settings, understand your security posture, and troubleshoot device issues, including Windows 365 Cloud PCs
+- **Microsoft Copilot in Intune** (this article): Copilot is embedded in Intune and is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The Copilot prompts and their output are in the context of Intune and your Intune and Windows 365 Cloud PC data. These capabilities access your Intune and Windows 365 Cloud PC data. They can help you manage your policies and settings, understand your security posture, and troubleshoot device issues, including Windows 365 Cloud PCs.
 
   This experience has an IT admin/IT Pro focus.
 
@@ -87,7 +87,7 @@ To use Copilot in Intune, you should know the following information:
   > [!TIP]
   > Some roles can enable or disable plug-ins. For more information, see [Manage plug-ins in Microsoft Security Copilot](/copilot/security/manage-plugins).
 
-  You would also need to turn on Windows 365 if you plan to use Copilot in Intune for Windows 365 Cloud PCs.
+  To use Copilot in Intune for Windows 365 Cloud PCs, in the [Security Copilot portal](https://securitycopilot.microsoft.com) > **Sources**, enable **Windows 365**.
   
 - **Your Intune data**: Copilot uses your Intune data. When an Intune admin submits a prompt, Copilot can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
 
@@ -214,7 +214,7 @@ To use this feature in Intune, select a device, and then select **Summarize with
 
 :::image type="content" source="./media/copilot-intune-overview/summarize-with-copilot.png" alt-text="Screenshot that shows you can select any device and then select Summarize with Copilot in Microsoft Intune and Intune admin center.":::
 
-This will directly open Copilot chat, if not already open, and will execute the prompt Summarize this device.
+This step automatically opens Copilot chat (if it's not already open), and executes the prompt.
 
 For more information about using Copilot with your devices, go to [Use Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 
