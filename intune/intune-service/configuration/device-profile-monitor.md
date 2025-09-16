@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 05/09/2024
+ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -118,17 +118,13 @@ After you create your device configuration policy, Intune provides reporting dat
 
     The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the effect of a policy and its settings on your users and devices.
 
-    For more information on the different ways you can use Copilot in Intune, go to [Microsoft Copilot in Intune overview](../copilot/copilot-intune-overview.md).
+    For more information on the different ways you can use Copilot in Intune, go to [Copilot in Intune overview](../copilot/copilot-intune-overview.md).
 
 3. Go to **Devices** > **All devices** > select an existing device.
 
-4. Select **Explore with Copilot**:
+4. Select **Summarize with Copilot**. Copilot shows device-specific information, like the device properties, group membership, and more.
 
-    :::image type="content" source="./media/device-profile-monitor/explore-with-copilot.png" alt-text="Screenshot that shows how to select Explore with Copilot when you select a device in Microsoft Intune and Intune admin center.":::
-
-    In the set of prompts, you can get device-specific information, like the assigned policies and compare this device with another device.
-
-    For more information on using Copilot to troubleshoot devices, go to [Use Microsoft Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
+    For information on using Copilot to troubleshoot devices, go to [Use Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
 
 ---
 
@@ -179,7 +175,7 @@ You can use Copilot to help troubleshoot conflicts at the setting level.
 
     :::image type="content" source="./media/device-profile-monitor/copilot-tooltip.png" alt-text="Screenshot that shows the Copilot tooltip for a setting in Microsoft Intune and Intune admin center.":::
 
-    Select the tooltip to get more information about setting. The Copilot prompts can help you understand the effect of the setting, look for potential conflicts, and provide a recommended value.
+    Select the tooltip to get more information about setting. In Copilot Chat, enter `conflicts`. In suggestions, there are some sample prompts you can select, like **Show me policies that contain conflicting settings**.
 
 ---
 
