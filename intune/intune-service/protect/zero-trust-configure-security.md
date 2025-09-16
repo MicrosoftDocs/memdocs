@@ -56,9 +56,9 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24521](./includes/secure-recommendations/24521.md)]-->
 
-<!-- 24555 -->
+### Intune Scope Tags are configured for delegated administration<!-- 24555 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-<!-- [!INCLUDE [24555](./includes/secure-recommendations/24555.md)]-->
+[!INCLUDE [24555](./includes/secure-recommendations/24555.md)]
 
 <!-- 24558 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
