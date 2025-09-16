@@ -286,6 +286,17 @@ For a list of supported OS version, see [Supported operating systems and browser
 
 ### Device security
 
+#### New security baseline update experience<!-- 31607281  -->
+
+We’ve updated the Intune security baseline update experience for the more recent versions of security baselines. With this change, when you update a security baseline that was created after May 2023 to a more recent version of that same baseline, you now have two options to help automatically configure the updated baseline:
+
+- Keep customizations – With this option, Intune applies all the settings customizations from the original baseline that you're upgrading to the new baselines template. The result is that the new baseline instance retains (includes) all your organization's specific modifications.
+- Discard customizations – With this option, Intune creates a new 'default' baseline instance that uses the new baseline version. Each setting in that baseline uses the baseline default and none of your settings customizations are automatically applied.
+
+With both options, your decision is applied to a new profile instance of that baseline, which uses the latest baseline version. This new profile won't have the scope tags or assignments from the original, which you can add later after the new profile has been created. This gives you time to configure additional settings if desired before the updated profile is assigned and begins to deploy the latest baseline version to devices. Meanwhile, your original baseline is left unchanged and remains active, however its setting configurations become read-only.
+
+For more information, see [Update a baseline profile to the latest version](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version)  in Manage security baseline profiles in Microsoft Intune.
+
 #### Company Portal supports Purebred's new derived credentials experience<!--31973776-->
 
 Apple has released iOS 26 and iPadOS 26. With this update, Purebred (version 3) introduces a new and improved derived credentials experience. As part of day zero support, Company Portal will support Purebred's updated workflow.
