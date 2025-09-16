@@ -28,7 +28,7 @@ These remote actions are especially useful in environments where devices are sha
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This remote action is supported on the following platforms:
+> This remote action supports the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
@@ -56,7 +56,7 @@ These remote actions are especially useful in environments where devices are sha
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
+> To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]

@@ -25,7 +25,7 @@ Depending on the platform, Intune can also report the last known location if the
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This remote action is supported on the following platforms:
+> This remote action supports the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
@@ -86,7 +86,7 @@ Before you can use the locate functionality, you must configure your devices to 
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
+> To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -98,7 +98,7 @@ Before you can use the locate functionality, you must configure your devices to 
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Locate device**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Locate device**.
 1. After the device is located, its location is shown in **Locate device**. You can select the location pin on the map to view a location address and coordinates.
 
 ::: zone pivot="android"

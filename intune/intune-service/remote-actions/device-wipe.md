@@ -24,7 +24,7 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This remote action is supported on the following platforms:
+> This remote action supports the following platforms:
 >
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned dedicated (COSU)
@@ -38,7 +38,7 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
+> To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -84,7 +84,7 @@ To factory reset a Zebra Android device, use one of the following methods:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Wipe**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Wipe**.
 
 ::: zone pivot="macos"
 4. Enter a 6-digit **Recovery PIN**. This PIN is required to reinstall the operating system on devices that don't have the T2 security chip—typically models from 2018 or earlier, or devices running macOS 10.14 or earlier. Make sure to record the PIN and share it with the device owner. The PIN won't be visible after the wipe completes.

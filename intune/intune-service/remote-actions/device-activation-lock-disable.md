@@ -58,7 +58,7 @@ The business benefits of using Intune to manage Activation Lock are:
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This remote action is supported on the following platforms:
+> This remote action supports the following platforms:
 >
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP] through Automated Device Enrollment (ADE)
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
@@ -89,7 +89,7 @@ Before you can manage Activation Lock, you must configure your devices to allow 
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
+> To run this remote action, use an account with at least one of the following roles:
 >
 > - Intune Service Administrator
 > - [Custom role][INT-RC] that includes:
@@ -103,7 +103,7 @@ To avoid re-locking the device, make sure you have physical possession of the de
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Disable Activation Lock**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Disable Activation Lock**.
 1. Select **Hardware**, then find and copy the **Activation Lock bypass code** value under **Conditional Access**.
 
     >[!IMPORTANT]
@@ -116,7 +116,7 @@ If you send an unfiltered request for the device object, Graph returns a default
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Wipe**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Wipe**.
 ::: zone pivot="ios"
 3. After the device is reset, you're prompted for the Apple ID and password. Leave the ID field blank, and then enter the **Activation Lock bypass code** for the password. This step removes the account from the device.
 ::: zone-end

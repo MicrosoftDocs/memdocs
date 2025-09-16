@@ -23,7 +23,7 @@ The **Collect diagnostics** remote action lets you collect and download managed 
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This remote action is supported on the following platforms:
+> This remote action supports the following platforms:
 >
 > - Android (via app protection)
 > - iOS/iPadOS (via app protection)
@@ -34,7 +34,7 @@ The **Collect diagnostics** remote action lets you collect and download managed 
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
+> To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -148,7 +148,7 @@ To use the *Collect diagnostics* action:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Collect diagnostics**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Collect diagnostics**.
 1. To confirm, select **Yes**. A pending notification appears on the device's **Overview** page.
 1. To check the status of the action, select **Monitor** > **Device diagnostics**.
 1. After the action completes, select **...** > **Download** in the row for the action > **Yes**.
@@ -163,7 +163,7 @@ To view the diagnostics collected after a Windows Autopilot failure:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Diagnostics** > **Download**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Diagnostics** > **Download**.
 1. The data zip file is added to your download tray and you can save it to your computer.
 
 ### Data collected

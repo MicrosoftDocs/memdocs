@@ -40,7 +40,7 @@ Renaming a device can help improve clarity and consistency across your device in
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This remote action is supported on the following platforms:
+> This remote action supports the following platforms:
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
 > - Android Enterprise corporate-owned Work Profile (COPE)
@@ -51,7 +51,7 @@ Renaming a device can help improve clarity and consistency across your device in
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
+> To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -63,7 +63,7 @@ Renaming a device can help improve clarity and consistency across your device in
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Rename device**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Rename device**.
 ::: zone pivot="windows"
 4. In the **Rename device** pane, type the new name in the text box. The new name must follow these rules:
     - Less than or equal to 63 characters, not including trailing NULL

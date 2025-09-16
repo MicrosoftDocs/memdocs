@@ -20,7 +20,7 @@ The **Update cellular data plan** remote action lets you remotely activate an eS
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This remote action is supported on the following platforms:
+> This remote action supports the following platforms:
 >
 > - iOS/iPadOS
 
@@ -39,7 +39,7 @@ The **Update cellular data plan** remote action lets you remotely activate an eS
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Update cellular data plan (preview)**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Update cellular data plan (preview)**.
     ![Screenshot of updating cellular data plan](images/update-cellular-data-plan.png)
 1. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
 

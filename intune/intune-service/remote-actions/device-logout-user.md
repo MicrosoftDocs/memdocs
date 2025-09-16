@@ -27,7 +27,7 @@ This remote action is useful in environments where multiple users access the sam
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
+> To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Custom role][INT-RC] that includes:
@@ -38,7 +38,7 @@ This remote action is useful in environments where multiple users access the sam
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Logout current user**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Logout current user**.
 
 ## Reference links
 

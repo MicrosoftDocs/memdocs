@@ -26,7 +26,7 @@ The **Remote lock** device action locks a managed device so the user must enter 
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This remote action is supported on the following platforms:
+> This remote action supports the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
@@ -50,7 +50,7 @@ The **Remote lock** device action locks a managed device so the user must enter 
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Remote lock**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Remote lock**.
 ::: zone pivot="macos"
 3. Set a six-digit recovery PIN.
 

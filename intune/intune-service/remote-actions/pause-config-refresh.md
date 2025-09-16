@@ -24,7 +24,7 @@ With the **Pause Config Refresh** action, IT admins can suspend policy refresh f
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This remote action is supported on the following platforms:
+> This remote action supports the following platforms:
 >
 > - Windows 11
 
@@ -40,7 +40,7 @@ To learn more, see [Config Refresh][LEARN-1].
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
+> To run this remote action, use an account with at least one of the following roles:
 >
 > - [Intune Administrator][ENT-R1]
 > - [Custom role][INT-RC] that includes:
@@ -51,7 +51,7 @@ To learn more, see [Config Refresh][LEARN-1].
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Pause Config Refresh**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Pause Config Refresh**.
 1. Specify the number of minutes to pause Config Refresh in the **Time period to Pause Config Refresh**. The maximum is 1,440 minutes (24 hours).
 1. Select **Pause**.
 

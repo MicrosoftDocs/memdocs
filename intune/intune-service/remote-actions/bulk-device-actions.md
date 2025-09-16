@@ -13,9 +13,9 @@ ms.collection:
 
 # Bulk device actions in Intune
 
-Managing devices at scale is a common challenge for IT pros, especially in environments like schools, enterprises, or frontline operations. Microsoft Intune supports bulk remote actions, allowing IT admins to perform tasks on up to 100 devices simultaneously. This capability streamlines operations, reduces manual effort, and ensures consistent policy enforcement across large device fleets.
+Managing devices at scale is a common challenge for IT pros, especially in environments like schools, enterprises, or frontline operations. Microsoft Intune supports bulk remote actions, so IT admins can perform tasks on up to 100 devices at the same time. This capability streamlines operations, reduces manual effort, and ensures consistent policy enforcement across large device fleets.
 
-For example, at the end of a school year, IT admins can use bulk wipe to securely reset student devices before reassigning them for the next term. This saves time and ensures that sensitive data is removed efficiently across all devices.
+For example, at the end of a school year, IT admins can use bulk wipe to securely reset student devices before reassigning them for the next term. This approach saves time and ensures that sensitive data is removed efficiently across all devices.
 
 Select one of the following tabs to learn more about the available bulk remote actions for each platform:
 
@@ -25,52 +25,52 @@ Select one of the following tabs to learn more about the available bulk remote a
 |--------------------------------|--------------------------------------------------------------------------------------------------|
 | [Autopilot reset][RA-APRESET]  | Restores a device to its original settings and removes personal files, apps, and settings.       |
 | [Collect diagnostics][RA-DIAG] | Collects diagnostic logs from a device and uploads the logs to Intune.                           |
-| [Delete][RA-DELETE]            | Removes a device from Intune management, any company data is removed, and the device is retired. |
+| [Delete][RA-DELETE]            | Removes a device from Intune management, removes any company data, and retires the device. |
 | [Rename][RA-REN]               | Changes the device name in Intune.                                                               |
 | [Restart][RA-RESTART]          | Restarts a device.                                                                               |
 | [Retire][RA-RETIRE]            | Removes company data and settings from a device, and leaves personal data intact.                |
 | [Sync][RA-SYNC]                | Syncs a device with Intune to apply the latest policies and configurations.                      |
-| [Wipe][RA-WIPE]                | This action restores a device to its factory settings and removes all data and settings.         |
+| [Wipe][RA-WIPE]                | Restores a device to the factory settings and removes all data and settings.         |
 
 # [:::image type="icon" source="../media/icons/platforms/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
 
 | Bulk action                              | Description                                                                                      |
 |------------------------------------------|--------------------------------------------------------------------------------------------------|
-| [Delete][RA-DELETE]                      | Removes a device from Intune management, any company data is removed, and the device is retired. |
+| [Delete][RA-DELETE]                      | Removes a device from Intune management, removes any company data, and retires the device. |
 | [Rename][RA-REN]                         | Changes the device name in Intune.                                                               |
 | [Restart][RA-RESTART]                    | Restarts a device.                                                                               |
 | [Retire][RA-RETIRE]                      | Removes company data and settings from a device, and leaves personal data intact.                |
 | [Send custom notification][RA-NOTIFY]    | Sends a custom notification message to a device that can be viewed in the Company Portal app.    |
 | [Sync][RA-SYNC]                          | Syncs a device with Intune to apply the latest policies and configurations.                      |
 | [Update cellular data plan][RA-CELLULAR] | Updates the cellular data plan settings for a device that uses an eSIM profile.                  |
-| [Wipe][RA-WIPE]                          | This action restores a device to its factory settings and removes all data and settings.         |
+| [Wipe][RA-WIPE]                          | Restores a device to its factory settings and removes all data and settings.         |
 
 # [:::image type="icon" source="../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
 | Bulk action                              | Description                                                                                      |
 |------------------------------------------|--------------------------------------------------------------------------------------------------|
-| [Delete][RA-DELETE]                      | Removes a device from Intune management, any company data is removed, and the device is retired. |
+| [Delete][RA-DELETE]                      | Removes a device from Intune management, removes any company data, and retires the device. |
 | [Rename device][RA-REN]                  | Changes the device name in Intune.                                                               |
 | [Restart][RA-RESTART]                    | Restarts a device.                                                                               |
 | [Retire][RA-RETIRE]                      | Removes company data and settings from a device, and leaves personal data intact.                |
 | [Sync][RA-SYNC]                          | Syncs a device with Intune to apply the latest policies and configurations.                      |
-| [Wipe][RA-WIPE]                          | This action restores a device to its factory settings and removes all data and settings.         |
+| [Wipe][RA-WIPE]                          | Restores a device to its factory settings and removes all data and settings.         |
 
 # [:::image type="icon" source="../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 | Bulk action           | Description                                                                                      |
 |-----------------------|--------------------------------------------------------------------------------------------------|
-| [Delete][RA-DELETE]   | Removes a device from Intune management, any company data is removed, and the device is retired. |
+| [Delete][RA-DELETE]   | Removes a device from Intune management, removes any company data, and retires the device. |
 | [Rename][RA-REN]      | Changes the device name in Intune.                                                               |
 | [Restart][RA-RESTART] | Restarts a device.                                                                               |
-| [Wipe][RA-WIPE]       | This action restores a device to its factory settings and removes all data and settings.         |
+| [Wipe][RA-WIPE]       | Restores a device to its factory settings and removes all data and settings.         |
 
 # [:::image type="icon" source="../media/icons/platforms/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
 | Bulk action              | Description                                                                                                                                                                              |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Deprovision][RA-DEPR]   | Removes Google Admin policies from a ChromeOS device that is no longer in use.                                                                                                           |
-| [Lost mode][RA-LOSTMODE] | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this is referred to as **Disabled**. |
+| [Deprovision][RA-DEPR]   | Removes Google Admin policies from a ChromeOS device that you no longer use.                                                                                                           |
+| [Lost mode][RA-LOSTMODE] | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this action is referred to as **Disabled**. |
 | [Restart][RA-RESTART]    | Restarts a device.                                                                                                                                                                       |
 | [Retire][RA-WIPE]        | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment.                  |
 
@@ -82,7 +82,7 @@ Every bulk remote action has its own steps, which are detailed in the respective
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices** > [**Bulk device actions**][INT-AC2].
 1. On the **Basics** page, select an **OS** and **Device action** from the dropdowns. Some device actions have more options or fields to populate. Select **Next**.
-1. On the **Devices** page, select up to maximum number of devices that the action supports. Select **Next**.
+1. On the **Devices** page, select up to the maximum number of devices that the action supports. Select **Next**.
 1. On the **Review + create** page, select **Create**.
 
 <!--links-->

@@ -13,7 +13,7 @@ ms.collection:
 
 # Quick scan with Microsoft Defender using Intune
 
-The **Quick Scan** remote action in Microsoft Intune allows IT administrators to initiate a targeted malware scan on managed Windows devices using Microsoft Defender Antivirus. This action scans key system areas where threats are commonly found—such as memory, startup folders, and running processes—without performing a full system sweep.
+The **Quick Scan** remote action in Microsoft Intune enables IT administrators to start a targeted malware scan on managed Windows devices by using Microsoft Defender Antivirus. This action scans key system areas where threats commonly appear—such as memory, startup folders, and running processes—without performing a full system sweep.
 
 Quick scans are especially useful for routine health checks, validating recent policy deployments, or responding to low-risk alerts. By triggering a scan remotely from the Intune admin center, IT teams can quickly assess device health and ensure protection is up to date—without waiting for the next scheduled scan or relying on user intervention.
 
@@ -22,26 +22,26 @@ Quick scans are especially useful for routine health checks, validating recent p
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This remote action is supported on the following platforms:
+> This remote action supports the following platform:
 >
 > - Windows
 
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
+> To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Windows defender**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ## How to initiate a quick scan from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, locate the row of remote action icons. Select **Quick scan**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Quick scan**.
 
 ## Reference links
 

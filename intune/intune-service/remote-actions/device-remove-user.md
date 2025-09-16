@@ -26,7 +26,7 @@ The **Remove user** remote device action in Microsoft Intune deletes a selected 
 [!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
-> To execute this remote action, you must use an account that has at least one of the following roles:
+> To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Custom role][INT-RC] that includes:
