@@ -179,6 +179,12 @@ To learn more about these settings, see [Android Intune settings catalog setting
 
 ### Device management
 
+#### Device category management supports multiple administrative approval<!-- 26838632 -->
+
+Intune [device categories](../enrollment/device-group-mapping.md) support multiple administrative approval (MAA). When MAA is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it’s applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
+
+For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
+
 #### New Private Space and USB access settings in the Android Enterprise settings catalog <!-- 30802944 24213820 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
@@ -291,6 +297,12 @@ Apple has released iOS 26 and iPadOS 26. With this update, Purebred (version 3) 
 > Applies to:
 >
 > - iOS/iPadOS
+
+### Monitor and troubleshoot
+
+#### Give feedback about multiple device query<!--  -->
+
+Use the new feedback feature on the multiple device query page to submit feedback about multiple device query.  
 
 ## Week of September 8, 2025
 

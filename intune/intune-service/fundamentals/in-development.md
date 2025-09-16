@@ -177,11 +177,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Monitor and troubleshoot
-
-### Give feedback about multiple device query<!-- 33381301 -->
-
-You will be able to use the new feedback feature on the multiple device query page to submit feedback about multiple device query.
+<!-- ## Monitor and troubleshoot -->
 
 <!-- *********************************************** -->
 
