@@ -143,11 +143,11 @@ If a prompt requires more information, you're prompted to enter that information
 
 ### ✅ Explore your data
 
-Copilot Chat includes all the prompts that you can use to explore your Intune data. In your prompt, you might see the **Go to Explorer** option:
+Copilot Chat includes all the prompts that you can use to explore your Intune data. In your prompt, you might see the **Explore further** option:
 
-:::image type="content" source="./media/copilot-intune-overview/go-to-explorer.png" alt-text="Screenshot that shows the Go to Explorer option in Copilot Chat in Microsoft Intune." lightbox="./media/copilot-intune-overview/go-to-explorer.png":::
+:::image type="content" source="./media/copilot-intune-overview/go-to-explorer.png" alt-text="Screenshot that shows the Explor further option in Copilot Chat in Microsoft Intune." lightbox="./media/copilot-intune-overview/go-to-explorer.png":::
 
-When you select it, you're redirected with your prompt already filled out in the Explorer prompt box:
+When you select **Explore further**, you're redirected with your prompt already filled out in the Explorer prompt box. In our example, select **Platform** and then select your platform from the list:
 
 :::image type="content" source="./media/copilot-intune-overview/explorer-redirect.png" alt-text="Screenshot that shows the Explorer prompt box with the filled-out prompt in Microsoft Intune." lightbox="./media/copilot-intune-overview/explorer-redirect.png":::
 
