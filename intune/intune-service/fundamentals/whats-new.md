@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 09/10/2025
+ms.date: 09/17/2025
 ms.topic: whats-new
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -79,6 +79,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 ## Week of September 15, 2025
 
 ### Device management
+
+#### New features in Copilot for Microsoft Intune <!-- 32549162 -->
+
+- **Easier access to Copilot Chat** - Copilot Chat is embedded directly into the Intune admin center header. So, IT admins can access Copilot Chat from any screen in the admin center. This feature helps admins get faster insights and support.
+
+- **Context-aware conversations with Copilot Chat** - As you type, a dynamic prompt box provides real-time suggestions and recommends prompts relevant to what you're trying to ask. You can troubleshoot devices, manage policies, explore Windows 365 features, and more. You can also directly access the Microsoft docs to learn more.
+
+  Copilot Chat retains your conversation history and remains context aware as you move through the admin center. This continuity helps minimize repetitive prompts.
+
+- **Expanded support for Windows 365 Cloud PC** - With this general availability update, Copilot now supports Windows 365 Cloud PC management. IT admins can access important info, like licensing status, connection quality, configuration details, and performance metrics. This feature makes it easier for admins to monitor and manage Cloud PCs directly from the Intune admin center.
+
+To learn more about Copilot in Intune and to get started, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
 
 #### Intune supports iOS/iPadOS 17.x as the minimum version<!--33405397-->
 
