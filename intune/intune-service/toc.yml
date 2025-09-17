@@ -1271,7 +1271,7 @@ items:
       - name: Create a profile
         displayName: android, ios, ipados, macos, windows
         href: ./configuration/device-profile-create.md
-      - name: Monitor a profile
+      - name: View and monitor profiles
         displayName: android, ios, ipados, macos, windows
         href: ./configuration/device-profile-monitor.md
 

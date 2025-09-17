@@ -7,12 +7,12 @@ keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, explorer, que
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 06/30/2025
+ms.date: 09/15/2025
 ms.update-cycle: 180-days
 ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
-ms.localizationpriority: high
+ms.localizationpriority: medium
 
 # optional metadata
 
@@ -77,13 +77,15 @@ Select the prompt that best matches your request, or continue typing for more su
 #### What data can I explore?
 You can explore several Intune resources and the relationships between them. The areas you can ask about along with the queries and query capabilities available will all evolve as we add more data coverage and exploration functionality. The areas you can explore today include:
 
-- Devices (device properties)
-- Device updates (Windows, other platforms coming soon)
+- App configuration and app protection
 - Apps
-- Configuration policies
 - Compliance
-- App configuration
-- App protection
+- Device Configuration
+- Device updates
+- Devices (device properties)
+- Windows Autopilot deployments
+- [Endpoint Privilege Management](../protect/epm-overview.md)
+- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
 
 ### 3 - Use the built-in examples
 
