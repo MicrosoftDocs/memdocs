@@ -35,7 +35,7 @@
       "breadcrumb_path": "/intune/breadcrumb/toc.json",
       "uhfHeaderId": "MSDocsHeader-Intune",
       "feedback_system": "Standard",
-            "brand": "Microsoft Endpoint Manager",
+      "brand": "Microsoft Intune",
       "searchScope": ["Intune"],
       "contributors_to_exclude": [
         "PRMerger9",
@@ -109,6 +109,22 @@
       "feedback_system": {
         "configmgr/core/misc/**/*": "None"
       },
+      "manager": {
+        "intune-service//**/*.md": "laurawi",
+        "intune-service//**/*.yml": "laurawi"
+      },
+      "ms.service": {
+        "intune-service//**/*.md": "microsoft-intune",
+        "intune-service//**/*.yml": "microsoft-intune"
+      },
+      "ms.suite": {
+        "intune-service//**/*.md": "ems",
+        "intune-service//**/*.yml": "ems"
+      },
+      "search.appverid": {
+        "intune-service//**/*.md": "MET150",
+        "intune-service//**/*.yml": "MET150"
+      },
       "author": {
         "intune-service/remote-actions//**/*.md": "paolomatarazzo",
         "intune-service/remote-actions//**/*.yml": "paolomatarazzo"
@@ -117,25 +133,9 @@
         "intune-service/remote-actions//**/*.md": "paoloma",
         "intune-service/remote-actions//**/*.yml": "paoloma"
       },
-      "manager": {
-        "intune-service/remote-actions//**/*.md": "laurawi",
-        "intune-service/remote-actions//**/*.yml": "laurawi"
-      },
-      "ms.service": {
-        "intune-service/remote-actions//**/*.md": "microsoft-intune",
-        "intune-service/remote-actions//**/*.yml": "microsoft-intune"
-      },
       "ms.subservice": {
         "intune-service/remote-actions//**/*.md": "remote-actions",
         "intune-service/remote-actions//**/*.yml": "remote-actions"
-      },
-      "ms.suite": {
-        "intune-service/remote-actions//**/*.md": "ems",
-        "intune-service/remote-actions//**/*.yml": "ems"
-      },
-      "search.appverid": {
-        "intune-service/remote-actions//**/*.md": "MET150",
-        "intune-service/remote-actions//**/*.yml": "MET150"
       },
       "ms.reviewer": {
         "intune-service/remote-actions//**/*.md": "mattcall",
