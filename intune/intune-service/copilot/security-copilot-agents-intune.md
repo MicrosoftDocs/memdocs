@@ -5,7 +5,7 @@ description: Learn about Security Copilot agents in Microsoft Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2025
+ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: overview
 ms.service: security-copilot
@@ -38,17 +38,22 @@ Use of this Copilot Agent by your security team can reduce the time it takes to 
 
 #### Trigger
 
-The Vulnerability Remediation Agent runs manually, on demand.
+The Vulnerability Remediation Agent runs manually on demand, and also supports a scheduled run every one to seven days.
 
 #### Permissions
 
-The Vulnerability Remediation Agent runs using the identity and permissions of the user who installed the agent in Intune.
+The Vulnerability Remediation Agent runs using the identity and permissions of the an administrative user. By default, this is the user who installs the agent. However, after the agent is set up, this identity can be changed to a different account.
 
 #### Identity
 
-The agent persistently runs in the identity of the user who initially set up the agent. This identity refreshes with each agent run and expires if the agent has not been run for 90 consecutive days. When the expiration date nears, each *Copilot owner* and *Copilot contributor* receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until re-authentication. Renewal of the agent authentication can be performed by both owners and contributors before the expiration as well as after expiration.
+The agent persistently runs in the identity of a user account. By default, this is the Intune administrative user who initially set up the agent.
 
-When the agent authentication is renewed, the agent begins use of the credentials of the individual who clicks on the *Renew authentication* button.
+This identity refreshes with each agent run and expires if the agent has not been run for 90 consecutive days. When the expiration date nears, each *Copilot owner* and *Copilot contributor* receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until re-authentication. Renewal of the agent authentication can be performed by both owners and contributors before the expiration as well as after expiration.
+
+When the agent authentication is renewed, the agent begins using the credentials of the individual who clicks on the *Renew authentication* button.
+
+The agent also supports a manual change of the account used as its identity. To successfully assign a new agent identity requires sign-in and authentication of the new user account.
+
 
 
 #### Products
@@ -76,6 +81,4 @@ When assigning RBAC roles and permissions to admins to manage and use the agent,
 | **Work with Installed Agent** | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Microsoft Entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role. | The admin must be a [Copilot contributor](/copilot/security/authentication). |
 
 > [!IMPORTANT]  
-> The Vulnerability Remediation Agent runs under the identity of the admin who set up the agent. During public preview, the identity can't be edited. To change this identity, the agent must be removed and set up again, or a different Copilot owner must use the *Renew Authentication* option for the Agent authorization.
->
 > Data that is reported by the agent and visible through agent suggestions might be visible to admins with access to view the agent within the Intune admin center, even when that data is outside the admins assigned Intune roles or scope.
