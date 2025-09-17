@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 08/18/2025
+ms.date: 09/15/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -58,6 +58,30 @@ These settings apply to the Android Enterprise enrollment types where Intune con
 To learn more about the different Android enrollment types, see [Android Enrollment guide](../fundamentals/deployment-guide-enrollment-android.md).
 
 ### Device restriction
+
+#### Applications
+
+- **Allow installation from unknown sources**: If **True**, allows users to turn on Unknown sources. This setting allows apps to install from unknown sources, including sources other than the Google Play Store. It allows users to side-load apps on the device using means other than the Google Play Store. If **False**, Intune doesn't change or update this setting. By default, the OS might prevent users from turning on Unknown sources.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **App auto-updates (work profile-level)**: Select the auto update policy for apps. Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting.
+  - **User choice**: End users can set their preference in managed Google Play.
+  - **Never**: Apps never auto-update.
+  - **Wi-Fi only**: Apps only auto-update when the device is connected to Wi-Fi.
+  - **Always**: Apps always auto-update.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
 
 #### Device Password
 
@@ -165,7 +189,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
-- **Disable lock screen**: If **True**, this setting blocks all Keyguard lock screen features from being used. If **False**, Intune doesn't change or update this setting. By default, when the device is in lock screen, the OS might allow all the Keyguard features, such as camera, fingerprint unlock, and more.
+- **Disable lock screen**: If **True**, this setting blocks all Keyguard lock screen features from being used. If **False**, Intune doesn't change or update this setting. By default, when the device is in lock screen, the OS might allow all the Keyguard features, like camera, fingerprint unlock, and more.
 
   This feature applies to:
 
@@ -173,6 +197,32 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned dedicated devices (COSU)
 
 #### General
+
+- **Allow access to developer settings**: If **True**, allow users access to the developer settings on the device. If **False**, Intune doesn't change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block access to camera**: If **True**, prevents access to the camera on the device. If **False**, Intune doesn't change or update this setting. By default, the OS might allow access to the camera. Intune only manages access to the device camera. It doesn't have access to pictures or videos.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block beaming data from apps using NFC (work-profile level)**: If **True**, prevents using the Near Field Communication (NFC) technology to beam data from apps to other devices. If **False**, Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+  This feature was deprecated in Android 10 and above. This setting can still be applied on newer devices, but it has no effect because the feature is no longer available.
 
 - **Block Bluetooth**: If **True**, this setting disables Bluetooth on the device so that users can't pair with other devices. If **False**, Intune doesn't change or update this setting. By default, the OS might enable Bluetooth on the device.
 
@@ -182,12 +232,127 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
+- **Block Bluetooth configuration**: If **True**, prevents users from configuring Bluetooth on the device. If **False**, Intune doesn't change or update this setting. By default, the OS might allow configuring Bluetooth on the device.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block factory reset**: If **True**, prevents users from using the factory reset option in the device settings. If **False**, Intune doesn't change or update this setting. By default, the OS might allow users to use this setting on the device
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block private space**: If **True**, users are prevented from creating or using private spaces on the device. All existing private spaces are deleted. If **False**, Intune doesn't change or update this setting. By default, the OS might allow private spaces.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+
+- **Block roaming data services**: If **True**, prevents data roaming over the cellular network. If **False**, Intune doesn't change or update this setting. By default, the OS might allow data roaming when the device is on a cellular network.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block tethering and access to hotspots**: If **True**, prevents tethering and access to portable hotspots. If **False**, Intune doesn't change or update this setting. By default, the OS might allow tethering and access to portable hotspots.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block volume changes**: If **True**, prevents users from changing the device's volume, and also mutes the main volume. If **False**, Intune doesn't change or update this setting. By default, the OS might allow using the volume settings on the device.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+  This setting appears as successfully applied to COPE devices in reporting views, but it has no functional effect.
+
+- **Block Wi-Fi access point configuration**: If **True**, prevents users from creating or changing any Wi-Fi configurations. If **False**, Intune doesn't change or update this setting. By default, the OS might allow users to change the Wi-Fi settings on the device.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Default permission policy**: Define the default permission policy for requests for runtime permissions. Your options:
+
+  - Device default
+  - Prompt
+  - Auto grant
+  - Auto deny
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
 - **Hide organization name**: If **True**, this setting prevents the enterprise name from being shown on the device, like on the lock screen. If **False**, Intune doesn't change or update this setting. By default, the OS might display the enterprise name.
 
   This feature applies to:
 
   - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
+
+- **USB access**: Select if files and/or data can be transferred using USB. Your options:
+
+  - **Allow USB transfer**: All files and data are allowed to be transferred to and from USB. All USB connections are allowed, like a mouse.
+  - **Disallow USB transfer**: Files are blocked from being transferred to and from USB. Other USB connections are allowed, like a mouse.
+  - **Disallow USB data transfer**: All data is blocked to and from USB. No USB connections are allowed, like a mouse.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices at work profile level (COSU)
+
+#### System Security
+
+- **Require Common Criteria mode**: If **True**, enables an elevated set of security standards on the device most often used in highly sensitive organizations, like government establishments. If **False**, Intune doesn't change or update this setting.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Require threat scan on apps**: If **True**, enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it might warn users to remove the app from the device. If **False**, Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+#### Users and Accounts
+
+- **Block account changes**: If **True**, prevents users from updating or changing accounts when in kiosk mode. If **False**, Intune doesn't change or update this setting. By default, the OS might allow users to update user accounts on the device.
+
+  Applies to:
+
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block users from configuring credentials (work profile-level)**: If **True**, prevents users from configuring certificates assigned to devices, even devices that aren't associated with a user account. If **False**, Intune doesn't change or update this setting. By default, the OS might make it possible for users to configure or change their credentials when they access them in the keystore.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
 
 # [AOSP](#tab/aosp)
 
