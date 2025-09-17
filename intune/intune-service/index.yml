@@ -1,6 +1,7 @@
 ### YamlMime:Hub
 title: Microsoft Intune documentation
 summary: Official product documentation for Microsoft Intune
+brand: azure
 
 metadata:
   services: service
@@ -14,7 +15,6 @@ metadata:
   - tier1
   - essentials-navigation
   ms.custom: intro-hub-or-landing
-  brand: azure
 
 highlightedContent:
   items:
