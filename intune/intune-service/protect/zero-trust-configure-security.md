@@ -56,9 +56,9 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24521](./includes/secure-recommendations/24521.md)]-->
 
-<!-- 24555 -->
+### Intune Scope Tags are configured for delegated administration<!-- 24555 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-<!-- [!INCLUDE [24555](./includes/secure-recommendations/24555.md)]-->
+[!INCLUDE [24555](./includes/secure-recommendations/24555.md)]
 
 <!-- 24558 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
@@ -97,9 +97,13 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24561](./includes/secure-recommendations/24561.md)]-->
 
-<!-- 24569 -->
+## macOS Defender Antivirus policy is configured and assigned<!-- 24784 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-<!-- [!INCLUDE [24569](./includes/secure-recommendations/24569.md)]-->
+[!INCLUDE [24784](./includes/secure-recommendations/24784.md)]
+
+### macOS FileVault policy is created and Assigned<!-- 24569 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24569](./includes/secure-recommendations/24569.md)]
 
 ### macOS Firewall policy is created and assigned<!-- 24552 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
