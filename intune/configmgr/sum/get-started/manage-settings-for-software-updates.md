@@ -42,7 +42,7 @@ The Configuration Manager client sets local group policies to control the softwa
 
 ### Remove older deployments and software update groups to optimize site performance and improve compliance accuracy
 
-Since updates are cumulative, there is no need to keep older updates deployed, in fact it will actually have a negative impact on the environment
+Since updates are cumulative, there is no need to keep older updates deployed. Not removing old deployments will actually have a negative impact on the environment.
 
 ### Remove any unnecessary Products & Categories in the Software Update Properties
 
