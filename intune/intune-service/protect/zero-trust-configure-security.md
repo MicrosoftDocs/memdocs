@@ -139,7 +139,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24553](./includes/secure-recommendations/24553.md)]
 
-### Windows Hello for Business policies are  configured and assigned <!-- 24551-->
+### Windows Hello for Business policies are configured and assigned <!-- 24551-->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24551](./includes/secure-recommendations/24551.md)]
 
@@ -151,13 +151,13 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24564](./includes/secure-recommendations/24564.md)]-->
 
-<!-- 24574 -->
+### Defender attack surface reduction rules are configured and assigned Windows devices<!-- 24574 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-<!-- [!INCLUDE [24574](./includes/secure-recommendations/24574.md)]-->
+[!INCLUDE [24574](./includes/secure-recommendations/24574.md)]
 
-<!-- 24575 -->
+### Defender antivirus policies are configured and assigned for Windows devices<!-- 24575 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-<!-- [!INCLUDE [24575](./includes/secure-recommendations/24575.md)]-->
+[!INCLUDE [24575](./includes/secure-recommendations/24575.md)]
 
 ### Windows Automatic Enrollment is enabled<!-- 24546 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
