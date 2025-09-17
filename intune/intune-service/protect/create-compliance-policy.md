@@ -11,7 +11,7 @@ ms.date: 12/13/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.reviewer: tycast
+ms.reviewer: ilwu
 
 # optional metadata
 

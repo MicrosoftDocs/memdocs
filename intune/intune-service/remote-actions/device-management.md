@@ -7,7 +7,7 @@ keywords:
 author: paolomatarazzo
 ms.author: paoloma
 manager: dougeby
-ms.date: 02/20/2025
+ms.date: 09/15/2025
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -51,6 +51,8 @@ This feature applies to:
 - iOS/iPadOS
 - macOS
 - Windows
+
+For Intel vPro devices, Intune also integrates with Intel vPro Fleet Services to provide hardware-level remote management capabilities, including out-of-band management that works even when the operating system is unresponsive or the device is powered off.
 
 This article shows you how to see the available remote actions, and lists some of the common remote actions you can run on your devices.
 
