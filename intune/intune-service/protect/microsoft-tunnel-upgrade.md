@@ -138,7 +138,6 @@ Image hash values:
   
 Changes in this release:
 - Minor bug fixes
--
 
 ### July 21, 2025
 
@@ -170,7 +169,6 @@ Image hash values:
   
 Changes in this release:
 - Minor bug fixes
-
 
 ### April 7, 2025
 
