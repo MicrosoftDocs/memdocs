@@ -36,7 +36,7 @@ Using Windows PowerShell and Microsoft Intune, you can use the WDAC CSP to allow
 This feature applies to:
 
 - HoloLens 2 devices running Windows Holographic for Business
-- Windows 10/11
+- Windows
 
 The WDAC CSP is based on the [Windows Defender Application Control (WDAC) feature](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). You can also [use multiple WDAC policies](/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
 

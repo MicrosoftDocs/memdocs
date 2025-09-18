@@ -60,7 +60,7 @@ This feature applies to:
   > [!NOTE]
   >
   > - Android Enterprise corporate-owned devices are not supported. Team viewer works with the Company portal app. It doesn't work with the Intune app.
-  > - TeamViewer may not support Windows Holographic (HoloLens), Windows Team (Surface Hub), or Windows 10 S. For supportability, see [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) for any updates.
+  > - TeamViewer may not support Windows Holographic (HoloLens) or Windows Team (Surface Hub). For supportability, see [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) for any updates.
 
 
 - A [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) account with the sign-in credentials. Only some TeamViewer licenses support integration with Intune. For specific TeamViewer needs, see [TeamViewer Integration Partner: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).
