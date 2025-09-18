@@ -7,7 +7,6 @@ description: Learn how to use Intune to disable Activation Lock on Apple devices
 keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: dougeby
 ms.date: 02/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -21,8 +20,6 @@ ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 #audience:
 
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
@@ -68,7 +65,7 @@ There are two methods to disabling Activation Lock on devices:
 - Using the Disable Activation Lock device action
 
 For supervised devices, Intune stores the Activation Lock bypass code, which can be entered on the device to manually disable Activation Lock. If the device has been wiped, you can directly access the device by using a blank username and the code as the password.
-Additionally, Intune can directly issue the bypass code to Apple's activation server to disable Activation Lock without having to interact with the device.  
+Additionally, Intune can directly issue the bypass code to Apple's activation server to disable Activation Lock without having to interact with the device.
 
 **The business benefits of using Intune to manage Activation Lock are:**
 
