@@ -35,11 +35,11 @@ If devices cannot be upgraded in time, consider enrolling eligible devices in th
 #### Additional information:
 
 - [Stay secure with Windows 11, Copilot+ PCs and Windows 365 before support ends for Windows 10](https://blogs.windows.com/windowsexperience/2025/06/24/stay-secure-with-windows-11-copilot-pcs-and-windows-365-before-support-ends-for-windows-10/)
-- [Windows 10 reaching end of support](lifecycle/announcements/windows-10-end-of-support)
-- [Enable Extended Security Updates (ESU)](windows/whats-new/enable-extended-security-updates)
-- [Windows 10 release information](windows/release-health/release-information)
-- [Windows 11 release information](windows/release-health/windows11-release-information)
-- [Lifecycle FAQ - Windows](lifecycle/faq/windows)
+- [Windows 10 reaching end of support](/lifecycle/announcements/windows-10-end-of-support)
+- [Enable Extended Security Updates (ESU)](/windows/whats-new/enable-extended-security-updates)
+- [Windows 10 release information](/windows/release-health/release-information)
+- [Windows 11 release information](/windows/release-health/windows11-release-information)
+- [Lifecycle FAQ - Windows](/lifecycle/faq/windows)
 
 ### Update to the latest Intune App SDK and Intune App Wrapping Tool  for iOS and register your app with Microsoft Entra
 
