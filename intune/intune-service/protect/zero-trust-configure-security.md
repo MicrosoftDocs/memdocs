@@ -68,6 +68,13 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
  [!INCLUDE [24572](./includes/secure-recommendations/24572.md)] 
 
+<!-- ### Tenant - A Device Clean-up rule is Configured 24805 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
+<!-- [!INCLUDE [24805](./includes/secure-recommendations/24805.md)]-->
+
+<!-- ### Tenant - Terms and conditions is configured and assigned 24794 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
+<!-- [!INCLUDE [24794](./includes/secure-recommendations/24794.md)]-->
 
 ## Apply Compliance policies on devices
 
@@ -97,7 +104,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24561](./includes/secure-recommendations/24561.md)]-->
 
-## macOS - Defender Antivirus policy is created and assigned<!-- 24784 -->
+### macOS - Defender Antivirus policy is created and assigned<!-- 24784 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24784](./includes/secure-recommendations/24784.md)]
 
@@ -135,7 +142,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24540](./includes/secure-recommendations/24540.md)]
 
-### Windows - Windows Update Policy is configured and assigned<!-- 24553 -->
+### Windows - Windows Update policy is configured and assigned<!-- 24553 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24553](./includes/secure-recommendations/24553.md)]
 
@@ -163,10 +170,6 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24546](./includes/secure-recommendations/24546.md)]
 
-<!-- ### 24562 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-<!-- [!INCLUDE [24562](./includes/secure-recommendations/24562.md)]-->
-
 ### Windows - Endpoint Analytics policy is created and assigned<!-- 24576 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24576](./includes/secure-recommendations/24576.md)]
@@ -180,7 +183,6 @@ We recommend that all of the following controls be implemented where licenses ar
 ### App protection policy assigned on iOS/iPad devices<!-- 24548 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
-
 
 ## Related content
 
