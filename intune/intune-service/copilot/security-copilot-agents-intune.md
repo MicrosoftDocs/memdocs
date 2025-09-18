@@ -89,7 +89,7 @@ The account used by the agent for its identity must be assigned permissions at a
 
 Ensure the agent’s identity is scoped to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 
-For details on mapping permissions to the Unified Security Reader role, see [Microsoft Entra Global roles access](https://learn.microsoft.com/en-us/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access ) in the *Map Microsoft Defender XDR Unified role-based access control (RBAC)* article in the Defender documentation.
+For details on mapping permissions to the Unified Security Reader role, see [Microsoft Entra Global roles access](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access ) in the *Map Microsoft Defender XDR Unified role-based access control (RBAC)* article in the Defender documentation.
 
 **Security Copilot Roles:**  
 - To setup or remove an agent, the admin must be a [Copilot **owner**](/copilot/security/authentication).
