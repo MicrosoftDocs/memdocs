@@ -12,4 +12,4 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-On October 14, 2025, [Windows 10 is reaching end of support](/lifecycle/announcements/windows-10-end-of-support) and won't receive quality or feature updates. Windows 10 is an "allowed" version in Intune. Devices running this version can still enroll in Intune and use eligible features, but functionality isn't guaranteed and can vary. For more information, see [Microsoft lifecycle policy](/lifecycle).
+On October 14, 2025, [Windows 10 is reaching end of support](/lifecycle/announcements/windows-10-end-of-support) and will stop receiving quality and feature updates. After October 14, 2025, Windows 10 becomes an "allowed" version in Intune. Devices running this version can still enroll in Intune and use eligible features, but functionality won't be guaranteed and can vary.
