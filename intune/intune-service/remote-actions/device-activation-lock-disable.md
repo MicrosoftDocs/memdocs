@@ -7,6 +7,7 @@ description: Learn how to use Intune to disable Activation Lock on Apple devices
 keywords:
 author: paolomatarazzo
 ms.author: paoloma
+manager: dougeby
 ms.date: 02/27/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -20,6 +21,8 @@ ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
 #audience:
 
 ms.reviewer:
+ms.suite: ems
+search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
