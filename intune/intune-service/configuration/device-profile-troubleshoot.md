@@ -58,7 +58,7 @@ There are 4 main types of check-ins:
 | Android, AOSP | About every 8 hours |
 | iOS/iPadOS | About every 8 hours |
 | macOS | About every 8 hours |
-| Windows 10/11 PCs enrolled as devices | About every 8 hours |
+| Windows PCs enrolled as devices | About every 8 hours |
 
 **End user driven check-ins** – These check-ins are driven by end users when they perform certain actions in the Company Portal app like going into  **Devices** > **Check Status** or **Settings** > **Sync** to check for policy or profile updates or selecting an app for download.
 
@@ -68,6 +68,7 @@ There are 4 main types of check-ins:
 
 > [!IMPORTANT]
 > To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md#intune-dependencies).
+>
 > - For Windows, see [Windows dependencies](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
 > - For Apple, see [Apple dependencies](../fundamentals/intune-endpoints.md#apple-dependencies).
 > - For Android, see [Android dependencies](../fundamentals/intune-endpoints.md#android-aosp-dependencies).
@@ -91,7 +92,7 @@ Additionally, when devices first enroll, configuration check-ins run more freque
 | Android, AOSP | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
 | macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
-| Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+| Windows PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 
 For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
 
@@ -166,7 +167,7 @@ When you delete a profile, or remove a device from a group that's assigned the p
 
 To apply a less restrictive profile, some devices might need to be retired and re-enrolled in to Intune. For example, you might have to retire and re-enroll Android, iOS/iPadOS, and Windows client devices.
 
-## Some settings in a Windows 10/11 profile return "Not Applicable"
+## Some settings in a Windows profile return "Not Applicable"
 
 Some settings on Windows client devices can show as **Not Applicable**. When this situation happens, that specific setting isn't supported on the Windows version or edition running on the device. This message can occur for the following reasons:
 
