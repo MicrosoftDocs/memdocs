@@ -52,132 +52,132 @@ We recommend that all of the following controls be implemented where licenses ar
 
 ## Protect tenants
 
-<!-- 24521 -->
+<!-- ### Tenant - Least privilege principal is used for Intune Role and Responsibilities 24521 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24521](./includes/secure-recommendations/24521.md)]-->
 
-### Intune Scope Tags are configured for delegated administration<!-- 24555 -->
+### Tenant - Scope Tags are configured for delegated administration<!-- 24555 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24555](./includes/secure-recommendations/24555.md)]
 
-<!-- 24558 -->
+<!-- ### Tenant - Enrollment restrictions per platform are configured 24558 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24558](./includes/secure-recommendations/24558.md)]-->
 
-### Device enrollment notification is configured and assigned<!-- 24572 -->
+### Tenant - Enrollment notification<!-- 24572 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
  [!INCLUDE [24572](./includes/secure-recommendations/24572.md)] 
 
 
 ## Apply Compliance policies on devices
 
-<!-- 24545 -->
+<!-- ### Compliance policies for Android Enterprise (Fully managed and corporate owned work profile) 24545 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24545](./includes/secure-recommendations/24545.md)]-->
 
-<!-- 24547 -->
+<!-- ### Compliance policies for Android Enterprise (Personally owned work profile) 24547 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24547](./includes/secure-recommendations/24547.md)]-->
 
-<!-- 24543 -->
+<!-- ### Compliance policies for iOS/iPadOS 24543 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24543](./includes/secure-recommendations/24543.md)]-->
 
-### Compliance policies for macOS devices are configured and assigned<!-- 24542 -->
+### Compliance policies for macOS<!-- 24542 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24542](./includes/secure-recommendations/24542.md)]
 
-### Compliance policies for Windows devices are configured and assigned<!-- 24541 -->
+### Compliance policies for Windows devices<!-- 24541 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24541](./includes/secure-recommendations/24541.md)]
 
 ## Protect Apple devices
 
-<!-- 24561 -->
+<!-- ### macOS - Cloud LAPS is enforced 24561 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24561](./includes/secure-recommendations/24561.md)]-->
 
-## macOS Defender Antivirus policy is configured and assigned<!-- 24784 -->
+## macOS - Defender Antivirus policy is created and assigned<!-- 24784 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24784](./includes/secure-recommendations/24784.md)]
 
-### macOS FileVault policy is created and Assigned<!-- 24569 -->
+### macOS - Configure macOS FileVault<!-- 24569 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24569](./includes/secure-recommendations/24569.md)]
 
-### macOS Firewall policy is created and assigned<!-- 24552 -->
+### macOS - Firewall policy is created and assigned<!-- 24552 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24552](./includes/secure-recommendations/24552.md)]
 
-### iOS Update policy is configured and assigned<!-- 24554 -->
+### iOS - Update policy is configured and assigned<!-- 24554 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
 
-### macOS Update policy is configured and assigned<!-- 24690 -->
+### macOS - Update policy is created and assigned<!-- 24690 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24690](./includes/secure-recommendations/24690.md)]
 
-<!-- 24568 -->
+<!-- ### macOS - Platform SSO is configured and assigned 24568 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24568](./includes/secure-recommendations/24568.md)]-->
 
 ## Protect Windows devices 
 
-### Windows Cloud LAPS policy is created and assigned<!-- 24560 -->
+### Windows - Cloud LAPS policy is enforced<!-- 24560 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24560](./includes/secure-recommendations/24560.md)]
 
-### Windows BitLocker policy is configured and assigned<!-- 24550 -->
+### Windows - BitLocker Policy is created and assigned<!-- 24550 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24550](./includes/secure-recommendations/24550.md)]
 
-### Windows Firewall policies are configured and assigned<!-- 24540 -->
+### Windows - Firewall is created and assigned<!-- 24540 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24540](./includes/secure-recommendations/24540.md)]
 
-### Windows Update policy is configured and assigned<!-- 24553 -->
+### Windows - Windows Update Policy is configured and assigned<!-- 24553 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24553](./includes/secure-recommendations/24553.md)]
 
-### Windows Hello for Business policies are configured and assigned <!-- 24551-->
+### Windows - Hello for Business policy is configured and assigned<!-- 24551-->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24551](./includes/secure-recommendations/24551.md)]
 
-### A Windows security baseline is configured and assigned<!-- 24573 -->
+### Windows - A security baseline is configured and assigned<!-- 24573 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24573](./includes/secure-recommendations/24573.md)]
 
-<!-- 24564 -->
+<!-- ### Windows - Local Account Protection policy is configured and assigned 24564 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24564](./includes/secure-recommendations/24564.md)]-->
 
-### Defender attack surface reduction rules are configured and assigned Windows devices<!-- 24574 -->
+### Windows - Deploy Attack Surface Reduction (ASR) policies<!-- 24574 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24574](./includes/secure-recommendations/24574.md)]
 
-### Defender antivirus policies are configured and assigned for Windows devices<!-- 24575 -->
+### Windows - Defender Antivirus policy is created and assigned<!-- 24575 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24575](./includes/secure-recommendations/24575.md)]
 
-### Windows Automatic Enrollment is enabled<!-- 24546 -->
+### Windows - Automatic enrollment is configured<!-- 24546 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24546](./includes/secure-recommendations/24546.md)]
 
-<!-- 24562 -->
+<!-- ### 24562 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24562](./includes/secure-recommendations/24562.md)]-->
 
-### Intune Endpoint Analytics policy is created and Assigned<!-- 24576 -->
+### Windows - Endpoint Analytics policy is created and assigned<!-- 24576 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24576](./includes/secure-recommendations/24576.md)]
 
 ## Protect Apps on devices
 
-### App protection policies for Android devices are configured and assigned<!-- 24549 -->
+### App protection policy assigned on Android devices<!-- 24549 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24549](./includes/secure-recommendations/24549.md)]
 
-### App protection policies for iOS devices are configured and assigned<!-- 24548 -->
+### App protection policy assigned on iOS/iPad devices<!-- 24548 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
 
