@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use ADMX templates on Windows 10/11 devices in Microsoft Intune
+title: Use ADMX templates on Windows devices in Microsoft Intune
 description: Use Administrative templates in Microsoft Intune to create groups of settings for Windows 10/11 client devices. Use these settings in a device configuration profile. You can control Office programs, Microsoft Edge, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use HTTP printing, control user sign-in, and change the event log size.
 keywords:
 author: MandiOhlinger
@@ -31,7 +31,7 @@ ms.collection:
 - msec-ai-copilot
 ---
 
-# Use Windows 10/11 templates to configure group policy settings in Microsoft Intune
+# Use Windows templates to configure group policy settings in Microsoft Intune
 
 > [!IMPORTANT]
 > Starting with the December 2412 release, you can't create new Administrative Templates policies from the **Templates** > **Administrative Templates** profile type in the Intune admin center. To create ADMX template profiles, use the **[settings catalog](settings-catalog.md)**. For more information on this change, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
@@ -43,8 +43,7 @@ ms.collection:
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 The Intune templates are 100-percent cloud-based, are built in to Intune (no downloading), and don't require any customizations, including using OMA-URI. They offer a straight-forward way to find and configure the settings you want:
 
@@ -62,7 +61,7 @@ This article describes the steps to create a template for Windows client devices
 
 ## Before you begin
 
-- Some of these settings are available starting with Windows 10 version 1709 (RS2/build 15063). Some settings aren't included in all Windows editions. For the best experience, we recommend Windows 10 Enterprise version 1903 (19H1/build 18362) or newer.
+- Some settings aren't included in all Windows editions. For the best experience, we recommend using the Windows Enterprise edition.
 
 - The Windows settings use the [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). The CSPs work on different editions of Windows, such as Home, Professional, Enterprise, and so on. To see if a CSP works on a specific edition, go to [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
@@ -94,7 +93,7 @@ This article describes the steps to create a template for Windows client devices
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Name your profiles so you can easily identify them later. For example, a good profile name is *ADMX: Windows 10/11 admin template that configures xyz settings in Microsoft Edge*.
+    - **Name**: Name your profiles so you can easily identify them later. For example, a good profile name is **ADMX: Configures xyz settings in Microsoft Edge**.
     - **Description**: This setting is optional but recommended.
 
 6. Select **Next**.

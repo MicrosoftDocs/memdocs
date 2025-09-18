@@ -51,9 +51,7 @@ This feature applies to:
 - Android Enterprise personally owned devices with a work profile
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
-- Windows 8.1
+- Windows
 
 This article shows you how to create a device restrictions profile. You can also see all the available settings for the different platforms.
 
@@ -75,7 +73,10 @@ This article shows you how to create a device restrictions profile. You can also
 
     - **Profile type**: Select **Device restrictions**. Or, select **Templates** > **Device restrictions**.
 
-        To create a device restrictions profile for Windows 10 Team devices, like Surface Hub, then select **Device restrictions (Windows 10 Team)**.
+      To create a device restrictions profile for Windows Team devices, like Surface Hub, then select **Device restrictions (Windows 10 Team)**.
+
+      > [!IMPORTANT]
+      > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -91,7 +92,7 @@ This article shows you how to create a device restrictions profile. You can also
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
-    - [Windows 10/11](device-restrictions-windows-10.md)
+    - [Windows](device-restrictions-windows-10.md)
     - [Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 

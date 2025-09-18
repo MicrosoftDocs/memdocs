@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Device restriction settings for Windows 10/11 in Microsoft Intune
+title: Device restriction settings for Windows devices in Microsoft Intune
 description: See a list of all the settings and their descriptions for creating device restrictions on Windows 10/11 client devices. Use these settings in a configuration profile to control screenshots, password requirements, kiosk settings, apps in the store, Microsoft Edge browser, Microsoft Defender, access to the cloud, start menu, and more in Microsoft Intune.
 keywords:
 author: MandiOhlinger
@@ -30,7 +30,7 @@ ms.collection:
 - highseo
 ---
 
-# Windows 10/11 device settings to allow or restrict features using Intune
+# Windows device settings to allow or restrict features using Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -39,19 +39,18 @@ This article describes some of the settings you can control on Windows client de
 
 These settings apply to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your Windows client devices.
 
 > [!NOTE]
 > Some settings are only available on specific Windows editions, such as Enterprise. To see the supported editions, refer to the [policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider) (opens another Microsoft web site).
 >
-> In a Windows 10/11 device restrictions profile, most configurable settings are deployed at the device level using device groups. Policies deployed to user groups apply to targeted users. The policies also apply to users who have an Intune license, and users that sign in to that device.
+> In a Windows device restrictions profile, most configurable settings are deployed at the device level using device groups. Policies deployed to user groups apply to targeted users. The policies also apply to users who have an Intune license, and users that sign in to that device.
 
 ## Before you begin
 
-[Create a Windows 10/11 device restrictions profile](device-restrictions-configure.md#create-the-profile).
+[Create a Windows device restrictions profile](device-restrictions-configure.md#create-the-profile).
 
 ## App Store
 
@@ -365,13 +364,15 @@ These settings use the [browser policy CSP](/windows/client-management/mdm/polic
 The available settings change depending on what you choose. Your options:
 
 - **No** (default): Microsoft Edge isn't running in kiosk mode. All Microsoft Edge settings are available for you to change and configure.
-- **Digital/Interactive signage (single app kiosk)**: Filters Microsoft Edge settings that apply to Digital/Interactive signage Microsoft Edge Kiosk mode on Windows 10/11 single-app kiosks. Choose this setting to open a URL full screen, and only show the content on that website. [Set up digital signs](/windows/configuration/setup-digital-signage) provides more information on this feature.
-- **InPrivate Public browsing (single app kiosk)**: Filters Microsoft Edge settings that are applicable for InPrivate Public Browsing Microsoft Edge Kiosk mode for use on Windows 10/11 single-app kiosks. Runs a multi-tab version of Microsoft Edge.
+- **Digital/Interactive signage (single app kiosk)**: Filters Microsoft Edge settings that apply to Digital/Interactive signage Microsoft Edge Kiosk mode on Windows single-app kiosks. Choose this setting to open a URL full screen, and only show the content on that website. [Set up digital signs](/windows/configuration/setup-digital-signage) provides more information on this feature.
+- **InPrivate Public browsing (single app kiosk)**: Filters Microsoft Edge settings that are applicable for InPrivate Public Browsing Microsoft Edge Kiosk mode for use on Windows single-app kiosks. Runs a multi-tab version of Microsoft Edge.
 - **Normal mode (multi-app kiosk)**: Filters Microsoft Edge settings that are applicable for Normal Microsoft Edge Kiosk mode. Runs a full-version of Microsoft Edge with all browsing features.
 - **Public browsing (multi-app kiosk)**: Filters Microsoft Edge settings that are applicable for Public browsing on a Windows 10 multi-app kiosk.  Runs a multi-tab version of Microsoft Edge InPrivate.
 
-> [!TIP]
-> For more information on what these options do, see [Microsoft Edge kiosk mode configuration types](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+For more information on what these options do, see [Microsoft Edge kiosk mode configuration types](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 This device restrictions profile is directly related to the kiosk profile you create using the [Windows kiosk settings](kiosk-settings-windows.md). To summarize:
 
@@ -554,7 +555,7 @@ These settings use the [DeviceLock policy CSP](/windows/client-management/mdm/po
 
   [Cryptography/AllowFipsAlgorithmPolicy CSP](/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
-- **Windows Hello device authentication**: **Allow** users to use a Windows Hello companion device, such as a phone, fitness band, or IoT device, to sign in to a Windows 10/11 computer. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent Windows Hello companion devices from authenticating.
+- **Windows Hello device authentication**: **Allow** users to use a Windows Hello companion device, such as a phone, fitness band, or IoT device, to sign in to a Windows computer. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent Windows Hello companion devices from authenticating.
 
   [Authentication/AllowSecondaryAuthenticationDevice CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
 
@@ -1287,6 +1288,6 @@ These settings use the [power policy CSP](/windows/client-management/mdm/policy-
 
 ## Next steps
 
-For additional technical details on each setting and what editions of Windows are supported, see [Windows 10/11 Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider)
+For additional technical details on each setting and what editions of Windows are supported, see [Windows Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider)
 
 [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
