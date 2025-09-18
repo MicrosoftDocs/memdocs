@@ -36,13 +36,30 @@ The [Vulnerability Remediation Agent in Intune](../protect/vulnerability-remedia
 
 Use of this Copilot Agent by your security team can reduce the time it takes to investigate, identify, and remediate threats from hours to only a few minutes.
 
-#### Trigger
+| Attribute | Description |
+|---|---|
+| Trigger | Runs manually, on demand |
+| Permissions | Run hunting queries<br>Read vulnerability data from Defender<br>Read managed apps in Intune<br>Read device configurations in Intune |
+| Products | [Security Copilot](/copilot/security/get-started-security-copilot)<br>[Microsoft Intune Plan 1 subscription](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a)<br> [Microsoft Defender Vulnerability Management](../protect/advanced-threat-protection.md) | 
+| Identity | Runs as the user who first set up the agent and requires reauthentication after 90 days |
+| Plugins | [Intune](security-copilot.md)<br>[Microsoft Defender](/defender-xdr/security-copilot-in-microsoft-365-defender)|
+| Role-based access | |
 
-The Vulnerability Remediation Agent runs manually, on demand.
 
-#### Permissions
+### Products
 
-The Vulnerability Remediation Agent runs using the identity and permissions of the user who installed the agent in Intune.
+-  *This subscription provides the core Intune capabilities*.
+- [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) - *Security Copilot must share a Tenant with Intune, and you must have sufficient SCUs to power Security Copilot workloads, including agents.*
+- *This capability is provided by Microsoft Defender for Endpoint P2 or Defender Vulnerability Management Standalone.*
+
+
+QUESTIONS
+How does the "renewal" or "reauthentication" after 90 days work? 
+The screenshot of the agent with the plugins says "Microsoft Defender" but in our list of plugins, we don't have just Microsoft Defender. We have XDR, External Attack Surface Management (Defender EASM), and Defender for Cloud. 
+Some details should probably live within the docs.
+
+
+
 
 #### Identity
 
@@ -51,18 +68,6 @@ The agent persistently runs in the identity of the user who initially set up the
 When the agent authentication is renewed, the agent begins use of the credentials of the individual who clicks on the *Renew authentication* button.
 
 
-#### Products
-
-The agent requires the following products:
-
-- [Microsoft Intune Plan 1 subscription](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a) *This subscription provides the core Intune capabilities*.
-- [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) - *Security Copilot must share a Tenant with Intune, and you must have sufficient SCUs to power Security Copilot workloads, including agents.*
-- [Microsoft Defender Vulnerability Management](../protect/advanced-threat-protection.md) *This capability is provided by Microsoft Defender for Endpoint P2 or Defender Vulnerability Management Standalone.*
-
-#### Plugins
-
-- Microsoft Intune
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
 #### Role-based access
 
