@@ -7,19 +7,19 @@ keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, explorer, que
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 06/30/2025
+ms.date: 09/15/2025
 ms.update-cycle: 180-days
 ms.topic: get-started
 ms.service: microsoft-intune
 ms.subservice:
-ms.localizationpriority: high
+ms.localizationpriority: medium
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: rashok
+ms.reviewer: ankurgoyal, rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -77,13 +77,15 @@ Select the prompt that best matches your request, or continue typing for more su
 #### What data can I explore?
 You can explore several Intune resources and the relationships between them. The areas you can ask about along with the queries and query capabilities available will all evolve as we add more data coverage and exploration functionality. The areas you can explore today include:
 
-- Devices (device properties)
-- Device updates (Windows, other platforms coming soon)
+- App configuration and app protection
 - Apps
-- Configuration policies
 - Compliance
-- App configuration
-- App protection
+- Device Configuration
+- Device updates
+- Devices (device properties)
+- Windows Autopilot deployments
+- [Endpoint Privilege Management](../protect/epm-overview.md)
+- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
 
 ### 3 - Use the built-in examples
 
@@ -105,13 +107,13 @@ The **Get results** button runs your query. Copilot summarizes and helps you und
 
 In the query results, you can export the results and select an item to go to its individual resource page and get more information. If your query results are a list of users or devices, you can add them to a group, and target apps and policies to this group to complete management tasks.
 
-:::image type="content" source="./media/copilot-intune-explorer/explorer-query-results.png" alt-text="When exploring data, you can export the query results and add users or devices to groups in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/copilot-intune-explorer/explorer-query-results.png" alt-text="When exploring data, you can export the query results and add users or devices to groups in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-query-results.png":::
 
 When you add to a group, you can select an existing group or create a new group. When finished, a progress report is automatically created. If you want to keep the report, export it now, as the report isn't available again.
 
 In the following example, a query found noncompliant devices that are out of the grace period. These devices are added to a group. Some devices failed to be added to the group, and the **Status detail** shows the reason why. You can use the **Add filters** option to filter the results, like the devices that were successfully added to the group.
 
-:::image type="content" source="./media/copilot-intune-explorer/explorer-add-to-group-report.png" alt-text="When exploring data, add the device query results to a group and view the report status in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/copilot-intune-explorer/explorer-add-to-group-report.png" alt-text="When exploring data, add the device query results to a group and view the report status in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-add-to-group-report.png":::
 
 ## Feedback and future updates
 
