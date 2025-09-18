@@ -112,11 +112,27 @@
       },
       "manager": {
         "intune-service//**/*.md": "laurawi",
-        "intune-service//**/*.yml": "laurawi"
+        "intune-service//**/*.yml": "laurawi",
+        "analytics//**/*.md": "laurawi",
+        "analytics//**/*.yml": "laurawi",
+        "solutions//**/*.md": "laurawi",
+        "solutions//**/*.yml": "laurawi"
       },
       "ms.service": {
         "intune-service//**/*.md": "microsoft-intune",
-        "intune-service//**/*.yml": "microsoft-intune"
+        "intune-service//**/*.yml": "microsoft-intune",
+        "analytics//**/*.md": "microsoft-intune",
+        "analytics//**/*.yml": "microsoft-intune",
+        "solutions//**/*.md": "microsoft-intune",
+        "solutions//**/*.yml": "microsoft-intune"
+      },
+      "search.appverid": {
+        "intune-service//**/*.md": "MET150",
+        "intune-service//**/*.yml": "MET150",
+        "analytics//**/*.md": "MET150",
+        "analytics//**/*.yml": "MET150",
+        "solutions//**/*.md": "MET150",
+        "solutions//**/*.yml": "MET150"
       },
       "author": {
         "intune-service/remote-actions//**/*.md": "paolomatarazzo",
