@@ -118,10 +118,6 @@
         "intune-service//**/*.md": "microsoft-intune",
         "intune-service//**/*.yml": "microsoft-intune"
       },
-      "search.appverid": {
-        "intune-service//**/*.md": "MET150",
-        "intune-service//**/*.yml": "MET150"
-      },
       "author": {
         "intune-service/remote-actions//**/*.md": "paolomatarazzo",
         "intune-service/remote-actions//**/*.yml": "paolomatarazzo"
