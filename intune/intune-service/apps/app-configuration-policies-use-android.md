@@ -67,7 +67,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**.
 
     > [!NOTE]
-    > As of Android 12, configuring **Auto grant** for the following permissions isn't supported for coporate-owned work profile or corporate-owned dedicated devices.
+    > As of Android 12, configuring **Auto grant** for the following permissions isn't supported for corporate-owned work profile or corporate-owned dedicated devices.
     > * SMS (read)
     > * Location access (coarse)
     > * Location access (fine)
