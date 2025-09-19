@@ -100,7 +100,7 @@ The **Program** step provides the following options:
 
     For command line installations, leave the Installer type as **Command line** to use the default commands provided by Enterprise App Management.
 
-    For PowerShell script installations, select **PowerShell script** to upload your own install script (maximum size 50 KB) when you have a specific need to customize installation behavior. The script should execute the necessary installer for the app (you can find the default command for reference) and any custom actions you require. Use this option only if you have a specific need to customize installation behavior.
+    For [PowerShell script](#powershell-script-installer-for-enterprise-app-catalog-apps) installations, select **PowerShell script** to upload your own install script (maximum size 50 KB) when you have a specific need to customize installation behavior. The script should execute the necessary installer for the app (you can find the default command for reference) and any custom actions you require. Use this option only if you have a specific need to customize installation behavior.
 
     > [!IMPORTANT]
     > If a script is used, Intune will run it in place of the standard command – an incorrect script could cause the app installation to fail, so test carefully. Changing the install logic of a Catalog app might affect its ability to install or update properly. Ensure that your script calls the app's installer with the right parameters and handles updates if applicable. Intune will still enforce the app's detection rules to confirm installation success.
