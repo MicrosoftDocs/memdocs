@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Actions: Full Scan"
+title: "Intune Remote Device Action: Full Scan"
 description: Learn how to initiate on demand Microsoft Defender full scan with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
@@ -11,9 +11,9 @@ ms.collection:
 - highpri
 ---
 
-# Full scan with Microsoft Defender using Intune
+# Remote device action: full scan
 
-The **Full Scan** remote action in Intune lets IT admins trigger a comprehensive malware scan on managed Windows devices using Microsoft Defender Antivirus. It checks all files and running processes, helping detect threats missed by quick scans.
+The *full scan* remote action in Intune lets IT admins trigger a comprehensive malware scan on managed Windows devices using Microsoft Defender Antivirus. It checks all files and running processes, helping detect threats missed by quick scans.
 
 This action is ideal when a device is suspected of compromise or when validating security baselines. Instead of waiting for scheduled scans or relying on user action, admins can launch a full scan directly from the Intune admin center.
 

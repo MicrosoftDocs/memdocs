@@ -14,9 +14,9 @@ ms.collection:
 zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 ---
 
-# Locate devices using Intune
+# Remote device action: locate device
 
-The **Locate device** device remote action in Microsoft Intune enables IT administrators to pinpoint the physical location of managed devices when they are lost, stolen, or simply misplaced. This feature is especially valuable in organizations where devices are distributed across multiple sites or used by mobile users. By triggering the Locate device action from the Intune admin center, admins can view the device's location on a map, helping accelerate recovery, reduce downtime, and improve compliance.
+The *locate device* device remote action in Microsoft Intune enables IT administrators to pinpoint the physical location of managed devices when they are lost, stolen, or simply misplaced. This feature is especially valuable in organizations where devices are distributed across multiple sites or used by mobile users. By triggering the Locate device action from the Intune admin center, admins can view the device's location on a map, helping accelerate recovery, reduce downtime, and improve compliance.
 
 Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](device-play-lost-mode-sound.md), or [display custom messages](device-lost-mode.md).
 

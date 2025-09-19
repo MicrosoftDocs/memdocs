@@ -11,7 +11,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Bulk device actions in Intune
+# Bulk device actions
 
 Managing devices at scale is a common challenge for IT pros, especially in environments like schools, enterprises, or frontline operations. Microsoft Intune supports bulk remote actions, so IT admins can perform tasks on up to 100 devices at the same time. This capability streamlines operations, reduces manual effort, and ensures consistent policy enforcement across large device fleets.
 

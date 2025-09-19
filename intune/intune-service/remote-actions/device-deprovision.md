@@ -10,9 +10,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Deprovision devices using Intune
+# Remote device action: deprovision
 
-The **Deprovision** device action in Microsoft Intune enables IT administrators to remove Google Admin policies from ChromeOS devices that are no longer in use by the organization.
+The *deprovision* device action in Microsoft Intune enables IT administrators to remove Google Admin policies from ChromeOS devices that are no longer in use by the organization.
 
 ## Requirements
 

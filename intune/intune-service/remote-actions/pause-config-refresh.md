@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Actions: Pause Config Refresh"
+title: "Intune Remote Device Action: Pause Config Refresh"
 description: Learn how to temporarily pause policy enforcement on Windows 11 devices using Intune's Pause Config Refresh remote action to support troubleshooting and manual changes.
 ms.date: 08/27/2025
 ms.topic: how-to
@@ -11,13 +11,13 @@ ms.collection:
 - highpri
 ---
 
-# Pause Config Refresh using Intune
+# Remote device action: pause Config Refresh
 
-Use the **Pause Config Refresh** remote action in Microsoft Intune to temporarily suspend automatic policy enforcement on Windows 11 devices. This action is helpful when you need to troubleshoot, perform maintenance, or apply manual changes that shouldn't be overwritten by Intune policies.
+Use the **pause Config Refresh** remote action in Microsoft Intune to temporarily suspend automatic policy enforcement on Windows 11 devices. This action is helpful when you need to troubleshoot, perform maintenance, or apply manual changes that shouldn't be overwritten by Intune policies.
 
-**Config Refresh** is a Windows feature that periodically reapplies policy settings to ensure devices stay compliant with your defined configurations. IT admins can configure the refresh cadence to run as frequently as every 30 minutes or as infrequently as once every 24 hours (1,440 minutes).
+Config Refresh is a Windows feature that periodically reapplies policy settings to ensure devices stay compliant with your defined configurations. IT admins can configure the refresh cadence to run as frequently as every 30 minutes or as infrequently as once every 24 hours (1,440 minutes).
 
-With the **Pause Config Refresh** action, IT admins can suspend policy refresh for a specified duration—up to 1,440 minutes. After the pause period ends, Config Refresh resumes automatically.
+With the pause Config Refresh action, IT admins can suspend policy refresh for a specified duration—up to 1,440 minutes. After the pause period ends, Config Refresh resumes automatically.
 
 ## Requirements
 

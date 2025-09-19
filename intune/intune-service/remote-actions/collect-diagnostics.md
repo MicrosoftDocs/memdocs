@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Actions: Collect Diagnostics"
+title: "Intune Remote Device Action: Collect Diagnostics"
 description: Learn how to collect diagnostics with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
@@ -12,11 +12,11 @@ ms.collection:
 zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 ---
 
-# Collect diagnostics using Intune
+# Remote device action: collect diagnostics
 
 Collecting diagnostics in Microsoft Intune is a powerful remote action that enables IT administrators to gather troubleshooting data from managed devices without interrupting users. This feature is essential for identifying and resolving issues related to device compliance, app performance, or enrollment failures—especially in large or distributed environments where hands-on access to devices is limited. For example, if a Windows device fails during Autopilot provisioning, Intune can automatically collect logs from the device and upload them for review, helping admins pinpoint the root cause quickly. This feature can also be used in bulk across up to 25 devices at once, streamlining diagnostics at scale.
 
-The **Collect diagnostics** remote action lets you collect and download managed device diagnostics without interrupting the user. Only nonuser locations and file types are accessed.
+The *collect diagnostics* remote action lets you collect and download managed device diagnostics without interrupting the user. Only nonuser locations and file types are accessed.
 
 ## Requirements
 
@@ -135,7 +135,7 @@ Diagnostics take approximately 30 minutes to be delivered from an end user's dev
 
 <!--1895390-->
 
-The **Collect diagnostics** remote action can also be configured to automatically collect and upload Windows devices logs upon a Windows Autopilot failure on a device. When a Windows Autopilot failure occurs, logs are processed on the failed device and then automatically captured and uploaded to Intune. A device can automatically capture one set of logs per day.
+The collect diagnostics remote action can also be configured to automatically collect and upload Windows devices logs upon a Windows Autopilot failure on a device. When a Windows Autopilot failure occurs, logs are processed on the failed device and then automatically captured and uploaded to Intune. A device can automatically capture one set of logs per day.
 
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
 
@@ -279,7 +279,7 @@ This following list is the same order as the diagnostic zip. Each collection con
 
 ### Disable device diagnostics
 
-The **Collect diagnostics** remote action is enabled by default. You can disable the **Collect diagnostics** remote action for all devices by following these steps:
+The collect diagnostics remote action is enabled by default. You can disable the **Collect diagnostics** remote action for all devices by following these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Tenant administration** > **Device diagnostics**.

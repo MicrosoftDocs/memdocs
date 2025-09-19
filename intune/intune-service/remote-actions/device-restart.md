@@ -12,9 +12,9 @@ ms.collection:
 zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 ---
 
-# Restart devices using Intune
+# Remote device action: restart
 
-The **Restart** remote action triggers a restart (usually begins within 5 minutes) and might not show a warning to the signed-in user.
+The *restart* remote action triggers a restart (usually begins within 5 minutes) and might not show a warning to the signed-in user.
 
 > [!IMPORTANT]
 > The restart depends on the device receiving a push notification. If the device is offline or push notifications are blocked, the restart is delayed until connectivity resumes.

@@ -14,9 +14,9 @@ ms.collection:
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Remove apps and configuration using Intune
+# Remote device action: remove apps and configuration
 
-Use the **Remove apps and configuration** remote action in Intune to uninstall apps and remove configuration profiles from a device. This action is useful for troubleshooting or temporarily removing settings that might be causing issues.
+Use the *remove apps and configuration* remote action in Intune to uninstall apps and remove configuration profiles from a device. This action is useful for troubleshooting or temporarily removing settings that might be causing issues.
 
 ## Requirements
 
@@ -53,7 +53,7 @@ Scope tags limit which apps and configurations an admin can view and manage. The
 
 ## Supported apps and configuration profiles
 
-The **Remove apps and configuration** remote action supports the following items:
+This remote action supports the following items:
 
 - **Applications**: Any Intune-delivered app on supported device platforms.
 ::: zone pivot="ios"

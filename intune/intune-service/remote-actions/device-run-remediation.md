@@ -11,9 +11,9 @@ ms.collection:
 - highpri
 ---
 
-# Run remediations using Intune
+# Remote device action: run remediation
 
-The **Run remediation** remote action in Microsoft Intune allows IT administrators to proactively detect and resolve support issues on managed devices. This action triggers a remediation script that checks for specific conditions and applies a fix if needed—without requiring user interaction.
+The *run remediation* remote action in Microsoft Intune allows IT administrators to proactively detect and resolve support issues on managed devices. This action triggers a remediation script that checks for specific conditions and applies a fix if needed—without requiring user interaction.
 
 Use this action to address common problems such as configuration drift, missing settings, or compliance gaps. It's especially useful for maintaining device health across large environments.
 

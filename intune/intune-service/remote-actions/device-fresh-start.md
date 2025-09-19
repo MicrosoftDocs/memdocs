@@ -11,9 +11,9 @@ ms.collection:
 - highpri
 ---
 
-# Fresh Start using Intune
+# Remote device action: fresh start
 
-The **Fresh Start** device action removes apps from managed Windows devices, helping you remove preinstalled (OEM) apps that typically ship with a new PC.
+The *fresh start* remote action removes apps from managed Windows devices, helping you remove preinstalled (OEM) apps that typically ship with a new PC.
 
 ## Requirements
 

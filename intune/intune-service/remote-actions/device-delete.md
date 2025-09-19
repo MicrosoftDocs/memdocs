@@ -13,7 +13,7 @@ ms.collection:
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
-# Delete devices in Intune
+# Remote device action: delete
 
 Use the **Delete** remote action in Intune to permanently remove devices that are no longer needed, being repurposed, or missing. This action helps cleanup your device inventory and ensures that unmanaged or obsolete devices no longer appear in the admin center.
 

@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Remotely shut down devices using Intune
+# Remote device action: shut down
 
 With the **shut down** action, IT administrators can remotely power off managed devices. This action doesn't prompt or warn the user before the device powers down.
 

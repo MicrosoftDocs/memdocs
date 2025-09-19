@@ -1,5 +1,5 @@
 ---
-title: Device cleanup Rules in Microsoft Intune
+title: Device Cleanup Rules
 description: Intune's device cleanup rules offer a simple, automated way to ensure that only actively managed devices remain visible in the admin center. Learn more about device cleanup rules and how to configure them.
 ms.date: 08/27/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# Device cleanup rules in Intune
+# Device cleanup rules
 
 <!--
 Managing a dynamic fleet of devices across an organization can be a daunting task for IT professionals. As devices come and go—whether due to upgrades, user turnover, or inactivity—keeping the Microsoft Intune admin center clean and accurate becomes essential. That's where Intune's device cleanup rules come into play.

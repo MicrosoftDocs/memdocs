@@ -10,7 +10,7 @@ ms.collection:
 - highpri
 ---
 
-# Remotely assist users with Intune
+# Remote device action:  new Remote Assistance session
 
 Microsoft Intune provides remote assistance capabilities to help IT support teams troubleshoot and resolve issues on user devices. This functionality is available through two integration paths: **Remote Help** (part of the Intune Suite) and **TeamViewer**. Each option offers different features, licensing requirements, and setup steps.
 

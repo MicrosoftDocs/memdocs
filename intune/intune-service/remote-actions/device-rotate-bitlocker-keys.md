@@ -11,9 +11,9 @@ ms.collection:
 - highpri
 ---
 
-# BitLocker key rotation using Intune
+# Remote device action: BitLocker key rotation
 
-The **BitLocker key rotation** remote action in Microsoft Intune lets IT admins remotely refresh the recovery key for the operating system drive on BitLocker-encrypted Windows devices. This helps reduce the risk of unauthorized access if a recovery key has been used or potentially exposed.
+The *BitLocker key rotation* remote action in Microsoft Intune lets IT admins remotely refresh the recovery key for the operating system drive on BitLocker-encrypted Windows devices. This helps reduce the risk of unauthorized access if a recovery key has been used or potentially exposed.
 
 Key rotation is especially useful in environments where devices are frequently serviced, reassigned, or exposed to support scenarios. For example, if a helpdesk technician shares a recovery key during a support call, you can rotate the key from Intune to ensure it can't be reused.
 

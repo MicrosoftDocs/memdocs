@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# Autopilot Reset using Intune
+# Remote device action: Autopilot Reset
 
 
 Use the **Autopilot Reset** remote action in Intune to prepare a Windows device for reuse while maintaining its Microsoft Entra ID and Intune enrollment. Autopilot Reset removes user data, settings, and apps, and reapplies the original device configuration.

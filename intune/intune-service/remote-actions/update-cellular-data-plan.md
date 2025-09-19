@@ -11,9 +11,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Update cellular data plan
+# Remote device action: update cellular data plan
 
-The **Update cellular data plan** remote action lets you remotely activate an eSIM cellular plan on supported iOS/iPadOS devices, making it easier to manage connectivity for users without physical SIM cards.
+The *update cellular data plan* remote action lets you remotely activate an eSIM cellular plan on supported iOS/iPadOS devices, making it easier to manage connectivity for users without physical SIM cards.
 
 ## Requirements
 

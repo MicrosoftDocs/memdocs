@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Actions: Quick Scan"
+title: "Intune Remote Device Action: Quick Scan"
 description: Learn how to initiate on demand Microsoft Defender quick scan with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
@@ -11,9 +11,9 @@ ms.collection:
 - highpri
 ---
 
-# Quick scan with Microsoft Defender using Intune
+# Remote device action: quick scan
 
-The **Quick Scan** remote action in Microsoft Intune enables IT administrators to start a targeted malware scan on managed Windows devices by using Microsoft Defender Antivirus. This action scans key system areas where threats commonly appear—such as memory, startup folders, and running processes—without performing a full system sweep.
+The *quick scan* remote action in Microsoft Intune enables IT administrators to start a targeted malware scan on managed Windows devices by using Microsoft Defender Antivirus. This action scans key system areas where threats commonly appear—such as memory, startup folders, and running processes—without performing a full system sweep.
 
 Quick scans are especially useful for routine health checks, validating recent policy deployments, or responding to low-risk alerts. By triggering a scan remotely from the Intune admin center, IT teams can quickly assess device health and ensure protection is up to date—without waiting for the next scheduled scan or relying on user intervention.
 

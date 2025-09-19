@@ -14,7 +14,7 @@ ms.collection:
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Play lost mode sound using Intune
+# Remote device action: play lost mode sound
 
 Microsoft Intune provides platform-specific remote actions to help locate a lost or misplaced device by triggering an audible alert—even if the device is locked or silenced.
 

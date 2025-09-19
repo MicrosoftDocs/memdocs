@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Actions: Disable Activation Lock"
+title: "Intune Remote Device Action: Disable Activation Lock"
 description: Learn how to use Microsoft Intune to disable Activation Lock on Apple devices.
 ms.date: 08/27/2025
 ms.topic: how-to
@@ -12,7 +12,7 @@ ms.collection:
 zone_pivot_groups: e5de148b-1c4f-40a3-8ecb-0f8a7724d927
 ---
 
-# Disable Activation Lock using Intune
+# Remote device action: disable Activation Lock
 
 Activation Lock is a security feature built into the *Find My* app on iOS/iPadOS and macOS devices. When enabled, it prevents unauthorized access by requiring the user's Apple ID and password to:
 
