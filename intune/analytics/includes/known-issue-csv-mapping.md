@@ -1,11 +1,6 @@
 ---
-author: MandiOhlinger
-ms.author: mandia
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: include
 ms.date: 03/31/2022
-ms.localizationpriority: high
 ---
 <!--Don't apply H2 in this include file since they are context driven by article. Used in startup-performance.md, work-from-anywhere.md, app-reliability.md, and scores.md files -->
 ### Exported csv files display numerical values
@@ -29,7 +24,7 @@ When reporting data is exported to a `.csv` file, the exported data doesn't use 
    |2|Needs attention|
    |3|Meeting goals|
 
-**Startup performance report** </br> 
+**Startup performance report** </br>
 
 The `CoreBootTime`, `GPBootTime`, `CoreLogonTime`, `GPLogonTime`, `DesktopUsableTime`, `Median`, and `TimePerProcess` columns are integer values with a unit of **seconds**.
 
