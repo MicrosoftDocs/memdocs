@@ -33,13 +33,12 @@ ms.collection:
 
 This feature applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 > [!NOTE]
 > The information in this article applies to Intune profiles for Delivery Optimization created before April 24, 2025.
 >
-> is article details the settings you can find in Windows device configuration templates for Delivery Optimization created before April 24, 2025. On April 24, 2025, the original Delivery Optimization templated was deprecated and replaced by a new template that uses the newer settings format as found in the Settings Catalog. 
+> This article details the settings you can find in Windows device configuration templates for Delivery Optimization created before April 24, 2025. On April 24, 2025, the original Delivery Optimization template was deprecated and replaced by a new template that uses the newer settings format as found in the Settings Catalog.
 > 
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text that is available within in the Microsoft Intune admin center are taken directly from the settings authoritative content. You can access that content by viewing a settings *information text* and then selecting the **Learn more** link.
 

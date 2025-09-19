@@ -1230,5 +1230,5 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
 ## Related articles
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- You can also create dedicated device kiosk profiles for [Android](device-restrictions-android.md#kiosk) and [Windows 10](kiosk-settings.md) devices.
+- You can also create dedicated device kiosk profiles for [Android](device-restrictions-android.md#kiosk) and [Windows](kiosk-settings.md) devices.
 - [Configure and troubleshoot Android enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974).

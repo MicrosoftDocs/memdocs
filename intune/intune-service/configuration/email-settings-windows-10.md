@@ -36,8 +36,7 @@ In Microsoft Intune, you can create and configure email to connect to an Exchang
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 This article describes some of the settings you can configure. You can create a device configuration profile to assign or deploy these email settings to your iOS/iPadOS devices.
 

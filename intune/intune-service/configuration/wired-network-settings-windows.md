@@ -36,8 +36,7 @@ This article describes the settings you can configure.
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Before you begin
 
