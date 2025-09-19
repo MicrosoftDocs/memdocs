@@ -1,9 +1,4 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: bpardi
-ms.subservice: autopilot
-ms.service: windows-client
 ms.topic: include
 ms.date: 06/11/2025
 ms.localizationpriority: medium
