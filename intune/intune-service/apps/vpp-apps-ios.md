@@ -8,7 +8,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 07/30/2025
+ms.date: 09/19/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -240,7 +240,7 @@ To renew an Apple Business Manager location token (Apple VPP token), use the fol
 > [!NOTE]
 > The expiration date listed in Intune might take some time to reflect the new certificate expiration date after renew. Confirm renew was successful by refreshing the page until the expiration date updates.
 >
-> Renew the existing Apple VPP token or location token if the user who set up the token in Apple Business Manager changes their password. Also renew the token if that user leaves your Apple Business Manager organization. Tokens that aren't renewed show "invalid" status in Intune.
+> Renew the existing Apple VPP token or location token if there are any changes to the Managed Apple ID account used to set up the token (Domain change, Password changed or expired, Account is disabled). Tokens show "invalid" status in Intune in any of those scenarios or if the token expired.
 
 ## Configure updates for VPP apps
 
