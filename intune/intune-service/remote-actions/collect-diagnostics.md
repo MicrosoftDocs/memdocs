@@ -279,7 +279,7 @@ This following list is the same order as the diagnostic zip. Each collection con
 
 ### Disable device diagnostics
 
-The collect diagnostics remote action is enabled by default. You can disable the **Collect diagnostics** remote action for all devices by following these steps:
+The *collect diagnostics* remote action is enabled by default. You can disable the **Collect diagnostics** remote action for all devices by following these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Tenant administration** > **Device diagnostics**.

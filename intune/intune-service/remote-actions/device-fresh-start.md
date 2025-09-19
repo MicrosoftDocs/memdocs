@@ -11,9 +11,9 @@ ms.collection:
 - highpri
 ---
 
-# Remote device action: fresh start
+# Remote device action: Fresh Start
 
-The *fresh start* remote action removes apps from managed Windows devices, helping you remove preinstalled (OEM) apps that typically ship with a new PC.
+The *Fresh Start* remote action removes apps from managed Windows devices, helping you remove preinstalled (OEM) apps that typically ship with a new PC.
 
 ## Requirements
 

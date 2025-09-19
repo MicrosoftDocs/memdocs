@@ -40,7 +40,7 @@ To dive deeper into how Activation Lock works, see [Activation Lock for iPhone a
 There are two methods to disabling Activation Lock on devices:
 
 - Manually entering the Activation Lock bypass code on the device.
-- Using the Disable Activation Lock device action.
+- Using the *disable Activation* Lock device action.
 
 For supervised devices, Intune stores the Activation Lock bypass code, which can be entered on the device to manually disable Activation Lock. If the device has been wiped, you can directly access the device by using a blank username and the code as the password.
 Additionally, Intune can directly issue the bypass code to Apple's activation server to disable Activation Lock without having to interact with the device.

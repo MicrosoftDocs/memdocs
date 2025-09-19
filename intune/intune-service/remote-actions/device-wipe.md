@@ -15,7 +15,7 @@ zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 
 # Remote device action: wipe
 
-Use the **Wipe** remote action in Intune to factory reset a device, restoring it to its default settings. This action removes all personal and organizational data, apps, and configurations. It's commonly used when a device needs to be retired, repurposed, reset for troubleshooting, or securely erased if lost or stolen.
+Use the *Wipe* remote action in Intune to factory reset a device, restoring it to its default settings. This action removes all personal and organizational data, apps, and configurations. It's commonly used when a device needs to be retired, repurposed, reset for troubleshooting, or securely erased if lost or stolen.
 
 Depending on the platform, you can customize the wipe behavior to meet your organization's needs.
 

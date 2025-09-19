@@ -18,8 +18,8 @@ zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 
 Microsoft Intune provides platform-specific remote actions to help locate a lost or misplaced device by triggering an audible alert—even if the device is locked or silenced.
 
-- On iOS/iPadOS, use the **Play Lost Mode sound** action. This action is available when the device is in [Lost Mode](device-lost-mode.md) and supervised.
-- On Android Enterprise devices, use the **Play lost device sound** action. This action is supported for corporate-owned devices enrolled with Android Enterprise.
+- On iOS/iPadOS, use the *play Lost Mode sound* action. This action is available when the device is in [Lost Mode](device-lost-mode.md) and supervised.
+- On Android Enterprise devices, use the *Play lost device sound* action. This action is supported for corporate-owned devices enrolled with Android Enterprise.
 
 These remote actions are especially useful in environments where devices are shared or frequently moved—such as classrooms, labs, or enterprise workspaces. Playing a sound helps users or administrators locate the device quickly and securely, supporting recovery efforts when a device is lost.
 

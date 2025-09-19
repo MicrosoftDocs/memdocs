@@ -13,7 +13,7 @@ ms.collection:
 
 # Remote device action: remove passcode
 
-With the **remove passcode** action in Microsoft Intune, you can remotely remove a device passcode to help users regain access to their devices without requiring a full device wipe. This remote action is especially useful when a user forgets their passcode or is locked out of their device.
+With the *remove passcode* action in Microsoft Intune, you can remotely remove a device passcode to help users regain access to their devices without requiring a full device wipe. This remote action is especially useful when a user forgets their passcode or is locked out of their device.
 
 ## Requirements
 

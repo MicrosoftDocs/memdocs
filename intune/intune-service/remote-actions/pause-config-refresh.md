@@ -13,7 +13,7 @@ ms.collection:
 
 # Remote device action: pause Config Refresh
 
-Use the **pause Config Refresh** remote action in Microsoft Intune to temporarily suspend automatic policy enforcement on Windows 11 devices. This action is helpful when you need to troubleshoot, perform maintenance, or apply manual changes that shouldn't be overwritten by Intune policies.
+Use the *pause Config Refresh* remote action in Microsoft Intune to temporarily suspend automatic policy enforcement on Windows 11 devices. This action is helpful when you need to troubleshoot, perform maintenance, or apply manual changes that shouldn't be overwritten by Intune policies.
 
 Config Refresh is a Windows feature that periodically reapplies policy settings to ensure devices stay compliant with your defined configurations. IT admins can configure the refresh cadence to run as frequently as every 30 minutes or as infrequently as once every 24 hours (1,440 minutes).
 

@@ -12,7 +12,7 @@ ms.collection:
 
 # Remote device action: shut down
 
-With the **shut down** action, IT administrators can remotely power off managed devices. This action doesn't prompt or warn the user before the device powers down.
+With the *shut down* action, IT administrators can remotely power off managed devices. This action doesn't prompt or warn the user before the device powers down.
 
 ## Requirements
 
