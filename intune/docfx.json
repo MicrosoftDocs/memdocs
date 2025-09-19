@@ -38,6 +38,7 @@
       "brand": "Microsoft Intune",
       "searchScope": ["Intune"],
       "ms.suite": "ems",
+      "titlesuffix": "Microsoft Intune",
       "contributors_to_exclude": [
         "PRMerger9",
         "PRMerger17",
