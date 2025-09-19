@@ -73,4 +73,4 @@ As an Intune administrator, you can create and assign email settings to Android 
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Create email profiles for [Android Samsung Knox](email-settings-android.md), [iOS/iPadOS](email-settings-ios.md), and [Windows 10 and later](email-settings-windows-10.md) devices.
+- Create email profiles for [Android Samsung Knox](email-settings-android.md), [iOS/iPadOS](email-settings-ios.md), and [Windows](email-settings-windows-10.md) devices.

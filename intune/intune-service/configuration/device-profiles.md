@@ -97,7 +97,7 @@ This feature supports:
 
 ## Delivery optimization
 
-[Delivery optimization](delivery-optimization-windows.md) provides a better experience to delivery software updates. These settings are replacing the **Software Updates** > **Windows 10 update ring** settings.
+[Delivery optimization](delivery-optimization-windows.md) provides a better experience to delivery software updates.
 
 Use these settings to control how software updates are downloaded to devices in your organization. For example, you can let users get their own updates, or get updates using the delivery optimization cloud services in a device profile.
 

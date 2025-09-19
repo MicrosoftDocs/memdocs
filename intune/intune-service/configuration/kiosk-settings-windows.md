@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Kiosk settings for Windows 10/11 in Microsoft Intune
+title: Kiosk settings for Windows in Microsoft Intune
 description: Configure your Windows 10/11 client devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune.
-keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11
+keywords: frontline worker, FLW, kiosk, dedicated device, Windows
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
@@ -29,12 +29,12 @@ ms.collection:
 - highpri
 ---
 
-# Windows 10/11 and newer device settings to run as a kiosk in Intune
+# Windows device settings to run as a kiosk in Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-On Windows 10/11 devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. To configure multi-app kiosk on Windows 11, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
+On Windows devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. To configure multi-app kiosk on Windows 11, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
 
 This article describes some of the settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to configure your Windows client devices to run in kiosk mode.
 
@@ -45,6 +45,9 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
 ## Before you begin
 
 - Create a [Windows kiosk device configuration profile](kiosk-settings.md#create-the-profile).
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 - This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older). To summarize:
 
@@ -127,7 +130,7 @@ Runs only one app on the device, such as a web browser or Store app.
       `office.com`
 
     > [!NOTE]
-    > Windows 10/11 Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Microsoft Entra credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
+    > Windows Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Microsoft Entra credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
 
   - **Add Store app**: Select **Add a store app**, and choose an app from the list.
 

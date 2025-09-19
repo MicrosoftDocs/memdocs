@@ -91,4 +91,4 @@ Select the content types that you want to synchronize on the devices.
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Create email profiles for [Android Enterprise](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md), and [Windows 10 and later](email-settings-windows-10.md).
+- Create email profiles for [Android Enterprise](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md), and [Windows](email-settings-windows-10.md).

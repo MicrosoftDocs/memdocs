@@ -73,7 +73,7 @@ This feature applies to:
   - Configure earlier versions of Microsoft Edge.
   - Configure Microsoft Edge browser settings that aren't in the settings catalog.
 
-- **Windows 10/11**
+- **Windows**
 
   There are thousands of settings, including settings that weren't previously available. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
 
@@ -230,8 +230,7 @@ After you give the new profile a name, you can edit the profile to adjust the se
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you export a policy, import it to create a new policy, and then make changes to the new policy.
 

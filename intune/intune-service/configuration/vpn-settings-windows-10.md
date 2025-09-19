@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows 10/11 VPN settings in Microsoft Intune
+title: Windows VPN settings in Microsoft Intune
 description: Learn and read about all the available VPN settings in Microsoft Intune, what they're used for, and what they do. See the traffic rules, Conditional Access, and DNS and proxy settings for Windows 10/11 and Windows Holographic for Business devices.
 keywords:
 author: MandiOhlinger
@@ -28,7 +28,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune
+# Windows and Windows Holographic device settings to add VPN connections using Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -39,7 +39,7 @@ As part of your mobile device management (MDM) solution, use these settings to a
 
 These settings apply to devices running:
 
-- Windows 10/11
+- Windows
 - Windows Holographic for Business
 
 ## Before you begin
