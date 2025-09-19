@@ -59,6 +59,7 @@ This feature applies to:
 | com.apple.DocumentsApp      | Files        | Apple     |
 | com.apple.mobileme.fmf1     | Find Friends | Apple     |
 | com.apple.mobileme.fmip1    | Find iPhone  | Apple     |
+| com.apple.games             | Games        | Apple     |
 | com.apple.gamecenter        | Game Center  | Apple     |
 | com.apple.mobilegarageband  | GarageBand   | Apple     |
 | com.apple.Health            | Health       | Apple     |
@@ -83,6 +84,7 @@ This feature applies to:
 | com.apple.Photo-Booth       | Photo Booth  | Apple     |
 | com.apple.mobileslideshow   | Photos       | Apple     |
 | com.apple.podcasts          | Podcasts     | Apple     |
+| com.apple.preview           | Preview      | Apple     |
 | com.apple.reminders         | Reminders    | Apple     |
 | com.apple.mobilesafari      | Safari       | Apple     |
 | com.apple.Preferences       | Settings     | Apple     |
