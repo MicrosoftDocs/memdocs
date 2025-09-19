@@ -68,9 +68,9 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
  [!INCLUDE [24572](./includes/secure-recommendations/24572.md)] 
 
-<!-- ### Tenant - A Device Clean-up rule is Configured 24805 -->
+### Tenant - A device cleanup rule is configured 24802
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-<!-- [!INCLUDE [24805](./includes/secure-recommendations/24805.md)]-->
+[!INCLUDE [24805](./includes/secure-recommendations/24802.md)]
 
 <!-- ### Tenant - Terms and conditions is configured and assigned 24794 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
