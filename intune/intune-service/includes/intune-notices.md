@@ -37,10 +37,10 @@ Alternatively, you may add the service tag â€œAzureFrontDoor.MicrosoftSecurityâ€
 
 If you aren't the IT admin who can make this change, notify your networking team. If you're responsible for configuring internet traffic, refer to the following documentation for more details:
 
-[Azure Front Door](/azure/frontdoor/origin-security?tabs=app-service-functions&pivots=front-door-classic)
-[Azure service tags](/azure/virtual-network/service-tags-overview)
-[Intune network endpoints](../fundamentals/intune-endpoints.md#intune-core-service)
-[US government network endpoints for Intune](/fundamentals/intune-us-government-endpoints)
+- [Azure Front Door](/azure/frontdoor/origin-security?tabs=app-service-functions&pivots=front-door-classic)
+- [Azure service tags](/azure/virtual-network/service-tags-overview)
+- [Intune network endpoints](../fundamentals/intune-endpoints.md#intune-core-service)
+- [US government network endpoints for Intune](/fundamentals/intune-us-government-endpoints)
 
 If you have a helpdesk, inform them about this upcoming change.
 
