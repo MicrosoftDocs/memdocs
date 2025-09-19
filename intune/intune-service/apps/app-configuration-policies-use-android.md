@@ -76,6 +76,9 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     > * Record audio
     > * Allow body sensor data
 
+    > [!NOTE]
+    > As of Android 16, configuring **Auto grant** for permissions under the **HEALTH** permission group is no longer supported.
+
 11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods for adding configuration information:
     - **Use configuration designer**
     - **Enter JSON data**
