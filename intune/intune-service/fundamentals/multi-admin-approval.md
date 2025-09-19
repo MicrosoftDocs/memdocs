@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Use multiple administrative approvals in Intune
+title: Use Multi Admin Approval in Intune
 titleSuffix: Microsoft Intune
-description: Configure multi-admin approval to protect your tenant against the use of compromised administrative accounts in Intune.
+description: Configure Multi Admin Approval to protect your tenant against the use of compromised administrative accounts in Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -29,11 +29,11 @@ ms.collection:
 - setup
 ---
 
-# Use Access policies to require multiple administrative approvals
+# Use Access policies to require Multi Admin Approval
 
-To help protect against a compromised administrative account, use Intune *access policies* to require that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA).
+To help protect against a compromised administrative account, use Intune *access policies* to require that a second administrative account is used to approve a change before the change is applied. This capability is known as Multi Admin Approval.
 
-With MAA, you configure access policies that protect specific configurations, like Apps or Scripts for devices. Access policies specify what is protected and which group of accounts are permitted to approve changes to those resources.
+With Multi Admin Approval, you configure access policies that protect specific configurations, like Apps or Scripts for devices. Access policies specify what is protected and which group of accounts are permitted to approve changes to those resources.
 
 When any account in the Tenant is used to make a change to a resource that's protected by an access policy, Intune doesn't apply the change until a different account explicitly approves it. Only administrators who are members of an approval group that's assigned a protected resource in an access protection policy can approve changes. Approvers can also reject change requests.
 
@@ -56,7 +56,7 @@ To be an approver for access policies, an account must be in the approver group 
 
 All approver groups must also be a member group of one or more Intune role assignments. There's no specific requirement for which role assignment the approver group must be added to. If the approver group isn't added to a role assignment, approver group members are removed from the group periodically.
 
-## How multi admin approval and Access policies work
+## How Multi Admin Approval and Access policies work
 
 **When an admin edits** or creates a new object for an area that's protected by an access policy, they see an option on the *Save + Review* surface where they can enter a description of the change as a *business justification*.
 
@@ -89,7 +89,7 @@ All approver groups must also be a member group of one or more Intune role assig
 
 ## Submit a request
 
-To submit a request when MAA is enabled, use your normal process to create or edit a resource.
+To submit a request when Multi Admin Approval is enabled, use your normal process to create or edit a resource.
 
 On the final page before you can save your changes, add details to the *Business justification* field, and then submit the request. For urgent requests, consider reaching out to a known list of approvers to ensure your request is seen in a timely manner.
 
