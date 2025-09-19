@@ -37,8 +37,7 @@ To help optimize your Windows devices, use this profile as part of your mobile d
 
 This feature applies to:
 
-- Windows 11 devices enrolled in Intune
-- Windows 10 version 1903 and newer devices enrolled in Intune
+- Windows devices enrolled in Intune
 
 This article shows you how to create the profile, and enable the monitoring.
 

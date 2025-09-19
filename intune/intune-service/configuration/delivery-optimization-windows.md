@@ -4,8 +4,8 @@
 title: Windows Delivery Optimization settings in Microsoft Intune
 description: Configure device configuration policy to manage Delivery Optimization settings on Windows devices you manage with Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: MandiOhlinger
+ms.author: mandia
 manager: laurawi
 ms.date: 04/23/2025
 ms.topic: how-to
@@ -31,7 +31,7 @@ ms.reviewer: juidaewo; davguy
 With Intune, you can use Delivery Optimization settings for your Windows devices to reduce bandwidth consumption when those devices download applications and updates. This article describes how to configure Delivery Optimization settings as part of an Intune device configuration profile. After you create a profile, you then assign or deploy that profile to your Windows devices.
 
 > [!IMPORTANT]
-> In April 2025, the settings format of the Delivery Optimization template was updated. Profiles for this new platform use the settings format as found in the Settings Catalog.  With this change you can no longer create new versions of the old profile. Your existing instances of the old profile remain available to use. 
+> In April 2025, the settings format of the Delivery Optimization template was updated. Profiles for this new platform use the settings format as found in the Settings Catalog.  With this change you can no longer create new versions of the old profile. Your existing instances of the old profile remain available to use.
 >
 > For more information about this change, see the Intune Customer Success blog at [Support tip: Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-windows-device-configuration-policies-migrating-to-unified-settings-/4189665).
 
@@ -39,8 +39,7 @@ With Intune, you can use Delivery Optimization settings for your Windows devices
 
 This feature applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 ## Create the profile
 

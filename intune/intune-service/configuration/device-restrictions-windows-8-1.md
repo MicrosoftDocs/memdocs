@@ -130,4 +130,4 @@ This article shows you the Microsoft Intune device restrictions settings that yo
 
 ## Related articles
 
-- Create a device restrictions profile on [Windows 10 and newer](device-restrictions-windows-10.md).
+- Create a device restrictions profile on [Windows devices](device-restrictions-windows-10.md).

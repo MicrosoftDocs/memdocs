@@ -6,7 +6,7 @@ description: Manage custom compliance settings for Linux and Windows devices by 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/15/2024
 ms.topic: concept-article
 ms.service: microsoft-intune
@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,7 +37,7 @@ This feature applies to:
 
 - Windows 10/11 (excluding Windows 10/11 Home)  
 - Linux 
-  - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS  
+  - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS  
   - RedHat Enterprise Linux 8  
   - RedHat Enterprise Linux 9  
 

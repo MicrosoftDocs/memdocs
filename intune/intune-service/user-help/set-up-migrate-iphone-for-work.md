@@ -7,7 +7,7 @@ description: Learn how to transfer your work access from an old iPhone to a new 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 10/06/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune

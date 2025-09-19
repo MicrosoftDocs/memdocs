@@ -2,8 +2,8 @@
 title: Integrate Windows Update client policies
 titleSuffix: Configuration Manager
 description: Use Windows Update client policies to keep Windows up-to-date for devices connected to the Windows Update service.
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 10/20/2021
 ms.topic: integration

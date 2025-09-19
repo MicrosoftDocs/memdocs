@@ -6,8 +6,8 @@ description: Enroll a work provided Linux device in Microsoft Intune to get secu
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 11/04/2024
+manager: laurawi
+ms.date: 08/15/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -37,11 +37,11 @@ Enroll a Linux device in Microsoft Intune to get secure access to work or school
 
 Enrollment is supported on the following versions of Linux:
 
-* Ubuntu Desktop 24.04, 22.04 or 20.04 LTS (physical, Azure VM, or Hyper-V machine with x86/64 CPUs)  
+* Ubuntu Desktop, version 22.04 LTS or 24.04 LTS (physical, Azure VM, or Hyper-V machine with x86/64 CPUs)  
 * RedHat Enterprise Linux 8  
 * RedHat Enterprise Linux 9
 
-Devices must be configured with a GNOME graphical desktop environment, which is automatically included with Ubuntu Desktop 22.04 and 20.04 LTS.  
+Devices must be configured with a GNOME graphical desktop environment, which is automatically included with Ubuntu Desktop, version 22.04 LTS and 24.04 LTS.  
 
 Linux devices enrolled with Microsoft Intune are considered corporate-owned devices. Device enrollment isn't supported with personal devices. 
 

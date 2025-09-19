@@ -6,7 +6,7 @@ description: Use the device compliance dashboard to understand overall device co
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 05/21/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -45,7 +45,7 @@ This article applies to:
 - Android open source platform (AOSP)   
 - Android Enterprise
 - iOS/iPadOS
-- Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
+- Linux - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
 - macOS
 - Windows 10 and later
 

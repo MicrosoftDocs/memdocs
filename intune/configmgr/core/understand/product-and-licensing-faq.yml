@@ -118,7 +118,7 @@ sections:
           - [Tenant attach prerequisites](../../tenant-attach/prerequisites.md)
           - [Endpoint analytics licensing prerequisites](../../../analytics/overview.md#licensing-prerequisites)
           - [Use Conditional Access with Intune](../../../intune-service/protect/conditional-access.md#ways-to-use-conditional-access-with-intune)
-          - [TeamViewer prerequisites](../../../intune-service/remote-actions/teamviewer-support.md#prerequisites)
+          - [TeamViewer prerequisites](../../../intune-service/fundamentals/teamviewer-support.md#prerequisites)
 
       - question: |
           I have Enterprise Mobility + Security and it expired, what must I do now?

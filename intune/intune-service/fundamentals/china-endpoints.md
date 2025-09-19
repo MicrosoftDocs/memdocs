@@ -5,8 +5,8 @@ title: Network endpoints for China deployments - Microsoft Intune
 titleSuffix: 
 description: Review China endpoints for Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: MandiOhlinger
+ms.author: mandia
 manager: laurawi
 ms.date: 06/09/2025
 ms.topic: reference

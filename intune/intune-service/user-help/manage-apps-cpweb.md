@@ -6,7 +6,7 @@ description: Manage and view available and installed apps
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 03/05/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune

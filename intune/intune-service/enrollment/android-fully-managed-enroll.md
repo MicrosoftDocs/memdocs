@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: grwilson
+ms.reviewer: grwilso
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -44,14 +44,22 @@ You and your device users can initiate enrollment by entering or scanning an enr
 Complete these prerequisites to ensure a successful enrollment.     
 
 * You must have an Intune standalone tenant, with the [mobile device management (MDM) authority set to Microsoft Intune](../fundamentals/mdm-authority-set.md).  
+
 * Devices must:  
   - Run Android OS version 8.0 and later.
   - Run an Android build that has Google Mobile Services connectivity. 
   - Have Google Mobile Services available and be able to connect to it.  
   
-  There's no restriction on device manufacturer/OEM if all three requirements are met. 
+  There's no restriction on device manufacturer/OEM if all three requirements are met.  
+
  * Make sure Android Enterprise is supported in your region. For Android Enterprise requirements, see [Get started with Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).  
+
+ * Make sure Android Enterprise is supported on devices. For more information, see:   
+    * [Android Enterprise help - General FAQs](https://support.google.com/work/android/answer/14772109?hl=en#zippy=%2cif-my-device-is-not-android-enterprise-recommended-aer-can-i-still-use-android-enterprise)  
+    * [Check & fix Play Protect certification status](https://support.google.com/googleplay/answer/7165974?hl=en#zippy=%2Cdevice-isnt-certified)  
+
  * [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).    
+
  * The Android setup process uses a Chrome tab to authenticate device users during enrollment. If you have a Microsoft Entra Conditional Access policy with the following configurations, you must exclude the Microsoft Intune cloud app from the policy:  
    
      * *Require a device to be marked as compliant* setting is used to grant or block access.

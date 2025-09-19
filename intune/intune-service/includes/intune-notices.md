@@ -12,6 +12,35 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Update to support statement for Windows 10 in Intune
+
+Windows 10 will reach end of support on **October 14, 2025**. After this date, Windows 10 will no longer receive quality or feature updates. Security updates will only be available to commercial customers who have enrolled devices into the Extended Security Updates (ESU) program. For more details, review the additional information shared below.
+
+#### How does this change affect you or your users?
+
+After Windows 10 reaches the end of support, Microsoft Intune will continue to maintain core management functionality for Windows 10. This ensures:
+
+- Continuity of device management.
+- Support for updates and migration workflows to Windows 11.
+- Ability for ESU customers to deploy Windows security updates and maintain secure patch levels.
+
+Following Windows 10 end of support, the final release of Windows 10 (version 22H2) will be designated as an “allowed” version in Intune. While updates and new features are not available, devices running this version can still enroll in Intune and use eligible features, but functionality is not guaranteed and may vary.
+
+#### How can you prepare?
+Use the **All devices** report in the Intune admin center to identify devices still running Windows 10 and upgrade eligible devices to Windows 11.
+
+If devices cannot be upgraded in time, consider enrolling eligible devices in the Windows 10 ESU program to continue receiving critical security updates.
+
+
+#### Additional information:
+
+- [Stay secure with Windows 11, Copilot+ PCs and Windows 365 before support ends for Windows 10](https://blogs.windows.com/windowsexperience/2025/06/24/stay-secure-with-windows-11-copilot-pcs-and-windows-365-before-support-ends-for-windows-10/)
+- [Windows 10 reaching end of support](/lifecycle/announcements/windows-10-end-of-support)
+- [Enable Extended Security Updates (ESU)](/windows/whats-new/enable-extended-security-updates)
+- [Windows 10 release information](/windows/release-health/release-information)
+- [Windows 11 release information](/windows/release-health/windows11-release-information)
+- [Lifecycle FAQ - Windows](/lifecycle/faq/windows)
+
 ### Update to the latest Intune App SDK and Intune App Wrapping Tool  for iOS and register your app with Microsoft Entra
 
 To support the upcoming release of iOS/iPadOS 26 and ensure continued app protection policy (APP, also known as MAM) enforcement, update to the latest versions of the Intune App SDK and the Intune App Wrapping Tool to ensure applications stay secure and run smoothly. **Important:** If you don't update to the latest versions, some app protection policies may not apply to your app in certain scenarios.

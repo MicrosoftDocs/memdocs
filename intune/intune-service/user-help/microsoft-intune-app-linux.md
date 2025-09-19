@@ -6,7 +6,7 @@ description: Describes how to install, update, and remove the Microsoft Intune a
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/04/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
@@ -38,7 +38,7 @@ The Microsoft Intune app package is available at [https://packages.microsoft.com
 
 The Microsoft Intune app is supported with the following operating systems:  
 
- - Ubuntu Desktop 24.04, 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
+ - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
  - RedHat Enterprise Linux 8  
  - RedHat Enterprise Linux 9
 

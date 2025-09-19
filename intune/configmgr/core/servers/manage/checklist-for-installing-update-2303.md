@@ -6,8 +6,8 @@ ms.date: 04/10/2023
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: checklist
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ---

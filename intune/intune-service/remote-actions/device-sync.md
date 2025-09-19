@@ -4,8 +4,8 @@
 title: Sync devices with Microsoft Intune
 description: Synchronize devices that are registered or managed with Microsoft Intune to get the latest policies and actions. Includes the steps to sync by using the Azure portal, and lists the error codes that can be retried.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: paolomatarazzo
+ms.author: paoloma
 manager: dougeby
 ms.date: 02/27/2025
 ms.topic: how-to
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -71,5 +71,5 @@ When an administrator runs the **Sync** device action, iOS/iPadOS and Android ap
 
 ## Next steps
 
-You can [check the details](device-inventory.md) of the device.
- 
+You can [check the details](../fundamentals/device-inventory.md) of the device.
+
