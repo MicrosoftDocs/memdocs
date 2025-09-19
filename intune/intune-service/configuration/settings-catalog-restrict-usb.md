@@ -40,8 +40,7 @@ This article shows you:
 
 This article applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Prerequisites
 

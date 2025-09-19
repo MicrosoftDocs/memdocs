@@ -39,8 +39,7 @@ This feature applies to:
 
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Configure Microsoft Edge and Google Chrome
 
@@ -49,8 +48,7 @@ This feature applies to:
 This feature applies to:
 
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome.
 
@@ -66,8 +64,7 @@ For a sample Microsoft Edge scenario, see [Create a Microsoft Edge policy](setti
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 You can create a universal print policy, add printers, and then deploy this printer list to your managed users. When the policy is deployed, it automatically installs the printers you added. Users can see these printers, and select a printer from your list.
 

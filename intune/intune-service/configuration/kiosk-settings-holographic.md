@@ -44,6 +44,9 @@ To learn more about the Windows kiosk feature in Intune, go to [configure kiosk 
 
   When you create a Windows client kiosk device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 - This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-holographic.md#microsoft-edge-browser). To summarize:
 
   1. Create this kiosk profile to run the device in kiosk mode.
@@ -94,7 +97,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
       For more information on these options, go to [Deploy Microsoft Edge kiosk mode](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a device restrictions profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10** for platform > **Templates** > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) describes the available Holographic for Business settings.
+      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a device restrictions profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) describes the available Holographic for Business settings.
 
     - **Add Kiosk browser**: Not supported on Windows Holographic for Business.
 
