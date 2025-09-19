@@ -3,7 +3,7 @@
 
 title: Kiosk settings for Windows and Holographic devices in Microsoft Intune
 description: Configure your Windows 10/11 and Windows Holographic for Business devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune.
-keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11, Windows Holographic for Business, Windows HoloLens, Windows kiosk
+keywords: frontline worker, FLW, kiosk, dedicated device, Windows Holographic for Business, Windows HoloLens, Windows kiosk
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
@@ -36,8 +36,7 @@ This scenario is common for frontline workers (FLW). For more information on FLW
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 - Windows Holographic for Business
 
 To create kiosk profiles for other platforms, go to:
@@ -81,6 +80,8 @@ This article shows you how to run one app or many apps as a Windows kiosk device
 
         > [!NOTE]
         > Currently, you can use Intune to configure a multi-app kiosk on Windows 10 devices. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
+        >
+        > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
     For a list of all settings, and what they do, go to:
 
@@ -108,5 +109,5 @@ The next time each device checks in, the policy is applied.
 
   - [Android device administrator](device-restrictions-android.md#kiosk)
   - [Android Enterprise](device-restrictions-android-for-work.md) (Device experience)
-  - [Windows 10/11](kiosk-settings-windows.md)
+  - [Windows](kiosk-settings-windows.md)
   - [Windows Holographic for Business](kiosk-settings-holographic.md)

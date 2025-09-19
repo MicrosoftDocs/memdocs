@@ -49,8 +49,7 @@ You can use email profiles to configure email settings for the following devices
 - Android Enterprise personally owned devices with a work profile
 - iOS 11.0 and newer
 - iPadOS 13.0 and newer
-- Windows 11
-- Windows 10
+- Windows
 
 This article shows you how to create an email profile in Microsoft Intune. It also includes links to the different platforms for more specific settings.
 
@@ -299,7 +298,7 @@ After the email app is assigned to the device, this next step creates the device
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10/11: Email settings for all Windows 10/11 devices**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Email settings for all Windows devices**.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -309,7 +308,7 @@ After the email app is assigned to the device, this next step creates the device
     - [Android device administrator (Samsung Knox Standard)](email-settings-android.md)
     - [Android Enterprise](email-settings-android-enterprise.md)
     - [iOS/iPadOS](email-settings-ios.md)
-    - [Windows 10/11](email-settings-windows-10.md)
+    - [Windows](email-settings-windows-10.md)
 
 8. Select **Next**.
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
