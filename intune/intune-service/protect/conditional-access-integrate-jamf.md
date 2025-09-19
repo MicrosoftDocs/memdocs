@@ -20,7 +20,7 @@ ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
 #ROBOTS: 
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -38,9 +38,9 @@ ms.collection:
 >
 > **Jamf macOS device support for Conditional Access is being deprecated**.
 >
-> Beginning on January 31, 2025, the platform that Jamf Pro’s Conditional Access feature is built on will no longer be supported.
+> Beginning on January 31, 2025, the platform that Jamf Pro's Conditional Access feature is built on will no longer be supported.
 >
-> If you use Jamf Pro’s Conditional Access integration for macOS devices, follow Jamf’s documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
+> If you use Jamf Pro's Conditional Access integration for macOS devices, follow Jamf's documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
 >
 > If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
@@ -66,7 +66,7 @@ You need the following to configure Conditional Access with Jamf Pro:
 
 - Jamf Pro 10.1.0 or later
 - Microsoft Intune and Microsoft Entra ID P1 licenses (recommended Microsoft Enterprise Mobility + Security license bundle)
-- Global admin role in Microsoft Entra ID.
+- Global Administrator role in Microsoft Entra ID.
 - A user with Microsoft Intune Integration privileges in Jamf Pro
 - [Company Portal app for macOS](https://aka.ms/macoscompanyportal)
 - macOS devices with OS X 10.12 Yosemite or later

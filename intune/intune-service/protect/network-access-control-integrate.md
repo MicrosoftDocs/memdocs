@@ -51,6 +51,8 @@ Intune integrates with network access control (NAC) partners to help organizatio
 > - Aruba ClearPass with Microsoft Intune Extension v6 and later
 > - Forescout eyeExtend Microsoft Module v1.0.1 and later
 > - Portnox Cloud
+> - Fortinet FortiNAC 9.4.x
+> - Fortinet FortiNAC-F 7.x and later
 >
 > We will be deprecating the Intune NAC service in the future, so we recommend that you migrate to the compliance retrieval service to avoid service disruption. Contact your NAC solution provider if you have questions about the compliance retrieval service or impact to your tenant. For more information and updates about the compliance retrieval service and NAC partners, see [Microsoft Tech Community: New Microsoft Intune service for network access control](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696). 
 
@@ -145,3 +147,4 @@ Also, the data returned will be limited if:
 - [Integrate Forescout with Intune](https://protect-us.mimecast.com/s/YTj3CmZV3rFkqlOJFGbpF-?domain=docs.forescout.com)
 - [Integrate HPE Aruba ClearPass with Intune](https://asp.arubanetworks.com/downloads/documents/RmlsZTowMTg2ZmY0Yy05MGE5LTExZWItODRiZC0yZjM5OWFjNzc5YTY%3D)
 - [Integrate Squadra security Removable Media Manager (secRMM) with Intune](https://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.10.0.0/secRMMIntune.pdf)
+- [Integrate FortiNAC with Intune](https://docs.fortinet.com/document/fortinac/9.4.0/third-party-mdm-device-integration/880555/microsoft-intune)

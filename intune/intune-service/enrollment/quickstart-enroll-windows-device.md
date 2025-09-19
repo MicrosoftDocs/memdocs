@@ -53,11 +53,11 @@ To complete this evaluation step, you must:
 
 - Have a Microsoft Intune subscription: [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md)
 - Complete the evaluation step for [setting up automatic enrollment in Intune](quickstart-setup-auto-enrollment.md).  
-- Be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+- Use the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.
 
-  If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+  If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-  > [!CAUTION]  
+  > [!CAUTION]
   > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 Additionally, before you begin enrollment, confirm the version of Windows running on your device.  

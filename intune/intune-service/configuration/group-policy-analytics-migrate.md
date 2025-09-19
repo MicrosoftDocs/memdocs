@@ -31,7 +31,7 @@ ms.collection:
 - highpri
 ---
 
-# Create a Settings Catalog policy using your imported GPOs in Microsoft Intune (public preview)
+# Create a Settings Catalog policy using your imported GPOs in Microsoft Intune
 
 You can import your on-premises Group Policy Objects (GPOs), and create an Intune policy using these imported settings. This policy can be deployed to users and devices managed by your organization.
 
@@ -39,8 +39,7 @@ With Group Policy Analytics, you import your on-premises GPOs. It analyzes your 
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 This article shows you how to create the policy from your imported GPOs. For more information and an overview on Group Policy Analytics, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md).
 
@@ -62,11 +61,9 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 - Only admins scoped to the GPO can create a settings catalog policy from that imported GPO. Scope tags are first applied during import of the GPO and can be edited. If a scope tag isn't or wasn't selected during the GPO import, then the **Default** scope tag is automatically used.
 
-- This feature is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
-
 ## Review and migrate your GPOs to a Settings Catalog policy
 
-After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analytics), review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows 10/11 devices. After you review them, you can migrate the settings to a Settings Catalog policy.
+After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analytics), review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows devices. After you review them, you can migrate the settings to a Settings Catalog policy.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics**.
 2. In the list, your imported GPOs are shown. Next to the GPO you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
@@ -96,7 +93,7 @@ After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analy
       :::image type="content" source="./media/group-policy-analytics-migrate/sort-using-column-names.png" alt-text="Screenshot that shows how to sort the settings using the Migrate, Setting name, Group policy setting category, MDM support, value, scope, min OS version, and CSP name Group Policy Analytics migrate features in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/sort-using-column-names.png":::
 
     > [!TIP]
-    > If you haven't already, review your Group Policy settings. It's possible some settings don't apply to cloud-based policy management or don't apply to cloud native endpoints, like Windows 10/11 devices. It's not recommended to include all your Group Policy settings without reviewing them.
+    > If you haven't already, review your Group Policy settings. It's possible some settings don't apply to cloud-based policy management or don't apply to cloud native endpoints, like Windows devices. It's not recommended to include all your Group Policy settings without reviewing them.
 
     Select **Next**.
 
@@ -108,7 +105,7 @@ After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analy
 
 6. In **Profile info**, enter the following settings:
 
-    - **Name**: Enter a descriptive name for the Setting Catalog profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Windows 10/11: Imported Microsoft Edge GPOs**.
+    - **Name**: Enter a descriptive name for the Setting Catalog profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Windows: Imported Microsoft Edge GPOs**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
     Select **Next**.
@@ -176,5 +173,4 @@ When you create the Settings Catalog profile, any settings that can be included 
 ## Related articles
 
 - [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md)
-- [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md)
 - [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md)

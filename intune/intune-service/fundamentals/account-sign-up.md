@@ -4,8 +4,8 @@
 title: Sign up or sign in to Microsoft Intune
 description: How to sign up for a Microsoft Intune subscription or sign in to start with your subscription.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: paolomatarazzo
+ms.author: paoloma
 manager: laurawi
 ms.date: 05/21/2025
 ms.topic: article
@@ -36,7 +36,7 @@ ms.collection:
 
 This article can help system administrators sign up for an Intune account. Before you sign up for Intune, determine if your organization already uses [Microsoft Entra ID](/entra/fundamentals/what-is-entra). Entra ID supports work or school accounts that you use with Intune and other Microsoft online services and subscriptions, like Microsoft Azure and Microsoft 365.
 
-- To add an Intune subscription to an Entra tenant, you must use an account that is assigned an Entra ID built-in role with sufficient permissions to add Intune. The initial sign-up page identifies the applicable built-in roles, which include [Billing Administrator](/entra/identity/role-based-access-control/permissions-reference#billing-administrator), [Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator), and [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator).
+- To add an Intune subscription to an Entra tenant, you must use an account that is assigned an Entra ID built-in role with sufficient permissions to add Intune. The initial sign-up page identifies the applicable built-in roles, which include [Billing Administrator](/entra/identity/role-based-access-control/permissions-reference#billing-administrator), [Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator), and [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
   > [!CAUTION]
   > [!INCLUDE [global-admin](../includes/global-admin.md)]
@@ -52,15 +52,17 @@ This article can help system administrators sign up for an Intune account. Befor
 
 Securing access to your organization is a foundational security step. We recommend immediately after you sign up for Intune, plan to use the Microsoft 365 admin center to assign a user account the Entra ID built-in role [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
-Like the Global Administrator, the Intune Administrator is a privileged account. However, the permissions this role includes are applicable only within the scope of Microsoft Intune.
+The Intune Administrator is a privileged account. The permissions this role includes are applicable only within the scope of Microsoft Intune.
 
 In addition to configuring Intune, an Intune Administrator can use the Intune admin center to assign other user accounts to the specific Intune built-in roles that they require to complete their regular day-to-day administrative tasks. Use of lesser-privileged roles to manage daily tasks follows the principle of *least privileged* access and reduces risk.
+
+For enhanced security, consider enabling multi-administrator approval (MAA) for role-based access control changes. [!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
 
 For more information, see [Best practices](/entra/identity/role-based-access-control/best-practices) for Microsoft Entra roles, and [Role-based access control](../fundamentals/role-based-access-control.md) (RBAC) with Microsoft Intune.
 
 ## How to sign up for Intune
 
-1. 1.    In a web browser, open the [Intune set up account page](https://go.microsoft.com/fwlink/?linkid=2019088) and solve the puzzle to confirm you're not a robot.
+1. In a web browser, open the [Intune set up account page](https://go.microsoft.com/fwlink/?linkid=2019088) and solve the puzzle to confirm you're not a robot.
 
 2. On the *Sign-in details* page, sign in or sign up to manage a new subscription of Intune.
 

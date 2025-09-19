@@ -3,9 +3,9 @@ title: Deployment models for Microsoft Intune cloud PKI
 titleSuffix: Microsoft Intune 
 description: Describes the deployment options for Microsoft Intune cloud PKI.  
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -55,7 +55,7 @@ Identify your relying parties. The relying party is a user or system that consum
 
 - A Wi-Fi access point using radius certificate-based authentication.  
 - A VPN server authenticating a remote user.
-- A user visiting an TLS/LLS protected web site in a web browser.
+- A user visiting an TLS/SSL protected web site in a web browser.
 
 ### Determine location for trust anchor
 

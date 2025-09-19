@@ -7,7 +7,7 @@ keywords:
 author: nicholasswhite
 ms.author: nwhite
 manager: laurawi
-ms.date: 07/21/2025
+ms.date: 09/08/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -44,7 +44,7 @@ Microsoft Intune exports reports through the following Microsoft Graph API endpo
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 ```
 
-The following table contains the possible values for the `reportName` parameterparameter and the corresponding reports you can export.
+The following table contains the possible values for the `reportName` parameter and the corresponding reports you can export.
 
 | ReportName (Export Parameter) | Associated Report in Microsoft Intune |
 |------------------------------|----------------------------------------|
@@ -763,7 +763,7 @@ You can generate the ChromeOSDevices report using the Microsoft Graph API to mak
 
 ### Check the status of the ChromeOSDevices report
 
-You can check whether the ChromeOSDevices report has completed by using the Microsoft Graph API.
+You can check whether the ChromeOSDevices report is complete by using the Microsoft Graph API.
 
 | Microsoft Graph API endpoint | Method |
 |---|---|
@@ -1679,6 +1679,8 @@ The following table contains the possible output when calling the `DeviceRunStat
 | UserId |
 | UserName |
 
+[!INCLUDE [platform-scripts-column-mappings](../includes/platform-scripts-column-mappings.md)]
+
 There are no filters for this report.
 
 ## Devices
@@ -2276,9 +2278,9 @@ There are no filters for this report.
 > [!NOTE]
 > To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API allows you to select, to what you receive back.
 >
-> The column alias can only be accepted by the select parameter, and can’t be accepted by the filter parameter.
+> The select parameter accepts column aliases, but the filter parameter doesn’t.
 >
-> The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` will only be exported when they're included in the select parameter. These columns won't be exported by default.
+> The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` are only exported when they're included in the select parameter. These columns aren't exported by default.
 
 The following table contains the possible output when calling the `DevicesWithInventory` report:
 
@@ -2354,14 +2356,14 @@ You can choose to filter the `DevicesWithInventory` report's output based on the
 - `OwnerType`
 - `PartnerFeaturesBitmask`
 
-The `ProcessorArchitecture` mappings for Windows 10+ are the following:
+The following `ProcessorArchitecture` mappings apply to Windows 10 and later:
 - 9 = x64
 - 5 = ARM
 - 12 = ARM64
 - 0 = x86
 - default = Unknown
 
-The `ProcessorArchitecture` mappings for macOS are the following:
+The following `ProcessorArchitecture` mappings apply to macOS:
 - 9 = x64
 - 12 = ARM64
 - default = unknown
@@ -3452,7 +3454,7 @@ The following table contains the possible output when calling the `EpmElevationR
 | FilePath |
 | FileVersion |
 | Hash |
-| Id |
+| ID |
 | InternalName |
 | IsSystemInitiated |
 | Justification |

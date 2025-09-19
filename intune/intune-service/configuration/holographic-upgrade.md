@@ -40,7 +40,7 @@ As part of your mobile device management (MDM) solution, use these settings to u
 
 As an Intune administrator, you can create and assign these settings to your devices.
 
-For more information on this feature, see [Upgrade Windows 10/11 editions or enable S mode](edition-upgrade-configure-windows-10.md).
+For more information on this feature, see [Upgrade Windows editions or enable S mode](edition-upgrade-configure-windows-10.md).
 
 ## Before you begin
 
@@ -58,4 +58,4 @@ For more information on this feature, see [Upgrade Windows 10/11 editions or ena
 
 - [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-- Create edition upgrade profiles for [Windows 10/11](edition-upgrade-windows-settings.md) devices.
+- Create edition upgrade profiles for [Windows](edition-upgrade-windows-settings.md) devices.

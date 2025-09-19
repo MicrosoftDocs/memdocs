@@ -3,9 +3,9 @@ title: Bring your own certificate authority with Cloud PKI
 titleSuffix: Microsoft Intune 
 description: Create a Microsoft Cloud PKI BYOCA issuing CA in Intune and anchor it to an on-premises or private CA.  
 keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 12/06/2024
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -250,16 +250,16 @@ For information about how to complete these tasks, which are required to proceed
       > [!div class="mx-imgBorder"]
       > ![Image showing the newly created CA in admin center.](./media/microsoft-cloud-pki/refresh-ca-intune.png)  
 
-You can select the CA in the list to view available properties. Properties include:
+   You can select the CA in the list to view available properties. Properties include:
 
-- Certificate revocation list (CRL) distribution point URI.
-- Authority information access (AIA) URI.
-- The Cloud PKI issuing CA shows the SCEP URI. The SCEP URI must be copied into the SCEP configuration profile for every platform-issued certificate.
+   - Certificate revocation list (CRL) distribution point URI.
+   - Authority information access (AIA) URI.
+   - The Cloud PKI issuing CA shows the SCEP URI. The SCEP URI must be copied into the SCEP configuration profile for every platform-issued certificate.
 
    When you're ready to download the CA trust public key, select **Download**.  
 
    >[!NOTE]
-   > The AIA property for a BYOCA issuing CA is defined by the private CA, and contains the properties defined by the private CA's AIA configuration.  ADCS uses a default LDAP AIA location. If the private CA provides a HTTP AIA location, the BYOCA properties will show the HTTP AIA location.  
+   > The AIA property for a BYOCA issuing CA is defined by the private CA, and contains the properties defined by the private CA's AIA configuration. ADCS uses a default LDAP AIA location. If the private CA provides a HTTP AIA location, the BYOCA properties will show the HTTP AIA location.  
 
 ## Step 4: Create certificate trust profiles  
 
@@ -299,7 +299,6 @@ Create a trusted certificate profile with the exported intermediate or issuing C
 
 > [!TIP]
 > To find your BYOCA CAs in the CA list, look for CAs with the following values:
-
 > - Type: **Issuing**
 > - Root common name: **External root CA**
 
@@ -353,4 +352,4 @@ Create an SCEP certificate profile for each OS platform you're targeting, like y
       > Make sure the EKU(s) you select is configured on the Cloud PKI issuing certificate authority (CA). If you select an EKU that isn't present on the Cloud PKI issuing CA, then an error occurs with the SCEP profile. And, a certificate isn't issued to the device.
 
    - **SCEP Server URLs**: Don't combine NDES/SCEP URLs with Microsoft Cloud PKI issuing CA SCEP URLs.  
-1. Assign and review the profile. When you're ready to finalize everything, select **Create**.
+1. Assign and review the profile. When you're ready to finalize everything, select **Create**.  

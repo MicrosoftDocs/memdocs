@@ -6,7 +6,7 @@ description: This article describes how to resolve device sign-in requirements, 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/09/2024
 ms.topic: end-user-help
 ms.localizationpriority: high

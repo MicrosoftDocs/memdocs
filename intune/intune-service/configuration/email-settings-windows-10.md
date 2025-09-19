@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Email settings for Windows 10/11 devices in Microsoft Intune
+title: Email settings for Windows devices in Microsoft Intune
 description: Create a device configuration email profile that that uses Exchange servers, and retrieves attributes from Microsoft Entra ID. You can also enable SSL, and synchronize email and schedules on Windows 10/11 client devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
@@ -27,7 +27,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Email profile settings for devices running Windows 10/11 in Microsoft Intune
+# Email profile settings for Windows devices in Microsoft Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -36,15 +36,14 @@ In Microsoft Intune, you can create and configure email to connect to an Exchang
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 This article describes some of the settings you can configure. You can create a device configuration profile to assign or deploy these email settings to your iOS/iPadOS devices.
 
 ## Before you begin
 
 - Deploy your email app. For more information, go to [Configure email apps](email-settings-configure.md).
-- Create a [Windows 10/11 Email device configuration profile](email-settings-configure.md).
+- Create a [Windows Email device configuration profile](email-settings-configure.md).
 
 ## Email settings
 

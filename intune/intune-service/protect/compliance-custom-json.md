@@ -6,8 +6,8 @@ description: Create the JSON file that defines custom settings and values for us
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 05/15/2024
+manager: laurawi
+ms.date: 08/15/2025
 ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,7 +37,7 @@ You include the JSON file in a compliance policy when you configure a policy to 
 
 This feature applies to:
 
-- Linux – Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
+- Linux – Ubuntu Desktop, version 22.04 LTS and 24.04 LTS
 - Windows 10/11
 
 A correctly formatted JSON file must include the following information:

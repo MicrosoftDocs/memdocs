@@ -4,9 +4,9 @@
 title: Intune data platform schema
 description: Overview of Intune data platform schema.
 keywords: 
-ms.author: smbhardwaj
-author: smritib17 
-manager: dougeby
+ms.author: mandia
+author: MandiOhlinger 
+manager: laurawi
 ms.date: 07/15/2025
 ms.topic: reference
 ms.service: microsoft-intune

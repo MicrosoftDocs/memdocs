@@ -4,8 +4,8 @@ description: Software updates for Configuration Manager devices from the admin c
 ms.date: 06/07/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 ms.manager: apoorvseth
 ms.topic: how-to
 ms.localizationpriority: high

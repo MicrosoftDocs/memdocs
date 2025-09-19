@@ -2,8 +2,8 @@
 title: Set up CMG
 titleSuffix: Configuration Manager
 description: Use this step-by-step process for setting up a cloud management gateway (CMG).
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 09/18/2022
 ms.topic: how-to

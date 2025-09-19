@@ -6,7 +6,7 @@ description: Describes how to enroll a corporate Android device in Intune
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 11/07/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune

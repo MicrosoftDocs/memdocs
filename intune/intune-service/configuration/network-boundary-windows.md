@@ -39,8 +39,7 @@ For more information on using Microsoft Defender Application Guard in Intune, go
 
 This feature applies to:
 
-- Windows 11 devices enrolled in Intune
-- Windows 10 devices enrolled in Intune
+- Windows devices enrolled in Intune
 
 This article shows you how to create the profile, and add trusted sites.
 

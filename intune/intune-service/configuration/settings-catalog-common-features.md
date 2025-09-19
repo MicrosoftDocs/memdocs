@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 05/29/2024
+ms.date: 08/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,7 +17,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: laarrizz, mikedano, beflamm
+ms.reviewer: laarrizz, mayurjadhav, beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -39,18 +39,16 @@ This feature applies to:
 
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Configure Microsoft Edge and Google Chrome
 
-<!-- ms.reviewer: mikedano -->
+<!-- ms.reviewer: mayurjadhav -->
 
 This feature applies to:
 
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome.
 
@@ -58,14 +56,15 @@ These web browser settings are built in, and can be configured & deployed to you
 
 Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
 
+For a sample Microsoft Edge scenario, see [Create a Microsoft Edge policy](settings-catalog-configure-edge.md).
+
 ## Add universal printers
 
 <!-- ms.reviewer: laarrizz -->
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 You can create a universal print policy, add printers, and then deploy this printer list to your managed users. When the policy is deployed, it automatically installs the printers you added. Users can see these printers, and select a printer from your list.
 

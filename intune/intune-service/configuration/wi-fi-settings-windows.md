@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Wi-Fi settings for Windows 10/11 devices in Microsoft Intune
+title: Wi-Fi settings for Windows devices in Microsoft Intune
 description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10/11 client devices in Microsoft Intune. You can configure basic settings, or enterprise level settings. 
 keywords:
 author: MandiOhlinger
@@ -27,7 +27,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Add Wi-Fi settings for Windows 10/11 devices in Intune
+# Add Wi-Fi settings for Windows devices in Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -38,7 +38,7 @@ This article describes some of these settings.
 
 ## Before you begin
 
-- Create a [Windows 10/11 Wi-Fi device configuration profile](wi-fi-settings-configure.md).
+- Create a [Windows Wi-Fi device configuration profile](wi-fi-settings-configure.md).
 - These settings use the [Wi-Fi CSP](/windows/client-management/mdm/wifi-csp).
 
 ## Basic profile
