@@ -35,8 +35,7 @@ For example, you have a cellular data plan for work, and another data plan with 
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 In Intune, you can bulk activate eSIM codes using the following options:
 
@@ -55,7 +54,11 @@ This article describes how to import the activation codes in bulk, and then depl
 To deploy eSIM to your devices using Intune, the following are needed:
 
 - **eSIM capable devices**, like the Surface LTE. To determine if your Windows device supports eSIM, go to [Use an eSIM to get a cellular data connection on your Windows PC](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). If you're unsure if your devices support eSIM, then you can also contact your device manufacturer.
-- A Windows device running **Windows 10 Fall creators update PC** (1709 or later)
+- A Windows device
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 - **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
 - The device must be enrolled and MDM managed by Intune. For information on the enrollment options for Windows devices, go to [Windows enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]

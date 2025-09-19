@@ -51,7 +51,7 @@ Use the *Windows data* category to enable use of Intune features in your tenant 
 
 The following features require you to enable this support:
 
-- [Windows feature update device readiness report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-device-readiness-report) 
+- [Windows feature update device readiness report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-device-readiness-report)
 - [Windows feature update compatibility risks report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-compatibility-risks-report)
 - [Windows driver updates report](../protect/windows-driver-updates-overview.md)
 - Windows feature update report
@@ -77,8 +77,8 @@ The following features require you to attest to having Windows E3 or equivalent 
 
 Supported licenses include the following options:
 
-- Windows 10 or later Enterprise E3 or E5; or Microsoft 365 F3, E3, or E5.
-- Windows 10 or later Education A3 or A5; or Microsoft 365 A3 or A5.
+- Windows Enterprise E3 or E5; or Microsoft 365 F3, E3, or E5.
+- Windows Education A3 or A5; or Microsoft 365 A3 or A5.
 - Windows Virtual Desktop Access E3 or E5.
 
 To confirm you own the required licenses for these features, set **I confirm that my tenant owns one of these license** to **On**. By default, it's *Off*.
