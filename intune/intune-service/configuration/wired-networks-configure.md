@@ -41,8 +41,7 @@ As part of your mobile device management (MDM) solution, use this feature to cre
 This feature applies to:
 
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Example scenario
 
