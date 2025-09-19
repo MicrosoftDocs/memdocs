@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 7 of 9 - Assign Windows Autopilot device to a user
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join with pre-provisioning - Step 7 of 9 - Assign Windows Autopilot device to a user.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

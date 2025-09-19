@@ -1,7 +1,6 @@
 ---
 title: Manual registration of devices for Windows Autopilot
 description: Manual registration overview.
-ms.localizationpriority: medium
 ms.date: 03/27/2025
 ms.topic: how-to
 ms.collection:

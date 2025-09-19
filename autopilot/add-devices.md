@@ -1,7 +1,6 @@
 ---
 title: Manually register devices with Windows Autopilot
 description: Learn how to manually add devices to Windows Autopilot.
-ms.localizationpriority: medium
 ms.date: 04/11/2025
 ms.topic: how-to
 ms.collection:

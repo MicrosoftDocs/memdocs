@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot self-deploying mode - Step 4 of 6 - Create a device group
 description: How to - Windows Autopilot self-deploying mode - Step 4 of 6 - Create a device group.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

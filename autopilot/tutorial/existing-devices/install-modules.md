@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 2 of 10 - Install required modules to obtain Windows Autopilot profiles from Intune
 description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 2 of 10 - Install required modules to obtain Windows Autopilot profiles from Intune.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

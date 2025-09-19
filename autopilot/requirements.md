@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot requirements
 description: Software, Networking, Licensing, and Configuration requirements for Windows Autopilot.
-ms.localizationpriority: medium
 ms.date: 07/08/2025
 ms.collection:
   - M365-modern-desktop

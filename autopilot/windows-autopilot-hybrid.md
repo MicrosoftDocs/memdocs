@@ -4,7 +4,6 @@ titleSuffix: Windows Autopilot
 description: Use Windows Autopilot to enroll Microsoft Entra hybrid joined devices in Microsoft Intune.
 ms.date: 05/29/2025
 ms.topic: how-to
-ms.localizationpriority: medium
 ms.collection:
   - M365-identity-device-management
   - highpri

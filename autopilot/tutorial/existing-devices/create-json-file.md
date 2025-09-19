@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 3 of 10 - Create JSON file for Windows Autopilot profiles
 description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 3 of 10 - Create JSON file for Windows Autopilot profiles.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 7 - Create a Windows Autopilot device preparation policy
 description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 7 - Create a Windows Autopilot device preparation policy.
-ms.localizationpriority: medium
 ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:

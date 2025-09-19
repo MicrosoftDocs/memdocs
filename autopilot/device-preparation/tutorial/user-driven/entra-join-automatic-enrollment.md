@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 1 of 7 - Set up Windows automatic Intune enrollment
 description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 1 of 7 - Set up Windows automatic Intune enrollment.
-ms.localizationpriority: medium
 ms.date: 04/04/2025
 ms.topic: tutorial
 ms.collection:

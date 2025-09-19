@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation known issues
 description: Information regarding known issues that might occur during a Windows Autopilot device preparation deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.localizationpriority: medium
 ms.date: 04/04/2025
 ms.collection:
   - M365-modern-desktop

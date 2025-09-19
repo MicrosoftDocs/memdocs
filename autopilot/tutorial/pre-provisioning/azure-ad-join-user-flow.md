@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 8 of 9 - User flow
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 8 of 9 - User flow.
-ms.localizationpriority: medium
 ms.date: 07/23/2024
 ms.topic: tutorial
 ms.collection:

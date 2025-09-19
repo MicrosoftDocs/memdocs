@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot Enrollment Status Page
 description: Gives an overview of the Enrollment Status Page capabilities, configuration.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop

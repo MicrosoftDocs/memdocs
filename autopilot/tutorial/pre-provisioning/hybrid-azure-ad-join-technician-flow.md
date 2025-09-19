@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 9 of 11 - Technician flow
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 9 of 11 - Technician flow.
-ms.localizationpriority: medium
 ms.date: 04/09/2025
 ms.topic: tutorial
 ms.collection:

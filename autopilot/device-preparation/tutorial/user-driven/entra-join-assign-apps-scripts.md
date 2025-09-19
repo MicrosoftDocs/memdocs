@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and PowerShell scripts to device group
 description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and PowerShell scripts to device group.
-ms.localizationpriority: medium
 ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:

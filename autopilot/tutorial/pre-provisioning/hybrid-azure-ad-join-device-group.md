@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 5 of 11 - Create a device group
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 5 of 11 - Create a device group.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

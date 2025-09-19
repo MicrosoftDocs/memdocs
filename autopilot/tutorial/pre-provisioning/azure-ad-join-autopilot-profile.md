@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 6 of 9 - Create and assign a pre-provisioned Microsoft Entra join Windows Autopilot profile
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 6 of 9 - Create and assign a pre-provisioned Microsoft Entra join Windows Autopilot profile.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

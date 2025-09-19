@@ -1,7 +1,6 @@
 ---
 title: Compare Windows Autopilot device preparation and Windows Autopilot
 description: Compare Windows Autopilot device preparation and Windows Autopilot features and when to use each.
-ms.localizationpriority: medium
 ms.date: 04/02/2025
 ms.topic: overview
 ms.collection:

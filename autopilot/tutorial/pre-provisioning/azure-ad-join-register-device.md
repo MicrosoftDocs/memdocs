@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 3 of 9 - Register devices as Windows Autopilot devices
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 3 of 9 - Register devices as Windows Autopilot devices.
-ms.localizationpriority: medium
 ms.date: 03/25/2025
 ms.topic: tutorial
 ms.collection:

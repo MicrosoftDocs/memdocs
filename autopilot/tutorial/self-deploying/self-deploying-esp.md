@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot self-deploying mode - Step 5 of 6 - Configure and assign the Enrollment Status Page (ESP)
 description: How to - Windows Autopilot self-deploying mode - Step 5 of 6 - Configure and assign the Enrollment Status Page (ESP).
-ms.localizationpriority: medium
 ms.date: 09/03/2025
 ms.topic: tutorial
 ms.collection:

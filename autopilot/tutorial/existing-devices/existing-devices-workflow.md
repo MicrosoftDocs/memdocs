@@ -1,7 +1,6 @@
 ---
 title: Overview for Windows Autopilot deployment for existing devices in Intune and Configuration Manager
 description: Overview for Windows Autopilot deployment for existing devices in Intune and Configuration Manager.
-ms.localizationpriority: medium
 ms.date: 05/23/2025
 ms.topic: tutorial
 ms.collection:

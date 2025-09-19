@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 8 of 11 - Create and assign a domain join profile
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 8 of 11 - Create and assign a domain join profile.
-ms.localizationpriority: medium
 ms.date: 04/01/2025
 ms.topic: tutorial
 ms.collection:

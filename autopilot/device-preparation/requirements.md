@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation requirements
 description: Software, Networking, Licensing, Configuration, and RBAC requirements for Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.localizationpriority: medium
 ms.date: 06/11/2025
 ms.collection:
   - M365-modern-desktop

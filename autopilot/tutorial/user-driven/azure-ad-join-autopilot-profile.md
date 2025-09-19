@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot user-driven Microsoft Entra join - Step 6 of 8 - Create and assign a user-driven Microsoft Entra join Windows Autopilot profile
 description: How to - Windows Autopilot user-driven Microsoft Entra join - Step 6 of 8 - Create and assign a user-driven Microsoft Entra join Windows Autopilot profile.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

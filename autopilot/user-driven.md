@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot User-Driven Mode
 description: With Windows Autopilot user-driven mode, devices can be configured to deploy to a ready-to-use state without requiring help from IT personnel.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop

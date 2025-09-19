@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot user-driven Microsoft Entra hybrid join - Step 2 of 10 - Install the Intune Connector for Active Directory
 description: How to - Windows Autopilot user-driven Microsoft Entra hybrid join - Step 2 of 10 - Install the Intune Connector for Active Directory.
-ms.localizationpriority: medium
 ms.date: 05/29/2025
 ms.topic: tutorial
 ms.collection:

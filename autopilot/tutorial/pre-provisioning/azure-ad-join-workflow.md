@@ -1,7 +1,6 @@
 ---
 title: Overview for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune
 description: Overview for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune.
-ms.localizationpriority: medium
 ms.date: 09/13/2024
 ms.topic: tutorial
 ms.collection:

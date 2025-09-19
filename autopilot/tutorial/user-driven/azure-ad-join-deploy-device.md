@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot user-driven Microsoft Entra join - Step 8 of 8 - Deploy the device
 description: How to - Windows Autopilot user-driven Microsoft Entra join - Step 8 of 8 - Deploy the device.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

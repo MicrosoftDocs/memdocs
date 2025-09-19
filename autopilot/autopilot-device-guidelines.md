@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device guidelines
 description: Learn all about hardware, firmware, and software best practices for Windows Autopilot deployment.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop

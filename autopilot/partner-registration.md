@@ -1,7 +1,6 @@
 ---
 title: Reseller, distributor, or partner registration of Windows Autopilot devices
 description: How partners add devices to Windows Autopilot.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: how-to
 ms.collection:

@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 5 of 10 - Create Windows Autopilot task sequence in Configuration Manager
 description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 5 of 10 - Create Windows Autopilot task sequence in Configuration Manager.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

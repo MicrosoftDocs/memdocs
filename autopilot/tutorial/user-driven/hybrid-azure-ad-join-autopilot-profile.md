@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot user-driven Microsoft Entra hybrid join - Step 7 of 10 - Create and assign user-driven Microsoft Entra hybrid join Windows Autopilot profile
 description: How to - Windows Autopilot user-driven Microsoft Entra hybrid join - Step 7 of 10 - Create and assign user-driven Microsoft Entra hybrid join Windows Autopilot profile.
-ms.localizationpriority: medium
 ms.date: 09/13/2024
 ms.topic: tutorial
 ms.collection:

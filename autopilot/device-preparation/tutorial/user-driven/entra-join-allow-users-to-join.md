@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 2 of 7 - Allow users to join devices to Microsoft Entra ID
 description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 2 of 7 - Allow users to join devices to Microsoft Entra ID.
-ms.localizationpriority: medium
 ms.date: 04/04/2025
 ms.topic: tutorial
 ms.collection:

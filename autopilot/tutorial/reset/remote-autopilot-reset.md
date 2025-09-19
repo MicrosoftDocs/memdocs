@@ -1,7 +1,6 @@
 ---
 title: Remote Windows Autopilot Reset in Intune
 description: Remote Windows Autopilot Reset in Intune.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

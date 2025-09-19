@@ -1,7 +1,6 @@
 ---
 title: Overview for Windows Autopilot device preparation user-driven Microsoft Entra join in Intune
 description: Overview for Windows Autopilot device preparation user-driven Microsoft Entra join in Intune.
-ms.localizationpriority: medium
 ms.date: 03/27/2025
 ms.topic: tutorial
 ms.collection:

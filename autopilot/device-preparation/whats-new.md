@@ -1,7 +1,6 @@
 ---
 title: What's new in Windows Autopilot device preparation
 description: News and resources about the latest updates of Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.localizationpriority: medium
 ms.date: 09/09/2025
 ms.collection:
   - M365-modern-desktop

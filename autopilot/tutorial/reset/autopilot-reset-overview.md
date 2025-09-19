@@ -1,7 +1,6 @@
 ---
 title: Overview for Windows Autopilot Reset in Intune
 description: Overview for Windows Autopilot Reset in Intune.
-ms.localizationpriority: medium
 ms.date: 10/08/2024
 ms.topic: tutorial
 ms.collection:

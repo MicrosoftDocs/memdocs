@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation reporting and monitoring
 description: Reporting and monitoring in Windows Autopilot device preparation.
-ms.localizationpriority: medium
 ms.date: 06/11/2025
 ms.topic: how-to
 ms.collection:

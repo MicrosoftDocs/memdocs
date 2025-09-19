@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot self-deploying mode - Step 5 of 5 - Create and assign self-deploying mode Windows Autopilot profile
 description: How to - Windows Autopilot self-deploying mode - Step 5 of 5 - Create and assign self-deploying mode Windows Autopilot profile.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

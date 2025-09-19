@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot motherboard replacement
 description: Understand how Windows Autopilot deployments function when the motherboard is replaced on a device.
-ms.localizationpriority: medium
 ms.date: 08/13/2025
 ms.collection:
   - M365-modern-desktop

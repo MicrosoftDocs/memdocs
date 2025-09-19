@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 3 of 11 - Increase the computer account limit in the Organizational Unit (OU)
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 3 of 11 - Increase the computer account limit in the Organizational Unit (OU).
-ms.localizationpriority: medium
 ms.date: 02/27/2025
 ms.topic: tutorial
 ms.collection:

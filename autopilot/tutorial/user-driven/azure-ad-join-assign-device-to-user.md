@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot user-driven Microsoft Entra join - Step 7 of 8 - Assign Windows Autopilot device to a user
 description: How to - Windows Autopilot user-driven Microsoft Entra join - Step 7 of 8 - Assign Windows Autopilot device to a user.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

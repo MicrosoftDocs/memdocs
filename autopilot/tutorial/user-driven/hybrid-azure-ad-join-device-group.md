@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot user-driven Microsoft Entra hybrid join - Step 5 of 10 - Create a device group
 description: How to - Windows Autopilot user-driven Microsoft Entra hybrid join - Step 5 of 10 - Create a device group.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

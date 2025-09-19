@@ -1,7 +1,6 @@
 ---
 title: Automatic registration of existing devices
 description: Automatically add devices to Windows Autopilot.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: how-to
 ms.collection:

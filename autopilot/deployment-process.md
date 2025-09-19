@@ -1,7 +1,6 @@
 ---
 title: Windows deployment process posters
 description: View and download Windows deployment process flows for Microsoft Configuration Manager and Windows Autopilot.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: install-set-up-deploy
 ms.collection: tier2

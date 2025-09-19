@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 9 of 10 - Run Windows Autopilot task sequence on device
 description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 9 of 10 - Run Windows Autopilot task sequence on device.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

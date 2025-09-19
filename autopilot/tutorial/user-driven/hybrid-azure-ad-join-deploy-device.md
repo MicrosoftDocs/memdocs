@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot user-driven Microsoft Entra hybrid join - Step 10 of 10 - Deploy the device
 description: How to - Windows Autopilot user-driven Microsoft Entra hybrid join - Step 10 of 10 - Deploy the device.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

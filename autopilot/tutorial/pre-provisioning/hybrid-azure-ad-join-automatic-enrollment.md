@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 1 of 11 - Set up Windows automatic Intune enrollment
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 1 of 11 - Set up Windows automatic Intune enrollment.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

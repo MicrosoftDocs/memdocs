@@ -1,7 +1,6 @@
 ---
 title: DFCI Management
 description: With Windows Autopilot Deployment and Intune, Unified Extensible Firmware Interface (UEFI) settings can be managed after the device is enrolled. UEFI settings can be managed by using the Device Firmware Configuration Interface (DFCI).
-ms.localizationpriority: medium
 ms.date: 03/25/2025
 ms.collection:
   - M365-modern-desktop

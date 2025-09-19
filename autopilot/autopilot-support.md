@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot support
 description: Find out who to contact for help with Windows Autopilot installation.
-ms.localizationpriority: medium
 ms.date: 08/02/2024
 ms.collection:
   - M365-modern-desktop

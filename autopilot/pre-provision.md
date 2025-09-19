@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment
 description: Windows Autopilot for pre-provisioned deployment.
-ms.localizationpriority: medium
 ms.date: 04/09/2025
 ms.collection:
   - M365-modern-desktop

@@ -1,7 +1,6 @@
 ---
 title: Overview for Windows Autopilot self-deploying mode in Intune
 description: Overview for Windows Autopilot self-deploying mode in Intune.
-ms.localizationpriority: medium
 ms.date: 09/13/2024
 ms.topic: tutorial
 ms.collection:

@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot user-driven Microsoft Entra hybrid join - Step 8 of 10 - Create and assign a domain join profile
 description: How to - Windows Autopilot user-driven Microsoft Entra hybrid join - Step 8 of 10 - Create and assign a domain join profile.
-ms.localizationpriority: medium
 ms.date: 04/01/2025
 ms.topic: tutorial
 ms.collection:

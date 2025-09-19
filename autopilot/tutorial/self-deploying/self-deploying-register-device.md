@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot self-deploying mode - Step 3 of 6 - Register devices as Windows Autopilot devices
 description: How to - Windows Autopilot self-deploying mode - Step 3 of 6 - Register devices as Windows Autopilot devices.
-ms.localizationpriority: medium
 ms.date: 03/25/2025
 ms.topic: tutorial
 ms.collection:

@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot self-deploying mode - Step 6 of 6 - Deploy the device
 description: How to - Windows Autopilot self-deploying mode - Step 5 of 5 - Step 6 of 6 - Deploy the device.
-ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:

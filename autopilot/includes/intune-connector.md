@@ -1,7 +1,6 @@
 ---
 ms.topic: include
 ms.date: 05/29/2025
-ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:
