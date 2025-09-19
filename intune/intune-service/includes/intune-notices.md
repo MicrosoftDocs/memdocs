@@ -14,12 +14,12 @@ These notices provide important information that can help you prepare for future
 
 ### Update firewall configurations to include new Intune network endpoints
 
-As part of Microsoft’s ongoing [Secure Future Initiative (SFI)](/trust-center/security/secure-future-initiative), starting on or shortly after **December 2, 2025**, the network service endpoints for Microsoft Intune  will also use the Azure Front Door IP addresses. This improvement supports better alignment with modern security practices and over time will make it easier for organizations using multiple Microsoft products to manage and maintain their firewall configurations. As a result, customers may be required to add these network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allowlist that allows outbound traffic based on IP addresses or Azure service tags.
+As part of Microsoft’s ongoing [Secure Future Initiative (SFI)](https://www.microsoft.com/trust-center/security/secure-future-initiative), starting on or shortly after **December 2, 2025**, the network service endpoints for Microsoft Intune  will also use the Azure Front Door IP addresses. This improvement supports better alignment with modern security practices and over time will make it easier for organizations using multiple Microsoft products to manage and maintain their firewall configurations. As a result, customers may be required to add these network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allowlist that allows outbound traffic based on IP addresses or Azure service tags.
 
 Don't remove any existing network endpoints required for Microsoft Intune. Additional network endpoints are documented as part of the Azure Front Door and service tags information referenced in the files linked below:
 
-- Public clouds: Download Azure IP Ranges and Service Tags – [Public Cloud from Official Microsoft Download Center](/download/details.aspx?id=56519)
-- Government clouds: Download Azure IP Ranges and Service Tags – [US Government Cloud from Official Microsoft Download Center](/download/details.aspx?id=57063)
+- Public clouds: Download Azure IP Ranges and Service Tags – [Public Cloud from Official Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=56519)
+- Government clouds: Download Azure IP Ranges and Service Tags – [US Government Cloud from Official Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=57063)
 
 The additional ranges are those listed in the JSON files linked above and can be found by searching for “AzureFrontDoor.MicrosoftSecurity”.
 
@@ -39,8 +39,8 @@ If you aren't the IT admin who can make this change, notify your networking team
 
 [Azure Front Door](/azure/frontdoor/origin-security?tabs=app-service-functions&pivots=front-door-classic)
 [Azure service tags](/azure/virtual-network/service-tags-overview)
-[Intune network endpoints](../fundamentals/intune-endpoints#intune-core-service.md)
-[US government network endpoints for Intune](../fundamentals/intune-us-government-endpoints.md)
+[Intune network endpoints](../fundamentals/intune-endpoints.md#intune-core-service)
+[US government network endpoints for Intune](/fundamentals/intune-us-government-endpoints)
 
 If you have a helpdesk, inform them about this upcoming change.
 
