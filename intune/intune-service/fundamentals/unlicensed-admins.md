@@ -5,8 +5,8 @@ title: Unlicensed admins in Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: This article describes how to give unlicensed admins permissions to access Intune.
 keywords:
-author: nicholasswhite
-ms.author: nwhite
+author: BrenDuns
+ms.author: brenduns
 manager: laurawi
 ms.date: 05/09/2025
 ms.topic: how-to
@@ -32,7 +32,7 @@ ms.collection:
 
 # Unlicensed admins
 
-You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Microsoft Entra administrators, and so on. Other features or services, such as those in Microsoft Entra ID P1 or P2, might require a license for the administrator.
+You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune Administrators, Microsoft Entra administrators, and so on. Other features or services, such as those in Microsoft Entra ID P1 or P2, might require a license for the administrator.
 
 ## Allow access
 

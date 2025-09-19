@@ -182,4 +182,4 @@ Configuring these settings deploys a new profile to the device, even when an exi
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Configure email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), and [Windows 10](email-settings-windows-10.md) devices.
+- Configure email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), and [Windows](email-settings-windows-10.md) devices.

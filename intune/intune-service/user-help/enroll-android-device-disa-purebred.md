@@ -6,7 +6,7 @@ description: Learn how to enroll an Android device and set up derived credential
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/19/2022  
 ms.topic: end-user-help
 ms.service: microsoft-intune

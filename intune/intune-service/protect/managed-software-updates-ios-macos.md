@@ -4,10 +4,10 @@
 title: Use the settings catalog to configure DDM software updates 
 description: Use Microsoft Intune to configure Apple's declarative device management (DDM) settings to install a specific update by an enforced deadline. This feature uses the settings catalog to configure managed software updates for supervised iOS/iPadOS and managed macOS devices.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: paolomatarazzo
+ms.author: paoloma
 manager: laurawi
-ms.date: 07/23/2025
+ms.date: 08/18/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -146,7 +146,10 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 12. Select **Next**.
 
-13. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+1. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+> [!NOTE]
+> The `retrieveDeviceConfigurationAvailableOptions` function of the [deviceManagementConfigurationSettingDefinition resource type](/graph/api/resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition?view=graph-rest-beta) requires delegated user authentication. Application permissions cannot be used for this endpoint. 
 
 ## Configure the manual DDM software updates policy
 
@@ -250,4 +253,4 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - [macOS software update policies in Intune](software-updates-macos.md)
 - [Software updates planning guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
 - [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
-
+- [Declarative Apple software update reports in Intune](software-updates-reports-apple-declarative-based.md)

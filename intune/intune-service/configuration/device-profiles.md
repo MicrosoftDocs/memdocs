@@ -42,7 +42,7 @@ You can create profiles for different devices and different platforms, including
 
 When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups.
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Some profile examples include:
 
@@ -69,17 +69,6 @@ You can create a baseline of profiles that all devices must have, or you can con
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
-## Administrative templates and Group policy
-
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office apps. These templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.
-
-[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs. It's a tool that helps you determine how your GPOs translate in the cloud. The output shows any deprecated settings and the settings that are available (or not available) to MDM providers, including Microsoft Intune.
-
-This feature supports:
-
-- Windows 11
-- Windows 10
-
 ## Certificates
 
 You use [certificates in Intune](../protect/certificates-configure.md) to authenticate your users so they can access applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users don't need to enter usernames and passwords.
@@ -93,9 +82,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
-- Windows 8.1
+- Windows
 
 ## Custom profile
 
@@ -106,19 +93,17 @@ This feature supports:
 - Android device administrator
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Delivery optimization
 
-[Delivery optimization](delivery-optimization-windows.md) provides a better experience to delivery software updates. These settings are replacing the **Software Updates** > **Windows 10 update ring** settings.
+[Delivery optimization](delivery-optimization-windows.md) provides a better experience to delivery software updates.
 
 Use these settings to control how software updates are downloaded to devices in your organization. For example, you can let users get their own updates, or get updates using the delivery optimization cloud services in a device profile.
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Derived credential
 
@@ -148,8 +133,7 @@ With [BIOS configuration](bios-configuration.md), administrators can password-pr
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Device restrictions
 
@@ -164,9 +148,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
-- Windows 10 Team
+- Windows
 
 ## Domain join
 
@@ -174,21 +156,19 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Edition upgrade and mode switch
 
-[Windows 10/11 edition upgrades](edition-upgrade-configure-windows-10.md) automatically upgrades devices that run some versions of Windows client to a newer edition.
+[Windows edition upgrades](edition-upgrade-configure-windows-10.md) automatically upgrades devices that run some versions of Windows client to a newer edition.
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Education
 
-[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
+[Education settings - Windows](education-settings-configure.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
 [Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
@@ -201,8 +181,7 @@ This feature supports:
 - Android device administrator
 - Android Enterprise
 - iOS/iPadOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Endpoint protection
 
@@ -218,8 +197,7 @@ To onboard Microsoft Defender for Endpoint with Microsoft Intune, see [Configure
 This feature supports:
 
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## eSIM cellular
 
@@ -227,8 +205,7 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11
-- Windows 10 Fall Creators Update and newer
+- Windows
 
 ## Extensions
 
@@ -254,6 +231,9 @@ This feature supports:
 
 Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 ## MX profile (Zebra)
 
 [Mobility extensions (MX)](android-zebra-mx-overview.md) expand on the built-in Intune settings to customize or add more settings specific to Zebra devices. Zebra devices are commonly used on factory floors, and retail environments. If you have hundreds or thousands of Zebra devices, you can use Intune to configure and manage these devices.
@@ -268,8 +248,7 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Network boundary
 
@@ -277,8 +256,7 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## OEMConfig
 
@@ -301,7 +279,7 @@ This feature supports:
 > [!TIP]
 > macOS settings are continually being added to the [settings catalog](settings-catalog.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
 
-## Settings catalog
+## Settings catalog and Group Policy analytics
 
 The [settings catalog](settings-catalog.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but is cloud native.
 
@@ -315,19 +293,23 @@ This feature supports:
 - macOS
 - Android Enterprise
 - Android (AOSP)
-- Windows 11
-- Windows 10
+- Windows
+
+[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs. It's a tool that helps you determine how your GPOs translate in the cloud. The output shows any deprecated settings and the settings that are available (or not available) to MDM providers, including Microsoft Intune.
+
+This feature supports:
+
+- Windows
 
 ## Shared multi-user device
 
-[Windows 10/11](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) includes settings to manage devices with multiple users. These devices are known as shared devices, or shared PCs. When a user signs in to the device, you choose if the user can change the sleep options, or save files on the device. In another example, to save space, you can create a profile that deletes inactive credentials from Windows HoloLens devices.
+[Windows](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) includes settings to manage devices with multiple users. These devices are known as shared devices, or shared PCs. When a user signs in to the device, you choose if the user can change the sleep options, or save files on the device. In another example, to save space, you can create a profile that deletes inactive credentials from Windows HoloLens devices.
 
 These shared multi-user device settings allow administrators to control some of the device features, and manage these shared devices using Intune.
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 - Windows Holographic for Business
 
 ## Shell scripts
@@ -342,8 +324,7 @@ This feature supports:
 
 - Linux
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Update policies
 
@@ -367,9 +348,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
-- Windows 8.1
+- Windows
 
 ## Wi-Fi
 
@@ -382,9 +361,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
-- Windows 8.1 (import only)
+- Windows
 
 ## Windows health monitoring
 
@@ -392,8 +369,7 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Wired networks
 
@@ -404,8 +380,7 @@ When you assign the profile, users get access to your corporate wired network wi
 This feature supports:
 
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Zebra Mobility Extensions (MX)
 

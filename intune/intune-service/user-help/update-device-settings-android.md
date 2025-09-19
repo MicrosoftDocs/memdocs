@@ -6,7 +6,7 @@ description: Learn more about Intune Company Portal device setting requirements 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 02/06/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune

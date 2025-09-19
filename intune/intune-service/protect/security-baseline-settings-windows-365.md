@@ -37,7 +37,7 @@ zone_pivot_groups: windows-365-versions
 
 # Windows 365 Cloud PC security baseline settings reference for Microsoft Intune
 
-TThis article is a reference for the settings that are available in the Windows 365 Cloud PC security baseline for Microsoft Intune.
+This article is a reference for the settings that are available in the Windows 365 Cloud PC security baseline for Microsoft Intune.
 
 ## About this reference article
 
@@ -55,7 +55,7 @@ When a new version of a baseline becomes available, it replaces the previous ver
 
 To learn more about using security baselines, see:
 - [Use security baselines](../protect/security-baselines.md)
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format)
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version)
 - [Manage security baselines](../protect/security-baselines-configure.md)
 
 ::: zone pivot="win365-24h1"

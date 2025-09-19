@@ -7,7 +7,7 @@ keywords: mobile device management migration guide, migration guide, intune plan
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 07/23/2024
+ms.date: 08/21/2025
 ms.topic: upgrade-and-migration-article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -414,8 +414,7 @@ Some considerations:
 
     [Settings insight](settings-insight.md) provides confidence in configurations by adding insights that similar organizations successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](settings-insight.md).
 
-  - **Settings catalog**: On Apple and Windows client devices, the [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure and looks similar to on-premises GPOs. When you create the policy, you start from scratch and configure settings at a granular level.
-  - **Administrative templates (ADMX)**: On Windows client devices, use [ADMX templates](../configuration/administrative-templates-windows.md) to configure group policy settings for Windows, Internet Explorer, Office, and Microsoft Edge version 77 and later. These ADMX templates are the same ADMX templates used in on-premises AD group policy, but are 100% cloud-based in Intune.
+  - **Settings catalog**: The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure and looks similar to on-premises GPOs and ADMX templates. When you create the policy, you start from scratch and configure settings at a granular level.
   - **Group policy**: Use [group policy analytics](../configuration/group-policy-analytics.md) to import and analyze your GPOs. This feature helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
 
     You can also create an Intune policy based on your imported settings. For more information, go to [Create a settings catalog policy using your imported GPOs](../configuration/group-policy-analytics-migrate.md).
@@ -613,7 +612,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
 
 - **Train your help desk and support teams**. Have them enroll devices running the different platforms used in your organization so they're familiar with the process. Consider using help desk and support teams as a pilot group for your scenarios.
 
-  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-walkthrough-administrative-templates.md), and courses through training partners.
+  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-settings-catalog-group-policy.md), and courses through training partners.
 
   The following example is an Intune support training agenda:
 

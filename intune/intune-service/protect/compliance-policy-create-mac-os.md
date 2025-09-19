@@ -6,8 +6,8 @@ description: View the device compliance settings for macOS devices that you can 
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 05/15/2024
+manager: laurawi
+ms.date: 09/5/2025
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,10 +56,10 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Device Properties
 
-- **Minimum OS required**  
+- **Minimum OS version**  
   A device that doesn't meet the minimum OS version requirement is considered to be noncompliant. The device user can view a link with information on how to upgrade and can choose to upgrade their device. After that, they can access organization resources.
 
-- **Maximum OS version allowed**  
+- **Maximum OS version**  
   When a device uses an OS version later than the version in the rule, access to organization resources is blocked. The device user is asked to contact their IT administrator. The device can't access organization resources until a rule changes to allow the OS version.
 
 - **Minimum OS build version**  
@@ -106,7 +106,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ### Encryption
 
-- **Encryption of data storage on device**  
+- **Require encryption of data storage on device**  
   - **Not configured** (*default*)
   - **Require** - Use *Require* to encrypt data storage on your devices.
 

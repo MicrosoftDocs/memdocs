@@ -5,9 +5,9 @@ title: Audit, export or delete personal data collected by Intune
 titleSuffix: Microsoft Intune
 description: Learn how to audit, export, or delete personal data that is collected by Intune.
 keywords: GDPR, personal data, privacy
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
+manager: laurawi
 ms.date: 04/10/2025
 ms.topic: article
 ms.service: microsoft-intune

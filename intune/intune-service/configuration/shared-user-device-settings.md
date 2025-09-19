@@ -50,8 +50,8 @@ When you create the profile in Intune, you deploy or assign the profile to devic
 
 This feature applies to:
 
-- Windows 10/11 Professional
-- Windows 10/11 Enterprise
+- Windows Professional
+- Windows Enterprise
 - Windows Holographic for Business, such as the HoloLens
 
 > [!TIP]
@@ -79,7 +79,7 @@ This feature applies to:
 6. Select **Next**.
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-    - [Windows 10/11](shared-user-device-settings-windows.md)
+    - [Windows](shared-user-device-settings-windows.md)
     - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
 8. Select **Next**.
@@ -101,5 +101,5 @@ The next time each device checks in, the policy is applied.
 
 ## Related articles
 
-- See all the settings for [Windows 10/11](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
+- See all the settings for [Windows](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

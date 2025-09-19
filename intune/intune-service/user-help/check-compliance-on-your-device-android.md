@@ -6,7 +6,7 @@ description: During a check-in, Company Portal confirms that the settings on you
 keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
+manager: laurawi
 ms.date: 01/27/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune

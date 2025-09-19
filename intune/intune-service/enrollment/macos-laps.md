@@ -44,7 +44,7 @@ The Intune generated password for the admin account is 15 characters with a mixt
 Because *macOS local account configuration with LAPS* is enabled only during automated device enrollment (ADE), a previously enrolled device must reenroll with Intune using a LAPS enabled ADE profile to be supported for LAPS for the administrator account.
 
 > [!IMPORTANT]  
-> When a macOS device enrolls via ADE with a configured local admin account and a targeted passcode profile, it prompts for an admin password reset—even if **Change at next auth** is not enabled. This does not affect the standard account. We're aware of the issue. As a workaround, manually rotate the admin password after the reset on the device to keep the Intune and device password state in sync.
+> When a macOS device enrolls via ADE with a configured local admin account and a targeted passcode profile, it prompts for an admin password reset—even if **Change at next auth** is not enabled or if a value is set for Max Age (days). This does not affect the standard account. We're aware of the issue. As a workaround, manually rotate the admin password after the reset on the device to keep the Intune and device password state in sync.
 
 > [!IMPORTANT]  
 > The local admin account does not receive a secure token, due to platform limitations. The first account that signs in after enrollment receives the secure token, which at this time will always be the local user account.
@@ -96,14 +96,14 @@ Following are examples of the available configuration options. Additional detail
 
 - **Admin account username** - Specify the account name or use one of the following supported variables to dynamically create the name. By default, this field uses *Admin*.
   - {{serialNumber}} - for example, **F4KN99ZUG5V2**
-  - {{partialupn}} - for example, **John**
+  - {{partialupn}} - for example, **John.Dupont**
   - {{managedDeviceName}} - for example, **F2AL10ZUG4W2_14_4/15/2025_12:45PM** 
-  - {{onPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **JDoe**
 
 - **Admin account full name** - Specify the account name or use one of the following supported variables to dynamically create the name. By default, this field uses *Admin*.
   - {{username}} - for example, **John@contoso.com**
   - {{serialNumber}} - for example, **F4KN99ZUG5V2**
-  - {{onPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **JDoe**
 - **Hide in Users & Groups** - Make the admin account hidden in the sign-in window and in Users & Groups. By default, this set to *Not Configured*.
 
 ### Local user account
@@ -118,14 +118,14 @@ Following is some guidance for the available options. Additional details are acc
 
 - **Primary account name** - Specify the account name or use one of the following supported variables to dynamically create the name. Setup Assistant uses this value to prefill the Account Name field if *Prefill account info* is set to *Not configured*. By default, this field uses the *{{partialupn}}* variable.
   - {{serialNumber}} - for example, **F4KN99ZUG5V2** 
-  - {{partialupn}} - for example, **John**
+  - {{partialupn}} - for example, **John.Dupont**
   - {{managedDeviceName}} - for example, **F2AL10ZUG4W2_14_4/15/2025_12:45PM**
-  - {{onPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **JDoe**
 
 - **Primary account full name** - Specify the full name for the account or use one of the following variables to dynamically create the name. Setup Assistant uses this value to prefill the Full Name field if *Prefill account info* is set to *Not configured*. By default, this field uses the *{{username}}* variable:
   - {{username}} - for example, **John@contoso.com**
   - {{serialNumber}} - for example, **F4KN99ZUG5V2** 
-  - {{onPremisesSamAccountName}} - for example, **contoso\John**
+  - {{onPremisesSamAccountName}} - for example, **JDoe**
 
 - **Restrict editing** - Prevent the end user from editing the full name and account name. By default, this is set to *Not configured*.
 

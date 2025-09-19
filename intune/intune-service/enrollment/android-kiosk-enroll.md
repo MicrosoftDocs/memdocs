@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: grwilson
+ms.reviewer: grwilso
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -47,7 +47,10 @@ This article describes how to set up and configure Microsoft Intune to enroll de
 Devices must have: 
 
 - Android OS version 8.0 or later.
-- A distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
+- A distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS. 
+- Support for Android Enterprise. For more information about requirements and support, see:   
+    * [Android Enterprise help - General FAQs](https://support.google.com/work/android/answer/14772109?hl=en#zippy=%2cif-my-device-is-not-android-enterprise-recommended-aer-can-i-still-use-android-enterprise)  
+    * [Check & fix Play Protect certification status](https://support.google.com/googleplay/answer/7165974?hl=en#zippy=%2Cdevice-isnt-certified)  
 
 ## Set up Android Enterprise dedicated device management
 

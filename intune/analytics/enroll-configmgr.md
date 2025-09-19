@@ -6,9 +6,9 @@ ms.date: 04/07/2025
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: quickstart
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: MandiOhlinger
+ms.author: mandia
+manager: laurawi
 # Customer intent: As an administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
 ms.localizationpriority: high
 ms.collection: highpri

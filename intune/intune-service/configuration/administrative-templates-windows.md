@@ -1,13 +1,14 @@
 ---
 # required metadata
 
-title: Use ADMX templates on Windows 10/11 devices in Microsoft Intune
+title: Use ADMX templates on Windows devices in Microsoft Intune
 description: Use Administrative templates in Microsoft Intune to create groups of settings for Windows 10/11 client devices. Use these settings in a device configuration profile. You can control Office programs, Microsoft Edge, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use HTTP printing, control user sign-in, and change the event log size.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
 ms.date: 12/11/2024
+ms.update-cycle: 180-days
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,20 +31,19 @@ ms.collection:
 - msec-ai-copilot
 ---
 
-# Use Windows 10/11 templates to configure group policy settings in Microsoft Intune
+# Use Windows templates to configure group policy settings in Microsoft Intune
 
 > [!IMPORTANT]
 > Starting with the December 2412 release, you can't create new Administrative Templates policies from the **Templates** > **Administrative Templates** profile type in the Intune admin center. To create ADMX template profiles, use the **[settings catalog](settings-catalog.md)**. For more information on this change, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
 > 
 > There will be no changes to the following UI experiences:
-> - ‘Imported Administrative templates (Preview)’ template which is used for Custom ADMX templates. 
+> - 'Imported Administrative templates (Preview)' template which is used for Custom ADMX templates. 
 
 **Administrative Templates** in Microsoft Intune include thousands of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Google Chrome, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings enable administrators to create group policies using the cloud.
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 The Intune templates are 100-percent cloud-based, are built in to Intune (no downloading), and don't require any customizations, including using OMA-URI. They offer a straight-forward way to find and configure the settings you want:
 
@@ -61,7 +61,7 @@ This article describes the steps to create a template for Windows client devices
 
 ## Before you begin
 
-- Some of these settings are available starting with Windows 10 version 1709 (RS2/build 15063). Some settings aren't included in all Windows editions. For the best experience, we recommend Windows 10 Enterprise version 1903 (19H1/build 18362) or newer.
+- Some settings aren't included in all Windows editions. For the best experience, we recommend using the Windows Enterprise edition.
 
 - The Windows settings use the [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). The CSPs work on different editions of Windows, such as Home, Professional, Enterprise, and so on. To see if a CSP works on a specific edition, go to [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
@@ -93,7 +93,7 @@ This article describes the steps to create a template for Windows client devices
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Name your profiles so you can easily identify them later. For example, a good profile name is *ADMX: Windows 10/11 admin template that configures xyz settings in Microsoft Edge*.
+    - **Name**: Name your profiles so you can easily identify them later. For example, a good profile name is **ADMX: Configures xyz settings in Microsoft Edge**.
     - **Description**: This setting is optional but recommended.
 
 6. Select **Next**.
@@ -196,8 +196,8 @@ For more information about KIR, see:
 The template is created but might not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
 
 See also:
-- [Update Office using administrative templates](administrative-templates-update-office.md).
-- [Restrict USB devices using administrative templates](administrative-templates-restrict-usb.md).
-- [Create Microsoft Edge policy using ADMX](administrative-templates-configure-edge.md).
+
+- [Update Office using the settings catalog](settings-catalog-update-office.md).
+- [Restrict USB devices using the settings catalog](settings-catalog-restrict-usb.md).
+- [Create Microsoft Edge policy using the settings catalog](settings-catalog-configure-edge.md).
 - [Import custom or partner ADMX files](administrative-templates-import-custom.md).
-- [Tutorial: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)
