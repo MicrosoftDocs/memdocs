@@ -38,8 +38,7 @@ In Intune, use this feature to control BIOS settings. Typically, firmware is mor
 
 This feature applies to:
 
-- Windows 11 on supported UEFI
-- Windows 10 RS5 (1809) and later on supported UEFI
+- Windows on supported UEFI
 
 For example, you use Windows client devices in a secure environment, and want to disable the camera. You can disable the camera at the firmware-layer, so it doesn't matter what the end user does. Reinstalling the OS or wiping the computer won't turn the camera back on. In another example, lock down the boot options to prevent users from booting up another OS, or an older version of Windows that doesn't have the same security features.
 

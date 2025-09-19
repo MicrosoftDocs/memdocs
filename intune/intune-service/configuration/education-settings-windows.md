@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Windows 10 education settings in Microsoft Intune
-description: See a list of all the education settings for Windows 10 devices. Use these settings in a device configuration profile with the Take a Test app, choose how users or students sign in, monitor the screen during the test, and more in Intune.
+title: Windows education settings in Microsoft Intune
+description: See a list of all the education settings for Windows devices. Use these settings in a device configuration profile with the Take a Test app, choose how users or students sign in, monitor the screen during the test, and more in Intune.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -29,12 +29,12 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Configure the Take a Test app on Windows 10 devices using Intune
+# Configure the Take a Test app on Windows devices using Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-The Take a Test app lets you securely administer online tests on your classroom's Windows 10 devices. To set up the Take a Test app, you'll need to create a device configuration profile in Intune and configure the secure assessment settings. This article describes some of the settings you'll find for the Take a Test app.
+The Take a Test app lets you securely administer online tests on your classroom's Windows devices. To set up the Take a Test app, you'll need to create a device configuration profile in Intune and configure the secure assessment settings. This article describes some of the settings you'll find for the Take a Test app.
 
 After you've configured the profile, assign and deploy it to your students. 
 
@@ -42,7 +42,7 @@ After you've configured the profile, assign and deploy it to your students.
 
 ## Before you begin
 
-Create a [Windows 10 secure assessment education device configuration profile](education-settings-configure.md#create-a-device-profile).
+Create a [Windows secure assessment education device configuration profile](education-settings-configure.md#create-a-device-profile).
 
 ## Take a test settings
 
@@ -50,7 +50,7 @@ Create a [Windows 10 secure assessment education device configuration profile](e
   - Azure AD account (Microsoft Entra account)
   - Domain account
   - Local account
-  - Local guest account: Only available on devices running Windows 10, version 1903 and later.
+  - Local guest account
 - **Account user name**: Enter the user name of the account used with the Take a Test app. You can enter accounts in the following format:
   - `user@contoso.com`
   - `domain\username`
