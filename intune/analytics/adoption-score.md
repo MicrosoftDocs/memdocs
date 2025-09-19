@@ -3,6 +3,7 @@ title: Endpoint analytics page in Microsoft Adoption Score
 description: Get details about endpoint analytics in Microsoft Adoption Score
 ms.date: 04/10/2025
 ms.topic: article
+titlesuffix: "Microsoft Intune"
 ---
 
 # Endpoint analytics in Microsoft Adoption Score
