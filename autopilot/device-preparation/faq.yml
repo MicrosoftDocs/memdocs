@@ -2,7 +2,7 @@
 metadata:
   title: Windows Autopilot device preparation FAQ
   description: This article provides OEMs, partners, administrators, and users with answers to some frequently asked questions about deploying Windows with Windows Autopilot device preparation.
-    ms.date: 04/04/2025
+  ms.date: 04/04/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
