@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 5 of 6 - Create a Cloud PC provisioning policy
 description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 5 of 6 - Create a Cloud PC provisioning policy.
-manager: aaroncz
 ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:

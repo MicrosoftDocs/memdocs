@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 1 of 6 - Set up Windows automatic Intune enrollment
 description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 1 of 6 - Set up Windows automatic Intune enrollment.
-manager: aaroncz
 ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:

@@ -1,5 +1,4 @@
 ---
-manager: aaroncz
 ms.topic: include
 ms.date: 06/11/2025
 ---

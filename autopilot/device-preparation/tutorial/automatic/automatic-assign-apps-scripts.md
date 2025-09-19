@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 3 of 6 - Assign applications and PowerShell scripts to device group
 description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 3 of 6 - Assign applications and PowerShell scripts to device group.
-manager: aaroncz
 ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:

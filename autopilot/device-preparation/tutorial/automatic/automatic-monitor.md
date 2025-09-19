@@ -1,7 +1,6 @@
 ---
 title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 6 of 6 - Monitor the deployment
 description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 6 of 6 - Monitor the deployment.
-manager: aaroncz
 ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:

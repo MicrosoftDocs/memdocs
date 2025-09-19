@@ -1,7 +1,6 @@
 ---
 title: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune
 description: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune.
-manager: aaroncz
 ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:
