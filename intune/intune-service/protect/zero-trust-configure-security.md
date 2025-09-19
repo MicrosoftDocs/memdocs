@@ -78,17 +78,17 @@ We recommend that all of the following controls be implemented where licenses ar
 
 ## Apply Compliance policies on devices
 
-<!-- ### Compliance policies for Android Enterprise (Fully managed and corporate owned work profile) 24545 -->
+### Compliance policies for Android Enterprise (Fully managed and corporate owned work profile)<!-- 24545 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-<!-- [!INCLUDE [24545](./includes/secure-recommendations/24545.md)]-->
+[!INCLUDE [24545](./includes/secure-recommendations/24545.md)]
 
-<!-- ### Compliance policies for Android Enterprise (Personally owned work profile) 24547 -->
+ ### Compliance policies for Android Enterprise (Personally owned work profile)<!-- 24547 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-<!-- [!INCLUDE [24547](./includes/secure-recommendations/24547.md)]-->
+[!INCLUDE [24547](./includes/secure-recommendations/24547.md)]
 
-<!-- ### Compliance policies for iOS/iPadOS 24543 -->
+### Compliance policies for iOS/iPadOS<!-- 24543 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-<!-- [!INCLUDE [24543](./includes/secure-recommendations/24543.md)]-->
+[!INCLUDE [24543](./includes/secure-recommendations/24543.md)]
 
 ### Compliance policies for macOS<!-- 24542 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
@@ -100,11 +100,11 @@ We recommend that all of the following controls be implemented where licenses ar
 
 ## Protect Apple devices
 
-<!-- ### macOS - Cloud LAPS is enforced 24561 -->
+### macOS - Cloud LAPS is enforced<!--  24561 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-<!-- [!INCLUDE [24561](./includes/secure-recommendations/24561.md)]-->
+[!INCLUDE [24561](./includes/secure-recommendations/24561.md)]
 
-### macOS - Defender Antivirus policy is created and assigned<!-- 24784 -->
+### macOS - Defender Antivirus policy is configured and assigned<!-- 24784 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24784](./includes/secure-recommendations/24784.md)]
 
@@ -112,7 +112,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24569](./includes/secure-recommendations/24569.md)]
 
-### macOS - Firewall policy is created and assigned<!-- 24552 -->
+### macOS - Firewall policy is configured and assigned<!-- 24552 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24552](./includes/secure-recommendations/24552.md)]
 
@@ -120,7 +120,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
 
-### macOS - Update policy is created and assigned<!-- 24690 -->
+### macOS - Update policy is configured and assigned<!-- 24690 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24690](./includes/secure-recommendations/24690.md)]
 
@@ -134,11 +134,11 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24560](./includes/secure-recommendations/24560.md)]
 
-### Windows - BitLocker Policy is created and assigned<!-- 24550 -->
+### Windows - BitLocker Policy is configured and assigned<!-- 24550 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24550](./includes/secure-recommendations/24550.md)]
 
-### Windows - Firewall is created and assigned<!-- 24540 -->
+### Windows - Firewall is configured and assigned<!-- 24540 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24540](./includes/secure-recommendations/24540.md)]
 
@@ -154,15 +154,15 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24573](./includes/secure-recommendations/24573.md)]
 
-<!-- ### Windows - Local Account Protection policy is configured and assigned 24564 -->
+### Windows - Local Account Protection policy is configured and assigned<!--  24564 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-<!-- [!INCLUDE [24564](./includes/secure-recommendations/24564.md)]-->
+[!INCLUDE [24564](./includes/secure-recommendations/24564.md)]
 
 ### Windows - Deploy Attack Surface Reduction (ASR) policies<!-- 24574 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24574](./includes/secure-recommendations/24574.md)]
 
-### Windows - Defender Antivirus policy is created and assigned<!-- 24575 -->
+### Windows - Defender Antivirus policy is configured and assigned<!-- 24575 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24575](./includes/secure-recommendations/24575.md)]
 
@@ -170,7 +170,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24546](./includes/secure-recommendations/24546.md)]
 
-### Windows - Endpoint Analytics policy is created and assigned<!-- 24576 -->
+### Windows - Endpoint Analytics policy is configured and assigned<!-- 24576 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24576](./includes/secure-recommendations/24576.md)]
 
