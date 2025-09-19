@@ -134,7 +134,7 @@ The **Hide organization name** settings catalog setting now supports corporate o
 
 Previously, this setting was only supported on corporate-owned devices with a work profile and corporate owned fully managed devices.
 
-For more information on this setting, see [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md).
+For more information on this setting, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
 
 ### Settings available in both Templates and Settings Catalog for Android Enterprise<!-- 34458121 -->
 
