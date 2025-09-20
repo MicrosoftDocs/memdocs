@@ -40,7 +40,7 @@ If you aren't the IT admin who can make this change, notify your networking team
 - [Azure Front Door](/azure/frontdoor/origin-security?tabs=app-service-functions&pivots=front-door-classic)
 - [Azure service tags](/azure/virtual-network/service-tags-overview)
 - [Intune network endpoints](../fundamentals/intune-endpoints.md#intune-core-service)
-- [US government network endpoints for Intune](/fundamentals/intune-us-government-endpoints)
+- [US government network endpoints for Intune](../fundamentals/intune-us-government-endpoints.md)
 
 If you have a helpdesk, inform them about this upcoming change.
 
