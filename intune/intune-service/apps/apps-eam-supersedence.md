@@ -1,22 +1,10 @@
 ---
-title: Guided update supersedence for Enterprise App Management 
-titleSuffix: Microsoft Intune
-description: Learn how to update an Enterprise App Catalog app using supersedence with Microsoft Intune. 
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
+title: Guided update supersedence for Enterprise App Management
+description: Learn how to update an Enterprise App Catalog app using supersedence with Microsoft Intune.
 ms.date: 09/17/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
 ms.reviewer: nicolezhao
-ms.suite: ems
-search.appverid: MET150
-ms.custom: 
+ms.custom:
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -47,7 +35,7 @@ The **Enterprise App Catalog apps with updates** pane provides a list of Enterpr
 
     Superseding an app creates a new app with the latest app package and sets up the supersedence relationship. Some settings, such as scope tags and assignments won't be copied to the new app.
 
-2. Select the **Update** option for the specific app. 
+2. Select the **Update** option for the specific app.
    The **Update application** pane is displayed.
 
     :::image type="content" alt-text="Screenshot an Enterprise App Catalog app list the supersedence option." source="./media/apps-eam-supersedence/apps-eam-supersedence-04.png" lightbox="./media/apps-eam-supersedence/apps-eam-supersedence-04.png" :::

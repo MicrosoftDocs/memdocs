@@ -1,29 +1,9 @@
 ---
-# required metadata
-
 title: How to wipe only corporate data from apps
-titleSuffix: Microsoft Intune
 description: Learn how to selectively wipe only corporate data from Intune-managed apps with Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier1
@@ -73,7 +53,7 @@ The service creates and tracks a separate wipe request for each protected app on
 
 ## Create a user based wipe request
 
-By adding a user to the User-level wipe you'll automatically issue wipe commands to all apps on all the user's devices.  The user will continue to get wipe commands at every check-in from all devices.  To re-enable a user, you must remove them from the list.  
+By adding a user to the User-level wipe you'll automatically issue wipe commands to all apps on all the user's devices.  The user will continue to get wipe commands at every check-in from all devices.  To re-enable a user, you must remove them from the list.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App selective wipe** > **User-Level Wipe**

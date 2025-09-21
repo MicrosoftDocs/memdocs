@@ -1,29 +1,9 @@
 ---
-# required metadata
-
 title: Review app protection policy logs
-titleSuffix: Microsoft Intune
 description: This topic describes how to configure Intune app protection policy (APP) logs.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 01/06/2025
 ms.topic: troubleshooting
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: demerson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2
@@ -32,7 +12,7 @@ ms.collection:
 
 # Review client app protection logs
 
-Learn about the settings you can review in the app protection logs. Access logs by enabling Intune Diagnostics on a mobile client. 
+Learn about the settings you can review in the app protection logs. Access logs by enabling Intune Diagnostics on a mobile client.
 
 The process to enable and collect logs varies by platform:
 - **iOS/iPadOS devices** - Use Microsoft Edge for iOS/iPadOS to collect logs. For details, see [Use Microsoft Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
@@ -40,7 +20,7 @@ The process to enable and collect logs varies by platform:
 - **Android devices** - Use Microsoft Edge for Android to collect logs. For details, see [Use Microsoft Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
 
   > [!NOTE]
-  > On Android Fully Managed devices, in certain instances the Intune Company Portal app may be visible under all apps. This may happen when an app associated with an app protection policy is either not installed or not launched. 
+  > On Android Fully Managed devices, in certain instances the Intune Company Portal app may be visible under all apps. This may happen when an app associated with an app protection policy is either not installed or not launched.
 
 The following tables list the App protection policy setting name and supported values that are recorded in the log. In addition, each setting identifies the policy setting found within Microsoft Intune admin center. For detailed information on each setting, see [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md) and [Android app protection policy settings in Microsoft Intune](app-protection-policy-settings-android.md).
 
@@ -71,7 +51,7 @@ The following tables list the App protection policy setting name and supported v
 | FaceIDEnabled              | 0 = Block<br>1 = Allow                                                                                                                                                                                                                                                                                           | **Section**: Access requirements<br>**Setting**: Face ID instead of PIN for access (iOS 11+/iPadOS)                                                                                                                                      |
 | FileEncryptionLevel         | 0 = When device is locked<br>1 = When device is locked and there are open files<br>2 = After device restart<br>3 = Use device settings                                                                                                                                                                      | **Section**: Data protection<br>**Setting**: Encrypt org data                                                                                                                                                      |
 | FileSharingSaveAsDisabled   | 0 = Allow<br>1 = Block                                                                                                                                                                                                                                                                                           | **Section**: Data protection<br>**Setting**: Save copies of org data                                                                                                                                                     |
-| GenmojiConfigurationState   | 0 = Allow<br>1 = Block                                                                                                                                                                                                                                                                                           | **Section**: Data protection<br>**Setting**: Genmoji                                                                                                                                                     |  
+| GenmojiConfigurationState   | 0 = Allow<br>1 = Block                                                                                                                                                                                                                                                                                           | **Section**: Data protection<br>**Setting**: Genmoji                                                                                                                                                     |
 | IntuneIdentityUPN           | UPN of the Intune MAM user                                                                                                                                                                                                                                                                                  | N/A                                                                                                                                                                                     |
 | ManagedBrowserRequired      | 0 = False<br>1 = True                                                                                                                                                                                                                                                                                           | **Section**: Data protection<br>**Setting**: Restrict web content transfer with other apps                                                                                                     |
 | ManagedLocations            | A value that represents the number of managed storage locations to which the app can save data. <br>1 = OneDrive<br>2 = SharePoint<br>3 = OneDrive & SharePoint<br>4 = Box<br>5 = OneDrive & Box<br>6 = SharePoint & Box<br>7 = OneDrive, SharePoint & Box<br>32 = Local Storage<br>33 = Local Storage & OneDrive<br>34 = Local Storage & SharePoint<br>35 = Local Storage, OneDrive & SharePoint<br>36 = Local Storage & Box<br>37 = Local Storage, OneDrive & Box<br>38 = Local Storage, SharePoint & Box<br>39 = Local Storage, OneDrive, SharePoint & Box<br>128 = Photo Library<br>129 = Photo Library & OneDrive<br>130 = Photo Library & SharePoint<br>131 = Photo Library, OneDrive & SharePoint<br>132 = Photo Library & Box<br>133 = Photo Library, OneDrive & Box<br>134 = Photo Library, SharePoint & Box<br>135 = Photo Library, OneDrive, SharePoint & Box<br>160 = Photo Library, Local Storage<br>161 = Photo Library, Local Storage & OneDrive<br>162 = Photo Library, Local Storage & SharePoint<br>163 = Photo Library, Local Storage, OneDrive & SharePoint<br>164 = Photo Library, Local Storage & Box<br>165 = Photo Library, Local Storage, OneDrive & Box<br>166 = Photo Library, Local Storage, SharePoint & Box<br>167 = Photo Library, Local Storage, OneDrive, SharePoint & Box | **Section**: Data protection<br>**Setting**: Allow user to save copies to selected services                                                                                                          |

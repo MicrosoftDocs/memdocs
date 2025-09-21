@@ -1,30 +1,10 @@
 ---
-# required metadata
-
 title: Discovered apps
-titleSuffix: Microsoft Intune
 description: Understand details about the detected apps that Intune found on a device.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 07/30/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 07dd262f-13e7-4cb2-9cc2-b755d1c276cf
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
 - tier1
 - M365-identity-device-management

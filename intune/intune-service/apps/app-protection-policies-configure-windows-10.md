@@ -1,36 +1,16 @@
 ---
-# required metadata
-
 title: Configure app protection policies for Windows 10/11
-titleSuffix: Microsoft Intune
 description: This article describes how to configure app protection policies for Windows 10/11 devices.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 949fddec-5318-4c9a-957e-ea260e6e05be
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
 - tier2
 - M365-identity-device-management
 - Windows
 ---
 
-# Get ready for Windows Information Protection in Windows 10/11 
+# Get ready for Windows Information Protection in Windows 10/11
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -48,17 +28,17 @@ Enable Windows Information Protection (WIP) for Windows 10/11 by setting the WIP
 5. Select **Microsoft Intune**.
 6. Configure the settings in the  **Restore default WIP URLs** group on the **Configure** pane.
 
-   **WIP user scope**  
+   **WIP user scope**
    Use WIP autoenrollment to manage enterprise data on your employees' Windows devices. WIP autoenrollment will be configured for your own device scenarios.<ul><li>**None**<br>Select if no users can be enrolled in WIP.</li><li>**Some**<br>Select Microsoft Entra groups that contain users who will be enrolled in WIP.</li><li>**All**<br>Select if all users can be enrolled in WIP.</li></ul>
 
-   **WIP terms of use URL**  
+   **WIP terms of use URL**
    The WIP terms of use URL isn't supported for Microsoft Intune. This input box must be left blank for protection policies to apply.
 
-   **WIP discovery URL**  
+   **WIP discovery URL**
    The URL of the enrollment endpoint of the WIP service. The enrollment endpoint is used to enroll devices for management with the WIP service.
 
-   **WIP compliance URL**  
-   The WIP compliance URL isn't supported for Microsoft Intune. This input box must be left blank for protection policies to apply. 
+   **WIP compliance URL**
+   The WIP compliance URL isn't supported for Microsoft Intune. This input box must be left blank for protection policies to apply.
 
 7. Select **Save**.
 

@@ -1,29 +1,9 @@
 ---
-# required metadata
-
 title: Understanding Microsoft Intune management agent for macOS
-titleSuffix:
 description: Learn about the Microsoft Intune management agent for macOS.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 07/12/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier1

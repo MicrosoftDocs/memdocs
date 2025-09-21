@@ -1,29 +1,11 @@
 ---
-# required metadata
-
 title: Windows Information Protection (WIP) app protection policy
-titleSuffix: Microsoft Intune
 description: Create and deploy Windows Information Protection (WIP) policy with Microsoft Intune
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/17/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
-
-# optional metadata
-
 ROBOTS: NOINDEX,NOFOLLOW
 #audience:
-
 ms.reviewer: mattcall
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier2
@@ -59,7 +41,7 @@ You must understand a few concepts when adding a WIP policy:
 
 ## Prerequisites
 
-You must configure the MAM provider before you can create a WIP policy. Learn more about [how to configure your MAM provider with Intune](app-protection-policies-configure-windows-10.md).  
+You must configure the MAM provider before you can create a WIP policy. Learn more about [how to configure your MAM provider with Intune](app-protection-policies-configure-windows-10.md).
 
 > [!IMPORTANT]
 > WIP does not support multi-identity, only one managed identity can exist at a time. For more information about the capabilities and limitations of WIP, see [Protect your enterprise data using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
@@ -76,8 +58,8 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 >[!IMPORTANT]
 > Windows Information Protection (WIP) policies without enrollment has been deprecated. You can no longer create WIP policies for unenrolled devices.
 
-> [!TIP]  
-> For related information about creating WIP policies for Intune, including available settings and how to configure them, see [Create a Windows Information Protection (WIP) policy with MAM using the portal for Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) in the Windows Security documentation library. 
+> [!TIP]
+> For related information about creating WIP policies for Intune, including available settings and how to configure them, see [Create a Windows Information Protection (WIP) policy with MAM using the portal for Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) in the Windows Security documentation library.
 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
