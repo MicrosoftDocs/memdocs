@@ -4,9 +4,7 @@ description: Use the remote lock action in Microsoft Intune to lock a managed de
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.collection:
-- tier2
 - M365-identity-device-management
-
 zone_pivot_groups: bf632d5b-6209-46d2-8c9c-8d76b1f704cc
 ---
 

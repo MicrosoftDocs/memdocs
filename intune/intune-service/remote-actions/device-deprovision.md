@@ -4,7 +4,6 @@ description: Learn how to deprovision a chromeOS device with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 

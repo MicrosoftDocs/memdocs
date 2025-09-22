@@ -4,10 +4,8 @@ description: Learn how to wipe, or factory reset, devices with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
-
 zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 ---
 

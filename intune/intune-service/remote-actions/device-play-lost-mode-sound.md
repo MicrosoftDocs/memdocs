@@ -5,10 +5,8 @@ ms.date: 09/22/2025
 ms.topic: how-to
 ms.reviewer: shsivaku
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
-
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 

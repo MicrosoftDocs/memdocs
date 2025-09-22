@@ -6,9 +6,7 @@ ms.topic: how-to
 ms.reviewer: petermt
 
 ms.collection:
-- tier2
 - M365-identity-device-management
-
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 

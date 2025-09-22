@@ -4,9 +4,7 @@ description: Learn how to temporarily pause policy enforcement on Windows 11 dev
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.reviewer: Mike Danoski
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

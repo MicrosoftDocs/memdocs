@@ -4,9 +4,7 @@ description: Learn how to use the device sync remote action in Intune to apply p
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.collection:
-- tier2
 - M365-identity-device-management
-
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 

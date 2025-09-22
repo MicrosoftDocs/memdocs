@@ -4,10 +4,8 @@ description: Learn how to rotate the local admin password on Windows and macOS d
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
-
 zone_pivot_groups: 2fce401c-16eb-4314-8d26-844d8612f9c5
 ---
 

@@ -6,10 +6,8 @@ ms.topic: how-to
 ms.reviewer:
 #ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
-
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 

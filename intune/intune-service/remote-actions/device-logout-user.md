@@ -4,7 +4,6 @@ description: Learn how to use the logout the current user from a Shared iPad wit
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

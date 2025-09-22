@@ -4,9 +4,7 @@ description: Learn how to use Microsoft Intune to disable Activation Lock on App
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.collection:
-- tier2
 - M365-identity-device-management
-
 zone_pivot_groups: e5de148b-1c4f-40a3-8ecb-0f8a7724d927
 ---
 

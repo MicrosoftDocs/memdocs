@@ -4,9 +4,7 @@ description: Learn how to enable Lost Mode in Microsoft Intune to remotely lock 
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.collection:
-- tier2
 - M365-identity-device-management
-
 zone_pivot_groups: 46b8d067-28e2-43a6-97b2-ffcc8414e503
 ---
 

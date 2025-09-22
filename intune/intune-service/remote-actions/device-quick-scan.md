@@ -4,7 +4,6 @@ description: Learn how to initiate on demand Microsoft Defender quick scan with 
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
