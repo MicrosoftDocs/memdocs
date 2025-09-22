@@ -48,11 +48,11 @@ The Vulnerability Remediation Agent runs using the identity and permissions of a
 
 The agent persistently runs in the identity of a user account. By default, this is the Intune administrative user who initially set up the agent.
 
+The agent also supports a manual change of the account used as its identity. To successfully assign a new agent identity requires sign-in and authentication of the new user account.
+
 The agent identity refreshes with each agent run and expires if the agent doesn't run for 90 consecutive days. When the expiration date nears, each Copilot owner and Copilot contributor receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until authentication is renewed. For more information about renewing authentication, see Renew the agent later in this article
 
 When the agent authentication is renewed, the agent begins using the credentials of the individual who clicks on the *Renew authentication* button.
-
-The agent also supports a manual change of the account used as its identity. To successfully assign a new agent identity requires sign-in and authentication of the new user account.
 
 #### Products
 
