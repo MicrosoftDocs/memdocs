@@ -9,7 +9,6 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - highpri
-ms.custom: intune-azure
 ---
 
 # Configure Microsoft Edge for Windows with Intune

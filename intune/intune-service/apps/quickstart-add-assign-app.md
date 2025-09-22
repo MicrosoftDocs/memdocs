@@ -4,7 +4,6 @@ description: In this article, you'll use Microsoft Intune to add and assign an a
 ms.date: 02/28/2025
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

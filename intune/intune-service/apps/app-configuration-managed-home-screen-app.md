@@ -8,7 +8,6 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - Android
-ms.custom: intune-azure
 ---
 
 # Configure the Microsoft Managed Home Screen app for Android Enterprise

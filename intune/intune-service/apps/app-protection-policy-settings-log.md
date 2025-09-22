@@ -4,7 +4,6 @@ description: This topic describes how to configure Intune app protection policy 
 ms.date: 01/06/2025
 ms.topic: troubleshooting
 ms.reviewer: demerson
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

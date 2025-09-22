@@ -10,7 +10,6 @@ ms.collection:
 - Android
 - highpri
 - FocusArea_Apps_SpecificApp
-ms.custom: intune-azure
 ---
 
 # Manage Microsoft Edge on iOS and Android with Intune

@@ -4,7 +4,6 @@ description: Learn about adding web apps (client-server applications) to Microso
 ms.date: 06/19/2025
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

@@ -4,7 +4,6 @@ description: In this tutorial you will configure Slack to use Intune for EMM and
 ms.date: 06/07/2024
 ms.topic: tutorial
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management

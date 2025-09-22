@@ -4,7 +4,6 @@ description: Learn about how to add an iOS/iPadOS line-of-business (LOB) app to 
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

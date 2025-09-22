@@ -5,7 +5,6 @@ ms.date: 07/24/2025
 ms.topic: reference
 ms.localizationpriority: high
 ms.reviewer: cdemello
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

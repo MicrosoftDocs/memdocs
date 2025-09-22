@@ -4,7 +4,6 @@ description: Create, assign, monitor, and troubleshoot shell scripts for macOS d
 ms.date: 08/08/2024
 ms.topic: how-to
 ms.reviewer: arnab
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

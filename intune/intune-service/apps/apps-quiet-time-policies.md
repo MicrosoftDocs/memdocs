@@ -5,7 +5,6 @@ ms.date: 09/23/2024
 ms.topic: overview
 ms.localizationpriority: high
 ms.reviewer: cdemello
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - highpri

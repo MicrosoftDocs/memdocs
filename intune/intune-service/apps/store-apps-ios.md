@@ -4,7 +4,6 @@ description: Learn about adding iOS store apps to Microsoft Intune. You can assi
 ms.date: 01/06/2025
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

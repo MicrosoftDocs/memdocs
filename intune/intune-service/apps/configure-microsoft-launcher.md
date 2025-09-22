@@ -8,7 +8,6 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-azure
 ---
 
 # Configure Microsoft Launcher

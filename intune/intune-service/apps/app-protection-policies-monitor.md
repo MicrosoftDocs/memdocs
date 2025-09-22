@@ -4,7 +4,6 @@ description: This article describes how to monitor app protection policies in In
 ms.date: 06/16/2024
 ms.topic: how-to
 ms.reviewer: ilwu
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

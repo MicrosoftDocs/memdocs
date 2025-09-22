@@ -4,7 +4,6 @@ description: This article describes how to create and assign Microsoft Intune ap
 ms.date: 06/12/2025
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

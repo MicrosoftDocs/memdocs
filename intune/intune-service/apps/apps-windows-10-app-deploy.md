@@ -4,7 +4,6 @@ description: Learn about Windows 10/11 app deployment scenarios available with M
 ms.date: 04/16/2024
 ms.topic: how-to
 ms.reviewer: priyar
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

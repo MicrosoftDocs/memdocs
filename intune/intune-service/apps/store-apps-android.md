@@ -9,7 +9,6 @@ ms.collection:
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_Store
-ms.custom: intune-azure
 ---
 
 # Add Android store apps to Microsoft Intune

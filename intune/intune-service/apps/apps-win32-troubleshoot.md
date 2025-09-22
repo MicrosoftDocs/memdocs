@@ -4,7 +4,6 @@ description: Learn about the most common methods to troubleshoot Win32 app issue
 ms.date: 08/14/2025
 ms.topic: troubleshooting
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

@@ -4,7 +4,6 @@ description: Learn how to assign an Intune app to groups of users or devices usi
 ms.date: 01/09/2025
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

@@ -4,7 +4,6 @@ description: Learn how you can use Microsoft Intune to install Microsoft 365 app
 ms.date: 04/17/2024
 ms.topic: how-to
 ms.reviewer: arnab
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

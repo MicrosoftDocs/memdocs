@@ -4,7 +4,6 @@ description: Understand how to use mobile app management policies in Microsoft I
 ms.date: 06/12/2025
 ms.topic: how-to
 ms.reviewer: arnab
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

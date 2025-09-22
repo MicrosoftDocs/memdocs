@@ -4,7 +4,6 @@ description: Learn about adding Microsoft Store (legacy) apps to Intune.
 ms.date: 04/17/2024
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

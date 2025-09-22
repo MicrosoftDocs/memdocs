@@ -9,7 +9,6 @@ ms.collection:
 - M365-identity-device-management
 - Windows
 - highpri
-ms.custom: intune-azure
 ---
 
 # Data protection for Windows MAM
