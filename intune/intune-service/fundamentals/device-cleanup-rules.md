@@ -1,5 +1,5 @@
 ---
-title: Device Cleanup Rules
+title: Automatically remove devices with cleanup rules
 description: Intune's device cleanup rules offer a simple, automated way to ensure that only actively managed devices remain visible in the admin center. Learn more about device cleanup rules and how to configure them.
 ms.date: 08/27/2025
 ms.topic: how-to

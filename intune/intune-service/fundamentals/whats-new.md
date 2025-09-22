@@ -92,7 +92,7 @@ To learn more about viewing and monitoring existing profiles, see [View and moni
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
- 
+
 ##### iOS/iPadOS
 
 **Managed Settings > Default Applications**:
@@ -174,14 +174,14 @@ To learn more about these settings, see [Android Intune settings catalog setting
 
 > [!div class="checklist"]
 > Applies to:
-> 
+>
 > - Android Enterprise
 
 ### Device management
 
 #### Device category management supports Multi Admin Approval<!-- 26838632 -->
 
-Intune [device categories](../enrollment/device-group-mapping.md) support Multi Admin Approval. When Multi Admin Approval is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it’s applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
+Intune [device categories](../enrollment/device-group-mapping.md) support Multi Admin Approval. When Multi Admin Approval is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
@@ -299,7 +299,7 @@ For a list of supported OS version, see [Supported operating systems and browser
 
 #### New security baseline update experience<!-- 31607281  -->
 
-We’ve updated the Intune security baseline update experience for the more recent versions of security baselines. With this change, when you update a security baseline that was created after May 2023 to a more recent version of that same baseline, you now have two options to help automatically configure the updated baseline:
+We've updated the Intune security baseline update experience for the more recent versions of security baselines. With this change, when you update a security baseline that was created after May 2023 to a more recent version of that same baseline, you now have two options to help automatically configure the updated baseline:
 
 - Keep customizations – With this option, Intune applies all the settings customizations from the original baseline that you're upgrading to the new baselines template. The result is that the new baseline instance retains (includes) all your organization's specific modifications.
 - Discard customizations – With this option, Intune creates a new 'default' baseline instance that uses the new baseline version. Each setting in that baseline uses the baseline default and none of your settings customizations are automatically applied.
@@ -324,7 +324,7 @@ Apple has released iOS 26 and iPadOS 26. With this update, Purebred (version 3) 
 
 #### Give feedback about multiple device query<!--  -->
 
-Use the new feedback feature on the multiple device query page to submit feedback about multiple device query.  
+Use the new feedback feature on the multiple device query page to submit feedback about multiple device query.
 
 ## Week of September 8, 2025
 
@@ -570,11 +570,7 @@ For more information about Linux enrollment, see [Linux device enrollment guide 
 
 When you use the Multi Admin Approval feature, you require a second admin account to approve a change before the change is applied.
 
-<<<<<<< HEAD
-The **[Wipe](../remote-actions/device-wipe.md)** remote action supports MAA. Use MAA with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
-=======
-The **[Wipe](../remote-actions/devices-wipe.md)** remote action supports Multi Admin Approval. Use Multi Admin Approval with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
->>>>>>> afcdc71ebf4de7969a9097cfcdade3ecfa2c3955
+The **[Wipe](../remote-actions/device-wipe.md)** remote action supports Multi Admin Approval. Use Multi Admin Approval with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
 
 For more information on Multi Admin Approval, see [Use Multi Admin Approval in Intune](../fundamentals/multi-admin-approval.md).
 
@@ -760,7 +756,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### Platform support for Device Cleanup rules<!-- 13835920 -->
 
-Using [cleanup rules](../remote-actions/device-cleanup-rules.md), you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
+Using cleanup rules, you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
 
 With this feature, you can:
 
@@ -768,7 +764,7 @@ With this feature, you can:
 - Use the [Audit logs](monitor-audit-logs.md) to see the devices that the device cleanup rules conceal from the Intune reports.
 - Use [role-based access control (RBAC)](role-based-access-control.md) to customize the user roles that can create device cleanup rules.
 
-For more information, see [device cleanup rules](../remote-actions/device-cleanup-rules.md).
+For more information, see [device cleanup rules](../fundamentals/device-cleanup-rules.md).
 
 ### Device security
 
