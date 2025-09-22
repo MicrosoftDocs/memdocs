@@ -19,7 +19,7 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
@@ -33,7 +33,7 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 > - macOS
 > - Windows
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:

@@ -17,14 +17,14 @@ Quick scans are especially useful for routine health checks, validating recent p
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platform:
 >
 > - Windows
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:

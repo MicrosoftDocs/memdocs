@@ -14,14 +14,14 @@ The *remove user* remote device action in Microsoft Intune deletes a selected us
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action is supported on the following platform:
 >
 > - iPadOS (Shared iPad mode only)
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:

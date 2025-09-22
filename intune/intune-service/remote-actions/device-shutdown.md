@@ -14,7 +14,7 @@ With the *shut down* action, IT administrators can remotely power off managed de
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
@@ -22,7 +22,7 @@ With the *shut down* action, IT administrators can remotely power off managed de
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP]
 > - macOS
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:

@@ -19,7 +19,7 @@ Use the *remove apps and configuration* remote action in Intune to uninstall app
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
@@ -28,7 +28,7 @@ Use the *remove apps and configuration* remote action in Intune to uninstall app
 > - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To execute this remote action, at a minimum, use an account that has one of the following roles:

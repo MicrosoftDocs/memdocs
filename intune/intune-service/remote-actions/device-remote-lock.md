@@ -21,7 +21,7 @@ The *remote lock* device action locks a managed device so the user must enter th
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
@@ -32,7 +32,7 @@ The *remote lock* device action locks a managed device so the user must enter th
 > - iOS/iPadOS
 > - macOS
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To execute this remote action, at a minimum, use an account that has one of the following roles:

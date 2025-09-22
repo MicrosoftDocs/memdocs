@@ -24,7 +24,7 @@ Chrome Enterprise and the Google Admin console refer to devices in lost mode as 
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
@@ -32,7 +32,7 @@ Chrome Enterprise and the Google Admin console refer to devices in lost mode as 
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 > - ChromeOS
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To execute this remote action, at a minimum, use an account that has one of the following roles:

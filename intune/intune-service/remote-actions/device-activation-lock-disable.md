@@ -53,7 +53,7 @@ The business benefits of using Intune to manage Activation Lock are:
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
@@ -61,7 +61,7 @@ The business benefits of using Intune to manage Activation Lock are:
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP] through Automated Device Enrollment (ADE)
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
 
-[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
+[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
 
 Before you can manage Activation Lock, you must configure your devices to allow it.
 
@@ -84,7 +84,7 @@ Before you can manage Activation Lock, you must configure your devices to allow 
 
 2. Assign the policy to a group that contains as members the devices that you want to configure.
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:

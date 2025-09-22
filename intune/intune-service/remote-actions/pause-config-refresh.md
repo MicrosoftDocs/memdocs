@@ -21,14 +21,14 @@ With the pause Config Refresh action, IT admins can suspend policy refresh for a
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
 >
 > - Windows 11
 
-[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
+[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
 
 > [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
@@ -37,7 +37,7 @@ With the pause Config Refresh action, IT admins can suspend policy refresh for a
 
 To learn more, see [Config Refresh][LEARN-1].
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:

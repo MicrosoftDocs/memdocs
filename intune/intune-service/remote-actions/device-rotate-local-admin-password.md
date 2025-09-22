@@ -17,14 +17,14 @@ The *rotate local admin password* remote action in Microsoft Intune lets IT admi
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
 > - Windows (corporate-owned)
 
-[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
+[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
 
 ::: zone pivot="windows"
 
@@ -49,7 +49,7 @@ For more information, see [Configure support for macOS ADE local account with LA
 
 ::: zone-end
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:

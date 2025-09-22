@@ -23,7 +23,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action is supported on the following platform:
@@ -31,7 +31,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 > - Android Enterprise personally-owned work profile (BYOD)
 > - iOS/iPadOS
 
-[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
+[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
 
 ::: zone pivot="android"
 
@@ -52,7 +52,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 
 ::: zone-end
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:

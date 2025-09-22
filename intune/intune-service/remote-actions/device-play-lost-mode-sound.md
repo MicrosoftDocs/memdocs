@@ -23,7 +23,7 @@ These remote actions are especially useful in environments where devices are sha
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
@@ -32,7 +32,7 @@ These remote actions are especially useful in environments where devices are sha
 > - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 
-[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
+[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
 
 ::: zone pivot="ios"
 
@@ -51,7 +51,7 @@ These remote actions are especially useful in environments where devices are sha
 
 ::: zone-end
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:

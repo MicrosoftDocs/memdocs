@@ -36,7 +36,7 @@ Renaming a device can help improve clarity and consistency across your device in
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
@@ -47,7 +47,7 @@ Renaming a device can help improve clarity and consistency across your device in
 > - macOS (corporate-owned)
 > - Windows (corporate-owned)
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:

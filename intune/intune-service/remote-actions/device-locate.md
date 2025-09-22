@@ -20,7 +20,7 @@ Depending on the platform, Intune can also report the last known location if the
 
 ## Requirements
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This remote action supports the following platforms:
@@ -30,7 +30,7 @@ Depending on the platform, Intune can also report the last known location if the
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 > - Windows
 
-[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
+[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
 
 ::: zone pivot="ios"
 
@@ -81,7 +81,7 @@ Before you can use the locate functionality, you must configure your devices to 
 
 ::: zone-end
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To run this remote action, use an account with at least one of the following roles:
