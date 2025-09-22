@@ -1903,6 +1903,8 @@ items:
     items:
     - name: Tenant status and health
       href: ./fundamentals/tenant-status.md
+    - name: 🗑️ Device cleanup rules
+      href: ./fundamentals/device-cleanup-rules.md
 
     - name: Endpoint analytics
       items:

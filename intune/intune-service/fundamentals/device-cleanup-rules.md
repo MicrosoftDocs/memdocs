@@ -16,27 +16,19 @@ ms.collection:
 
 Managing a dynamic device fleet means constantly tracking devices that come and go—due to upgrades, user turnover, or inactivity. Intune's device cleanup rules help keep the admin center clean by automatically removing stale records.
 
-## How it works
+Device cleanup rules in Intune run on a schedule and automatically remove records of devices that didn't check in for a specified period (for example, 90 days). These rules:
 
-Device cleanup rules in Intune automatically remove records of devices that haven't checked in for a specified period (for example, 90 days). These rules:
-
-- Do not wipe or retire devices.
-- Soft delete records—devices are hidden from the Intune portal and reports but preserved in the backend for potential recovery.
-- Run periodically and auto-recover devices that check in again (for example, after extended leave).
-- Don't trigger BitLocker suspension when Intune manages BitLocker encryption.
+- *Soft delete* device records—devices are hidden from the Intune portal and reports but preserved in the backend for potential recovery.
+- Cleaned-up devices reappear in the Intune admin center if they check in before their device certificate expires. After expiration, re-enrollment is required.
+- Don't trigger any actions on the device (no wipe or retire).
 - Aren't available for Jamf-managed devices.
 
-
-⚠️ Devices removed from Intune are not deleted from Entra ID. An Entra ID admin must manually remove them from Azure AD.
-
-
-
-## Before you begin
-
+> [!NOTE]
+> Devices removed from Intune aren't deleted from Microsoft Entra ID. For more information about removing devices from Microsoft Entra ID, see [Manage stale devices in Microsoft Entra ID](/entra/identity/devices/manage-stale-devices).
 
 ## Requirements
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
 > To configure device cleanup rules, use an account with at least one of the following roles:
@@ -81,12 +73,6 @@ Device cleanup rules in Intune automatically remove records of devices that have
 
 1. Select **Next**.
 1. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the rule applies.
-
-## Device cleanup rules behavior
-
-When a device cleanup rule runs, it hides the affected devices from Intune reports. It doesn't trigger any actions on the devices.
-
-If a cleaned up device checks in before its device certification expires, it reappears in the Intune admin center. Once the device certification expires, the device must go through a re-enrollment process for it to show in the Intune admin center.
 
 ## Device cleanup rules logging
 
