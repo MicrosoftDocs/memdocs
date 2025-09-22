@@ -1,30 +1,9 @@
 ---
-# required metadata
-
 title: Windows app deployment by using Microsoft Intune
-titleSuffix:
 description: Learn about Windows 10/11 app deployment scenarios available with Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/16/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: priyar
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

@@ -1,21 +1,10 @@
 ---
 title: Microsoft Intune Enterprise Application Management
-titleSuffix:
-description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune. 
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
+description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune.
 ms.date: 09/05/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
 ms.localizationpriority: high
-ms.assetid: 
 ms.reviewer: dguilory
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -46,7 +35,7 @@ When you add an Enterprise App Catalog app, Intune prefills the following instal
 - Installation and device restart behavior
 - Return codes to indicate post-installation behavior
 - Whether to install the app for system or user
-  
+
 Microsoft Intune prefills the detection rules that devices must meet before the app is installed:
 
 - File size
@@ -93,7 +82,7 @@ You can also upvote an application previously submitted by someone else. Applica
 
 ### Where are the devices downloading the app content from?
 
-Microsoft hosts the applications in Microsoft storage accessible through `*.manage.microsoft.com`. For the full list of network requirements, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md?tabs=north-america).  
+Microsoft hosts the applications in Microsoft storage accessible through `*.manage.microsoft.com`. For the full list of network requirements, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md?tabs=north-america).
 
 ### Is Microsoft providing security around any of the content provided in the Enterprise App Catalog?
 

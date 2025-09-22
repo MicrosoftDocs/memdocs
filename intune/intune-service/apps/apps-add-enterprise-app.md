@@ -1,21 +1,10 @@
 ---
 title: Add an Enterprise App Catalog app to Microsoft Intune
-titleSuffix:
-description: Learn how to add an Enterprise App Catalog app to Microsoft Intune. 
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
+description: Learn how to add an Enterprise App Catalog app to Microsoft Intune.
 ms.date: 06/17/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
 ms.localizationpriority: high
-ms.assetid: 
 ms.reviewer: dguilory
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -25,7 +14,7 @@ ms.collection:
 
 # Add an Enterprise App Catalog app to Microsoft Intune
 
-The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. 
+The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities.
 
 > [!IMPORTANT]
 > The Enterprise App Catalog is a feature of Enterprise App Management (EAM) which is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
@@ -47,7 +36,7 @@ The following steps help you add a Windows App Catalog app to Intune:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
 3. Select **Enterprise App Catalog app** on the **Select app type** pane under the **Other** app types.
-4. Click **Select** to add the app type. 
+4. Click **Select** to add the app type.
    The **Add app** pane appear and shows the steps needed to add the app to Intune.
 
 ## Step 1: App information
@@ -98,10 +87,10 @@ The **Program** step provides the following options:
 
 - **Allow available uninstall**: Select 'Yes' to provide the uninstall option for this app for users from the Company Portal. Select 'No' to prevent users from uninstalling the app from the Company Portal.
 
-- **Install behavior**: Enterprise App Management selects the install behavior. This cannot be modified and is determined by the installer. 
-    
+- **Install behavior**: Enterprise App Management selects the install behavior. This cannot be modified and is determined by the installer.
+
 - **Device restart behavior**: Select the device restart behavior after the app has successfully installed, based on the following options:
-    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. 
+    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code.
     - **No specific action**: Choose this option to suppress device restarts during the app installation of MSI-based apps.
     - **App install may force a device restart**: Choose this option to allow the app installation to finish without suppressing restarts. This option means that the Windows catalog app (Win32) installation is allowed to complete without suppressing restarts. With this configuration, a hard reboot return code will notify the user that a restart of the device will be triggered in 120 minutes and a soft reboot return code will only notify the user that a restart is required to finish the installation.
     - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successful app installation.
@@ -110,9 +99,9 @@ The **Program** step provides the following options:
     1. In the **Return code** column, add the return code.
     2. In the **Code type** column, set the **Code type** to one of the following:
         - **Failed**: The return value that indicates an app installation failure.
-        - **Hard reboot**: The hard reboot return code doesn't allow the next Windows catalog app (Win32) to be installed on the client without reboot. 
+        - **Hard reboot**: The hard reboot return code doesn't allow the next Windows catalog app (Win32) to be installed on the client without reboot.
         - **Soft reboot**: The soft reboot return code allows the next Windows catalog app (Win32) to be installed without requiring a client reboot. Reboot is necessary to complete installation of the current application.
-        - **Retry**: The agent will attempt to install the app three times. It will wait for five minutes between each attempt. 
+        - **Retry**: The agent will attempt to install the app three times. It will wait for five minutes between each attempt.
         - **Success**: The return value that indicates the app was successfully installed.
     3. If needed, select **Add** to add more return codes, or modify existing return codes.
 
@@ -137,9 +126,9 @@ The **Requirements** step provides the following options:
 - **Minimum number of logical processors required**: Add the minimum number of logical processors required to install the app.
 - **Minimum CPU speed required (MHz)**: Add the minimum CPU speed required to install the app.
 - **Configure additional requirement rules**:
-    1. Select **Add** to display the **Add a Requirement rule** pane and create and configure requirement rules. 
+    1. Select **Add** to display the **Add a Requirement rule** pane and create and configure requirement rules.
     2. **Requirement type**: (Required) Choose the type of rule that you'll use to determine how a requirement is validated. Requirement rules can be based on file system information, registry values, or PowerShell scripts.
-        - **File**: When you choose **File** as the **Requirement type** value, the requirement rule must detect a file or folder, date, version, or size. 
+        - **File**: When you choose **File** as the **Requirement type** value, the requirement rule must detect a file or folder, date, version, or size.
             - **Path**: (Required) The full path of the folder that contains the file or folder to detect.
             - **File or folder**: (Required) The file or folder to detect.
             - **Property**: (Required) Select the type of rule used to validate the presence of the app.
@@ -187,28 +176,28 @@ The **Rules format** provides the following options:
         - **File or folder**: (Required) Enter the file or folder to detect.
         - **Detection method**: (Required) Select the type of detection method used to validate the presence of the app. You can choose options, such as **File or folder exists**, **Date created**, **String (version)**, **Size in MB**, and **Size in bytes**.
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to expand any path environment variables in the 32-bit context on 64-bit clients. Select **No** (default) to expand any path variables in the 64-bit context on 64-bit clients. 32-bit clients will always use the 32-bit context.
-        - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location will show as the app version in reporting. This may differ from the version of the app properties. Only one detection rule can have this setting, by adding this to another rule for this app will clear it from the prior rule. 
+        - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location will show as the app version in reporting. This may differ from the version of the app properties. Only one detection rule can have this setting, by adding this to another rule for this app will clear it from the prior rule.
 
           :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-09.png" alt-text="Screenshot of file detection rule.":::
-                 
+
     - **Registry**: Verify based on value, string, integer, or version.
         - **Key path**: The full path of the registry entry that contains the value to detect. A valid syntax is HKEY_LOCAL_MACHINE\Software\WinRAR or HKLM\Software\WinRAR.
         - **Value name**: The name of the registry value to detect. If this value is empty, the detection will happen on the key. The (default) value of a key will be used as detection value if the detection method is other than file or folder existence.
         - **Detection method**: Select the type of detection method that's used to validate the presence of the app.
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to search the 32-bit registry on 64-bit clients. Select **No** (default) to search the 64-bit registry on 64-bit clients. 32-bit clients will always search the 32-bit registry.
-        - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location will show as the app version in reporting. This may differ from the version of the app properties. Only one detection rule can have this setting, by adding this to another rule for this app will clear it from the prior rule. 
+        - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location will show as the app version in reporting. This may differ from the version of the app properties. Only one detection rule can have this setting, by adding this to another rule for this app will clear it from the prior rule.
 
           :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-08.png" alt-text="Screenshot of registry detection rule.":::
-                 
-- **Use a custom detection script**: Specify the PowerShell script that will be used to detect this app. 
-    
+
+- **Use a custom detection script**: Specify the PowerShell script that will be used to detect this app.
+
    - **Script file**: Select a PowerShell script that will detect the presence of the app on the client. The app will be detected when the script both returns a **0** value exit code and writes a string value to STDOUT.
    - **Script content**: Add the script to your detection rule.
    - **Run script as 32-bit process on 64-bit clients**: Select **Yes** to run the script in a 32-bit process on 64-bit clients. Select **No** (default) to run the script in a 64-bit process on 64-bit clients. 32-bit clients run the script in a 32-bit process.
 
    - **Enforce script signature check**: Select **Yes** to verify that a trusted publisher has signed the script, which will allow the script to run with no warnings or prompts displayed. The script will run unblocked. Select **No** (default) to run the script without signature verification.
-    
-   The Intune agent checks the results from the script. It reads the values written by the script to the STDOUT stream, the standard error (STDERR) stream, and the exit code. If the script exits with a nonzero value, the script fails and the application detection status isn't installed. If the exit code is zero and STDOUT has data, the application detection status is installed. 
+
+   The Intune agent checks the results from the script. It reads the values written by the script to the STDOUT stream, the standard error (STDERR) stream, and the exit code. If the script exits with a nonzero value, the script fails and the application detection status isn't installed. If the exit code is zero and STDOUT has data, the application detection status is installed.
 
    > [!NOTE]
    > We recommend encoding your script as UTF-8 BOM. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
@@ -237,7 +226,7 @@ You can select the **Required**, **Available for enrolled devices**, or **Uninst
 3. On the **Select groups** pane, select groups to assign based on users or devices.
 4. After you select your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](apps-win32-app-management.md#set-win32-app-availability-and-notifications).
 5. If you don't want this app assignment to affect groups of users, select **Included** under the **MODE** column. In the **Edit assignment** pane, change the **mode** value from  **Included** to **Excluded**. Select **OK** to close the **Edit assignment** pane.
-6. In the **App settings** section, select the **Delivery optimization priority** value for the app. This setting will determine how the app content will be downloaded. You can choose to download the app content in background mode or foreground mode based on assignment. 
+6. In the **App settings** section, select the **Delivery optimization priority** value for the app. This setting will determine how the app content will be downloaded. You can choose to download the app content in background mode or foreground mode based on assignment.
 
 After you finish setting the assignments for the apps, select **Next** to display the **Review + create** page.
 
@@ -248,7 +237,7 @@ After you finish setting the assignments for the apps, select **Next** to displa
 
     The **Overview** pane for the LOB app appears.
 
-At this point, you've completed steps to add a Windows catalog app (Win32) to Intune. 
+At this point, you've completed steps to add a Windows catalog app (Win32) to Intune.
 
 ## Next steps
 

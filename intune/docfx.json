@@ -135,18 +135,24 @@
         "solutions/**/*.yml": "MET150"
       },
       "author": {
+        "intune-service/apps/**/*.md": "nicholasswhite",
+        "intune-service/apps/**/*.yml": "nicholasswhite",
         "intune-service/remote-actions/**/*.md": "paolomatarazzo",
         "intune-service/remote-actions/**/*.yml": "paolomatarazzo",
         "analytics/**/*.md": "mandiohlinger",
         "analytics/**/*.yml": "mandiohlinger"
       },
       "ms.author": {
+        "intune-service/apps/**/*.md": "nwhite",
+        "intune-service/apps/**/*.yml": "nwhite",
         "intune-service/remote-actions/**/*.md": "paoloma",
         "intune-service/remote-actions/**/*.yml": "paoloma",
         "analytics/**/*.md": "mandia",
         "analytics/**/*.yml": "mandia"
       },
       "ms.subservice": {
+        "intune-service/apps/**/*.md": "apps",
+        "intune-service/apps/**/*.yml": "apps",
         "intune-service/remote-actions/**/*.md": "remote-actions",
         "intune-service/remote-actions/**/*.yml": "remote-actions",
         "analytics/**/*.md": "endpoint-analytics",
@@ -156,11 +162,13 @@
         "intune-service/remote-actions/**/*.md": "mattcall",
         "intune-service/remote-actions/**/*.yml": "mattcall"
       },
-      "titlesuffix": {
-        "intune-service/remote-actions/**/*.md": "Microsoft Intune",
-        "intune-service/remote-actions/**/*.yml": "Microsoft Intune",
+      "titleSuffix": {
         "analytics/**/*.md": "Microsoft Intune",
-        "analytics/**/*.yml": "Microsoft Intune"
+        "analytics/**/*.yml": "Microsoft Intune",
+        "intune-service/apps/**/*.md": "Microsoft Intune",
+        "intune-service/apps/**/*.yml": "Microsoft Intune",
+        "intune-service/remote-actions/**/*.md": "Microsoft Intune",
+        "intune-service/remote-actions/**/*.yml": "Microsoft Intune"
       }
     },
     "template": [],
