@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Policy sets 
+title: Policy sets
 titleSuffix: Microsoft Intune
 description: Use policy sets to group collections of management objects in Microsoft Intune.
 keywords:
@@ -57,7 +57,7 @@ You can include the following management objects in a policy set:
 - Settings catalog policies
 
 > [!IMPORTANT]
-> As of September 2021, enrollment restrictions based on device type can no longer be included in policy sets. For more information about how to create enrollment restrictions, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).  
+> As of September 2021, enrollment restrictions based on device type can no longer be included in policy sets. For more information about how to create enrollment restrictions, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).
 
 When you create a policy set, you create a single unit of assignment, and manage associations between different objects. A policy set will be a reference to objects external to it. Any changes in the included objects will affect the policy set as well. After you create a policy set, you can repeatedly view and edit its objects and assignments.
 
@@ -74,13 +74,13 @@ When you create a policy set, you create a single unit of assignment, and manage
    <p>
       <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
-4. Click **Next: Application management**.  
+4. Click **Next: Application management**.
    On the **Application management** page you can optionally [add apps](../apps/apps-add.md), [app configuration policies](../apps/app-configuration-policies-overview.md), and [app protection policies](../apps/app-protection-policy.md) to your policy set. For information about app management, see [What is Microsoft Intune app management?](../apps/app-management.md).
-5. Click **Next: Device management**.  
+5. Click **Next: Device management**.
    The **Device management** page allows you to add device management objects to your policy set, such as [device configuration profiles](../configuration/device-profiles.md) and [device compliance policies](../protect/device-compliance-get-started.md). Be sure to include all associated objects, such as other policies, certificates, and security baseline profiles.
-6. Click **Next: Device enrollment**.  
+6. Click **Next: Device enrollment**.
    The **Device enrollment** page allows you to add device enrollment objects to your policy set, such as [Windows Autopilot deployment profiles](/autopilot/enrollment-autopilot), and [enrollment status page profiles](../enrollment/windows-enrollment-status.md).
-7. Click **Next: Assignments**.  
+7. Click **Next: Assignments**.
    The **Assignments** page allows you can assign the policy set to users and devices. It's important to note that you can assign a policy set to a device whether or not the device is managed by Intune.
 8. Click **Next: Review + create** to review the values you entered for the profile.
 9. When you're done, click **Create** to create the policy set in Intune.
@@ -89,7 +89,7 @@ When you create a policy set, you create a single unit of assignment, and manage
 
 Policy sets, new to 1910, have the following known issues.
 
-- When creating a policy set, if a scoped admin tries to create a policy set without any scope tags selected, upon reaching the **Review + Create** page, validation will fail and an error will be displayed on the status bar. The admin must switch to a different page in the process, then return to the **Review + Create** page. This will enable the **Create** option.  
+- When creating a policy set, if a scoped admin tries to create a policy set without any scope tags selected, upon reaching the **Review + Create** page, validation will fail and an error will be displayed on the status bar. The admin must switch to a different page in the process, then return to the **Review + Create** page. This will enable the **Create** option.
 
 - The following app types are currently supported by policy sets:
   - iOS/iPadOS store app
@@ -116,18 +116,14 @@ Policy sets, new to 1910, have the following known issues.
 - Policy sets have the following enrollment restrictions and Enrollment Status Page (ESP) issues:
   - Restrictions and ESP don't support virtual group assignments.
   - Restrictions and ESP don't strictly support exclusion group assignments.
-  - Restrictions and ESP use priority-based conflict resolution. Restrictions and ESP might not be applied to the same users as the rest of a policy set's payloads if the restrictions and ESP are also targeted by a higher priority restriction and ESP.  
-  - The default restrictions and ESP can't be added to a policy set.  
+  - Restrictions and ESP use priority-based conflict resolution. Restrictions and ESP might not be applied to the same users as the rest of a policy set's payloads if the restrictions and ESP are also targeted by a higher priority restriction and ESP.
+  - The default restrictions and ESP can't be added to a policy set.
 
 - MAM policy types that support policy sets include the following:
-  - MAM WIP (Windows) MDM targeted managed app protection
   - MAM iOS/iPadOS targeted managed app protection
   - MAM Android targeted managed app protection
   - MAM iOS/iPadOS targeted managed app configuration
   - MAM Android targeted managed app configuration
-
-- MAM policy types that don't support policy sets include the following:
-  - MAM WIP (Windows) targeted managed app protection
 
 - MAM processes policy set assignments as direct assignments for the following policy types:
   - MAM iOS/iPadOS targeted managed app protection
