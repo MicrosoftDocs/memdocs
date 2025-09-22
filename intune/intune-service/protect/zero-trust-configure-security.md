@@ -68,6 +68,10 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
  [!INCLUDE [24572](./includes/secure-recommendations/24572.md)] 
 
+### Unmanaged and unprotected Apps are restricted from Accessing Corporate Data<!-- 24827 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
+ [!INCLUDE [24827](./includes/secure-recommendations/24827.md)]
+
 ### Tenant - A device cleanup rule is configured<!-- 24802 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24805](./includes/secure-recommendations/24802.md)]
@@ -76,6 +80,10 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24794](./includes/secure-recommendations/24794.md)]
 
+### Tenant - Company Portal branding and end-user support settings are customize<!-- 24823 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
+ [!INCLUDE [24823](./includes/secure-recommendations/24823.md)]
+ 
 ## Apply Compliance policies on devices
 
 ### Compliance policies for Android Enterprise (Fully managed and corporate owned work profile)<!-- 24545 -->
