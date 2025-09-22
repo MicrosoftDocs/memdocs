@@ -3,10 +3,8 @@ title: "Remote Device Action: Retire"
 description: Learn how to retire device using Microsoft Intune.
 ms.date: 07/22/2025
 ms.topic: how-to
-
 ms.reviewer:
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

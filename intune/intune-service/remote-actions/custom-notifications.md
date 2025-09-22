@@ -1,11 +1,9 @@
 ---
 title: "Remote Device Action: Send Custom Notifications"
 description: Use Intune to create and send custom notifications to users of iOS/iPadOS and Android devices.
-ms.date: 08/27/2025
+ms.date: 09/22/2025
 ms.topic: how-to
-
 ms.reviewer: petermt
-ms.custom: intune-azure
 
 ms.collection:
 - tier2

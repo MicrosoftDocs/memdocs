@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Pause Config Refresh"
 description: Learn how to temporarily pause policy enforcement on Windows 11 devices using Intune's Pause Config Refresh remote action to support troubleshooting and manual changes.
-ms.date: 08/27/2025
+ms.date: 09/22/2025
 ms.topic: how-to
 ms.reviewer: Mike Danoski
 ms.custom: intune-azure; get-started

@@ -1,10 +1,8 @@
 ---
 title: "Intune Remote Action: Rotate FileVault Recovery Key"
 description: Learn how to rotate the FileVault recovery key with Microsoft Intune.
-ms.date: 08/27/2025
+ms.date: 09/22/2025
 ms.topic: how-to
-
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

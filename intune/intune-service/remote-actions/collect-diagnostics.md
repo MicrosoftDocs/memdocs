@@ -1,10 +1,9 @@
 ---
 title: "Remote Device Action: Collect Diagnostics"
 description: Learn how to collect diagnostics with Microsoft Intune.
-ms.date: 08/27/2025
+ms.date: 09/22/2025
 ms.topic: how-to
 ms.reviewer: jlynn
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

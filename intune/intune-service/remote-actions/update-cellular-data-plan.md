@@ -1,11 +1,9 @@
 ---
 title: "Remote Device Action: Update Cellular Data Plan"
 description: Learn how to update the cellular data plan for iOS/iPadOS devices that support eSIM with Microsoft Intune.
-ms.date: 08/27/2025
+ms.date: 09/22/2025
 ms.topic: how-to
-
 ms.reviewer: rashok
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
