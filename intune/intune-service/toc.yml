@@ -373,7 +373,7 @@ items:
       items:
       - name: Configure security recommendations using Zero Trust
         href: ./protect/zero-trust-configure-security.md
- 
+
   - name: Create and deploy Intune policies
     items:
 
@@ -733,10 +733,6 @@ items:
                   href: ./apps/app-protection-policy-extensions.md
                 - name: Monitor app protection user status
                   href: ./apps/app-protection-policies-monitor.md
-                - name: Get ready for WIP app protection policies
-                  href: ./apps/app-protection-policies-configure-windows-10.md
-                - name: Create & assign WIP app protection policies
-                  href: ./apps/windows-information-protection-policy-create.md
                 - name: Manage data transfer between iOS apps
                   href: ./apps/data-transfer-between-apps-manage-ios.md
               - name: Review app protection logs
