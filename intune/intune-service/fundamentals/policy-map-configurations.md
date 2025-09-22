@@ -103,7 +103,7 @@ One Intune configuration profile:
 
 For Android devices, this setting is only supported on Samsung Knox devices in Basic Mobility and Security.
 
-For Windows 10 devices, the most restrictive value prevents sending security-related data.
+For Windows devices, the most restrictive value prevents sending security-related data.
 
 Three Intune configuration profiles:
 

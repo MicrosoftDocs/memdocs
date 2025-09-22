@@ -67,6 +67,10 @@ User configuration support in Microsoft Intune for Windows 10 or Windows 11 mult
 This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, which are:
 
 - Running Windows 10 multi-session, version 1903 or later, or running Windows 11 multi-session.
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 - Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager.
 - Under the same tenant as Intune.
 - Running an Azure Virtual Desktop agent version of 1.0.2944.1400 or later.
