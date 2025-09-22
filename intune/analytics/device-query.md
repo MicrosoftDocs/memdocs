@@ -1,29 +1,10 @@
 ---
-# required metadata
-
 title: Device query in Microsoft Intune
 description: Learn how to gain on-demand information about the state of your devices using device query.
 keywords:
-ms.author: mandia
-author: MandiOhlinger
-manager: laurawi
 ms.date: 08/01/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: Elizabeth cox
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
 - tier2
 - M365-identity-device-management

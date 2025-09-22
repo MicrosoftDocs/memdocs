@@ -21,6 +21,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "intune/intune-service/apps/app-protection-policies-configure-windows-10.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/windows-information-protection-policy-create.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/remote-actions/teamviewer-support.md",
       "redirect_url": "/intune/intune-service/fundamentals/teamviewer-support",
       "redirect_document_id": false

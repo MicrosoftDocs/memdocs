@@ -1,29 +1,10 @@
 ---
-# required metadata
-
 title: How to configure the Intune Company Portal apps, Company Portal website, and Intune app
-titleSuffix: Microsoft Intune
 description: Learn how you can configure the Intune Company Portal apps, Company Portal website, and Intune app.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 09/15/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
 ms.localizationpriority: high
-ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: abstarr
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
 - tier1

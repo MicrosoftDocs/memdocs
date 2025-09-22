@@ -1,29 +1,10 @@
 ---
-# required metadata
-
 title: App protection policies overview
-titleSuffix: Microsoft Intune
 description: Learn how Microsoft Intune app protection policies help protect your company data and prevent data loss.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: apps
 ms.localizationpriority: high
-ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: intune-azure, get-started
 ai-usage: ai-assisted
 ms.collection:
@@ -410,9 +391,9 @@ Intune app protection policies for access will be applied in a specific order on
 
 When dealing with different types of settings, an app version requirement would take precedence, followed by an Android operating system version requirement and an Android patch version requirement. Then, any warnings are checked for all types of settings in the same order.
 
-### Intune app protection policies and Google Play’s device integrity check for Android devices
+### Intune app protection policies and Google Play's device integrity check for Android devices
 
-Intune app protection policies provide the capability for admins to require end-user devices to pass Google Play’s device integrity check for Android devices. A new Google Play service determination will be reported to the IT admin at an interval determined by the Intune service. How often the service call is made is throttled due to load, thus this value is maintained internally and isn't configurable. Any IT admin configured action for the Google device integrity setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If there's no data, access will be allowed depending on no other conditional launch checks failing, and Google Play Service "roundtrip" for determining attestation results will begin in the backend and prompt the user asynchronously if the device has failed. If there's stale data, access will be blocked or allowed depending on the last reported result, and similarly, a Google Play Service "roundtrip" for determining attestation results will begin and prompt the user asynchronously if the device has failed.
+Intune app protection policies provide the capability for admins to require end-user devices to pass Google Play's device integrity check for Android devices. A new Google Play service determination will be reported to the IT admin at an interval determined by the Intune service. How often the service call is made is throttled due to load, thus this value is maintained internally and isn't configurable. Any IT admin configured action for the Google device integrity setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If there's no data, access will be allowed depending on no other conditional launch checks failing, and Google Play Service "roundtrip" for determining attestation results will begin in the backend and prompt the user asynchronously if the device has failed. If there's stale data, access will be blocked or allowed depending on the last reported result, and similarly, a Google Play Service "roundtrip" for determining attestation results will begin and prompt the user asynchronously if the device has failed.
 
 ### Intune app protection policies and Google's Verify Apps API for Android devices
 

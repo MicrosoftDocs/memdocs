@@ -1,30 +1,16 @@
 ### YamlMime:FAQ
 metadata:
-  # required metadata
-
   title: Frequently asked questions about MAM and app protection
   description: This article provides answers to some frequently asked questions on Intune mobile application management (MAM) and Intune app protection.
-  keywords:
-  author: nicholasswhite
-  ms.author: nwhite
-  manager: laurawi
   ms.date: 06/05/2025
   ms.topic: faq
-  ms.service: microsoft-intune
-  ms.subservice: apps
-  ms.localizationpriority: high
-  ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
-  # optional metadata
-
-  #audience:
-  ms.reviewer: nwhite
-  ms.suite: ems
-  search.appverid: MET150
-  #ms.tgt_pltfrm:
+  ms.reviewer:
   ms.custom: intune-azure
   ms.collection:
   - M365-identity-device-management
   - tier2
+  - tier2
+
 title: Frequently asked questions about MAM and app protection
 summary: This article provides answers to some frequently asked questions on Intune mobile application management (MAM) and Intune app protection.
 
@@ -165,7 +151,7 @@ sections:
 
       - question: How does Intune remotely wipe data?
         answer: |
-          Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../remote-actions/device-wipe.md). For more information about selective wipe using MAM, see [the Retire action](../remote-actions/device-retire.md) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
+          Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../remote-actions/devices-wipe.md). For more information about selective wipe using MAM, see [the Retire action](../remote-actions/devices-wipe.md#retire) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
       - question: What is wipe?
         answer: |
@@ -175,7 +161,7 @@ sections:
 
       - question: What is selective wipe for MDM?
         answer: |
-           Selective wipe for MDM removes only company data from the device without affecting personal data. For more information, see [Remove devices - retire](../remote-actions/device-retire.md).
+           Selective wipe for MDM removes only company data from the device without affecting personal data. For more information, see [Remove devices - retire](../remote-actions/devices-wipe.md#retire).
 
       - question: What is selective wipe for MAM?
         answer: |
