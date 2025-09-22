@@ -62,12 +62,12 @@ You can compare your current scores and subscores to others by setting a baselin
 
 1. There's a built-in baseline for **All organizations (median)**, which allows you to compare your scores to a typical enterprise.
 
-   > [!Important]
+   > [!IMPORTANT]
    > We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](data-collection.md#bkmk_stop) at any time.
 
 1. You can create new baselines based on your current metrics to track progress or view regressions over time. Select the **Create new** button and give your new baseline a name. We recommend a name that includes the date, so it's easier to select from the drop-down in the reports pages.
 
-   > [!Note]
+   > [!NOTE]
    > You must open at least one Endpoint analytics report, such as [Startup performance](startup-performance.md), during your browser session before you are able to create a new baseline.
 
 1. There's a limit of 20 baselines per tenant. You can delete old baselines that are no longer needed.
