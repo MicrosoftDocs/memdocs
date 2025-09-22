@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 06/27/2024
+ms.date: 09/22/2025
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
