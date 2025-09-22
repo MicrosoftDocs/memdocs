@@ -162,7 +162,7 @@
         "intune-service/remote-actions//**/*.md": "mattcall",
         "intune-service/remote-actions//**/*.yml": "mattcall"
       },
-      "titlesuffix": {
+      "titleSuffix": {
         "analytics//**/*.md": "Microsoft Intune",
         "analytics//**/*.yml": "Microsoft Intune",
         "intune-service/apps//**/*.md": "Microsoft Intune",

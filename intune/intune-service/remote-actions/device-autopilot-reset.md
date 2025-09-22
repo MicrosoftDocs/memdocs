@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 
-titlesuffix: Microsoft Intune 1
+titleSuffix: Microsoft Intune 1
 ---
 
 # Remote device action: Autopilot Reset
