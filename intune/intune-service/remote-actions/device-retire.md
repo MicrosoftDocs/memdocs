@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Retire"
+title: "Remote Device Action: Retire"
 description: Learn how to retire device using Microsoft Intune.
 ms.date: 07/22/2025
 ms.topic: how-to

@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Fresh Start"
+title: "Remote Device Action: Fresh Start"
 description: Learn how to use Fresh Start to remove or uninstall apps with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to

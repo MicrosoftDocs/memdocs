@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Wipe"
+title: "Remote Device Action: Wipe"
 description: Learn how to wipe, or factory reset, devices with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to

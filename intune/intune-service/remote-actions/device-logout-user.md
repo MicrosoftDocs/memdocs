@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Logout current user"
+title: "Remote Device Action: Logout current user"
 description: Learn how to use the logout the current user from a Shared iPad with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to

@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Reset Passcode"
+title: "Remote Device Action: Reset Passcode"
 description: Learn how to reset a passcode with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to

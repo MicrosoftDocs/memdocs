@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Lost Mode"
+title: "Remote Device Action: Lost Mode"
 description: Learn how to enable Lost Mode in Microsoft Intune to remotely lock a lost or stolen iOS or iPadOS device and display a custom message and phone number on the lock screen.
 ms.date: 08/27/2025
 ms.topic: how-to

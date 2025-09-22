@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Rotate local admin password"
+title: "Remote Device Action: Rotate local admin password"
 description: Learn how to rotate the local admin password on Windows and macOS devices with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to

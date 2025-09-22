@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Disable Activation Lock"
+title: "Remote Device Action: Disable Activation Lock"
 description: Learn how to use Microsoft Intune to disable Activation Lock on Apple devices.
 ms.date: 08/27/2025
 ms.topic: how-to

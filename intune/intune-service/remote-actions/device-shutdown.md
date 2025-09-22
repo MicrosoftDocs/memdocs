@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Shutdown"
+title: "Remote Device Action: Shutdown"
 description: Learn how to shutdown Apple devices with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to

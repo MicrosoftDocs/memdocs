@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Remove User"
+title: "Remote Device Action: Remove User"
 description: Learn how to remove a user from a Shared iPad with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to

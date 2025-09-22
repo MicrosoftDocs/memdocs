@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Full Scan"
+title: "Remote Device Action: Full Scan"
 description: Learn how to initiate on demand Microsoft Defender full scan with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to

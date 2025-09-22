@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Sync"
+title: "Remote Device Action: Sync"
 description: Learn how to use the device sync remote action in Intune to apply policy, app, and configuration updates to managed devices.
 ms.date: 08/27/2025
 ms.topic: how-to

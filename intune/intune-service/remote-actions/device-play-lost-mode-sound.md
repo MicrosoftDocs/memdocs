@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Play Lost Mode Sound"
+title: "Remote Device Action: Play Lost Mode Sound"
 description: Learn how to use the Play lost device sound remote action in Microsoft Intune to trigger an audible alert on a lost, stolen, or misplaced device—helping users locate it quickly and securely.
 ms.date: 08/27/2025
 ms.topic: how-to

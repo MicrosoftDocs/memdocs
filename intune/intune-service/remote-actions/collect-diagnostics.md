@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Collect Diagnostics"
+title: "Remote Device Action: Collect Diagnostics"
 description: Learn how to collect diagnostics with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to

@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Find lost devices"
+title: "Remote Device Action: Find lost devices"
 description: Locate lost or stolen devices by using the locate device feature in Microsoft Intune. Get details on security and privacy information when using the locate device action.
 ms.date: 08/27/2025
 ms.topic: how-to

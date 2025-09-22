@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Remove Apps and Configuration"
+title: "Remote Device Action: Remove Apps and Configuration"
 description: Learn how apps and configurations can be removed temporarily, then restored automatically or manually using the Remove apps and configuration device action with Intune.
 ms.date: 08/27/2025
 ms.topic: how-to

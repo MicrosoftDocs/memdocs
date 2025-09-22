@@ -1,5 +1,5 @@
 ---
-title: "Intune Remote Device Action: Restart"
+title: "Remote Device Action: Restart"
 description: Learn how to restart managed devices with Microsoft Intune.
 ms.date: 08/27/2025
 ms.topic: how-to
