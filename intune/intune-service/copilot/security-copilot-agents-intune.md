@@ -38,36 +38,25 @@ Use of this Copilot Agent by your security team can reduce the time it takes to 
 
 | Attribute | Description |
 |---|---|
-| Trigger | Runs manually, on demand |
+| Identity | Runs as the user who first set up the agent and requires reauthentication after 90 days |
+| Licenses | |
 | Permissions | Run hunting queries<br>Read vulnerability data from Defender<br>Read managed apps in Intune<br>Read device configurations in Intune |
 | Products | [Security Copilot](/copilot/security/get-started-security-copilot)<br>[Microsoft Intune Plan 1 subscription](https://www.microsoft.com/security/business/microsoft-intune-pricing?msockid=2da59cedebdd644e10a289a7ea67657a)<br> [Microsoft Defender Vulnerability Management](../protect/advanced-threat-protection.md) | 
-| Identity | Runs as the user who first set up the agent and requires reauthentication after 90 days |
 | Plugins | [Intune](security-copilot.md)<br>[Microsoft Defender](/defender-xdr/security-copilot-in-microsoft-365-defender)|
 | Role-based access | |
+| Trigger | Runs manually, on demand |
 
 
 ### Products
 
 -  *This subscription provides the core Intune capabilities*.
 - [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) - *Security Copilot must share a Tenant with Intune, and you must have sufficient SCUs to power Security Copilot workloads, including agents.*
-- *This capability is provided by Microsoft Defender for Endpoint P2 or Defender Vulnerability Management Standalone.*
-
-
-QUESTIONS
-How does the "renewal" or "reauthentication" after 90 days work? 
-The screenshot of the agent with the plugins says "Microsoft Defender" but in our list of plugins, we don't have just Microsoft Defender. We have XDR, External Attack Surface Management (Defender EASM), and Defender for Cloud. 
-Some details should probably live within the docs.
-
-
-
 
 #### Identity
 
 The agent persistently runs in the identity of the user who initially set up the agent. This identity refreshes with each agent run and expires if the agent has not been run for 90 consecutive days. When the expiration date nears, each *Copilot owner* and *Copilot contributor* receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until re-authentication. Renewal of the agent authentication can be performed by both owners and contributors before the expiration as well as after expiration.
 
 When the agent authentication is renewed, the agent begins use of the credentials of the individual who clicks on the *Renew authentication* button.
-
-
 
 #### Role-based access
 
