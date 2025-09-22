@@ -149,8 +149,8 @@
       "ms.subservice": {
         "intune-service/remote-actions//**/*.md": "remote-actions",
         "intune-service/remote-actions//**/*.yml": "remote-actions",
-        "analytics//**/*.md": "suite",
-        "analytics//**/*.yml": "suite"
+        "analytics//**/*.md": "endpoint-analytics",
+        "analytics//**/*.yml": "endpoint-analytics"
       },
       "ms.reviewer": {
         "intune-service/remote-actions//**/*.md": "mattcall",
