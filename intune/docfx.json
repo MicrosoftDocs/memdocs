@@ -143,10 +143,12 @@
         "analytics/**/*.yml": "mandiohlinger"
       },
       "ms.author": {
-        "intune-service/remote-actions//**/*.md": "paoloma",
-        "intune-service/remote-actions//**/*.yml": "paoloma",
-        "analytics//**/*.md": "mandia",
-        "analytics//**/*.yml": "mandia"
+        "intune-service/apps/**/*.md": "nwhite",
+        "intune-service/apps/**/*.yml": "nwhite",
+        "intune-service/remote-actions/**/*.md": "paoloma",
+        "intune-service/remote-actions/**/*.yml": "paoloma",
+        "analytics/**/*.md": "mandia",
+        "analytics/**/*.yml": "mandia"
       },
       "ms.subservice": {
         "intune-service/apps/**/*.md": "apps",
@@ -157,8 +159,6 @@
         "analytics/**/*.yml": "endpoint-analytics"
       },
       "ms.reviewer": {
-        "intune-service/remote-actions/**/*.md": "mattcall",
-        "intune-service/remote-actions/**/*.yml": "mattcall"
         "intune-service/remote-actions/**/*.md": "mattcall",
         "intune-service/remote-actions/**/*.yml": "mattcall"
       },
