@@ -1,16 +1,8 @@
 ---
 title: Quickstart - Enroll Configuration Manager devices
-titleSuffix: Microsoft Intune
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
 ms.date: 04/07/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: quickstart
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-# Customer intent: As an administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
-ms.localizationpriority: high
 ms.collection: highpri
 ---
 
@@ -20,7 +12,7 @@ This quickstart outlines prerequisites and instructions for enrolling Configurat
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
-Before you start this tutorial, make sure you have the following prerequisites:  
+Before you start this tutorial, make sure you have the following prerequisites:
 
 ### Configuration Manager requirements
 
@@ -28,7 +20,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 - The Configuration Manager clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
 - [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > If you have co-management enabled, enrolled devices that meet the Intune requirements send required functional data directly to Microsoft public cloud. For more information, see [requirements for devices managed by Intune](overview.md#bkmk_intune_prereq).
 
 ### Licensing Prerequisites

@@ -1,16 +1,8 @@
 ---
 title: Quickstart - Enroll Intune devices
-titleSuffix: Microsoft Intune
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
 ms.date: 04/07/2025
-ms.subservice: desktop-analytics
-ms.service: configuration-manager
 ms.topic: quickstart
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-# Customer intent: As a Microsoft Intune administrator, I want to enroll Intune devices into Endpoint analytics so that I can gain insights into the user experience.
-ms.localizationpriority: high
 ms.collection: highpri
 ---
 
@@ -20,7 +12,7 @@ This quickstart outlines prerequisites and instructions for enrolling Intune man
 
 ## <a name="bkmk_prereq"></a> Prerequisites
 
-Before you start this tutorial, make sure you have the following prerequisites:  
+Before you start this tutorial, make sure you have the following prerequisites:
 
 ### Intune device requirements
 
