@@ -155,7 +155,7 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
     - If there are already Intune-licensed users in the recommended groups, then verify that the recommended policies are appropriate for these users. After you assign the policies to these groups, all Intune licensed users in the groups receive the policies, even users not previously managed by Basic Mobility and Security.
 
         > [!NOTE]
-        > For the Windows operating system, only Windows 10/11 desktop devices will have policy migrated for them. Other versions of Windows won't have policy migrated. For more information, see the [Policy mapping for Access Requirements](policy-map-access-requirements.md) and [Policy mapping for Configuration](policy-map-configurations.md).
+        > For the Windows operating system, only Windows desktop devices will have policy migrated for them. Other versions of Windows won't have policy migrated. For more information, see the [Policy mapping for Access Requirements](policy-map-access-requirements.md) and [Policy mapping for Configuration](policy-map-configurations.md).
 
 6. If you want to implement the recommended policy, then select **Open policy**. The policy page opens and the Intune policy is created. You can change or update the migrated policies.
 
@@ -229,8 +229,8 @@ The **Number of sign-in failures before device is wiped** setting isn't migrated
 **Workaround**: If this setting was enabled in the Basic Mobility and Security policy, then this setting must be manually added to Intune device configuration profiles. For more information on the similar settings you can configure in Intune, go to:
 
 - [Android Enterprise: Settings list to allow or restrict features](../configuration/device-restrictions-android-for-work.md)
-- [iOS/iPadOS devices: Settings list to allow or restrict features](../configuration/device-restrictions-ios.md)
-- [Windows 10/11 device: Settings list to allow or restrict features](../configuration/device-restrictions-windows-10.md)
+- [iOS/iPadOS: Settings list to allow or restrict features](../configuration/device-restrictions-ios.md)
+- [Windows: Settings list to allow or restrict features](../configuration/device-restrictions-windows-10.md)
 
 ## Next steps
 

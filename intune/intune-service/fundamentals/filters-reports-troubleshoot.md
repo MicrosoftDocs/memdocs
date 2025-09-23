@@ -29,7 +29,7 @@ ms.collection:
 
 # Filter reports and troubleshooting in Microsoft Intune
 
-When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10/11 devices running a specific OS version.
+When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows devices running a specific OS version.
 
 You can use filters on **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune). For more information, go to [Use filters when assigning your apps, policies, and profiles](filters.md).
 

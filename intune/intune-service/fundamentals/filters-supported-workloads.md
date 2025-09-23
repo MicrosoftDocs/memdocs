@@ -38,11 +38,16 @@ Filters support some of the different workloads available in Microsoft Intune. T
 
 This article assumes you're familiar with filters. If not, learn more at [Use filters when assigning your apps, policies, and profiles](filters.md).
 
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Before you begin
 
 - ✅: Supports filters.
 - ❌: Doesn't support filters.
 - N/A: Doesn't apply to the platform.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Supported app types for managed devices
 
@@ -104,7 +109,7 @@ You can use filters for some common app policies on the following platforms. For
 | Web link | ❌ |
 | Line-of-business apps | ✅ |
 
-### Windows 10/11
+### Windows
 
 | App type | Supported |
 | --- | --- |
@@ -152,7 +157,7 @@ You can use filters for some common app policies on the following platforms. For
   - Android (AOSP)
   - iOS/iPadOS
   - macOS
-  - Windows 10 and later
+  - Windows
 
 ## Device configuration profiles and Endpoint security
 
@@ -303,11 +308,11 @@ You can use filters for some common app policies on the following platforms. For
 | Firewall | ❌ |
 | Security baselines | N/A |
 
-### Windows 10/11
+### Windows
 
 | Profile type | Supported |
 | --- | --- |
-| Update rings for Windows 10/11 | ✅ |
+| Update rings for Windows | ✅ |
 | &nbsp; | &nbsp; |
 | **Device configuration profile** | &nbsp; |
 | Administrative Templates | ✅ |
@@ -317,7 +322,7 @@ You can use filters for some common app policies on the following platforms. For
 | Device restrictions | ✅ |
 | Device Restrictions (Windows 10 Team) | ✅ |
 | Device Features | N/A |
-| Device Firmware Configuration Interface (DFCI) on Windows 11 and Windows 10 RS5 (1809)+ on supported UEFI | ✅ |
+| Device Firmware Configuration Interface (DFCI) on Windows on supported UEFI | ✅ |
 | Domain Join | ✅ |
 | Edition upgrade and S mode switch | ✅ |
 | Email | ✅ |
@@ -346,14 +351,14 @@ You can use filters for some common app policies on the following platforms. For
 | Endpoint detection and response | ✅ |
 | Endpoint Privilege Management (EPM) |✅ |
 | Firewall | ✅ |
-| Microsoft Defender for Endpoint (Windows 10/11 Desktop) | ✅ |
+| Microsoft Defender for Endpoint (Windows Desktop) | ✅ |
 | Security baselines | ❌ |
 
 ## Not supported on managed devices
 
 The following features on managed devices don't support using filters:
 
-- Custom compliance policies for Windows 10/11 (preview)
+- Custom compliance policies for Windows (preview)
 - App protection policies for Android and iOS/iPadOS
 
   You can use filters on app protection policies for managed apps. For more information on managed apps, go to [Use filters when assigning your apps, policies, and profiles in Intune](filters.md).

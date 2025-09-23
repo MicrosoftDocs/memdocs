@@ -79,4 +79,4 @@ In this article, you used Intune to create a group based on an existing user. Fo
 To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 4 - Set up automatic enrollment for Windows 10/11 devices](../enrollment/quickstart-setup-auto-enrollment.md)
+> [Step 4 - Set up automatic enrollment for Windows devices](../enrollment/quickstart-setup-auto-enrollment.md)
