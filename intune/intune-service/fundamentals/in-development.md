@@ -171,6 +171,27 @@ To learn more about these settings, go to [Android Intune settings catalog setti
 
 ## Device enrollment
 
+### New Setup Assistant screens to be generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29611787 -->
+
+As an IT admin, you'll be able to hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens during Setup Assistant.
+
+The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:  
+- **App Store** (iOS/iPadOS 14.3+)
+- **Camera button** (iOS/iPadOS 18+)
+   - **Web content filtering** (iOS/iPadOS 18.2+)
+   - **Safety and handling** (iOS/iPadOS 18.4+)
+   - **Multitasking** (iOS/iPadOS 26+)
+   - **OS Showcase** (iOS/iPadOS 26+)
+
+The screens you can skip during macOS enrollment include:  
+- **App Store** (macOS 11.1+)
+- **Get Started** (macOS 15+)
+- **Software update** (macOS 15.4+)
+- **Additional privacy settings** (macOS 26+)
+- **OS Showcase** (macOS 26+)
+- **Update completed** (macOS 26+)
+- **Get Started** (macOS 15+)
+
 ### Edit Managed Google Play organization name<!--32268351 -->
 
 You will be able to edit the Managed Google Play organization name directly in the Intune admin center under **Devices** > **Android** > **Enrollment** > **Managed Google Play**. The updated name, which will be validated on input, will appear in the admin center. It might also appear on Android device lock screens within a message like *This device is managed by [organization name]*.
@@ -212,6 +233,31 @@ To update the version of the Company Portal app, see the following available gui
 <!-- *********************************************** -->
 
 ## Device security
+
+### Intune to end support for legacy Apple MDM software updates<!-- 33004946 -->
+
+With the release of iOS 26, iPadOS 26, and macOS 26, Apple has deprecated legacy mobile device management (MDM) software update commands and payloads. To align with this change, Intune will soon end support for the following MDM-based workloads:
+
+- iOS/iPadOS update policies
+- macOS update policies
+- Software update settings in:
+  - iOS/iPadOS **templates** > **Device restrictions**
+  - iOS/iPadOS **settings catalog** > **Restrictions**
+  - macOS **templates** > **Device restrictions**
+  - macOS **settings catalog** > **Restrictions**
+  - macOS **settings catalog** > **Software update**
+- Reports:
+  - iOS/iPadOS update installation failures
+  - macOS update installation failures
+  - macOS per-device software updates
+
+These functionalities [are now available through declarative device management (DDM)](/intune/intune-service/protect/managed-software-updates-ios-macos), which provides a more modern and reliable approach to managing Apple software updates. For more information about this transition, see the Intune Customer Success blog [Move to declarative device management for Apple software updates](https://aka.ms/Intune/Apple-DDM-software-updates).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
 
 ### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
 
