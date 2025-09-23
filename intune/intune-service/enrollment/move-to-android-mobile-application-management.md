@@ -1,8 +1,7 @@
 ---
-# required metadata
-
 title: Move from Android device administrator to mobile application management
 description: Use Microsoft Intune to set up mobile application management, an alternative option to Android device administrator that focuses on app protection and doesn't require device enrollment.
+<<<<<<< HEAD
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -19,13 +18,12 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
+=======
+ms.date: 06/27/2024
+ms.topic: how-to
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.reviewer: esalter
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
 
@@ -76,7 +74,11 @@ The following table lists configurations commonly used with Android device admin
 | Allow specific manufacturers | **Device manufacturers** <br> <br> Setting available in [Enrollment > Device platform restriction](../enrollment/create-device-platform-restrictions.md#create-a-device-platform-restriction). | **Device manufacturers** <br> <br> Setting available in [App protection policy > Conditional launch](../apps/app-protection-policy-settings-android.md#conditional-launch). | |
 | VPN |Create a [VPN profile](../configuration/vpn-settings-configure.md) in a configuration policy.  |Set up [Microsoft Tunnel for Mobile App Management](../protect/microsoft-tunnel-mam-android.md). |  |
 | Assign and deploy apps |  Make apps required for automatic installation or make them available in the Company Portal app. <br> <br> Settings available in [Apps > Android store app](../apps/store-apps-android.md#add-an-app). | Apps you make available to employees and students automatically appear in the Company Portal for Android app or Managed Google Play app.  |  Protect line-of-business (LOB) apps with app protection policies by using the Intune app wrapping tool. If you develop LOB apps in-house, your developers can [leverage the Intune App SDK](../developer/app-sdk.md).  |
+<<<<<<< HEAD
 | Wipe corporate data | **Retire** devices to wipe corporate data only, or **Wipe** devices to restore them to factory settings. <br> <br> Settings available in [remote actions](../remote-actions/device-wipe.md).| **Wipe corporate data from apps** <br> <br> Setting available in [App selective wipe](../apps/apps-selective-wipe.md). |  |
+=======
+| Wipe corporate data | **Retire** devices to wipe corporate data only, or **Wipe** devices to restore them to factory settings. <br> <br> Settings available in [remote actions](../remote-actions/devices-wipe.md).| **Wipe corporate data from apps** <br> <br> Setting available in [App selective wipe](../apps/apps-selective-wipe.md). |  |
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 
 ## Step 2: Restrict Android device administrator
 
@@ -101,7 +103,11 @@ Removing an enrolled device from Intune can have the following effect:
 3. Select the name of the device that you want to retire. You can add an **OS** filter to make it easier to see all Android device administrator devices in your tenant.
 4. Select **Retire**. Then select **Yes** to confirm that you want to remove the device from device management.
 
+<<<<<<< HEAD
 Removal happens the next time the device checks in and receives the remote *retire* action. The device remains visible in the admin center until the device checks in. If you want to remove stale devices immediately, use the *delete* action instead. For more information about how to remove devices from Microsoft Intune, see [Remove devices](../remote-actions/device-wipe.md).
+=======
+Removal happens the next time the device checks in and receives the remote *retire* action. The device remains visible in the admin center until the device checks in. If you want to remove stale devices immediately, use the *delete* action instead. For more information about how to remove devices from Microsoft Intune, see [Remove devices](../remote-actions/devices-wipe.md).
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 
 ### Let device users unenroll device
 Employees and students can unenroll their devices in the Intune Company Portal app. To support them and ensure that they're successful, you can:

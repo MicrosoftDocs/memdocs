@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 # required metadata
 
 title: Set up Apple device management in Intune for corporate-owned userless devices
@@ -8,11 +9,14 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: laurawi
+=======
+title: Set up Apple device management in Intune for corporate-owned userless devices
+description: Set up Intune for corporate-owned userless iOS/iPadOS devices.
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.date: 02/17/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
+<<<<<<< HEAD
 ms.assetid:
 
 # optional metadata
@@ -20,13 +24,10 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
+=======
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.reviewer: tranamst
-ms.suite: ems
-search.appverid:
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 

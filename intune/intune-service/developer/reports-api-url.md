@@ -1,30 +1,11 @@
 ---
 # required metadata
 title: Intune Data Warehouse API endpoint
-titleSuffix: Microsoft Intune 
 description: This reference topic describes the Microsoft Intune Data Warehouse API URL structure. Filter examples are provided.
-keywords: Intune Data Warehouse
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 # Intune Data Warehouse API endpoint
@@ -43,7 +24,7 @@ For more information, see [Authorize access to web applications using OAuth 2.0 
 
 The Data Warehouse API endpoints read the entities for each set. The API supports a **GET** HTTP verb, and a subset of query options.
 
-The URL for Intune uses the following format:  
+The URL for Intune uses the following format:
 `https://fef.{location}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity-collection}?api-version={api-version}`
 
 > [!NOTE]

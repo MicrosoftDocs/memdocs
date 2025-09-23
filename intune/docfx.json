@@ -173,6 +173,8 @@
         "intune-service/developer/**/*.yml": "developer",
         "intune-service/enrollment/**/*.md": "enrollment",
         "intune-service/enrollment/**/*.yml": "enrollment",
+        "intune-service/fundamentals/**/*.md": "fundamentals",
+        "intune-service/fundamentals/**/*.yml": "fundamentals",
         "intune-service/remote-actions/**/*.md": "remote-actions",
         "intune-service/remote-actions/**/*.yml": "remote-actions",
         "intune-service/user-help/**/*.md": "end-user",

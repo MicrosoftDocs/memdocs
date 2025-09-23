@@ -1,32 +1,13 @@
 ---
-# required metadata
-
 title: What is Microsoft Intune
 description: Microsoft Intune manages users and devices, simplifies app management and automated policy deployment, and integrates with mobile threat defense. It connects to Managed Google Play, Apple tokens and certificates, and Teamviewer for remote assistance. Can use MDM or MAM to protect data, configure devices, and simplify access to company resources.
-keywords: what is Intune, mobile endpoint management, mobile application management
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/30/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.custom:
-- intro-overview
-- get-started
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
 - essentials-overview
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo

@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 # required metadata
 
 title: Enroll personal devices in Intune with Android Enterprise work profile management
@@ -8,11 +9,14 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: laurawi
+=======
+title: Enroll personal devices in Intune with Android Enterprise work profile management
+description: Set up Intune for personal devices and bring-your-own-device scenarios using Android Enterprise work profile management.
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.date: 10/28/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
+<<<<<<< HEAD
 ms.assetid:
 
 # optional metadata
@@ -20,13 +24,10 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
+=======
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.reviewer: grwilso
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -83,7 +84,11 @@ Communicate enrollment steps to device users. Users typically don't like enrolli
 Users must be signed in to the primary user account on their device when enrolling. Enrollment isn't supported on secondary user accounts. Personal devices previously enrolled with Android device administrator can unenroll, and then re-enroll using the work profile solution.
 
 > [!TIP]
+<<<<<<< HEAD
 > You can remotely return a device to a state where it's ready to enroll again by using the **Retire** function in the admin center. For more information, see [Retire devices using Intune](../remote-actions/device-retire.md?pivots=android).
+=======
+> You can remotely return a device to a state where it's ready to enroll again by using the **Retire** function in the admin center. To use this remote action, go to **Devices** > **All devices**, and select a device. For more information, see [Retire Android device administrator](../remote-actions/devices-wipe.md#android-device-administrator).
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 
 For more information and screenshots of the end user experience, see [Enroll device with Android work profile](../user-help/enroll-device-android-work-profile.md) in the Intune user help docs.
 

@@ -1,31 +1,11 @@
 ---
-# required metadata
-
 title: Overview of Apple User Enrollment in Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Utilize Apple User Enrollment to enroll and manage user-owned iOS/iPadOS devices in Microsoft Intune.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
 ms.date: 08/19/2024
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: rishitasarin
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -68,7 +48,11 @@ Supported device configuration policies and management capabilities include:
 - VPN: User enrollment is limited to per-app VPN. For more information, see [Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune](../configuration/vpn-setting-configure-per-app.md). Safari domains are not supported.
 - Wi-Fi: For more information, see [Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune](../configuration/wi-fi-settings-ios.md).
 - Device restrictions: For a list of supported device restrictions, see [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
+<<<<<<< HEAD
 - Remote actions for admins: You can retire, delete, remote lock, and sync devices. For more information about these actions and how they work, see [Manage devices with Microsoft Intune](../remote-actions/index.md).
+=======
+- Remote actions for admins: You can retire, delete, remote lock, and sync devices. For more information about these actions and how they work, see [Manage devices with Microsoft Intune](../remote-actions/device-management.md).
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 
 ### App deployment and management
 Supported app types include:

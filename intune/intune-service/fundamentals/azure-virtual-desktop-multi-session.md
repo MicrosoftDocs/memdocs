@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Using Azure Virtual Desktop multi-session with Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Guidelines for using Azure Virtual Desktop multi-session with Microsoft Intune
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 02/13/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: madakeva
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started; references_regions
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

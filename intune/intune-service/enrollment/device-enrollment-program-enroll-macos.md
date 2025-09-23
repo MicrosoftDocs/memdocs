@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 # required metadata
 
 title: Set up automated device enrollment (ADE) for macOS
@@ -7,11 +8,14 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: laurawi
+=======
+title: Set up automated device enrollment (ADE) for macOS
+description: Learn how to enroll corporate-owned Macs into Microsoft Intune with Apple Automated Device Enrollment (ADE).
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.date: 07/22/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
+<<<<<<< HEAD
 
 # optional metadata
 
@@ -22,8 +26,10 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
+=======
+ms.reviewer: annovich
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -339,4 +345,8 @@ Complete these steps to renew a server token that's about to expire. This proced
 
 ## Next steps
 
+<<<<<<< HEAD
 Use [Microsoft Intune remote actions](../remote-actions/index.md) to remotely manage enrolled Macs.
+=======
+Use [Microsoft Intune remote actions](../remote-actions/device-management.md) to remotely manage enrolled Macs.
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f

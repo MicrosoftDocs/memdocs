@@ -1,31 +1,13 @@
 ---
-# required metadata
 title: What's new in Microsoft Intune
-titleSuffix:
 description: Find out what's new in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 09/17/2025
 ms.topic: whats-new
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: intuner
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 - highseo
 ---

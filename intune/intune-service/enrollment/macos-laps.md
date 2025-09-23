@@ -1,32 +1,11 @@
 ---
-# required metadata
-
 title: Set up local admin account creation and password management for macOS devices
-titleSuffix: Microsoft Intune
 description: Set up macOS account configuration with LAPS through automatic device enrollment for macOS devices in Intune.
-keywords:
-author: brenduns
-ms.author: brenduns
-manager: laurawi
 ms.date: 08/01/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: annovich
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

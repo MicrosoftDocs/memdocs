@@ -1,30 +1,11 @@
 ---
-# required metadata
-
 title: Use direct enrollment for macOS devices
-titleSuffix: Microsoft Intune
 description: Deploy and enroll macOS devices in Microsoft Intune using direct enrollment with Apple Configurator.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
 ms.date: 04/03/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: scottbreenmsft
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -116,6 +97,10 @@ The Mac is now enrolled in Microsoft Intune and ready-to-manage. Other profiles 
 Start managing enrolled devices in the Microsoft Intune admin center.
 
 - [Tutorial - Walkthrough the Microsoft Intune admin center](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
+<<<<<<< HEAD
 - [Run remote actions on devices with Microsoft Intune](../remote-actions/index.md)
+=======
+- [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 - [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
 

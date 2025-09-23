@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 # required metadata
 
 title: Set up Android (AOSP) device management in Intune for corporate-owned user-associated devices
@@ -8,11 +9,14 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: laurawi
+=======
+title: Set up Android (AOSP) device management in Intune for corporate-owned user-associated devices
+description: Set up Intune for corporate-owned user-associated devices built on the Android Open Source Project (AOSP) platform.
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.date: 05/15/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
+<<<<<<< HEAD
 ms.assetid:
 
 # optional metadata
@@ -20,13 +24,10 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
+=======
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.reviewer: jieyan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -192,7 +193,11 @@ The following remote actions are available for Android (AOSP) devices:
 * Wipe
 * Delete
 
+<<<<<<< HEAD
 You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/device-wipe.md).
+=======
+You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).
+>>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 
 > [!NOTE]
 > After you wipe an Android (AOSP) device, the device remains in a **Pending** state until it's fully restored to its factory default settings. Then Intune removes it from the device list. When you delete a device, the device is removed from the device list immediately, with no pending status, and the factory reset happens the next time the device checks in.

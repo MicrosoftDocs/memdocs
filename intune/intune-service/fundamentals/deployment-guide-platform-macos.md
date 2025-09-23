@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: Deployment guide to manage macOS devices in Microsoft Intune
 description: Learn the recommended processes to manage macOS devices in Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 07/31/2025
 ms.topic: install-set-up-deploy
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
