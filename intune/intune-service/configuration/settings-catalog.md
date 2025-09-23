@@ -1,31 +1,14 @@
 ---
-# required metadata
-
 title: Create a policy using settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
-keywords: settings catalog, security copilot, intune, microsoft intune
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mayurjadhav, beflamm, cchristenson, rashok
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - msec-ai-copilot
 ---
@@ -69,7 +52,7 @@ This feature applies to:
   - [Add a property list file to macOS devices using Microsoft Intune](preference-file-settings-macos.md).
 
   You can continue using the [preference file](/deployedge/configure-microsoft-edge-on-mac) to:
-  
+
   - Configure earlier versions of Microsoft Edge.
   - Configure Microsoft Edge browser settings that aren't in the settings catalog.
 
@@ -174,7 +157,7 @@ If you use Copilot, you can get AI-generated information about each setting.
 # [Search and filter](#tab/sc-search-filter)
 
 When you create a new policy or update an existing policy, there are built-in search and filter features to help you find settings.
- 
+
 - To find specific settings in your policy, you can use **Add settings** > **Search**. You can search by category, such as `browser`; search for a keyword, such as `office` or `google`; and search for specific settings.
 
   For example, search for `internet explorer`. All the settings with `internet explorer` are shown. Select a category to see the available settings:
@@ -214,15 +197,15 @@ When you use settings catalog policies, you can use Copilot to get more informat
 
 ---
 
-## Copy a profile  
+## Copy a profile
 
-Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar to the original one. The copy contains the same setting configurations and scope tags as the original profile but doesn't have assignments attached to it. 
+Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar to the original one. The copy contains the same setting configurations and scope tags as the original profile but doesn't have assignments attached to it.
 
 After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
 
 1. Go to **Devices** > **Manage devices** > **Configuration**.
 2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (`…`).
-3. Select **Duplicate**.  
+3. Select **Duplicate**.
 4. Enter a new name and description for the policy.
 5. **Save** your changes.
 
@@ -328,7 +311,7 @@ Device and user groups are used when you assign your policies. Device and user s
 
 When you deploy policy from Intune, you can assign user scope or device scope to any type of target group. Behavior of the policy per user depends on the scope of the setting:
 
-- User scoped policy writes to `HKEY_CURRENT_USER (HKCU)`. 
+- User scoped policy writes to `HKEY_CURRENT_USER (HKCU)`.
 - Device scoped policy writes to `HKEY_LOCAL_MACHINE (HKLM)`.
 
 When a device checks in to Intune, the device always presents a `deviceID`. The device might or might not present a `userID`, depending on the check-in timing and whether a user is signed in.

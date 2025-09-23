@@ -1,30 +1,14 @@
 ---
-# required metadata
-
 title: Configure email settings in Microsoft Intune | Microsoft Docs
 titleSuffix:
 description: Create an email device configuration profile in Microsoft Intune, and deploy this profile to Android device administrator, Android Enterprise, iOS, iPadOS, and Windows devices. Use email profiles to configure common email settings, including a Microsoft Exchange email server. Add authentication methods to connect to corporate email on devices you manage.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 02/19/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
 ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: sheetg
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 

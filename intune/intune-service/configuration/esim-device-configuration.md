@@ -1,29 +1,14 @@
 ---
-# required metadata
-
 title: Enable eSIM data connections in Microsoft Intune
 description: Add or use eSIM to get internet and data access using different data plans. In Intune, add or import activation codes, and then assign these activation codes using a configuration profile. You can also monitor the eSIM profiles and check the status of the eSIM-enabled devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/25/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
 ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: nicolezhao, hejimenez
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Configure VPN settings to macOS devices in Microsoft Intune
 description: Add or create a virtual private network (VPN) configuration profile in Microsoft Intune. Add the connection details, split tunneling, custom VPN settings with the identifier, key and value pairs, proxy settings with a configuration script, IP or FQDN address, and TCP port in Microsoft Intune on devices running macOS.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 11/19/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: abalwan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -35,7 +18,7 @@ Depending on the settings you choose, not all values in the following list are c
 
 This feature applies to:
 
-- macOS  
+- macOS
 
 
 ## Before you begin
@@ -48,20 +31,20 @@ This feature applies to:
 
 ## Base VPN
 
-- **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the authentication certificates are stored, so it's important to select the proper channel. It's not possible to edit the deployment channel after you deploy the profile. To change it, you must create a new profile. 
+- **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the authentication certificates are stored, so it's important to select the proper channel. It's not possible to edit the deployment channel after you deploy the profile. To change it, you must create a new profile.
 
   >[!NOTE]
-  > We recommend rechecking the deployment channel setting in existing profiles when the linked authentication certificates are up for renewal to ensure the intended channel is selected. If it isn't, create a new profile with the correct deployment channel.   
+  > We recommend rechecking the deployment channel setting in existing profiles when the linked authentication certificates are up for renewal to ensure the intended channel is selected. If it isn't, create a new profile with the correct deployment channel.
 
-   You have two options:  
-   - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.     
-   - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain.   
-   
+   You have two options:
+   - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.
+   - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain.
+
 - **Connection name**: Enter a name for this connection. End users see this name when they browse their device for the list of available VPN connections.
 
 - **VPN server address**: Enter the IP address or fully qualified domain name of the VPN server that devices connect to. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
-  - **Certificates**: Under **Authentication certificate**, select a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, go to [How to configure certificates](../protect/certificates-configure.md). Choose the certificates that align with your deployment channel selection. If you selected the user channel, your certificate options are limited to user certificate profiles. If you selected the device channel, you have both user and device certificate profiles to choose from. However, we recommend always selecting the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.       
+  - **Certificates**: Under **Authentication certificate**, select a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, go to [How to configure certificates](../protect/certificates-configure.md). Choose the certificates that align with your deployment channel selection. If you selected the user channel, your certificate options are limited to user certificate profiles. If you selected the device channel, you have both user and device certificate profiles to choose from. However, we recommend always selecting the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.
   - **Username and password**: End users must enter a username and password to sign into the VPN server.
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:
@@ -112,7 +95,7 @@ Select the **type of automatic VPN** you want. Your options:
   - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
   - **No**: Allows users to turn off automatic VPN.
 
-  This setting applies to:  
+  This setting applies to:
   - macOS 11 and newer (Big Sur)
 
 - **Per-app VPN**: Enables per-app VPN by associating this VPN connection with a macOS app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the software. For more information, go to [How to assign and monitor apps](../apps/apps-deploy.md).
@@ -131,7 +114,7 @@ Select the **type of automatic VPN** you want. Your options:
     - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
     - **No**: Allows users to turn off automatic VPN.
 
-    This setting applies to:  
+    This setting applies to:
     - macOS 11 and newer (Big Sur)
 
 ## Proxy

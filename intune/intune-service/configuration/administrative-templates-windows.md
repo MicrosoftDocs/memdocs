@@ -1,31 +1,14 @@
 ---
-# required metadata
-
 title: Use ADMX templates on Windows devices in Microsoft Intune
 description: Use Administrative templates in Microsoft Intune to create groups of settings for Windows 10/11 client devices. Use these settings in a device configuration profile. You can control Office programs, Microsoft Edge, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use HTTP printing, control user sign-in, and change the event log size.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 12/11/2024
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - msec-ai-copilot
@@ -35,9 +18,9 @@ ms.collection:
 
 > [!IMPORTANT]
 > Starting with the December 2412 release, you can't create new Administrative Templates policies from the **Templates** > **Administrative Templates** profile type in the Intune admin center. To create ADMX template profiles, use the **[settings catalog](settings-catalog.md)**. For more information on this change, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
-> 
+>
 > There will be no changes to the following UI experiences:
-> - 'Imported Administrative templates (Preview)' template which is used for Custom ADMX templates. 
+> - 'Imported Administrative templates (Preview)' template which is used for Custom ADMX templates.
 
 **Administrative Templates** in Microsoft Intune include thousands of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Google Chrome, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings enable administrators to create group policies using the cloud.
 
@@ -53,7 +36,7 @@ The Intune templates are 100-percent cloud-based, are built in to Intune (no dow
 
 - You can import custom and third-party ADMX and ADML files. For more information, see [Import custom or partner ADMX files](administrative-templates-import-custom.md).
 
-When managing devices in your organization, you should create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task by using **Administrative Templates** in Microsoft Intune. 
+When managing devices in your organization, you should create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task by using **Administrative Templates** in Microsoft Intune.
 
 As part of your mobile device management (MDM) solution, use these template settings to manage your Windows client devices.
 
