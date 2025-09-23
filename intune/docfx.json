@@ -153,6 +153,8 @@
       "ms.subservice": {
         "intune-service/apps/**/*.md": "apps",
         "intune-service/apps/**/*.yml": "apps",
+        "intune-service/configuration/**/*.md": "configuration",
+        "intune-service/configuration/**/*.yml": "configuration",
         "intune-service/remote-actions/**/*.md": "remote-actions",
         "intune-service/remote-actions/**/*.yml": "remote-actions",
         "analytics/**/*.md": "endpoint-analytics",
