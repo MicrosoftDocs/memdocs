@@ -6,7 +6,6 @@ ms.date: 07/15/2025
 ms.topic: reference
 ms.reviewer: Abby Starr
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

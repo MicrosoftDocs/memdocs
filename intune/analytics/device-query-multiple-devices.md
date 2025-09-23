@@ -8,7 +8,6 @@ ms.date: 07/14/2025
 ms.topic: how-to
 ms.reviewer: Abby Starr
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

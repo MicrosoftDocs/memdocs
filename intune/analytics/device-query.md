@@ -6,7 +6,6 @@ ms.date: 08/01/2024
 ms.topic: how-to
 ms.reviewer: Elizabeth cox
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
