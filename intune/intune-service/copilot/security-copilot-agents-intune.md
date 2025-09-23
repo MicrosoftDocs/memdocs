@@ -38,7 +38,7 @@ Use of this Copilot Agent by your security team can reduce the time it takes to 
 
 #### Trigger
 
-The Vulnerability Remediation Agent runs manually on demand, and also supports a scheduled run every one to seven days.
+The Vulnerability Remediation Agent runs manually on demand.
 
 #### Permissions
 
