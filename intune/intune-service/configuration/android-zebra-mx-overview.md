@@ -64,9 +64,6 @@ The following steps provide an overview. For specific details, go to Zebra's doc
 
 Continue to publish the profile, and consume it with the StageNow app on the device. The Company Portal app is installed and opened on the device.
 
-> [!TIP]
-> To learn more about StageNow, go to [StageNow Android device staging](https://www.zebra.com/us/en/software/mobile-computer-software/stagenow.html) (opens Zebra's web site).
-
 ## Step 2 - Confirm the Company Portal app has device administrator role
 
 The Company Portal app requires Device Administrator to manage Android devices. To activate the Device Administrator role, some Zebra devices include a user interface (UI) on the device. If the device includes a UI, the Company Portal app prompts the end user to grant Device Administrator during [enrollment](#step-3---enroll-the-device-in-intune) (in this article).
