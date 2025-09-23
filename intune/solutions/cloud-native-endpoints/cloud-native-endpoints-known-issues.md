@@ -46,7 +46,7 @@ In this article, **Computer accounts** and **machine accounts** are used interch
 
 ## Don't use machine authentication
 
-When a Windows endpoint, like a Windows 10/11 device, joins an on-premises Active Directory (AD) domain, a computer account is automatically created. The computer/machine account can be used to authenticate.
+When a Windows endpoint, like a Windows device, joins an on-premises Active Directory (AD) domain, a computer account is automatically created. The computer/machine account can be used to authenticate.
 
 Machine authentication happens when:
 
@@ -119,7 +119,7 @@ The following list includes common features and services that might use machine 
 
   For more information, go to:
 
-  - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](../../intune-service/apps/intune-management-extension.md)
+  - [Add PowerShell scripts to Windows devices in Microsoft Intune](../../intune-service/apps/intune-management-extension.md)
   - [Introduction to OneDrive in Microsoft 365](/training/modules/m365-onedrive-collaboration-use/)
 
 ## Group Policy Objects might not apply

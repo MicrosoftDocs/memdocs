@@ -4,7 +4,6 @@ description: After you've assigned an app to users or devices, use this informat
 ms.date: 11/18/2024
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

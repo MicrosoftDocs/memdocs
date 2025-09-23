@@ -9,7 +9,6 @@ ms.collection:
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_LOB
-ms.custom: intune-azure
 ---
 
 # Add an Android line-of-business app to Microsoft Intune

@@ -4,7 +4,6 @@ description: Learn how to selectively wipe only corporate data from Intune-manag
 ms.date: 06/12/2024
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

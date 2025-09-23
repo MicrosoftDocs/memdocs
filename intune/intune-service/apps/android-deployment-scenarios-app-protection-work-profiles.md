@@ -7,7 +7,6 @@ ms.reviewer: esalter
 ms.collection:
 - tier2
 - Android
-ms.custom: intune-azure;workProfilesUpdate
 ---
 
 # Mobile Application Management and personally-owned work profiles on Android Enterprise devices in Intune

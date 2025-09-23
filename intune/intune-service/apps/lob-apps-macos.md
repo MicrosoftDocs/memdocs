@@ -4,7 +4,6 @@ description: Learn about how to add macOS line-of-business (LOB) apps to Microso
 ms.date: 06/12/2025
 ms.topic: how-to
 ms.reviewer: arnab
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

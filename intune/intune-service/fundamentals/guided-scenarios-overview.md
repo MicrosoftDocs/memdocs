@@ -38,7 +38,7 @@ The following guided scenarios are available:
 - [Secure Office apps for mobile](guided-scenarios-office-mobile.md)
 - [Deploy Edge for mobile](guided-scenarios-edge.md)
 - [Set up a test device to try out cloud management](guided-scenarios-cloud-managed-pc.md)
-- [Deploy Windows 10 and later in cloud configuration](cloud-configuration.md)
+- [Deploy Windows in cloud configuration](cloud-configuration.md)
 - [Windows 365 Boot](/windows-365/enterprise/windows-365-boot-guide)
 
 ## Guided scenario functionality

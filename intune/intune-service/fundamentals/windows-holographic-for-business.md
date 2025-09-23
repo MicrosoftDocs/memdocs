@@ -40,7 +40,7 @@ This article describes the different features and services you can use to manage
 
 Microsoft Entra ID helps manage and control your devices running Windows Holographic for Business. When you use Intune and Microsoft Entra ID, you can:
 
-- **[Join devices to Microsoft Entra ID](/entra/identity/devices/device-join-plan)**: In Microsoft Entra ID, you can add your work-owned Windows 10/11 devices, including devices running Windows Holographic for Business. This feature allows Microsoft Entra ID to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
+- **[Join devices to Microsoft Entra ID](/entra/identity/devices/device-join-plan)**: In Microsoft Entra ID, you can add your work-owned Windows devices, including devices running Windows Holographic for Business. This feature allows Microsoft Entra ID to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
 
   For information, go to [Device identity in Microsoft Entra ID](/entra/identity/devices/overview).
 
@@ -86,9 +86,6 @@ Microsoft Intune can deploy Universal Windows Apps (UWP) to Microsoft HoloLens d
 
 - To learn about app management with Microsoft Intune, go to [What is app management in Microsoft Intune](../apps/app-management.md).
 - To learn more about developing apps for Microsoft HoloLens, go to [Mixed reality apps for Microsoft HoloLens](https://www.microsoft.com/hololens/apps).
-
-> [!NOTE]
-> HoloLens devices running Windows 10 Holographic for Business 1607 don't support online-licensed apps from the Microsoft Store for Business. To learn more, go to [Install apps on HoloLens](/hololens/holographic-store-apps).
 
 ## Device actions
 

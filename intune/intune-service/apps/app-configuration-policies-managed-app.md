@@ -4,7 +4,6 @@ description: Learn how to configure policies for Intune App SDK managed apps.
 ms.date: 04/28/2025
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

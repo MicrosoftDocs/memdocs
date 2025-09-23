@@ -4,7 +4,6 @@ description: Add a macOS DMG app to Microsoft Intune.
 ms.date: 07/12/2024
 ms.topic: how-to
 ms.reviewer: arnab
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

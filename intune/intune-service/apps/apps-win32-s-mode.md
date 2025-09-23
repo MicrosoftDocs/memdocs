@@ -4,7 +4,6 @@ description: Learn how to enable Win32 apps on S mode devices using Microsoft In
 ms.date: 11/21/2024
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

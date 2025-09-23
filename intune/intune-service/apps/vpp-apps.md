@@ -4,7 +4,6 @@ description:  Learn about how you can use Microsoft Intune to manage and monitor
 ms.date: 05/16/2024
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

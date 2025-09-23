@@ -5,7 +5,6 @@ ms.date: 08/09/2024
 ms.topic: overview
 ms.localizationpriority: high
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ai-usage: ai-assisted
 ms.collection:
 - tier1

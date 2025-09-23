@@ -4,7 +4,6 @@ description: Add the macOS Company Portal app.
 ms.date: 11/21/2024
 ms.topic: how-to
 ms.reviewer: arnab
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

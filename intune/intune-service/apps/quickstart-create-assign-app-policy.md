@@ -4,7 +4,6 @@ description: In this article, you use Microsoft Intune to create and assign and 
 ms.topic: how-to
 ms.date: 02/28/2025
 ms.reviewer: dagerrit
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

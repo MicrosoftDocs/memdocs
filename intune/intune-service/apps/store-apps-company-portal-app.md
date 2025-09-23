@@ -4,7 +4,6 @@ description: Learn how your workforce can manually add the Windows 10 Company Po
 ms.date: 08/27/2024
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

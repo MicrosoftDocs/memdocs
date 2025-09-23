@@ -78,8 +78,8 @@ Intune has built-in features that can be used for frontline worker devices, incl
 
   For more information on this guided scenario and the other guided scenarios available, go to:
 
-  - [Guided scenario - Windows 10/11 in cloud configuration](../../intune-service/fundamentals/cloud-configuration.md)
-  - [Step-by-step guide - Windows 10/11 in cloud configuration](../../intune-service/fundamentals/cloud-configuration-setup-guide.md)
+  - [Guided scenario - Windows in cloud configuration](../../intune-service/fundamentals/cloud-configuration.md)
+  - [Step-by-step guide - Windows in cloud configuration](../../intune-service/fundamentals/cloud-configuration-setup-guide.md)
   - [Intune guided scenarios overview](../../intune-service/fundamentals/guided-scenarios-overview.md)
 
 - **[Remote Help](../../intune-service/fundamentals/remote-help.md)**

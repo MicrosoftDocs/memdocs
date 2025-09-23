@@ -9,7 +9,6 @@ ms.collection:
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_Add
-ms.custom: intune-azure
 ---
 
 # Manage Android Enterprise system apps in Microsoft Intune

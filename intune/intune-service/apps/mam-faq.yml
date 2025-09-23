@@ -4,8 +4,6 @@ metadata:
   description: This article provides answers to some frequently asked questions on Intune mobile application management (MAM) and Intune app protection.
   ms.date: 06/05/2025
   ms.topic: faq
-  ms.reviewer:
-  ms.custom: intune-azure
   ms.collection:
   - M365-identity-device-management
   - tier2

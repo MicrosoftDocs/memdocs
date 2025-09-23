@@ -9,7 +9,6 @@ ms.collection:
 - M365-identity-device-management
 - Android
 - highpri
-ms.custom: intune-azure
 ---
 # Android app protection policy settings in Microsoft Intune
 This article describes the app protection policy settings for Android devices. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the portal.

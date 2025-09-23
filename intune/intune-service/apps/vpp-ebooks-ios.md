@@ -4,7 +4,6 @@ description: Learn how to sync books you purchased in volume from the iOS store 
 ms.date: 07/31/2025
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

@@ -8,7 +8,6 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - Android
-ms.custom: intune-azure
 ---
 
 # Manage messaging collaboration access by using Outlook for iOS and Android with Microsoft Intune

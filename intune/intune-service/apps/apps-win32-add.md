@@ -5,7 +5,6 @@ ms.date: 01/23/2025
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: bryanke
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

@@ -44,6 +44,9 @@ From a service perspective, Intune uses Microsoft Entra ID for identity storage 
 
 This article discusses concepts and features you should consider when managing your identities.
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 ## Use your existing users and groups
 
 A large part of managing endpoints is managing users and groups. If you have existing users and groups or will create new users and groups, Intune can help.
@@ -74,7 +77,7 @@ By default, Intune automatically creates the **All users** and **All devices** g
 
 ### Move from machine accounts
 
-When a Windows endpoint, like a Windows 10/11 device, joins an on-premises Active Directory (AD) domain, a computer account is automatically created. The computer/machine account can be used to authenticate on-premises programs, services, and apps.
+When a Windows endpoint, like a Windows device, joins an on-premises Active Directory (AD) domain, a computer account is automatically created. The computer/machine account can be used to authenticate on-premises programs, services, and apps.
 
 These machine accounts are local to the on-premises environment and can't be used on devices that are joined to Microsoft Entra ID. In this situation, you need to switch to user-based authentication to authenticate to on-premises programs, services, and apps.
 

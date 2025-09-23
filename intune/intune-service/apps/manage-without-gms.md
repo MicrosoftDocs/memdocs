@@ -4,7 +4,6 @@ description: Learn how to use Intune in environments without Google Mobile Servi
 ms.date: 10/28/2024
 ms.topic: how-to
 ms.reviewer: priyar
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

@@ -4,7 +4,6 @@ description: This topic describes the app protection policy (APP) for extensions
 ms.date: 01/06/2025
 ms.topic: article
 ms.reviewer: demerson
-ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management

@@ -54,7 +54,7 @@ This article describes some of the differences between Microsoft Entra joined an
 
 ## Microsoft Entra joined
 
-When an endpoint, like a Windows 10/11 device is Microsoft Entra joined, it establishes a trust with Microsoft Entra, and has an identity (`device-id`) in Microsoft Entra. The endpoint is managed and controlled by the organization.
+When an endpoint, like a Windows device is Microsoft Entra joined, it establishes a trust with Microsoft Entra, and has an identity (`device-id`) in Microsoft Entra. The endpoint is managed and controlled by the organization.
 
 The endpoint is joined to Microsoft Entra. It's not joined to an on-premises AD domain.
 
@@ -122,7 +122,7 @@ Consider the following scenarios:
 
 | Scenario | Microsoft Entra join or Hybrid Microsoft Entra join |
 | --- | --- |
-| You're provisioning new Windows endpoints | ✔️ Microsoft Entra join <br/><br/> If you have new, refurbished, or refreshed Windows devices that you're provisioning and enrolling, then Microsoft Entra join is recommended. Windows 10/11 has modern features built in to the OS, including modern management, modern authentication, and more. Microsoft Entra Join should be your default option for new and reset endpoints.<br/><br/>❌ Hybrid Microsoft Entra join <br/><br/> You can use Hybrid Microsoft Entra Join for new endpoints, but it's typically not recommended. When joined using Hybrid Microsoft Entra Join, you might not get to use the modern features built into Windows 10/11.  |
+| You're provisioning new Windows endpoints | ✔️ Microsoft Entra join <br/><br/> If you have new, refurbished, or refreshed Windows devices that you're provisioning and enrolling, then Microsoft Entra join is recommended. Windows has modern features built in to the OS, including modern management, modern authentication, and more. Microsoft Entra Join should be your default option for new and reset endpoints.<br/><br/>❌ Hybrid Microsoft Entra join <br/><br/> You can use Hybrid Microsoft Entra Join for new endpoints, but it's typically not recommended. When joined using Hybrid Microsoft Entra Join, you might not get to use the modern features built into Windows.  |
 | You have existing, previously provisioned Windows endpoints that are hybrid Microsoft Entra or AD joined | ✔️ Hybrid Microsoft Entra join <br/> <br/>If you have existing endpoints that are joined to an on-premises AD domain (including hybrid Microsoft Entra joined), then hybrid Microsoft Entra join is recommended. Devices get a cloud identity and can use cloud services that require a cloud identity. For end users with existing endpoints, this option has minimal impact. <br/><br/>❌ Microsoft Entra join <br/><br/> Existing devices joined to an on-premises AD domain (including hybrid Microsoft Entra joined) must be reset to become Microsoft Entra joined. If they can't be reset, then there's no supported Microsoft path to Microsoft Entra join them. |
 
 ### Common questions, answers, and scenarios
