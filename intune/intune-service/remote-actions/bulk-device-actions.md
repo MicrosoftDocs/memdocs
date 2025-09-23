@@ -16,7 +16,7 @@ For example, at the end of a school year, IT admins can use bulk wipe to securel
 
 Select one of the following tabs to learn more about the available bulk remote actions for each platform:
 
-# [:::image type="icon" source="../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+# [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
 | Bulk action                    | Description                                                                                      |
 |--------------------------------|--------------------------------------------------------------------------------------------------|
@@ -29,7 +29,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 | [Sync][RA-SYNC]                | Syncs a device with Intune to apply the latest policies and configurations.                      |
 | [Wipe][RA-WIPE]                | Restores a device to the factory settings and removes all data and settings.         |
 
-# [:::image type="icon" source="../media/icons/platforms/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
+# [:::image type="icon" source="../../media/icons/platforms/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
 
 | Bulk action                              | Description                                                                                      |
 |------------------------------------------|--------------------------------------------------------------------------------------------------|
@@ -42,7 +42,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 | [Update cellular data plan][RA-CELLULAR] | Updates the cellular data plan settings for a device that uses an eSIM profile.                  |
 | [Wipe][RA-WIPE]                          | Restores a device to its factory settings and removes all data and settings.         |
 
-# [:::image type="icon" source="../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+# [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
 | Bulk action                              | Description                                                                                      |
 |------------------------------------------|--------------------------------------------------------------------------------------------------|
@@ -53,7 +53,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 | [Sync][RA-SYNC]                          | Syncs a device with Intune to apply the latest policies and configurations.                      |
 | [Wipe][RA-WIPE]                          | Restores a device to its factory settings and removes all data and settings.         |
 
-# [:::image type="icon" source="../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+# [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 | Bulk action           | Description                                                                                      |
 |-----------------------|--------------------------------------------------------------------------------------------------|
@@ -62,7 +62,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 | [Restart][RA-RESTART] | Restarts a device.                                                                               |
 | [Wipe][RA-WIPE]       | Restores a device to its factory settings and removes all data and settings.         |
 
-# [:::image type="icon" source="../media/icons/platforms/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
+# [:::image type="icon" source="../../media/icons/platforms/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
 | Bulk action              | Description                                                                                                                                                                              |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

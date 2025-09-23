@@ -27,7 +27,6 @@ The *collect diagnostics* remote action lets you collect and download managed de
 > - Windows (corporate-owned)
 > - Windows Holographic
 
-
 [!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
 > [!div class="checklist"]
