@@ -1,27 +1,12 @@
 ---
-# required metadata
-
 title: Properties catalog in Microsoft Intune
 description: Configure Properties catalog policy to manage Device Inventory settings on Windows devices you manage with Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 07/09/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
 ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ms.reviewer: abbystarr
 ---

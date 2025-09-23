@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Import custom and third-party partner ADMX templates in Microsoft Intune
 description: You can add, upload, or import custom and third-party partner ADMX and ADML files in Microsoft Intune. When they're imported, create a device configuration profile and assign the profile to your Windows 10/11 client devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 09/04/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano, kabalu
-ms.suite: ems
-search.appverid: 
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
-
 ---
 
 # Import custom ADMX and ADML administrative templates into Microsoft Intune (public preview)
@@ -67,11 +49,11 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
   2. Import the `firefox.admx` and `firefox.adml` files.
 
   If you upload `firefox.admx` before `mozilla.adml`, then the import fails.
-  
+
   To see if your ADMX has a dependency, open the ADMX file in a text editor, go to the `policyNamespaces` node, and look for `using prefix`. Any dependencies are listed.
-  
+
   In the following example, the`kerberos.admx` file requires the `Windows.admx` file:
-  
+
   ```xml
    <policyNamespaces>
       <target prefix="kerberos" namespace="Microsoft.Policies.Kerberos" />
