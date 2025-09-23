@@ -6,26 +6,16 @@ description: Learn about the deprecation for the Intune PC software client.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 10/15/2020
 ms.topic: archived
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid: 1f104923-12df-453c-9c20-942ef65a0945
 ROBOTS: NOINDEX,NOFOLLOW
 
-# optional metadata
 
 #audience:
 
 ms.reviewer: owenyen
 ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 - triage
 ---

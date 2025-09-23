@@ -2,29 +2,16 @@
 # required metadata
 
 title: Migrate from Microsoft 365 Basic Mobility and Security to Intune
-titleSuffix: Microsoft Intune
 description: Learn how to migrate your mobile device management from Microsoft 365 Basic Mobility and Security to Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/25/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: dagerrit
 ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -63,7 +50,7 @@ This article helps you migrate your mobile device management (MDM) from Microsof
   Users with Intune licenses already assigned can start receiving policies immediately, possibly sooner than you expect. The policies can happen even if Basic Mobility and Security didn't previously manage the users or devices.
 
   If you want to prevent this behavior, you can unassign the Intune licenses before the migration. You can also create separate groups to help manage when the policies are deployed:
-  
+
   - Group 1: Users with Intune licenses already assigned
   - Group 2: Users without Intune licenses assigned
 

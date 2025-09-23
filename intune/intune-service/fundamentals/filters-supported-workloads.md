@@ -3,28 +3,13 @@
 
 title: Platforms and policy types supported by filters in Microsoft Intune
 description: See the supported apps, compliance policies, and device configuration profiles that support filters in Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 07/28/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: gokarthi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

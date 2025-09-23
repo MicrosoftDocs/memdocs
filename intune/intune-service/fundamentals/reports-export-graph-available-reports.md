@@ -6,26 +6,13 @@ description: Learn about Intune reports and properties provided via Graph API.
 keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 09/08/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 
 ms.reviewer: davidra
 #ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -422,7 +409,7 @@ The following table contains the possible output when calling the `AppInvRawData
 |     UserId  |
 |     UserName  |
 
-You can filter the `AppInvRawData` report using the `eq` comparison operator on the following properties: 
+You can filter the `AppInvRawData` report using the `eq` comparison operator on the following properties:
 - ApplicationName
 - ApplicationPublisher
 - ApplicationShortVersion
@@ -746,7 +733,7 @@ To call this report, you need a minimum role-based access control permission of 
 
 The properties `LastOSUpdateTime` and `LastRebootTime` only populate in the report when the **OS Update Status** setting is enabled in the Google Admin Console. This setting can be found in the Google Admin Console under **Devices** > **Chrome** **Settings**.
 
-You can filter the `ChromeOSDevices` report using the following properties: 
+You can filter the `ChromeOSDevices` report using the following properties:
 - IntuneDeviceId
 - MostRecentUserEmail
 - MostRecentLogin

@@ -6,27 +6,14 @@ description: Learn more about the frequency of the Microsoft Intune service upda
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/10/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: dougeby
 ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
 - get-started
 - intro-get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

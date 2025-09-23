@@ -2,29 +2,17 @@
 # required metadata
 
 title: Add, configure, and protect apps with Intune
-titleSuffix: Microsoft Intune
 description: Add, configure, and protect apps with Intune.
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 04/16/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 
-# optional metadata
-
-#ROBOTS:
-#audience:
 
 ms.reviewer: demerson
-ms.suite:
-search.appverid: MET150
-ms.custom: 
-ms.collection: 
-- M365-identity-device-management 
+ms.collection:
+- M365-identity-device-management
 - highpri
-- tier1
 ---
 # Step 2 - Add, configure, and protect apps with Intune
 
@@ -237,7 +225,7 @@ For more information about app protection in Intune, go to the following topics:
 
 As more organizations implement mobile device strategies for accessing work or school data, protecting against data leakage becomes paramount. Intune's mobile application management solution for protecting against data leakage is app protection policies. App protection policies are rules that ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled.
 
-When configuring app protection policies, the different settings and options available allow organizations to customize the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework), and Intune is leveraging a similar taxonomy for its APP data protection framework for mobile app management.  
+When configuring app protection policies, the different settings and options available allow organizations to customize the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework), and Intune is leveraging a similar taxonomy for its APP data protection framework for mobile app management.
 
 The APP data protection configuration framework is organized into three distinct configuration scenarios:
 

@@ -2,32 +2,18 @@
 # required metadata
 
 title: Try Microsoft Intune overview
-titleSuffix: 
 description: Evaluate Microsoft Intune by stepping through common Intune settings.
 keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 04/24/2024
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: tycast
 ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.collection: 
+ms.collection:
 - M365-identity-device-management
 - highpri
-- tier1
 ---
 
 # Evaluate Microsoft Intune

@@ -7,15 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/11/2025
-manager: laurawi
 ms.topic: overview
-ms.service: microsoft-intune
 ms.suite: ems
 
-# optional metadata
 ms.reviewer: pfetty
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

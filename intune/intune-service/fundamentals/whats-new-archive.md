@@ -1,31 +1,19 @@
 ---
 # required metadata
 title: What's new in previous months in the Microsoft Intune
-titleSuffix:
 description: Review older announcements from the Intune what's new page
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 08/20/2025
 ms.topic: whats-new
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid: 9ba01d60-4a03-4e3e-9aba-8be905c0054c
-
-# optional metadata
 
 ROBOTS: NOINDEX,NOFOLLOW
 #audience:
 
 ms.reviewer: lebacon
 ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -123,7 +111,7 @@ Applies to:
 
 #### Manage the DefaultEnforcement configuration for Microsoft Defender Device Control on Windows devices<!-- 30253799 -->
 
-You can now use Intune to manage the configuration of the Microsoft Defender CSP for [DefaultEnforcement](/windows/client-management/mdm/defender-csp#configurationdefaultenforcement) for Device Control. 
+You can now use Intune to manage the configuration of the Microsoft Defender CSP for [DefaultEnforcement](/windows/client-management/mdm/defender-csp#configurationdefaultenforcement) for Device Control.
 
 DefaultEnforcement manages the configuration of Device Control:
 

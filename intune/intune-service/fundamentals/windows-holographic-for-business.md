@@ -5,24 +5,11 @@ description: Use Microsoft Intune to manage and complete different tasks on devi
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 03/17/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 585a2f17-106b-4f02-adf7-05f08a92dbc1
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

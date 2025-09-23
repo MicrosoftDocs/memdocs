@@ -6,25 +6,12 @@ description: Create and assign a custom role for a remote device manager.
 services: microsoft-intune
 author: BrenDuns
 ms.author: brenduns
-manager: laurawi
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.topic: how-to
 ms.date: 03/26/2019
-ms.assetid: 0b3ac749-4a61-4717-bf08-e0e6a15c3b0a
-# optional metadata
 
-#ROBOTS:
-#audience:
-
-ms.reviewer:
 ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

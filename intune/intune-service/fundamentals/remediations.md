@@ -2,25 +2,13 @@
 title: Use Remediations to detect and fix support issues
 description: Learn more about Remediations in Microsoft Intune, including what Remediations are and view any prerequisites and licensing requirements. Also, learn how to deploy built-in and custom remediation scripts, and learn how to monitor your scripts.
 ms.date: 09/08/2025
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.topic: how-to
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 # Customer intent: As a Microsoft Intune administrator, I want to enable and use remediations so that I can fix common support issues before end users notice issues.
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jocallah
 ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
 - highpri
 - M365-identity-device-management
@@ -33,7 +21,7 @@ ms.collection:
 
 Remediations help you fix common support issues before end-users notice issues.
 
-In this article, you learn how to:  
+In this article, you learn how to:
 
 > [!div class="checklist"]
 >
@@ -44,7 +32,7 @@ In this article, you learn how to:
 > * Client policy retrieval and client reporting
 > * Monitor the script packages
 > * Export script output
-> * Monitor remediation status for a device  
+> * Monitor remediation status for a device
 
 ## About Remediations
 
@@ -83,7 +71,7 @@ Remediations require users of the devices to have one of the following licenses:
 ### Script requirements
 
 - You can have up to 200 script packages.
-- A script package can contain a detection script only or both a detection script and a remediation script. 
+- A script package can contain a detection script only or both a detection script and a remediation script.
   - A remediation script only runs if the detection script uses exit code `exit 1`, meaning the issue was detected.
 - Ensure the scripts are encoded in UTF-8.
   - In the [Settings](#deploy-built-in-script-packages) page of creating a script package, if the **Enforce script signature check** option is enabled, then make sure that the scripts are encoded in UTF-8, not UTF-8 BOM (Byte Order Mark).
@@ -112,7 +100,7 @@ To assign the script package:
 1. Choose the groups you want to **Assign to** and any **Excluded groups** for the script package.
 1. To change the **Scope tags**, select **Edit** then **Select scope tags**.
 1. To change the schedule, select the ellipses and choose **Edit** to specify your settings. Select **Apply** to save your changes.
-1. When you're done, select **Review + save**.  
+1. When you're done, select **Review + save**.
 
 ### Schedule options for assignments
 
@@ -121,7 +109,7 @@ When you configure the assignment of a script package, you can define how often 
 - **Once** - Execute the remediation one time only, at a specified date and time.
 
 - **Hourly** - Run the remediation on an hourly basis, with a configurable interval, like every *n* hours. The value must be less than 24 hours.
-  
+
 - **Daily** - Execute the remediation daily at a specified time.
 
 Execution behavior:
@@ -171,7 +159,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
    For information about enforcing script signature checks, see [Script requirements](#script-requirements).
 1. Select **Next** then assign any **Scope tags** you need.
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](filters.md).
- 
+
    >[!NOTE]
    > Don't mix user and device groups across include and exclude assignments.
 
@@ -240,7 +228,7 @@ The client reports Remediation information at the following times:
 
 ## Export script output
 <!-- 10198545 -->
-To help you easily analyze returned outputs, use the **Export** option to save the output as a `.csv` file. Exporting the output to a `.csv` file allows you to analyze the returned outputs when Remediations run on devices with issues. Exporting also allows you to share the results with others for more analysis.  
+To help you easily analyze returned outputs, use the **Export** option to save the output as a `.csv` file. Exporting the output to a `.csv` file allows you to analyze the returned outputs when Remediations run on devices with issues. Exporting also allows you to share the results with others for more analysis.
 
 ## Monitor remediation status for a device
 
