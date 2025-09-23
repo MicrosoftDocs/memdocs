@@ -191,6 +191,9 @@
         "analytics/**/*.yml": "Microsoft Intune",
         "intune-service/**/*.md": "Microsoft Intune",
         "intune-service/**/*.yml": "Microsoft Intune"
+      },
+      "zone_pivot_group_filename": {
+        "intune-service/remote-actions/**/*.md": "intune-service/remote-actions/zone-pivot-groups.json"
       }
     },
     "template": [],
