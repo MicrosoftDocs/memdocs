@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Network endpoints for Microsoft Intune
 description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
 author: brenduns

@@ -1,16 +1,12 @@
 ---
-# required metadata
-
 title: Network endpoints for US government deployments
 description: See the list of US government endpoint URLs that Intune needs and requires. Allow the ports, IP addresses, and endpoint URLs in your proxy server configuration.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/11/2025
 ms.topic: reference
 ms.localizationpriority: high
 ms.reviewer: srink, davidra
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 ---

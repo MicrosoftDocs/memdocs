@@ -1,16 +1,11 @@
 ---
-# required metadata
-
 title: Use Graph APIs to export Intune Reports | Microsoft Docs
 description: Learn about exporting Intune reports using Graph APIs.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
 ms.topic: how-to
 ms.date: 02/28/2025
-
 ms.reviewer: davidra
-#ms.suite: ems
 #ms.custom:
 ms.collection:
 - M365-identity-device-management

@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Windows cloud configuration step by step guide
 description: Use this Windows 10/11 cloud configuration step-by-step setup guide to create your own cloud configuration deployment. You create the Microsoft Entra group and policies using Microsoft Intune, including the enrollment profile, compliance policy, and security baseline. You also deploy apps and resources that users need to do their jobs.
 author: MandiOhlinger

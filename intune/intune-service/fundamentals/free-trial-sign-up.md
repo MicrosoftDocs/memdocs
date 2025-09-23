@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Try Microsoft Intune for free
 description: Create a free trial subscription, understand supported configurations and networking requirements, and optionally configure your domain name.
 author: nicholasswhite

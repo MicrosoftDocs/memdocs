@@ -1,15 +1,11 @@
 ---
-# required metadata
-
 title: Intune classic groups in the Azure portal
 description: Learn what's new with groups in the Microsoft Intune Azure portal.
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 03/31/2019
 ms.topic: archived
-
 ms.reviewer: scottduf
-#ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 ---

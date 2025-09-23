@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Deployment guide for Windows device management | Microsoft Intune
 description: Use our platform deployment guide to set up Windows device management in Microsoft Intune.
 author: lenewsad

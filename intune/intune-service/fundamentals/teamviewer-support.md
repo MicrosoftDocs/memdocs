@@ -1,15 +1,11 @@
 ---
-# required metadata
-
 title: Remotely administer devices in Microsoft Intune
 description: View the required roles to use TeamViewer, how to install the TeamViewer connector, and step-by-step guidance to remotely administer devices using Microsoft Intune in the Azure portal
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.localizationpriority: high
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

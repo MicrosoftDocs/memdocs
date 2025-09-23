@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Deployment guide to manage iOS/iPadOS devices in Microsoft Intune
 description: A guide to managing iOS/iPadOS devices in Microsoft Intune.
 author: lenewsad

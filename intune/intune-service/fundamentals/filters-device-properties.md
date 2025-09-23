@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Supported filter device and app properties & operators in Microsoft Intune
 description: When using filters, get more information on the device properties, supported operators, and supported Windows OS SKUs, including examples. Use these features to create rule expressions in Microsoft Intune.
 author: MandiOhlinger

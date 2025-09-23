@@ -5,10 +5,8 @@ ms.date: 09/08/2025
 ms.topic: how-to
 author: nicholasswhite
 ms.author: nwhite
-# Customer intent: As a Microsoft Intune administrator, I want to enable and use remediations so that I can fix common support issues before end users notice issues.
 ms.localizationpriority: high
 ms.reviewer: jocallah
-ms.suite: ems
 ms.collection:
 - highpri
 - M365-identity-device-management

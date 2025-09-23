@@ -1,15 +1,12 @@
 ---
-# required metadata
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
 ms.date: 09/17/2025
 ms.topic: whats-new
 ms.localizationpriority: high
 ms.reviewer: intuner
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highseo

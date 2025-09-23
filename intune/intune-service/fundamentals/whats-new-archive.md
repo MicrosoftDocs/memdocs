@@ -1,18 +1,13 @@
 ---
-# required metadata
 title: What's new in previous months in the Microsoft Intune
 description: Review older announcements from the Intune what's new page
-keywords:
 author: brenduns
 ms.author: brenduns
 ms.date: 08/20/2025
 ms.topic: whats-new
 
 ROBOTS: NOINDEX,NOFOLLOW
-#audience:
-
 ms.reviewer: lebacon
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 ---

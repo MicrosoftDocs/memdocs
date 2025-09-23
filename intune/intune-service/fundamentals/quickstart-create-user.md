@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Create a user in Intune
 description: Create a user in Intune.
 services: microsoft-intune
@@ -9,10 +7,7 @@ ms.author: paoloma
 ms.localizationpriority: high
 ms.topic: how-to
 ms.date: 04/07/2025
-
-
 ms.reviewer: jlynn
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 ---

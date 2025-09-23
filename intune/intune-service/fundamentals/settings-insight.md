@@ -1,16 +1,12 @@
 ---
-# required metadata
-
 title: Settings insight
 description: The Settings insight feature adds insights giving you confidence in configurations that are successfully adopted by similar organizations.
-keywords:
 author: BrenDuns
 ms.author: brenduns
 ms.date: 7/31/2024
 ms.topic: article
 ms.localizationpriority: high
 ms.reviewer: Lavanya.lakshman
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

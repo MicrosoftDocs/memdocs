@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Deployment guide to manage macOS devices in Microsoft Intune
 description: Learn the recommended processes to manage macOS devices in Microsoft Intune.
 author: lenewsad

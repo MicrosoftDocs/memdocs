@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Android Open Source Project Supported Devices
 description: Lists Android open source project devices (AOSP) supported devices
 author: MandiOhlinger

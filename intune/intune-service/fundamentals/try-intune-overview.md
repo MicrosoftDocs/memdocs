@@ -1,16 +1,12 @@
 ---
-# required metadata
-
 title: Try Microsoft Intune overview
 description: Evaluate Microsoft Intune by stepping through common Intune settings.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
 ms.date: 04/24/2024
 ms.topic: concept-article
 ms.localizationpriority: high
 ms.reviewer: tycast
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

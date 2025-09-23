@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Find the primary user of a Microsoft Intune device.
 description: Find the primary user (or User Device Affinity) of an Intune device.
 author: paolomatarazzo

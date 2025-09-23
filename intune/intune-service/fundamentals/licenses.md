@@ -1,16 +1,12 @@
 ---
-# required metadata
-
 title: Licenses available for Microsoft Intune
 description: Intune is available with these licenses
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 05/09/2024
 ms.topic: article
 ms.localizationpriority: high
 ms.reviewer: amsaeedi
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

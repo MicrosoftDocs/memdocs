@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Get started with Microsoft Intune
 description: See an overview of the steps to start using Intune. Plan your move and deployment of Intune, determine your licensing needs and any platform requirements, use compliance and Conditional Access, deploy apps, create device configuration profiles, and enroll your devices to be managed. Get more information on mobile application management for BYOD or personal devices.
 author: MandiOhlinger
@@ -9,8 +7,6 @@ ms.date: 02/19/2025
 ms.topic: overview
 ms.localizationpriority: high
 ms.reviewer: dougeby
-- get-started
-- intro-get-started
 ms.collection:
 - M365-identity-device-management
 - highpri

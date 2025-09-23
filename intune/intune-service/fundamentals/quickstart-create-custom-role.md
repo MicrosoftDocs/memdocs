@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Create and assign a custom role in Intune
 description: Create and assign a custom role for a remote device manager.
 services: microsoft-intune
@@ -10,7 +8,6 @@ ms.localizationpriority: high
 ms.topic: how-to
 ms.date: 03/26/2019
 
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 ---

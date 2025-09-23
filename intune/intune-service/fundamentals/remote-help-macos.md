@@ -1,17 +1,12 @@
 ---
-# required metadata
-
 title: Using Remote Help on macOS to assist authenticated users.
 description: Use Remote Help to provide remote assistance to authenticated users and to troubleshoot for frontline workers (FLW).
-keywords:
 author: lenewsad
 ms.author: lanewsad
 ms.date: 04/02/2024
 ms.topic: how-to
 ms.localizationpriority: high
-#CustomerIntent: As an IT admin, I want to use Remote Help on macOS so that we can troubleshoot and assist users such as Frontline Workers.
 ms.reviewer: Karawang
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

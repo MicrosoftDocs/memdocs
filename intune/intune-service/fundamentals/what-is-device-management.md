@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: What is device management?
 description: Learn more about what device management means and how it can help organizations, including Microsoft 365 small & medium business, and enterprise. See a list of features and benefits, including mobile device management (MDM) and mobile application management (MAM), and learn about Microsoft Intune.
 author: MandiOhlinger
@@ -8,10 +6,7 @@ ms.author: mandia
 ms.date: 02/26/2025
 ms.topic: overview
 audience: microsoft-business
-
-
 ms.reviewer: dougeby
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

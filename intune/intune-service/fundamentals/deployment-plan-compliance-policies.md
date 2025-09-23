@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Configure compliance policies
 description: Description for configuring compliance policies
 author: lenewsad

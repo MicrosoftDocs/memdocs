@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Network endpoints for China deployments - Microsoft Intune
 description: Review China endpoints for Intune.
 author: MandiOhlinger

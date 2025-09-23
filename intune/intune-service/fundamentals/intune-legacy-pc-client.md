@@ -1,20 +1,12 @@
 ---
-# required metadata
-
 title: Legacy Intune PC software client
 description: Learn about the deprecation for the Intune PC software client.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 10/15/2020
 ms.topic: archived
 ROBOTS: NOINDEX,NOFOLLOW
-
-
-#audience:
-
 ms.reviewer: owenyen
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - triage

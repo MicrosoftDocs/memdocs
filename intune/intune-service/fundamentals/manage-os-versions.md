@@ -1,15 +1,11 @@
 ---
-# required metadata
-
 title: Manage device operating system versions with Intune
 description: Learn about the methods for managing device operating system versions supported by Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
 ms.date: 06/12/2025
 ms.topic: concept-article
 ms.localizationpriority: high
-#ms.suite: ems
 #ms.custom:
 ms.collection:
 - M365-identity-device-management

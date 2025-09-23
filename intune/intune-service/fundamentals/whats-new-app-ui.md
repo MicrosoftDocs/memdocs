@@ -1,16 +1,12 @@
 ---
-# required metadata
-
 title: UI updates for Intune end-user apps
 description: Find out what has changed in UI for apps that work on end-user devices with Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
 ms.date: 02/20/2025
 ms.topic: article
 ms.localizationpriority: high
 ms.reviewer: esalter
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 ---

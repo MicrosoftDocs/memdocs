@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Use Windows cloud configuration in a guided scenario
 description: Use a guided scenario to configure Windows 10/11 client devices in a cloud configuration in Microsoft Intune. Cloud config focuses on a simplified device experience for internet browsing and using Microsoft 365 apps, including Microsoft Teams.
 author: MandiOhlinger

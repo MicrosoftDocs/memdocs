@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Troubleshooting Remote Help on Android.
 description: Sometimes a Remote Help session starts in service but the client connection isn't established. Learn more about the possible causes in this article, and how to resolve them.
 author: lenewsad

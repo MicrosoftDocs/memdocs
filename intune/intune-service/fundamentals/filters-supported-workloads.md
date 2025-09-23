@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Platforms and policy types supported by filters in Microsoft Intune
 description: See the supported apps, compliance policies, and device configuration profiles that support filters in Intune.
 author: MandiOhlinger

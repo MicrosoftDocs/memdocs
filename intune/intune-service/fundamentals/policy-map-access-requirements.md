@@ -1,16 +1,12 @@
 ---
-# required metadata
-
 title: Access requirements policy mapping from Basic Mobility and Security to Intune
 description: A detailed list of the policy map between Basic Mobility and Security access requirements and Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 11/02/2023
 ms.topic: reference
 ms.localizationpriority: high
 ms.reviewer: dagerrit
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 ---

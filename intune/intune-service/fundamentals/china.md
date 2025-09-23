@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Intune operated by 21Vianet in China
 description: Intune operated by 21Vianet in China.
 author: MandiOhlinger

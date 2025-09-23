@@ -1,14 +1,10 @@
 ---
-# required metadata
-
 title: Add, configure, and protect apps with Intune
 description: Add, configure, and protect apps with Intune.
 author: nicholasswhite
 ms.author: nwhite
 ms.date: 04/16/2024
 ms.topic: article
-
-
 ms.reviewer: demerson
 ms.collection:
 - M365-identity-device-management

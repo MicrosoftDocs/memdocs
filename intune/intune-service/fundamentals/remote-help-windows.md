@@ -1,17 +1,12 @@
 ---
-# required metadata
-
 title: Using Remote Help on Windows to assist authenticated users.
 description: Use the Remote Help app to provide remote assistance to authenticated users who also run the Remote Help app, and to troubleshoot for frontline workers (FLW).
-keywords:
 author: lenewsad
 ms.author: lanewsad
 ms.date: 04/30/2025
 ms.topic: how-to
 ms.localizationpriority: high
-#CustomerIntent: As an IT admin, I want to use Remote Help on Windows so that we can troubleshoot and assist users such as Frontline Workers.
 ms.reviewer: Karawang
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

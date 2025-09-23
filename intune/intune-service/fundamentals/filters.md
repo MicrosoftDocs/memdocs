@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Create filters in Microsoft Intune
 description: Learn more about policy assignment filters, and see the steps to create, update, or delete a filter in Microsoft Intune. Create an assignment filter for managed devices or managed apps scenarios.
 author: MandiOhlinger

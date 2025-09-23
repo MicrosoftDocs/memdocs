@@ -1,14 +1,11 @@
 ---
-# required metadata
 title: Overview of Microsoft Surface Management Portal
 description: Learn more about the features and capabilities of Microsoft Surface Management Portal.
-keywords:
 author: Lenewsad
 ms.author: lanewsad
 ms.date: 10/28/2021
 ms.topic: concept-article
 ms.localizationpriority: high
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 ---

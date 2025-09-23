@@ -1,16 +1,11 @@
 ---
-# required metadata
-
 title: Unlicensed admins in Microsoft Intune | Microsoft Docs
 description: This article describes how to give unlicensed admins permissions to access Intune.
-keywords:
 author: BrenDuns
 ms.author: brenduns
 ms.date: 05/09/2025
 ms.topic: how-to
 ms.localizationpriority: high
-# CustomerIntent: As an  IT admin, I want to give other administrators access to Microsoft Intune without them requiring an Intune license so that right admins have the correct access.
-
 ms.collection:
 - M365-identity-device-management
 ---

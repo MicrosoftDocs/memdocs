@@ -1,16 +1,12 @@
 ---
-# required metadata
-
 title: Planning guide to move to Microsoft Intune
 description: Plan, design, implement, adopt, and move to Microsoft Intune. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
-keywords: mobile device management migration guide, migration guide, intune planning and configuration spreadsheet, intune deployment planning, design and implementation guide, intune deployment project plan
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/21/2025
 ms.topic: upgrade-and-migration-article
 ms.localizationpriority: high
 ms.reviewer: dougeby
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

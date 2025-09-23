@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Intune settings for the iOS/iPadOS Classroom app
 description: Learn the Intune settings you can use to control settings for the Classroom app on iOS/iPadOS devices.
 author: lenewsad
@@ -9,8 +7,6 @@ ms.date: 11/14/2019
 ms.topic: archived
 
 #ROBOTS: NOINDEX
-#audience:
-
 ms.reviewer: derriw
 ms.collection:
 - M365-identity-device-management

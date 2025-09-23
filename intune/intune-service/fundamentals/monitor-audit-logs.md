@@ -1,15 +1,11 @@
 ---
-# required metadata
-
 title: Audit changes and events in Microsoft Intune
 description: Learn how to review audit logs that record Microsoft Intune activities.
-keywords:
 ms.author: mandia
 author: MandiOhlinger
 ms.date: 03/17/2025
 ms.topic: how-to
 
-#ms.suite: ems
 #ms.custom:
 ms.collection:
 - M365-identity-device-management

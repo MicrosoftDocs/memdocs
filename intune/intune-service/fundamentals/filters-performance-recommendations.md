@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Performance recommendations when using filters
 description: When using filters in Microsoft Intune, use Intune virtual groups that don't require Microsoft Entra ID syncing. To improve performance, reuse groups, make incremental group changes, and use filters to include and exclude.
 author: MandiOhlinger

@@ -1,16 +1,10 @@
 ---
-# required metadata
-
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: laurawi
 ms.author: brenduns
 ms.date: 09/17/2025
 ms.topic: article
-
-
-#audience:
-
 ms.reviewer: intuner
 ms.collection:
 - M365-identity-device-management

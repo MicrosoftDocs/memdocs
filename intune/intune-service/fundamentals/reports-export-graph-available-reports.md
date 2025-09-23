@@ -1,16 +1,11 @@
 ---
-# required metadata
-
 title: Intune Graph API - Reports and properties | Microsoft Docs
 description: Learn about Intune reports and properties provided via Graph API.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
 ms.date: 09/08/2025
 ms.topic: article
-
 ms.reviewer: davidra
-#ms.suite: ems
 #ms.custom:
 ms.collection:
 - M365-identity-device-management

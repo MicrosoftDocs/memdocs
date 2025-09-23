@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Create a custom role in Intune
 description: Learn how to create a custom role in Microsoft Intune.
 author: brenduns

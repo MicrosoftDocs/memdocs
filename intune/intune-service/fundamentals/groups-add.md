@@ -1,13 +1,10 @@
 ---
-# required metadata
-
 title: Add groups to organize users and devices for Microsoft Intune
 description: Create Microsoft Entra groups to organize users and devices for use with Microsoft Intune.
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 06/23/2025
 ms.topic: how-to
-#customer intent: As an IT admin, I want to add groups, so that users and devices are organized.
 ms.localizationpriority: high
 ms.reviewer: scottduf
 ms.collection:

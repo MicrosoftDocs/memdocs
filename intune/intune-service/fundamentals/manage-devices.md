@@ -1,17 +1,12 @@
 ---
-# required metadata
-
 title: Manage and secure devices overview
 description: Get an overview of the concepts and features you should know when managing devices that access organization resources in Microsoft Intune. You can manage new and existing devices, including BYOD personal devices, check health compliance and view reports, configure device features, and secure devices using mobile threat solutions.
-keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 ms.date: 02/20/2025
 ms.topic: article
 ms.localizationpriority: high
-#audience:
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

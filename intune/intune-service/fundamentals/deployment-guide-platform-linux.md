@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Deployment guide for Linux device management | Microsoft Intune
 description: Use our platform deployment guide to set up Linux device management in Microsoft Intune.
 author: lenewsad

@@ -2,16 +2,13 @@
 
 title: Assign Microsoft Intune licenses
 description: Assign licenses to users so they can enroll in Intune
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 01/24/2025
 ms.topic: how-to
 ms.localizationpriority: high
 #ROBOTS:
-
 ms.reviewer: amsaeedi
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

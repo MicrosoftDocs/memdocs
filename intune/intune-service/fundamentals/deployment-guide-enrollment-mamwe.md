@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune
 description: Use mobile application management without enrollment to deploy apps, and protect organization data within the apps. Get an overview of the administrator and end user tasks for this enrollment option.
 author: MandiOhlinger

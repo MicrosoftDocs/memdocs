@@ -1,14 +1,12 @@
 ---
 title: Use Remote Help to assist users authenticated by your organization.
 description: With the Remote Help app, provide remote assistance to authenticated users who also run the Remote Help app.
-keywords:
 author: lenewsad
 ms.author: lanewsad
 ms.date: 03/18/2025
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: karawang
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

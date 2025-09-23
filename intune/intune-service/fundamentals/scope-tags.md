@@ -1,17 +1,10 @@
 ---
-# required metadata
-
 title: Use role-based access control (RBAC) and scope tags for distributed IT
 description: Use role-based access control (RBAC) and scope tags to filter configuration profiles to specific roles.
-keywords:
 author: brenduns
 ms.author: brenduns
 ms.date: 06/06/2025
 ms.topic: how-to
-
-# CustomerIntent: As an  IT admin, I want to create and use scope tags so that right admins have the correct access and visibility to the required Intune objects.
-
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

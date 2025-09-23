@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: High-level architecture for Microsoft Intune
 description: This reference architecture shows options for integrating Microsoft Intune in your Azure environment with Microsoft Entra ID.
 author: nicholasswhite
@@ -9,7 +7,6 @@ ms.date: 02/25/2025
 ms.topic: article
 ms.localizationpriority: high
 ms.reviewer: davidra
-#ms.suite: ems
 #ms.custom:
 ms.collection:
 - M365-identity-device-management

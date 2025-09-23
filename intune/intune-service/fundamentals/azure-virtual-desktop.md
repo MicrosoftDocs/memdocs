@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Using Azure Virtual Desktop single-session with Microsoft Intune
 description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Intune.
 author: MandiOhlinger

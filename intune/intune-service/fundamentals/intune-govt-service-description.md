@@ -1,15 +1,10 @@
 ---
-# required metadata
-
 title: Microsoft Intune Government Service overview
 description: Learn more about the Intune government service offerings and features. This article is designed to serve as an overview of the Microsoft Intune offering for government community cloud (GCC) High and United States Department of Defense (DoD) environments.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/11/2025
 ms.topic: overview
-ms.suite: ems
-
 ms.reviewer: pfetty
 ms.collection:
 - M365-identity-device-management

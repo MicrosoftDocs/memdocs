@@ -1,15 +1,11 @@
 ---
-# required metadata
-
 title: Microsoft Intune built-in roles reference
 description: Permissions reference for built-in roles for Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
 ms.date: 06/14/2025
 ms.topic: reference
 
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 ---

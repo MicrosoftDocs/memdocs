@@ -1,16 +1,11 @@
 ---
-# required metadata
-
 title: Manage and secure apps overview
 description: Get an overview of the concepts and features you should know when managing apps that access organization resources in Microsoft Intune. You can deploy apps used by your organization, including Microsoft Edge and Microsoft 365. You can also configure apps, protect apps on organizations owned and BYOD personal devices, and update apps that you deploy.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 02/19/2025
 ms.topic: article
 ms.localizationpriority: high
-#audience:
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

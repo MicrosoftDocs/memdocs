@@ -1,19 +1,12 @@
 ---
-# required metadata
-
 title: Tutorial - Walkthrough the Microsoft Intune admin center
 description: In this tutorial, you will tour Microsoft Intune in the Microsoft Intune admin center to better understand how to accomplish tasks.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
 ms.date: 02/04/2025
 ms.topic: tutorial
 ms.localizationpriority: high
-Customer intent: As an Intune admin, I want to learn where to find the different features in Intune from the Microsoft Intune admin center.
-
-
 ms.reviewer: tycast
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri

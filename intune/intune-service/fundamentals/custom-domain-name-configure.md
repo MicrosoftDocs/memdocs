@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Configure a custom domain name
 description: Add a custom domain name for your Microsoft Intune subscription
 author: paolomatarazzo

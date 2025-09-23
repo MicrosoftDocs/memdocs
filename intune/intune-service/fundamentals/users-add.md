@@ -1,16 +1,13 @@
 ---
 title: Add users to Microsoft Intune
 description: Learn how to add and managing Microsoft Entra user accounts from within Microsoft Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.localizationpriority: high
 #ROBOTS:
-
 ms.reviewer: dougeby
-ms.suite: ems
 ms.collection:
 - M365-identity-device-management
 - highpri
