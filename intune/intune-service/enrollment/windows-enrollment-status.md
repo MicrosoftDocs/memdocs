@@ -1,32 +1,11 @@
 ---
-# required metadata
-
 title: Set up the Enrollment Status Page in the admin center copy
-titleSuffix: Microsoft Intune
 description: Set up a greeting page for users signing in and enrolling Windows devices copy.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
 ms.date: 09/09/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
-ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: madakeva
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

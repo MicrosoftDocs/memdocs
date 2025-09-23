@@ -1,25 +1,17 @@
 ---
-
 title: Microsoft Security Copilot agents in Microsoft Intune
 description: Learn about Security Copilot agents in Microsoft Intune
-author: brenduns
-ms.author: brenduns
-manager: dougeby
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: overview
-ms.service: security-copilot
 ms.localizationpriority: high
 ms.reviewer: idaewor
 ms.collection:
 - security-copilot
 - msec-ai-copilot
-- tier1
 - essentials
 - get-started
 
-search.appverid: MET150
-keywords: NOCSH
 audience: ITPro
 
 ---
@@ -68,7 +60,7 @@ The agent requires the following products:
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
 #### Role-based access
-**Intune Requirements:**  
+**Intune Requirements:**
 To set up the agent or view agent results, admins must be assigned an Intune license and be assigned either a built-in or custom Intune role-based access control (RBAC) role that grants the following permissions:
 
 - Managed apps / read
@@ -77,22 +69,22 @@ To set up the agent or view agent results, admins must be assigned an Intune lic
 
 The least privileged built-in role that includes these permissions is [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator).
 
-**Microsoft Defender Requirements:**  
+**Microsoft Defender Requirements:**
 The account used by the agent for its identity must be assigned permissions that align with the following Microsoft Defender XDR RBAC configurations. The specific configuration depends on whether your Defender XDR implementation uses [Unified RBAC](/defender-xdr/manage-rbac) or a [granular RBAC](/defender-endpoint/rbac) configuration:
 
 - **Unified RBAC:** Assign the Microsoft Entra ID *Security Reader* to the agent's identity account. This role provides read-only access to Defender Vulnerability Management data and automatically enforces device group scoping.
-  
+
   For details about mapping permissions to the Unified RBAC Security Reader role, see [Microsoft Entra Global roles access](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access) in the *Map Microsoft Defender XDR Unified role-based access control (RBAC)* article in the Defender documentation.
 
 - **Granular RBAC:** Assign a custom RBAC role with permissions equivalent to the Unified RBAC *Security Reader* role. For example, the permission **View data – Defender Vulnerability Management** is required, as it maps to the Unified RBAC permission of **Security posture / Posture management / Vulnerability management (read)**.
 
 Ensure the agent’s identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 
-**Security Copilot Roles:**  
+**Security Copilot Roles:**
 - To set up or remove an agent, the admin must be a [Copilot **owner**](/copilot/security/authentication).
 - To work with the installed agent, the admin must be a [Copilot **contributor**](/copilot/security/authentication).
 
-<!--  
+<!--
 For an Intune administrator (admin) to successfully manage or use the Vulnerability Remediation Agent, they must be assigned the role-based access controls (RBAC) for Intune, Microsoft Defender, and Security Copilot as described in the following sections.
 
 When assigning RBAC roles and permissions to admins to manage and use the agent, assign the least privileged built-in RBAC role or a custom role that includes the minimum permissions ￼required to complete their administrative tasks.
@@ -100,7 +92,7 @@ When assigning RBAC roles and permissions to admins to manage and use the agent,
 | Action | Microsoft Intune | Microsoft Defender | Security Copilot |
 |--------|------------------|--------------------|------------------|
 | **Set Up and Removal**        | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Microsoft Entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role. | The admin must be a [Copilot owner](/copilot/security/authentication). |
-| **Work with Installed Agent** | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Microsoft Entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role. | The admin must be a [Copilot contributor](/copilot/security/authentication). |     --> 
+| **Work with Installed Agent** | Admin must be assigned an Intune license. Permissions (built-in or custom role) must include: <br><br> - Managed apps/read <br> - Mobile apps/read <br> - Device configurations/read <br><br>Least privileged Intune built-in role: [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator). | The admin must have permissions equal to the Microsoft Entra [Security reader](/defender-endpoint/prepare-deployment#role-based-access-control) role. | The admin must be a [Copilot contributor](/copilot/security/authentication). |     -->
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Data that the agent reports is made visible through agent suggestions. This data might be visible to admins with access to view the agent within the Intune admin center, even when that data is outside the admins assigned Intune roles or scope.
