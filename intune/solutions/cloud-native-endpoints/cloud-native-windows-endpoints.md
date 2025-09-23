@@ -59,7 +59,7 @@ This feature applies to:
 > You can use this guide combined with *Windows in cloud configuration* to customize the pre-built experience even more.
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
 ## How to get started
 
