@@ -164,7 +164,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
   For more specific information, go to:
 
-  - [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](../apps/apps-add-office365.md)
+  - [Add Microsoft 365 Apps to Windows devices with Microsoft Intune](../apps/apps-add-office365.md)
   - [Microsoft 365 docs: Manage devices with Intune](/microsoft-365/solutions/manage-devices-with-intune-overview)
 
 - **[Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint)** to help enterprises prevent, detect, investigate, and respond to threats

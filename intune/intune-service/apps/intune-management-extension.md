@@ -1,28 +1,10 @@
 ---
-# required metadata
-
 title: Understand Microsoft Intune management extension
 description: Understand Microsoft Intune management extension for Windows.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 08/26/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
 ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management

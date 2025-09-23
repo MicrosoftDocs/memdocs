@@ -259,6 +259,7 @@ Two compliance policies:
 ## Require managing email profile (required for selective wipe on iOS)
 
 Requiring this setting was never supported for Windows or Android compliance in Basic Mobility and Security.
+
 Windows email was never supported for Windows 10 in Basic Mobility and Security.
 
 For Android, this setting was only supported on Samsung Knox devices in Basic Mobility and Security.
@@ -317,9 +318,9 @@ The following settings aren't deployed by device security policies. But when dep
 | iOS | Block sending Email from third party addresses | false |
 | iOS | Block syncing recently used email addresses | false |
 | iOS | Require S/mime | false |
-| Windows 10 | Sync Contacts | true |
-| Windows 10 | Sync Calendar | true |
-| Windows 10 | Sync Tasks | true |
+| Windows | Sync Contacts | true |
+| Windows | Sync Calendar | true |
+| Windows | Sync Tasks | true |
 
 ## Related articles
 

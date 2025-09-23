@@ -63,7 +63,7 @@ This feature applies to:
   - Android (AOSP)
   - iOS/iPadOS
   - macOS
-  - Windows 10/11
+  - Windows
 
 - **Managed apps** on the following platforms:
 

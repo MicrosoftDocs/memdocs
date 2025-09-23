@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Using Windows 10 virtual machines with Microsoft Intune
+title: Using Windows virtual machines with Microsoft Intune
 titleSuffix: Microsoft Intune
-description: This article describes the general guidelines for using Windows 10 virtual machines with Microsoft Intune
+description: This article describes the general guidelines for using Windows 10/11 virtual machines with Microsoft Intune
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -16,7 +16,7 @@ ms.localizationpriority: high
 ms.assetid: 
 
 # optional metadata
-# CustomerIntent: As an  IT admin, I want to understand the guidelines for virtual machines running on Windows 10 enterprise so that I can manage the virtual machines running on Windows 10 Enterprise.
+# CustomerIntent: As an  IT admin, I want to understand the guidelines for virtual machines running on Windows Enterprise so that I can manage the virtual machines running on Windows Enterprise.
 
 #ROBOTS:
 #audience:
@@ -31,9 +31,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Using Windows 10/11 virtual machines with Intune
+# Using Windows virtual machines with Intune
 
-Intune supports managing virtual machines running Windows 10 Enterprise with certain limitations. Intune management doesn't depend on, or interfere with Azure Virtual Desktop management of the same virtual machine.
+Intune supports managing virtual machines running Windows Enterprise with certain limitations. Intune management doesn't depend on, or interfere with Azure Virtual Desktop management of the same virtual machine.
 
 ## Enrollment
 
