@@ -38,16 +38,16 @@ Filters support some of the different workloads available in Microsoft Intune. T
 
 This article assumes you're familiar with filters. If not, learn more at [Use filters when assigning your apps, policies, and profiles](filters.md).
 
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
-> [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Before you begin
 
 - ✅: Supports filters.
 - ❌: Doesn't support filters.
 - N/A: Doesn't apply to the platform.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Supported app types for managed devices
 
