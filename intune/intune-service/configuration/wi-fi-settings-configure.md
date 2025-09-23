@@ -97,7 +97,7 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
     - [Android](wi-fi-settings-android-enterprise.md), including dedicated devices
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
-    - [Windows 10/11](wi-fi-settings-windows.md)
+    - [Windows](wi-fi-settings-windows.md)
     - [Windows 8.1 and newer](wi-fi-settings-import-windows-8-1.md), including Windows Holographic for Business
     - [Android device administrator](wi-fi-settings-android.md)
 

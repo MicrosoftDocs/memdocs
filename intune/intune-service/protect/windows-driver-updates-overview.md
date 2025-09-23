@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Learn about Windows Driver updates policy for Windows 10 Windows 11 devices in Intune
-description: Learn about using Microsoft Intune policy to manage Windows driver updates on your Windows 10 and Windows 11 devices.
+title: Learn about Windows Driver updates policy for Windows devices in Intune
+description: Learn about using Microsoft Intune policy to manage Windows driver updates.
 keywords:
 author: paolomatarazzo
 ms.author: paoloma
@@ -33,7 +33,7 @@ ms.collection:
 
 # Windows Driver update management in Microsoft Intune
 
-With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Intune and the Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and Windows Autopatch sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
+With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows devices. Intune and the Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and Windows Autopatch sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
 
 Using Windows driver update policies, you remain in control of which driver updates can install on your devices. You can:
 
@@ -56,8 +56,7 @@ Regardless of the policy configuration and the drivers included, only approved d
 
 Windows driver update management applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 ## Prerequisites
 
@@ -78,8 +77,8 @@ To use Windows Driver Update management, your organization must have the followi
 
 Your organization must have one of the following subscriptions that include a license for Windows Autopatch:
 
-- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access E3 or E5
 - Microsoft 365 Business Premium
 
@@ -91,7 +90,7 @@ If you're blocked when creating new policies for capabilities that require Windo
 
 **Windows editions**:
 
-Driver updates are supported for the following Windows 10/11 editions:
+Driver updates are supported for the following Windows editions:
 
 - Pro
 - Enterprise
@@ -100,17 +99,17 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 > [!NOTE]
 > **Unsupported versions and editions**:
-> *Windows 10/11 Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, available under the **Windows 10 and later** blade don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
+> *Windows Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, available under the **Windows 10 and later** blade don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
 
 **Devices must**:
 
-- Run a version of Windows 10/11 that remains in support.
+- Run a version of Windows that remains in support.
 
 - Be enrolled in Intune MDM and be Hybrid AD joined or Microsoft Entra joined.
 
 - Have Telemetry turned on and configured to report a minimum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.
 
-  You can use one of the following Intune device configuration profile paths to configure Telemetry for Windows 10 or Windows 11 devices:
+  You can use one of the following Intune device configuration profile paths to configure Telemetry for Windows devices:
   - **[Device restriction template](../configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
   - **[Settings catalog](../configuration/settings-catalog.md)**: From the Settings catalog, add **Allow Telemetry** from the **System** category, and set it to **Basic**. *Full* is also supported.
 
@@ -155,7 +154,7 @@ For more information, see [Role-based access control for Microsoft Intune](../fu
 
 Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for other capabilities that aren't supported for WPJ devices.
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md).
 
 ## Architecture
 
@@ -327,7 +326,7 @@ Here are some more details on when deadlines are applied to drivers:
 ### How do I set deferrals for drivers?
 
 - The deferral period set for Quality Updates within the Update Rings policy does not apply to drivers that are approved using the Driver Update Policy. Instead, use the deferral setting in the Driver policy to set a deferral.  In fact, using multiple driver policies with different deferral settings to create driver deployment rings is highly recommended. Remember to only assign a device to one driver policy.
-  
+
 > [!NOTE]
 > The deferral period only applies to automatically approved driver and firmware updates. An admin must specify the date to start offering a driver with any manual approval.
 

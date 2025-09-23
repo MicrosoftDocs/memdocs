@@ -37,8 +37,7 @@ In this scenario, you create a settings catalog policy in Intune that updates Mi
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 - Microsoft 365
 
 ## Prerequisites

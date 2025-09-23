@@ -68,4 +68,4 @@ For more information on this feature in Intune, see [Control access, accounts, a
 ## Related articles
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- See the shared user device settings for [Windows 10/11](shared-user-device-settings-windows.md).
+- See the shared user device settings for [Windows](shared-user-device-settings-windows.md).

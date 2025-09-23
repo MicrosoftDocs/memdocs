@@ -51,7 +51,7 @@ This article shows you how to create the policy in Intune, and includes an XML e
 
 > [!IMPORTANT]
 >
-> - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this error happens, the Wi-Fi profile is properly assigned to the device, and the profile does work as expected.
+> - Using a pre-shared key with Windows causes a remediation error to show in Intune. When this error happens, the Wi-Fi profile is properly assigned to the device, and the profile does work as expected.
 > - If you export a Wi-Fi profile that includes a pre-shared key, be sure the file is protected. The key is in plain text. It's your responsibility to protect the key.
 
 ## Prerequisites
@@ -128,7 +128,7 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 
 - `<protected>false</protected>` must be set to **false**. When **true**, it could cause the device to expect an encrypted password, and then try to decrypt it; which can result in a failed connection.
 
-- `<hex>53534944</hex>` should be set to the hexadecimal value of `<name><SSID of wifi profile></name>`. Windows 10/11 devices can return a false `x87D1FDE8 Remediation failed` error, but the device still contains the profile.
+- `<hex>53534944</hex>` should be set to the hexadecimal value of `<name><SSID of wifi profile></name>`. Windows devices can return a false `x87D1FDE8 Remediation failed` error, but the device still contains the profile.
 
 - XML has special characters, like the `&` (ampersand). Using special characters can prevent the XML from working as expected.
 

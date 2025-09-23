@@ -131,7 +131,7 @@ The following security baseline instances are available for use with Intune. Use
 
 When a new version for a profile becomes available, settings in profiles based on the older versions become read-only. You can continue to use those older profiles. You can also edit the profile names, description, and assignments, but they don't support a change to their settings configuration and you can't create new profiles based on the older versions.
 
-When you're ready to use the more recent baseline version, you can create new profiles or update your existing profiles to the new version. See [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-a-profile-to-the-latest-version) in the *Manage security baseline profiles* article.
+When you're ready to use the more recent baseline version, you can create new profiles or update your existing profiles to the new version. See [Update a baseline profile to the latest version](../protect/security-baselines-configure.md#update-a-baseline-to-the-latest-version) in the *Manage security baseline profiles* article.
 
 ## About baseline versions and instances
 
@@ -146,7 +146,7 @@ You can view the list of available baselines in the [Microsoft Intune admin cent
 
 To view more information about the baseline versions you use, select a baseline type, like *Security Baseline for Windows 10 and later* to open its *Profiles* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. The details include the most recent and current baseline version. You can select a single version to view deeper details about the profiles that use that version.
 
-You can choose to [change the version](../protect/security-baselines-configure.md#update-a-profile-to-the-latest-version) of a baseline that's in use with a given profile. When you change the version, you don't have to create a new baseline profile to take advantage of updated versions. Instead you can select a baseline profile and use the built-in option to change the instance version for that profile to a new one.
+You can choose to [change the version](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version) of a baseline that's in use with a given profile. When you change the version, you don't have to create a new baseline profile to take advantage of updated versions. Instead you can select a baseline profile and use the built-in option to change the instance version for that profile to a new one.
 
 ## Avoid conflicts
 

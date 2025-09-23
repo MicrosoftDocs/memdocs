@@ -37,7 +37,7 @@ This feature applies to:
 - Android device administrator
 - iOS/iPadOS
 - macOS
-- Windows 10/11
+- Windows
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
@@ -75,7 +75,7 @@ This article shows you how to create a custom device configuration profile in In
     - [Android device administrator](custom-settings-android.md)
     - [iOS/iPadOS](custom-settings-ios.md)
     - [macOS](custom-settings-macos.md)
-    - [Windows 10/11](custom-settings-windows-10.md)
+    - [Windows](custom-settings-windows-10.md)
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
 
 8. Select **Next**.

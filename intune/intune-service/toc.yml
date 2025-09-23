@@ -105,6 +105,8 @@ items:
     - name: Copilot in Surface Management Portal
       displayName: ai, copilot, surface, models, fleet, warranty
       href: ./copilot/security-copilot-surface-portal.md
+    - name: Copilot in Windows 365 Cloud PCs
+      href: /windows-365/enterprise/copilot-in-intune-for-windows365?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
     - name: Security Copilot agents in Microsoft Intune
       href: ./copilot/security-copilot-agents-intune.md
 
@@ -378,6 +380,11 @@ items:
       - name: Configure multiple admin approvals
         href: ./fundamentals/multi-admin-approval.md
         displayName: multi-admin approval, maa
+
+    - name: Configure security recommendations using Zero Trust
+      items:
+      - name: Configure security recommendations using Zero Trust
+        href: ./protect/zero-trust-configure-security.md
 
   - name: Create and deploy Intune policies
     items:
@@ -738,10 +745,6 @@ items:
                   href: ./apps/app-protection-policy-extensions.md
                 - name: Monitor app protection user status
                   href: ./apps/app-protection-policies-monitor.md
-                - name: Get ready for WIP app protection policies
-                  href: ./apps/app-protection-policies-configure-windows-10.md
-                - name: Create & assign WIP app protection policies
-                  href: ./apps/windows-information-protection-policy-create.md
                 - name: Manage data transfer between iOS apps
                   href: ./apps/data-transfer-between-apps-manage-ios.md
               - name: Review app protection logs
@@ -1276,7 +1279,7 @@ items:
       - name: Create a profile
         displayName: android, ios, ipados, macos, windows
         href: ./configuration/device-profile-create.md
-      - name: Monitor a profile
+      - name: View and monitor profiles
         displayName: android, ios, ipados, macos, windows
         href: ./configuration/device-profile-monitor.md
 
@@ -2510,5 +2513,3 @@ items:
       href: ./protect/privacy-data-view-correct.md
     - name: Audit, export, delete
       href: ./protect/privacy-data-audit-export-delete.md
-    - name: Windows Information Protection
-      href: ./protect/windows-information-protection-configure.md
