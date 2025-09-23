@@ -1,16 +1,8 @@
 ---
 title: What is Endpoint analytics?
-titleSuffix: Microsoft Intune
 description: Overview for Endpoint analytics.
 ms.date: 02/28/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: overview
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-#Customer intent: As an Intune or Configuration Manager admin, I want to have visibility into the end-user experience so that I can improve it.
-ms.localizationpriority: high
 ms.collection: highpri
 ---
 
@@ -120,7 +112,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 |-----------|-----------|
 | `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](data-collection.md#bkmk_datacollection) to the Intune data collection endpoint. |
 
->[!Important]  
+>[!Important]
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
 ## Next steps

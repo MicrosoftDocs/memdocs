@@ -179,9 +179,9 @@ To learn more about these settings, see [Android Intune settings catalog setting
 
 ### Device management
 
-#### Device category management supports multiple administrative approval<!-- 26838632 -->
+#### Device category management supports Multi Admin Approval<!-- 26838632 -->
 
-Intune [device categories](../enrollment/device-group-mapping.md) support multiple administrative approval (MAA). When MAA is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it’s applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
+Intune [device categories](../enrollment/device-group-mapping.md) support Multi Admin Approval. When Multi Admin Approval is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it’s applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
@@ -566,13 +566,13 @@ For more information about Linux enrollment, see [Linux device enrollment guide 
 
 ### Device management
 
-#### Wipe remote action supports multiple administrative approval (MAA)<!-- 27043113 -->
+#### Wipe remote action supports Multi Admin Approval<!-- 27043113 -->
 
-When you use the multiple administrative approval (MAA) feature, you require a second admin account to approve a change before the change is applied.
+When you use the Multi Admin Approval feature, you require a second admin account to approve a change before the change is applied.
 
-The **[Wipe](../remote-actions/devices-wipe.md)** remote action supports MAA. Use MAA with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
+The **[Wipe](../remote-actions/devices-wipe.md)** remote action supports Multi Admin Approval. Use Multi Admin Approval with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
 
-For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
+For more information on Multi Admin Approval, see [Use Multi Admin Approval in Intune](../fundamentals/multi-admin-approval.md).
 
 #### Configure Windows Backup for Organizations (public preview)<!-- 33829628 -->
 
@@ -637,9 +637,9 @@ For more information about the changes behind these reports, see [Support tip: M
 
 ### Role-based access control
 
-#### Multi-administrator approval support for role-based access control<!-- 26838684 -->
+#### Multi Admin Approval support for role-based access control<!-- 26838684 -->
 
-Multi-administrator approval (MAA) now supports role-based access control. When enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
+Multi Admin Approval now supports role-based access control. When enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
 
 For more information, see [Role-based access control in Microsoft Intune](../fundamentals/role-based-access-control.md).
 

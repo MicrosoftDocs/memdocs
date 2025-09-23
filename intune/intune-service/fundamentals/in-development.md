@@ -198,7 +198,7 @@ You will be able to edit the Managed Google Play organization name directly in t
 
 ### Configure Windows Backup for Organizations<!--29202026 -->
 
-A new feature called *Windows Backup for Organizations* will be soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md). 
+A new feature called *Windows Backup for Organizations* will be soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md). 
 
 <!-- *********************************************** -->
 
@@ -294,6 +294,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
+
 ## Monitor and troubleshoot
 
 ### Enrollment time grouping failure report to be generally available for Android and Windows <!-- 33290045 -->
@@ -305,7 +306,6 @@ Soon to be generally available in the Microsoft Intune admin center, the enrollm
 - Enrollment of Android Enterprise dedicated devices.
 
 The enrollment time grouping failures report will be available in the admin center under **Devices** > **Monitor** > **Enrollment time grouping failures**. Recently updated information could take up to 20 minutes to appear in the report.
-
 
 <!-- *********************************************** -->
 

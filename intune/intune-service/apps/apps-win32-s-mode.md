@@ -1,22 +1,9 @@
 ---
 title: Enable Win32 apps on S mode devices
-titleSuffix: Microsoft Intune
 description: Learn how to enable Win32 apps on S mode devices using Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 11/21/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
