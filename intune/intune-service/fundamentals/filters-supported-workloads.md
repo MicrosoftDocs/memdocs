@@ -40,7 +40,7 @@ This article assumes you're familiar with filters. If not, learn more at [Use fi
 
 > [!IMPORTANT]
 > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
->
+
 > [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Before you begin
