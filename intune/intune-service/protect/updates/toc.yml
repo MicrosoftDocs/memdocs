@@ -12,11 +12,11 @@ items:
     href: ../managed-software-updates-ios-macos.md
   - name: Software update reports
     href: ../software-updates-reports-apple-declarative-based.md
-  - name: Update policies
+  - name: Update policies (deprecated)
     items:
-    - name: iOS/iPadOS update policies
+    - name: iOS/iPadOS update policies (deprecated)
       href: ../software-updates-ios.md
-    - name: macOS update policies
+    - name: macOS update policies (deprecated)
       href: ../software-updates-macos.md
 - name: Windows updates
   items:

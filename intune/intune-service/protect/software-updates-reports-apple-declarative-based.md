@@ -3,7 +3,7 @@ title: View declarative device management-based software update reports for Appl
 description: Use Microsoft Intune to software updates reports for managed Apple devices based on Apples declarative device management capabilities.
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 08/18/2025
+ms.date: 09/24/2025
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -15,7 +15,7 @@ ms.collection:
 
 # Declarative software update reports for Apple devices in Microsoft Intune
 
-Microsoft Intune’s declarative Apple software update reports for Apple devices relies on a reporting model that's part of Apple devices that provides near real-time status for Apple software updates. Intune surfaces the update status from this reporting model through several reports that include the status information as reported directly by each Apple device, each time the device’s software update status changes.
+Microsoft Intune's declarative Apple software update reports for Apple devices relies on a reporting model that's part of Apple devices that provides near real-time status for Apple software updates. Intune surfaces the update status from this reporting model through several reports that include the status information as reported directly by each Apple device, each time the device's software update status changes.
 
 
 Available reports include:
@@ -74,7 +74,7 @@ Details available in this report include:
 - An option to *Refresh* the report view.
 - An option to *Export* the report details as a comma-separated values (.csv) file.
 
-To find this report, in the admin center go to *Devices* > *Monitor*, and then select the report’s name to view the report details.
+To find this report, in the admin center go to *Devices* > *Monitor*, and then select the report's name to view the report details.
 
 <!-- Image is pending availability
 The following image is an example of the Apple update failures report for a test tenant:
@@ -88,9 +88,9 @@ As an organizational report, use the **Apple software update report** to view de
 
 Details available in this report include:
 
--	When the report view was last generated (refreshed)
--	A chart view that identifies device counts for each software update status type
--	A list of devices with their most recent update status, which includes the device name, platform, current OS version, pending OS version, and more.
+-    When the report view was last generated (refreshed)
+-    A chart view that identifies device counts for each software update status type
+-    A list of devices with their most recent update status, which includes the device name, platform, current OS version, pending OS version, and more.
 
 This report supports filters to focus results by platforms and update installation status. When you select the *Generate* button the report fetches relevant details for display based on the filters that are selected for platforms and update install states. The report also includes an option to *Export* the report details as a comma-separated values (.csv) file.
 
@@ -106,10 +106,10 @@ With the Apple software update **Summary** view, you monitor details about pendi
 
 This summary view presents the following for each device platform:
 
--	When the summary was last refreshed
--	The latest update that is available for the platform
--	When the latest update became available
--	A chart view that identifies device counts for each software update status category
+-    When the summary was last refreshed
+-    The latest update that is available for the platform
+-    When the latest update became available
+-    A chart view that identifies device counts for each software update status category
 
 To find this report, in the admin center go to *Reports* > *Device management* > *Apple updates*, select the *Summary* tab.
 
