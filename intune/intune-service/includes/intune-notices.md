@@ -1,39 +1,34 @@
 ---
-title: include file
-description: include file
-author: dougeby  
-ms.service: microsoft-intune
+author: dougeby
 ms.topic: include
 ms.date: 4/8/2025
 ms.author: dougeby
-manager: dougeby
-ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
 ### Update firewall configurations to include new Intune network endpoints
 
-As part of Microsoft’s ongoing [Secure Future Initiative (SFI)](https://www.microsoft.com/trust-center/security/secure-future-initiative), starting on or shortly after **December 2, 2025**, the network service endpoints for Microsoft Intune  will also use the Azure Front Door IP addresses. This improvement supports better alignment with modern security practices and over time will make it easier for organizations using multiple Microsoft products to manage and maintain their firewall configurations. As a result, customers may be required to add these network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allowlist that allows outbound traffic based on IP addresses or Azure service tags.
+As part of Microsoft's ongoing [Secure Future Initiative (SFI)](https://www.microsoft.com/trust-center/security/secure-future-initiative), starting on or shortly after **December 2, 2025**, the network service endpoints for Microsoft Intune  will also use the Azure Front Door IP addresses. This improvement supports better alignment with modern security practices and over time will make it easier for organizations using multiple Microsoft products to manage and maintain their firewall configurations. As a result, customers may be required to add these network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allowlist that allows outbound traffic based on IP addresses or Azure service tags.
 
 Don't remove any existing network endpoints required for Microsoft Intune. Additional network endpoints are documented as part of the Azure Front Door and service tags information referenced in the files linked below:
 
 - Public clouds: Download Azure IP Ranges and Service Tags – [Public Cloud from Official Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=56519)
 - Government clouds: Download Azure IP Ranges and Service Tags – [US Government Cloud from Official Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=57063)
 
-The additional ranges are those listed in the JSON files linked above and can be found by searching for “AzureFrontDoor.MicrosoftSecurity”.
+The additional ranges are those listed in the JSON files linked above and can be found by searching for "AzureFrontDoor.MicrosoftSecurity".
 
 #### How does this change affect you or your users?
 
-If you've configured an outbound traffic policy for Intune IP address ranges or Azure service tags for your firewalls, routers, proxy servers, client-based firewalls, VPN or network security groups, you'll need to update them to include the new Azure Front Door ranges with the “AzureFrontDoor.MicrosoftSecurity” tag. 
+If you've configured an outbound traffic policy for Intune IP address ranges or Azure service tags for your firewalls, routers, proxy servers, client-based firewalls, VPN or network security groups, you'll need to update them to include the new Azure Front Door ranges with the "AzureFrontDoor.MicrosoftSecurity" tag.
 
-Intune requires internet access for devices under Intune management, whether for mobile device management or mobile application management. If your outbound traffic policy doesn’t include the new Azure Front Door IP address ranges, users may face login issues, devices might lose connectivity with Intune, and access to apps like the Intune Company Portal or those protected by app protection policies could be disrupted.
+Intune requires internet access for devices under Intune management, whether for mobile device management or mobile application management. If your outbound traffic policy doesn't include the new Azure Front Door IP address ranges, users may face login issues, devices might lose connectivity with Intune, and access to apps like the Intune Company Portal or those protected by app protection policies could be disrupted.
 
 #### How can you prepare?
 
-Ensure that your firewall rules are updated and added to your firewall’s allowlist with the additional IP addresses documented under Azure Front Door by **December 2, 2025**. 
+Ensure that your firewall rules are updated and added to your firewall's allowlist with the additional IP addresses documented under Azure Front Door by **December 2, 2025**.
 
-Alternatively, you may add the service tag “AzureFrontDoor.MicrosoftSecurity” to your firewall rules to allow outbound traffic on port 443 for the addresses in the tag. 
+Alternatively, you may add the service tag "AzureFrontDoor.MicrosoftSecurity" to your firewall rules to allow outbound traffic on port 443 for the addresses in the tag.
 
 If you aren't the IT admin who can make this change, notify your networking team. If you're responsible for configuring internet traffic, refer to the following documentation for more details:
 
@@ -56,7 +51,7 @@ After Windows 10 reaches the end of support, Microsoft Intune will continue to m
 - Support for updates and migration workflows to Windows 11.
 - Ability for ESU customers to deploy Windows security updates and maintain secure patch levels.
 
-Following Windows 10 end of support, the final release of Windows 10 (version 22H2) will be designated as an “allowed” version in Intune. While updates and new features are not available, devices running this version can still enroll in Intune and use eligible features, but functionality is not guaranteed and may vary.
+Following Windows 10 end of support, the final release of Windows 10 (version 22H2) will be designated as an "allowed" version in Intune. While updates and new features are not available, devices running this version can still enroll in Intune and use eligible features, but functionality is not guaranteed and may vary.
 
 #### How can you prepare?
 Use the **All devices** report in the Intune admin center to identify devices still running Windows 10 and upgrade eligible devices to Windows 11.
@@ -81,14 +76,14 @@ To support the upcoming release of iOS/iPadOS 26 and ensure continued app protec
 > Updating to SDK v21.0.0 or later requires your app to be registered with Microsoft Entra. Review the following GitHub announcements for more details on the specific impact:
 > - SDK for iOS: [App Registration Requirement Will be Enforced in Version 21.0.0+ | microsoftconnect/ms-intune-app-sdk-ios - Discussion #569](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/discussions/569)
 > - Wrapper for iOS: [-ac and -ar parameters will become required in version 21.0.0 | microsoftconnect/intune-app-wrapping-tool-ios - Discussion #136](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/discussions/136)
-> 
-> If you have questions or concerns, file an issue in the GitHub repository or reply directly to the GitHub announcement. 
+>
+> If you have questions or concerns, file an issue in the GitHub repository or reply directly to the GitHub announcement.
 
 As a best practice, always update your iOS/iPadOS apps to the latest App SDK or App Wrapping Tool to ensure that your app continues to run smoothly.
 
 #### How does this change affect you or your users?
 
-If you have applications using the Intune App SDK or Intune App Wrapping Tool, update to the latest version to support iOS/iPadOS 26. Updating to v21.0.0 or later requires that apps must be registered with Microsoft Entra. While it was previously possible for apps to enable Intune MAM without full Microsoft Entra configuration, this won't be supported starting with SDK 21.0.0. Apps that aren't properly registered may fail to function or receive app protection policies. 
+If you have applications using the Intune App SDK or Intune App Wrapping Tool, update to the latest version to support iOS/iPadOS 26. Updating to v21.0.0 or later requires that apps must be registered with Microsoft Entra. While it was previously possible for apps to enable Intune MAM without full Microsoft Entra configuration, this won't be supported starting with SDK 21.0.0. Apps that aren't properly registered may fail to function or receive app protection policies.
 
 #### How can you prepare?
 
@@ -100,7 +95,7 @@ If you have applications using the Intune App SDK or Intune App Wrapping Tool, u
     - For apps built with XCode 26 use v21.0.0 or later which is expected to release in September 2025.
 - Ensure your apps are registered in Microsoft Entra. For more details refer to: [How to register an app in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app)
 
-Notify your users as applicable, to ensure they upgrade their apps to the latest version prior to upgrading to iOS 26. You can review the Intune App SDK version in use by your users in the Microsoft Intune admin center by navigating to **Apps** > **Monitor** > **App protection status**, then review “Platform version” and “iOS SDK version”.  
+Notify your users as applicable, to ensure they upgrade their apps to the latest version prior to upgrading to iOS 26. You can review the Intune App SDK version in use by your users in the Microsoft Intune admin center by navigating to **Apps** > **Monitor** > **App protection status**, then review "Platform version" and "iOS SDK version".  
 
 ### Plan for Change: Intune is moving to support iOS/iPadOS 17 and later
 
@@ -143,17 +138,17 @@ Check your Intune reporting to see what devices or users might be affected. Go t
 
 ### Plan for Change: Google Play strong integrity definition update for Android 13 or above
 
-Google recently updated the definition of "Strong Integrity" for devices running Android 13 or above, requiring hardware-backed security signals and recent security updates. For more information refer to the [Android Developers Blog: Making the Play Integrity API faster, more resilient, and more private](https://android-developers.googleblog.com/2024/12/making-play-integrity-api-faster-resilient-private.html). Microsoft Intune will enforce this change by **September 30, 2025**. Until then we've adjusted app protection policy and compliance policy behavior to align with Google’s recommended backward compatibility guidance to minimize disruption as detailed in [Improved verdicts in Android 13 and later devices | Google Play | Android Developers](https://developer.android.com/google/play/integrity/improvements#how_can_i_use_the_old_meets-strong-integrity_label_definition_across_all_android_sdk_versions).
+Google recently updated the definition of "Strong Integrity" for devices running Android 13 or above, requiring hardware-backed security signals and recent security updates. For more information refer to the [Android Developers Blog: Making the Play Integrity API faster, more resilient, and more private](https://android-developers.googleblog.com/2024/12/making-play-integrity-api-faster-resilient-private.html). Microsoft Intune will enforce this change by **September 30, 2025**. Until then we've adjusted app protection policy and compliance policy behavior to align with Google's recommended backward compatibility guidance to minimize disruption as detailed in [Improved verdicts in Android 13 and later devices | Google Play | Android Developers](https://developer.android.com/google/play/integrity/improvements#how_can_i_use_the_old_meets-strong-integrity_label_definition_across_all_android_sdk_versions).
 
 #### How does this change affect you or your users?
 
-If you have targeted users with app protection policies and/or compliance policies that are using devices running Android 13 or above without a security update in the past 12 months, these devices will no longer meet the "Strong Integrity" standard. 
+If you have targeted users with app protection policies and/or compliance policies that are using devices running Android 13 or above without a security update in the past 12 months, these devices will no longer meet the "Strong Integrity" standard.
 
 **User Impact:** For users running devices on Android 13 or above after this change:
 - Devices without the latest security updates may be downgraded from "Strong Integrity" to "Device Integrity" which could result in conditional launch blocks for affected devices.
 - Devices without the latest security updates may see their devices become noncompliant in the Intune Company Portal app and could lose access to company resources based on your organization's Conditional Access policies.
 
-Note that devices running Android versions 12 or below aren't affected by this change. 
+Note that devices running Android versions 12 or below aren't affected by this change.
 
 #### How can you prepare?
 
@@ -164,8 +159,8 @@ Before September 30, 2025, review and update your policies as needed. Ensure use
 
 ### Plan for Change: New Intune connector for deploying Microsoft Entra hybrid joined devices using Windows Autopilot
 
-As part of Microsoft’s Secure Future Initiative, we recently released an update to the Intune Connector for Active Directory to use a Managed Service Account instead of a local SYSTEM account for deploying Microsoft Entra hybrid joined devices with Windows Autopilot. The new connector aims to enhance security by reducing unnecessary privileges and permissions associated with the local SYSTEM account.
- 
+As part of Microsoft's Secure Future Initiative, we recently released an update to the Intune Connector for Active Directory to use a Managed Service Account instead of a local SYSTEM account for deploying Microsoft Entra hybrid joined devices with Windows Autopilot. The new connector aims to enhance security by reducing unnecessary privileges and permissions associated with the local SYSTEM account.
+
 > [!IMPORTANT]
 > At the end of June 2025, we'll remove the old connector which uses the local SYSTEM account. At that point, we will stop accepting enrollments from the old connector. For more details, refer to the blog: [Microsoft Intune Connector for Active Directory security update](https://aka.ms/Intune-connector-blog)
 
@@ -197,7 +192,7 @@ If you're using Intune to deploy applications and scripts, you'll need to grant 
 
 #### How can you prepare?
 
-Update your firewall rules to include the new CDN endpoints. For the best experience, we recommend using the *.manage.microsoft.com domain. If your proxy or firewall doesn't allow you to create a firewall rule using a domain, update the address as listed: 
+Update your firewall rules to include the new CDN endpoints. For the best experience, we recommend using the *.manage.microsoft.com domain. If your proxy or firewall doesn't allow you to create a firewall rule using a domain, update the address as listed:
 
 - Windows CDN requirements: [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md#network-requirements-for-powershell-scripts-and-win32-apps)
 - Configuration Manager co-managed devices CDN requirements: [Updates and servicing](../../configmgr/core/plan-design/network/internet-endpoints.md#updates-and-servicing)
@@ -263,7 +258,7 @@ Update your automation or scripts to use the new Graph API properties to avoid d
 - [azureADWindowsAutopilotDeploymentProfile resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-enrollment-azureadwindowsautopilotdeploymentprofile)
 - [outOfBoxExperienceSettings resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-enrollment-outofboxexperiencesettings)
 
-### Plan for Change: Blocking screen capture in the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS 
+### Plan for Change: Blocking screen capture in the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS
 
 We recently released updated versions of the Intune App SDK and the Intune App Wrapping Tool. Included in these releases (v19.7.5+ for Xcode 15 and v20.2.0+ for Xcode 16) is the support for blocking screen capture, Genmojis, and writing tools in response to the new AI features in iOS/iPadOS 18.2.
 
@@ -273,12 +268,12 @@ For apps that have updated to the latest Intune App SDK or Intune App Wrapping T
 
 #### How can you prepare?
 
-Review your app protection policies and if needed, create a [Managed apps app configuration policy](../apps/app-configuration-policies-managed-app.md) to allow screen capture by configuring the above setting *(Apps > App configuration policies > Create > Managed apps > Step 3 ‘Settings’ under General configuration)*. For more information review, [iOS app protection policy settings – Data protection](../apps/app-protection-policy-settings-ios.md#data-protection) and [App configuration policies - Managed apps](../apps/app-configuration-policies-overview.md#managed-apps).
+Review your app protection policies and if needed, create a [Managed apps app configuration policy](../apps/app-configuration-policies-managed-app.md) to allow screen capture by configuring the above setting *(Apps > App configuration policies > Create > Managed apps > Step 3 'Settings' under General configuration)*. For more information review, [iOS app protection policy settings – Data protection](../apps/app-protection-policy-settings-ios.md#data-protection) and [App configuration policies - Managed apps](../apps/app-configuration-policies-overview.md#managed-apps).
 
 ### Plan for Change: Implement strong mapping for SCEP and PKCS certificates
 
 With the May 10, 2022, Windows update ([KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16)), changes were made to the Active Directory Kerberos Key Distribution (KDC) behavior in Windows Server 2008 and later versions to mitigate elevation of privilege vulnerabilities associated with certificate spoofing. Windows enforces these changes on **February 11, 2025**.
- 
+
 To prepare for this change, Intune has released the ability to include the security identifier to strongly map SCEP and PKCS certificates. For more information, review the blog: [Support tip: Implementing strong mapping in Microsoft Intune certificates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-implementing-strong-mapping-in-microsoft-intune-certificates/4053376).
 
 #### How does this change affect you or your users?
@@ -300,11 +295,11 @@ If you use SCEP or PKCS certificates for Microsoft Entra Hybrid joined users or 
 ### Update to the latest Intune App SDK and Intune App Wrapper for Android 15 support
 
 We've recently released new versions of the Intune App SDK and Intune App Wrapping Tool for Android to support Android 15. We recommend upgrading your app to the latest SDK or wrapper versions to ensure applications stay secure and run smoothly.
- 
+
 #### How does this change affect you or your users?
 
 If you have applications using the Intune App SDK or Intune App Wrapping Tool for Android, it's recommended that you update your app to the latest version to support Android 15.
- 
+
 #### How can you prepare?
 
 If you choose to build apps targeting Android API 35, you need to adopt the new version of the Intune App SDK for Android (v11.0.0). If you wrapped your app and are targeting API 35 you need to use the new version of the App wrapper (v1.0.4549.6).
