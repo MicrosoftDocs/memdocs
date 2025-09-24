@@ -1,7 +1,7 @@
 ---
 title: Windows Firewall policy
-ms.author:brenduns
-author:brenduns
+ms.author: brenduns
+author: brenduns
 ms.topic: include
 ms.date: 09/02/2025
 # sfipillar:
