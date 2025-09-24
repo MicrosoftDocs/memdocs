@@ -290,7 +290,7 @@ You can set up an application using Microsoft Entra ID and authenticate to the I
 - An Intune license is no longer required to be assigned to the user when accessing the Intune Data Warehouse (including the API).
 - The Intune role name has been changed from **Reports** to **Intune data warehouse**.
 
-    For more information, see [Microsoft Entra ID and Intune credential requirements](reports-api-url.md#azure-ad-and-intune-credential-requirements).
+    For more information, see [Microsoft Entra ID and Intune credential requirements](reports-api-url.md#microsoft-entra-id-and-intune-credential-requirements).
 
 ### OData query options <!-- 2077711 -->
 

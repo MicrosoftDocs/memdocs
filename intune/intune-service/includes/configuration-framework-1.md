@@ -1,6 +1,5 @@
 ---
 author: ErikjeMS
-ms.service: microsoft-intune
 ms.topic: include
 ms.date: 04/12/2021
 ms.author: erikje

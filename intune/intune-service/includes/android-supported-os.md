@@ -1,11 +1,8 @@
 ---
 author: ErikjeMS
 ms.author: erikje
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.topic: include
 ms.date: 08/13/2025
-ms.localizationpriority: high
 ---
 
 > [!NOTE]
