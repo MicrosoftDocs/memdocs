@@ -15,18 +15,7 @@ ms.collection:
 > [!IMPORTANT]
 >  Device users shouldn't restart devices until enrollment is complete. If device users setting up fully managed devices or corporate-owned devices with a work profile restart their devices in the middle of enrollment, their devices may not be able to register with Microsoft Intune. Devices that restarted may appear to be enrolled but they won't be protected by your Intune policies.
 
-After you've set up your Android Enterprise [dedicated devices](android-kiosk-enroll.md), [fully managed devices](android-fully-managed-enroll.md), or [corporate-owned work profile devices](android-corporate-owned-work-profile-enroll.md) in Intune, you can enroll the devices. Intune enrollment for dedicated devices, fully managed devices, and corporate-owned with a work profile start with a factory reset. How you enroll your Android Enterprise devices depends on the operating system.
-
-| Enrollment method | Minimum Android OS version for dedicated and fully managed devices |
-| ----- | ----- |
-| Near Field Communication | 8.0 |
-| Token entry | 8.0 |
-| QR code | 8.0 |
-| Zero Touch  | 8.0<br><br> On participating manufacturers. |
-| [Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md)  | 8.0<br><br> On Samsung Knox 2.8 or higher devices only. |
-
-> [!TIP]
-> Corporate-owned work profile (COPE) device management is available on Android version 8.0 and newer.
+After you've set up your Android Enterprise [dedicated devices](android-kiosk-enroll.md), [fully managed devices](android-fully-managed-enroll.md), or [corporate-owned work profile devices](android-corporate-owned-work-profile-enroll.md) in Intune, you can enroll the devices. You have several options for how to enroll these devices: QR code, Google Zero Touch, Knox Mobile Enrollment, Near Field Communication (NFC), or token entry.
 
 > [!NOTE]
 > If you have a Microsoft Entra Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Microsoft Entra Conditional Access documentation](/azure/active-directory/conditional-access/).
