@@ -82,7 +82,7 @@ Before you deploy Intune roles, be familiar with [About Intune role assignments]
 
 7. On the **Review + Create** page, when you're done, select **Create**.
 
-The new assignment is displayed in the list of assignments.
+   The new assignment is displayed in the list of assignments.
 
 ## Related content
 
