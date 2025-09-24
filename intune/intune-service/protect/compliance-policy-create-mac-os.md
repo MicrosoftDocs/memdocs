@@ -1,29 +1,13 @@
 ---
-# required metadata
-
 title: macOS device compliance settings in Microsoft Intune
 description: View the device compliance settings for macOS devices that you can manage with Microsoft Intune compliance policies.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 09/5/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: tycast
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - compliance
 - sub-device-compliance
@@ -50,54 +34,54 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Device Health
 
-- **Require a system integrity protection**  
+- **Require a system integrity protection**
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Require macOS devices to have [System Integrity Protection](https://support.apple.com/HT204899) (opens Apple's web site) enabled.
 
 ## Device Properties
 
-- **Minimum OS version**  
+- **Minimum OS version**
   A device that doesn't meet the minimum OS version requirement is considered to be noncompliant. The device user can view a link with information on how to upgrade and can choose to upgrade their device. After that, they can access organization resources.
 
-- **Maximum OS version**  
+- **Maximum OS version**
   When a device uses an OS version later than the version in the rule, access to organization resources is blocked. The device user is asked to contact their IT administrator. The device can't access organization resources until a rule changes to allow the OS version.
 
-- **Minimum OS build version**  
+- **Minimum OS build version**
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a minimum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `22E772610a`.
 
-- **Maximum OS build version**  
+- **Maximum OS build version**
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `22E772610a`.
 
 ## System security settings
 
 ### Password
 
-- **Require a password to unlock devices**  
+- **Require a password to unlock devices**
   - **Not configured** (*default*)
   - **Require** Users must enter a password before they can access their device.
 
-- **Simple passwords**  
+- **Simple passwords**
   - **Not configured** (*default*) - Users can create passwords simple like **1234** or **1111**.
   - **Block** - Users can't create simple passwords, such as **1234** or **1111**.
 
-- **Minimum password length**  
+- **Minimum password length**
   Enter the minimum number of digits or characters that the password must have.
 
-- **Password type**  
+- **Password type**
   Choose if a password should have only **Numeric** characters, or if there should be a mix of numbers and other characters (**Alphanumeric**).
 
-- **Number of non-alphanumeric characters in password**  
+- **Number of non-alphanumeric characters in password**
   Enter the minimum number of special characters, such as `&`, `#`, `%`, `!`, and so on, that must be in the password.
 
   Setting a higher number requires the user to create a password that is more complex.
 
-- **Maximum minutes of inactivity before password is required**  
+- **Maximum minutes of inactivity before password is required**
   Enter the idle time before the user must reenter their password.
 
-- **Password expiration (days)**  
+- **Password expiration (days)**
   Select the number of days before the password expires, and they must create a new one.
 
-- **Number of previous passwords to prevent reuse**  
+- **Number of previous passwords to prevent reuse**
   Enter the number of previously used passwords that can't be used.
 
 > [!IMPORTANT]
@@ -106,7 +90,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ### Encryption
 
-- **Require encryption of data storage on device**  
+- **Require encryption of data storage on device**
   - **Not configured** (*default*)
   - **Require** - Use *Require* to encrypt data storage on your devices.
 
@@ -114,15 +98,15 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 Firewall protects devices from unauthorized network access. You can use Firewall to control connections on a per-application basis.
 
-- **Firewall**  
+- **Firewall**
   - **Not configured** (*default*) - This setting leaves the firewall turned off, and network traffic is allowed (not blocked).
   - **Enable** -  Use *Enable* to help protect devices from unauthorized access. Enabling this feature allows you to handle incoming internet connections, and use stealth mode.
 
-- **Incoming connections**  
+- **Incoming connections**
   - **Not configured** (*default*) - Allows incoming connections and sharing services.
   - **Block** - Block all incoming network connections except the connections required for basic internet services, such as DHCP, Bonjour, and IPSec. This setting also blocks all sharing services, including screen sharing, remote access, iTunes music sharing, and more.
 
-- **Stealth Mode**  
+- **Stealth Mode**
   - **Not configured** (*default*) - This setting leaves stealth mode turned off.
   - **Enable** - Turn on stealth mode to prevent devices from responding to probing requests, which can be made my malicious users. When enabled, the device continues to answer incoming requests for authorized apps.
 
@@ -130,7 +114,7 @@ Firewall protects devices from unauthorized network access. You can use Firewall
 
 For more information, see [Gatekeeper on macOS](https://support.apple.com/HT202491) (opens Apple's web site).
 
-- **Allow apps downloaded from these locations**  
+- **Allow apps downloaded from these locations**
   Allows supported applications to be installed on your devices from different locations. Your location options:
 
   - **Not configured** (*default*) - The gatekeeper option has no effect on compliance or noncompliance.

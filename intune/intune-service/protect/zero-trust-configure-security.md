@@ -1,30 +1,18 @@
 ---
 title:  Configure Microsoft Intune for increased security
 description:  Learn how to improve your security posture with Microsoft Intune.
- 
-ms.service: microsoft-intune
-ms.subservice: protect
+
 ms.topic: reference
 ms.date:  08/29/2025
 
 ms.author: brenduns
 author: brenduns
-manager: laurawi
 ms.reviewer: ramical
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
 - tier 1
 - M365-identity-device-management
---- 
- 
+---
+
 # Configure Microsoft Intune for increased security (Preview)
 
 The security recommendations in this document are designed to help you improve your organization's security posture by using Microsoft Intune. These recommendations are influenced by accepted industry standards like those developed by NIST, the configuration baselines we use internally at Microsoft, and our experiences with customers. The recommendations in this article are guided by the following Microsoft [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) pillars:
@@ -87,7 +75,7 @@ We recommend that all of the following controls be implemented where licenses ar
 
 ### Tenant - Enrollment notification<!-- 24572 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
- [!INCLUDE [24572](./includes/secure-recommendations/24572.md)] 
+ [!INCLUDE [24572](./includes/secure-recommendations/24572.md)]
 
 ### Windows - Automatic enrollment is configured<!-- 24546 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->

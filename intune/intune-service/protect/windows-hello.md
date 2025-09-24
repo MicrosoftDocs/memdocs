@@ -1,34 +1,16 @@
 ---
-# required metadata
 title: Configure a tenant-wide Windows Hello for Business policy with Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Apply policy for Windows Hello for Business on devices at the time they enroll with Microsoft Intune
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 07/23/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - identity-protection
 - sub-secure-endpoints
-
 ms.reviewer: shpate
 ---
 

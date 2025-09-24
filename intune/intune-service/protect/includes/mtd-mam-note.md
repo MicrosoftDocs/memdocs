@@ -3,8 +3,6 @@ author: brenduns
 ms.author: brenduns
 ms.reviewer: demerson
 
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.topic: include
 ms.date: 08/20/2024
 

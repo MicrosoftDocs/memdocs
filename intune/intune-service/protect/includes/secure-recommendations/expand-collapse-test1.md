@@ -2,12 +2,9 @@
 title: Windows Firewall policy
 ms.author:brenduns
 author:brenduns
-manager:laurawi
-ms.service: microsoft-intune
 ms.topic: include
 ms.date: 09/02/2025
-ms.custom: Intune-Secure-Recommendation
-# sfipillar:  
+# sfipillar:
 # category: Devices
 # risklevel: High
 # userimpact: Medium
@@ -23,4 +20,4 @@ ms.custom: Intune-Secure-Recommendation
 <b>Remediation action</b>
 
 - [Create and assign Intune compliance policies](/intune/intune-service/protect/create-compliance-policy)
-- [Review the Windows compliance settings you can manage with Intune](/intune/intune-service/protect/compliance-policy-create-windows)</details> 
+- [Review the Windows compliance settings you can manage with Intune](/intune/intune-service/protect/compliance-policy-create-windows)</details>

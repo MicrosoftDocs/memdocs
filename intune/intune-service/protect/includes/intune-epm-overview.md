@@ -1,8 +1,6 @@
 ---
 author: brenduns
 ms.author: brenduns
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.topic: include
 ms.date: 09/03/2025
 ---

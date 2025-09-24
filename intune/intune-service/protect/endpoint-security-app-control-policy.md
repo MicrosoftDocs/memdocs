@@ -1,28 +1,12 @@
 ---
-# required metadata
-
 title: Manage approved apps for Windows devices with App Control for Business policy and Managed Installers in Microsoft Intune | Microsoft Docs
 description: Use App Control for Business policies and a managed installer to manage which apps are approved to run on Windows devices that you manage with Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 09/17/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -128,7 +112,7 @@ App Control for Business policies are an implementation of Windows Defender Appl
 
 **Considerations for using a managed installer**:
 
-- You deploy one or more *App Control for Business* policies for a managed installer to different groups of managed Windows devices. 
+- You deploy one or more *App Control for Business* policies for a managed installer to different groups of managed Windows devices.
 
   > [!TIP]
   > On August 18, 2025, Intune replaced a single tenant-wide policy for adding a managed installer to Windows devices with a new policy design that supports assignment of a managed installer to selected groups. If you had the tenant-wide policy in place prior to August 18, that policy is converted to a policy that targets all devices, which is equivalent to the original configuration. If you prefer to use a more granular deployment of the managed installer, consider deleting the existing policy and then create new policies to target specific groups or use specific scope tags.
@@ -161,7 +145,7 @@ You can create one or more managed installer policies to add the managed install
 - So long as one policy has the setting *Enable Intune Managed Extension as Managed Installer* set to *Enabled*, the device applies the configuration as enabled.
 - Scope tags from more than one policy apply to a device as a superset of those scope tags.
 
-The following procedure guides you through adding the Intune Management Extension as a managed installer for your tenant: 
+The following procedure guides you through adding the Intune Management Extension as a managed installer for your tenant:
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **App Control for Business** > select the **Managed installer** tab and then select **Create**. The *Create Managed Installer Policy* workflow opens.
 
@@ -174,14 +158,14 @@ The following procedure guides you through adding the Intune Management Extensio
 
 3. On **Settings**, set *Enable Intune Managed Extension as Managed Installer* to *Enabled*, the default. When enabled, devices with this policy use the managed installer. When disabled, the device doesn't actively use the managed installer.
 
-   > [!TIP]  
+   > [!TIP]
    > You can edit a policy at any time to edit the value of *Enable Intune Managed Extension as Managed Installer*.
 
 4. On the **Scope tags**, optionally you can select any desired scope tags to apply.
 
 5. For **Assignments**, you can *Include* and *Exclude* device groups from the policy. To continue, select **Next**.
 
-   > [!TIP]  
+   > [!TIP]
    > Although you can target security groups that might include users, only the devices in the security group will be targeted and receive the managed installer policy. This is because managed installer policies only apply to the device scope.
 
 6. For **Review + create**, review your settings and then select **Create** to save your changes and deploy the policy to members of the assigned groups. The policy is also shown in the policy list.
@@ -211,7 +195,7 @@ For more information, see [Allow apps installed by a managed installer](/windows
 
 ### Remove the Intune Management Extension as a managed installer
 
-Should you need to, you can stop policies from configuring the Intune Management Extension as a managed installer for your tenant. This requires you to disable each managed installer policy. After a policies are turned off, you can choose to use additional clean-up actions. 
+Should you need to, you can stop policies from configuring the Intune Management Extension as a managed installer for your tenant. This requires you to disable each managed installer policy. After a policies are turned off, you can choose to use additional clean-up actions.
 
 #### Disable the Intune Management Extension policy (required)
 
