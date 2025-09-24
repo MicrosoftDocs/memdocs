@@ -1,10 +1,9 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-author: laurawi
+author: brenduns
 ms.author: brenduns
-manager: laurawi
-ms.date: 09/22/2025
+ms.date: 09/24/2025
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -49,9 +48,15 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ### Support for user account context in Endpoint Privilege Management Elevation Rules<!-- 25617968 -->
 
+<<<<<<<<< Temporary merge branch 1
 Endpoint Privilege Management (EPM) will soon offer a new option for elevation rules: the ability to run elevated applications using the user's context, not just a virtual account. Today, when EPM elevates an app or file, it uses a virtual account for security. While this protects your environment, it can result in elevated apps missing a users personal settings, preferences, and customizations.
 
 With this upcoming change, EPM elevation rules will support changing the user token context. This means that when EPM runs an app with elevated privileges, a users personalized experience like custom file paths, app settings, and preferences can be preserved by the EPM elevation.
+=========
+Endpoint Privilege Management (EPM) will soon offer a new option for elevation rules: the ability to run elevated applications using the user's context, not just a virtual account. Today, when EPM elevates an app or file, it uses a virtual account for security. While this protects your environment, it can result in elevated apps missing a user's personal settings, preferences, and customizations.
+
+With this upcoming change, EPM elevation rules will support changing the user token context. This means that when EPM runs an app with elevated privileges, a users personalized experience like custom file paths, app settings, and preferences are preserved by the EPM elevation.
+>>>>>>>>> Temporary merge branch 2
 
 For more information, see [Use Endpoint Privilege Management with Microsoft Intune](../protect/epm-overview.md).
 
@@ -201,9 +206,9 @@ For more information, see [Support statement for Windows 10 in Intune](#update-t
 >
 > - Windows 10
 
-### End of support for older versions of the Intune Company Portal app<!-- 33827426 -->
+### End of support for older versions of the Android Intune Company Portal app<!-- 33827426 -->
 
-On October 1, 2025, support for all Intune Company Portal versions that are older than 5.0.5421.0 ends. When support ends, users with a device that runs an older version of the Intune Company Portal might not be able to successfully maintain that device's registration status and those devices could be identified as noncompliant. For devices to remain registered and in compliance, the Company Portal version must be updated to a version that remains in support.
+On October 1, 2025, support for the Android Intune Company Portal versions older than 5.0.5421.0 ends. When support ends, users with a device that runs an older version of the Android Intune Company Portal might not be able to successfully maintain that device's registration status and those devices could be identified as noncompliant. For devices to remain registered and in compliance, the Company Portal version must be updated to a version that remains in support.
 
 To update the version of the Company Portal app, see the following available guidance:
 
@@ -211,10 +216,11 @@ To update the version of the Company Portal app, see the following available gui
 - Use Intune to deploy the latest version: [Windows Company Portal app by using Microsoft Intune](../apps/store-apps-company-portal-app.md)
 
 **For device users:**
-- Get the latest version of the Company Portal from your device's app store:
-  - [Apple App Store](https://apps.apple.com/app/intune-company-portal/id719171358)
-  - [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)
-  - [Microsoft Store](https://apps.microsoft.com/detail/9wzdncrfj3pz)
+- Get the latest version of the Company Portal from the Google Play store: [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)
+
+Applies to:
+
+- Android
 
 <!-- *********************************************** -->
 
