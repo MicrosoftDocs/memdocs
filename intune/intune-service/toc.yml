@@ -817,7 +817,7 @@ items:
             href: /troubleshoot/mem/intune/troubleshoot-jamf
 
       - name: Software updates
-        href: protect/toc-updates.yml
+        href: protect/updates/toc.yml
 
       - name: Endpoint security
         items:
