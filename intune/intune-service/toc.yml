@@ -1511,8 +1511,6 @@ items:
             href: ./configuration/preference-file-settings-macos.md
           - name: SCEP certificate
             href: ./protect/certificates-profile-scep.md
-          - name: Software updates (macOS 13 and older)
-            href: ./protect/software-updates-macos.md
           - name: Trusted certificate
             href: ./protect/certificates-trusted-root.md
           - name: VPN

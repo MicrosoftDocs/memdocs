@@ -1,4 +1,3 @@
-### YamlMime:TOC
 items:
 - name: Android Enterprise updates
   items:
@@ -13,11 +12,11 @@ items:
     href: managed-software-updates-ios-macos.md
   - name: Software update reports
     href: software-updates-reports-apple-declarative-based.md
-  - name: Update policies (deprecated)
+  - name: Update policies
     items:
-    - name: iOS/iPadOS update policies (deprecated)
+    - name: iOS/iPadOS update policies
       href: software-updates-ios.md
-    - name: macOS update policies (deprecated)
+    - name: macOS update policies
       href: software-updates-macos.md
 - name: Windows updates
   items:
