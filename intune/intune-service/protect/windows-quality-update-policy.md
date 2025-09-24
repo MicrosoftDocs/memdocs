@@ -8,8 +8,8 @@ ms.reviewer: Mounika
 ms.topic: how-to
 ms.localizationpriority: high
 ms.collection:
-  - highpri
-  ---
+- highpri
+---
 
 # Windows quality update policy
 
