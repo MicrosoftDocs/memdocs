@@ -1,29 +1,13 @@
 ---
-# required metadata
-
 title: Filter reports and troubleshooting in Microsoft Intune
 description: Use the device and app filter reports to get more information on successfully applied filters. Learn the effect of include and exclude filters in Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 11/20/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: gokarthi, abalwan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -63,8 +47,8 @@ To see this report, use the following steps:
     - The evaluation results: **Match** or **No match**
     - If the filter is using Include or Exclude mode
     - The filter name, description, and rules
-    - The properties that were evaluated, such as `deviceName`.  
-    - The available apps that can be assigned to the device.  
+    - The properties that were evaluated, such as `deviceName`.
+    - The available apps that can be assigned to the device.
 
     The **Filter information** section is populated with the currently configured filter name, description, and rules. The information isn't populated from log data. The filter name, syntax, and any other metadata can change since the last evaluation time. When troubleshooting, be sure to look at the **Evaluation time** and **Last modified** timestamps.
 
@@ -103,7 +87,7 @@ In the following example, you can see this information for the **Microsoft Word*
 > - In the **Apps** and **Settings Catalog** device status reports, there's a column that shows any filter evaluation. Currently, the filter evaluation information isn't available for all Intune workloads.
 > - If you use the `operatingSystemVersion` filter for available apps on any Android, AOSP, or iOS platforms the evaluation result is inconclusive. This behavior is a known issue and will be fixed in a future release. No ETA.
 
-## Reports for managed apps  
+## Reports for managed apps
 
 The Intune admin center has per-device and per-platform reporting information for managed apps. Use this information to help troubleshoot filter evaluation, and determine why a policy applied or didn't apply.
 
@@ -111,7 +95,7 @@ You can use the following reports to get more information on properties used for
 
 - [App protection status report](../apps/app-protection-policies-monitor.md)
 - App configuration status report
-  
+
   For more information about app configuration policies, go to:
 
   - [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md)

@@ -1,33 +1,15 @@
 ---
-# required metadata
-
 title: Step 5 – Enroll devices in Microsoft Intune
 description: Enroll Android, Android Enterprise, iOS, iPadOS, Linux, macOS, and Windows devices in Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 4/3/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
-- tier1
 ---
 
 # Step 5 – Enroll devices in Microsoft Intune

@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Policy sets
-titleSuffix: Microsoft Intune
 description: Use policy sets to group collections of management objects in Microsoft Intune.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 04/10/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: DaGerrit
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

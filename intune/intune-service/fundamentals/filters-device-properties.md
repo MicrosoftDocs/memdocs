@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: Supported filter device and app properties & operators in Microsoft Intune
 description: When using filters, get more information on the device properties, supported operators, and supported Windows OS SKUs, including examples. Use these features to create rule expressions in Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 03/06/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: gokarthi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -112,7 +95,7 @@ You can use the following device properties in your managed device filter rules:
   - macOS
   - Windows
 
-- **`deviceOwnership` (Ownership)**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators. 
+- **`deviceOwnership` (Ownership)**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators.
 
   Example:
 
@@ -253,7 +236,7 @@ You can use the following device properties in your managed device filter rules:
   - iOS/iPadOS
   - macOS
   - Windows
-  
+
   > [!NOTE]
   > For Apple devices, the `OSversion` property doesn't include Apple's Security Patch Version (SPV) information. The SPV is the letter after the version number, like `14.1.2a`. When creating filters for Apple devices, don't include the SPV in the `OSversion` rule syntax.
 
@@ -275,7 +258,7 @@ You can use the following device properties in your managed device filter rules:
   | **Core** | Windows 10/11 Home (10/111) |
   | **CoreCountrySpecific** | Windows 10/11 Home China (99) |
   | **CoreN** | Windows 10/11 Home N (98) |
-  | **CoreSingleLanguage** | Windows 10/11 Home single language (100) |  
+  | **CoreSingleLanguage** | Windows 10/11 Home single language (100) |
   | **Education** | Windows 10/11 Education (121) |
   | **EducationN**  | Windows 10/11 Education (122) |
   | **Enterprise** | Windows 10/11 Enterprise (4) |

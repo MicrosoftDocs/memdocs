@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Windows cloud configuration step by step guide
 description: Use this Windows 10/11 cloud configuration step-by-step setup guide to create your own cloud configuration deployment. You create the Microsoft Entra group and policies using Microsoft Intune, including the enrollment profile, compliance policy, and security baseline. You also deploy apps and resources that users need to do their jobs.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 01/22/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: royork
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
 ---
@@ -182,7 +164,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
     7. Review the new profile and then select **Create**.
 
 3. **Create and assign an Enrollment Status Page in Intune**.
-  
+
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
     2. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment** > **General** > **Enrollment Status Page**.
     3. Select **Create** and enter a name for the **Enrollment Status Page**.
@@ -199,7 +181,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
         | Allow users to use device if installation error occurs |     No |
         | Block device user until these required apps are installed if they are assigned to the user/device |    All |
 
-        > [!NOTE]  
+        > [!NOTE]
         > If an installation error occurs, we recommend you block users from using the device. Blocking users makes sure they can only start using the device after cloud config is fully applied.
         >
         > If an installation error occurs, based on your deployment needs, you can allow the user to use the device. If you do allow using the device, when the device checks in with Intune, Intune continues trying to apply the configurations.
@@ -242,13 +224,13 @@ With this enrollment option, you:
 
 When you configure OneDrive **Known Folder Move**, user files and data are automatically saved in OneDrive. When you remove built-in Windows apps and the Microsoft Store, the Start menu and device experience are simplified.
 
-This step helps simplify the Windows user experience. 
+This step helps simplify the Windows user experience.
 
 ### ✅ 1 - Configure OneDrive Known Folder Move with an Administrative Template
 
 With **Known Folder Move**, users data (files and folders) is saved to OneDrive. When users sign in to another device, OneDrive automatically synchronizes the data to the new device. Users don't have to manually move their files.
 
-> [!NOTE]  
+> [!NOTE]
 > Due to a sync issue with OneDrive **Known Folder Move** and SharedPC configuration, Microsoft doesn't recommend using Windows in cloud configuration with a device that has multiple users signing in and out.
 
 To configure **Known Folder Move**, use an ADMX template in Intune:
@@ -335,7 +317,7 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
 
     If you want to deploy other Microsoft 365 apps, then select them from this list. Remember, only deploy what users need.
 
-    > [!TIP]  
+    > [!TIP]
     > You don't need to choose OneDrive. OneDrive is built into Windows Pro, Enterprise, and Education.
 
 7. For **App suite information**, configure the following settings:
@@ -353,7 +335,7 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
     | --- | --- |
     | Use shared computer activation | Yes |
     | Accept the Microsoft Software License Terms on behalf of users | Yes|
-  
+
 9. Select **Next**.
 10. Assign the suite to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 

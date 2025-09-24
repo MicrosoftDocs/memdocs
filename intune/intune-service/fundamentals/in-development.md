@@ -1,27 +1,12 @@
 ---
-# required metadata
-
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-keywords:
-author: laurawi
+author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 09/22/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
- 
-# optional metadata
-
-#audience:
-
 ms.reviewer: intuner
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -64,7 +49,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 ### Support for user account context in Endpoint Privilege Management Elevation Rules<!-- 25617968 -->
 
 Endpoint Privilege Management (EPM) will soon offer a new option for elevation rules: the ability to run elevated applications using the user's context, not just a virtual account. Today, when EPM elevates an app or file, it uses a virtual account for security. While this protects your environment, it can result in elevated apps missing a user's personal settings, preferences, and customizations.
- 
+
 With this upcoming change, EPM elevation rules will support changing the user token context. This means that when EPM runs an app with elevated privileges, a users personalized experience like custom file paths, app settings, and preferences are preserved by the EPM elevation.
 
 For more information, see [Use Endpoint Privilege Management with Microsoft Intune](../protect/epm-overview.md).
@@ -175,7 +160,7 @@ To learn more about these settings, go to [Android Intune settings catalog setti
 
 As an IT admin, you'll be able to hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens during Setup Assistant.
 
-The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:  
+The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
 - **App Store** (iOS/iPadOS 14.3+)
 - **Camera button** (iOS/iPadOS 18+)
    - **Web content filtering** (iOS/iPadOS 18.2+)
@@ -183,7 +168,7 @@ The screens you can skip during iOS/iPadOS enrollment, and the applicable versio
    - **Multitasking** (iOS/iPadOS 26+)
    - **OS Showcase** (iOS/iPadOS 26+)
 
-The screens you can skip during macOS enrollment include:  
+The screens you can skip during macOS enrollment include:
 - **App Store** (macOS 11.1+)
 - **Get Started** (macOS 15+)
 - **Software update** (macOS 15.4+)
@@ -198,7 +183,7 @@ You will be able to edit the Managed Google Play organization name directly in t
 
 ### Configure Windows Backup for Organizations<!--29202026 -->
 
-A new feature called *Windows Backup for Organizations* will be soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md). 
+A new feature called *Windows Backup for Organizations* will be soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).
 
 <!-- *********************************************** -->
 
@@ -221,10 +206,10 @@ On October 1, 2025, support for all Intune Company Portal versions that are olde
 
 To update the version of the Company Portal app, see the following available guidance:
 
-**For administrators:**  
+**For administrators:**
 - Use Intune to deploy the latest version: [Windows Company Portal app by using Microsoft Intune](../apps/store-apps-company-portal-app.md)
 
-**For device users:**  
+**For device users:**
 - Get the latest version of the Company Portal from your device's app store:
   - [Apple App Store](https://apps.apple.com/app/intune-company-portal/id719171358)
   - [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)
@@ -266,7 +251,7 @@ As part of Microsoft's ongoing [Secure Future Initiative (SFI)]( https://www.mic
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
 We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices, and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
- 
+
 > [!div class="checklist"]
 > Applies to:
 >
