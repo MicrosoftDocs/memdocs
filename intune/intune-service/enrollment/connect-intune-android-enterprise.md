@@ -71,20 +71,16 @@ Complete these steps to enable Android Enterprise management options in Microsof
 You can disconnect the link between Microsoft Intune and Google in the admin center. Disconnecting the account disables Android Enterprise device management for your tenant.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune Administrator account.
-<<<<<<< HEAD
-2. [Retire](../remote-actions/device-retire.md) all of the following devices:
-=======
-2. [Retire](../remote-actions/devices-wipe.md#retire) all of the following devices:
->>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
+1. [Retire](../remote-actions/device-retire.md) all of the following devices:
     - Android Enterprise personally owned work profile devices
     - Android Enterprise corporate-owned work profile devices
     - Android Enterprise fully managed
     - Android Enterprise dedicated devices
-2. Go to **Devices** > **Enrollment**.
-3. Select the **Android** tab.
-3. Under **Prerequisites**, choose **Managed Google Play**.
-4. Select **Disconnect**.
-4. Choose **Yes** to disconnect and unenroll all Android enterprise devices from Intune.
+1. Go to **Devices** > **Enrollment**.
+1. Select the **Android** tab.
+1. Under **Prerequisites**, choose **Managed Google Play**.
+1. Select **Disconnect**.
+1. Choose **Yes** to disconnect and unenroll all Android enterprise devices from Intune.
 
 ## Next steps
 
