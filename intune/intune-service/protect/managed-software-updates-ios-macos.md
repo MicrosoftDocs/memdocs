@@ -84,108 +84,68 @@ DDM software updates have precedence over other policies that configure software
 2. MDM update policies (**Devices** > **Update policies for macOS**)
 3. MDM software updates (**Settings catalog** > **System Updates** > **Software Update**)
 
-## Configure the automatic DDM software updates policy
+## Configure the automatic software updates policy
 
 You can use the settings catalog to configure a policy that automatically enforces the latest update available for devices, so you don't have to manually update the target OS version and target date time settings each time that Apple releases a new update.
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+::: zone pivot="ios"
+1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS platform and use the following setting:
 
-2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
+    | Category | Setting name | Value |
+    |--|--|--|
+    | **Declarative Device Management** > **Software Update Enforce Latest** | **Delay in Days**| Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured.|
+    | **Declarative Device Management** > **Software Update Enforce Latest** | **Install Time**| Specify the local device time for when updates are enforced. The Install Time setting is configured using the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.|
 
-3. Enter the following properties and select **Create**:
+::: zone-end
+::: zone pivot="macos"
+1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the macOS platform and use the following setting:
 
-    - **Platform**: Select **iOS/iPadOS** or **macOS**.
-    - **Profile**: Select **Settings catalog**.
+    | Category | Setting name | Value |
+    |--|--|--|
+    | **Declarative Device Management** > **Software Update Enforce Latest** | **Delay in Days**| Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured.|
+    | **Declarative Device Management** > **Software Update Enforce Latest** | **Install Time**| Specify the local device time for when updates are enforced. The Install Time setting is configured using the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.|
 
-4. In the **Basics** tab, enter the following information, and select **Next**:
+::: zone-end
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later.
-    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+2. Assign the policy to a group that contains as members the devices that you want to configure.
 
-5. In **Configuration settings**, select **Add settings** > expand **Declarative Device Management** > **Software Update Enforce Latest**.
+> [!IMPORTANT]
+> Assignment filters are not supported for DDM-based policies.
 
-6. Choose **Select all these settings** and then close the settings picker.
-
-    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-updates-enforce-latest.png" alt-text="Screenshot that shows the settings catalog software update enforce latest settings for Apple devices in Microsoft Intune." lightbox="./media/managed-software-updates-ios-macos/ddm-software-updates-enforce-latest.png":::
-
-7. Configure the settings:
-
-    - **Delay in Days**: Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured.
-    - **Install Time**: Specify the local device time for when updates are enforced.
-
-      > [!IMPORTANT]
-      > The Install Time setting is configured using the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
-
-8. Select **Next**.
-
-9. In the **Scope tags** tab (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go to [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
-
-10. Select **Next**.
-
-11. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
-
-    > [!IMPORTANT]
-    > Assignment filters are not supported for DDM-based policies.
-
-12. Select **Next**.
-
-1. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+<!--
 
 > [!NOTE]
-> The `retrieveDeviceConfigurationAvailableOptions` function of the [deviceManagementConfigurationSettingDefinition resource type](/graph/api/resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition?view=graph-rest-beta) requires delegated user authentication. Application permissions cannot be used for this endpoint.
+> The `retrieveDeviceConfigurationAvailableOptions` function of the [deviceManagementConfigurationSettingDefinition resource type](/graph/api/resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition?view=graph-rest-beta) requires delegated user authentication. Application permissions cannot be used for this endpoint.-->
 
-## Configure the manual DDM software updates policy
+## Configure the manual software updates policy
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+::: zone pivot="ios"
+1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS platform and use the following setting:
 
-2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
+    | Category | Setting name | Value |
+    |--|--|--|
+    | **Declarative Device Management** > **Software Update** | **Details URL**| Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.|
+    | **Declarative Device Management** > **Software Update** | **Target Build Version**| Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.<br><br>If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.|
+    | **Declarative Device Management** > **Software Update** | **Target Date Time**| Select or manually enter the date and the time that specifies when to force the installation of the software update.<br><br>The **Target Date Time** setting schedules the update using the local timezone of the device. For example, an admin configures an update to install at 2PM. The policy schedules the update to happen at 2PM in the local timezone of devices that receive the policy.<br><br>- If the user doesn't trigger the software update before this time, then a one-minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.<br>- If the device is powered off when the deadline is met, when the device powers back on, there's a one hour grace period. When the grace period ends, the device force installs the update and forces a restart.|
+    | **Declarative Device Management** > **Software Update** | **Target OS Version**| Select or manually enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.|
 
-3. Enter the following properties and select **Create**:
+::: zone-end
+::: zone pivot="macos"
+1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the macOS platform and use the following setting:
 
-    - **Platform**: Select **iOS/iPadOS** or **macOS**.
-    - **Profile**: Select **Settings catalog**.
+    | Category | Setting name | Value |
+    |--|--|--|
+    | **Declarative Device Management** > **Software Update** | **Details URL**| Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.|
+    | **Declarative Device Management** > **Software Update** | **Target Build Version**| Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.<br><br>If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.|
+    | **Declarative Device Management** > **Software Update** | **Target Date Time**| Select or manually enter the date and the time that specifies when to force the installation of the software update.<br><br>The **Target Date Time** setting schedules the update using the local timezone of the device. For example, an admin configures an update to install at 2PM. The policy schedules the update to happen at 2PM in the local timezone of devices that receive the policy.<br><br>- If the user doesn't trigger the software update before this time, then a one-minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.<br>- If the device is powered off when the deadline is met, when the device powers back on, there's a one hour grace period. When the grace period ends, the device force installs the update and forces a restart.|
+    | **Declarative Device Management** > **Software Update** | **Target OS Version**| Select or manually enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.|
 
-4. In the **Basics** tab, enter the following information, and select **Next**:
+::: zone-end
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later.
-    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+2. Assign the policy to a group that contains as members the devices that you want to configure.
 
-5. In **Configuration settings**, select **Add settings** > expand **Declarative Device Management** > **Software Update**.
-
-6. Choose **Select all these settings** and then close the settings picker.
-
-    :::image type="content" source="./media/managed-software-updates-ios-macos/ddm-software-update-category.png" alt-text="Screenshot that shows the settings catalog software update settings for Apple devices in Microsoft Intune." lightbox="./media/managed-software-updates-ios-macos/ddm-software-update-category.png":::
-
-7. Configure the settings:
-
-    - **Details URL**: Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
-    - **Target Build Version**: Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.
-
-      If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
-
-   - **Target Date Time**: Select or manually enter the date and the time that specifies when to force the installation of the software update.
-
-     The **Target Date Time** setting schedules the update using the local timezone of the device. For example, an admin configures an update to install at 2PM. The policy schedules the update to happen at 2PM in the local timezone of devices that receive the policy.
-
-     - If the user doesn't trigger the software update before this time, then a one-minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
-     - If the device is powered off when the deadline is met, when the device powers back on, there's a one hour grace period. When the grace period ends, the device force installs the update and forces a restart.
-
-    - **Target OS Version**: Select or manually enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
-
-8. Select **Next**.
-
-9. In the **Scope tags** tab (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go to [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
-
-10. Select **Next**.
-
-11. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
-
-    > [!IMPORTANT]
-    > Assignment filters are not supported for DDM-based policies.
-
-12. Select **Next**.
-
-13. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+> [!IMPORTANT]
+> Assignment filters are not supported for DDM-based policies.
 
 ## Monitoring DDM software updates
 
