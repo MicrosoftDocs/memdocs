@@ -3,7 +3,7 @@ title: Admin guide and checklist for macOS software updates
 description: Guidance and advice for administrators that create and manage software updates for macOS devices using Microsoft Intune. Use this article to help manage software updates on your organization-owned devices, including how to create policies, manage updates, and review update status.
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 07/23/2025
+ms.date: 09/24/2025
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
