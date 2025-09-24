@@ -1,12 +1,8 @@
 ---
-title: Include file
-description: Include file
-author: brenduns  
-ms.service: microsoft-intune
+author: brenduns
 ms.topic: include
 ms.date: 08/19/2024
 ms.author: brenduns
-ms.custom: include file
 ---
 
 #### Attack surface reduction
