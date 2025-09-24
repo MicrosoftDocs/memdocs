@@ -7,9 +7,9 @@ ms.date: 10/14/2024
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: aanavath
+ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
-
 ---
 
 # Monitor device encryption with Intune
