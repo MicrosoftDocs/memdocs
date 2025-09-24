@@ -23,13 +23,17 @@ With DDM managed software updates in Intune, you can:
 - Enforce a deadline for the device to automatically install an update.
 - Specify a URL that users can visit to learn more about updates.
 
-This feature applies to:
+[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
-- iOS/iPadOS 17.0 and later
-- macOS 14.0 and later
+> [!div class="checklist"]
+> This feature applies to:
+>
+> - iOS/iPadOS 17.0 and later
+> - macOS 14.0 and later
 
 Apple's declarative device management (DDM) allows you to install a specific update by an enforced deadline. The autonomous nature of DDM provides an improved user experience as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
 
+<!--
 ## DDM software updates vs MDM software update policies
 
 On Apple devices in Intune, you can create MDM-based software update policies or DDM-managed software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types.
@@ -68,6 +72,8 @@ Use the following information to help you decide which policy type to use.
 | **Minimum supported version** | &nbsp; | &nbsp; |
 | iOS/iPadOS | 17.0 and later | - iOS 10.3 (supervised)<br/>- iPadOS 13.0 (supervised) |
 | macOS | 14.0 and later | macOS 12.0 |
+
+-->
 
 ### Precedence
 
