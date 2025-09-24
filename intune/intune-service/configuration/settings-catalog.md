@@ -58,7 +58,7 @@ This feature applies to:
 
 - **Windows**
 
-  There are thousands of settings, including settings that weren't previously available. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
+  There are thousands of settings, including settings that weren't previously available. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
 
 > [!TIP]
 >
