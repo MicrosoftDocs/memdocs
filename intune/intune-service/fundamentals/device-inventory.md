@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: View device details with Microsoft Intune
 description: View your device details, including operating systems, storage space, manufacturer, and model. Get a list of installed apps, check compliance policies, and set up TeamViewer with Microsoft Intune in Azure. Similar to viewing inventory of the devices you manage.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: dougeby
 ms.date: 01/14/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

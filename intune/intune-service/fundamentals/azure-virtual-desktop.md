@@ -1,32 +1,13 @@
 ---
-# required metadata
-
 title: Using Azure Virtual Desktop single-session with Microsoft Intune
-titleSuffix:
 description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 02/13/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: madakeva
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

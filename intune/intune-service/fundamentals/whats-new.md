@@ -1,31 +1,13 @@
 ---
-# required metadata
 title: What's new in Microsoft Intune
-titleSuffix:
 description: Find out what's new in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 09/17/2025
 ms.topic: whats-new
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: intuner
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 - highseo
 ---
@@ -92,7 +74,7 @@ To learn more about viewing and monitoring existing profiles, see [View and moni
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
- 
+
 ##### iOS/iPadOS
 
 **Managed Settings > Default Applications**:
@@ -174,7 +156,7 @@ To learn more about these settings, see [Android Intune settings catalog setting
 
 > [!div class="checklist"]
 > Applies to:
-> 
+>
 > - Android Enterprise
 
 ### Device management
@@ -324,7 +306,7 @@ Apple has released iOS 26 and iPadOS 26. With this update, Purebred (version 3) 
 
 #### Give feedback about multiple device query<!--  -->
 
-Use the new feedback feature on the multiple device query page to submit feedback about multiple device query.  
+Use the new feedback feature on the multiple device query page to submit feedback about multiple device query.
 
 ## Week of September 8, 2025
 
