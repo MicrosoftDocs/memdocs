@@ -73,7 +73,7 @@ We’ve updated the Vulnerability Remediation Agent for Security Copilot, adding
 
   Changes to the agent’s identity won’t affect the agent’s run history, which remains available.
 
-To learn more about this Agent, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
+These updates provide greater flexibility and control for organizations using the Vulnerability Remediation Agent in preview. To learn more about this Agent, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
 
 ## Week of September 15, 2025 (Service release 2509)
 
