@@ -191,7 +191,7 @@ Some remote actions can also be executed in bulk. To learn more, see [Bulk devic
 [RA-RESTART]: device-restart.md
 [RA-RETIRE]: device-retire.md
 [RA-ROTLAP]: ../protect/windows-laps-policy.md#manually-rotate-passwords
-[RA-SCANF]: device-quick-scan.md
+[RA-SCANF]: device-full-scan.md
 [RA-SCANQ]: device-quick-scan.md
 [RA-SYNC]: device-sync.md
 [RA-HELP]: ../fundamentals/remote-help.md
