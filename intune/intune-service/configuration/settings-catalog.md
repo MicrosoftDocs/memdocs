@@ -1,6 +1,7 @@
 ---
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
+description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, administrative templates (ADMX), and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
+keywords: administrative templates, admx, group policy objects, gpo
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 09/17/2025
@@ -58,7 +59,7 @@ This feature applies to:
 
 - **Windows**
 
-  There are thousands of settings, including settings that weren't previously available. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
+  There are thousands of settings, and more settings are continually being added. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
 
 > [!TIP]
 >
