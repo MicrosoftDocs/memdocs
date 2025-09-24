@@ -116,7 +116,6 @@ Policy sets, new to 1910, have the following known issues.
     If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in the workload, not "assigned via the policy set". As a result of this, MAM doesn't process group assignment deletions coming from policy sets.
 
 - MAM doesn't support deployment to **All Users** and **All Devices** virtual groups for any policy types.
-- The Device Configuration Profile of type "Administrative Templates" can't be selected as part of a policy set.
 
 ## Next steps
 
