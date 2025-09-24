@@ -1,31 +1,9 @@
 ---
-<<<<<<< HEAD
-# required metadata
-
-title: Set up Android (AOSP) device management in Intune for corporate-owned user-associated devices
-titleSuffix: Microsoft Intune
-description: Set up Intune for corporate-owned user-associated devices built on the Android Open Source Project (AOSP) platform.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
-=======
 title: Set up Android (AOSP) device management in Intune for corporate-owned user-associated devices
 description: Set up Intune for corporate-owned user-associated devices built on the Android Open Source Project (AOSP) platform.
->>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.date: 05/15/2025
 ms.topic: how-to
 ms.localizationpriority: high
-<<<<<<< HEAD
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-=======
->>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.reviewer: jieyan
 ms.collection:
 - M365-identity-device-management

@@ -1,31 +1,9 @@
 ---
-<<<<<<< HEAD
-# required metadata
-
-title: Connect Intune account to managed Google Play account
-titleSuffix: Microsoft Intune
-description: Learn how to connect your Intune account to your Managed Google Play account.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
-=======
 title: Connect Intune account to managed Google Play account
 description: Learn how to connect your Intune account to your Managed Google Play account.
->>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.date: 06/12/2025
 ms.topic: how-to
 ms.localizationpriority: high
-<<<<<<< HEAD
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-=======
->>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.reviewer: grwilson
 ms.collection:
 - M365-identity-device-management
@@ -57,7 +35,7 @@ This article describes how to link your accounts in the Microsoft Intune admin c
 
 - Confirm Android Enterprise availability in your country/region. For more information, see [Is Android Enterprise available in my country/region?](https://support.google.com/work/android/answer/6270910).
 =======
-> As of August 2024, you can link your Microsoft Entra identity account to a Google account, instead of using an enterprise Gmail account. We recommend using your Microsoft Entra account to connect to Google Play. For more information about this change, see [Google blog: How we’re making Android Enterprise signup and access to Google services better](https://blog.google/products/android-enterprise/android-enterprise-signup-google-services/). Current Microsoft Intune tenants who have already associated a Gmail account with Intune will continue to be supported.
+> As of August 2024, you can link your Microsoft Entra identity account to a Google account, instead of using an enterprise Gmail account. We recommend using your Microsoft Entra account to connect to Google Play. For more information about this change, see [Google blog: How we're making Android Enterprise signup and access to Google services better](https://blog.google/products/android-enterprise/android-enterprise-signup-google-services/). Current Microsoft Intune tenants who have already associated a Gmail account with Intune will continue to be supported.
 
 - Confirm Android Enterprise availability in your country or region. For more information, see [Is Android Enterprise available in my country?](https://support.google.com/work/android/answer/6270910).
 >>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f

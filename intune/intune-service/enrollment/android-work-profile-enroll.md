@@ -1,31 +1,9 @@
 ---
-<<<<<<< HEAD
-# required metadata
-
-title: Enroll personal devices in Intune with Android Enterprise work profile management
-titleSuffix: Microsoft Intune
-description: Set up Intune for personal devices and bring-your-own-device scenarios using Android Enterprise work profile management.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
-=======
 title: Enroll personal devices in Intune with Android Enterprise work profile management
 description: Set up Intune for personal devices and bring-your-own-device scenarios using Android Enterprise work profile management.
->>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.date: 10/28/2024
 ms.topic: how-to
 ms.localizationpriority: high
-<<<<<<< HEAD
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-=======
->>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.reviewer: grwilso
 ms.collection:
 - M365-identity-device-management

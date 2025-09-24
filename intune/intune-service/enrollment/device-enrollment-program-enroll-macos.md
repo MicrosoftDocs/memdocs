@@ -1,34 +1,10 @@
 ---
-<<<<<<< HEAD
-# required metadata
-
 title: Set up automated device enrollment (ADE) for macOS
 description: Learn how to enroll corporate-owned Macs into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
-=======
-title: Set up automated device enrollment (ADE) for macOS
-description: Learn how to enroll corporate-owned Macs into Microsoft Intune with Apple Automated Device Enrollment (ADE).
->>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.date: 07/22/2025
 ms.topic: how-to
 ms.localizationpriority: high
-<<<<<<< HEAD
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: annovich
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-=======
-ms.reviewer: annovich
->>>>>>> 663a663ce7e71c457c3fb8730949ff7da82bae2f
 ms.collection:
 - M365-identity-device-management
 ---
@@ -249,7 +225,7 @@ The following table describes the Setup Assistant screens shown during automated
 | Setup Assistant screen | What happens when visible  |
 |------------------------------------------|------------------------------------------|
 | **Location Services** | Shows the location services setup pane, where users can enable location services on their device. For macOS 10.11 and later. |
-| **Restore** | Shows the apps and data setup pane. On this screen, users setting up devices can restore or transfer data from iCloud Backup. For macOS 10.9-15.3. For macOS 15.4 and later, this screen cannot be hidden and the user receives an alert after enrollment that they’re unable to transfer data from another device because MDM controls the setting. |
+| **Restore** | Shows the apps and data setup pane. On this screen, users setting up devices can restore or transfer data from iCloud Backup. For macOS 10.9-15.3. For macOS 15.4 and later, this screen cannot be hidden and the user receives an alert after enrollment that they're unable to transfer data from another device because MDM controls the setting. |
 | **Apple ID** | Shows the Apple ID setup pane, which gives users to the option to sign in with their Apple ID and use iCloud. For macOS 10.9 and later.   |
 | **Terms and conditions** |Shows the Apple terms and conditions pane, and requires users to accept them. For macOS 10.9 and later. |
 | **Touch ID and Face ID** | Shows the biometric setup pane, which gives users the option to set up fingerprint or facial identification on their devices. For macOS 10.12.4 and later. |
