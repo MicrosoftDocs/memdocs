@@ -1,30 +1,14 @@
 ---
-# required metadata
-
 title: Windows Update settings you can manage with Intune Update Ring policies for Windows devices.
 description: View the settings for Windows Update that you can manage through Intune policy for Update rings.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 07/15/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davguy; bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-updates
 ---

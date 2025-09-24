@@ -1,28 +1,12 @@
 ---
-# required metadata
-
 title: Manage account protection settings with endpoint security policies in Microsoft Intune
 description: Use Microsoft Intune endpoint security account protection policies to protect the identity and accounts of users.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 10/10/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -75,7 +59,7 @@ Profiles:
 - **Local admin password solution (Windows LAPS)** - Use this profile to configure Windows LAPS on devices. Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting *Administrator Account Name*.
 
   For more information in using Intune to manage Windows LAPS, see:
-  
+
   - Learn about [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
   - [Manage LAPS policy](../protect/windows-laps-policy.md)
 

@@ -1,28 +1,12 @@
 ---
-# required metadata
-
 title: Manage devices with endpoint security in Microsoft Intune
 description: Learn how Security Administrators can use the Endpoint Security node to view devices and manage them in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/02/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
