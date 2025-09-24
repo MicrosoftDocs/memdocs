@@ -25,7 +25,7 @@ This feature applies to:
 
 You can import custom and non-Microsoft ADMX and ADML files. For more information, see [Import custom or partner ADMX files](administrative-templates-import-custom.md).
 
-This article describes the steps to create an administrative template using the settings catalog, and shows how to filter all the settings in Intune. When you create the template, it creates a device configuration profile. You can then assign or deploy this profile to Windows client devices in your organization.
+This article describes the steps to use the administrative templates in the settings catalog. When the settings catalog policy is created, you can assign or deploy this profile to Windows client devices in your organization.
 
 ## Before you begin
 
@@ -51,24 +51,24 @@ This article describes the steps to create an administrative template using the 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Name your profiles so you can easily identify them later. For example, a good profile name is **ADMX: Configures xyz settings in Microsoft Edge**.
+    - **Name**: Name your profiles so you can easily identify them later. For example, a good profile name is **ADMX: Configures screen saver**.
     - **Description**: This setting is optional but recommended.
 
 6. Select **Next**.
 
 7. Select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
 
-    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Screenshot that shows how to expand administrative templates in a settings catalog policy in Microsoft Intune.":::
+    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Screenshot that shows how to expand administrative templates in a settings catalog policy in Microsoft Intune." lightbox="./media/administrative-templates-windows/settings-catalog-administrative-templates.png":::
 
 8. When you select a setting, you can see `(User)` in the setting name. `(User)` means that the settings apply to users when they sign in. Settings that don't have `(User)` in the setting name apply to devices.
 
-    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates-user.png" alt-text="See the settings that apply to users and that apply to devices in the settings catalog in Microsoft Intune and Intune admin center":::
+    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates-user.png" alt-text="See the settings that apply to users and that apply to devices in the settings catalog in Microsoft Intune and Intune admin center" lightbox="./media/administrative-templates-windows/settings-catalog-administrative-templates-user.png":::
 
 9. Select a setting you want to configure. For example, expand **Control Panel** > **Personalization** > select **Enable screen saver (User)**. Close the settings picker.
 
     When you select the setting, it's added to the policy, and ready for you to configure:
 
-    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates-sample-setting.png" alt-text="See a sample setting in the settings catalog in Microsoft Intune and Intune admin center that you can configure":::
+    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates-sample-setting.png" alt-text="See a sample setting in the settings catalog in Microsoft Intune and Intune admin center that you can configure" lightbox="./media/administrative-templates-windows/settings-catalog-administrative-templates-sample-setting.png":::
 
 10. Select **Next**.
 11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).

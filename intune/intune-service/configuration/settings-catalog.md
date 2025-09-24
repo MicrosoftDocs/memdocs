@@ -59,7 +59,7 @@ This feature applies to:
 
 - **Windows**
 
-  There are thousands of settings, and more settings are continually being added. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
+  There are thousands of settings, including administrative templates (ADMX), and more settings are continually being added. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
 
 > [!TIP]
 >
