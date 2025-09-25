@@ -38,6 +38,7 @@
       "brand": "Microsoft Intune",
       "searchScope": ["Intune"],
       "ms.suite": "ems",
+      "ms.service": "microsoft-intune",
       "contributors_to_exclude": [
         "PRMerger9",
         "PRMerger17",
@@ -160,12 +161,8 @@
         "intune-service/remote-actions/**/*.yml": "mattcall"
       },
       "ms.service": {
-        "analytics/**/*.md": "microsoft-intune",
-        "analytics/**/*.yml": "microsoft-intune",
-        "intune-service/**/*.md": "microsoft-intune",
-        "intune-service/**/*.yml": "microsoft-intune",
-        "solutions/**/*.md": "microsoft-intune",
-        "solutions/**/*.yml": "microsoft-intune"
+        "configmgr/**/*.md": "configuration-manager",
+        "configmgr/**/*.yml": "configuration-manager"
       },
       "ms.subservice": {
         "analytics/**/*.md": "endpoint-analytics",
