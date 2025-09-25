@@ -6,9 +6,6 @@ ms.topic: tutorial
 ms.author: scbree
 author: scottbreenmsft
 zone_pivot_groups: platforms-windows-ios
-ms.manager: dougeby
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Set up Microsoft Intune
