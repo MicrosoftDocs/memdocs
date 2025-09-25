@@ -16,14 +16,14 @@ ms.collection:
 
 # Use the Intune settings catalog to configure settings
 
-The settings catalog lists all the settings you can configure all in one place. This feature simplifies how you create a policy and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
+The settings catalog lists all the settings you can configure and all in one place. This feature simplifies how you create a policy and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 
 You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md). When you use the Copilot features with the settings catalog, you can use Copilot to:
 
 - Learn more about each setting and find potential conflicts.
 - Summarize existing policies and get impact analysis on users and security.
 
-If you prefer to configure settings at a granular level, similar to using on-premises Group Policy Objects (GPOs), the settings catalog is a natural transition to cloud-based policy.
+If you prefer to configure settings at a granular level, similar to on-premises Group Policy Objects (GPOs), then the settings catalog is a natural transition to cloud-based policy.
 
 When you create the policy, you start from scratch. You add only the settings you want to control and manage.
 
@@ -33,7 +33,9 @@ This feature applies to:
 
 - **Android**
 
-    Settings catalog for Android lists settings available for Android (AOSP) and corporate-owned Android Enterprise devices. More settings for Android devices are continually added to the settings catalog.
+  Settings catalog for Android lists settings available for Android (AOSP) and corporate-owned Android Enterprise devices. More settings for Android devices are continually added to the settings catalog.
+
+  For a list of Android settings you can configure, see [Android Intune settings catalog settings list](settings-catalog-android.md).
 
 - **iOS/iPadOS**
 
@@ -101,11 +103,11 @@ You create the policy by using the settings catalog profile type.
 
 7. In **Configuration settings**, select **Add settings**. In the settings picker, select a category to see all the available settings.
 
-    For example, in a **Windows 10 and later** policy, select **Authentication** to see all the settings in this category:
+    For example, in a Windows policy, select **Authentication** to see all the settings in this category:
 
     :::image type="content" source="./media/settings-catalog/settings-picker-authentication.png" alt-text="Screenshot that shows the Settings Catalog when you select Windows and Authentication in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-authentication.png":::
 
-    For example, select **macOS**. The **Microsoft Edge - All** category lists all the settings you can configure. The other categories include settings that are obsolete or that apply to older versions:
+    In another example, select **macOS**. The **Microsoft Edge - All** category lists all the settings you can configure. The other categories include settings that are obsolete or that apply to older versions:
 
     :::image type="content" source="./media/settings-catalog/macos-settings-picker-edge-all.png" alt-text="Screenshot that shows the Settings Catalog when you select macOS and select a feature or category in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/macos-settings-picker-edge-all.png":::
 
@@ -174,7 +176,7 @@ When you create a new policy or update an existing policy, there are built-in se
   > [!NOTE]
   > For the Microsoft Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, the Microsoft Edge, Office, and OneDrive settings aren't shown.
 
-  You can also *filter the settings by device or user scope*. For more information, see [Device scope vs. user scope settings](#device-scope-vs-user-scope-settings) (in this article):
+  You can also filter the settings by device or user scope. For more information, see [Device scope vs. user scope settings](#device-scope-vs-user-scope-settings) (in this article):
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-scope.png" alt-text="Screenshot that shows the user and device scope filter in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-filter-scope.png":::
 
