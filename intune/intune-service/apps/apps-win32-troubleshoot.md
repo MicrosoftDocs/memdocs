@@ -5,7 +5,6 @@ ms.date: 08/14/2025
 ms.topic: troubleshooting
 ms.reviewer: bryanke
 ms.collection:
-- tier1
 - M365-identity-device-management
 - FocusArea_Apps_Win32
 ---

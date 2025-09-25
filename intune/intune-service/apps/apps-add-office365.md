@@ -5,7 +5,6 @@ ms.date: 04/10/2025
 ms.topic: how-to
 ms.reviewer: craigma
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri

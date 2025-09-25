@@ -5,7 +5,6 @@ ms.date: 11/21/2024
 ms.topic: how-to
 ms.reviewer: tycast
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_Configure

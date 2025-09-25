@@ -1,29 +1,10 @@
 ---
-# required metadata
-
 title: Common issues and resolutions with cloud-native endpoints
-titleSuffix: Microsoft Intune
 description: Learn more about the known and resolutions when using cloud-native endpoints. Use user-based authentication; don't use machine authentication. Existing group policy objects might not apply.
-keywords:
-author: MandiOhlinger
-  
-ms.author: mandia
-manager: dougeby
 ms.date: 05/30/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: 
 ms.localizationpriority: high
-ms.assetid: 
-# optional metadata
- 
-#audience:
-#ms.devlang:
 ms.reviewer: ahamil, jasandys, wicale
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
   - intune-scenario
@@ -97,7 +78,7 @@ The following list includes common features and services that might use machine 
   **Recommendation**:
   - On your web sites, enable Negotiate authentication.
   - Update your web server apps to use Microsoft Entra authentication. For more information, go to [Migrate application authentication to Microsoft Entra](/entra/identity/enterprise-apps/migrate-adfs-apps-phases-overview).
-  
+
   More resources:
 
   - [IIS Authentication `<windowsAuthentication>`](/iis/configuration/system.webserver/security/authentication/windowsauthentication/)
@@ -111,7 +92,7 @@ The following list includes common features and services that might use machine 
 
   **Recommendation**: Configure your scheduled tasks to use **logged in user**, or another form of account-based authentication.
 
-- **Active Directory login scripts** are assigned in the on-premises AD user's properties or deployed using a Group Policy Object (GPO). These scripts aren't available for cloud-native endpoints.  
+- **Active Directory login scripts** are assigned in the on-premises AD user's properties or deployed using a Group Policy Object (GPO). These scripts aren't available for cloud-native endpoints.
 
   **Recommendation**: Review your scripts. If there's a modern equivalent, then use it instead. For example, if your script sets the user's home drive, then you can move a user's home drive to OneDrive instead. If your script stores shared folder content, then migrate the shared folder content to SharePoint Online instead.
 

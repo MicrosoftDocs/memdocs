@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Mobile App Management (MAM)
 description: Reference topic for the Mobile App Management category of entity collections in the Intune Data Warehouse API.
 ms.date: 10/30/2024

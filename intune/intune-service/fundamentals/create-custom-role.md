@@ -7,7 +7,6 @@ ms.date: 07/28/2025
 ms.topic: article
 ms.localizationpriority: high
 ms.collection:
-  - tier2
   - M365-identity-device-management
 ---
 

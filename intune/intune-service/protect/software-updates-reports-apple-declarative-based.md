@@ -4,7 +4,6 @@ description: Use Microsoft Intune to software updates reports for managed Apple 
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 08/18/2025
-audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.reviewer: beflamm

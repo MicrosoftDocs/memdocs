@@ -5,7 +5,6 @@ ms.date: 09/05/2025
 ms.topic: how-to
 ms.reviewer: abigailstein
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Android
 ---

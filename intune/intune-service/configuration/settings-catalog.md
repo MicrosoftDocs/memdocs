@@ -1,7 +1,6 @@
 ---
 title: Create a policy using settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, administrative templates (ADMX), and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
-keywords: administrative templates, admx, group policy objects, gpo
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 09/25/2025
