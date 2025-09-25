@@ -5,12 +5,8 @@ ms.date: 10/16/2024
 ms.topic: tutorial
 author: yegor-a
 ms.author: egorabr
-ms.manager: dougeby
-no-loc: [Microsoft, Apple]
-ms.collection: 
+ms.collection:
 - graph-interactive
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Optional restrictions

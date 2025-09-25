@@ -7,11 +7,8 @@ description: Plan enrollment for Education devices in Intune.
 keywords:
 author: scottbreenmsft
 ms.author: scbree
-manager: dougeby
 ms.date: 5/2/2024
 ms.topic: tutorial
-ms.service: microsoft-intune
-ms.subservice: education
 searchScope:
  - IntuneEDU
 zone_pivot_groups: platforms-windows-ios

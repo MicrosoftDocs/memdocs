@@ -1,9 +1,6 @@
 ---
-
 title: Device query for multiple devices in Microsoft Intune
 description: Learn how device query for multiple devices allows you to gain comprehensive insights about all your devices using Kusto Query Language (KQL).
-keywords:
-author: MandiOhlinger
 ms.date: 07/14/2025
 ms.topic: how-to
 ms.reviewer: Abby Starr
