@@ -817,51 +817,7 @@ items:
             href: /troubleshoot/mem/intune/troubleshoot-jamf
 
       - name: Software updates
-        items:
-        - name: Android Enterprise updates
-          items:
-          - name: Android FOTA update
-            href: ./protect/fota-updates-android.md
-          - name: Zebra LG OTA Integration
-            href: ./protect/zebra-lifeguard-ota-integration.md
-        - name: iOS/iPadOS & macOS updates
-          items:
-          - name: Managed software updates (DDM)
-            displayName: ddm
-            href: ./protect/managed-software-updates-ios-macos.md
-          - name: iOS/iPadOS update policies
-            href: ./protect/software-updates-ios.md
-          - name: macOS update policies
-            href: ./protect/software-updates-macos.md
-          - name: Apple declarative-based software update reports
-            href: ./protect/software-updates-reports-apple-declarative-based.md
-        - name: Windows updates
-          items:
-          - name: Use Windows Update client policies
-            href: ./protect/windows-update-for-business-configure.md
-          - name: Update rings policy
-            href: ./protect/windows-10-update-rings.md
-          - name: Feature updates policy
-            href: ./protect/windows-10-feature-updates.md
-          - name: Windows quality updates policy
-            href: ./protect/windows-quality-update-policy.md
-          - name: Expedite updates policy
-            href: ./protect/windows-10-expedite-updates.md
-          - name: Windows driver updates
-            items:
-            - name: Driver updates overview
-              href: ./protect/windows-driver-updates-overview.md
-            - name: Driver updates policy
-              href: ./protect/windows-driver-updates-policy.md
-          - name: Windows rollout options
-            href: ./protect/windows-update-rollout-options.md
-          - name: Windows Update compatibility reports
-            href: ./protect/windows-update-compatibility-reports.md
-          - name: Windows Update reports
-            href: ./protect/windows-update-reports.md
-          - name: Delivery Optimization
-            href: ./configuration/delivery-optimization-windows.md
-            displayName: delivery optimization, windows updates
+        href: protect/updates/toc.yml
 
       - name: Endpoint security
         items:
@@ -1273,7 +1229,7 @@ items:
 
       - name: Profiles and their step-by-step guides
         items:
-        - name: Settings catalog
+        - name: Settings catalog, GPO, and ADMX
           displayName: gpo, admx, ios, ipados, macos, windows
           items:
           - name: Overview and get started
@@ -1296,6 +1252,21 @@ items:
             - name: Restrict USB devices
               displayName: gpo, windows
               href: ./configuration/settings-catalog-restrict-usb.md
+            - name: Configure ADMX
+              displayName: gpo, admx, windows
+              href: ./configuration/administrative-templates-windows.md
+          - name: Import custom ADMX and ADML
+            displayName: gpo, windows
+            href: ./configuration/administrative-templates-import-custom.md
+          - name: Group policy analytics
+            items:
+            - name: Analyze on-premises GPOs
+              displayName: gpo, admx, csp, windows
+              href: ./configuration/group-policy-analytics.md
+            - name: Import GPOs to create a policy
+              displayName: gpo, admx, settings catalog, windows
+              href: ./configuration/group-policy-analytics-migrate.md
+
         - name: Properties catalog
           displayName: windows
           href: ./configuration/properties-catalog.md
@@ -1343,30 +1314,7 @@ items:
             displayName: wifi, wireless, psk, oma-uri, eap, android, windows
           - name: Troubleshoot Wi-Fi
             displayName: wifi, wireless, android, ios, ipados, macos, windows, holographic
-            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles
-        - name: Group policy and ADMX templates
-          items:
-          - name: Group Policy analytics
-            displayName: gpo, admx, csp, windows
-            href: ./configuration/group-policy-analytics.md
-          - name: Import GPOs to create a policy
-            displayName: gpo, admx, settings catalog, windows
-            href: ./configuration/group-policy-analytics-migrate.md
-          - name: Create administrative templates (retired)
-            displayName: gpo, admx, windows
-            href: ./configuration/administrative-templates-windows.md
-          - name: Import custom ADMX and ADML
-            displayName: gpo, windows
-            href: ./configuration/administrative-templates-import-custom.md
-          - name: Update Microsoft 365 using settings catalog
-            displayName: gpo, windows, admx
-            href: ./configuration/settings-catalog-update-office.md
-          - name: Create Microsoft Edge policy using settings catalog
-            displayName: gpo, windows, macos, admx
-            href: ./configuration/settings-catalog-configure-edge.md
-          - name: Restrict USB devices using settings catalog
-            displayName: gpo, windows
-            href: ./configuration/settings-catalog-restrict-usb.md
+            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles 
         - name: BIOS & DFCI on Windows
           items:
           - name: Configure the BIOS
@@ -1555,8 +1503,6 @@ items:
             href: ./configuration/preference-file-settings-macos.md
           - name: SCEP certificate
             href: ./protect/certificates-profile-scep.md
-          - name: Software updates (macOS 13 and older)
-            href: ./protect/software-updates-macos.md
           - name: Trusted certificate
             href: ./protect/certificates-trusted-root.md
           - name: VPN
@@ -1994,7 +1940,7 @@ items:
         href: ./fundamentals/chrome-enterprise-device-details.md
 
     - name: Remote device actions
-      href: ./remote-actions/toc.yml
+      href: remote-actions/toc.yml
 
   - name: Support your end users
     items:

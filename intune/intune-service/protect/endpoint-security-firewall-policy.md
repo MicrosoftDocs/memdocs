@@ -1,32 +1,15 @@
 ---
-# required metadata
-
 title: Manage firewall settings with endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Configure and deploy policies for devices you manage with endpoint security firewall policy in Microsoft Intune. 
-keywords:
+description: Configure and deploy policies for devices you manage with endpoint security firewall policy in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 09/18/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
-
 ms.reviewer: laarrizz
 
 ---
@@ -86,7 +69,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
   > [!TIP]
   >
-  > Use of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information, see the following Windows Defender articles:  
+  > Use of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information, see the following Windows Defender articles:
   > - [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
   > - [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
 
@@ -165,7 +148,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 > ![View the Firewall Off](media/endpoint-security-firewall-policy/firewall-off-report.png)
 
 ### MDM Firewall status for Windows 10 and later
- 
+
 *This organizational report is also described in [Intune Reports](../fundamentals/reports.md#mdm-firewall-status-for-windows-10-and-later-organizational)*.
 
 As an organizational report, this report is available from the **Reports** node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** > **MDM Firewall status for Windows 10 and later**.

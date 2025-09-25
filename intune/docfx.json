@@ -175,6 +175,8 @@
         "intune-service/enrollment/**/*.yml": "enrollment",
         "intune-service/fundamentals/**/*.md": "fundamentals",
         "intune-service/fundamentals/**/*.yml": "fundamentals",
+        "intune-service/protect/**/*.md": "protect",
+        "intune-service/protect/**/*.yml": "protect",
         "intune-service/remote-actions/**/*.md": "remote-actions",
         "intune-service/remote-actions/**/*.yml": "remote-actions",
         "intune-service/user-help/**/*.md": "end-user",

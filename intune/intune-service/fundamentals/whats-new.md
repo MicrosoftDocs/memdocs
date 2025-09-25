@@ -57,6 +57,24 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of September 22, 2025
+
+### Device security
+
+#### Update for the Vulnerability Remediation Agent for Security Copilot in Intune (public preview)<!-- 35028555 -->
+
+We’ve updated the Vulnerability Remediation Agent for Security Copilot, adding the following changes to the ongoing limited public preview:
+
+- **Role-based access control (RBAC) for Microsoft Defender** - We’ve updated the [RBAC guidance](../protect/vulnerability-remediation-agent.md#role-based-access-control-and-permissions) to reflect how RBAC is implemented in Microsoft Defender XDR. Guidance is now provided for configurations that use [**Unified RBAC**](/defender-xdr/manage-rbac) (a single set of permissions across services) and for [**granular RBAC**](/defender-endpoint/rbac) (customized permissions per service).
+
+  When using granular RBAC configurations, ensure the agent’s identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
+
+- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../protect/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data. 
+
+  Changes to the agent’s identity won’t affect the agent’s run history, which remains available.
+
+These updates provide greater flexibility and control for organizations using the Vulnerability Remediation Agent in preview. To learn more about this Agent, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
+
 ## Week of September 15, 2025 (Service release 2509)
 
 ### Device configuration

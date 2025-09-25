@@ -118,12 +118,12 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
 
 ### Administrative templates
 
-Windows 10 or Windows 11 Administrative Templates are supported for Windows 10 or Windows 11 Enterprise multi-session via the Settings catalog with some limitations:
+Administrative Templates in the [Intune settings catalog](../configuration/settings-catalog.md) are supported for Windows 10 or Windows 11 Enterprise multi-session with some limitations:
 
 - ADMX-backed policies are supported. Some policies aren't yet available in the Settings catalog.
-- ADMX-ingested policies are supported, including Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings won't be applicable to Windows 10 or Windows 11 Enterprise multi-session.
+- ADMX-ingested policies are supported. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings won't be applicable to Windows 10 or Windows 11 Enterprise multi-session.
 
-To list supported Administrative Templates, you'll need to use the filter in Settings catalog.
+For a list of supported Administrative Templates, create a [settings catalog](../configuration/settings-catalog.md) policy.
 
 ## Compliance and Conditional Access
 

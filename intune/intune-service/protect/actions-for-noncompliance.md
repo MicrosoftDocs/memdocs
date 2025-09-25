@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: Configure compliance policies with actions for noncompliance in Microsoft Intune
 description: Configure your compliance policies with one or more actions for noncompliance to protect devices and your organization from unprotected devices. Actions can remotely lock devices, send email or notifications to device users, and more.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 1/23/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
 ms.reviewer: ilwu
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - compliance
@@ -101,7 +84,7 @@ Following are the available actions for noncompliance:
     - Personally Owned Work Profile
   - iOS/iPadOS
   - macOS
-  - Windows 10/11
+  - Windows
 
   > [!NOTE]
   > Only devices to which the **Add device to retire list** action has been triggered appear in the **Retire selected devices** tab. To see a list of all devices that are not compliant, see the **Noncompliant devices** report mentioned in [Monitor device compliance policy](../protect/compliance-policy-monitor.md#other-compliance-reports).
@@ -215,7 +198,7 @@ Add variables to the message to create a personalized email with dynamic content
    > Intune converts Windows-style new line characters to `<br>` HTML tags but ignores all other types of new line characters, including those for macOS and Linux. To ensure line breaks render properly in templates, we recommend using the `<br>` tag to indicate the end of a line.
 
 
-1. Select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn’t include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.
+1. Select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn't include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.
 
    Select **Next** to continue.
 
