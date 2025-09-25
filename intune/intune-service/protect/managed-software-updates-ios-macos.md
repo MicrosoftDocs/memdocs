@@ -68,7 +68,6 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 
 ## Configure the manual software updates policy
-## Configure the manual software updates policy
 
 1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS or macOS platform and use the following settings:
 
