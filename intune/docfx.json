@@ -100,7 +100,8 @@
         "configmgr/**/*.md": ["ConfigMgr"],
         "configmgr/**/*.yml": ["ConfigMgr"],
         "configmgr/core/**/*.md": ["ConfigMgr"],
-        "analytics/**/*.md": ["Analytics"]
+        "analytics/**/*.md": ["Analytics"],
+        "intune-service/user-help/**/*.md": ["User help"]
       },
       "featureFlags": {
         "*.md" : [
@@ -183,6 +184,10 @@
         "intune-service/user-help/**/*.yml": "end-user",
         "intune-service/industry/education/**/*.md": "education",
         "intune-service/industry/education/**/*.yml": "education"
+      },
+      "ms.topic": {
+        "intune-service/user-help/**/*.md": "end-user-help",
+        "intune-service/user-help/**/*.yml": "end-user-help"
       },
       "search.appverid": {
         "analytics/**/*.md": "MET150",
