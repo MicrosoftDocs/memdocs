@@ -5,6 +5,7 @@ ms.date: 03/27/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
+  - tier1
   - essentials-manage
 ms.topic: how-to
 appliesto:

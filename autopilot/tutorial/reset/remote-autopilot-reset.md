@@ -4,6 +4,7 @@ description: Remote Windows Autopilot Reset in Intune.
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:
+  - tier1
   - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
