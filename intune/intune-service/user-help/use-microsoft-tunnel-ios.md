@@ -1,35 +1,11 @@
 ---
-# required metadata
-
-title: Use the Microsoft Tunnel app for iOS - Microsoft Intune  | Microsoft Docs
+title: Use the Microsoft Tunnel app for iOS
 description: Learn how to connect over VPN using Microsoft Tunnel for iOS.
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: laurawi
 ms.date: 11/14/2023
-ms.topic: end-user-help
-ms.service: microsoft-intune
-ms.subservice: end-user
-ms.assetid: 
-searchScope:
- - User help
-
-# optional metadata
-
-ROBOTS:  
-#audience:
-
 ms.reviewer: shthilla
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-enduser
-ms.collection:
-- tier2
 ---
 
-
-# Using Microsoft Tunnel for iOS  
+# Using Microsoft Tunnel for iOS
 
 Microsoft Tunnel uses Microsoft Defender for Endpoint as The Microsoft Tunnel client app on iOS.
 

@@ -7,6 +7,8 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: laurawi
+title: Reset a device from the Intune Company Portal website
+description: Learn how to factory reset a lost or stolen device from the Intune Company Portal website.
 ms.date: 10/08/2024
 ms.topic: end-user-help
 ms.service: microsoft-intune
@@ -21,13 +23,7 @@ ROBOTS:
 #audience:
 
 ms.reviewer: coferro
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-enduser
-ms.collection:
-- tier1
 ---
-
 
 # Reset device from Company Portal website
 
@@ -45,7 +41,7 @@ You can reset the following types of devices from the Company Portal website:
 * iOS/iPadOS devices that aren't supervised
 * Devices running Windows 10 or Windows 11
 
-The action may be unavailable on devices that your organization owns and lends out for use. If you're an IT support person and want to find out more about device reset and its limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/device-wipe.md).
+The action may be unavailable on devices that your organization owns and lends out for use. If you're an IT support person and want to find out more about device reset and its limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).
 
 ## Reset device
 To reset a device to its original, out-of-box settings:

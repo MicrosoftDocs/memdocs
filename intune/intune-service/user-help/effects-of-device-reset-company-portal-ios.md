@@ -7,6 +7,8 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: laurawi
+title: Reset device in Intune Company Portal
+description: Describes what happens after you reset a device in the Intune Company Portal app for iOS and includes the steps for how to do it.
 ms.date: 02/18/2025
 ms.topic: end-user-help
 ms.service: microsoft-intune
@@ -21,11 +23,6 @@ ROBOTS:
 #audience:
 
 ms.reviewer: esmich
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-enduser
-ms.collection:
-- tier1
 ---
 
 
@@ -37,7 +34,7 @@ If your device is only set up to access work or school email, your email account
 
 ## Availability of factory reset option
 
-The factory reset option isn't available for all iOS devices. If you're an IT support person and want to find out more about these limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](/intune/intune-service/remote-actions/device-wipe).
+The factory reset option isn't available for all iOS devices. If you're an IT support person and want to find out more about these limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](/mem/intune-service/remote-actions/devices-wipe).
 
 ## Factory reset device
 To reset a device to its original, out-of-box settings:
