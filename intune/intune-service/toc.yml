@@ -1229,7 +1229,7 @@ items:
 
       - name: Profiles and their step-by-step guides
         items:
-        - name: Settings catalog
+        - name: Settings catalog, GPO, and ADMX
           displayName: gpo, admx, ios, ipados, macos, windows
           items:
           - name: Overview and get started
@@ -1252,6 +1252,21 @@ items:
             - name: Restrict USB devices
               displayName: gpo, windows
               href: ./configuration/settings-catalog-restrict-usb.md
+            - name: Configure ADMX
+              displayName: gpo, admx, windows
+              href: ./configuration/administrative-templates-windows.md
+          - name: Import custom ADMX and ADML
+            displayName: gpo, windows
+            href: ./configuration/administrative-templates-import-custom.md
+          - name: Group policy analytics
+            items:
+            - name: Analyze on-premises GPOs
+              displayName: gpo, admx, csp, windows
+              href: ./configuration/group-policy-analytics.md
+            - name: Import GPOs to create a policy
+              displayName: gpo, admx, settings catalog, windows
+              href: ./configuration/group-policy-analytics-migrate.md
+
         - name: Properties catalog
           displayName: windows
           href: ./configuration/properties-catalog.md
@@ -1299,30 +1314,7 @@ items:
             displayName: wifi, wireless, psk, oma-uri, eap, android, windows
           - name: Troubleshoot Wi-Fi
             displayName: wifi, wireless, android, ios, ipados, macos, windows, holographic
-            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles
-        - name: Group policy and ADMX templates
-          items:
-          - name: Group Policy analytics
-            displayName: gpo, admx, csp, windows
-            href: ./configuration/group-policy-analytics.md
-          - name: Import GPOs to create a policy
-            displayName: gpo, admx, settings catalog, windows
-            href: ./configuration/group-policy-analytics-migrate.md
-          - name: Create administrative templates (retired)
-            displayName: gpo, admx, windows
-            href: ./configuration/administrative-templates-windows.md
-          - name: Import custom ADMX and ADML
-            displayName: gpo, windows
-            href: ./configuration/administrative-templates-import-custom.md
-          - name: Update Microsoft 365 using settings catalog
-            displayName: gpo, windows, admx
-            href: ./configuration/settings-catalog-update-office.md
-          - name: Create Microsoft Edge policy using settings catalog
-            displayName: gpo, windows, macos, admx
-            href: ./configuration/settings-catalog-configure-edge.md
-          - name: Restrict USB devices using settings catalog
-            displayName: gpo, windows
-            href: ./configuration/settings-catalog-restrict-usb.md
+            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles 
         - name: BIOS & DFCI on Windows
           items:
           - name: Configure the BIOS
