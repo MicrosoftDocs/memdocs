@@ -4,7 +4,7 @@ description: Use settings catalog in Microsoft Intune to configure thousands of 
 keywords: administrative templates, admx, group policy objects, gpo
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 09/24/2025
+ms.date: 09/25/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -63,16 +63,17 @@ This feature applies to:
 
   There are thousands of settings, including administrative templates (ADMX), and more settings are continually being added. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
 
-> [!TIP]
->
-> - For a list of the settings in the settings catalog, see the [IntunePMFiles/DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
-> - To see the Microsoft Edge policies you configured, open Microsoft Edge and go to `edge://policy`.
-
 This article describes the steps to create a policy, shows how to search and filter the settings in Intune, and shows how to use Copilot.
 
 When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
 
-For information about features you can configure using the settings catalog, see [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
+For information about popular features you can configure using the settings catalog, see [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
+
+## Before you begin
+
+- For a list of the settings in the settings catalog, see the [IntunePMFiles/DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
+- To see the Microsoft Edge policies you configured, open Microsoft Edge and go to `edge://policy`. For a list of the Microsoft Edge current and deprecated settings, see [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
+- The tooltips and **Learn more** links in the tooltips provide more information on the setting.
 
 ## Create the policy
 
@@ -106,16 +107,6 @@ You create the policy by using the settings catalog profile type.
     For example, in a Windows policy, select **Authentication** to see all the settings in this category:
 
     :::image type="content" source="./media/settings-catalog/settings-picker-authentication.png" alt-text="Screenshot that shows the Settings Catalog when you select Windows and Authentication in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-authentication.png":::
-
-    In another example, select **macOS**. The **Microsoft Edge - All** category lists all the settings you can configure. The other categories include settings that are obsolete or that apply to older versions:
-
-    :::image type="content" source="./media/settings-catalog/macos-settings-picker-edge-all.png" alt-text="Screenshot that shows the Settings Catalog when you select macOS and select a feature or category in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/macos-settings-picker-edge-all.png":::
-
-   > [!TIP]
-   >
-   > - On macOS, the categories are temporarily removed. To find a specific setting, use the **Microsoft Edge - All** category, or search for the setting name. For a list of the setting names, see [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
-   >
-   > - Use the **Learn more** link in the tooltip to see if a setting is obsolete and to see the supported versions.
 
 8. Select any setting you want to configure. Or, choose **Select all these settings**:
 
