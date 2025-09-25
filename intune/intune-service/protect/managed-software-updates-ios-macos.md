@@ -1,5 +1,6 @@
 ---
 title: Configure software updates for Apple devices
+title: Configure software updates for Apple devices
 description: Use Microsoft Intune to configure Apple's declarative device management (DDM) settings to install a specific update by an enforced deadline. This feature uses the settings catalog to configure managed software updates for supervised iOS/iPadOS and managed macOS devices.
 author: paolomatarazzo
 ms.author: paoloma
@@ -30,9 +31,17 @@ With DDM managed software updates in Intune, you can:
 >
 > - iOS/iPadOS 17.0 and later
 > - macOS 14.0 and later
+[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+
+> [!div class="checklist"]
+> This feature applies to:
+>
+> - iOS/iPadOS 17.0 and later
+> - macOS 14.0 and later
 
 Apple's declarative device management (DDM) allows you to install a specific update by an enforced deadline. The autonomous nature of DDM provides an improved user experience as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
 
+<!--
 <!--
 ## DDM software updates vs MDM software update policies
 
@@ -75,6 +84,8 @@ Use the following information to help you decide which policy type to use.
 
 -->
 
+-->
+
 ### Precedence
 
 DDM software updates have precedence over other policies that configure software updates. If you configure DDM software updates and also have other MDM software update policies assigned, then it's possible the other update policies have no effect.
@@ -91,6 +102,7 @@ DDM software updates have precedence over other policies that configure software
 3. MDM software updates (**Settings catalog** > **System Updates** > **Software Update**)
 
 ## Configure the automatic software updates policy
+## Configure the automatic software updates policy
 
 You can use the settings catalog to configure a policy that automatically enforces the latest update available for devices, so you don't have to manually update the target OS version and target date time settings each time that Apple releases a new update.
 
@@ -105,12 +117,17 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 > [!IMPORTANT]
 > Assignment filters are not supported for DDM-based policies.
+> [!IMPORTANT]
+> Assignment filters are not supported for DDM-based policies.
 
+<!--
 <!--
 
 > [!NOTE]
 > The `retrieveDeviceConfigurationAvailableOptions` function of the [deviceManagementConfigurationSettingDefinition resource type](/graph/api/resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition?view=graph-rest-beta) requires delegated user authentication. Application permissions cannot be used for this endpoint.-->
+> The `retrieveDeviceConfigurationAvailableOptions` function of the [deviceManagementConfigurationSettingDefinition resource type](/graph/api/resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition?view=graph-rest-beta) requires delegated user authentication. Application permissions cannot be used for this endpoint.-->
 
+## Configure the manual software updates policy
 ## Configure the manual software updates policy
 
 1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS or macOS platform and use the following settings:
@@ -126,7 +143,10 @@ You can use the settings catalog to configure a policy that automatically enforc
 
 > [!IMPORTANT]
 > Assignment filters are not supported for DDM-based policies.
+> [!IMPORTANT]
+> Assignment filters are not supported for DDM-based policies.
 
+## Monitor software updates
 ## Monitor software updates
 
 To monitor software updates for Apple devices, you can use the following methods:
