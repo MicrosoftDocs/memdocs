@@ -21,7 +21,7 @@ With Microsoft Intune, IT admins can configure and enforce update policies for A
 
 This article outlines how to configure update policies in Intune using Apple's Declarative Device Management (DDM) model. DDM offers improved reliability and autonomy compared to legacy MDM-based policies, which are now deprecated.
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../includes/h2/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This feature applies to:
