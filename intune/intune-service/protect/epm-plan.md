@@ -1,26 +1,12 @@
 ---
 title: Plan and Prepare for Endpoint Privilege Management Deployment
-description: Plan your Endpoint Privilege Management deploying by understanding requirements, fundamentals, and security recommendations. 
-keywords:
+description: Plan your Endpoint Privilege Management deploying by understanding requirements, fundamentals, and security recommendations.
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 09/10/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -151,7 +137,7 @@ When a device receives two separate elevation settings policies with conflicting
 
 > [!NOTE]
 >
-> If *Enable Endpoint Privilege Management* is in conflict, the default behavior of the client is to *Enable* EPM. 
+> If *Enable Endpoint Privilege Management* is in conflict, the default behavior of the client is to *Enable* EPM.
 
 **Windows elevation rules policy**:
 
@@ -193,7 +179,7 @@ When [configuring an elevation rule](../protect/epm-elevation-rules.md#create-el
 
 This recommendation applies to rules created [automatically](../protect/epm-elevation-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](../protect/epm-reports.md) or [support approved](../protect/epm-support-approved.md) request, and for elevation rules that you create [manually](../protect/epm-elevation-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Files located on network shares aren't supported and shouldn't be used in rule definitions.
 
 ### Differentiate installer and runtime elevation
