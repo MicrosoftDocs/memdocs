@@ -1,6 +1,5 @@
 ---
-title: Configure software updates for Apple devices
-title: Configure software updates for Apple devices
+title: Configure software update policies for Apple devices
 description: Use Microsoft Intune to configure Apple's declarative device management (DDM) settings to install a specific update by an enforced deadline. This feature uses the settings catalog to configure managed software updates for supervised iOS/iPadOS and managed macOS devices.
 author: paolomatarazzo
 ms.author: paoloma
@@ -14,15 +13,13 @@ ms.collection:
 - sub-updates
 ---
 
-# DDM software updates with the settings catalog in Microsoft Intune
+# Configure software updates policies for Apple devices
 
-You can use the Intune [settings catalog](../configuration/settings-catalog.md) to configure managed software updates for iOS/iPadOS and macOS devices. Managed software updates uses Apple's declarative device management (DDM).
+Software updates for Apple devices are critical to maintaining security, performance, and compliance across an organization. Updates often include patches for vulnerabilities, bug fixes, and feature enhancements. Without a consistent update strategy, organizations risk exposing devices to threats and encountering compatibility issues with apps and services.
 
-With DDM managed software updates in Intune, you can:
+With Microsoft Intune, IT admins can configure and enforce update policies for Apple devices. This control allows updates to be scheduled during maintenance windows, enforces deadlines, and minimizes user disruption.
 
-- Choose an update to install using its OS version or build version.
-- Enforce a deadline for the device to automatically install an update.
-- Specify a URL that users can visit to learn more about updates.
+This article outlines how to configure update policies in Intune using Apple's Declarative Device Management (DDM) model. DDM offers improved reliability and autonomy compared to legacy MDM-based policies, which are now deprecated.
 
 [!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
@@ -32,52 +29,7 @@ With DDM managed software updates in Intune, you can:
 > - iOS/iPadOS 17.0 and later
 > - macOS 14.0 and later
 
-Apple's declarative device management (DDM) allows you to install a specific update by an enforced deadline. The autonomous nature of DDM provides an improved user experience as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
-
-<!--
-<!--
-## DDM software updates vs MDM software update policies
-
-On Apple devices in Intune, you can create MDM-based software update policies or DDM-managed software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types.
-
-> [!NOTE]
-> Apple deprecated MDM-based software update workloads. Microsoft recommends you use DDM to install updates instead. For more information on these changes, see [support tip for moving to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/4432177).
-
-Use the following information to help you decide which policy type to use.
-
-| Feature | Managed software update policy (DDM) | Software update policy (MDM) |
-| --- | --- | --- |
-| **Configure a specific update to install** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ✅ | ✅ |
-| macOS | ✅ | ❌ |
-| &nbsp;|&nbsp; | &nbsp;|
-| **Enforces an update deadline** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ✅ | ❌ |
-| macOS | ✅ | ❌ |
-| &nbsp;|&nbsp; | &nbsp;|
-| **Enter a help URL** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ✅ | ❌ |
-| macOS | ✅ | ❌ |
-| &nbsp;|&nbsp; | &nbsp;|
-| **Auto deploy latest update** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ✅ | ✅ |
-| macOS | ✅ | ✅ |
-| &nbsp;|&nbsp; | &nbsp;|
-| **Downgrade versions** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ❌ | ❌ |
-| macOS | ❌ | ❌ |
-| &nbsp;|&nbsp; | &nbsp;|
-| **Intune admin center policy type** | &nbsp; | &nbsp; |
-| iOS/iPadOS | [Settings catalog](../configuration/settings-catalog.md) |[Update policies for iOS/iPadOS](software-updates-ios.md) |
-| macOS | [Settings catalog](../configuration/settings-catalog.md) | [Update policies for macOS](software-updates-macos.md) |
-| &nbsp;|&nbsp; | &nbsp;|
-| **Minimum supported version** | &nbsp; | &nbsp; |
-| iOS/iPadOS | 17.0 and later | - iOS 10.3 (supervised)<br/>- iPadOS 13.0 (supervised) |
-| macOS | 14.0 and later | macOS 12.0 |
-
--->
-
-### Precedence
+## Precedence
 
 DDM software updates have precedence over other policies that configure software updates. If you configure DDM software updates and also have other MDM software update policies assigned, then it's possible the other update policies have no effect.
 
@@ -94,9 +46,11 @@ DDM software updates have precedence over other policies that configure software
 
 ## Configure the automatic software updates policy
 
+You can use the Intune [settings catalog](../configuration/settings-catalog.md) to configure managed software updates for iOS/iPadOS and macOS devices.
+
 You can use the settings catalog to configure a policy that automatically enforces the latest update available for devices, so you don't have to manually update the target OS version and target date time settings each time that Apple releases a new update.
 
-1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS or macOS platform and use the following settings:
+1. Create a [settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS or macOS platform and use the following settings:
 
     | Category | Setting name | Value |
     |--|--|--|
@@ -174,3 +128,45 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - [Software updates planning guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
 - [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
 - [Declarative Apple software update reports in Intune](software-updates-reports-apple-declarative-based.md)
+
+<!--
+## DDM software updates vs MDM software update policies
+
+On Apple devices in Intune, you can create MDM-based software update policies or DDM-managed software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types.
+
+> [!NOTE]
+> Apple deprecated MDM-based software update workloads. Microsoft recommends you use DDM to install updates instead. For more information on these changes, see [support tip for moving to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/4432177).
+
+Use the following information to help you decide which policy type to use.
+
+| Feature | Managed software update policy (DDM) | Software update policy (MDM) |
+| --- | --- | --- |
+| **Configure a specific update to install** | &nbsp; | &nbsp; |
+| iOS/iPadOS | ✅ | ✅ |
+| macOS | ✅ | ❌ |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Enforces an update deadline** | &nbsp; | &nbsp; |
+| iOS/iPadOS | ✅ | ❌ |
+| macOS | ✅ | ❌ |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Enter a help URL** | &nbsp; | &nbsp; |
+| iOS/iPadOS | ✅ | ❌ |
+| macOS | ✅ | ❌ |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Auto deploy latest update** | &nbsp; | &nbsp; |
+| iOS/iPadOS | ✅ | ✅ |
+| macOS | ✅ | ✅ |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Downgrade versions** | &nbsp; | &nbsp; |
+| iOS/iPadOS | ❌ | ❌ |
+| macOS | ❌ | ❌ |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Intune admin center policy type** | &nbsp; | &nbsp; |
+| iOS/iPadOS | [Settings catalog](../configuration/settings-catalog.md) |[Update policies for iOS/iPadOS](software-updates-ios.md) |
+| macOS | [Settings catalog](../configuration/settings-catalog.md) | [Update policies for macOS](software-updates-macos.md) |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Minimum supported version** | &nbsp; | &nbsp; |
+| iOS/iPadOS | 17.0 and later | - iOS 10.3 (supervised)<br/>- iPadOS 13.0 (supervised) |
+| macOS | 14.0 and later | macOS 12.0 |
+
+-->
