@@ -1,13 +1,8 @@
 ---
 author: brenduns
 ms.author: brenduns
-ms.reviewer: demerson
-
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.topic: include
 ms.date: 08/20/2024
-
 ---
 
 <!-- This note appears in several articles that detail MTD partner apps that support App Protection policies (MAM)  Do not add a blank line after the end of this note.  -->

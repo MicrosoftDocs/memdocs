@@ -1,27 +1,13 @@
 ---
-# required metadata
 title: Encrypt Windows devices with Intune
-titleSuffix: Microsoft Intune
 description: Use Microsoft Intune policy to manage encryption of Windows devices with either BitLocker or Personal Data Encryption.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 09/23/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-
-# optional metadata
-#audience:
 ms.reviewer: annovich; aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -135,7 +121,7 @@ The following subjects can help you manage specific tasks through BitLocker poli
 - [Rotate BitLocker recovery keys](#rotate-bitlocker-recovery-keys)
 - [End user self service recovery key experiences](#self-service-recovery-keys)
 
-To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md). 
+To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md).
 
 ### Silently enable BitLocker on devices
 
@@ -199,7 +185,7 @@ Following are the relevant settings for each profile type:
 - **Compatible TPM startup key** - Configure this as *Do not allow startup Key with TPM*
 - **Compatible TPM startup key and PIN** - Configure this as *Do not allow startup Key and PIN with TPM*
 
-> [!WARNING]  
+> [!WARNING]
 > While neither the endpoint security or device configuration policies configure the TPM settings by default, some versions of the [security baseline for Microsoft Defender for Endpoint](../protect/security-baselines.md#available-security-baselines) will configure both *Compatible TPM startup PIN* and *Compatible TPM startup key* by default. These configurations might block silent enablement of BitLocker.
 >
 > If you deploy this baseline to devices on which you want to silently enable BitLocker, review your baseline configurations for possible conflicts. To remove conflicts, either reconfigure the settings in the baselines to remove the conflict, or remove applicable devices from receiving the baseline instances that configure TPM settings that block silent enablement of BitLocker.
