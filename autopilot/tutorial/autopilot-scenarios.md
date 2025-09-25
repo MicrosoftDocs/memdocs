@@ -4,7 +4,6 @@ description: Describes the different Windows Autopilot scenarios.
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:
-  - tier1
   - highpri
   - essentials-get-started
 appliesto:

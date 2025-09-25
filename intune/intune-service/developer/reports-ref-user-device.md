@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: User Device Association - Intune Data Warehouse
 description: The UserDeviceAssociation entity contains user device associations in your organization.
 ms.date: 10/30/2024

@@ -6,7 +6,6 @@ ms.topic: article
 ms.reviewer: beflamm
 ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 

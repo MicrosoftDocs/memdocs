@@ -4,7 +4,6 @@ description: How to - Windows Autopilot self-deploying mode - Step 4 of 6 - Crea
 ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:
-  - tier1
   - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

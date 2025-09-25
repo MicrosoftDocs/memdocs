@@ -2,7 +2,6 @@
 title: include file
 description: include file
 author: MandiOhlinger
-ms.service: microsoft-intune
 ms.topic: include
 ms.date: 05/30/2024
 ms.author: mandia

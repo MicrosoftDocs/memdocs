@@ -125,7 +125,9 @@
         "intune-service/user-help/**/*.md": "lenewsad",
         "intune-service/user-help/**/*.yml": "lenewsad",
         "analytics/**/*.md": "paolomatarazzo",
-        "analytics/**/*.yml": "paolomatarazzo"
+        "analytics/**/*.yml": "paolomatarazzo",
+        "solutions/**/*.md": "mandiohlinger",
+        "solutions/**/*.yml": "mandiohlinger"
       },
       "manager": {
         "intune-service/**/*.md": "laurawi",
@@ -149,7 +151,9 @@
         "intune-service/user-help/**/*.md": "lanewsad",
         "intune-service/user-help/**/*.yml": "lanewsad",
         "analytics/**/*.md": "paoloma",
-        "analytics/**/*.yml": "paoloma"
+        "analytics/**/*.yml": "paoloma",
+        "solutions/**/*.md": "mandia",
+        "solutions/**/*.yml": "mandia"
       },
       "ms.reviewer": {
         "intune-service/remote-actions/**/*.md": "mattcall",

@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Use the Intune Data Warehouse
 description: Use the Intune Data Warehouse to build reports that provide insight into your enterprise mobile environment.
 ms.date: 10/30/2024

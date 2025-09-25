@@ -1,7 +1,6 @@
 ---
 title: Use ADMX templates on Windows devices in Microsoft Intune
 description: Use the settings catalog to configure administrative templates (ADMX) in Microsoft Intune on Windows 10/11 client devices. You can configure some Control Panel features, Start menu and task bar notifications, event log service, prevent IIS installation, and more.
-keywords: admx, gpo, group policy, administrative templates, intune, settings catalog, windows, windows 10, windows 11
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 09/25/2025

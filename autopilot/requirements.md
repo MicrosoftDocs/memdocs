@@ -5,7 +5,6 @@ ms.date: 07/08/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
-  - tier1
 ms.topic: article
 ms.custom:
   - CI 116757

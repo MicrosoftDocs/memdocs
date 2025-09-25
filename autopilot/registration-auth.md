@@ -4,7 +4,6 @@ description: Learn how a cloud service provider (CSP) partner or an OEM can get 
 ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop
-  - tier2
 ms.topic: reference
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

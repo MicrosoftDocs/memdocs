@@ -1,6 +1,5 @@
 ---
 title: Windows Delivery Optimization settings for Intune
-titleSuffix: Microsoft Intune
 description: Delivery Optimization settings for Windows devices that you can deploy using Intune.
 author: paolomatarazzo
 ms.author: paoloma

@@ -4,7 +4,6 @@ description: Guidance and advice for administrators that create and manage softw
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 07/24/2025
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: beflamm, ahamil, rogerso

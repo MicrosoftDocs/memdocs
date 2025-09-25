@@ -1,29 +1,13 @@
 ---
-# required metadata
 
 title: Tutorial-Get started with cloud-native Windows endpoints
-titleSuffix: Microsoft Intune
 description: Set up secure cloud-native Windows endpoints that are Microsoft Entra joined, enrolled in Intune, and then deploy at scale with Windows Autopilot.
-keywords:
 author: scottbreenmsft
-
-ms.author: brenduns
-manager: dougeby
+ms.author: scbree
 ms.date: 07/24/2025
 ms.topic: get-started
-ms.service: microsoft-intune
-ms.subservice:
 ms.localizationpriority: high
-ms.assetid:
-# optional metadata
-
-#audience:
-#ms.devlang:
 ms.reviewer: scbree;rogerso
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
   - highpri
@@ -315,7 +299,7 @@ This phase is designed to help you build out security settings for your organiza
 
 ### Microsoft Defender Antivirus (MDAV)
 
-The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 #### [:::image type="icon" source="../../intune-service/media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
 
@@ -400,7 +384,7 @@ When you configure the following BitLocker settings, they silently enable 128-bi
 
 - Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later): **Not Configured**
 - Provide the unique identifiers for your organization: **Not Configured**
- 
+
 **Operating System Drives**:
 
 - Enforce drive encryption type on operating system drives: **Enabled**
@@ -424,7 +408,7 @@ When you configure the following BitLocker settings, they silently enable 128-bi
   - Omit recovery options from the BitLocker setup wizard: **True**
   - Save BitLocker recovery information to AD DS for operating system drives: **True**
 - Configure pre-boot recovery message and URL: **Not configured**
-  
+
 **Fixed Data Drives**:
 
 - Enforce drive encryption type on fixed data drives: **Enabled**

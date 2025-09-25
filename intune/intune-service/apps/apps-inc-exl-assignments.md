@@ -5,7 +5,6 @@ ms.date: 04/17/2024
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

@@ -4,7 +4,6 @@ description: Microsoft Intune provides a comprehensive set of configuration opti
 ms.date: 04/02/2025
 ms.collection:
   - M365-modern-desktop
-  - tier2
 ms.topic: how-to
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

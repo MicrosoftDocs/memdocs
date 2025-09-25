@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: nicolezhao
 ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - FocusArea_Apps_EAM
 ---
