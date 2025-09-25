@@ -298,7 +298,6 @@ You can use filters for some common app policies on the following platforms. For
 | Update rings for Windows | ✅ |
 | &nbsp; | &nbsp; |
 | **Device configuration profile** | &nbsp; |
-| Administrative Templates | ✅ |
 | Custom | ✅ |
 | Derived credential | N/A |
 | Delivery optimization | ✅ |

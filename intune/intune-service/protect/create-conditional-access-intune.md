@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Set up device-based Conditional Access policies with Intune
-titleSuffix: Microsoft Intune
 description: Configure a device-based Conditional Access policy that uses device status from a Microsoft Intune device compliance policies.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 09/18/2023
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ilwu
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - conditional-access
 - sub-device-compliance
@@ -43,7 +25,7 @@ From within the Intune admin center, you can access the Conditional Access polic
 To Create a device-based Conditional Access policy your account must have one of the following permissions in Microsoft Entra:
 
 - Security administrator
-- Conditional Access administrator  
+- Conditional Access administrator
 
 To take advantage of device compliance status, configure Conditional Access policies to **Require device to be marked as compliant**. This option is set while configuring *Grant* access during step 6 of the following procedure.
 
@@ -61,7 +43,7 @@ To take advantage of device compliance status, configure Conditional Access poli
 
 3. Under **Assignments**, configure **Users** to select the Identities in the directory that the policy applies to. To learn more, see [Users and groups](/azure/active-directory/conditional-access/concept-conditional-access-users-groups) in the Microsoft Entra documentation.
 
-   - On the **Include** tab, configure the user and groups you want to include.  
+   - On the **Include** tab, configure the user and groups you want to include.
    - Use the **Exclude** tab if there are any users, roles, or groups you want to exclude from this policy.
 
    > [!TIP]
