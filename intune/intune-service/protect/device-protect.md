@@ -200,7 +200,7 @@ By deploying EPM *elevation rules* that you define, you can allow only the appli
 
 > [!TIP]
 >
-> Endpoint Privilege Management is available as an [Intune add-on](../fundamentals/intune-add-ons.md) which requires an additional license to use, and supports Windows 10 and Windows 11 devices.
+> Endpoint Privilege Management is available as an [Intune add-on](../fundamentals/intune-add-ons.md) which requires an additional license to use, and supports Windows devices.
 
 For more information, see [Endpoint Privilege Management](../protect/epm-overview.md).
 
