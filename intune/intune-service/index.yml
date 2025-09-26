@@ -4,15 +4,11 @@ summary: Learn more about Microsoft Intune's unified endpoint management and sec
 brand: azure
 
 metadata:
-  services: service
-  ms.service: microsoft-intune
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
-  manager: dansimp
   ms.date: 02/06/2025
   ms.collection:
-  - tier1
   - essentials-navigation
   ms.custom: intro-hub-or-landing
 

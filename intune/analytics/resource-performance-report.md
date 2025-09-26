@@ -1,16 +1,8 @@
 ---
 title: Resource Performance report in Microsoft Intune Advanced Analytics
-titleSuffix: Microsoft Intune
 description: This article provides an overview of the resource performance report for cloud-managed Windows devices
 ms.date: 08/19/2024
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
-
 ---
 
 # Resource Performance report in Microsoft Intune Advanced Analytics
@@ -25,8 +17,9 @@ The insights show not only how much your score can improve by upgrading the CPU 
 
 ## License requirements
 
-The resource performance report is available for:
+With a Windows 365 license, you get access to this report for the Cloud PCs in your organization.
 
+The resource performance report is available for:
 - Windows 365 Cloud PCs and;
 - Other supported Windows devices with users licensed by Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
@@ -63,7 +56,7 @@ The CPU spike time score (from 0 to 100) is assigned based on the device's usage
 
 Usage over 50% is considered a spike.
 
-- To improve the performance of CPU in Windows physical devices, you could upgrade the processors by increasing the number of cores or the clock speed, optimize the operating system or adjust power settings.  
+- To improve the performance of CPU in Windows physical devices, you could upgrade the processors by increasing the number of cores or the clock speed, optimize the operating system or adjust power settings.
 
 - To improve the performance of CPU in Cloud PCs, you could upgrade to a higher configuration of Cloud PCs.
 

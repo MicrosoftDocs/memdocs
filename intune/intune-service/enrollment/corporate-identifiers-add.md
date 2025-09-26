@@ -1,25 +1,10 @@
 ---
-# required metadata
-
 title: Add corporate identifiers to Intune
 description: Add corporate identifiers (enrollment method, IMEI, and serial numbers) to Microsoft Intune.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
 ms.date: 04/11/2025
 ms.topic: how-to
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: maholdaa
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -235,7 +220,7 @@ To edit a device's identification after enrollment, change its ownership setting
 
 When you change a device's ownership type from *corporate* to *personal*, Intune deletes all app information previously collected from that device within seven days. If applicable, Intune also deletes the phone number on record. Intune still collects the inventory of apps installed by the IT admin on the device, and a partial phone number.
 
-When you change the ownership of an iOS/iPad or Android device from *personal* to *corporate*, a push notification is sent through the Company Portal app to inform the device user of the change.  
+When you change the ownership of an iOS/iPad or Android device from *personal* to *corporate*, a push notification is sent through the Company Portal app to inform the device user of the change.
 
 ## Block personal devices
 

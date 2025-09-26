@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: Monitor security baselines deployed by Microsoft Intune
 description: Monitor device and per-setting results of security baselines you deploy with Microsoft Intune, and identify conflicts for devices.
-keywords:
-author: brenduns 
+author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/22/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: juidaewo
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-secure-endpoints
 ---
@@ -248,6 +231,6 @@ On Windows 10/11 devices, there's a built-in MDM diagnostic information report. 
 
 - [Learn about security baselines](security-baselines.md)
 - [Avoid conflicts](security-baselines.md#avoid-conflicts)
-- [Monitor device profiles](../configuration/device-profile-monitor.md) 
+- [Monitor device profiles](../configuration/device-profile-monitor.md)
 - [Common issues and resolutions](../configuration/device-profile-troubleshoot.md).
 - [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

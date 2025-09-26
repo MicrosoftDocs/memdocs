@@ -1,16 +1,8 @@
 ---
 title: Battery Health report in Microsoft Intune Advanced Analytics
-titleSuffix: Microsoft Intune
 description: Learn about the battery health report as an advanced feature in Endpoint analytics
 ms.date: 04/07/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
-
 ---
 
 # Battery health
@@ -47,7 +39,7 @@ The maximum capacity of a battery is the ratio of its full charge capacity again
 
 **Battery capacity score**: Based on the maximum capacities of batteries in your organization's devices, we create a score from 0 (poor) to 100 (exceptional). Your battery capacity score is the average for all devices.
 
-The *estimated device runtime* is an estimate of the amount of time a device runs using a battery on full charge and assuming the system's usage pattern is comparable to when the device was plugged in. The *Battery capacity score* is calculated from the combined battery capacity and estimated battery drain rate.  
+The *estimated device runtime* is an estimate of the amount of time a device runs using a battery on full charge and assuming the system's usage pattern is comparable to when the device was plugged in. The *Battery capacity score* is calculated from the combined battery capacity and estimated battery drain rate.
 
 **Battery runtime score**: Based on the estimated device runtimes for batteries in your organization's devices, we create a score from 0 (poor) to 100 (exceptional). Your battery runtime score is the average for all devices.
 
@@ -55,11 +47,11 @@ The *estimated device runtime* is an estimate of the amount of time a device run
 
 The Battery health page provides a prioritized list of Insights and recommendations, described in this section:
 
-**Low battery capacity**: These devices have batteries that hold less charge compared to what they were designed to hold. Devices with battery capacities below 60% are considered most impacted whereas devices with battery capacities between 60-80% are considered moderately impacted. The insights might contain one of these conditions independently or in combination with low runtimes.  
+**Low battery capacity**: These devices have batteries that hold less charge compared to what they were designed to hold. Devices with battery capacities below 60% are considered most impacted whereas devices with battery capacities between 60-80% are considered moderately impacted. The insights might contain one of these conditions independently or in combination with low runtimes.
 
 For example, some devices might have batteries with below 60% capacity but still provide reasonable runtimes because their design capacities are high. Whereas other devices might have batteries with below 60% capacity and less than 3 hours of runtime, in which case they're a part of insights that highlight both gaps together.
 
-**Low estimated runtime**: These devices result in poor user experience as they must be plugged in frequently. Devices with battery estimated runtimes below 3 hours are considered most impacted. Low runtimes are typically reported in combination with battery capacities.  
+**Low estimated runtime**: These devices result in poor user experience as they must be plugged in frequently. Devices with battery estimated runtimes below 3 hours are considered most impacted. Low runtimes are typically reported in combination with battery capacities.
 
 Devices with less than 3 hours of runtime usually have poor maximum capacities and are included in insights that highlight both issues together. The exception is seen in the following scenario where even with high capacities, the batteries drain quickly because of power hungry apps. Either by design or because of poor energy usage efficiency.
 
@@ -67,7 +59,7 @@ Devices with less than 3 hours of runtime usually have poor maximum capacities a
 
 1. The device is running apps that drain the battery quickly. Users run applications that consume high power or inefficiently use power and need upgrading or replacing. Battery-powered devices can use the [battery saver Windows](/windows-hardware/design/component-guidelines/battery-saver) feature to ensure that both user productivity and experience are protected.
 
-2. The device has a battery that is designed to hold low charge. Procurement teams drive this decision.  
+2. The device has a battery that is designed to hold low charge. Procurement teams drive this decision.
 
 Insights for this scenario highlight the devices for which the **App Impact** tab might provide more visibility into whether the user needs to use power hungry apps or whether the app's battery usage is unusually high due to inefficiency.
 
@@ -102,7 +94,7 @@ Estimated runtimes are sometimes not available for battery-powered devices where
 
 If the battery design doesn't report cycle count, then the report won't contain cycle count information for such battery-powered devices.
 
-If battery is new, we might not have enough data on the cycle count in which case a zero with an asterisk appears as the cycle count.  
+If battery is new, we might not have enough data on the cycle count in which case a zero with an asterisk appears as the cycle count.
 
 In rare cases, the battery count might exceed 2, indicating that devices are plugged into UPS or other external batteries. Since this is unusual, we add an asterisk (*) if the count exceeds 2.
 

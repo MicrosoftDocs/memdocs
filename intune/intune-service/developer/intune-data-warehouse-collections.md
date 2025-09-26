@@ -1,30 +1,10 @@
 ---
-# required metadata
 title:  Intune Data Warehouse Collections
-titleSuffix: Microsoft Intune
 description: The Intune Data Warehouse collections provide details related to the Data Warehouse API.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 11/18/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

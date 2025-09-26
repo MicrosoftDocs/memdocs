@@ -1,16 +1,10 @@
 ---
 title: Enhanced device timeline in Endpoint analytics
-titleSuffix: Microsoft Endpoint Manager
 description: Learn about Enhanced device timeline as an Advanced Analytics feature in Intune
 ms.date: 04/10/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
 ---
+
 # Enhanced device timeline in Endpoint analytics
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
@@ -24,15 +18,15 @@ The enhanced device timeline allows you to see a history of events that have occ
 > [!NOTE]
 > The **Device timeline** tab replaces the **Application reliability** tab in tenants that have Advanced Analytics features in Intune.
 
-You can search by event name or details. Select the **Add filter** button to choose the source and level of events that appear on the device timeline and select a time range of interest.  
+You can search by event name or details. Select the **Add filter** button to choose the source and level of events that appear on the device timeline and select a time range of interest.
 
-Currently, the enhanced device timeline contains app crash, app unresponsive, device boot, device logon, and anomaly detected events. The end-to-end latency is generally under 24 hours.  
+Currently, the enhanced device timeline contains app crash, app unresponsive, device boot, device logon, and anomaly detected events. The end-to-end latency is generally under 24 hours.
 
 > [!NOTE]
 > In some cases, end-to-end latency might exceed 24 hours when event details aren't able to upload from the client right away. Events such as restarts and stop errors experience this when the device doesn't immediately reboot after the shut-down or stop error event. In this case, the event details are uploaded at the next available opportunity, and the event appears on the timeline with a timestamp equal to the time the event occurred.
 
 > [!NOTE]
-> Event timestamps are localized according to the time zone of the logged on Intune user.  
+> Event timestamps are localized according to the time zone of the logged on Intune user.
 
 ## Using Enhanced Device Timeline
 

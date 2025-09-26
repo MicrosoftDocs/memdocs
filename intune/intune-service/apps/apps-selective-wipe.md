@@ -1,32 +1,10 @@
 ---
-# required metadata
-
 title: How to wipe only corporate data from apps
-titleSuffix: Microsoft Intune
 description: Learn how to selectively wipe only corporate data from Intune-managed apps with Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

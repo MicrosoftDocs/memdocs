@@ -1,32 +1,11 @@
 ---
-# required metadata
-
 title: Policies for Microsoft 365 apps
-titleSuffix: Microsoft Intune
 description: Understand the policies available for Microsoft 365 apps.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 05/16/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

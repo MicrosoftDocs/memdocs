@@ -1,28 +1,10 @@
 ---
-# required metadata
-
 title: Update your workloads to support cloud-native endpoints
-titleSuffix: Microsoft Intune
 description: To support hybrid and remote workers, convert or migrate your workloads to support cloud-native endpoints. This planning guide focuses on deploying apps and updates with Intune, moving from Group Policy Objects, and using Windows Autopilot.
-keywords:
-author: MandiOhlinger
-ms.author: mandia
-manager: dougeby
 ms.date: 01/08/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice:
 ms.localizationpriority: high
-ms.assetid:
-# optional metadata
-
-#audience:
-#ms.devlang:
 ms.reviewer: ahamil, jasandys, wicale
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
   - intune-scenario
@@ -132,7 +114,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   For more information, go to:
 
-  - [Windows 10/11 app deployment using Microsoft Intune](../../intune-service/apps/apps-windows-10-app-deploy.md)
+  - [Windows app deployment using Microsoft Intune](../../intune-service/apps/apps-windows-10-app-deploy.md)
   - [Introduction to app management in Configuration Manager](../../configmgr/apps/understand/introduction-to-application-management.md)
   - [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11)
 
@@ -163,7 +145,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
     For more information, go to:
 
-    - [Manage Windows 10 and Windows 11 software updates in Intune](../../intune-service/protect/windows-update-for-business-configure.md)
+    - [Manage Windows software updates in Intune](../../intune-service/protect/windows-update-for-business-configure.md)
     - [Integrate Configure Manager with Windows Update client policies](../../configmgr/sum/deploy-use/integrate-windows-update-for-business-windows-10.md)
     - [Choose how to manage updates to Microsoft 365 Apps](/deployoffice/choose-how-manage-updates-microsoft-365-apps)
 
@@ -174,7 +156,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
     For more information, go to:
 
-    - [Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune](../../intune-service/apps/apps-add-office365.md)
+    - [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune-service/apps/apps-add-office365.md)
     - [Management tasks for Configuration Manager apps](../../configmgr/apps/deploy-use/management-tasks-applications.md)
 
 - **Manage user data and settings**

@@ -1,29 +1,10 @@
 ---
-# required metadata
-
 title: Intune data platform schema
 description: Overview of Intune data platform schema.
-keywords: 
-ms.author: mandia
-author: MandiOhlinger 
-manager: laurawi
+author: MandiOhlinger
 ms.date: 07/15/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: Abby Starr 
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.reviewer: Abby Starr
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -56,7 +37,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device query for multiple devices.
 
-| **Property** | **Type** | **Description** |**Platform**|
+| Property | Type | Description | Platform |
 | --- | --- | --- |--- |
 | AccountGUID | String | The generated GUID of the administrator account |macOS|
 | AccountShortName | String | The short name of the administrator account |macOS|
@@ -69,7 +50,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device query for multiple devices.
 
-| **Property** | **Type** | **Description** |**Platform**|
+| Property | Type | Description | Platform |
 | --- | --- | --- | --- |
 |  ActivationLockSupported  |  bool  |  Specifies if activation lock is available  |iOS, iPadOS, macOS|
 |  AwaitingConfiguration  |  bool  |  If true on the device channel, the device is still waiting for a DeviceConfiguredCommand to continue through Setup Assistant. |iOS, iPadOS, macOS|
@@ -89,7 +70,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device query for multiple devices.
 
-| **Property** | **Type** | **Description** |**Platform**|
+| Property | Type | Description | Platform |
 | --- | --- | --- | --- |
 | AutoCheckEnabled | bool | The preference to automatically check for app updates. |macOS|
 | AutomaticAppInstallationEnabled | bool | The preference to automatically install app updates. |macOS|
@@ -110,7 +91,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device query for multiple devices, Inventory.
 
-| **Property** | **Type** | **Description** |**Platform**|
+| Property | Type | Description | Platform |
 | --- | --- | --- |--- |
 | CycleCount | Long | The number of times a battery completed a full charge and discharge. Can be used to assess the battery state.|Android, Windows|
 | DesignCapacity | Long (milliwatt hours) | The theoretical capacity of the battery when new.|Windows|
@@ -121,15 +102,15 @@ For entities that include Android data, the following platforms are supported:
 | Model| String | Display name of the battery.|Windows|
 | SerialNumber| String | The battery serial number that the manufacturer assigned.|Android|
 
-## BiosInfo 
+## BiosInfo
 
 **Description**: Provides basic BIOS information.
 
 **Supported platforms**: Windows
 
-**Supported for**:  Device query for multiple devices, single device query on-demand, inventory. 
+**Supported for**:  Device query for multiple devices, single device query on-demand, inventory.
 
-| **Property** | **Type** | **Description** | **Platform** |
+| Property | Type | Description | Platform |
 |----|----|----|----|
 | BiosName | String | Name used to identify the BIOS instance. | Windows multi-device query |
 | Manufacturer | String | Manufacturer of this BIOS/software element. | Windows single device query, Windows multi-device query |
@@ -150,7 +131,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device Query for Multiple devices.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | MacAddress | string | Bluetooth media access control (MAC) address. |iOS, iPadOS, macOS|
 
@@ -162,7 +143,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device query for multiple devices.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- | --- |
 | CellularTechnology | string | The cellular technology type. |Android, iOS, iPadOS|
 | DataRoamingEnabled | bool | If true, the device enables data roaming. |iOS, iPadOS|
@@ -176,9 +157,9 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query for single device (on-demand).  
+**Supported for**: Device query for single device (on-demand).
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |---|
 | SubjectName| string | Certificate distinguished name |Windows|
 | Issuer | string | Certificate issuer distinguished name |Windows|
@@ -203,7 +184,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | ProcessorId | string (max length 256 characters) | The DeviceID of the CPU. |Windows single device query, Windows multi device query  |
 | Model | string (max length 256 characters) | The model of the CPU. |Windows single device query, Windows multi device query  |
@@ -227,7 +208,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device query for multiple devices.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | DeviceCapacityBytes | long | Total device storage capacity |Android, iOS, iPadOS, macOS|
 | Encrypted | bool | Details whether encryption is on or off |Android|
@@ -241,7 +222,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | DriveId | string (max length 256 characters) | The unique identifier of the drive on the system. |Windows|
 | PartitionCount | long | Number of detected partitions on disk. |Windows|
@@ -263,7 +244,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | VolumeId | string (max length 256 characters) | ID of the encrypted volume. |Windows|
 | WindowsDriveLetter | string (max length 5 characters) | Drive letter of the encrypted drive. |Windows|
@@ -282,9 +263,9 @@ For entities that include Android data, the following platforms are supported:
 **Supported for**: single device query on-demand.
 
 > [!NOTE]
-> This is a parameterized entity where you must pass in the path of the File you want to query. For example, pass in `FileInfo('c:\windows\system32\drivers\etc\hosts') | take 10`. If a directory is passed, it will return information about the files in the directory and subdirectories.  
+> This is a parameterized entity where you must pass in the path of the File you want to query. For example, pass in `FileInfo('c:\windows\system32\drivers\etc\hosts') | take 10`. If a directory is passed, it will return information about the files in the directory and subdirectories.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | Path | string (max length 260 characters) | Absolute file path |Windows|
 | Directory | string (max length 4,096 characters) | Directory of files |Windows|
@@ -302,13 +283,13 @@ For entities that include Android data, the following platforms are supported:
 
 ## LocalGroup
 
-**Description**: Lists local user groups.  
+**Description**: Lists local user groups.
 
 **Supported platforms**: Windows
 
 **Supported for**: Single device query on-demand.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | GroupId | long, Result should be (\>=0) | Group ID |Windows|
 | GroupName | String (max length 256 characters) | Group Name |Windows|
@@ -322,7 +303,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: single device query on-demand.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | UserId | long, Result should be (\>=0) | User ID |Windows|
 | Username | string (max length 256 characters) | Username |Windows|
@@ -338,7 +319,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | DriveIdentifier | string (max length 5 characters) | The drive ID, usually the drive name. For example, 'C:'. |Windows |
 | DriveType | string (max length 100 character) | Drive type such as local disk or removal disk |Windows |
@@ -354,14 +335,14 @@ For entities that include Android data, the following platforms are supported:
 **Supported platforms**: Windows
 
 **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
-PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for single device query on-demand.  
+PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for single device query on-demand.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | PhysicalMemoryTotalBytes | Long, Result should be (\>=0) | Total amount of physical memory available to the operating system. This value doesn't necessarily indicate the true amount of physical memory, but what is reported to the operating system as available to it. |Windows single device query, Windows multi device query |
 | PhysicalMemoryFreeBytes | Long, Result should be (\>=0) |Number of bytes of physical memory currently unused and available. |Windows single device query |
 | VirtualMemoryTotalBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory. |Windows single device query, Windows multi device query |
-| VirtualMemoryFreeBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory currently unused and available. |Windows single device query |  
+| VirtualMemoryFreeBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory currently unused and available. |Windows single device query |
 
 ## NetworkAdapter
 
@@ -371,7 +352,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 **Supported Platforms**: Windows
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | Identifier | String | Unique identifier of the adapter from other devices on the system. |Windows|
 | MacAddress| String | Hardware identification number that uniquely identifies each device on a network. |Android, iOS, iPadOS, macOS |
@@ -383,13 +364,13 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## OsVersion
 
-**Description**: A single record containing the operating system name and version of the device. 
+**Description**: A single record containing the operating system name and version of the device.
 
 **Supported platforms**: Android, iOS, iPadOS, Windows
 
 **Supported for**: Device query for multiple devices, Single device query on-demand (Windows only), Inventory.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | OsName | string (max length 256 characters) | Distribution or product name |Android, iOS, iPadOS, Windows|
 | OsVersion | string (max length 40 characters) | Pretty, suitable for presentation, OS version |Android, iOS, iPadOS, Windows|
@@ -400,17 +381,17 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | Architecture | string (max length 256 characters) | OS Architecture |Windows single device query, Windows multi device query |
 | InstallDateTime | datetime (UTC) | The install date time of the OS. |Windows single device query, Windows multi device query |
 |AppleSupplementalOSVersion |String |The OS version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |
-|AppleSupplementalBuildVersion |String |The OS build version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |  
+|AppleSupplementalBuildVersion |String |The OS build version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |
 
 ## Process
 
-**Description**: All running processes on the host system.  
+**Description**: All running processes on the host system.
 
 **Supported platforms**: Windows
 
 **Supported for**: single device query on-demand.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | ProcessId | long | Process ID |Windows|
 | ProcessName | string (max 260 characters) | The name of process |Windows|
@@ -441,7 +422,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 **Supported for**: Device query for multiple devices.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | EstimatedResidentUsersCount | long | Estimated number of users that can share the device based on space. |iPadOS|
 | IsMultiUser | bool | iPad set up as multiuser |iPadOS|
@@ -452,7 +433,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | ResidentUsersCount | long | The number of users currently on this shared iPad device. |iPadOS|
 | SkipLanguageAndLocaleSetupForNewUsers | bool | If true, skip the language and country/region panes for new users on Shared iPad. |iPadOS|
 | TemporarySessionTimeoutSeconds | long | The timeout interval for the temporary session. A value of 0 indicates that there's no timeout. |iPadOS|
-| UserSessionTimeoutSeconds | long | The timeout interval for the user session. A value of 0 indicates that there's no timeout. |iPadOS|  
+| UserSessionTimeoutSeconds | long | The timeout interval for the user session. A value of 0 indicates that there's no timeout. |iPadOS|
 
 ## SystemEnclosure
 
@@ -465,7 +446,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 > [!NOTE]
 > Chassis Types property is currently not supported for Inventory or Device query for multiple devices.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | SerialNumber | string (max 64 characters) | The serial number of the chassis. |Windows single device query, Windows multi device query |
 | AudibleAlarmEquipped | bool | If TRUE, the frame is equipped with an audible alarm. |Windows single device query, Windows multi device query |
@@ -483,13 +464,13 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## SystemInfo
 
-**Description**: System information of the device.  
+**Description**: System information of the device.
 
 **Supported platforms**: Windows
 
 **Supported for**: single device query on-demand.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | FqdnHostname | string (max 256) | Network hostname including domain |Windows single device query |
 | Uuid | string (max 36 characters) | Unique ID provided by the system |Windows single device query |
@@ -507,7 +488,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 **Supported for**: Device query for multiple devices, Inventory.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | WindowsESimId | String | The ID of an eSIM found on the device |Windows|
 | Eid | String | The electronic identification number of the device |Windows|
@@ -521,19 +502,19 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 **Supported Platforms**: Windows
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | TimeZone | String | Describes the device's time zone. |Windows|
 
-## TPM  
+## TPM
 
-**Description**: Provides TPM related information of the device.  
+**Description**: Provides TPM related information of the device.
 
 **Supported platforms**: Windows
 
 **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | Activated | bool | TPM is activated |Windows|
 | Enabled | bool | TPM is enabled |Windows|
@@ -543,7 +524,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | ManufacturerId | long | TPM manufacturers ID |Windows|
 | ProductName | string (max 256 characters) | Product name of the TPM |Windows|
 | PhysicalPresenceVersion | string (max 256 characters) | Version of the Physical Presence Interface |Windows|
-| SpecVersion | string (max 256 characters) | Trusted Computing Group specification that the TPM supports |Windows|  
+| SpecVersion | string (max 256 characters) | Trusted Computing Group specification that the TPM supports |Windows|
 
 ## VideoController
 
@@ -553,7 +534,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 **Supported Platforms**: Windows
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | AdapterDacType | String | Name or identifier of the digital-to-analog converter (DAC) chip. The character set of this property is alphanumeric. |Windows|
 | AdapterRam | Long | Memory size of the video adapter. |Windows|
@@ -570,7 +551,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 **Supported for**: single device query on-demand.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |---|
 | ReportId (Key) | string (max 256 characters) | Report ID of the app crash event. |Windows|
 | AppPath | string (max 256 characters) | Application path of the crashed app. |Windows|
@@ -587,7 +568,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 **Supported for**: single device query on-demand.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | DriverDeviceId(Key) | string (max 256 characters) | Device ID |Windows|
 | FriendlyName | string (max 256 characters) | Such as "Microsoft Device Association Root Enumerator" |Windows|
@@ -602,7 +583,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## WindowsEvent
 
-**Description**: Get Windows Event logs in the specified log name and look back in time.  
+**Description**: Get Windows Event logs in the specified log name and look back in time.
 
 **Supported platforms**: Windows
 
@@ -611,7 +592,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 > [!NOTE]
 > When constructing the query, you must specify the log name and look back time, for example: `WindowsEvent(Application, 1d) | take 1`.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | LogName | string (max 256 characters) | Name of the Windows event log|Windows|
 | EventId | long | Event ID number |Windows|
@@ -641,7 +622,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## WindowsRegistry
 
-**Description**: Lists registry under the passed registry key.  
+**Description**: Lists registry under the passed registry key.
 
 **Supported platforms**: Windows
 
@@ -650,7 +631,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 > [!NOTE]
 > You must pass in the registry key you're trying to query. For example, `WindowsRegistry('HKEY_LOCAL_MACHINE\\ServiceLastKnownStatus')`.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | RegistryKey | string (max 16,638 characters) | Full path to the value |Windows|
 | ValueName | string (max 16,383 characters) | Name of the registry value entry |Windows|
@@ -663,9 +644,9 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 **Supported platforms**: Windows
 
-**Supported for**: Single device query on-demand.  
+**Supported for**: Single device query on-demand.
 
-| **Property** | **Type** | **Description** |**Supported platforms**|
+| Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | ServiceName | string (max 256 characters) | Service name |Windows|
 | ServiceType | string (max 40 characters) | Service Type, such as OWN\_PROCESS, SHARE\_PROCESS, or Interactive |Windows|

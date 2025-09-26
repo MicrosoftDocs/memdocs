@@ -1,15 +1,8 @@
 ---
 title: Restart frequency in endpoint analytics
-titleSuffix: Microsoft Intune
 description: Get details about device restart frequency in endpoint analytics
 ms.date: 04/10/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
 ---
 
 # Restart frequency in endpoint analytics
@@ -75,7 +68,7 @@ Select a particular device in the [**Device performance** tab](#device-performan
 The **OS restart history** table has the following information:
 
 - The **Restart category** for each reboot
-- For Stop errors (blue screen errors), the following additional information is available: 
+- For Stop errors (blue screen errors), the following additional information is available:
   - The [stop code](/windows-hardware/drivers/debugger/bug-check-code-reference2) also called the bug check code
   - A **Failure bucket ID** that can be used for diagnostics when working with Microsoft support
 
