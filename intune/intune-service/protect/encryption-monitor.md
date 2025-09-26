@@ -58,7 +58,7 @@ The Encryption report pane displays a list of the devices you manage with high
     - The device must have a TPM chip
 
     > [!IMPORTANT]
-    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)][!INCLUDE
+    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
     For more information on Windows prerequisites for encryption, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
 

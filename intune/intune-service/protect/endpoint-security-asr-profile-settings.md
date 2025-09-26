@@ -18,8 +18,10 @@ View the settings you can configure in profiles for *Attack surface reduction* p
 
 Applies to:
 
-- Windows 11
-- Windows 10
+- Windows
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 Supported platforms and profiles:
 

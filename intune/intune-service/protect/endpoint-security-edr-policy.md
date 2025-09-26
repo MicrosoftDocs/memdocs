@@ -24,8 +24,7 @@ Applies to:
 
 - Linux
 - macOS
-- Windows 10
-- Windows 11
+- Windows
 - Windows Server 2012 R2 and later *(when managed by Configuration Manager through the [tenant attach](../protect/tenant-attach-intune.md) scenario, or through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 
 ## About Intune policy for endpoint detection and response
@@ -151,6 +150,9 @@ To manage EDR for macOS devices, select the **macOS** platform. The following pr
   To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
 
 #### Windows
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 To manage EDR for Windows devices, select the **Windows** platform. The following profile is available:
 
