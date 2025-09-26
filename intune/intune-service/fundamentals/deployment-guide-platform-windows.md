@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Deployment guide for Windows device management | Microsoft Intune
 description: Use our platform deployment guide to set up Windows device management in Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 08/21/2024
 ms.topic: install-set-up-deploy
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: get-started
 ms.collection:
 - M365-identity-device-management
-- tier1
 ---
 
 # Deployment guide: Manage devices running Windows 10/11

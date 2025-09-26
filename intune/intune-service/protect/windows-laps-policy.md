@@ -1,27 +1,13 @@
 ---
-title: Create Intune policies to configure and manage Windows LAPS 
-description: Create policies to manage the Windows Local Administrator Policy Solution (LAPS) on Windows devices that enrolled with Microsoft Intune. 
-keywords:
+title: Create Intune policies to configure and manage Windows LAPS
+description: Create policies to manage the Windows Local Administrator Policy Solution (LAPS) on Windows devices that enrolled with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 07/22/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
 ms.reviewer: laarrizz
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - sub-secure-endpoints
 ---
@@ -47,7 +33,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-> [!TIP]  
+> [!TIP]
 > The Intune support for Windows LAPS is similar but distinct from Intune’s implementation of macOS LAPS. For information about macOS LAPS in Intune, see [macOS local account configuration with LAPS](../enrollment/macos-laps.md).
 
 ## About Intune LAPS policy
@@ -69,7 +55,7 @@ To help reduce potential conflicts, we recommend assigning a single LAPS policy 
 
 ### Create a LAPS policy
 
-  > [!IMPORTANT]  
+  > [!IMPORTANT]
   > Ensure that you have enabled LAPS in Microsoft Entra, as covered in the [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-microsoft-entra-id) documentation.
 
 To create or manage LAPS policy, your account must have applicable rights from the **Security baseline** category. By default, these permissions are included in the built-in role *Endpoint Security Manager*. To use custom roles, ensure the custom role includes the rights from the *Security baselines* category. See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
@@ -91,7 +77,7 @@ Before you create a policy, you can review details about the available settings 
 
    :::image type="content" source="./media/windows-laps-policy/specify-the-backup-directory.png" alt-text="Screen shot that shows the options for the Backup Directory setting." lightbox="./media/windows-laps-policy/specify-the-backup-directory.png":::
 
-   > [!IMPORTANT]  
+   > [!IMPORTANT]
    > When configuring a policy, keep in mind that the backup directory type in the policy must be supported by the join type of the device the policy is assigned to. For example, if you set the directory to Active Directory and the device isn’t domain joined (but a member of Microsoft Entra), the device can apply the policy settings from Intune without error, but LAPS on the device will not be able to successfully use that configuration to back up the account.
 
    After configuring *Backup Directory*, review and configure the available settings to meet your organization’s requirements.
@@ -101,7 +87,7 @@ Before you create a policy, you can review details about the available settings 
 5. For **Assignments**, select the groups to receive this policy.
     We recommend assigning LAPS policy to device groups. Policies assigned to user groups follow a user from device to device. When the user of a device changes, a new policy might apply to the device and introduce inconsistent behavior, including which account the device backs up or when the managed accounts password is next rotated.
 
-   > [!NOTE]  
+   > [!NOTE]
    > As with all Intune policies, when a new policy applies to a device, Intune attempts to notify that device to check in and process the policy.
    >
    > Until a device successfully checks in with Intune and successfully processes its LAPS policy, data about its managed local admin account won’t be available to view or manage from within the admin center.

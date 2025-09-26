@@ -1,28 +1,12 @@
 ---
-# required metadata
-
 title: Manage endpoint security policies in Microsoft Intune
-description: Security Administrators can use the Endpoint Security policies and profiles to focus on security configuration of devices in Microsoft Intune. 
-keywords:
+description: Security Administrators can use the Endpoint Security policies and profiles to focus on security configuration of devices in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 09/23/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -155,7 +139,7 @@ The following procedure provides general guidance for creating endpoint security
    When your done configuring settings, select **Next**.
 
 7. On the **Scope tags** page, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
-  
+
    Select **Next** to continue.
 
 8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).

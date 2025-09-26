@@ -1,32 +1,10 @@
 ---
-# required metadata
-
 title: Add an iOS/iPadOS line-of-business app to Microsoft Intune
-titleSuffix:
 description: Learn about how to add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 02/20/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - iOS/iPadOS
 - FocusArea_Apps_LOB
@@ -92,7 +70,7 @@ You can use scope tags to determine who can see client app information in Intune
 1. Click **Next** to display the **Review + create** page.
 
 > [!NOTE]
-> Users may receive the "Open in iTunes?" prompt when installing LOB apps from the iOS Company Portal. Instruct users to click 'Open' to install the LOB app. 
+> Users may receive the "Open in iTunes?" prompt when installing LOB apps from the iOS Company Portal. Instruct users to click 'Open' to install the LOB app.
 ## Step 4 - Review + create
 
 1. Review the values and settings you entered for the app.

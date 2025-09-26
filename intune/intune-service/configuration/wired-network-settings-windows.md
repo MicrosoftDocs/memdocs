@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Configure wired network settings for Windows devices in Microsoft Intune
-titleSuffix:
-description: Create or add a wired network device configuration profile for Windows 10/11 devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune. 
-keywords:
+description: Create or add a wired network device configuration profile for Windows 10/11 devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/25/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: abalwan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -36,8 +18,7 @@ This article describes the settings you can configure.
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Before you begin
 
@@ -130,9 +111,9 @@ This feature applies to:
 
   - **Protected EAP (PEAP)**: Also enter:
 
-    - **Server trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this network.  
+    - **Server trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this network.
 
-    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.  
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Perform server validation**: When set to **Yes**, in PEAP negotiation phase 1, devices validate the certificate, and verify the server. Select **No** to block or prevent this validation. When set to **Not configured**, Intune doesn't change or update this setting.
 
@@ -166,7 +147,7 @@ This feature applies to:
 
   - **Tunnel EAP (TEAP)**: Also enter:
 
-    - **Server trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this network.  
+    - **Server trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this network.
 
     - **Client Authentication** - **Primary authentication method**: Select the primary authentication method used by your device clients for user authentication. This authentication method is the identity certificate that the device presents to the server.
 

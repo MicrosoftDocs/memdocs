@@ -1,30 +1,14 @@
 ---
-# required metadata
-
 title: Add Wi-Fi settings for Android devices in Microsoft Intune
 description: Create or add a WiFi device configuration profile for Android Enterprise, Android Kiosk, and AOSP devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune. For kiosk devices, also enter the Pre-shared key of your network.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/17/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 params:
   siblings_only: true
 ms.reviewer: abalwan, cchristenson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -303,9 +287,9 @@ These settings configure the work profile.
   >[!NOTE]
   > When using any EAP type (EAP-TLS, PEAP, or EAP-TTLS) and certificates for authentication, it's required to include the user principal name (UPN) in the Subject Alternative Name (SAN) for user and device certificates. If the UPN isn't present in the SAN, the Wi-Fi profile deployment fails.
 
-  - **EAP-TLS**: Also enter:  
-  
-    - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.  
+  - **EAP-TLS**: Also enter:
+
+    - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
 
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
