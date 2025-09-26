@@ -72,6 +72,7 @@ General prerequisites for Remote Help are listed here [Prerequisites for Remote 
 - macOS 13 (Ventura)
 - macOS 14 (Sonoma)
 - macOS 15 (Sequoia)
+- macOS 26.0 (from version 1.0.2509231 of Remote Help and later)
 
 ### Remote Help Web App supported browsers
 
@@ -212,7 +213,7 @@ The Remote Help native app is available to download from Microsoft and must be i
 
 Download the latest version of Remote Help directly from Microsoft at https://aka.ms/downloadremotehelpmacos.
 
-The most recent version of Remote Help is **1.0.2404171**.
+The most recent version of Remote Help is **1.0.2509231**.
 
 ### Deploy Remote Help
 
