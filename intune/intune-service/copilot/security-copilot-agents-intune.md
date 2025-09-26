@@ -1,7 +1,7 @@
 ---
 title: Microsoft Security Copilot agents in Microsoft Intune
 description: Learn about Security Copilot agents in Microsoft Intune
-ms.date: 09/17/2025
+ms.date: 09/26/2025
 ms.update-cycle: 180-days
 ms.topic: overview
 ms.localizationpriority: high
