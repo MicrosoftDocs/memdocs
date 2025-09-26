@@ -6,7 +6,6 @@ ms.topic: reference
 ms.localizationpriority: high
 ms.reviewer: cdemello
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

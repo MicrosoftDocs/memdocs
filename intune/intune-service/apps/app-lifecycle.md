@@ -6,7 +6,6 @@ ms.topic: concept-article
 ms.reviewer: bryanke
 ms.custom: apps; get-started
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 

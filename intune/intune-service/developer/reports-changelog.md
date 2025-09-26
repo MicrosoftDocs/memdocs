@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Intune Data Warehouse Change log
 description: This topic provides a list of changes for the Microsoft Intune Data Warehouse API.
 ms.date: 11/18/2024

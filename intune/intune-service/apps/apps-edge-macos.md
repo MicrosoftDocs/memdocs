@@ -5,7 +5,6 @@ ms.date: 04/17/2024
 ms.topic: how-to
 ms.reviewer: arnab
 ms.collection:
-- tier3
 - M365-identity-device-management
 - macOS
 - FocusArea_Apps_Add

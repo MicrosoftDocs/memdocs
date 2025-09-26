@@ -5,7 +5,6 @@ ms.date: 08/08/2024
 ms.topic: how-to
 ms.reviewer: arnab
 ms.collection:
-- tier2
 - M365-identity-device-management
 - macOS
 ---

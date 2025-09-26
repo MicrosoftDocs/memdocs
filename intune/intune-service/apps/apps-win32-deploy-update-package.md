@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: bryanke
 ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - FocusArea_Apps_Win32
 ---

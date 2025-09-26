@@ -5,7 +5,6 @@ ms.date: 02/24/2025
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_LOB

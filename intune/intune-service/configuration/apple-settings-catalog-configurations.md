@@ -1,5 +1,4 @@
 ---
-# Required metadata
 title: Apple configuration list for Intune settings catalog
 description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Apple devices. This article lists and describes the settings you can configure.
 author: beflamm

@@ -4,7 +4,6 @@ description: Add or create settings using the settings catalog to configure Micr
 ms.author: mandia
 author: MandiOhlinger
 ms.date: 08/25/2025
-audience: ITPro
 ms.topic: how-to
 
 ms.reviewer: mayurjadhav
