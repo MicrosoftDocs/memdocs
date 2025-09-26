@@ -1,10 +1,7 @@
 ---
-# required metadata
 
 title: Plan Education device enrollment
-titleSuffix: Intune for Education
 description: Plan enrollment for Education devices in Intune.
-keywords:
 author: scottbreenmsft
 ms.author: scbree
 ms.date: 5/2/2024

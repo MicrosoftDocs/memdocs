@@ -5,7 +5,6 @@ ms.date: 06/12/2025
 ms.topic: article
 ms.reviewer: esalter
 ms.collection:
-- tier2
 - Android
 ---
 

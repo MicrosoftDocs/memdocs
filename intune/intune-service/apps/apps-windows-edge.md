@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: arnab
 ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 ---

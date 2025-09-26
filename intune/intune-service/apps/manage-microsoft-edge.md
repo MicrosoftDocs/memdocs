@@ -5,7 +5,6 @@ ms.date: 08/27/2025
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
-- tier1
 - Microsoft 365-identity-device-management
 - Android
 - highpri

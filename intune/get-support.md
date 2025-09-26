@@ -1,13 +1,13 @@
 ---
-# required metadata
 
 title: Get support in the Microsoft Intune admin center
 titleSuffix: Microsoft Intune
 description: Get online and telephone support for Microsoft Intune and other device management cloud services from within the Microsoft Intune admin center.
 keywords:
+title: Get support in the Microsoft Intune admin center
+description: Get online and telephone support for Microsoft Intune and other device management cloud services from within the Microsoft Intune admin center.
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
 ms.date: 02/28/2025
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -25,7 +25,6 @@ search.appverid: MET150
 ms.custom:
 ms.collection:
   - M365-identity-device-management
-  - tier1
   - help-support
 ---
 

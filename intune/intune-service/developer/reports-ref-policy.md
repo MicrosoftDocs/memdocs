@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Reference for Policy entities
 description: Reference topic for the Policy category of entity collections in the Intune Data Warehouse API.
 ms.date: 10/30/2024

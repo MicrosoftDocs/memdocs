@@ -5,7 +5,6 @@ ms.date: 08/08/2024
 ms.topic: how-to
 ms.reviewer: demerson
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri

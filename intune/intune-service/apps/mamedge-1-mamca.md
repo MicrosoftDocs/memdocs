@@ -7,7 +7,6 @@ ms.localizationpriority: high
 ms.reviewer: samarti
 ms.custom:
 ms.collection:
-- tier1
 - highpri
 - highseo
 - FocusArea_Apps_AppManagement

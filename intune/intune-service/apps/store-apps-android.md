@@ -5,7 +5,6 @@ ms.date: 01/06/2025
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_Store
