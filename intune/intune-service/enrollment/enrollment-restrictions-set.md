@@ -1,32 +1,11 @@
 ---
-# required metadata
-
 title: Overview of enrollment restrictions
-titleSuffix: Microsoft Intune
 description: Learn about the enrollment restrictions available in Microsoft Intune.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
 ms.date: 12/12/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
-ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: maholdaa
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo

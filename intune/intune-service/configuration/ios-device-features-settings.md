@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: iOS/iPadOS device feature settings in Microsoft Intune
 description: See all the settings to configure iOS and iPadOS devices for AirPrint, home screen layout, app notifications, shared devices, single sign-on, and web content filter settings in Microsoft Intune. Use these settings in a device configuration profile to configure iOS/iPadOS devices to use these Apple features on your devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/17/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid:
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -59,7 +41,7 @@ Create an [iOS/iPadOS device features configuration profile](device-features-con
 
 - **IP address**: Enter the IPv4 or IPv6 address of the printer. If you use hostnames to identify printers, you can get the IP address by pinging the printer in the terminal. [Get the IP address and path](#get-server-ip-address-resource-path-and-port) (in this article) provides more details.
 - **Resource path**: The path is typically `ipp/print` for printers on your network. [Get the IP address and path](#get-server-ip-address-resource-path-and-port) (in this article) provides more details.
-- **Port**: Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port. 
+- **Port**: Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port.
 
   This feature applies to:
 
@@ -123,7 +105,7 @@ Use this feature to add apps. And, see how these apps look on pages, the dock, a
 
   - iPhone 5 supports 4 columns x 5 rows
   - iPhone 6 and later support 4 columns x 6 rows
-  - iPads support 5 columns x 6 rows  
+  - iPads support 5 columns x 6 rows
 
 - **+**: Select the add button to add apps.
 
@@ -222,7 +204,7 @@ This feature applies to:
 - **Asset tag information**: Enter information about the asset tag of the device. For example, enter `Owned by Contoso Corp` or `Serial Number: {{serialnumber}}`.
 
   Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}` or `Device ID: {{DEVICEID}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`.
-  
+
   The following device information variables are supported. Variables aren't validated in the UI, and are case sensitive. If you enter an incorrect variable, you can see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
 
   - `{{AADDeviceId}}`: Microsoft Entra device ID
@@ -335,7 +317,7 @@ This feature applies to:
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS doesn't use app extensions. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
   - **Microsoft Entra ID**: Uses the Microsoft Entra ID Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for on-premises Active Directory accounts across all applications that support [Apple's Enterprise single sign-on](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Microsoft Entra ID.
-  
+
     The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
@@ -354,10 +336,10 @@ This feature applies to:
 
 - **Enable shared device mode** (Microsoft Entra ID only): Choose **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Microsoft Entra shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
 
-  For more information about shared device mode and how to enable it, go to [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).  
+  For more information about shared device mode and how to enable it, go to [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).
 
   This feature applies to:
-  
+
   - iOS/iPadOS 13.5 and newer
 
 - **Extension ID** (Redirect and Credential): Enter the bundle identifier that identifies your SSO app extension, like `com.apple.extensiblesso`.
@@ -380,7 +362,7 @@ This feature applies to:
   - The URLs must begin with `http://` or `https://`.
 
 - **Additional configuration** (Microsoft Entra ID, Redirect, and Credential): Enter more extension-specific data to pass to the SSO app extension:
-  - **Key**: Enter the name of the item you want to add, like `user name` or `AppAllowList`.  
+  - **Key**: Enter the name of the item you want to add, like `user name` or `AppAllowList`.
   - **Type**: Enter the type of data. Your options:
 
     - String
@@ -406,7 +388,7 @@ This feature applies to:
 - **Allow only managed apps** (Kerberos only): When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow nonmanaged apps to access the credential.
 
   This feature applies to:
-  
+
   - iOS/iPadOS 14 and newer
 
 - **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
@@ -421,7 +403,7 @@ This feature applies to:
 - **Sign in window text** (Kerberos only): Enter the text shown to users at the Kerberos sign in window.
 
   This feature applies to:
-  
+
   - iOS/iPadOS 14 and newer
 
 - **App bundle IDs** (Microsoft Entra ID, Kerberos): Enter the bundle IDs of any other apps that should get single sign-on through an extension on your devices. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
@@ -431,7 +413,7 @@ This feature applies to:
   - These apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in.
   - The app bundle IDs you enter have permission to use the Microsoft Entra SSO app extension if they don't use any Microsoft libraries, like Microsoft Authentication Library (MSAL).
 
-    The experience for these apps might not be as seamless compared to the Microsoft libraries. Older apps that use MSAL authentication, or apps that don't use the newest Microsoft libraries, must be added to this list to work properly with the Microsoft Azure SSO app extension.  
+    The experience for these apps might not be as seamless compared to the Microsoft libraries. Older apps that use MSAL authentication, or apps that don't use the newest Microsoft libraries, must be added to this list to work properly with the Microsoft Azure SSO app extension.
 
   If you use the **Kerberos SSO app extension** type, then these apps:
 

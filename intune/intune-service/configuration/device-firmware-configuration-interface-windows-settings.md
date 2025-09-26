@@ -1,29 +1,12 @@
 ---
-# required metadata
-
-title: Device firmware configuration interface settings for Windows 10/11 in Microsoft Intune
-description: See a list of all the DFCI profile settings and their descriptions on Windows 10/11 client devices. Use these settings in a configuration profile to control UEFI firmware layer features using Microsoft Intune policy. You can manage the CPU, built-in hardware, and boot options on Windows 10/11 client devices using Microsoft Intune.
-keywords:
+title: Device firmware configuration interface settings for Windows devices
+description: See a list of all the DFCI profile settings and their descriptions on Windows 10/11 client devices. Use these settings in a configuration profile to control UEFI firmware layer features using Microsoft Intune policy. You can manage the CPU, built-in hardware, and boot options on client devices using Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/15/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: madakeva
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; 
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -34,8 +17,7 @@ This article lists and describes the DFCI profile settings you can control on Wi
 
 These settings apply to:
 
-- Windows 11 on supported UEFI
-- Windows 10 RS5 (1809) and later on supported UEFI
+- Windows on supported UEFI
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your Windows client devices.
 
@@ -228,7 +210,7 @@ We recommend you configure the **Radios (Bluetooth, Wi-Fi, NFC, etc.)** category
 
 ## Related articles
 
-- For other technical details on each setting and what editions of Windows are supported, go to [Windows 10/11 Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider).
+- For other technical details on each setting and what editions of Windows are supported, go to [Windows Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider).
 
 - [Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
 

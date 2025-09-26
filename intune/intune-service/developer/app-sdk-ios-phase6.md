@@ -1,31 +1,10 @@
 ---
-# required metadata
-
 title: Microsoft Intune App SDK for iOS developer guide - App Protection CA support (optional)
 description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. App Protection CA support (optional)
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: has-adal-ref
 ms.collection:
-- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---
@@ -117,8 +96,8 @@ func accountId(_ accountId: String, hasComplianceStatus status: IntuneMAMComplia
               let alert = UIAlertController(title: errTitle, message: errMsg, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                     exit(0)
-                })) 
-                self.present(alert, animated: true, completion: nil) 
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
         case .interactionRequired:
             IntuneMAMComplianceManager.instance().remediateCompliance(forAccountId: accountId, silent: false)
@@ -127,7 +106,7 @@ func accountId(_ accountId: String, hasComplianceStatus status: IntuneMAMComplia
 
 ### MSAL/ADAL
 Apps need to indicate support for App Protection CA by adding client capabilities variable to their MSAL/ADAL configuration.
-The following values are required:   claims = {"access_token":{"xms_cc":{"values":["protapp"]}}} 
+The following values are required:   claims = {"access_token":{"xms_cc":{"values":["protapp"]}}}
 
 [MSALPublicClientApplicationConfig Class Reference (azuread.github.io)](https://azuread.github.io/microsoft-authentication-library-for-objc/Classes/MSALPublicClientApplicationConfig.html#/c:objc(cs)MSALPublicClientApplicationConfig(py)clientApplicationCapabilities)
 
@@ -177,7 +156,7 @@ To fetch the Microsoft Entra object ID for the accountId parameter of the MAM SD
     - Enabling the policy.
     - Assigning the policy to a user or group.
 4. Assign cloud apps. Select **Include** > **All cloud apps**. As the warning notes, be careful not to misconfigure this setting. For example, if you excluded all cloud apps, you would lock yourself out of the console.
-5. Grant access controls by selecting **Access Controls** > **Grant Access** > **Require app protection policy**. 
+5. Grant access controls by selecting **Access Controls** > **Grant Access** > **Require app protection policy**.
 6. When you're finished configuring the policy, select **Create** to save the policy and apply it.
 7. Enable the policy.
 8. You also need to make sure that the users are targeted for MAM policies.

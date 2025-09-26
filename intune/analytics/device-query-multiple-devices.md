@@ -1,29 +1,9 @@
 ---
-# required metadata
-
 title: Device query for multiple devices in Microsoft Intune
 description: Learn how device query for multiple devices allows you to gain comprehensive insights about all your devices using Kusto Query Language (KQL).
-keywords: 
-ms.author: mandia
-author: MandiOhlinger 
-manager: laurawi
 ms.date: 07/14/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: Abby Starr 
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.reviewer: Abby Starr
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -33,10 +13,10 @@ ms.collection:
 
 Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
 
-## Prerequisites  
+## Prerequisites
 
 > [!NOTE]
-> You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically. 
+> You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically.
 
 - To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
 
@@ -47,28 +27,28 @@ Device query for multiple devices allows you to gain comprehensive insights abou
 
 - Devices must be Intune managed and corporate owned.
 
-- Device query for multiple devices only works on devices that are already collecting device inventory data from an assigned [Properties catalog](../intune-service/configuration/properties-catalog.md) profile. 
+- Device query for multiple devices only works on devices that are already collecting device inventory data from an assigned [Properties catalog](../intune-service/configuration/properties-catalog.md) profile.
 
 ## Supported platforms
 
-Device query for multiple devices is supported on devices running:  
+Device query for multiple devices is supported on devices running:
 
-- Windows 10 and later  
-- Android  
-  - Android Enterprise corporate owned dedicated devices (COSU)  
-  - Android Enterprise corporate owned fully managed (COBO)  
-  - Android Enterprise corporate owned work profile (COPE)  
-- Apple  
-  - iOS/iPadOS  
-  - macOS  
+- Windows 10 and later
+- Android
+  - Android Enterprise corporate owned dedicated devices (COSU)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned work profile (COPE)
+- Apple
+  - iOS/iPadOS
+  - macOS
 
 ## How to use device query for multiple devices
 
 To use device query for multiple devices, go to the **Devices** pane and select **Device query**. Then input a query in the query box using the supported properties and supported operators and select **Run** to execute the query. Results are displayed in the **Results** tab area. If you only want to run part of the query, or if you have multiple queries in the query window and only want to run one, you can highlight the query you want to run and select **Run**. Only that query is run.
 
-You can expand the view on the left side to see all the properties that can be queried. Select any one to populate into your query. You can select and drag the edges of both the left side and the query window to make any adjustments.  
+You can expand the view on the left side to see all the properties that can be queried. Select any one to populate into your query. You can select and drag the edges of both the left side and the query window to make any adjustments.
 
-After running a query, select **Export** to save results to a .CSV file. You have the option to export all columns in the query result or just the columns you select. You can export up to 50,000 results to a file. 
+After running a query, select **Export** to save results to a .CSV file. You have the option to export all columns in the query result or just the columns you select. You can export up to 50,000 results to a file.
 
 > [!TIP]
 > You can use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#query-many-devices).
@@ -108,7 +88,7 @@ Cpu | where Architecture == "ARM64"
 This query provides a summary of devices by CPU architecture.
 
 ```kusto
-Cpu| summarize DeviceCount=count() by Architecture  
+Cpu| summarize DeviceCount=count() by Architecture
 ```
 
 #### Top devices by battery capacity
@@ -124,7 +104,7 @@ Battery| project Device, InstanceName, Manufacturer, Model, SerialNumber, CycleC
 This query lists devices with physical and virtual memory in GB.
 
 ```kusto
-MemoryInfo| project Device, PhysicalMemoryGB = PhysicalMemoryTotalBytes/(1000*1000*1000), VirtualMemoryGB = VirtualMemoryTotalBytes/(1000*1000*1000) | order by PhysicalMemoryGB asc  
+MemoryInfo| project Device, PhysicalMemoryGB = PhysicalMemoryTotalBytes/(1000*1000*1000), VirtualMemoryGB = VirtualMemoryTotalBytes/(1000*1000*1000) | order by PhysicalMemoryGB asc
 ```
 
 #### Device count by OS version
@@ -241,22 +221,22 @@ Scalar functions can be used to perform operations on individual values. The fol
 
 Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
 
-- Apple Auto Setup Admin Accounts 
-- Apple Device States 
-- Apple Update Settings 
-- Battery 
+- Apple Auto Setup Admin Accounts
+- Apple Device States
+- Apple Update Settings
+- Battery
 - Bios Info
-- Bluetooth  
-- Cellular  
-- CPU  
-- Device Storage  
-- Disk Drive  
-- Encryptable Volume  
-- Logical Drive  
-- Memory Info  
+- Bluetooth
+- Cellular
+- CPU
+- Device Storage
+- Disk Drive
+- Encryptable Volume
+- Logical Drive
+- Memory Info
 - Network Adapter
 - Os Version
-- Shared iPad  
+- Shared iPad
 - Sim Info
 - System Enclosure
 - Time
@@ -299,17 +279,17 @@ The device entity and its properties can also be referenced in queries by refere
 The following query returns all the DiskDrive information for all devices with serial number 123.:
 
 ```kusto
-DiskDrive 
+DiskDrive
 where Device.SerialNumber = 123
 ```
 
-The following query projects the Device ID and Manufacturer properties of the entity DiskDrive:  
+The following query projects the Device ID and Manufacturer properties of the entity DiskDrive:
 
 ```kusto
 DiskDrive | project Device.DeviceId, Manufacturer
 ```
 
-Although the Device entity that is shown as the first column by default appears as device names using Device by itself in a query parses to Device.DeviceId.  
+Although the Device entity that is shown as the first column by default appears as device names using Device by itself in a query parses to Device.DeviceId.
 This query returns results ordered by the DeviceID, not by DeviceName:
 
 ```kusto
@@ -322,7 +302,7 @@ Similarly, this query returns no results unless the device ID is Desktop123. It 
 Cpu | where Device == "Desktop123"
 ```
 
-Use the following example to query on device name:  
+Use the following example to query on device name:
 
 ```kusto
 Cpu | where Device.DeviceName == 'Desktop123"
@@ -336,16 +316,16 @@ Cpu | where Device.DeviceName == 'Desktop123"
     Cpu | summarize max(Device) by Manufacturer.
     ```
 
-- Queries with a join operator, $left and $right parameters show a red underline under $left and $right. However, the query can still run and returns results as expected.  
+- Queries with a join operator, $left and $right parameters show a red underline under $left and $right. However, the query can still run and returns results as expected.
 
 - A single query can contain a maximum of three join operators. Queries with more joins fail.
 
-- A max of ~50,000 records are returned for a query.  
+- A max of ~50,000 records are returned for a query.
 
 - A maximum of 10 queries can be submitted per minute. Additional queries will fail.
 
 - A maximum of 1,000 queries can be submitted per month.
 
-- Negative values for the amounts parameter of the datetime_add() function aren't supported.  
+- Negative values for the amounts parameter of the datetime_add() function aren't supported.
 
 - Referencing a variable that has been summarized by an aggregation function throws an error. Explicitly naming the variable allows the query to succeed again. For example, the query Device | summarize dcount(DeviceId) | order by dcount_DeviceId will fail. Device | summarize DCountDeviceIdRename=dcount(DeviceId) | order by DCountDeviceIdRename succeeds.

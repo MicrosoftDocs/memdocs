@@ -1,33 +1,12 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for Android developer integration and testing guide - MAM integration essentials 
+title: Microsoft Intune App SDK for Android developer integration and testing guide - MAM integration essentials
 description: Understand MAM integration essentials to incorporate Intune mobile app management (MAM) into your Android app.
-keywords: SDK
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-classic
 ---
 
 # Intune App SDK for Android - MAM integration essentials
@@ -401,9 +380,9 @@ This invokes `publish()` on the application handler for every log message.
 
 ```java
 /**
- * Global log handler that enables fine grained PII filtering within MAM logs.  
+ * Global log handler that enables fine grained PII filtering within MAM logs.
  * To start using this you should build your own log handler and add it via
- * MAMComponents.get(MAMLogHandlerWrapper.class).addHandler(myHandler, false);  
+ * MAMComponents.get(MAMLogHandlerWrapper.class).addHandler(myHandler, false);
  * You may also remove the handler entirely via
  * MAMComponents.get(MAMLogHandlerWrapper.class).removeHandler(myHandler);
  */
@@ -411,7 +390,7 @@ public interface MAMLogHandlerWrapper {
     /**
      * Add a handler, PII can be toggled.
      * @param handler handler to add.
-     * @param wantsPII if PII is desired in the logs.    
+     * @param wantsPII if PII is desired in the logs.
      */
     void addHandler(final Handler handler, final boolean wantsPII);
 
