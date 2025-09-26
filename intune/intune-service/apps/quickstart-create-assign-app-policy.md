@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.date: 02/28/2025
 ms.reviewer: dagerrit
 ms.collection:
-- tier2
 - M365-identity-device-management
 - FocusArea_Apps_Protect
 ---

@@ -6,7 +6,6 @@ ms.topic: article
 ms.localizationpriority: high
 ms.reviewer: demerson
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

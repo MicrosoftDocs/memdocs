@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: dguilory
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_EAC

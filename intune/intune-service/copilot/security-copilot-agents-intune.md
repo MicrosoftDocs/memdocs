@@ -12,7 +12,6 @@ ms.collection:
 - essentials
 - get-started
 
-audience: ITPro
 
 ---
 

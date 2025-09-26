@@ -4,15 +4,10 @@ summary: Learn more about how Microsoft Intune products and capabilities can hel
 brand: azure
 
 metadata:
-  services: service
-  ms.service: microsoft-intune
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
-  manager: dansimp
   ms.date: 11/25/2024
-  ms.localizationpriority: high
-  ms.collection:
   ms.custom: intro-hub-or-landing
 
 highlightedContent:

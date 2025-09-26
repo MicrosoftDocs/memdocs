@@ -1,5 +1,4 @@
 ---
-# required metadata
 title:  Intune Data Warehouse Collections
 description: The Intune Data Warehouse collections provide details related to the Data Warehouse API.
 ms.date: 11/18/2024

@@ -5,7 +5,6 @@ ms.date: 11/20/2024
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
-- tier1
 - M365-identity-device-management
 - iOS/iPadOS
 - highpri

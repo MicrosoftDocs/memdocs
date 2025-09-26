@@ -7,7 +7,6 @@ ms.localizationpriority: high
 ms.reviewer: bryanke
 ai-usage: ai-assisted
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo

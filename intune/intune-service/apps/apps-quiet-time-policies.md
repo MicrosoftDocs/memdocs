@@ -6,7 +6,6 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.reviewer: cdemello
 ms.collection:
-- tier1
 - highpri
 ---
 

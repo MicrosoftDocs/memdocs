@@ -5,7 +5,6 @@ ms.date: 02/20/2025
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
-- tier1
 - M365-identity-device-management
 - iOS/iPadOS
 - FocusArea_Apps_LOB

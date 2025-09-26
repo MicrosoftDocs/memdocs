@@ -1,33 +1,9 @@
 ---
-# required metadata
-
-title: Use the Microsoft Tunnel client app for Android - Microsoft Intune  | Microsoft Docs
-description: Learn how to connect over VPN using Microsoft Tunnel for Android.  
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: laurawi
+title: Use the Microsoft Tunnel client app for Android
+description: Learn how to connect over VPN using Microsoft Tunnel for Android.
 ms.date: 11/14/2023
-ms.topic: end-user-help
-ms.service: microsoft-intune
-ms.subservice: end-user
-ms.assetid: 
-searchScope:
- - User help
-
-# optional metadata
-
-ROBOTS:  
-#audience:
-
 ms.reviewer: shthilla
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-enduser
-ms.collection:
-- tier2
 ---
-
 
 # Using Microsoft Tunnel for Android
 
@@ -39,31 +15,31 @@ The Microsoft Tunnel client app helps you securely and privately connect to your
 
 Microsoft Defender for Endpoint is available in the Google Play store. Before heading there, check your device to see if it's already installed.
 
-If you can’t find the app in the Play store, contact your IT support person for help.  
+If you can’t find the app in the Play store, contact your IT support person for help.
 
-## Connect and disconnect from VPN  
+## Connect and disconnect from VPN
 
 1. Open Microsoft Defender for Endpoint.
 2. Sign in with your work account if prompted.
-3. On the **Tunnel** screen, turn the **Status** toggle on or off to connect or disconnect from the VPN. 
+3. On the **Tunnel** screen, turn the **Status** toggle on or off to connect or disconnect from the VPN.
 
-Your organization might require you to stay connected to Microsoft Tunnel. This is known as an *always-on* connection. If this is the case, the Status toggle will appear inactive, and you won't be able to disconnect from the VPN as long as you're connected to the internet. 
+Your organization might require you to stay connected to Microsoft Tunnel. This is known as an *always-on* connection. If this is the case, the Status toggle will appear inactive, and you won't be able to disconnect from the VPN as long as you're connected to the internet.
 
-If the toggle is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#send-logs) section in this article.  
+If the toggle is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#send-logs) section in this article.
 
 ## Connection details
 
-The following information appears on the **Connect** screen when Tunnel is connected.  
+The following information appears on the **Connect** screen when Tunnel is connected.
 
-* **Uptime**: How long the VPN connection has been running. 
+* **Uptime**: How long the VPN connection has been running.
 
-* **Data received**: How much data has been received through the VPN connection. 
+* **Data received**: How much data has been received through the VPN connection.
 
-* **Data sent**: How much data has been sent through the VPN connection.  
+* **Data sent**: How much data has been sent through the VPN connection.
 
-Tap **Details** to see the following information:  
+Tap **Details** to see the following information:
 
-* **Address**: The server address for your VPN connection. 
+* **Address**: The server address for your VPN connection.
 
 * **Device-wide connection**: When turned on, all network traffic to and from your device goes through the VPN connection.
 
@@ -71,7 +47,7 @@ Tap **Details** to see the following information:
 
 * **Always-on**: When turned on, Microsoft Defender for Endpoint will continuously try to establish a connection.
 
-## App settings  
+## App settings
 
 From the **Connect** screen, select the **Settings** gear icon to:
 
@@ -80,10 +56,10 @@ From the **Connect** screen, select the **Settings** gear icon to:
 
 ## Get help in the app
 
-Select **Help** from the menu at the bottom of the screen to:  
+Select **Help** from the menu at the bottom of the screen to:
 
-* Access this article.  
-* Send logs to IT support to report a problem.  
+* Access this article.
+* Send logs to IT support to report a problem.
 
 ### Send logs
 
@@ -98,7 +74,7 @@ Send app logs to IT support to get help with an app or connection problem.
 
 ## About Microsoft Tunnel
 
-Tap your profile picture, and then select **About** to view the Microsoft Tunnel privacy policy, terms of use, and third-party notices.   
+Tap your profile picture, and then select **About** to view the Microsoft Tunnel privacy policy, terms of use, and third-party notices.
 
 ## Next steps
 

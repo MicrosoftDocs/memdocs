@@ -8,7 +8,6 @@ ms.reviewer: beflamm
 ms.custom: intune-azure, get-started
 ai-usage: ai-assisted
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

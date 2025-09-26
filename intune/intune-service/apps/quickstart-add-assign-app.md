@@ -5,7 +5,6 @@ ms.date: 02/28/2025
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
-- tier2
 - M365-identity-device-management
 - FocusArea_Apps_Add
 ---

@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: bryanke
 ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

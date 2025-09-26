@@ -5,7 +5,6 @@ ms.date: 01/16/2025
 ms.topic: how-to
 ms.reviewer: aanavath
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

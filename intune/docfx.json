@@ -38,6 +38,7 @@
       "brand": "Microsoft Intune",
       "searchScope": ["Intune"],
       "ms.suite": "ems",
+      "ms.service": "microsoft-intune",
       "contributors_to_exclude": [
         "PRMerger9",
         "PRMerger17",
@@ -100,7 +101,8 @@
         "configmgr/**/*.md": ["ConfigMgr"],
         "configmgr/**/*.yml": ["ConfigMgr"],
         "configmgr/core/**/*.md": ["ConfigMgr"],
-        "analytics/**/*.md": ["Analytics"]
+        "analytics/**/*.md": ["Analytics"],
+        "intune-service/user-help/**/*.md": ["User help"]
       },
       "featureFlags": {
         "*.md" : [
@@ -123,8 +125,10 @@
         "intune-service/remote-actions/**/*.yml": "paolomatarazzo",
         "intune-service/user-help/**/*.md": "lenewsad",
         "intune-service/user-help/**/*.yml": "lenewsad",
-        "analytics/**/*.md": "mandiohlinger",
-        "analytics/**/*.yml": "mandiohlinger"
+        "analytics/**/*.md": "paolomatarazzo",
+        "analytics/**/*.yml": "paolomatarazzo",
+        "solutions/**/*.md": "mandiohlinger",
+        "solutions/**/*.yml": "mandiohlinger"
       },
       "manager": {
         "intune-service/**/*.md": "laurawi",
@@ -147,20 +151,18 @@
         "intune-service/remote-actions/**/*.yml": "paoloma",
         "intune-service/user-help/**/*.md": "lanewsad",
         "intune-service/user-help/**/*.yml": "lanewsad",
-        "analytics/**/*.md": "mandia",
-        "analytics/**/*.yml": "mandia"
+        "analytics/**/*.md": "paoloma",
+        "analytics/**/*.yml": "paoloma",
+        "solutions/**/*.md": "mandia",
+        "solutions/**/*.yml": "mandia"
       },
       "ms.reviewer": {
         "intune-service/remote-actions/**/*.md": "mattcall",
         "intune-service/remote-actions/**/*.yml": "mattcall"
       },
       "ms.service": {
-        "analytics/**/*.md": "microsoft-intune",
-        "analytics/**/*.yml": "microsoft-intune",
-        "intune-service/**/*.md": "microsoft-intune",
-        "intune-service/**/*.yml": "microsoft-intune",
-        "solutions/**/*.md": "microsoft-intune",
-        "solutions/**/*.yml": "microsoft-intune"
+        "configmgr/**/*.md": "configuration-manager",
+        "configmgr/**/*.yml": "configuration-manager"
       },
       "ms.subservice": {
         "analytics/**/*.md": "endpoint-analytics",
@@ -180,7 +182,13 @@
         "intune-service/remote-actions/**/*.md": "remote-actions",
         "intune-service/remote-actions/**/*.yml": "remote-actions",
         "intune-service/user-help/**/*.md": "end-user",
-        "intune-service/user-help/**/*.yml": "end-user"
+        "intune-service/user-help/**/*.yml": "end-user",
+        "intune-service/industry/education/**/*.md": "education",
+        "intune-service/industry/education/**/*.yml": "education"
+      },
+      "ms.topic": {
+        "intune-service/user-help/**/*.md": "end-user-help",
+        "intune-service/user-help/**/*.yml": "end-user-help"
       },
       "search.appverid": {
         "analytics/**/*.md": "MET150",
