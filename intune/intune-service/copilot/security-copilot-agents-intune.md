@@ -33,5 +33,5 @@ Use of this Copilot Agent by your security team can reduce the time it takes to 
 | Permissions | Run hunting queries<br>Read vulnerability data from Defender<br>Read managed apps in Intune<br>Read device configurations in Intune |
 | Products | [Security Copilot](/copilot/security/get-started-security-copilot)<br>[Microsoft Intune]()<br> [Microsoft Defender Vulnerability Management](../protect/advanced-threat-protection.md) | 
 | Plugins | [Intune](security-copilot.md)<br>[Microsoft Defender](/defender-xdr/security-copilot-in-microsoft-365-defender)|
-| Role-based access | **Microsoft Intune**: Intune Read Only Operator<br>**Microsoft Defender XDR**:<br>- With Unified RBAC: Microsoft Entra ID Security Reader<br>- With granular RBAC: A custom role with permissions equivalent to the Unified RBAC Security Reader |
+| Role-based access | **Microsoft Intune**: [Intune Read Only Operator](../fundamentals/role-based-access-control.md#built-in-roles)<br>**Microsoft Defender XDR**:<br>- With Unified RBAC: [Microsoft Entra ID Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)<br>- With granular RBAC: A [custom role](../fundamentals/create-custom-role.md) with permissions equivalent to the Unified RBAC Security Reader |
 | Trigger | Runs manually, on demand |
