@@ -144,7 +144,7 @@ For more details on creating a rule, see [Create elevation rules](epm-elevation-
    - **Local group**: Administrators
    - **Group and user action**: Add (Replace)
    - **User selection type:** Manual
-6. Select **Select users(s)**
+6. Select **users(s)**
 7. Add the two Security Identifiers (SIDs) for:
    - Global Administrator
    - Microsoft Entra Joined Device Local Administrator
