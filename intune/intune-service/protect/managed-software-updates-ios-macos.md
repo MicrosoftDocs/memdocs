@@ -1,6 +1,6 @@
 ---
-title: Configure software update for Apple devices
-description: Use Microsoft Intune to configure Apple's declarative device management (DDM) settings to install a specific update by an enforced deadline. This feature uses the settings catalog to configure managed software updates for supervised iOS/iPadOS and managed macOS devices.
+title: Configure Software Updates For Apple devices
+description: Use Microsoft Intune to configure Apple's declarative device management (DDM) settings for Software Updates.
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 09/24/2025
@@ -14,7 +14,7 @@ ms.collection:
 
 # Configure software updates for Apple devices
 
-Keeping Apple devices updated is essential for maintaining enterprise security, performance, and compliance. Updates often include critical patches, bug fixes, and feature enhancements. Without a consistent update strategy, organizations risk exposing endpoints to vulnerabilities and compatibility issues.
+Keeping devices updated is essential for maintaining enterprise security, performance, and compliance. Updates often include critical patches, bug fixes, and feature enhancements. Without a consistent update strategy, organizations risk exposing endpoints to vulnerabilities and compatibility issues.
 
 Microsoft Intune enables IT admins to configure and enforce update policies for Apple devices. You can schedule updates during maintenance windows, set enforcement deadlines, and reduce user disruption.
 
@@ -98,15 +98,6 @@ When both Declarative Device Management (DDM) and Mobile Device Management (MDM)
 > [!TIP]
 > Avoid configuring conflicting DDM and MDM policies. Doing so may lead to unexpected results or policy enforcement gaps.
 
-## Monitor software updates
-
-To monitor software updates for Apple devices, use the following methods:
-
-- DDM software updates use the same reporting as device configuration policies. For more information, see [Monitor device configuration policies](../configuration/device-profile-monitor.md).
-
-  > [!IMPORTANT]
-  > A policy that reports Success only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
-
 ## Using the Software Update Settings declarative configuration
 
 When you configure DDM software updates, you might want to manage aspects of the software update process leading up to the enforcement of an update. Using this configuration, you can:
@@ -136,6 +127,15 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - Enforced Software Update Non OS Deferred Install Delay (macOS)
 
 :::image type="content" source="./media/managed-software-updates-ios-macos/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune." lightbox="./media/managed-software-updates-ios-macos/settings-catalog-restrictions-delay-updates.png":::
+
+## Monitor software updates
+
+To monitor software updates for Apple devices, use the following methods:
+
+- DDM software updates use the same reporting as device configuration policies. For more information, see [Monitor device configuration policies](../configuration/device-profile-monitor.md).
+
+  > [!IMPORTANT]
+  > A policy that reports Success only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
 
 ## Related articles
 
@@ -184,8 +184,3 @@ Use the following information to help you decide which policy type to use.
 | macOS | 14.0 and later | macOS 12.0 |
 
 -->
-
-
-<!--
-> [!NOTE]
-> The `retrieveDeviceConfigurationAvailableOptions` function of the [deviceManagementConfigurationSettingDefinition resource type](/graph/api/resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition?view=graph-rest-beta) requires delegated user authentication. Application permissions cannot be used for this endpoint.-->
