@@ -141,9 +141,9 @@ The following tables list the App protection policy setting name and supported v
 | ManagedBrowserRequired | true = Microsoft Edge or Unmanaged browser<br>false = Any app | **Section**: Data protection<br>**Setting**: Restrict web content transfer with other apps. |
 | ManagedLocations | A value that represents the number of managed storage locations to which the app can save data, separated by a semi-colon.<br>ONEDRIVE_FOR_BUSINESS<br>SHAREPOINT<br>LOCAL | **Section**: Data protection<br>**Setting**: Allow user to save copies to selected services |
 | MaxPinRetryExceededAction | RESET_PIN = Reset PIN<br>WIPE_DATA = Wipe data | **Section**: Conditional launch<br>**Setting**: Max PIN attempts |
-| MaxOsVersion | "0.0" = no maximum OS version<br>anything else = maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Block access |
-| MaxOsVersionWarning | "0.0" = no maximum OS version<br>anything else = maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Warn |
-| MaxOsVersionWipe | "0.0" = no maximum OS version<br>anything else = maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Wipe data |
+| MaxOsVersion | maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Block access |
+| MaxOsVersionWarning | maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Warn |
+| MaxOsVersionWipe | maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Wipe data |
 | MessagingRedirectAppDisplayName | Messaging app name | **Section**: Data protection<br>**Setting**: Messaging App Name |
 | MessagingRedirectAppPackageId | Messaging app package ID | **Section**: Data protection<br>**Setting**: Messaging App Package ID |
 | MinAppVersion | "0.0" = no minimum app version<br>anything else = minimum app version | **Section**: Conditional launch<br>**Setting**: Min app version with action Block access |
