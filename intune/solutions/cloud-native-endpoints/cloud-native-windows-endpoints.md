@@ -357,8 +357,9 @@ Microsoft Defender Firewall can detect a trusted network using the [NetworkListM
 - Windows 11 21H2 with [2022-12 cumulative update](https://support.microsoft.com/topic/december-13-2022-kb5021234-os-build-22000-1335-56a94ce4-7122-447d-98d8-360e95fc0cf9)
 - Windows 10 20H2 or higher with [2022-12 cumulative update](https://support.microsoft.com/topic/december-13-2022-kb5021233-os-builds-19042-2364-19043-2364-19044-2364-and-19045-2364-44e774aa-60c4-4e38-b7e7-c886d210db3b)
 
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!IMPORTANT]  
+> On October 14, 2025, [Windows 10 is reaching end of support](/lifecycle/announcements/windows-10-end-of-support) and will stop receiving quality and feature updates. After October 14, 2025, Windows 10 becomes an "allowed" version in Intune. Devices running this version can still enroll in Intune and use eligible features, but functionality won't be guaranteed and can vary.
+
 
 Using the *domain* network profile allows you to separate firewall rules based on a trusted network, a private network, and a public network. These settings can be applied using a Windows custom profile.
 
@@ -519,8 +520,9 @@ Microsoft Edge is included on devices that run:
 - Windows 10 20H2 or later
 - Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update
 
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!IMPORTANT]  
+> On October 14, 2025, [Windows 10 is reaching end of support](/lifecycle/announcements/windows-10-end-of-support) and will stop receiving quality and feature updates. After October 14, 2025, Windows 10 becomes an "allowed" version in Intune. Devices running this version can still enroll in Intune and use eligible features, but functionality won't be guaranteed and can vary.
+
 
 After users sign in, Microsoft Edge updates automatically. To trigger an update for Microsoft Edge during deployment, you can run the following command:
 
