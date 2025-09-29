@@ -4,13 +4,13 @@ items:
 - name: What is cloud attach?
   href: overview.md
 - name: Enable cloud attach, versions 2111 and later
-  href: enable.md 
+  href: enable.md
 - name: Tenant attach
   items:
   - name: Tenant attach prerequisites
     href: ../tenant-attach/prerequisites.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Enable tenant attach, versions 2103 and earlier
-    href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json  
+    href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Use Intune RBAC for tenant attach
     href: use-intune-rbac.md
   - name: Use tenant attach
@@ -44,11 +44,11 @@ items:
       - name: Create and deploy endpoint detection and response policy
         href: ../tenant-attach/atp-onboard.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Create and deploy antivirus policy
-        href: ../tenant-attach/deploy-antivirus-policy.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json  
+        href: ../tenant-attach/deploy-antivirus-policy.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Create and deploy firewall policy
         href: ../tenant-attach/deploy-firewall-policy.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Create and deploy attack surface reduction policy
-        href: ../tenant-attach/deploy-asr-policy.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json     
+        href: ../tenant-attach/deploy-asr-policy.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Reference for tenant attach
       items:
       - name: Tenant attach data collection
@@ -69,7 +69,7 @@ items:
         href: ../tenant-attach/troubleshoot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Client details
         href: ../tenant-attach/troubleshoot-client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-      - name: Application installation 
+      - name: Application installation
         href: ../tenant-attach/troubleshoot-applications.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Common error codes for application installation
         href: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
@@ -86,7 +86,7 @@ items:
 - name: Endpoint analytics
   items:
   - name: Endpoint analytics overview
-    href: ../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    href: ../../analytics/index.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Scores, baselines, and insights
     href: ../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Enable Endpoint analytics
@@ -100,7 +100,7 @@ items:
     - name: Startup performance
       href: ../../analytics/startup-performance.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Restart frequency
-      href: ../../analytics/restart-frequency.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json    
+      href: ../../analytics/restart-frequency.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Application reliability
       href: ../../analytics/app-reliability.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Work from anywhere
