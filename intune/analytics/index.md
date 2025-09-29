@@ -1,18 +1,15 @@
 ---
-title: What is Endpoint analytics?
+title: Endpoint Analytics Overview
 description: Overview for Endpoint analytics.
 ms.date: 02/28/2025
 ms.topic: overview
-ms.collection: highpri
 ---
 
-# <a name="bkmk_overview"></a> What is Endpoint analytics?
+# Endpoint analytics overview
 
 Endpoint analytics is part of the [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score). These analytics give you insights for measuring how your organization is working and the quality of the experience you're delivering to your users. Endpoint analytics can help identify policies or hardware issues that might be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket. For more information on the Microsoft Adoption Score and other new tools, see [New tools to help IT empower employees securely in a remote work world​](https://www.microsoft.com/en-us/microsoft-365/blog/2020/04/30/new-tools-help-it-empower-employees-securely-remote-work-world/).<!-- see MEMDocs#955, this link requires "en-us" locale -->
 
-## Endpoint analytics overview
-
-It's not uncommon for end users to experience long boot times or other disruptions. These disruptions can be due to a combination of:
+It's not uncommon for users to experience long boot times or other disruptions. These disruptions can be due to a combination of:
 
 - Legacy hardware
 - Software configurations that aren't optimized for the end-user experience

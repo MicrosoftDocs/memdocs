@@ -153,7 +153,7 @@ Learn more about:
 - [Remote Help](remote-help.md)
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
-- [Intune Advanced Analytics](../../analytics/overview.md)
+- [Intune Advanced Analytics](../../analytics/index.md)
 - [Endpoint Privilege Management](../protect/epm-overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Remote Help](..\fundamentals\remote-help.md)

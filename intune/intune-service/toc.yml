@@ -191,26 +191,8 @@ items:
       - name: Troubleshooting Remote Help on Android
         href: ./fundamentals/remote-help-android-troubleshoot.md
 
-    - name: Advanced Analytics
-      items:
-      - name: What is Advanced Analytics?
-        href: ../analytics/advanced-endpoint-analytics.md
-      - name: Anomaly detection
-        href: ../analytics/anomaly-detection.md
-      - name: Enhanced device timeline
-        href: ../analytics/enhanced-device-timeline.md
-      - name: Device scopes
-        href: ../analytics/device-scopes.md
-      - name: Device query
-        href: ../analytics/device-query.md
-      - name: Device query for multiple devices
-        href: ../analytics/device-query-multiple-devices.md
-      - name: Data platform schema
-        href: ../analytics/data-platform-schema.md
-      - name: Battery health
-        href: ../analytics/battery-health.md
-      - name: Resource Performance
-        href: ../analytics/resource-performance-report.md
+    - name: Advanced analytics
+      href: ../analytics/advanced/toc.yml
 
   - name: Plan and prepare for Intune
     items:
@@ -1314,7 +1296,7 @@ items:
             displayName: wifi, wireless, psk, oma-uri, eap, android, windows
           - name: Troubleshoot Wi-Fi
             displayName: wifi, wireless, android, ios, ipados, macos, windows, holographic
-            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles 
+            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles
         - name: BIOS & DFCI on Windows
           items:
           - name: Configure the BIOS
@@ -1852,61 +1834,7 @@ items:
       href: ./fundamentals/tenant-status.md
 
     - name: Endpoint analytics
-      items:
-      - name: Overview
-        items:
-        - name: What is Endpoint analytics?
-          href: ../analytics/overview.md
-      - name: Concepts
-        items:
-        - name: Scores, baselines, and insights
-          href: ../analytics/scores.md
-      - name: How to guides
-        items:
-        - name: Enroll Intune devices
-          href: ../analytics/enroll-intune.md
-        - name: Enroll Configuration Manager devices
-          href: ../analytics/enroll-configmgr.md
-        - name: Manage settings
-          href: ../analytics/settings.md
-      - name: Reports
-        items:
-        - name: Startup performance
-          href: ../analytics/startup-performance.md
-        - name: Restart frequency
-          href: ../analytics/restart-frequency.md
-        - name: Application reliability
-          href: ../analytics/app-reliability.md
-        - name: Work from anywhere
-          href: ../analytics/work-from-anywhere.md
-        - name: Endpoint analytics in Microsoft Adoption Score
-          href: ../analytics/adoption-score.md
-      - name: Intune Advanced Analytics
-        items:
-        - name: What is Advanced Analytics?
-          href: ../analytics/advanced-endpoint-analytics.md
-        - name: Anomaly detection
-          href: ../analytics/anomaly-detection.md
-        - name: Enhanced device timeline
-          href: ../analytics/enhanced-device-timeline.md
-        - name: Device scopes
-          href: ../analytics/device-scopes.md
-        - name: Device query
-          href: ../analytics/device-query.md
-        - name: Device query for multiple devices
-          href: ../analytics/device-query-multiple-devices.md
-        - name: Data platform schema
-          href: ../analytics/data-platform-schema.md
-        - name: Battery health
-          href: ../analytics/battery-health.md
-        - name: Resource Performance
-          href: ../analytics/resource-performance-report.md
-      - name: Get support
-        href: ../analytics/get-support.md
-      - name: Data collection
-        href: ../analytics/data-collection.md
-      - name: Troubleshoot
-        href: ../analytics/troubleshoot.md
+      href: ../analytics/toc.yml
 
     - name: View reports and monitor status
       items:
