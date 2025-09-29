@@ -4,54 +4,54 @@ items:
   - name: Overview
     items:
     - name: What is Endpoint analytics?
-      href: analytics/overview.md
+      href: overview.md
   - name: Concepts
     items:
     - name: Scores, baselines, and insights
-      href: analytics/scores.md
+      href: scores.md
   - name: How to guides
     items:
     - name: Enroll Intune devices
-      href: analytics/enroll-intune.md
+      href: enroll-intune.md
     - name: Enroll Configuration Manager devices
-      href: analytics/enroll-configmgr.md
+      href: enroll-configmgr.md
     - name: Manage settings
-      href: analytics/settings.md
+      href: settings.md
   - name: Reports
     items:
     - name: Startup performance
-      href: analytics/startup-performance.md
+      href: startup-performance.md
     - name: Restart frequency
-      href: analytics/restart-frequency.md
+      href: restart-frequency.md
     - name: Application reliability
-      href: analytics/app-reliability.md
+      href: app-reliability.md
     - name: Work from anywhere
-      href: analytics/work-from-anywhere.md
+      href: work-from-anywhere.md
     - name: Endpoint analytics in Microsoft Adoption Score
-      href: analytics/adoption-score.md
+      href: adoption-score.md
   - name: Intune Advanced Analytics
     items:
     - name: What is Advanced Analytics?
-      href: analytics/advanced-endpoint-analytics.md
+      href: advanced-endpoint-analytics.md
     - name: Anomaly detection
-      href: analytics/anomaly-detection.md
+      href: anomaly-detection.md
     - name: Enhanced device timeline
-      href: analytics/enhanced-device-timeline.md
+      href: enhanced-device-timeline.md
     - name: Device scopes
-      href: analytics/device-scopes.md
+      href: device-scopes.md
     - name: Device query
-      href: analytics/device-query.md
+      href: device-query.md
     - name: Device query for multiple devices
-      href: analytics/device-query-multiple-devices.md
+      href: device-query-multiple-devices.md
     - name: Data platform schema
-      href: analytics/data-platform-schema.md
+      href: data-platform-schema.md
     - name: Battery health
-      href: analytics/battery-health.md
+      href: battery-health.md
     - name: Resource Performance
-      href: analytics/resource-performance-report.md
+      href: resource-performance-report.md
   - name: Get support
-    href: analytics/get-support.md
+    href: get-support.md
   - name: Data collection
-    href: analytics/data-collection.md
+    href: data-collection.md
   - name: Troubleshoot
-    href: analytics/troubleshoot.md
+    href: troubleshoot.md

@@ -192,25 +192,7 @@ items:
         href: ./fundamentals/remote-help-android-troubleshoot.md
 
     - name: Advanced Analytics
-      items:
-      - name: What is Advanced Analytics?
-        href: ../analytics/advanced-endpoint-analytics.md
-      - name: Anomaly detection
-        href: ../analytics/anomaly-detection.md
-      - name: Enhanced device timeline
-        href: ../analytics/enhanced-device-timeline.md
-      - name: Device scopes
-        href: ../analytics/device-scopes.md
-      - name: Device query
-        href: ../analytics/device-query.md
-      - name: Device query for multiple devices
-        href: ../analytics/device-query-multiple-devices.md
-      - name: Data platform schema
-        href: ../analytics/data-platform-schema.md
-      - name: Battery health
-        href: ../analytics/battery-health.md
-      - name: Resource Performance
-        href: ../analytics/resource-performance-report.md
+      href: ../analytics/advanced/toc.yml
 
   - name: Plan and prepare for Intune
     items:

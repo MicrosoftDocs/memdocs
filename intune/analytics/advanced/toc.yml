@@ -1,0 +1,19 @@
+items:
+- name: What is Advanced Analytics?
+  href: ../advanced-endpoint-analytics.md
+- name: Anomaly detection
+  href: ../anomaly-detection.md
+- name: Enhanced device timeline
+  href: ../enhanced-device-timeline.md
+- name: Device scopes
+  href: ../device-scopes.md
+- name: Device query
+  href: ../device-query.md
+- name: Device query for multiple devices
+  href: ../device-query-multiple-devices.md
+- name: Data platform schema
+  href: ../data-platform-schema.md
+- name: Battery health
+  href: ../battery-health.md
+- name: Resource Performance
+  href: ../resource-performance-report.md
