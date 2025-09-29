@@ -1,7 +1,7 @@
 ---
 title: How to configure the Intune Company Portal apps, Company Portal website, and Intune app
 description: Learn how you can configure the Intune Company Portal apps, Company Portal website, and Intune app.
-ms.date: 09/15/2025
+ms.date: 09/30/2025
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: abstarr
@@ -91,7 +91,9 @@ This table provides enrollment-specific configuration details:
 
 Support for the device enrollment setting requires end users have these Company Portal versions:
 - Company Portal on iOS/iPadOS: version 4.4 or later
-- Company Portal on Android: version 5.0.4715.0 or later
+- Company Portal on Android: version 5.0.5421.0 or later
+
+[!INCLUDE [android-company-portal-version-support](../includes/android-company-portal-version-support.md)]
 
 > [!IMPORTANT]
 > These settings don't apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of configuration, these devices enroll during the out of box flow. The Company Portal prompts users to sign in when they launch it.
