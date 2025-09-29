@@ -25,9 +25,11 @@ Manage [Antivirus settings for Configuration Manager devices](../protect/antivir
 **Supported Configuration Manager device platforms**:
 
 - Windows 8.1 (x86, x64), starting in Configuration Manager version 2010 <!--8763780, 8740844-->
-- Windows 10 and later (x86, x64, ARM64)
-- Windows 11 and later (x86, x64, ARM64)
+- Windows
 - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010 <!--8763780, 8740844-->
 - Windows Server 2016 and later (x64)
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]

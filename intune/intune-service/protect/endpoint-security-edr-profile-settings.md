@@ -24,12 +24,15 @@ View the settings you can configure in profiles for [Endpoint detection and resp
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 Supported platforms and profiles:
 
-- **Windows**: Use this platform for policy you deploy to Windows 10 and Windows 11 devices managed with Intune.
+- **Windows**: Use this platform for policy you deploy to Windows devices managed with Intune.
   - Profile: **Endpoint detection and response (MDM)**
 
 - **Windows (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.

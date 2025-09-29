@@ -357,6 +357,9 @@ Microsoft Defender Firewall can detect a trusted network using the [NetworkListM
 - Windows 11 21H2 with [2022-12 cumulative update](https://support.microsoft.com/topic/december-13-2022-kb5021234-os-build-22000-1335-56a94ce4-7122-447d-98d8-360e95fc0cf9)
 - Windows 10 20H2 or higher with [2022-12 cumulative update](https://support.microsoft.com/topic/december-13-2022-kb5021233-os-builds-19042-2364-19043-2364-19044-2364-and-19045-2364-44e774aa-60c4-4e38-b7e7-c886d210db3b)
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 Using the *domain* network profile allows you to separate firewall rules based on a trusted network, a private network, and a public network. These settings can be applied using a Windows custom profile.
 
 > [!NOTE]
@@ -455,7 +458,7 @@ Windows Local Administrator Password Solution (LAPS) is one of the features you 
 3. In Intune, create an endpoint security policy:
 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    2. Select **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows 10 and later** > **Local admin password solution (Windows LAPS)** > **Create**.
+    2. Select **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows** > **Local admin password solution (Windows LAPS)** > **Create**.
 
     For more information, go to [Create a LAPS policy in Intune](../../intune-service/protect/windows-laps-policy.md#create-a-laps-policy).
 
@@ -515,6 +518,9 @@ Microsoft Edge is included on devices that run:
 - Windows 11
 - Windows 10 20H2 or later
 - Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 After users sign in, Microsoft Edge updates automatically. To trigger an update for Microsoft Edge during deployment, you can run the following command:
 

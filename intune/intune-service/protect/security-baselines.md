@@ -26,8 +26,8 @@ This feature applies to:
 - Windows 11
 - Windows 10 version 1809 and later
 
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Intune security baseline overview
 
