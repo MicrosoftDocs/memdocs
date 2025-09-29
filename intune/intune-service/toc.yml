@@ -1580,36 +1580,18 @@ items:
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
       - name: Configure enrollment features
         items:
-        - name: Get Apple MDM push certificate
-          href: ./enrollment/apple-mdm-push-certificate-get.md
-          displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment
-        - name: Turn on iOS/iPadOS supervised mode
-          href: ./enrollment/device-supervised-mode.md
+        - name: Add corporate identifiers
+          href: ./enrollment/corporate-identifiers-add.md 
+          displayName: COD; corporate owned; IMEI; device ownership; serial       
+        - name: Add device categories
+          href: ./enrollment/device-group-mapping.md
+          displayName: group; category; categorize; security group             
+        - name: Add device enrollment manager
+          href: ./enrollment/device-enrollment-manager-enroll.md
+          displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations        
         - name: Configure Chrome Enterprise connector
           href: ./enrollment/chrome-enterprise-connector-configure.md
           displayName: chrome os; connector; device management; google admin
-        - name: Add corporate identifiers
-          href: ./enrollment/corporate-identifiers-add.md
-          displayName: COD; corporate owned; IMEI; device ownership; serial
-        - name: Add device enrollment manager
-          href: ./enrollment/device-enrollment-manager-enroll.md
-          displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
-        - name: Enable Windows backup and restore
-          href: ./enrollment/windows-backup-restore.md
-        - name: Add device categories
-          href: ./enrollment/device-group-mapping.md
-          displayName: group; category; categorize; security group;
-        - name: Require multifactor authentication
-          href: ./enrollment/multi-factor-authentication.md
-          displayName: multi-factor; enrollment; MFA; verification; Conditional Access
-        - name: Create terms and conditions policy
-          href: ./enrollment/terms-and-conditions-create.md
-          displayName: intune; enrollment; terms and conditions; policy
-        - name: Set up enrollment notifications
-          href: ./enrollment/enrollment-notifications.md
-        - name: Set up enrollment time grouping
-          href: ./enrollment/enrollment-time-grouping.md
-          displayName: enrollment time grouping; security groups; Entra
         - name: Configure device enrollment restrictions
           items:
           - name: Overview
@@ -1619,7 +1601,25 @@ items:
           - name: Create device platform restrictions
             href: ./enrollment/create-device-platform-restrictions.md
           - name: Create device limit restrictions
-            href: ./enrollment/create-device-limit-restrictions.md
+            href: ./enrollment/create-device-limit-restrictions.md        
+        - name: Create terms and conditions policy
+          href: ./enrollment/terms-and-conditions-create.md
+          displayName: intune; enrollment; terms and conditions; policy       
+        - name: Enable Windows backup and restore
+          href: ./enrollment/windows-backup-restore.md        
+        - name: Get Apple MDM push certificate
+          href: ./enrollment/apple-mdm-push-certificate-get.md
+          displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment
+        - name: Require multifactor authentication
+          href: ./enrollment/multi-factor-authentication.md
+          displayName: multi-factor; enrollment; MFA; verification; Conditional Access
+        - name: Set up enrollment notifications
+          href: ./enrollment/enrollment-notifications.md
+        - name: Set up enrollment time grouping
+          href: ./enrollment/enrollment-time-grouping.md
+          displayName: enrollment time grouping; security groups; Entra
+        - name: Turn on iOS/iPadOS supervised mode
+          href: ./enrollment/device-supervised-mode.md        
 
       - name: Set up Windows enrollment
         items:
@@ -1635,12 +1635,13 @@ items:
           items:
           - name: Create and validate CNAME records
             href: ./enrollment/windows-enrollment-create-cname.md
-          - name: Set up Intune Connector for Active Directory
-            href: /autopilot/windows-autopilot-hybrid
           - name: Set up Enrollment Status Page
             href: ./enrollment/windows-enrollment-status.md
+          - name: Set up Intune Connector for Active Directory
+            href: /autopilot/windows-autopilot-hybrid          
           - name: Set up Windows Enrollment Attestation
             href: ./enrollment/windows-enrollment-attestation.md
+          
 
       - name: Set up Android enrollment
         items:
@@ -1759,7 +1760,7 @@ items:
           items:
           - name: Set up automated device enrollment for macOS
             href: ./enrollment/device-enrollment-program-enroll-macos.md
-          - name: ./Setup macOS account configuration with LAPS
+          - name: Setup macOS account configuration with LAPS
             href: ./enrollment/macos-laps.md
           - name: Set up Direct Enrollment for macOS
             href: ./enrollment/device-enrollment-direct-enroll-macos.md
