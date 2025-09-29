@@ -1,5 +1,5 @@
 items:
-- name: What is Advanced Analytics?
+- name: Advanced analytics overview
   href: ../advanced-endpoint-analytics.md
 - name: Anomaly detection
   href: ../anomaly-detection.md

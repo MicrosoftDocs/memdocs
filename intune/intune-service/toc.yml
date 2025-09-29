@@ -191,7 +191,7 @@ items:
       - name: Troubleshooting Remote Help on Android
         href: ./fundamentals/remote-help-android-troubleshoot.md
 
-    - name: Advanced Analytics
+    - name: Advanced analytics
       href: ../analytics/advanced/toc.yml
 
   - name: Plan and prepare for Intune
