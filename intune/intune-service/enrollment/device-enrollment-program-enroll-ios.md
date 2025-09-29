@@ -28,7 +28,7 @@ The following table shows the features and scenarios supported with automated de
 | You have new devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
-| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are user-less, such as dedicated devices. | ✔️ |
 | Devices are in shared device mode. | ✔️ |
 | Devices are personal or bring-your-own (BYOD). | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), or [User and Device enrollment](../enrollment/apple-user-enrollment-with-company-portal.md). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> If you want to fully manage a device in Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are owned by the organization, we recommend enrolling them in Intune. |
