@@ -1,14 +1,7 @@
 ---
 title: What's new in Windows Autopilot
 description: News and resources about the latest updates and past versions of Windows Autopilot. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-manager: bpardi
-ms.reviewer: madakeva
-ms.date: 04/21/2025
+ms.date: 09/09/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -31,6 +24,25 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+
+## Enrollment Status Page support for installing Windows security updates during Windows OOBE
+
+Date added: *September 3, 2025*<br>
+Date updated: *September 9, 2025*
+
+> [!IMPORTANT]
+>
+> As of September 9, 2025, this capability is delayed to help ensure delivery of the best possible experience. The new setting on the Enrollment Status Page (ESP) can be configured on both new and existing ESP profiles, but the automatic installation of monthly security update releases and the new user interface isn't available yet. This post will be updated with a revised timeline as soon as it's available.
+
+The Windows out-of-box experience (OOBE) by default installs the latest available monthly security update releases to help ensure devices are secure and up to date from day one. Windows OOBE is used by Intune and by Windows Autopilot scenarios through the Intune enrollment status page (ESP) configurations. Intune refers to these monthly security update releases as quality updates.
+
+To help manage this behavior, the Intune enrollment status page (ESP) is updated with a new setting that can be used to allow or block the automatic installation of monthly security update releases. The new setting is **Install Windows quality updates (might restart the device)**. Monthly security update releases are installed by default during the Windows out-of-box experience OOBE that's used by Intune and by Windows Autopilot
+
+By default, this setting is set to **Yes** in all new ESP profiles that are created. Configuring this setting to **Yes** results in the most recent monthly security update releases to be installed. In all previously created ESP profiles, this setting is set to **No** until those profiles are edited and changed. When set to **No**, OOBE doesn't install the monthly security update releases. Delaying the install of monthly security update releases can give internal teams time to test the monthly security update releases before allowing them to install on new devices during provisioning.
+
+- For more information, see [Get ready for Windows quality updates out of the box](https://techcommunity.microsoft.com/blog/windows-itpro-blog/get-ready-for-windows-quality-updates-out-of-the-box/4434498).
+- For more information about configuring the setting in the Intune enrollment status page (ESP), see [Set up Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status).
+- For information about Windows quality updates, see [Windows quality update policy](/windows/deployment/update/release-cycle#monthly-security-update-release).
 
 ## Deliver Enterprise App Catalog (EAM) apps during the Enrollment status page
 
@@ -163,7 +175,7 @@ When devices that utilize Windows Autopilot are reused, and there's a new device
 
 ## Win32 app configurable installation time impacts the Enrollment Status Page
 
-Staring in Intune 2308, Win32 apps allow configuration of an installation time on a per app basis. This time is expressed in minutes. If the app takes longer to install than the set installation time, the deployment fails the app install. To avoid Enrollment Status Page (ESP) timeout failures, any changes made to timeouts for Win32 apps also needs an increase in the ESP timeout to reflect those changes.
+Starting in Intune 2308, Win32 apps allow configuration of an installation time on a per app basis. This time is expressed in minutes. If the app takes longer to install than the set installation time, the deployment fails the app install. To avoid Enrollment Status Page (ESP) timeout failures, any changes made to timeouts for Win32 apps also needs an increase in the ESP timeout to reflect those changes.
 
 ## Windows Autopilot profile resiliency
 
@@ -310,5 +322,6 @@ The diagnostics page is currently supported when signing in with a Work or Schoo
 
 ## Related content
 
+- [What's new in Windows Autopilot device preparation](device-preparation/whats-new.md).
 - [What's new in Microsoft Intune](/mem/intune-service/fundamentals/whats-new).
 - [What's new in Windows client](/windows/whats-new/).

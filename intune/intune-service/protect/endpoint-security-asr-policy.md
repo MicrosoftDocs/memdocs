@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Manage attack surface reduction settings with Microsoft Intune
-description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune. 
-keywords:
+description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 06/20/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -134,7 +117,7 @@ Available profiles for this platform include:
 - **Application control** - Application control settings can help mitigate security threats by restricting the applications that users can run and the code that runs in the System Core (kernel). Manage settings that can block unsigned scripts and MSIs, and restrict Windows PowerShell to run in Constrained Language Mode.
 
   To learn more, see [Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender for Endpoint documentation.
-  
+
     > [!NOTE]
     > If you use this setting, AppLocker CSP behavior currently prompts end user to reboot their machine when a policy is deployed.
 

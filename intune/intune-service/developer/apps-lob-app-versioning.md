@@ -1,31 +1,10 @@
 ---
-# required metadata
-
 title: Line-of-business app versioning in Intune
 description: Introduces how app versions are used in Intune when an app is added or updated.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 11/18/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -50,7 +29,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
   :::image type="content" source="media/apps-lob-app-versioning/apps-lob-app-versioning-02.png" alt-text="View an existing app":::
 - You can select to view the version in the list of apps. The version value is the value of the **identityVersion** property.
-  
+
   :::image type="content" source="media/apps-lob-app-versioning/apps-lob-app-versioning-03.png" alt-text="View app versions":::
 
 You can see the version when you install the app from the Company Portal app.

@@ -1,32 +1,11 @@
 ---
-# required metadata
-
 title: Add Microsoft Edge for Windows 10/11 to Microsoft Intune
-titleSuffix:
 description: Learn about adding Microsoft Edge for Windows to Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/16/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 ---
@@ -96,9 +75,9 @@ You can use scope tags to determine who can see client app information in Intune
 4.    Click **Select** > **OK**.
 
 ## Add the app
-When you've completed configuring the app, select **Add** from the **App app** pane. 
+When you've completed configuring the app, select **Add** from the **App app** pane.
 
-The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
+The app you've created is displayed in the apps list, where you can assign it to the groups that you select.
 
 > [!NOTE]
 > Currently, if you unassign the deployment of Microsoft Edge, it will remain on the device.

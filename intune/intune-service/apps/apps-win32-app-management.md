@@ -1,23 +1,12 @@
 ---
 title: Win32 app management in Microsoft Intune
 description: Learn how to manage Win32 apps with Microsoft Intune. This article provides an overview of the Intune Win32 app delivery and management capabilities.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/13/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: apps
 ms.localizationpriority: high
-ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
 ai-usage: ai-assisted
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Win32
@@ -28,7 +17,7 @@ ms.collection:
 Microsoft Intune enables Windows Win32 app management. Win32 app management in Intune allows you to install, configure, protect, and monitor your Windows applications on devices at your organization. Win32 apps are deployed using the Microsoft Intune management extension (IME), which is installed automatically when a PowerShell script or a Win32 app is assigned to the user or device using Intune.
 
 In addition to supporting extensive management capabilities, Win32 app management in Microsoft Intune provides support for the following capabilities:
-- Management of large traditional desktop apps 
+- Management of large traditional desktop apps
 - Support for several app types
 - Control for complex app installations
 - Support for detection rules, dependencies, and requirements
@@ -139,7 +128,7 @@ Set the app availability and other app assignment properties using the following
     - **App installation deadline** to **As soon as possible** or **A specific date and time** and select your date and time. This date and time specify when the app is installed on the targeted device. When more than one assignment is made for the same user or device, the app installation deadline time is picked based on the following conditions:
       - A specific deadline is picked over the earliest time possible.
       - An earlier specific deadline is picked over a later specific deadline.
-      
+
       > [!NOTE]
       > If a win32 app is configured with a deadline to install, it will be downloaded but it won't install until the deadline. The Company Portal doesn't provide this level of detail. The Company Portal will show an **Installing** status for the app as soon as it's downloaded. Once the app is installed, the Company Portal will show the app installation status as **Installed**. The time between showing an **Installing** status verses an **Installed** status depends on the configuration for the deadline in Intune.
 

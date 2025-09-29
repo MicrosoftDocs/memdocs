@@ -1,29 +1,9 @@
 ---
-# required metadata
-
 title: Device query in Microsoft Intune
 description: Learn how to gain on-demand information about the state of your devices using device query.
-keywords:
-ms.author: mandia
-author: MandiOhlinger
-manager: laurawi
 ms.date: 08/01/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: Elizabeth cox
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -65,7 +45,7 @@ The supported properties you can query are listed in the **Properties** section.
 For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
 
 > [!TIP]
-> You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+> You can use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
 ## Remote device actions
 
