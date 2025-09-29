@@ -1,30 +1,10 @@
 ---
-# required metadata
 title: IntuneManagementExtension Entity
-titleSuffix: Microsoft Intune 
 description: Reference topic for the IntuneManagementExtension Entity category of entity collections in the Intune Data Warehouse API.
-keywords: Intune Data Warehouse
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 73DF3B90-6D52-4EF6-AFFD-1873A18C7421
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -56,7 +36,7 @@ The **intuneManagementExtensionHealthState** lists all possible health states of
 ## intuneManagementExtensions
 
 The **intuneManagementExtension** lists the IntuneManagementExtensions health on each Windows 10 device per day.
-The data is retained for the last 60 days. 
+The data is retained for the last 60 days.
 
 
 |      Property       |                         Description                         | Example |

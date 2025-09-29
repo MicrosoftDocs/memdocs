@@ -1,24 +1,10 @@
 ---
 title: Troubleshoot Win32 apps in Microsoft Intune
-titleSuffix:
 description: Learn about the most common methods to troubleshoot Win32 app issues with Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 06/13/2025
+ms.date: 08/14/2025
 ms.topic: troubleshooting
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - FocusArea_Apps_Win32
 ---
@@ -51,7 +37,17 @@ When an installation issue occurs with a Win32 app, you can choose the **Collect
 
 Agent logs on the client machine are commonly in *C:\ProgramData\Microsoft\IntuneManagementExtension\Logs*. You can use *CMTrace.exe* to view these log files. For more information, see [CMTrace](/configmgr/core/support/cmtrace).
 
-![Screenshot of the Agent logs on the client machine.](./media/apps-win32-app-management/apps-win32-app-10.png)
+![User's image](media/apps-win32-troubleshoot/image.png)
+
+| Log File | Description |
+|----------|-------------|
+| IntuneManagementExtension.log | Main client log. Contains agent check in, policy request, policy processing and reporting activities |
+| AgentExecutor.log | Tracks PowerShell script execution details |
+| ClientHealth.log | Tracks SideCar agent client heath activities |
+| _IntuneManagementExtension.log | Saved copy of IntuneManagementExtension.log after log rolls over |
+| AppActionProcessor.log | Tracks the Application Action Processor. This includes information about detection and applicability checks |
+| AppWorkload.log | Main app workload log. This includes apps check-ins, app installs, app applicability and app detection logging |
+| HealthScripts.log | Tracks Remediation script execution details. All workloads that leverage Remediation scripts would find logging for their features here, including custom compliance scripts, managed installer, hardware configuration, and on-demand proactive remediations. |
 
 > [!IMPORTANT]
 > To allow proper installation and execution of LOB Win32 apps, antimalware settings should exclude the following directories from being scanned:<p>

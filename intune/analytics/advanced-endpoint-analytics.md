@@ -1,15 +1,8 @@
 ---
 title: What is Microsoft Intune Advanced Analytics
-titleSuffix: Microsoft Intune
 description: Learn about Intune Advanced Analytics
 ms.date: 08/01/2024
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: concept-article
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.localizationpriority: high
 ---
 
 # What is Microsoft Intune Advanced Analytics
@@ -63,7 +56,7 @@ For more information, see [Microsoft Intune for US Government GCC service descri
 
 When some users in your tenant have access to Advanced Analytics through an add-on subscription or trial, while others only have access to the base Endpoint analytics product, it's called a mixed license scenario.
 
-Currently, the highest functional subscription sets the Endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint analytics for all enrolled devices.  
+Currently, the highest functional subscription sets the Endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint analytics for all enrolled devices.
 
 ## Enabling Advanced Analytics in Microsoft Intune
 
@@ -78,7 +71,7 @@ For more information, go to:
 
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
-- [Enhanced device timeline](enhanced-device-timeline.md)  
+- [Enhanced device timeline](enhanced-device-timeline.md)
 - [Battery health](battery-health.md)
 - [Device query](device-query.md)
 - [Resource Performance report](resource-performance-report.md)

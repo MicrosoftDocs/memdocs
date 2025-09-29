@@ -1,30 +1,11 @@
 ---
-# required metadata
-
 title: Understand Microsoft Intune management extension
 description: Understand Microsoft Intune management extension for Windows.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 06/18/2025
+ms.date: 08/26/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
 ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri
@@ -60,13 +41,13 @@ This feature applies to:
 
 The Intune management extension has the following prerequisites. When the prerequisites are met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
-- Devices running Windows 10 version 1607 or later. If the device is enrolled using [automatic enrollment](../enrollment/windows-bulk-enroll.md), it must run Windows 10 version 1709 or later. The Intune management extension doesn't support Windows 10 in S mode, as S mode doesn't allow running nonstore apps.
+- Devices running Windows 10 version 1607 or later. If the device is enrolled using [automatic enrollment](../enrollment/windows-bulk-enroll.md), it must run Windows 10 version 1709 or later. The Intune management extension doesn't support Windows 10 in S mode because S mode doesn't allow running nonstore apps.
 
 - Devices joined to Microsoft Entra ID, including:
 
   - Microsoft Entra hybrid joined: Devices joined to Microsoft Entra ID and on-premises Active Directory (AD). See [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
 
-  - Microsoft Entra registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID. For more information, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS). Typically, these are Bring Your Own Device (BYOD) devices with a work or school account added via **Settings** > **Accounts** > **Access work or school**.
+  - Microsoft Entra registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID. For more information, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS). These are Bring Your Own Device (BYOD) devices with a work or school account added via **Settings** > **Accounts** > **Access work or school**.
 
 - Devices enrolled in Intune, including:
 
@@ -86,14 +67,14 @@ The Intune management extension has the following prerequisites. When the prereq
     - [Client apps workload](/configmgr/comanage/workloads#client-apps)
     - [How to switch Configuration Manager workloads to Intune](/configmgr/comanage/how-to-switch-workloads)
 
-- For devices behind firewalls and proxy servers, enable communication for Intune. To learn more, see [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md).
+- For devices behind firewalls and proxy servers, enable communication for Intune. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md).
 
 > [!NOTE]
 > For details about using Windows 10 or Windows 11 virtual machines, see [Using Windows 10 virtual machines with Microsoft Intune](../fundamentals/windows-10-virtual-machines.md).
 
 ## Understand Intune management extension agent installation
 
-For devices meeting the prerequisites, the Intune management extension installs automatically when certain features are assigned to a user or device. Installation commonly occurs when the following features are assigned:
+For devices meeting the prerequisites, the Intune management extension installs automatically when certain features are assigned to a user or device. Installation occurs when the following features are assigned:
 
 - [PowerShell scripts](../apps/powershell-scripts.md)
 - [Remediations](../fundamentals/remediations.md)
@@ -112,7 +93,8 @@ The agent installs at `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs` 
 ### Intune management extension functionality
 
 - The IME silently authenticates with Intune services before checking in to receive assigned installations for the Windows device.
-- The IME checks for new or updated installations with Intune services approximately every 8 hours. This check-in process is independent of the MDM check-in.
+- The IME checks for new or updated installations with Intune services every 8 hours. This check-in process is independent of the MDM check-in.
+- The IME might periodically perform health checks to validate connectivity to Intune services.
 
 ### Manually initiate an Intune management IME check-in from a Windows device
 
@@ -129,7 +111,7 @@ The IME is removed from the device under the following conditions:
 
 - Shell scripts are no longer assigned to the device.
 - The Windows device is no longer managed.
-- The IME is in an irrecoverable state for more than 24 hours (device-awake time).
+- The IME is in an irrecoverable state for over 24 hours (device-awake time).
 
 ## Common issues and resolutions
 
@@ -137,11 +119,11 @@ The IME is removed from the device under the following conditions:
 
 **Possible resolutions**:
 
-- The device isn't joined to Microsoft Entra ID. Ensure the devices meet the [prerequisites](#prerequisites) in this article.
+- The device isn't joined to Microsoft Entra ID. Make sure the devices meet the [prerequisites](#prerequisites) in this article.
 - No PowerShell scripts or Win32 apps are assigned to the groups the user or device belongs to.
 - The device can't check in with the Intune service. For example, there's no internet access or no access to Windows Push Notification Services (WNS).
 - The device is in S mode. The Intune management extension doesn't support devices running in S mode.
-- On Windows 10 devices, if the proxy is configured only at the user level (and not machine-wide), ensure a user is signed into the device. Alternatively, use `bitsadmin /util /setieproxy` to manually configure the proxy for the BITS (Background Intelligent Transfer Service). For more information, see [bitsadmin util and setieproxy](/windows-server/administration/windows-commands/bitsadmin-util-and-setieproxy).
+- On Windows 10 devices, if the proxy is configured only at the user level (and not machine-wide), make sure a user is signed into the device. Alternatively, use `bitsadmin /util /setieproxy` to manually configure the proxy for the BITS (Background Intelligent Transfer Service). For more information, see [bitsadmin util and setieproxy](/windows-server/administration/windows-commands/bitsadmin-util-and-setieproxy).
 
 To check if the device is automatically enrolled:
 
@@ -159,7 +141,7 @@ IME logs on the client machine are typically in `C:\ProgramData\Microsoft\Intune
 
 ![Screenshot or sample cmtrace agent logs in Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)
 
-Additionally, use the log file *AppWorkload.log* to troubleshoot and analyze Win32 app management events on the client. This log file contains all logging information related to app deployment activities conducted by the IME.
+Also, use the log file *AppWorkload.log* to troubleshoot and analyze Win32 app management events on the client. This log file contains all logging information related to app deployment activities conducted by the IME.
 
 ### IME log files
 

@@ -1,29 +1,9 @@
 ---
-# required metadata
-
 title: Device query in Microsoft Intune
 description: Learn how to gain on-demand information about the state of your devices using device query.
-keywords:
-ms.author: smbhardwaj
-author: smritib17
-manager: dougeby
 ms.date: 08/01/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: Elizabeth cox
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -65,7 +45,7 @@ The supported properties you can query are listed in the **Properties** section.
 For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
 
 > [!TIP]
-> You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+> You can use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
 ## Remote device actions
 
@@ -90,7 +70,7 @@ The following list includes supported device actions:
 |[Locate device](../intune-service/remote-actions/device-locate.md)|Shows the approximate location of a device on a map.|
 |[Pause ConfigRefresh](../intune-service/remote-actions/pause-config-refresh.md)|Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes.|
 |[Quick scan](../intune-service/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)|Initiates a quick scan of the device by Microsoft Defender Antivirus.|
-|[Remote control with Team Viewer](../intune-service/remote-actions/teamviewer-support.md)|Allows you to remotely control a device using TeamViewer.|
+|[Remote control with Team Viewer](../intune-service/fundamentals/teamviewer-support.md)|Allows you to remotely control a device using TeamViewer.|
 |[Rename device](../intune-service/remote-actions/device-rename.md)|Changes the device name in Intune.|
 |[Restart](../intune-service/remote-actions/device-rename.md)|Restarts a device.|
 |[Retire](../intune-service/remote-actions/devices-wipe.md#retire)|Removes company data and settings from a device, and leaves personal data intact.|

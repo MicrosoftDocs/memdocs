@@ -6,8 +6,8 @@ ms.date: 10/18/2024
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: tutorial
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

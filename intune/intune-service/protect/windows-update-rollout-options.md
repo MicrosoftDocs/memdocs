@@ -1,29 +1,14 @@
 ---
-# required metadata
-
 title: Configure schedules to gradually roll out Windows Updates in Intune
 description: Configure schedules that manage how and when Windows updates roll out to your managed devices with Microsoft Intune.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 04/07/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davguy; bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-updates
 ---
@@ -61,7 +46,7 @@ To configure this option, you set the following values. Windows Update uses thes
 
 The following behaviors apply to the management of offer groups:
 
-- Windows Update assigns targeted devices to the groups randomly, keeping groups evenly sized.
+- Windows Update assigns targeted devices to groups randomly, keeping groups evenly sized, with a minimum unit of 100 devices per group.
 
 - If you edit a policy to change the date for the first or final group availability, or change the number of days between groups for the policy:
   - Windows Update recalculates the number of groups to use, if necessary.

@@ -1,33 +1,16 @@
 ---
-# required metadata
-
 title: Update Windows BIOS features using DFCI MDM policies
 description: Learn more about the Device Firmware Configuration Interface (DFCI) profile to manage UEFI settings in Microsoft Intune. To use DFCI profiles, create Microsoft Entra security groups, the Windows Autopilot deployment profile, and the Enrollment State Page profile.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/04/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: madakeva
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
- 
+
 # Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune
 
 When you use Intune to manage Windows Autopilot devices, you can manage UEFI (BIOS) settings after they're enrolled using the Device Firmware Configuration Interface (DFCI). For an overview of benefits, scenarios, and prerequisites, go to [Overview of DFCI](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/).
@@ -38,8 +21,7 @@ In Intune, use this feature to control BIOS settings. Typically, firmware is mor
 
 This feature applies to:
 
-- Windows 11 on supported UEFI
-- Windows 10 RS5 (1809) and later on supported UEFI
+- Windows on supported UEFI
 
 For example, you use Windows client devices in a secure environment, and want to disable the camera. You can disable the camera at the firmware-layer, so it doesn't matter what the end user does. Reinstalling the OS or wiping the computer won't turn the camera back on. In another example, lock down the boot options to prevent users from booting up another OS, or an older version of Windows that doesn't have the same security features.
 

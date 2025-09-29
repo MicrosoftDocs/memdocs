@@ -6,8 +6,8 @@ ms.date: 04/05/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -68,6 +68,10 @@ Configuration Manager automatically creates and manages these security groups. T
 
 To make sure service continuity and least privileges, don't manually edit these groups.
 
+### Avoid automatically approving all clients ###
+
+Automatically approving all clients isn't recommended, unless you have other access controls to prevent untrustworthy computers from accessing your network. Refer to [Automatically approve client computers from trusted domains and manually check and approve other computers](../../clients/deploy/plan/security-and-privacy-for-clients.md) for more information.
+
 ### Manage the trusted root key provisioning process
 
 If clients can't query the global catalog for Configuration Manager information, they must rely on the trusted root key to authenticate valid management points. The trusted root key is stored in the client registry. It can be set by using group policy or manual configuration.
@@ -81,6 +85,7 @@ Using non-default port numbers can provide additional security. They make it har
 ### Use role separation on site systems
 
 Although you can install all the site system roles on a single computer, this practice is rarely used on production networks. It creates a single point of failure.
+A best practice for security and operational resilience is to keep site system roles separate from the site server, rather than colocate them on the same computer.
 
 ### Reduce the attack profile
 

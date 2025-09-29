@@ -1,32 +1,13 @@
 ---
-# required metadata
-
 title: Intune operated by 21Vianet in China
-titleSuffix: 
 description: Intune operated by 21Vianet in China.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: laurawi
+author: MandiOhlinger
+ms.author: mandia
 ms.date: 11/25/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: amsaeedi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 - government
 ---
@@ -57,7 +38,7 @@ Because the China services are operated by a partner from inside China, there ar
   - Google Play Protect capabilities such as Play integrity verdict.
   - Managing apps from the Google Play Store.
   - Android Enterprise capabilities. For more information, see this [Google documentation](https://support.google.com/work/android/answer/6270910?hl=en).
-- The Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable). 
+- The Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
 - Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
@@ -74,11 +55,11 @@ In Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, yo
 - You control your customer data if you leave the service.
 - You have options to control the security of your customer data.
 
-With Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, you’re the owner of your data:
+With Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, you're the owner of your data:
 
-- 21Vianet doesn’t use customer data for advertising.
+- 21Vianet doesn't use customer data for advertising.
 - You control who has access to your customer data.
-- We use logical isolation to segregate each customer’s data.
+- We use logical isolation to segregate each customer's data.
 - We provide simple, transparent data-use policies, and get independent audits.
 - Our subcontractors are under contract to meet our privacy requirements.
 

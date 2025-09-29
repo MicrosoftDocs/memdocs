@@ -1,27 +1,12 @@
 ---
-# required metadata
-
 title: Learn about using Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune
 description: Learn how to use Intune policy to manage Microsoft Defender security settings on devices that aren't enrolled with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: laurawi
-ms.date: 06/27/2025
+ms.date: 08/27/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -111,14 +96,14 @@ You can find the version of your Defender agents using these methods from within
   DeviceTvmSoftwareInventory
   | where SoftwareName == "defender_for_linux"
   ```
-  
+
 For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
 
 *Known issues*
 
 - With Defender agent version **101.23052.0009**, Linux devices fail to enroll if the following file path is absent: `/sys/class/dmi/id/board_vendor`.
 
-- When a Linux device performs synthetic registration, the Device Entra ID (formerly known as Device AAD ID) isn't visible in the Defender portal. This information can be viewed from the Intune or Microsoft Entra portals. Administrators can still manage devices with policies in this manner. 
+- When a Linux device performs synthetic registration, the Device Entra ID (formerly known as Device AAD ID) isn't visible in the Defender portal. This information can be viewed from the Intune or Microsoft Entra portals. Administrators can still manage devices with policies in this manner.
 
 
 **macOS**:
@@ -141,12 +126,12 @@ You can find the versions of your Defender agents using these methods from withi
   DeviceTvmSoftwareInventory
   | where SoftwareName == "defender_for_mac"
   ```
-  
+
 For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-updates).
 
 *Known issues*
 
-- When a macOS device performs synthetic registration, the Device Entra ID (formerly known as Device AAD ID) isn't visible in the Defender portal. This information can be viewed from the Intune or Microsoft Entra portals. Administrators can still manage devices with policies in this manner. 
+- When a macOS device performs synthetic registration, the Device Entra ID (formerly known as Device AAD ID) isn't visible in the Defender portal. This information can be viewed from the Intune or Microsoft Entra portals. Administrators can still manage devices with policies in this manner.
 
 **Windows**:
 
@@ -155,7 +140,7 @@ For guidance on updating the agent version, see [Deploy updates for Microsoft De
 - Windows Server 2012 R2 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2016 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 (with [KB5025229](https://support.microsoft.com/topic/april-11-2023-kb5025229-os-build-17763-4252-e8ead788-2cd3-4c9b-8c77-d677e2d8744f))
-- Windows Server 2019 Core (with the [Server Core App Compatibility Feature on Demand](/windows-server/get-started/server-core-app-compatibility-feature-on-demand) installed)  
+- Windows Server 2019 Core (with the [Server Core App Compatibility Feature on Demand](/windows-server/get-started/server-core-app-compatibility-feature-on-demand) installed)
 - Windows Server 2022, including Server Core (with [KB5025230](https://support.microsoft.com/topic/april-11-2023-security-update-kb5025230-5048ddfb-7bf3-4e6c-b29a-7b44b789d282))
 - Windows Server 2025
 
@@ -211,7 +196,7 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 
 ### What to expect in the Microsoft Defender portal
 
-You can use the Microsoft Defender for Endpoint *Device inventory* to confirm a device is using the security settings management capability in Defender for Endpoint, by reviewing the devices status in the **Managed by** column. The *Managed by* information is also available on the devices side-panel or device page. *Managed by* should consistently indicate that its managed by **MDE**.  
+You can use the Microsoft Defender for Endpoint *Device inventory* to confirm a device is using the security settings management capability in Defender for Endpoint, by reviewing the devices status in the **Managed by** column. The *Managed by* information is also available on the devices side-panel or device page. *Managed by* should consistently indicate that its managed by **MDE**. 
 
 You can also confirm a device is enrolled in *security settings management* successfully by confirming that the device-side panel or device page display **MDE Enrollment status** as **Success**.
 
@@ -350,21 +335,22 @@ In the Microsoft Defender portal, as a security administrator:
 
    > [!TIP]
    > Use the proper device tags to test and validate your rollout on a small number of devices.
-   > 
+   >
    > When you deploy to the *All devices* group, any device that falls into the scope configured will automatically be enrolled.
-   > 
+   >
    > While most devices complete enrollment and apply assigned policy within a few minutes, a device can sometimes take up to 24 hours to complete enrollment.
-   
+
    > [!IMPORTANT]
-   > Dynamic asset rules are not currently supported for this task. For more information, see [Create dynamic rules for devices in asset rule management](/defender-xdr/configure-asset-rules).
-   
+   > As of July 3rd, 2025, dynamic asset rules are supported for defining the devices in the MDE-Management tag in public preview.
+
+
 3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
 
    :::image type="content" source="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft Defender portal." lightbox="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png":::
-   
+
    > [!TIP]
    > To ensure your Microsoft Defender portal users have consistent permissions across portals, if not already provided, request that your IT administrator grants them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](../fundamentals/role-based-access-control.md).
-   
+
 ### Configure Intune
 
 In the Microsoft Intune admin center, your account needs permissions equal to Endpoint Security Manager built-in Role based access control (RBAC) role.
@@ -395,7 +381,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices. 
+2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices.
 
    Devices that onboard to Microsoft Defender for Endpoint and are registered but aren't managed by Intune display **Microsoft Defender for Endpoint** in the *Managed by* column. These are the devices that can receive policy for security management for Microsoft Defender for Endpoint.
 

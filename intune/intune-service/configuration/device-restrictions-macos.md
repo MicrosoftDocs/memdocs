@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: macOS device settings in Microsoft Intune
-titleSuffix:
 description: Add, configure, or create settings on macOS devices to restrict features in Microsoft Intune. Set password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: beflamm, jayeren
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -55,24 +38,24 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 > [!NOTE]
 > These settings apply to different enrollment types. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
 
-## App Store, doc viewing, gaming  
+## App Store, doc viewing, gaming
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Block adding Game Center friends**: **Yes** prevents users from adding friends to Game Center. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add friends to Game Center.  
-
-  This feature applies to:  
-  - macOS 10.13 and newer  
-
-- **Block Game Center**: **Yes** disables Game Center, and the Game Center icon is removed from the home screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make Game Center available to users.   
+- **Block adding Game Center friends**: **Yes** prevents users from adding friends to Game Center. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add friends to Game Center.
 
   This feature applies to:
-  - macOS 10.13 and newer  
+  - macOS 10.13 and newer
 
-- **Block multiplayer gaming in the Game Center**: **Yes** prevents multiplayer gaming when using Game Center. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to play multiplayer games. 
+- **Block Game Center**: **Yes** disables Game Center, and the Game Center icon is removed from the home screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make Game Center available to users.
 
-  This feature applies to:  
-  - macOS 10.13 and newer  
+  This feature applies to:
+  - macOS 10.13 and newer
+
+- **Block multiplayer gaming in the Game Center**: **Yes** prevents multiplayer gaming when using Game Center. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to play multiplayer games.
+
+  This feature applies to:
+  - macOS 10.13 and newer
 
 ## Built-in Apps
 
@@ -82,12 +65,12 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 - **Block use of camera**: **Yes** prevents access to the camera on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the device camera.
 
   Intune only manages access to the device camera. It doesn't have access to pictures or videos.
-  
+
 - **Block Apple Music**: **Yes** reverts the Music app to classic mode, and disables the Music service. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the Apple Music app.
 - **Block spotlight suggestions**: **Yes** stops Spotlight from returning any results from an Internet search. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Spotlight search to connect to the Internet, and get search results.
 - **Block file transfer using Finder or iTunes**: **Yes** disables application file sharing services. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow application file sharing services.
 
-  This feature applies to:  
+  This feature applies to:
   - macOS 10.13 and newer
 
 ## Cloud and storage
@@ -105,14 +88,14 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 - **Block iCloud Photos backup**: **Yes** disables iCloud Photo Library, and prevents iCloud from syncing the device photos. Any photos not fully downloaded from iCloud Photo Library are removed from local storage on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow syncing photos between the device and the iCloud Photo Library.
 - **Block Handoff**: This feature allows users to start work on a macOS device, and then continue the work they started on another iOS/iPadOS or macOS device. **Yes** prevents the Handoff feature on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow this feature on devices.
 
-  This feature applies to:  
+  This feature applies to:
   - macOS 10.15 and newer
 
 ### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)
 
 - **Block iCloud Private Relay**: **Yes** disables the iCloud Private Relay. When disabled, Apple doesn't encrypt internet traffic leaving the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow this feature, which prevents networks and servers from monitoring a user's activity across the internet.
 
-  This feature applies to:  
+  This feature applies to:
   - macOS 12 and newer
 
   [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's web site)
@@ -140,7 +123,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
   For more information on content caching on macOS, see [Manage content caching on Mac](https://support.apple.com/guide/mac-help/manage-content-caching-on-mac-mchl3b6c3720/mac) (opens another website).
 
-  This feature applies to:  
+  This feature applies to:
   - macOS 10.13 and newer
 
 - **Block screenshots and screen recording**: **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
@@ -155,33 +138,33 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might show newly released software updates to users as soon as they're released.
   - **Major OS software updates**: Major OS software updates, such as macOS 12, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of major OS software updates** field. Requires macOS 11.3 and newer.
-  - **Minor OS software updates**: Minor OS software updates, such as macOS 12.x, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of minor OS software updates** field. Requires macOS 11.3 and newer.  
+  - **Minor OS software updates**: Minor OS software updates, such as macOS 12.x, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of minor OS software updates** field. Requires macOS 11.3 and newer.
   - **Non-OS software updates**: Non-OS software updates, such as Safari updates, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of non OS software updates** field. Requires macOS 11.0 and later.
-  
+
   Then enter how long you want to delay each type of update, from 1-90 days. For example, if a macOS update is available on January 1, and **Delay visibility** is set to 5 days, then the update isn't shown as an available update. On the sixth day following the release, that update becomes available, and users are notified to update to the earliest version available when the delay was triggered. Your options:
 
-  - **Delay default visibility of software updates**: Enter the number of days to delay all software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. Intune will override this value if you choose to delay major OS, minor OS, or non-OS software updates individually.  
-  - **Delay visibility of major OS software updates**: Enter the number of days to delay all major OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.  
+  - **Delay default visibility of software updates**: Enter the number of days to delay all software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. Intune will override this value if you choose to delay major OS, minor OS, or non-OS software updates individually.
+  - **Delay visibility of major OS software updates**: Enter the number of days to delay all major OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.
 
-     This feature applies to:  
+     This feature applies to:
     - macOS 11.3 and newer
 
   - **Delay visibility of minor OS software updates**: Enter the number of days to delay all minor OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.
 
-     This feature applies to:  
+     This feature applies to:
     - macOS 11.3 and newer
 
   - **Delay visibility of non-OS software updates**: Enter the number of days to delay all non-OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.
 
-     This feature applies to:  
+     This feature applies to:
     - macOS 11.0 and newer
-  
+
   - **Allow activation lock**: **Yes**, enables Activation Lock on supervised macOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-     This feature applies to:  
-    - macOS 10.15 or later  
+     This feature applies to:
+    - macOS 10.15 or later
 
-### Settings apply to: Automated device enrollment  
+### Settings apply to: Automated device enrollment
 
 - **Disable AirPlay, view screen by Classroom app, and screen sharing**: **Yes** blocks AirPlay, and prevents screen sharing to other devices. It also prevents teachers from using the Classroom app to see their students' screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow teachers to see their students' screens.
 
@@ -195,18 +178,18 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 - **Allow Classroom to lock the device without prompting**: **Yes** lets teachers lock a student's device or app without the student's approval. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require students agree before teachers can lock the device or app.
 
-- **Students can automatically join Classroom class without prompting**: **Yes** lets students join a class without prompting the teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require teacher approval to join a class.  
+- **Students can automatically join Classroom class without prompting**: **Yes** lets students join a class without prompting the teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require teacher approval to join a class.
 
 - **Block modification of wallpaper**:
-**Yes** prevents users from changing the device wallpaper. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the wallpaper.  
+**Yes** prevents users from changing the device wallpaper. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the wallpaper.
 
-  This feature applies to:  
-  - macOS 10.13 and newer  
+  This feature applies to:
+  - macOS 10.13 and newer
 
-- **Block users from erasing all content and settings on device**: **Yes** disables the reset option on supervised devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to erase all content and settings on their device.  
+- **Block users from erasing all content and settings on device**: **Yes** disables the reset option on supervised devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to erase all content and settings on their device.
 
-  This feature applies to:  
-  - macOS 12 and newer  
+  This feature applies to:
+  - macOS 12 and newer
 
 ## Password
 
@@ -226,7 +209,7 @@ These settings use the [Passcode payload](https://developer.apple.com/documentat
     - **Alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
     - **Numeric**: Password must only be numbers, such as 123456789.
 
-    This feature applies to:  
+    This feature applies to:
     - macOS 10.10.3 and newer
 
   - **Number of non-alphanumeric characters in password**: Enter the number of complex characters required in the password, from 0-4. A complex character is a symbol, such as `?`. When left blank or set to **Not configured**, Intune doesn't change or update this setting.
@@ -260,7 +243,7 @@ These settings use the [Passcode payload](https://developer.apple.com/documentat
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might set the timeout to 48 hours (172,800 seconds).
 
-  This feature applies to:  
+  This feature applies to:
   - macOS 12 and newer
 
 - **Block password AutoFill**: **Yes** prevents using the AutoFill Passwords feature on macOS. Choosing **Yes** also has the following impact:
@@ -288,12 +271,12 @@ This feature applies to:
 
 > [!NOTE]
 > When you allow apps using a policy, these apps aren't shown in System settings (Privacy + Security) on the device. Only apps manually allowed by end users are shown.
- 
+
 ### Settings apply to: User approved device enrollment, Automated device enrollment
 
 - **Apps and processes**: **Add** apps or processes to configure access. Also enter:
   - **Name**: Enter a name for your app or process. For example, enter `Microsoft Remote Desktop` or `Microsoft 365`.
-  
+
   - **Identifier type**: Your options:
     - **Bundle ID**: Select this option for apps.
     - **Path**: Select this option for non-bundled binaries, which is a process or executable.
@@ -313,7 +296,7 @@ This feature applies to:
 
   - **Enable static code validation**: Choose **Yes** for the app or process to statically validate the code requirement. When set to **Not configured**, Intune doesn't change or update this setting.
 
-    Enable this setting only if the process invalidates its dynamic code signature. Otherwise, use **Not configured**.  
+    Enable this setting only if the process invalidates its dynamic code signature. Otherwise, use **Not configured**.
 
   - **Block Camera**: **Yes** prevents the app from accessing the system camera. You can't allow access to the camera. When set to **Not configured**, Intune doesn't change or update this setting.
 
@@ -343,7 +326,7 @@ This feature applies to:
 
   - **Contacts**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access contact information managed by the system Contacts app.  
+    - **Allow**: Allows the app to access contact information managed by the system Contacts app.
     - **Block**: Prevents the app from accessing this contact information.
 
   - **Calendar**: Your options:
@@ -363,7 +346,7 @@ This feature applies to:
 
   - **Media library**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access Apple Music, music and video activity, and the media library.  
+    - **Allow**: Allows the app to access Apple Music, music and video activity, and the media library.
     - **Block**: Prevents the app from accessing this media.
 
     Requires macOS 10.15 and newer.
@@ -429,7 +412,7 @@ This feature applies to:
 
     - **Identifier type**: Select **Bundle ID** if the receiving identifier is an application. Select **Path** if the receiving identifier is a process or executable.
 
-    - **Identifier**: Enter the app bundle ID, or the installation path of the process receiving an Apple event.  
+    - **Identifier**: Enter the app bundle ID, or the installation path of the process receiving an Apple event.
 
     - **Code requirement**: Enter the code signature for the receiving application or process.
 

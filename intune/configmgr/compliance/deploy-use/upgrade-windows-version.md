@@ -6,8 +6,8 @@ ms.date: 09/15/2023
 ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: upgrade-and-migration-article
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

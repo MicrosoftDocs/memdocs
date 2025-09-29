@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Route logs to Azure Monitor using Microsoft Intune
 description: Use Diagnostics Settings to send audit logs and operational logs in Microsoft Intune to Azure Storage account, Event Hubs, or Log Analytics. Choose how long you want to keep the data, and see some estimated costs for different size tenants.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 09/03/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 95191d64-9895-4f2e-8c5b-f0e85be086d8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: chnatar, daviales
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -63,7 +45,7 @@ To use this feature, you need:
 
 Depending on where you want to route the audit log data, you need one of the following services:
 
-- An [Azure storage account](/azure/storage/common/storage-account-overview) with the **ListKeys** permissions. We recommend that you use a general storage account, and not a blob storage account. For storage pricing information, go to the [Azure Storage pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=storage). 
+- An [Azure storage account](/azure/storage/common/storage-account-overview) with the **ListKeys** permissions. We recommend that you use a general storage account, and not a blob storage account. For storage pricing information, go to the [Azure Storage pricing calculator](https://azure.microsoft.com/pricing/calculator/?service=storage).
 - An [Azure Event Hubs namespace](/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) to integrate with third-party partner solutions.
 - An [Azure Log Analytics workspace](/azure/azure-monitor/learn/quick-create-workspace) to send logs to Log Analytics.
 
