@@ -126,7 +126,7 @@ To see whether an enrolled macOS device has an Intune managed admin password, if
 
 ## Manually rotate admin account password
 
-LAPS policy includes a schedule for automatically rotating account passwords (once every six months). In addition to a scheduled rotation, you can use the Intune [device action](../remote-actions/device-management.md) of **Rotate local admin password** to manually rotate a devices password at any time.
+LAPS policy includes a schedule for automatically rotating account passwords (once every six months). In addition to a scheduled rotation, you can use the Intune [device action](../remote-actions/index.md) of **Rotate local admin password** to manually rotate a devices password at any time.
 
 To use this device action, your account must be assigned the [Intune RBAC permission](#role-based-access- controls-for-macos-laps) of:
 

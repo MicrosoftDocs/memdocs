@@ -13,7 +13,7 @@ ms.collection:
 
 # Overview of the Microsoft Intune mobile device management (MDM) lifecycle
 
-All devices that you manage have a *lifecycle*. Intune can help you manage this lifecycle: from enrollment, through configuration and protection, to retiring the device when it's no longer required. Here's an example: an iPad bought by your company first needs to be enrolled with your Microsoft Intune account to allow your company to manage it; then, it needs to be configured to your company's liking; then, the data that's stored on it by a user needs to be protected; and finally, when that iPad is no longer needed, you must [retire or wipe](../remote-actions/devices-wipe.md) all sensitive data on it.
+All devices that you manage have a *lifecycle*. Intune can help you manage this lifecycle: from enrollment, through configuration and protection, to retiring the device when it's no longer required. Here's an example: an iPad bought by your company first needs to be enrolled with your Microsoft Intune account to allow your company to manage it; then, it needs to be configured to your company's liking; then, the data that's stored on it by a user needs to be protected; and finally, when that iPad is no longer needed, you must [retire or wipe](../remote-actions/device-wipe.md) all sensitive data on it.
 
 ![The device lifecycle](./media/device-lifecycle/device-lifecycle.png "the Intune device lifecycle")
 
@@ -41,8 +41,8 @@ In the modern IT world, protecting devices from unauthorized access is one of th
 
 ## Retire
 
-When a device gets lost or stolen, when it needs to be replaced, or when users move to another position, it's usually time to [retire or wipe](../remote-actions/device-management.md) the device. There are a number of ways you can do this—including resetting the device, removing it from management, and wiping the corporate data on it.
+When a device gets lost or stolen, when it needs to be replaced, or when users move to another position, it's usually time to [retire or wipe](../remote-actions/index.md) the device. There are a number of ways you can do this—including resetting the device, removing it from management, and wiping the corporate data on it.
 
 ## Next steps
 
-- Learn about [device management in Microsoft Intune](../remote-actions/device-management.md)
+- Learn about [device management in Microsoft Intune](../remote-actions/index.md)
