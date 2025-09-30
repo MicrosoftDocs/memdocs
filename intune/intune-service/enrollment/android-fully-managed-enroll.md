@@ -26,7 +26,7 @@ Complete these prerequisites to ensure a successful enrollment.
 * You must have an Intune standalone tenant, with the [mobile device management (MDM) authority set to Microsoft Intune](../fundamentals/mdm-authority-set.md).
 
 * Devices must:
-  - Run Android OS version 8.0 and later.
+  - Run Android OS version 10.0 and later.
   - Run an Android build that has Google Mobile Services connectivity.
   - Have Google Mobile Services available and be able to connect to it.
 
