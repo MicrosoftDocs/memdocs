@@ -55,7 +55,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24561](./includes/secure-recommendations/24561.md)]
 
-<!-- ### macOS - Platform SSO is configured and assigned 24568 -->
+<!-- ### Enable Platform SSO for macOS devices<!-- 24568 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24568](./includes/secure-recommendations/24568.md)]-->
 
@@ -81,11 +81,11 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24546](./includes/secure-recommendations/24546.md)]
 
-<!-- ### ## Tenant - Least privilege principal is used for Intune Role and Responsibilities 24521 -->
+<!-- ### ## Assign least privilege role-based access control roles in Intune<!-- 24521 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24521](./includes/secure-recommendations/24521.md)]-->
 
-<!-- ### Tenant - Enrollment restrictions per platform are configured 24558 -->
+<!-- ### Configure platform-specific enrollment restrictions<!-- 24558 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24558](./includes/secure-recommendations/24558.md)]-->
 
@@ -97,7 +97,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24542](./includes/secure-recommendations/24542.md)]
 
-### Enforce compliance policies on fully managed and coporate owned Android devices<!--  24545 -->
+### Enforce compliance policies on fully managed and corporate owned Android devices<!--  24545 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24545](./includes/secure-recommendations/24545.md)]
 
@@ -109,7 +109,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24543](./includes/secure-recommendations/24543.md)]
 
-<!-- ## Android - Automatic Enrollment to Defender is enabled for Android Devices <!-- 24871 -->
+<!-- ## Enable automatic Defender enrollment for Android devices<!-- 24871 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24871](./includes/secure-recommendations/24871.md)]-->
 
@@ -183,7 +183,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24840](./includes/secure-recommendations/24840.md)]
 
-<!-- ### Corporate Wi-Fi network on macOS devices is securely managed<!-- 24870 -->
+<!-- ### Configure secure Wi-Fi profiles for macOS devices<!-- 24870 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24870](./includes/secure-recommendations/24870.md)] -->
 
