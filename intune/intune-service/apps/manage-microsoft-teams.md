@@ -5,7 +5,6 @@ ms.date: 06/12/2025
 ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
-- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 - Android

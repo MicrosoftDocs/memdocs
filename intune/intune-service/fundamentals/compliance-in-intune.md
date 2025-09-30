@@ -7,7 +7,6 @@ ms.date: 12/03/2024
 ms.topic: overview
 ms.localizationpriority: high
 ms.collection:
- - tier1
  - highpri
  - essentials-compliance
 

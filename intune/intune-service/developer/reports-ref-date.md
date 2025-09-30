@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Date - Intune Data Warehouse
 description: Reference topic for the Date category of entity collections in the Intune Data Warehouse API.
 ms.date: 10/30/2024

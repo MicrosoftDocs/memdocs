@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Move your Intune Data Warehouse account data
 description: Understand how to back up your Intune Data Warehouse data when moving your account.
 ms.date: 06/09/2025

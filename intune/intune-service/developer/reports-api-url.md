@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Intune Data Warehouse API endpoint
 description: This reference topic describes the Microsoft Intune Data Warehouse API URL structure. Filter examples are provided.
 ms.date: 10/30/2024

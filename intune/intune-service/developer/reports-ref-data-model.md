@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Data Warehouse data model
 description: The Microsoft Intune Data Warehouse samples data daily to provide a historical view of your continually changing mobile environment.
 ms.date: 10/30/2024

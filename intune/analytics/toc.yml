@@ -1,0 +1,33 @@
+items:
+- name: Endpoint analytics overview
+  href: index.md
+- name: Scores, baselines, and insights
+  href: scores.md
+- name: How to guides
+  items:
+  - name: Enroll Intune devices
+    href: enroll-intune.md
+  - name: Enroll Configuration Manager devices
+    href: enroll-configmgr.md
+  - name: Manage settings
+    href: settings.md
+- name: Reports
+  items:
+  - name: Startup performance
+    href: startup-performance.md
+  - name: Restart frequency
+    href: restart-frequency.md
+  - name: Application reliability
+    href: app-reliability.md
+  - name: Work from anywhere
+    href: work-from-anywhere.md
+  - name: Endpoint analytics in Microsoft Adoption Score
+    href: adoption-score.md
+- name: Advanced analytics
+  href: advanced/toc.yml
+- name: Get support
+  href: get-support.md
+- name: Data collection
+  href: data-collection.md
+- name: Troubleshoot
+  href: troubleshoot.md

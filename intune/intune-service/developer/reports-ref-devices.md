@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Devices - Intune Data Warehouse
 description: Reference article for the Devices category of entity collections in the Intune Data Warehouse API.
 ms.date: 10/30/2024

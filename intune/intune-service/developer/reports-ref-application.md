@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Reference for Application entities
 description: Reference topic for the Application category of entity collections in the Intune Data Warehouse API.
 ms.date: 10/30/2024

@@ -5,7 +5,6 @@ ms.date: 06/16/2024
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

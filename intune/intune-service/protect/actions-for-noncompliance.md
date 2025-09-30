@@ -68,7 +68,7 @@ Following are the available actions for noncompliance:
     - Dedicated
     - Corporate-Owned Work Profile
     - Personally Owned Work Profile
-    - Android Enterprise kiosk devices
+    - Android Enterprise dedicated devices
   - iOS/iPadOS
   - macOS
 

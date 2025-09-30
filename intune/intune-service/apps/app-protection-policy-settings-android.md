@@ -5,7 +5,6 @@ ms.date: 01/09/2025
 ms.topic: article
 ms.reviewer: demerson
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Android
 - highpri

@@ -5,7 +5,6 @@ ms.date: 01/06/2025
 ms.topic: article
 ms.reviewer: demerson
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
