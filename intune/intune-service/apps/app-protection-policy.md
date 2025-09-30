@@ -323,15 +323,15 @@ Intune can wipe app data in three different ways:
 - Selective wipe for MDM
 - MAM selective wipe
 
-For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../remote-actions/devices-wipe.md). For more information about selective wipe using MAM, see [the Retire action](../remote-actions/devices-wipe.md#retire) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
+For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../remote-actions/device-wipe.md). For more information about selective wipe using MAM, see [the Retire action](../remote-actions/device-retire.md) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
-[Full device wipe](../remote-actions/devices-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
+[Full device wipe](../remote-actions/device-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
 
   > [!NOTE]
   > Full device wipe, and selective wipe for MDM can only be achieved on devices enrolled with Intune mobile device management (MDM).
 
 **Selective wipe for MDM**<br>
-See [Remove devices - retire](../remote-actions/devices-wipe.md#retire) to read about removing company data.
+See [Remove devices - retire](../remote-actions/device-retire.md) to read about removing company data.
 
 **Selective wipe for MAM**<br>
 Selective wipe for MAM removes company app data from an app. The request is initiated using Intune. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).

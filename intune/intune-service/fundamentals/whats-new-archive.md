@@ -2247,7 +2247,7 @@ The remote action **Pause configuration refresh** can be accessed from the devic
 
 For more information, see:
 
-- [Remote actions](../remote-actions/device-management.md)
+- [Remote actions](../remote-actions/index.md)
 - [Pause Config Refresh Remote action](../remote-actions/pause-config-refresh.md)
 
 ### Device security
