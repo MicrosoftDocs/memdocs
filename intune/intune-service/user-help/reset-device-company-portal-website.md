@@ -1,27 +1,10 @@
 ---
-# required metadata
-
 title: Reset a device from the Intune Company Portal website | Microsoft Docs
-description: Learn how to factory reset a lost or stolen device from the Intune Company Portal website.
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: laurawi
-title: Reset a device from the Intune Company Portal website
 description: Learn how to factory reset a lost or stolen device from the Intune Company Portal website.
 ms.date: 10/08/2024
 ms.topic: end-user-help
-ms.service: microsoft-intune
-ms.subservice: end-user
-ms.assetid: d3182a85-328b-45b4-bf7a-9f6249984641
 searchScope:
  - User help
-
-# optional metadata
-
-ROBOTS:
-#audience:
-
 ms.reviewer: coferro
 ---
 
