@@ -1,8 +1,6 @@
 items:
 - name: Remote device actions overview
   href: index.md
-- name: Bulk device actions
-  href: bulk-device-actions.md
 - name: Actions list
   items:
   - name: Autopilot Reset
