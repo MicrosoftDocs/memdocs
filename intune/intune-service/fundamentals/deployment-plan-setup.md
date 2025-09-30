@@ -1,31 +1,15 @@
 ---
-# required metadata
-
 title : Set up Intune
-titleSuffix: Microsoft Intune
-description: Step 1 for deploying or setting up Intune. The starting point is to review supported configurations, sign up for the trial, configure the custom domain name, add users and groups to Intune, assign licenses to users, manage roles, grant admin permissions, and set the MDM authority.  
-author: Smritib17
-ms.author: smbhardwaj
-manager: laurawi
+description: Step 1 for deploying or setting up Intune. The starting point is to review supported configurations, sign up for the trial, configure the custom domain name, add users and groups to Intune, assign licenses to users, manage roles, grant admin permissions, and set the MDM authority.
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 04/07/2025
 ms.topic: install-set-up-deploy
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 
-# optional metadata
 
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite:
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
-ms.collection: 
-- M365-identity-device-management 
+ms.collection:
+- M365-identity-device-management
 - highpri
-- tier1
 - ContentFreshnessFY24
 ---
 
@@ -41,7 +25,7 @@ The purpose of this article is to help you get a better understanding of Intune'
 
 ## Prerequisites
 
-Before you begin setting up Microsoft Intune, review the [Planning guide](intune-planning-guide.md). The planning guide helps you to plan your move or migration to Intune.  
+Before you begin setting up Microsoft Intune, review the [Planning guide](intune-planning-guide.md). The planning guide helps you to plan your move or migration to Intune.
 
 The planning guide also helps you address these areas:
 
@@ -113,7 +97,7 @@ As an administrator, you can add users individually or in bulk to Intune.
 
 You must be a Microsoft Entra [License Administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator) or [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) to add users to Intune. If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-> [!CAUTION]  
+> [!CAUTION]
 > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## 5 - Create groups in Intune
@@ -137,7 +121,7 @@ For guidance, go to [Microsoft Intune licensing](licenses.md).
 ✔️ **Get started with assigning licenses to users**
 
 Whether you added users one at a time or all at once, you must assign each user an Intune license before users can enroll their devices in Intune. The Microsoft Intune free trial provides 25 Intune licenses. For a list of licenses, see Licenses that include Intune.
-Give users permission to use Intune. Each user or userless device requires an Intune license to access the service. 
+Give users permission to use Intune. Each user or userless device requires an Intune license to access the service.
 
 For guidance, go to [Assign licenses](licenses-assign.md).
 

@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Device compliance policies in Microsoft Intune
 description: Overview of Microsoft Intune device compliance, including tenant-wide compliance policy settings and device compliance policies.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 05/14/2024
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.reviewer: tycast
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: ilwu
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -117,7 +100,7 @@ The following subjects link to dedicated articles for different aspects of devic
 - [**Custom compliance settings**](compliance-use-custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 
   You can use custom compliance settings with the following platforms:
-  - Linux – Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
+  - Linux – Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
   - Windows 10
   - Windows 11
 

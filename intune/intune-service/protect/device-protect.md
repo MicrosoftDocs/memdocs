@@ -1,32 +1,13 @@
 ---
-# required metadata
-
-title: Protect devices with Microsoft Intune 
-titleSuffix: Microsoft Intune
+title: Protect devices with Microsoft Intune
 description: Learn about the Intune capabilities that can help you protect your devices and data against unauthorized access and other threats.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/23/2024
 ms.topic: overview
-ms.subservice: protect
-ms.service: microsoft-intune
 ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-secure-endpoints
 ---

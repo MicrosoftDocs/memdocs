@@ -1,31 +1,10 @@
 ---
-# required metadata
-
 title: Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune
-titleSuffix:
 description: Learn about adding Microsoft Defender for Endpoint to macOS devices using Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/17/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - macOS
 ---

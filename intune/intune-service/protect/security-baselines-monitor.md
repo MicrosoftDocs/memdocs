@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: Monitor security baselines deployed by Microsoft Intune
 description: Monitor device and per-setting results of security baselines you deploy with Microsoft Intune, and identify conflicts for devices.
-keywords:
-author: brenduns 
+author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/22/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: juidaewo
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-secure-endpoints
 ---
@@ -45,7 +28,7 @@ For more information about the feature, see [Security baselines in Intune](secur
 >
 > In May 2023, Intune began rollout of a new security baseline format that applies to new baseline types, like Microsoft 365 Apps, and to the newer versions of existing baselines, like Microsoft Edge baseline version 112. The new format updates the baseline settings to directly take their name and configuration options from the configuration service provider (CSP) that the baseline setting manages.
 >
-> Intune also introduced a new process to help you [*migrate an existing security baseline profile to the newer baseline version*](../protect/security-baselines-configure.md#update-a-baseline-to-the-new-format). This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
+> Intune also introduced a new process to help you [*migrate an older security baseline profile to the newer baseline version*](../protect/security-baselines-configure.md#update-a-baseline-to-the-new-format). This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
 >
 > Baselines instances that use this new format also have an updated report and monitoring structure that aligns to other report improvements rolled out this year across Intune feature areas. The report view details for the [new format](#monitor-the-baseline-and-your-devices) are presented in this article separately from the [original details provided for the older baselines](#monitor-profiles-for-baseline-versions-released-before-may-2023), many of the concepts discussed for the older views remain relevant.
 
@@ -248,6 +231,6 @@ On Windows 10/11 devices, there's a built-in MDM diagnostic information report. 
 
 - [Learn about security baselines](security-baselines.md)
 - [Avoid conflicts](security-baselines.md#avoid-conflicts)
-- [Monitor device profiles](../configuration/device-profile-monitor.md) 
+- [Monitor device profiles](../configuration/device-profile-monitor.md)
 - [Common issues and resolutions](../configuration/device-profile-troubleshoot.md).
 - [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

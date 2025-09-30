@@ -1,17 +1,9 @@
 ---
 title: Troubleshooting Endpoint analytics
-titleSuffix: Microsoft Intune
 description: Instructions for troubleshooting Endpoint analytics.
 ms.date: 04/10/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: troubleshooting
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.localizationpriority: high
 ---
-
 
 # <a name="bkmk_tshoot"></a> Troubleshooting Endpoint analytics
 

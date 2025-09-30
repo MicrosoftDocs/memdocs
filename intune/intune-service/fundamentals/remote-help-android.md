@@ -1,35 +1,18 @@
 ---
-# required metadata
-
-title: Use Remote Help on Android to assist users authenticated by your organization. 
+title: Use Remote Help on Android to assist users authenticated by your organization.
 description: With the Remote Help app in Android, provide remote assistance to authenticated users who also run the Remote Help app.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: laurawi
+author: lenewsad
+ms.author: lanewsad
 ms.date: 06/24/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: Karawang
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
 ---
- 
+
 # Remote Help on Android with Microsoft Intune
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
@@ -77,7 +60,7 @@ For general prerequisites, go to [Prerequisites for Remote Help](remote-help.md#
 
 - Samsung devices only: The device must have Knox. For a list of Knox compatible devices, see [Device Compatibility Knox Solutions](https://www.samsungknox.com/knox-platform/supported-devices) (opens Samsung's website). Samsung devices without Knox work for screen share, but don't work in full control or unattended mode.
 
-- Zebra devices only: Set up Zebra OEMConfig for your tenant. For more details, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md)  
+- Zebra devices only: Set up Zebra OEMConfig for your tenant. For more details, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md)
 
 - The helper must be licensed to use the Remote Help add-on. For more details on licensing, go to [Use Intune Suite add-on capabilities - Microsoft Intune](../fundamentals/intune-add-ons.md)
 
@@ -101,7 +84,7 @@ To set up Remote Help for Android, you need to complete the following steps:
 
 1. Deploy the Remote Help app.
 
-2. Grant permissions.  
+2. Grant permissions.
 
    - Configure camera permissions.
 
@@ -120,14 +103,14 @@ To set up Remote Help for Android, you need to complete the following steps:
 To protect user privacy on the device, both the Android OS and device OEMs require certain permissions to be granted to the Remote Help app.
 
 > [!NOTE]
-> We do not recommend installing or allow-list apps capable of screen recording or mirroring if you intend to use unattended mode in your organization for risky operations. 
+> We do not recommend installing or allow-list apps capable of screen recording or mirroring if you intend to use unattended mode in your organization for risky operations.
 
 #### Camera
 
 The Remote Help app requires Camera permissions.
 
 > [!NOTE]
-> Remote Help doesn't store camera input. These permissions are only used to initiate a remote help session between the device and the Intune service.  
+> Remote Help doesn't store camera input. These permissions are only used to initiate a remote help session between the device and the Intune service.
 
 You can autogrant them through app configuration policy:
 
@@ -141,7 +124,7 @@ You can autogrant them through app configuration policy:
 
 #### Permission setup for Zebra devices
 
-On Zebra devices, permissions are granted through Zebra OEMConfig profiles.  
+On Zebra devices, permissions are granted through Zebra OEMConfig profiles.
 
 For instructions on how to set up OEMConfig, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
@@ -170,7 +153,7 @@ Use OEMConfig to deploy the following settings on devices that you want to use R
   | Package Signing Certificate | ```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``` |
 
 2.For the package you created, under **Package > Permissions**, add a new permission as follows:
-  
+
   | Key                      | Value                                           |
   |-----------------------------------|-----------------------------------------------|
   | Name| System Alert Window  |
@@ -178,9 +161,9 @@ Use OEMConfig to deploy the following settings on devices that you want to use R
 
 3.For the package created in step 1, under **Package** > **Allowed Services**, add two allowed services:
 
-- One allowed service with a Service Identifier of `com.zebra.eventinjectionservice`  
+- One allowed service with a Service Identifier of `com.zebra.eventinjectionservice` 
 
-- Another allowed service with a Service Identifier of `com.zebra.remotedisplayservice`  
+- Another allowed service with a Service Identifier of `com.zebra.remotedisplayservice` 
 
 ##### Instructions for Legacy Zebra OEMConfig
 
@@ -201,7 +184,7 @@ Use OEMConfig to deploy the following settings on devices that you want to use R
 > The OEMConfig setting requires version MX 10.4 and higher on the device. For devices running a lower MX version, the display overlay permission must be manually granted to the Remote Help app. Contact Zebra for specific steps on your device or refer to the setup instructions for this permission on Samsung devices.
 
 2.In a separate transaction step, under Service Access Configuration, create the following details:
-  
+
   | Name                      | Description                                           |
   |-----------------------------------|-----------------------------------------------|
   | Service Binding Action | Allow |
@@ -211,8 +194,8 @@ Use OEMConfig to deploy the following settings on devices that you want to use R
   | Allow Caller Package | com.microsoft.intune.remotehelp |
   | Allow Caller Signature | ```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```|
 
-3.In another transaction step, under Service Access Configuration, configure the following details:  
-  
+3.In another transaction step, under Service Access Configuration, configure the following details:
+
   | Name                      | Description                                           |
   |-----------------------------------|-----------------------------------------------|
   | Service Binding Action | Allow |
@@ -245,12 +228,12 @@ On some devices, the user also needs to agree to Samsung's KLMS Agent terms and 
 
 1. After installing the Remote Help app, launch it. The prompt is automatically displayed when the app is launched.
 
-2. Agree to the terms and conditions and tap **Confirm**.  
+2. Agree to the terms and conditions and tap **Confirm**.
 
 > [!NOTE]
 >
 > - On Knox 2.8-3.7 (inclusive) this consent is revoked if the Remote Help app is uninstalled.
-> - If the user agreed to KLMS license terms through another app, the prompt might not appear.  
+> - If the user agreed to KLMS license terms through another app, the prompt might not appear.
 
 ## How to use Remote Help for Android
 
@@ -262,19 +245,19 @@ To request help, you must reach out to your support staff to request assistance.
 
 When you as the sharer and your helper are ready to begin the session:
 
-1. On your device, you will see a prompt displaying a request to grant screen share or control of the device with the helpers information including their full name and company.  
+1. On your device, you will see a prompt displaying a request to grant screen share or control of the device with the helpers information including their full name and company.
 
-    a. If starting an attended screen sharing or full control session, you must select **Accept** to allow the session to begin. If you do not accept within 5 minutes, the session times out.  
+    a. If starting an attended screen sharing or full control session, you must select **Accept** to allow the session to begin. If you do not accept within 5 minutes, the session times out.
 
     b. If starting an unattended control session, the session will begin automatically after **30 seconds** if there is no response.
 
 2. When the session is ongoing
-   
+
     a. During an attended screen sharing or full control session, the device displays a floating **End Session** button. This button can be repositioned on the screen. Tap the button to end the session from your device.
-   
+
     b. During an unattended control session, the screen of the device will blocked due to security and privacy reasons, and you will be notified if you interact with it. If you interact with the blocked screen, you will receive a notification that a helper is currently remotely accessing it for maintence. When the notification is shown, you and the helper will not be able to taken any action for 30 seconds when this screen will close. You will not be able to end the session from your device until the helper ends the session.
 
-   
+
 ### Provide Help
 
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
@@ -282,21 +265,21 @@ When you as the sharer and your helper are ready to begin the session:
    a. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the Android device on which assistance is needed.
 
    b. From the remote action bar across the top of the device view, select **New remote assistance session** and select **Remote Help**, and then **Continue**.
-   
+
    c. Select the session type from the options for which you have permission - screen sharing, full control, unattended control, and then **Launch Remote Help**.
 
-2. On the device, the user sees a prompt displaying a request to grant screen share or control of the device.  
+2. On the device, the user sees a prompt displaying a request to grant screen share or control of the device.
 
-    a. If starting an attended screen sharing or full control session, the user must select **Accept** to allow the session to begin. If the user doesn't accept within 5 minutes, the session times out.  
+    a. If starting an attended screen sharing or full control session, the user must select **Accept** to allow the session to begin. If the user doesn't accept within 5 minutes, the session times out.
 
     b. If starting an unattended control session, the session will begin automatically after **30 seconds** if there is no response from the user.
 
 3. When the session is ongoing
-   
+
     a. During an attended screen sharing or full control session, the sharer device displays a floating **End Session** button. This button can be repositioned on the screen. Tap the button to end the session from the sharer device.
-   
+
     b. During an attended full control session, use the buttons on the menu bar, keyboard, or mouse input to interact with the sharer device. You can also long-press on the Power button in the menu bar to simulate a long press. For example, to open the power options menu on some devices.
-   
+
     c. During an unattended control session, the screen of the device you are connected to will blocked due to security and privacy reasons, and the user will be notified if they interact with it. If the user interacts with the blocked screen, they will receive a notification letting them know that you are currently remotely accessing it for maintence. When the notification is shown, you and the end user will not be able to taken any action for 30 seconds when this screen will close.
 
 > [!NOTE]

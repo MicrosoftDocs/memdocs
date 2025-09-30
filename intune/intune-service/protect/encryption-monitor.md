@@ -1,32 +1,15 @@
 ---
-# required metadata
 title: View report details for encryption status of devices managed with Microsoft Intune
-titleSuffix: Microsoft Intune
-description: Use the Microsoft Intune admin center to view reports for device encryption status across macOS FileVault and Windows BitLocker encrypted devices that you manage with Microsoft Intune. 
-keywords:
+description: Use the Microsoft Intune admin center to view reports for device encryption status across macOS FileVault and Windows BitLocker encrypted devices that you manage with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 10/14/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-ms.assetid:  
-
-# optional metadata
-
-#audience:
-
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
-- tier2
+ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
-
 ---
 
 # Monitor device encryption with Intune
@@ -79,7 +62,7 @@ The Encryption report pane displays a list of the devices you manage with high
   - **Not ready**: The device doesn't have full encryption capabilities, but might still support encryption.
   - **Not applicable**: There isn't enough information to classify this device.
 
-- **Encryption status** – Whether the OS drive is encrypted. 
+- **Encryption status** – Whether the OS drive is encrypted.
 
 - **User Principal Name** - The primary user of the device.
 
@@ -97,7 +80,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   To speed up the reporting of FileVault encryption status before device check-in normally occurs, have users sync their devices after encryption completes.
 
-  For Windows devices, this field doesn't look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp).  
+  For Windows devices, this field doesn't look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp).
 
 - **Profiles** – A list of the *Device configuration* profiles that apply to this device and are configured with the following values:
 
@@ -143,7 +126,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
     *Consider: One possible cause for an unknown status is that the device is locked and Intune can't start the escrow or encryption process. After the device is unlocked, progress can continue*.
 
   **Windows 10/11**:
-  
+
   For Windows devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later, or Windows 11. *Status details* are coming from [BitLocker CSP - Status/DeviceEncryptionStatus](/windows/client-management/mdm/bitlocker-csp).
 
   - The BitLocker policy requires user consent to launch the BitLocker Drive Encryption Wizard to start encryption of the OS volume but the user didn't consent.
@@ -177,7 +160,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
   - To encrypt drives, the BitLocker policy requires either the user to sign in as an Administrator or, if the device is joined to Microsoft Entra ID, the AllowStandardUserEncryption policy must be set to `1`.
 
   - Windows Recovery Environment (WinRE) isn't configured.
-  
+
     *Consider: Need to run command line to configure the WinRE on separate partition; as that wasn't detected. For more information, see [REAgentC command-line options](/windows-hardware/manufacture/desktop/reagentc-command-line-options).*
 
   - A TPM isn't available for BitLocker, either because it isn't present, it's been made unavailable in the Registry, or the OS is on a removable drive.

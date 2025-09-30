@@ -1,29 +1,10 @@
 ---
-# required metadata
-
 title: Intune data platform schema
 description: Overview of Intune data platform schema.
-keywords: 
-ms.author: smbhardwaj
-author: smritib17 
-manager: dougeby
+author: MandiOhlinger
 ms.date: 07/15/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: Abby Starr 
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.reviewer: Abby Starr
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -35,10 +16,10 @@ ms.collection:
 
 This article goes over the properties supported in the Intune Data Platform. The Intune Data Platform can be accessed via Device query for single devices, Inventory, and Device query for Multiple Devices.
 
-Each table (entity) in this page lists the types of queries that are supported with the following information:  
-- Property: The name of the variable we collect and store.  
-- Type: The data type you can expect to see, such as *string* or *boolean*.  
-- Description: The purpose of the property. 
+Each table (entity) in this page lists the types of queries that are supported with the following information:
+- Property: The name of the variable we collect and store.
+- Type: The data type you can expect to see, such as *string* or *boolean*.
+- Description: The purpose of the property.
 - Platform:  The operating systems that support the property.
 
 For entities that include Android data, the following platforms are supported:
@@ -76,7 +57,7 @@ For entities that include Android data, the following platforms are supported:
 |  MdmLostModeEnabled  |  bool  |  Specifies if Managed Lost Mode is enabled  |iOS, iPadOS|
 |  PinRequiredForDeviceLock  |  bool  |  Is a PIN required for device lock scenarios  |macOS|
 |  PinRequiredForEraseDevice  |  bool  |  Is a PIN required before erasing the device  |macOS|
-|  Supervised  |  bool  |  If true, it’s a supervised device. |iOS, iPadOS, macOS|
+|  Supervised  |  bool  |  If true, it's a supervised device. |iOS, iPadOS, macOS|
 |  SupportsiOSAppInstalls  |  bool  |  Are iOS app installs supported on this device  |macOS|
 |  SystemIntegrityProtectionEnabled  |  bool  |  System Integrity Protection (SIP) is a security technology on Mac that prevents malicious software from modifying protected resources  |macOS|
 
@@ -99,7 +80,7 @@ For entities that include Android data, the following platforms are supported:
 | IsDefaultCatalog | bool | If true, CatalogURL is the default catalog. |macOS|
 | PerformPeriodicCheck | bool | If true, start a new scan. |macOS|
 | PreviousScanDateTime | DateTime | The date of the last software update scan. |macOS|
-| PreviousScanResult | string | The result code of last software update scan; ”0” = success. |macOS|
+| PreviousScanResult | string | The result code of last software update scan; "0" = success. |macOS|
 
 ## Battery
 
@@ -120,13 +101,13 @@ For entities that include Android data, the following platforms are supported:
 | Model| String | Display name of the battery.|Windows|
 | SerialNumber| String | The battery serial number that the manufacturer assigned.|Android|
 
-## BiosInfo 
+## BiosInfo
 
 **Description**: Provides basic BIOS information.
 
 **Supported platforms**: Windows
 
-**Supported for**:  Device query for multiple devices, single device query on-demand, inventory. 
+**Supported for**:  Device query for multiple devices, single device query on-demand, inventory.
 
 | **Property** | **Type** | **Description** | **Platform** |
 |----|----|----|----|
@@ -165,7 +146,7 @@ For entities that include Android data, the following platforms are supported:
 | --- | --- | --- | --- |
 | CellularTechnology | string | The cellular technology type. |Android, iOS, iPadOS|
 | DataRoamingEnabled | bool | If true, the device enables data roaming. |iOS, iPadOS|
-| HotspotEnabled | bool | If true, the device enables Personal Hotspot, which isn’t available for all carriers. |iOS, iPadOS|
+| HotspotEnabled | bool | If true, the device enables Personal Hotspot, which isn't available for all carriers. |iOS, iPadOS|
 | ModemFirmwareVersion | string | The modem firmware version. |iOS, iPadOS|
 | NetworkTethered | bool | If true, the device is network-tethered. |iOS, iPadOS|
 
@@ -175,7 +156,7 @@ For entities that include Android data, the following platforms are supported:
 
 **Supported platforms**: Windows
 
-**Supported for**: Device query for single device (on-demand).  
+**Supported for**: Device query for single device (on-demand).
 
 | **Property** | **Type** | **Description** |**Supported platforms**|
 | --- | --- | --- |---|
@@ -281,7 +262,7 @@ For entities that include Android data, the following platforms are supported:
 **Supported for**: single device query on-demand.
 
 > [!NOTE]
-> This is a parameterized entity where you must pass in the path of the File you want to query. For example, pass in `FileInfo('c:\windows\system32\drivers\etc\hosts') | take 10`. If a directory is passed, it will return information about the files in the directory and subdirectories.  
+> This is a parameterized entity where you must pass in the path of the File you want to query. For example, pass in `FileInfo('c:\windows\system32\drivers\etc\hosts') | take 10`. If a directory is passed, it will return information about the files in the directory and subdirectories.
 
 | **Property** | **Type** | **Description** |**Supported platforms**|
 | --- | --- | --- |--- |
@@ -301,7 +282,7 @@ For entities that include Android data, the following platforms are supported:
 
 ## LocalGroup
 
-**Description**: Lists local user groups.  
+**Description**: Lists local user groups.
 
 **Supported platforms**: Windows
 
@@ -353,14 +334,14 @@ For entities that include Android data, the following platforms are supported:
 **Supported platforms**: Windows
 
 **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
-PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for single device query on-demand.  
+PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for single device query on-demand.
 
 | **Property** | **Type** | **Description** |**Supported platforms**|
 | --- | --- | --- |--- |
 | PhysicalMemoryTotalBytes | Long, Result should be (\>=0) | Total amount of physical memory available to the operating system. This value doesn't necessarily indicate the true amount of physical memory, but what is reported to the operating system as available to it. |Windows single device query, Windows multi device query |
 | PhysicalMemoryFreeBytes | Long, Result should be (\>=0) |Number of bytes of physical memory currently unused and available. |Windows single device query |
 | VirtualMemoryTotalBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory. |Windows single device query, Windows multi device query |
-| VirtualMemoryFreeBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory currently unused and available. |Windows single device query |  
+| VirtualMemoryFreeBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory currently unused and available. |Windows single device query |
 
 ## NetworkAdapter
 
@@ -382,7 +363,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## OsVersion
 
-**Description**: A single record containing the operating system name and version of the device. 
+**Description**: A single record containing the operating system name and version of the device.
 
 **Supported platforms**: Android, iOS, iPadOS, Windows
 
@@ -399,11 +380,11 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | Architecture | string (max length 256 characters) | OS Architecture |Windows single device query, Windows multi device query |
 | InstallDateTime | datetime (UTC) | The install date time of the OS. |Windows single device query, Windows multi device query |
 |AppleSupplementalOSVersion |String |The OS version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |
-|AppleSupplementalBuildVersion |String |The OS build version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |  
+|AppleSupplementalBuildVersion |String |The OS build version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |
 
 ## Process
 
-**Description**: All running processes on the host system.  
+**Description**: All running processes on the host system.
 
 **Supported platforms**: Windows
 
@@ -450,8 +431,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | QuotaSizeBytes | long | The quota size in bytes for each user on this shared iPad device |iPadOS|
 | ResidentUsersCount | long | The number of users currently on this shared iPad device. |iPadOS|
 | SkipLanguageAndLocaleSetupForNewUsers | bool | If true, skip the language and country/region panes for new users on Shared iPad. |iPadOS|
-| TemporarySessionTimeoutSeconds | long | The timeout interval for the temporary session. A value of 0 indicates that there’s no timeout. |iPadOS|
-| UserSessionTimeoutSeconds | long | The timeout interval for the user session. A value of 0 indicates that there’s no timeout. |iPadOS|  
+| TemporarySessionTimeoutSeconds | long | The timeout interval for the temporary session. A value of 0 indicates that there's no timeout. |iPadOS|
+| UserSessionTimeoutSeconds | long | The timeout interval for the user session. A value of 0 indicates that there's no timeout. |iPadOS|
 
 ## SystemEnclosure
 
@@ -482,7 +463,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## SystemInfo
 
-**Description**: System information of the device.  
+**Description**: System information of the device.
 
 **Supported platforms**: Windows
 
@@ -524,9 +505,9 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | --- | --- | --- |--- |
 | TimeZone | String | Describes the device's time zone. |Windows|
 
-## TPM  
+## TPM
 
-**Description**: Provides TPM related information of the device.  
+**Description**: Provides TPM related information of the device.
 
 **Supported platforms**: Windows
 
@@ -542,7 +523,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | ManufacturerId | long | TPM manufacturers ID |Windows|
 | ProductName | string (max 256 characters) | Product name of the TPM |Windows|
 | PhysicalPresenceVersion | string (max 256 characters) | Version of the Physical Presence Interface |Windows|
-| SpecVersion | string (max 256 characters) | Trusted Computing Group specification that the TPM supports |Windows|  
+| SpecVersion | string (max 256 characters) | Trusted Computing Group specification that the TPM supports |Windows|
 
 ## VideoController
 
@@ -601,7 +582,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## WindowsEvent
 
-**Description**: Get Windows Event logs in the specified log name and look back in time.  
+**Description**: Get Windows Event logs in the specified log name and look back in time.
 
 **Supported platforms**: Windows
 
@@ -640,7 +621,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## WindowsRegistry
 
-**Description**: Lists registry under the passed registry key.  
+**Description**: Lists registry under the passed registry key.
 
 **Supported platforms**: Windows
 
@@ -662,7 +643,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 **Supported platforms**: Windows
 
-**Supported for**: Single device query on-demand.  
+**Supported for**: Single device query on-demand.
 
 | **Property** | **Type** | **Description** |**Supported platforms**|
 | --- | --- | --- |--- |

@@ -1,28 +1,12 @@
 ---
-# required metadata
-
 title: Configure Endpoint protection settings in Microsoft Intune
 description: Create Endpoint protection settings when you create a macOS or Windows 10 device profile in Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 09/19/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - endpoint-protection
 - sub-secure-endpoints
@@ -50,7 +34,7 @@ Before you create a profile, review the following articles that detail the Endpo
 > [!IMPORTANT]
 > The macOS endpoint protection template has been deprecated. Existing policies remain unchanged, but you can no longer create new policies using this template. We recommend using the settings catalog to create new configuration policies for FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. For more information, see [macOS settings catalog](../configuration/settings-catalog.md).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
 
@@ -99,7 +83,7 @@ When you plan for profiles with custom Firewall rules, consider the following in
 
 - For each profile, if a single rule fails to apply, all rules in that profile are failed and none of the rules are applied to the device.
 
-- When a rule fails to apply, all rules in the profile are reported as failed. Intune cannot identify which individual rule failed.  
+- When a rule fails to apply, all rules in the profile are reported as failed. Intune cannot identify which individual rule failed.
 
 The Firewall rules that Intune can manage are detailed in the Windows [Firewall configuration service provider](/windows/client-management/mdm/firewall-csp) (CSP). To review the list of custom firewall settings for Windows devices that Intune supports, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
 

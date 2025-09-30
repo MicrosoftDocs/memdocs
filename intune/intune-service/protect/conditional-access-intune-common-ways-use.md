@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: Scenarios for using Conditional Access with Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Learn how Conditional Access is commonly used with Intune compliance policy for devices and apps
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 03/19/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: tycast
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure, get-started
+ms.reviewer: ilwu
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - conditional-access
@@ -38,7 +21,7 @@ There are two types of Conditional Access policies you can use with Intune: devi
 The information in this article can help you understand how to use the Intune mobile *device* compliance capabilities and the Intune mobile *application* management (MAM) capabilities.
 
 > [!NOTE]
-> Conditional Access is a Microsoft Entra capability that is included with a Microsoft Entra ID P1 or P2 license. Intune enhances this capability by adding mobile device compliance and mobile app management to the solution. The Conditional Access node accessed from *Intune* is the same node as accessed from *Microsoft Entra ID*.  
+> Conditional Access is a Microsoft Entra capability that is included with a Microsoft Entra ID P1 or P2 license. Intune enhances this capability by adding mobile device compliance and mobile app management to the solution. The Conditional Access node accessed from *Intune* is the same node as accessed from *Microsoft Entra ID*.
 
 ## Device-based Conditional Access
 
@@ -117,4 +100,4 @@ Intune and Microsoft Entra ID work together to make sure only managed apps can a
 
 [How to configure Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-[Set up app-based Conditional Access policies](app-based-conditional-access-intune-create.md) 
+[Set up app-based Conditional Access policies](app-based-conditional-access-intune-create.md)

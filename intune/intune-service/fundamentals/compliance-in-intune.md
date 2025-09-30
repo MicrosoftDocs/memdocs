@@ -1,18 +1,12 @@
 ---
 title: Compliance in Microsoft Intune
-titleSuffix:
 description: Learn about compliance, dependencies, and features in Microsoft Intune supporting data protection and regulatory requirements.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 12/03/2024
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.collection: 
- - tier1
+ms.collection:
  - highpri
  - essentials-compliance
 
@@ -75,7 +69,7 @@ Intune includes several compliance features that help organizations meet regulat
 ### Data lifecycle management
 
 > [!IMPORTANT]
-> Microsoft Intune doesn't use any personal data collected as part of providing the service for profiling, advertising, or marketing purposes. 
+> Microsoft Intune doesn't use any personal data collected as part of providing the service for profiling, advertising, or marketing purposes.
 
 Intune supports data lifecycle management through retention policies and labels. These features help organizations retain or delete data based on compliance requirements. For more information, see [Privacy and personal data in Intune](../fundamentals/intune-service-servicing-information.md#privacy-and-personal-data-in-intune).
 
