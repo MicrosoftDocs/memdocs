@@ -3,7 +3,7 @@ title:  Configure Microsoft Intune for increased security
 description:  Learn how to improve your security posture with Microsoft Intune.
 
 ms.topic: reference
-ms.date:  08/29/2025
+ms.date: 09/30/2025
 
 ms.author: brenduns
 author: brenduns
@@ -113,7 +113,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24871](./includes/secure-recommendations/24871.md)]-->
 
-### Non-compliant devices are restricted from accessing corporate data<!-- 24824 -->
+### Noncompliant devices are restricted from accessing corporate data<!-- 24824 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24824](./includes/secure-recommendations/24824.md)]
 
@@ -129,7 +129,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24794](./includes/secure-recommendations/24794.md)]
 
-### Tenant - Company Portal branding and end-user support settings are customize<!-- 24823 -->
+### Tenant - Company Portal branding and end-user support settings are customized<!-- 24823 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
  [!INCLUDE [24823](./includes/secure-recommendations/24823.md)]
 
@@ -159,7 +159,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24540](./includes/secure-recommendations/24540.md)]
 
-### Windows - Deploy Attack Surface Reduction (ASR) policies<!-- 24574 -->
+### Windows - Deploy Attack Surface Reduction policies<!-- 24574 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24574](./includes/secure-recommendations/24574.md)]
 
