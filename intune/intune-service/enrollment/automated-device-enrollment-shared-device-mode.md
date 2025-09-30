@@ -56,7 +56,7 @@ Create an Apple automated device enrollment policy in Microsoft Intune for devic
 
 ## Step 2: Create a dynamic Microsoft Entra group
 
-Create a dynamic Microsoft Entra group using the `enrollmentProfileName` property to automatically group devices that enroll with a specific enrollment profile. In this case, we want to group devices that are in share device mode and enrolling with the profile you created in Step 1. Include these configurations when creating your dynamic group:  
+Create a dynamic Microsoft Entra group using the `enrollmentProfileName` property to automatically group devices that enroll with a specific enrollment profile. In this case, we want to group devices that are in shared device mode and enrolling with the profile you created in Step 1. Include these configurations when creating your dynamic group:  
 
 * **Group type**: Security
 * **Membership type**: Dynamic Device
