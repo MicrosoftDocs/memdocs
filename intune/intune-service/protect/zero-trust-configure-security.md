@@ -109,6 +109,10 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24543](./includes/secure-recommendations/24543.md)]
 
+<!-- ## Android - Automatic Enrollment to Defender is enabled for Android Devices <!-- 24871 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+<!-- [!INCLUDE [24871](./includes/secure-recommendations/24871.md)]-->
+
 ### Non-compliant devices are restricted from accessing corporate data<!-- 24824 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24824](./includes/secure-recommendations/24824.md)]
@@ -171,6 +175,17 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24784](./includes/secure-recommendations/24784.md)]
 
+### Corporate Wi-Fi network on iOS devices is securely managed<!-- 24839 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24839](./includes/secure-recommendations/24839.md)]
+
+### Corporate Wi-Fi network on Android devices is securely managed<!-- 24840 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24840](./includes/secure-recommendations/24840.md)]
+
+<!-- ### Corporate Wi-Fi network on macOS devices is securely managed<!-- 24870 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+<!-- [!INCLUDE [24870](./includes/secure-recommendations/24870.md)] -->
 
 ## Related content
 
