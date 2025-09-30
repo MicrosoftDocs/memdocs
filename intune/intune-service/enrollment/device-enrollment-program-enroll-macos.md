@@ -127,8 +127,8 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
 1. On the **Management Settings** page, configure **User Affinity**. *User affinity* determines whether devices enroll with or without an assigned user. Your options:
 
-    * **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Choose this option for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices.
-    * **Enroll with User Affinity**: Enroll devices that are associated with an assigned user. Choose this option for work devices that belong to users, and if you want to require users to have the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option.
+    * **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Choose this option for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices. Enrolling without user affinity is also referred to as enrolling *userless*.  
+    * **Enroll with User Affinity**: Enroll devices that are associated with an assigned user. Choose this option for work devices that belong to users, and if you want to require users to have the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option. Enrolling with user affinity is also referred to as enrolling with a *user*.  
 
       Option 2 requires more configurations. Users must authenticate themselves before enrollment to confirm their identity. Select one of the following authentication methods:
 
