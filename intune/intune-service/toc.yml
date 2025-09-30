@@ -1581,14 +1581,14 @@ items:
       - name: Configure enrollment features
         items:
         - name: Add corporate identifiers
-          href: ./enrollment/corporate-identifiers-add.md 
-          displayName: COD; corporate owned; IMEI; device ownership; serial       
+          href: ./enrollment/corporate-identifiers-add.md
+          displayName: COD; corporate owned; IMEI; device ownership; serial
         - name: Add device categories
           href: ./enrollment/device-group-mapping.md
-          displayName: group; category; categorize; security group             
+          displayName: group; category; categorize; security group
         - name: Add device enrollment manager
           href: ./enrollment/device-enrollment-manager-enroll.md
-          displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations        
+          displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
         - name: Configure Chrome Enterprise connector
           href: ./enrollment/chrome-enterprise-connector-configure.md
           displayName: chrome os; connector; device management; google admin
@@ -1601,12 +1601,12 @@ items:
           - name: Create device platform restrictions
             href: ./enrollment/create-device-platform-restrictions.md
           - name: Create device limit restrictions
-            href: ./enrollment/create-device-limit-restrictions.md        
+            href: ./enrollment/create-device-limit-restrictions.md
         - name: Create terms and conditions policy
           href: ./enrollment/terms-and-conditions-create.md
-          displayName: intune; enrollment; terms and conditions; policy       
+          displayName: intune; enrollment; terms and conditions; policy
         - name: Enable Windows backup and restore
-          href: ./enrollment/windows-backup-restore.md        
+          href: ./enrollment/windows-backup-restore.md
         - name: Get Apple MDM push certificate
           href: ./enrollment/apple-mdm-push-certificate-get.md
           displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment
@@ -1619,7 +1619,7 @@ items:
           href: ./enrollment/enrollment-time-grouping.md
           displayName: enrollment time grouping; security groups; Entra
         - name: Turn on iOS/iPadOS supervised mode
-          href: ./enrollment/device-supervised-mode.md        
+          href: ./enrollment/device-supervised-mode.md
 
       - name: Set up Windows enrollment
         items:
@@ -1638,10 +1638,10 @@ items:
           - name: Set up Enrollment Status Page
             href: ./enrollment/windows-enrollment-status.md
           - name: Set up Intune Connector for Active Directory
-            href: /autopilot/windows-autopilot-hybrid          
+            href: /autopilot/windows-autopilot-hybrid
           - name: Set up Windows Enrollment Attestation
             href: ./enrollment/windows-enrollment-attestation.md
-          
+
 
       - name: Set up Android enrollment
         items:
