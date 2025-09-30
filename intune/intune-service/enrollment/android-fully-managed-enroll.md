@@ -154,7 +154,7 @@ When you create the enrollment profile in the admin center, you have to select a
 
 The default token, *corporate-owned, fully managed*, enrolls devices into Microsoft Intune as standard Android Enterprise corporate fully managed devices. This token requires you to complete pre-provisioning steps before you distribute the devices. End users complete the remaining steps on the device when they sign in with their work or school account.
 
-The device staging token, *Corporate-owned, fully managed, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a third party vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing into the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 8 or later.
+The device staging token, *Corporate-owned, fully managed, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a third party vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing into the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 10 or later.
 
 For more information, see [Device staging overview](device-staging-overview.md).
 
