@@ -1,31 +1,10 @@
 ---
-# required metadata
-
 title: Add Microsoft 365 Apps to Windows 10/11 devices using Microsoft Intune
 description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on Windows 10/11 devices.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/10/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: craigma
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri

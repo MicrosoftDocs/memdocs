@@ -1,6 +1,9 @@
-<!-- This include is part of the Intune Data Warehouse documentation. -->
-
-<a name='azure-ad-and-intune-credential-requirements'></a>
+---
+author: nicholasswhite
+ms.author: nwhite
+ms.topic: include
+ms.date: 09/08/2025
+---
 
 ## Microsoft Entra ID and Intune credential requirements
 
@@ -11,7 +14,7 @@ Requirements for accessing the Intune Data Warehouse (including the API) are:
 - User must have a minimum of one of the following roles:
   - An Intune service administrator
   - User with role-based access to **Intune data warehouse** resource
-  - User-less authentication using [application-only authentication](../developer/data-warehouse-app-only-auth.md) 
+  - User-less authentication using [application-only authentication](../developer/data-warehouse-app-only-auth.md)
 
 > [!IMPORTANT]
 > To be assigned an Intune role and access the Intune Data Warehouse, the user must have an Intune license. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md) and [Microsoft Intune licensing](../fundamentals/licenses.md).

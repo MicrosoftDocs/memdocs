@@ -1,32 +1,10 @@
 ---
-# required metadata
-
 title: Install Microsoft 365 apps to macOS devices using Microsoft Intune
-titleSuffix: 
 description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on macOS devices.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/17/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 2372332a-7e3a-4a9c-91a9-86654e0fabe2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - macOS
 ---

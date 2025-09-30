@@ -1,27 +1,12 @@
 ---
 title: Use SCEP certificate profiles with Microsoft Intune
 description: Create and assign Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Microsoft Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 06/26/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: wicale
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -29,7 +14,7 @@ ms.collection:
 - sub-certificates
 ---
 
-# Create and assign SCEP certificate profiles in Intune 
+# Create and assign SCEP certificate profiles in Intune
 
 After you [configure your infrastructure](certificates-scep-configure.md) to support Simple Certificate Enrollment Protocol (SCEP) certificates, you can create and then assign SCEP certificate profiles to users and devices in Intune.
 
@@ -45,71 +30,70 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 >
 > For more information about this limitation, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
- [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)] 
+ [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 > [!TIP]
-> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).  
+> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
-## Update certificate connector: Strong mapping requirements for KB5014754  
+## Update certificate connector: Strong mapping requirements for KB5014754
 
-**Applies to**:  
+**Applies to**:
 
-- Windows 10  
-- Windows 11
-- Android   
-- iOS  
-- macOS  
+- Windows
+- Android
+- iOS
+- macOS
 
-The Key Distribution Center (KDC) requires user or device objects to be strongly mapped to Active Directory for certificate-based authentication. This means that the certificate's subject alternative name (SAN) must contain a security identifier (SID) extension that maps to the user or device SID in Active Directory. When a user or device authenticates with a certificate in Active Directory, the KDC checks for the SID to verify that the certificate is mapped and issued to the correct user or device. The mapping requirement protects against certificate spoofing and ensures that certificate-based authentication against the KDC continues working.  
+The Key Distribution Center (KDC) requires user or device objects to be strongly mapped to Active Directory for certificate-based authentication. This means that the certificate's subject alternative name (SAN) must contain a security identifier (SID) extension that maps to the user or device SID in Active Directory. When a user or device authenticates with a certificate in Active Directory, the KDC checks for the SID to verify that the certificate is mapped and issued to the correct user or device. The mapping requirement protects against certificate spoofing and ensures that certificate-based authentication against the KDC continues working.
 
-Strong mapping is required for all certificates deployed by Microsoft Intune and used for certificate-based authentication against KDC. The strong mapping solution is applicable to user certificates across all platforms. For device certificates, it only applies to Microsoft Entra hybrid-joined Windows devices. If certificates in these scenarios don't meet the strong mapping requirements by the full enforcement mode date, authentication will be denied.  
+Strong mapping is required for all certificates deployed by Microsoft Intune and used for certificate-based authentication against KDC. The strong mapping solution is applicable to user certificates across all platforms. For device certificates, it only applies to Microsoft Entra hybrid-joined Windows devices. If certificates in these scenarios don't meet the strong mapping requirements by the full enforcement mode date, authentication will be denied.
 
-To implement the strong mapping solution for SCEP certificates delivered via Intune, you must add the `OnpremisesSecurityIdentifier` variable to the SAN in the SCEP profile. 
+To implement the strong mapping solution for SCEP certificates delivered via Intune, you must add the `OnpremisesSecurityIdentifier` variable to the SAN in the SCEP profile.
 
   > [!div class="mx-imgBorder"]
-   > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/certificates-profile-scep/scep-configuration-settings.png)   
+   > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/certificates-profile-scep/scep-configuration-settings.png)
 
-This variable must be part of the URI attribute. You can create a new SCEP profile or edit an existing one to add the URI attribute.  
+This variable must be part of the URI attribute. You can create a new SCEP profile or edit an existing one to add the URI attribute.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/certificates-profile-scep/scep-san-add.png)  
+   > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/certificates-profile-scep/scep-san-add.png)
 
-After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and the resolved SID. Example formatting: `tag:microsoft.com,2022-09-14:sid:<value>` At this point, the certificate profile meets the strong mapping requirements. 
+After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and the resolved SID. Example formatting: `tag:microsoft.com,2022-09-14:sid:<value>` At this point, the certificate profile meets the strong mapping requirements.
 
-To ensure your SCEP profile meets strong mapping requirements, create a SCEP certificate profile in the Microsoft Intune admin center, or modify an existing profile with the new SAN attribute and value. As a prerequisite, users and devices must be synced from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/synchronization).   
+To ensure your SCEP profile meets strong mapping requirements, create a SCEP certificate profile in the Microsoft Intune admin center, or modify an existing profile with the new SAN attribute and value. As a prerequisite, users and devices must be synced from Active Directory to Microsoft Entra ID. For more information, see [How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain](/entra/identity/domain-services/synchronization).
 
-For more information about the KDC's requirements and enforcement date for strong mapping, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).  
+For more information about the KDC's requirements and enforcement date for strong mapping, see [KB5014754: Certificate-based authentication changes on Windows domain controllers ](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).
 
-## S/MIME certificate requirements for third party public CA       
+## S/MIME certificate requirements for third party public CA
 > [!IMPORTANT]
-> Beginning July 16, 2025, the Certification Authority Browser Forum (CA/Browser Forum) is enforcing new S/MIME baseline requirements for public certificate authorities (CAs). These requirements apply to all sponsor-validated S/MIME certificates that the public CAs issue. For more information about S/MIME certificate requirements, see [CA/Browser Forum](https://cabforum.org/working-groups/smime/).  
+> Beginning July 16, 2025, the Certification Authority Browser Forum (CA/Browser Forum) is enforcing new S/MIME baseline requirements for public certificate authorities (CAs). These requirements apply to all sponsor-validated S/MIME certificates that the public CAs issue. For more information about S/MIME certificate requirements, see [CA/Browser Forum](https://cabforum.org/working-groups/smime/).
 
-The certificate subject name (SN) in all S/MIME certificates must include the following information:  
+The certificate subject name (SN) in all S/MIME certificates must include the following information:
 
-- Given name attribute  
-- Surname attribute  
+- Given name attribute
+- Surname attribute
 
- In terms of Microsoft Intune, these attributes are required for you when using Intune SCEP certificate profiles with third party public CA partners to issue S/MIME certificates for secure email. For a list of those CA partners, see [Third party certification authority partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners).  
- 
- Public CAs will reject certificate requests from Intune-enrolled devices that omit the given name and surname attributes from the subject name. This requirement applies to new certificates and renewals. 
- 
- When you edit an existing certificate profile to include these attributes, it triggers a reissuance of all certificates, which might incur additional costs depending on your CA agreement. 
- 
+ In terms of Microsoft Intune, these attributes are required for you when using Intune SCEP certificate profiles with third party public CA partners to issue S/MIME certificates for secure email. For a list of those CA partners, see [Third party certification authority partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners).
+
+ Public CAs will reject certificate requests from Intune-enrolled devices that omit the given name and surname attributes from the subject name. This requirement applies to new certificates and renewals.
+
+ When you edit an existing certificate profile to include these attributes, it triggers a reissuance of all certificates, which might incur additional costs depending on your CA agreement.
+
  To avoid service disruption, complete the following steps in the Microsoft Intune admin center:
 
-  1. Review your Intune SCEP certificate profiles used for S/MIME scenarios.  
-  2. Update the subject name format to include these variables:  
-      - G={{GivenName}}   
-      - SN={{SurName}} 
+  1. Review your Intune SCEP certificate profiles used for S/MIME scenarios.
+  2. Update the subject name format to include these variables:
+      - G={{GivenName}}
+      - SN={{SurName}}
 
-     You can enter variables in the SCEP profile under **Configuration settings** > **Subject name format**.  
-    
+     You can enter variables in the SCEP profile under **Configuration settings** > **Subject name format**.
+
       > [!div class="mx-imgBorder"]
         > ![Image of a SCEP certificate profile and its configuration settings, highlighting the subject name format setting.](./media/certificates-profile-scep/subject-name-2506.png)
-     
 
-  3. Test changes. Before broad deployment, create a new profile and assign a small user group.  
-  4. Don't rely on automatic updates. Intune doesn't modify profiles on your behalf due to the risk of duplicate attributes and unintended certificate reissuance.  
+
+  3. Test changes. Before broad deployment, create a new profile and assign a small user group.
+  4. Don't rely on automatic updates. Intune doesn't modify profiles on your behalf due to the risk of duplicate attributes and unintended certificate reissuance.
 
 
 ## Create a SCEP certificate profile
@@ -122,7 +106,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
    - **Platform**: Choose the platform of your devices.
    - **Profile**: Select **SCEP certificate**. Or, select **Templates** > **SCEP certificate**.
 
-     For **Android Enterprise**, *Profile type* is divided into two categories, *Fully Managed, Dedicated, and Corporate-Owned Work Profile* and *Personally-Owned Work Profile*. Be sure to select the correct SCEP certificate profile for the devices you manage.  
+     For **Android Enterprise**, *Profile type* is divided into two categories, *Fully Managed, Dedicated, and Corporate-Owned Work Profile* and *Personally-Owned Work Profile*. Be sure to select the correct SCEP certificate profile for the devices you manage.
 
      SCEP certificate profiles for the *Fully Managed, Dedicated, and Corporate-Owned Work Profile* profile have the following limitations:
 
@@ -134,7 +118,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
      1. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
      1. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owners**. You can manage revocation through an external process or directly with the certification authority.
-     1. SCEP certificate profiles are supported for Wi-Fi network configuration. VPN configuration profile support isn't available. A future update might include support for VPN configuration profiles.  
+     1. SCEP certificate profiles are supported for Wi-Fi network configuration. VPN configuration profile support isn't available. A future update might include support for VPN configuration profiles.
      1. The following variables aren't available for use on Android (AOSP) SCEP certificate profiles. Support for these variables will come in a future update.
         - onPremisesSamAccountName
         - OnPrem_Distinguished_Name
@@ -157,14 +141,14 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
 7. In **Configuration settings**, complete the following configurations:
 
-   - **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the linked certificates are stored, so it's important to select the proper channel. 
-   
-     Always select the user deployment channel in profiles with user certificates. The user channel stores certificates in the user keychain. Always select the device deployment channel in profiles with device certificates. The device channel stores certificates in the system keychain. 
-     
+   - **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the linked certificates are stored, so it's important to select the proper channel.
+
+     Always select the user deployment channel in profiles with user certificates. The user channel stores certificates in the user keychain. Always select the device deployment channel in profiles with device certificates. The device channel stores certificates in the system keychain.
+
      It's not possible to edit the deployment channel after you deploy the profile. You must create a new profile to select a different channel.
    - **Certificate type**:
 
-     *(Applies to:  Android, Android Enterprise, Android (AOSP), iOS/iPadOS, macOS, Windows 8.1, and Windows 10/11)*
+     *(Applies to:  Android, Android Enterprise, Android (AOSP), iOS/iPadOS, macOS, and Windows)*
 
      Select a type, depending on how you plan to use the certificate profile:
 
@@ -172,19 +156,19 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
      - **Device**:  *Device* certificates can only contain device attributes in the subject and SAN of the certificate.
 
-       Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.  
+       Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
 
-       For macOS, if this profile is configured to use the device deployment channel, you can select **User** or **Device**. If the profile is configured to use the user deployment channel, you can select only **User**. 
+       For macOS, if this profile is configured to use the device deployment channel, you can select **User** or **Device**. If the profile is configured to use the user deployment channel, you can select only **User**.
 
      > [!NOTE]
      > Storage of certificates provisioned by SCEP:
-     > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (also called *system store* or *device keychain*) of the device, unless you select the user deployment channel. 
+     > - *macOS* - Certificates you provision with SCEP are always placed in the system keychain (also called *system store* or *device keychain*) of the device, unless you select the user deployment channel.
      >
-     > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.  
+     > - *Android* - Devices have both a *VPN and apps* certificate store, and a *WIFI* certificate store.  Intune always stores SCEP certificates in the VPN and apps store on a device. Use of the VPN and apps store makes the certificate available for use by any other app.
      >
      >   However, when a SCEP certificate is also associated with a Wi-Fi profile, Intune also installs the certificate in the Wi-Fi store.
-     >   
-     >   When configured for VPN apps, user will be prompted to select the correct certificate. Silent certificate approval for Fully Managed (or BYOD scenarios) is not supported. If everything is setup correctly, the correct certificate should already be preselected in the dialog box. 
+     >
+     >   When configured for VPN apps, user will be prompted to select the correct certificate. Silent certificate approval for Fully Managed (or BYOD scenarios) is not supported. If everything is setup correctly, the correct certificate should already be preselected in the dialog box.
 
    - **Subject name format**:
 
@@ -220,7 +204,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
        **Common Name (CN)** can be set to any of the following variables:
 
-       - **CN={{UserName}}**: The user name of the user, such as janedoe. 
+       - **CN={{UserName}}**: The user name of the user, such as janedoe.
        - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
        - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Microsoft Entra ID. This ID is typically used to authenticate with Microsoft Entra ID.
        - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
@@ -233,7 +217,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
          To use the *{{OnPrem_Distinguished_Name}}* variable:
          - Be sure to sync the *onpremisesdistinguishedname* user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
          - If the CN value contains a comma, the Subject name format must be in quotes. For example: **CN="{{OnPrem_Distinguished_Name}}"**
-        
+
        - **CN={{OnPremisesSamAccountName}}**: Admins can sync the samAccountName attribute from Active Directory to Microsoft Entra ID using Microsoft Entra Connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign-in name format is: *DomainName\testUser*, or only *testUser*.
 
          To use the *{{OnPremisesSamAccountName}}* variable, be sure to sync the *OnPremisesSamAccountName* user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
@@ -244,7 +228,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
        That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
 
-       User attributes aren't supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won’t be able to get the user principal name when there's no user on the device.
+       User attributes aren't supported for devices that don't have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won't be able to get the user principal name when there's no user on the device.
 
      - **Device certificate type**
 
@@ -261,33 +245,33 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
        - **{{DeviceName}}**
        - **{{FullyQualifiedDomainName}}** *(Only applicable for Windows and domain-joined devices)*
        - **{{MEID}}**
-      
+
 
        You can specify these variables and static text in the textbox. For example, the common name for a device named *Device1* can be added as **CN={{DeviceName}}Device1**.
 
        > [!IMPORTANT]
        >
-       > - When you specify a variable, enclose the variable name in double curly brackets {{ }} as seen in the example, to avoid an error.  
+       > - When you specify a variable, enclose the variable name in double curly brackets {{ }} as seen in the example, to avoid an error.
        > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
 
-   - **Subject alternative name**:  
-     Configure the subject alternative name (SAN) in the certificate request. You can enter more than one subject alternative name. The text value can contain variables and static text for the attribute.  
+   - **Subject alternative name**:
+     Configure the subject alternative name (SAN) in the certificate request. You can enter more than one subject alternative name. The text value can contain variables and static text for the attribute.
 
      > [!NOTE]
-     > The following Android Enterprise profiles don’t support use of the {{UserName}} variable for the SAN:  
+     > The following Android Enterprise profiles don't support use of the {{UserName}} variable for the SAN:
      >
      > - Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 
-     Select from the available SAN attributes:  
+     Select from the available SAN attributes:
 
      - **Email address**
      - **User principal name (UPN)**
      - **DNS**
      - **Uniform Resource Identifier (URI)**
 
-     The type of certificate you choose determines the SAN variable.  
+     The type of certificate you choose determines the SAN variable.
 
      > [!NOTE]
      > Beginning with Android 12, Android no longer supports use of the following hardware identifiers for *personally owned work profile* devices:
@@ -298,25 +282,25 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
      >
      > Intune certificate profiles for personally owned work profile devices that rely on these variables in the subject name or SAN will fail to provision a certificate on devices that run Android 12 or later at the time the device enrolled with Intune. Devices that enrolled prior to upgrade to Android 12 can still receive certificates so long as Intune previously obtained the devices hardware identifiers.
      >
-     >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.   
+     >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
      - **User certificate type**
 
-        With the *user* certificate type, you can use any of the user or device certificate variables described above in the Subject Name section. 
+        With the *user* certificate type, you can use any of the user or device certificate variables described above in the Subject Name section.
 
-        For example, user certificate types can include the user principal name (UPN) in the subject alternative name. If a client certificate is used to authenticate to a Network Policy Server, set the subject alternative name to the UPN.  
+        For example, user certificate types can include the user principal name (UPN) in the subject alternative name. If a client certificate is used to authenticate to a Network Policy Server, set the subject alternative name to the UPN.
 
-        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the Key Distribution Center's (KDC) strong mapping requirements for certificate-based authentication. You should add the variable to user certificates that authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in user certificates for macOS, iOS, and Windows 10/11, and only works with the URI attribute.          
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the Key Distribution Center's (KDC) strong mapping requirements for certificate-based authentication. You should add the variable to user certificates that authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in user certificates for macOS, iOS, and Windows, and only works with the URI attribute.
 
      - **Device certificate type**
 
-        With the *device* certificate type, you can use any of the variables described in the *Device certificate type* section for Subject Name. 
+        With the *device* certificate type, you can use any of the variables described in the *Device certificate type* section for Subject Name.
 
-        To specify a value for an attribute, include the variable name with curly brackets, followed by the text for that variable. For example, a value for the DNS attribute can be added **{{AzureADDeviceId}}.domain.com** where *.domain.com* is the text. For a user named *User1* an Email address might appear as {{FullyQualifiedDomainName}}User1@Contoso.com.  
+        To specify a value for an attribute, include the variable name with curly brackets, followed by the text for that variable. For example, a value for the DNS attribute can be added **{{AzureADDeviceId}}.domain.com** where *.domain.com* is the text. For a user named *User1* an Email address might appear as {{FullyQualifiedDomainName}}User1@Contoso.com.
 
-        By using a combination of one or many of these variables and static text strings, you can create a custom subject alternative name format, such as **{{UserName}}-Home**.  
-        
-        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the Key Distribution Center's (KDC) strong mapping requirements for certificate-based authentication. You should add the variable to device certificates that authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.    
+        By using a combination of one or many of these variables and static text strings, you can create a custom subject alternative name format, such as **{{UserName}}-Home**.
+
+        Microsoft Intune also supports *OnPremisesSecurityIdentifier*, a variable that's compliant with the Key Distribution Center's (KDC) strong mapping requirements for certificate-based authentication. You should add the variable to device certificates that authenticate with the KDC. You can add the variable, formatted as **{{OnPremisesSecurityIdentifier}}**, to new and existing profiles in the Microsoft Intune admin center. This variable is supported in device certificates for Microsoft Entra hybrid joined devices, and only works with the URI attribute.
 
 
         > [!IMPORTANT]
@@ -324,7 +308,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
         > - When using a device certificate variable, enclose the variable name in double curly brackets {{ }}.
         > - Don't use curly brackets **{ }**, pipe symbols **|**, and semicolons **;**, in the text that follows the variable.
         > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
-        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the SAN of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.  
+        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the SAN of a SCEP profile and is assigned to a device that doesn't have an IMEI number, the profile fails to install.
 
    - **Certificate validity period**:
 
@@ -334,17 +318,17 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
      For example, if the certificate validity period in the certificate template is two years, you can enter a value of one year, but not a value of five years. The value must also be lower than the remaining validity period of the issuing CA's certificate.
 
-     Plan to use a validity period of five days or greater. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed.
+     Plan to use a validity period of five days or greater. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it's installed.
 
    - **Key storage provider (KSP)**:
 
-     *(Applies to:  Windows 8.1, and Windows 10/11)*
+     *(Applies to:  Windows)*
 
      Specify where the key to the certificate is stored. Choose from the following values:
 
      - **Enroll to Trusted Platform Module (TPM) KSP if present, otherwise Software KSP**
      - **Enroll to Trusted Platform Module (TPM) KSP, otherwise fail**
-     - **Enroll to Windows Hello for Business, otherwise fail (Windows 10 and later)**
+     - **Enroll to Windows Hello for Business, otherwise fail**
      - **Enroll to Software KSP**
 
    - **Key usage**:
@@ -375,16 +359,16 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
    - **Hash algorithm**:
 
-     *(Applies to Android, Android (AOSP), Android enterprise, Windows 8.1, and Windows 10/11)*
+     *(Applies to Android, Android (AOSP), Android enterprise, and Windows)*
 
      Select one of the available hash algorithm types to use with this certificate. Select the strongest level of security that the connecting devices support.
-     
-     NOTE: Android AOSP and Android Enterprise devices will select the strongest algorithm supported - SHA-1 will be ignored, and SHA-2 will be used instead. 
+
+     NOTE: Android AOSP and Android Enterprise devices will select the strongest algorithm supported - SHA-1 will be ignored, and SHA-2 will be used instead.
 
 
    - **Root Certificate**:
 
-     Select the *trusted certificate profile* you previously configured and assigned to applicable users and devices for this SCEP certificate profile. The trusted certificate profile is used to provision users and devices with the Trusted Root CA certificate. For information about the trusted certificate profile, see [Export your trusted root CA certificate](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*. 
+     Select the *trusted certificate profile* you previously configured and assigned to applicable users and devices for this SCEP certificate profile. The trusted certificate profile is used to provision users and devices with the Trusted Root CA certificate. For information about the trusted certificate profile, see [Export your trusted root CA certificate](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*.
      > [!NOTE]
      > If you have a multiple level PKI Infastructure, such as a Root Certification Authority and an Issuing Certification Authority, select the top level Trusted Root certificate profile that validates the Issuing Certification Authority.
 
@@ -395,7 +379,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
    - **Renewal threshold (%)**:
 
      Enter the percentage of the certificate lifetime that remains before the device requests renewal of the certificate. For example, if you enter 20, the renewal of the certificate will be attempted when the certificate is 80% expired. Renewal attempts continue until renewal is successful. Renewal generates a new certificate, which results in a new public/private key pair.
-     
+
      > [!NOTE]
      > Renewal behavior on iOS/iPadOS and macOS: Certificates can only be renewed during the renewal threshold phase. In addition, the device has to be unlocked while synching with Intune. If the renewal was not successful, the expired certificate will remain on the device and Intune does not trigger a renewal anymore. Also, Intune does not offer an option to redeploy expired certificates. Affected devices need to be excluded from the SCEP profile temporarily to remove the expired certificate and request a new one.
 
@@ -403,24 +387,24 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
      Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
 
-     To allow devices on the internet to get certificates, you must specify the NDES URL external to your corporate network.  
+     To allow devices on the internet to get certificates, you must specify the NDES URL external to your corporate network.
      The URL can be HTTP or HTTPS. However, to support the following devices, the SCEP Server URL must use HTTPS:
      - Android device administrator
      - Android Enterprise device owner
      - Android Enterprise corporate-owned work profile
      - Android Enterprise personally owned work profile
 
-     You can add additional SCEP URLs for load balancing as needed. Devices make three separate calls to the NDES server. The first is to get the servers capabilities, the next to get a public key, and then to submit a signing request. When you use multiple URLs, it's possible that load balancing might result in a different URL being used for subsequent calls to an NDES Server. If a different server is contacted for a subsequent call during the same request, the request will fail.  
+     You can add additional SCEP URLs for load balancing as needed. Devices make three separate calls to the NDES server. The first is to get the servers capabilities, the next to get a public key, and then to submit a signing request. When you use multiple URLs, it's possible that load balancing might result in a different URL being used for subsequent calls to an NDES Server. If a different server is contacted for a subsequent call during the same request, the request will fail.
 
      The behavior for managing the NDES server URL is specific to each device platform:
 
-     - **Android**: The device randomizes the list of URLs received in the SCEP policy, and then works through the list until an accessible NDES server is found. The device then continues to use that same URL and server through the entire process. If the device can’t access any of the NDES servers, the process fails.
-     - **iOS/iPadOS**: Intune randomizes the URLs and provides a single URL to a device. If the device can’t access the NDES server, the SCEP request fails.
-     - **Windows**: The list of NDES URLs is randomized and then passed to the Windows device, which then tries them in the order received, until one that's available is found. If the device can’t access any of the NDES servers, the process fails.
+     - **Android**: The device randomizes the list of URLs received in the SCEP policy, and then works through the list until an accessible NDES server is found. The device then continues to use that same URL and server through the entire process. If the device can't access any of the NDES servers, the process fails.
+     - **iOS/iPadOS**: Intune randomizes the URLs and provides a single URL to a device. If the device can't access the NDES server, the SCEP request fails.
+     - **Windows**: The list of NDES URLs is randomized and then passed to the Windows device, which then tries them in the order received, until one that's available is found. If the device can't access any of the NDES servers, the process fails.
 
-     If a device fails to reach the same NDES server successfully during any of the three calls to the NDES server, the SCEP request fails. For example, this might happen when a load-balancing solution provides a different URL for the second or third call to the NDES server, or provides a different actual NDES server based on a virtualized URL for NDES. After a failed request, a device tries the process again on its next policy cycle, starting with the randomized list of NDES URLs (or a single URL for iOS/iPadOS).  
+     If a device fails to reach the same NDES server successfully during any of the three calls to the NDES server, the SCEP request fails. For example, this might happen when a load-balancing solution provides a different URL for the second or third call to the NDES server, or provides a different actual NDES server based on a virtualized URL for NDES. After a failed request, a device tries the process again on its next policy cycle, starting with the randomized list of NDES URLs (or a single URL for iOS/iPadOS).
 
-8. This step applies only to **Android Enterprise** devices profiles for **Fully Managed, Dedicated, and Corporate-Owned work Profile**.  
+8. This step applies only to **Android Enterprise** devices profiles for **Fully Managed, Dedicated, and Corporate-Owned work Profile**.
 
    In **Apps**, configure **Certificate access** to manage how certificate access is granted to applications. Choose from:
 
@@ -433,7 +417,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
     Select **Next**.
 
-11. (*Applies to Windows 10/11 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+11. (*Applies to Windows only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
     For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
@@ -451,22 +435,22 @@ The special characters are:
 
 When your subject name includes one of the special characters, use one of the following options to work around this limitation:
 
-- Encapsulate the CN value that contains the special character with quotes.  
+- Encapsulate the CN value that contains the special character with quotes.
 - Remove the special character from the CN value.
 
-**For example**, you have a Subject Name that appears as *Test user (TestCompany, LLC)*. A CSR that includes a CN that has the comma between *TestCompany* and *LLC* presents a problem. The problem can be avoided by placing quotes around the entire CN, or by removing of the comma from between *TestCompany* and *LLC*:  
+**For example**, you have a Subject Name that appears as *Test user (TestCompany, LLC)*. A CSR that includes a CN that has the comma between *TestCompany* and *LLC* presents a problem. The problem can be avoided by placing quotes around the entire CN, or by removing of the comma from between *TestCompany* and *LLC*:
 
 - **Add quotes**: *CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **Remove the comma**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  However, attempts to escape the comma by using a backslash character will fail with an error in the CRP logs:
- 
+
 - **Escaped comma**: *CN=Test User (TestCompany\\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
 The error is similar to the following error:
 
 ```
-Subject Name in CSR CN="Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com" and challenge CN=Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com do not match  
+Subject Name in CSR CN="Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com" and challenge CN=Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com do not match
 
   Exception: System.ArgumentException: Subject Name in CSR and challenge do not match
 
@@ -494,12 +478,12 @@ Consider the following before you continue:
 
 - To publish a certificate to a device quickly after the device enrolls, assign the certificate profile to a user group rather than to a device group. If you assign to a device group, a full device registration is required before the device receives policies.
 
-- If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10/11 clients to start the process of requesting the certificate.
+- If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows clients to start the process of requesting the certificate.
 
 > [!NOTE]
 > - On iOS/iPadOS and macOS devices, when a SCEP certificate profile or a PKCS certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the device having multiple certificates delivered by the SCEP or PKCS certificate request.
 > - Certificates delivered by SCEP are each unique. Certificates delivered by PKCS are the same certificate, but appear different as each profile instance is represented by a separate line in the management profile.
-> - On iOS 13 and macOS 10.15, there are [additional security requirements that are documented by Apple](https://support.apple.com/HT210176) to take into consideration.  
+> - On iOS 13 and macOS 10.15, there are [additional security requirements that are documented by Apple](https://support.apple.com/HT210176) to take into consideration.
 
 ## Next steps
 

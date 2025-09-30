@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: View device details with Microsoft Intune
 description: View your device details, including operating systems, storage space, manufacturer, and model. Get a list of installed apps, check compliance policies, and set up TeamViewer with Microsoft Intune in Azure. Similar to viewing inventory of the devices you manage.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: dougeby
 ms.date: 01/14/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -110,7 +93,7 @@ Depending on the carrier used by the devices, not all details might be collected
 
  > [!NOTE]
  >
- > - For Windows 10 devices that are registered with [Windows Autopilot service](/autopilot/add-devices), Enrolled date displays the time when devices were registered with Windows Autopilot instead of the time when they were enrolled.
+ > - For Windows devices that are registered with [Windows Autopilot service](/autopilot/add-devices), Enrolled date displays the time when devices were registered with Windows Autopilot instead of the time when they were enrolled.
  > - For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases.
  > - For multi-SIM iOS/iPadOS devices, Intune has no control over which SIM data is assigned to the Service Subscription slots on the device for the ICCID, IMEI, MEID, and Phone number values. Intune only reports the first available values received from the device in the following order:
    > - CT Subscription Slot One

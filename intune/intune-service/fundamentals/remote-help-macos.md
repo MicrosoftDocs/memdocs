@@ -1,38 +1,19 @@
 ---
-# required metadata
-
 title: Using Remote Help on macOS to assist authenticated users.
-titleSuffix: Microsoft Intune 
 description: Use Remote Help to provide remote assistance to authenticated users and to troubleshoot for frontline workers (FLW).
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 04/02/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#CustomerIntent: As an IT admin, I want to use Remote Help on macOS so that we can troubleshoot and assist users such as Frontline Workers.
 ms.reviewer: Karawang
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
 - graph-interactive
 ---
- 
+
 # Remote Help on macOS with Microsoft Intune
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
@@ -80,7 +61,7 @@ Both helpers and sharers sign in to your organization using Microsoft Entra ID, 
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-For details about configuring and setting up of permissions, go to [Using Remote Help](remote-help.md#task-2-configure-permissions-for-remote-help). 
+For details about configuring and setting up of permissions, go to [Using Remote Help](remote-help.md#task-2-configure-permissions-for-remote-help).
 
 ## Remote Help requirements
 
@@ -91,6 +72,7 @@ General prerequisites for Remote Help are listed here [Prerequisites for Remote 
 - macOS 13 (Ventura)
 - macOS 14 (Sonoma)
 - macOS 15 (Sequoia)
+- macOS 26.0 (from version 1.0.2509231 of Remote Help and later)
 
 ### Remote Help Web App supported browsers
 
@@ -231,7 +213,7 @@ The Remote Help native app is available to download from Microsoft and must be i
 
 Download the latest version of Remote Help directly from Microsoft at https://aka.ms/downloadremotehelpmacos.
 
-The most recent version of Remote Help is **1.0.2404171**.
+The most recent version of Remote Help is **1.0.2509231**.
 
 ### Deploy Remote Help
 
@@ -313,7 +295,7 @@ As a helper, you can provide remote assistance to their device by providing them
 
 ## Known Issues
 
-- If the sharer exits from a Remote Help session early, the helper might not be notified for 60+ seconds.  
+- If the sharer exits from a Remote Help session early, the helper might not be notified for 60+ seconds.
 
 - If using Edge, the sharer might have to sign in to Edge before starting a session or the device reports as Unenrolled.
 

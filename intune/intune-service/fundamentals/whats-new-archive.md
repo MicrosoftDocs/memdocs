@@ -1,31 +1,14 @@
 ---
-# required metadata
 title: What's new in previous months in the Microsoft Intune
-titleSuffix:
 description: Review older announcements from the Intune what's new page
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 08/20/2025
 ms.topic: whats-new
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid: 9ba01d60-4a03-4e3e-9aba-8be905c0054c
-
-# optional metadata
 
 ROBOTS: NOINDEX,NOFOLLOW
-#audience:
-
 ms.reviewer: lebacon
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -123,7 +106,7 @@ Applies to:
 
 #### Manage the DefaultEnforcement configuration for Microsoft Defender Device Control on Windows devices<!-- 30253799 -->
 
-You can now use Intune to manage the configuration of the Microsoft Defender CSP for [DefaultEnforcement](/windows/client-management/mdm/defender-csp#configurationdefaultenforcement) for Device Control. 
+You can now use Intune to manage the configuration of the Microsoft Defender CSP for [DefaultEnforcement](/windows/client-management/mdm/defender-csp#configurationdefaultenforcement) for Device Control.
 
 DefaultEnforcement manages the configuration of Device Control:
 
@@ -372,7 +355,7 @@ There are no changes in the following UI experiences:
 - Adding, modifying, or deleting settings in an existing Administrative template.
 - **Imported Administrative templates (Preview)** template, which is used for Custom ADMX.
 
-For more information, see [Use ADMX templates on Windows 10/11 devices in Microsoft Intune](..\configuration\administrative-templates-windows.md).
+For more information, see [Use ADMX templates on Windows devices in Microsoft Intune](../configuration/administrative-templates-windows.md).
 
 Applies to:
 
@@ -570,8 +553,8 @@ For more information and steps, see [Update certificate connector: Strong mappin
 
 Applies to:
 
-- Windows 10/11, iOS/iPadOS, and macOS user certificates
-- Windows 10/11 device certificates
+- Windows, iOS/iPadOS, and macOS user certificates
+- Windows device certificates
 
 This requirement isn't applicable to device certificates used with Microsoft Entra joined users or devices, because the SID attribute is an on-premises identifier.
 
@@ -656,9 +639,9 @@ Applies to:
 
 #### Device Firmware Configuration Interface (DFCI) supports VAIO devices <!-- 28186944 -->
 
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+For Windows devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
-Some VAIO devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+Some VAIO devices running Windows are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
 For more information about DFCI profiles, see:
 
@@ -841,7 +824,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-For information about this new capability, see [Windows elevation rules policy](../protect/epm-policies.md) in the *Configure policies for Endpoint Privilege management* article.
+For information about this new capability, see [Windows elevation rules policy](../protect/epm-elevation-rules.md) in the *Configure policies for Endpoint Privilege management* article.
 
 #### Introducing the Resource performance report for physical devices in Advanced Analytics<!-- 12659827 -->
 
@@ -1545,7 +1528,7 @@ We've updated role-based access controls (RBAC) for all enrollment platform rest
 
 - Android
 - Apple
-- Windows 10/11
+- Windows
 
 It's important to know that with these changes:
 
@@ -1591,7 +1574,7 @@ You can prevent end users within your organization from accessing BitLocker reco
 Applies to:
 
 - macOS
-- Windows 10/11
+- Windows
 
 For more information, see:
 
@@ -1662,7 +1645,7 @@ To support the new primary endpoint on Windows devices, upgrade Remote Help to v
 Applies to:
 
 - macOS 11, 12, 13 and 14
-- Windows 10/11
+- Windows
 - Windows 11 on ARM64 devices
 - Windows 10 on ARM64 devices
 - Windows 365
@@ -1737,7 +1720,7 @@ For more information, see:
 
 #### New version of Windows hardware attestation report<!-- 15425680 -->
 
-We've released a new version of the Windows hardware attestation report that shows the value of settings attested by Device Health Attestation and Microsoft Azure Attestation for Windows 10/11. The Windows hardware attestation report is built on a new reporting infrastructure, and reports on new settings added to Microsoft Azure Attestation. The report is available in the admin center under **Reports** > **Device Compliance** > **Reports**.
+We've released a new version of the Windows hardware attestation report that shows the value of settings attested by Device Health Attestation and Microsoft Azure Attestation for Windows. The Windows hardware attestation report is built on a new reporting infrastructure, and reports on new settings added to Microsoft Azure Attestation. The report is available in the admin center under **Reports** > **Device Compliance** > **Reports**.
 
 For more information, see [Intune reports](reports.md#windows-hardware-attestation-report-organizational).
 
@@ -1938,7 +1921,7 @@ The Windows update distribution report in Intune provides a summarized report. T
 - The number of devices that are on each quality update level.
 - The percentage of coverage for each update across Intune managed devices, including co-managed devices.
 
-You can drill down further in the report for each quality update that aggregates devices based on the Windows 10/11 feature version and the update statuses.
+You can drill down further in the report for each quality update that aggregates devices based on the Windows feature version and the update statuses.
 
 Finally, the admins can get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
 
@@ -2035,8 +2018,8 @@ For more information on these features, see:
 
 Applies to:
 
-- Windows 10/11
-- Windows 10/11 on ARM64 devices
+- Windows
+- Windows on ARM64 devices
 - Windows 365
 - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
 
@@ -2202,7 +2185,7 @@ This feature applies to:
   - Android (AOSP)
   - iOS/iPadOS
   - macOS
-  - Windows 10/11
+  - Windows
 
 - **Managed apps** on the following platforms:
 
@@ -3252,7 +3235,7 @@ Applies to:
 For more information on these features, see:
 
 - [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
-- [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
+- [Use Windows templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
 - [What is FSLogix?](/fslogix/overview-what-is-fslogix)
 
 #### Use delegated scopes in your Managed Google Play apps that configure enhanced permissions on Android Enterprise devices<!-- 14029609  -->
@@ -3722,7 +3705,7 @@ With Remote Launch, the helper can launch Remote Help seamlessly on the helper a
 
 Applies to:
 
-- Windows 10/11
+- Windows
 
 For more information, see [Remote Help](remote-help-windows.md).
 
@@ -4106,7 +4089,7 @@ Applies to:
 
 - Windows 10 and later (excluding Windows 10 Home)
 
-For more information about using Windows PowerShell scripts in Intune, see [Use PowerShell scripts on Windows 10/11 devices in Intune](../apps/powershell-scripts.md).
+For more information about using Windows PowerShell scripts in Intune, see [Use PowerShell scripts on Windows devices in Intune](../apps/powershell-scripts.md).
 
 ### Device configuration
 
@@ -4164,10 +4147,10 @@ Intune now supports use of endpoint security [Antivirus policy](../protect/endpo
 #### EpmTools PowerShell module for Endpoint Privilege Management<!-- 22800379  -->
 The EpmTools PowerShell module is now available for use with Intune Endpoint Privilege Management (EPM). EpmTools includes the cmdlets like **Get-FileAttributes** that you can use to retrieve file details to help build accurate elevation rules, and other cmdlets you can use to troubleshoot or diagnose EPM policy deployments.
 
-For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
+For more information, see [EpmTools PowerShell module](../protect/epm-plan.md#epmtools-powershell-module).
 
 #### Endpoint Privilege Management support to manage elevation rules for child processes<!-- 15931887 -->
-With Intune Endpoint Privilege Management (EPM) you can manage which files and processes are allowed to *Run as Administrator* on your Windows devices.  Now, EPM [elevation rules](../protect/epm-policies.md#windows-elevation-rules-policy) support a new setting, **Child process behavior**.
+With Intune Endpoint Privilege Management (EPM) you can manage which files and processes are allowed to *Run as Administrator* on your Windows devices.  Now, EPM [elevation rules](../protect/epm-elevation-rules.md#controlling-child-process-behavior) support a new setting, **Child process behavior**.
 
 With *Child process behavior*, your rules can manage the elevation context for any child processes created by the managed process. Options include:
 
@@ -4372,9 +4355,9 @@ A new setting is available in the Settings Catalog. In the [Microsoft Intune adm
 - UseKeyChain
 
 #### Device Firmware Configuration Interface (DFCI) supports Asus devices <!-- 10249874 -->
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+For Windows devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
-Some Asus devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+Some Asus devices running Windows are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
 For more information about DFCI profiles, see:
 
@@ -4426,7 +4409,7 @@ Applies to:
 #### Endpoint analytics is available to tenants in Government cloud<!-- 8527244  -->
 With this release, Endpoint analytics is available to tenants in Government cloud.
 
-Learn more about [Endpoint analytics](../../analytics/overview.md).
+Learn more about [endpoint analytics](../../analytics/index.md).
 
 #### Introducing in-session connection mode switch in Remote Help<!-- 10602971  -->
 In Remote Help, you can now take advantage of the in-session connection mode switch feature. This feature can help effortlessly transition between full control and view-only modes, granting flexibility and convenience.
@@ -4435,7 +4418,7 @@ For more information on Remote Help, see [Remote Help](remote-help.md).
 
 Applies to:
 
-- Windows 10/11
+- Windows
 
 ### Device security
 
@@ -4543,7 +4526,7 @@ Applies to:
 #### Intune UI displays Windows Server devices as distinct from Windows clients for the Security Management for Microsoft Defender for Endpoint scenario<!-- 16882836 -->
 To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune now differentiates Windows devices in Microsoft Entra ID as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
 
-With this change, you can improve policy targeting for MDE security configuration. For example, you can use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).
+With this change, you can improve policy targeting for MDE security configuration. For example, you can use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows).
 
 For more information about this change, see the Intune Customer Success blog [Windows Server devices now recognized as a new OS in Microsoft Intune, Microsoft Entra ID, and Defender for Endpoint
 ](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-server-devices-will-now-be-identified-as-a/ba-p/3767773).
@@ -4601,7 +4584,7 @@ For more information on Remote Help, see [Remote Help](remote-help.md).
 
 Applies to:
 
-- Windows 10/11
+- Windows
 
 #### Remote Help administrators can reference audit log sessions<!-- 9052185  -->
 For Remote Help, in addition to existing session reports, administrators can now reference audit logs sessions created in Intune. This feature enables administrators to reference past events for troubleshooting and analyzing log activities.
@@ -4635,7 +4618,7 @@ Visual Studio settings are included in the Settings Catalog and Administrative T
 For more information on these policy types, see:
 
 - [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
-- [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
+- [Use Windows templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
 - [Visual Studio Administrative Templates (ADMX)](/visualstudio/install/administrative-templates)
 
 Applies to:
@@ -4794,9 +4777,9 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Device configuration
 
 #### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859 -->
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+For Windows devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
-Some Dynabook devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+Some Dynabook devices running Windows are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
 For more information about DFCI profiles, see:
 
@@ -5047,7 +5030,7 @@ For more information, see the following articles in the Windows Defender Applica
 
 Applies to:
 
-- Windows 10/11
+- Windows
 
 #### New App and browser isolation profile for Intune's endpoint security Attack Surface Reduction policy<!-- 17392386  -->
 We have released a new experience creating new *App and Browser Isolation* profiles for endpoint security Attack Surface Reduction policy. The experience for editing your previously created App and Browser isolation policies remains the same, and you can continue to use them. This update applies only for the new [App and Browser Isolation](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles) policies you create for the *Windows 10 and later* platform.

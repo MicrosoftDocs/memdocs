@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: Planning guide to move to Microsoft Intune
 description: Plan, design, implement, adopt, and move to Microsoft Intune. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
-keywords: mobile device management migration guide, migration guide, intune planning and configuration spreadsheet, intune deployment planning, design and implementation guide, intune deployment project plan
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/21/2025
 ms.topic: upgrade-and-migration-article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: get-started
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -270,7 +253,7 @@ As a best practice, always assume data will leave the device. Be sure your track
 
 ### Manage desktop computers
 
-Intune can manage desktop computers running Windows 10 and newer. The Windows client OS includes built-in modern device management features, and removes dependencies on local Active Directory (AD) group policy. You get the benefits of the cloud when creating rules and settings in Intune, and deploying these policies to all your Windows client devices, including desktop computers and PCs.
+Intune can manage desktop computers running Windows. The Windows client OS includes built-in modern device management features, and removes dependencies on local Active Directory (AD) group policy. You get the benefits of the cloud when creating rules and settings in Intune, and deploying these policies to all your Windows client devices, including desktop computers and PCs.
 
 For more information, go to [Guided scenario - Cloud-managed Modern Desktop](guided-scenarios-cloud-managed-pc.md).
 
@@ -330,7 +313,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Microsoft Purview** (included in the **Microsoft 365 E5** license) classifies and protects documents and emails by applying labels. On Microsoft 365 apps, you can use this service to [prevent unauthorized access to organization data](/microsoft-365/compliance/information-protection), including apps on personal devices.
 
-- **[Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.  
+- **[Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
 
   Copilot in Intune is licensed through Microsoft Security Copilot. For more information, go to [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 
@@ -414,8 +397,7 @@ Some considerations:
 
     [Settings insight](settings-insight.md) provides confidence in configurations by adding insights that similar organizations successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](settings-insight.md).
 
-  - **Settings catalog**: On Apple and Windows client devices, the [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure and looks similar to on-premises GPOs. When you create the policy, you start from scratch and configure settings at a granular level.
-  - **Administrative templates (ADMX)**: On Windows client devices, use [ADMX templates](../configuration/administrative-templates-windows.md) to configure group policy settings for Windows, Internet Explorer, Office, and Microsoft Edge version 77 and later. These ADMX templates are the same ADMX templates used in on-premises AD group policy, but are 100% cloud-based in Intune.
+  - **Settings catalog**: The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure and looks similar to on-premises GPOs and ADMX templates. When you create the policy, you start from scratch and configure settings at a granular level.
   - **Group policy**: Use [group policy analytics](../configuration/group-policy-analytics.md) to import and analyze your GPOs. This feature helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
 
     You can also create an Intune policy based on your imported settings. For more information, go to [Create a settings catalog policy using your imported GPOs](../configuration/group-policy-analytics-migrate.md).

@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "intune/analytics/overview.md",
+      "redirect_url": "/intune/analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/windows-information-protection-configure.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/developer/mam-tunnel-ios-xamarin-bindings.md",
       "redirect_url": "/intune/intune-service/developer/app-sdk-get-started",
       "redirect_document_id": false
@@ -87,7 +97,7 @@
     },
     {
       "source_path": "intune/intune/apps/app-protection-policies-configure-windows-10.md",
-      "redirect_url": "/intune/intune-service/apps/app-protection-policies-configure-windows-10",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
       "redirect_document_id": false
     },
     {
@@ -497,7 +507,7 @@
     },
     {
       "source_path": "intune/intune/apps/windows-information-protection-policy-create.md",
-      "redirect_url": "/intune/intune-service/apps/windows-information-protection-policy-create",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
       "redirect_document_id": false
     },
     {
@@ -3227,7 +3237,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-information-protection-configure.md",
-      "redirect_url": "/intune/intune-service/protect/windows-information-protection-configure",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip",
       "redirect_document_id": false
     },
     {

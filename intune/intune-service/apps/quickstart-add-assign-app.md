@@ -1,32 +1,10 @@
 ---
-# required metadata
-
 title: Add and assign an app
-titleSuffix: Microsoft Intune
 description: In this article, you'll use Microsoft Intune to add and assign an app.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 02/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - FocusArea_Apps_Add
 ---
@@ -54,11 +32,11 @@ If you created an Intune Trial subscription, the account that created the subscr
 
 ## Add the app to Intune
 
-An app can be included so that Intune can manage aspects of the app. 
+An app can be included so that Intune can manage aspects of the app.
 
 Use the following steps to add an app to Intune:
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Create**. 
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Create**.
 2. In the **App type** drop-down box, select **Windows 10 and later** from **Microsoft 365 Apps**.
 3. Click **Select**. The **Add app** steps are displayed.
 4. Confirm the default details in the **App suite information** step and click **Next**.
@@ -76,11 +54,11 @@ After you've added an app to Microsoft Intune, you can assign the app to additio
 
 Use the following steps to assign an app to a group:
 
-1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All Apps**. 
+1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **All Apps**.
 2. Select the app that you want to assign to a group.
-3. Click **Properties**. Next to **Assignments** click **Edit**. 
+3. Click **Properties**. Next to **Assignments** click **Edit**.
 5. Click **Add Group** under the **Required** section. The **Select group** pane is displayed.
-6. Find the group that you need to added and click **Select** at the bottom of the pane. 
+6. Find the group that you need to added and click **Select** at the bottom of the pane.
 1. Click **Review + save** > **Save** to assign the group.
 
 You now have assigned the app to an additional group.
