@@ -35,7 +35,7 @@
       "breadcrumb_path": "/intune/breadcrumb/toc.json",
       "uhfHeaderId": "MSDocsHeader-Intune",
       "feedback_system": "Standard",
-      "brand": "Microsoft Intune",
+      "brand": "azure",
       "searchScope": ["Intune"],
       "ms.suite": "ems",
       "ms.service": "microsoft-intune",
@@ -101,7 +101,7 @@
         "configmgr/**/*.md": ["ConfigMgr"],
         "configmgr/**/*.yml": ["ConfigMgr"],
         "configmgr/core/**/*.md": ["ConfigMgr"],
-        "analytics/**/*.md": ["Analytics"],
+        "analytics/**/*.md": ["Intune","Analytics"],
         "intune-service/user-help/**/*.md": ["User help"]
       },
       "featureFlags": {
