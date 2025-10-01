@@ -2247,7 +2247,7 @@ The remote action **Pause configuration refresh** can be accessed from the devic
 
 For more information, see:
 
-- [Remote actions](../remote-actions/device-management.md)
+- [Remote actions](../remote-actions/index.md)
 - [Pause Config Refresh Remote action](../remote-actions/pause-config-refresh.md)
 
 ### Device security
@@ -4409,7 +4409,7 @@ Applies to:
 #### Endpoint analytics is available to tenants in Government cloud<!-- 8527244  -->
 With this release, Endpoint analytics is available to tenants in Government cloud.
 
-Learn more about [Endpoint analytics](../../analytics/overview.md).
+Learn more about [endpoint analytics](../../analytics/index.md).
 
 #### Introducing in-session connection mode switch in Remote Help<!-- 10602971  -->
 In Remote Help, you can now take advantage of the in-session connection mode switch feature. This feature can help effortlessly transition between full control and view-only modes, granting flexibility and convenience.

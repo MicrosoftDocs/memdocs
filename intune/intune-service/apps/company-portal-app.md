@@ -277,7 +277,7 @@ Some platforms and configurations don't support self-service device actions. Thi
 <sup>(3)</sup> All remote actions are disabled if using a Device Enrollment Manager enrollment.<br>
 <sup>(4)</sup> **Rename** only changes the device name in the Company Portal app or Web Portal, not on the device.<br>
 <sup>(5)</sup> **Wipe** isn't available on User Enrolled iOS/iPadOS devices.<br>
-<sup>(6)</sup> **Reset Passcode** isn't supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
+<sup>(6)</sup> **Reset Passcode** isn't supported on some Android and Android Enterprise configurations. For more information, see [Reset a device passcode using Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **Retire** and **Wipe** aren't available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br>
 <sup>(8)</sup> **Reset Passcode** isn't supported on User Enrolled iOS/iPadOS devices.<br>
 <sup>(9)</sup>All iOS/iPadOS Automated Device Enrollment devices (formerly known as DEP)  have **Retire** and **Wipe** options disabled.
@@ -297,7 +297,7 @@ The Company Portal app stores and displays push notifications sent to your users
 
 Notifications from the iOS/iPadOS Company Portal app are now delivered to devices using the default Apple sound, rather than being delivered silently. To turn the notification sound off from the iOS/iPadOS Company Portal app, select **Settings** > **Notifications** > **Comp Portal** and select the **Sound** toggle.
 
-For more information about notifications, see [Receive a custom notification](../remote-actions/custom-notifications.md#receive-a-custom-notification).
+For more information about notifications, see [Receive a custom notification](../remote-actions/custom-notifications.md).
 
 ## Configure feedback settings for Company Portal and Microsoft Intune apps
 

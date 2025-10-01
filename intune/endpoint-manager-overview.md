@@ -169,7 +169,7 @@ You can use Endpoint Analytics on devices that are managed with Intune or Config
 
 For more information, go to:
 
-- [What is Endpoint analytics?](./analytics/overview.md)
+- [Endpoint analytics overview](./analytics/index.md)
 - [Endpoint analytics scores, baselines, and insights](./analytics/scores.md)
 - [Tutorial: Walkthrough the Microsoft Intune admin center](./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md)
 - [Quickstart - Enroll Configuration Manager devices](./analytics/enroll-configmgr.md)
