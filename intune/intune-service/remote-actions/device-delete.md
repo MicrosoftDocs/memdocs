@@ -3,9 +3,6 @@ title: "Remote Device Action: Delete"
 description: Learn how to delete devices with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- highpri
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 

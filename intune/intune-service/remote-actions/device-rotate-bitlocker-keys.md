@@ -3,9 +3,6 @@ title: "Remote Device Action: BitLocker Key Rotation"
 description: Learn how to rotate the BitLocker recovery key with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- highpri
 ---
 
 # Remote device action: BitLocker key rotation

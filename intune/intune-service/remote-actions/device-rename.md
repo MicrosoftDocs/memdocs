@@ -3,11 +3,6 @@ title: "Remote Device Action: Rename Device"
 description: Learn how to use the Rename device remote action in Microsoft Intune to update the device name shown in the admin center. Useful for standardizing naming conventions, managing shared devices, and improving inventory clarity.
 ms.date: 09/22/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.reviewer: Elcox
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 

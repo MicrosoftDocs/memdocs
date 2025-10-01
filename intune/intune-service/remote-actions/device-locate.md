@@ -4,9 +4,6 @@ description: Locate lost or stolen devices by using the locate device feature in
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.reviewer: shsivaku
-ms.collection:
-- M365-identity-device-management
-- highpri
 zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 ---
 

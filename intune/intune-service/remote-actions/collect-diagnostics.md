@@ -4,8 +4,6 @@ description: Learn how to collect diagnostics with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.reviewer: jlynn
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 ---
 
