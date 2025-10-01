@@ -124,6 +124,10 @@ The reports for Firewall policy display status details about the firewall status
 
 - Windows
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+
 ### Summary
 
 Summary is the default view when you open the Firewall node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** > **Summary**.

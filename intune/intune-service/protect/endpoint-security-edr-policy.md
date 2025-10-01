@@ -27,6 +27,9 @@ Applies to:
 - Windows
 - Windows Server 2012 R2 and later *(when managed by Configuration Manager through the [tenant attach](../protect/tenant-attach-intune.md) scenario, or through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 ## About Intune policy for endpoint detection and response
 
 Intune's endpoint detection and response policies include platform-specific profiles to manage the onboarding installation of Microsoft Defender for Endpoint. Each profile includes an *onboarding package* that applies to the device platform that the policy targets. Onboarding packages are how devices are configured to work with Microsoft Defender for Endpoint. After a device onboards, you can start to use threat data from that device.

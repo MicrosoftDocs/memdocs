@@ -32,6 +32,9 @@ The settings in this article apply to:
 
 - Windows
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 Supported platforms and profiles:
 
 - **Windows 10 and later**:

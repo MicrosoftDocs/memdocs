@@ -43,6 +43,10 @@ Applies to:
 
 - Windows
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+
 ## Prerequisites
 
 ### Devices
@@ -257,7 +261,7 @@ After you create an [App Control for Business policy](#create-an-app-control-for
 
 Use the following procedure to help you create a successful App Control for Business policy. This policy is considered a *base* policy if you go on to create [supplemental policies](#use-supplemental-policy) to expand the scope of trust you define with this policy.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **App Control for Business** > select the **App Control for Business** tab > and then select **Create Policy**. App Control for Business policies are automatically assigned to a platform type of *Windows 10 and later*.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **App Control for Business** > select the **App Control for Business** tab > and then select **Create Policy**. App Control for Business policies are automatically assigned a platform type.
 
    :::image type="content" source="./media/endpoint-security-app-control-policy/create-app-control-policy.png" alt-text="Screen capture that shows the path in the admin center to create a new App Control for Business policy." lightbox="./media/endpoint-security-app-control-policy/create-app-control-policy.png":::
 

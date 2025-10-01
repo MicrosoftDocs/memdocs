@@ -21,8 +21,8 @@ Applies to:
 - macOS
 - Windows
 
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!NOTE]
 >
