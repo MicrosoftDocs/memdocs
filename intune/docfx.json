@@ -35,7 +35,7 @@
       "breadcrumb_path": "/intune/breadcrumb/toc.json",
       "uhfHeaderId": "MSDocsHeader-Intune",
       "feedback_system": "Standard",
-      "brand": "azure",
+      "brand": "Microsoft Intune",
       "searchScope": ["Intune"],
       "ms.suite": "ems",
       "ms.service": "microsoft-intune",
