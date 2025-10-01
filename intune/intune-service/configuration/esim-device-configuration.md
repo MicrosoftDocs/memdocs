@@ -1,6 +1,7 @@
 ---
 title: Enable eSIM data connections in Microsoft Intune
 description: Add or use eSIM to get internet and data access using different data plans. In Intune, add or import activation codes, and then assign these activation codes using a configuration profile. You can also monitor the eSIM profiles and check the status of the eSIM-enabled devices.
+keywords:
 author: MandiOhlinger
 ms.author: mandia
 ms.date: 06/25/2024
@@ -182,9 +183,9 @@ When you remove the device from the Microsoft Entra group, the eSIM profile is a
 
 The eSIM profile is also removed when:
 
-- The device is [retired](../remote-actions/devices-wipe.md#retire).
+- The device is [retired](../remote-actions/device-retire.md).
 - The user unenrolls the device from Intune.
-- The [reset device remote action](../remote-actions/devices-wipe.md#wipe) runs on the device.
+- The [reset device remote action](../remote-actions/device-wipe.md) runs on the device.
 
 > [!NOTE]
 > Removing the profile might not stop billing. Contact your mobile operator to check the billing status for your device.

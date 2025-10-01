@@ -225,7 +225,7 @@ The following table describes the Setup Assistant screens shown during automated
 | Setup Assistant screen | What happens when visible  |
 |------------------------------------------|------------------------------------------|
 | **Location Services** | Shows the location services setup pane, where users can enable location services on their device. For macOS 10.11 and later. |
-| **Restore** | Shows the apps and data setup pane. On this screen, users setting up devices can restore or transfer data from iCloud Backup. For macOS 10.9-15.3. For macOS 15.4 and later, this screen cannot be hidden and the user receives an alert after enrollment that they’re unable to transfer data from another device because MDM controls the setting. |
+| **Restore** | Shows the apps and data setup pane. On this screen, users setting up devices can restore or transfer data from iCloud Backup. For macOS 10.9-15.3. For macOS 15.4 and later, this screen cannot be hidden and the user receives an alert after enrollment that they're unable to transfer data from another device because MDM controls the setting. |
 | **Apple ID** | Shows the Apple ID setup pane, which gives users to the option to sign in with their Apple ID and use iCloud. For macOS 10.9 and later.   |
 | **Terms and conditions** |Shows the Apple terms and conditions pane, and requires users to accept them. For macOS 10.9 and later. |
 | **Touch ID and Face ID** | Shows the biometric setup pane, which gives users the option to set up fingerprint or facial identification on their devices. For macOS 10.12.4 and later. |
@@ -321,4 +321,4 @@ Complete these steps to renew a server token that's about to expire. This proced
 
 ## Next steps
 
-Use [Microsoft Intune remote actions](../remote-actions/device-management.md) to remotely manage enrolled Macs.
+Use [Remote Device Actions In Microsoft Intune](../remote-actions/index.md) to remotely manage enrolled Macs.

@@ -78,7 +78,7 @@ The following Windows 10 desktop device remote actions aren't supported/recommen
 
 ### Retirement
 
-Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
+Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../fundamentals/device-cleanup-rules.md) according to the cleanup rules configured for the tenant.
 
 ### Known issues
 
