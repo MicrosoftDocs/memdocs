@@ -29,6 +29,10 @@ Applies to:
 
 - Windows
 
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+
 Supported platforms and profiles:
 
 - **Windows**: Use this platform for policy you deploy to Windows devices managed with Intune.

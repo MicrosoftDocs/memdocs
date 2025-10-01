@@ -32,11 +32,14 @@ Applies to:
 - macOS
 - Windows
 
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 Supported platforms and profiles:
 
 - **macOS**:
   - Profile: **FileVault**
-- **Windows 10 and later**:
+- **Windows**:
   - Profile: **BitLocker**
 
 ## FileVault

@@ -25,8 +25,7 @@ This overview provides information about EPM including the benefits, how it work
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 ## Key Features and Benefits
 

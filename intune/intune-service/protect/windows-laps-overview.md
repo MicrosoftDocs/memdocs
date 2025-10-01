@@ -46,8 +46,7 @@ To learn about Windows LAPS in more detail, start with the following articles in
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 ## Prerequisites
 
@@ -95,6 +94,10 @@ Devices can have any [Windows edition that Intune supports](../fundamentals/supp
 - Windows 10, version 21H2 (19044.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
 - Windows 10, version 20H2 (19042.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
 - Windows 10 Enterprise LTSC 2019 and [later LTSC versions](/windows-server/identity/laps/laps-overview#windows-laps-supported-platforms)
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 ### GCC High support
 
