@@ -94,7 +94,7 @@ Remember, if the OS updates can't be forced or controlled, which is common on pe
 For more information on these features, go to:
 
 - [Conditional launch actions with app protection policies in Intune](../apps/app-protection-policies-access-actions.md)
-- [Using custom notifications in Intune](../remote-actions/custom-notifications.md#considerations-for-using-custom-notifications)
+- [Using custom notifications in Intune](../remote-actions/custom-notifications.md)
 
 ## Related articles
 

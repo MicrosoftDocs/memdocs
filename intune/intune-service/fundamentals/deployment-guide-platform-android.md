@@ -183,7 +183,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
 | Task | Detail |
 | ---- | ------ |
-|[Run remote actions in Intune](../remote-actions/device-management.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.|
+|[Run remote actions in Intune](../remote-actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.|
 |[Remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender's threat and vulnerability management, and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
 | [Wipe corporate data from Intune-managed apps](../apps/apps-selective-wipe.md) | Selectively remove work-related data from a device. |
 

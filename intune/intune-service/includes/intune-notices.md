@@ -46,7 +46,10 @@ Plan to make the changes below before **December 15, 2025**:
 - For tenants with policies targeted to Android apps: 
   - Notify your users that they need to upgrade to the latest version (v5.0.6726.0) of the [Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) app. 
   - Additionally, you have the option to enable the following [Conditional Launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) device condition setting: 
-    - The **Min Company Portal version** setting to warn users using a Company Portal app version older than 5.0.6726.0. 
+    - The **Min Company Portal version** setting to warn users using a Company Portal app version older than 5.0.6726.0.
+   
+> [!NOTE]
+> Use Conditional Access policy to ensure that only apps with app protection policies can access corporate resources. For more information, refer to the [documentation](/entra/identity/conditional-access/policy-all-users-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices) on creating Conditional Access policies.
 
 ### Update firewall configurations to include new Intune network endpoints
 
