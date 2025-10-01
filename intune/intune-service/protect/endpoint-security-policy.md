@@ -40,13 +40,13 @@ Following are brief descriptions of each endpoint security policy type. To learn
 
 - [App Control for Business (Preview)](../protect/endpoint-security-app-control-policy.md) - Manage approved apps for Windows devices with App Control for Business policy and Managed Installers for Microsoft Intune. Intune App Control for Business policies are an implementation of Windows Defender Application Control (WDAC).
 
-- [Attack surface reduction](../protect/endpoint-security-asr-policy.md) - When Defender antivirus is in use on your Windows 10/11 devices, use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
+- [Attack surface reduction](../protect/endpoint-security-asr-policy.md) - When Defender antivirus is in use on your Windows devices, use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
 
 - [Disk encryption](../protect/endpoint-security-disk-encryption-policy.md) - Endpoint security Disk encryption profiles focus on only the settings that are relevant for a devices built-in encryption method, like FileVault, BitLocker, and Personal Data Encryption (for Windows). This focus makes it easy for security admins to manage disk or folder level encryption settings without having to navigate a host of unrelated settings.
 
 - [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) - When you integrate Microsoft Defender for Endpoint with Intune, use the endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender for Endpoint.
 
-- [Firewall](../protect/endpoint-security-firewall-policy.md) - Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10/11.
+- [Firewall](../protect/endpoint-security-firewall-policy.md) - Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows.
 
 The following sections apply to all of the endpoint security policies.
 
