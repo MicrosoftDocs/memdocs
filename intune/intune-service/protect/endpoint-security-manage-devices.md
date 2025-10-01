@@ -136,6 +136,9 @@ The following Intune remote actions are of interest to the security admin, and a
 
 - [BitLocker key rotation](../protect/encrypt-devices.md#to-rotate-the-bitlocker-recovery-key) – Remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later, or Windows 11.
 
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 You can also use *bulk device actions* to manage some actions like *Retire* and *Wipe* for multiple devices at the same time. To learn more, see [bulk device actions](../remote-actions/index.md#bulk-device-actions).
 
 ![Select bulk actions](./media/endpoint-security-manage-devices/select-bulk-actions.png)

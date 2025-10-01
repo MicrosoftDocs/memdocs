@@ -24,7 +24,6 @@ Applies to:
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
-
 > [!NOTE]
 >
 > Beginning on April 5, 2022, the Firewall profiles for the *Windows 10 and later* platform were replaced by the *Windows* platform and new instances of those same profiles. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
@@ -38,7 +37,7 @@ Supported platforms and profiles:
 - **macOS**:
   - Profile: **macOS firewall**
 
-- **Windows 10 and later**:
+- **Windows**:
   - Profile: **Windows Firewall**
 
 ## macOS firewall profile
