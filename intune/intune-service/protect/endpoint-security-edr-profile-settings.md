@@ -14,6 +14,9 @@ ms.reviewer: mattcall
 ---
 # Endpoint detection and response policy settings for endpoint security in Intune
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 > [!NOTE]
 >
 > The information in this article applies only to the settings in the Endpoint detection and response profile for the *Windows 10 and later* platform for endpoint security Endpoint detection and response policy.
@@ -24,12 +27,15 @@ View the settings you can configure in profiles for [Endpoint detection and resp
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 Supported platforms and profiles:
 
-- **Windows**: Use this platform for policy you deploy to Windows 10 and Windows 11 devices managed with Intune.
+- **Windows**: Use this platform for policy you deploy to Windows devices managed with Intune.
   - Profile: **Endpoint detection and response (MDM)**
 
 - **Windows (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.

@@ -133,7 +133,7 @@ The following remote actions are available for Apple devices:
 * Remove passcode
 * Revoke licenses
 
-You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).
+You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/device-wipe.md).
 
 
 ### Troubleshooting + Support

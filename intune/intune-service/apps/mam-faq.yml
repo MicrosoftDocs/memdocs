@@ -151,7 +151,7 @@ sections:
 
       - question: What is wipe?
         answer: |
-           [Wipe](../remote-actions/devices-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
+           [Wipe](../remote-actions/device-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
             >[!NOTE]
             > Wipe can only be achieved on devices enrolled with Intune mobile device management (MDM).
 

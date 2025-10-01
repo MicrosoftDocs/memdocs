@@ -28,9 +28,12 @@ Applies to:
 
 - Linux
 - macOS
-- Windows 10
-- Windows 11
+- Windows
 - Windows Server *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 ## Prerequisites for antivirus policy
 
@@ -64,7 +67,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 Tamper protection is available for devices that are running one of the following operating systems:
 
 - macOS (any supported version)
-- Windows 10 and 11 (including Enterprise multi-session)
+- Windows (including Enterprise multi-session)
 - Windows Server version 1803 or later, Windows Server 2019, Windows Server 2022
 - Windows Server 2012 R2 and Windows Server 2016 ([using the modern, unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution))
 
@@ -86,7 +89,7 @@ Profiles for *Antivirus* policy that support tamper protection for [devices mana
   - Profile: **Windows Security experience**
 
   > [!NOTE]
-  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform.
+  > On April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform.
   >
   > The *Windows* platform supports devices communicating with Intune through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which isn't supported through Microsoft Intune natively.
   >
@@ -123,7 +126,7 @@ The following profiles are supported for devices you manage with Intune:
 
   Antivirus exclusions are also managed by Microsoft Defender Antivirus policy, which includes identical settings for exclusions, and from other policies like Intune's Endpoint detection and response profile for [Microsoft Defender Global Exclusions (AV+EDR)](../protect/endpoint-security-edr-policy.md#linux) for Linux, which includes both EDR and Antivirus exclusions. Settings from multiple sources are subject to policy merge, and create a super set of exclusions for applicable devices and users.
 
-  > [IMPORTANT]
+  > [!IMPORTANT]
   > The *Microsoft Defender Global Exclusions (AV+EDR)* profile is supported only for Linux devices managed by Defender through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
 
   For more information about Linux exclusions, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-exclusions) in the Microsoft Defender documentation.
@@ -142,7 +145,7 @@ The following profiles are supported for devices you manage with Intune:
   Profiles for this platform can be used with devices enrolled with Intune, and devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
   > [!NOTE]
-  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform.
+  > On April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform.
   >
   > The *Windows* platform supports devices communicating with Intune through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which isn't supported through Microsoft Intune natively.
   >

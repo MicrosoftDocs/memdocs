@@ -191,26 +191,8 @@ items:
       - name: Troubleshooting Remote Help on Android
         href: ./fundamentals/remote-help-android-troubleshoot.md
 
-    - name: Advanced Analytics
-      items:
-      - name: What is Advanced Analytics?
-        href: ../analytics/advanced-endpoint-analytics.md
-      - name: Anomaly detection
-        href: ../analytics/anomaly-detection.md
-      - name: Enhanced device timeline
-        href: ../analytics/enhanced-device-timeline.md
-      - name: Device scopes
-        href: ../analytics/device-scopes.md
-      - name: Device query
-        href: ../analytics/device-query.md
-      - name: Device query for multiple devices
-        href: ../analytics/device-query-multiple-devices.md
-      - name: Data platform schema
-        href: ../analytics/data-platform-schema.md
-      - name: Battery health
-        href: ../analytics/battery-health.md
-      - name: Resource Performance
-        href: ../analytics/resource-performance-report.md
+    - name: Advanced analytics
+      href: ../analytics/advanced/toc.yml
 
   - name: Plan and prepare for Intune
     items:
@@ -1314,7 +1296,7 @@ items:
             displayName: wifi, wireless, psk, oma-uri, eap, android, windows
           - name: Troubleshoot Wi-Fi
             displayName: wifi, wireless, android, ios, ipados, macos, windows, holographic
-            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles 
+            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles
         - name: BIOS & DFCI on Windows
           items:
           - name: Configure the BIOS
@@ -1598,36 +1580,18 @@ items:
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
       - name: Configure enrollment features
         items:
-        - name: Get Apple MDM push certificate
-          href: ./enrollment/apple-mdm-push-certificate-get.md
-          displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment
-        - name: Turn on iOS/iPadOS supervised mode
-          href: ./enrollment/device-supervised-mode.md
-        - name: Configure Chrome Enterprise connector
-          href: ./enrollment/chrome-enterprise-connector-configure.md
-          displayName: chrome os; connector; device management; google admin
         - name: Add corporate identifiers
           href: ./enrollment/corporate-identifiers-add.md
           displayName: COD; corporate owned; IMEI; device ownership; serial
+        - name: Add device categories
+          href: ./enrollment/device-group-mapping.md
+          displayName: group; category; categorize; security group
         - name: Add device enrollment manager
           href: ./enrollment/device-enrollment-manager-enroll.md
           displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
-        - name: Enable Windows backup and restore
-          href: ./enrollment/windows-backup-restore.md
-        - name: Add device categories
-          href: ./enrollment/device-group-mapping.md
-          displayName: group; category; categorize; security group;
-        - name: Require multifactor authentication
-          href: ./enrollment/multi-factor-authentication.md
-          displayName: multi-factor; enrollment; MFA; verification; Conditional Access
-        - name: Create terms and conditions policy
-          href: ./enrollment/terms-and-conditions-create.md
-          displayName: intune; enrollment; terms and conditions; policy
-        - name: Set up enrollment notifications
-          href: ./enrollment/enrollment-notifications.md
-        - name: Set up enrollment time grouping
-          href: ./enrollment/enrollment-time-grouping.md
-          displayName: enrollment time grouping; security groups; Entra
+        - name: Configure Chrome Enterprise connector
+          href: ./enrollment/chrome-enterprise-connector-configure.md
+          displayName: chrome os; connector; device management; google admin
         - name: Configure device enrollment restrictions
           items:
           - name: Overview
@@ -1638,6 +1602,24 @@ items:
             href: ./enrollment/create-device-platform-restrictions.md
           - name: Create device limit restrictions
             href: ./enrollment/create-device-limit-restrictions.md
+        - name: Create terms and conditions policy
+          href: ./enrollment/terms-and-conditions-create.md
+          displayName: intune; enrollment; terms and conditions; policy
+        - name: Enable Windows backup and restore
+          href: ./enrollment/windows-backup-restore.md
+        - name: Get Apple MDM push certificate
+          href: ./enrollment/apple-mdm-push-certificate-get.md
+          displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment
+        - name: Require multifactor authentication
+          href: ./enrollment/multi-factor-authentication.md
+          displayName: multi-factor; enrollment; MFA; verification; Conditional Access
+        - name: Set up enrollment notifications
+          href: ./enrollment/enrollment-notifications.md
+        - name: Set up enrollment time grouping
+          href: ./enrollment/enrollment-time-grouping.md
+          displayName: enrollment time grouping; security groups; Entra
+        - name: Turn on iOS/iPadOS supervised mode
+          href: ./enrollment/device-supervised-mode.md
 
       - name: Set up Windows enrollment
         items:
@@ -1653,12 +1635,13 @@ items:
           items:
           - name: Create and validate CNAME records
             href: ./enrollment/windows-enrollment-create-cname.md
-          - name: Set up Intune Connector for Active Directory
-            href: /autopilot/windows-autopilot-hybrid
           - name: Set up Enrollment Status Page
             href: ./enrollment/windows-enrollment-status.md
+          - name: Set up Intune Connector for Active Directory
+            href: /autopilot/windows-autopilot-hybrid
           - name: Set up Windows Enrollment Attestation
             href: ./enrollment/windows-enrollment-attestation.md
+
 
       - name: Set up Android enrollment
         items:
@@ -1777,7 +1760,7 @@ items:
           items:
           - name: Set up automated device enrollment for macOS
             href: ./enrollment/device-enrollment-program-enroll-macos.md
-          - name: ./Setup macOS account configuration with LAPS
+          - name: Setup macOS account configuration with LAPS
             href: ./enrollment/macos-laps.md
           - name: Set up Direct Enrollment for macOS
             href: ./enrollment/device-enrollment-direct-enroll-macos.md
@@ -1849,63 +1832,11 @@ items:
     items:
     - name: Tenant status and health
       href: ./fundamentals/tenant-status.md
+    - name: Device cleanup rules
+      href: ./fundamentals/device-cleanup-rules.md
 
     - name: Endpoint analytics
-      items:
-      - name: Overview
-        items:
-        - name: What is Endpoint analytics?
-          href: ../analytics/overview.md
-      - name: Concepts
-        items:
-        - name: Scores, baselines, and insights
-          href: ../analytics/scores.md
-      - name: How to guides
-        items:
-        - name: Enroll Intune devices
-          href: ../analytics/enroll-intune.md
-        - name: Enroll Configuration Manager devices
-          href: ../analytics/enroll-configmgr.md
-        - name: Manage settings
-          href: ../analytics/settings.md
-      - name: Reports
-        items:
-        - name: Startup performance
-          href: ../analytics/startup-performance.md
-        - name: Restart frequency
-          href: ../analytics/restart-frequency.md
-        - name: Application reliability
-          href: ../analytics/app-reliability.md
-        - name: Work from anywhere
-          href: ../analytics/work-from-anywhere.md
-        - name: Endpoint analytics in Microsoft Adoption Score
-          href: ../analytics/adoption-score.md
-      - name: Intune Advanced Analytics
-        items:
-        - name: What is Advanced Analytics?
-          href: ../analytics/advanced-endpoint-analytics.md
-        - name: Anomaly detection
-          href: ../analytics/anomaly-detection.md
-        - name: Enhanced device timeline
-          href: ../analytics/enhanced-device-timeline.md
-        - name: Device scopes
-          href: ../analytics/device-scopes.md
-        - name: Device query
-          href: ../analytics/device-query.md
-        - name: Device query for multiple devices
-          href: ../analytics/device-query-multiple-devices.md
-        - name: Data platform schema
-          href: ../analytics/data-platform-schema.md
-        - name: Battery health
-          href: ../analytics/battery-health.md
-        - name: Resource Performance
-          href: ../analytics/resource-performance-report.md
-      - name: Get support
-        href: ../analytics/get-support.md
-      - name: Data collection
-        href: ../analytics/data-collection.md
-      - name: Troubleshoot
-        href: ../analytics/troubleshoot.md
+      href: ../analytics/toc.yml
 
     - name: View reports and monitor status
       items:

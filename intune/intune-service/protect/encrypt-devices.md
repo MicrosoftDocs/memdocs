@@ -16,7 +16,10 @@ ms.collection:
 
 # Manage Disk Encryption policy for Windows devices with Intune
 
-Use Intune to configure BitLocker encryption on devices that run Windows 10 or later, and Personal Data Encryption (PDE) on devices that run Windows 11 Version 22H2 or later.
+Use Intune to configure BitLocker encryption on devices that run Windows, and Personal Data Encryption (PDE) on devices that run Windows 11 Version 22H2 or later.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!TIP]
 >
@@ -30,7 +33,7 @@ To configure encryption on your managed devices, use one of the following policy
 
   - *Personal Data Encryption* - [Personal Data Encryption](/windows/security/operating-system-security/data-protection/personal-data-encryption/) (PDE) differs from BitLocker in that it encrypts files instead of whole volumes and disks. PDE occurs in addition to other encryption methods like BitLocker. Unlike BitLocker that releases data encryption keys at boot, PDE doesn't release data encryption keys until a user signs in using Windows Hello for Business. For more information, see the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp).
 
-- **[Device configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-windows)**. BitLocker settings are one of the available settings categories for Windows 10/11 endpoint protection.
+- **[Device configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-windows)**. BitLocker settings are one of the available settings categories for Windows endpoint protection.
 
   View the BitLocker settings that are available for [BitLocker in endpoint protection profiles from device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
 
@@ -94,6 +97,9 @@ Use one of the following procedures to create the policy type you prefer.
 
 3. Set the following options:
    1. **Platform**: **Windows 10 and later**
+      > [!IMPORTANT]
+      > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
    2. **Profile type**: Select **Templates** > **Endpoint protection**, and then select **Create**.
 
    ![Select your BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
@@ -138,6 +144,9 @@ A device must meet the following conditions to be eligible for silently enabling
 - The device must be Microsoft Entra joined or Microsoft Entra hybrid joined.
 - Device must contain at least TPM (Trusted Platform Module) 1.2.
 - The BIOS mode must be set to Native UEFI only.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]v
 
 #### Required settings to silently enable BitLocker
 
@@ -233,7 +242,7 @@ To change the disk encryption type between full disk encryption and used space o
 
 ### View details for recovery keys
 
-Intune provides access to the Microsoft Entra node for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Intune admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached-devices).
+Intune provides access to the Microsoft Entra node for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows devices, from within the Microsoft Intune admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached-devices).
 
 To be accessible, the device must have its keys escrowed to Microsoft Entra.
 
@@ -255,7 +264,7 @@ To be accessible, the device must have its keys escrowed to Microsoft Entra.
 > [!NOTE]
 > Currently, Microsoft Entra ID supports a maximum of 200 BitLocker recovery keys per device. If you reach this limit, silent encryption will fail due to the failing backup of recovery keys before starting encryption on the device.
 
-Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, Windows 10 Pro version 1809 and later, and Windows 11.
+Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP).
 
 IT admins need to have a specific permission within Microsoft Entra ID to be able to see device BitLocker recovery keys: `microsoft.directory/bitlockerKeys/key/read`. There are some roles within Microsoft Entra ID that come with this permission, including Cloud Device Administrator, Helpdesk Administrator, etc. For more information on which Microsoft Entra roles have which permissions, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference).
 
@@ -275,6 +284,9 @@ When you use the tenant attach scenario, Microsoft Intune can display recovery k
 ### Rotate BitLocker recovery keys
 
 You can use an Intune device action to remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later, and Windows 11.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 #### Prerequisites
 
