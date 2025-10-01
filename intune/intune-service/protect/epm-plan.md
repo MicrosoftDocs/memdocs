@@ -67,6 +67,10 @@ Endpoint Privilege Management supports the following operating systems:
 - Windows 10, version 21H2 (19044.3393 or later) with [KB5030211](https://support.microsoft.com/topic/september-12-2023-kb5030211-os-builds-19044-3448-and-19045-3448-c0dee353-f025-4f03-bcc1-336f74fb992c)
 
 > [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+
+> [!IMPORTANT]
 >
 > - Elevation settings policies report as 'not applicable' for devices that don't run a supported operating system version.
 > - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures, including Arm64.

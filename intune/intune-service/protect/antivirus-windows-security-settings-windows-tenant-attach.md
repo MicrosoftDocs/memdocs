@@ -15,6 +15,9 @@ ms.reviewer: mattcall
 
 # Settings for Windows Security experience Antivirus policy for tenant attached devices in Microsoft Intune
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 View the Windows Security experience settings you can manage with the **Windows Security experience (preview)** profile from Intune.
 
 The profile is available when you configure [Intune Endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md). This profile supports devices you manage with Configuration Manager after configuring the [tenant attach](../protect/tenant-attach-intune.md) scenario for Intune.

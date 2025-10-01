@@ -45,8 +45,8 @@ An Intune admin with sufficient permissions can assign any of the Intune roles t
 - **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
 - **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
 - **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
-- **School Administrator**: Manages Windows 10 devices in [Intune for Education](../industry/education/introduction-intune-education.md).
-
+- **School Administrator**: School Administrators manage apps, settings, and devices for their groups in [Intune for Education](../industry/education/introduction-intune-education.md). They can take remote actions on devices, including remotely locking them, restarting them, and retiring them from management.
+  
 When your tenant includes a subscription to Windows 365 to support Cloud PCs, you also see the following Cloud PC roles in the Intune admin center. These roles aren't available by default and include permissions within Intune for tasks related to Cloud PCs. For more information about these roles, see [Cloud PC built-in roles](/windows-365/enterprise/role-based-access#cloud-pc-built-in-roles) in the Windows 365 documentation.
 
 - **Cloud PC Administrator**: A Cloud PC Administrator has *Read* and *Write* access to all Cloud PC features located within the Cloud PC area.
