@@ -27,8 +27,10 @@ This article describes settings that are available in profiles for *Account prot
 
 The settings in this article apply to:
 
-- Windows 10
-- Windows 11
+- Windows
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 Supported platforms and profiles:
 

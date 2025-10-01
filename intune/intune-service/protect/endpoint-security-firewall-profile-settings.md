@@ -19,8 +19,11 @@ View the settings you can configure in profiles for *Firewall* policy in the end
 Applies to:
 
 - macOS
-- Windows 10
-- Windows 11
+- Windows
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 > [!NOTE]
 >
