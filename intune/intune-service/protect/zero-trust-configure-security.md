@@ -47,7 +47,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24564](./includes/secure-recommendations/24564.md)]
 
-### Encrypt macOS devices with FileVault<!-- 24569 -->
+### Enforce FileVault encryption on macOS devices<!-- 24569 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24569](./includes/secure-recommendations/24569.md)]
 
