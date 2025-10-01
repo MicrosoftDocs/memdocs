@@ -14,6 +14,9 @@ ms.reviewer: mattcall
 ---
 # Endpoint detection and response policy settings for endpoint security in Intune
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 > [!NOTE]
 >
 > The information in this article applies only to the settings in the Endpoint detection and response profile for the *Windows 10 and later* platform for endpoint security Endpoint detection and response policy.

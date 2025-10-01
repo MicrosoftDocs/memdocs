@@ -15,7 +15,10 @@ ms.reviewer: laarrizz
 
 # Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices
 
-View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 and later in Microsoft Intune.
+View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows in Microsoft Intune.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!IMPORTANT]
 > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]

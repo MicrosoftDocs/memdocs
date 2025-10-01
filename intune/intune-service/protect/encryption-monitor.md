@@ -57,6 +57,9 @@ The Encryption report pane displays a list of the devices you manage with high
     - Windows 10 version 1709 or later of *Business*, *Enterprise*, *Education*, Windows 10 version 1809 or later of *Pro*, and Windows 11.
     - The device must have a TPM chip
 
+    > [!IMPORTANT]
+    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
     For more information on Windows prerequisites for encryption, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
 
   - **Not ready**: The device doesn't have full encryption capabilities, but might still support encryption.
