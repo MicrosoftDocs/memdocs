@@ -219,6 +219,8 @@ Device support is dependent on both the users operating system, and their web br
 
 Linux isn't officially supported by Remote Help. However, the Remote Help Web App might function for most Linux devices that are using a supported browser.
 
+---
+
 ## Network considerations
 
 Both the helper and sharer must be able to reach specific endpoints over port 443. For more information, see [Network endpoints for Remote Help](intune-endpoints.md#remote-help).
@@ -240,6 +242,8 @@ The sharer's Windows device must be enrolled into the same tenant where the Remo
 
 > [!NOTE]
 > Company Portal isn't supported on devices enrolled without user affinity. To use Remote Help on these devices, you need to change your tenant settings to set **Remote Help to unenrolled devices** to **Allowed**.
+
+---
 
 ## Supported Languages
 
@@ -320,6 +324,8 @@ Remote Help is supported in the following languages:
 - Thai
 - Turkish
 - Ukrainian
+
+---
 
 ## Data and privacy
 
