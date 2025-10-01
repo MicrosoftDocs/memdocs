@@ -22,7 +22,7 @@ For example, you can:
 - Get the BIOS version and TPM status to identify devices that might need firmware updates or aren't compliant with security policies.
 - Identify devices that lack encryption, which might violate security policies.
 - Identify devices that need to be replaced based on hardware properties, like disk size or memory.
-- Detect outdated firmware or hardware that could pose vulnerabilities.
+- Detect outdated firmware or hardware that could expose vulnerabilities.
 - Collect battery health information to help monitor device performance and lifespan.
 - Retrieve network adapter configurations to troubleshoot connectivity issues.
 
@@ -74,6 +74,8 @@ Use the following steps to create a properties catalog profile and assign it to 
 
 5. Select **Add properties** and select the properties you want to collect. You can select multiple properties from multiple categories.
 
+    There are some required properties that are automatically added. For a list, see [Required properties](#required-properties) (in this article).
+
     Select **Next**.
 
 6. Optional. In **Scope (Tags)**, select any scope tags you want to assign to the profile. To learn more about scope tags, see [Use scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -84,7 +86,9 @@ Use the following steps to create a properties catalog profile and assign it to 
 
    Select **Next**.
 
-8. In **Review + create**, review your settings, and select **Create**. When you select create, the profile is assigned to the groups you specified. The profile is created and is shown in the list.
+8. In **Review + create**, review your settings, and select **Create**.
+
+    When you select create, the profile is assigned to the groups you specified. The profile is also created and is shown in the list.
 
 The next time each device checks in with the Intune service, the policy applies. It can take up to 24 hours for the initial collection of inventory data.
 
@@ -125,16 +129,16 @@ When you create the policy, you can select any of the following property categor
 
 When you create the policy, the following **required** properties are automatically collected when you collect any property in that category.
 
-- **Battery**: Instance Name
-- **Bios Info**: Bios Name, Software Element ID, Software Element State, Target Operating System
-- **Cpu**: Processor ID
-- **Disk Drive**: Drive ID
-- **Encryptable Volume**: Volume ID
-- **Logical Drive**: Drive Identifier
-- **Network Adapter**: Identifier
-- **System Enclosure**: Serial Number
-- **Video Controller**: Identifier
-- **Windows QFE**: Hot Fix ID
+- Battery - Instance Name
+- Bios Info - Bios Name, Software Element ID, Software Element State, Target Operating System
+- Cpu - Processor ID
+- Disk Drive - Drive ID
+- Encryptable Volume - Volume ID
+- Logical Drive - Drive Identifier
+- Network Adapter - Identifier
+- System Enclosure - Serial Number
+- Video Controller - Identifier
+- Windows QFE - Hot Fix ID
 
 ---
 
