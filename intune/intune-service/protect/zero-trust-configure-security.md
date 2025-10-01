@@ -51,19 +51,19 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24569](./includes/secure-recommendations/24569.md)]
 
-### Enforce Cloud LAPS for macOS local admin accounts<!--  24561 -->
+### Enforce macOS LAPS to protect local administrator credentials during enrollment<!--  24561 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24561](./includes/secure-recommendations/24561.md)]
 
-<!-- ### Enable Platform SSO for macOS devices<!-- 24568 -->
+<!-- ### Enable Platform SSO for macOS devices <or> Enforce Platform SSO on macOS for phishing-resistant authentication<!-- 24568 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24568](./includes/secure-recommendations/24568.md)]-->
 
-### Apply app protection policies to Android devices<!-- 24549 -->
+### Enforce app protection policies on Android devices to prevent data leakage<!-- 24549 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24549](./includes/secure-recommendations/24549.md)]
 
-### Apply app protection policies to iOS/iPadOS devices<!-- 24548 -->
+### Enforce app protection policies on iOS/iPadOS devices to prevent data leakage<!-- 24548 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
 
