@@ -3,8 +3,6 @@ title: Remote Device Actions – Wipe, Lock, Locate, and More
 description: Discover how to use Microsoft Intune to remotely manage, wipe, lock, restart, and secure Android, iOS/iPadOS, macOS, Windows, and ChromeOS devices. Learn about available remote actions, prerequisites, and bulk actions for IT admins.
 ms.date: 09/22/2025
 ms.topic: overview
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Remote device actions

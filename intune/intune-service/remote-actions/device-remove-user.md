@@ -3,8 +3,6 @@ title: "Remote Device Action: Remove User"
 description: Learn how to remove a user from a Shared iPad with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Remote device action: remove user
