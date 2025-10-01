@@ -74,7 +74,7 @@ Use the following steps to create a properties catalog profile and assign it to 
 
 5. Select **Add properties** and select the properties you want to collect. You can select multiple properties from multiple categories.
 
-    There are some required properties that are automatically added. For a list, see [Required properties](#required-properties) (in this article).
+    There are some required properties that are automatically added. For a list, see [Required properties](#available-and-required-properties) (in this article).
 
     Select **Next**.
 
