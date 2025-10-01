@@ -25,8 +25,7 @@ Find the endpoint security policies for disk encryption under *Manage* in the **
 ## Prerequisites for disk encryption policy
 
 - **macOS** - macOS 10.13 or later
-- **Windows** - Windows 10
-- **Windows** - Windows 11
+- **Windows** - Windows
 
 ## Role-based access controls (RBAC)
 

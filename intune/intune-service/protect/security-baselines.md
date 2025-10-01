@@ -23,8 +23,11 @@ Even though Windows and Windows Server are designed to be secure out-of-the-box,
 
 This feature applies to:
 
-- Windows 10 version 1809 and later
 - Windows 11
+- Windows 10 version 1809 and later
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Intune security baseline overview
 
@@ -34,7 +37,7 @@ The settings in each baseline are device configuration settings like those found
 
 To learn more about why and when you might want to deploy security baselines, see [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) in the Windows security documentation.
 
-You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10 or 11. For example, the default configuration of the *Security Baseline for Windows 10 and later* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
+You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows. For example, the default configuration of the *Security Baseline for Windows 10 and later* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
 
 > [!NOTE]
 >
@@ -119,7 +122,7 @@ When you're ready to use the more recent baseline version, you can create new pr
 
 ## About baseline versions and instances
 
-Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows settings become available with new versions of Windows 10/11, *Security Baseline for Windows 10 and later* might receive a new version instance that includes the newest settings.
+Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows settings become available with new versions of Windows, *Security Baseline for Windows 10 and later* might receive a new version instance that includes the newest settings.
 
 You can view the list of available baselines in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines**. The list includes:
 
