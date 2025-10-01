@@ -21,7 +21,7 @@ Intune's App Control for Business policies are part of endpoint security and use
 
 Also available through App Control for Business policy, you can use a managed installer policy to add the [*Intune management extension*](../apps/apps-win32-app-management.md) to your Tenant as a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work). With this extension as a managed installer, the apps you deploy through Intune are automatically tagged by the installer. Tagged apps are identified by your App Control for Business policies as safe apps that are allowed to run on your devices.
 
-- The *Intune management extension* is an Intune service that supplements Windows 10 MDM features for Windows 10 and Windows 11 devices. It facilitates the [installation of Win32 apps and PowerShell scripts on managed devices](../apps/apps-win32-app-management.md).
+- The *Intune management extension* is an Intune service that supplements Windows MDM features for Windows devices. It facilitates the [installation of Win32 apps and PowerShell scripts on managed devices](../apps/apps-win32-app-management.md).
 
 - A *managed installer* uses an AppLocker rule to tag applications you install as trusted by your organization For more information, see [Allow apps installed by a managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
@@ -41,12 +41,14 @@ For related information, see [Windows Defender Application Control](/windows/sec
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 ## Prerequisites
 
 ### Devices
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 The following devices are supported for App Control for Business policies when they're enrolled with Intune:
 
@@ -362,7 +364,7 @@ To aid this optimization, WDAC policy and the Intune management Extension are co
 
 ## Delete App Control for Business policy
 
-As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) (Windows 10) - Windows security](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune#remove-wdac-policies-on-windows-10-1903) in the Windows Security documentation, policies deleted from the Intune UI are removed from the system, and from devices, but stay in effect until the next reboot of the machine.
+As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) - Windows security](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune) in the Windows Security documentation, policies deleted from the Intune UI are removed from the system, and from devices, but stay in effect until the next reboot of the machine.
 
 **To disable or delete WDAC enforcement**:
 
