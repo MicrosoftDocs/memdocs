@@ -1,7 +1,7 @@
 ---
 title: How to update the Company Portal app
 description: Get the latest version of the Company Portal app on Android, iOS, macOS, and Windows devices.
-ms.date: 10/08/2024
+ms.date: 09/30/2025
 ms.reviewer: priyar
 ---
 
@@ -24,6 +24,8 @@ You might be required to update the app on your work or school device when:
 
 Company Portal sends notifications to your device when an update is required.
 
+[!INCLUDE [android-company-portal-version-support](../includes/android-company-portal-version-support.md)]
+
 ## Update on Android device
 
 Google Play Store notifies you when a new version of the Company Portal is available. You won't see a prompt in the Company Portal app itself. Select the Google Play alert and follow the onscreen prompts to update the app.
@@ -41,7 +43,7 @@ After you install the updates, run a status check on your device in Company Port
 3. Select **Check Status**.
 
 > [!NOTE]
-> The minimum supported version of the Company Portal app for iOS/iPadOS is v5.2311.1. If you're running an older version, you will be prompted to update the Company Portal app when you sign in.
+> The minimum supported version of the Company Portal app for iOS/iPadOS is v5.2311.1. If you're running an older version, you'll be prompted to update the Company Portal app when you sign in.
 
 ## Update on macOS device
 
