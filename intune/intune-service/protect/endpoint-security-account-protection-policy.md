@@ -31,12 +31,9 @@ Find the endpoint security policies for Account protection under *Manage* in the
 
 ## Prerequisites for Account protection profiles
 
-- To support the *Account protection* profile, devices must run Windows.
+- To support the *Account protection* profile, devices must run Windows 10 or Windows 11.
 - To support the *Local user group membership* profile, devices must run Windows 10 20H2 or later, or Windows 11.
 - To support the *Local admin password solution (Windows LAPS), see [Prerequisites](../protect/windows-laps-overview.md#prerequisites) in *Microsoft Intune support for Windows LAPS*.
-
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Role-based access controls (RBAC)
 

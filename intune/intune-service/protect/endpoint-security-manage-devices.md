@@ -126,7 +126,7 @@ The following Intune remote actions are of interest to the security admin, and a
 
 - [Synchronize device](../remote-actions/device-sync.md) – Have the device immediately check-in with Intune. When a device checks in, it receives any pending actions or policies that are assigned to it.
 
-- [Restart](../remote-actions/device-restart.md) – Force a Windows device to restart, within five minutes. The device owners aren't automatically notified of the restart and might lose work.
+- [Restart](../remote-actions/device-restart.md) – Force a Windows 10/11 device to restart, within five minutes. The device owners aren't automatically notified of the restart and might lose work.
 
 - [Quick Scan](../configuration/device-restrictions-windows-10.md) – Have Defender run a quick scan of the device for malware and then submit the results to Intune. A quick scan looks at common locations where there could be malware registered, such as registry keys and known Windows startup folders.
 

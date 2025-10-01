@@ -28,12 +28,9 @@ Applies to:
 
 - Linux
 - macOS
-- Windows
+- Windows 10
+- Windows 11
 - Windows Server *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
-
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
 
 ## Prerequisites for antivirus policy
 
@@ -67,7 +64,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 Tamper protection is available for devices that are running one of the following operating systems:
 
 - macOS (any supported version)
-- Windows (including Enterprise multi-session)
+- Windows 10 and 11 (including Enterprise multi-session)
 - Windows Server version 1803 or later, Windows Server 2019, Windows Server 2022
 - Windows Server 2012 R2 and Windows Server 2016 ([using the modern, unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution))
 
