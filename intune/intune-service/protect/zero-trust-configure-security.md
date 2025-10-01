@@ -31,11 +31,11 @@ We recommend that all of the following controls be implemented where licenses ar
 
 ## Protect identities and secrets
 
-### Enforce Cloud LAPS for Windows local admin accounts<!-- 24560 -->
+### Enforce Windows LAPS to protect local administrator credentials<!-- 24560 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24560](./includes/secure-recommendations/24560.md)]
 
-### Encrypt Windows devices with BitLocker<!-- 24550 -->
+### Enforce BitLocker encryption on Windows devices<!-- 24550 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24550](./includes/secure-recommendations/24550.md)]
 

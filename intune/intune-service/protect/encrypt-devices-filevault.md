@@ -29,7 +29,7 @@ Use one of the following policy types to configure FileVault on your managed dev
 
 - **[Settings catalog profile for macOS FileVault](#create-settings-catalog-policy-for-filevault)**. FileVault can be configured through the Intune [settings catalog](../configuration/settings-catalog.md), which includes some settings that aren't available in the *endpoint security* and *endpoint protection* templates.
 
-To manage BitLocker for Windows 10/11, see [Manage BitLocker policy](../protect/encrypt-devices.md).
+To manage BitLocker for Windows, see [Manage BitLocker policy](../protect/encrypt-devices.md).
 
 > [!TIP]
 > Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices.

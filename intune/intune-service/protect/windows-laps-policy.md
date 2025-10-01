@@ -1,5 +1,5 @@
 ---
-title: Create Intune policies to configure and manage Windows LAPS
+title: Deploy Intune policies to manage Windows LAPS
 description: Create policies to manage the Windows Local Administrator Policy Solution (LAPS) on Windows devices that enrolled with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
@@ -12,7 +12,7 @@ ms.collection:
 - sub-secure-endpoints
 ---
 
-# Manage Windows LAPS policy with Microsoft Intune
+# Deploy Windows LAPS policy with Microsoft Intune
 
 When you're ready to manage the *Windows Local Administrator Password Solution* ([Windows LAPS](/windows-server/identity/laps/laps-overview)) on Windows devices you manage with Microsoft Intune, the information in this article can help you use the Intune admin center to:
 
@@ -30,8 +30,7 @@ Before creating policies, be familiar with the information in [Microsoft Intune 
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 > [!TIP]
 > The Intune support for Windows LAPS is similar but distinct from Intune's implementation of macOS LAPS. For information about macOS LAPS in Intune, see [macOS local account configuration with LAPS](../enrollment/macos-laps.md).
@@ -66,7 +65,7 @@ Before you create a policy, you can review details about the available settings 
 
    :::image type="content" source="./media/windows-laps-policy/create-laps-policy.png" alt-text="Screen shot that shows where in the admin center you create a LAPS policy." lightbox="./media/windows-laps-policy/create-laps-policy.png":::
 
-   Set the *Platform* to **Windows 10 and later**, *Profile* to **Local admin password solution (Windows LAPS)**, and then select **Create**.
+   Set the *Platform* to **Windows**, *Profile* to **Local admin password solution (Windows LAPS)**, and then select **Create**.
 
 2. On **Basics**, enter the following properties:
 
