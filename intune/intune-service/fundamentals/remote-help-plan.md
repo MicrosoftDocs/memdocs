@@ -100,11 +100,13 @@ These are the different modes:
 
 This table shows the mode support by helper app and sharer app.
 
-|Helper app|Windows native|macOS native|Android native|macOS webapp|Windows webapp|
-|---|---|---|---|---|---|
-|Windows native|✅ View only</br>✅ Full Control</br>✅ Elevation|Unsupported|Unsupported|Unsupported|Unsupported|
-|Windows web|Unsupported|✅ View only</br>✅ Full Control|✅ View only</br>✅ Full Control</br>✅ Unattended|✅ View only|✅ View only|
-|macOS web|Unsupported|✅ View only</br>✅ Full Control|✅ View only</br>✅ Full Control</br>✅ Unattended|✅ View only</br>|✅ View only</br>|
+|Sharer app|Windows native|Windows web|macOS web|
+|---|---|---|---|
+|Windows native|✅ View only</br>✅ Full Control</br>✅ Elevation|Unsupported|Unsupported|
+|macOS native|Unsupported|✅ View only</br>✅ Full Control|✅ View only</br>✅ Full Control|
+|Android native|Unsupported|✅ View only</br>✅ Full Control</br>✅ Unattended|✅ View only</br>✅ Full Control</br>✅ Unattended|
+|macOS webapp|Unsupported|✅ View only|✅ View only</br>|
+|Windows webapp|Unsupported|✅ View only|✅ View only</br>|
 
 For information on deploying the Remote Help apps, see [Deploy Remote Help](remote-help-deploy.md).
 
@@ -155,19 +157,21 @@ General prerequisites that apply to Remote Help:
 
 ## Supported platforms
 
+Each platform has specific prerequisites and capabilities.
+
 ### [Windows](#tab/windows)
 
 - Windows 10/11 x86, x64 and ARM64
 - Windows 365
 - Azure Virtual Desktop
 
-- Optional Windows updates for higher notification reliability:
+In addition, there are optional Windows updates for higher notification reliability:
   - Win 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
   - Win 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
 
-- Intune management extension is required on the sharer's device for the remote launch feature. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md).
+The Intune management extension is required on the sharer's device for the remote launch feature. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md).
 
-- We do not recommend remotely starting a session to users on azure virtual desktops. For more information, see [How to provide help on an AVD](#provide-help-on-an-avd).
+We do not recommend remotely starting a session to users on azure virtual desktops. For more information, see [How to provide help on an AVD](#provide-help-on-an-avd).
 
 ### [macOS](#tab/macos)
 
