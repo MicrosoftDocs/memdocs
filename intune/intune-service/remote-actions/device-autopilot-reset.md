@@ -3,9 +3,6 @@ title: "Remote Device Action: Autopilot Reset"
 description: Learn how to use Autopilot reset with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- highpri
 ---
 
 # Remote device action: Autopilot Reset

@@ -3,9 +3,6 @@ title: "Remote Device Action: Quick Scan"
 description: Learn how to initiate on demand Microsoft Defender quick scan with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- highpri
 ---
 
 # Remote device action: quick scan
