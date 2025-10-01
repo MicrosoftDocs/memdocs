@@ -4,9 +4,6 @@ description: Learn how to temporarily pause policy enforcement on Windows 11 dev
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.reviewer: Mike Danoski
-ms.collection:
-- M365-identity-device-management
-- highpri
 ---
 
 # Remote device action: pause Config Refresh

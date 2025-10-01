@@ -4,8 +4,6 @@ description: Learn how to update the cellular data plan for iOS/iPadOS devices t
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.reviewer: rashok
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Remote device action: update cellular data plan
