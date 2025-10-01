@@ -231,11 +231,11 @@ Remote Help communicates over port 443 (https) and connects to the Remote Assist
 
 If your organization restricts Remote Help to enrolled devices only there are extra requirements:
 
-### [Windows](#tab/windows)
+### [Windows](#tab/windowsenrolled)
 
 The sharer's Windows device must be enrolled into the same tenant where the Remote Help session is starting from.
 
-### [macOS](#tab/macos)
+### [macOS](#tab/macosenrolled)
 
 1. **Single sign-on (SSO)**. For more information, see [Use Enterprise SSO Plug-in on macOS](../configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
 1. **Open and sign in to Company Portal**. The user must open and sign into Company Portal for Remote Help to recognize the device is enrolled.
@@ -249,7 +249,7 @@ The sharer's Windows device must be enrolled into the same tenant where the Remo
 
 Remote Help is supported in the following languages:
 
-### [Windows](#tab/windows)
+### [Windows](#tab/windowslanguage)
 
 - Arabic
 - Bulgarian
@@ -286,7 +286,7 @@ Remote Help is supported in the following languages:
 - Turkish
 - Ukrainian
 
-### [macOS](#tab/macos)
+### [macOS](#tab/macoslanguage)
 
 Remote Help is supported in the following languages:
 
