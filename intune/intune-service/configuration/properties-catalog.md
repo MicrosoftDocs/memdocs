@@ -11,7 +11,7 @@ ms.collection:
 ms.reviewer: abbystarr, madisoncooks
 ---
 
-# Use the properties catalog to collect hardware properties from Windows devices in Microsoft Intune
+# Collect hardware properties with the properties catalog on Windows devices in Microsoft Intune
 
 In Microsoft Intune, you can use the **properties catalog** to collect and view hardware properties from your managed Windows devices. When you create the policy, you can select specific properties to collect, such as BIOS version, disk information, memory details, and network adapter configurations.
 
@@ -130,7 +130,11 @@ When you create the policy, you can select any of the following property categor
 When you create the policy, the following **required** properties are automatically collected when you collect any property in that category.
 
 - Battery - Instance Name
-- Bios Info - Bios Name, Software Element ID, Software Element State, Target Operating System
+- Bios Info:
+  - Bios Name
+  - Software Element ID
+  - Software Element State
+  - Target Operating System
 - Cpu - Processor ID
 - Disk Drive - Drive ID
 - Encryptable Volume - Volume ID
