@@ -188,6 +188,8 @@ items:
         href: ./fundamentals/remote-help-use.md
       - name: Troubleshooting Remote Help
         href: ./fundamentals/remote-help-troubleshoot-monitor.md
+      - name: What's new in Remote Help
+        href: ./fundamentals/remote-help-whats-new.md
 
     - name: Advanced analytics
       href: ../analytics/advanced/toc.yml

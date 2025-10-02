@@ -25,8 +25,9 @@ This article describes the steps to deploy Remote Help with Microsoft Intune.
 - [⚙️Set up your tenant](#configure-remote-help-for-your-tenant)
 - [⬇️Download Remote Help](#download-remote-help-apps)
 - [🛠️Install Remote Help](#install-remote-help-apps)
+- [⚙️Configure Remote Help](#configure-remote-help-apps)
 - [🔄️Update Remote Help](#update-remote-help-apps)
-- [🔒Configure Conditional Access](#setup-conditional-access-for-remote-help)
+- [🔒Configure Conditional Access](#set-up-conditional-access-for-remote-help)
 
 When planning your deployment of Remote Help, consider the following best practices:
 

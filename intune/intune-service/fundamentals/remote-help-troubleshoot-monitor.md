@@ -99,7 +99,6 @@ Microsoft Edge WebView2 is required to use Remote Help. If you get an error mess
 - After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30 minutes after restart), or manually start the service through services.msc.
  For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
 
-
 ## Troubleshooting Remote Help on Android
 
 If a Remote Help session for Android is unable to connect, check for the following possibilities:
@@ -116,7 +115,6 @@ If a Remote Help session for Android is unable to connect, check for the followi
   | (On Samsung devices only) The Knox license on the device is expired/invalid or has network issues.  | Make sure that all Knox permissions have been granted, and that the device has an active Knox license; see [License activation errors](https://configure.samsungknox.com/files/knox-configure-getting-started/Content/license-activation-errors.htm) for troubleshooting Knox activation errors. |
   | (On Samsung devices only) Other apps are actively using the Samsung Knox remote desktop APIs (you're using another remote assistance app on the device). | Close or uninstall any other apps that may be using remote viewing/control capabilities on the device. |
 
-
 ## Known Issues macOS
 
 - If the sharer exits from a Remote Help session early, the helper might not be notified for 60+ seconds.
@@ -126,7 +124,6 @@ If a Remote Help session for Android is unable to connect, check for the followi
 - Verify that your browser is up to date.
 
 - If you're screen sharing using another application like Teams or recording during the session, it might take longer for the session to connect.
-
 
 ## Known Issues web app
 
