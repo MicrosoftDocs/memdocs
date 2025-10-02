@@ -14,7 +14,9 @@ ms.collection:
 
 # Android Intune settings catalog settings list
 
-This article lists and describes the Android Enterprise and AOSP settings you can configure in a settings catalog policy in Microsoft Intune. To learn more about the settings catalog, see [Settings catalog overview](settings-catalog.md).
+This article lists and describes the Android Enterprise and AOSP settings you can configure in a settings catalog policy in Microsoft Intune. When you create the settings catalog profile, use the settings described in this article as a reference.
+
+To learn more about the settings catalog, see [Settings catalog overview](settings-catalog.md).
 
 This feature applies to:
 
