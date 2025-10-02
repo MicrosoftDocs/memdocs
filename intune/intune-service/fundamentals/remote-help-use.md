@@ -74,8 +74,10 @@ To request help, you must reach out to your support staff to request assistance,
 1. Select **Share screen** to continue. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
 1. macOS displays a dialogue menu in the top right corner as one of two options:
    - **Green camera icon**: Choose **Screen**, and then move your mouse to select the screen share.
+
    :::image type="content" source="media/remote-help/remote-help-screen-share.png" alt-text="A screenshot of the macOS screen  sharing dialog to allow screen sharing for Microsoft Remote Help":::
    - **Yellow microphone icon** (if you selected to allow the microphone permission): Select the microphone icon, then to the right of the application name Microsoft Remote Help, select the grey icon, and then **Screen**. Move your cursor to the screen you want to share and select **Share this screen**.
+
    :::image type="content" source="media/remote-help/remote-help-screen-share-microphone.png" alt-text="A screenshot of the macOS microphone sharing dialog to allow screen sharing for Microsoft Remote Help":::
 
 1. After the session is established, the helper can then help in resolving any issues on the device.
@@ -121,7 +123,7 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
 To provide help, you must reach out to the user who needs assistance. You can reach out through a call, chat, email, and so on, and you'll be the helper during the session.
 
-### [Windows from Windows native app](#tab/windowsnative)
+### [**Windows from Windows native app**](#tab/windowsnative)
 
 As a helper, after receiving a request from a user who wants assistance by using the Remote Help app:
 
