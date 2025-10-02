@@ -884,7 +884,7 @@ items:
           items:
           - name: Intune support for Windows LAPS
             href: ./protect/windows-laps-overview.md
-          - name: Manage LAPS policy
+          - name: Deploy LAPS policy
             href: ./protect/windows-laps-policy.md
           - name: Reports for LAPS policy
             href: ./protect/windows-laps-reports.md
@@ -1249,8 +1249,8 @@ items:
               displayName: gpo, admx, settings catalog, windows
               href: ./configuration/group-policy-analytics-migrate.md
 
-        - name: Properties catalog
-          displayName: windows
+        - name: Properties catalog (device inventory)
+          displayName: windows, device inventory
           href: ./configuration/properties-catalog.md
         - name: Custom settings & scripts
           items:
