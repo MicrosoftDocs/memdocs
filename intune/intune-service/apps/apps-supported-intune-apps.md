@@ -1,7 +1,7 @@
 ---
 title: Supported Microsoft Intune apps
 description: This article provides lists of support partner and Microsoft apps that are commonly used with Microsoft Intune.
-ms.date: 07/24/2025
+ms.date: 10/02/2025
 ms.topic: reference
 ms.localizationpriority: high
 ms.reviewer: cdemello
@@ -66,7 +66,7 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft Lens - PDF Scanner|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
 |Microsoft Lens - PDF Scanner|[iOS](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059)|✔|No settings|✖|N/A|✖|✖|N/A|✖|
 |Microsoft Lists|[iOS](https://apps.apple.com/us/app/microsoft-lists/id1530637363)|✔|No settings|✔|N/A|N/A|✔|✔|✖|
-|Microsoft Lists|[Android](https://play.google.com/store/apps/details?id=com.microsoft.lists.public&gl=US)|✔|No settings|✖|N/A|N/A|✖|✖|✖|
+|Microsoft Lists|[Android](https://play.google.com/store/apps/)|✔|No settings|✖|N/A|N/A|✖|✖|✖|
 |Microsoft Loop|[iOS](https://apps.apple.com/us/app/microsoft-loop/id1637682491)|✔|No settings|✔|N/A|✖|N/A|N/A|✖|
 |Microsoft Loop|[Android](https://play.google.com/store/apps/details?id=com.microsoft.loop)|✔|No settings|✔|N/A|✖|N/A|N/A|✖|
 |Microsoft 365 Copilot|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|✖|
@@ -295,7 +295,7 @@ To learn how to add apps for each platform to Intune, see:
 - [Web apps (for all platforms)](web-app.md)
 - [Microsoft store apps](store-apps-windows.md)
 - [Windows LOB app](lob-apps-windows.md)
-- [Microsoft 365 apps for Windows 10](apps-add-office365.md)
+- [Microsoft 365 apps for Windows](apps-add-office365.md)
 - [Microsoft 365 apps for macOS](apps-add-office365-macos.md)
 - [Built-in apps](apps-add-built-in.md)
 - [Win32 apps](apps-win32-add.md)
