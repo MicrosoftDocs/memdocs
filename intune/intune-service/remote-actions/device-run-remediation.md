@@ -3,9 +3,6 @@ title: "Remote Device Action: Run Remediation"
 description: Learn how to initiate on demand remediations with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- highpri
 ---
 
 # Remote device action: run remediation
