@@ -1,7 +1,7 @@
 ---
 title: Enroll Android device with Intune Company Portal
 description: Describes how to set up an Android device for work or school with the Company Portal app.
-ms.date: 11/13/2024
+ms.date: 09/30/2025
 ms.reviewer: esmich
 ---
 
@@ -11,10 +11,12 @@ Enroll your personal or corporate-owned Android device with Intune Company Porta
 ## Prerequisites
 The Intune Company Portal app supports devices running Android 8.0 and later, including devices secured by Samsung Knox Standard 2.4 and later. To learn how to update your Android device to meet requirements, see [Check & update your Android version](https://support.google.com/android/answer/7680439).
 
+[!INCLUDE [android-company-portal-version-support](../includes/android-company-portal-version-support.md)]
+
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o]
 
 > [!NOTE]
-> Samsung Knox is a type of security that certain Samsung devices use for additional protection outside of what native Android provides. To check if you have a Samsung Knox device, go to **Settings** > **About device**. If you don't see the **Knox version** listed there, you have a native Android device.
+> Samsung Knox is a type of security that certain Samsung devices use for extra protection outside of what native Android provides. To check if you have a Samsung Knox device, go to **Settings** > **About device**. If you don't see the **Knox version** listed there, you have a native Android device.
 
 ## Install Company Portal app
 Install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md) for a list of stores that offer the app in People's Republic of China.
@@ -60,7 +62,7 @@ During enrollment, you might be asked to choose a category that best describes h
     ![Screenshot of the Activate device administrator screen, highlighting the activate button.](./media/enroll-device-android-company-portal/activate-device-administrator-1911.png)
 
 > [!NOTE]
-> Microsoft does not control the messaging on this screen. We understand that its phrasing can seem somewhat drastic. Company Portal can't specify which restrictions and access are relevant to your organization. If you have questions about how your organization uses the app, contact your IT support person. Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's contact information.
+> Microsoft doesn't control the messaging on this screen. We understand that its phrasing can seem drastic. Company Portal can't specify which restrictions and access are relevant to your organization. If you have questions about how your organization uses the app, contact your IT support person. Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's contact information.
 
 
 7. Your device begins enrolling. Review and acknowledge the ELM Agent privacy policy if Company Portal prompts for it.

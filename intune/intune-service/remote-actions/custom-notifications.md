@@ -4,9 +4,6 @@ description: Use Intune to create and send custom notifications to users of iOS/
 ms.date: 09/22/2025
 ms.topic: how-to
 ms.reviewer: petermt
-
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 

@@ -270,7 +270,9 @@ If you're not familiar with creating compliance policy, reference the [Create a 
    - **Android device administrator**
    - **Android Enterprise**
    - **iOS/iPadOS**
-   - **Windows 10 and later**
+   - **Windows 10 and later**  
+     > [!IMPORTANT]
+     > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
    Next, select **Create**.
 

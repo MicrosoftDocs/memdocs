@@ -88,6 +88,9 @@ This baseline is optimized for physical devices and isn't recommended for use on
   Baseline default: *Enabled*
   [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#encryptionmethodbydrivetype)
 
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
   - **Select the encryption method for removable data drives:**
     Baseline default: *AES-CBC 128-bit (default)*
 
