@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting and monitoring Remote Help for Microsoft Intune.
+title: Troubleshoot and monitor Remote Help for Microsoft Intune.
 description: Use the troubleshooting and monitoring information for Remote Help with Microsoft Intune to ensure healthy and successful deployment.
 author: lenewsad
 ms.author: lanewsad
