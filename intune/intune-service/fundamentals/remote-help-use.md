@@ -19,7 +19,7 @@ ms.collection:
 
 [!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
 
-The use of Remote Help depends on whether you're requesting help or providing help. In this section, both scenarios are covered.
+The use of Remote Help depends on whether you're requesting help or providing help. In this page, both scenarios are covered.
 
 ## Get help
 

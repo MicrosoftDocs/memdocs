@@ -156,7 +156,7 @@ General prerequisites that apply to Remote Help:
 
 Each platform has specific prerequisites and capabilities.
 
-### [Windows](#tab/windows)
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
 - Windows 10/11 x86, x64 and ARM64
 - Windows 365
@@ -171,14 +171,14 @@ The Intune management extension is required on the sharer's device for the remot
 
 We do not recommend remotely starting a session to users on azure virtual desktops. For more information, see [How to provide help on an AVD](remote-help-use.md#provide-help-on-an-avd).
 
-### [macOS](#tab/macos)
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
 - macOS 13 (Ventura)
 - macOS 14 (Sonoma)
 - macOS 15 (Sequoia)
 - macOS 26.0 (from version 1.0.2509231 of Remote Help and later)
 
-### [Android](#tab/android)
+### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 Remote Help is supported on the following Android Enterprise devices enrolled in dedicated mode:
 
@@ -193,7 +193,7 @@ Remote Help is supported on the following Android Enterprise devices enrolled in
 - Samsung devices only: The device must have Knox. For a list of Knox compatible devices, see [Device Compatibility Knox Solutions](https://www.samsungknox.com/knox-platform/supported-devices) (opens Samsung's website). Samsung devices without Knox work for screen share, but don't work in full control or unattended mode.
 - Zebra devices only: Set up Zebra OEMConfig for your tenant. For more details, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md)
 
-### [Web App](#tab/webapp)
+### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web App**](#tab/webapp)
 
 Device support is dependent on both the users operating system, and their web browser.
 
@@ -233,11 +233,11 @@ Remote Help communicates over port 443 (https) and connects to the Remote Assist
 
 If your organization restricts Remote Help to enrolled devices only there are extra requirements:
 
-### [Windows](#tab/windowsenrolled)
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windowsenrolled)
 
 The sharer's Windows device must be enrolled into the same tenant where the Remote Help session is starting from.
 
-### [macOS](#tab/macosenrolled)
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macosenrolled)
 
 1. **Single sign-on (SSO)**. For more information, see [Use Enterprise SSO Plug-in on macOS](../configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
 1. **Open and sign in to Company Portal**. The user must open and sign into Company Portal for Remote Help to recognize the device is enrolled.
@@ -251,7 +251,7 @@ The sharer's Windows device must be enrolled into the same tenant where the Remo
 
 Remote Help is supported in the following languages:
 
-### [Windows](#tab/windowslanguage)
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windowslanguage)
 
 - Arabic
 - Bulgarian
@@ -288,7 +288,7 @@ Remote Help is supported in the following languages:
 - Turkish
 - Ukrainian
 
-### [macOS](#tab/macoslanguage)
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macoslanguage)
 
 - Arabic
 - Bulgarian
