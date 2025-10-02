@@ -31,27 +31,27 @@ We recommend that all of the following controls be implemented where licenses ar
 
 ## Protect identities and secrets
  
-### Enforce Windows LAPS to protect local administrator credentials<!-- 24560 -->
+### Local administrator credentials on Windows are protected by enforcing Windows LAPS<!-- 24560 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24560](./includes/secure-recommendations/24560.md)]
 
-### Enforce BitLocker encryption on Windows devices<!-- 24550 -->
+### Data on Windows is protected by enforcing BitLocker encryption<!-- 24550 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24550](./includes/secure-recommendations/24550.md)]
 
-### Require Windows Hello for Business for authentication<!-- 24551-->
+### Authentication is protected by requiring Windows Hello for Business<!-- 24551-->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24551](./includes/secure-recommendations/24551.md)]
 
-### Restrict local account usage on Windows devices<!--  24564 -->
+### Local account usage on Windows is restricted to reduce unauthorized access<!--  24564 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24564](./includes/secure-recommendations/24564.md)]
 
-### Enforce FileVault encryption on macOS devices<!-- 24569 -->
+### Data on macOS is protected by enforcing FileVault encryption<!-- 24569 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24569](./includes/secure-recommendations/24569.md)]
 
-### Enforce macOS LAPS to protect local administrator credentials during enrollment<!--  24561 -->
+### Local administrator credentials on macOS are protected during enrollment by enforcing macOS LAPS<!--  24561 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24561](./includes/secure-recommendations/24561.md)]
 
@@ -59,25 +59,25 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24568](./includes/secure-recommendations/24568.md)]-->
 
-### Enforce app protection policies on Android devices to prevent data leakage<!-- 24549 -->
+### Data on Android is protected by enforcing app protection policies<!-- 24549 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24549](./includes/secure-recommendations/24549.md)]
 
-### Enforce app protection policies on iOS/iPadOS devices to prevent data leakage<!-- 24548 -->
+### Data on iOS/iPadOS devices is protected by enforcing app protection policies<!-- 24548 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
 
 ## Protect tenants and isolate production systems
 
-### Configure scope tags for delegated admin access<!-- 24555 -->
+### Enforce scope tags to support delegated administration and least-privilege access<!-- 24555 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24555](./includes/secure-recommendations/24555.md)]
 
-### Enable enrollment notifications for device onboarding<!-- 24572 -->
+### Enforce device enrollment notifications to support secure onboarding and user awareness<!-- 24572 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
  [!INCLUDE [24572](./includes/secure-recommendations/24572.md)]
 
-### Enable automatic enrollment for Windows devices<!-- 24546 -->
+### Windows device enrollment is enforced to ensure consistent management<!-- 24546 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24546](./includes/secure-recommendations/24546.md)]
 
