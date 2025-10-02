@@ -109,8 +109,8 @@ Known issues with Windows Backup for Organizations include:
 
 - When corporate accounts are used on Hyper-V virtual machines (VM) with phishing-resistant multifactor authentication (MFA) enforced, users are prompted to authenticate using a security key or smart card. However, due to Hyper-V VM limitations, these authentication methods can't pass through, resulting in an undesirable UI experience and preventing users from completing the authentication process.
 
->[!NOTE]
-> This issue is specific to VMs, particularly when users initially sign in with weaker authentication methods (such as a password or authenticator app) and phishing-resistant MFA is subsequently enforced.
+  >[!NOTE]
+  > This issue is specific to VMs, particularly when users initially sign in with weaker authentication methods (such as a password or authenticator app) and phishing-resistant MFA is subsequently enforced.
 
 - The restore feature isn't supported with the following provisioning methods:
 
