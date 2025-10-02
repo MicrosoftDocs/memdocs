@@ -67,7 +67,9 @@ To configure the restore setting, you must have Intune Service Administrator per
 
 ## Enrollment
 
-To enable Windows Backup for Organizations during enrollment, configure your backup and restore settings in the Microsoft Intune admin center. There are two areas where you need to configure settings: in the settings catalog, and under enrollment.
+To enable Windows Backup for Organizations during enrollment, configure your backup and restore settings in the Microsoft Intune admin center. There are two areas where you need to configure settings: in the settings catalog, and under enrollment. 
+
+# [Backup](#tab/backup)
 
 Complete these steps to configure the backup settings in the settings catalog.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
@@ -77,6 +79,8 @@ Complete these steps to configure the backup settings in the settings catalog.
    2. For **Profile type**, select **Settings Catalog**.
 1. Under the **Sync your settings** category, find the **Enable Windows backup** setting. Select the setting to enable it.
 1. Finish the remaining steps to create your policy. Then select **Save**.
+
+# [Restore](#tab/restore)
 
 Complete these steps to configure the restore setting for enrollment.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
