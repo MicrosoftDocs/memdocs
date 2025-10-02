@@ -22,6 +22,11 @@ ms.collection:
 
 This article describes the steps to deploy Remote Help with Microsoft Intune.
 
+- [⚙️Set up your tenant](#configure-remote-help-for-your-tenant)
+- [⬇️Download Remote Help](#download-remote-help-apps)
+- [🛠️Install Remote Help](#install-remote-help-apps)
+- [🔒Configure Conditional Access](#setup-conditional-access-for-remote-help)
+
 When planning your deployment of Remote Help, consider the following best practices:
 
 - **User Communication and Training**: To drive adoption and effective use, provide documentation or brief training for both your helpdesk and end-users:
@@ -29,10 +34,6 @@ When planning your deployment of Remote Help, consider the following best practi
 - **End-User Guidance**: Let your users know that a new remote support tool is available. Instruct them on how a support session is initiated – e.g., "When you contact the IT helpdesk, they may ask you to open the Remote Help app and share a code, or you might receive a popup notification to allow screen sharing." Reassure them that the tool is secure and only authorized IT will be able to connect, and that they will always have to explicitly allow any screen sharing or control.
 - **Security Monitoring**: Keep an eye on the usage to detect any anomalous behavior. For instance, Intune's audit logs and Entra ID sign-in logs will show who is signing into Remote Help. Unusual times or unknown helpers should be investigated. Also ensure that when staff leave the support team, you remove them from the Remote Help roles to revoke their ability to use the tool.
 - **Updates and New Features**: Remote Help is evolving. Microsoft may roll out new features (for example, the ability to support more platforms or an improved web helper dashboard). Stay updated via the Intune release notes or tech community blogs. Knowing these updates can help you refine your support process.
-
-## Updating Remote Help
-
-Microsoft Update, Microsoft Auto Update, Google Play store.
 
 ## Configure Remote Help for your tenant
 
@@ -120,7 +121,7 @@ The Remote Help app for Android is available from the Google Play store at [Remo
 
 ---
 
-## Install and update Remote Help apps
+## Install Remote Help apps
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
