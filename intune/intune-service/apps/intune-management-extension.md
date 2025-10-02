@@ -109,7 +109,8 @@ Alternatively, open **Task Manager**, find the service **IntuneManagementExtensi
 
 The IME is removed from the device under the following conditions:
 
-- Shell scripts are no longer assigned to the device.
+- PowerShell scripts are no longer assigned to the device.
+
 - The Windows device is no longer managed.
 - The IME is in an irrecoverable state for over 24 hours (device-awake time).
 
@@ -139,7 +140,7 @@ To check if the device is automatically enrolled:
 
 IME logs on the client machine are typically in `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Use [CMTrace.exe](/configmgr/core/support/cmtrace) to view these log files.
 
-![Screenshot or sample cmtrace agent logs in Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)
+![User's image](media/intune-management-extension/image.png)
 
 Also, use the log file *AppWorkload.log* to troubleshoot and analyze Win32 app management events on the client. This log file contains all logging information related to app deployment activities conducted by the IME.
 
