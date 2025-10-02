@@ -1,7 +1,7 @@
 ---
 title: Add Microsoft Edge to macOS devices using Microsoft Intune
 description: Learn about adding Microsoft Edge to macOS devices using Microsoft Intune.
-ms.date: 04/17/2024
+ms.date: 10/02/2025
 ms.topic: how-to
 ms.reviewer: arnab
 ms.collection:
@@ -16,9 +16,6 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 
 > [!IMPORTANT]
 > This app type offers developer and beta channels for macOS. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**.
-
-> [!NOTE]
-> Microsoft Edge *version 77 and later* is available for Windows 10 as well.
 
 ## Prerequisites
 

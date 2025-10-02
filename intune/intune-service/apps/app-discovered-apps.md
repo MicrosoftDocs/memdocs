@@ -1,7 +1,7 @@
 ---
 title: Discovered apps
 description: Understand details about the detected apps that Intune found on a device.
-ms.date: 07/30/2025
+ms.date: 10/02/2025
 ms.topic: how-to
 ms.reviewer: arnab
 ms.custom:
@@ -44,8 +44,8 @@ The following list shows the app platform type. It also shows which apps are mon
 
 | Platform | For personally owned devices | For company-owned devices | Refresh cycle |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10/11 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | Windows Installer apps on the device that appear in add/remove programs | Every 24 hours from device enrollment |
-| Windows 10/11 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every seven days from device enrollment |
+| Windows (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | Windows Installer apps on the device that appear in add/remove programs | Every 24 hours from device enrollment |
+| Windows (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every seven days from device enrollment |
 | Windows 8.1 | Only managed apps | Only managed apps | Every seven days from device enrollment |
 | Windows RT | Only managed apps | Only managed apps | Every seven days from device enrollment |
 | iOS/iPadOS | Only managed apps | All apps installed on the device except system apps | Every seven days from device enrollment |
