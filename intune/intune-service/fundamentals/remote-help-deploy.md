@@ -20,6 +20,10 @@ ms.collection:
 
 [!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
 
+This article describes the steps to deploy Remote Help with Microsoft Intune.
+
+When planning your deployment of Remote Help, consider the following best practices:
+
 - **User Communication and Training**: To drive adoption and effective use, provide documentation or brief training for both your helpdesk and end-users:
 - **Helpdesk Training**: Make sure your support team knows how to initiate sessions (via Intune or via the Remote Help app), how to generate/enter session codes, and the limitations (for example, they should know they can't help users outside the tenant). Emphasize security practices, like always confirming end-user consent on the call before taking control. Microsoft's documentation and support videos can be good training material.
 - **End-User Guidance**: Let your users know that a new remote support tool is available. Instruct them on how a support session is initiated – e.g., "When you contact the IT helpdesk, they may ask you to open the Remote Help app and share a code, or you might receive a popup notification to allow screen sharing." Reassure them that the tool is secure and only authorized IT will be able to connect, and that they will always have to explicitly allow any screen sharing or control.
@@ -96,9 +100,29 @@ After creating the custom roles that you can use to provide different users with
 
 6. On the **Review + Create** page, when you're done, choose **Create**. The new assignment is displayed in the list of assignments.
 
-## Install and update Remote Help
+## Download Remote Help apps
 
-### [Windows](#tab/windows)
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+
+Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
+
+The most recent version of Remote Help is **5.1.1998.0**
+
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+
+Download the latest version of Remote Help directly from Microsoft at [aka.ms/downloadremotehelpmacos](https://aka.ms/downloadremotehelpmacos).
+
+The most recent version of Remote Help is **1.0.2509231**.
+
+### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+
+The Remote Help app for Android is available from the Google Play store at [Remote Help - Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune.remotehelp).
+
+---
+
+## Install and update Remote Help apps
+
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
 Remote Help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a Remote Help session. By default, Remote Help opts users into automatic updates and updates itself when an update is available.
 
@@ -112,12 +136,6 @@ Some users may choose to opt out of automatic updates. However, when a new versi
 > - On May 2022, existing users of Remote Help will see a recommended upgrade screen when they open the Remote Help app. Users will be able to continue using Remote Help without upgrading.
 > - On May 23, 2022, existing users of Remote Help will see a mandatory upgrade screen when they open the Remote Help app. They will not be able to proceed until they upgrade to the latest version of Remote Help.
 > - Remote Help will now require Microsoft Edge WebView2 Runtime. During the Remote Help installation process, if Microsoft Edge WebView2 Runtime is not installed on the device, then Remote Help installation will install it. When uninstalling Remote Help, Microsoft Edge WebView2 Runtime will not be uninstalled.
-
-#### Download Remote Help
-
-Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
-
-The most recent version of Remote Help is **5.1.1998.0**
 
 #### Deploy Remote Help as an Enterprise App Catalog app
 
@@ -170,7 +188,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 
 1. Complete creation of the Windows app to have Intune deploy and install Remote Help on applicable devices.
 
-## Windows Firewall details
+#### Windows Firewall details
 
 Automatic firewall rule creation from the Remote Help installer has been removed. However, if needed, System administrators can create firewall rules.
 
@@ -180,7 +198,28 @@ Depending on the environment that Remote Help is utilized in, it may be necessar
 - C:\Program Files\Remote help\RHService.exe
 - C:\Program Files\Remote help\RemoteHelpRDP.exe
 
-### [Android](#tab/android)
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macOS)
+
+#### Install and update Remote Help native app
+
+The Remote Help native app is available to download from Microsoft and must be installed on the device you're trying to help before that device can be used to participate in a Remote Help session.
+
+> [!TIP]
+> The native app is only required if full control of the helpers device is required, otherwise you can use [Remote Help web app](remote-help-webapp.md).
+
+#### Deploy macOS Remote Help
+
+For enrolled devices, you can streamline the user experience by installing Remote Help on behalf of your users.
+
+For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](../apps/macos-unmanaged-pkg.md).
+
+For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
+
+#### Update Remote Help
+
+Remote Help receives the latest versions through the [Microsoft AutoUpdate (MAU) application](/DeployOffice/mac/update-office-for-mac-using-msupdate#application-identifiers). Users can opt in for automatic updates to ensure Remote Help is up to date.
+
+### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 To set up Remote Help for Android, you need to complete the following steps:
 
@@ -339,8 +378,6 @@ On some devices, the user also needs to agree to Samsung's KLMS Agent terms and 
 
 ---
 
-
-
 ## Setup Conditional Access for Remote Help
 
 This section outlines the steps for provisioning the Remote Help service on the tenant for Conditional Access.
@@ -408,16 +445,7 @@ To apply conditional access policies to Remote Help, follow these steps:
 
 The [Remote Help]( https://regale.cloud/Microsoft/viewer/1746/remote-help/index.html#/0/0) interactive demo walks you through scenarios step-by-step with interactive annotations and navigation controls.
 
-## Android
-
-
-
-## Setting up Remote Help for Android
-
-
-## macOS
-
-### Native app operating system permissions
+## Streamline macOS Native app operating system permissions
 
 On macOS, applications that access and control the screen require permission. By default, users must accept these permissions. macOS allows some control capabilities for each type of privacy setting using *Privacy Preferences Policy Control*.
 
@@ -428,7 +456,7 @@ On macOS, applications that access and control the screen require permission. By
 
 With settings catalog, we can streamline the end users experience for allowing these permissions.
 
-#### [:::image type="icon" source="../media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
+### [:::image type="icon" source="../media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices > Manage devices > Configuration > Create > macOS > Settings catalog**
 1. Enter a name and description for the profile. For example, "macOS Remote Help privacy permissions" and select **Next**
@@ -466,7 +494,7 @@ With settings catalog, we can streamline the end users experience for allowing t
     | Static Code | False |
 1. Select **Next**, configure scope tags as required, assign the profile to groups as required, review settings and **Create** the policy.
 
-#### [:::image type="icon" source="../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
+### [:::image type="icon" source="../media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
 
 [!INCLUDE [graph-explorer-introduction](../includes/graph-explorer-intro.md)]
 
@@ -481,31 +509,6 @@ Content-Type: application/json
 [!INCLUDE [graph-explorer-steps](../includes/graph-explorer-steps.md)]
 
 ---
-
-### Install and update Remote Help native app
-
-The Remote Help native app is available to download from Microsoft and must be installed on the device you're trying to help before that device can be used to participate in a Remote Help session.
-
-> [!TIP]
-> The native app is only required if full control of the helpers device is required, otherwise you can use [Remote Help web app](remote-help-webapp.md).
-
-### Download Remote Help
-
-Download the latest version of Remote Help directly from Microsoft at https://aka.ms/downloadremotehelpmacos.
-
-The most recent version of Remote Help is **1.0.2509231**.
-
-### Deploy Remote Help
-
-For enrolled devices, you can streamline the user experience by installing Remote Help on behalf of your users.
-
-For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](../apps/macos-unmanaged-pkg.md).
-
-For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
-
-### Update Remote Help
-
-Remote Help receives the latest versions through the [Microsoft AutoUpdate (MAU) application](/DeployOffice/mac/update-office-for-mac-using-msupdate#application-identifiers). Users can opt in for automatic updates to ensure Remote Help is up to date.
 
 ## Next steps
 
