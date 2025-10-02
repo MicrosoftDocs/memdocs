@@ -3,8 +3,6 @@ title: "Remote Device Action: Restart"
 description: Learn how to restart managed devices with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 ---
 

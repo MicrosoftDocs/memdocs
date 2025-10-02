@@ -15,6 +15,9 @@ ms.reviewer: juidaewo
 # Account protection policy settings for endpoint security in Intune
 
 > [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+> [!IMPORTANT]
 >
 > In July 2024, the following Intune profiles for identity protection and account protection were deprecated and replaced by a new consolidated profile named *Account protection*. This newer profile is found in the account protection policy node of endpoint security, and is the only profile template that remains available to create new policy instances for identity and account protection. The settings from this new profile are also available through the settings catalog.
 >
@@ -27,8 +30,10 @@ This article describes settings that are available in profiles for *Account prot
 
 The settings in this article apply to:
 
-- Windows 10
-- Windows 11
+- Windows
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 Supported platforms and profiles:
 

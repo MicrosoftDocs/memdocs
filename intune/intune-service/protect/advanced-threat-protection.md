@@ -47,7 +47,7 @@ The following platforms are supported for Intune with Microsoft Defender for End
 
 - Android
 - iOS/iPadOS
-- Windows 10/11 (Microsoft Entra hybrid joined or Microsoft Entra joined)
+- Windows (Microsoft Entra hybrid joined or Microsoft Entra joined)
 
 ### Microsoft Defender
 

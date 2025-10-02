@@ -103,12 +103,12 @@ To learn more about using security baselines, see:
   Baseline default: *Enabled*
   [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
-  *This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10/11 Pro or Enterprise instances that are enrolled for device management.*
+  *This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows Pro or Enterprise instances that are enrolled for device management.*
 
 - **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**
   Baseline default: *Enabled*
 
-  *This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10/11 Pro or Enterprise instances that are enrolled for device management.*
+  *This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows Pro or Enterprise instances that are enrolled for device management.*
 
 - **Allow users to proceed from the SSL warning page**
   Baseline default: *Disabled*
@@ -175,7 +175,7 @@ To learn more about using security baselines, see:
   Baseline default: *Enabled*
   [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
-  *This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10/11 Pro or Enterprise instances that are enrolled for device management*.
+  *This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows Pro or Enterprise instances that are enrolled for device management*.
 
 - **Allow user-level native messaging hosts (installed without admin permissions)**
   Baseline default: *Disabled*

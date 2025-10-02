@@ -3,8 +3,6 @@ title: "Remote Device Action: Logout current user"
 description: Learn how to use the logout the current user from a Shared iPad with Microsoft Intune.
 ms.date: 09/22/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Remote device action: logout current user

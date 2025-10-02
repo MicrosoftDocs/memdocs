@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 09/17/2025
+ms.date: 10/01/2025
 ms.topic: whats-new
 ms.localizationpriority: high
 ms.reviewer: intuner
@@ -57,6 +57,26 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of September 30, 2025
+
+### App management
+
+#### End of support for older versions of the Android Intune Company Portal app <!--33827426-->
+
+Support for Android Intune Company Portal versions earlier than **5.0.5421.0** ended on October 1, 2025. Devices running an older version of the app might no longer maintain their registration status and can be marked noncompliant. To keep devices registered and compliant, users must update to a supported version of the Company Portal app.
+
+To update, see:
+
+**For administrators:**
+
+- [Deploy the latest Windows Company Portal app by using Microsoft Intune](../apps/store-apps-company-portal-app.md)
+
+**For device users:**
+
+- Download the latest version of the Company Portal from the [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
+
+Applies to: Android
+
 ## Week of September 22, 2025
 
 ### Device security

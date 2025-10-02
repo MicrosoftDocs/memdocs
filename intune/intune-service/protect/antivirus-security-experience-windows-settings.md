@@ -15,10 +15,11 @@ ms.reviewer: mattcall
 
 # Settings for the Windows Security experience profile in Microsoft Intune
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 > [!NOTE]
 > This article details the settings in the  Windows Security experience profile for the *Windows 10 and later* platform for endpoint security Antivirus policy. Beginning on April, 5 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.
-
-View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Windows Security Experience profile for Windows 10 and later in Microsoft Intune.
 
 **Windows Security**:
 
