@@ -1,7 +1,7 @@
 ---
 title: Supported Microsoft Intune apps
 description: This article provides lists of support partner and Microsoft apps that are commonly used with Microsoft Intune.
-ms.date: 07/24/2025
+ms.date: 10/02/2025
 ms.topic: reference
 ms.localizationpriority: high
 ms.reviewer: cdemello
@@ -295,7 +295,7 @@ To learn how to add apps for each platform to Intune, see:
 - [Web apps (for all platforms)](web-app.md)
 - [Microsoft store apps](store-apps-windows.md)
 - [Windows LOB app](lob-apps-windows.md)
-- [Microsoft 365 apps for Windows 10](apps-add-office365.md)
+- [Microsoft 365 apps for Windows](apps-add-office365.md)
 - [Microsoft 365 apps for macOS](apps-add-office365-macos.md)
 - [Built-in apps](apps-add-built-in.md)
 - [Win32 apps](apps-win32-add.md)

@@ -1,7 +1,7 @@
 ---
 title: How to configure the Intune Company Portal apps, Company Portal website, and Intune app
 description: Learn how you can configure the Intune Company Portal apps, Company Portal website, and Intune app.
-ms.date: 09/30/2025
+ms.date: 10/02/2025
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: abstarr
@@ -266,7 +266,7 @@ To customize the available user self-service actions, see [Customizing user self
 
 Some platforms and configurations don't support self-service device actions. This table provides further details about self-service actions:
 
-| Action | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Action | Windows<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Retire | Available<sup>(1)</sup> | Available<sup>(9)</sup> | Available | Available<sup>(7)</sup> |
 | Wipe | Available | Available<sup>(5)</sup><sup>(9)</sup> | NA | Available<sup>(7)</sup> |
