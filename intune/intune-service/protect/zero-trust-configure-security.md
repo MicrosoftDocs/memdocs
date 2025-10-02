@@ -30,7 +30,7 @@ The security recommendations in this document are designed to help you improve y
 We recommend that all of the following controls be implemented where licenses are available. These patterns and practices help to provide a secure foundation for other resources built on top of this solution. More controls will be added to this document over time.
 
 ## Protect identities and secrets
-
+ 
 ### Enforce Windows LAPS to protect local administrator credentials<!-- 24560 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24560](./includes/secure-recommendations/24560.md)]
