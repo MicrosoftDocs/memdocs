@@ -215,7 +215,7 @@ When you as the sharer and your helper are ready to begin the session:
 1. After the session is established, the helper can then help in resolving any issues on the device.
 
 > [!NOTE]
-> If Remote Help wasn't installed by your administrator you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](#install-and-update-remote-help-native-app) section.
+> If Remote Help wasn't installed by your administrator you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](remote-help-deploy.md#install-and-update-remote-help) section.
 
 ## Provide help
 

@@ -1,6 +1,6 @@
 ---
 title: Deploy Remote Help with Microsoft Intune
-description: Learn about the requirements and capabilities of Remote Help with Microsoft Intune on Windows, macOS, and Android Enterprise.
+description: Follow the steps to deploy Remote Help with Microsoft Intune on Windows, macOS, and Android Enterprise.
 author: lenewsad
 ms.author: lanewsad
 ms.date: 10/01/2025
