@@ -25,6 +25,7 @@ This article describes the steps to deploy Remote Help with Microsoft Intune.
 - [⚙️Set up your tenant](#configure-remote-help-for-your-tenant)
 - [⬇️Download Remote Help](#download-remote-help-apps)
 - [🛠️Install Remote Help](#install-remote-help-apps)
+- [🔄️Update Remote Help](#update-remote-help-apps)
 - [🔒Configure Conditional Access](#setup-conditional-access-for-remote-help)
 
 When planning your deployment of Remote Help, consider the following best practices:
@@ -216,10 +217,6 @@ For more information on installing Remote Help through Intune as a required inst
 
 For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
 
-#### Update Remote Help
-
-Remote Help receives the latest versions through the [Microsoft AutoUpdate (MAU) application](/DeployOffice/mac/update-office-for-mac-using-msupdate#application-identifiers). Users can opt in for automatic updates to ensure Remote Help is up to date.
-
 ### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 To set up Remote Help for Android, you need to complete the following steps:
@@ -376,6 +373,22 @@ On some devices, the user also needs to agree to Samsung's KLMS Agent terms and 
 >
 > - On Knox 2.8-3.7 (inclusive) this consent is revoked if the Remote Help app is uninstalled.
 > - If the user agreed to KLMS license terms through another app, the prompt might not appear.
+
+---
+
+## Update Remote Help apps
+
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+
+Remote Help recieves updates via Microsoft Update if configured. Otherwise, you need to update the application by using the Enterprise App Catalog (available as part of Intune Suite) or by packaging and deploying the update as a Win32 app.
+
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+
+Remote Help receives the latest versions through the [Microsoft AutoUpdate (MAU) application](/DeployOffice/mac/update-office-for-mac-using-msupdate#application-identifiers). Users can opt in for automatic updates to ensure Remote Help is up to date.
+
+### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+
+The Remote Help app for Android will be updated by the Google Play store after deployed.
 
 ---
 
