@@ -13,13 +13,11 @@ ms.collection:
 - highseo
 ---
 
-# Remote Help on Windows with Microsoft Intune
+# Using Remote Help with Microsoft Intune
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
 [!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
-
-## How to use Remote Help Windows
 
 The use of Remote Help depends on whether you're requesting help or providing help. In this section, both scenarios are covered.
 
