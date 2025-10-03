@@ -57,7 +57,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
-## Week of September 30, 2025
+## Week of September 29, 2025
 
 ### App management
 

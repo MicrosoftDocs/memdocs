@@ -30,12 +30,12 @@ The security recommendations in this document are designed to help you improve y
 We recommend that all of the following controls be implemented where licenses are available. These patterns and practices help to provide a secure foundation for other resources built on top of this solution. More controls will be added to this document over time.
 
 ## Protect identities and secrets
-
-### Enforce Cloud LAPS for Windows local admin accounts<!-- 24560 -->
+ 
+### Enforce Windows LAPS to protect local administrator credentials<!-- 24560 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24560](./includes/secure-recommendations/24560.md)]
 
-### Encrypt Windows devices with BitLocker<!-- 24550 -->
+### Enforce BitLocker encryption on Windows devices<!-- 24550 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24550](./includes/secure-recommendations/24550.md)]
 
@@ -47,23 +47,23 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24564](./includes/secure-recommendations/24564.md)]
 
-### Encrypt macOS devices with FileVault<!-- 24569 -->
+### Enforce FileVault encryption on macOS devices<!-- 24569 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24569](./includes/secure-recommendations/24569.md)]
 
-### Enforce Cloud LAPS for macOS local admin accounts<!--  24561 -->
+### Enforce macOS LAPS to protect local administrator credentials during enrollment<!--  24561 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24561](./includes/secure-recommendations/24561.md)]
 
-<!-- ### macOS - Platform SSO is configured and assigned 24568 -->
+<!-- ### Enable Platform SSO for macOS devices <or> Enforce Platform SSO on macOS for phishing-resistant authentication<!-- 24568 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24568](./includes/secure-recommendations/24568.md)]-->
 
-### Apply app protection policies to Android devices<!-- 24549 -->
+### Enforce app protection policies on Android devices to prevent data leakage<!-- 24549 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24549](./includes/secure-recommendations/24549.md)]
 
-### Apply app protection policies to iOS/iPadOS devices<!-- 24548 -->
+### Enforce app protection policies on iOS/iPadOS devices to prevent data leakage<!-- 24548 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
 
@@ -81,11 +81,11 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24546](./includes/secure-recommendations/24546.md)]
 
-<!-- ### ## Tenant - Least privilege principal is used for Intune Role and Responsibilities 24521 -->
+<!-- ### ## Assign least privilege role-based access control roles in Intune<!-- 24521 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24521](./includes/secure-recommendations/24521.md)]-->
 
-<!-- ### Tenant - Enrollment restrictions per platform are configured 24558 -->
+<!-- ### Configure platform-specific enrollment restrictions<!-- 24558 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 <!-- [!INCLUDE [24558](./includes/secure-recommendations/24558.md)]-->
 
@@ -97,7 +97,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24542](./includes/secure-recommendations/24542.md)]
 
-### Enforce compliance policies on fully managed and coporate owned Android devices<!--  24545 -->
+### Enforce compliance policies on fully managed and corporate owned Android devices<!--  24545 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24545](./includes/secure-recommendations/24545.md)]
 
@@ -109,7 +109,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24543](./includes/secure-recommendations/24543.md)]
 
-<!-- ## Android - Automatic Enrollment to Defender is enabled for Android Devices <!-- 24871 -->
+<!-- ## Enable automatic Defender enrollment for Android devices<!-- 24871 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24871](./includes/secure-recommendations/24871.md)]-->
 
@@ -183,7 +183,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24840](./includes/secure-recommendations/24840.md)]
 
-<!-- ### Corporate Wi-Fi network on macOS devices is securely managed<!-- 24870 -->
+<!-- ### Configure secure Wi-Fi profiles for macOS devices<!-- 24870 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24870](./includes/secure-recommendations/24870.md)] -->
 
