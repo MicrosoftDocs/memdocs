@@ -63,7 +63,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 ---
 
-## Try an interactive demo
+## Demos and Videos
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
@@ -75,6 +75,10 @@ Use the interacitive demos to explore Remote Help on macOS:
 
 - [macOS native experience](https://regale.cloud/microsoft/play/1746/remote-help#/7/0)
 - [macOS web app experience](https://regale.cloud/microsoft/play/1746/remote-help#/6/0)
+
+### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+
+For an overview and demo of Remote Help on Android, see [Remote Help for Android overview](https://www.youtube.com/watch?v=1mX4jv2b9mA).
 
 ---
 
