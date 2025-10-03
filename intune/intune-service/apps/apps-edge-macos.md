@@ -1,5 +1,5 @@
 ---
-title: Add Microsoft Edge to macOS devices using Microsoft Intune
+title: Add Microsoft Edge to macOS Devices Using Microsoft Intune
 description: Learn about adding Microsoft Edge to macOS devices using Microsoft Intune.
 ms.date: 10/02/2025
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.collection:
 - FocusArea_Apps_Add
 ---
 
-# Add Microsoft Edge to macOS devices using Microsoft Intune
+# Add Microsoft Edge to macOS Devices Using Microsoft Intune
 
 Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run macOS. This app type makes it easy for you to assign Microsoft Edge to macOS devices without requiring you to use the macOS app wrapping tool. To help keep the apps more secure and up to date, the app comes with Microsoft AutoUpdate (MAU).
 

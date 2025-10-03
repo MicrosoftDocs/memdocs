@@ -1,5 +1,5 @@
 ---
-title: Add Microsoft 365 Apps to Windows devices using Microsoft Intune
+title: Add Microsoft 365 Apps to Windows Devices Using Microsoft Intune
 description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on Windows 10/11 devices.
 ms.date: 10/02/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_Add
 ---
 
-# Add Microsoft 365 Apps to Windows devices with Microsoft Intune
+# Add Microsoft 365 Apps to Windows Devices With Microsoft Intune
 
 [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 

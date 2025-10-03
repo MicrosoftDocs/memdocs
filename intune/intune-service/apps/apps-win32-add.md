@@ -1,5 +1,5 @@
 ---
-title: Add and assign Win32 apps to Microsoft Intune
+title: Add and Assign Win32 Apps to Microsoft Intune
 description: Learn how to add, assign, and manage Win32 apps with Microsoft Intune.
 ms.date: 10/02/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_Win32
 ---
 
-# Add, assign, and monitor a Win32 app in Microsoft Intune
+# Add, Assign, and Monitor a Win32 App in Microsoft Intune
 
 [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 

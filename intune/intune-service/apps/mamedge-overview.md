@@ -1,5 +1,5 @@
 ---
-title: Secure your corporate data using Microsoft Edge for Business
+title: Secure Your Corporate Data Using Microsoft Edge for Business
 description: Secure your corporate data in Microsoft Intune with Microsoft Edge for Business.
 ms.date: 06/12/2025
 ms.topic: overview
@@ -12,7 +12,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Secure your corporate data in Intune with Microsoft Edge for Business
+# Secure Your Corporate Data in Intune With Microsoft Edge for Business
 
 This content helps you implement and secure enterprise browser configuration for Mobile Application Management using Microsoft Edge for Business.
 

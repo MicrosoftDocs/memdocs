@@ -1,5 +1,5 @@
 ---
-title: Understanding Microsoft Intune management agent for macOS
+title: Understanding Microsoft Intune Management Agent for macOS
 description: Learn about the Microsoft Intune management agent for macOS.
 ms.date: 07/12/2024
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.collection:
 - highpri
 ---
 
-# Microsoft Intune management agent for macOS
+# Microsoft Intune Management Agent for macOS
 
 ## Why is the agent required?
 
