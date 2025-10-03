@@ -233,11 +233,11 @@ Remote Help communicates over port 443 (https) and connects to the Remote Assist
 
 If your organization restricts Remote Help to enrolled devices only, there are extra requirements:
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windowsenrolled)
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows
 
 The sharer's Windows device must be enrolled into the same tenant where the Remote Help session is starting from.
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macosenrolled)
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
 1. **Single sign-on (SSO)**. For more information, see [Use Enterprise SSO Plug-in on macOS](../configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
 1. **Open and sign in to Company Portal**. The user must open and sign into Company Portal for Remote Help to recognize the device is enrolled.
@@ -245,13 +245,21 @@ The sharer's Windows device must be enrolled into the same tenant where the Remo
 > [!NOTE]
 > Company Portal isn't supported on devices enrolled without user affinity. To use Remote Help on these devices, you need to change your tenant settings to set **Remote Help to unenrolled devices** to **Allowed**.
 
+### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+
+Remote Help doesn't support unenrolled devices on Android.
+
+### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web App**](#tab/webapp)
+
+The web app has the same requirements as the platform of the sharer.
+
 ---
 
 ## Supported Languages
 
 Remote Help is supported in the following languages:
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windowslanguage)
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
 - Arabic
 - Bulgarian
@@ -288,7 +296,7 @@ Remote Help is supported in the following languages:
 - Turkish
 - Ukrainian
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macoslanguage)
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
 - Arabic
 - Bulgarian
@@ -324,6 +332,14 @@ Remote Help is supported in the following languages:
 - Thai
 - Turkish
 - Ukrainian
+
+### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+
+The Remote Help app for Android uses the language set on the device. The Remote Help app for Android supports all languages that are supported by Android.
+
+### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web App**](#tab/webapp)
+
+The Remote Help web app supports all of the languages supported by the browser being used.
 
 ---
 
