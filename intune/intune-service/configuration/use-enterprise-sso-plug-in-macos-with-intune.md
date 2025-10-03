@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 05/01/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: miepping, tbc, alessanc
 ms.collection:
 - M365-identity-device-management

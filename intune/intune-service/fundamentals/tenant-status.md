@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 02/24/2025
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: crisk
 ms.collection:
 - M365-identity-device-management

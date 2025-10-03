@@ -3,7 +3,6 @@ title: Set up web based device enrollment
 description: Set up web-based device enrollment to manage user-owned iOS/iPadOS devices in Microsoft Intune.
 ms.date: 09/23/2024
 ms.topic: install-set-up-deploy
-ms.localizationpriority: high
 ms.reviewer: rishitasarin
 ms.collection:
 - M365-identity-device-management

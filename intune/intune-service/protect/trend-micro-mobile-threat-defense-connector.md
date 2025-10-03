@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 08/27/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management

@@ -9,7 +9,6 @@ ms.topic: concept-article
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.localizationpriority: high
 ---
 
 # Advanced Analytics Troubleshooting and Frequently Asked Questions
@@ -74,7 +73,7 @@ For more information, go to:
 
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
-- [Enhanced device timeline](enhanced-device-timeline.md)  
+- [Enhanced device timeline](enhanced-device-timeline.md)
 - [Battery health](battery-health.md)
 - [Device query](device-query.md)
 - [Resource Performance report](resource-performance-report.md)

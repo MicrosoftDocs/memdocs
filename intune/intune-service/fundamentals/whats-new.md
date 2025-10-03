@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 10/03/2025
 ms.topic: whats-new
-ms.localizationpriority: high
 ms.reviewer: intuner
 ms.collection:
 - M365-identity-device-management
@@ -97,7 +96,7 @@ We’ve updated the Vulnerability Remediation Agent for Security Copilot, adding
 
   When using granular RBAC configurations, ensure the agent’s identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 
-- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../protect/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data. 
+- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../protect/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
 
   Changes to the agent’s identity won’t affect the agent’s run history, which remains available.
 
