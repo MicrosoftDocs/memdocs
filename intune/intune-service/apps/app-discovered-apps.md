@@ -1,32 +1,11 @@
 ---
-# required metadata
-
 title: Discovered apps
-titleSuffix: Microsoft Intune
 description: Understand details about the detected apps that Intune found on a device.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 07/30/2025
+ms.date: 10/02/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 07dd262f-13e7-4cb2-9cc2-b755d1c276cf
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -65,8 +44,8 @@ The following list shows the app platform type. It also shows which apps are mon
 
 | Platform | For personally owned devices | For company-owned devices | Refresh cycle |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10/11 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | Windows Installer apps on the device that appear in add/remove programs | Every 24 hours from device enrollment |
-| Windows 10/11 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every seven days from device enrollment |
+| Windows (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | Windows Installer apps on the device that appear in add/remove programs | Every 24 hours from device enrollment |
+| Windows (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every seven days from device enrollment |
 | Windows 8.1 | Only managed apps | Only managed apps | Every seven days from device enrollment |
 | Windows RT | Only managed apps | Only managed apps | Every seven days from device enrollment |
 | iOS/iPadOS | Only managed apps | All apps installed on the device except system apps | Every seven days from device enrollment |

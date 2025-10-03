@@ -1,29 +1,17 @@
 ---
-title: Add an Enterprise App Catalog app to Microsoft Intune
-titleSuffix:
-description: Learn how to add an Enterprise App Catalog app to Microsoft Intune. 
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 09/24/2025
+title: Add an Enterprise App Catalog App to Microsoft Intune
+description: Learn how to add an Enterprise App Catalog app to Microsoft Intune.
+ms.date: 06/17/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
 ms.localizationpriority: high
-ms.assetid: 
 ms.reviewer: dguilory
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_EAC
 ---
 
-# Add an Enterprise App Catalog app to Microsoft Intune
+# Add an Enterprise App Catalog App to Microsoft Intune
 
 The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility (introduced in 2025). 
 
@@ -134,7 +122,7 @@ The **Program** step provides the following options:
     1. In the **Return code** column, add the return code.
     2. In the **Code type** column, set the **Code type** to one of the following:
         - **Failed**: The return value that indicates an app installation failure.
-        - **Hard reboot**: The hard reboot return code doesn't allow the next Windows catalog app (Win32) to be installed on the client without reboot. 
+        - **Hard reboot**: The hard reboot return code doesn't allow the next Windows catalog app (Win32) to be installed on the client without reboot.
         - **Soft reboot**: The soft reboot return code allows the next Windows catalog app (Win32) to be installed without requiring a client reboot. Reboot is necessary to complete installation of the current application.
         - **Retry**: The agent attempts to install the app three times. It waits for five minutes between each attempt. 
         - **Success**: The return value that indicates the app was successfully installed.
@@ -214,7 +202,7 @@ The **Rules format** provides the following options:
         - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location shows as the app version in reporting. This might differ from the version of the app properties. Only one detection rule can have this setting. Adding this setting to another rule for this app clears it from the prior rule. 
 
           :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-09.png" alt-text="Screenshot of file detection rule.":::
-                 
+
     - **Registry**: Verify based on value, string, integer, or version.
         - **Key path**: The full path of the registry entry that contains the value to detect. A valid syntax is HKEY_LOCAL_MACHINE\Software\WinRAR or HKLM\Software\WinRAR.
         - **Value name**: The name of the registry value to detect. If this value is empty, the detection happens on the key. The (default) value of a key will be used as detection value if the detection method is other than file or folder existence.

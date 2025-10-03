@@ -1,35 +1,13 @@
 ---
-# required metadata
-
-title: Manage Android Enterprise system apps in Microsoft Intune
-titleSuffix: 
+title: Manage Android Enterprise System Apps in Microsoft Intune
 description: Learn how to manage Android Enterprise system apps in Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 08/18/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: priyar
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_Add
-ms.custom: intune-azure
 ---
 
 # Manage Android Enterprise system apps in Microsoft Intune
@@ -46,7 +24,7 @@ You can enable an Android Enterprise system app in Intune using the following st
 4. Click **Select**. The **Add app** steps are displayed.
 In the **App information** page, add the app details:
     - **App Name**: Enter the name of the app.
-    - **Publisher**: Enter the name of the publisher of the app.  
+    - **Publisher**: Enter the name of the publisher of the app.
     - **Package Name**: Enter a package name. Intune will validate that the package name is valid.
 5. Click **Next** to display the **Scope tags** page.
 6. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -61,10 +39,10 @@ The **Overview** blade of the app you've created is displayed.
 > You'll need to work with the OEM of your device to find the package name of the app you would like to enable/disable.
 >
 > You can't create an Android Enterprise system app when there's the same app in Managed Google Play in Intune.
-> 
-> The Notes section won't appear for an Android Enterprise system app and isn't editable. 
+>
+> The Notes section won't appear for an Android Enterprise system app and isn't editable.
 
-The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
+The app you've created is displayed in the apps list, where you can assign it to the groups that you select.
 
 ## Disable an existing system app
 
@@ -82,7 +60,7 @@ You can disable an Android Enterprise system app in Intune using the following s
 3. In **Select app type**, select **Other** > **Android Enterprise system app**.
 4. Click **Select**. In **App information**, add the app details:
     - **App Name**: Enter the name of the app.
-    - **Publisher**: Enter the name of the publisher of the app.  
+    - **Publisher**: Enter the name of the publisher of the app.
     - **Package Name**: Enter a package name, like `com.microsoft.word`. Intune validates that the package name is valid.
 
     For example, to disable the on-device AI experience, you can block the AICore system service by entering the following:

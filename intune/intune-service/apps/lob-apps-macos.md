@@ -1,43 +1,21 @@
 ---
-# required metadata
-
-title: How to add macOS line-of-business apps to Microsoft Intune
-titleSuffix:
+title: How to Add macOS Line-of-Business Apps to Microsoft Intune
 description: Learn about how to add macOS line-of-business (LOB) apps to Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - macOS
 - highpri
 - FocusArea_Apps_LOB
 ---
 
-# How to add macOS line-of-business (LOB) apps to Microsoft Intune
+# How to Add macOS Line-of-Business (LOB) Apps to Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Use the information in this article to help you add macOS line-of-business apps to Microsoft Intune. 
+Use the information in this article to help you add macOS line-of-business apps to Microsoft Intune.
 
 > [!NOTE]
 > macOS LOB apps have a maximum size limit of 2 GB per app.
@@ -72,7 +50,7 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 
 ### Select the app package file
 
-1. In the **Add app** pane, select **Select app package file**. 
+1. In the **Add app** pane, select **Select app package file**.
 2. In the **App package file** pane, select the browse button. Then, select an macOS installation file with the extension *.pkg*.
    The app details are displayed.
 3. When you're finished, select **OK** on the **App package file** pane to add the app.
@@ -101,7 +79,7 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-1. Choose **Select scope tags** to optionally add scope tags for the app. 
+1. Choose **Select scope tags** to optionally add scope tags for the app.
 2. Select **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments

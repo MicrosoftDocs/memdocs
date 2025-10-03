@@ -1,21 +1,15 @@
 ---
 title: Anomaly detection in Endpoint analytics
-titleSuffix: Microsoft Endpoint Manager
 description: Learn about Anomaly detection as an advanced feature in Endpoint analytics
 ms.date: 04/07/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
 ---
 
 # Anomaly Detection in Endpoint analytics
 
-> [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+
+[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
 This article explains how anomaly detection in Endpoint analytics works as an early warning system.
 
@@ -27,9 +21,9 @@ Administrators can rely on anomaly detection to learn about user experience impa
 
 With anomaly detection, you can detect potential problems in a system before they become a serious issue. Traditionally, support teams had limited visibility into potential problems.
 
-- The support channel is only able to report or escalate a subset of the issues. This report isn't truly representative of everything going on in your organization.  
+- The support channel is only able to report or escalate a subset of the issues. This report isn't truly representative of everything going on in your organization.
 
-- The support channel spends countless hours reviewing custom dashboards trying to identify the root cause, troubleshoot, create custom alerts, change thresholds, and tweak parameters.  
+- The support channel spends countless hours reviewing custom dashboards trying to identify the root cause, troubleshoot, create custom alerts, change thresholds, and tweak parameters.
 
 Anomaly detection aims at addressing these problems by enabling IT admins with critical information.
 
@@ -42,7 +36,7 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 
 - Licensing/Subscriptions: The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
-- Permissions: Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)  
+- Permissions: Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)
 
 ## Anomalies tab
 
@@ -65,13 +59,29 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 
    :::image type="content" source="media/anomaly-detection/affected-devices.png" lightbox="media/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
 
+## Reviewing Anomaly Detection Data
+
+Investigate flagged Device correlation groups using device timeline and resource reports to determine root cause. Device correlation groups identify root causes for high & medium severity anomalies, along with at risk devices which may be impacted in the future.
+
+- Best practices:
+  - IT administrators should periodically review the anomaly detection dashboard, to understand the current baseline and prioritize investigations and resolutions of new issues.
+  - Investigate any new reported issues, to identify common factors, as displayed in advanced analytics such as common device hardware.
+  - Prioritize the anomalies to investigate based on severity, and internal knowledge like application criticality.
+  - Leverage [device timeline](enhanced-device-timeline.md) to review if there is a specific pattern, such as a device restart or update tied to the anomaly.
+  - Work with IT teams to understand any other factors that could be impacting this, such as recent application updates.
+  - Review possible remediation actions as noted in the Anomaly report (Driver Updates, Application Updates).
+  - Integrate the resolution into L1/L2 support, to keep teams aware of current known issues. Consider working with your ITSM team to record known anomalies currently under investigation.
+  - Test remediation actions on a subset of devices and monitor before rolling out to wider impacted devices. After remediation has been performed on impacted devices, proactively roll out to at risk devices that may be impacted in the future. 
+  - Review anomaly detection after any major update or incident to check for possible new issues that need investigation and resolution.
+  - To better understand the detection methods, consider reviewing the [Statistical Models](#statistical-models-for-determining-anomalies) used by Anomaly Detection.
+
 ## Statistical Models for determining anomalies
 
 The Analytical Model built detects device cohorts facing anomalous set of stop error restarts and application hangs/ crashes that need admin attention to mitigate and resolve. Patterns identified from our sensor telemetry and diagnostics logs determine these device cohorts
 
-- **Threshold based heuristic model**: The heuristic model involves setting one or more threshold values for Application Hangs/Crashes or Stop Error Restarts. Devices are flagged as anomalous if there's a breach in the above set threshold. The model is simple yet effective; it's suited in surfacing prominent or static issues with devices or their apps. Currently, the thresholds are predetermined without an option to customize.  
+- **Threshold based heuristic model**: The heuristic model involves setting one or more threshold values for Application Hangs/Crashes or Stop Error Restarts. Devices are flagged as anomalous if there's a breach in the above set threshold. The model is simple yet effective; it's suited in surfacing prominent or static issues with devices or their apps. Currently, the thresholds are predetermined without an option to customize. 
 
-- **Paired t-tests model**: Paired t-tests are a mathematical method that compares pairs of observations in a dataset, looking for a statistically significant distance between their means. Tests are used on datasets that consist of observations related to each other in some way. For example, count of Stop Error Restarts from the same device before and after a policy change, or app crashes on a device after an OS (operating systems) update.  
+- **Paired t-tests model**: Paired t-tests are a mathematical method that compares pairs of observations in a dataset, looking for a statistically significant distance between their means. Tests are used on datasets that consist of observations related to each other in some way. For example, count of Stop Error Restarts from the same device before and after a policy change, or app crashes on a device after an OS (operating systems) update.
 
 - **Population Z-score model**: Population Z-score based statistical models involve calculating the standard deviation and mean of a dataset, and then using those values to determine which data points are anomalous.
 Standard deviation and mean are used to calculate the Z-score for each data point, which represents the number of standard deviations away from the mean. Data points that fall outside a certain range are anomalous. This model is well suited in highlighting outlier devices or apps from the wider baseline but requires sufficiently large datasets to be accurate.
@@ -79,10 +89,17 @@ Standard deviation and mean are used to calculate the Z-score for each data poin
 - **Time Series Z-score model**: Time series Z-score models are a variation of the standard Z-score model designed for detecting anomalies in time series data. Time series data is a sequence of data points collected at regular intervals over time, such as aggregate of Stop Error Restarts.
 Standard deviation and mean are calculated for a sliding window of time, using aggregated metrics. This method allows the model to be sensitive to temporal patterns in the data and adapt to changes in its distribution over time.
 
-## Next steps
+---
+
+## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Battery Health >](battery-health.md)
+
+---
 
 For more information, go to:
 
 - [Enhanced device timeline](enhanced-device-timeline.md)
 - [Device scopes](device-scopes.md)
-- [What is advanced Endpoint analytics](advanced-endpoint-analytics.md)  
+- [What is advanced Endpoint analytics](advanced-endpoint-analytics.md)

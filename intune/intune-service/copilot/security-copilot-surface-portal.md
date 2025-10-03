@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Security Copilot in Microsoft Surface Management Portal
 description: You can use Security Copilot to help you manage and monitor Surface devices at scale.
-keywords:
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
 ms.date: 02/18/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice:
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: zadvor
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -35,7 +16,7 @@ ms.collection:
 
 # Security Copilot in Microsoft Surface Management Portal
 
-Microsoft Security Copilot is a cloud-based AI platform that provides a natural language Copilot experience that can be used to provide information and resolve issues. [Surface Management Portal](/surface/surface-management-portal) provides a centralized platform to manage and monitor Surface devices at scale. Surface Management Portal integration with Microsoft Copilot for Security helps Surface device administrators be more efficient, and resolve hardware issues faster and at scale. 
+Microsoft Security Copilot is a cloud-based AI platform that provides a natural language Copilot experience that can be used to provide information and resolve issues. [Surface Management Portal](/surface/surface-management-portal) provides a centralized platform to manage and monitor Surface devices at scale. Surface Management Portal integration with Microsoft Copilot for Security helps Surface device administrators be more efficient, and resolve hardware issues faster and at scale.
 
 Copilot for Surface Management Portal provides visibility into your environment's applicable warranty and protection plan coverage, whichever is longer (Coverage), and end-of-servicing timelines. Additionally, it offers insights into various aspects of device management, including compliance policies, malware protection, and other threats to reduce risks.
 
@@ -61,7 +42,7 @@ There are Surface Management Portal capabilities built into Security Copilot, an
 
 ## Key features
 
-Copilot for Surface Management Portal brings the capabilities of Security Copilot to the Microsoft Surface Management Portal admin center, enabling you to respond to Surface device issues and escalations quickly. Bringing AI to Surface Management Portal allows teams to immediately understand coverage of their device fleet and determine remediation steps in a timely manner. You can also learn more about protecting your organizations devices from malware and other threats, so that you can reduce risks.  
+Copilot for Surface Management Portal brings the capabilities of Security Copilot to the Microsoft Surface Management Portal admin center, enabling you to respond to Surface device issues and escalations quickly. Bringing AI to Surface Management Portal allows teams to immediately understand coverage of their device fleet and determine remediation steps in a timely manner. You can also learn more about protecting your organizations devices from malware and other threats, so that you can reduce risks.
 
 :::image type="content" source="./media/security-copilot-surface-portal/surface-management-portal-01.png" alt-text="Screenshot that shows Copilot in the Surface Management Portal." lightbox="./media/security-copilot-surface-portal/surface-management-portal-01.png" border="true":::
 

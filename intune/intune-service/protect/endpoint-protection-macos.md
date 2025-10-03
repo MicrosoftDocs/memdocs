@@ -1,29 +1,13 @@
 ---
-# required metadata
-
 title: Configure endpoint protection on macOS devices with Microsoft Intune | Microsoft Docs
 description: Use Intune to configure macOS devices use the built-in firewall to allow or block specific apps or to use stealth mode, to use Gatekeeper to determine where apps install, and to use FileVault disk encryption.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 10/25/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mattcall
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - endpoint-protection
 - sub-secure-endpoints
@@ -49,7 +33,7 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
 > [!IMPORTANT]
 > As of macOS 10.15, FileVault configuration requires user approved MDM enrollment.
 
-- **Enable FileVault**  
+- **Enable FileVault**
 
   You can *enable* Full Disk Encryption using XTS-AES 128 with FileVault on devices that run macOS 10.13 and later.
 
