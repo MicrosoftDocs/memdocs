@@ -69,11 +69,11 @@ We recommend that all of the following controls be implemented where licenses ar
 
 ## Protect tenants and isolate production systems
 
-### Use scope tags to support delegated administration and least-privilege access<!-- 24555 -->
+### Scope tag configuration is enforced to support delegated administration and least-privilege access<!-- 24555 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24555](./includes/secure-recommendations/24555.md)]
 
-### Device enrollment notifications support secure onboarding and user awareness<!-- 24572 -->
+### Device enrollment notifications are enforced to ensure user awareness and secure onboarding<!-- 24572 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
  [!INCLUDE [24572](./includes/secure-recommendations/24572.md)]
 
