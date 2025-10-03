@@ -233,7 +233,7 @@ Remote Help communicates over port 443 (https) and connects to the Remote Assist
 
 If your organization restricts Remote Help to enrolled devices only, there are extra requirements:
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
 The sharer's Windows device must be enrolled into the same tenant where the Remote Help session is starting from.
 

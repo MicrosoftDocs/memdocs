@@ -191,7 +191,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 
 1. Complete creation of the Windows app to have Intune deploy and install Remote Help on applicable devices.
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macOS)
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
 #### Install and update Remote Help native app
 
