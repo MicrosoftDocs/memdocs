@@ -6,7 +6,6 @@ author: Smritib17
 ms.author: smbhardwaj
 ms.date: 02/28/2025
 ms.topic: how-to
-ms.localizationpriority: high
 
 ms.reviewer: hipethe
 ms.custom:
