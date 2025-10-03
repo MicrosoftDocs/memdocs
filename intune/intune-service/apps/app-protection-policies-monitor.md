@@ -1,5 +1,5 @@
 ---
-title: How to monitor app protection policies
+title: How to Monitor App Protection Policies
 description: This article describes how to monitor app protection policies in Intune.
 ms.date: 06/16/2024
 ms.topic: how-to
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# How to monitor app protection policies
+# How to Monitor App Protection Policies
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 You can monitor the status of the app protection policies that you applied to users from the Intune app protection pane in Intune. Additionally, you can find information about the users affected by app protection policies, policy compliance status, and any issues that your users might be experiencing.

@@ -1,5 +1,5 @@
 ---
-title: Install Microsoft 365 apps to macOS devices using Microsoft Intune
+title: Install Microsoft 365 Apps to macOS Devices Using Microsoft Intune
 description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on macOS devices.
 ms.date: 10/02/2025
 ms.topic: how-to
@@ -9,7 +9,7 @@ ms.collection:
 - macOS
 ---
 
-# Assign Microsoft 365 to macOS devices with Microsoft Intune
+# Assign Microsoft 365 to macOS Devices With Microsoft Intune
 
 This app type makes it easy for you to assign Microsoft 365 apps to macOS devices. By using this app type, you can install Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive. To help keep the apps more secure and up to date, the apps come with Microsoft AutoUpdate (MAU). The apps that you want are displayed as one app in the list of apps in the Intune admin center.
 

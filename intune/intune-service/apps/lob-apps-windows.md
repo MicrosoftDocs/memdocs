@@ -1,5 +1,5 @@
 ---
-title: Add a Windows line-of-business app to Microsoft Intune
+title: Add a Windows Line-of-Business App to Microsoft Intune
 description: Learn how to add a Windows line-of-business (LOB) app using Microsoft Intune.
 ms.date: 04/25/2024
 ms.topic: how-to
@@ -12,7 +12,7 @@ ms.collection:
 - FocusArea_Apps_LOB
 ---
 
-# Add a Windows line-of-business app to Microsoft Intune
+# Add a Windows Line-of-Business App to Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

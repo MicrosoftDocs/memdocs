@@ -1,5 +1,5 @@
 ---
-title: Enable Win32 apps on S mode devices
+title: Enable Win32 Apps on S Mode Devices
 description: Learn how to enable Win32 apps on S mode devices using Microsoft Intune.
 ms.date: 10/02/2025
 ms.topic: how-to
@@ -9,7 +9,7 @@ ms.collection:
 - FocusArea_Apps_Win32
 ---
 
-# Enable Win32 apps on S mode devices
+# Enable Win32 Apps on S Mode Devices
 
 [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
