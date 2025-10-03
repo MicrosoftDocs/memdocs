@@ -24,6 +24,7 @@ Microsoft Intune Remote Help is a cloud-based remote support solution that allow
 The Remote Help app supports the following capabilities in general across the supported platforms.
 
 - **Enable Remote Help for your tenant**: By default, Remote Help is not eneabled for Intune tenants. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
+  :::image type="content" source="media/remote-help/remote-help-enable.png" alt-text="A screenshot of the tenant administration screen where you can enable Remote Help" lightbox="media/remote-help/remote-help-enable-expanded.png":::
 
 - **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
 
@@ -39,123 +40,43 @@ The Remote Help app supports the following capabilities in general across the su
 
 ## Platform-specific capabilities
 
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+
+- **Elevation**: Allows helpers to enter UAC credentials when prompted on the sharer's device. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access.
+- **Remote launch**: Allows helpers to launch Remote Help on the helper and sharer's device from Intune by sending a notification to the sharer's device.
+- **Optional support for unenrolled devices**: This setting is turned off by default. Enabling this option allows help to be provided to devices that aren't enrolled in Intune. This setting does not apply to devices used by helpers.
+  :::image type="content" source="media/remote-help/remote-help-unenrolled.png" alt-text="A screenshot of the opion to enable unenrolled devices":::
+- **Conditional access support**: You can use Conditional Access policies to control how helpers and sharers access Remote Help. For example, you can require multi-factor authentication (MFA) for helpers or restrict access to specific locations or compliant devices.
+- **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages).
+
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+
 - **Optional support for unenrolled devices**: This setting is turned off by default. For Windows and macOS devices, enabling this option allows help to be provided to devices that aren't enrolled in Intune. This setting does not apply to devices used by helpers.
+  :::image type="content" source="media/remote-help/remote-help-unenrolled.png" alt-text="A screenshot of the opion to enable unenrolled devices":::
+- **Conditional access support**: You can use Conditional Access policies to control how helpers and sharers access Remote Help. For example, you can require multi-factor authentication (MFA) for helpers or restrict access to specific locations or compliant devices.
+- **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages).
 
-- **Conditional access support for macOS and Windows**: You can use Conditional Access policies to control how helpers and sharers access Remote Help. For example, you can require multi-factor authentication (MFA) for helpers or restrict access to specific locations or compliant devices.
-
-### Android
+### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 - **Unattended access**: Helpers can connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a fully managed device or as a dedicated device.
+  :::image type="content" source="media/remote-help/remote-help-android-unattended.png" alt-text="Screenshot of an unattended Remote Help session on Android" lightbox="media/remote-help/remote-help-android-unattended-expanded.png":::
+
+---
 
 ## Try an interactive demo
 
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+
 The [Remote Help]( https://regale.cloud/Microsoft/viewer/1746/remote-help/index.html#/0/0) interactive demo walks you through scenarios step-by-step with interactive annotations and navigation controls.
 
-## What's New for Remote Help Windows
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
-Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
+Use the interacitive demos to explore Remote Help on macOS:
 
-### March 21, 2025
+- [macOS native experience](https://regale.cloud/microsoft/play/1746/remote-help#/7/0)
+- [macOS web app experience](https://regale.cloud/microsoft/play/1746/remote-help#/6/0)
 
-Version: 5.1.1998.0
-
-- Added support for users on multi-session AVD
-
-- Resolved accessibility bugs
-
-### June 25, 2024
-
-Version 5.1.1419.0
-
-- Resolve issue where the screen may be blank on first launch.
-
-### March 13, 2024
-
-Version: 5.1.1214.0
-
-- Changed the primary endpoint for Remote Help from https://remoteassistance.support.services.microsoft.com to https://remotehelp.microsoft.com.
-  > [!NOTE]
-  > This could cause a breaking change for some organizations that have not yet allowed remotehelp.microsoft.com through their firewall after 5/30/2024.
-- Resolved various bugs including an issue with Conditional Access. If a tenant had a **Terms of Use** policy enabled for Office 365, Remote Help wouldn't know how to respond and would instead present an authentication error message to the user.
-- Enabled a shortcut to open context menus with the keyboard shortcut 'Alt + Space'
-
-### October 25, 2023
-
-Version: 5.0.1311.0
-
-- Disabled the relaying of system audio from the Sharer device to the Helper device, which caused an echo when both users were using another app to communicate (such as Teams).
-- Added the capability for Helpers that have elevation permissions to also be able to elevate apps on devices where the Sharer is an Administrator.
-
-### September 7, 2023
-
-Version: 5.0.1045.0
-
-With Remote Launch, the helper can launch Remote Help seamlessly on the helper and sharer's device from Intune by sending a notification to the sharer's device.
-
-### July 13, 2023
-
-Version: 5.0.1045.0
-This version of Remote Help provides support for ARM64 devices including the Microsoft Surface Pro X and Parallels Desktop on macOS.
-
-### June 20, 2023
-
-Version: 4.2.1424.0
-With Remote Help 4.2.1424.0, a new in-session connection mode feature provides users with a way to seamlessly switch between full control and view-only modes during a remote assistance session.
-
-### May 1, 2023
-
-Version: 4.2.1270.0
-
-This version includes a minor update that enables future functionality.
-
-- Added support for slashes within the Remote Help URI (to enable future functionality)
-
-### March 27, 2023
-
-Version: 4.2.1167.0 - Changes in this release:
-
-This release addresses a bug in the Laser Pointer and includes some updates to prepare for future releases.
-
-- Updated product name from **Remote help** to **Remote Help**
-- Updated application description to better localize it for non-US locales
-- Resolved a bug where the app would flash a white screen when launched in dark mode
-- Fixed a bug with the Laser pointer color change
-
-### February 6, 2023
-
-Version: 4.1.1.0 - Changes in this release:
-
-A new Laser Pointer feature has been added to better assist a helper guide a sharer during a session. A helper can use the Laser Pointer in both Full Control and View Only sessions. Other updates include improvements to localization, and error handling.
-
-Various bug fixes included in this release:
-
-- Fixed an issue where in some cases a helper is unable to interact with elevated applications
-
-- Resolved an accessibility issue where a helper was unable to use some keyboard navigation hotkeys
-
-- Reliability fixes and improved logging for WebView2 integration
-
-### September 6, 2022
-
-Version: 4.0.1.13 - Changes in this release:
-
-Fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
-
-For more information, go to [Use Remote Help with Intune](remote-help.md).
-
-### July 26, 2022
-
-Version: 4.0.1.12 - Changes in this release:
-
-Various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability.
-
-### May 11, 2022
-
-Version 4.0.1.7 - Webview 2 release
-
-### April 5, 2022
-
-Version 4.0.0.0 - GA release
+---
 
 ## Next Steps
 
