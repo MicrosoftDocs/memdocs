@@ -12,7 +12,7 @@ ms.collection:
 - tier 1
 - M365-identity-device-management
 ---
-
+ 
 # Configure Microsoft Intune for increased security (Preview)
 
 The security recommendations in this document are designed to help you improve your organization's security posture by using Microsoft Intune. These recommendations are influenced by accepted industry standards like those developed by NIST, the configuration baselines we use internally at Microsoft, and our experiences with customers. The recommendations in this article are guided by the following Microsoft [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) pillars:
@@ -93,15 +93,15 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24541](./includes/secure-recommendations/24541.md)]
 
-### Compliance policies protect on macOS devices<!-- 24542 -->
+### Compliance policies protect macOS devices<!-- 24542 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24542](./includes/secure-recommendations/24542.md)]
 
-### Compliance policies protect Fully managed and corporate-owned Android devices<!--  24545 -->
+### Compliance policies protect fully managed and corporate-owned Android devices<!--  24545 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24545](./includes/secure-recommendations/24545.md)]
 
-### Compliance policies are protect Personally owned Android devices<!--  24547 -->
+### Compliance policies protect personally owned Android devices<!--  24547 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24547](./includes/secure-recommendations/24547.md)]
 
@@ -113,7 +113,7 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24871](./includes/secure-recommendations/24871.md)]-->
 
-### Conditional Access policy blocks access from noncompliant devices<!-- 24824 -->
+### Conditional Access policies block access from noncompliant devices<!-- 24824 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24824](./includes/secure-recommendations/24824.md)]
 
