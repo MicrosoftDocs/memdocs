@@ -3,7 +3,6 @@ title: App Protection Policy Settings for Windows
 description: This article describes the app protection policy (APP) settings for MAM on Windows.
 ms.date: 06/12/2025
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: demerson
 ms.collection:
 - M365-identity-device-management

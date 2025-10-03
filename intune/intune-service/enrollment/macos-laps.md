@@ -3,7 +3,6 @@ title: Set up local admin account creation and password management for macOS dev
 description: Set up macOS account configuration with LAPS through automatic device enrollment for macOS devices in Intune.
 ms.date: 08/01/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management

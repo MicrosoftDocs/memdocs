@@ -3,7 +3,6 @@ title: Turn on iOS/iPadOS supervised mode with Microsoft Intune
 description: Learn how to turn on iOS/iPadOS supervised mode with Intune.
 ms.date: 04/07/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management

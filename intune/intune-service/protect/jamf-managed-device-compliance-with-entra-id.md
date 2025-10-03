@@ -5,7 +5,6 @@ author: jeffducasse
 ms.author: lanewsad
 ms.date: 09/12/2023
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: jeffducasse
 ms.collection:
 - M365-identity-device-management

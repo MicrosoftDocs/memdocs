@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 03/28/2025
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -18,8 +17,8 @@ View the settings you can configure in profiles for *Attack surface reduction* p
 
 Applies to:
 
-- Windows 
-  
+- Windows
+
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 

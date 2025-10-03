@@ -3,7 +3,6 @@ title: Get started with macOS endpoints
 description: Microsoft Intune guide to set up and configure macOS devices from setup to creating policies and enrolling devices. You secure your corporate and organization-owned endpoints that are enrolled in Intune, and then deploy at scale with Apple Business Manager or Apple School Manager.
 ms.date: 07/31/2025
 ms.topic: get-started
-ms.localizationpriority: high
 ms.reviewer: scbree;rogerso
 ms.collection:
   - M365-identity-device-management
