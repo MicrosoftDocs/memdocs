@@ -1,5 +1,5 @@
 ---
-title: App protection policy settings for Windows
+title: App Protection Policy Settings for Windows
 description: This article describes the app protection policy (APP) settings for MAM on Windows.
 ms.date: 06/12/2025
 ms.topic: article
@@ -10,7 +10,7 @@ ms.collection:
 - highpri
 ---
 
-# App protection policy settings for Windows
+# App Protection Policy Settings for Windows
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

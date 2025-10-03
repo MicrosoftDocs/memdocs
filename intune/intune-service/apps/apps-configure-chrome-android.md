@@ -1,5 +1,5 @@
 ---
-title: Configure Google Chrome for Android devices using Intune
+title: Configure Google Chrome for Android Devices Using Intune
 description: Use Intune configuration policies with Google Chrome for Android devices.
 ms.date: 11/21/2024
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.collection:
 - FocusArea_Apps_Add
 ---
 
-# Configure Google Chrome for Android devices using Intune
+# Configure Google Chrome for Android Devices Using Intune
 
 You can use an Intune app configuration policy to configure Google Chrome for Android devices. The settings for the app can be automatically applied. For example, you can specifically set the bookmarks and the URLs that you would like to block or allow.
 

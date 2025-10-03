@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune App SDK for iOS developer guide - App participation features
+title: Microsoft Intune App SDK for iOS Developer Guide - App Participation Features
 description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. App participation features
 ms.date: 06/12/2025
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.collection:
 - iOS/iPadOS
 ---
 
-# Intune App SDK for iOS - App participation features
+# Intune App SDK for iOS - App Participation Features
 
 The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
