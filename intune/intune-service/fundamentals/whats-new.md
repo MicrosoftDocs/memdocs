@@ -61,7 +61,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
-#### PowerShell script support when installing Win32 apps<!-- 29857395 wndraft -->
+#### PowerShell script support when installing Win32 apps<!--29857395-->
 
 You can now upload a PowerShell script to install Enterprise App Catalog apps as an alternative to using a command line. This option gives you more flexibility when deploying apps.
 
