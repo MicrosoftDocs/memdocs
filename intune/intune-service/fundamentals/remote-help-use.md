@@ -28,7 +28,7 @@ To get help, you must reach out to your support staff to request assistance. You
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
 > [!NOTE]
-> The Remote Help app need to be installed on your device. If Remote Help isn't installed, you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](remote-help-deploy.md#install-and-update-remote-help) section.
+> The Remote Help app need to be installed on your device. If Remote Help isn't installed, you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](remote-help-deploy.md#install-remote-help-apps) section.
 
 **Starting the session:**
 
