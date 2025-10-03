@@ -15,8 +15,7 @@ ms.collection:
 * Android
 * iOS
 * macOS
-* Windows 10
-* Windows 11
+* Windows 
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]

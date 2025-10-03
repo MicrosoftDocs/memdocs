@@ -12,7 +12,7 @@ ms.collection:
 
 # Windows enrollment attestation
 
-The goal of Windows enrollment attestation is to make devices more secure and trustworthy within the network they join. With this feature, you can check that Windows 10 and 11 devices meet strict security standards during enrollment, using Trusted Platform Module (TPM) technology to enhance their defense against threats. The Windows enrollment attestation feature also confirms and reports on the devices that enroll securely, ensuring the process is reliable.
+The goal of Windows enrollment attestation is to make devices more secure and trustworthy within the network they join. With this feature, you can check that devices running Windows meet strict security standards during enrollment, using Trusted Platform Module (TPM) technology to enhance their defense against threats. The Windows enrollment attestation feature also confirms and reports on the devices that enroll securely, ensuring the process is reliable.
 
 Here’s how it benefits organizations:
 
@@ -29,6 +29,9 @@ We recommend using the latest updates for a more successful attestation rate.
 - Windows 10
 
   - 10.0.19045.3996+
+
+    > [!IMPORTANT]
+    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 - Windows 11
 
