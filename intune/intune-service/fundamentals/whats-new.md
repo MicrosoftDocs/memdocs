@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/01/2025
+ms.date: 10/03/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -59,6 +59,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 ## Week of September 29, 2025
 
 ### App management
+
+#### PowerShell script support when installing Win32 apps<!--29857395-->
+
+You can now upload a PowerShell script to install Enterprise App Catalog apps as an alternative to using a command line. This option gives you more flexibility when deploying apps.
+
+For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).  
+
+Applies to: Windows
 
 #### End of support for older versions of the Android Intune Company Portal app <!--33827426-->
 
