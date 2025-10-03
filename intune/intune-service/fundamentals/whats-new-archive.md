@@ -1658,7 +1658,7 @@ Applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 
-For information on the newest version of Remote Help, see the *March 13, 2024* entry for [What's New for Remote Help](../fundamentals/remote-help-windows.md#march-13-2024). For information about Intune endpoints for Remote Help, see [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in *Network endpoints for Microsoft Intune*.
+For information on the newest version of Remote Help, see [Week of March 13, 2024](#week-of-march-13-2024). For information about Intune endpoints for Remote Help, see [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in *Network endpoints for Microsoft Intune*.
 
 ### Device management
 
