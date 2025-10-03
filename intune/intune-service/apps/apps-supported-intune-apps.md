@@ -3,7 +3,6 @@ title: Supported Microsoft Intune apps
 description: This article provides lists of support partner and Microsoft apps that are commonly used with Microsoft Intune.
 ms.date: 10/02/2025
 ms.topic: reference
-ms.localizationpriority: high
 ms.reviewer: cdemello
 ms.collection:
 - M365-identity-device-management

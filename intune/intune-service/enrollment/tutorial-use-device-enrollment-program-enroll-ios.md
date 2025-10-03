@@ -3,7 +3,6 @@ title: Tutorial - Use Apple Business Manager to enroll iOS/iPadOS devices in Int
 description: In this tutorial, you'll set up Apple corporate device enrollment features with Intune to enroll iOS/iPadOS devices purchased through Apple Business Manager.
 ms.date: 03/05/2025
 ms.topic: tutorial
-ms.localizationpriority: high
 Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business Manager.
 ms.reviewer: annovich
 ms.collection:

@@ -3,7 +3,6 @@ title: Set up enrollment notifications in Intune
 description: Set up enrollment notifications in Intune for employees or students.
 ms.date: 06/18/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management

@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 12/04/2018
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.collection:
 - M365-identity-device-management
 - triage

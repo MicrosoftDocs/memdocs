@@ -3,7 +3,6 @@ title: Step 4. Create app configuration policies for Microsoft Edge for Business
 description: Step 4. Create app configuration policy for Microsoft Edge for Business.
 ms.date: 03/26/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: samarti
 ms.custom:
 ms.collection:

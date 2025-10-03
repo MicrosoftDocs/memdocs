@@ -3,7 +3,6 @@ title: Categorize devices into groups in Intune
 description: Categorize Intune-managed devices into groups for easier management in the admin center.
 ms.date: 09/16/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: scotduff
 ms.collection:
 - M365-identity-device-management
@@ -35,9 +34,9 @@ If Multi Admin Approval access policies are enabled for device actions, creating
 ## Step 1: Create device category in Intune
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Go to **Devices**. 
-1. Expand **Manage devices**, and then select **Device categories**.  
-1. Choose **Create** to add a new category.  
+1. Go to **Devices**.
+1. Expand **Manage devices**, and then select **Device categories**.
+1. Choose **Create** to add a new category.
 1. Enter the name of the new category, such as `HR` and an optional description.
 1. Select **Next**.
 1. Optionally, assign a scope tag, like `US-NC IT Team` or `JohnGlenn_ITDepartment`, to limit management of the category to specific IT groups. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
