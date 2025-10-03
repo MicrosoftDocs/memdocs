@@ -4,7 +4,6 @@ description: In this evaluation task, enroll a device running Windows 10/11 into
 services: microsoft-intune
 ms.date: 07/11/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management

@@ -3,7 +3,6 @@ title: Enable Windows Backup for Organizations in Microsoft Intune
 description: Enable Windows backup and restore in Intune for employees or students.
 ms.date: 08/18/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
@@ -67,7 +66,7 @@ To configure the restore setting, you must have Intune Service Administrator per
 
 ## Enrollment
 
-To enable Windows Backup for Organizations during enrollment, configure your backup and restore settings in the Microsoft Intune admin center. There are two areas where you need to configure settings: in the settings catalog, and under enrollment. 
+To enable Windows Backup for Organizations during enrollment, configure your backup and restore settings in the Microsoft Intune admin center. There are two areas where you need to configure settings: in the settings catalog, and under enrollment.
 
 # [Backup](#tab/backup)
 
@@ -94,9 +93,9 @@ Complete these steps to configure the restore setting for enrollment.
 
 1. Select **Save**.
 
-The **Last modified** date updates to account for recent changes. Return to **Windows Backup and Restore** anytime to view and edit the setting again.  
+The **Last modified** date updates to account for recent changes. Return to **Windows Backup and Restore** anytime to view and edit the setting again.
 
----  
+---
 
 ## Known issues
 Known issues with Windows Backup for Organizations include:

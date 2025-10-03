@@ -3,7 +3,6 @@ title: How to Configure the Intune Company Portal Apps, Company Portal Website, 
 description: Learn how you can configure the Intune Company Portal apps, Company Portal website, and Intune app.
 ms.date: 10/02/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: abstarr
 ms.collection:
 - M365-identity-device-management

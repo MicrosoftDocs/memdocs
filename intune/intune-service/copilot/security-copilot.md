@@ -4,7 +4,6 @@ description: You can use Security Copilot to get information about your Intune d
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: ankurgoyal, rashok
 ms.collection:
 - M365-identity-device-management

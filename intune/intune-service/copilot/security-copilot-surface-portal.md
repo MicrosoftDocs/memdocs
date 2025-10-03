@@ -4,7 +4,6 @@ description: You can use Security Copilot to help you manage and monitor Surface
 ms.date: 02/18/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: zadvor
 ms.collection:
 - M365-identity-device-management

@@ -3,7 +3,6 @@ title: Set up the Enrollment Status Page in the admin center copy
 description: Set up a greeting page for users signing in and enrolling Windows devices copy.
 ms.date: 09/24/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: madakeva
 ms.collection:
 - M365-identity-device-management

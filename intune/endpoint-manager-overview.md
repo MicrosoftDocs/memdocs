@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/20/2024
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: dougeby
 ms.custom:
   - get-started

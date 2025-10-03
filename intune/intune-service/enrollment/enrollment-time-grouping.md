@@ -3,7 +3,6 @@ title: Set up enrollment time grouping
 description: Overview and setup of the enrollment time grouping feature in Microsoft Intune.
 ms.date: 04/15/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer:
 ms.collection:
 - M365-identity-device-management
