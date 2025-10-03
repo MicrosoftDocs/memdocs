@@ -3,7 +3,6 @@ title: Set up automated device enrollment (ADE) for iOS/iPadOS
 description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microsoft Intune with Apple Automated Device Enrollment (ADE).
 ms.date: 06/09/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
@@ -223,8 +222,8 @@ Now that you've installed your token, you can create an enrollment profile for a
 
 1. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
 
-    - **Enroll with User Affinity**: Select this option for devices that belong to users who want to use the Company Portal for services like installing apps. Enrolling with user affinity is also referred to as enrolling with a *user*.   
-    - **Enroll without User Affinity**: Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices. Enrolling without user affinity is also referred to as enrolling *userless*.   
+    - **Enroll with User Affinity**: Select this option for devices that belong to users who want to use the Company Portal for services like installing apps. Enrolling with user affinity is also referred to as enrolling with a *user*.
+    - **Enroll without User Affinity**: Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices. Enrolling without user affinity is also referred to as enrolling *userless*.
 
       In some situations, you might want to associate a primary user with devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
     - **Enroll with Microsoft Entra ID shared mode**: Select this option to enroll devices that will be in shared mode.

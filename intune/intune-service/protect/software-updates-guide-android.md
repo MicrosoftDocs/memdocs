@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 05/29/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ahamil, talima, mandia
 ms.collection:
 - M365-identity-device-management

@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 08/18/2025
 ms.topic: conceptual
-ms.localizationpriority: high
 ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management

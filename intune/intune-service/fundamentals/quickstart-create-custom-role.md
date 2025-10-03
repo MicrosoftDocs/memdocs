@@ -4,7 +4,6 @@ description: Create and assign a custom role for a remote device manager.
 services: microsoft-intune
 author: BrenDuns
 ms.author: brenduns
-ms.localizationpriority: high
 ms.topic: how-to
 ms.date: 03/26/2019
 

@@ -3,7 +3,6 @@ title: Windows enrollment attestation | Microsoft Intune
 description: Find out how the Device attestation status report can help you and learn to use the Attest device action to ensure your devices are secure and reliable.
 ms.date: 02/14/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management

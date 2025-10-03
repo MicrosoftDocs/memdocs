@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 04/13/2022
 ms.topic: how-to
-ms.localizationpriority: high
 ROBOTS: NOINDEX
 ms.reviewer: wicale
 ms.collection:
