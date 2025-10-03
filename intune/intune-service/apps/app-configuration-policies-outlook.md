@@ -1,5 +1,5 @@
 ---
-title: Manage Outlook for iOS and Android with Intune
+title: Manage Outlook for iOS and Android With Intune
 description: Use Intune app protection and configuration policies with Outlook for iOS and Android to ensure team collaboration experiences are always accessed with safeguards in place.
 ms.date: 06/12/2025
 ms.topic: how-to
@@ -9,7 +9,7 @@ ms.collection:
 - Android
 ---
 
-# Manage messaging collaboration access by using Outlook for iOS and Android with Microsoft Intune
+# Manage Messaging Collaboration Access by Using Outlook for iOS and Android With Microsoft Intune
 
 The Outlook for iOS and Android app is designed to enable users in your organization to do more from their mobile devices, by bringing together email, calendar, contacts, and other files.
 

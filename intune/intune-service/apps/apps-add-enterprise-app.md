@@ -1,5 +1,5 @@
 ---
-title: Add an Enterprise App Catalog app to Microsoft Intune
+title: Add an Enterprise App Catalog App to Microsoft Intune
 description: Learn how to add an Enterprise App Catalog app to Microsoft Intune.
 ms.date: 06/17/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_EAC
 ---
 
-# Add an Enterprise App Catalog app to Microsoft Intune
+# Add an Enterprise App Catalog App to Microsoft Intune
 
 The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities.
 

@@ -1,5 +1,5 @@
 ---
-title: Wrap Android apps with the Intune App Wrapping Tool
+title: Wrap Android Apps With the Intune App Wrapping Tool
 description: Learn how to wrap your Android apps without changing the code of the app itself. Prepare the apps so you can apply mobile app management policies.
 ms.date: 11/18/2024
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.collection:
 - Android
 ---
 
-# Prepare Android apps for app protection policies with the Intune App Wrapping Tool
+# Prepare Android Apps for App Protection Policies With the Intune App Wrapping Tool
 
 Use the Microsoft Intune App Wrapping Tool for Android to change the behavior of your in-house Android apps by restricting features of the app without changing the code of the app itself.
 
