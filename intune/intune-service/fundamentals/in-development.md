@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/01/2025
+ms.date: 10/03/2025
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -61,10 +61,6 @@ We're working on a dashboard for Endpoint Privilege Management (EPM) that brings
 <!-- ***********************************************-->
 
 ## App management
-
-### PowerShell script support when installing Win32 apps<!-- 29857395 -->
-
-For added flexibility when installing apps, you'll be able to upload a PowerShell script to install Enterprise App Catalog apps as an alternative to running a command line. Support for other Win32 app types will be added soon.
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
