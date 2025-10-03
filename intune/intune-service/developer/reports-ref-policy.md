@@ -1,5 +1,5 @@
 ---
-title: Reference for Policy entities
+title: Reference for Policy Entities
 description: Reference topic for the Policy category of entity collections in the Intune Data Warehouse API.
 ms.date: 10/30/2024
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Reference for Policy entities
+# Reference for Policy Entities
 
 The **policies** category contains entities for mobile devices that track information such as:
 

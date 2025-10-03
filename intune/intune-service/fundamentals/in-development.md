@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 09/24/2025
+ms.date: 10/01/2025
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -199,22 +199,6 @@ For more information, see [Support statement for Windows 10 in Intune](#update-t
 > Applies to:
 >
 > - Windows 10
-
-### End of support for older versions of the Android Intune Company Portal app<!-- 33827426 -->
-
-On October 1, 2025, support for the Android Intune Company Portal versions older than 5.0.5421.0 ends. When support ends, users with a device that runs an older version of the Android Intune Company Portal might not be able to successfully maintain that device's registration status and those devices could be identified as noncompliant. For devices to remain registered and in compliance, the Company Portal version must be updated to a version that remains in support.
-
-To update the version of the Company Portal app, see the following available guidance:
-
-**For administrators:**
-- Use Intune to deploy the latest version: [Windows Company Portal app by using Microsoft Intune](../apps/store-apps-company-portal-app.md)
-
-**For device users:**
-- Get the latest version of the Company Portal from the Google Play store: [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)
-
-Applies to:
-
-- Android
 
 <!-- *********************************************** -->
 
