@@ -1,5 +1,5 @@
 ---
-title: Supported Microsoft Intune apps
+title: Supported Microsoft Intune Apps
 description: This article provides lists of support partner and Microsoft apps that are commonly used with Microsoft Intune.
 ms.date: 10/02/2025
 ms.topic: reference
@@ -10,7 +10,7 @@ ms.collection:
 - highpri
 ---
 
-# Microsoft Intune protected apps
+# Microsoft Intune Protected Apps
 
 The apps listed in this article are supported partner and Microsoft apps that are commonly used with Microsoft Intune. Intune protected apps are enabled with a rich set of mobile application protection policies.
 

@@ -1,5 +1,5 @@
 ---
-title: Add, configure, and protect apps with Intune
+title: Add, Configure, and Protect Apps with Intune
 description: Add, configure, and protect apps with Intune.
 author: nicholasswhite
 ms.author: nwhite
@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 ---
-# Step 2 - Add, configure, and protect apps with Intune
+# Step 2 - Add, Configure, and Protect Apps with Intune
 
 The next step when deploying Intune is to add and protect apps that access organization data.
 

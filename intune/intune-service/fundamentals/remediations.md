@@ -1,5 +1,5 @@
 ---
-title: Use Remediations to detect and fix support issues
+title: Use Remediations to Detect and Fix Support Issues
 description: Learn more about Remediations in Microsoft Intune, including what Remediations are and view any prerequisites and licensing requirements. Also, learn how to deploy built-in and custom remediation scripts, and learn how to monitor your scripts.
 ms.date: 09/08/2025
 ms.topic: how-to
