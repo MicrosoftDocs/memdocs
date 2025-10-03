@@ -1,5 +1,5 @@
 ---
-title: Line-of-business app versioning in Intune
+title: Line-of-Business App Versioning in Intune
 description: Introduces how app versions are used in Intune when an app is added or updated.
 ms.date: 11/18/2024
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Line-of-business app versioning
+# Line-of-Business App Versioning
 
 When you add or update a line-of-business (LOB) app in Microsoft Intune, the version property of the app is extracted to detect and install the app on devices. The version value is stored in the **identityVersion** property of the LOB app entity. When the LOB app is updated, the Intune service compares the versions of the existing and updated app packages. If the versions are the same, the Intune service rejects the update.
 

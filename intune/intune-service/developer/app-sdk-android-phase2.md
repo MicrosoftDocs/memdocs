@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune App SDK for Android developer integration and testing guide - MSAL Prerequisite
+title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide - MSAL Prerequisite
 description: Understand the MSAL prerequisite to incorporate Intune mobile app management (MAM) into your Android app.
 ms.date: 06/12/2025
 ms.topic: reference
