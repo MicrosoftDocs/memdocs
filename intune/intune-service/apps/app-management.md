@@ -1,9 +1,8 @@
 ---
-title: What is app management in Microsoft Intune?
+title: What Is App Management in Microsoft Intune?
 description: Learn about client app management capabilities by platform for Microsoft Intune.
-ms.date: 12/02/2024
+ms.date: 10/02/2025
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: bryanke
 ai-usage: ai-assisted
 ms.collection:
@@ -47,7 +46,7 @@ Intune MAM supports two configurations:
 
 Intune offers a range of capabilities to help you get the apps you need on the devices you want to run them on. The following table provides a summary of app management capabilities.
 
-| App Management Capability | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10/11 |
+| App Management Capability | Android/Android Enterprise | iOS/iPadOS | macOS | Windows |
 |-------------------------- | -------------------------- | ---------- | ----- | ---------- |
 | Add and assign apps to devices and users | Yes | Yes | Yes | Yes |
 | Assign apps to devices not enrolled with Intune | Yes | Yes | No | No |

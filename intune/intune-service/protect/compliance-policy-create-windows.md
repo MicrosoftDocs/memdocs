@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 11/19/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management

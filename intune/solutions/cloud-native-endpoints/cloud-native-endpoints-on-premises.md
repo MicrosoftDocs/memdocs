@@ -3,7 +3,6 @@ title: Use on-premises services with cloud-native endpoints
 description: For cloud-native endpoints to access on-premises resources, such as file servers, printers, and web servers, use Windows integrated authentication (WIA) and Microsoft Entra Connect.
 ms.date: 02/20/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ahamil, jasandys, wicale
 ms.collection:
   - M365-identity-device-management

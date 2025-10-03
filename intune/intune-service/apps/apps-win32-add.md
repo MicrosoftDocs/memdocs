@@ -1,9 +1,8 @@
 ---
-title: Add and assign Win32 apps to Microsoft Intune
+title: Add and Assign Win32 Apps to Microsoft Intune
 description: Learn how to add, assign, and manage Win32 apps with Microsoft Intune.
-ms.date: 01/23/2025
+ms.date: 10/02/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
@@ -11,7 +10,9 @@ ms.collection:
 - FocusArea_Apps_Win32
 ---
 
-# Add, assign, and monitor a Win32 app in Microsoft Intune
+# Add, Assign, and Monitor a Win32 App in Microsoft Intune
+
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 After you've [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.md) by using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730), you can add the app to Intune. To learn more about preparing a Win32 app to be uploaded, see [Prepare Win32 app content for upload](apps-win32-prepare.md).
 
@@ -25,7 +26,7 @@ To use Win32 app management, be sure you meet the following criteria:
 - Use Windows 10 version 1607 or later (Enterprise, Pro, and Education versions).
 - Devices must be joined or registered to Microsoft Entra ID and be auto-enrolled. The Intune management extension supports devices that are Microsoft Entra joined, Microsoft Entra registered, hybrid domain joined, or group policy enrolled.
   > [!NOTE]
-  > For the scenario of group policy enrollment, the user uses the local user account to Microsoft Entra join their Windows 10 device. The user must log on to the device by using their Microsoft Entra user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
+  > For the scenario of group policy enrollment, the user uses the local user account to Microsoft Entra join their Windows device. The user must log on to the device by using their Microsoft Entra user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
 - Windows application size is capped at 30 GB per app.
 
 Much like a standard line-of-business (LOB) app, you can add a Win32 app to Microsoft Intune. This type of app is typically written in-house or by a third party.
@@ -121,7 +122,7 @@ On the **Program** page, configure the app installation and removal commands for
 - **Install behavior**: Set the install behavior to either **System** or **User**.
 
     > [!NOTE]
-    > You can configure a Win32 app to be installed in **User** or **System** context. **User** context refers to only a particular user. **System** context refers to all users of a Windows 10 device.
+    > You can configure a Win32 app to be installed in **User** or **System** context. **User** context refers to only a particular user. **System** context refers to all users of a Windows device.
     >
     > When a device is enrolled by being Microsoft Entra registered, select **System**.
     >

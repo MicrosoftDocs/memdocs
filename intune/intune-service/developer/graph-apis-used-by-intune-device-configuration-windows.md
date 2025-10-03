@@ -1,5 +1,5 @@
 ---
-title: Graph APIs to configure devices in Microsoft Intune
+title: Graph APIs to Configure Devices in Microsoft Intune
 description: See a list of all the Graph API entities with the matching Windows CSP and offset URI on Windows 10 devices and newer used when configuring devices in Microsoft Intune. See the matching API and CSP for shared PCs, endpoint protection, Microsoft Defender for Endpoint, identity protection, Windows 10 Teams, kiosk, and Windows Update client policies.
 ms.date: 03/04/2019
 ms.topic: reference
@@ -9,25 +9,27 @@ ms.collection:
 - Windows
 ---
 
-# Graph APIs and matching Windows 10 CSPs used in Intune
+# Graph APIs and Matching Windows CSPs Used in Intune
 
-Microsoft Intune uses the [Graph API entities](/graph/api/resources/intune-graph-overview) (opens another Docs site) to configure devices (**Intune admin center** > **Devices** > **Manage devices** > **Configuration**) running Windows 10 and later. The Graph API uses configuration service providers (CSPs) to read, set, change, and/or delete configuration settings on devices.
+Microsoft Intune uses the [Graph API entities](/graph/api/resources/intune-graph-overview) (opens another Docs site) to configure devices (**Intune admin center** > **Devices** > **Manage devices** > **Configuration**) running Windows and later. The Graph API uses configuration service providers (CSPs) to read, set, change, and/or delete configuration settings on devices.
 
 This list applies to:
 
 - Windows 10 and later
 
-This article lists the Graph entities and their matching Windows 10 CSPs and offset URIs.
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+This article lists the Graph entities and their matching Windows CSPs and offset URIs.
 
 This information is useful for various scenarios. For example, see what Intune uses, settings to include in custom OMA-URI configurations, and so on.
 
-## Windows 10 CSPs
+## Windows CSPs
 
-For more information on Windows 10 configuration service providers, see the [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site).
+For more information on Windows configuration service providers, see the [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site).
 
 ## Graph API properties to CSP mapping
 
-The following list shows most of Graph API entities used by Microsoft Intune for Windows 10 device configuration. It also shows the corresponding Windows 10 CSP and offset URI.
+The following list shows most of Graph API entities used by Microsoft Intune for Windows device configuration. It also shows the corresponding Windows CSP and offset URI.
 
 To see the Windows 10 versions the following APIs apply, use the Windows 10 [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site).
 

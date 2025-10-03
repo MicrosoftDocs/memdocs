@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot Win32 apps in Microsoft Intune
+title: Troubleshoot Win32 Apps in Microsoft Intune
 description: Learn about the most common methods to troubleshoot Win32 app issues with Microsoft Intune.
-ms.date: 08/14/2025
+ms.date: 10/02/2025
 ms.topic: troubleshooting
 ms.reviewer: bryanke
 ms.collection:
@@ -9,7 +9,9 @@ ms.collection:
 - FocusArea_Apps_Win32
 ---
 
-# Troubleshoot Win32 app issues
+# Troubleshoot Win32 App Issues
+
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 When you're troubleshooting Win32 apps used in Microsoft Intune, you can use a number of methods. This article provides troubleshooting details and information to help you solve Win32 app problems. For more information, see [Win32 app installation troubleshooting](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting) resources.
 
@@ -104,7 +106,7 @@ In the preceding PowerShell command, replace `<path to binary file>` with your f
 ## Additional troubleshooting areas to consider
 - Check targeting to make sure the agent is installed on the device. A Win32 app targeted to a group or a PowerShell Script targeted to a group will create an agent installation policy for a security group.
 - Check the OS version: Windows 10 1607 and later.
-- Check the Windows 10 SKU. Windows 10 S, or Windows versions running with S-mode enabled, doesn't support MSI installation.
+- Check the Windows SKU. Windows S, or Windows versions running with S-mode enabled, doesn't support MSI installation.
 
 For more information about troubleshooting Win32 apps, see [Win32 app installation troubleshooting](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting). For information about app types on ARM64 devices, see [App types supported on ARM64 devices](/troubleshoot/mem/intune/troubleshoot-app-install#app-types-supported-on-arm64-devices).
 

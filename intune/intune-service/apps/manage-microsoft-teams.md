@@ -1,5 +1,5 @@
 ---
-title: Manage Teams for iOS and Android with Intune
+title: Manage Teams for iOS and Android With Intune
 description: Use Intune app protection and configuration policies with Teams for iOS and Android to ensure team collaboration experiences are always accessed with safeguards in place.
 ms.date: 06/12/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_SpecificApp
 ---
 
-# Manage collaboration experiences in Teams for iOS and Android with Microsoft Intune
+# Manage Collaboration Experiences in Teams for iOS and Android With Microsoft Intune
 
 Microsoft Teams is the hub for team collaboration in Microsoft 365 that integrates the people, content, and tools your team needs to be more engaged and effective.
 

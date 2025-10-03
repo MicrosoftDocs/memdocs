@@ -1,9 +1,8 @@
 ---
-title: Add apps to Microsoft Intune
+title: Add Apps to Microsoft Intune
 description: Learn how to add apps to Microsoft Intune so you can assign apps to users and devices. Intune supports a wide range of app types.
-ms.date: 08/09/2024
+ms.date: 10/02/2025
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: bryanke
 ai-usage: ai-assisted
 ms.collection:
@@ -257,10 +256,10 @@ To learn how to add apps for each platform to Intune, see:
 - [Web apps (for all platforms)](web-app.md)
 - [Microsoft store apps](store-apps-windows.md)
 - [Windows LOB app](lob-apps-windows.md)
-- [Microsoft 365 apps for Windows 10](apps-add-office365.md)
+- [Microsoft 365 apps for Windows](apps-add-office365.md)
 - [Microsoft 365 apps for macOS](apps-add-office365-macos.md)
 - [Managed Google Play apps](apps-add-android-for-work.md)
-- [Microsoft Edge for Windows 10](apps-windows-edge.md)
+- [Microsoft Edge for Windows](apps-windows-edge.md)
 - [Microsoft Edge for macOS](apps-edge-macos.md)
 - [Built-in apps](apps-add-built-in.md)
 - [Android Enterprise system app](apps-ae-system.md)

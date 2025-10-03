@@ -1,5 +1,5 @@
 ---
-title: Wipe data using app protection policy conditional launch actions
+title: Wipe Data Using App Protection Policy Conditional Launch Actions
 description: Learn how to selectively wipe data using app protection policy conditional launch actions in Microsoft Intune.
 ms.date: 01/16/2025
 ms.topic: how-to
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Selectively wipe data using app protection policy conditional launch actions in Intune
+# Selectively Wipe Data Using App Protection Policy Conditional Launch Actions in Intune
 
 Conditional launch actions within Intune app protection policies provide organizations the ability to block access or wipe org data when certain device or app conditions aren't met.
 

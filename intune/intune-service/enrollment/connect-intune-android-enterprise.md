@@ -3,7 +3,6 @@ title: Connect Intune account to managed Google Play account
 description: Learn how to connect your Intune account to your Managed Google Play account.
 ms.date: 06/12/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: grwilson
 ms.collection:
 - M365-identity-device-management
