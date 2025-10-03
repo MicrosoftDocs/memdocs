@@ -1,5 +1,5 @@
 ---
-title: Graph APIs to configure devices in Microsoft Intune
+title: Graph APIs to Configure Devices in Microsoft Intune
 description: See a list of all the Graph API entities with the matching Windows CSP and offset URI on Windows 10 devices and newer used when configuring devices in Microsoft Intune. See the matching API and CSP for shared PCs, endpoint protection, Microsoft Defender for Endpoint, identity protection, Windows 10 Teams, kiosk, and Windows Update client policies.
 ms.date: 03/04/2019
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.collection:
 - Windows
 ---
 
-# Graph APIs and matching Windows CSPs used in Intune
+# Graph APIs and Matching Windows CSPs Used in Intune
 
 Microsoft Intune uses the [Graph API entities](/graph/api/resources/intune-graph-overview) (opens another Docs site) to configure devices (**Intune admin center** > **Devices** > **Manage devices** > **Configuration**) running Windows and later. The Graph API uses configuration service providers (CSPs) to read, set, change, and/or delete configuration settings on devices.
 
