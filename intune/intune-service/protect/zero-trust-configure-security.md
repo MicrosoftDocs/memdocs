@@ -12,7 +12,7 @@ ms.collection:
 - tier 1
 - M365-identity-device-management
 ---
- 
+
 # Configure Microsoft Intune for increased security (Preview)
 
 The security recommendations in this document are designed to help you improve your organization's security posture by using Microsoft Intune. These recommendations are influenced by accepted industry standards like those developed by NIST, the configuration baselines we use internally at Microsoft, and our experiences with customers. The recommendations in this article are guided by the following Microsoft [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) pillars:
@@ -117,19 +117,19 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24824](./includes/secure-recommendations/24824.md)]
 
-### Conditional Access policy blocks access from unmanaged apps<!-- 24827 -->
+### Conditional Access policies block access from unmanaged apps<!-- 24827 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
  [!INCLUDE [24827](./includes/secure-recommendations/24827.md)]
 
-### Device cleanup rules actively remove inactive devices<!--  24802 -->
+### Device cleanup rules maintain tenant hygiene by hiding inactive devices<!--  24802 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24802](./includes/secure-recommendations/24802.md)]
 
-### Users must accept terms and conditions before gaining access to sensitive data<!--  24794 -->
+### Terms and Conditions policies protect access to sensitive data<!--  24794 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24794](./includes/secure-recommendations/24794.md)]
 
-### User experience is enhanced by customized Company Portal branding and support settings<!-- 24823 -->
+### Company Portal branding and support settings enhance user experience and trust<!-- 24823 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
  [!INCLUDE [24823](./includes/secure-recommendations/24823.md)]
 
