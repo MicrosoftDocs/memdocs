@@ -1,15 +1,8 @@
 ---
 title: Endpoint analytics settings
-titleSuffix: Microsoft Intune
 description: Instructions for configuring settings in Endpoint analytics.
 ms.date: 04/08/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: how-to
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
 ---
 
 # <a name="bkmk_set"></a> Endpoint analytics settings
@@ -31,7 +24,7 @@ To assign this setting to a subset of devices, [Create a profile](../intune-serv
 - **Profile Type**: Select **Template**
 
 - **Profile**: Select **Windows health monitoring**
-  
+
 - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
 
 - **Description**: Enter a description for the profile. This setting is optional, but recommended.
@@ -46,11 +39,11 @@ To assign this setting to a subset of devices, [Create a profile](../intune-serv
 
 ### Configuration Manager data connector
 
-To connect your Configuration Manager hierarchy with Endpoint analytics, you need to enable [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
+To connect your Configuration Manager hierarchy with Endpoint analytics, you need to enable [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md).
 
 Once connected, you can [choose which devices you'd like to target](enroll-configmgr.md#bkmk_cm_enroll) for Endpoint analytics in the Configuration Manager console.
 
-> [!NOTE] 
+> [!NOTE]
 > Some devices, such as non-Windows devices, aren't eligible for Endpoint analytics, but might be eligible for [device actions with Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection have no effect on Endpoint Analytics.
 
 ### <a name="bkmk_consent"></a> Consent to share data
@@ -69,14 +62,14 @@ You can compare your current scores and subscores to others by setting a baselin
 
 1. There's a built-in baseline for **All organizations (median)**, which allows you to compare your scores to a typical enterprise.
 
-   > [!Important]  
+   > [!IMPORTANT]
    > We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](data-collection.md#bkmk_stop) at any time.
 
 1. You can create new baselines based on your current metrics to track progress or view regressions over time. Select the **Create new** button and give your new baseline a name. We recommend a name that includes the date, so it's easier to select from the drop-down in the reports pages.
 
-   > [!Note]
+   > [!NOTE]
    > You must open at least one Endpoint analytics report, such as [Startup performance](startup-performance.md), during your browser session before you are able to create a new baseline.
-   
+
 1. There's a limit of 20 baselines per tenant. You can delete old baselines that are no longer needed.
 1. Your current metrics are flagged red and shown as regressed if they fall below the current baseline in your reports. It's perfectly normal for metrics to fluctuate from day to day. So you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they've regressed by more than 10%.
 

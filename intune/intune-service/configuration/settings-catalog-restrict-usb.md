@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Restrict USB devices using settings catalog in Microsoft Intune
 description: Use the settings catalog in Microsoft Intune to restrict USB devices, including thumb drives, flash drives, USB cameras, and more. Use other settings to allow specific USB devices on Windows 10/11 devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mayurjadhav, kufang
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -40,8 +23,7 @@ This article shows you:
 
 This article applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Prerequisites
 

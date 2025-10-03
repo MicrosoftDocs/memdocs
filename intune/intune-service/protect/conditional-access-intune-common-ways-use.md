@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: Scenarios for using Conditional Access with Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Learn how Conditional Access is commonly used with Intune compliance policy for devices and apps
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 03/19/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: tycast
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure, get-started
+ms.reviewer: ilwu
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - conditional-access
@@ -38,7 +21,7 @@ There are two types of Conditional Access policies you can use with Intune: devi
 The information in this article can help you understand how to use the Intune mobile *device* compliance capabilities and the Intune mobile *application* management (MAM) capabilities.
 
 > [!NOTE]
-> Conditional Access is a Microsoft Entra capability that is included with a Microsoft Entra ID P1 or P2 license. Intune enhances this capability by adding mobile device compliance and mobile app management to the solution. The Conditional Access node accessed from *Intune* is the same node as accessed from *Microsoft Entra ID*.  
+> Conditional Access is a Microsoft Entra capability that is included with a Microsoft Entra ID P1 or P2 license. Intune enhances this capability by adding mobile device compliance and mobile app management to the solution. The Conditional Access node accessed from *Intune* is the same node as accessed from *Microsoft Entra ID*.
 
 ## Device-based Conditional Access
 
@@ -48,11 +31,11 @@ With Intune, you deploy device compliance policies to determine if a device meet
 
 Device-based Conditional Access policies for Exchange online and other Microsoft 365 products are configured through the [Microsoft Intune admin center](../fundamentals/what-is-intune.md).
 
-- Learn more about [Require managed devices with Conditional Access in Microsoft Entra ID](/azure/active-directory/conditional-access/require-managed-devices).
+- Learn more about [Require managed devices with Conditional Access in Microsoft Entra ID](/entra/identity/conditional-access/policy-all-users-device-compliance).
 
 - Learn more about [Intune device compliance](device-compliance-get-started.md).
 
-- Learn more about [Supported browsers with Conditional Access in Microsoft Entra ID](/azure/active-directory/conditional-access/technical-reference#supported-browsers).
+- Learn more about [Supported browsers with Conditional Access in Microsoft Entra ID](/entra/identity/conditional-access/concept-conditional-access-conditions#supported-browsers).
 
 > [!NOTE]
 > When you enable Device Based Access for content that users access from browser apps on their Android personally owned work profile devices, users that enrolled before January 2021 must enable browser access as follows:
@@ -115,6 +98,6 @@ Intune and Microsoft Entra ID work together to make sure only managed apps can a
 
 ## Next steps
 
-[How to configure Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
+[How to configure Conditional Access in Microsoft Entra ID](/entra/identity/conditional-access/concept-conditional-access-policy-common)
 
-[Set up app-based Conditional Access policies](app-based-conditional-access-intune-create.md) 
+[Set up app-based Conditional Access policies](app-based-conditional-access-intune-create.md)

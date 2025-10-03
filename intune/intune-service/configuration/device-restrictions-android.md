@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Device restriction settings for Android DA in Microsoft Intune
 description: See a list of all the Android device administrator settings you can control and restrict in Microsoft Intune. Use these settings to control the password, access Google Play, allow or prohibit apps, control the browser settings, block apps, backup to the Google cloud, and control the message, voice, data roaming, Wi-Fi, and Bluetooth connection options.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/09/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-ROBOTS: NOINDEX
-
-#audience:
-
 ms.reviewer: anuragjain
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -110,7 +91,7 @@ These settings apply to all Android OS versions and manufacturers, except where 
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
 
-  This setting applies to:  
+  This setting applies to:
   - Android 10 and newer, but not on Samsung Knox.
 
   > [!IMPORTANT]
@@ -149,7 +130,7 @@ These settings apply to devices running Android 9 or earlier, and all Samsung Kn
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-  This setting applies to:  
+  This setting applies to:
   - Samsung KNOX Standard 5.0 and newer
 
 ## Google Play Store
@@ -204,7 +185,7 @@ Your options:
 
 For each setting, add your apps:
 
-- **Add apps by package name**: Enter the app name, and the name of the app package. Primarily used for line-of-business apps. 
+- **Add apps by package name**: Enter the app name, and the name of the app package. Primarily used for line-of-business apps.
 - **Add apps by URL**: Enter the app name, and its URL in the Google Play store.
 - **Add store app**: Select an app from the existing list of apps you manage in Intune.
 

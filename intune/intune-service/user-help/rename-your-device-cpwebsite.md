@@ -1,31 +1,8 @@
 ---
-# required metadata
-
 title: Rename your device on the Company Portal website
 description: Learn how to rename your work or school device on the Company Portal website.
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
 ms.date: 11/09/2024
-ms.topic: end-user-help
-ms.service: microsoft-intune
-ms.subservice: end-user
-ms.assetid: 35a34ef8-efbb-4edf-88eb-a03c1b27a026
-searchScope:
- - User help
-
-# optional metadata
-
-ROBOTS:
-#audience:
-
 ms.reviewer: jieyang
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-enduser
-ms.collection:
-- tier2
 ---
 
 # Rename your device from the Company Portal website

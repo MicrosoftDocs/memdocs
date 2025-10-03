@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Deployment guide for Windows device management | Microsoft Intune
 description: Use our platform deployment guide to set up Windows device management in Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 08/21/2024
 ms.topic: install-set-up-deploy
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: get-started
 ms.collection:
 - M365-identity-device-management
-- tier1
 ---
 
 # Deployment guide: Manage devices running Windows 10/11
@@ -91,8 +73,8 @@ Use Microsoft Intune to enable or disable Windows settings and features on devic
 
 | Task | Detail |
 | ---- | ------ |
-|[Create a device profile](../configuration/device-profile-create.md) |Create a device profile in Microsoft Intune and find resources about all device profile types. You can also use the [settings catalog](../configuration/settings-catalog.md) to create a policy from scratch.|
-|[Configure group policy settings](../configuration/administrative-templates-windows.md) |Use Windows 10 templates to configure group policy settings in Microsoft Intune. Administrative templates include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.|
+|[Create a device profile](../configuration/device-profile-create.md) |Create a device profile in Microsoft Intune and find resources about all device profile types.|
+|[Configure device settings](../configuration/settings-catalog.md) | Use the settings catalog to configure settings in Microsoft Intune. The settings catalog includes hundreds of settings that you can configure for Microsoft Edge, OneDrive, remote desktop, Office apps, and more. These settings have a similar feel to Group Policy Objects (GPO), and they're 100% cloud-based.|
 |[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference for Windows 10 and later](../configuration/wi-fi-settings-windows.md).|
 |[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network.  For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-windows-10.md). |
 |[Configure email profile](../configuration/email-settings-configure.md)|Configure email settings so that people can connect to a mail server and access their work or school email. For a description of the settings in this area, see the [email settings reference](../configuration/email-settings-windows-10.md).|
@@ -161,7 +143,7 @@ After devices are set up, you can use supported remote actions to manage and tro
 
 | Task | Detail |
 | ---- | ------ |
-|[Take remote action on devices](../remote-actions/device-management.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
+|[Take remote action on devices](../remote-actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
 |[Use TeamViewer to remotely administer Intune devices](../fundamentals/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
 |[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. |
 

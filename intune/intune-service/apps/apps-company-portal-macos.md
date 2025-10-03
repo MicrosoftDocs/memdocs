@@ -1,38 +1,16 @@
 ---
-# required metadata
-
-title: Add the Company Portal for macOS app
-titleSuffix: Microsoft Intune
+title: Add the Company Portal for macOS App
 description: Add the macOS Company Portal app.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 11/21/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - macOS
 - highpri
 ---
 
-# Add the macOS Company Portal app
+# Add the macOS Company Portal App
 
 To manage devices, install optional apps, and gain access to resources protected by Conditional Access on macOS devices with user affinity, users must install and sign in to the Company Portal app. You can provide instructions to your users to install Company Portal for macOS or install it on devices already enrolled directly from Intune.
 
@@ -56,7 +34,7 @@ You can instruct users to download, install, and sign in to Company Portal for m
 
 Company Portal for macOS can be downloaded and installed using the [macOS LOB apps](lob-apps-macos.md) feature. The version downloaded is the version that will always be installed and may need to be updated periodically to ensure users get the best experience during initial enrollment.
 
-1. Download Company Portal for macOS from https://go.microsoft.com/fwlink/?linkid=853070. 
+1. Download Company Portal for macOS from https://go.microsoft.com/fwlink/?linkid=853070.
 
 2. Follow the instructions to create a macOS LOB app in [Add an unmanaged macOS PKG app to Microsoft Intune](macos-unmanaged-pkg.md).
 
@@ -68,16 +46,16 @@ Company Portal for macOS can be downloaded and installed using the [macOS Shell 
 
 1. Download a sample script to install Company Portal for macOS from [Intune Shell Script Samples - Company Portal](https://github.com/microsoft/shell-intune-samples).
 
-2. Follow instructions to deploy the macOS Shell Script using [macOS Shell Scripts](macos-shell-scripts.md). 
+2. Follow instructions to deploy the macOS Shell Script using [macOS Shell Scripts](macos-shell-scripts.md).
     - Set **Run script as signed-in user** to **No** (to run in the system context).
     - Set **Maximum number of retries if script fails** to **3**.
 
 > [!NOTE]
-> The script will require Internet access when it runs to download the current version of the Company Portal for macOS. 
+> The script will require Internet access when it runs to download the current version of the Company Portal for macOS.
 
-## Signing into the Company Portal for macOS when using Setup Assistant with Modern Authentication 
+## Signing into the Company Portal for macOS when using Setup Assistant with Modern Authentication
 
-For macOS devices running 10.15 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**. The user has to authenticate using Microsoft Entra credentials during the setup assistant screens. This will require an additional Microsoft Entra login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The Company Portal can be installed in any of the three ways documented here for Setup Assistant with modern authentication. 
+For macOS devices running 10.15 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**. The user has to authenticate using Microsoft Entra credentials during the setup assistant screens. This will require an additional Microsoft Entra login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The Company Portal can be installed in any of the three ways documented here for Setup Assistant with modern authentication.
 
 Use one of the ways documented above to deploy the macOS Company Portal to the devices enrolling with Setup Assistant with modern authentication so that the end user can authenticate and complete Microsoft Entra registration.
 

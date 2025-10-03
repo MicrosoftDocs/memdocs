@@ -1,67 +1,74 @@
 ---
-# required metadata
-
-title: Remotely lock devices with Microsoft Intune
-description: Use the Remote lock action in Microsoft Intune to lock a device that is protected by a PIN or password. 
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
-ms.date: 07/31/2024
+title: "Remote Device Action: Remote Lock"
+description: Use the remote lock action in Microsoft Intune to lock a managed device that has a passcode or PIN.
+ms.date: 09/22/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.collection:
-- tier2
-- M365-identity-device-management
+zone_pivot_groups: bf632d5b-6209-46d2-8c9c-8d76b1f704cc
 ---
 
-# Remotely lock devices with Intune
+# Remote device action: remote lock
 
-The **Remote lock** device action locks the device. To unlock the device, the device owner enters their passcode. You can remotely lock devices that have a PIN or password set. Devices that don't have a PIN or password can't be remotely locked.
+The *remote lock* device action locks a managed device so the user must enter the existing passcode or PIN to continue. Use this action when a device is misplaced, left unattended, or suspected of unauthorized use without wiping data or removing enrollment.
 
-When **Remote lock** is applied to a device that doesn’t have a PIN or password, the device’s screen will turn off but the device will not be locked and the user will be able to wake the device and start using it again without entering a PIN or password. Ensure devices have a PIN or password policy enforced before using the **Remote lock** action to lock the device.
+> [!IMPORTANT]
+> Remote lock is only effective if a passcode or PIN is already set:
+> - If no passcode exists, the screen may just turn off and the user can still access the device.
+> - Enforce a passcode policy before relying on this action.
 
-## Supported platforms
+## Requirements
 
-**Remote lock** is supported for the following platforms:
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
-- Android
-- Android Enterprise kiosk devices
-- Android Enterprise work profile devices
-- Android Enterprise fully managed devices
-- Android Enterprise corporate-owned with work profile devices
-- Android Open Source Project (AOSP) devices
-- iOS
-- macOS
+> [!div class="checklist"]
+> This remote action supports the following platforms:
+> - Android Enterprise corporate-owned dedicated (COSU)
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned work profile (COPE)
+> - Android Open Source Project (AOSP)
+> - iOS/iPadOS
+> - macOS
 
-**Remote lock** isn't supported for:
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
-- Windows
+> [!div class="checklist"]
+> To execute this remote action, at a minimum, use an account that has one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Endpoint Security Manager][INT-R4]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Remote lock**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+
+## How to remote lock a device from the Intune admin center
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. From the devices list, select a device.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Remote lock**.
+::: zone pivot="macos"
+3. Set a six-digit recovery PIN.
 
 > [!NOTE]
-> For macOS devices, you set a 6-digit recovery PIN. When the device is locked, the **Device overview** displays the PIN until another device action is sent. Please make sure to write down the pin since it will only be available for 30 days after the remote lock command is sent. After the 30 days, Intune will no longer have the PIN. Also, you will see a failed status in reporting if you initiate this command again for the same device while the original pin has not been used to successfully unlock the device. You should only send this command once, write down the pin, and until you use it to get into the macOS device successfully, do not try to send this command to the same device again.
+> The recovery PIN is shown on the device overview pane for up to 30 days, or until another device action is sent. Record it securely; it can't be retrieved afterward. Don't resend remote lock to the same macOS device until that PIN is used—additional attempts show a **Failed** status in reporting.
 
-## Remote lock a device
+::: zone-end
+::: zone pivot="ios,android"
+::: zone-end
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **All devices**.
-3. In the list of devices, select a device, and then select the **Remote lock** action.
+## Reference links
 
-## Next steps
+- Microsoft Graph API: [remoteLock action][GRAPH-1]
 
-- To see the status of this action, select **Microsoft Intune** > **Devices** > **Device actions**.
-- For more actions that can help you manage your devices, see [Available actions](device-management.md).
+<!--links-->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
+
+<!-- API links -->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-remotelock

@@ -1,30 +1,11 @@
 ---
-# required metadata
-
 title: Use role-based access control (RBAC) and scope tags for distributed IT
-titleSuffix: Microsoft Intune
 description: Use role-based access control (RBAC) and scope tags to filter configuration profiles to specific roles.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 06/06/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-
-# optional metadata
-# CustomerIntent: As an  IT admin, I want to create and use scope tags so that right admins have the correct access and visibility to the required Intune objects.
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -79,7 +60,7 @@ Creating, updating, or deleting scope tags requires an administrator assigned th
     - **Add All users**: Users in the Admin Groups can manage all users.
     - **Add All devices**: Users in the Admin Groups can manage all devices.
 
-   > [!TIP]  
+   > [!TIP]
    > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](role-based-access-control.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
 
 5. Choose **Next**
