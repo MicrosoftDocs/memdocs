@@ -44,6 +44,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 - **Elevation**: Allows helpers to enter UAC credentials when prompted on the sharer's device. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access.
 - **Remote launch**: Allows helpers to launch Remote Help on the helper and sharer's device from Intune by sending a notification to the sharer's device.
+  :::image type="content" source="media/remote-help/remote-help-windows-remote-launch.png" alt-text="A screenshot of the sharer's computer showing the prompt to start a Remote Help session using the Remote Launch feature.":::
 - **Optional support for unenrolled devices**: This setting is turned off by default. Enabling this option allows help to be provided to devices that aren't enrolled in Intune. This setting does not apply to devices used by helpers.
   :::image type="content" source="media/remote-help/remote-help-unenrolled.png" alt-text="A screenshot of the opion to enable unenrolled devices":::
 - **Conditional access support**: You can use Conditional Access policies to control how helpers and sharers access Remote Help. For example, you can require multi-factor authentication (MFA) for helpers or restrict access to specific locations or compliant devices.
