@@ -28,11 +28,9 @@ This cache is separate from Configuration Manager's distribution point content. 
 
 ## Supported scenarios
 
-Connected Cache supports the following three primary scenarios:
+Connected Cache supports the following scenarios:
 
-- Traditional Configuration Manager clients that communicate with on-premises distribution points.
-
-- Co-managed clients that get Win32 apps from Microsoft Intune. For more information, see [Support for Intune Win32 apps](#support-for-intune-win32-apps).
+- Co-managed clients with workloads shifted to Intune that receive Win32 app assignments from Microsoft Intune. For more information, see [Support for Intune Win32 apps](#support-for-intune-win32-apps).
 
 - Cloud-only devices, such as Intune-enrolled devices without the Configuration Manager client. For more information, see [Support for cloud-managed devices](#support-for-cloud-managed-devices).
 
@@ -40,14 +38,10 @@ Connected Cache supports the following three primary scenarios:
 
 When clients download cloud-managed content, they use Delivery Optimization from the cache server installed on your distribution point. Cloud-managed content includes the following types:
 
-- Microsoft Store apps (UWP)
+- For [co-management workloads](../../../comanage/workloads.md) moved to Intune:
 
-- If you enable [Windows Update client policies](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md): Windows feature and quality updates
-
-- For [co-management workloads](../../../comanage/workloads.md):
-
-  - Windows Update client policies: Windows feature and quality updates
-
+  - Windows Update client policies: Windows feature and quality updates assigned from Intune
+    
   - Office Click-to-Run apps: Microsoft 365 Apps and updates
 
   - Client apps: Microsoft Store apps (UWP) and updates
@@ -57,9 +51,8 @@ When clients download cloud-managed content, they use Delivery Optimization from
 - Intune Win32 apps
 - For a complete list visit: [Types of download content supported by Delivery Optimization and Microsoft Connected Cache](/windows/deployment/do/waas-delivery-optimization#types-of-download-content-supported-by-delivery-optimization)
 
-> [!NOTE]
->
-> Connected Cache doesn't support content that Configuration Manager manages, like software updates with an integrated software update point.<!--10729675-->
+> [!WARNING]
+> Connected Cache only provides content for Co-Managed devices with workloads shifted to Intune. It doesn't support content related any deployments that originate from Configuration Manager, like software updates with an integrated software update point.<!--10729675-->
 
 ## How it works
 
@@ -105,7 +98,7 @@ Connected Cache with Configuration Manager requires an *on-premises* distributio
 
 - Running a [currently supported version](/windows-server/get-started/windows-server-release-info) of Windows Server.
 
-- Microsoft .NET Framework version 4.7.2 or later. For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).<!-- MEMDocs#1105 -->
+- Microsoft .NET Framework version 4.8 or later. For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).<!-- MEMDocs#1105 -->
 
 - The default web site enabled on port 80.
 
@@ -113,7 +106,7 @@ Connected Cache with Configuration Manager requires an *on-premises* distributio
 
 - The Connected Cache application can use an unauthenticated proxy server for internet access. For more information, see [Configure the proxy for a site system server](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 
-- Don't use a distribution point that has other site roles, for example, a management point. Enable Connected Cache on a site system server that only has the distribution point role.<!-- 9580345 -->
+- It's not supported to use a distribution point that has other site roles, for example, a management point. Enable Connected Cache on a site system server that only has the distribution point role.<!-- 9580345 -->
 
 ### Network access requirements
 
@@ -142,13 +135,13 @@ Connected Cache with Configuration Manager requires an *on-premises* distributio
         > [!NOTE]
         > You can change this drive later. Any cached content is lost, unless you copy it to the new drive.
 
-    3. **Disk space**: Select the amount of disk space to reserve in GB or a percentage of the total disk space. By default, this value is 100 GB.
-
-        > [!NOTE]
-        > The default cache size should be sufficient for most customers. You can adjust the cache size later.
-        >
-        > If the cache size on disk exceeds the allocated space, ARR clears space by removing content based on its built-in heuristics.<!-- SCCMDocs#2045 -->
-
+   1. **Disk space**: Select the amount of disk space to reserve in GB or a percentage of the total disk space. By default, this value is 100 GB.
+   
+      > [!NOTE]
+      > The default cache size should be sufficient for most customers. You can adjust the cache size later.
+      > 
+      > If the cache size on disk exceeds the allocated space, ARR clears space by removing content based on its built-in heuristics.<!-- SCCMDocs#2045 -->
+      
     4. **Retain cache when disabling the Connected Cache server**: If you remove the cache server, and you enable this option, the server keeps the cache's content on the disk.
 
 1. In client settings, in the **Delivery Optimization** group, configure the setting to **Enable devices managed by Configuration Manager to use Microsoft Connected Cache servers for content download**.
@@ -216,7 +209,11 @@ When you enable Connected Cache on your Configuration Manager distribution point
 
 #### Client
 
-- Update the client to the latest version.
+- Update the client to the latest version
+
+- Co-Managed with workloads shifted to Intune
+
+- Devices must be on the intranet and in a boundary group where a Connected Cache enabled Distribution Point is added as a reference
 
 - For Delivery Optimization peer-to-peer: the client device needs to have at least 4 GB of memory.
 
@@ -231,8 +228,8 @@ For Microsoft Connected Cache:
 
 - The client and the Connected Cache-enabled distribution point need to be in the same boundary group. If a client isn't in a boundary group with a Connected Cache-enabled distribution point, it won't download content from a Connected Cache-enabled distribution point in a neighbor or site default boundary group.
 
-- Enable the following **client settings** in the [**Delivery Optimization**](../../clients/deploy/about-client-settings.md#delivery-optimization) group:
-  - **Enable devices managed by Configuration Manger to use Microsoft Connected Cache servers for content download**
+- Enable the following **client setting** in the **[Delivery Optimization](../../clients/deploy/about-client-settings.md#delivery-optimization)** group:
+- **Enable devices managed by Configuration Manger to use Microsoft Connected Cache servers for content download**
 
 For Delivery Optimization peer-to-peer:
 
@@ -240,9 +237,8 @@ For Delivery Optimization peer-to-peer:
   - **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID:**
 - Enable **Allow peer downloads in this boundary group** option for the Boundary Group that contains the client and the distribution point. For more information, see [Boundary Group options](../../servers/deploy/configure/boundary-group-options.md).
 
-> [!TIP]
->
-> You do not need to set the options that enable Delivery Optimization peer-to-peer in order to use Microsoft Connected Cache.
+> [!IMPORTANT]
+> You **do not** need to set the options that enable Delivery Optimization peer-to-peer in order to use Microsoft Connected Cache.
 
 #### Intune
 
@@ -252,7 +248,7 @@ For Delivery Optimization peer-to-peer:
 
 - Enable co-management, and switch the **Client apps** workload to **Pilot Intune** or **Intune**. For more information, see the following articles:
 
-  - [Workloads - Client apps](../../../comanage/workloads.md#client-apps)
+- [Workloads - Client apps](../../../comanage/workloads.md#client-apps)
   - [How to enable co-management](../../../comanage/how-to-enable.md)
   - [Switch workloads to Intune](../../../comanage/how-to-switch-workloads.md)
 
