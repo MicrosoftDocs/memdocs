@@ -9,16 +9,7 @@ ms.collection:
 - highpri
 ---
 
-# Create device limit restrictions in Intune
-
-**Applies to**
-* Android
-* iOS
-* macOS
-* Windows 
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+# Create device limit restrictions in Intune  
 
 Create a device limit enrollment restriction policy to limit the number of devices a user can enroll in Microsoft Intune. Device limit restrictions work on devices that meet the following criteria:
 
