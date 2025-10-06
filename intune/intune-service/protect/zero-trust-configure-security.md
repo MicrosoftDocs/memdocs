@@ -15,19 +15,19 @@ ms.collection:
 
 The security recommendations in this document are designed to help you improve your organization's security posture by using Microsoft Intune. These recommendations are influenced by accepted industry standards like those developed by NIST, the configuration baselines we use internally at Microsoft, and our experiences with customers. The recommendations in this article are guided by the following Microsoft [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) pillars:
 
-- [Protect identities and secrets](#tab-tabnameprotect-identities-and-secrets)
-- [Protect tenants and isolate production systems](#tab-tabnameprotect-tenants-and-isolate-production-systems)
-- [Protect networks](#tab-tabname-protect-networks)
-- Protect engineering systems - *There are no Intune checks for this pillar.*
-- Monitor and detect cyberthreats - *There are no Intune checks for this pillar.*
-- Accelerate response and remediation - *There are no Intune checks for this pillar.*
+- [**Protect identities and secrets**](#protect-identities-and-secrets)
+- [**Protect tenants and isolate production systems**](#protect-tenants-and-isolate-production-systems)
+- [**Protect networks**](#protect-networks)
+- **Protect engineering systems** - *There are no Intune checks for this pillar.*
+- **Monitor and detect cyberthreats** - *There are no Intune checks for this pillar.*
+- **Accelerate response and remediation** - *There are no Intune checks for this pillar.*
 
 > [!TIP]
 > Some organizations might take these recommendations exactly as written, while others might choose to make modifications based on their own business needs.
 
 We recommend that all of the following controls be implemented where licenses are available. These patterns and practices help to provide a secure foundation for other resources built on top of this solution. More controls will be added to this document over time.
 
-#### [Protect identities and secrets](#tab/Protect identities and secrets)
+## [Protect identities and secrets](#tab/protect-identifies-and-secrets)
 
 Reduce credential-related risk by implementing modern identity standards.
 
@@ -67,7 +67,7 @@ Reduce credential-related risk by implementing modern identity standards.
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
 
-## [Protect tenants and isolate production systems](#tab/Protect tenants and isolate production systems)
+## [Protect tenants and isolate production systems](#tab/Protect-tenants-and-isolate-production-systems)
 
 Limit blast radius and enforce least-privilege access by segmenting administrative control and securing device onboarding. 
 
@@ -155,8 +155,7 @@ Limit blast radius and enforce least-privilege access by segmenting administrati
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
 
- 
-#### [Protect networks](#tab/Protect networks)
+## [Protect networks](#tab/Protect-networks)
 
 Protect your network perimeter and endpoints through policy-driven controls.
 
