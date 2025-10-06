@@ -15,9 +15,9 @@ ms.collection:
 
 The security recommendations in this document are designed to help you improve your organization's security posture by using Microsoft Intune. These recommendations are influenced by accepted industry standards like those developed by NIST, the configuration baselines we use internally at Microsoft, and our experiences with customers. The recommendations in this article are guided by the following Microsoft [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) pillars:
 
-- Protect identities and secrets
-- Protect tenants and isolate production systems
-- Protect networks
+- [Protect identities and secrets](#tab-tabnameprotect-identities-and-secrets)
+- [Protect tenants and isolate production systems](#tab-tabnameprotect-tenants-and-isolate-production-systems)
+- [Protect networks](#tab-tabname-protect-networks)
 - Protect engineering systems - *There are no Intune checks for this pillar.*
 - Monitor and detect cyberthreats - *There are no Intune checks for this pillar.*
 - Accelerate response and remediation - *There are no Intune checks for this pillar.*
