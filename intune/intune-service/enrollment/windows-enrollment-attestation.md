@@ -164,7 +164,7 @@ If any of the following **Status details** appear, we recommend re-attempting th
 
 ### Permissions for device action
 
-To use the **Attest device** device action, you require a role based permission known as Remote tasks: **Indicates mobile device management (MDM) attestation if device is capable for it**. Set the Permission to **yes** to enable the action. With the permission set to **Yes**, IT admins can initiate **Attest device** action.
+To use the **Attest device** action, you require a role based permission known as Remote tasks: **Indicates mobile device management (MDM) attestation if device is capable for it**. Set the Permission to **yes** to enable the action. With the permission set to **Yes**, IT admins can initiate **Attest device** action.
 
 ## Resources
 
