@@ -8,20 +8,19 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Categorize devices into groups
-
-**Applies to**:
-* Android
-* iOS/iPadOS
-* macOS
-* Windows 10
-* Windows 11
+# Categorize devices into groups  
 
 Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune will automatically add all devices that fall within that category to the corresponding device group in Intune. To enable categories in your tenant, you must create a category in the Microsoft Intune admin center and set up dynamic Microsoft Entra security groups.
 
 This article describes how to configure and edit device categories.
 
-## Role based access control
+## Requirements  
+Device categories are available for these platforms:  
+
+- Android
+- iOS/iPadOS
+- macOS
+- Windows 
 
 To configure device categories, you must be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
