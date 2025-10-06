@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 08/28/2025
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
@@ -47,7 +46,7 @@ The following platforms are supported for Intune with Microsoft Defender for End
 
 - Android
 - iOS/iPadOS
-- Windows 10/11 (Microsoft Entra hybrid joined or Microsoft Entra joined)
+- Windows (Microsoft Entra hybrid joined or Microsoft Entra joined)
 
 ### Microsoft Defender
 

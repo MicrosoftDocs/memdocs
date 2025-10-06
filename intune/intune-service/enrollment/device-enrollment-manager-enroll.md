@@ -3,7 +3,6 @@ title: Enroll devices using a device enrollment manager account
 description: Use the device enrollment manager account to enroll devices in Intune.
 ms.date: 06/18/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer:
 ms.collection:
 - M365-identity-device-management
@@ -78,7 +77,7 @@ The following types of Android Enterprise devices can't be set up via DEM:
   * Fully managed devices
 
 ### Android open source project (AOSP)
-AOSP doesn't support DEM accounts.  
+AOSP doesn't support DEM accounts.
 
 ### App assignments
 There are no users associated with a DEM-enrolled device, so apps can't be deployed as **Available**.
@@ -105,12 +104,12 @@ Conditional Access is only supported with DEM on devices running:
 DEM enrolls Windows devices in shared device mode, so device limit restrictions won't work on them. Instead, you can configure a hard limit for these devices in the Microsoft Entra admin center. For more information, see [Manage device identities](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
 
 ### Intune Company Portal
-Only the local device appears in the Company Portal app or Company Portal website. Device users can't wipe DEM-enrolled devices from Company Portal. You have to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to wipe these devices.  
+Only the local device appears in the Company Portal app or Company Portal website. Device users can't wipe DEM-enrolled devices from Company Portal. You have to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to wipe these devices.
 
 <a name='azure-ad'></a>
 
 ### Microsoft Entra ID
-Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM account prevents you from reaching the 1,000 device limit that the DEM account can enroll.  
+Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM account prevents you from reaching the 1,000 device limit that the DEM account can enroll.
 
 ### Number of accounts
 There's a limit of 150 DEM accounts in Microsoft Intune.

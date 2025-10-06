@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 08/21/2025
 ms.topic: reference
-ms.localizationpriority: high
 ms.reviewer: angrobe
 ms.collection:
 - M365-identity-device-management
@@ -258,7 +257,7 @@ For details, see the following resource:
 
 ## Migrating device health attestation compliance policies to Microsoft Azure attestation
 
-If a customer enables any of the Windows 10/11 Compliance policy - Device Health settings, then Windows 11 devices begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
+If a customer enables any of the Windows Compliance policy - Device Health settings, then Windows 11 devices begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
 However, Windows 10 and GCCH/DOD environments continue to use the existing Device Health Attestation DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and isn't impacted by this change.
 
 If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they're unable to reach the MAA attestation endpoints for their location.

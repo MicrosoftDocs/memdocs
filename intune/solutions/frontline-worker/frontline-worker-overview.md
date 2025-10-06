@@ -3,7 +3,6 @@ title: Get started with frontline worker (FLW) device management
 description: Learn how to manage frontline worker devices using Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Get guidance on device use and Intune features built for FLW, like Remote Help. Also, learn about Microsoft Entra shared device mode (SDM) for FLW.
 ms.date: 08/19/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: cbernier
 ms.collection:
 - M365-identity-device-management

@@ -3,7 +3,6 @@ title: Update your workloads to support cloud-native endpoints
 description: To support hybrid and remote workers, convert or migrate your workloads to support cloud-native endpoints. This planning guide focuses on deploying apps and updates with Intune, moving from Group Policy Objects, and using Windows Autopilot.
 ms.date: 01/08/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ahamil, jasandys, wicale
 ms.collection:
   - M365-identity-device-management
@@ -397,7 +396,7 @@ This phase transitions new Windows endpoint provisioning to Microsoft Entra join
 
   Before resetting an existing Windows endpoint, be sure to:
 
-  1. [Delete the device in Intune](../../intune-service/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
+  1. [Delete the device in Intune](../../intune-service/remote-actions/device-delete.md).
   2. [Delete the Windows Autopilot device registration](/autopilot/add-devices).
   3. [Delete the existing Microsoft Entra device object](/entra/identity/devices/manage-stale-devices).
 

@@ -4,7 +4,6 @@ description: In this evaluation task, enroll a device running Windows into Micro
 services: microsoft-intune
 ms.date: 07/11/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management

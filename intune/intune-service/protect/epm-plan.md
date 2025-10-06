@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 09/10/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: mikedano
 ms.collection:
 - tier 1
@@ -65,6 +64,10 @@ Endpoint Privilege Management supports the following operating systems:
 - Windows 11, version 21H2 (22000.2713 or later) with [KB5034121](https://support.microsoft.com/topic/january-9-2024-kb5034121-os-build-22000-2713-f5847e32-0b71-4151-8190-54d3e36386f0)
 - Windows 10, version 22H2 (19045.3393 or later) with [KB5030211](https://support.microsoft.com/topic/september-12-2023-kb5030211-os-builds-19044-3448-and-19045-3448-c0dee353-f025-4f03-bcc1-336f74fb992c)
 - Windows 10, version 21H2 (19044.3393 or later) with [KB5030211](https://support.microsoft.com/topic/september-12-2023-kb5030211-os-builds-19044-3448-and-19045-3448-c0dee353-f025-4f03-bcc1-336f74fb992c)
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 > [!IMPORTANT]
 >

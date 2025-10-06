@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 1/23/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ilwu
 ms.collection:
 - M365-identity-device-management
@@ -84,7 +83,7 @@ Following are the available actions for noncompliance:
     - Personally Owned Work Profile
   - iOS/iPadOS
   - macOS
-  - Windows 10/11
+  - Windows
 
   > [!NOTE]
   > Only devices to which the **Add device to retire list** action has been triggered appear in the **Retire selected devices** tab. To see a list of all devices that are not compliant, see the **Noncompliant devices** report mentioned in [Monitor device compliance policy](../protect/compliance-policy-monitor.md#other-compliance-reports).
@@ -93,7 +92,7 @@ Following are the available actions for noncompliance:
 
   Other options include *Retire all devices*, *Clear all devices retire state*, and *Clear selected devices retire state*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Add device to retire list* is applied to that device again.
 
-  Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
+  Learn more about [retiring devices](../remote-actions/device-retire.md).
 
 - **Send push notification to end user**: Configure this action to send a push notification about noncompliance to a device through the Company Portal app or Intune App on the device.
 

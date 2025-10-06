@@ -5,7 +5,6 @@ author: nicholasswhite
 ms.author: nwhite
 ms.date: 02/25/2025
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: davidra
 #ms.custom:
 ms.collection:

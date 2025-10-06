@@ -1,59 +1,52 @@
 ---
-# required metadata
-
-title: Sync devices with Microsoft Intune
-description: Synchronize devices that are registered or managed with Microsoft Intune to get the latest policies and actions. Includes the steps to sync by using the Azure portal, and lists the error codes that can be retried.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
-ms.date: 02/27/2025
+title: "Remote Device Action: Sync"
+description: Learn how to use the device sync remote action in Intune to apply policy, app, and configuration updates to managed devices.
+ms.date: 09/22/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.collection:
-- tier2
-- M365-identity-device-management
+zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
-# Sync devices to get the latest policies and actions with Intune
+# Remote device action: sync
 
-The **Sync** device action forces the selected device to immediately check in with Intune. When a device checks in, it immediately receives any pending actions or policies assigned to it. This feature can help you immediately validate and troubleshoot policies you're assigned to, without waiting for the next scheduled check-in.
+The *sync* device action forces a device to check in with Intune. When a device checks in, it receives any pending actions or policies assigned to it. This action is useful for validating and troubleshooting policy deployment without waiting for the next scheduled check-in.
 
-## Supported platforms
+For more information about the standard Intune policy check-in frequencies, see [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
-- Windows
-- iOS
-- macOS
-- Android (Device administrator and personally owned work profile only)
+## Requirements
 
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+> [!div class="checklist"]
+> This remote action is supported on the following platform:
+> - Android
+> - iOS/iPadOS
+> - macOS
+> - Windows
 
-## Sync a device
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **All devices**.
-3. In the list of devices you manage, select a device to open its *Overview* pane, and then select **Sync**.
-4. To confirm, select **Yes**.
+> [!div class="checklist"]
+> To run this remote action, use an account with at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Endpoint Security Manager][INT-R4]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Sync devices**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
 
-You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+## How to sync a device from the Intune admin center
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. From the devices list, select a device.
+1. At the top of the device overview pane, find the row ofremote action icons. Select **Sync**.
+1. To confirm, select **Yes**.
+
+::: zone pivot="ios,android"
 
 ## Retryable error codes
 
-When an administrator runs the **Sync** device action, iOS/iPadOS and Android apps that failed and raised a retryable error code are still available to the device. However, apps that raised a nonretryable error code must wait seven days before they're available to the device.
+When you execute the **Sync** remote action, iOS/iPadOS and Android apps that failed and raised a retryable error code are still available to the device. However, apps that raised a nonretryable error code must wait seven days before they're available to the device.
 
 | Error code  | Suggested description | Retryable |
 |---|---|---|
@@ -69,7 +62,21 @@ When an administrator runs the **Sync** device action, iOS/iPadOS and Android ap
 | 2016330889 | The secure connection failed. Reset your connection. | Yes|
 | 2016330888 | The server trust evaluation has failed. | No|
 
-## Next steps
+::: zone-end
 
-You can [check the details](../fundamentals/device-inventory.md) of the device.
+## Reference links
 
+- Microsoft Graph API: [syncDevice action][GRAPH-1]
+
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-syncdevice
+
+::: zone pivot="windows,ios,macos,android"
+::: zone-end

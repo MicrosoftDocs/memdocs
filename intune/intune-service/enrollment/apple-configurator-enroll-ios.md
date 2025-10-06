@@ -3,7 +3,6 @@ title: iOS/iPadOS direct enrollment - Apple Configurator-Setup Assistant
 description: Use Apple Configurator to enroll corporate-owned iOS/iPadOS devices with Setup Assistant.
 ms.date: 02/27/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
@@ -199,6 +198,6 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 
 ## Next steps
 
-* Manage Intune-enrolled devices by using the device management actions and features available in the Microsoft Intune admin center. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)
+* Manage Intune-enrolled devices by using the device management actions and features available in the Microsoft Intune admin center. For more information, see [Remote Device Actions In Microsoft Intune](../remote-actions/index.md)
 
 * For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](device-enrollment-direct-enroll-macos.md).

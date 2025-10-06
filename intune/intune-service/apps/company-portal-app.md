@@ -1,9 +1,8 @@
 ---
-title: How to configure the Intune Company Portal apps, Company Portal website, and Intune app
+title: How to Configure the Intune Company Portal Apps, Company Portal Website, and Intune App
 description: Learn how you can configure the Intune Company Portal apps, Company Portal website, and Intune app.
-ms.date: 09/15/2025
+ms.date: 10/02/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: abstarr
 ms.collection:
 - M365-identity-device-management
@@ -11,7 +10,7 @@ ms.collection:
 - FocusArea_Apps_SpecificApp
 ---
 
-# How to configure the Intune Company Portal apps, Company Portal website, and Intune app
+# How to Configure the Intune Company Portal Apps, Company Portal Website, and Intune App
 
 The Company Portal apps, Company Portal website, and Intune app on Android are where users access company data and do common tasks. Common tasks include enrolling devices, installing apps, and locating information for IT assistance. Users securely access company resources. The end-user experience provides several pages: Home, Apps, App details, Devices, and Device details. To quickly find apps, filter them on the Apps page.
 
@@ -91,7 +90,9 @@ This table provides enrollment-specific configuration details:
 
 Support for the device enrollment setting requires end users have these Company Portal versions:
 - Company Portal on iOS/iPadOS: version 4.4 or later
-- Company Portal on Android: version 5.0.4715.0 or later
+- Company Portal on Android: version 5.0.5421.0 or later
+
+[!INCLUDE [android-company-portal-version-support](../includes/android-company-portal-version-support.md)]
 
 > [!IMPORTANT]
 > These settings don't apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md). Regardless of configuration, these devices enroll during the out of box flow. The Company Portal prompts users to sign in when they launch it.
@@ -264,7 +265,7 @@ To customize the available user self-service actions, see [Customizing user self
 
 Some platforms and configurations don't support self-service device actions. This table provides further details about self-service actions:
 
-| Action | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Action | Windows<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Retire | Available<sup>(1)</sup> | Available<sup>(9)</sup> | Available | Available<sup>(7)</sup> |
 | Wipe | Available | Available<sup>(5)</sup><sup>(9)</sup> | NA | Available<sup>(7)</sup> |
@@ -277,7 +278,7 @@ Some platforms and configurations don't support self-service device actions. Thi
 <sup>(3)</sup> All remote actions are disabled if using a Device Enrollment Manager enrollment.<br>
 <sup>(4)</sup> **Rename** only changes the device name in the Company Portal app or Web Portal, not on the device.<br>
 <sup>(5)</sup> **Wipe** isn't available on User Enrolled iOS/iPadOS devices.<br>
-<sup>(6)</sup> **Reset Passcode** isn't supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
+<sup>(6)</sup> **Reset Passcode** isn't supported on some Android and Android Enterprise configurations. For more information, see [Reset a device passcode using Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **Retire** and **Wipe** aren't available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br>
 <sup>(8)</sup> **Reset Passcode** isn't supported on User Enrolled iOS/iPadOS devices.<br>
 <sup>(9)</sup>All iOS/iPadOS Automated Device Enrollment devices (formerly known as DEP)  have **Retire** and **Wipe** options disabled.
@@ -297,7 +298,7 @@ The Company Portal app stores and displays push notifications sent to your users
 
 Notifications from the iOS/iPadOS Company Portal app are now delivered to devices using the default Apple sound, rather than being delivered silently. To turn the notification sound off from the iOS/iPadOS Company Portal app, select **Settings** > **Notifications** > **Comp Portal** and select the **Sound** toggle.
 
-For more information about notifications, see [Receive a custom notification](../remote-actions/custom-notifications.md#receive-a-custom-notification).
+For more information about notifications, see [Receive a custom notification](../remote-actions/custom-notifications.md).
 
 ## Configure feedback settings for Company Portal and Microsoft Intune apps
 

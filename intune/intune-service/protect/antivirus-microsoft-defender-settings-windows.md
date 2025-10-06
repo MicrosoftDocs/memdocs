@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 03/27/2025
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -15,7 +14,13 @@ ms.reviewer: laarrizz
 
 # Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices
 
-View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 and later in Microsoft Intune.
+View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows in Microsoft Intune.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!NOTE]
 > This article details the settings you can find in Microsoft Defender Antivirus and Microsoft Defender Antivirus Exclusions profiles created before April 5, 2022, for the *Windows 10 and later* platform for endpoint security Antivirus policy. On April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
@@ -29,7 +34,7 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
 - **Turn on cloud-delivered protection**
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#allowcloudprotection)
 
-  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
   - **No** - The setting is disabled. Device users can't change this setting.
@@ -100,7 +105,7 @@ These settings are available in the following profiles:
 - **Turn on real-time protection**
   CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#allowrealtimemonitoring)
 
-  Require Defender on Windows 10/11 desktop devices to use the real-time Monitoring functionality.
+  Require Defender on Windows desktop devices to use the real-time Monitoring functionality.
   - **Not configured** (*default*) - The setting is restored to the system default
   - **No** - The setting is disabled. Device users can't change this setting.
   - **Yes** - Enforce use of real-time monitoring. Device users can't change this setting.
@@ -124,7 +129,7 @@ CSP: [AllowOnAccessProtection](/windows/client-management/mdm/policy-csp-defende
 - **Turn on behavior monitoring**
   CSP: [AllowBehaviorMonitoring](/windows/client-management/mdm/policy-csp-defender#allowbehaviormonitoring)
 
-  By default, Defender on Windows 10/11 desktop devices uses the Behavior Monitoring functionality.
+  By default, Defender on Windows desktop devices uses the Behavior Monitoring functionality.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
   - **No** - The setting is disabled. Device users can't change this setting.

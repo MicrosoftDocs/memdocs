@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 04/07/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ahamil, talima, mandia
 ms.collection:
 - M365-identity-device-management
@@ -94,7 +93,7 @@ Remember, if the OS updates can't be forced or controlled, which is common on pe
 For more information on these features, go to:
 
 - [Conditional launch actions with app protection policies in Intune](../apps/app-protection-policies-access-actions.md)
-- [Using custom notifications in Intune](../remote-actions/custom-notifications.md#considerations-for-using-custom-notifications)
+- [Using custom notifications in Intune](../remote-actions/custom-notifications.md)
 
 ## Related articles
 

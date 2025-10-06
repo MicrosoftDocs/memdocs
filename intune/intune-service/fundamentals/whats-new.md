@@ -3,9 +3,8 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 09/17/2025
+ms.date: 10/03/2025
 ms.topic: whats-new
-ms.localizationpriority: high
 ms.reviewer: intuner
 ms.collection:
 - M365-identity-device-management
@@ -57,6 +56,34 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of September 29, 2025
+
+### App management
+
+#### PowerShell script support when installing Win32 apps<!--29857395-->
+
+You can now upload a PowerShell script to install Enterprise App Catalog apps as an alternative to using a command line. This option gives you more flexibility when deploying apps.
+
+For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).  
+
+Applies to: Windows
+
+#### End of support for older versions of the Android Intune Company Portal app <!--33827426-->
+
+Support for Android Intune Company Portal versions earlier than **5.0.5421.0** ended on October 1, 2025. Devices running an older version of the app might no longer maintain their registration status and can be marked noncompliant. To keep devices registered and compliant, users must update to a supported version of the Company Portal app.
+
+To update, see:
+
+**For administrators:**
+
+- [Deploy the latest Windows Company Portal app by using Microsoft Intune](../apps/store-apps-company-portal-app.md)
+
+**For device users:**
+
+- Download the latest version of the Company Portal from the [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
+
+Applies to: Android
+
 ## Week of September 22, 2025
 
 ### Device security
@@ -69,7 +96,7 @@ We’ve updated the Vulnerability Remediation Agent for Security Copilot, adding
 
   When using granular RBAC configurations, ensure the agent’s identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 
-- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../protect/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data. 
+- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../protect/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
 
   Changes to the agent’s identity won’t affect the agent’s run history, which remains available.
 
@@ -181,7 +208,7 @@ To learn more about these settings, see [Android Intune settings catalog setting
 
 #### Device category management supports Multi Admin Approval<!-- 26838632 -->
 
-Intune [device categories](../enrollment/device-group-mapping.md) support Multi Admin Approval. When Multi Admin Approval is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it’s applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
+Intune [device categories](../enrollment/device-group-mapping.md) support Multi Admin Approval. When Multi Admin Approval is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
@@ -299,7 +326,7 @@ For a list of supported OS version, see [Supported operating systems and browser
 
 #### New security baseline update experience<!-- 31607281  -->
 
-We’ve updated the Intune security baseline update experience for the more recent versions of security baselines. With this change, when you update a security baseline that was created after May 2023 to a more recent version of that same baseline, you now have two options to help automatically configure the updated baseline:
+We've updated the Intune security baseline update experience for the more recent versions of security baselines. With this change, when you update a security baseline that was created after May 2023 to a more recent version of that same baseline, you now have two options to help automatically configure the updated baseline:
 
 - Keep customizations – With this option, Intune applies all the settings customizations from the original baseline that you're upgrading to the new baselines template. The result is that the new baseline instance retains (includes) all your organization's specific modifications.
 - Discard customizations – With this option, Intune creates a new 'default' baseline instance that uses the new baseline version. Each setting in that baseline uses the baseline default and none of your settings customizations are automatically applied.
@@ -570,7 +597,7 @@ For more information about Linux enrollment, see [Linux device enrollment guide 
 
 When you use the Multi Admin Approval feature, you require a second admin account to approve a change before the change is applied.
 
-The **[Wipe](../remote-actions/devices-wipe.md)** remote action supports Multi Admin Approval. Use Multi Admin Approval with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
+The **[Wipe](../remote-actions/device-wipe.md)** remote action supports Multi Admin Approval. Use Multi Admin Approval with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
 
 For more information on Multi Admin Approval, see [Use Multi Admin Approval in Intune](../fundamentals/multi-admin-approval.md).
 
@@ -756,7 +783,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### Platform support for Device Cleanup rules<!-- 13835920 -->
 
-Using [cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules), you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
+Using cleanup rules, you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
 
 With this feature, you can:
 
@@ -764,7 +791,7 @@ With this feature, you can:
 - Use the [Audit logs](monitor-audit-logs.md) to see the devices that the device cleanup rules conceal from the Intune reports.
 - Use [role-based access control (RBAC)](role-based-access-control.md) to customize the user roles that can create device cleanup rules.
 
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
+For more information, see [device cleanup rules](../fundamentals/device-cleanup-rules.md).
 
 ### Device security
 

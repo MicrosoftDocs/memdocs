@@ -3,7 +3,6 @@ title: Require multifactor authentication for Intune device enrollment
 description: How to require multifactor authentication in Microsoft Entra ID for Intune device enrollment.
 ms.date: 12/11/2024
 ms.topic: how-to
-ms.localizationpriority: high
 
 
 ROBOTS:

@@ -884,7 +884,7 @@ items:
           items:
           - name: Intune support for Windows LAPS
             href: ./protect/windows-laps-overview.md
-          - name: Manage LAPS policy
+          - name: Deploy LAPS policy
             href: ./protect/windows-laps-policy.md
           - name: Reports for LAPS policy
             href: ./protect/windows-laps-reports.md
@@ -1834,6 +1834,8 @@ items:
     items:
     - name: Tenant status and health
       href: ./fundamentals/tenant-status.md
+    - name: Device cleanup rules
+      href: ./fundamentals/device-cleanup-rules.md
 
     - name: Endpoint analytics
       href: ../analytics/toc.yml

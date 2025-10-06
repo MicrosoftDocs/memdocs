@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 09/10/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.reviewer: juidaewo
 ms.collection:
 - M365-identity-device-management
@@ -87,6 +86,9 @@ This baseline is optimized for physical devices and isn't recommended for use on
 - **Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later)**
   Baseline default: *Enabled*
   [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#encryptionmethodbydrivetype)
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
   - **Select the encryption method for removable data drives:**
     Baseline default: *AES-CBC 128-bit (default)*

@@ -110,7 +110,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   Factory reset protection (FRP) helps prevent unauthorized access to your device after it's been factory reset. If the device is reset without your permission, in some situations, only the email addresses you enter can unlock the device. When the **Factory reset protection emails** setting is configured, there is different factory reset protection (FRP) behavior:
 
-  | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../remote-actions/devices-wipe.md#wipe) |
+  | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../remote-actions/device-wipe.md) |
   | --- | --- | --- | --- |
   | **Corporate-owned devices with work profile** (COPE) | ✅ factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
   | **Fully managed** (COBO) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |

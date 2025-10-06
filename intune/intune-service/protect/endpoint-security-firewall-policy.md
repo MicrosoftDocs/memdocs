@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 09/18/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -24,10 +23,12 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 ## Prerequisites for Firewall profiles
 
-- Windows 10
-- Windows 11
+- Windows
 - Windows Server 2012 R2 or later *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 - Any supported version of macOS
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!IMPORTANT]
 >
@@ -79,8 +80,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 In public preview, Windows Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
 
-- Windows 10
-- Windows 11
+- Windows
 
 The following firewall rule profile settings are available in reusable settings groups:
 
@@ -121,7 +121,11 @@ When rules from multiple rules profiles don't conflict with each other, devices 
 
 The reports for Firewall policy display status details about the firewall status for your managed devices. Firewall reports support managed devices that run the following operating systems.
 
-- Windows 10/11
+- Windows
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 ### Summary
 
@@ -132,7 +136,7 @@ This view provides:
 - An aggregate count of devices that have the firewall turned off.
 - A list of your Firewall policies, including the name, type, if it's assigned, and when it was last modified.
 
-### MDM devices running Windows 10 or later with firewall off
+### MDM devices running Windows with firewall off
 
 This report is located in the Endpoint security node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** > **MDM devices running Windows 10 or later with firewall off**.
 
@@ -147,11 +151,11 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Off](media/endpoint-security-firewall-policy/firewall-off-report.png)
 
-### MDM Firewall status for Windows 10 and later
+### MDM Firewall status for Windows
 
 *This organizational report is also described in [Intune Reports](../fundamentals/reports.md#mdm-firewall-status-for-windows-10-and-later-organizational)*.
 
-As an organizational report, this report is available from the **Reports** node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** > **MDM Firewall status for Windows 10 and later**.
+As an organizational report, this report is available from the **Reports** node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** > **MDM Firewall status for Windows**.
 
 > [!div class="mx-imgBorder"]
 > ![Select firewall reports](media/endpoint-security-firewall-policy/select-firewall-reports.png)

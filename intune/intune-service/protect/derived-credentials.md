@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 07/19/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: lacranda
 ms.collection:
 - M365-identity-device-management
@@ -49,7 +48,7 @@ a
 
 Review the following information before you configure your tenant to use derived credentials.
 
-### :::image type="icon" source="../media/icons/headers/devices.svg" border="false"::: Platform requirements
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
 > [!div class="checklist"]
 > Intune supports derived credentials on the following platforms:

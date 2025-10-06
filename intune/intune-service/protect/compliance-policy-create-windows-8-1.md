@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 05/15/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - compliance

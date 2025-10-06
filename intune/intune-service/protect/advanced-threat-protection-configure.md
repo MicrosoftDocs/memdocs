@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 07/09/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
@@ -271,6 +270,8 @@ If you're not familiar with creating compliance policy, reference the [Create a 
    - **Android Enterprise**
    - **iOS/iPadOS**
    - **Windows 10 and later**
+     > [!IMPORTANT]
+     > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
    Next, select **Create**.
 

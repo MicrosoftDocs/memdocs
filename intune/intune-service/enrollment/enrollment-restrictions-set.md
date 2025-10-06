@@ -3,7 +3,6 @@ title: Overview of enrollment restrictions
 description: Learn about the enrollment restrictions available in Microsoft Intune.
 ms.date: 12/12/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management

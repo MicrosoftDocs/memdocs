@@ -3,7 +3,6 @@ title: Enable Windows Backup for Organizations in Microsoft Intune
 description: Enable Windows backup and restore in Intune for employees or students.
 ms.date: 08/18/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
@@ -70,6 +69,8 @@ To configure the restore setting, you must have Intune Service Administrator per
 
 To enable Windows Backup for Organizations during enrollment, configure your backup and restore settings in the Microsoft Intune admin center. There are two areas where you need to configure settings: in the settings catalog, and under enrollment.
 
+# [Backup](#tab/backup)
+
 Complete these steps to configure the backup settings in the settings catalog.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 1. Go to **Devices** > **Managed devices** > **Configuration**.
@@ -78,6 +79,8 @@ Complete these steps to configure the backup settings in the settings catalog.
    2. For **Profile type**, select **Settings Catalog**.
 1. Under the **Sync your settings** category, find the **Enable Windows backup** setting. Select the setting to enable it.
 1. Finish the remaining steps to create your policy. Then select **Save**.
+
+# [Restore](#tab/restore)
 
 Complete these steps to configure the restore setting for enrollment.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
@@ -93,6 +96,8 @@ Complete these steps to configure the restore setting for enrollment.
 
 The **Last modified** date updates to account for recent changes. Return to **Windows Backup and Restore** anytime to view and edit the setting again.
 
+---
+
 ## Known issues
 Known issues with Windows Backup for Organizations include:
 
@@ -104,8 +109,8 @@ Known issues with Windows Backup for Organizations include:
 
 - When corporate accounts are used on Hyper-V virtual machines (VM) with phishing-resistant multifactor authentication (MFA) enforced, users are prompted to authenticate using a security key or smart card. However, due to Hyper-V VM limitations, these authentication methods can't pass through, resulting in an undesirable UI experience and preventing users from completing the authentication process.
 
->[!NOTE]
-> This issue is specific to VMs, particularly when users initially sign in with weaker authentication methods (such as a password or authenticator app) and phishing-resistant MFA is subsequently enforced.
+  >[!NOTE]
+  > This issue is specific to VMs, particularly when users initially sign in with weaker authentication methods (such as a password or authenticator app) and phishing-resistant MFA is subsequently enforced.
 
 - The restore feature isn't supported with the following provisioning methods:
 

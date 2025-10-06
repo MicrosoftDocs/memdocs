@@ -5,7 +5,6 @@ author: nicholasswhite
 ms.author: nwhite
 ms.date: 06/23/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: jlynn
 ms.collection:
 - M365-identity-device-management
@@ -83,7 +82,7 @@ A compliance trend report for device compliance can show the trend of device com
 You can view the **Device compliance trends** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance trends** to view device compliance over a 60 day trend.
+2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance trends** to view device compliance over a 30 day trend.
 
     ![Intune trend report](./media/intune-reports/intune-reports-03.png)
 
@@ -547,7 +546,7 @@ Other reports for Microsoft Defender Antivirus include:
 
 ### MDM Firewall status for Windows 10 and later (Organizational)
 
-*This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-10-or-later-with-firewall-off) along with the MDM devices running Windows 10 or later with firewall off report, which is only available from within the Endpoint security node.*
+*This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-with-firewall-off) along with the MDM devices running Windows firewall off report, which is only available from within the Endpoint security node.*
 
 The **MDM Firewall status for Windows 10 and later** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 

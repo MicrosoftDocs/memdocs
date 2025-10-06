@@ -9,7 +9,6 @@ ms.topic: concept-article
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.localizationpriority: high
 ---
 
 # Plan for Advanced Analytics
@@ -53,16 +52,16 @@ Windows capability requirements:
 > [!NOTE]
 > For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
 
-Device query for multiple devices is supported on devices running:  
+Device query for multiple devices is supported on devices running:
 
-- Windows 10 and later  
-- Android  
-  - Android Enterprise corporate owned dedicated devices (COSU)  
-  - Android Enterprise corporate owned fully managed (COBO)  
-  - Android Enterprise corporate owned work profile (COPE)  
-- Apple  
-  - iOS/iPadOS  
-  - macOS  
+- Windows 10 and later
+- Android
+  - Android Enterprise corporate owned dedicated devices (COSU)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned work profile (COPE)
+- Apple
+  - iOS/iPadOS
+  - macOS
 
 ## Government cloud support
 
@@ -101,7 +100,7 @@ For more information, go to:
 
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
-- [Enhanced device timeline](enhanced-device-timeline.md)  
+- [Enhanced device timeline](enhanced-device-timeline.md)
 - [Battery health](battery-health.md)
 - [Device query](device-query.md)
 - [Resource Performance report](resource-performance-report.md)
