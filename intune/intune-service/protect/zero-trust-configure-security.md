@@ -29,7 +29,7 @@ We recommend that all of the following controls be implemented where licenses ar
 
 :::tabs
 
-## :::tab tabname="Protect identities and secrets"
+### :::tab tabname="Protect identities and secrets"
 
 Reduce credential-related risk by implementing modern identity standards.
 
@@ -71,7 +71,7 @@ Reduce credential-related risk by implementing modern identity standards.
 
 :::
 
-## :::tab tabname="Protect tenants and isolate production systems"
+### :::tab tabname="Protect tenants and isolate production systems"
 
 Limit blast radius and enforce least-privilege access by segmenting administrative control and securing device onboarding. 
 
@@ -161,7 +161,7 @@ Limit blast radius and enforce least-privilege access by segmenting administrati
 
 :::
 
-## :::tab tabname="## Protect networks"
+### :::tab tabname="## Protect networks"
 
 Protect your network perimeter and endpoints through policy-driven controls.
 
