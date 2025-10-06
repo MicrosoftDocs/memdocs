@@ -18,17 +18,21 @@ The security recommendations in this document are designed to help you improve y
 - Protect identities and secrets
 - Protect tenants and isolate production systems
 - Protect networks
-- Protect engineering systems
-- Monitor and detect cyberthreats
-- Accelerate response and remediation
+- Protect engineering systems - *There are no Intune checks for this pillar.*
+- Monitor and detect cyberthreats - *There are no Intune checks for this pillar.*
+- Accelerate response and remediation - *There are no Intune checks for this pillar.*
 
 > [!TIP]
 > Some organizations might take these recommendations exactly as written, while others might choose to make modifications based on their own business needs.
 
 We recommend that all of the following controls be implemented where licenses are available. These patterns and practices help to provide a secure foundation for other resources built on top of this solution. More controls will be added to this document over time.
 
-## Protect identities and secrets
- 
+:::tabs
+
+## :::tab tabname="Protect identities and secrets"
+
+Reduce credential-related risk by implementing modern identity standards.
+
 ### Local administrator credentials on Windows are protected by Windows LAPS<!-- 24560 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24560](./includes/secure-recommendations/24560.md)]
@@ -65,7 +69,11 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
 
-## Protect tenants and isolate production systems
+:::
+
+## :::tab tabname="Protect tenants and isolate production systems"
+
+Limit blast radius and enforce least-privilege access by segmenting administrative control and securing device onboarding. 
 
 ### Scope tag configuration is enforced to support delegated administration and least-privilege access<!-- 24555 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
@@ -151,7 +159,11 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
 
-## Protect networks
+:::
+
+## :::tab tabname="## Protect networks"
+
+Protect your network perimeter and endpoints through policy-driven controls.
 
 ### Windows Firewall policies protect against unauthorized network access<!-- 24540 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
@@ -185,10 +197,10 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24870](./includes/secure-recommendations/24870.md)] -->
 
+:::
+
 ## Related content
 
 - [Deployment guide for Microsoft Intune](/intune/intune-service/fundamentals/get-started-with-intune)
 - [Protect data and devices with Microsoft Intune](/intune/intune-service/protect/device-protect)
 - [Configure Microsoft Entra for increased security (Preview)](/entra/fundamentals/configure-security)
-
-
