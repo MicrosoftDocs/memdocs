@@ -27,9 +27,7 @@ The security recommendations in this document are designed to help you improve y
 
 We recommend that all of the following controls be implemented where licenses are available. These patterns and practices help to provide a secure foundation for other resources built on top of this solution. More controls will be added to this document over time.
 
-:::tabs
-
-### :::tab tabname="Protect identities and secrets"
+#### [Protect identities and secrets](#tab/Protect identities and secrets)
 
 Reduce credential-related risk by implementing modern identity standards.
 
@@ -69,9 +67,7 @@ Reduce credential-related risk by implementing modern identity standards.
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
 
-:::
-
-### :::tab tabname="Protect tenants and isolate production systems"
+## [Protect tenants and isolate production systems](#tab/Protect tenants and isolate production systems)
 
 Limit blast radius and enforce least-privilege access by segmenting administrative control and securing device onboarding. 
 
@@ -159,9 +155,8 @@ Limit blast radius and enforce least-privilege access by segmenting administrati
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
 
-:::
-
-### :::tab tabname="## Protect networks"
+ 
+#### [Protect networks](#tab/Protect networks)
 
 Protect your network perimeter and endpoints through policy-driven controls.
 
@@ -196,8 +191,7 @@ Protect your network perimeter and endpoints through policy-driven controls.
 <!-- ### Secure Wi-Fi profiles are configured to protect macOS connectivity and devices<!-- 24870 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24870](./includes/secure-recommendations/24870.md)] -->
-
-:::
+---
 
 ## Related content
 
