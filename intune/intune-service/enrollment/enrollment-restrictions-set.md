@@ -29,7 +29,7 @@ Each restriction type comes with one default policy that you can edit and custom
 This article provides an overview of the available enrollment restrictions, and feature limitations. To start creating restrictions, skip to [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).
 
 ## Supported platforms  
-Enrollment restrctions are available for these platforms: 
+Enrollment restrictions are available for these platforms: 
 * Android
 * iOS
 * macOS
