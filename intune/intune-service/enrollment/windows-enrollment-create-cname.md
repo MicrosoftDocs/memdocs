@@ -12,12 +12,11 @@ ms.collection:
 
 # Enable auto-discovery of Intune enrollment server  
 
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
 If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias, called a *CNAME* record type, for your MDM servers. The CNAME redirects enrollment requests to Intune servers so that device users don't have to enter the server address during device enrollment. Although the CNAME configuration is optional, it makes enrollment easier for users by enabling automatic discovery of the Intune enrollment server and reducing the amount of user interaction required.
 
-If you're enrolling Windows devices by using [MDM automatic enrollment](windows-enroll.md), you don’t have to worry about configuring CNAME records for your MDM server. The MDM server is configured by default when you enable MDM automatic enrollment in your tenant.
+If you're enrolling Windows devices by using [MDM automatic enrollment](windows-enroll.md), you don’t have to worry about configuring CNAME records for your MDM server. The MDM server is configured by default when you enable MDM automatic enrollment in your tenant.  
+
+This article applies to Windows.  
 
 ## Step 1: Create CNAME
 

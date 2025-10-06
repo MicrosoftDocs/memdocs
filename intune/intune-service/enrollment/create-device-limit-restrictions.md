@@ -27,7 +27,7 @@ This article describes how to create and configure a device limit-enrollment res
 ## Default policy
 Microsoft Intune provides one default policy for device limit restrictions that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.
 
-## Prerequisites  
+## Requirements    
 You can use device limit restrictions with these platforms:
 
 - Android

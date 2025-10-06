@@ -43,7 +43,10 @@ To manage device enrollment manager accounts in Microsoft Intune, you must be an
 |Permission| Description |
 |---------------|------------|
 |Update | Create new device enrollment manager accounts, or delete device enrollment manager accounts. |
-|Read | View the list of device enrollment manager accounts. |
+|Read | View the list of device enrollment manager accounts. |  
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]   
 
 ## Add a device enrollment manager
 
@@ -94,9 +97,6 @@ Conditional Access is only supported with DEM on devices running:
 
 * Windows 10, version 1803 and later
 * Windows 11  
-
-  > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]  
 
 > [!NOTE]
 >  DEM accounts on iOS/iPadOS and macOS do not support Microsoft Entra Join, Microsoft Entra registration, and Workplace Join.
