@@ -28,6 +28,18 @@ Each restriction type comes with one default policy that you can edit and custom
 
 This article provides an overview of the available enrollment restrictions, and feature limitations. To start creating restrictions, skip to [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).
 
+## Supported platforms  
+Enrollment restrctions are available for these platforms: 
+* Android
+* iOS
+* macOS
+* Windows
+
+Availability varies by restriction type. 
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]  
+
 ## Available restrictions
 You can configure the following restrictions in the admin center:
 
@@ -35,7 +47,7 @@ You can configure the following restrictions in the admin center:
 * Device platform
 * OS version
 * Device manufacturer
-* Device ownership (personally owned devices) 
+* Device ownership (personally owned devices)  
 
 ### Device limit
 Put a limit on the number of devices a person can enroll. You can set the device limit from 1 to 15.
@@ -51,9 +63,6 @@ Block devices running on a specific device platform. You can apply this restrict
    * iOS/iPadOS
    * macOS
    * Windows 
-
-     > [!IMPORTANT]
-     > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 In groups where both Android platforms are allowed, devices that support work profile will enroll with a work profile. Devices that don't support work profile will enroll on the Android device administrator platform. Neither work profile nor device administrator enrollment will work until you complete all prerequisites for Android enrollment.
 
@@ -72,9 +81,6 @@ This restriction enforces your maximum and minimum OS version requirements. This
    * iOS/iPadOS\*
    * Windows  
 
-     > [!IMPORTANT]
-     > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
 \* Version restrictions are supported on these operating systems for devices enrolled via Intune Company Portal only.
 
 This restriction is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.
@@ -89,9 +95,6 @@ This restriction helps prevent device users from accidentally enrolling their pe
 * iOS/iPad OS
 * macOS
 * Windows 
-
-     > [!IMPORTANT]
-     > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 This restriction is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.
 
