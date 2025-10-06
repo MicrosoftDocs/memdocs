@@ -15,8 +15,8 @@ Device categories allow you to easily manage and group devices in Microsoft Intu
 
 This article describes how to configure and edit device categories.
 
-## Prerequisites  
-You can use device categories with these platforms:
+## Requirements  
+Device categories are available for these platforms:  
 
 - Android
 - iOS/iPadOS
