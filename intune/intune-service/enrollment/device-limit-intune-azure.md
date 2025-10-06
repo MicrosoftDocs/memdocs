@@ -10,24 +10,18 @@ ms.collection:
 - highpri
 ---
 
-# Understand Intune and Microsoft Entra device limit restrictions
-
-**Applies to**
-
-- Android
-- iOS
-- macOS
-- Windows 
+# Understand Intune and Microsoft Entra device limit restrictions  
 
 There are two ways to limit the number of devices an employee or student can use for work or school. You can:
 
 * Configure device limit restrictions in the Microsoft Intune admin center.
 * Configure a device limit in the Microsoft Entra admin center.
 
-This article provides an overview of each limitation, and describes the device conditions and provisioning scenarios that support them.  
-
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]  
+This article provides an overview of each limitation, and describes the device conditions and provisioning scenarios that support them. It applies to:  
+- Android  
+- iOS  
+- macOS  
+- Windows  
 
 ## Intune device limit restrictions
 
