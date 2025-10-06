@@ -130,6 +130,27 @@ The following apps support the core Intune App Protection Policy settings. Apps 
 > [!IMPORTANT]
 > Contact the app vendor for specific details on Intune related support.
 
+<!--
+================================================================================
+REMOVED APPS SECTION
+================================================================================
+This section tracks apps that have been removed from the Partner Productivity
+Apps table below. When removing an app, add its details here with:
+- ADO Work Item ID
+- Date removed
+- Reason for removal
+- Original table entry (for reference)
+================================================================================
+
+| App Name | ADO ID | Date Removed | Reason |
+|----------|--------|--------------|--------|
+| Meetio Enterprise | 35431280 | October 2025 | Meetio is now part of Logitech. All features and services will be transitioned under the Logitech brand. Visit the Logitech website to learn more about Logitech's Room Booking offering. |
+
+Original Table Entry:
+| :::no-loc text="Meetio Enterprise"::: <p><img alt="Partner app - Meetio Enterprise icon" src="./media/apps-supported-intune-apps/icon-p-meetio-enterprise.png" width="100"> | Meetio transforms the way organizations utilize their office spaces with a comprehensive platform that seamlessly integrates room booking, desk booking, and visitor management. Meetio works with hybrid and office work environments, optimizing space utilization, and employee collaboration. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.meetio.pro),<br>[App Store link (iOS)](https://apps.apple.com/se/app/meetio-meeting-room-displays/id1441860071) |
+
+================================================================================
+-->
 
 | App   title | App description | App store links for supported   platforms |
 |-------------------------------------------------|-------------------------|---------------------------------------------|
@@ -216,7 +237,6 @@ The following apps support the core Intune App Protection Policy settings. Apps 
 | :::no-loc text="M-Files for Intune"::: <p><img alt="Partner app - M-Files for Intune icon" src="./media/apps-supported-intune-apps/icon-p-m-files.png" width="100">| M-Files&reg; is content management (ECM) and document management solution that helps to manages, find, track, and secure information for companies of all sizes.<p>The M-Files mobile application lets you access your M-Files documents anytime and anywhere – even when you're on the go or not connected to your office network. The application enables you to find documents from your M-Files Vaults via search functions and various customizable views, as well as view and approve documents and workflows.<p>To be able to utilize the mobile application, you need to have an M-Files system set up and to possess the required access rights. To get started, you need an M-Files server address and sign in credentials. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.mfiles.mfms),<br>[App Store link (iOS)](https://apps.apple.com/app/m-files-for-intune/id1551120145) |
 | :::no-loc text="MangoApps - Work from Anywhere"::: <p><img alt="Partner app - MangoApps - Work from Anywhere icon" src="./media/apps-supported-intune-apps/icon-p-mangoappswork.png" width="100">| MangoApps - Work from Anywhere simplifies teamwork, collaboration, and file sharing. It's a comprehensive, cross-platform business collaboration tool designed for mobile devices, but also works seamlessly from your desktop. With features such as advanced team communication, project management, task management, chat, company intranet, and wikis, MangoApps helps employees stay organized and productive wherever they are. Easily access work-related information and stay connected with colleagues and clients from any location and on any device. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.ms.engage&hl=en_IN&gl=US),<br>[App Store link (iOS)](https://apps.apple.com/us/app/mangoapps-work-from-anywhere/id347307528?platform=iphone) |
 | :::no-loc text="Meetings by Decisions"::: <p><img alt="Partner app - Meetings by Decisions icon" src="./media/apps-supported-intune-apps/icon-p-meetings-by-decisions.png" width="100">| Meetings by Decisions is a solution for Microsoft Teams and Microsoft 365 (Office). With Decisions, users improve collaboration, engagement, and productivity by using agenda builder, Teams in-meeting extensions, secure voting, minutes templates, task management, and more. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.meetingdecisions.androidApp),<br>[App Store link (iOS)](https://apps.apple.com/app/meetings-by-decisions/id1532239791) |
-<!-- ADO ID: 35431280 - Meetio is no longer available. The official meetio statement reads: "Meetio is now part of Logitech. All features and services will be transitioned under the Logitech brand. Visit the Logitech website to learn more about Logitech's Room Booking offering."| :::no-loc text="Meetio Enterprise"::: <p><img alt="Partner app - Meetio Enterprise icon" src="./media/apps-supported-intune-apps/icon-p-meetio.png" width="100">| Meetio's mobile app for organizations using Meetio room management solutions. Meetio Enterprise simplifies your workday by allowing you to schedule meetings and meeting rooms - all at once, while you're on the go. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.getmeetio.personal),<br>[App Store link (iOS)](https://apps.apple.com/app/meetio/id1340190306) | -->
 | :::no-loc text="Mijn InPlanning / Swisio"::: <p><img alt="Partner app - Mijn InPlanning / Swisio icon" src="./media/apps-supported-intune-apps/icon-p-mijninplanning.png" width="100"> | Stay in control of your schedule – anytime, anywhere.<br><br>The InPlanning app by Intus gives you instant access to your work schedule, availability, and hours worked. Easily manage your shifts, swap shifts, and stay up-to-date with notifications. Flexible, clear, and user-friendly – the perfect planning tool for both employees and schedulers. | [App Store link (iOS)](https://apps.apple.com/nl/app/mijn-inplanning/id6464472614) |
 | :::no-loc text="Mobile Helix Link for Intune"::: <p><img alt="Partner app - Mobile Helix Link for Intune icon" src="./media/apps-supported-intune-apps/icon-p-mobilehelixlink.png" width="100">| LINK provides lawyers and knowledge professionals with seamless document workflows in a single, encrypted mobile app. With LINK, you can access your documents in Document Management Systems or in Outlook. Then securely review, annotate, compare, edit, check-in, and email your documents. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.mobilehelix.link.intune),<br>[App Store link (iOS)](https://apps.apple.com/eg/app/mobile-helix-link-for-intune/id6473648085) |
 | :::no-loc text="MoveInSync"::: <p><img alt="Partner app - MoveInSync icon" src="./media/apps-supported-intune-apps/icon-p-moveinsync.png" width="100"> | MoveInSync empowers organizations to reduce carbon emissions through shared commutes, optimal fleet management, and the adoption of electric vehicles.<p>MoveInSync One offers a comprehensive employee transport solution, integrating fleet, technology, and operations. The SaaS solution, Ion, automates employees' office commutes, corporate car rentals, and workplace management. Ion identifies and mitigates risks, ensures ESG compliance, and enhances employee satisfaction. It manages cabs, EVs, and shuttles for various travel needs, featuring scheduling, routing, tracking, billing, safety, security, compliance, and reporting.<p>With MoveInSync, whether managing your workplace or employee commute, everything becomes more straightforward. This single app can transform your workplace for the better. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.moveinsync.ets&hl=en_IN),<br>[App Store link (iOS)](https://apps.apple.com/in/app/moveinsync/id962949521) |
@@ -299,3 +319,35 @@ To learn how to add apps for each platform to Intune, see:
 - [Built-in apps](apps-add-built-in.md)
 - [Win32 apps](apps-win32-add.md)
 - [Enterprise App Catalog app (Win32)](apps-add-enterprise-app.md)
+
+<!-- 
+==============================================================================
+REMOVED APPS SECTION
+==============================================================================
+This section documents apps that have been removed from the supported list.
+It is hidden from the published documentation but serves as a reference for 
+documentation maintainers and contributors.
+
+Format for each entry:
+- App Name
+- ADO Work Item ID
+- Date Removed
+- Reason for Removal
+- Original Description (if needed for reference)
+
+==============================================================================
+
+1. Meetio Enterprise
+   - ADO ID: 35431280
+   - Date Removed: October 2025
+   - Reason: Meetio is no longer available as a standalone app. 
+     Official statement: "Meetio is now part of Logitech. All features and 
+     services will be transitioned under the Logitech brand. Visit the 
+     Logitech website to learn more about Logitech's Room Booking offering."
+   - Original Entry:
+     | :::no-loc text="Meetio Enterprise"::: <p><img alt="Partner app - Meetio Enterprise icon" src="./media/apps-supported-intune-apps/icon-p-meetio.png" width="100">| Meetio's mobile app for organizations using Meetio room management solutions. Meetio Enterprise simplifies your workday by allowing you to schedule meetings and meeting rooms - all at once, while you're on the go. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.getmeetio.personal),<br>[App Store link (iOS)](https://apps.apple.com/app/meetio/id1340190306) |
+
+==============================================================================
+END OF REMOVED APPS SECTION
+==============================================================================
+-->
