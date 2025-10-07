@@ -10,7 +10,7 @@ ms.reviewer: jieyan
 * Android
 * iOS/iPadOS
 * macOS
-* Windows 10/11
+* Windows 
 
 Use the Company Portal website to remotely unenroll and unregister a personal device from work or school. Once you remove a device, your organization no longer manages the device and it is removed from the Company Portal app and website. You might lose access to protected work data, such as files, apps, and email, on the device after you unenroll.
 
