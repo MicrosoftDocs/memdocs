@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Windows 10/11 device access for school or work
+title: Troubleshoot Windows device access for school or work
 description: Resolve access or account connection issues for an enrolled Windows device.
 ms.date: 04/30/2024
 ms.reviewer: amanh
@@ -10,10 +10,9 @@ ms.reviewer: amanh
 # Troubleshoot Windows device access
 
 **Applies to**
-- Windows 10
-- Windows 11
+- Windows 
 
-This article describes how to resolve access issues for an enrolled Windows 10/11 device.
+This article describes how to resolve access issues for an enrolled Windows device.
 
 ## Check Wi-Fi connection
 
@@ -24,9 +23,8 @@ If your account isn't appearing in the **Settings** app, go through the setup st
 
 1. Open the **Settings** app.
 2. Select **Accounts**.
-3. Identify the version of Windows you're using and then:
-    * Windows 10 (version 1607 and later) and Windows 11: Select **Access work or school**.
-    * Windows 10, version 1511 and earlier: Select **Work access**.
+3. Identify the version of Windows you're using, and then select **Access work or school**.  
+    <!-- * Windows 10, version 1511 and earlier: Select **Work access**-->  
 4. Check for your account. If it's not listed, select **Connect** to add it.
 5. Sign in with your work or school account, and then follow the onscreen prompts to finish connecting.
 
