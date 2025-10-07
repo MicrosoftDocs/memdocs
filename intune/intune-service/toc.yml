@@ -104,7 +104,7 @@ items:
       href: ./copilot/security-copilot.md
     - name: Copilot in Surface Management Portal
       displayName: ai, copilot, surface, models, fleet, warranty
-      href: ./copilot/security-copilot-surface-portal.md
+      href: /surface/security-copilot-surface-management-portal?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
     - name: Copilot in Windows 365 Cloud PCs
       href: /windows-365/enterprise/copilot-in-intune-for-windows365?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
     - name: Security Copilot agents in Microsoft Intune
@@ -775,8 +775,6 @@ items:
           displayName: ca
         - name: Common ways to use Conditional Access
           href: ./protect/conditional-access-intune-common-ways-use.md
-        - name: Device-based Conditional Access policy
-          href: ./protect/create-conditional-access-intune.md
         - name: App-based Conditional Access
           href: ./protect/app-based-conditional-access-intune.md
         - name: Set up app-based Conditional Access
