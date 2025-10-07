@@ -72,7 +72,7 @@ The following articles can help you understand the settings that Intune policies
 - [Android Open-Source Project (AOSP)](../protect/compliance-policy-create-android-aosp.md)
 - [iOS](../protect/compliance-policy-create-ios.md)
 - [macOS](../protect/compliance-policy-create-mac-os.md)
-- [Windows 10/11](../protect/compliance-policy-create-windows.md)
+- [Windows](../protect/compliance-policy-create-windows.md)
 
 ## Level 1 - Minimal device compliance
 
