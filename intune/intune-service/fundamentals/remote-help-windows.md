@@ -115,7 +115,7 @@ To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, a
 After you repackage Remote Help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md) with the following details to upload and deploy Remote Help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
 
    > [!IMPORTANT]
-   > Make sure the file you dowloaded is renamed to **remotehelpinstaller.exe**.
+   > Make sure the file you downloaded is renamed to **remotehelpinstaller.exe**.
 
 1. On the App information page, select **Select app package file**, and locate the *remotehelp.intunewin* file you've previously prepared, and then select **OK**.
 
@@ -146,7 +146,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
    - For *Value*, specify the Remote Help version that you're deploying. For example, **10.0.22467.1000**. See the following note for details on how to get the Remote Help version.
-   - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
+   - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**.
 
     > [!NOTE]
     > To get the version of the **RemoteHelp.exe**, install RemoteHelp manually to a machine and run the following Powershell command **(Get-Item "$env:ProgramFiles\Remote Help\RemoteHelp.exe").VersionInfo**. From the output make a note of the FileVersion and use it to specify the *Value* in the detection rule.
@@ -344,7 +344,7 @@ To apply conditional access policies to Remote Help, follow these steps:
      1. Select **Resources (formerly cloud apps)** to specify what this policy applies to.
      2. Select **Exclude**.
      3. Select **Select resources**.
-     4. Under **Select**, check the **RemoteAssistanceService** with the app ID of 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
+     4. Under **Select**, check the **RemoteAssistanceService** with the app ID of 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2.
 
 ## Languages Supported
 
