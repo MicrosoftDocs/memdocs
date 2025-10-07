@@ -16,8 +16,9 @@ Managing a dynamic device fleet means constantly tracking devices that come and 
 
 Device cleanup rules in Intune run on a schedule and automatically hide records of devices that didn't check in for a specified period (for example, 90 days). These rules:
 
-- *Soft delete* device records—devices are hidden from the Intune portal and reports but preserved in the backend for potential recovery.
-- Cleaned-up devices reappear in the Intune admin center if they check in before their device certificate expires. After expiration, re-enrollment is required.
+- Hide devices from the Intune portal and reports.
+- Allow cleaned-up devices to reappear if they check in before their device certificate expires.
+- Require re-enrollment after the certificate expires.
 - Don't trigger any actions on the device (no wipe or retire).
 - Aren't available for Jamf-managed devices.
 
