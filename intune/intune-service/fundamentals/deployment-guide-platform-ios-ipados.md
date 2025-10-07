@@ -39,7 +39,7 @@ The [Microsoft Intune planning guide](intune-planning-guide.md) provides guidanc
 
 The iOS/iPadOS security configuration framework is a series of recommendations for device compliance and configuration policy settings. These recommendations help you tailor your organization's mobile device security protection to your specific needs.
 
-Microsoft Intune uses a taxonomy for this framework that's similar to the one used for security configurations in Windows 10. It applies to both personally owned and supervised devices, and includes the recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one and offers more protection than the last.
+Microsoft Intune uses a taxonomy for this framework that's similar to the one used for security configurations in Windows. It applies to both personally owned and supervised devices, and includes the recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one and offers more protection than the last.
 
 The security levels for personally owned devices are:
 

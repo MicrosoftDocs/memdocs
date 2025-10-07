@@ -9,13 +9,13 @@ ms.collection:
 - highpri
 ---
 
-# Enable auto-discovery of Intune enrollment server
-
-*Applies to Windows 10, Windows 11*
+# Enable auto-discovery of Intune enrollment server  
 
 If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias, called a *CNAME* record type, for your MDM servers. The CNAME redirects enrollment requests to Intune servers so that device users don't have to enter the server address during device enrollment. Although the CNAME configuration is optional, it makes enrollment easier for users by enabling automatic discovery of the Intune enrollment server and reducing the amount of user interaction required.
 
-If you're enrolling Windows 10/11 devices using [MDM automatic enrollment](windows-enroll.md), you don’t have to worry about configuring CNAME records for your MDM server. The MDM server is configured by default when you enable MDM automatic enrollment in your tenant.
+If you're enrolling Windows devices by using [MDM automatic enrollment](windows-enroll.md), you don’t have to worry about configuring CNAME records for your MDM server. The MDM server is configured by default when you enable MDM automatic enrollment in your tenant.  
+
+This article applies to Windows.  
 
 ## Step 1: Create CNAME
 
@@ -75,9 +75,9 @@ Microsoft Entra ID uses a different CNAME during device registration for iOS/iPa
 For more information about device registration, see
 [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
 
-## Windows auto enrollment and device registration
+## Windows auto enrollment and device registration  
 
-This section applies to US government cloud customers on devices running Windows 10 or Windows 11.
+This section applies to US government cloud customers on devices running Windows.  
 
 Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.us.
 

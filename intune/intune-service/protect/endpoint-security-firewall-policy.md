@@ -46,6 +46,8 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 ## Firewall profiles
 
+Find guidance for creating endpoint security profiles at [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy).
+
 ### Devices managed by Intune
 
 **Platform: macOS**:
