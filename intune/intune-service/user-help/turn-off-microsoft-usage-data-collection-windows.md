@@ -8,8 +8,7 @@ ms.reviewer: priyar
 # Turn off Microsoft data collection on Windows device
 
 **Applies to**
-- Windows 10
-- Windows 11
+- Windows 
 
 This article describes how to prevent Microsoft from collecting data about your Company Portal app usage. To turn off data collection in Company Portal:
 
