@@ -5,7 +5,7 @@ ms.date: 06/28/2024
 ms.reviewer: madekeva
 ---
 
-# Enroll Windows 10/11 devices in Intune
+# Enroll Windows devices in Intune
 
 **Applies to**
 - Windows 
