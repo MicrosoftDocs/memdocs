@@ -54,8 +54,11 @@ The prerequisites for Remote Help on Windows are:
 To remotely start a session:
 
 - The helper can be on an enrolled or unenrolled device.
-- The sharer's device needs to be enrolled device with Intune management extension.
-  - Intune management extension is required for the remote launch feature and that is supported on Windows 10 and 11. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md)
+- The sharer's device needs to be an enrolled device with the Intune management extension.
+  - Intune management extension is required for the remote launch feature and that is supported on Windows. Specifically for Windows 10 the OS build needs to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md)  
+
+    > [!IMPORTANT]
+    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 - Optional Windows updates for higher notification reliability:
 

@@ -79,8 +79,8 @@ Limitations:
 - Remote Help might not be available in all markets or localizations.
 - Remote Help is supported in Government Community Cloud (GCC) environments on the following platforms:
 
-  - Windows 10/11
-  - Windows 10/11 on ARM64 devices
+  - Windows
+  - Windows on ARM64 devices
   - Windows 365
   - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
   - macOS 13, 14, and 15
@@ -91,9 +91,8 @@ Limitations:
 
 This feature applies to:
 
-- Windows 10/11
-- Windows 11 on ARM64 devices
-- Windows 10 on ARM64 devices
+- Windows
+- Windows on ARM64 devices  
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
 - macOS 13, 14, and 15

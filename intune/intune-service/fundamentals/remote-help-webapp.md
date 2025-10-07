@@ -12,15 +12,15 @@ ms.collection:
 - highseo
 ---
 
-# Remote Help Web App
+# Remote Help web app
 
 Remote Help is a cloud-based solution for secure help desk connections with role-based access controls (RBAC). With this connection, your support staff can remotely connect to the user's device and view their display.
 
-In this article, users who provide help are referred to as Helpers, and users that receive help are referred to as Sharers as they share their session with the helper.
+In this article, users who provide help are referred to as *helpers*. Users who receive help are referred to as *sharers*, as they share their session with the helper.
 
-In situations where the sharer needs assistance but is unable to install the Remote Help native application on a device, the sharer can share their screen to a helper by using the Remote Help Web App. This web app provides View Only capabilities to the helper, which allows them to guide the user through support scenarios.
+In situations where the sharer needs assistance but is unable to install the Remote Help native application on a device, the sharer can share their screen to a helper by using the Remote Help web app. This web app provides view only capabilities to the helper, which allows them to guide the user through support scenarios.
 
-## Remote Help Web App Capabilities
+## Remote Help web app capabilities
 
 The Remote Help web app supports the following capabilities:
 
@@ -66,9 +66,7 @@ Device support is dependent on both the users operating system, and their web br
 
 ### Windows Versions
 
-- Windows 10
-
-- Windows 11
+- Windows 
 
 ### Linux Versions
 
