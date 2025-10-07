@@ -775,8 +775,6 @@ items:
           displayName: ca
         - name: Common ways to use Conditional Access
           href: ./protect/conditional-access-intune-common-ways-use.md
-        - name: Device-based Conditional Access policy
-          href: ./protect/create-conditional-access-intune.md
         - name: App-based Conditional Access
           href: ./protect/app-based-conditional-access-intune.md
         - name: Set up app-based Conditional Access
