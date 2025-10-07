@@ -4883,7 +4883,7 @@ Administrators can now utilize Conditional Access capability when setting up pol
 For more information, see:
 
 - [Conditional Access](../protect/conditional-access.md)
-- [Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help)
+- [Remote Help](remote-help-windows.md#set-up-conditional-access-for-remote-help)
 
 ### Device security
 

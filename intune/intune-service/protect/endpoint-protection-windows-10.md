@@ -1,6 +1,6 @@
 ---
-title: Settings you can manage with Intune Endpoint Protection profiles for Windows 10/11 devices
-description: View the available settings in Intune endpoint protection profiles for managed Windows 10 and 11 devices.
+title: Settings you can manage with Intune Endpoint Protection profiles for Windows devices
+description: View the available settings in Intune endpoint protection profiles for managed Windows devices.
 author: lenewsad
 ms.author: lanewsad
 ms.date: 11/14/2023
@@ -289,7 +289,7 @@ The following settings are each listed in this article a single time, but all ap
 
 ### Firewall rules
 
-You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-1011-devices).
+You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-devices).
 
 Custom Firewall rules support the following options:
 
@@ -505,7 +505,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
   - **Encryption for removable data-drives**
     **Default**: AES-CBC 128-bit
 
-    Choose the encryption method for removable data drives. If the removable drive is used with devices that aren't running Windows 10/11, then we recommend you use the AES-CBC algorithm.
+    Choose the encryption method for removable data drives. If the removable drive is used with devices that aren't running Windows, then we recommend you use the AES-CBC algorithm.
     - **AES-CBC 128-bit**
     - **AES-CBC 256-bit**
     - **XTS-AES 128-bit**
@@ -1034,7 +1034,10 @@ Microsoft Defender Credential Guard protects against credential theft attacks. I
     > [!NOTE]
     > If you use this setting, and then later want to disable Credential Guard, you must set the Group Policy to **Disabled**. And, physically clear the UEFI configuration information from each computer. As long as the UEFI configuration persists, Credential Guard is enabled.​
 
-  - **Enable without UEFI lock** - Allows Credential Guard to be disabled remotely by using Group Policy. The devices that use this setting must be running Windows 10 version 1511 and newer, or Windows 11.​
+  - **Enable without UEFI lock** - Allows Credential Guard to be disabled remotely by using Group Policy. The devices that use this setting must be running Windows 10 version 1511 and later, or Windows 11.​  
+
+     > [!IMPORTANT]
+     > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
   When you *enable* Credential Guard, the following required features are also enabled:
 
@@ -1205,7 +1208,7 @@ You can choose to **Display in app and in notifications**, **Display only in app
 
 ## Local device security options
 
-Use these options to configure the local security settings on Windows 10/11 devices.
+Use these options to configure the local security settings on Windows devices.
 
 ### Accounts
 
