@@ -289,7 +289,7 @@ The following settings are each listed in this article a single time, but all ap
 
 ### Firewall rules
 
-You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-1011-devices).
+You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-devices).
 
 Custom Firewall rules support the following options:
 

@@ -284,7 +284,7 @@ Depending on the environment that Remote Help is utilized in, it may be necessar
 - C:\Program Files\Remote help\RHService.exe
 - C:\Program Files\Remote help\RemoteHelpRDP.exe
 
-## Setup Conditional Access for Remote Help
+## Set up Conditional Access for Remote Help
 
 This section outlines the steps for provisioning the Remote Help service on the tenant for Conditional Access.
 
