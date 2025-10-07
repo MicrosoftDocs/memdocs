@@ -24,7 +24,6 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 
 > [!IMPORTANT]
 > This article describes the capabilities and configuration tasks that are applicable in general for Remote Help across supported platforms. For specific capabilities, prerequisites, and other details based on the platform that you are using, go to:
-
 > - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md)
 > - [Remote Help on Android with Microsoft Intune](remote-help-android.md)
 > - [Remote Help on macOS with Microsoft Intune](remote-help-macOS.md)
@@ -178,8 +177,8 @@ After creating the custom roles that you can use to provide different users with
 
 5. On the **Scope (Groups)** page, choose a group containing the users/devices that a member is allowed to manage. You also can choose all users or all devices. Choose **Next** to continue.
 
-   >[!IMPORTANT]
-   >If a sharer or a sharer's device isn't in the scope of a helper, that helper cannot provide assistance. When assisting an unenrolled device, the "All Devices" scope group will not include these devices. Instead, you should use the user scope group during the assignment process.
+   > [!IMPORTANT]
+   > If a sharer or a sharer's device isn't in the scope of a helper, that helper cannot provide assistance. When assisting an unenrolled device, the "All Devices" scope group will not include these devices. Instead, you should use the user scope group during the assignment process.
    >
    > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](role-based-access-control.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
 
