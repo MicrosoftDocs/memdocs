@@ -17,13 +17,10 @@ Managing a dynamic device fleet means constantly tracking devices that come and 
 Device cleanup rules in Intune run on a schedule and automatically hide records of devices that didn't check in for a specified period (for example, 90 days). These rules:
 
 - Hide devices from the Intune portal and reports.
+- **Don't trigger any actions on the device (no wipe or retire).**
 - Allow cleaned-up devices to reappear if they check in before their device certificate expires.
 - Require re-enrollment after the certificate expires.
-- Don't trigger any actions on the device (no wipe or retire).
 - Aren't available for Jamf-managed devices.
-
-> [!NOTE]
-> Devices removed from Intune aren't deleted from Microsoft Entra ID. For more information about removing devices from Microsoft Entra ID, see [Manage stale devices in Microsoft Entra ID](/entra/identity/devices/manage-stale-devices).
 
 ## Requirements
 
@@ -65,13 +62,16 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 1. Select **Next**.
 1. In **Rule settings** > **Remove devices that haven't checked in for this many days**, enter a number between 30 and 270.
 
-    This setting determines how many days a device must check in with the Intune service before the device is considered stale or inactive. If a device fails to check in before the period ends, the device is cleaned up.
+    This setting determines how many days a device must check in with the Intune service before the device is considered stale or inactive. If a device doesn't check in before the period ends, the device is cleaned up.
 
     > [!TIP]
     > Select **Preview affected devices** to get a list of devices that didn't check in during the specified number of days.
 
 1. Select **Next**.
 1. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the rule applies.
+
+> [!NOTE]
+> Devices hidden from Intune aren't removed from Microsoft Entra ID. For more information about removing devices from Microsoft Entra ID, see [Manage stale devices in Microsoft Entra ID](/entra/identity/devices/manage-stale-devices).
 
 ## Device cleanup rules logging
 
