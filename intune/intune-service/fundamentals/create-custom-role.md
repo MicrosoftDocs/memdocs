@@ -1,31 +1,11 @@
 ---
-# required metadata
-
 title: Create a custom role in Intune
 description: Learn how to create a custom role in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 07/28/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-  - tier2
   - M365-identity-device-management
 ---
 

@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Kiosk settings for Windows and Holographic devices in Microsoft Intune
 description: Configure your Windows 10/11 and Windows Holographic for Business devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune.
-keywords: frontline worker, FLW, kiosk, dedicated device, Windows Holographic for Business, Windows HoloLens, Windows kiosk
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/25/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

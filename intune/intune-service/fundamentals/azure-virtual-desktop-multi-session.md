@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Using Azure Virtual Desktop multi-session with Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Guidelines for using Azure Virtual Desktop multi-session with Microsoft Intune
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 02/13/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: madakeva
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started; references_regions
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -67,6 +48,10 @@ User configuration support in Microsoft Intune for Windows 10 or Windows 11 mult
 This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, which are:
 
 - Running Windows 10 multi-session, version 1903 or later, or running Windows 11 multi-session.
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 - Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager.
 - Under the same tenant as Intune.
 - Running an Azure Virtual Desktop agent version of 1.0.2944.1400 or later.
@@ -132,12 +117,12 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
 
 ### Administrative templates
 
-Windows 10 or Windows 11 Administrative Templates are supported for Windows 10 or Windows 11 Enterprise multi-session via the Settings catalog with some limitations:
+Administrative Templates in the [Intune settings catalog](../configuration/settings-catalog.md) are supported for Windows 10 or Windows 11 Enterprise multi-session with some limitations:
 
 - ADMX-backed policies are supported. Some policies aren't yet available in the Settings catalog.
-- ADMX-ingested policies are supported, including Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings won't be applicable to Windows 10 or Windows 11 Enterprise multi-session.
+- ADMX-ingested policies are supported. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings won't be applicable to Windows 10 or Windows 11 Enterprise multi-session.
 
-To list supported Administrative Templates, you'll need to use the filter in Settings catalog.
+For a list of supported Administrative Templates, create a [settings catalog](../configuration/settings-catalog.md) policy.
 
 ## Compliance and Conditional Access
 
@@ -221,7 +206,7 @@ The following Windows 10 or Windows 11 desktop device remote actions aren't supp
 Deleting VMs from Azure will leave orphaned device records in the Microsoft Intune admin center. AVD machines are deleted automatically after 30 days and removed permanently after 60 days.
 For more information, see:
 - [Using Intune device cleanup rules](https://techcommunity.microsoft.com/t5/device-management-in-microsoft/using-intune-device-cleanup-rules-updated-version/ba-p/3760854).
-- [Automatically remove devices with cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules)
+- [Automatically remove devices with cleanup rules](../fundamentals/device-cleanup-rules.md)
 
 ## Security baselines
 

@@ -1,31 +1,11 @@
 ---
-# required metadata
-
 title: Security Copilot in Microsoft Intune
 description: You can use Security Copilot to get information about your Intune data, including devices, apps, policies, and groups managed in Intune. You can also compare policies, get device specific details, and get target info for policies.
-keywords:
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice:
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: ankurgoyal, rashok
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -103,7 +83,7 @@ In Microsoft Defender, you can use this information, including the device type, 
 - You can access your Intune data in the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) and Copilot in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on Copilot in Intune vs. Security Copilot, and other common questions, go to the [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
 
 ## Enable the Security Copilot integration in Intune
- 
+
 To use the Intune capabilities in Security Copilot, enable the Intune plugin.
 
 1. Go to [Security Copilot](https://go.microsoft.com/fwlink/?linkid=2247989) and sign in with your credentials.
@@ -159,7 +139,7 @@ You can create your own prompts in Security Copilot to get information about you
   - **According to Intune, how many devices were enrolled this week?**
   - **Tell me about Intune devices for (user name).**
 
-- Experiment with different prompts and variations to see what works best for your use case. Chat AI models vary, so iterate and refine your prompts based on the results you receive.  
+- Experiment with different prompts and variations to see what works best for your use case. Chat AI models vary, so iterate and refine your prompts based on the results you receive.
 
   You can also save your prompts in a promptbook for future use. For more information, go to:
 

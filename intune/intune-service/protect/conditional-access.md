@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Use Conditional Access with Microsoft Intune compliance policies
-titleSuffix: Microsoft Intune
-description: Combine Conditional Access with Intune compliance policies to define the requirements that users and devices must meet before gaining access your organizations resources. 
-keywords:
+description: Combine Conditional Access with Intune compliance policies to define the requirements that users and devices must meet before gaining access your organizations resources.
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby    
 ms.date: 04/25/2024
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ilwu
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 - conditional-access
 - sub-device-compliance
@@ -51,7 +31,7 @@ Use Conditional Access with Microsoft Intune compliance policies to control the 
 
 ## Ways to use Conditional Access with Intune
 
-Conditional Access works with Intune device configuration and compliance policies, and with Intune Application protection policies.  
+Conditional Access works with Intune device configuration and compliance policies, and with Intune Application protection policies.
 
 - **Device-based Conditional Access**
 
@@ -73,8 +53,8 @@ Conditional Access works with Intune device configuration and compliance policie
 
   Learn more about [app-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
 
-## Known limitations  
-The compliant network location condition is only supported for devices enrolled in mobile device management (MDM). If you configure a Conditional Access policy using the compliant network location condition, users with devices that aren't yet MDM-enrolled might be affected. Users on these devices might fail the Conditional Access policy check, and be blocked. Ensure that you exclude the affected users or devices when using the compliant network location condition.  
+## Known limitations
+The compliant network location condition is only supported for devices enrolled in mobile device management (MDM). If you configure a Conditional Access policy using the compliant network location condition, users with devices that aren't yet MDM-enrolled might be affected. Users on these devices might fail the Conditional Access policy check, and be blocked. Ensure that you exclude the affected users or devices when using the compliant network location condition.
 
 ## Next steps
 

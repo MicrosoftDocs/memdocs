@@ -1,38 +1,17 @@
 ---
-# required metadata
-
-title: Manage Microsoft 365 (Office) for iOS and Android with Intune 
-titleSuffix: 
-description: Use Intune app protection and configuration policies with Microsoft 365 (Office) for iOS and Android to ensure collaboration experiences are always accessed with safeguards in place. 
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
+title: Manage Microsoft 365 (Office) for iOS and Android With Intune
+description: Use Intune app protection and configuration policies with Microsoft 365 (Office) for iOS and Android to ensure collaboration experiences are always accessed with safeguards in place.
 ms.date: 06/12/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - iOS/iPadOS
 - Android
 - FocusArea_Apps_SpecificApp
 ---
 
-# Manage collaboration experiences in Microsoft 365 (Office) for iOS and Android with Microsoft Intune
+# Manage Collaboration Experiences in Microsoft 365 (Office) for iOS and Android With Microsoft Intune
 
 Microsoft 365 (Office) for iOS and Android delivers several key benefits including:
 
@@ -117,7 +96,7 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 Microsoft 365 (Office) for iOS/iPadOS and Android offers administrators the ability to customize the default configuration for several in-app settings using either [iOS/iPadOS](../apps/app-configuration-policies-use-ios.md) or [Android](../apps/app-configuration-policies-use-android.md) app configuration policies.  This capability is offered for both enrolled devices via any UEM provider and for devices that are not enrolled when Microsoft 365 (Office) for iOS and Android has an Intune App Protection Policy applied.
 
 > [!NOTE]
-> If an App Protection Policy is targeted to the users, the recommendation is to deploy the general app configuration settings in a **Managed Apps** enrollment model. This ensures the App Configuration Policy is deployed to both enrolled devices and unenrolled devices. 
+> If an App Protection Policy is targeted to the users, the recommendation is to deploy the general app configuration settings in a **Managed Apps** enrollment model. This ensures the App Configuration Policy is deployed to both enrolled devices and unenrolled devices.
 
 Microsoft 365 (Office) supports the following settings for configuration:
 
@@ -168,7 +147,7 @@ This key can be used both by managed devices and managed apps.
 
 ### Data protection settings in Microsoft 365 (Office)
 
-You can enable or disable offline caching when **Save As to Local Storage** is blocked by the [app protection policy](../apps/app-protection-policies.md). 
+You can enable or disable offline caching when **Save As to Local Storage** is blocked by the [app protection policy](../apps/app-protection-policies.md).
 
 > [!IMPORTANT]
 > This setting is only applicable to the Microsoft 365 (Office) app on Android.
@@ -206,5 +185,5 @@ This key can be used by managed devices and managed apps.
 
 ## Next steps
 
-- [What are app protection policies?](app-protection-policy.md) 
+- [What are app protection policies?](app-protection-policy.md)
 - [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)

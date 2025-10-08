@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Questions with policies and profiles in Microsoft Intune
 description: Common questions, answers, and scenarios with device policies and profiles in Microsoft Intune. Learn more about profile changes not applying to users or devices, how long it takes for new policies to deploy, which settings apply when there are conflicts, what happens when you delete or remove a profile, and more.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/28/2025
 ms.update-cycle: 180-days
 ms.topic: troubleshooting
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - msec-ai-copilot
 ---
@@ -83,7 +65,7 @@ These notification times also vary between platforms.
 An offline device, such as a powered off, or a disconnected device, might not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with Intune.
 
 > [!NOTE]
-> It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.  
+> It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.
 
 Additionally, when devices first enroll, configuration check-ins run more frequently to perform configuration, compliance and non-compliance checks. The check-ins are estimated as follows:
 
@@ -196,7 +178,7 @@ For more information on dynamic groups, go to:
 
 On Windows devices, when trying to sync in the **Settings** app > **Accounts** > **Access work or school**, you might see a `The sync could not be initiated (0x80072f9a)` error.
 
-If the Trusted Platform Module (TPM) was reset to factory settings, then the device must reenrolled to resume syncing. The device's Microsoft Entra identity is stored in the TPM. So, if the ID is removed, then reenrollment is the only way to reestablish the Microsoft Entra identity. 
+If the Trusted Platform Module (TPM) was reset to factory settings, then the device must reenrolled to resume syncing. The device's Microsoft Entra identity is stored in the TPM. So, if the ID is removed, then reenrollment is the only way to reestablish the Microsoft Entra identity.
 
 ## Related articles
 

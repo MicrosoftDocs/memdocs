@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Create an email device profile for iOS/iPadOS devices
 description: Learn how to use Microsoft Intune to create an email device profile so iOS/iPadOS devices can securely connect to company organization email.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/14/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -62,7 +43,7 @@ If you created an Intune Trial subscription, the account that created the subscr
 
    - **Platform**: Select **iOS/iPadOS**.
    - **Profile type**: Select **Templates** > **Email**.
-  
+
 4. Select **Create**.
 
 5. In **Basics**, enter the following properties:

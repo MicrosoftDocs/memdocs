@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: eSIM configuration of a download server
-description: Learn about configuration of an eSIM Download Server from Microsoft Intune.  
-keywords:
+description: Learn about configuration of an eSIM Download Server from Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/25/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: hejimenez
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

@@ -1,31 +1,12 @@
 ---
-# required metadata
 title: What's new in Microsoft Intune
-titleSuffix:
 description: Find out what's new in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
-ms.date: 09/17/2025
+ms.date: 10/03/2025
 ms.topic: whats-new
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: intuner
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 - highseo
 ---
@@ -75,6 +56,52 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of September 29, 2025
+
+### App management
+
+#### PowerShell script support when installing Win32 apps<!--29857395-->
+
+You can now upload a PowerShell script to install Enterprise App Catalog apps as an alternative to using a command line. This option gives you more flexibility when deploying apps.
+
+For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).  
+
+Applies to: Windows
+
+#### End of support for older versions of the Android Intune Company Portal app <!--33827426-->
+
+Support for Android Intune Company Portal versions earlier than **5.0.5421.0** ended on October 1, 2025. Devices running an older version of the app might no longer maintain their registration status and can be marked noncompliant. To keep devices registered and compliant, users must update to a supported version of the Company Portal app.
+
+To update, see:
+
+**For administrators:**
+
+- [Deploy the latest Windows Company Portal app by using Microsoft Intune](../apps/store-apps-company-portal-app.md)
+
+**For device users:**
+
+- Download the latest version of the Company Portal from the [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
+
+Applies to: Android
+
+## Week of September 22, 2025
+
+### Device security
+
+#### Update for the Vulnerability Remediation Agent for Security Copilot in Intune (public preview)<!-- 35028555 -->
+
+We've updated the Vulnerability Remediation Agent for Security Copilot, adding the following changes to the ongoing limited public preview:
+
+- **Role-based access control (RBAC) for Microsoft Defender** - We've updated the [RBAC guidance](../protect/vulnerability-remediation-agent.md#role-based-access-control-and-permissions) to reflect how RBAC is implemented in Microsoft Defender XDR. Guidance is now provided for configurations that use [**Unified RBAC**](/defender-xdr/manage-rbac) (a single set of permissions across services) and for [**granular RBAC**](/defender-endpoint/rbac) (customized permissions per service).
+
+  When using granular RBAC configurations, ensure the agent's identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
+
+- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../protect/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
+
+  Changes to the agent's identity won't affect the agent's run history, which remains available.
+
+These updates provide greater flexibility and control for organizations using the Vulnerability Remediation Agent in preview. To learn more about this Agent, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
+
 ## Week of September 15, 2025 (Service release 2509)
 
 ### Device configuration
@@ -92,7 +119,7 @@ To learn more about viewing and monitoring existing profiles, see [View and moni
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
- 
+
 ##### iOS/iPadOS
 
 **Managed Settings > Default Applications**:
@@ -174,14 +201,14 @@ To learn more about these settings, see [Android Intune settings catalog setting
 
 > [!div class="checklist"]
 > Applies to:
-> 
+>
 > - Android Enterprise
 
 ### Device management
 
-#### Device category management supports multiple administrative approval<!-- 26838632 -->
+#### Device category management supports Multi Admin Approval<!-- 26838632 -->
 
-Intune [device categories](../enrollment/device-group-mapping.md) support multiple administrative approval (MAA). When MAA is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it’s applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
+Intune [device categories](../enrollment/device-group-mapping.md) support Multi Admin Approval. When Multi Admin Approval is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
 
 For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
@@ -299,7 +326,7 @@ For a list of supported OS version, see [Supported operating systems and browser
 
 #### New security baseline update experience<!-- 31607281  -->
 
-We’ve updated the Intune security baseline update experience for the more recent versions of security baselines. With this change, when you update a security baseline that was created after May 2023 to a more recent version of that same baseline, you now have two options to help automatically configure the updated baseline:
+We've updated the Intune security baseline update experience for the more recent versions of security baselines. With this change, when you update a security baseline that was created after May 2023 to a more recent version of that same baseline, you now have two options to help automatically configure the updated baseline:
 
 - Keep customizations – With this option, Intune applies all the settings customizations from the original baseline that you're upgrading to the new baselines template. The result is that the new baseline instance retains (includes) all your organization's specific modifications.
 - Discard customizations – With this option, Intune creates a new 'default' baseline instance that uses the new baseline version. Each setting in that baseline uses the baseline default and none of your settings customizations are automatically applied.
@@ -324,7 +351,7 @@ Apple has released iOS 26 and iPadOS 26. With this update, Purebred (version 3) 
 
 #### Give feedback about multiple device query<!--  -->
 
-Use the new feedback feature on the multiple device query page to submit feedback about multiple device query.  
+Use the new feedback feature on the multiple device query page to submit feedback about multiple device query.
 
 ## Week of September 8, 2025
 
@@ -566,13 +593,13 @@ For more information about Linux enrollment, see [Linux device enrollment guide 
 
 ### Device management
 
-#### Wipe remote action supports multiple administrative approval (MAA)<!-- 27043113 -->
+#### Wipe remote action supports Multi Admin Approval<!-- 27043113 -->
 
-When you use the multiple administrative approval (MAA) feature, you require a second admin account to approve a change before the change is applied.
+When you use the Multi Admin Approval feature, you require a second admin account to approve a change before the change is applied.
 
-The **[Wipe](../remote-actions/devices-wipe.md)** remote action supports MAA. Use MAA with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
+The **[Wipe](../remote-actions/device-wipe.md)** remote action supports Multi Admin Approval. Use Multi Admin Approval with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
 
-For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
+For more information on Multi Admin Approval, see [Use Multi Admin Approval in Intune](../fundamentals/multi-admin-approval.md).
 
 #### Configure Windows Backup for Organizations (public preview)<!-- 33829628 -->
 
@@ -637,9 +664,9 @@ For more information about the changes behind these reports, see [Support tip: M
 
 ### Role-based access control
 
-#### Multi-administrator approval support for role-based access control<!-- 26838684 -->
+#### Multi Admin Approval support for role-based access control<!-- 26838684 -->
 
-Multi-administrator approval (MAA) now supports role-based access control. When enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
+Multi Admin Approval now supports role-based access control. When enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
 
 For more information, see [Role-based access control in Microsoft Intune](../fundamentals/role-based-access-control.md).
 
@@ -756,7 +783,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### Platform support for Device Cleanup rules<!-- 13835920 -->
 
-Using [cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules), you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
+Using cleanup rules, you can configure Intune to automatically clean up devices that appear to be inactive, stale, or unresponsive.
 
 With this feature, you can:
 
@@ -764,7 +791,7 @@ With this feature, you can:
 - Use the [Audit logs](monitor-audit-logs.md) to see the devices that the device cleanup rules conceal from the Intune reports.
 - Use [role-based access control (RBAC)](role-based-access-control.md) to customize the user roles that can create device cleanup rules.
 
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
+For more information, see [device cleanup rules](../fundamentals/device-cleanup-rules.md).
 
 ### Device security
 
@@ -836,7 +863,7 @@ You can now use Microsoft Copilot in Intune to explore your Intune data using na
   - Centralize Surface-specific device administration in a single environment.
   - Automatically access comprehensive information from your Intune-enrolled Surface devices, which flows into the Surface Management Portal when users sign in for the first time.
 
-  To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](../copilot/security-copilot-surface-portal.md).
+  To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](/surface/security-copilot-surface-management-portal).
 
 ### Monitor and troubleshoot
 

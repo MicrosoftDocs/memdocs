@@ -1,30 +1,12 @@
 ---
-# required metadata
-
-title: Use the settings catalog to configure DDM software updates 
+title: Use the settings catalog to configure DDM software updates
 description: Use Microsoft Intune to configure Apple's declarative device management (DDM) settings to install a specific update by an enforced deadline. This feature uses the settings catalog to configure managed software updates for supervised iOS/iPadOS and managed macOS devices.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 08/18/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-updates
@@ -149,7 +131,7 @@ You can use the settings catalog to configure a policy that automatically enforc
 1. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 > [!NOTE]
-> The `retrieveDeviceConfigurationAvailableOptions` function of the [deviceManagementConfigurationSettingDefinition resource type](/graph/api/resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition?view=graph-rest-beta) requires delegated user authentication. Application permissions cannot be used for this endpoint. 
+> The `retrieveDeviceConfigurationAvailableOptions` function of the [deviceManagementConfigurationSettingDefinition resource type](/graph/api/resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition?view=graph-rest-beta) requires delegated user authentication. Application permissions cannot be used for this endpoint.
 
 ## Configure the manual DDM software updates policy
 
@@ -181,7 +163,7 @@ You can use the settings catalog to configure a policy that automatically enforc
       If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
 
    - **Target Date Time**: Select or manually enter the date and the time that specifies when to force the installation of the software update.
-   
+
      The **Target Date Time** setting schedules the update using the local timezone of the device. For example, an admin configures an update to install at 2PM. The policy schedules the update to happen at 2PM in the local timezone of devices that receive the policy.
 
      - If the user doesn't trigger the software update before this time, then a one-minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
@@ -211,7 +193,7 @@ To monitor software updates for Apple devices, you can use the following methods
 - DDM software updates use the same reporting as device configuration policies. For more information, see [Monitor device configuration policies](../configuration/device-profile-monitor.md).
 
   > [!IMPORTANT]
-  > A policy that reports Success only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.  
+  > A policy that reports Success only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
 
 ## Using the Software Update Settings declarative configuration
 
@@ -219,7 +201,7 @@ When you configure DDM software updates, you might want to manage aspects of the
 
 - Require that an admin or standard user can perform updates on the device
 
-- Control how users can manually interact with software update settings like automatic download and install or the behavior of Rapid Security Responses 
+- Control how users can manually interact with software update settings like automatic download and install or the behavior of Rapid Security Responses
 
 - Hide updates from users for a specified time period
 

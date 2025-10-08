@@ -1,29 +1,12 @@
 ---
-# required metadata
 title: Use Windows Defender Application Control on HoloLens 2 devices in Microsoft Intune
 description: Configure the Windows Defender Application Control (WDAC) CSP to allow or block apps from opening on HoloLens 2 devices in Microsoft Intune. Use PowerShell and a custom configuration profile.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/06/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-ms.assetid: 
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -46,7 +29,7 @@ This article shows you how to:
 2. Use Windows PowerShell to convert the WDAC policy rules to XML, update the XML, and then convert the XML to a binary file.
 3. In Microsoft Intune, create a [custom device configuration profile](custom-settings-windows-holographic.md), add this WDAC policy binary file, and apply the policy to your HoloLens 2 devices.
 
-In Intune, you must create a custom configuration profile to use the Windows Defender Application Control (WDAC) CSP. 
+In Intune, you must create a custom configuration profile to use the Windows Defender Application Control (WDAC) CSP.
 
 Use the steps in this article as a template to allow or deny specific apps from opening on HoloLens 2 devices.
 

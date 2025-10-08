@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Planning guide to move to Microsoft Intune
 description: Plan, design, implement, adopt, and move to Microsoft Intune. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
-keywords: mobile device management migration guide, migration guide, intune planning and configuration spreadsheet, intune deployment planning, design and implementation guide, intune deployment project plan
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/21/2025
 ms.topic: upgrade-and-migration-article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: get-started
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -185,7 +167,7 @@ When data is stored on mobile devices, the data should be protected from acciden
 Some sample scenarios:
 
 - A device is lost or stolen, or no longer being used. A user leaves the organization.
-  - In Intune, you can [remove devices by using wipe, retire, or manually unenroll them](../remote-actions/devices-wipe.md). You can also automatically remove devices that haven't checked in with Intune for *x* number of days.
+  - In Intune, you can [remove devices by using wipe, retire, or manually unenroll them](../remote-actions/device-wipe.md). You can also automatically remove devices that haven't checked in with Intune for *x* number of days.
   - At the app level, you can [remove organization data from Intune-managed apps](../apps/apps-selective-wipe.md). A selective wipe is great for personal devices, as it keeps personal data on the device, and only removes organization data.
 
 - On personal devices, you might want to prevent users from copy/paste, taking screenshots, or forwarding emails. [App protection policies](../apps/app-protection-policy.md) can block these features on devices you don't manage.
@@ -270,7 +252,7 @@ As a best practice, always assume data will leave the device. Be sure your track
 
 ### Manage desktop computers
 
-Intune can manage desktop computers running Windows 10 and newer. The Windows client OS includes built-in modern device management features, and removes dependencies on local Active Directory (AD) group policy. You get the benefits of the cloud when creating rules and settings in Intune, and deploying these policies to all your Windows client devices, including desktop computers and PCs.
+Intune can manage desktop computers running Windows. The Windows client OS includes built-in modern device management features, and removes dependencies on local Active Directory (AD) group policy. You get the benefits of the cloud when creating rules and settings in Intune, and deploying these policies to all your Windows client devices, including desktop computers and PCs.
 
 For more information, go to [Guided scenario - Cloud-managed Modern Desktop](guided-scenarios-cloud-managed-pc.md).
 
@@ -330,7 +312,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Microsoft Purview** (included in the **Microsoft 365 E5** license) classifies and protects documents and emails by applying labels. On Microsoft 365 apps, you can use this service to [prevent unauthorized access to organization data](/microsoft-365/compliance/information-protection), including apps on personal devices.
 
-- **[Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.  
+- **[Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
 
   Copilot in Intune is licensed through Microsoft Security Copilot. For more information, go to [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 

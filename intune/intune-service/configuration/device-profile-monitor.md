@@ -1,32 +1,13 @@
 ---
-# required metadata
-
 title: See device configuration policies with Microsoft Intune
 description: See and manage the device configuration policy details in Microsoft Intune. Look at a graphical chart of the number of devices assigned to a policy, and see which devices have policies assigned or deployed. Can also troubleshoot policies that have conflict settings.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: laarrizz
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - msec-ai-copilot
 ---

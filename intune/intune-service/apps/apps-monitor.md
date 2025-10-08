@@ -1,32 +1,10 @@
 ---
-# required metadata
-
-title: Monitor app information and assignments
-titleSuffix: Microsoft Intune
+title: Monitor App Information and Assignments
 description: After you've assigned an app to users or devices, use this information to help you monitor the app's status.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 11/18/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -61,7 +39,7 @@ The **Essentials** section provides the following information about the app if a
 | **Version**            | If applicable, the version number of the app |
 | **MAM SDK enabled**    | If applicable, whether the app uses the Intune MAM SDK (**Yes** or **No**)                  |
 | **Created**             | The date and time when this revision was created <b>**Note**: This date value is updated when an admin changes app metadata, such as changing the app category or app description.                        |
-| **Assigned**           | Whether the app has been assigned (**Yes** or **No**)          
+| **Assigned**           | Whether the app has been assigned (**Yes** or **No**)
 | **App package file**   | If applicable, the app package file name            |
 
 

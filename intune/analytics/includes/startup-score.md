@@ -1,11 +1,6 @@
 ---
-author: MandiOhlinger
-ms.author: mandia
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: include
 ms.date: 03/03/2020
-ms.localizationpriority: medium
 ---
 <!--Don't apply H2 in this include file since they are context driven by article. Used in the adoption-score.md and startup-performance.md files -->
 The **Startup performance score** helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:

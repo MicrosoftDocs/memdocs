@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Add and assign MTD apps to Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authenticator app, and iOS configuration policy in Microsoft Intune
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 06/02/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -103,7 +84,7 @@ For general guidance about Intune app configuration policies, see the following 
 > [!NOTE]
 > For initial testing, use a test group when assigning users and devices in the Assignments section of the configuration policy.
 
-- **Android Enterprise**:  
+- **Android Enterprise**:
   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Jamf Android app configuration policy using the following information when prompted.
 
   1. In the **Jamf Portal**, select the **Add** button under **Configuration settings** format.
@@ -115,7 +96,7 @@ For general guidance about Intune app configuration policies, see the following 
   >
   > Unlike iOS, you'll need to define a unique Android Enterprise app configuration policy for each Activation Profile. If you don’t require multiple Activation Profiles, you can use a single Android app configuration for all target devices. When creating Activation Profiles in Jamf, be sure to select Microsoft Entra ID under the Associated User configuration to ensure Jamf is able to synchronize the device with Intune via UEM Connect.
 
-- **iOS**:  
+- **iOS**:
   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Jamf iOS app configuration policy using the following information when prompted.
 
   1. In **Jamf Security Cloud**, navigate to **Devices > Activation profiles** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.
@@ -180,7 +161,7 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 
 ### Trellix Mobile Security app configuration policy
 
-- **Android Enterprise**:  
+- **Android Enterprise**:
   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Trellix Mobile Security Android app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
@@ -191,7 +172,7 @@ Create the iOS app configuration policy as described in the [using iOS app confi
   |  tenantid | string | Copy value from admin console *Manage* page in the Trellix console |
   |  defaultchannel | string | Copy value from admin console *Manage* page in the Trellix console |
 
-- **iOS**:  
+- **iOS**:
   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Trellix Mobile Security iOS app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
@@ -208,7 +189,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 ### Zimperium app configuration policy
 
-- **Android Enterprise**:  
+- **Android Enterprise**:
   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Zimperium Android app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
@@ -219,7 +200,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
   |  tenantid | string | Copy value from admin console *Manage* page in the Zimperium console |
   |  defaultchannel | string | Copy value from admin console *Manage* page in the Zimperium console |
 
-- **iOS**:  
+- **iOS**:
   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Zimperium iOS app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
@@ -273,7 +254,7 @@ Choose the section that corresponds to your MTD provider:
   - Use the URL for [CrowdStrike Falcon](https://play.google.com/store/apps/details?id=com.crowdstrike.falconmobile) from the app store for the **Appstore URL**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). 
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
   - Use the URL for [CrowdStrike Falcon](https://apps.apple.com/us/app/crowdstrike-falcon/id1458815656) from the app store for the **Appstore URL**.
 
 ### Assigning Jamf
@@ -293,7 +274,7 @@ Choose the section that corresponds to your MTD provider:
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Lookout for Work iOS app store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468) for the **Appstore URL**.
 
 - **Lookout for Work app outside the Apple store**:
-  - You must re-sign the Lookout for Work iOS app. Lookout distributes its Lookout for Work iOS app outside of the iOS App Store. Before distributing the app, you must re-sign the app with your iOS Enterprise Developer Certificate. Contact Lookout for Work for detailed instructions on this process. 
+  - You must re-sign the Lookout for Work iOS app. Lookout distributes its Lookout for Work iOS app outside of the iOS App Store. Before distributing the app, you must re-sign the app with your iOS Enterprise Developer Certificate. Contact Lookout for Work for detailed instructions on this process.
 
   - **Enable Microsoft Entra authentication for Lookout for Work iOS app users.**
 
@@ -311,7 +292,7 @@ Choose the section that corresponds to your MTD provider:
     >
     > See [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-configuration#-configure-client-apps-to-access-app-service) for more details.
 
-  - **Add the Lookout for Work ipa file.**  
+  - **Add the Lookout for Work ipa file.**
     - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../apps/lob-apps-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.
 
 ### Assigning Pradeo

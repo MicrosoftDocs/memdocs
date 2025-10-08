@@ -1,29 +1,12 @@
 ---
 title: Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune
 description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, and use device configuration profiles for a PKCS Certificate.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 11/19/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: wicale
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - certificates
@@ -188,7 +171,7 @@ Use a command line to complete these steps:
 
 12. In **Security**:
     1. Add the computer account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
-    1. (Optional but recommended) Remove the domain users group from the list of groups or user names allowed permissions on this template. To remove the group:
+    1. Remove the domain users group from the list of groups or user names allowed permissions on this template. To remove the group:
        1. Select the **Domain Users** group.
        1. Select **Remove**.
        1. Review the other entries under **Groups or user names** to confirm permissions and applicability to your environment.

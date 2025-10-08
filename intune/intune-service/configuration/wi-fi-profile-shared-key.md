@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Create Wi-Fi profile with preshared key in Microsoft Intune
 description: Use a custom profile to create a Wi-Fi profile with a preshared key (PSK), and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 05/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: abalwan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -96,7 +76,7 @@ This article shows you how to create the policy in Intune, and includes an XML e
         > - If the SSID has a space, then add an escape space `%20`.
 
         SSID (Service Set Identifier) is your Wi-Fi network name that you're creating the policy for. This value is typically the friendly name that users see in their internet connection list. It's possible this friendly name is different than the actual SSID value of your Wi-Fi network. Be sure to enter the friendly name. If you export an existing Intune Wi-Fi profile to XML, the friendly name is listed in `<name>` in `<WLANProfile> <name>`.
-        
+
         For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`. If the Wi-Fi is named `Contoso WiFi`, enter `./Vendor/MSFT/WiFi/Profile/Contoso%20WiFi/Settings` (with the `%20` escape space).
 
     4. **Data Type**: Select **String**.
@@ -270,7 +250,7 @@ You can also create an XML file from an existing Wi-Fi connection. On a Windows 
 4. Run `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. This command creates a file named `Wi-Fi-YourProfileName.xml` in c:\Wifi.
 
     - If you're exporting a Wi-Fi profile that includes a preshared key, add `key=clear` to the command. The `key=clear` parameter exports the key in plain text, which is required to successfully use the profile:
-  
+
       `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
     - If the exported Wi-Fi profile `<name></name>` element includes a space, then it might return an `ERROR CODE 0x87d101f4 ERROR DETAILS Syncml(500)` error when assigned. When this issue happens, the profile is listed in `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces`, and shows as a known network. But, it doesn't successfully display as managed policy in the "Areas managed by..." URI.

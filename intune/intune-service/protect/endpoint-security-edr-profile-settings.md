@@ -1,35 +1,20 @@
 ---
-# required metadata
-
 title: Intune endpoint security Endpoint detection and response settings | Microsoft Docs
-description: Endpoint security Endpoint detection and response policy settings for deprecated profiles in Microsoft Intune 
-keywords:
+description: Endpoint security Endpoint detection and response policy settings for deprecated profiles in Microsoft Intune
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/28/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: mattcall
 
 ---
 # Endpoint detection and response policy settings for endpoint security in Intune
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!NOTE]
 >
@@ -41,12 +26,15 @@ View the settings you can configure in profiles for [Endpoint detection and resp
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 Supported platforms and profiles:
 
-- **Windows**: Use this platform for policy you deploy to Windows 10 and Windows 11 devices managed with Intune.
+- **Windows**: Use this platform for policy you deploy to Windows devices managed with Intune.
   - Profile: **Endpoint detection and response (MDM)**
 
 - **Windows (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.
@@ -66,12 +54,12 @@ Supported platforms and profiles:
 
   When set to *Onboarding blob*, you can configure the following settings:
 
-  - **Defender for Endpoint onboarding blob**  
+  - **Defender for Endpoint onboarding blob**
     Click **Select onboarding file** to open the *Select onboarding File* pane, where you specify a `.onboarding` file.
 
   When set to *Offboarding blob*, you can configure the following settings:
-  
-  - **Defender for Endpoint offboarding blob**  
+
+  - **Defender for Endpoint offboarding blob**
      Click **Select offboarding file** to open the *Select offboarding File* pane, where you specify a `.offboarding` file.
 
 - **Sample sharing for all files**
@@ -92,7 +80,7 @@ Supported platforms and profiles:
 
 - **Sample sharing for all files**
 
-  Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.  
+  Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.
   - **Not configured** (*default*)
   - **Yes**
 

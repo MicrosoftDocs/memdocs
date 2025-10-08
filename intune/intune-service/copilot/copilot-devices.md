@@ -1,31 +1,11 @@
 ---
-# required metadata
-
 title: Copilot in Intune shows device information and helps troubleshoot
 description: Microsoft Security Copilot in Intune can help you get information about your devices, compare devices, and get error information. Use this information to help you manage and troubleshoot device issues.
-keywords: security copilot, intune, microsoft intune, copilot, device information, device errors, device troubleshooting, analyze error code, compare devices, AI, generative-AI
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice:
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ankurgoyal, zadvor, rashok
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - msec-ai-copilot
 ---
@@ -70,7 +50,7 @@ The prompts include:
 - Show apps on this device.
 - Show policies on this device.
 - Show group memberships.
-- Show the primary user of this device. 
+- Show the primary user of this device.
 
 As you type your question in Copilot Chat, an intelligent search matches your request to available prompts built into Intune. These prompts are shown as suggestions that you can select. You can also ask questions about a Microsoft Surface device, or troubleshoot issues in a Windows 365 Cloud PC.
 

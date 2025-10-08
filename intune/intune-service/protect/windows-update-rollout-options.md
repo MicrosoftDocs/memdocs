@@ -1,29 +1,13 @@
 ---
-# required metadata
-
 title: Configure schedules to gradually roll out Windows Updates in Intune
 description: Configure schedules that manage how and when Windows updates roll out to your managed devices with Microsoft Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 04/07/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davguy; bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-updates
 ---

@@ -1,32 +1,11 @@
 ---
-# required metadata
-
-title: Understand app protection policy delivery and timing
-titleSuffix: Microsoft Intune
+title: Understand App Protection Policy Delivery and Timing
 description: Learn the different deployment windows for app protection policies to understand when changes should appear on your end user devices.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 05/20/2024
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: ec111319-7e02-434f-946b-88647726bf1a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -36,7 +15,7 @@ Learn about the different delivery timing for app protection policies to underst
 
 ## Delivery timing summary
 
-App protection policy (APP) delivery depends on the license state and Intune service registration for your users.  
+App protection policy (APP) delivery depends on the license state and Intune service registration for your users.
 
 |    User State    |    App Protection behavior     |    Retry Interval  (see note)    |    Why does this happen?    |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|

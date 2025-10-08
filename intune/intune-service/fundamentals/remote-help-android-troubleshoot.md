@@ -1,35 +1,17 @@
 ---
-# required metadata
-
-title: Troubleshooting Remote Help on Android. 
+title: Troubleshooting Remote Help on Android.
 description: Sometimes a Remote Help session starts in service but the client connection isn't established. Learn more about the possible causes in this article, and how to resolve them.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 08/16/2023
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: Karawang
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
 ---
- 
+
 # Troubleshooting Remote Help on Android
 
 If a Remote Help session for Android is unable to connect, check for the following possibilities:
