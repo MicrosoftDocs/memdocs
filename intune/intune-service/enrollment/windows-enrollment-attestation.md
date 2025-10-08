@@ -1,39 +1,17 @@
 ---
-# required metadata
-
 title: Windows enrollment attestation | Microsoft Intune
-titleSuffix:
 description: Find out how the Device attestation status report can help you and learn to use the Attest device action to ensure your devices are secure and reliable.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
 ms.date: 02/14/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: high
-ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: maholdaa
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
 
 # Windows enrollment attestation
 
-The goal of Windows enrollment attestation is to make devices more secure and trustworthy within the network they join. With this feature, you can check that Windows 10 and 11 devices meet strict security standards during enrollment, using Trusted Platform Module (TPM) technology to enhance their defense against threats. The Windows enrollment attestation feature also confirms and reports on the devices that enroll securely, ensuring the process is reliable.
+The goal of Windows enrollment attestation is to make devices more secure and trustworthy within the network they join. With this feature, you can check that devices running Windows meet strict security standards during enrollment, using Trusted Platform Module (TPM) technology to enhance their defense against threats. The Windows enrollment attestation feature also confirms and reports on the devices that enroll securely, ensuring the process is reliable.
 
 Here’s how it benefits organizations:
 
@@ -50,6 +28,9 @@ We recommend using the latest updates for a more successful attestation rate.
 - Windows 10
 
   - 10.0.19045.3996+
+
+    > [!IMPORTANT]
+    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 - Windows 11
 
@@ -183,7 +164,7 @@ If any of the following **Status details** appear, we recommend re-attempting th
 
 ### Permissions for device action
 
-To use the **Attest device** device action, you require a role based permission known as Remote tasks: **Indicates mobile device management (MDM) attestation if device is capable for it**. Set the Permission to **yes** to enable the action. With the permission set to **Yes**, IT admins can initiate **Attest device** action.
+To use the **Attest device** action, you require a role based permission known as Remote tasks: **Indicates mobile device management (MDM) attestation if device is capable for it**. Set the Permission to **yes** to enable the action. With the permission set to **Yes**, IT admins can initiate **Attest device** action.
 
 ## Resources
 

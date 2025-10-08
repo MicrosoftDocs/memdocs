@@ -1,41 +1,19 @@
 ---
-# required metadata
-
-title: Add Microsoft Store apps to Intune (legacy)
-titleSuffix:
+title: Add Microsoft Store Apps to Intune (Legacy)
 description: Learn about adding Microsoft Store (legacy) apps to Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/17/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - FocusArea_Apps_Store
 ---
 
-# Add Microsoft Store apps to Intune (legacy)
+# Add Microsoft Store Apps to Intune (Legacy)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Before you can assign, monitor, configure, or protect apps, you must add them to Intune. 
+Before you can assign, monitor, configure, or protect apps, you must add them to Intune.
 
 > [!IMPORTANT]
 > The steps provided in this topic refer to adding Microsoft Store apps using the legacy method. For the latest method, see  [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md).
@@ -47,11 +25,11 @@ You can add a Microsoft Store app to Intune by doing the following:
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Microsoft store app (Legacy)**.
 4. Click **Select**. The **Add app** steps are displayed.
-5. To configure the **App information** for Microsoft store apps, click **Select app**, and search for the app you want to assign to members of your organization. Display the app page and make a note of the app details. 
+5. To configure the **App information** for Microsoft store apps, click **Select app**, and search for the app you want to assign to members of your organization. Display the app page and make a note of the app details.
 6. In the **App information** page, add the app details:
     - **Name**: Enter the name of the app as it is to be displayed in the company portal. Make sure that any app name that you use is unique. If an app name is duplicated, only one name is displayed to users in the company portal.
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
-    - **Publisher**: Enter the name of the publisher of the app. 
+    - **Publisher**: Enter the name of the publisher of the app.
     - **Appstore URL**: Enter the 'Link for Intune' URL for the app provided by the store.
     - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
     - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
@@ -64,7 +42,7 @@ You can add a Microsoft Store app to Intune by doing the following:
 1. Click **Next** to display the **Scope tags** page.
 1. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 1. Click **Next** to display the **Assignments** page.
-1. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
+1. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 1. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 1. When you are done, click **Create** to add the app to Intune.
 

@@ -1,30 +1,13 @@
 ---
-# required metadata
-
-title: Create Windows Driver updates policy for Windows 10 Windows 11 devices in Intune
-description: Use Microsoft Intune to manage policies that install Windows driver updates on your Intune managed Windows 10 and Windows 11 devices.
-keywords:
+title: Create Windows Driver updates policy in Intune
+description: Use Microsoft Intune to manage policies that install Windows driver updates on your Intune managed Windows devices.
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 04/07/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davguy; davidmeb; bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - ContentEnagagementFY24
@@ -33,7 +16,7 @@ ms.collection:
 
 # Manage policy for Windows Driver updates with Microsoft Intune
 
-This article can help you use Microsoft Intune to create and manage Windows Driver updates policies for your Windows 10 and Windows 11 devices. These policies let you view the available driver updates for devices targeted by policy, approve updates for deployment, or pause the deployment of individual updates. When driver updates are approved, Intune sends the assignments to Windows Update, which manages the update installation on devices based on the policy configuration.
+This article can help you use Microsoft Intune to create and manage Windows Driver updates policies for your Windows devices. These policies let you view the available driver updates for devices targeted by policy, approve updates for deployment, or pause the deployment of individual updates. When driver updates are approved, Intune sends the assignments to Windows Update, which manages the update installation on devices based on the policy configuration.
 
 Before creating and deploying driver update policies, review the Windows driver update prerequisites, plan the deployment, and check the frequently asked questions. These subjects are available in the [Windows Driver updates overview article](../protect/windows-driver-updates-overview.md#prerequisites).
 
@@ -41,14 +24,13 @@ After you create driver update policies, plan to review them regularly for newly
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 ## Create Windows driver update policies
 
 Use this procedure to create policies for managing driver updates for groups of devices.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Policies for Windows update rings and policies that use the settings catalog can include configurations that block the installation of Windows driver updates. To ensure driver updates aren't blocked, review your policies for configurations that can block the installation.
 >
 > - Windows update ring policy: Ensure the *Windows driver* setting is set to *Allow*.
@@ -83,14 +65,14 @@ Use this procedure to create policies for managing driver updates for groups of 
 
     For example, consider a driver update policy that uses automatic approvals and has a deferral of three days. On June 1, Windows Autopatch identifies a new recommended driver update that applies to devices with this policy and adds the update to the policy as approved. Due to the deferral period of three days, Windows Update waits to offer this update to any device until June 4, three days after it was added to the policy. If the deferral was set to zero days, Windows Update would begin installing the update on devices immediately.
 
-   > [!TIP]  
+   > [!TIP]
    > After a policy is created, you won't be able to edit the policy to change the approval type. If the approval type is automatic, you can edit the value for *Make updates available after (days)*.
 
 4. For **Scope tags**, select any desired scope tags to apply.
 
 5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md). Devices must be assigned to this policy and the policy saved before Windows Autopatch can identify the applicable driver updates to add to this policies driver list.
 
-   > [!TIP]  
+   > [!TIP]
    > We recommend that a device be assigned a single policy for driver update policies. Assignment of a device to only one policy helps to prevent the installation of a driver update that is declined in one policy but approved in a second policy. Keep in mind that policies for Windows driver updates don't support options to remove or roll-back driver updates.
 
 6. For **Review + create**, review the policy configuration, and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The profile is also shown in the policy list.
@@ -120,7 +102,7 @@ For more information on manually approving updates, see [Manage the status of dr
 
 When you review the list of driver update policies in the admin center, you can identify policies with new drivers added to them by reviewing the **Drivers to review** column for indications of new updates that need review.
 
-> [!NOTE]  
+> [!NOTE]
 > An exception is new *recommended driver* updates that are added to a policy set for automatic approval. Recommended driver updates that are the newest or latest are added to the policy and approved automatically, and their status is never set to *Needs review*.
 
 To look for policies that have new driver updates pending a review, in the admin center go to **Devices** > **Manage updates** > **Windows 10 and later updates** > **Driver Updates** tab.
@@ -142,7 +124,7 @@ While viewing the Windows driver update policy list, you can view details about 
 
 You can use the *driver list* to review the driver updates that Windows Autopatch identifies as applicable for one or more devices that receive that policy. From the list, you can view and manage the approval status of each update.
 
-> [!TIP]  
+> [!TIP]
 > The driver list isn't a record of the driver versions currently installed on devices assigned to the policy. Instead, it's a list of driver updates identified by and collected by Windows Autopatch, which can be installed on devices to upgrade their existing drivers to a newer version. Intune doesn't collect an inventory of installed drivers.
 
 The driver list is divided into two tabs:
@@ -157,10 +139,10 @@ The driver list is divided into two tabs:
   - A previously recommended update was superseded by a newer update version
   - Firmware updates
   - Optional driver updates, or updates that the OEM doesn't intend to be installed on all devices by default
-  
+
   These updates can be managed and deployed through policies for Windows driver updates, but not through classic client Windows Update client policies.
 
-> [!TIP]  
+> [!TIP]
 > When a driver update is no longer needed by any device in the policy, that update version is removed from the driver list, and the policy. Policies retain only the driver update versions that can be used to update a driver on a device with that policy.
 
 In the following screen capture, we've opened the policy named*Test Manual* and selected the **Recommended drivers** tab:
@@ -229,7 +211,7 @@ On the *Manage driver* pane, you can:
 
 - **Approved** – This status identifies an update that is approved for installation on applicable devices.
 
-  > [!TIP]  
+  > [!TIP]
   > Windows Update will only install a driver update on a device if the updates version is newer than the version of the driver that's currently on the device. So, there's no risk of a policy installing an older version of a driver and downgrading a device's driver version.
 
   The following rules apply to the setting of Approved for an update:
@@ -240,7 +222,7 @@ On the *Manage driver* pane, you can:
 
   - **Policies with manual approval**: For policies that require manual approval, you must edit the policy and manage new updates to configure them as *Approved*. Once set to Approved, you can configure a setting called **Make available in Windows Update**. Here, you must specify a date that indicates when the update is available for installation on applicable devices. If you leave this field blank, the update is approved for installation on devices immediately.
 
-  > [!IMPORTANT]  
+  > [!IMPORTANT]
   > Any time a driver update's status is manually changed to *Approved*, the availability of that update (which is when Windows Update begins to deploy it to devices) is defined by the date you assign for **Make available in Windows Update**.
   >
   > This behavior applies when manually setting an update as *Approved* in policies with manual approval, and in policies with automatic approval. In policies with automatic approval, this includes the manual approval of an update on the *other updates* list, or when reapproving a recommended update that was paused.
@@ -268,7 +250,7 @@ Bulk driver updates allow the user to approve, pause, or decline multiple driver
 #### How to use bulk driver updates
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Driver updates** tab, and select an existing policy. If you need to create a new policy, see [Create Windows driver update policies](#create-windows-driver-update-policies).
-2. In the Driver Updates page, select **Bulk actions**.  
+2. In the Driver Updates page, select **Bulk actions**.
 
     :::image type="content" source="./media/windows-driver-updates-policy/bulk-actions.png" alt-text="A screen capture that shows the bulk actions button." lightbox="./media/windows-driver-updates-policy/bulk-actions.png":::
 
@@ -279,7 +261,7 @@ The displayed list includes drivers that are able to be approved. For example, d
 6. In the **Select available drivers** fly-out you can also bulk select the drivers.
 
    > [!NOTE]
-   > You can only select up to 100 drivers at a time. If  you select more than a 100 and select **Save**, an error  message is displayed.  
+   > You can only select up to 100 drivers at a time. If  you select more than a 100 and select **Save**, an error  message is displayed.
 
 7. Select **Save** and then **Next**.
 8. In the **Review +Save** tab, you can review and save the changes you made.

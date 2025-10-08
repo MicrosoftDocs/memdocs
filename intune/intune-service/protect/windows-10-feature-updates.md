@@ -1,30 +1,13 @@
 ---
-# required metadata
-
-title: Configure feature updates policy for Windows 10 Windows 11 devices in Intune
-description: Create and manage Intune policy for Windows feature updates. Configure and deploy policy to maintain the Windows feature version of Windows 10/11 devices you manage with Microsoft Intune.
-keywords:
+title: Configure feature updates policy for Windows devices in Intune
+description: Create and manage Intune policy for Windows feature updates. Configure and deploy policy to maintain the Windows feature version of Windows devices you manage with Microsoft Intune.
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 09/10/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davidmeb; bryanke; davguy
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-updates
@@ -32,7 +15,7 @@ ms.collection:
 
 # Feature updates for Windows 10 and later policy in Intune
 
-With *Feature updates for Windows 10 and later* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1909 or a version of Windows 11. Intune supports setting a feature level to any version that remains in support at the time you create the policy.
+With *Feature updates for Windows 10 and later* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at. Intune supports setting a feature level to any version that remains in support at the time you create the policy.
 
 You can also use feature updates policy to [upgrade devices that run Windows 10 to Windows 11](#upgrade-devices-to-windows-11).
 
@@ -48,9 +31,7 @@ When a device receives a policy for Feature updates:
   > - Learn more about [safeguard holds](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) in the Windows documentation for *Feature Update Status*.
   > - To learn about known issues that can result in a safeguard hold, see the applicable Windows release information and then reference the relevant Windows version from the table of contents for that page:
   >   - [Windows 11 release information](/windows/release-health/windows11-release-information)
-  >   - [Windows 10 release information](/windows/release-health/release-information)
-  >
-  >   For example, for Windows 11 version 21H2, go to the Windows 11 release information and then from the left-hand pane, select *Version 21H2* and then *Known issues and notifications*. The [resultant page](/windows/release-health/status-windows-11-21h2) includes details for known issues for that Windows version that might result in safeguard hold.
+
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 - The ability to *Uninstall* the Feature update is still honored by the Update Rings.
@@ -70,15 +51,13 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - Additional cloud-based functionality requires an additional license. To use a cloud-based capability, in addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Autopatch:
 
-  - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+  - Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 
-  - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+  - Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
 
   - Windows Virtual Desktop Access E3 or E5
 
   - Microsoft 365 Business Premium
-
-  Beginning in November of 2022, the Windows Autopatch license is checked and enforced.
 
   The cloud-based capabilities requiring the additional license are indicated in the *Create feature update deployment* or policy creation page and include the following items and potentially new features:
 
@@ -89,13 +68,13 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   - Windows 10 (SxS): The Windows 10 (SxS) feature is a cloud-only feature. If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 - Devices must:
-  - Run a version of Windows 10/11 that remains in support.
+  - Run a version of Windows that remains in support.
   - Be enrolled in Intune MDM and be Microsoft Entra hybrid joined or Microsoft Entra joined.
   - Have Telemetry turned on, with a minimum setting of [*Required*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
 
     Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy.
 
-    Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows 10/11. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
+    Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
 
   - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
 
@@ -105,7 +84,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - Enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy feature updates.
 
-- Feature updates are supported for the following Windows 10/11 editions:
+- Feature updates are supported for the following Windows editions:
   - Pro
   - Enterprise
   - Pro Education
@@ -114,7 +93,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   > [!NOTE]
   > **Unsupported versions and editions**:
-  > *Windows 10/11 Enterprise LTSC*: Windows Update client policies does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
+  > *Windows Enterprise LTSC*: Windows Update client policies does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
 
 ### Limitations for Workplace Joined devices
 
@@ -216,7 +195,7 @@ However, if a Windows 10 device that can't run Windows 11 is targeted with a Win
 
 The first step in preparing for a Windows 11 upgrade is to ensure your devices meet the [minimum system requirements for Windows 11](/windows/whats-new/windows-11-requirements#hardware-requirements).
 
-You can use [Endpoint analytics in Microsoft Intune](../../analytics/overview.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune, co-managed, or have the Configuration Manager client version 2107 or newer with tenant attach enabled.
+You can use [endpoint analytics](../../analytics/index.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune, co-managed, or have the Configuration Manager client with tenant attach enabled.
 
 If you're already using Endpoint analytics, navigate to the [Work from anywhere report](../../analytics/work-from-anywhere.md), and select the Windows score category in the middle to open a flyout with aggregate Windows 11 readiness information. For more granular details, go to the Windows tab at the top of the report. On the Windows tab, you'll see device-by-device readiness information.
 

@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Settings insight
 description: The Settings insight feature adds insights giving you confidence in configurations that are successfully adopted by similar organizations.
-keywords:
 author: BrenDuns
 ms.author: brenduns
-manager: laurawi
 ms.date: 7/31/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: Lavanya.lakshman
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: get-started
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -82,13 +64,13 @@ Setting value recommendations are then made for similar organizations categorize
 > Customer Data is not being used in the model. Usage data is aggregated at organization level and is converted to categorical format when possible.
 > For example, a Boolean attribute is used to reflect whether the customer has Microsoft Exchange in use and categorical data is used to show the range of deployment ratio rather than the actual deployment ratio. Data in use is signed off via privacy and security reviews to ensure compliance and is securely stored with appropriate protection and retention management.
 
-Other safeguard measures are also applied to inhibit individual customer inference. For example, no recommendation is made if the number of similar customers within one cluster is below a given threshold or when the setting isn't adopted by the required minimum number of organizations. Data aggregation and a set of thresholds are applied to protect the confidentiality of individual organizations.  
+Other safeguard measures are also applied to inhibit individual customer inference. For example, no recommendation is made if the number of similar customers within one cluster is below a given threshold or when the setting isn't adopted by the required minimum number of organizations. Data aggregation and a set of thresholds are applied to protect the confidentiality of individual organizations.
 
 Model execution and performance are actively monitored to ensure quality and reliability. A series of live monitors is set up to closely watch execution anomalies and key performance metrics. Prompt investigation and regular maintenance are in place to provide valuable recommendations to customers.
 
 ## Why some settings may not have insights
 
-Settings insight is powered by machine learning and heavily relies on underlying data used to make recommendations. For reliable recommendations, we have set considerable guardrails in place to only show recommendations when we have sufficient data to support them. If the admin doesn't see recommendations for certain settings, it could mean we didn't have sufficient data to provide an insight. However, this could change over a period as more data becomes available.  
+Settings insight is powered by machine learning and heavily relies on underlying data used to make recommendations. For reliable recommendations, we have set considerable guardrails in place to only show recommendations when we have sufficient data to support them. If the admin doesn't see recommendations for certain settings, it could mean we didn't have sufficient data to provide an insight. However, this could change over a period as more data becomes available.
 
 ## Next steps
 

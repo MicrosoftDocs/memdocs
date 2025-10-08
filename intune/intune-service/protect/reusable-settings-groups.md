@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Use reusable groups of settings policies in Microsoft Intune | Microsoft Docs
 description: Manage groups of settings for Intune profiles as a single object and then add that settings group object to multiple profile instances. Later changes you make to the settings groups  automatically apply to each profile that includes the reusable settings group.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 09/18/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -61,9 +44,12 @@ The following profiles support use of reusable settings groups:
 
 **Endpoint security policy**
 
-- **Firewall** > **Windows Firewall rules**:  
+- **Firewall** > **Windows Firewall rules**:
   - Platforms: Windows
   - Windows versions: Devices must run Windows 10 20H2 or later, or Windows 11
+
+    > [!IMPORTANT]
+    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 - **Attack surface reduction** > **Device control**:
   - Platforms: Windows
@@ -97,7 +83,7 @@ Each reusable settings group includes a subset of settings from the full profile
 
    There's a limit of 100 instances per group. Use the information text in the admin center for each setting in the reusable settings group as guidance. Follow the *Learn more* link for a setting to view details about the setting from that settings content source.
 
-   > [!TIP]  
+   > [!TIP]
    > Carefully *Name* each reusable group you create to ensure you can identify it later. This is important because each reusable group that you create, for any policy type, is visible when adding reusable groups to a policy, even if the group contains settings that would not normally apply to the policy you're configuring. For example, if you have a reusable group created for Windows Firewall rules, that group will be visible and can be selected when adding reusable groups to Device Control policies.
 
 5. On the *Review + Add* page, select **Add** to save your reusable settings group.

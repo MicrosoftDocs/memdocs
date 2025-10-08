@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Use Microsoft Intune to import and analyze group policies
 description: Import and analyze your group policy objects using the Group Policy analytics tool. See the policies that are supported and aren't supported in Intune.
-keywords: intune group policy, import gpo into Intune, Group Policy analytics
 author: MandiOhlinger
-
 ms.author: mandia
-manager: laurawi
 ms.date: 11/15/2023
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -43,14 +23,13 @@ Microsoft Intune has many of the same settings as your on-premises GPOs. **Group
 - Shows any deprecated settings, or settings not available.
 - Can [migrate your imported GPOs to a settings catalog policy](group-policy-analytics-migrate.md) that can be deployed to your devices.
 
-If your organization uses on-premises GPOs to manage Windows 10/11 devices, then Group Policy analytics can help. With Group Policy analytics, it's possible Intune can replace your on-premises GPOs. Windows 10/11 devices are inherently cloud native. So depending on your configuration, these devices might not require access to an on-premises Active Directory.
+If your organization uses on-premises GPOs to manage Windows devices, then Group Policy analytics can help. With Group Policy analytics, it's possible Intune can replace your on-premises GPOs. Windows devices are inherently cloud native. So depending on your configuration, these devices might not require access to an on-premises Active Directory.
 
 If you're ready to remove the dependency to on on-premises AD, then analyzing your GPOs with **Group Policy analytics** is a good first step. Some older settings aren't supported, or don't apply to cloud native Windows devices. After you analyze your GPOs, you know the settings that are still valid.
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 This article shows you how to export your on-premises GPOs, import the GPOs into Intune, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](group-policy-analytics-migrate.md).
 
@@ -96,7 +75,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
     - **Group Policy name**: The name is automatically generated using information in the GPO.
     - **Active Directory Target**: The target is automatically generated using the organizational unit (OU) target information in the GPO.
-    - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.  
+    - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.
 
       > [!NOTE]
       > Whenever the Microsoft Intune product team makes changes to the mapping in Intune, the percentage under MDM Support automatically updates to reflect those changes.
@@ -109,7 +88,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
     :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Screenshot that shows how to import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Intune admin center.":::
 
-6. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:  
+6. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:
 
     - **Setting Name**: The name is automatically generated using information in the GPO setting.
     - **Group Policy Setting Category**: Shows the setting category for ADMX settings, such as Internet Explorer and Microsoft Edge. Not all settings have a setting category.

@@ -1,51 +1,73 @@
 ---
-# required metadata
-
-title: Reset Windows 10 and 11 devices with Microsoft Intune
-description: Use Fresh Start to remove or uninstall apps on Windows 10 and 11 by using Microsoft Intune. 
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
-ms.date: 04/07/2025
+title: "Remote Device Action: Fresh Start"
+description: Learn how to use Fresh Start to remove or uninstall apps with Microsoft Intune.
+ms.date: 09/22/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.collection:
-- tier1
-- M365-identity-device-management
-- highpri
 ---
 
-# Use Fresh Start to reset Windows 10 and 11 devices with Intune
+# Remote device action: Fresh Start
 
-The **Fresh Start** device action removes any apps that are installed on a PC running Windows 10, version 1709 or later and Windows 11. Fresh Start helps remove pre-installed (OEM) apps that are typically installed with a new PC.
+The *Fresh Start* remote action removes apps from managed Windows devices, helping you remove preinstalled (OEM) apps that typically ship with a new PC.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
-2. From the list of devices you manage, choose a Windows 10 desktop device.
-3. Click **Fresh Start**.
-4. Select **Retain user data on this device** to:
-   * Keep the device Microsoft Entra joined
-   * Device is enrolled into mobile device management again when a Microsoft Entra ID enabled user signs into the device.
-   * Keep the contents of the device user's Home folder, and remove apps and settings
+## Requirements
+
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+
+> [!div class="checklist"]
+> This remote action supports the following platforms:
+>
+> - Windows
+
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+
+> [!div class="checklist"]
+> To run this remote action, use an account with at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Endpoint Security Manager][INT-R4]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Clean PC**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+
+## How to execute Fresh Start from the Intune admin center
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. From the devices list, select a device.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Fresh Start**.
+1. Select **Retain user data on this device** to:
+
+   - Keep the device Microsoft Entra joined.
+   - Automatically re-enroll the device in mobile device management when a Microsoft Entra ID-enabled user signs in.
+   - Preserve the contents of the user's Home folder, while removing apps and settings.
 
    > [!IMPORTANT]
-   > If you do not retain user data, the device will be restored to the default OOBE (out-of-box experience) completed state retaining the built in administrator account.
-   > BYOD devices will be unenrolled from Microsoft Entra ID and mobile device management.
-   > Microsoft Entra joined devices will be enrolled into mobile device management again when a Microsoft Entra ID enabled user signs into the device.
+   > If you don't retain user data, the device is restored to the default out-of-box experience (OOBE) completed state retaining the built-in administrator account.
+   > BYOD devices are removed from Microsoft Entra ID and mobile device management.
 
-5. Click **OK**.
-6. To see the status of this action, go back to **Devices** and click **Device actions**.  
-7. The device will be restored to the initial sign-in screen.
+1. Select **OK**.
+
+## Reference links
+
+- Configuration service provider (CSP) used to initiate the remote action: [CleanPC CSP][CSP-1]
+- Microsoft Graph API: [cleanWindowsDevice action][GRAPH-1]
+
+<!--links-->
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+
+<!-- role links -->
+
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+
+<!-- API links -->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-cleanwindowsdevice
+
+[CSP-1]: /windows/client-management/mdm/cleanpc-csp

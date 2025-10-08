@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Create device compliance policies in Microsoft Intune
 description: Create device compliance policies for Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 12/13/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.reviewer: ilwu
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - compliance
@@ -58,9 +41,9 @@ To use device compliance policies, be sure you:
   - Android AOSP
   - Android Enterprise
   - iOS
-  - Linux - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS  
+  - Linux - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
   - macOS
-  - Windows 10/11
+  - Windows  
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
@@ -70,8 +53,8 @@ To use device compliance policies, be sure you:
 
 In addition to compliance settings that are built in to Intune, the following platforms support adding custom compliance settings to compliance policies:
 
-- Ubuntu Desktop, version 22.04 LTS or 24.04 LTS   
-- Windows 10/11
+- Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
+- Windows 
 
 Before you can add custom settings, you must prepare a custom JSON file that defines the settings you want to base your custom compliance on, and a script that runs on devices to detect the settings defined in the JSON.
 
@@ -82,29 +65,29 @@ For more information about using custom compliance settings, including supported
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Devices**.
-3. Under **Manage devices**, select **Compliance**. Then choose **Create policy**.   
+3. Under **Manage devices**, select **Compliance**. Then choose **Create policy**.
 
 4. Select a **Platform** for this policy from the following options:
    - **Android device administrator**
    - **Android (AOSP)**
    - **Android Enterprise**
    - **iOS/iPadOS**
-   - **Linux** - (Ubuntu Desktop, version 22.04 LTS or 24.04 LTS, RedHat Enterprise Linux 8, or RedHat Enterprise Linux 9) 
-   - **macOS**  
-   - **Windows 10 and later** 
-   - **Windows 8.1 and later**  
-  
+   - **Linux** - (Ubuntu Desktop, version 22.04 LTS or 24.04 LTS, RedHat Enterprise Linux 8, or RedHat Enterprise Linux 9)
+   - **macOS**
+   - **Windows 10 and later**
+   - **Windows 8.1 and later**
+
 
     For *Android Enterprise*, you also select a **Profile type**. Your options:
-     - **Fully managed, dedicated, and corporate-owned work profile**  
-     - **Personally-owned work profile**  
+     - **Fully managed, dedicated, and corporate-owned work profile**
+     - **Personally-owned work profile**
 
-    Then select **Create** to open the configuration page.  
+    Then select **Create** to open the configuration page.
 
 5. On the **Basics** tab, enter a **Name** that helps you identify this policy later. For example, a good policy name is **Mark iOS/iPadOS jailbroken devices as not compliant**.
 
-   Optionally, enter a **Description** for the policy.  
-  
+   Optionally, enter a **Description** for the policy.
+
 6. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy. The following articles describe the available compliance settings for each platform:
    - [Android device administrator](compliance-policy-create-android.md)
    - [Android (AOSP)](compliance-policy-create-android-aosp.md)
@@ -113,32 +96,32 @@ For more information about using custom compliance settings, including supported
    - [Linux](../protect/compliance-policy-create-linux.md)
    - [macOS](compliance-policy-create-mac-os.md)
    - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
-   - [Windows 10/11](compliance-policy-create-windows.md)  
+   - [Windows](compliance-policy-create-windows.md)
 
-7. Optionally, you can add custom settings for supported platforms.  
+7. Optionally, you can add custom settings for supported platforms.
 
-   > [!TIP]  
-   > This is an optional step that’s supported for the following platforms:  
+   > [!TIP]
+   > This is an optional step that’s supported for the following platforms:
    >
-   > - Linux - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS  
-   > - Windows 10 and later  
+   > - Linux - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
+   > - Windows 
    > Before you can add custom settings to a policy, you must have uploaded a detection script to Intune, and have ready a JSON file that defines the settings you want to use for compliance. See [Custom compliance settings](../protect/compliance-use-custom-settings.md).
 
    On the **Compliance settings** page, expand the **Custom Compliance** category:
 
-   **For Windows**:  
+   **For Windows**:
    1. On the *Compliance settings* page, expand **Custom Compliance** and set *Custom compliance* to **Require**.
-   2. For *Select your discovery script*, select **Click to select**, and then enter the name of a script that you previously added to the Microsoft Intune admin center. This script must be uploaded before you begin to create the policy. Choose **Select** to continue to the next step.    
-   3. For *Upload and validate the JSON file with your custom compliance settings*, select the folder icon, and then find and add the JSON file for Windows that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](compliance-custom-json.md).  
+   2. For *Select your discovery script*, select **Click to select**, and then enter the name of a script that you previously added to the Microsoft Intune admin center. This script must be uploaded before you begin to create the policy. Choose **Select** to continue to the next step.
+   3. For *Upload and validate the JSON file with your custom compliance settings*, select the folder icon, and then find and add the JSON file for Windows that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](compliance-custom-json.md).
 
-   **For Linux**:  
-   1. On the *Compliance settings* page, select **Add settings** to open the **Settings picker**.  
-   2. Select **Custom Compliance**. Then close the settings picker.  
+   **For Linux**:
+   1. On the *Compliance settings* page, select **Add settings** to open the **Settings picker**.
+   2. Select **Custom Compliance**. Then close the settings picker.
    3. Switch **Require Custom Compliance** to **True**. T
    4. For **Select your discovery script**, select **Select a script**. Then select a script that’s been previously added to the Microsoft Intune admin center. This script must be uploaded before you begin to create the policy.
    6. For **Select your rules file**, select the folder icon and then locate and add the JSON file for Linux that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](compliance-custom-json.md).
 
-   Wait while Intune validates the JSON. Problems that need to be fixed appear onscreen. After validation of the JSON contents, the rules from the JSON appear in table format.  
+   Wait while Intune validates the JSON. Problems that need to be fixed appear onscreen. After validation of the JSON contents, the rules from the JSON appear in table format.
 
 8. On the **Actions for noncompliance** tab, select a sequence of actions to apply automatically to devices that don't meet this compliance policy.
 
@@ -148,17 +131,17 @@ For more information about using custom compliance settings, including supported
 
    Another example includes the use of Locations where you add at least one location to a compliance policy. In this case, the default action for noncompliance applies when you select at least one location. If the device isn't connected to any of the selected locations, it's considered not compliant. You can configure the schedule to give your users a grace period, such as one day.
 
-9. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies. 
+9. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies.
 
    For information on using scope tags, see [Use scope tags to filter policies](../fundamentals/scope-tags.md).
 
-10. On the **Assignments** tab, assign the policy to your groups.  
+10. On the **Assignments** tab, assign the policy to your groups.
 
    Select **Add groups**, and then assign the policy to one or more groups. The policy will apply to these groups when you save the policy after the next step.
 
    Policies for Linux don't support user-based assignments and can only be assigned to device groups.
 
-11. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
+11. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.
 
     The users or devices targeted by your policy are evaluated for compliance when they check in with Intune.
 
@@ -207,4 +190,4 @@ For example, a device has three compliance policies assigned to it: one Unknown 
 
 ## Next steps
 
-[Monitor your policies](compliance-policy-monitor.md).  
+[Monitor your policies](compliance-policy-monitor.md).

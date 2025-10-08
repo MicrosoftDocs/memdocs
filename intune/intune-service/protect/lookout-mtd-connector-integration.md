@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Set up Lookout Mobile Endpoint Security with Microsoft Intune
 description: How to set up Lookout Mobile Endpoint Security and Microsoft Intune to control mobile device access to your corporate resources.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 07/19/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---

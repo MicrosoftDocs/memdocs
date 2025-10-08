@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: iOS/iPadOS supervised device security configurations
-titleSuffix: Microsoft Intune
 description: Review example supervised device security configurations of basic, enhanced, and high security for iOS devices.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/20/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -111,7 +91,7 @@ The level 2 settings include all the policy settings recommended for level 1. Ho
 Level 3 is the recommended configuration for both:
 
 - Organizations with large and sophisticated security organizations.
-- Specific users and groups who are uniquely targeted by adversaries. 
+- Specific users and groups who are uniquely targeted by adversaries.
 
 Such organizations are typically targeted by well-funded and sophisticated adversaries.
 

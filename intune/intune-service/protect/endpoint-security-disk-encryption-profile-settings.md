@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Intune endpoint security disk encryption policy settings
 description: View the list of settings that are available in Microsoft Intune endpoint security disk encryption policy settings for BitLocker and FileVault.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/19/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: aanavath
@@ -33,8 +16,10 @@ ms.reviewer: aanavath
 
 View the settings you can configure in profiles for *Disk Encryption* policy in the Endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 > [!NOTE]
->
 > Beginning on June 19, 2023, the BitLocker profile for Windows was updated to use the settings format as found in the Settings Catalog. The new profile format includes the same settings as the older profile, but due to the new format, settings names in the Intune admin center have updated. With this change you can no longer create new versions of the old profile. Your existing instances of the old profile remain available to use and edit.
 >
 > The settings details in this article apply only to BitLocker profiles created before June 19, 2023.
@@ -44,14 +29,16 @@ View the settings you can configure in profiles for *Disk Encryption* policy in 
 Applies to:
 
 - macOS
-- Windows 10
-- Windows 11
+- Windows
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 Supported platforms and profiles:
 
 - **macOS**:
   - Profile: **FileVault**
-- **Windows 10 and later**:
+- **Windows**:
   - Profile: **BitLocker**
 
 ## FileVault
@@ -97,7 +84,7 @@ Supported platforms and profiles:
 
 > [!NOTE]
 >
-> This article details the settings you can find in BitLocker profiles created before June 19, 2023, for the Windows 10 and later platform for endpoint security Disk encryption policy. On June 19, 2023, the Windows 10 and later profile was updated to use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+> This article details the settings you can find in BitLocker profiles created before June 19, 2023, for the *Windows 10 and later* platform for endpoint security Disk encryption policy. On June 19, 2023, the *Windows 10 and later* profile was updated to use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 >

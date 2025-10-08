@@ -1,18 +1,13 @@
 ---
-title: Windows quality update policy  
+title: Windows quality update policy
 description: Use Hotpatch updates to receive security updates without restarting your device
 ms.date: 04/17/2025
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.reviewer: Mounika
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.localizationpriority: high
-ms.subservice: protect
 ms.collection:
-  - highpri
-  - tier1
+- highpri
 ---
 
 # Windows quality update policy
@@ -65,11 +60,11 @@ To learn more about CHPE, see [here](/windows/win32/winprog64/wow64-implementati
 > [!NOTE]
 > There are no plans to support hotpatch updates on Arm64 devices with CHPE enabled. Disabling CHPE is required only for Arm64 devices. AMD and Intel CPUs don't have CHPE.
 
-If you choose to no longer use Hotpatch updates, clear the CHPE disable flag (`HotPatchRestrictions=0`) then restart the device to turn on CHPE usage.  
+If you choose to no longer use Hotpatch updates, clear the CHPE disable flag (`HotPatchRestrictions=0`) then restart the device to turn on CHPE usage.
 
 ## Ineligible devices
 
-Devices that don't meet one or more prerequisites automatically receive the Latest Cumulative Update (LCU) instead. Latest Cumulative Update (LCU) contains monthly updates that supersede the previous month's updates containing both security and nonsecurity releases.  
+Devices that don't meet one or more prerequisites automatically receive the Latest Cumulative Update (LCU) instead. Latest Cumulative Update (LCU) contains monthly updates that supersede the previous month's updates containing both security and nonsecurity releases.
 
 LCUs requires you to restart the device, but the LCU ensures that the device remains fully secure and compliant.
 
@@ -135,7 +130,7 @@ After a Windows quality updates policy has been created with Hotpatch updates en
 
 ### Hotpatch quality updates
 
-This report shows the total targeted devices and current update states of all Hotpatch update enabled devices.  
+This report shows the total targeted devices and current update states of all Hotpatch update enabled devices.
 
 1. Sign in to the Microsoft [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -147,7 +142,7 @@ This report shows the total targeted devices and current update states of all Ho
 
 This report shows the device distribution for different quality update releases. For Hotpatch applicable **Updates**, you can see both Hotpatch and standard quality update build numbers are displayed. Note that Hotpatch builds are lower numbered due to the inclusion of subset of fixes compared to standard builds. You can select **Devices on this update** column for each release to see a detailed list of devices and their corresponding updates.
 
-To go to the device,  
+To go to the device,
 
 1. Sign in to the Microsoft [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

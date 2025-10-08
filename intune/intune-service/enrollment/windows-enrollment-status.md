@@ -1,32 +1,10 @@
 ---
-# required metadata
-
 title: Set up the Enrollment Status Page in the admin center copy
-titleSuffix: Microsoft Intune
 description: Set up a greeting page for users signing in and enrolling Windows devices copy.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
-ms.date: 09/09/2025
+ms.date: 09/24/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: high
-ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: madakeva
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -34,10 +12,6 @@ ms.collection:
 
 
 # Set up the Enrollment Status Page
-
-**Applies to**
-- Windows 10
-- Windows 11
 
 The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track how far along their device is in the setup process.
 
@@ -158,6 +132,17 @@ Versions of Windows 11 that already have these or later updates installed have t
 Monthly security update releases on supported versions of Windows 11 are installed by default during OOBE. This behavior can be managed using the **Install Windows quality updates (might restart the device)** setting of the ESP profile. Newly created ESP Profiles will default to **Yes**, while existing ESP profiles default to **No**. To enable installing monthly security update releases during OOBE on existing ESP profiles, edit the existing ESP profile so that the **Install Windows quality updates (might restart the device)** setting is set to **Yes**.
 
 Installation of monthly security update releases during OOBE normally adds 20-40 minutes to the provisioning process. Installation of monthly security update releases also might require restarts. If a restart occurs, the user isn't automatically logged into Windows. Restarts might break some autologon provisioning scenarios. Setting the setting **Install Windows quality updates (might restart the device)** to **No** is recommended in these scenarios.
+
+> [!IMPORTANT]
+>
+> If admins set the option **Block device use until all apps and profiles are installed** to **No** in an ESP profile, the device might exit ESP before the following items are applied:
+>
+> - Windows Update for Business (WUfB) policies.
+> - Monthly security update releases.
+>
+> The device exiting the ESP before these items are applied can result in monthly security update releases being installed during OOBE, even when the option **Install Windows quality updates (might restart the device)** is set to **No**.
+>
+> To ensure that monthly security update releases aren't installed when the option **Install Windows quality updates (might restart the device)** is set to **No**, make sure that the option **Block device use until all apps and profiles are installed** is set to **Yes**.
 
 #### Supported configurations
 
