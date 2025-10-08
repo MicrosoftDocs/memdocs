@@ -11,8 +11,7 @@ ms.reviewer: priyar
 - Android
 - iOS
 - macOS
-- Windows 10
-- Windows 11
+- Windows 
 
 
 Get the latest version of the Microsoft Intune Company Portal app on your Android, iOS, macOS, or Windows device. We recommend using the latest version of the Company Portal app on your device because it contains the latest bug fixes and security updates.
@@ -69,7 +68,7 @@ To turn on automatic app updates:
 
 ## Update on Windows device
 
-To view available app updates on devices running Windows 10/11:
+To view available app updates on devices running Windows:
 
 1. Open the Microsoft Store app and go to **Downloads**.
 
