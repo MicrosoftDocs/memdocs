@@ -1,5 +1,5 @@
 ---
-title: Deploy Windows update packages in Intune
+title: Deploy Windows Update Packages in Intune
 description: Learn how to deploy a Windows update package (.msu file) in Intune.
 ms.date: 10/02/2025
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.collection:
 - FocusArea_Apps_Win32
 ---
 
-# Deploy Windows update packages in Intune
+# Deploy Windows Update Packages in Intune
 
 [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 

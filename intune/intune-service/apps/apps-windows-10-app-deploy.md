@@ -1,5 +1,5 @@
 ---
-title: Windows app deployment by using Microsoft Intune
+title: Windows App Deployment by Using Microsoft Intune
 description: Learn about Windows 10/11 app deployment scenarios available with Microsoft Intune.
 ms.date: 10/02/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_Deploy
 ---
 
-# Windows app deployment by using Microsoft Intune
+# Windows App Deployment by Using Microsoft Intune
 
 [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 

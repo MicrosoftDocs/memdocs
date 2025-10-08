@@ -1,9 +1,8 @@
 ---
-title: What is app management in Microsoft Intune?
+title: What Is App Management in Microsoft Intune?
 description: Learn about client app management capabilities by platform for Microsoft Intune.
 ms.date: 10/02/2025
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: bryanke
 ai-usage: ai-assisted
 ms.collection:

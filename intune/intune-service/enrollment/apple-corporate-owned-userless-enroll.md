@@ -3,7 +3,6 @@ title: Set up Apple device management in Intune for corporate-owned userless dev
 description: Set up Intune for corporate-owned userless iOS/iPadOS devices.
 ms.date: 02/17/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: tranamst
 ms.collection:
 - M365-identity-device-management

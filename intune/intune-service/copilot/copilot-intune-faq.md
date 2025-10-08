@@ -4,7 +4,6 @@ description: Get answers to common questions when using Copilot in Microsoft Int
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ankurgoyal, rashok
 ms.collection:
 - M365-identity-device-management

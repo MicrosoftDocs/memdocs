@@ -3,7 +3,6 @@ title: iOS/iPadOS app protection policy settings
 description: This article describes the iOS/iPadOS app protection policy (APP) settings for iOS/iPadOS devices.
 ms.date: 07/18/2025
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: demerson
 ms.collection:
 - M365-identity-device-management

@@ -1,5 +1,5 @@
 ---
-title: iOS/iPadOS app provisioning profiles in Microsoft Intune
+title: iOS/iPadOS App Provisioning Profiles in Microsoft Intune
 description: Intune gives you the tools to proactively assign a new provisioning profile to devices that have apps that are nearing expiry.
 ms.date: 01/06/2025
 ms.topic: how-to
@@ -9,7 +9,7 @@ ms.collection:
 - iOS/iPadOS
 ---
 
-# Use iOS app provisioning profiles to prevent your apps from expiring
+# Use iOS App Provisioning Profiles to Prevent Your Apps From Expiring
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

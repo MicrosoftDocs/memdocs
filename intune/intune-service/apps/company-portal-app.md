@@ -1,9 +1,8 @@
 ---
-title: How to configure the Intune Company Portal apps, Company Portal website, and Intune app
+title: How to Configure the Intune Company Portal Apps, Company Portal Website, and Intune App
 description: Learn how you can configure the Intune Company Portal apps, Company Portal website, and Intune app.
 ms.date: 10/02/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: abstarr
 ms.collection:
 - M365-identity-device-management
@@ -11,7 +10,7 @@ ms.collection:
 - FocusArea_Apps_SpecificApp
 ---
 
-# How to configure the Intune Company Portal apps, Company Portal website, and Intune app
+# How to Configure the Intune Company Portal Apps, Company Portal Website, and Intune App
 
 The Company Portal apps, Company Portal website, and Intune app on Android are where users access company data and do common tasks. Common tasks include enrolling devices, installing apps, and locating information for IT assistance. Users securely access company resources. The end-user experience provides several pages: Home, Apps, App details, Devices, and Device details. To quickly find apps, filter them on the Apps page.
 

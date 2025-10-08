@@ -3,7 +3,6 @@ title: Microsoft Intune Enterprise Application Management
 description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune.
 ms.date: 09/05/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: dguilory
 ms.collection:
 - M365-identity-device-management
