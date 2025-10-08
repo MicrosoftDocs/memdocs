@@ -32,7 +32,9 @@ To get help, you must reach out to your support staff to request assistance. You
 
 **Starting the session:**
 
-1. The helper can initiates a session or you can manually start the Remote Help app and enter a session code provided by the helper.
+1. The helper can initiate a session or you can manually start the Remote Help app and enter a session code provided by the helper.
+  > [!NOTE]
+  > If the helper initiates the session from Intune, a notification is sent to your device. Select **Open Remote Help** in the notification to open the Remote Help app and continue. If your computer is in "Do Not Disturb" mode, you might not see the notification. In this case, open the Remote Help app manually to continue or check the notifications center.
 1. Verify the helper's identity by viewing their information including their full name, job title, company, profile picture, and verified domain. You can then choose to *Allow screen sharing or full control* or to *Decline the request*.
 1. The session is established, and the helper can then help in resolving any issues on the device.
 

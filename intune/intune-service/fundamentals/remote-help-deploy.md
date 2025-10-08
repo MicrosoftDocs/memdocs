@@ -14,7 +14,7 @@ ms.collection:
 - graph-interactive
 ---
 
- # Deploying Remote Help with Microsoft Intune
+# Deploying Remote Help with Microsoft Intune
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
@@ -32,9 +32,9 @@ This article describes the steps to deploy Remote Help with Microsoft Intune.
 When planning your deployment of Remote Help, consider the following best practices:
 
 - **User Communication and Training**: To drive adoption and effective use, provide documentation or brief training for both your helpdesk and end-users:
-- **Helpdesk Training**: Make sure your support team knows how to initiate sessions (via Intune or via the Remote Help app), how to generate/enter session codes, and the limitations (for example, they should know they can't help users outside the tenant). Emphasize security practices, like always confirming end-user consent on the call before taking control. Microsoft's documentation and support videos can be good training material.
-- **End-User Guidance**: Let your users know that a new remote support tool is available. Instruct them on how a support session is initiated – for example, "When you contact the IT helpdesk, they might ask you to open the Remote Help app and share a code, or you might receive a popup notification to allow screen sharing." Reassure them that the tool is secure and only authorized IT can connect, and that they'll always have to explicitly allow any screen sharing or control.
-- **Security Monitoring**: Keep an eye on the usage to detect any anomalous behavior. For instance, Intune's audit logs and Entra ID sign-in logs show who is signing into Remote Help. Unusual times or unknown helpers should be investigated. Also ensure that when staff leave the support team, you remove them from the Remote Help roles to revoke their ability to use the tool.
+- **Helpdesk Training**: Make sure your support team knows how to initiate sessions. Make them aware of the capabilities like launching a session through the Intune admin center or the Remote Help app, how to generate/enter session codes. Also make them aware of the limitation of not being able help users outside the tenant. Emphasize security practices, like confirming end-user consent on the call before taking control.
+- **End-User Guidance**: Let your users know that a new remote support tool is available. Instruct them on how a support session is initiated – for example, "When you contact the IT helpdesk, they might ask you to open the Remote Help app and share a code, or you might receive a popup notification to allow screen sharing." Reassure them that the tool is secure and only authorized IT can connect, and that they must allow any screen sharing or control.
+- **Security Monitoring**: Keep an eye on the usage to detect any anomalous behavior. For instance, Intune's audit logs and Entra ID sign-in logs show who is signing into Remote Help. Unusual times or unknown helpers should be investigated. Also ensure that when a staff member leaves the support team, they're removed from the Remote Help roles to revoke their ability to use the tool.
 - **Updates and New Features**: Remote Help is evolving. Microsoft might roll out new features (for example, the ability to support more platforms or an improved web helper dashboard). Stay updated via the Intune release notes or tech community blogs. Knowing these updates can help you refine your support process.
 
 ## Configure Remote Help for your tenant
@@ -73,7 +73,7 @@ The following Intune RBAC permissions manage the use of the Remote Help app. Set
 
 > [!NOTE]
 > If the **Take full control** permission is set to *Yes*, then by default, the user has permission to **View screen**, even if the user's **View screen** permission is set to *No.*
-> If the **Elevation** permission is set to *Yes*, then by default, the user will has permission to **View screen** and **Take full control**, even if the user's **View screen** and **Take full control** permission is set to *No.*
+> If the **Elevation** permission is set to *Yes*, then by default, the user has permission to **View screen** and **Take full control**, even if the user's **View screen** and **Take full control** permission is set to *No.*
 > If the **Unattended control** permission is set to *Yes*, then, by default, the user has permission to **View screen**, **Take full control**, and **Elevation**, even if the user's **View screen**, **Take full control**, and **Elevation** permissions is set to *No.*
 
 - Category: **Remote tasks**
@@ -97,7 +97,7 @@ After creating the custom roles that you can use to provide different users with
 5. On the **Scope (Groups)** page, choose a group containing the users/devices that a member is allowed to manage. You also can choose all users or all devices. Choose **Next** to continue.
 
    >[!IMPORTANT]
-   >If a sharer or a sharer's device isn't in the scope of a helper, that helper can't provide assistance. When assisting an unenrolled device, the "All Devices" scope group won't include these devices. Instead, you should use the user scope group during the assignment process.
+   >If a sharer or a sharer's device isn't in the scope of a helper, that helper can't provide assistance. The "All Devices" scope group doesn't include unenrolled devices. Instead, use a user scope group during the assignment process.
    >
    > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](role-based-access-control.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
 
@@ -129,16 +129,16 @@ The Remote Help app for Android is available from the Google Play store at [Remo
 
 Remote Help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a Remote Help session. By default, Remote Help opts users into automatic updates and updates itself when an update is available.
 
-Some users may choose to opt out of automatic updates. However, when a new version of Remote Help is necessary, the app prompts users to install that version upon opening. You can use the same process to download and install Remote Help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
+When a new version of Remote Help is required, the app prompts users to update. You can use the same process to download and install Remote Help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-devices).
 - Individual users who have permissions to install apps on their devices can also download and install Remote Help.
 
 > [!NOTE]
 >
-> - On May 2022, existing users of Remote Help will see a recommended upgrade screen when they open the Remote Help app. Users are able to continue using Remote Help without upgrading.
-> - On May 23, 2022, existing users of Remote Help will see a mandatory upgrade screen when they open the Remote Help app. They won't be able to proceed until they upgrade to the latest version of Remote Help.
-> - Remote Help requires Microsoft Edge WebView2 Runtime. During the Remote Help installation process, if Microsoft Edge WebView2 Runtime isn't installed on the device, then Remote Help installs it. When uninstalling Remote Help, Microsoft Edge WebView2 Runtime won't be uninstalled.
+> - On May 2022, existing users of Remote Help see a recommended upgrade screen when they open the Remote Help app. Users are able to continue using Remote Help without upgrading.
+> - On May 23, 2022, existing users of Remote Help will see a mandatory upgrade screen when they open the Remote Help app. They can't proceed until they upgrade to the latest version of Remote Help.
+> - Remote Help requires Microsoft Edge WebView2 Runtime. During the Remote Help installation process, if Microsoft Edge WebView2 Runtime isn't installed on the device, then Remote Help installs it. When Remote Help is uninstalled, Microsoft Edge WebView2 Runtime isn't uninstalled.
 
 #### Deploy Remote Help as an Enterprise App Catalog app
 
@@ -153,7 +153,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
    > [!IMPORTANT]
    > To take advantage of the command line example, ensure the downloaded file is renamed to **remotehelpinstaller.exe**.
 
-1. On the App information page, select **Select app package file**, and locate the *remotehelp.intunewin* file you've previously prepared, and then select **OK**.
+1. On the App information page, select **Select app package file**, and locate the *remotehelp.intunewin* file previously prepared, and then select **OK**.
 
    Add a *Publisher* and then select **Next**. The other details on the App Information page are optional.
 
@@ -187,7 +187,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 > [!NOTE]
 > To get the version of the **RemoteHelp.exe**, install RemoteHelp manually to a machine and run the following PowerShell command **(Get-Item "$env:ProgramFiles\Remote Help\RemoteHelp.exe").VersionInfo**. From the output, make a note of the FileVersion and use it to specify the *Value* in the detection rule.
 
-1. Proceed to the Assignments page, and then select an applicable device group or device groups that should install the Remote Help app. Remote Help is applicable when targeting group(s) of devices and not for User groups.
+1. Proceed to the Assignments page, and then select an applicable device group or device groups that should install the Remote Help app. Remote Help is applicable when targeting groups of devices and not for User groups.
 
 1. Complete creation of the Windows app to have Intune deploy and install Remote Help on applicable devices.
 
@@ -195,7 +195,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 
 #### Install and update Remote Help native app
 
-The Remote Help native app is available to download from Microsoft and must be installed on the device you're trying to help before that device can be used to participate in a Remote Help session.
+The macOS Remote Help native app is available to download from Microsoft and must be installed on the device to use full control.
 
 > [!TIP]
 > The native app is only required if full control of the helpers device is required, otherwise you can use [Remote Help web app](remote-help-webapp.md).
@@ -236,8 +236,6 @@ To set up Remote Help for Android, you need to complete the following steps:
 
 #### Windows Firewall details
 
-Automatic firewall rule creation from the Remote Help installer has been removed. However, if needed, System administrators can create firewall rules.
-
 Depending on the environment that Remote Help is utilized in, it may be necessary to create firewall rules to allow Remote Help through the Windows Firewall. In some situations when it's necessary, the following Remote Help executables should be allowed through the firewall:
 
 - C:\Program Files\Remote help\RemoteHelp.exe
@@ -261,7 +259,7 @@ You can configure these settings using either the Intune Admin Console or Micros
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices > Manage devices > Configuration > Create > macOS > Settings catalog**
 1. Enter a name and description for the profile. For example, "macOS Remote Help privacy permissions" and select **Next**
-1. Select **Add settings** and in the settings picker, navigate to **Privacy > Privacy Preferences Policy Control > Services**
+1. Select **Add settings** and in the settings picker navigate to **Privacy > Privacy Preferences Policy Control > Services**
     1. Under **Accessibility** select:
       - **Authorization**
       - **Code Requirement**
@@ -299,7 +297,7 @@ You can configure these settings using either the Intune Admin Console or Micros
 
 [!INCLUDE [graph-explorer-introduction](../includes/graph-explorer-intro.md)]
 
-This creates a policy in your tenant with the name **_MSLearn_Example_macOS Remote Help - Privacy Preferences Policy Control**.
+Using Graph Explorer creates a policy in your tenant with the name **_MSLearn_Example_macOS Remote Help - Privacy Preferences Policy Control**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
@@ -462,7 +460,7 @@ Remote Help receives the latest versions through the [Microsoft AutoUpdate (MAU)
 
 ### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
-The Remote Help app for Android is updated by the Google Play store after deployed.
+The Google Play store updates the Remote Help app for Android after deployment.
 
 ---
 
@@ -471,7 +469,7 @@ The Remote Help app for Android is updated by the Google Play store after deploy
 This section outlines the steps for provisioning the Remote Help service on the tenant for Conditional Access.
 
 1. Open PowerShell in admin mode.
-    - It may be necessary to install [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation)
+    - The [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation) module must be installed.
 2. Within PowerShell enter the following commands:
 
 ### Installation
@@ -490,7 +488,7 @@ Connect-MgGraph -Scopes "Application.ReadWrite.All"
 
 ### Create the service principal
 
-Create a Service Principal using the `Remote Assistance Service` AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2".
+Create a Service Principal using the `Remote Assistance Service` AppId `1dee7b72-b80d-4e56-933d-8b6b04f9a3e2`.
 
 ```powershell
 New-MgServicePrincipal -AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2"
@@ -502,7 +500,7 @@ DisplayName                                     Id AppId                        
 RemoteAssistanceService                      3d5ff82b-a5f2-483a-xxxx-9514ed66f7c5        1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
 ```
 
-This output has been shortened for readability.
+The output has been shortened for readability.
 
 The ID corresponds to the app ID for the Remote Assistance Service.
 
@@ -529,10 +527,7 @@ To apply conditional access policies to Remote Help, follow these steps:
      3. Select **Select resources**.
      4. Under **Select**, check the **RemoteAssistanceService** with the app ID of 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
 
-### Try an interactive demo
+## Next Steps
 
-The [Remote Help]( https://regale.cloud/Microsoft/viewer/1746/remote-help/index.html#/0/0) interactive demo walks you through scenarios step-by-step with interactive annotations and navigation controls.
-
-## Next steps
-
-[Get support in Microsoft Intune admin center](../../get-support.md).
+> [!div class="nextstepaction"]
+> [Next: Using Remote Help >](remote-help-use.md)
