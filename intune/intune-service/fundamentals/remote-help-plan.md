@@ -44,13 +44,13 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 When planning for Remote Help, consider:
 
 - **Enforce Least Privilege**: Only grant the minimum Remote Help permissions needed for each support role. Use custom Intune roles if necessary to limit who can take full control or perform unattended sessions 2. For example, level-1 support might get view-only rights, while tier-2 gets full control rights. This principle helps protect user privacy and device integrity.
-- **Use Conditional Access for Helpers**: Since helpers have elevated access into user devices, add an extra layer of security. Requiring MFA or compliant device status for helper accounts via Conditional Access is highly recommended. These additional measures ensure that a compromised helper account can't easily be used maliciously to access devices. Entra ID Conditional Access policies for Remote Help are only supported on Windows and macOS.
+- **Use Conditional Access for Helpers**: Since helpers have elevated access into user devices, add an extra layer of security. Requiring MFA or compliant device status for helper accounts via Conditional Access is highly recommended. These measures ensure that a compromised helper account can't easily be used maliciously to access devices. Entra ID Conditional Access policies for Remote Help are only supported on Windows and macOS.
 - **Enable Unenrolled Device Support Only If Needed**: Allowing Remote Help on unenrolled devices (Entra registered only) is convenient for supporting personal devices, but it comes with reduced oversight (no device compliance info or limited audit data). Enable that feature thoughtfully and consider limiting which support staff can help unenrolled devices (perhaps via separate roles).
 - **Network and Firewall**: Verify that corporate network policies don't interfere with Remote Help. The app communicates over port 443 to Azure cloud endpoints. If your users are on a corporate network, ensure proxy or SSL inspection doesn't break the connection. If your proxy servers are using SSL inspection, the domains listed for Remote Help should be excluded to avoid issues).
 - **Support for Government Cloud is reduced**: Remote Help is supported in Government Community Cloud (GCC) environments on except in Azure Virtual Desktop (AVD). Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
-- **Cross-Tenant support is not available**: Remember, you can't use Remote Help across different Microsoft Entra tenants. If your organization has multiple tenants or you support external clients, Remote Help won't function for those scenarios yet.
+- **Cross-Tenant support is not available**: Remember, you can't use Remote Help across different Microsoft Entra tenants.
   > [!NOTE]
-  > Lack of cross tenant support can affect outsourced helpdesk scenarios. Consider a scenario where your user's (sharers) device belongs to tenant A, but the helper's device belongs to tenant B (in the case where they're using a device issued by their outsourcing organization)  As a workaround, consider supplying devices joined to your tenant A to the helpdesk, or consider providing them with access to Windows 365 or AVD devices joined to tenant A.
+  > Lack of cross tenant support can affect outsourced helpdesk scenarios. Consider a scenario where your user's (sharers) device belongs to tenant A, but the helper's device belongs to tenant B (in the case where they're using a device issued by their outsourcing organization). As a workaround, consider supplying devices joined to your tenant A to the helpdesk, or consider providing them with access to Windows 365 or AVD devices joined to tenant A.
 - **Combine with Endpoint Analytics**: Use the data from Remote Help sessions to identify common issues. For example, if many sessions show compliance warnings, perhaps improve your device compliance policies. Remote Help's audit logs combined with Intune's Endpoint Analytics might give insights into support trends (like frequently problematic apps or policies).
 - **Keep the Remote Help apps up to date**: On Windows and Mac, new versions bring improvements and required fixes. Microsoft might enforce upgrades for older versions. Use autoupdate on both platforms (Windows Update, Mac via Microsoft AutoUpdate) or regularly push the latest package via Intune after testing. For Android, updates come through the Play Store automatically if you approved the app – monitor that devices are getting the latest version during your regular maintenance windows.
 - **Plan for Privacy and Compliance**: Remote Help can raise privacy questions. Assure stakeholders that Remote Help requires user consent and doesn't give IT silent access by default. All sessions are consensual and visibly indicated on the user's screen. No session recordings are stored in the service. These points can be included in your internal IT policies or user guides to address concerns. Unattended access on Android should be used sparingly.
@@ -68,11 +68,11 @@ The Remote Help app supports the following capabilities in general across the su
 
 - **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
 
-- **Compliance Warnings**: Before a helper connects to a user's non-compliant device, the helper will be shown a warning. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+- **Compliance Warnings**: Before a helper connects to a user's noncompliant device, the helper is shown a warning. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
 If the user's device that they're trying to connect to isn't enrolled, the helper sees a prompt that the user's device is unenrolled.
 
-- **Conditional Access**: Administrators can now utilize Conditional Access capability when setting up policies and conditions for Remote Help. For more information on setting up Conditional Access, go to [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
+- **Conditional Access**: Administrators can now utilize Conditional Access capability when setting up policies and conditions for Remote Help. For more information on setting up Conditional Access, go to [Setup Conditional Access for Remote Help](remote-help-deploy.md#set-up-conditional-access-for-remote-help).
 
 - **Role-based access control**: Admins can set RBAC rules that determine the scope of a helper's access, such as:
   - The users who can help others and the range of actions they can do while providing help. For example, who can run elevated privileges while helping.
@@ -86,13 +86,13 @@ If the user's device that they're trying to connect to isn't enrolled, the helpe
 
 ### Helper and client modes
 
-Remote Help clients support different modes based on the combination of the helper app and the sharer app. Windows, macOS, and Android have Remote Help apps that can be installed that enhance functionality. These Remote Help apps are sometimes referred to as a native app. Remote Help also supports sharing from devices with reduced capabilities from a web app.
+Remote Help clients support different modes based on the combination of the helper app and the sharer app. Windows, macOS, and Android have Remote Help apps that can be installed that enhance functionality. Remote Help apps are sometimes referred to as a native app. Remote Help also supports sharing from devices with reduced capabilities from a web app.
 
 These are the different modes:
 
 - **View only**: Request view of the remote screen. To minimize effect on end user privacy, this option is recommended unless full control is necessary.
 - **Request full control**: Request full control of the remote device.
-- **Elevation**: Allows helpers to enter UAC credentials when prompted on the sharer's device. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access.
+- **Elevation**: Allows helpers to enter User Account Control (UAC) credentials when prompted on the sharer's device. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access.
 - **Unattended**: Full control of the device without the presence of an end user.
 
 This table shows the mode support by helper app and sharer app.
@@ -136,7 +136,7 @@ General prerequisites that apply to Remote Help:
 - [Intune subscription](../fundamentals/licenses.md)
 - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.
 - [Supported platforms and devices](#supported-platforms)
-- To support Remote Help Intune-enrolled devices must be registered with Microsoft Entra.
+- Intune-enrolled devices must be registered with Microsoft Entra.
 
 ## Limitations
 
@@ -144,8 +144,8 @@ General prerequisites that apply to Remote Help:
 - Remote Help might not be available in all markets or localizations.
 - Remote Help is supported in Government Community Cloud (GCC) environments on the following platforms:
 
-  - Windows 10/11
-  - Windows 10/11 on ARM64 devices
+  - Windows
+  - Windows on ARM64 devices
   - Windows 365
   - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
   - macOS 13, 14, and 15
@@ -158,7 +158,7 @@ Each platform has specific prerequisites and capabilities.
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
-- Windows 10/11 x86, x64 and ARM64
+- Windows x86, x64, and ARM64
 - Windows 365
 - Azure Virtual Desktop
 
@@ -219,7 +219,7 @@ Device support is dependent on both the users operating system, and their web br
 
 #### Linux Versions
 
-Linux isn't supported by Remote Help. However, the Remote Help Web App might function for most Linux devices that are using a supported browser.
+Remote Help isn't supported on Linux. However, the Remote Help Web App might function for most Linux devices that are using a supported browser.
 
 ---
 
