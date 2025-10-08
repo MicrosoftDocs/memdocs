@@ -1,29 +1,13 @@
 ---
-# required metadata
-
 title: Enable eSIM data connections in Microsoft Intune
-description: Add or use eSIM to get internet and data access using different data plans. In Intune, add or import activation codes, and then assign these activation codes using a configuration profile. You can also monitor the eSIM profiles and check the status of the eSIM-enabled devices. 
+description: Add or use eSIM to get internet and data access using different data plans. In Intune, add or import activation codes, and then assign these activation codes using a configuration profile. You can also monitor the eSIM profiles and check the status of the eSIM-enabled devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/25/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: nicolezhao, hejimenez
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -35,8 +19,7 @@ For example, you have a cellular data plan for work, and another data plan with 
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 In Intune, you can bulk activate eSIM codes using the following options:
 
@@ -55,7 +38,11 @@ This article describes how to import the activation codes in bulk, and then depl
 To deploy eSIM to your devices using Intune, the following are needed:
 
 - **eSIM capable devices**, like the Surface LTE. To determine if your Windows device supports eSIM, go to [Use an eSIM to get a cellular data connection on your Windows PC](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). If you're unsure if your devices support eSIM, then you can also contact your device manufacturer.
-- A Windows device running **Windows 10 Fall creators update PC** (1709 or later)
+- A Windows device
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 - **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
 - The device must be enrolled and MDM managed by Intune. For information on the enrollment options for Windows devices, go to [Windows enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
@@ -195,9 +182,9 @@ When you remove the device from the Microsoft Entra group, the eSIM profile is a
 
 The eSIM profile is also removed when:
 
-- The device is [retired](../remote-actions/devices-wipe.md#retire).
+- The device is [retired](../remote-actions/device-retire.md).
 - The user unenrolls the device from Intune.
-- The [reset device remote action](../remote-actions/devices-wipe.md#wipe) runs on the device.
+- The [reset device remote action](../remote-actions/device-wipe.md) runs on the device.
 
 > [!NOTE]
 > Removing the profile might not stop billing. Contact your mobile operator to check the billing status for your device.

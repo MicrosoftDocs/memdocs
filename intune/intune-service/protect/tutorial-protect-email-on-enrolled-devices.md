@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Tutorial - Protect Exchange Online email on managed iOS devices
-titleSuffix: Microsoft Intune
 description: Learn to secure Exchange Online with iOS Intune compliance policies and Microsoft Entra Conditional Access to require managed devices and the Outlook app.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 07/18/2024
 ms.topic: tutorial
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: demerson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-device-compliance
 ---
@@ -50,7 +30,7 @@ Trial subscriptions help you avoid affecting a production environment with wrong
 This tutorial requires a test tenant with the following subscriptions:
 
 - Microsoft Intune Plan 1 subscription ([sign up for a free trial account](../fundamentals/free-trial-sign-up.md))
-- Microsoft Entra ID P1 ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+- Microsoft Entra ID P1 ([free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn))
 - Microsoft 365 Apps for business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## Sign in to Intune
@@ -71,9 +51,9 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Compliance**.  
+2. Select **Devices** > **Compliance**.
 3. On the **Policies** tab, choose **Create policy**.
-4. On the *Create a policy* page, for *Platform* select **iOS/iPadOS**. Select **Create** to continue.  
+4. On the *Create a policy* page, for *Platform* select **iOS/iPadOS**. Select **Create** to continue.
 
 5. On the **Basics** tab, enter the following properties:
 
@@ -115,7 +95,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
 ## Create the Conditional Access policy
 
-Next, use the Microsoft Intune admin center to create a Conditional Access policy. You integrate Conditional Access with Intune to help control the devices and apps that can connect to your organizations email and resources.  
+Next, use the Microsoft Intune admin center to create a Conditional Access policy. You integrate Conditional Access with Intune to help control the devices and apps that can connect to your organizations email and resources.
 
 The Conditional Access policy will:
 

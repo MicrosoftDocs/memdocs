@@ -1,23 +1,12 @@
 ---
 title: Guided scenario - Cloud-managed Modern Desktop
-titleSuffix: Microsoft Intune
 description: Learn about the guided scenario to set up and configure a basic Modern Desktop from the Microsoft 365 Device Management portal.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 04/17/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-
 ms.reviewer: dagerrit
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
 ---

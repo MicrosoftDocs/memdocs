@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Using Azure Virtual Desktop single-session with Microsoft Intune
-titleSuffix:
 description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Intune.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: laurawi
+author: MandiOhlinger
+ms.author: mandia
 ms.date: 02/13/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: madakeva
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -39,6 +19,10 @@ ms.collection:
 Currently, for single-session, Intune supports Azure Virtual Desktop VMs that are:
 
 - Running Windows 10 Enterprise, version 1809 or later, or running Windows 11.
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 - Set up as [personal remote desktops](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure.
 - [Microsoft Entra hybrid joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Intune in one of the following methods:
   - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are Microsoft Entra hybrid joined.
@@ -63,7 +47,7 @@ Cross-regional enrollments aren't supported, for example an Azure Virtual Deskto
 
 ### Configuration
 
-All VM limitations listed in [Using Windows 10 virtual machines](windows-10-virtual-machines.md) also apply to Azure Virtual Desktop VMs.
+All VM limitations listed in [Using Windows virtual machines](windows-10-virtual-machines.md) also apply to Azure Virtual Desktop VMs.
 
 Also, the following profiles aren't currently supported:
 
@@ -93,7 +77,7 @@ The following Windows 10 desktop device remote actions aren't supported/recommen
 
 ### Retirement
 
-Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
+Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../fundamentals/device-cleanup-rules.md) according to the cleanup rules configured for the tenant.
 
 ### Known issues
 

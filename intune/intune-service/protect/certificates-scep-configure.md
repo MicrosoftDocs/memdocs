@@ -1,28 +1,12 @@
 ---
 title: Configure infrastructure to support SCEP certificate profiles with Microsoft Intune
 description: To use Simple Certificate Enrollment Protocol (SCEP) with Microsoft Intune, configure your on-premises AD domain, create a certification authority, and set up the NDES server to support use of the Certificate Connector.
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 06/26/2023
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: lacranda
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: wicale
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -80,7 +64,7 @@ To support SCEP, the following on-premises infrastructure must run on servers th
 
 #### Support for NDES on the internet
 
-To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use a reverse proxy like *Microsoft Entra application proxy*, *Microsoft’s Web Application Proxy Server*, or a third-party reverse proxy service or device.
+To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use a reverse proxy like *Microsoft Entra application proxy*, *Microsoft's Web Application Proxy Server*, or a third-party reverse proxy service or device.
 
 - **Microsoft Entra application proxy** – You can use the Microsoft Entra application proxy instead of a dedicated Web Application Proxy (WAP) Server to publish your NDES URL to the internet. This solution allows both intranet and internet facing devices to get certificates. For more information, see [Integrate with Microsoft Entra application proxy on a Network Device Enrollment Service (NDES) server](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
 
@@ -131,7 +115,7 @@ The following certificates and templates are used when you use SCEP.
 
 > [!NOTE]
 >The following certificate is not used with the Certificate Connector for Microsoft Intune. This information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.
-> 
+>
 > |Object    |Details    |
 > |----------|-----------|
 > |**Client authentication certificate** | Requested from your issuing CA or public CA.<br /> You install this certificate on the computer that hosts the NDES service and it's used by the Certificate Connector for Microsoft Intune.<br /> If the certificate has the *client* and *server authentication* key usages set (**Enhanced Key Usages**) on the CA template that you use to issue this certificate, you can then use the same certificate for server and client authentication. |
@@ -141,21 +125,21 @@ For Android Enterprise, the version of encryption on a device determines whether
 
 - **Full-disk encryption**, which requires the device have a PIN configured.
 
-- **File-based encryption**, which is required on devices that are installed by the OEM with Android 10 or later. These devices won’t require a PIN. Devices that upgrade to Android 10 might still require a PIN.
+- **File-based encryption**, which is required on devices that are installed by the OEM with Android 10 or later. These devices won't require a PIN. Devices that upgrade to Android 10 might still require a PIN.
 
 > [!NOTE]
 >
-> Microsoft Intune can’t identify the type of encryption on an Android device.
+> Microsoft Intune can't identify the type of encryption on an Android device.
 
 The version of Android on a device can affect the available encryption type:
 
 - **Android 10 and later:** Devices installed with Android 10 or later by the OEM use file-based encryption and won't require a PIN for SCEP to provision a certificate. Devices that upgrade to version 10 or later and begin to use file-based encryption might still require a PIN.
 
-- **Android 8 to 9**: These versions of Android support the use of file-based encryption, but it’s not required. Each OEM chooses which encryption type to implement for a device. It’s also possible that OEM modifications will result in a PIN not being required even when full-disk encryption is in use.
+- **Android 8 to 9**: These versions of Android support the use of file-based encryption, but it's not required. Each OEM chooses which encryption type to implement for a device. It's also possible that OEM modifications will result in a PIN not being required even when full-disk encryption is in use.
 
-For more information, see the following articles in the Android documentation:  
+For more information, see the following articles in the Android documentation:
 
-- [File-Based Encryption](https://source.android.com/security/encryption/file-based)  
+- [File-Based Encryption](https://source.android.com/security/encryption/file-based)
 - [Full-Disk Encryption](https://source.android.com/security/encryption/full-disk)
 
 #### Considerations for devices enrolled as Android Enterprise dedicated
@@ -212,7 +196,7 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
      - For iOS/iPadOS and macOS certificate templates, also edit **Key Usage** and make sure **Signature is proof of origin** isn't selected.
 
-     ![Template, extensions tab](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
+     ![Template, extensions tab](./media/certificates-scep-configure/scep-ndes-extensions.jpg)
 
    - **Security**:
 
@@ -224,7 +208,7 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
    - **Request Handling**:
 
-     The following image is an example. Your configuration might vary.  
+     The following image is an example. Your configuration might vary.
 
      ![Template, request handling tab](./media/certificates-scep-configure/scep-ndes-request-handling.png)
 
@@ -278,13 +262,13 @@ On the server that hosts the certificate connector, use either the NDES server *
 
 ### Modify the validity period of the certificate template
 
-It's optional to modify the validity period of the certificate template.  
+It's optional to modify the validity period of the certificate template.
 
 After you [create the SCEP certificate template](#create-the-scep-certificate-template), you can edit the template to review the **Validity period** on the **General** tab.
 
 By default, Intune uses the value configured in the template, but you can configure the CA to allow the requester to enter a different value, so that value can be set from within the Microsoft Intune admin center.
 
-Plan to use a validity period of five days or greater. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed.
+Plan to use a validity period of five days or greater. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it's installed.
 
 > [!IMPORTANT]
 > For iOS/iPadOS and macOS, always use a value set in the template.
@@ -293,9 +277,9 @@ Plan to use a validity period of five days or greater. When the validity period 
 
 On the CA, run the following commands:
 
-   **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**  
-   **net stop certsvc**  
-   **net start certsvc**  
+   **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
+   **net stop certsvc**
+   **net start certsvc**
 
 ## Publish certificate templates
 
@@ -333,12 +317,12 @@ For more information about NDES, see [Network Device Enrollment Service Guidance
       - **Management Tools** > **IIS 6 Management Compatibility** > **IIS 6 WMI Compatibility**
       - On the server, add the NDES service account as a member of the local **IIS_IUSRS** group.
 
-2. Configure a service principal name (SPN) in Active Directory, if necessary. For information about how to set the SPN, see [Verify if it's necessary to set a service principal name for NDES](/windows-server/identity/ad-cs/create-domain-user-account-ndes-service-account).  
+2. Configure a service principal name (SPN) in Active Directory, if necessary. For information about how to set the SPN, see [Verify if it's necessary to set a service principal name for NDES](/windows-server/identity/ad-cs/create-domain-user-account-ndes-service-account).
 
-### Configure the NDES service  
+### Configure the NDES service
 
 To configure the NDES service, use an account that is an *Enterprise Administrator*.
- 
+
 1. On the computer that hosts the NDES service, open the **AD CS Configuration** wizard, and then make the following updates:
 
    > [!TIP]
@@ -373,7 +357,7 @@ To configure the NDES service, use an account that is an *Enterprise Administrat
    ![Test NDES](./media/certificates-scep-configure/scep-ndes-url.png)
 
    If the web address returns a **503 Service unavailable**, check the computers event viewer. This error commonly occurs when the application pool is stopped due to a missing [permission for the NDES service account](#accounts).
-  
+
 ### Install and bind certificates on the server that hosts NDES
 
 On the NDES server, add a **Server authentication certificate**.
@@ -385,7 +369,7 @@ On the NDES server, add a **Server authentication certificate**.
 
   1. Request a **server authentication** certificate from your internal CA or public CA, and then install the certificate on the server.
 
-     Depending how you expose your NDES to the internet, there are different requirements. 
+     Depending how you expose your NDES to the internet, there are different requirements.
 
      A good configuration is:
 
@@ -408,7 +392,7 @@ On the NDES server, add a **Server authentication certificate**.
 
 
 > [!NOTE]
-> When configuring NDES for the Certificate Connector for Microsoft Intune , only the Server authentication certificate is used. If you're configuring NDES to support the older certificate connector (NDESConnectorSetup.exe), you must also configure a *Client authentication certificate*. You can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses. 
+> When configuring NDES for the Certificate Connector for Microsoft Intune , only the Server authentication certificate is used. If you're configuring NDES to support the older certificate connector (NDESConnectorSetup.exe), you must also configure a *Client authentication certificate*. You can use a single certificate for both *server authentication* and *client authentication* when that certificate is configured to meet the criteria of both uses.
 > Regarding the Subject Name, it must meet the *client authentication* certificate requirements.
 >
 > The following information is provided for those who have not yet replaced the older connector for SCEP (installed by NDESConnectorSetup.exe) with the new connector software.
@@ -456,11 +440,11 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 > [!NOTE]
 > The following changes must be made for GCC High tenants prior to launching the Microsoft Intune Connector.
-> 
+>
 > Make edits to the two config files listed below which will update the service endpoints for the GCC High environment. Notice that these updates change the URIs from **.com** to **.us** suffixes. There are a total of three URI updates, two updates within the NDESConnectorUI.exe.config configuration file, and one update in the NDESConnector.exe.config file.
-> 
+>
 > - File Name: <install_Path>\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config
-> 
+>
 >   Example: (%programfiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config)
 >   ```
 >    <appSettings>
@@ -469,7 +453,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 >        <add key="AccountPortalURL" value="https://manage.microsoft.us"/>
 >    </appSettings>
 >   ```
-> 
+>
 > - File Name: <install_Path>\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config
 >
 >   Example: (%programfiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config)
@@ -488,15 +472,15 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 7. In the **Certificate Connector** UI:
 
-   1. Select **Sign In**, and enter your Intune service administrator credentials, or credentials for a tenant administrator with the global administration permission.
+   1. Select **Sign In**, and enter your Intune Administrator credentials.
 
    2. The account you use must be assigned a valid Intune license.
 
-   3. After you sign in, the Microsoft Intune Connector downloads a certificate from Intune. This certificate is used for authentication between the connector and Intune. If the account you used doesn't have an Intune license, the connector (NDESConnectorUI.exe) fails to get the certificate from Intune.  
+   3. After you sign in, the Microsoft Intune Connector downloads a certificate from Intune. This certificate is used for authentication between the connector and Intune. If the account you used doesn't have an Intune license, the connector (NDESConnectorUI.exe) fails to get the certificate from Intune.
 
       If your organization uses a proxy server and the proxy is needed for the NDES server to access the Internet, select **Use proxy server**. Then enter the proxy server name, port, and account credentials to connect.
 
-   4. Select the **Advanced** tab, and then enter credentials for an account that has the **Issue and Manage Certificates** permission on your issuing Certificate Authority. **Apply** your changes.  
+   4. Select the **Advanced** tab, and then enter credentials for an account that has the **Issue and Manage Certificates** permission on your issuing Certificate Authority. **Apply** your changes.
 
     5. You can now close the Certificate Connector UI.
 
@@ -511,4 +495,4 @@ To validate that the service is running, open a browser, and enter the following
 
 ## Next steps
 
-[Create a SCEP certificate profile](certificates-profile-scep.md)  
+[Create a SCEP certificate profile](certificates-profile-scep.md)

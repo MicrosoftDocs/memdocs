@@ -1,32 +1,12 @@
 ---
-# required metadata
-
-title: Optional diagnostic data that is collected by Intune client apps 
-titleSuffix: Microsoft Intune
+title: Optional diagnostic data that is collected by Intune client apps
 description: Learn about the optional diagnostic data that Intune Client apps collect.
-keywords: privacy, personal data
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 04/08/2022
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: angerobe
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - sub-data-privacy
@@ -98,7 +78,7 @@ The data do not include any customer information, like:
 
 - Device name
 - Phone number
-- Contents to the user’s files or photo.
+- Contents to the user's files or photo.
 
 ## Turn off data collection
 

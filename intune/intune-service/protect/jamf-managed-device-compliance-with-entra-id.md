@@ -1,31 +1,12 @@
 ---
-# Required metadata
-
 title: Jamf Managed Device Compliance with Microsoft Entra ID
-titleSuffix: Microsoft Intune
-description: Integrate Jamf Pro with Microsoft Intune to report device compliance to Microsoft Entra ID. 
+description: Integrate Jamf Pro with Microsoft Intune to report device compliance to Microsoft Entra ID.
 author: jeffducasse
 ms.author: lanewsad
-manager: dougeby
 ms.date: 09/12/2023
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
-#audience:
-
 ms.reviewer: jeffducasse
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - conditional-access
 - sub-mtd-apps
@@ -53,26 +34,26 @@ The process to establish integration between Jamf Pro and Microsoft Intune is ev
 - Configure the Intune Connector.
 - Prepare Microsoft Entra ID required components.
 
-## Account permissions 
+## Account permissions
 
 To complete the procedures in this article, you must have:
 
-- A Jamf Pro user account with device compliance privileges or a Jamf Pro administrator account. 
+- A Jamf Pro user account with device compliance privileges or a Jamf Pro administrator account.
 
-- A Microsoft Entra account, assigned a role with sufficient permissions. Available built-in roles include:   
+- A Microsoft Entra account, assigned a role with sufficient permissions. Available built-in roles include:
 
-  - Intune Administrator - This role can perform all steps in this article. 
+  - Intune Administrator - This role can perform all steps in this article.
 
     >[!TIP]
     > The Intune Administrator is a highly privileged role with full access in Microsoft Intune. When you delegate roles to other accounts, consider assigning a built-in role with fewer privileges.
-  
+
   - Groups Administrator - This role can create the required device groups.
-    
-  - Conditional Access Administrator - This role can create and update the Microsoft Entra Conditional Access policies that enable user-device registration. 
-    
+
+  - Conditional Access Administrator - This role can create and update the Microsoft Entra Conditional Access policies that enable user-device registration.
+
   - Application Administrator - This role can create apps that communicate with JAMF about the device compliance state.
 
-  For more information about these roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).  
+  For more information about these roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
 <a name='common-questions-about-jamf-pro-integration-with-entra-id'></a>
 

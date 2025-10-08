@@ -1,34 +1,14 @@
 ---
-# required metadata
-
-title: Prepare apps for mobile application management with Microsoft Intune
+title: Prepare Apps for Mobile Application Management With Microsoft Intune
 description: The information in this topic helps you decide when you should use the App wrapping tool and the App SDK to enable your custom line-of-business apps to use the mobile app management policies.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 11/18/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Prepare line-of-business apps for app protection policies
+# Prepare Line-of-Business Apps for App Protection Policies
 
 You can enable your apps to use app protection policies by using either the Intune App Wrapping Tool or the Intune App SDK. Use this information to learn about these two methods and when to use them.
 
@@ -73,7 +53,7 @@ The Intune SDK development team actively tests and maintains support for apps bu
 
 ## Feature comparison
 
-This table lists the settings that are enabled if an app uses the App SDK or the App Wrapping Tool. Some features require app developers to apply some logic outside of basic integration with the Intune SDK, and as such, are not enabled if the app uses the App Wrapping Tool. 
+This table lists the settings that are enabled if an app uses the App SDK or the App Wrapping Tool. Some features require app developers to apply some logic outside of basic integration with the Intune SDK, and as such, are not enabled if the app uses the App Wrapping Tool.
 
 |Feature|App SDK|App Wrapping Tool|
 |-----------|---------------------|-----------|
@@ -101,7 +81,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Targeted Application Configuration (or app config through the "MAM channel")|X||
 |Support for Multi-Identity|X||
 |Customizable Style |X||
-|On-demand application VPN connections with Citrix mVPN|X|X| 
+|On-demand application VPN connections with Citrix mVPN|X|X|
 |Disable contact sync|X|X|
 |Disable printing|X|X|
 |Require minimum app version|X|X|

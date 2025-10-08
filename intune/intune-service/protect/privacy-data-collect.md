@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Data collection in Intune
-titleSuffix: Microsoft Intune
 description: Learn about personal data collected in Intune.
-keywords: privacy, personal data
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.date: 04/07/2025
+author: paolomatarazzo
+ms.author: paoloma
+ms.date: 06/25/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: d1171740-936d-46a5-af37-f418bd6fa63e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: demerson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: bradyw
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - sub-data-privacy
@@ -41,7 +21,7 @@ When users enroll their corporate or personal devices with Intune, Intune collec
 - Customer accounts at third party services (per admin's instructions).
 - Diagnostic, performance, and usage information.
 
-From these sources, Intune collects information that falls into the following two categories: [required](#required-data), [optional](#optional-data). Each category is divided into customer data, personal data, diagnostic data, and service-generated data.
+From these sources, Intune collects information that falls into the following two categories: **[required](#required-data)** and **[optional](#optional-data)**.
 
 > [!NOTE]
 > We don't sell any data collected by our service to any third parties for any reason.
@@ -146,7 +126,7 @@ Your organization might enable optional features within Intune which enable coll
   When a customer enables Device query, the admin can query device details such as File Name and File Path. For a complete list of data, see [Intune data platform schema](../../analytics/data-platform-schema.md).
 
 - Enhanced device inventory
-  
+
   When a customer enables enhanced device inventory, the admin can see non-sensitive device details such as CPU, disk drive, and memory info. For a complete list of data, see [Intune data platform schema](../../analytics/data-platform-schema.md).
 
 Customers can control the collection of pseudonymized diagnostics and telemetry data from Intune components installed on their devices. We think there are compelling reasons for people to share this optional data as it helps Microsoft improve the reliability and performance of its products and we understand the importance of providing users the opportunity to make these choices for themselves.
@@ -174,6 +154,6 @@ For more information, see [Getting started enrolling devices](../fundamentals/de
 
 For more information on the data types and definition, see [How Microsoft categorizes data for online services](https://www.microsoft.com/trust-center/privacy/customer-data-definitions).
 
-## Next steps
+## Related content
 
 Learn more about how Intune [stores and processes](privacy-data-store-process.md) and [shares](privacy-data-secure-share.md) personal data.

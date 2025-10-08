@@ -1,35 +1,15 @@
 ---
-# required metadata
-
-title: Overview of the app lifecycle for Microsoft Intune
+title: Overview of the App Lifecycle for Microsoft Intune
 description: Learn about the managed apps lifecycle in Microsoft Intune. The app lifecycle involves adding, deploying, configuring, protecting, and retiring apps.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 11/18/2024
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 60347012-bc3f-4b9a-a4f4-6d3c5021a6e6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: apps; get-started
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
-# Overview of the app lifecycle in Microsoft Intune
+# Overview of the App Lifecycle in Microsoft Intune
 
 The Microsoft Intune app lifecycle begins when an app is added and progresses through additional phases until you remove the app. By understanding these phases, you'll have the details you need to get started with app management in Intune.
 

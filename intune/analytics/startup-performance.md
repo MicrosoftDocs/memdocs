@@ -1,15 +1,8 @@
 ---
 title: Startup performance in Endpoint Analytics
-titleSuffix: Microsoft Intune
 description: Get details about device startup performance in Endpoint Analytics
 ms.date: 04/08/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: article
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.localizationpriority: high
 ---
 
 # <a name="bkmk_bp"></a> Startup performance

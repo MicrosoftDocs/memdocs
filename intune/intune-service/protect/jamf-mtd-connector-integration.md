@@ -1,32 +1,12 @@
 ---
-# required metadata
-
-title: Set up Jamf Mobile Threat Protection integration with Intune
-titleSuffix: Intune on Azure
+title: Set up Jamf Mobile Threat Protection integration with Microsoft Intune
 description: How to set up the Jamf Mobile Threat Protection solution with Microsoft Intune to control mobile device access to your corporate resources.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 06/18/2024
+ms.date: 06/30/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:  
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: aanavath
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -40,21 +20,20 @@ Complete the following steps to integrate the Jamf Mobile Threat Defense solutio
 Before you start the process to integrate Jamf with Intune, make sure you have the following prerequisites in place:
 
 - Microsoft Intune Plan 1 subscription
-- Microsoft Entra administrator credentials and assigned role that is able to grant the following permissions:
 
+- Microsoft Entra administrator credentials and assigned role that is able to grant the following permissions:
   - Sign in and read user profile
   - Access the directory as the signed-in user
   - Read directory data
   - Send device risk information to Intune
 
-- A valid Jamf Security Cloud subscription
-  - An administrator account with super admin privileges
+- A valid Jamf Security Cloud subscription, including an administrator account with super admin privileges
 
 ## Integration overview
 
 Enabling Mobile Threat Defense integration between Jamf and Intune entails:
 
-- Enabling Jamf's UEM Connect service to synchronize information with Azure and Intune. Synchronization includes user and device Life Cycle Management (LCM) metadata, along with Mobile Threat Defense (MTD) device threat level.
+- Enabling Jamf's UEM Connect service to synchronize information with Entra and Intune. Synchronization includes user and device Life Cycle Management (LCM) metadata, along with Mobile Threat Defense (MTD) device threat level.
 - Create Activation Profiles in Jamf to define device enrollment behavior.
 - Deploy the Jamf Trust app to managed iOS and Android devices.
 - Configure Jamf for end user self-service using MAM on iOS and Android devices.
@@ -67,11 +46,11 @@ Setting up integration between Jamf and Intune doesn't require any support from 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > **Add**.
+2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > **Create**.
 
-3. On the **Add Connector** page, use the dropdown and select **Jamf**. And then select **Create**.
+3. On the **Add Connector** page, use the dropdown and select **Jamf Trust** to load the Jamf connector configuration options.
 
-4. On the Mobile Threat Defense pane, select the **Jamf** MTD Connector from the list of connectors to open the **Edit connector** pane. Select **Open the Jamf admin console** to open Jamf Security Cloud portal, and sign in.
+4. For the first step, select **Open the Jamf Trust admin console** to open Jamf Security Cloud portal, and sign in.
 
 5. In the Jamf Security Cloud portal, go to **Integrations > UEM Integration**, and select the **UEM Connect** tab. Use the EMM Vendor drop-down and select **Microsoft Intune**.
 
@@ -79,9 +58,9 @@ Setting up integration between Jamf and Intune doesn't require any support from 
 
    :::image type="content" source="./media/jamf-mtd-connector-integration/integrations-and-permissions.png" alt-text="Screen shot of the integrations and permissions for Jamf.":::
 
-7. Next to Microsoft Intune User and Device Sync, select the **Grant** button to start the process to provide consent for Jamf to perform Life Cycle Management (LCM) functions with Azure and Intune.
+7. Next to Microsoft Intune User and Device Sync, select the **Grant** button to start the process to provide consent for Jamf to perform Life Cycle Management (LCM) functions with Entra and Intune.
 
-8. When prompted, select or enter your Azure admin credentials. Review the requested permissions, then select the checkbox to Consent on behalf of your organization. Finally, select Accept to authorize the LCM integration.
+8. When prompted, select or enter your Entra admin credentials. Review the requested permissions, then select the checkbox to Consent on behalf of your organization. Finally, select Accept to authorize the LCM integration.
 
    :::image type="content" source="./media/jamf-mtd-connector-integration/permissions.png" alt-text="Screen shot of the permissions that you accept.":::
 
@@ -101,7 +80,7 @@ Intune-based deployments are facilitated using Jamf Activation Profiles defined 
 
 After creating an Activation Profile in Jamf, you assign it to users and devices in Intune. While an Activation Profile is universal across device platforms and management strategies, the following steps define how to configure Intune based upon these differences.
 
-The steps from here assume you created an Activation Profile in Jamf that you would like to deploy via Intune to your target devices. For more information about creating and using Jamf Activation Profiles, see [Activation Profiles](https://learn.jamf.com/en-US/bundle/jamf-security-documentation/page/Activation_Profiles.html) in the Jamf Security Documentation.
+The steps from here assume you created an Activation Profile in Jamf that you would like to deploy via Intune to your target devices. For more information about creating and using Jamf Activation Profiles, see [Activation Profiles](https://learn.jamf.com/bundle/jamf-security-cloud-setup-guide/page/Activation_Profiles.html) in the Jamf Security Cloud Portal Setup Guide.
 
 > [!NOTE]
 >
@@ -112,15 +91,15 @@ The steps from here assume you created an Activation Profile in Jamf that you wo
 For iOS and Android devices that you manage with Intune, Jamf can deploy over-the-air for rapid push-based activations. Be sure you already created the Activation Profiles you need before proceeding with this section. Deploying Jamf to managed devices involves:
 
 - Adding Jamf configuration profiles to Intune and assigning to target devices.
-- Adding the Jamf trust app and respective app configurations to Intune and assigning to target devices.
+- Adding the Jamf Trust app and respective app configurations to Intune and assigning to target devices.
 
 ### Configure and deploy iOS configuration profiles
 
 In this section, you download **required** iOS device configuration files and then deliver them over-the-air via MDM to your Intune managed devices.
 
-1. In Jamf Security Cloud portal, navigate to the Activation Profile you want to deploy (Devices > Activations), then select the **Deployment Strategies** tab > **Managed Devices** > **Microsoft Intune**.
+1. In Jamf Security Cloud portal, navigate to the Activation Profile you want to deploy (Devices > Activation profiles), then select **Microsoft Intune** under **Select your UEM solution**.
 
-2. Expand the **Apple iOS Supervised** or **Apple iOS Unsupervised** sections based upon your device fleet configuration.
+2. Select  **iOS and iPadOS supervised** or **iOS and iPadOS unsupervised** under **Select your OS** based upon your device fleet configuration.
 
 3. Download the provided configuration profile and prepare to upload them in a later step.
 
@@ -148,11 +127,11 @@ For unenrolled devices with MAM managed applications, Jamf utilizes an integrate
 
 The following sections describe how to configure Jamf and Intune to enable end users to seamlessly activate Jamf before being able to access company data.
 
-### Configure Azure Device Provisioning in a Jamf Activation Profile
+### Configure Entra Device Provisioning in a Jamf Activation Profile
 
 Activation Profiles to be used with MAM must have Associated User set to the Authenticated by Identity Provider > Microsoft Entra option.
 
-1. In the Jamf Security Cloud portal, select an existing, or create a new, Activation Profile that unenrolled devices with MAM managed applications use during enrollment in Devices > Activations.
+1. In the Jamf Security Cloud portal, select an existing, or create a new, Activation Profile that unenrolled devices with MAM managed applications use during enrollment in Devices > Activation profiles.
 
 2. Select the **Identity-based provisioning** tab, and then scroll to the Microsoft section.
 
@@ -161,7 +140,7 @@ Activation Profiles to be used with MAM must have Associated User set to the Aut
 4. Choose to confirm the current selection of the **Everyone (any group)** option, or select **Specific groups** and then add **group IDs** to limit user activations to only those groups.
 
    - If one or more **group IDs** are defined, a user activating MAM must be a member of at least one of the specified groups to activate using this Activation Profile.
-   - You can set up multiple Activation Profiles for the same Azure Tenant ID, with each using a different group ID. Use of different group IDs allows you to enroll devices into Jamf based upon Azure group membership, enabling differentiated capabilities by group at activation time.
+   - You can set up multiple Activation Profiles for the same Entra Tenant ID, with each using a different group ID. Use of different group IDs allows you to enroll devices into Jamf based upon Entra group membership, enabling differentiated capabilities by group at activation time.
    - You can configure a single "default" Activation Profile that doesn't specify any Group IDs. This group serves as a catch-all for all activations in which the authenticated user isn't a member of a group with an association to another Activation Profile.
 
 5. Select **Save** in the upper-right corner of the page.
@@ -169,4 +148,4 @@ Activation Profiles to be used with MAM must have Associated User set to the Aut
 ## Next Steps
 
 - With Jamf Activation Profiles loaded in the Jamf Security Cloud portal, create client apps in Intune to deploy the Jamf Trust app to Android and iOS/iPadOS devices. The Jamf app config provides essential functionality to complement device configuration profiles that are pushed to devices, and is recommended for all deployments. See [Add MTD apps](mtd-apps-ios-app-configuration-policy-add-assign.md) for the procedures and custom details specific to the Jamf apps.
-- With Jamf integrated with Intune, you can tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Support Center Getting Started Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/getting-started) in the Jamf documentation.
+- With Jamf integrated with Intune, you can tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Jamf Security Cloud Portal Setup Guide](https://learn.jamf.com/bundle/jamf-security-cloud-setup-guide/page/RADAR_Portal.html) from Jamf.

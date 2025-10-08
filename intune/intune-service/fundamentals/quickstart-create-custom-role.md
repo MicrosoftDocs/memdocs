@@ -1,29 +1,13 @@
 ---
-# required metadata
-
 title: Create and assign a custom role in Intune
 description: Create and assign a custom role for a remote device manager.
 services: microsoft-intune
-author: Smritib17
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
+author: BrenDuns
+ms.author: brenduns
 ms.topic: how-to
 ms.date: 03/26/2019
-ms.author: smbhardwaj
-ms.assetid: 0b3ac749-4a61-4717-bf08-e0e6a15c3b0a
-# optional metadata
 
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -41,7 +25,12 @@ If you don't have an Intune subscription, [sign up for a free trial account](fre
 
 ## Sign in to Intune
 
-Sign in to [Intune](https://aka.ms/intuneportal). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.
+
+If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+
+> [!CAUTION]
+> [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Create a custom role
 

@@ -6,8 +6,8 @@ ms.date: 01/14/2020
 ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart
@@ -310,7 +310,7 @@ These settings are only for devices running Windows 10 Team.
 - **Maintenance Window**: Enable this setting to configure the window when updates can install and restart the device.
   - **Start time**: Set the start time for the maintenance window.
   - **Duration (Hours)**: Set the length in hours of the maintenance window.
-- **Azure Operational Insights**: Allow [Azure Operational Insights](https://azure.microsoft.com/resources/videos/azure-operational-insights-overview/) to collect, store, and analyze log file data from Windows 10 Team devices.
+- **Azure Operational Insights**: Allow [Azure Operational Insights](https://www.youtube.com/watch?v=bRftuwXXkbg) to collect, store, and analyze log file data from Windows 10 Team devices.
   - **Workspace ID**: Enter a valid workspace ID
   - **Workspace Key**: Enter the key for the associated workspace
 - **Miracast wireless projection**: Allow Miracast-enabled devices to project to this Windows 10 Team device.

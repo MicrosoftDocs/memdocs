@@ -1,28 +1,12 @@
 ---
-# required metadata
-
 title: Licenses available for Microsoft Intune
 description: Intune is available with these licenses
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 05/09/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: amsaeedi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -81,7 +65,7 @@ Intune Plan 1 for Education is included in the following licenses:
 
 ## Licensing for Configuration Manager-managed devices in Intune
 
-For existing Configuration Manager-managed devices to enroll into Intune for co-management at scale without user interaction, co-management uses a Microsoft Entra feature called Windows 10 auto-enrollment. Auto-enrollment with co-management requires licenses for both Microsoft Entra ID P1 or P2 (AADP1) and Microsoft Intune Plan 1. Starting on December 1, 2019, you no longer need to assign individual Intune licenses for this scenario. Microsoft Intune now includes the Intune licenses for co-management. The separate AADP1 licensing requirement remains the same for this scenario to work. You still need to assign Intune licenses for other enrollment scenarios.
+For existing Configuration Manager-managed devices to enroll into Intune for co-management at scale without user interaction, co-management uses a Microsoft Entra feature called auto-enrollment. Auto-enrollment with co-management requires licenses for both Microsoft Entra ID P1 or P2 (AADP1) and Microsoft Intune Plan 1. Starting on December 1, 2019, you no longer need to assign individual Intune licenses for this scenario. Microsoft Intune now includes the Intune licenses for co-management. The separate AADP1 licensing requirement remains the same for this scenario to work. You still need to assign Intune licenses for other enrollment scenarios.
 
 ## Additional information
 

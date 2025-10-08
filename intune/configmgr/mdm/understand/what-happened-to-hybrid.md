@@ -6,8 +6,8 @@ ms.date: 12/30/2019
 ms.subservice: other
 ms.service: configuration-manager
 ms.topic: article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart
@@ -67,7 +67,7 @@ The following note is the original deprecation announcement:
 >
 > **What do I need to do to prepare for this change?**
 >
-> - Start planning your migration for MDM from the ConfigMgr console to Azure. Many customers, including Microsoft IT, have gone through this process. For more information, see this [Microsoft case study](https://aka.ms/Intune_MSFT).
+> - Start planning your migration for MDM from the ConfigMgr console to Azure. Many customers, including Microsoft IT, have gone through this process.
 >
 > - Contact your partner of record or FastTrack for assistance. [FastTrack for Microsoft 365](https://aka.ms/hybrid_fasttrack) can assist in your migration from hybrid MDM to Intune on Azure.
 >

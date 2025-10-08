@@ -1,32 +1,14 @@
 ---
-# required metadata
-
 title: Manage firewall settings with endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Configure and deploy policies for devices you manage with endpoint security firewall policy in Microsoft Intune. 
-keywords:
+description: Configure and deploy policies for devices you manage with endpoint security firewall policy in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 09/18/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
-
 ms.reviewer: laarrizz
 
 ---
@@ -41,10 +23,12 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 ## Prerequisites for Firewall profiles
 
-- Windows 10
-- Windows 11
+- Windows
 - Windows Server 2012 R2 or later *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 - Any supported version of macOS
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!IMPORTANT]
 >
@@ -61,6 +45,8 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 For guidance on assigning the right level of permissions and rights to manage Intune firewall policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Firewall profiles
+
+Find guidance for creating endpoint security profiles at [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy).
 
 ### Devices managed by Intune
 
@@ -86,7 +72,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
   > [!TIP]
   >
-  > Use of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information, see the following Windows Defender articles:  
+  > Use of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information, see the following Windows Defender articles:
   > - [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
   > - [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
 
@@ -96,8 +82,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 In public preview, Windows Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
 
-- Windows 10
-- Windows 11
+- Windows
 
 The following firewall rule profile settings are available in reusable settings groups:
 
@@ -138,7 +123,11 @@ When rules from multiple rules profiles don't conflict with each other, devices 
 
 The reports for Firewall policy display status details about the firewall status for your managed devices. Firewall reports support managed devices that run the following operating systems.
 
-- Windows 10/11
+- Windows
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 ### Summary
 
@@ -149,7 +138,7 @@ This view provides:
 - An aggregate count of devices that have the firewall turned off.
 - A list of your Firewall policies, including the name, type, if it's assigned, and when it was last modified.
 
-### MDM devices running Windows 10 or later with firewall off
+### MDM devices running Windows with firewall off
 
 This report is located in the Endpoint security node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** > **MDM devices running Windows 10 or later with firewall off**.
 
@@ -164,11 +153,11 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Off](media/endpoint-security-firewall-policy/firewall-off-report.png)
 
-### MDM Firewall status for Windows 10 and later
- 
+### MDM Firewall status for Windows
+
 *This organizational report is also described in [Intune Reports](../fundamentals/reports.md#mdm-firewall-status-for-windows-10-and-later-organizational)*.
 
-As an organizational report, this report is available from the **Reports** node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** > **MDM Firewall status for Windows 10 and later**.
+As an organizational report, this report is available from the **Reports** node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** > **MDM Firewall status for Windows**.
 
 > [!div class="mx-imgBorder"]
 > ![Select firewall reports](media/endpoint-security-firewall-policy/select-firewall-reports.png)

@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Intune classic groups in the Azure portal
-titleSuffix: Microsoft Intune
 description: Learn what's new with groups in the Microsoft Intune Azure portal.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: laurawi
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 03/31/2019
 ms.topic: archived
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: scottduf
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

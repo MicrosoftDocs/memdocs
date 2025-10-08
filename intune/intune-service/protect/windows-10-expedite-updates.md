@@ -1,38 +1,22 @@
 ---
-# required metadata
-
 title: Use Intune to expedite Windows quality updates
 description: Use Microsoft Intune policy to expedite the installation of Windows updates on managed devices as soon as possible.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 02/20/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.localizationpriority: high
-ms.subservice: protect
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davguy;bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - sub-updates
 ---
 
 # Expedite Windows quality updates in Microsoft Intune
 
-With *Quality updates for Windows 10 and Later* policy, you can expedite the installation of the most recent Windows 10/11 security updates on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly update policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn't deploy the update for some time.
+With *Quality updates for Windows 10 and Later* policy, you can expedite the installation of the most recent Windows security updates on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly update policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn't deploy the update for some time.
 
-Not all updates can be expedited. Currently, only Windows 10/11 security updates that can be expedited are available to deploy with Quality updates policy. To manage regular monthly quality updates, use [Update rings for Windows 10 and later policies](windows-10-update-rings.md).
+Not all updates can be expedited. Currently, only Windows security updates that can be expedited are available to deploy with Quality updates policy. To manage regular monthly quality updates, use [Update rings for Windows 10 and later policies](windows-10-update-rings.md).
 
 ## How expedited updates work
 
@@ -42,7 +26,7 @@ Expedited update policies temporarily override deferrals and other settings to i
 
 The actual time required for a device to start an update depends on the device internet connectivity, its scan timing, whether communication channels to the device are functioning, and other factors like cloud-processing time.
 
-- For each expedited update policy, you select a single update to deploy based on its release date. By using the release date, you don't have to create separate policies to deploy different instances of that update to devices that have different versions of Windows, like Windows 10 version 1809, 1909, and so on.
+- For each expedited update policy, you select a single update to deploy based on its release date. By using the release date, you don't have to create separate policies to deploy different instances of that update to devices that have different versions of Windows.
 
 - Windows Update evaluates the build and architecture of each device, and then delivers the version of the update that applies.
 
@@ -74,8 +58,8 @@ The following are requirements to qualify for installing expedited quality updat
 
 In addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Autopatch:
 
-- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access E3 or E5
 - Microsoft 365 Business Premium
 
@@ -83,9 +67,9 @@ Beginning in November of 2022, the Windows Autopatch license will be checked and
 
 If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
-**Supported Windows 10/11 versions**:
+**Supported Windows versions**:
 
-- Windows 10/11 versions that remain in support for Servicing, on x86 or x64 architecture
+- Windows versions that remain in support for Servicing, on x86 or x64 architecture
 
 Only update builds that are generally available are supported. Preview builds, including the Beta and Dev channels, are not supported with expedited updates.
 
@@ -111,7 +95,7 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Be configured to get Quality Updates directly from the Windows Update service.
 
-- Have the *Update Health Tools* installed, which are installed with [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a) or manually from [Microsoft Download - Update Health Tools](https://www.microsoft.com/en-us/download/details.aspx?id=103324).
+- Have the *Update Health Tools* installed, which are installed with [KB 4023057](https://support.microsoft.com/topic/fccad0ca-dc10-2e46-9ed1-7e392450fb3a) or manually from [Microsoft Download - Update Health Tools](https://www.microsoft.com/download/details.aspx?id=103324).
 
 > [!NOTE]
 > Windows 11, version 24H2 and above cannot apply *KB 4023057*, this is applicable only to Windows 11, version 23H2 and below. Upgrading to 24H2 removes *KB 4023057*, so checking for KB installation is no longer needed.
@@ -161,7 +145,7 @@ Before you can monitor results and update status for expedited updates, your Int
 
 Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for additional capabilities that are not supported for WPJ devices.
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows software updates in Intune*.
 
 ## Create and assign an expedited quality update
 
@@ -190,7 +174,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
    - Updates that include the letter **B** in their name identify updates that released as part of a *patch Tuesday* event. The letter B identifies that the update released on the second Tuesday of the month.
 
-   - Security updates for Windows 10/11 that release out of band from a *patch Tuesday* can be expedited. Instead of the letter B, *out-of-band* patch releases have different identifiers.
+   - Security updates for Windows that release out of band from a *patch Tuesday* can be expedited. Instead of the letter B, *out-of-band* patch releases have different identifiers.
 
    - When the update deploys, Windows Update ensures that each device that receives the policy installs a version of the update that applies to that devices architecture and its current Windows version, like version 1809, 2004, and so on.
 
@@ -201,7 +185,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
    - Non-security updates are only shown when it is the most recent release. The drop-down list is updated to display the most recent two security updates, including if one is an out-of-band update. If the most recent non-security update is newer than the newest security update, then the non-security update is also included in the drop-down list. As a result, sometimes two updates are shown, and at other times, three updates are shown.
 
      > [!TIP]
-     > For more information, see the blog [Windows 10 update servicing cadence - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-10-update-servicing-cadence/ba-p/222376).
+     > For more information, see the blog [Windows update servicing cadence - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-10-update-servicing-cadence/ba-p/222376).
 
    - The non-security expedite updates apply to Windows 11 devices. If Windows 10 devices are assigned to an Expedite policy that sets a **D** release, then those devices are not expedited and show an alert in the following reports.
      - **Reports** > **Windows Updates** > **Reports** Tab > **Windows Expedited Update Report**
@@ -245,13 +229,13 @@ While expedite update policies will override an update deferral for the update v
 
 The following sequence of events provides an example of how two devices, named *Test-1* and *Test-2*, install an update based on a *Quality updates for Windows 10 and Later* policy that's assigned to the devices.
 
-1. Each month, Intune administrators deploy the most recent Windows 10 quality updates on the fourth Tuesday of the month. This period gives them two weeks after the patch Tuesday event to validate the updates in their environment before they force installation of the update.
+1. Each month, Intune administrators deploy the most recent Windows quality updates on the fourth Tuesday of the month. This period gives them two weeks after the patch Tuesday event to validate the updates in their environment before they force installation of the update.
 
-2. On January 19, 2021, device *Test-1* and *Test-2* install the latest quality update from the patch Tuesday release on January 12. The next day, both devices are turned off by their users who are each leaving on vacation.
+2. On January 19, device *Test-1* and *Test-2* install the latest quality update from the patch Tuesday release on January 12. The next day, both devices are turned off by their users who are each leaving on vacation.
 
-3. On the February 9, the Intune admin creates policy to expedite installation of the patch Tuesday release **02/09/2021 – 2021.02 B Security Updates for Windows 10** to help secure company devices against a critical threat that the update resolves. The expedite policy is assigned to a group of devices that includes both *Test-1* and *Test-2*. All devices in that group that are active receive and install the expedited update policy.
+3. On the February 9, the Intune admin creates policy to expedite installation of the patch Tuesday release **02/09/2025 – 2025.02 B Security Updates for Windows** to help secure company devices against a critical threat that the update resolves. The expedite policy is assigned to a group of devices that includes both *Test-1* and *Test-2*. All devices in that group that are active receive and install the expedited update policy.
 
-4. On the March 9 patch Tuesday event, a new quality update releases as **03/09/2021 – 2021.03 B Security Updates for Windows 10**. There are no critical issues that require an expedited deployment of this update, but admins do find a possible conflict. To provide time to review the possible issue, admins use a Windows update ring policy to create a seven-day deferral policy. All managed devices are prevented from installing this update until March 14.
+4. On the March 9 patch Tuesday event, a new quality update releases as **03/09/2025 – 2025.03 B Security Updates for Windows**. There are no critical issues that require an expedited deployment of this update, but admins do find a possible conflict. To provide time to review the possible issue, admins use a Windows update ring policy to create a seven-day deferral policy. All managed devices are prevented from installing this update until March 14.
 
 5. Now consider the following results for *Test-1* and *Test-2*, based on when each is turned back on:
 

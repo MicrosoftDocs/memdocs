@@ -1,34 +1,12 @@
 ---
-# required metadata
-
 title: Data Apple sends to Intune
-titleSuffix: Microsoft Intune
 description: List of data that Apple sends to Intune.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 04/08/2022
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: cf27fdb8-f408-425c-9a7c-146de1534425
-
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - sub-data-privacy
@@ -48,7 +26,7 @@ Before Microsoft Intune can establish a connection, you must create an Apple acc
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
 
-The following table lists the data that an Apple device sends to Intune. [Intune also sends data to Apple](data-intune-sends-to-apple.md). 
+The following table lists the data that an Apple device sends to Intune. [Intune also sends data to Apple](data-intune-sends-to-apple.md).
 
 | Service | Message | Data sent to Intune | Used for |
 |:---:|:---:|:---:| ---|

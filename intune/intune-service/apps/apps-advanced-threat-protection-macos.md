@@ -1,47 +1,24 @@
 ---
-# required metadata
-
-title: Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune
-titleSuffix:
+title: Add Microsoft Defender for Endpoint to macOS Devices Using Microsoft Intune
 description: Learn about adding Microsoft Defender for Endpoint to macOS devices using Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/17/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - macOS
 ---
 
-# Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune
+# Add Microsoft Defender for Endpoint to macOS Devices Using Microsoft Intune
 
 Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft Defender for Endpoint. By selecting this app type in Intune, you can assign and install Microsoft Defender for Endpoint to devices you manage that run macOS. This app type makes it easy for you to assign Microsoft Defender for Endpoint to macOS devices without requiring you to use the macOS app wrapping tool. To help keep the apps more secure and up to date, the app comes with Microsoft AutoUpdate (MAU).
 
 ## Prerequisites
 
-- The macOS device must be running macOS 10.13 or later.
-- The macOS device must have at least 650 MB of disk space.
-- Deploy kernel extension in Intune. See more information, see [Add macOS kernel extensions in Intune](../configuration/kernel-extensions-overview-macos.md).
+- The macOS device must be running macOS 13 or later.
 
-> [!IMPORTANT]
-> The kernel extension can be automatically approved only if it is present on the device before the Microsoft DDefender for Endpoint app is installed. Else, users will see "System extension blocked" message on Macs and must approve the extension by going to **Security Preferences** or **System Preferences** > **Security & Privacy** and then selecting **Allow**. For more information, see [Troubleshoot kernel extension issues in Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
+- The macOS device must have at least 1 GB of disk space.
+
 
 ## Add Microsoft Defender for Endpoint to Intune
 

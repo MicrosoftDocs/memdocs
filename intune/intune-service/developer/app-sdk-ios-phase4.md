@@ -1,38 +1,17 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for iOS developer guide - App participation features
-description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. App participation features
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 04/04/2024
+title: Microsoft Intune App SDK for iOS Developer Guide - App Participation Features
+description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. App participation features
+ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: has-adal-ref
 ms.collection:
-- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---
 
-# Intune App SDK for iOS - App participation features
+# Intune App SDK for iOS - App Participation Features
 
-The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native iOS app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Plan the Integration].
@@ -78,11 +57,11 @@ The rest of this guide describes the remaining set of app participation features
 
 ## Customize your app's behavior with APIs
 
-The Intune App SDK has several APIs you can call to get information about the Intune APP policy deployed to the app. You can use this data to customize your app's behavior. The following table provides information on some essential Intune classes you use.
+The Intune App SDK has several APIs you can call to get information about the Intune app protection policies deployed to the app. You can use this data to customize your app's behavior. The following table provides information on some essential Intune classes you use.
 
 Class | Description
 ----- | -----------
-IntuneMAMPolicyManager.h | The IntuneMAMPolicyManager class exposes the Intune APP policy deployed to the application. Notably, it exposes APIs that are useful for [Enabling multi-identity]. |
+IntuneMAMPolicyManager.h | The IntuneMAMPolicyManager class exposes the Intune app protection policies deployed to the application. Notably, it exposes APIs that are useful for [Enabling multi-identity]. |
 IntuneMAMPolicy.h | The IntuneMAMPolicy class exposes some MAM policy settings that apply to the app. Most of these policy settings are exposed so the app can customize its UI. Most policy settings are enforced by the SDK and not the app. However, there are some exceptions. App developers should review the comments in this header to determine which APIs are applicable to their application's scenarios. |
 IntuneMAMFileProtectionManager.h | The IntuneMAMFileProtectionManager class exposes APIs the app can use to explicitly secure files and directories based on a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply the appropriate MAM policy. Using this class is optional. |
 IntuneMAMDataProtectionManager.h | The IntuneMAMDataProtectionManager class exposes APIs the app can use to secure data buffers given a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply encryption appropriately. |
@@ -95,7 +74,7 @@ To query for allowed accounts, the App should check the `allowedAccounts` proper
 
 Apps can also react to changes of the `allowedAccounts` property by observing the `IntuneMAMAllowedAccountsDidChangeNotification` notification. The notification is posted whenever the `allowedAccounts` property changes in value.
 
-The following requirements are needed when using APIs for allowed accounts: 
+The following requirements are needed when using APIs for allowed accounts:
 - Identity comparison must be case insensitive for UPN and OID.
 - Identity comparison must support both UPN and OID.
 - Application must have logging to diagnosis any mismatch between the admin-specified account and user-entered account.
@@ -112,7 +91,7 @@ Intune lets IT admins select which storage locations a managed app can save data
 
 Additionally, apps can verify that incoming data from a share extension is allowed by querying the `canReceiveSharedItemProvider:` API, defined in `IntuneMAMPolicy.h`. Apps can also query the `canReceiveSharedFile:` API to verify incoming files from an openURL call, also defined in `IntuneMAMPolicy.h`
 
-> [!NOTE] 
+> [!NOTE]
 > Changes have been made to internal behavior as of MAM SDK v15.1.0.
 > - A `nil` account will no longer be treated as the current account for the LocalDrive/LocalStorage locations. Passing in a `nil` account will have it treated as an unmanaged account. Because app's can control how they handle their sandbox storage, an identity can and should be associated with those locations.
 > - A `nil` account will no longer be treated as the current account for single-identity apps. Passing in a `nil` account in a single-identity app will now be treated exactly the same as if it was passed into a multi-identity app. If you are developing a single-identity app, please use the `IntuneMAMPolicy`'s `primaryUser` to refer to the current account if managed and `nil` to refer to the current account if unmanaged.
@@ -121,7 +100,7 @@ Additionally, apps can verify that incoming data from a share extension is allow
 
 Before moving data to a new cloud-storage or local location, an app must check with the `isSaveToAllowedForLocation:withAccountId:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being edited and saved in-place doesn't need to be checked with this API.
 
-> [!NOTE] 
+> [!NOTE]
 > The `IntuneMAMPolicy` object should represent the policies of the owner of the data being saved. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForAccountId:` method. If the owner is an unmanaged account with no identity, `nil` can be passed into `policyForAccountId:`.  Even if the data being saved is not organizational data, `isSaveToAllowedForLocation:withAccountId:` should still be called. The account owning the destination location might still have policies restricting incoming unmanaged data.
 
 The `isSaveToAllowedForLocation:withAccountId:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMSaveLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner isn't known, `nil` can be used instead.
@@ -133,7 +112,7 @@ The Intune MAM SDK provides support for the following save locations defined in 
 * `IntuneMAMSaveLocationOneDriveForBusiness` - This location represents OneDrive for Business locations. The identity associated with the OneDrive account should be passed in as the second argument.
 * `IntuneMAMSaveLocationSharePoint` - This location represents both SharePoint online and Microsoft Entra Hybrid Modern Auth SharePoint on-premises locations. The identity associated with the SharePoint account should be passed in as the second argument.
 * `IntuneMAMSaveLocationLocalDrive` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for saving via a file picker or for saving to files through a share extension. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.
-* `IntuneMAMSaveLocationCameraRoll` - This location represents the iOS Photo Library. Because there's no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. 
+* `IntuneMAMSaveLocationCameraRoll` - This location represents the iOS Photo Library. Because there's no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used.
 * `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. For example, uploading a photo to an organization’s LOB cloud service that is tied to the organization account.
 * `IntuneMAMSaveLocationOther` - This location represents any nonorganizational, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
@@ -147,7 +126,7 @@ If the destination location isn't listed, either `IntuneMAMSaveLocationAccountDo
 
 Before importing data from a new cloud-storage or local location, an app must check with the `isOpenFromAllowedForLocation:withAccountId:` API to know if the IT admin has allowed the data transfer. This method is called on an `IntuneMAMPolicy` object. Data being opened in-place doesn't need to be checked with this API.
 
-> [!NOTE] 
+> [!NOTE]
 > The `IntuneMAMPolicy` object should represent the policies of the identity receiving the data. To get the `IntuneMAMPolicy` object of a specific identity, call `IntuneMAMPolicyManager`'s `policyForAccountId:` method. If the receiving account is an unmanaged account with no identity, `nil` can be passed into `policyForAccountId:`. Even if the data being received is not organizational data, `isOpenFromAllowedForLocation:withAccountId:` should still be called. The account owning the data might still have policies restricting the destinations of outgoing data transfers.
 
 The `isOpenFromAllowedForLocation:withAccountId:` method takes two arguments. The first argument is an enum value of the type `IntuneMAMOpenLocation` defined in `IntuneMAMPolicy.h`. The second argument is the UPN of the identity that owns the location. If the owner isn't known, `nil` can be used instead.
@@ -160,7 +139,7 @@ The Intune MAM SDK provides support for the following open locations defined in 
 * `IntuneMAMOpenLocationSharePoint` - This location represents both SharePoint online and Microsoft Entra Hybrid Modern Auth SharePoint on-premises locations. The identity associated with the SharePoint account should be passed in as the second argument.
 * `IntuneMAMOpenLocationCamera` - This location **only** represents new images taken by the camera. Because there's no account associated with the iOS camera, only `nil` should be passed as the second argument when this location is used. For opening data from the iOS Photo Library, use  `IntuneMAMOpenLocationPhotos`.
 * `IntuneMAMOpenLocationPhotos` - This location **only** represents existing images within the iOS Photo Library. Because there's no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. For opening images taken directly from the iOS camera, use `IntuneMAMOpenLocationCamera`.
-* `IntuneMAMOpenLocationLocalStorage` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for opening files from a file picker or handling incoming files from an openURL. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument. 
+* `IntuneMAMOpenLocationLocalStorage` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for opening files from a file picker or handling incoming files from an openURL. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.
 * `IntuneMAMOpenLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. For example, downloading a photo from an organization’s LOB cloud service that is tied to the organization account.
 * `IntuneMAMOpenLocationOther` - This location represents any nonorganizational location, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
@@ -227,7 +206,7 @@ When sharing documents via the `UIActivityViewController` and `UIDocumentInterac
 
 ### Update existing Share and Action extensions
 
-If your app already contains Share or Action extensions, then their `NSExtensionActivationRule` will have to be modified to allow the Intune types. For each type supported by the extension, add an additional type prefixed with `com.microsoft.intune.mam`. For example, if the existing activation rule is:  
+If your app already contains Share or Action extensions, then their `NSExtensionActivationRule` will have to be modified to allow the Intune types. For each type supported by the extension, add an additional type prefixed with `com.microsoft.intune.mam`. For example, if the existing activation rule is:
 
 ```objc
 SUBQUERY (
@@ -311,7 +290,7 @@ By default, the Intune App SDK for iOS collects telemetry on the following types
 
 ## Siri Intents
 
-If your app integrates with Siri Intents or makes Siri Intent Donations, please make sure to read the comments for `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` for instructions on supporting this scenario. 
+If your app integrates with Siri Intents or makes Siri Intent Donations, please make sure to read the comments for `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.
 
 > [!NOTE]
 > In iOS 16 and above, a new App Intents system framework is available for creating Swift App Intents. Apps that implement an App Intent should first check the `areSiriIntentsAllowed` property on the IntuneMAMPolicy object for the user.
@@ -319,7 +298,7 @@ If your app integrates with Siri Intents or makes Siri Intent Donations, please 
  ## App Clips
 
  If your app includes an app clip target, be sure to verify no managed data is presented in the app clip. The app clip should be considered an unmanaged location. SDK integration into App Clips is not currently supported.
-    
+
  ## Printing
 
  If your app implements printing and provides a custom print action on a custom menu, be sure to utilize `UIPrintInteractionController.isPrintingAvailable()` to determine if you should add your print action to your custom menu.
@@ -327,7 +306,7 @@ If your app integrates with Siri Intents or makes Siri Intent Donations, please 
  ## Screen capture blocking
 
 For apps that have updated to v19.7.6 or later for Xcode 15 and v20.2.1 or later for Xcode 16 of the SDK, screen capture block will be applied if you have configured `Send Org data to other apps` to a value other than “All apps”. You can configure app configuration policy setting “com.microsoft.intune.mam.screencapturecontrol = Disabled” if you wish to allow screen capture for your iOS devices.
- 
+
 ## Notifications
 
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It's recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.

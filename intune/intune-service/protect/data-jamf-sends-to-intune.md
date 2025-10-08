@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Data JAMF Pro sends to Intune
-titleSuffix: Microsoft Intune
 description: Review the list of data that Jamf Pro sends to Microsoft Intune when you integrate Jamf Pro to manage Macs with Intune.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 12/07/2023
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:  
-
-# optional metadata
-
-#ROBOTS: 
-#audience:
-
 ms.reviewer: elocholi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - sub-data-privacy

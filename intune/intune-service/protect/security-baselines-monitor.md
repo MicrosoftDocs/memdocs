@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Monitor security baselines deployed by Microsoft Intune
 description: Monitor device and per-setting results of security baselines you deploy with Microsoft Intune, and identify conflicts for devices.
-keywords:
-author: brenduns 
+author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/22/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: juidaewo
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-secure-endpoints
 ---
@@ -45,7 +27,7 @@ For more information about the feature, see [Security baselines in Intune](secur
 >
 > In May 2023, Intune began rollout of a new security baseline format that applies to new baseline types, like Microsoft 365 Apps, and to the newer versions of existing baselines, like Microsoft Edge baseline version 112. The new format updates the baseline settings to directly take their name and configuration options from the configuration service provider (CSP) that the baseline setting manages.
 >
-> Intune also introduced a new process to help you [*migrate an existing security baseline profile to the newer baseline version*](../protect/security-baselines-configure.md#update-a-baseline-to-the-new-format). This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
+> Intune also introduced a new process to help you [*migrate an older security baseline profile to the newer baseline version*](../protect/security-baselines-configure.md#update-a-baseline-to-the-new-format). This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
 >
 > Baselines instances that use this new format also have an updated report and monitoring structure that aligns to other report improvements rolled out this year across Intune feature areas. The report view details for the [new format](#monitor-the-baseline-and-your-devices) are presented in this article separately from the [original details provided for the older baselines](#monitor-profiles-for-baseline-versions-released-before-may-2023), many of the concepts discussed for the older views remain relevant.
 
@@ -124,6 +106,9 @@ Below the reports section of the dashboard, you can find the profiles *Propertie
 > The following information applies to profile versions released before May 2023. To view information for profile versions released after May 2023, see [Monitor the baseline and your devices](#monitor-the-baseline-and-your-devices), earlier in this article.
 
 When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *Security Baseline for Windows 10 and later*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 The *Overview* pane displays two status views for the selected baseline:
 
@@ -225,7 +210,7 @@ You deployed a security baseline, but the deployment status shows an error. The 
 
 Now you know the problematic setting. The next step is to find out why this setting is causing an error or conflict.
 
-On Windows 10/11 devices, there's a built-in MDM diagnostic information report. This report includes default values, current values, lists the policy, shows if it's deployed to the device or the user, and more. Use this report to help determine why the setting is causing a conflict or error.
+On Windows devices, there's a built-in MDM diagnostic information report. This report includes default values, current values, lists the policy, shows if it's deployed to the device or the user, and more. Use this report to help determine why the setting is causing a conflict or error.
 
 1. On the device, go to **Settings** > **Accounts** > **Access work or school**.
 
@@ -237,7 +222,7 @@ On Windows 10/11 devices, there's a built-in MDM diagnostic information report. 
 
   For example, look in the **Enrolled configuration sources and target resources** section or the **Unmanaged policies** section. You might get an idea of why it's causing an error or conflict.
 
-[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) provides more information on this built-in report.
+For more information about diagnostic information logs, see [Collect MDM logs](/windows/client-management//mdm-collect-logs).
 
 > [!TIP]
 >
@@ -248,6 +233,6 @@ On Windows 10/11 devices, there's a built-in MDM diagnostic information report. 
 
 - [Learn about security baselines](security-baselines.md)
 - [Avoid conflicts](security-baselines.md#avoid-conflicts)
-- [Monitor device profiles](../configuration/device-profile-monitor.md) 
+- [Monitor device profiles](../configuration/device-profile-monitor.md)
 - [Common issues and resolutions](../configuration/device-profile-troubleshoot.md).
 - [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

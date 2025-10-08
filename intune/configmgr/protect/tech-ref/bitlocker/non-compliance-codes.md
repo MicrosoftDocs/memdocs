@@ -6,8 +6,8 @@ ms.date: 11/29/2019
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: reference
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart

@@ -5,9 +5,6 @@ ms.date: 06/27/2024
 ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
-ms.manager: dougeby
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Windows Autopilot

@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Software update errors and descriptions in Microsoft Intune
 description: See a list of the Software Update agent error code in Microsoft Intune, including the error code, symbolic name, and error description.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 05/29/2019
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-ms.assetid:
-ROBOTS: 
-
-# optional metadata
-
-#audience:
-
+ROBOTS:
 ms.reviewer: mghadial
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-updates
 ---

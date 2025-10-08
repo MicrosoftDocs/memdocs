@@ -6,8 +6,8 @@ ms.date: 03/25/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -46,6 +46,8 @@ The following requirements apply to all site system servers:
 
 - It's not supported to change the startup type or "Log on as" settings for any Configuration Manager service. If you do, you might prevent key services from running correctly.
 
+- A best practice for security and operational resilience is to keep site system roles separate from the site server, rather than colocate them on the same computer.
+
 ## .NET version requirements
 
 <!--28583799-->
@@ -63,9 +65,9 @@ If the site server doesn't have any collocated roles that require .NET, it still
 > [!IMPORTANT]
 > If you're upgrading from System Center 2012 Configuration Manager R2 Service Pack 1, you need to manually verify that remote site systems have at least .NET version 4.6.2. Configuration Manager current branch setup skips the check in this scenario.<!-- 13846610 -->
 
-During Configuration Manager setup, if site systems have a version earlier than 4.6.2, you'll see a prerequisite check warning. This check is a warning instead of an error, because setup will install version 4.6.2. When .NET updates, it usually requires Windows to restart. Site systems will send status message 4979 when a restart is required. Configuration Manager suppresses the restart; the system doesn't restart automatically.
+During Configuration Manager setup, if site systems have a version earlier than 4.6.2, you'll see a prerequisite check warning. This check is a warning instead of an error, because setup installs version 4.6.2. When .NET updates, it usually requires Windows to restart. Site systems send status message 4979 when a restart is required. Configuration Manager suppresses the restart; the system doesn't restart automatically.
 
-The behavior will differ for different types of site roles that require .NET:
+The behavior differs for different types of site roles that require .NET:
 
 - The following site system roles support in-place upgrade of .NET. After upgrading .NET, if a restart is required, it sends status message 4979. The role keeps running with the earlier .NET version. After Windows restarts, the role starts using the new .NET version.
   - Asset Intelligence synchronization point
@@ -92,7 +94,7 @@ There's also a new [management insight](../../servers/manage/management-insights
 
 ### Managing system restarts for .NET updates
 
-Whether you update .NET before updating the site, or set up updates it, .NET may require a restart to complete its installation. After .NET Framework is installed, it may require other updates. These updates may also require the server to restart.
+Whether you update .NET before updating the site, or set up updates it, .NET can require a restart to complete its installation. After .NET Framework is installed, it might require other updates. These updates might also require the server to restart.
 
 If you need to manage the device restarts before you update the site, use the following recommended process:
 
@@ -134,7 +136,7 @@ For more information on all prerequisites including permissions, see [Prerequisi
 
 ### SQL ODBC driver for the site server
 
-Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date. From **version 2503** onwards, The ODBC driver version has to be updated to version **18.4.1.1** and above or it will block the upgrade.
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date. From **version 2503** onwards, the ODBC driver version has to be updated to version **18.4.1.1** and above or it blocks the upgrade.
 
 For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
@@ -326,7 +328,7 @@ The data warehouse database requires SQL Server 2012 or later. The edition can b
 
   - IIS 6 WMI Compatibility
 
-By default, IIS uses request filtering to block several file name extensions and folder locations from access by HTTP or HTTPS communication. On a distribution point, this configuration prevents clients from downloading packages that have blocked extensions or folder locations. For more information, see [IIS request filtering for distribution points](../network/prepare-windows-servers.md#iis-request-filtering-for-distribution-points).
+By default, IIS uses request filtering to block several file name extensions and folder locations from access by HTTP or HTTPS communication. On a distribution point, this configuration prevents clients from downloading packages with blocked extensions or folder locations. For more information, see [IIS request filtering for distribution points](../network/prepare-windows-servers.md#iis-request-filtering-for-distribution-points).
 
 Distribution points require that IIS allows the following HTTP verbs:
 

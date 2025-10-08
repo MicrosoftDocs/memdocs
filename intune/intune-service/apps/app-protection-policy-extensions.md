@@ -1,36 +1,14 @@
 ---
-# required metadata
-
-title: App protection policies for extensions
-titleSuffix: Microsoft Intune
+title: App Protection Policies for Extensions
 description: This topic describes the app protection policy (APP) for extensions.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 01/06/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: demerson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Protecting application extensions
+# Protecting Application Extensions
 
 This article describes app protection policies for extensions in Microsoft Intune.
 
@@ -51,19 +29,19 @@ These instructions apply to Microsoft 365, Exchange 2016, Exchange 2013 across O
 
 ## LinkedIn account connections for Microsoft apps
 
-LinkedIn account connections allow users to see public LinkedIn profile information within certain Microsoft apps. By default, your users can choose to connect their LinkedIn and Microsoft work or school accounts to see additional LinkedIn profile information. 
+LinkedIn account connections allow users to see public LinkedIn profile information within certain Microsoft apps. By default, your users can choose to connect their LinkedIn and Microsoft work or school accounts to see additional LinkedIn profile information.
 
 > [!NOTE]
 > LinkedIn integration is currently unavailable for United States Government customers and for organizations with Exchange Online mailboxes hosted in Australia, Canada, China, France, Germany, India, South Korea, United Kingdom, Japan, and South Africa.
 
 The Intune SDK and Intune app protection policies don't include support for managing LinkedIn account connections, but there are other ways to manage them. You can disable LinkedIn account connections for your entire organization, or you can enable LinkedIn account connections for selected user groups in your organization. These settings affect LinkedIn connections across Microsoft 365 apps on all platforms (web, mobile, and desktop). You can:
 
-- Enable or disable LinkedIn account connections for your tenant in the portal. 
+- Enable or disable LinkedIn account connections for your tenant in the portal.
 - Enable or disable LinkedIn account connections for your organization's Office 2016 apps using Group Policy.
 
-If LinkedIn integration is enabled for your tenant, when users in your organization connect their LinkedIn and Microsoft work or school accounts, they have two options: 
+If LinkedIn integration is enabled for your tenant, when users in your organization connect their LinkedIn and Microsoft work or school accounts, they have two options:
 
-- They can give permission to share data between both accounts. This means that they give permission for their LinkedIn account to share data with their Microsoft work or school account, as well as their Microsoft work or school account to share data with their LinkedIn account. Data that is shared with LinkedIn leaves the online services. 
+- They can give permission to share data between both accounts. This means that they give permission for their LinkedIn account to share data with their Microsoft work or school account, as well as their Microsoft work or school account to share data with their LinkedIn account. Data that is shared with LinkedIn leaves the online services.
 - They can give permission to share data only from their LinkedIn account to their Microsoft work and school account
 
 If a user consents to sharing data between accounts, as with Office add-ins, LinkedIn integration uses existing Microsoft Graph APIs. LinkedIn integration uses only a subset of the APIs available to Office add-ins and supports various exclusions.
@@ -80,7 +58,7 @@ If a user consents to sharing data between accounts, as with Office add-ins, Lin
 ### Learn more
 
 - Learn about [LinkedIn information and features in your Microsoft apps](https://go.microsoft.com/fwlink/?linkid=850740).
-- Learn about LinkedIn account connections release on the [Microsoft 365 Roadmap page](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
+- Learn about LinkedIn account connections release on the [Microsoft 365 Roadmap page](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc).
 - Learn about [Configuring LinkedIn account connections](/azure/active-directory/linkedin-integration).
 - For more information about data that is shared between users' LinkedIn and Microsoft work or school accounts, see [LinkedIn in Microsoft applications at your work or school](https://www.linkedin.com/help/linkedin/answer/84077).
 
