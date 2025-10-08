@@ -102,7 +102,7 @@ Complete the steps in this section to edit the name of your organization.
 
       - `Spaces`    
 
-      - Punctuation: `. , ' - & ()` 
+      - Punctuation: `. , ' - & ( )` 
     - These special symbols are not allowed: `@ # $ % ^ * + = | \ / < > { } [ ]` 
 
 1. Select **Change**.   
