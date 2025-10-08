@@ -1,6 +1,6 @@
 ---
 title: Evaluate and try - Enroll a device
-description: In this evaluation task, enroll a device running Windows 10/11 into Microsoft Intune.
+description: In this evaluation task, enroll a device running Windows into Microsoft Intune.
 services: microsoft-intune
 ms.date: 07/11/2024
 ms.topic: how-to
@@ -10,11 +10,7 @@ ms.collection:
 - highpri
 ---
 
-# Step 5: Enroll a device
-
-**Applies to**:
-- Windows 10
-- Windows 11
+# Step 5: Enroll a device  
 
 Employees and students who want remote access to work or school resources can enroll their devices into Microsoft Intune. Enrollment ensures that all devices trying to access data within your organization are secure and compliant with your policies and requirements. Upon enrollment, the device gets access to resources like work email, files, VPN, and Wi-Fi.
 
@@ -22,14 +18,14 @@ Employees and students who want remote access to work or school resources can en
 
 In this task, you will:
 
-* Try out the device user experience by enrolling a device running Windows 10/11 into Microsoft Intune.
+* Try out the device user experience by enrolling a device running Windows into Microsoft Intune.
 * Try out the admin user experience by verifying the enrollment in the Microsoft Intune admin center.
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-To complete this evaluation step, you must:
+To complete this evaluation step, you must be running a supported version of Windows and must:  
 
 - Have a Microsoft Intune subscription: [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md)
 - Complete the evaluation step for [setting up automatic enrollment in Intune](quickstart-setup-auto-enrollment.md).
@@ -56,7 +52,7 @@ Additionally, before you begin enrollment, confirm the version of Windows runnin
   * For Windows 11: 21H2 or later
 
     > [!IMPORTANT]
-    > The steps in this evaluation step are for these versions of Windows. For information about enrolling earlier versions of Windows, see [Enroll device running Windows 10, version 1511 and earlier](../user-help/enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).
+    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Enroll device
 
@@ -74,7 +70,7 @@ Additionally, before you begin enrollment, confirm the version of Windows runnin
 
    ![Screenshot of newly added account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    If you followed the previous steps, but still can't access your work or school email account and files, see [Troubleshoot Windows 10/11 device access](../user-help/troubleshoot-your-windows-10-device-windows.md).
+    If you followed the previous steps, but still can't access your work or school email account and files, see [Troubleshoot Windows device access](../user-help/troubleshoot-your-windows-10-device-windows.md).
 
 ## Confirm device enrollment
 
@@ -88,7 +84,7 @@ To unenroll the device, see [Remove your Windows device from management](../user
 
 ## Next steps
 
-In this task, you learned how to enroll a device running Windows 10/11 into Intune. For more information about the device user experience, see these resources:
+In this task, you learned how to enroll a device running Windows into Intune. For more information about the device user experience, see these resources:
  * [Windows device enrollment with Intune Company Portal](../user-help/device-enrollment-overview-windows.md)
  * [What info can your company see when you enroll your device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 

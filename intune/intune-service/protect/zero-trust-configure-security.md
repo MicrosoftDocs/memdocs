@@ -1,10 +1,8 @@
 ---
 title:  Configure Microsoft Intune for increased security
 description:  Learn how to improve your security posture with Microsoft Intune.
-
 ms.topic: reference
-ms.date: 10/02/2025
-
+ms.date: 10/06/2025
 ms.author: brenduns
 author: brenduns
 ms.reviewer: ramical
@@ -175,11 +173,11 @@ We recommend that all of the following controls be implemented where licenses ar
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24784](./includes/secure-recommendations/24784.md)]
 
-### Secure Wi-Fi profiles protect iOS connectivity and devices<!-- 24839 -->
+### Secure Wi-Fi profiles protect iOS devices from unauthorized network access<!-- 24839 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24839](./includes/secure-recommendations/24839.md)]
 
-### Secure Wi-Fi profiles protect Android connectivity and devices<!-- 24840 -->
+### Secure Wi-Fi profiles protect Android devices from unauthorized network access<!-- 24840 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24840](./includes/secure-recommendations/24840.md)]
 

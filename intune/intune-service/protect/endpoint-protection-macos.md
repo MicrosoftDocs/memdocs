@@ -156,4 +156,4 @@ Use the firewall to control connections per-application, rather than per-port. U
 
 [Assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md).
 
-You can also configure endpoint protection on [Windows 10 and Windows 11 devices](endpoint-protection-windows-10.md).
+You can also [configure endpoint protection for Windows](endpoint-protection-windows-10.md).
