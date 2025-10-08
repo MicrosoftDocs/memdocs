@@ -134,21 +134,13 @@ The following apps support the core Intune App Protection Policy settings. Apps 
 ================================================================================
 REMOVED APPS SECTION
 ================================================================================
-This section tracks apps that have been removed from the Partner Productivity
-Apps table below. When removing an app, add its details here with:
-- ADO Work Item ID
-- Date removed
-- Reason for removal
-- Original table entry (for reference)
+This section tracks apps that have been removed from the Partner Productivity 
+Apps table.
 ================================================================================
 
-| App Name | ADO ID | Date Removed | Reason |
-|----------|--------|--------------|--------|
-| Meetio Enterprise | 35431280 | October 2025 | Meetio is now part of Logitech. All features and services will be transitioned under the Logitech brand. Visit the Logitech website to learn more about Logitech's Room Booking offering. |
-
-Original Table Entry:
-| :::no-loc text="Meetio Enterprise"::: <p><img alt="Partner app - Meetio Enterprise icon" src="./media/apps-supported-intune-apps/icon-p-meetio-enterprise.png" width="100"> | Meetio transforms the way organizations utilize their office spaces with a comprehensive platform that seamlessly integrates room booking, desk booking, and visitor management. Meetio works with hybrid and office work environments, optimizing space utilization, and employee collaboration. | [Google Play link (Android)](https://play.google.com/store/apps/details?id=com.meetio.pro),<br>[App Store link (iOS)](https://apps.apple.com/se/app/meetio-meeting-room-displays/id1441860071) |
-
+| App Name | ADO ID | Date Removed |
+|----------|--------|--------------|
+| Meetio Enterprise | 35431280 | October 2025 |
 ================================================================================
 -->
 
