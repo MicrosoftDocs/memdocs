@@ -1,7 +1,7 @@
 ---
 title: Connect Intune account to managed Google Play account
 description: Learn how to connect your Intune account to your Managed Google Play account.
-ms.date: 06/12/2025
+ms.date: 10/14/2025
 ms.topic: how-to
 ms.reviewer: grwilson
 ms.collection:
@@ -79,9 +79,35 @@ You can disconnect the link between Microsoft Intune and Google in the admin cen
 1. Select the **Android** tab.
 1. Under **Prerequisites**, choose **Managed Google Play**.
 1. Select **Disconnect**.
-1. Choose **Yes** to disconnect and unenroll all Android enterprise devices from Intune.
+1. Choose **Yes** to disconnect and unenroll all Android enterprise devices from Intune.  
 
-## Next steps
+
+## Edit managed Google Play organization name  
+
+When you first create a managed Google Play account, you provide a name for your organization to Google. This name appears in the Intune admin center and can also appear on Android devices. For example, on the lock screen it could appear to users as **This device is managed by [organization name]**.  
+
+Complete the steps in this section to edit the name of your organization.   
+
+1. In the **Microsoft Intune admin center**, go to **Devices**.
+1. Select **Android** > **Enrollment** > **Managed Google Play**.
+
+1. Select **Change organization name**. Enter the new name. 
+
+    - Names must be 2–50 characters long. 
+    - These characters are allowed:  
+
+      - Letters: `A–Z` and `a–z`, including accented characters such as `á`, `ñ`, and `ü`      
+
+      - Numbers: `0–9`    
+
+      - `Spaces`    
+
+      - Punctuation: `. , ' - & ()` 
+    - These special symbols are not allowed: `@ # $ % ^ * + = | \ / < > { } [ ]` 
+
+1. Select **Change**.   
+
+## Next steps  
 
 After you connect to a managed Google Play account, you can set up Microsoft Intune for these Android Enterprise scenarios:
 - [Personally owned work profile devices](android-work-profile-enroll.md).
