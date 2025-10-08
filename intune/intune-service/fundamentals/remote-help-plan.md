@@ -72,7 +72,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 If the user's device that they're trying to connect to isn't enrolled, the helper sees a prompt that the user's device is unenrolled.
 
-- **Conditional Access**: Administrators can now utilize Conditional Access capability when setting up policies and conditions for Remote Help. For more information on setting up Conditional Access, go to [Setup Conditional Access for Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help).
+- **Conditional Access**: Administrators can now utilize Conditional Access capability when setting up policies and conditions for Remote Help. For more information on setting up Conditional Access, go to [Setup Conditional Access for Remote Help](remote-help-deploy.md#set-up-conditional-access-for-remote-help).
 
 - **Role-based access control**: Admins can set RBAC rules that determine the scope of a helper's access, such as:
   - The users who can help others and the range of actions they can do while providing help. For example, who can run elevated privileges while helping.
@@ -144,8 +144,8 @@ General prerequisites that apply to Remote Help:
 - Remote Help might not be available in all markets or localizations.
 - Remote Help is supported in Government Community Cloud (GCC) environments on the following platforms:
 
-  - Windows 10/11
-  - Windows 10/11 on ARM64 devices
+  - Windows
+  - Windows on ARM64 devices
   - Windows 365
   - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
   - macOS 13, 14, and 15
@@ -158,7 +158,7 @@ Each platform has specific prerequisites and capabilities.
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
-- Windows 10/11 x86, x64, and ARM64
+- Windows x86, x64, and ARM64
 - Windows 365
 - Azure Virtual Desktop
 
