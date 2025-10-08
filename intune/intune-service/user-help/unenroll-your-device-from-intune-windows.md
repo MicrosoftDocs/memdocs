@@ -1,98 +1,73 @@
 ---
 title: Remove your Windows device from Intune management
-description: Disconnect your work or school account from device running Windows 10/11.  
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+description: Disconnect your work or school account from device running Windows.
 ms.date: 04/30/2024
-ms.topic: end-user-help
-ms.service: microsoft-intune
-ms.subservice: end-user
-ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
-
-searchScope:
- - User help
-
-# optional metadata
-
-ROBOTS:   
-#audience:
-
 ms.reviewer: jieyang
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-enduser
-ms.collection:
-- tier1
 ---
 
-# Remove your Windows device from management  
+# Remove your Windows device from management
 
-**Applies to**  
-- Windows 10  
-- Windows 11  
-- Windows 8.1
-- Windows 8.1 RT 
+**Applies to**
+- Windows 
 
-Remove a registered, Windows device from management when you no longer want or need to:  
-* Use your device for work or school. 
+Remove a registered, Windows device from management when you no longer want or need to:
+* Use your device for work or school.
 * Access work or school email, apps, or other resources.
 
-After you unregister the device, you lose device access to school or work resources.  
- 
-Make sure to read [What happens if you remove device from Intune](unenroll-your-device-from-intune-windows.md#what-happens-if-you-remove-device-from-intune) before unenrolling your device.  
+After you unregister the device, you lose device access to school or work resources.
 
-## What happens if you remove device from Intune  
-This section describes how your device and access to work or school will change after you remove your device from Intune. 
+Make sure to read [What happens if you remove device from Intune](unenroll-your-device-from-intune-windows.md#what-happens-if-you-remove-device-from-intune) before unenrolling your device.
 
-After you unenroll a device running Windows 11, Windows 10, or Windows 8.1: 
+## What happens if you remove device from Intune
+This section describes how your device and access to work or school will change after you remove your device from Intune.
 
-- Your device is removed from Company Portal.  
-- You can't install apps from the Company Portal.  
-- Intune client software (if installed) will be removed from your computer.  
-- Intune Endpoint Protection software is removed from your computer. If your computer has other virus protection software installed that's disabled, be sure to re-enable it after Intune Endpoint Protection is removed. Otherwise, your computer is vulnerable to viruses and malware. 
-- Changes to device settings (for example, disabling the camera or requiring a certain password length) are no longer required.    
-- Your computer no longer receives automatic software updates or antivirus software updates from the Intune service. But, depending on how it is set up, your computer might still receive updates from the Windows Server Update Services, Windows Update, or Microsoft Update. 
+After you unenroll a device running Windows:   
 
-In addition, for Windows 8.1:  
+- Your device is removed from Company Portal.
+- You can't install apps from the Company Portal.
+- Intune client software (if installed) will be removed from your computer.
+- Intune Endpoint Protection software is removed from your computer. If your computer has other virus protection software installed that's disabled, be sure to re-enable it after Intune Endpoint Protection is removed. Otherwise, your computer is vulnerable to viruses and malware.
+- Changes to device settings (for example, disabling the camera or requiring a certain password length) are no longer required.
+- Your computer no longer receives automatic software updates or antivirus software updates from the Intune service. But, depending on how it is set up, your computer might still receive updates from the Windows Server Update Services, Windows Update, or Microsoft Update.
 
-- You lose access to work apps and data on your device.   
-- Email apps, such as Windows Mail, can't open work email that's stored on your device.   
-- You might not be able to connect to your org's network via Wi-Fi or virtual private network (VPN).  
-- You could lose access to internal file shares and websites from your device.   
+In addition, for Windows 8.1:
 
-
-After you unenroll a device running Windows 8.1 RT:  
-
-- The Company Portal app is uninstalled from your device. Your device is removed from Company Portal and the app is uninstalled from your device.  
-- You can't install apps from Company Portal.  
-- You lose access to work apps and data on your device.  
-- Changes to device settings (for example, disabling the camera or requiring a certain password length) are no longer required.  
-- You might not be able to connect to your org's network via Wi-Fi or virtual private network (VPN).  
-- You could lose access to internal file shares and websites from your device.   
-- Email apps, such as Windows Mail, can't open work email that's stored on your device.   
+- You lose access to work apps and data on your device.
+- Email apps, such as Windows Mail, can't open work email that's stored on your device.
+- You might not be able to connect to your org's network via Wi-Fi or virtual private network (VPN).
+- You could lose access to internal file shares and websites from your device.
 
 
-## Remove Windows 10/11 devices  
-This section describes how to remove a Windows 10/11 device from Intune.   
+After you unenroll a device running Windows 8.1 RT:
+
+- The Company Portal app is uninstalled from your device. Your device is removed from Company Portal and the app is uninstalled from your device.
+- You can't install apps from Company Portal.
+- You lose access to work apps and data on your device.
+- Changes to device settings (for example, disabling the camera or requiring a certain password length) are no longer required.
+- You might not be able to connect to your org's network via Wi-Fi or virtual private network (VPN).
+- You could lose access to internal file shares and websites from your device.
+- Email apps, such as Windows Mail, can't open work email that's stored on your device.
+
+
+## Remove Windows devices
+This section describes how to remove a Windows device from Intune.
 
 ### Remove in device Settings app
-1. Open the Settings app. 
+1. Open the Settings app.
 2. Go to **Accounts** > **Access work or school**.
 3. Select the connected account that you want to remove > **Disconnect**.
 4. To confirm device removal, select **Yes**.
 
-## Remove Windows 8.1 PC  
+## Remove Windows 8.1 PC
 Complete the following steps to remove a Windows 8.1 computer from Intune.
 
 1. Go to **PC Settings** > **Network** > **Workplace**.
 2. Under **Workplace Join**, select **Leave**.
 3. Under **Turn on device management,** select **Turn off**.
-4. On the popup window that opens, select **Turn off**.  
+4. On the popup window that opens, select **Turn off**.
 
 
-## Removing your personal information after removing the Company Portal  
+## Removing your personal information after removing the Company Portal
 
 There are two kinds of data that the Company Portal stores on your Windows device:
 
@@ -101,10 +76,10 @@ There are two kinds of data that the Company Portal stores on your Windows devic
 
 To delete the stored logs and cache, complete one of the following steps:
 
-* [Uninstall the Company Portal app](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs) 
+* [Uninstall the Company Portal app](https://support.microsoft.com/help/4028003/windows-10-uninstall-apps-and-programs)
 
-* Reset the Company Portal app. Open the **Settings** app and select > **Apps** > **Installed apps** > **Company Portal** > **Advanced options** > **Reset**. 
+* Reset the Company Portal app. Open the **Settings** app and select > **Apps** > **Installed apps** > **Company Portal** > **Advanced options** > **Reset**.
 
-## Next steps  
+## Next steps
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -1,29 +1,11 @@
 ---
-# required metadata
-
 title: Sign and encrypt email using S/MIME - Microsoft Intune
 description: Learn how to use email digital certificates in Microsoft Intune to sign and encrypt emails on devices. These certificates are called S/MIME and are configured using device configuration profiles. Signing and encryption certificates use PKCS, or private certificates, and use a connector to import certificates.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 07/29/2021
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - certificates
 - sub-certificates
@@ -36,7 +18,7 @@ Email certificates, also known as S/MIME certificate, provide extra security to 
 - Android
 - iOS/iPadOS
 - macOS
-- Windows 10/11
+- Windows
 
 Intune can automatically deliver S/MIME encryption certificates to all platforms. S/MIME certificates are automatically associated with mail profiles that use the native mail client on iOS, and with Outlook on iOS and Android devices. For the Windows and macOS platforms, and for other mail clients on iOS and Android, Intune delivers the certificates but users must manually enable S/MIME in their mail app and choose their S/MIME certificates.
 

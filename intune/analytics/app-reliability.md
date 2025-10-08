@@ -1,15 +1,8 @@
 ---
 title: Application reliability in Endpoint analytics
 description: Get details about application reliability in Endpoint analytics
-titleSuffix: Microsoft Intune
 ms.date: 04/10/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
 ---
 
 # Application reliability in Endpoint analytics
@@ -114,14 +107,14 @@ Use the following script to determine if the issue impacts a device:
 ```powershell
 $query = "SELECT * FROM CCM_PendingPolicyState WHERE PolicyID=""B27D9CFC-84AD-0AF8-9DF1-23EE05E8C05D"""
 $obj = Get-WmiObject -Query $query -Namespace "root\ccm\policyagent"
- 
+
 foreach ($value in $obj)
 {
     if ($value.State  -eq 1)
     {
         Write-Host "Found ServiceCertificate policy in the pending policy list."
     }
-} 
+}
 ```
 
 **Mitigation**: Run the following script on affected devices to force a download of the updated ServiceCertificate policy state. When you complete all the steps, the issue is resolved and allows the device to start uploading application reliability data. Allow up to 72 hours to start seeing data in the Endpoint analytics portal.

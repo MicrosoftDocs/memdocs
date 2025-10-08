@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Configure iOS/iPadOS Enterprise SSO app extension with MDMs
 description: Learn more about the Microsoft Enterprise single sign-on (SSO) plug-in. Add or create an iOS or iPadOS device configuration profile using the Microsoft Enterprise SSO plug-in app extension in Microsoft Intune, Jamf Pro, and other MDM solution providers.
-keywords: Enterprise SSO plug-in, Microsoft Intune
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 07/14/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: miepping, tbc, alessanc
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -119,12 +102,12 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
       :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Entra ID for iOS/iPadOS in Intune.":::
 
-    - **Enable shared device mode**:  
+    - **Enable shared device mode**:
 
       - **Not configured**: Intune doesn't change or update this setting.
 
         For most scenarios, including Shared iPad, personal devices, and devices with or without user affinity, select this option.
-      - **Yes**: Select this option **only** if the targeted devices are using Microsoft Entra shared device mode. For more information, go to [Shared device mode overview](/entra/identity-platform/msal-shared-devices).  
+      - **Yes**: Select this option **only** if the targeted devices are using Microsoft Entra shared device mode. For more information, go to [Shared device mode overview](/entra/identity-platform/msal-shared-devices).
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, go to [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
 
@@ -233,7 +216,7 @@ In the MDM portal, create a device configuration profile. This profile include
 
 When the device checks in with the MDM service, it receives this profile.
 
---- 
+---
 
 [!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-ios-end-user-experience-boilerplate.md)]
 

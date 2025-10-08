@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Device compliance policies in Microsoft Intune
 description: Overview of Microsoft Intune device compliance, including tenant-wide compliance policy settings and device compliance policies.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 05/14/2024
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.reviewer: tycast
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: ilwu
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -110,16 +93,15 @@ The following subjects link to dedicated articles for different aspects of devic
   - [Linux](../protect/compliance-policy-create-linux.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows 10/11](compliance-policy-create-windows.md)
+  - [Windows](compliance-policy-create-windows.md)
   - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
     [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 - [**Custom compliance settings**](compliance-use-custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 
   You can use custom compliance settings with the following platforms:
-  - Linux – Ubuntu Desktop, version 22.04 LTS or 24.04 LTS   
-  - Windows 10
-  - Windows 11
+  - Linux – Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
+  - Windows  
 
 ## Monitor compliance status
 
@@ -156,13 +138,13 @@ The following table describes how noncompliant settings are managed when a compl
 |**Policy setting**| **Platform** |
 | --- | ----|
 | **Allowed Distros** | **Linux** *(only)* - Quarantined |
-| **Device encryption** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined <br><br>- **iOS 8.0 and later**: Remediated (by setting PIN) <br>- **macOS 10.11 and later**: Quarantined <br><br>- **Linux**: Quarantined <br><br>- **Windows 10/11**: Quarantined|
-| **Email profile** | - **Android 4.0 and later**: Not applicable<br>- **Samsung Knox Standard 4.0 and later**: Not applicable<br>- **Android Enterprise**: Not applicable<br><br>- **iOS 8.0 and later**: Quarantined <br>- **macOS 10.11 and later**: Quarantined <br><br>- **Linux**: Not applicable <br><br>- **Windows 10/11**: Not applicable |
-| **Jailbroken or rooted device** | - **Android 4.0 and later**: Quarantined (not a setting) <br>- **Samsung Knox Standard 4.0 and later**: Quarantined (not a setting)<br>- **Android Enterprise**: Quarantined (not a setting) <br><br>- **iOS 8.0 and later**: Quarantined (not a setting) <br>- **macOS 10.11 and later**: Not applicable <br><br>- **Linux**: Not applicable <br><br>- **Windows 10/11**: Not applicable |
-| **Maximum OS version** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined <br><br>- **iOS 8.0 and later**: Quarantined <br>- **macOS 10.11 and later**: Quarantined <br><br>- **Linux**: See *Allowed Distros* <br><br>- **Windows 10/11**: Quarantined |
-| **Minimum OS version** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined <br><br>- **iOS 8.0 and later**: Quarantined <br>- **macOS 10.11 and later**: Quarantined  <br><br>- **Linux**: See *Allowed Distros* <br><br>- **Windows 10/11**: Quarantined|
-| **PIN or password configuration** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined  <br><br>- **iOS 8.0 and later**: Remediated <br>- **macOS 10.11 and later**: Remediated <br><br>- **Linux**: Quarantined <br> <br>- **Windows 10/11**: Remediated|
-| **Windows health attestation** | - **Android 4.0 and later**: Not applicable <br>- **Samsung Knox Standard 4.0 and later**: Not applicable <br>- **Android Enterprise**: Not applicable <br><br>- **iOS 8.0 and later**: Not applicable <br>- **macOS 10.11 and later**: Not applicable <br><br>- **Linux**: Not applicable <br><br>- **Windows 10/11**: Quarantined |
+| **Device encryption** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined <br><br>- **iOS 8.0 and later**: Remediated (by setting PIN) <br>- **macOS 10.11 and later**: Quarantined <br><br>- **Linux**: Quarantined <br><br>- **Windows**: Quarantined|
+| **Email profile** | - **Android 4.0 and later**: Not applicable<br>- **Samsung Knox Standard 4.0 and later**: Not applicable<br>- **Android Enterprise**: Not applicable<br><br>- **iOS 8.0 and later**: Quarantined <br>- **macOS 10.11 and later**: Quarantined <br><br>- **Linux**: Not applicable <br><br>- **Windows**: Not applicable |
+| **Jailbroken or rooted device** | - **Android 4.0 and later**: Quarantined (not a setting) <br>- **Samsung Knox Standard 4.0 and later**: Quarantined (not a setting)<br>- **Android Enterprise**: Quarantined (not a setting) <br><br>- **iOS 8.0 and later**: Quarantined (not a setting) <br>- **macOS 10.11 and later**: Not applicable <br><br>- **Linux**: Not applicable <br><br>- **Windows**: Not applicable |
+| **Maximum OS version** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined <br><br>- **iOS 8.0 and later**: Quarantined <br>- **macOS 10.11 and later**: Quarantined <br><br>- **Linux**: See *Allowed Distros* <br><br>- **Windows**: Quarantined |
+| **Minimum OS version** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined <br><br>- **iOS 8.0 and later**: Quarantined <br>- **macOS 10.11 and later**: Quarantined  <br><br>- **Linux**: See *Allowed Distros* <br><br>- **Windows**: Quarantined|
+| **PIN or password configuration** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined  <br><br>- **iOS 8.0 and later**: Remediated <br>- **macOS 10.11 and later**: Remediated <br><br>- **Linux**: Quarantined <br> <br>- **Windows**: Remediated|
+| **Windows health attestation** | - **Android 4.0 and later**: Not applicable <br>- **Samsung Knox Standard 4.0 and later**: Not applicable <br>- **Android Enterprise**: Not applicable <br><br>- **iOS 8.0 and later**: Not applicable <br>- **macOS 10.11 and later**: Not applicable <br><br>- **Linux**: Not applicable <br><br>- **Windows**: Quarantined |
 
 
 > [!NOTE]

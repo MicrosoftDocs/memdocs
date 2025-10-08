@@ -2,13 +2,6 @@
 metadata:
   title: Windows Autopilot device preparation troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot device preparation issues
-  ms.service: windows-client
-  ms.subservice: autopilot
-  ms.localizationpriority: medium
-  author: frankroj
-  ms.author: frankroj
-  ms.reviewer: madakeva
-  manager: bpardi
   ms.date: 06/11/2025
   ms.collection:
     - M365-modern-desktop
@@ -41,8 +34,8 @@ sections:
       - question: |
           Priority column in the list of device preparation policies is grayed out.
         answer: |
-          Device preparation policies in automatic mode don't honor priority as they're assigned directly within the Cloud PC provisioning policy. 
-          
+          Device preparation policies in automatic mode don't honor priority as they're assigned directly within the Cloud PC provisioning policy.
+
       - question: |
           Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
         answer: |

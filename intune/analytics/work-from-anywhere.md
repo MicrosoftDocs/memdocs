@@ -1,22 +1,14 @@
 ---
 title: Work from anywhere report in Endpoint analytics
-titleSuffix: Microsoft Intune
 description: The Work from anywhere report in Endpoint analytics provides insights to help your end users be productive from anywhere.
 ms.date: 02/25/2025
-
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
 ms.collection: highpri
 ---
 
 # Work from anywhere report
 <!--8668496-->
-The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere. From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.
+The ability for employees to work from anywhere productively is essential in today's world. This report offers insights into how prepared your workforce is to be productive from anywhere. From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.
 
 > [!NOTE]
 > The **Work from anywhere** report replaced the **Recommended software report**. You may notice changes in your scores because the calculations are different in the **Work from anywhere** report.
@@ -100,7 +92,7 @@ In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness
 
 > [!NOTE]
 >
-> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune-service/remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment.
+> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune-service/fundamentals/device-cleanup-rules.md), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment.
 > - Windows 11 hardware readiness insights do not impact your Work from anywhere score.
 
 ## <a name="bkmk_np"></a> No commercial median

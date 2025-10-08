@@ -1,32 +1,13 @@
 ---
-# required metadata
-
 title: Assign device profiles in Microsoft Intune
 description: Use the Microsoft Intune admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 02/18/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: gokarthi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - msec-ai-copilot
@@ -58,12 +39,12 @@ This feature applies to:
 ## Before you begin
 
 - Be sure you have the correct role that can assign policies and profiles. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
-- Consider using Microsoft Copilot in Intune. Some benefits include:
+- Consider using [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md). Some benefits include:
 
-  - When you create a policy and configure settings, Copilot provides more information on each setting, can recommend a value, and find potential conflicts.
+  - When you create a policy and configure settings, Copilot provides more information on each setting and find potential conflicts.
   - When you assign a policy, Copilot can tell you the groups the policy is assigned to and help you understand the effect of the policy.
 
-  For more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+  For more information, go to [Copilot in Intune](../copilot/copilot-intune-overview.md).
 
 ## Assign a policy to users or groups
 
@@ -81,7 +62,7 @@ This feature applies to:
 4. Under **Included groups** or **Excluded groups**, choose **Add groups** to select one or more Microsoft Entra groups. If you intend to deploy the policy broadly to all applicable devices, select **Add all users** or **Add all devices**.
 
     > [!NOTE]
-    > If you select "All Devices" and "All Users", the option to add additional Microsoft Entra groups disables. 
+    > If you select "All Devices" and "All Users", the option to add additional Microsoft Entra groups disables.
 
 5. Select **Review + Save**. This step doesn't assign your policy.
 6. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
@@ -97,7 +78,7 @@ This feature applies to:
   - Device configuration profiles
 
   For more information, go to:
-  
+
   - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md)
   - [Platforms, policies, and app types supported by filters in Microsoft Intune](../fundamentals/filters-supported-workloads.md)
 
@@ -125,7 +106,7 @@ For example:
 
 - You create a [Device Firmware Configuration Interface (DFCI) Intune profile](device-firmware-configuration-interface-windows.md) that updates settings in the BIOS. For example, you configure this policy to disable the device camera, or lock down the boot options to prevent users from booting up another OS. This policy is a good scenario to assign to a devices group.
 
-- On some specific Windows devices, you always want to control some Microsoft Edge settings, regardless of who's using the device. For example, you want to block all downloads, limit all cookies to the current browsing session, and delete the browsing history. For this scenario, put these specific Windows devices in a devices group. Then, create an [Administrative Template in Intune](administrative-templates-windows.md), add these device settings, and then assign this policy to the devices group.
+- On some specific Windows devices, you always want to control some Microsoft Edge settings, regardless of who's using the device. For example, you want to block all downloads, limit all cookies to the current browsing session, and delete the browsing history. For this scenario, put these specific Windows devices in a devices group. Then, create a [settings catalog policy in Intune](settings-catalog.md), add these device settings, and then assign this policy to the devices group.
 
 To summarize, use device groups when you don't care who's signed in on the device, or if anyone signs in. You want your settings to always be on the device.
 
@@ -143,9 +124,9 @@ For example:
 - A user receives a new organization-owned device. The user signs in to the device with their domain account. The device is automatically registered in Microsoft Entra ID, and automatically managed by Intune. This policy is a good scenario to assign to a users group.
 - Whenever a user signs in to a device, you want to control features in apps, such as OneDrive or Office. In this scenario, assign your OneDrive or Office policy settings to a users group.
 
-  For example, you want to block untrusted ActiveX controls in your Office apps. You can create an [Administrative Template in Intune](administrative-templates-windows.md), configure this setting, and then assign this policy to a users group.
+  For example, you want to disable all ActiveX controls in your Office apps. You can create a [settings catalog policy in Intune](settings-catalog.md), configure this setting, and then assign this policy to a users group.
 
-To summarize, use user groups when you want your settings and rules to always go with the user, whatever device they use. 
+To summarize, use user groups when you want your settings and rules to always go with the user, whatever device they use.
 
 ### Azure Virtual Desktop multi-session
 

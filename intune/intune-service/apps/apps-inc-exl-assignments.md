@@ -1,42 +1,20 @@
 ---
-# required metadata
-
-title: Include and exclude app assignments in Microsoft Intune
-titleSuffix: 
+title: Include and Exclude App Assignments in Microsoft Intune
 description: Learn how you can use Microsoft Intune to include and exclude app assignments.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/17/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: c59f6df5-3317-4dff-8f19-fdeec33faedf
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Include and exclude app assignments in Microsoft Intune
+# Include and Exclude App Assignments in Microsoft Intune
 
 In Intune, you can determine who has access to an app by assigning groups of users to include and exclude. Before you assign groups to the app, you must set the assignment type for an app. The assignment type makes the app available, required, or uninstalls the app.
 
 To set the availability of an app, you include and exclude app assignments to a group of users or devices by using a combination of include and exclude group assignments. This capability can be useful when you make the app available by including a large group, and then narrow the selected users by also excluding a smaller group. The smaller group might be a test group or an executive group.
 
-As a best practice, create and assign apps specifically for your user groups, and separately for your device groups. For more information on groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).  
+As a best practice, create and assign apps specifically for your user groups, and separately for your device groups. For more information on groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 
 Important scenarios exist when including or excluding app assignments:
 
@@ -54,7 +32,7 @@ As a result, it's not recommended to assign apps to mixed groups.
 > [!NOTE]
 > When you set a group assignment for an app, the **Not Applicable** type is deprecated and replaced with exclude group functionality.
 >
-> Intune provides pre-created **All Users** and **All Devices** groups in the Microsoft Intune admin center. The groups have built-in optimizations for your convenience. It's highly recommended that you use these groups to target all users and all devices instead of any "all users" or "all devices" groups that you might create yourself.  
+> Intune provides pre-created **All Users** and **All Devices** groups in the Microsoft Intune admin center. The groups have built-in optimizations for your convenience. It's highly recommended that you use these groups to target all users and all devices instead of any "all users" or "all devices" groups that you might create yourself.
 >
 > Android enterprise supports including and excluding groups. You can leverage the built-in **All Users** and **All Devices** groups for Android enterprise app assignment.
 
@@ -90,7 +68,7 @@ When you make group assignments, groups that have already been assigned aren't a
 To edit assignments, in the app **Assignments** pane, select the row that contains the specific assignment that you want to change. You can also remove an assignment by selecting the ellipse (**…**) at the end of a row, and then selecting **Remove**.
 
 > [!NOTE]
-> Removing a group assignment does not remove the related app except on Android Enterprise dedicated, fully managed, and corporate-owned work profile devices. The installed app will remain on the device.  
+> Removing a group assignment does not remove the related app except on Android Enterprise dedicated, fully managed, and corporate-owned work profile devices. The installed app will remain on the device.
 
 ## Next steps
 

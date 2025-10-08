@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Use Windows Update for Business reports for Windows Updates in Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Use Windows Update for Business reports to view data for Windows Updates you deploy with Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 03/04/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: zadvor
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -36,11 +18,11 @@ ms.collection:
 
 With Intune, you can deploy updates to Windows 10/11 devices by using policies for:
 
-- [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)
-- [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
-- [Windows Driver updates for Windows 10 and later](../protect/windows-driver-updates-overview.md)
+- [Update rings for Windows](../protect/windows-10-update-rings.md)
+- [Feature updates for Windows](../protect/windows-10-feature-updates.md)
+- [Windows Driver updates for Windows](../protect/windows-driver-updates-overview.md)
 
-Reports for these policy types are available to help you monitor and troubleshoot update deployments. To support reporting, you must configure [Data collection settings](#configuring-for-client-data-reporting).  
+Reports for these policy types are available to help you monitor and troubleshoot update deployments. To support reporting, you must configure [Data collection settings](#configuring-for-client-data-reporting).
 
 Intune supports the following report options:
 
@@ -88,12 +70,12 @@ On the policy page view:
 
 - **View report**: This button opens a more detailed report view for *Device and user check-in status*. The detailed report view includes a chart and color bar similar to that from the preceding high-level view, but reports one the additional status of **In progress**.
 
-  This view also includes device specific details that include:  
+  This view also includes device specific details that include:
   - Device name
   - Logged in user
   - Check-in status
   - Last report modification time
-  
+
   :::image type="content" source="./media/windows-update-reports/report-view-details.png" alt-text="Screen capture that shows details available from the View report action.":::
 
   From this report view, you can select a device to drill in to view the list of the settings in the policy, and the status of the selected device for each of those settings. Additional drill-in is available by selecting a setting to open the *Setting details*. The *Setting details* display the name of the setting, the devices status (State) for that setting, and a list of profiles that manage the setting and that are assigned to the device. This is useful to help identify the source of a settings conflict.
@@ -103,9 +85,9 @@ On the policy page view:
   - **Device assignment status** – This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
 
     For this report, you can select one or more status details you are interested in, and then select *Generate report* to update the view with only that information. In this following image, we have generated a report that displays only the devices that were successfully assigned this policy:
-  
+
     :::image type="content" source="./media/windows-update-reports/successful-assignment-view.png" alt-text="Image of the results of the Assignment status report.":::
-  
+
     This report supports drilling in to view the list of settings, with subsequent drill-in as seen in for the full report view available from the *View report* button.
 
   - **Per setting status** – View the configuration status of each setting for this policy across all devices and users. This view present a simple view of each setting in the policy, and the count of assigned devices that have success, error, or conflict. This report view doesn't support drilling in for additional detail.
@@ -130,7 +112,7 @@ Before you can use the feature updates policy reports, you must configure prereq
 
   - Service-based data is collected for all feature update versions and doesn't require you to configure data collection.
   - Client-based data is collected from devices only after data collection is configured.
-  
+
   Service and client-based data is described in [Use the Windows 10 feature updates (Organizational) report](#use-the-windows-10-feature-updates-organizational-report) later in this article.
 
 - **Devices**:
@@ -139,36 +121,6 @@ Before you can use the feature updates policy reports, you must configure prereq
 
   - Meet the [prerequisites for Windows 10 and later feature updates policy](../protect/Windows-10-feature-updates.md#prerequisites) as documented in **Feature updates for Windows 10 and later policy in Intune**.
   - Be Microsoft Entra joined, or Microsoft Entra hybrid joined to support submitting of data for reporting.
-  - Run Windows 10 1903 or later, or Windows 11. Although Windows 10 and later feature updates policy supports earlier versions of Windows, earlier versions don't support reporting of the data that Intune uses for the feature updates reports.
-
-<!-- ### Configure data collection
-
-The data that powers Intune's Windows feature updates reports isn't collected by the typical device sync with Intune. Instead, it's collected through the *[Windows health monitoring](../configuration/windows-health-monitoring.md)* device configuration policy, which uses the Windows 10/11 and Windows Server Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. To enable use of this data in the reports, you must configure devices to send Windows Updates data.
-
-#### Enable data collection
-
-To Configure this setting for your devices, [Create a profile](../configuration/device-profile-create.md#create-the-profile) with the following information:
-
-- **Platform**: Select **Windows 10 and later**.
-- **Profile**: Select **Windows health monitoring**.
-- **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**.
-- **Description**: Enter a description for the profile. This setting is optional, but recommended.
-- In **Configuration Settings**:
-  - **Health Monitoring**: Select *Enable* to collect event information from supported Windows 10/11 devices.
-  - **Scope**: Select *Windows Updates*.
-
-- Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria. Only Windows 10 version 1903 and later and Windows 11 are supported for these reports.
-
-  > [!div class="mx-imgBorder"]
-  > ![Set the Scope to Windows updates](./media/windows-update-reports/whm-scope.png)
-
-When you complete the creation of the Windows health monitoring profile, the profile deploys to the assigned groups, and configuration of data collection is complete.
-
-It can take up to 24 hours after setting up Windows health monitoring with Windows updates before the policy is applied.
-
-> [!TIP]
-> If you use [Endpoint Analytics](../../analytics/overview.md), you can modify the existing configuration profile. The same policy is used to collect data for Endpoint Analytics.
-This section is now obsolete -->
 
 ### About reporting data latency
 
@@ -206,7 +158,7 @@ To use the report:
    - Select **Update status** and **Ownership** to refine the report.
      > [!div class="mx-imgBorder"]
      > ![Review ownership](./media/windows-update-reports/windows-feature-updates-by-policy.png)
-  
+
    The following list identifies the columns that are available in the view:
    - **Devices** – The name of the device.
    - **UPN** – Intune user identifier (email).
@@ -220,7 +172,7 @@ To use the report:
    - **Alert Details** – *This column isn't in use.*
    - **Last Scan Time** – The last time this device ran a scan for Windows Update.
    - **Target Version** – This column is useful in policy reports as it shows the friendly name of the update being targeted on the device. This field can be particularly useful when the [win10 sxs] checkbox is selected to identify when and which devices were determined to be ineligible for the update and are now being targeted with the Win10 update.
-   
+
    The following information applies to **Update State** and **Update Substate**:
 
    - **Service-side data**:
@@ -232,7 +184,7 @@ To use the report:
        - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.
      - **Canceled**:
        - **Admin Cancelled** – The update offer was canceled by explicit Administrator action.
-       - **Service Cancelled** – The update was canceled by Windows Update for one of the following reasons:  
+       - **Service Cancelled** – The update was canceled by Windows Update for one of the following reasons:
           - The *end of service* for the selected content was reached and it's no longer offered by Windows Update. For example, the device might have been added to a deployment after the content's availability expired, or the content reached its end of service date before it could install on the device.
           - The deployment content has been superseded for the device. This can happen when the device is targeted by another deployment that deploys newer content. For example, one deployment targets the Windows 10 device to install version 2004 and a second deployment targets that same device with version 21H1. In this event, 2004 is superseded by the 21H1 deployment and Windows Update cancels the 2004 deployment to the device.
        - **Removed from Deployment** – The update offer was canceled because it was removed from the Deployment by explicit Administrator action.
@@ -271,7 +223,7 @@ To use the report:
 
 The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](../protect/windows-10-feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
 
 This report provides insights to update installation status, including the number of devices with errors. It also supports drilling in for more details to help you troubleshoot issues with the installation. This report supports filtering, searching, paging, and sorting.

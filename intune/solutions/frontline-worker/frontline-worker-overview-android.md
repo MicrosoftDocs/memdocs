@@ -1,25 +1,10 @@
 ---
 title: Get started with Android frontline worker devices
 description: Learn how to manage frontline worker devices using Android devices in Microsoft Intune. Select the best enrollment option, configure the home screen, and more.
-ms.author: mandia
-author: MandiOhlinger
-manager: dougeby
 ms.date: 02/19/2025
-audience: ITPro
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: cbernier
-ms.suite: ems
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -183,7 +168,7 @@ The following scenarios are common for FLW:
   **What you need to know**:
 
   - Only features added to the Managed Home Screen (MHS) are available to end users. So, you can restrict end users from accessing settings and other device features.
-  - When you pin one app or pin many apps to the MHS, only those apps open. They're the only apps users can access.  
+  - When you pin one app or pin many apps to the MHS, only those apps open. They're the only apps users can access.
   - The MHS is the enterprise launcher you use. Don't install another enterprise launcher app.
 
   For more information on the MHS app on dedicated devices, go to the [Setup Microsoft MHS on dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060) blog post.

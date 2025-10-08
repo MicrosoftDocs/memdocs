@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Android (AOSP) compliance settings in Microsoft Intune
 description: View the device compliance settings for Android (AOSP) that you can manage with Microsoft Intune compliance policies.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 05/15/2024
+ms.date: 09/04/2025
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: tycast
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - compliance
 - sub-device-compliance
@@ -53,7 +34,7 @@ To access these settings, [create an Android (AOSP) compliance policy](create-co
 
 ## Device Health
 
-* **Rooted devices**  
+* **Rooted devices**
   Prevent rooted devices from having corporate access.
 
   * **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
@@ -61,17 +42,17 @@ To access these settings, [create an Android (AOSP) compliance policy](create-co
 
 ## Device Properties
 
-* **Minimum OS version**  
+* **Minimum OS version**
   When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.
 
   By default, no version is configured.
 
-* **Maximum OS version**  
+* **Maximum OS version**
   When a device is using an OS version later than the version specified in the rule, access to company resources is blocked. The user is asked to contact their IT admin. Until a rule is changed to allow the OS version, this device can't access company resources.
 
   By default, no version is configured.
 
-* **Minimum security patch level**  
+* **Minimum security patch level**
   Enter the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the `YYYY-MM-DD` format.
 
   By default, no patch level is configured.
@@ -80,7 +61,7 @@ To access these settings, [create an Android (AOSP) compliance policy](create-co
 
 If you don't configure password requirements, the use of a device password is optional and left up to the users to configure.
 
-* **Require a password to unlock mobile devices**  
+* **Require a password to unlock mobile devices**
   Require users to have a password-protected lock screen on their device. Your options:
 
   * **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
@@ -88,14 +69,14 @@ If you don't configure password requirements, the use of a device password is op
 
   If you require a password, also configure:
 
-  * **Required password type**  
+  * **Required password type**
     Require users to use a certain type of password. Your options:
 
     * **Device default** - To evaluate password compliance, be sure to select a password strength other than *Device default*.
 
     * **Numeric** - Password must only be numbers, such as `123456789`.
 
-      Also enter:  
+      Also enter:
       * **Minimum password length**: The minimum number of digits required, from 4 to 16.
 
     * **Numeric complex** - Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed.
@@ -109,12 +90,12 @@ If you don't configure password requirements, the use of a device password is op
     >
     > The following password types are listed as options but are not supported for Android (AOSP) devices: *Alphabetic*, *Alphanumeric*, and *Alphanumeric with symbols*.
 
-  * **Maximum minutes of inactivity before password is required**  
+  * **Maximum minutes of inactivity before password is required**
       Enter the maximum idle time allowed, from 1 minute to 8 hours, before the user must re-enter their password to get back into their device. When you choose **Not configured** (default), this setting isn't evaluated for compliance or noncompliance.
 
 ## Encryption
 
-* **Require encryption of data storage on a device**  
+* **Require encryption of data storage on a device**
   Your options are:
 
   * **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
