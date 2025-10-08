@@ -98,3 +98,13 @@ groups:
     title: Windows
   - id: ios
     title: iOS
+
+- id: manage-intune-cm
+  title: Management platform
+  prompt: Select how you manage your devices
+  pivots:
+  - id: intune
+    title: Microsoft Intune
+  - id: cm
+    title: Configuration Manager
+

@@ -1,7 +1,6 @@
 ---
 title: Intune data platform schema
 description: Overview of Intune data platform schema.
-author: MandiOhlinger
 ms.date: 07/15/2025
 ms.topic: reference
 ms.reviewer: Abby Starr
@@ -17,9 +16,9 @@ This article goes over the properties supported in the Intune Data Platform. The
 
 Each table (entity) in this page lists the types of queries that are supported with the following information:
 
-- Property: The name of the variable we collect and store.  
-- Type: The data type you can expect to see, such as *string* or *boolean*.  
-- Description: The purpose of the property. 
+- Property: The name of the variable we collect and store.
+- Type: The data type you can expect to see, such as *string* or *boolean*.
+- Description: The purpose of the property.
 - Platform:  The operating systems that support the property.
 
 For entities that include Android data, the following platforms are supported:

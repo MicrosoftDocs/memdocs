@@ -171,7 +171,7 @@ For more information, go to:
 - [Endpoint analytics overview](./analytics/index.md)
 - [Endpoint analytics scores, baselines, and insights](./analytics/scores.md)
 - [Tutorial: Walkthrough the Microsoft Intune admin center](./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md)
-- [Quickstart - Enroll Configuration Manager devices](./analytics/enroll-configmgr.md)
+- [Quickstart - Enroll Configuration Manager devices](./analytics/configure.md)
 
 ## Learn more
 

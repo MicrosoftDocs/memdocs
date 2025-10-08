@@ -1,118 +1,138 @@
 ---
-title: Endpoint Analytics Overview
-description: Overview for Endpoint analytics.
-ms.date: 02/28/2025
+title: "Endpoint Analytics: Optimize Device Performance and User Experience"
+description: Learn how endpoint analytics in Microsoft Intune provides actionable insights to optimize device performance, detect issues, and improve user experience. Discover key benefits, requirements, and how IT teams can proactively support users and reduce help desk tickets.
+ms.date: 09/30/2025
 ms.topic: overview
+zone_pivot_groups: manage-intune-cm
 ---
 
 # Endpoint analytics overview
 
-Endpoint analytics is part of the [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score). These analytics give you insights for measuring how your organization is working and the quality of the experience you're delivering to your users. Endpoint analytics can help identify policies or hardware issues that might be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket. For more information on the Microsoft Adoption Score and other new tools, see [New tools to help IT empower employees securely in a remote work world​](https://www.microsoft.com/en-us/microsoft-365/blog/2020/04/30/new-tools-help-it-empower-employees-securely-remote-work-world/).<!-- see MEMDocs#955, this link requires "en-us" locale -->
+Endpoint analytics helps IT professionals assess and improve the user experience across managed devices. It provides data-driven insights into device performance, startup times, app reliability, and battery health—empowering IT teams to proactively identify and remediate issues that impact productivity.
 
-It's not uncommon for users to experience long boot times or other disruptions. These disruptions can be due to a combination of:
+Endpoint analytics contributes to the technology experiences category within [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score), offering device-level insights that complement broader organizational productivity metrics.
 
-- Legacy hardware
-- Software configurations that aren't optimized for the end-user experience
-- Issues caused by configuration changes and updates
+The service integrates with Microsoft Intune, enabling IT pros to:
 
-These issues and other end-user experience problems persist because IT doesn't have much visibility into the end-user experience. Generally, the only visibility into these issues comes from a slow costly support channel that doesn't usually provide clear information about what needs to be optimized. It's not only IT support bearing the cost of these problems. The time information workers spend dealing with issues is also costly. Performance, reliability, and support issues that reduce user productivity can affect an organization's bottom line as well.
+- Enroll devices directly from Intune.
+- Use Configuration Manager for co-managed environments.
+- Manage data collection and configuration.
+- View analytics in the Intune admin center.
+- Apply remediations or adjust policies based on insights.
 
-**Endpoint analytics** aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing the effect of configuration changes on users.
+:::image type="content" source="images/ea-overview.png" alt-text="Screenshot of the endpoint analytics overview page" lightbox="images/ea-overview.png" border="false":::
 
-> [!IMPORTANT]
-> Endpoint analytics is now available to tenants in Government cloud.
+## Requirements
 
-## <a name="bkmk_prereq"></a> Prerequisites
+Endpoint analytics has different requirements based on how you manage devices. Review the sections below to ensure your environment meets the necessary prerequisites:
 
-You can enroll devices via Configuration Manager or Microsoft Intune.
+[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
 
-### <a name="bkmk_intune_prereq"></a> How to enroll devices via Intune
+> [!div class="checklist"]
+> Endpoint analytics supports the following Windows editions:
+> - Pro
+> - Pro Education
+> - Enterprise
+> - Education
 
-- Intune enrolled or co-managed devices running the following:
-  - Windows 10 version 1903 or later
-  - July 2021 cumulative update or later
-  - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
-- Windows devices must be Microsoft Entra joined or Microsoft Entra hybrid joined. Workplace joined or Microsoft Entra registered devices aren't supported.
-- Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
-- The [Intune Service Administrator role](/mem/intune-service/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
-  - After the administrator selects **Start** for gathering data, other read-only roles can view the data.
+[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
 
-### <a name="bkmk_cm_prereq"></a> How to enroll devices via Configuration Manager
+> [!div class="checklist"]
+> Endpoint analytics supports devices that are:
+>
+> - Managed by Intune
+> - Co-managed (Intune + Configuration Manager)
+> - Managed by Configuration Manager (via tenant attach)
+> - Microsoft Entra joined
+> - Microsoft Entra hybrid joined
+>
+> Devices must also meet the following requirements:
+> - The **Connected User Experiences and Telemetry** service (DiagTrack) must be enabled and running.
 
-- A minimum of Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
-- The Configuration Manager clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
-- [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
-- [Enable Endpoint analytics for devices uploaded to Microsoft Intune](enroll-configmgr.md#bkmk_cm_upload).
+[!INCLUDE [network-connectivity-requirements](../includes/h3/network-connectivity-requirements.md)]
 
-<!-- ### Remediation scripting requirements
-
-Whether enrolling devices via Intune or Configuration Manager, [**Remediation scripting**](../intune-service/fundamentals/remediations.md) has the following requirements:
-
-- Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
-  - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
-  - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607). -->
-
-## Licensing Prerequisites
-
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune-service/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
-
-<!-- Remediations also requires users of the devices to have one of the following licenses:
-
-- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10/11 Virtual Desktop Access (VDA) per user -->
-
-## Permissions
-
-### Endpoint analytics permissions
-
-[!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
-
-### Built-in role permissions
-
-Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md). <!--7567981-->
-
-|Role name|Microsoft Entra role|Intune role|Endpoint analytics permissions|
-|---|---|---|---|
-|Global Administrator|Yes||Read/write|
-|Intune Service Administrator|Yes||Read/write|
-|School Administrator||Yes|Read/write|
-|Endpoint Security Manager||Yes|Read only|
-|Help Desk Operator||Yes|Read only|
-|Read Only Operator||Yes|Read only|
-|Reports Reader|Yes||Read only|
-
-<!-- ### Remediations permissions
-
-For Remediations, the user needs permissions appropriate to their role under the **Device configurations** category.  Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Remediations.
-
-An [Intune Service Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using Remediations for the first time. (removing this as part of moving Remediations to Intune)-->
-
-## <a name="bkmk_endpoints"></a> Endpoints
-
-If your environment uses a proxy server, configure your proxy server to allow the following endpoints:
-
-### Endpoints required for Configuration Manager-managed devices
-
-Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they don't need directly access to the Microsoft public cloud.
+::: zone pivot="intune"
+To enroll Intune-managed devices to endpoint analytics, they need to send required functional data to Microsoft public cloud. Ensure the following endpoints are accessible from Intune-managed devices:
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to Endpoint analytics on Configuration Manager Server role. For more information, see [Configure the proxy for a site system server](../configmgr/core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Used to synch device collection and devices with Endpoint analytics on Configuration Manager Server role only. For more information, see [Configure the proxy for a site system server](../configmgr/core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+| `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
 
-### Endpoints required for Intune-managed devices
+::: zone-end
 
-To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows Connected User Experiences and Telemetry component (DiagTrack) to collect the data from Intune-managed devices. Make sure that the **Connected User Experiences and Telemetry** service on the device is running.
+::: zone pivot="cm"
+
+Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they don't need directly access to the Microsoft public cloud. If your environment uses a proxy server, configure the proxy server to allow the following endpoints:
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](data-collection.md#bkmk_datacollection) to the Intune data collection endpoint. |
+| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to endpoint analytics on Configuration Manager Server role. For more information, see [Configure the proxy for a site system server](../configmgr/core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+| `https://*.manage.microsoft.com` | Used to synch device collection and devices with endpoint analytics on Configuration Manager Server role only. For more information, see [Configure the proxy for a site system server](../configmgr/core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 
->[!Important]
-> For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
+If you have co-management enabled, enrolled devices send required functional data directly to Microsoft public cloud. In this case, ensure the following endpoints are accessible from co-managed devices:
 
-## Next steps
+| Endpoint  | Function  |
+|-----------|-----------|
+| `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
 
-- [Enroll Intune managed devices](enroll-intune.md)
-- [Enroll Configuration Manager managed devices](enroll-configmgr.md)
+::: zone-end
+
+For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
+
+[!INCLUDE [licensing-requirements](../includes/h3/licensing-requirements.md)]
+
+::: zone pivot="intune"
+
+- Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune-service/fundamentals/licenses.md).
+
+::: zone-end
+
+::: zone pivot="cm"
+
+- Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
+
+::: zone-end
+
+[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+
+Endpoint analytics includes tasks that require different levels of permissions.
+
+For a detailed breakdown of the required permissions for each task:
+
+- [RBAC requirements for configuring endpoint analytics](configure.md#-role-and-permission-requirements)
+- [RBAC requirements for rewieving endpoint analytics data](scores.md#-role-and-permission-requirements)
+
+::: zone pivot="cm"
+
+## Configuration Manager requirements
+
+To use endpoint analytics, your environment must have [tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled. Tenant attach connects Configuration Manager to Intune, allowing you to manage devices from the Intune admin center and perform actions such as device sync and remote tasks.
+
+> [!NOTE]
+> Using multiple Configuration Manager hierarchies with a single endpoint analytics instance isn't supported.
+
+::: zone-end
+
+## Reports available in endpoint analytics
+
+Endpoint analytics organizes insights into reports that highlight performance and reliability issues across managed devices. Common examples include:
+
+- Startup performance: Identifies devices with slow boot times and contributing factors.
+- Application reliability: Tracks app crashes and stability trends.
+- Restart frequency: Highlights devices that restart often, signaling potential hardware or software issues.
+- Battery health: Shows battery degradation and charging patterns for portable devices.
+- Recommended software: Suggests apps that improve productivity based on usage patterns.
+
+## Next Steps
+
+Learn more about endpoint analytics:
+
+- [Configure endpoint analytics](configure.md)
+- [Scores, baselines, and insights](scores.md)
+- Understand the reports:
+  - [Startup performance](startup-performance.md)
+  - [Restart frequency](restart-frequency.md)
+  - [Application reliability](app-reliability.md)
+  - [Work from anywhere](work-from-anywhere.md)
+- [Understand data collection](data-collection.md)
+- [Microsoft Intune Advanced Analytics](advanced-analytics.md)

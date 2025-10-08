@@ -17,15 +17,13 @@ Endpoint analytics contains great insights, but it requires access to the Micros
 
 The **Endpoint analytics** page looks similar to the other pages in Adoption Score, making it easy to dive right in. The following information is displayed on the **Endpoint analytics** page:
 
-- The current Endpoint analytics score
+- The current endpoint analytics score
 - Endpoint analytics score over the past 180 days
 - Startup performance scores
 
-## About the Endpoint analytics scores
+## About the endpoint analytics scores
 
-The **Endpoint analytics score** is a weighted average of the [Startup performance](startup-performance.md), [Application reliability](app-reliability.md), and [Work from anywhere](work-from-anywhere.md) scores.
-
-[!INCLUDE [Endpoint analytics startup score](includes/startup-score.md)]
+The **endpoint analytics score** is a weighted average of the [Startup performance](startup-performance.md), [Application reliability](app-reliability.md), and [Work from anywhere](work-from-anywhere.md) scores.
 
 ## Startup performance metrics
 
@@ -55,20 +53,3 @@ The overall **Application reliability score** for your tenant is shown with the 
   - **Active devices**: The total number of your tenant's enrolled devices that have launched this app at least once in the past 14 days.
 
 :::image type="content" source="media/8529842-application-reliability.png" alt-text="Endpoint analytics application reliability metrics" lightbox="media/8529842-application-reliability.png":::
-
-## Known issues
-
-### Unsupported roles
-
-Currently, the following roles aren't supported:
-
-- Exchange Administrator
-- SharePoint Administrator
-- Lync Administrator
-
-## Next steps
-
-For more information, see:
-
-- [Work from anywhere](work-from-anywhere.md)
-- [Startup performance scores](startup-performance.md)
