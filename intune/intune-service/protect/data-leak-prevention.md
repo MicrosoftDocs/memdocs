@@ -5,7 +5,6 @@ ms.author: dougeby
 author: dougeby
 ms.date: 01/02/2018
 ms.topic: archived
-ms.localizationpriority: medium
 ms.reviewer: pchacon
 ms.collection:
 - M365-identity-device-management

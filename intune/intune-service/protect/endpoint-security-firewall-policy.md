@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 09/18/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -46,6 +45,8 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 For guidance on assigning the right level of permissions and rights to manage Intune firewall policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
 
 ## Firewall profiles
+
+Find guidance for creating endpoint security profiles at [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy).
 
 ### Devices managed by Intune
 

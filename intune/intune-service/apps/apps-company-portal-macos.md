@@ -1,5 +1,5 @@
 ---
-title: Add the Company Portal for macOS app
+title: Add the Company Portal for macOS App
 description: Add the macOS Company Portal app.
 ms.date: 11/21/2024
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.collection:
 - highpri
 ---
 
-# Add the macOS Company Portal app
+# Add the macOS Company Portal App
 
 To manage devices, install optional apps, and gain access to resources protected by Conditional Access on macOS devices with user affinity, users must install and sign in to the Company Portal app. You can provide instructions to your users to install Company Portal for macOS or install it on devices already enrolled directly from Intune.
 

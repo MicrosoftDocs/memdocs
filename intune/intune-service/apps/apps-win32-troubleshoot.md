@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Win32 apps in Microsoft Intune
+title: Troubleshoot Win32 Apps in Microsoft Intune
 description: Learn about the most common methods to troubleshoot Win32 app issues with Microsoft Intune.
 ms.date: 10/02/2025
 ms.topic: troubleshooting
@@ -9,7 +9,7 @@ ms.collection:
 - FocusArea_Apps_Win32
 ---
 
-# Troubleshoot Win32 app issues
+# Troubleshoot Win32 App Issues
 
 [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 

@@ -4,7 +4,6 @@ description: Learn about applications and modern authentication (MSAL) using Mic
 author: nicholasswhite
 ms.author: nwhite
 ms.date: 03/28/2024
-ms.localizationpriority: medium
 ms.topic: article
 ms.reviewer: beflamm
 ms.collection:

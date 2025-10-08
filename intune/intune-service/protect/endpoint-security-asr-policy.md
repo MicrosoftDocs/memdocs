@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 06/20/2025
 ms.topic: article
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -57,6 +56,8 @@ For guidance on assigning the right level of permissions and rights to manage In
 ## Attack surface reduction profiles
 
 The available profiles for attack surface reduction policy depend on the platform you select.
+
+Find guidance for creating endpoint security profiles at [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy).
 
 > [!NOTE]
 >

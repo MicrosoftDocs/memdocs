@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune App SDK for iOS developer guide - Multi-Identity
+title: Microsoft Intune App SDK for iOS Developer Guide - Multi-Identity
 description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. Multi-Identity
 ms.date: 06/12/2025
 ms.topic: reference

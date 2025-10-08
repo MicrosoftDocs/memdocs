@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 05/19/2025
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -112,6 +111,8 @@ Prerequisites to support managing tamper protection with these profiles:
   - Profile: **Windows Security experience (preview)**
 
 ## Antivirus profiles
+
+Find guidance for creating endpoint security profiles at [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy).
 
 ### Devices managed by Microsoft Intune
 

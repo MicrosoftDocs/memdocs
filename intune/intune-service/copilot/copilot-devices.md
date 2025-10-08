@@ -4,7 +4,6 @@ description: Microsoft Security Copilot in Intune can help you get information a
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ankurgoyal, zadvor, rashok
 ms.collection:
 - M365-identity-device-management
