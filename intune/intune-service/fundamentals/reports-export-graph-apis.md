@@ -1,5 +1,5 @@
 ---
-title: Use Graph APIs to export Intune Reports | Microsoft Docs
+title: Use Graph APIs to Export Intune Reports | Microsoft Docs
 description: Learn about exporting Intune reports using Graph APIs.
 author: nicholasswhite
 ms.author: nwhite
@@ -11,7 +11,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Export Intune reports using Graph APIs
+# Export Intune Reports Using Graph APIs
 
 All reports that have been migrated to the Intune reporting infrastructure will be available for export from a single top-level export API. You must use the Microsoft Graph API to make the HTTP call. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources.
 
