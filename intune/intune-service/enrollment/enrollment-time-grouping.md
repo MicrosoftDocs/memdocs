@@ -75,7 +75,7 @@ After you configure enrollment time grouping in the enrollment profile, you can 
 
     1. **Membership type**: Select **Assigned**.
 
-    1. **Owners**: Select the **No owners selected** link.
+    1. **Owners**: Select the **No owners selected** link.  
 
     1. On the **Add owners** screen that opens, add the Intune Provisioning Client as owner:
 
