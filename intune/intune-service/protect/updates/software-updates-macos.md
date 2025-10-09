@@ -49,7 +49,7 @@ This feature applies to:
 
 4. On the **Update policy settings** tab, configure the following options:
 
-   :::image type="content" source="./media/software-updates-macos/macos-update-policy-settings.png" alt-text="Screen capture of the Update policy settings page.":::
+   :::image type="content" source="../media/software-updates-macos/macos-update-policy-settings.png" alt-text="Screen capture of the Update policy settings page.":::
 
    1. For *Critical*, *Firmware*, *Configuration file*, and *All other updates (OS, built-in apps)*, the following installation actions can be configured:
 
@@ -85,7 +85,7 @@ This feature applies to:
 
    3. **Weekly schedule**: If you choose a schedule type other than *update at next check-in*, configure the following options:
 
-        :::image type="content" source="./media/software-updates-macos/update-policy-schedule-settings.png" alt-text="Screen capture of the Update policy schedule settings.":::
+        :::image type="content" source="../media/software-updates-macos/update-policy-schedule-settings.png" alt-text="Screen capture of the Update policy schedule settings.":::
 
       - **Time zone**: Choose a time zone.
 
@@ -149,7 +149,7 @@ You can edit an existing policy, including changing the restricted times:
 1. Select **Devices** > **Update policies for macOS**. Select the policy you want to edit.
 2. While viewing the policies **Properties**, select **Edit** for the policy page you want to modify.
 
-   :::image type="content" source="./media/software-updates-macos/edit-a-macos-update-policy.png" alt-text="Screen capture of the policy edit page.":::
+   :::image type="content" source="../media/software-updates-macos/edit-a-macos-update-policy.png" alt-text="Screen capture of the policy edit page.":::
 
 3. After introducing a change, select **Review + save** > **Save** to save your edits.
 

@@ -53,7 +53,7 @@ With these MDM-based policies, you can:
 3. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.
 4. On the **Update policy settings** tab, configure the following options:
 
-   :::image type="content" source="./media/software-updates-ios/basics-tab.png" alt-text="Screenshot that shows sample software update policy settings in Microsoft Intune.":::
+   :::image type="content" source="../media/software-updates-ios/basics-tab.png" alt-text="Screenshot that shows sample software update policy settings in Microsoft Intune.":::
 
    1. **Select version to install**. You can choose from:
 
@@ -68,7 +68,7 @@ With these MDM-based policies, you can:
 
    3. **Weekly schedule**: If you choose a schedule type other than *update at next check-in*, configure the following options:
 
-      :::image type="content" source="./media/software-updates-ios/scheduled-time.png" alt-text="Screenshot that shows selecting to install an update during scheduled time in an update policy in Microsoft Intune.":::
+      :::image type="content" source="../media/software-updates-ios/scheduled-time.png" alt-text="Screenshot that shows selecting to install an update during scheduled time in an update policy in Microsoft Intune.":::
 
       - **Time zone**: Choose a time zone.
       - **Time window**: Define one or more blocks of time that restrict when the updates install. The effect of the following options depends on the Schedule type you selected. With a start day and end day, overnight blocks are supported. Options include:
@@ -111,7 +111,7 @@ You can edit an existing policy, including changing the restricted times:
 
 2. While viewing the policies **Properties**, select **Edit** for the policy page you want to modify.
 
-   :::image type="content" source="./media/software-updates-ios/edit-policy.png" alt-text="Screenshot that shows how to edit an existing iOS/iPadOS software update policy in Microsoft Intune.":::
+   :::image type="content" source="../media/software-updates-ios/edit-policy.png" alt-text="Screenshot that shows how to edit an existing iOS/iPadOS software update policy in Microsoft Intune.":::
 
 3. After introducing a change, select **Review + save** > **Save** to save your edits, and return to the policies *Properties*.
 
