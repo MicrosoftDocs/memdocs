@@ -122,9 +122,9 @@ If you remove a device from the group, Microsoft Intune reevaluates policy confi
 
 ## Reporting  
 
-To access reporting for enrollment time grouping, go to **Devices** > **Monitor** > **Enrollment time grouping failures**. The available report shows failures: devices that failed to become members of a specific static device group during these setup processes:  
+To access reporting for enrollment time grouping, go to **Devices** > **Monitor** > **Enrollment time grouping failures**. The available report shows only failures. Specifically, information about devices that failed to become members of a specific static device group during these setup processes:  
 
-- Windows Autopilot prepartion provisioning  
+- Windows Autopilot preparation provisioning  
 - Android Enterprise fully managed enrollment  
 - Android Enterprise corporate-owned work profile enrollment  
 - Android Enterprise dedicated enrollment  
@@ -132,7 +132,7 @@ To access reporting for enrollment time grouping, go to **Devices** > **Monitor*
 Recently updated information can take up to 20 minutes to appear in the report. You must have the *Microsoft.Intune/ManagedDevices/Read* RBAC permission to view the report.
 
 > [!IMPORTANT]
-> This report provides awareness about devices that fail to be added to the security groups configured in the enrollment profiles, given that the failure can cause devices to enter an undesirable management state. We recommend monitoring the report continuously so that you can take the necessary mitigating actions right away. You could, for example, use a custom app that scans the report data on a regular schedule. The app then generates a notification when it finds new devices in the report.  
+> This report provides awareness about devices that fail to be added to the security groups configured in the enrollment profiles. Given that the failure can cause devices to enter an undesirable management state, we recommend monitoring the report continuously so that you can take the necessary mitigating actions right away. You could, for example, use a custom app that scans the report data on a regular schedule. The app then generates a notification when it finds new devices in the report.  
 
 ## Known issues and limitations
 
