@@ -268,6 +268,6 @@ To accomplish this task, this scenario involves two policies:
 ## Related articles
 
 - [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md)
-- [Software updates planning guide and scenarios for BYOD and personal devices](software-updates-guide-personal-byod.md)
-- [Software updates planning guide for managed Android devices](software-updates-guide-android.md)
+- [Software updates planning guide and scenarios for BYOD and personal devices](../software-updates-guide-personal-byod.md)
+- [Software updates planning guide for managed Android devices](../software-updates-guide-android.md)
 - [Software updates planning guide for managed macOS devices](software-updates-guide-macos.md)

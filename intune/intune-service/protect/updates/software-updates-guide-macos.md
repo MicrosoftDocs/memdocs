@@ -177,6 +177,6 @@ For each device, you can see its current state of updates (Devices > macOS > Upd
 
 ## Related articles
 
-- [Software updates planning guide for BYOD and personal devices in Microsoft Intune](software-updates-guide-personal-byod.md)
-- [Software updates planning guide for managed Android Enterprise devices in Microsoft Intune](software-updates-guide-android.md)
+- [Software updates planning guide for BYOD and personal devices in Microsoft Intune](../software-updates-guide-personal-byod.md)
+- [Software updates planning guide for managed Android Enterprise devices in Microsoft Intune](../software-updates-guide-android.md)
 - [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](software-updates-guide-ios-ipados.md)

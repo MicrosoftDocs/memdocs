@@ -44,7 +44,7 @@ With these MDM-based policies, you can:
 - If you're new to configuring software updates or want some guidance based on common scenarios, go to:
 
   - [Software updates planning guide for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
-  - [Software updates planning guide for BYOD and personal devices](software-updates-guide-personal-byod.md)
+  - [Software updates planning guide for BYOD and personal devices](../software-updates-guide-personal-byod.md)
 
 ## Configure the update policy
 
