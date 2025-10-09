@@ -287,7 +287,11 @@ You can view details about failed user enrollment attempts.
 You can view the **Enrollment failures** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Monitor** > **Enrollment failures**.
+2. Select **Devices** > **Monitor** > **Enrollment failures**.  
+
+### Enrollment time grouping  
+
+
 
 ### Incomplete user enrollments report (Operational)
 
