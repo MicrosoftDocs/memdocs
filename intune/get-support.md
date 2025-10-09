@@ -1,9 +1,4 @@
 ---
-
-title: Get support in the Microsoft Intune admin center
-titleSuffix: Microsoft Intune
-description: Get online and telephone support for Microsoft Intune and other device management cloud services from within the Microsoft Intune admin center.
-keywords:
 title: Get support in the Microsoft Intune admin center
 description: Get online and telephone support for Microsoft Intune and other device management cloud services from within the Microsoft Intune admin center.
 author: Smritib17
