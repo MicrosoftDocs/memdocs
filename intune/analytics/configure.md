@@ -18,7 +18,7 @@ Configure endpoint analytics in Intune by creating a data collection policy and 
 
 Configure endpoint analytics in Configuration Manager by enabling data upload, turning on data collection for devices. Then, adjust settings in the Intune admin center that define your analytics experience.
 
-**Co-managed devices:** We recommend [using Intune to enroll them into endpoint analytics](configure.md?pivots=intune). You don't need to move co-management workloads to Intune for enrollment. When co-management is enabled, enrolled devices send required functional data directly to the Microsoft cloud.
+**Co-managed devices:** We recommend [using Intune to enroll them into endpoint analytics](?pivots=intune). You don't need to move co-management workloads to Intune for enrollment. When co-management is enabled, enrolled devices send required functional data directly to the Microsoft cloud.
 
 ::: zone-end
 
