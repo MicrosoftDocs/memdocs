@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 03/18/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: karawang
 ms.collection:
 - M365-identity-device-management
@@ -25,7 +24,6 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 
 > [!IMPORTANT]
 > This article describes the capabilities and configuration tasks that are applicable in general for Remote Help across supported platforms. For specific capabilities, prerequisites, and other details based on the platform that you are using, go to:
-
 > - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md)
 > - [Remote Help on Android with Microsoft Intune](remote-help-android.md)
 > - [Remote Help on macOS with Microsoft Intune](remote-help-macOS.md)
@@ -66,7 +64,7 @@ General prerequisites that apply to Remote Help:
 - [Intune subscription](../fundamentals/licenses.md)
   - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.
   - [Supported platforms and devices](#supported-platforms-and-devices)
-  - To support Remote Help Intune-enrolled devices must be registered with Mirosoft Entra.
+  - To support Remote Help Intune-enrolled devices must be registered with Microsoft Entra.
 
 For specific prerequisites based on the platform that you're using, go to:
 
@@ -80,8 +78,8 @@ Limitations:
 - Remote Help might not be available in all markets or localizations.
 - Remote Help is supported in Government Community Cloud (GCC) environments on the following platforms:
 
-  - Windows 10/11
-  - Windows 10/11 on ARM64 devices
+  - Windows
+  - Windows on ARM64 devices
   - Windows 365
   - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
   - macOS 13, 14, and 15
@@ -92,9 +90,8 @@ Limitations:
 
 This feature applies to:
 
-- Windows 10/11
-- Windows 11 on ARM64 devices
-- Windows 10 on ARM64 devices
+- Windows
+- Windows on ARM64 devices  
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
 - macOS 13, 14, and 15
@@ -180,8 +177,8 @@ After creating the custom roles that you can use to provide different users with
 
 5. On the **Scope (Groups)** page, choose a group containing the users/devices that a member is allowed to manage. You also can choose all users or all devices. Choose **Next** to continue.
 
-   >[!IMPORTANT]
-   >If a sharer or a sharer's device isn't in the scope of a helper, that helper cannot provide assistance. When assisting an unenrolled device, the "All Devices" scope group will not include these devices. Instead, you should use the user scope group during the assignment process.
+   > [!IMPORTANT]
+   > If a sharer or a sharer's device isn't in the scope of a helper, that helper cannot provide assistance. When assisting an unenrolled device, the "All Devices" scope group will not include these devices. Instead, you should use the user scope group during the assignment process.
    >
    > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](role-based-access-control.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
 

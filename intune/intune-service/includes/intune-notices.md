@@ -1,11 +1,55 @@
 ---
 author: dougeby
 ms.topic: include
-ms.date: 4/8/2025
+ms.date: 9/25/2025
 ms.author: dougeby
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Update to the latest Intune Company Portal for Android, Intune App SDK for iOS, and Intune App Wrapper for iOS before December 2025
+
+Starting **December 15, 2025**, or soon after, we're making updates to improve the Intune mobile application management (MAM) service. This update will require iOS wrapped apps, iOS SDK integrated apps, and the Intune Company Portal for Android to be updated to the latest versions to ensure applications stay secure and run smoothly. 
+
+> [!IMPORTANT]
+> If you do not update to the latest versions, users will be blocked from launching your app.
+
+Note that the way Android updates, once one Microsoft application with the updated SDK is on the device and the Company Portal is updated to the latest version, Android apps will update, so this message is focused on iOS SDK/app wrapper updates. We recommend to always update your Android and iOS apps to the latest SDK or app wrapper to ensure that your app continues to run smoothly. Review the following GitHub announcements for more details on the specific impact: 
+
+- SDK for iOS: [Action Required: Update the MAM SDK in your application to avoid end user impact - microsoftconnect/ms-intune-app-sdk-ios Discussion #598 | GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/discussions/598)
+- Wrapper for iOS: [Action Required: Wrap your application with version 20.8.1+ to avoid end user impact - microsoftconnect/intune-app-wrapping-tool-ios Discussion #143 | GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/discussions/143)
+
+If you have questions, leave a comment on the applicable GitHub announcement.  
+
+#### How does this change affect you or your users?
+
+If your users haven't updated to the latest Microsoft or third-party app protection supported apps, they'll be blocked from launching their apps. If you have iOS line-of-business (LOB) applications that are using the Intune wrapper or Intune SDK, you must be on Wrapper/SDK version **20.8.0** or later for apps compiled with Xcode 16 and version **21.1.0** or later for apps compiled with Xcode 26 to avoid your users being blocked. 
+
+#### How can you prepare?
+
+Plan to make the changes below before **December 15, 2025**:
+
+- For apps using the Intune App SDK, you must update to the new version of the Intune App SDK for iOS:  
+  - For apps built with XCode 16 use [v20.8.0 - Release 20.8.0 - microsoftconnect/ms-intune-app-sdk-ios | GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/20.8.0)
+  - For apps built with XCode 26 use [v21.1.0 - Release 21.1.0 - microsoftconnect/ms-intune-app-sdk-ios | GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/21.1.0) 
+
+- For apps using the wrapper, you must update to the new version of the Intune App Wrapping Tool for iOS: 
+  - For apps built with XCode 16 use [v20.8.1 - Release 20.8.1 - microsoftconnect/intune-app-wrapping-tool-ios | GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases/tag/20.8.1)
+  - For apps built with XCode 26 use [v21.1.0 - Release 21.1.0 - microsoftconnect/intune-app-wrapping-tool-ios | GitHub](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases/tag/21.1.0)
+
+- For tenants with policies targeted to iOS apps: 
+  - Notify your users that they need to upgrade to the latest version of the Microsoft apps. You can find the latest version of the apps in the [App store](https://www.apple.com/app-store/). For example, you can find the latest version of Microsoft Teams [here](https://apps.apple.com/app/microsoft-teams/id1113153706) and Microsoft Outlook [here](https://apps.apple.com/app/microsoft-outlook/id951937596).
+  - Additionally, you have the option to enable the following [Conditional Launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) settings: 
+    - The **Min SDK version** setting to block users if the app is using Intune SDK for iOS older than 20.8.0. 
+    - The **Min app version** setting to warn users on older Microsoft apps. Note, this setting must be in a policy targeted to only the targeted app. 
+
+- For tenants with policies targeted to Android apps: 
+  - Notify your users that they need to upgrade to the latest version (v5.0.6726.0) of the [Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) app. 
+  - Additionally, you have the option to enable the following [Conditional Launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) device condition setting: 
+    - The **Min Company Portal version** setting to warn users using a Company Portal app version older than 5.0.6726.0.
+   
+> [!NOTE]
+> Use Conditional Access policy to ensure that only apps with app protection policies can access corporate resources. For more information, refer to the [documentation](/entra/identity/conditional-access/policy-all-users-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices) on creating Conditional Access policies.
 
 ### Update firewall configurations to include new Intune network endpoints
 
@@ -66,36 +110,7 @@ If devices cannot be upgraded in time, consider enrolling eligible devices in th
 - [Enable Extended Security Updates (ESU)](/windows/whats-new/enable-extended-security-updates)
 - [Windows 10 release information](/windows/release-health/release-information)
 - [Windows 11 release information](/windows/release-health/windows11-release-information)
-- [Lifecycle FAQ - Windows](/lifecycle/faq/windows)
-
-### Update to the latest Intune App SDK and Intune App Wrapping Tool  for iOS and register your app with Microsoft Entra
-
-To support the upcoming release of iOS/iPadOS 26 and ensure continued app protection policy (APP, also known as MAM) enforcement, update to the latest versions of the Intune App SDK and the Intune App Wrapping Tool to ensure applications stay secure and run smoothly. **Important:** If you don't update to the latest versions, some app protection policies may not apply to your app in certain scenarios.
-
-> [!NOTE]
-> Updating to SDK v21.0.0 or later requires your app to be registered with Microsoft Entra. Review the following GitHub announcements for more details on the specific impact:
-> - SDK for iOS: [App Registration Requirement Will be Enforced in Version 21.0.0+ | microsoftconnect/ms-intune-app-sdk-ios - Discussion #569](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/discussions/569)
-> - Wrapper for iOS: [-ac and -ar parameters will become required in version 21.0.0 | microsoftconnect/intune-app-wrapping-tool-ios - Discussion #136](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/discussions/136)
->
-> If you have questions or concerns, file an issue in the GitHub repository or reply directly to the GitHub announcement.
-
-As a best practice, always update your iOS/iPadOS apps to the latest App SDK or App Wrapping Tool to ensure that your app continues to run smoothly.
-
-#### How does this change affect you or your users?
-
-If you have applications using the Intune App SDK or Intune App Wrapping Tool, update to the latest version to support iOS/iPadOS 26. Updating to v21.0.0 or later requires that apps must be registered with Microsoft Entra. While it was previously possible for apps to enable Intune MAM without full Microsoft Entra configuration, this won't be supported starting with SDK 21.0.0. Apps that aren't properly registered may fail to function or receive app protection policies.
-
-#### How can you prepare?
-
-- For apps running on iOS 26, update to the new version of the Intune App SDK for iOS: [Releases - microsoftconnect/ms-intune-app-sdk-ios](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases)
-    - For apps built with XCode 16 use the latest v20.x release.
-    - For apps built with XCode 26 use v21.0.0 or later, which is expected to release in September 2025.
-- For apps running on iOS 26, update to the new version of the Intune App Wrapping Tool for iOS: [Releases - microsoftconnect/intune-app-wrapping-tool-ios](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios/releases)
-    - For apps built with XCode 16 use the latest v20.x release.
-    - For apps built with XCode 26 use v21.0.0 or later which is expected to release in September 2025.
-- Ensure your apps are registered in Microsoft Entra. For more details refer to: [How to register an app in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app)
-
-Notify your users as applicable, to ensure they upgrade their apps to the latest version prior to upgrading to iOS 26. You can review the Intune App SDK version in use by your users in the Microsoft Intune admin center by navigating to **Apps** > **Monitor** > **App protection status**, then review "Platform version" and "iOS SDK version".  
+- [Lifecycle FAQ - Windows](/lifecycle/faq/windows) 
 
 ### Plan for Change: Intune is moving to support iOS/iPadOS 17 and later
 
@@ -178,27 +193,6 @@ Update your environment to the new connector by following these steps:
 
 For more detailed instructions, review: [Microsoft Intune Connector for Active Directory security update](https://aka.ms/Intune-connector-blog) and [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
 
-### Update network endpoints for Windows, Mac and Android AOSP managed devices
-Intune has updated the required CDN endpoints for Windows, Mac and Android Open Source Project (AOSP). If you have configured your firewall to allow *.manage.microsoft.com then no action is required, otherwise, we recommend you review and update your proxy settings by **April 30, 2025**.
-
-#### How does this change affect you or your users?
-
-If you're using Intune to deploy applications and scripts, you'll need to grant access to the updated endpoints for your location. If access to the new endpoints is not granted, users won't be able to install applications or scripts, and certain functionalities may fail. The CDN endpoints are used in the following scenarios:
-
-- Windows: The CDN is used for delivering updates to the Intune management extension which enables scenarios such as Win32 app deployment, PowerShell scripts, Endpoint analytics, and more.
-- Co-managed devices: The CDN providers the official Configuration Manager binaries, including the main technical preview and official releases, hotfixes, push notifications, and more.
-- Mac: The CDN is used for delivering updates to the Intune management agent which is used to deploy macOS PKG apps, DMG apps, shell scripts, and custom attributes.
-- Android AOSP: The CDN is used for delivering applications during device provisioning, such as the Intune Company Portal app, and feature updates.
-
-#### How can you prepare?
-
-Update your firewall rules to include the new CDN endpoints. For the best experience, we recommend using the *.manage.microsoft.com domain. If your proxy or firewall doesn't allow you to create a firewall rule using a domain, update the address as listed:
-
-- Windows CDN requirements: [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md#network-requirements-for-powershell-scripts-and-win32-apps)
-- Configuration Manager co-managed devices CDN requirements: [Updates and servicing](../../configmgr/core/plan-design/network/internet-endpoints.md#updates-and-servicing)
-- Mac CDN requirements: [Network requirements for macOS app and script deployments](../fundamentals/intune-endpoints.md#network-requirements-for-macos-app-and-script-deployments)
-- Android AOSP CDN requirements: [Android AOSP dependencies](../fundamentals/intune-endpoints.md#android-aosp-dependencies)
-
 ### Plan for Change: New settings for Apple AI features; Genmojis, Writing tools, Screen capture
 
 Today, the Apple AI features for Genmojis, Writing tools, and screen capture are blocked when the app protection policy (APP) "Send Org data to other apps" setting is configured to a value other than "All apps". For more details on the current configuration, app requirements, and the list of current Apple AI controls review the blog: [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037)
@@ -228,35 +222,6 @@ For apps that have updated to the latest Intune App SDK or Intune App Wrapping T
 #### How can you prepare?
 
 Update your IT admin documentation and notify your helpdesk or users as needed. You can learn more about blocking screen capture in the blog: [New block screen capture for iOS/iPadOS MAM protected apps](https://aka.ms/Intune/iOS-screen-capture)
-
-### Move to new Microsoft Graph Beta API properties for Windows Autopilot self-deploying mode and pre-provisioning
-
-In late May 2025 (previously March), a select number of old Microsoft Graph Beta API [windowsAutopilotDeploymentProfile](/graph/api/resources/intune-shared-windowsautopilotdeploymentprofile) properties used for Windows Autopilot self-deploying mode and pre-provisioning are removed and stop working. The same data can be found using newer Graph API properties.
-
-#### How does this change affect you or your users?
-
-If you have automation or scripts using the following Windows Autopilot properties, you must update to the new properties to prevent them from breaking.
-
-| Old | New |
-| -------- | ------- |
-| enableWhiteglove | preprovisioningAllowed |
-| extractHardwareHash | hardwareHashExtractionEnabled |
-| language | Locale |
-| outOfBoxExperienceSettings | outOfBoxExperienceSetting |
-| outOfBoxExperienceSettings.HidePrivacySettings | outOfBoxExperienceSetting.PrivacySettingsHidden |
-| outOfBoxExperienceSettings.HideEULA | outOfBoxExperienceSetting.EULAHidden |
-| outOfBoxExperienceSettings.SkipKeyboardSelectionPage | outOfBoxExperienceSettings.KeyboardSelectionPageSkipped |
-| outOfBoxExperienceSettings.HideEscapeLink | outOfBoxExperienceSettings.EscapeLinkHidden |
-
-#### How can you prepare?
-
-Update your automation or scripts to use the new Graph API properties to avoid deployment issues.
-
-**Additional information:**
-
-- [windowsAutopilotDeploymentProfile resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-shared-windowsautopilotdeploymentprofile)
-- [azureADWindowsAutopilotDeploymentProfile resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-enrollment-azureadwindowsautopilotdeploymentprofile)
-- [outOfBoxExperienceSettings resource type - Microsoft Graph Beta | Microsoft Learn](/graph/api/resources/intune-enrollment-outofboxexperiencesettings)
 
 ### Plan for Change: Blocking screen capture in the latest Intune App SDK for iOS and Intune App Wrapping Tool for iOS
 
@@ -349,40 +314,3 @@ Notify your helpdesk, if applicable, about this updated support statement. The f
 - Set [enrollment restrictions](../fundamentals/manage-os-versions.md) to prevent enrollment on devices running older versions.
 
 For more information, review: [Manage operating system versions with Microsoft Intune](../fundamentals/manage-os-versions.md).
-
-### Plan for Change: Web based device enrollment will become default method for iOS/iPadOS device enrollment
-
-Today, when creating iOS/iPadOS enrollment profiles, "Device enrollment with Company Portal" is shown as the default method. In an upcoming service release, the default method will change to "Web based device enrollment" during profile creation. Additionally for *new* tenants, if no enrollment profile is created, the user will enroll using web-based device enrollment.
-
-> [!NOTE]
-> For web enrollment, you need to deploy the single sign-on (SSO) extension policy to enable just in time (JIT) registration, for more information review: [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md).
-
-#### How does this change affect you or your users?
-
-This is an update to the user interface when creating new iOS/iPadOS enrollment profiles to display "Web based device enrollment" as the default method, existing profiles aren't impacted. For *new* tenants, if no enrollment profile is created, the user will enroll using web-based device enrollment.
-
-#### How can you prepare?
-
-Update your documentation and user guidance as needed. If you currently use device enrollment with Company Portal, we recommend moving to web based device enrollment and deploying the SSO extension policy to enable JIT registration.
-
-**Additional information:**
-
-- [Set up just in time registration in Microsoft Intune](../enrollment/set-up-just-in-time-registration.md)
-- [Set up web based device enrollment for iOS](../enrollment/web-based-device-enrollment-ios.md)
-
-### Plan for Change: Intune ending support for Android device administrator on devices with GMS access in December 2024
-
-[Google has deprecated](https://blog.google/products/android-enterprise/da-migration/) Android device administrator management, continues to remove management capabilities, and no longer provides fixes or improvements. Due to these changes, Intune will be ending support for Android device administrator management on devices with access to Google Mobile Services (GMS) beginning **December 31, 2024**. Until that time, we support device administrator management on devices running Android 14 and earlier. For more details, read the blog: [Microsoft Intune ending support for Android device administrator on devices with GMS access](https://aka.ms/Intune-Android-DA-blog).
-
-#### How does this change affect you or your users?
-
-After Intune ends support for Android device administrator, devices with access to GMS will be impacted in the following ways:
-
-1. Intune won't make changes or updates to Android device administrator management, such as bug fixes, security fixes, or fixes to address changes in new Android versions.
-2. Intune technical support will no longer support these devices.
-
-#### How can you prepare?
-
-Stop enrolling devices into Android device administrator and migrate impacted devices to other management methods. You can check your Intune reporting to see which devices or users might be affected. Go to **Devices** > **All devices** and filter the OS column to **Android (device administrator)** to see the list of devices.
-
-Read the blog, [Microsoft Intune ending support for Android device administrator on devices with GMS access](https://aka.ms/Intune-Android-DA-blog), for our recommended alternative Android device management methods and information about the impact to devices without access to GMS.

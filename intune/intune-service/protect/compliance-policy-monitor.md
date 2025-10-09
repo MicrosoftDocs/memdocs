@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 05/21/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ilwu
 ms.collection:
 - M365-identity-device-management
@@ -30,7 +29,7 @@ This article applies to:
 - iOS/iPadOS
 - Linux - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
 - macOS
-- Windows 10 and later
+- Windows 
 
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
@@ -82,7 +81,7 @@ The tile displays a count of devices for each of the following categories:
   - Devices that haven't checked in since the compliance policy was last updated.
   - Devices not associated to a specific user, such as:
     - iOS/iPadOS devices purchased through Apple's Device Enrollment Program (DEP) that don't have user affinity.
-    - Android kiosk or Android Enterprise dedicated devices.
+    - Android Enterprise dedicated devices.
   - Devices enrolled with a device enrollment manager (DEM) account.
 
 - **Not compliant**: The device failed to apply one or more device compliance policy settings, or the user hasn't complied with the policies.

@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 08/22/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: juidaewo
 ms.collection:
 - M365-identity-device-management
@@ -108,6 +107,9 @@ Below the reports section of the dashboard, you can find the profiles *Propertie
 
 When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *Security Baseline for Windows 10 and later*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane.
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 The *Overview* pane displays two status views for the selected baseline:
 
 - **Security baseline posture** chart - This chart displays high-level details about device status for the baseline version. The available details:
@@ -208,7 +210,7 @@ You deployed a security baseline, but the deployment status shows an error. The 
 
 Now you know the problematic setting. The next step is to find out why this setting is causing an error or conflict.
 
-On Windows 10/11 devices, there's a built-in MDM diagnostic information report. This report includes default values, current values, lists the policy, shows if it's deployed to the device or the user, and more. Use this report to help determine why the setting is causing a conflict or error.
+On Windows devices, there's a built-in MDM diagnostic information report. This report includes default values, current values, lists the policy, shows if it's deployed to the device or the user, and more. Use this report to help determine why the setting is causing a conflict or error.
 
 1. On the device, go to **Settings** > **Accounts** > **Access work or school**.
 
@@ -220,7 +222,7 @@ On Windows 10/11 devices, there's a built-in MDM diagnostic information report. 
 
   For example, look in the **Enrolled configuration sources and target resources** section or the **Unmanaged policies** section. You might get an idea of why it's causing an error or conflict.
 
-[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) provides more information on this built-in report.
+For more information about diagnostic information logs, see [Collect MDM logs](/windows/client-management//mdm-collect-logs).
 
 > [!TIP]
 >

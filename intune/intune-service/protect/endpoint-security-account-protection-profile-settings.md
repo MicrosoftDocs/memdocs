@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 07/23/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -13,6 +12,9 @@ ms.reviewer: juidaewo
 
 ---
 # Account protection policy settings for endpoint security in Intune
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!IMPORTANT]
 >
@@ -27,8 +29,10 @@ This article describes settings that are available in profiles for *Account prot
 
 The settings in this article apply to:
 
-- Windows 10
-- Windows 11
+- Windows
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 Supported platforms and profiles:
 

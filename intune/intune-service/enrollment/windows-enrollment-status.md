@@ -3,7 +3,6 @@ title: Set up the Enrollment Status Page in the admin center copy
 description: Set up a greeting page for users signing in and enrolling Windows devices copy.
 ms.date: 09/24/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: madakeva
 ms.collection:
 - M365-identity-device-management
@@ -13,10 +12,6 @@ ms.collection:
 
 
 # Set up the Enrollment Status Page
-
-**Applies to**
-- Windows 10
-- Windows 11
 
 The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track how far along their device is in the setup process.
 

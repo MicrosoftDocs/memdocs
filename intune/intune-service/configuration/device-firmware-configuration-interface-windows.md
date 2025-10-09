@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 04/04/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: madakeva
 ms.collection:
 - M365-identity-device-management
@@ -151,7 +150,7 @@ For example, you want to only allow Wi-Fi radios. In this scenario, you:
 
 ### Reuse
 
-If you plan to reset Windows to repurpose the device, then [wipe the device](../remote-actions/devices-wipe.md). Do **not** remove the Windows Autopilot device record.
+If you plan to reset Windows to repurpose the device, then [wipe the device](../remote-actions/device-wipe.md). Do **not** remove the Windows Autopilot device record.
 
 After wiping the device, move the device to the group assigned the new DFCI and Windows Autopilot profiles. Be sure to reboot the device to rerun Windows setup.
 

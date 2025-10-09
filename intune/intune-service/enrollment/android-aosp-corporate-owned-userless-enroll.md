@@ -3,7 +3,6 @@ title: Set up Android (AOSP) device management in Intune for corporate-owned use
 description: Set up Intune for corporate-owned userless devices built on the Android Open Source Project (AOSP) platform.
 ms.date: 05/15/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: jieyan
 ms.collection:
 - M365-identity-device-management
@@ -198,7 +197,7 @@ The following remote actions are available for Android (AOSP) devices:
 * Reset passcode
 * Restart
 
-You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).
+You can take action on one device at a time. For more information, see [Remote Device Actions In Microsoft Intune](../remote-actions/index.md).
 
 > [!NOTE]
 > After you wipe an Android (AOSP) device, the device remains in a **Pending** state until it's fully restored to its factory default settings. Then Intune removes it from the device list. When you delete a device, the device is removed from the device list immediately, with no pending status, and the factory reset happens the next time the device checks in.

@@ -1,103 +1,113 @@
 ---
-# required metadata
-
-title: Find lost devices with Microsoft Intune
+title: "Remote Device Action: Find lost devices"
 description: Locate lost or stolen devices by using the locate device feature in Microsoft Intune. Get details on security and privacy information when using the locate device action.
-keywords:
-author: paolomatarazzo
-ms.author: paoloma
-manager: dougeby
-ms.date: 02/28/2025 
+ms.date: 09/22/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: shsivaku
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.collection:
-- tier1
-- M365-identity-device-management
-- highpri
+zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 ---
 
-# Locate lost or stolen devices with Intune
+# Remote device action: locate device
 
-For supported device platforms, you can use a remote device action from within the Microsoft Intune admin center to locate a device should it be lost or stolen.
+The *locate device* device remote action in Microsoft Intune enables IT administrators to pinpoint the physical location of managed devices when they are lost, stolen, or simply misplaced. This feature is especially valuable in organizations where devices are distributed across multiple sites or used by mobile users. By triggering the Locate device action from the Intune admin center, admins can view the device's location on a map, helping accelerate recovery, reduce downtime, and improve compliance.
 
-In addition to identifying the location a lost or stolen device on a map, some platforms support other capabilities to help you find them, including:
+Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](device-play-lost-mode-sound.md), or [display custom messages](device-lost-mode.md).
 
-- Use a *lost device sound alert* on a phone to help a user locate the device should it be behind a chair or otherwise out-of-sight.
-- Report on the time and location of a devices *last known location*, which can help when the device is off-line, or can't be reached to verify where it is at. *(Android Enterprise dedicated devices only)*
+## Requirements
 
-You need to enable Windows location services in Windows Out of Box Experience (OOBE) or by using the [Privacy > LetAppsAccessLocation](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccesslocation) policy to be able to locate the device.
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
-## Supported platforms
+> [!div class="checklist"]
+> This remote action supports the following platforms:
+> - Android Enterprise corporate-owned dedicated (COSU)
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned work profile (COPE)
+> - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
+> - Windows
 
-**Locate device** - The following platforms support the **Locate device** capability:
+[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
 
-- **Android Enterprise** – Applicable to dedicated devices, fully-managed, and corporate-owned work profile devices. Requires the device to run *Google Play Services* version **20.06.16** or later and have Location services turned on and "Google Location Accuracy" enabled. The "Google Location Accuracy" setting can be found under **Settings** > **Location** > **Location Services**. Corporate-owned work profile devices running Android 12 or above require the end user to grant Intune app location permission by going to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
-- **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md).
-- **Windows 10**:
-  - Version 20H2 (10.0.19042.789) or later
-  - Version 2004 (10.0.19041.789) or later
-  - Version 1909 (10.0.18363.1350) or later
-  - Version 1809 (10.0.17763.1728) or later
-- **Windows 11**
+::: zone pivot="ios"
 
-**Lost device sound alert** – The following platforms support the **Lost device sound alert** capability:
+> [!div class="checklist"]
+> To use this remote action, make sure devices meet the following requirements:
+>
+> - Enable [Lost Mode](device-lost-mode.md)
 
-- **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md)
-- **Android Enterprise dedicated devices** - Requires the Intune app running 2202.01 or later
-- **Android Enterprise corporate-owned work profile devices** - Requires the Intune app running 2202.01 or later
-- **Android Enterprise fully managed devices** - Requires the Intune app running 2202.01 or later
+::: zone-end
 
-**Unsupported** - Device location capabilities aren't supported for the following platforms:
+::: zone pivot="android"
 
-- Android device administrator
-- Android Enterprise:
-  - Personally-owned work profile
-- macOS
-- Windows Holographic for Business
-- Windows Phone
+> [!div class="checklist"]
+> To use this remote action, make sure devices meet the following requirements:
+>
+> - Location services must be turned on.
+> - Intune app is installed.
+
+> **Fully Managed Devices**:
+> - The **Locate Device** feature must be explicitly enabled with a device restrictions profile.
+
+> **Corporate-Owned Work Profile Devices**:
+>
+> - The **Locate Device** feature must be explicitly enabled with a device restrictions profile.
+> - Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
+
+> **Dedicated Devices**:
+> - The **Locate Device** feature is enabled by default, unless explicitly blocked with a device restriction profile.
 
 > [!NOTE]
-> The locate device capability (excluding the lost device sound alert) isn't supported on Government Community Cloud (GCC) High environments.
+> When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
 
-## Locate a lost or stolen device
+For more information about device restrictions, see [Android template device settings list to restrict features using Intune](/intune/intune-service/configuration/device-restrictions-android-for-work).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices**, and then select **All devices**.
-3. From the list of devices you manage, select a supported device, and choose **...**. Then choose the **Locate device** remote action.
-4. After the device is located, its location is shown in **Locate device**.  
+::: zone-end
 
-   - You can select the location pin on the map to view a location address and coordinates.
+::: zone pivot="windows"
 
-   - Android Enterprise dedicated devices that aren't currently on-line can display their [last known location](#last-known-location) when the device last checked in within seven days.
+Before you can use the locate functionality, you must configure your devices to allow it.
 
-   ![Screenshot of Locate device using Intune in Azure](./media/device-locate/locate-device.png)
+1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the Windows platform and use the following setting:
 
-Android use of **Locate device** is managed using a device configuration profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
+    | Category | Setting name | Value |
+    |--|--|--|
+    | **Privacy** | Let Apps Access Location| Force allow|
 
-There are two separate toggles, one for dedicated and one for fully managed and corporate-owned work profile devices.
+1. Assign the policy to a group that contains as members the devices that you want to configure.
 
-For fully managed and corporate-owned work profile, **Locate device** is set to **Not configured** as the default and it blocks the feature. To allow this feature, use device restrictions within Device Configuration and configure the toggle for **Locate device** to Allow. For corporate-owned work profile devices running Android 12 or above, also have the user of the device enable location permissions by navigating to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
+::: zone-end
 
-For dedicated devices, **Locate device** is set to **Not configured** as the default, which allows the feature. To turn off this feature, use device restrictions within **Device Configuration** and configure the toggle for **Locate device** to **Block**. When **Locate device** is allowed, users receive a one-time notification, "Intune can access your location", indicating that Intune has the ability to use location permissions on the device.
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
-For more information on the policy settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
+> [!div class="checklist"]
+> To run this remote action, use an account with at least one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Custom role][INT-RC] that includes:
+>   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
+>   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+
+## Locate a device
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. From the devices list, select a device.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Locate device**.
+1. After the device is located, its location is shown in **Locate device**. You can select the location pin on the map to view a location address and coordinates.
+
+::: zone pivot="android"
+
+> [!NOTE]
+> Android Enterprise corporate-owned dedicated (COSU) that aren't currently online can display their [last known location](#last-known-location) when the device last checked in within seven days.
+
+::: zone-end
+
+   ![Screenshot of Locate device using Intune in Azure](images/locate-device.png)
+
+::: zone pivot="android"
 
 ### Last known location
 
-When you use the *Locate device* action for an Android Enterprise dedicated device that is off-line and unable to respond with its current location, Intune attempts to display its last known location. This capability uses data submitted by the device when it checks in with Intune.
+When you use the *Locate device* action for an Android Enterprise dedicated device that is offline and unable to respond with its current location, Intune attempts to display its last known location. This capability uses data submitted by the device when it checks in with Intune.
 
 Intune collects information about the last known location of a device every eight hours or when the device checks in with Intune. Intune keeps this information for up to seven days. The last known location of a device that hasn't checked in with Intune for more than seven days can't be displayed.
 
@@ -112,38 +122,35 @@ The date and time of this default status varies:
 
 Later, this default status updates to reflect the actual date and time that an admin runs the Locate device action for that device.
 
-## Activate lost device sound alert
+::: zone-end
 
-For supported device platforms, you can remotely trigger the device to play an alert sound so the user can find it. The sound plays until the user disables the sound on the device or the device is removed from lost mode.
+## Security and privacy information
 
-To start a lost device sound alert:
+Intune is designed to respect user privacy while providing powerful device management capabilities. When using the Locate Device action, here's what you need to know about how location data is handled:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices**, and then select **All devices**.
-3. Select the device you want to activate.
-4. On the devices *Overview* pane:
-   - For **iOS/iPadOS**: select **Play Lost mode sound (supervise only)**. The sound plays on an iOS/iPadOS device until the device is removed from lost mode.
+- Location data is only collected when you initiate the Locate Device action—never before.
+- Once triggered, the device's latitude and longitude are retrieved via the Graph API.
+- All location data is encrypted in transit and at rest, ensuring secure handling.
+- Data is stored for 24 hours and automatically deleted. Manual deletion is not supported.
+- The last known location might be retained for up to seven days before being removed.
+- On iOS/iPadOS devices, you can enable [Lost Mode](device-lost-mode.md) to remotely lock the device and display a custom message on the lock screen—helpful for recovery.
+- In Android fully managed and corporate-owned work profile scenarios, users receive a notification when the Locate Device action is used—if notifications are enabled on the device.
 
-   - For **Android Enterprise dedicated devices**, **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise fully managed devices** : select **Play Lost device sound**. The sound plays on an Android Enterprise dedicated device for the set duration or if notifications are enabled, until a user on the device turns it off.
-   
-   -  For **Android Enterprise dedicated devices**:
-      - devices running on operating systems below version 10, a full screen activity with a **Stop Sound** button pops up. 
-      - devices running on operating systems version 10 or higher, if notifications are enabled, a notification with a **Stop Sound** button shows up.
-      - To configure system notifications for devices in kiosk mode, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
-     
-   - For **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise fully managed devices** :
-     - To configure system notifications for devices, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+## Reference links
 
-## Security and privacy information for lost mode and locate device actions
+- Microsoft Graph API:
+  - [locateDevice action][GRAPH-1]
+  - [playLostModeSound action][GRAPH-2]
 
-- No device location information is sent to Intune until you turn on this action.
-- When you use the locate device action, the latitude and longitude coordinates of the device can be retrieved by using the Graph API.
-- The data is stored for 24 hours, then removed. You can't manually remove the location data.
-- The data for last known locations is stored for up to seven days, and then removed.
-- Location data is encrypted, both while stored and while being transmitted.
-- For iOS/iPadOS devices, when you configure lost mode, you can customize a message that appears on the lock screen. In this message, to help the person that finds the device, be sure to include specific details to return the lost device.
-- For fully-managed and corporate-owned work profile scenarios, end users receive a notification when the administrator uses this feature, if notifications are enabled.
+<!--links-->
 
-## Next steps
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+[INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
 
-To view the status of a device after enabling an action, open *Devices*, select the device, and on the *Overview* pane view *Device actions status*.
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-locatedevice
+[GRAPH-2]: /graph/api/intune-devices-manageddevice-playlostmodesound

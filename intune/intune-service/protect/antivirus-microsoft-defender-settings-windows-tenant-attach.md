@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 09/17/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -22,7 +21,7 @@ View the Microsoft Defender Antivirus settings you can manage with the **Microso
 - **Turn on cloud-delivered protection**
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Not Configured** (*default*) - The setting is restored to the system default.
   - **No** Turns off the Microsoft Active Protection Service.
@@ -72,7 +71,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 - **Turn on real-time protection**
   CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-  Require Defender on Windows 10/11 desktop devices to use the real-time Monitoring functionality.
+  Require Defender on Windows desktop devices to use the real-time Monitoring functionality.
   - **Not Configured** (*default*) - The setting is restored to the system default
   - **No** Turns off the real-time monitoring service.
   - **Yes** Turns on and runs the real-time monitoring service.
@@ -97,7 +96,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 - **Turn on behavior monitoring**
   CSP: [AllowBehaviorMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
-  By default, Defender on Windows 10/11 desktop devices uses the Behavior Monitoring functionality.
+  By default, Defender on Windows desktop devices uses the Behavior Monitoring functionality.
 
   - **Not Configured** (*default*) - The setting is restored to the system default.
   - **No** Turns off behavior monitoring.

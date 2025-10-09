@@ -10,11 +10,6 @@ author: Smritib17
 ms.author: smbhardwaj
 ms.date: 02/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice:
-ms.localizationpriority: high
-ms.assetid:
-# optional metadata
 
 #audience:
 #ms.devlang:

@@ -1,11 +1,10 @@
 ---
 title: Windows compliance settings in Microsoft Intune
-description: See a list of all the settings you can use when setting compliance for your Windows 10, Windows 11, Windows Holographic, and Surface Hub devices in Microsoft Intune. Check for compliance on the minimum and maximum operating system, set password restrictions and length, check for partner anti-virus (AV) solutions, enable encryption on data storage, and more.
+description: See a list of all the settings you can use when setting compliance for your Windows, Windows Holographic, and Surface Hub devices in Microsoft Intune. Check for compliance on the minimum and maximum operating system, set password restrictions and length, check for partner anti-virus (AV) solutions, enable encryption on data storage, and more.
 author: lenewsad
 ms.author: lanewsad
 ms.date: 11/19/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management
@@ -15,13 +14,13 @@ ms.collection:
 - sub-device-compliance
 ---
 
-# Device Compliance settings for Windows 10/11 in Intune
+# Device Compliance settings for Windows in Intune
 
 This article lists and describes the different compliance settings you can configure on Windows devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require BitLocker, set a minimum and maximum operating system, set a risk level using Microsoft Defender for Endpoint, and more.
 
 This feature applies to:
 
-- Windows 10/11
+- Windows 
 - Windows Holographic for Business
 - Surface Hub
 
@@ -72,7 +71,7 @@ For more information, see:
 
 ### Operating System Version
 
-To discover build versions for all Windows 10/11 Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows release information](/windows/release-information). Be sure to include the appropriate version prefix before the build numbers, like 10.0 for Windows 10 as the following examples illustrate.
+To discover build versions for all Windows Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows release information](/windows/release-information). Be sure to include the appropriate version prefix before the build numbers, like 11.0 for Windows 11.
 
 - **Minimum OS version**:
   Enter the minimum allowed version in the **major.minor.build.revision number** format. To get the correct value, open a command prompt, and type `ver`. The `ver` command returns the version in the following format:
@@ -117,7 +116,7 @@ To discover build versions for all Windows 10/11 Feature Updates and Cumulative 
 
 ## Configuration Manager Compliance
 
-Applies only to co-managed devices running Windows 10/11. Intune-only devices return a not available status.
+Applies only to co-managed devices running Windows. Intune-only devices return a not available status.
 
 - **Require device compliance from Configuration Manager**:
   - **Not configured** (*default*) - Intune doesn't check for any of the Configuration Manager settings for compliance.
@@ -220,7 +219,7 @@ Applies only to co-managed devices running Windows 10/11. Intune-only devices re
 
 ### Defender
 
-*The following compliance settings are supported with Windows 10/11 Desktop.*
+*The following compliance settings are supported with Windows.*  
 
 - **Microsoft Defender Antimalware**:
   - **Not configured** (*default*) - Intune doesn't control the service, nor change existing settings.
@@ -291,8 +290,8 @@ Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are support
 
 For guidance, see [set up enrollment for Windows devices](../enrollment/windows-enroll.md).
 
-**Special consideration for Surface Hubs running Windows 10/11 Team OS**:
-Surface Hubs that run Windows 10/11 Team OS do not support the Microsoft Defender for Endpoint and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows 10/11 Team OS set the following two settings to their default of *Not configured*:
+**Special consideration for Surface Hubs running Windows Team OS**:
+Surface Hubs that run Windows Team OS do not support the Microsoft Defender for Endpoint and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows Team OS set the following two settings to their default of *Not configured*:
 
 - In the category [Password](#password), set **Require a password to unlock mobile devices** to the default of *Not configured*.
 

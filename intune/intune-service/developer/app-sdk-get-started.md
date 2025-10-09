@@ -1,5 +1,5 @@
 ---
-title: Get started with the Microsoft Intune App SDK
+title: Get Started With the Microsoft Intune App SDK
 description: Quickly enable your mobile app for mobile application management (MAM) with Microsoft Intune.
 ms.date: 04/01/2025
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Get started with the Microsoft Intune App SDK
+# Get Started With the Microsoft Intune App SDK
 
 > [!IMPORTANT]
 > Xamarin support has ended as of May 1, 2024 for all Xamarin SDKs including Xamarin.Forms, Intune App SDK Xamarin Bindings, and related Microsoft Tunnel support. Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) and [.NET Multi-platform App UI](/dotnet/maui) documentation. For Intune support on the Android platform, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android) and [.NET for Android documentation](/dotnet/android/). For Intune support on the iOS platform, see [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS) and [.NET for iOS](/dotnet/ios/).

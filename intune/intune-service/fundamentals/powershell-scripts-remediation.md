@@ -5,7 +5,6 @@ ms.date: 04/30/2024
 ms.topic: reference
 author: nicholasswhite
 ms.author: nwhite
-ms.localizationpriority: high
 ---
 
 # PowerShell scripts for Remediations

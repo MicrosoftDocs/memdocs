@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 03/28/2025
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -14,6 +13,9 @@ ms.reviewer: mattcall
 ---
 
 # Settings for Windows Security experience Antivirus policy for tenant attached devices in Microsoft Intune
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 View the Windows Security experience settings you can manage with the **Windows Security experience (preview)** profile from Intune.
 

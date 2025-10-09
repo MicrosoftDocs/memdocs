@@ -12,7 +12,7 @@ ms.reviewer: jieyang
 * Android
 * iOS/iPadOS
 * macOS
-* Windows 10/11
+* Windows 
 
 Rename a device on the Company Portal website. If you use more than one device for work or school, renaming them can make it easier to recognize and manage them when you're in Company Portal.
 

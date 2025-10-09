@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 03/28/2025
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -18,12 +17,14 @@ View the settings you can configure in profiles for *Attack surface reduction* p
 
 Applies to:
 
-- Windows 11
-- Windows 10
+- Windows
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 Supported platforms and profiles:
 
-- **Windows 10 and later** - Use this platform for policy you deploy to devices managed with Intune.
+- **Windows** - Use this platform for policy you deploy to devices managed with Intune.
 
   - Profile: **App and browser isolation**
   - Profile: **Application control**
@@ -32,7 +33,7 @@ Supported platforms and profiles:
   - Profile: **Exploit protection**
   - Profile: **Web protection (Microsoft Edge Legacy)**
 
-- **Windows 10 and later (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.
+- **Windows (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.
 
   - Profile: **Exploit Protection(ConfigMgr)(preview)**
   - Profile: **Web Protection (ConfigMgr)(preview)**

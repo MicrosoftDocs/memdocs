@@ -4,7 +4,6 @@ description: Create a user in Intune.
 services: microsoft-intune
 author: paolomatarazzo
 ms.author: paoloma
-ms.localizationpriority: high
 ms.topic: how-to
 ms.date: 04/07/2025
 ms.reviewer: jlynn

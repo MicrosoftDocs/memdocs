@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 11/19/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
@@ -14,15 +13,11 @@ ms.collection:
 - sub-device-compliance
 ---
 
-# Evaluate compliance for Windows Subsystem for Linux
-
-**Applies to**:
-- Windows 10
-- Windows 11
+# Evaluate compliance for Windows Subsystem for Linux  
 
 Create a Microsoft Intune policy that checks the compliance of devices running Windows Subsystem for Linux (WSL). Microsoft Intune incorporates the WSL compliance results into the overall compliance state of the host device so that you can see the whole health of the device.
 
-This article describes how to set up compliance checks for WSL.
+This article applies to Windows and describes how to set up compliance checks for WSL.  
 
 ## Requirements
 

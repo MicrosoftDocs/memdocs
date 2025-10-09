@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 09/10/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: davidmeb; bryanke; davguy
 #ms.custom:
 ms.collection:
@@ -196,7 +195,7 @@ However, if a Windows 10 device that can't run Windows 11 is targeted with a Win
 
 The first step in preparing for a Windows 11 upgrade is to ensure your devices meet the [minimum system requirements for Windows 11](/windows/whats-new/windows-11-requirements#hardware-requirements).
 
-You can use [Endpoint analytics in Microsoft Intune](../../analytics/overview.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune, co-managed, or have the Configuration Manager client with tenant attach enabled.
+You can use [endpoint analytics](../../analytics/index.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune, co-managed, or have the Configuration Manager client with tenant attach enabled.
 
 If you're already using Endpoint analytics, navigate to the [Work from anywhere report](../../analytics/work-from-anywhere.md), and select the Windows score category in the middle to open a flyout with aggregate Windows 11 readiness information. For more granular details, go to the Windows tab at the top of the report. On the Windows tab, you'll see device-by-device readiness information.
 

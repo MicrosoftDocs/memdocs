@@ -26,7 +26,7 @@ For information about how to upgrade to Windows 11, see:
 
 ## Enable anti-malware protection
 
-Anti-malware is an important factor in making sure your device is protected. To meet this compliance requirement, enable the anti-malware software and features required by your organization. On devices running Windows 10 and later, the built-in anti-malware software is Microsoft Defender Antivirus.
+Anti-malware is an important factor in making sure your device is protected. To meet this compliance requirement, enable the anti-malware software and features required by your organization. On devices running more recent versions of Windows, the built-in anti-malware software is Microsoft Defender Antivirus.  
 
 Remember to only download apps from verified sources, such as the Company Portal app and the Microsoft Store. For more information about anti-malware for Windows, see [Microsoft Support: Getting started with anti-malware in Microsoft Defender](https://support.microsoft.com/topic/getting-started-with-anti-malware-in-microsoft-defender-f5219ae5-abb7-4985-a149-1ec1bb304eda).
 
@@ -35,7 +35,7 @@ Remember to only download apps from verified sources, such as the Company Portal
 Contact your IT support person to enable code integrity on your work or school device. Code integrity is a threat protection feature that checks the drivers and system files on your device for signs of corruption or malicious software. For it to work on your device, another security feature called *Secure Boot* must be enabled. Your IT support person can also help you enable Secure Boot, which will in turn trigger code integrity the next time you start up your device.
 
 <!-- Admin info commented out
-If you're a Microsoft Intune administrator and want to learn more about Intune's device health compliance settings, see [Add Windows 10/11 device compliance policy](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results). -->
+If you're a Microsoft Intune administrator and want to learn more about Intune's device health compliance settings, see [Add Windows device compliance policy](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results). -->
 
 ## Turn on Windows Defender Firewall
 

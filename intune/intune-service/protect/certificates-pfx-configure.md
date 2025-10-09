@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 11/19/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
@@ -172,7 +171,7 @@ Use a command line to complete these steps:
 
 12. In **Security**:
     1. Add the computer account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
-    1. (Optional but recommended) Remove the domain users group from the list of groups or user names allowed permissions on this template. To remove the group:
+    1. Remove the domain users group from the list of groups or user names allowed permissions on this template. To remove the group:
        1. Select the **Domain Users** group.
        1. Select **Remove**.
        1. Review the other entries under **Groups or user names** to confirm permissions and applicability to your environment.

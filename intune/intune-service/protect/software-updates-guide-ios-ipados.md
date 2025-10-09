@@ -6,7 +6,6 @@ ms.author: paoloma
 ms.date: 09/24/2025
 audience: ITPro
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: beflamm, ahamil, rogerso
 ms.collection:
 - M365-identity-device-management

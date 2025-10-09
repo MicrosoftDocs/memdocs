@@ -3,7 +3,6 @@ title: Get started with Windows frontline worker devices
 description: Learn how to manage frontline worker devices using Windows devices in Microsoft Intune. Select the best enrollment option, configure the home screen, and more.
 ms.date: 05/29/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: cbernier
 ms.collection:
 - M365-identity-device-management
