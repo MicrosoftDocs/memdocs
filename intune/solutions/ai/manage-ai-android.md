@@ -11,11 +11,11 @@ ms.collection:
 
 # Manage AI on Android with Intune - A Guide for IT Admins
 
-In Microsoft Intune, you can manage and restrict generative AI usage on Android devices enrolled in Intune. This guide provides lists the steps in Intune to block AI apps, websites, screen-driven experiences, on-device AI services, and OEM-specific AI features.
+In Microsoft Intune, you can manage and restrict generative AI usage on Android devices enrolled in Intune. You can block (or allow) AI apps, websites, screen-driven experiences, on-device AI services, and OEM-specific AI features.
 
-This article lists different objectives to block AI experiences. Each objective includes the goal, lists the supported enrollment types, and has step-by-step instructions.
+This article lists different objectives that block the different AI experiences. Each objective includes the goal, lists the supported enrollment types, and has step-by-step instructions.
 
-Using the steps in this guide, you can manage and restrict these AI experiences on your Android devices.
+When you use the steps in this guide, you can manage and restrict AI experiences on your Android devices.
 
 Applies to:
 
@@ -34,8 +34,8 @@ https://microsoft.sharepoint.com/:w:/r/teams/CTeam/_layouts/15/Doc.aspx?sourcedo
 > - ??Include AOSP? Or is it only Android Enterprise??
 > - Android Enterprise corporate owned fully managed devices (COBO)
 > - Android Enterprise corporate owned dedicated devices (COSU)
-> - Android Enterprise corporate-owned devices with a work profile (COPE)
-> - Android Enterprise personally-owned devices with a work profile (BYOD)
+> - Android Enterprise corporate owned devices with a work profile (COPE)
+> - Android Enterprise personally owned devices with a work profile (BYOD)
 
 To learn more about the different Android enrollment options, see the [Android Enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md).
 
@@ -54,14 +54,14 @@ To learn more about the different Android enrollment options, see the [Android E
 
 ## Before you begin
 
-- When you create the AI policies, you can assign them to the **All Users** and **All Devices** groups. Even though this is the simplest approach, you can target your policies to specific users and devices.
+- When you create the AI policies, you can assign them to the **All Users** and **All Devices** groups. Even though this assignment is the simplest approach, you can target your policies to specific users and devices.
 
   To learn more, see:
 
   - [Inclusion and exclusion groups](../../intune-service/apps/apps-inc-exl-assignments.md) to assign apps that target specific users and devices.
   - [Assign policies in Intune](../../intune-service/configuration/device-profile-assign.md) that target specific users and devices.
 
-- For corporate-owned devices with a work profile (COPE) and personally owned devices with a work profile (BYOD), most controls are available only in the work profile. They're not available in the personal profile.
+- For corporate owned devices with a work profile (COPE) and personally owned devices with a work profile (BYOD), most controls are available only in the work profile. They're not available in the personal profile.
 - The steps in this guide show you how to block AI experiences. If you want to allow specific AI experiences, you can use the same steps but configure them to allow instead of block. Most AI experiences are enabled and allowed by default.
 - When you create a policy and assign it, the devices receive the policy the next time they check in with Intune. To learn more, see [Intune policy refresh intervals](../../intune-service/configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
@@ -69,8 +69,8 @@ To learn more about the different Android enrollment options, see the [Android E
 
 On Android devices, AI is available in several ways:
 
-- **Native AI apps** - Standalone apps like ChatGPT, Microsoft Copilot, and Perplexity can be downloaded and used on the devices.
-- **AI websites** - Users can access AI websites through browser apps, like Edge and Chrome.
+- **AI apps** - Standalone apps like ChatGPT, Microsoft Copilot, and Perplexity can be downloaded and used on the devices.
+- **AI websites** - Users can access AI websites through browser apps, like Microsoft Edge and Chrome.
 - **Screen-driven and Assistant experiences** - OS-integrated features that read on-screen content (like Circle to Search) or provide assistant help are typically installed and available by default.
 - **On-device AI services** - Android can run the on-device **Gemini Nano** foundational model locally using **AICore**. Apps like Messages, Recorder, or GBoard use Gemini Nano to respond to messages, generate summaries, and suggest smart replies.
 
@@ -78,23 +78,25 @@ On Android devices, AI is available in several ways:
 
 - **OEM-specific AI services** - OEMs might implement their own AI capabilities, like Galaxy AI by Samsung.
 
-## Objective - Block native AI apps
+## Objective - Block AI apps
 
-✅ **Goal** - End users can't install AI apps from the Google Play Store, like ChatGPT, Copilot, Perplexity, Claude, and more.
+✅ **Goal - End users can't install AI apps from the Google Play Store**
 
-# [Corporate owned devices](#tab/native-ai-corp)
+AI apps like ChatGPT, Copilot, Perplexity, and Claude can be installed from the Google Play Store. You can use Intune to block these apps from being installed on your devices.
+
+# [Corporate owned devices](#tab/ai-apps-corp)
 
 **Supported enrollment types**:
 
 - Corporate owned fully managed devices (COBO)
 - Corporate owned dedicated devices (COSU)
-- Corporate-owned devices with a work profile (COPE)
+- Corporate owned devices with a work profile (COPE)
 
 ### Step 1 - Determine your app strategy
 
 Determine your organization's app strategy - **Block or Allow**:
 
-- **Block strategy** - No apps in the Google Play Store can be downloaded unless specifically assigned by admins. Only apps that are assigned are available on the device.
+- **Block strategy** - No apps in the Google Play Store can be downloaded unless assigned by admins. Only apps that are assigned are available on the device.
 
   This strategy is the default for corporate owned devices.
 
@@ -106,7 +108,7 @@ Determine your organization's app strategy - **Block or Allow**:
 
 ### Step 2 - Implement your app strategy
 
-In this step, implement your app strategy to block or allow native AI apps.
+In this step, implement your app strategy to block or allow AI apps.
 
 #### Block strategy (default)
 
@@ -116,7 +118,7 @@ With a Block strategy, no apps in the Google Play Store can be downloaded unless
 2. Select the app name > **Properties**.
 3. Make sure **Assignments** is not set to **Required**, not set to **Available for enrolled devices**, or not set to **Available with or without enrollment**.
 
-If all these options are not set, then the app hasn't been deployed by an Intune policy. It's possible the app was installed manually by the user or through another MDM solution.
+If all these options aren't set, then the app hasn't been deployed by an Intune policy. It's possible the app was installed manually by the user or through another MDM solution.
 
 ??What if it's already been deployed? Then what??
 
@@ -141,7 +143,7 @@ With an Allow strategy, all apps in the Google Play Store can be downloaded.
 
 2. Add the apps you want to block.
 
-    When they're added to Intune, then you can block the apps and they become managed.
+    When they're added to Intune, you can block the apps. Then they're considered managed apps.
 
     1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps > Android > Create > Managed Google Play app**.
     2. Select the AI app you want to block > **Sync**.
@@ -160,36 +162,36 @@ With an Allow strategy, all apps in the Google Play Store can be downloaded.
 
     ??One app per policy??
 
-# [Personally owned devices](#tab/native-ai-personal)
+# [Personally owned devices](#tab/ai-apps-personal)
 
 **Supported enrollment types**:
 
 - Personally owned devices with a work profile (BYOD)
 
-By default, no apps in the Google Play Store can be downloaded unless explicitly allowed. Use the following steps to make sure the app you want to block hasn't already been deployed to your devices.
+By default, no apps in the Google Play Store can be downloaded unless explicitly allowed. Use the following steps to make sure the app you want to block isn't already deployed to your devices.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps > Android > Android apps**.
 2. Select the AI app > **Properties**.
 3. Make sure **Assignments** is not set to **Required**, not set to **Available for enrolled devices**, or not set to **Available with or without enrollment**.
 
-If all these options are not set, then the app hasn't been deployed by an Intune policy. It's possible the app was installed manually by the user or through another MDM solution.
+If all these options aren't set, then the app hasn't been deployed by an Intune policy. It's possible the app was installed manually by the user or through another MDM solution.
 
 ?? What if it's already been deployed? Then what??
 
 ---
 
-## Objective: Block AI Websites Through Browser Configuration
+## Objective - Block AI Websites
 
-✅ **Goal** - Block AI websites in web browser apps.
+✅ **Goal - Block AI websites in web browser apps**
+
+You can use Intune app configuration policies to block access to AI websites in web browser apps, like Microsoft Edge and Chrome. Only the websites you enter are blocked. So, you can also use this approach to only allow specific AI websites. If you use multiple browsers, you need to create a separate policy for each web browser app.
 
 **Supported enrollment types**:
 
 - Corporate owned fully managed devices (COBO)
 - Corporate owned dedicated devices (COSU)
-- Corporate-owned devices with a work profile (COPE)
+- Corporate owned devices with a work profile (COPE)
 - Personally owned devices with a work profile (BYOD)
-
-To block AI websites, you can create an app configuration policy that configures your web browser apps to block access to the AI websites you enter. If you use multiple browsers, you need to create a separate policy for each browser.
 
 ### Step 1 - Add your web browser as a managed app
 
@@ -198,7 +200,7 @@ To configure the browser settings, you first need to add the browser app to Intu
 For the steps, see:
 
 - It's possible the browser app is [built-in](../../intune-service/apps/apps-add-built-in.md).
-- If the app isn't built-in, then you can [add your browser app from the Play Store](../../intune-service/apps/store-apps-android.md).
+- If the app isn't built in, then you can [add your browser app from the Play Store](../../intune-service/apps/store-apps-android.md).
 
 ### Step 2 - Create an app configuration policy
 
@@ -227,17 +229,20 @@ Use the following steps to create an app configuration policy that configures yo
 
 5. Select **Next** and continue creating the policy. For step-by-step instructions, see [Add App Configuration Policies for Managed Android Enterprise Devices](../../intune-service/apps/app-configuration-policies-use-android.md).
 
-## Objective: Block Screen-Driven AI Experiences (Screenshots & Assistants)
+## Objective - Block Screen-Driven AI Experiences
 
-✅ **Goal** - Block features that can read on-screen content, like Circle to Search, and prevent screenshots that AI features could use.
+✅ **Goal - Block features that can read on-screen content**
 
-??Expand intro to list more examples??
+AI features can read on-screen content, and can provide insights & recommendations from screenshots and content displayed on the screen. Some of these features are built into the OS, like Circle to Search, and some are provided by assistant apps.
 
-# [Fully managed](#tab/screen-fully-managed)
+To block these features, you can use Intune to restrict screenshot abilities and block content sharing with privileged apps.
+
+# [Fully managed<br/>Dedicated](#tab/screen-fully-managed)
 
 **Supported enrollment types**:
 
 - Corporate owned fully managed devices (COBO)
+- Corporate owned dedicated devices (COSU)
 
 ### Step 1 - Implement Basic Coverage
 
@@ -276,54 +281,13 @@ This setting blocks AI features from accessing on-screen content, but also disab
 4. In **Basics**, enter a **Name** for the profile, and select **Next**.
 5. Expand the **General** category and set the **Screen capture (work profile level)** setting to **Block**.
 
-# [Dedicated](#tab/screen-dedicated)
+
+
+# [Corporate owned with work profile](#tab/screen-corporate-owned)
 
 **Supported enrollment types**:
 
-- Corporate owned dedicated devices (COSU)
-
-### Step 1 - Implement Basic Coverage
-
-??INCLUDE FILE
-
-This step creates a settings catalog policy that configures the **Block assist content sharing with privileged apps** setting.
-
-This setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used on Android AI capabilities, like Circle to Search. This setting doesn't affect general screenshot abilities.
-
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
-2. Enter the following properties:
-
-    - **Platform**: Select **Android Enterprise**.
-    - **Profile type**: Select **Settings catalog**.
-
-3. Select **Create**.
-4. In **Basics**, enter a **Name** for the profile, and select **Next**.
-5. Select **Add settings**.
-6. Select the **General** category > **Block assist content sharing with privileged apps** setting. Set its value to **True**.
-
-### Step 2 - Implement Comprehensive Coverage (Optional)
-
-??INCLUDE FILE
-
-For more comprehensive protection, you can also restrict screenshot abilities and other functionalities using the **Block screen capture** setting in a device restrictions template profile.
-
-This setting blocks AI features from accessing on-screen content, but also disables screenshots device-wide.
-
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
-2. Enter the following properties:
-
-    - **Platform**: Select **Android Enterprise**.
-    - **Profile type**: Select **Templates > Fully Managed, Dedicated, and Corporate-Owned Work Profile Only > Device restrictions**.
-
-3. Select **Create**.
-4. In **Basics**, enter a **Name** for the profile, and select **Next**.
-5. Expand the **General** category and set the **Screen capture (work profile level)** setting to **Block**.
-
-# [Corporate-owned with work profile](#tab/screen-corporate-owned)
-
-**Supported enrollment types**:
-
-- Corporate-owned devices with a work profile (COPE)
+- Corporate owned devices with a work profile (COPE)
 
 ### Step 1 - Implement Basic Coverage
 
@@ -381,7 +345,7 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
 **Supported enrollment types**:
 
-- Personally-owned devices with a work profile (BYOD)
+- Personally owned devices with a work profile (BYOD)
 
 To prevent sensitive data from being used by AI apps in the personal profile, you can configure the following settings. These settings help you manage data flow from the work profile to the personal profile.
 
@@ -400,20 +364,20 @@ To prevent sensitive data from being used by AI apps in the personal profile, yo
 
 ---
 
-## Objective: Disable On-Device AI System App
+## Objective - Disable On-Device AI System App
 
-✅ **Goal** - Block Google's local AI processing by disabling Gemini Nano, which is Google's on-device foundation model.
+✅ **Goal - Block Google's local AI processing**
 
-Gemini Nano is integrated in Messages, Recorder, GBoard and other services. It enables AI summary and message reply capabilities.
+Gemini Nano is Google's on-device foundation model and processes AI interactions on the device. It enables AI summary and message reply capabilities in Messages, Recorder, GBoard, and other services. You can use Intune to disable the AICore system app.
 
-Third‑party SDK inference is not covered.??
+??Third‑party SDK inference is not covered.??
 
 **Supported enrollment types**:
 
 - Corporate owned fully managed devices (COBO)
 - Corporate owned dedicated devices (COSU)
-- Corporate-owned devices with a work profile (COPE)
-- Personally-owned devices with a work profile (BYOD)
+- Corporate owned devices with a work profile (COPE)
+- Personally owned devices with a work profile (BYOD)
 
 Use the following steps to disable the AICore system app.
 
@@ -432,12 +396,13 @@ Use the following steps to disable the AICore system app.
 
 6. In **Review + create**, review the values and settings you entered for the app. When you're done, select **Create**.
 
+## Objective - Disable OEM-Specific AI Capabilities
 
-## Objective: Disable OEM-Specific AI Capabilities
+✅ **Goal - Turn off OEM‑provided AI features**
 
-✅ **Goal** - Turn off OEM‑provided AI features, like Samsung Galaxy AI experiences through Knox Service Plugin, on corporate devices using OEMConfig.
+OEMs can include their own AI features and capabilities on the device, like the Samsung Galaxy AI experiences through the Knox Service Plugin. These features are typically managed through the OEM's OEMConfig app. Using Intune, you can configure the OEMConfig app to manage these AI features.
 
-OEMs might implement their own AI capabilities. These features are typically managed through the OEM's OEMConfig app. To configure the OEMConfig app, you need to know the AI settings available in the app. Contact your OEMs to get a list of available AI controls in their OEMConfig apps.
+To configure the OEMConfig app, you need to know the AI settings available in the app. Contact your OEMs to get a list of available AI controls in their OEMConfig apps.
 
 For a list of supported OEMConfig apps, see [OEMConfig in Intune - Supported OEMConfig apps](../../intune-service/configuration/android-oem-configuration-overview.md#supported-oemconfig-apps).
 
@@ -445,8 +410,8 @@ For a list of supported OEMConfig apps, see [OEMConfig in Intune - Supported OEM
 
 - Corporate owned fully managed devices (COBO)
 - Corporate owned dedicated devices (COSU)
-- Corporate-owned devices with a work profile (COPE)
-- Personally-owned devices with a work profile (BYOD)
+- Corporate owned devices with a work profile (COPE)
+- Personally owned devices with a work profile (BYOD)
 
 Use the following steps to add, deploy, and configure the OEMConfig app and its AI capabilities.
 
