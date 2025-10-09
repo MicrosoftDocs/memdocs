@@ -1,7 +1,7 @@
 ---
 title: Get Support for Endpoint Analytics
-description: Get online and telephone support for endpoint analytics
-ms.date: 04/10/2025
+description: Get support for Microsoft Intune endpoint analytics, including technical troubleshooting, online help, and product feedback options.
+ms.date: 10/09/2025
 ms.topic: how-to
 ---
 

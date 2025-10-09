@@ -1,8 +1,8 @@
 ---
-title: Application reliability in Endpoint Analytics
-description: Get details about application reliability in endpoint analytics
-ms.date: 04/10/2025
-ms.topic: article
+title: Application Reliability in Endpoint Analytics
+description: Explore application reliability in Microsoft Intune endpoint analytics to analyze app crashes, improve user productivity, and enhance device performance.
+ms.date: 10/09/2025
+ms.topic: concept-article
 ---
 
 # Application reliability in endpoint analytics

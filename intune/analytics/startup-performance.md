@@ -1,8 +1,8 @@
 ---
-title: Startup performance in Endpoint Analytics
-description: Get details about device startup performance in endpoint analytics
-ms.date: 04/08/2025
-ms.topic: article
+title: Startup Performance in Endpoint Analytics
+description: Learn how startup performance in Microsoft Intune endpoint analytics helps analyze boot times, identify issues, and optimize device performance.
+ms.date: 10/09/2025
+ms.topic: concept-article
 ---
 
 # Startup performance

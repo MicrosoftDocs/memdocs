@@ -1,8 +1,8 @@
 ---
-title: Restart frequency in endpoint analytics
-description: Get details about device restart frequency in endpoint analytics
-ms.date: 04/10/2025
-ms.topic: article
+title: Restart Frequency in Endpoint Analytics
+description: Analyze restart frequency in Microsoft Intune endpoint analytics to identify device reboot patterns, troubleshoot issues, and improve reliability.
+ms.date: 10/09/2025
+ms.topic: concept-article
 ---
 
 # Restart frequency in endpoint analytics

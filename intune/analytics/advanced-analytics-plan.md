@@ -1,7 +1,7 @@
 ---
-title: Planning for Advanced Analytics
-description: Learn about the requirements and fundamentals of Intune Advanced Analytics
-ms.date: 08/01/2024
+title: Plan for Advanced Analytics
+description: Plan Microsoft Intune Advanced Analytics by understanding requirements, prerequisites, and best practices for endpoint analytics and advanced reporting.
+ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 

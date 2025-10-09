@@ -1,8 +1,8 @@
 ---
 title: Advanced Analytics Troubleshooting and Frequently Asked Questions
-description: Learn about the frequently asked questions and common troubleshooting steps for Advanced Analytics features
-ms.date: 09/10/2025
-ms.topic: concept-article
+description: Find troubleshooting steps and FAQs for Microsoft Intune Advanced Analytics, including endpoint analytics issues, data refresh, and dashboard customization.
+ms.date: 10/09/2025
+ms.topic: faq
 ---
 
 # Advanced Analytics Troubleshooting and Frequently Asked Questions

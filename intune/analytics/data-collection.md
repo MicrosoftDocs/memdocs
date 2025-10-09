@@ -1,7 +1,7 @@
 ---
 title: Endpoint Analytics Data Collection
-description: Data collection information for endpoint analytics.
-ms.date: 10/23/2023
+description: Understand endpoint analytics data collection in Microsoft Intune, including data flow, privacy, and how to stop gathering device data.
+ms.date: 10/09/2025
 ms.topic: reference
 ---
 

@@ -1,9 +1,8 @@
 ---
 title: Work From Anywhere Report in Endpoint Analytics
-description: The Work from anywhere report in endpoint analytics provides insights to help your end users be productive from anywhere.
-ms.date: 02/25/2025
-ms.topic: article
-ms.collection: highpri
+description: Discover how the Work from Anywhere report in Microsoft Intune endpoint analytics provides insights into remote productivity, device readiness, and user experience.
+ms.date: 10/09/2025
+ms.topic: concept-article
 ---
 
 # Work from anywhere report

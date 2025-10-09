@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Endpoint Analytics
-description: Instructions for troubleshooting endpoint analytics.
-ms.date: 04/10/2025
+description: Troubleshoot Microsoft Intune endpoint analytics, including device enrollment issues, startup performance, and data collection problems.
+ms.date: 10/09/2025
 ms.topic: troubleshooting
 ---
 

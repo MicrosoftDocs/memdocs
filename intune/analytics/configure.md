@@ -1,7 +1,7 @@
 ---
 title: Configure Endpoint Analytics
-description: Learn how to configure endpoint analytics in the Microsoft Intune admin center and enroll devices.
-ms.date: 04/08/2025
+description: Step-by-step guide to configure endpoint analytics in Microsoft Intune, enroll devices, and manage data collection policies for device insights.
+ms.date: 10/09/2025
 ms.topic: how-to
 zone_pivot_groups: manage-intune-cm
 ---

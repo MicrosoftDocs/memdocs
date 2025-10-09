@@ -1,8 +1,8 @@
 ---
 title: Scores, Baselines, and Insights in Endpoint Analytics
-description: Learn about scores, baselines, and insights in endpoint analytics
-ms.date: 04/07/2025
-ms.topic: article
+description: Understand endpoint analytics scores, baselines, and insights in Microsoft Intune to measure and improve device performance metrics.
+ms.date: 10/09/2025
+ms.topic: concept-article
 ---
 
 # Endpoint analytics scores, baselines, and insights

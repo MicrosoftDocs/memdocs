@@ -1,11 +1,8 @@
 ---
-title: Device query in Microsoft Intune
-description: Learn how to gain on-demand information about the state of your devices using device query.
-ms.date: 08/01/2024
+title: Device Query in Microsoft Intune
+description: Learn how to use device query in Microsoft Intune to get on-demand device state, run Kusto Query Language (KQL) queries, and troubleshoot devices.
+ms.date: 10/09/2025
 ms.topic: how-to
-ms.reviewer: Elizabeth cox
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Device query
