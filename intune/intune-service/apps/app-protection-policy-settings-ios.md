@@ -1,5 +1,5 @@
 ---
-title: iOS/iPadOS app protection policy settings
+title: iOS/iPadOS App Protection Policy Settings
 description: This article describes the iOS/iPadOS app protection policy (APP) settings for iOS/iPadOS devices.
 ms.date: 07/18/2025
 ms.topic: article
@@ -9,7 +9,7 @@ ms.collection:
 - highpri
 ---
 
-# iOS app protection policy settings
+# iOS App Protection Policy Settings
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 This article describes the app protection policy settings for iOS/iPadOS devices. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the portal when you make a new policy.

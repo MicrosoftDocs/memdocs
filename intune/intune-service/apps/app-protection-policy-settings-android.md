@@ -1,5 +1,5 @@
 ---
-title: Android app protection policy settings
+title: Android App Protection Policy Settings
 description: This article describes the app protection policy settings for Android devices.
 ms.date: 09/30/2025
 ms.topic: article
@@ -9,7 +9,7 @@ ms.collection:
 - Android
 - highpri
 ---
-# Android app protection policy settings in Microsoft Intune
+# Android App Protection Policy Settings in Microsoft Intune
 This article describes the app protection policy settings for Android devices. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the portal.
 There are three categories of policy settings: data protection settings, access requirements, and conditional launch. In this article, the term *policy-managed apps* refers to apps that are configured with app protection policies.
 

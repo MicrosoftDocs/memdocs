@@ -1,5 +1,5 @@
 ---
-title: App protection policies overview
+title: App Protection Policies Overview
 description: Learn how Microsoft Intune app protection policies help protect your company data and prevent data loss.
 ms.date: 09/29/2025
 ms.topic: overview
@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# App protection policies overview
+# App Protection Policies Overview
 
 Intune app protection policies ensure an organization's data remains safe or contained in a managed app. These policies allow you to control how data is accessed and shared by apps on mobile devices. A policy can enforce rules when the user attempts to access or move "corporate" data. It can also prohibit or monitor actions when the user is inside the app. A managed app in Intune is a [protected app](../apps/apps-supported-intune-apps.md) where Intune applies app protection policies and manages the app.
 

@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Configure Slack to use Intune for EMM and app configuration
+title: Tutorial - Configure Slack to Use Intune for EMM and App Configuration
 description: In this tutorial you will configure Slack to use Intune for EMM and app configuration.
 ms.date: 06/07/2024
 ms.topic: tutorial
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Tutorial: Configure Slack to use Intune for EMM and app configuration
+# Tutorial: Configure Slack to Use Intune for EMM and App Configuration
 
 Slack is a collaboration app that you can use with Microsoft Intune.
 
