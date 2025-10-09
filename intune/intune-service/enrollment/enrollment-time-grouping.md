@@ -131,7 +131,7 @@ To access reporting for enrollment time grouping, go to **Devices** > **Monitor*
 
 Recently updated information can take up to 20 minutes to appear in the report. You must have the *Microsoft.Intune/ManagedDevices/Read* RBAC permission to view the report.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > This report provides awareness about devices that fail to be added to the security groups configured in the enrollment profiles, given that the failure can cause devices to enter an undesirable management state. We recommend monitoring the report continuously so that you can take the necessary mitigating actions right away. You could, for example, use a custom app that scans the report data on a regular schedule. The app then generates a notification when it finds new devices in the report.  
 
 ## Known issues and limitations

@@ -291,7 +291,12 @@ You can view the **Enrollment failures** report using the following steps:
 
 ### Enrollment time grouping  
 
+View the details of failed grouping attempts that happened with [enrollment time grouping](../enrollment/enrollment-time-grouping.md). 
 
+You can view the enrollment time grouping report using the following steps:  
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Monitor** > **Enrollment time grouping failures**.  
 
 ### Incomplete user enrollments report (Operational)
 
