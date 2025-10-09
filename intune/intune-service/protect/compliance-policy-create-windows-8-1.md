@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 05/15/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - compliance
@@ -97,4 +96,4 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
 
 - [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
 - [Monitor your compliance policies](compliance-policy-monitor.md).
-- See the [compliance policy settings for Windows 10/11](compliance-policy-create-windows.md) devices.
+- See the [compliance policy settings for Windows](compliance-policy-create-windows.md) devices.

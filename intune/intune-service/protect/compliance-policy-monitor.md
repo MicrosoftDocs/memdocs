@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 05/21/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ilwu
 ms.collection:
 - M365-identity-device-management
@@ -30,7 +29,7 @@ This article applies to:
 - iOS/iPadOS
 - Linux - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
 - macOS
-- Windows 10 and later
+- Windows 
 
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]

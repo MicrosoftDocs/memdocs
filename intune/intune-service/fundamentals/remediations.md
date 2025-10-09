@@ -5,7 +5,6 @@ ms.date: 09/08/2025
 ms.topic: how-to
 author: nicholasswhite
 ms.author: nwhite
-ms.localizationpriority: high
 ms.reviewer: jocallah
 ms.collection:
 - highpri

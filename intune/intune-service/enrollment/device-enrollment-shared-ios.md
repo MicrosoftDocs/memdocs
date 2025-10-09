@@ -3,7 +3,6 @@ title: Shared iOS and iPadOS devices
 description: Learn about Shared iOS and iPadOS devices.
 ms.date: 09/16/2024
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management

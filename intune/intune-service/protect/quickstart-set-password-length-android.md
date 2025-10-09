@@ -5,7 +5,6 @@ author: nicholasswhite
 ms.author: nwhite
 ms.date: 06/07/2024
 ms.topic: article
-ms.localizationpriority: medium
 ms.reviewer: andreibiswas
 ms.collection:
 - M365-identity-device-management

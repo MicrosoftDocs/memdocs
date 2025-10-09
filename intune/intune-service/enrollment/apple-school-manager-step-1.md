@@ -3,7 +3,6 @@ title: Apple School Manager - get Apple token and assign devices
 description: Get the Apple token needed to set up Apple School Manager and Microsoft Intune for corporate-owned iOS/iPadOS devices.
 ms.date: 01/07/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management

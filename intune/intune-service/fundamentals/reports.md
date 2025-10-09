@@ -5,7 +5,6 @@ author: nicholasswhite
 ms.author: nwhite
 ms.date: 06/23/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: jlynn
 ms.collection:
 - M365-identity-device-management
@@ -83,7 +82,7 @@ A compliance trend report for device compliance can show the trend of device com
 You can view the **Device compliance trends** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance trends** to view device compliance over a 60 day trend.
+2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance trends** to view device compliance over a 30 day trend.
 
     ![Intune trend report](./media/intune-reports/intune-reports-03.png)
 

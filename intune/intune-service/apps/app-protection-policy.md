@@ -3,7 +3,6 @@ title: App Protection Policies Overview
 description: Learn how Microsoft Intune app protection policies help protect your company data and prevent data loss.
 ms.date: 09/29/2025
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: beflamm
 ms.custom: intune-azure, get-started
 ai-usage: ai-assisted
@@ -373,7 +372,7 @@ When dealing with different types of settings, an Intune SDK version requirement
  > App protection policies aren't supported on Intune managed Android Enterprise dedicated devices without [Shared device mode](/azure/active-directory/develop/msal-shared-devices). On these devices, Company Portal installation is needed for an app protection policies block policy to take effect with no effect to the user. App protection policies are supported on Intune managed Android Enterprise dedicated devices with Shared device mode, and on AOSP userless devices that use Shared device mode. While App protection policies are supported in Shared device mode, there's an exception when either of the following settings are enforced in the Android App protection policy:
 > - PIN for access
 > - Work or school account credentials for access
-> 
+>
 > In this scenario, if a user is blocked during the PIN reset flow, they must use the Remove account button to unblock themselves.
 
 ### Microsoft Teams Android devices

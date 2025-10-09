@@ -5,7 +5,6 @@ author: nicholasswhite
 ms.author: nwhite
 ms.date: 04/24/2024
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management

@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 03/27/2025
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -16,9 +15,6 @@ ms.reviewer: laarrizz
 # Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices
 
 View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows in Microsoft Intune.
-
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!IMPORTANT]
 > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]

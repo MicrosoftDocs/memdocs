@@ -1,5 +1,12 @@
 {
   "redirections": [
+
+
+    {
+      "source_path": "intune/intune-service/copilot/security-copilot-surface-portal.md",
+      "redirect_url": "/surface/security-copilot-surface-management-portal",
+      "redirect_document_id": false
+    },
     {
       "source_path": "intune/intune-service/remote-actions/device-management.md",
       "redirect_url": "/intune/intune-service/remote-actions/index",

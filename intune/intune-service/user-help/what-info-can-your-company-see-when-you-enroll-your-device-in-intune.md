@@ -8,8 +8,7 @@ ms.reviewer: esmich
 # What information can my organization see when I enroll my device?
 
 **Applies to**:
-- Windows 10
-- Windows 11
+- Windows  
 - Android
 - iOS/iPadOS
 - macOS
