@@ -1,5 +1,5 @@
 ---
-title: Guided scenario - Cloud-managed Modern Desktop
+title: Guided Scenario - Cloud-Managed Modern Desktop
 description: Learn about the guided scenario to set up and configure a basic Modern Desktop from the Microsoft 365 Device Management portal.
 author: nicholasswhite
 ms.author: nwhite
@@ -11,7 +11,7 @@ ms.collection:
 - intune-scenario
 ---
 
-# Guided scenario - Cloud-managed Modern Desktop
+# Guided Scenario - Cloud-Managed Modern Desktop
 
 The modern desktop is the state-of-the-art productivity platform for the Information Worker. Microsoft 365 Apps and Windows 10 are the core components of the modern desktop along with the latest security baselines for Windows 10 and Microsoft Defender for Endpoint.
 
