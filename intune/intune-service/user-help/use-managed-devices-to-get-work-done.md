@@ -12,8 +12,7 @@ ms.reviewer: esmich
 - iOS/iPadOS
 - Linux
 - macOS
-- Windows 10
-- Windows 11
+- Windows  
 
 
 Device enrollment enables you to access your work or school's internal resources (such as apps, Wi-Fi, and email) from your mobile device.  During device enrollment:
@@ -42,14 +41,14 @@ If you're required to use the Microsoft Intune app with your Android device, you
 For information about how to install the Intune app on a work or school-provided Linux device, see [Get the Microsoft Intune app for Linux](microsoft-intune-app-linux.md).
 
 ## What's the difference between the apps and the website?
-The Company Portal app is available for Windows 10/11, iOS/iPadOS, macOS, and Android devices. It integrates seamlessly with your device's respective platform. The website version is accessible from any device and gives you the same, universal experience no matter what device you're using.
+The Company Portal app is available for Windows, iOS/iPadOS, macOS, and Android devices. It integrates seamlessly with your device's respective platform. The website version is accessible from any device and gives you the same, universal experience no matter what device you're using.
 
 The Microsoft Intune app is for Linux devices and corporate-owned Android and AOSP devices. It doesn't have a website.
 
 ## What kind of devices can you enroll with Company Portal?
 You can use Company Portal to enroll devices running:
 
-- Windows 10/11
+- Windows  
 - Android OS
 - iOS/iPadOS
 - macOS
@@ -81,7 +80,7 @@ You can also contact your IT support person. The Company Portal and Microsoft In
 ## Next steps
 If you're ready to access your work or school account, follow your organization's instructions to enroll your device. You can also find step-by-step enrollment guidance in the following articles.
 
-* [Enroll your Windows 10/11 device](enroll-windows-10-device.md)
+* [Enroll your Windows device](enroll-windows-10-device.md)
 * [Enroll your Android device](enroll-device-android-company-portal.md)
 * [Enroll with Android work profile](enroll-device-android-work-profile.md)
 * [Enroll Android or AOSP device with Microsoft Intune app](enroll-device-android-microsoft-intune-app.md)

@@ -1,5 +1,5 @@
 ---
-title: Add and assign an app
+title: Add and Assign an App
 description: In this article, you'll use Microsoft Intune to add and assign an app.
 ms.date: 10/02/2025
 ms.topic: how-to
@@ -9,7 +9,7 @@ ms.collection:
 - FocusArea_Apps_Add
 ---
 
-# Step 8: Add and assign an app
+# Step 8: Add and Assign an App
 
 In this article, you'll use Intune to add and assign an app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
 

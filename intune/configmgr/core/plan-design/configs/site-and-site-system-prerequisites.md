@@ -54,15 +54,11 @@ The following requirements apply to all site system servers:
 Starting in version 2303, site servers and specific site systems require Microsoft .NET Framework version 4.8 Before you run setup to install or update the site, first update .NET and restart the system.
 
 > [!NOTE]
-> .NET Framework version 4.6.2 is preinstalled with Windows Server 2016. Later versions of Windows are preinstalled with a later version of the .NET Framework.
->
-> .NET Framework version 4.8 is required for 2403 upgrade.
->
-> For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
+> .NET Framework version 4.8 is required for the Configuration Manager 2403 upgrade.> For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 
 ### Site server
 
-If the site server doesn't have any collocated roles that require .NET, it still requires .NET, but setup doesn't automatically install it. Make sure the site server itself has at least .NET version 4.6.2. If possible, install .NET 4.8.
+If the site server doesn't have any collocated roles that require .NET, it still requires .NET, but setup doesn't automatically install it. Make sure that at least .NET Framework version 4.8 is installed to the site server. 
 
 ### Site systems
 
@@ -90,7 +86,9 @@ The behavior differs for different types of site roles that require .NET:
 > [!NOTE]
 > Currently, you still need to enable the Windows feature for .NET Framework 3.5 on site systems that require it.
 
-If site systems have at least version 4.6.2 but earlier than version 4.8, you'll also see a prerequisite check warning. We recommend that you install the latest version of .NET version 4.8 to get the latest performance and security improvements. Configuration Manager setup doesn't automatically install .NET version 4.8. A later version of Configuration Manager will require .NET version 4.8.
+If site systems have at least version 4.6.2 but earlier than version 4.8, you'll also see a prerequisite check warning. Although this is a warning, .NET Framework version 4.8 or higher is ***required*** for Configuration Manager 2403 and later. Install the latest version of .NET version 4.8 to get the latest performance and security improvements. Configuration Manager setup doesn't automatically install .NET version 4.8. 
+
+Although the upgrade or installation will not be blocked if .NET Framework version 4.8 is not installed, certain roles, like the Service Connection Point and Management Point will not function properly without it
 
 There's also a new [management insight](../../servers/manage/management-insights.md) to recommend site systems that don't yet have .NET version 4.8 or later.
 
