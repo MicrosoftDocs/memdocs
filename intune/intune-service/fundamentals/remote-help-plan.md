@@ -62,7 +62,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 - **Enable Remote Help for your tenant**: By default, Remote Help isn't enabled for Intune tenants. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 
-- **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages).
+- **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages-for-chat).
 
 - **Use Remote Help with unenrolled devices**: This setting is turned off by default. For Windows and macOS devices, enabling this option allows help to be provided to devices that aren't enrolled in Intune. This setting doesn't apply to devices used by helpers.
 
@@ -255,9 +255,9 @@ The web app has the same requirements as the platform of the sharer.
 
 ---
 
-## Supported Languages
+## Supported Languages for Chat
 
-Remote Help is supported in the following languages:
+Remote Help chat on is supported in the following languages:
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
