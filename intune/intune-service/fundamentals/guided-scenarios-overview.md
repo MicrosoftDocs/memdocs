@@ -1,5 +1,5 @@
 ---
-title: Guided scenarios overview
+title: Guided Scenarios Overview
 description: Learn about the Intune guided scenarios available in the Microsoft 365 Device Management portal.
 author: nicholasswhite
 ms.author: nwhite
@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Intune guided scenarios overview
+# Intune Guided Scenarios Overview
 
 A guided scenario is a customized series of steps centered around one end-to-end use-case. Common scenarios are based on the role an admin, user, or device plays in your organization. These roles typically require a collection of carefully orchestrated profiles, settings, applications, and security controls. The goal is to provide the best user experience and security.
 

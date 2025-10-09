@@ -1,5 +1,5 @@
 ---
-title: Step 2. Create app protection policies for Microsoft Edge for Business
+title: Step 2. Create App Protection Policies for Microsoft Edge for Business
 description: Step 2. Create app protection policies for Microsoft Edge for Business.
 ms.date: 06/12/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Step 2. Create app protection policies for Microsoft Edge for Business
+# Step 2. Create App Protection Policies for Microsoft Edge for Business
 
 App protection policies are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move corporate data, or a set of actions that are prohibited or monitored when the device user is using the app. A managed app is an app that has app protection policies applied to it and is managed by an enterprise management solution, such as Intune.
 
