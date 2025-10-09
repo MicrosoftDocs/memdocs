@@ -19,7 +19,7 @@ Microsoft Intune enables IT admins to configure and enforce update policies for 
 
 This article explains how to configure update policies in Intune using Apple's Declarative Device Management (DDM) model. DDM provides greater reliability and autonomy than older MDM-based update policies, which are now deprecated.
 
-[!INCLUDE [platform-requirements](../includes/h2/platform-requirements.md)]
+[!INCLUDE [platform-requirements](../../includes/h2/platform-requirements.md)]
 
 > [!div class="checklist"]
 > This feature applies to:
@@ -131,7 +131,7 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 
 To monitor software updates for Apple devices, use the following methods:
 
-- DDM software updates use the same reporting as device configuration policies. For more information, see [Monitor device configuration policies](../configuration/device-profile-monitor.md).
+- DDM software updates use the same reporting as device configuration policies. For more information, see [Monitor device configuration policies](../../configuration/device-profile-monitor.md).
 
   > [!IMPORTANT]
   > A policy that reports Success only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
@@ -175,8 +175,8 @@ Use the following information to help you decide which policy type to use.
 | macOS | ❌ | ❌ |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Intune admin center policy type** | &nbsp; | &nbsp; |
-| iOS/iPadOS | [Settings catalog](../configuration/settings-catalog.md) |[Update policies for iOS/iPadOS](software-updates-ios.md) |
-| macOS | [Settings catalog](../configuration/settings-catalog.md) | [Update policies for macOS](software-updates-macos.md) |
+| iOS/iPadOS | [Settings catalog](../../configuration/settings-catalog.md) |[Update policies for iOS/iPadOS](software-updates-ios.md) |
+| macOS | [Settings catalog](../../configuration/settings-catalog.md) | [Update policies for macOS](software-updates-macos.md) |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Minimum supported version** | &nbsp; | &nbsp; |
 | iOS/iPadOS | 17.0 and later | - iOS 10.3 (supervised)<br/>- iPadOS 13.0 (supervised) |

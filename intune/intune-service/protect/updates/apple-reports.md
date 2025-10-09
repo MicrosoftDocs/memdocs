@@ -117,6 +117,6 @@ The following image shows a blank summary report with no device details availabl
 
 ## Related content
 
-- [iOS/iPadOS update policies](../protect/updates/software-updates-ios.md)
-- [macOS update policies](../protect/updates/software-updates-macos.md)
+- [iOS/iPadOS update policies](../../protect/updates/software-updates-ios.md)
+- [macOS update policies](../../protect/updates/software-updates-macos.md)
 
