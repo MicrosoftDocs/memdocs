@@ -863,7 +863,7 @@ You can now use Microsoft Copilot in Intune to explore your Intune data using na
   - Centralize Surface-specific device administration in a single environment.
   - Automatically access comprehensive information from your Intune-enrolled Surface devices, which flows into the Surface Management Portal when users sign in for the first time.
 
-  To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](../copilot/security-copilot-surface-portal.md).
+  To learn more about this feature, see [Security Copilot in Microsoft Surface Management Portal](/surface/security-copilot-surface-management-portal).
 
 ### Monitor and troubleshoot
 

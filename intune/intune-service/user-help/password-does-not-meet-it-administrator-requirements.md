@@ -8,8 +8,7 @@ ms.reviewer: anuragjain
 # Add or change device passcode on work or school device
 
  **Applies to**:
- * Windows 10
- * Windows 11
+ * Windows 
  * Android
  * iOS/iPadOS
  * macOS

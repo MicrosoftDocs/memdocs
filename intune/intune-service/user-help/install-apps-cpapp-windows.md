@@ -8,8 +8,7 @@ ms.reviewer:
 # Install and share apps on your device
 
 **Applies to**
-- Windows 10
-- Windows 11
+-  Windows 
 
 Browse and install work apps in the Intune Company Portal app for Windows. This article describes how to install, view, and share work apps from Company Portal.
 
