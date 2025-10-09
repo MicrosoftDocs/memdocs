@@ -1,5 +1,5 @@
 ---
-title: Data Warehouse data model
+title: Data Warehouse Data Model
 description: The Microsoft Intune Data Warehouse samples data daily to provide a historical view of your continually changing mobile environment.
 ms.date: 10/30/2024
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Microsoft Intune Data Warehouse data model
+# Microsoft Intune Data Warehouse Data Model
 
 The Intune Data Warehouse samples data daily to provide a historical view of your continually changing environment of mobile devices. The view is composed of related entities in time.
 
