@@ -8,7 +8,6 @@ ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-updates
 ---
 
@@ -106,7 +105,7 @@ This feature applies to:
    > You can deploy a settings catalog policy to hide an update from device users for a specified period of time on your supervised macOS devices. For more information, see the following section [Delay visibility of updates](#delay-visibility-of-updates).
 
    <!--
-   > You can configure settings in a [Settings Catalog](../protect/software-updates-ios.md#delay-visibility-of-software-updates) policy to hide an update from device users for a period of time on your supervised macOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
+   > You can configure settings in a [Settings Catalog](../protect/updates/software-updates-ios.md#delay-visibility-of-software-updates) policy to hide an update from device users for a period of time on your supervised macOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
    >
    > When you use a device restriction to hide an update, review your software update policies to ensure they won't schedule the installation of the update before that restriction period ends. Software update policies install updates based on their own schedule, regardless of the update being hidden or visible to the device user.
    -->

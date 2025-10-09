@@ -140,7 +140,7 @@ To monitor software updates for Apple devices, use the following methods:
 
 - [Software updates planning guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
 - [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
-- [Declarative Apple software update reports in Intune](software-updates-reports-apple-declarative-based.md)
+- [Declarative Apple software update reports in Intune](apple-reports.md)
 
 <!--
 ## DDM software updates vs MDM software update policies

@@ -8,7 +8,6 @@ ms.topic: how-to
 ms.reviewer: annovich, beflamm
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-updates
 ---
 

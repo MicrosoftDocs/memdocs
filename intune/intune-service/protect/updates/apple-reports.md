@@ -4,7 +4,6 @@ description: Use Microsoft Intune to software updates reports for managed Apple 
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 09/24/2025
-audience: ITPro
 ms.topic: conceptual
 ms.reviewer: beflamm
 ms.collection:
@@ -118,6 +117,6 @@ The following image shows a blank summary report with no device details availabl
 
 ## Related content
 
-- [iOS/iPadOS update policies](../protect/software-updates-ios.md)
-- [macOS update policies](../protect/software-updates-macos.md)
+- [iOS/iPadOS update policies](../protect/updates/software-updates-ios.md)
+- [macOS update policies](../protect/updates/software-updates-macos.md)
 
