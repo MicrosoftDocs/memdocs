@@ -186,11 +186,26 @@ Use the following information to help you decide which policy type to use.
 
 ```copilot-prompt
 
-Remove devices from Apple Business/School Manager to prevent automatic re-enrollment and ensure complete device lifecycle cleanup.
-
-1. Log in to Apple Business/School Manager portal
-2. Go to Devices section and search by serial numbers from your CSV
-3. Select devices and choose "Release from Organization"
-4. Confirm device release to remove DEP/ADE enrollment capability
+This is my sample prompt.
 
 ```
+
+
+```lg
+
+This is the sample answer.
+```
+
+
+
+> [!div class="prompt"]
+> **Prompt:**
+> ::: code language="copilot-prompt" displayType="text" interactionType="input"
+> "Show me all security agents installed on this device."
+> :::
+
+> [!div class="answer"]
+> **Answer:**
+> ::: code language="lg" displayType="text" interactionType="output"
+> "The device has Microsoft Defender ATP and BitLocker enabled."
+> :::
