@@ -195,17 +195,3 @@ This is my sample prompt.
 
 This is the sample answer.
 ```
-
-
-
-> [!div class="prompt"]
-> **Prompt:**
-> ::: code language="copilot-prompt" displayType="text" interactionType="input"
-> "Show me all security agents installed on this device."
-> :::
-
-> [!div class="answer"]
-> **Answer:**
-> ::: code language="lg" displayType="text" interactionType="output"
-> "The device has Microsoft Defender ATP and BitLocker enabled."
-> :::
