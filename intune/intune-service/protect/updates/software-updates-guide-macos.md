@@ -26,7 +26,7 @@ This article applies to:
 
 > [!TIP]
 >
-> - If your devices are personally owned, then go to the [software updates admin guide for personal devices](software-updates-guide-personal-byod.md).
+> - If your devices are personally owned, then go to the [software updates admin guide for personal devices](../software-updates-guide-personal-byod.md).
 > - [!INCLUDE [Apple MDM software updates deprecation](../../includes/apple-mdm-updates-deprecation.md)]
 
 ## Before you begin
@@ -69,7 +69,7 @@ DDM is the modern way to manage settings. The independent nature of DDM provides
 
 Don't use the MDM-based software update policy settings on these devices, as Apple deprecated the MDM policies.
 
-The DDM settings are configurable in the [Intune settings catalog](../../configuration/settings-catalog.md). For more information, go to [Managed software updates with the settings catalog](apple.md).
+The DDM settings are configurable in the [Intune settings catalog](../../../configuration/settings-catalog.md). For more information, go to [Managed software updates with the settings catalog](apple.md).
 
 ### ✅ Use MDM on macOS 13 and older
 
@@ -177,6 +177,6 @@ For each device, you can see its current state of updates (Devices > macOS > Upd
 
 ## Related articles
 
-- [Software updates planning guide for BYOD and personal devices in Microsoft Intune](../../software-updates-guide-personal-byod.md)
-- [Software updates planning guide for managed Android Enterprise devices in Microsoft Intune](../../software-updates-guide-android.md)
+- [Software updates planning guide for BYOD and personal devices in Microsoft Intune](../software-updates-guide-personal-byod.md)
+- [Software updates planning guide for managed Android Enterprise devices in Microsoft Intune](../software-updates-guide-android.md)
 - [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](software-updates-guide-ios-ipados.md)

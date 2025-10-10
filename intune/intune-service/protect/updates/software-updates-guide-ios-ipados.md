@@ -26,7 +26,7 @@ This article applies to:
 
 > [!TIP]
 >
-> - If your devices are personally owned, then go to the [software updates planning guide for personal devices](software-updates-guide-personal-byod.md).
+> - If your devices are personally owned, then go to the [software updates planning guide for personal devices](../software-updates-guide-personal-byod.md)
 > - [!INCLUDE [Apple MDM software updates deprecation](../../includes/apple-mdm-updates-deprecation.md)]
 
 ## Admin checklist for organization owned devices
@@ -68,8 +68,8 @@ Automatic updates work together with other update policies, which can provide a 
 Using Intune policies, you can also force users to update their devices:
 
 - Use [Enrollment Restrictions](../../enrollment/create-device-platform-restrictions.md) to prevent users from enrolling devices that aren't current.
-- Create [compliance policies](compliance-policy-create-ios.md) to determine the devices that aren't updated.
-- Create [Conditional Access (CA) policies](create-conditional-access-intune.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
+- Create [compliance policies](../compliance-policy-create-ios.md) to determine the devices that aren't updated.
+- Create [Conditional Access (CA) policies](../create-conditional-access-intune.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
 
 #### What you need to know
 
@@ -268,6 +268,6 @@ To accomplish this task, this scenario involves two policies:
 ## Related articles
 
 - [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md)
-- [Software updates planning guide and scenarios for BYOD and personal devices](../../software-updates-guide-personal-byod.md)
-- [Software updates planning guide for managed Android devices](../../software-updates-guide-android.md)
+- [Software updates planning guide and scenarios for BYOD and personal devices](../software-updates-guide-personal-byod.md)
+- [Software updates planning guide for managed Android devices](../software-updates-guide-android.md)
 - [Software updates planning guide for managed macOS devices](software-updates-guide-macos.md)
