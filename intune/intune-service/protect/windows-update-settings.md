@@ -23,21 +23,21 @@ Following are the Windows Update settings for Windows Updates that you can [mana
 
 Update settings control what bits a device will download, and when. For more information about the behavior of each setting, see the Windows reference documentation.
 
-- **Microsoft product updates**
+- **Microsoft product updates**  
   **Default**:  Allow
   Windows Update CSP: [Update/AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice)
 
   - **Allow** - Select *Allow* to scan for app updates from Microsoft Update.
   - **Block** - Select Block to prevent scanning for app updates.
 
-- **Windows drivers**
+- **Windows drivers**  
   **Default**:  Allow
   Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate)
 
   - **Allow** - Select *Allow* include Windows Update drivers during updates.
   - **Block** - Select Block to prevent scanning for drivers.
 
-- **Quality update deferral period (days)**
+- **Quality update deferral period (days)**  
   **Default**: 0
   Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays)
 
@@ -45,7 +45,7 @@ Update settings control what bits a device will download, and when. For more inf
 
   Quality Updates are typically fixes and improvements to existing Windows functionality.
 
-- **Feature update deferral period (days)**
+- **Feature update deferral period (days)**  
   **Default**: 0
   Windows Update CSP: [Update/DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays)
 
@@ -57,12 +57,12 @@ Update settings control what bits a device will download, and when. For more inf
 
   Feature Updates are typically new features for Windows.
 
-- **Upgrade Windows 10 devices to Latest Windows 11 release**
+- **Upgrade Windows 10 devices to Latest Windows 11 release**  
   **Default**: No
 
   When set to *Yes*, eligible Windows 10 devices will upgrade to the most current Windows 11 release. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](https://www.microsoft.com/windows/windows-11-specifications).
 
-- **Set feature update uninstall period (2 – 60 days)**
+- **Set feature update uninstall period (2 – 60 days)**  
   **Default**: 10
   Windows Update CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod)
 
@@ -72,7 +72,7 @@ Update settings control what bits a device will download, and when. For more inf
 
   For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days, you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.
 
-- **Enable pre-release builds**
+- **Enable pre-release builds**  
   **Default**: Not Configured
 
   When configuring *Update ring settings*, you can choose to enable **Enable pre-release builds**. Devices that receive this setting as *Enabled* will move to the pre-release build you specify, and will also reboot. When enabled, specify one of the following prerelease builds:
@@ -86,7 +86,7 @@ Update settings control what bits a device will download, and when. For more inf
 
 User experience settings control the end-user experience for device restart and reminders. For more information about the behavior of each setting, see the Windows Update CSP documentation.
 
-- **Automatic update behavior**
+- **Automatic update behavior**  
   **Default**: Auto install at maintenance time
   Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate)
 
@@ -158,21 +158,21 @@ User experience settings control the end-user experience for device restart and 
 
     This option is designed for education devices that remain in carts overnight that are left in sleep mode. It is not designed for 1:1 devices.
 
-- **Option to pause Windows updates**
+- **Option to pause Windows updates**  
   **Default**: Enable
   Windows Update CSP: [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess)
 
   - **Enable** - Allow device users to pause the installation of an update for a certain number of days.
   - **Disable** - Prevent device users from pausing the installation of an update.
 
-- **Option to check for Windows updates**
+- **Option to check for Windows updates**  
   **Default**: Enable
   Windows Update CSP: [Update/SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess)
 
   - **Enable** - Allow device users to use Windows Update scan to find updates.
   - **Disable** - Prevent device users from accessing the Windows Update scan.
 
-- **Change notification Update level**
+- **Change notification Update level**  
   **Default**: Use the default Windows Update notifications
   Windows Update CSP: [Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#updatenotificationlevel)
 
@@ -184,7 +184,7 @@ User experience settings control the end-user experience for device restart and 
   - **Turn off all notifications, excluding restart warnings**
   - **Turn off all notifications, including restart warnings**
 
-- **Use deadline settings**
+- **Use deadline settings**  
   **Default**: Not configured
 
   Allows configuration of deadline settings.
@@ -196,25 +196,25 @@ User experience settings control the end-user experience for device restart and 
 
   When set to *Allow*, you can configure the following settings for deadlines:
 
-  - **Deadline for feature updates**
+  - **Deadline for feature updates**  
     **Default**: *Not configured*
     Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforfeatureupdates)
 
     Specifies the number of days a user has before feature updates are installed on their devices automatically (2-30).
 
-  - **Deadline for quality updates**
+  - **Deadline for quality updates**  
     **Default**: *Not configured*
     Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforqualityupdates)
 
     Specifies the number of days a user has before quality updates are installed on their devices automatically (2-30).
 
-  - **Grace period**
+  - **Grace period**  
     **Default**: *Not configured*
     Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( /windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod)
 
     Specifies a minimum number of days after deadline until restarts occur automatically (0-7).
 
-  - **Auto reboot before deadline**
+  - **Auto reboot before deadline**  
     **Default**:  Yes
     Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot)
 
