@@ -45,7 +45,7 @@ By default, users receive notifications and/or see the latest updates available 
 
 They can also change the update behavior using the Automatic Updates feature on the device (Settings > Software Updates):
 
-:::image type="content" source="../media/software-updates-guide-macos/default-update-settings-macos-device.png" alt-text="The operating system default update settings and controls on a macOS Apple device.":::
+:::image type="content" source="images/default-update-settings-macos-device.png" alt-text="The operating system default update settings and controls on a macOS Apple device.":::
 
 When users install their own updates (instead of admins managing the updates), it can disrupt user productivity and business tasks. For example:
 
@@ -119,9 +119,9 @@ With these settings, this policy locks these settings so users can't change them
 
     The following images show the prompts that end users can see when updates are available:
 
-    :::image type="content" source="../media/software-updates-guide-macos/required-managed-update-sample-notification-macos.png" alt-text="The sample notification prompt for a required update on a macOS Apple device.":::
+    :::image type="content" source="images/required-managed-update-sample-notification-macos.png" alt-text="The sample notification prompt for a required update on a macOS Apple device.":::
 
-    :::image type="content" source="../media/software-updates-guide-macos/updates-available-sample-notification-macos.png" alt-text="The sample notification that an update is available on a macOS Apple device.":::
+    :::image type="content" source="images/updates-available-sample-notification-macos.png" alt-text="The sample notification that an update is available on a macOS Apple device.":::
 
 3. If end users use all the deferrals, then the update is force installed. For a forced installation, a restart doesn't prompt the end user, and could result in data loss.
 
@@ -153,7 +153,7 @@ For more information on the settings catalog, including how to create a settings
 
 This policy locks these settings so users can't change them. On the device, the software update settings are greyed out:
 
-:::image type="content" source="../media/software-updates-guide-macos/update-settings-with-settings-catalog-policy-macos.png" alt-text="The software update settings are greyed out after the Intune settings catalog update policy applies to a macOS Apple device.":::
+:::image type="content" source="images/update-settings-with-settings-catalog-policy-macos.png" alt-text="The software update settings are greyed out after the Intune settings catalog update policy applies to a macOS Apple device.":::
 
 ### ✅ Consider using the Nudge community tool
 
@@ -163,7 +163,7 @@ A popular tool within the Microsoft macOS admin community is Nudge. [Nudge is 
 
 When Nudge is configured and deployed, end users see the following sample message when their device is ready to be updated. End users can also choose to update the device or defer the update:
 
-:::image type="content" source="../media/software-updates-guide-macos/nudge-sample-notification-message-macos.png" alt-text="A sample Nudge community tool message when a software update is available a macOS Apple device." lightbox="../media/software-updates-guide-macos/nudge-sample-notification-message-macos.png":::
+:::image type="content" source="images/nudge-sample-notification-message-macos.png" alt-text="A sample Nudge community tool message when a software update is available a macOS Apple device." lightbox="images/nudge-sample-notification-message-macos.png":::
 
 There's also a [sample script and Intune configuration policy](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Apps/Nudge) for Nudge in the Microsoft shell script repository. This script includes everything you need to get started with Nudge. Make sure you update the `.mobileconfig` file with your values.
 
@@ -173,7 +173,7 @@ After the update policies are deployed, in the [Intune admin center](https://go.
 
 For each device, you can see its current state of updates (Devices > macOS > Update policies for macOS):
 
-:::image type="content" source="../media/software-updates-guide-macos/intune-report-device-update-category-status.png" alt-text="Use the built-in reporting to check the update status of a macOS Apple device in the Microsoft Intune admin center." lightbox="../media/software-updates-guide-macos/intune-report-device-update-category-status.png":::
+:::image type="content" source="images/intune-report-device-update-category-status.png" alt-text="Use the built-in reporting to check the update status of a macOS Apple device in the Microsoft Intune admin center." lightbox="images/intune-report-device-update-category-status.png":::
 
 ## Related articles
 
