@@ -69,7 +69,7 @@ DDM is the modern way to manage settings. The independent nature of DDM provides
 
 Don't use the MDM-based software update policy settings on these devices, as Apple deprecated the MDM policies.
 
-The DDM settings are configurable in the [Intune settings catalog](../../../configuration/settings-catalog.md). For more information, go to [Managed software updates with the settings catalog](apple.md).
+The DDM settings are configurable in the [Intune settings catalog](../../configuration/settings-catalog.md). For more information, go to [Managed software updates with the settings catalog](apple.md).
 
 ### ✅ Use MDM on macOS 13 and older
 
