@@ -22,7 +22,7 @@ This article explains how to configure update policies in Intune using Apple's D
 [!INCLUDE [platform-requirements](../../includes/h2/platform-requirements.md)]
 
 > [!div class="checklist"]
-> This feature applies to:
+> Applies to:
 >
 > - iOS/iPadOS 17.0 and later
 > - macOS 14.0 and later
@@ -34,7 +34,7 @@ When designing your Apple device update strategy, align with your organization's
 - **Latest version policy**: automatically installs the latest eligible OS version after a defined deferral period. With this model:
 
   - You configure a deferral period (in days) and an installation time.
-  - Updates are hidden from users during the deferral window and become visible once the period ends.
+  - Updates are hidden from users during the deferral window and become visible once the period ends.  
   - Devices autonomously install the update within the declared deadline—no manual triggers required.
 
   This model is ideal for organizations that prioritize rapid patching, regulatory compliance, and minimal IT overhead.
@@ -183,15 +183,3 @@ Use the following information to help you decide which policy type to use.
 | macOS | 14.0 and later | macOS 12.0 |
 
 -->
-
-```copilot-prompt
-
-This is my sample prompt.
-
-```
-
-
-```lg
-
-This is the sample answer.
-```
