@@ -142,7 +142,7 @@ The following profiles are supported for devices you manage with Intune:
 
 #### Windows
 
-- Platform: **Windows**
+- Platform: **Windows**  
   Profiles for this platform can be used with devices enrolled with Intune, and devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
   > [!NOTE]
@@ -193,15 +193,15 @@ The following profiles are supported for devices you manage with Intune:
 
 Some Antivirus policy settings support *policy merge*. Policy merge helps avoid conflicts when multiple policies apply to the same devices and configure the same setting. Intune evaluates the settings that policy merge supports, for each user or device as taken from all applicable policies. Those settings are then merged into a single superset of policy.
 
-For example, you create three separate antivirus policies that define different antivirus file path exclusions. Eventually, all three policies are assigned to the same user. Because the Microsoft Defender file path exclusion CSP supports policy merge, Intune evaluates and combines the file exclusions from all applicable policies for the user. The exclusions are added to a superset and the single list of exclusions is delivered to the users’ device.
+For example, you create three separate antivirus policies that define different antivirus file path exclusions. Eventually, all three policies are assigned to the same user. Because the Microsoft Defender file path exclusion CSP supports policy merge, Intune evaluates and combines the file exclusions from all applicable policies for the user. The exclusions are added to a superset and the single list of exclusions is delivered to the users' device.
 
-When policy merge isn’t supported for a setting, a conflict can occur. Conflicts can result in the user or device not receiving any policy for the setting. For example, policy merge doesn't support the CSP for preventing installation of matching device IDs (*PreventInstallationOfMatchingDeviceIDs*). Configurations for this CSP don’t merge, and are processed separately.
+When policy merge isn't supported for a setting, a conflict can occur. Conflicts can result in the user or device not receiving any policy for the setting. For example, policy merge doesn't support the CSP for preventing installation of matching device IDs (*PreventInstallationOfMatchingDeviceIDs*). Configurations for this CSP don't merge, and are processed separately.
 
 When processed separately, policy conflicts are resolved as follows:
 
 1. The most secure policy applies.
 2. If two policies are equally secure, the last modified policy applies.
-3. If the last modified policy can’t resolve the conflict, no policy is delivered to the device.
+3. If the last modified policy can't resolve the conflict, no policy is delivered to the device.
 
 ### Settings and CSPs that support policy merge
 
@@ -228,7 +228,7 @@ On the **Summary** page, you can [create new policies](../protect/endpoint-secur
 
 ![Summary page of antivirus policy](./media/endpoint-security-antivirus-policy/antivirus-summary.png)
 
-When you select a policy from the list, the *Overview* page for that policy instance opens and displays more information. After selecting a tile from this view, Intune displays additional details for that profile if they’re available.
+When you select a policy from the list, the *Overview* page for that policy instance opens and displays more information. After selecting a tile from this view, Intune displays additional details for that profile if they're available.
 
 ![Overview page of antivirus policy](./media/endpoint-security-antivirus-policy/policy-overview.png)
 
