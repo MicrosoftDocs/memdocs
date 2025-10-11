@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune reports
+title: Microsoft Intune Reports
 description: Intune provides specific report types with focused views that contain consistent and timely data.
 author: nicholasswhite
 ms.author: nwhite
@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# Intune reports
+# Intune Reports
 
 Microsoft Intune reports allow you to more effectively and proactively monitor the health and activity of endpoints across your organization, and also provides other reporting data across Intune. For example, you'll be able to see reports about device compliance, device health, and device trends. In addition, you can create custom reports to obtain more specific data.
 

@@ -1,5 +1,5 @@
 ---
-title: Manage Apple volume-purchased apps
+title: Manage Apple Volume-Purchased Apps
 description: Learn how to sync apps you bought in volume through Apple Business Manager with Microsoft Intune. Then manage and track these apps on iOS/iPadOS and macOS devices.
 ms.date: 09/19/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune
+# How to Manage iOS and macOS Apps Purchased Through Apple Business Manager with Microsoft Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
