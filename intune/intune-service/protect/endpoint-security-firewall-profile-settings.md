@@ -411,10 +411,10 @@ The following settings are configured as [Endpoint Security policy for Windows F
 
 #### Windows Firewall Rule
 
-- **Name**
+- **Name**  
   Specify a friendly name for your rule. This name will appear in the list of rules to help you identify it.
 
-- **Description**
+- **Description**  
   Provide a description of the rule.
 
 - **Direction**
@@ -427,7 +427,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **Blocked** - Traffic is blocked in the *Direction* you've configured.
   - **Allowed** - Traffic is allowed in the *Direction* you've configured.
 
-- **Network type**
+- **Network type**  
   Specify the network type to which the rule belongs. You can choose one or more of the following. If you don't select an option, the rule applies to all network types.
   - **Domain**
   - **Private**
@@ -438,7 +438,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
 
 Applications targeted with this rule:
 
-- **Package family name**
+- **Package family name**  
   [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   Package family names can be retrieved by running the Get-AppxPackage command from PowerShell.
@@ -448,7 +448,7 @@ Applications targeted with this rule:
 
   To specify the file path of an app, enter the apps location on the client device. For example: `C:\Windows\System\Notepad.exe`
 
-- **Service name**
+- **Service name**  
   [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Use a Windows service short name when a service, not an application, is sending or receiving traffic. Service short names are retrieved by running the `Get-Service` command from PowerShell.
@@ -465,7 +465,7 @@ Specify the local and remote ports to which this rule applies:
   - For custom protocols, enter a number between *0* and *255* that represents the IP protocol.
   - When nothing is specified, the rule defaults to **Any**.
 
-- **Interface types**
+- **Interface types**  
   Specify the interface types to which the rule belongs. You can choose one or more of the following. If you don't select an option, the rule applies to all interface types:
   - **Remote access**
   - **Wireless**
@@ -474,7 +474,7 @@ Specify the local and remote ports to which this rule applies:
   - **Mobile Broadband** - This option replaces use of the previous entry for Mobile Broadband, which is deprecated and no longer supported.
   - **[Not Supported] Mobile Broadband** - Do not use this option, which is the original Mobile Broadband option. This option no longer functions correctly. Replace use of this option with the newer version of *Mobile Broadband*.
 
-- **Authorized users**
+- **Authorized users**  
   [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Specify a list of authorized local users for this rule. A list of authorized users can't be specified if *Service name* in this policy is set as a Windows service. If no authorized user is specified, the default is *all users*.
@@ -483,7 +483,7 @@ Specify the local and remote ports to which this rule applies:
 
 Specifies the local and remote addresses to which this rule applies:
 
-- **Any local address**
+- **Any local address**  
   **Not configured** (*default*) - Use the following setting, *Local address ranges** to configure a range of addresses to support.
   - **Yes** - Support any local address and don't configure an address range.
 
@@ -504,7 +504,7 @@ Specifies the local and remote addresses to which this rule applies:
 
   When no value is specified, this setting defaults to use *Any address*.
 
-- **Any remote address**
+- **Any remote address**  
   **Not configured** (*default*) - Use the following setting, *Remote address ranges** to configure a range of addresses to support.
   - **Yes** - Support any remote address and don't configure an address range.
 
