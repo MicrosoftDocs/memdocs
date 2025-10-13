@@ -16,7 +16,7 @@ ms.collection:
 
 ## Prerequisites
 
-Currently, for single-session, Intune supports Azure Virtual Desktop VMs that are:
+For single-session, Intune supports Azure Virtual Desktop VMs that are:
 
 - Running Windows Enterprise.
 - Set up as [personal remote desktops](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure.
@@ -27,7 +27,7 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
 - Microsoft Entra joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 - Under the same tenant as Intune and in the same region.
 
-For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
+For more information on Azure Virtual Desktop licensing requirements, see [Licensing Azure Virtual Desktop](/azure/virtual-desktop/licensing).
 
 For information about working with multi-session remote desktops, see [Windows Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
 
@@ -54,7 +54,7 @@ Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](/w
 
 ### Cloning physical and virtual devices
 
-Intune doesn't support using a cloned image of a computer that is already enrolled. This includes both physical and virtual devices such as Azure Virtual Desktop (AVD). When device enrollment or identity tokens are replicated between devices, Intune device enrollment or synchronization failures will occur.
+Intune doesn't support using a cloned image of a computer that is already enrolled. This includes both physical and virtual devices such as Azure Virtual Desktop (AVD). When device enrollment or identity tokens are replicated between devices, Intune device enrollment or synchronization failures occur.
 
 - For more information, see [Mobile device enrollment - Windows Client Management](/windows/client-management/mobile-device-enrollment) and [Certificate authentication device enrollment - Windows Client Management](/windows/client-management/certificate-authentication-device-enrollment).
 - For information on disabling token roaming in AVD, see [Using Azure Virtual Desktop multi-session with Microsoft Intune](azure-virtual-desktop-multi-session.md#prerequisites).

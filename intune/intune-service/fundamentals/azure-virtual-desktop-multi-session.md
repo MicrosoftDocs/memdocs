@@ -15,7 +15,7 @@ ms.collection:
 
 Azure Virtual Desktop multi-session with Microsoft Intune is now generally available.
 
-You can now use Microsoft Intune to manage Windows Enterprise multi-session remote desktops in the Microsoft Intune admin center just as you can manage a shared Windows client device. When managing such virtual machines (VMs), you'll be able to use both device-based configuration targeted to devices or user-based configuration targeted to users.
+You can now use Microsoft Intune to manage Windows Enterprise multi-session remote desktops in the Microsoft Intune admin center just as you can manage a shared Windows client device. When managing such virtual machines (VMs), you can use device-based configuration targeted to devices or user-based configuration targeted to users.
 
 Windows Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure. It provides the following benefits:
 
@@ -33,7 +33,7 @@ You can manage **Windows Enterprise multi-session** VMs created in Azure Governm
 Device configuration support in Microsoft Intune for Windows Enterprise multi-session is generally available (GA). This means [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs when assigned to device groups.
 
 > [!NOTE]
-> Device-based configuration cannot be assigned to users and user-based configuration cannot be assigned to devices. It will be reported as **Error** or **Not applicable**.
+> Device-based configuration cannot be assigned to users and user-based configuration cannot be assigned to devices. It's reported as **Error** or **Not applicable**.
 
 User configuration support in Microsoft Intune for Windows Enterprise multi-session VMs is generally available. With this you are able to:
 
@@ -47,7 +47,6 @@ User configuration support in Microsoft Intune for Windows Enterprise multi-sess
 
 This feature supports Windows Enterprise multi-session VMs, which are:
 
-- Running Windows multi-session.
 - Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager.
 - Under the same tenant as Intune.
 - Running an Azure Virtual Desktop agent version of 1.0.2944.1400 or later.
@@ -56,7 +55,7 @@ This feature supports Windows Enterprise multi-session VMs, which are:
   - [Configuration Manager co-management](/configmgr/comanage/overview).
 - Microsoft Entra joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 - Licensing: The appropriate Azure Virtual Desktop and Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a Microsoft API. For more information, go to [Microsoft Intune licensing](licenses.md).
-- See [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements) for more information about Azure Virtual Desktop licensing requirements.
+- See [Licensing Azure Virtual Desktop](/azure/virtual-desktop/licensing) for more information about Azure Virtual Desktop licensing requirements.
 
 ## Limitations
 
@@ -75,9 +74,9 @@ Windows Enterprise multi-session VMs are treated as a separate OS edition and so
 
 ## Create the configuration profile
 
-To configure configuration policies for Windows Enterprise multi-session VMs, you'll need to use the [Settings catalog](../configuration/settings-catalog.md) in the Microsoft Intune admin center.
+To configure configuration policies for Windows Enterprise multi-session VMs, use the [Settings catalog](../configuration/settings-catalog.md) in the Microsoft Intune admin center.
 
-The existing device configuration profile templates aren't supported for Windows Enterprise multi-session VMs, except for the following templates:
+Only the following configuration profile templates are supported for Windows Enterprise multi-session VMs:
 
 - [Trusted certificate](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) - Device (machine) when targeting devices and User when targeting users
 - [SCEP certificate](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) - Device (machine) when targeting devices and User when targeting users
@@ -116,8 +115,6 @@ Administrative Templates in the [Intune settings catalog](../configuration/setti
 
 - ADMX-backed policies are supported. Some policies aren't yet available in the Settings catalog.
 - ADMX-ingested policies are supported. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings won't be applicable to Windows Enterprise multi-session.
-
-For a list of supported Administrative Templates, create a [settings catalog](../configuration/settings-catalog.md) policy.
 
 ## Compliance and Conditional Access
 
@@ -200,12 +197,13 @@ The following Windows desktop device remote actions aren't supported and will be
 
 Deleting VMs from Azure will leave orphaned device records in the Microsoft Intune admin center. AVD machines are deleted automatically after 30 days and removed permanently after 60 days.
 For more information, see:
+
 - [Using Intune device cleanup rules](https://techcommunity.microsoft.com/t5/device-management-in-microsoft/using-intune-device-cleanup-rules-updated-version/ba-p/3760854).
 - [Automatically remove devices with cleanup rules](../fundamentals/device-cleanup-rules.md)
 
 ## Security baselines
 
-Security baselines are available for Windows 11 Enterprise multi-session. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../configuration/settings-catalog.md).
+Security baselines are available for Windows Enterprise multi-session. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../configuration/settings-catalog.md).
 
 ## Additional configurations that aren't supported on Windows Enterprise multi-session VMs
 
