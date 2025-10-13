@@ -197,10 +197,10 @@ When creating profiles, consider the following recommendations:
 
   Some configuration profile examples include:
 
-  **Profile name**: OneDrive configuration profile for all Windows users
+  **Profile name**: OneDrive configuration profile for all Windows users\
   **Profile description**: OneDrive profile that includes the minimum and base settings for all Windows users. Created by `user@contoso.com` to prevent users from sharing organizational data to personal OneDrive accounts.
 
-  **Profile name**: VPN profile for all iOS/iPadOS users
+  **Profile name**: VPN profile for all iOS/iPadOS users\
   **Profile description**: VPN profile that includes the minimum and base settings for all iOS/iPadOS users to connect to Contoso VPN. Created by `user@contoso.com` so users automatically authenticate to VPN, instead of prompting users for their username and password.
 
 - Create your profile by its task, such as configure Microsoft Edge settings, enable Microsoft Defender anti-virus settings, block iOS/iPadOS jailbroken devices, and so on.

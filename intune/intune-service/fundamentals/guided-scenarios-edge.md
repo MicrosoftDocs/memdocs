@@ -1,5 +1,5 @@
 ---
-title: Guided scenario - Deploy Microsoft Edge for Mobile
+title: Guided Scenario - Deploy Microsoft Edge for Mobile
 description: Learn about the guided scenario to deploy Microsoft Edge for Mobile from the Microsoft 365 Device Management portal.
 author: nicholasswhite
 ms.author: nwhite
@@ -11,7 +11,7 @@ ms.collection:
 - intune-scenario
 ---
 
-# Guided scenario - Deploy Microsoft Edge for Mobile
+# Guided Scenario - Deploy Microsoft Edge for Mobile
 
 By following this [guided scenario](guided-scenarios-overview.md), you can assign the Microsoft Edge app to your users on iOS/iPadOS or Android devices at your organization. Assigning this app allows your users to seamlessly browse content using their corporate devices.
 
