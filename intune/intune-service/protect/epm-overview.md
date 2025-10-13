@@ -46,12 +46,12 @@ EPM elevation can be triggered using two methods:
 - Automatically, or;
 - User initiated.
 
-EPM can be configured using two types of policies:
+EPM can be configured using two types of policies, which both can be targeted at groups of users or devices:
 
 - **Elevation settings policy** - controls the EPM client, reporting level and default elevation capability.
 - **Elevation rules policy** - defines elevation behavior for binaries or scripts based on criteria.
 
-Both rules and policies can be targeted at groups of users or devices. To perform the elevation on the device, the EPM service uses a virtual account, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group.
+ To perform the elevation on the device, the EPM service uses a virtual account for most elevation types, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group. An exception to use of the virtual account is the the *Elevate as current user* elevation type, which is explained in more detail in the following section. 
 
 The EPM client is installed automatically when an *Elevation settings policy* is assigned to devices or users. The EPM client uses the 'Microsoft EPM Agent Service' service and stores its binaries in the `"C:\Program Files\Microsoft EPM Agent"` directory.
 
@@ -65,7 +65,7 @@ This diagram shows a high level architecture of how the EPM client is triggered,
 
 EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
 
-By default, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user’s profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
+With the exception of *Elevate as current user* type, EPM uses a *virtual account* to elevate processes. Use of the virtual account isolates elevated actions from the user’s profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
 
 When you use Endpoint Privilege Management, there are a few options for elevation behavior:
 
