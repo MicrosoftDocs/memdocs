@@ -17,7 +17,7 @@ Keeping devices updated is essential for maintaining enterprise security, perfor
 
 Microsoft Intune enables IT admins to configure and enforce update policies for Apple devices. You can schedule updates during maintenance windows, set enforcement deadlines, and reduce user disruption.
 
-This article explains how to configure update policies in Intune using Apple's Declarative Device Management (DDM) model. DDM provides greater reliability and autonomy than older MDM-based update policies, which are now deprecated.
+This article explains how to configure update policies in Intune using Apple's Declarative Device Management (DDM) model. DDM provides greater reliability and autonomy than older Mobile Device Management (MDM)-based update policies, which are now deprecated.
 
 ## Prerequisites
 
@@ -87,7 +87,7 @@ When designing your Apple device update strategy, align with your organization's
 
 ## Policy precedence
 
-When both Declarative Device Management (DDM) and the deprecated Mobile Device Management (MDM) update policies are configured, DDM settings take precedence. If a device receives both DDM and MDM update instructions, the DDM policy overrides MDM behavior—potentially rendering MDM update policies ineffective.
+When both DDM and MDM update policies are configured, DDM settings take precedence. If a device receives both DDM and MDM update instructions, the DDM policy overrides MDM behavior—potentially rendering MDM update policies ineffective.
 
 **iOS/iPadOS precedence order**:
 
