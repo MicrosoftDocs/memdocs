@@ -19,13 +19,19 @@ Microsoft Intune enables IT admins to configure and enforce update policies for 
 
 This article explains how to configure update policies in Intune using Apple's Declarative Device Management (DDM) model. DDM provides greater reliability and autonomy than older MDM-based update policies, which are now deprecated.
 
-[!INCLUDE [platform-requirements](../../includes/h2/platform-requirements.md)]
+## Prerequisites
 
-> [!div class="checklist"]
-> Applies to:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform-requirements](../../includes/prerequisites/platform-requirements.md)]
+:::column-end:::
+:::column span="3":::
+> This feature applies to the following platforms:
 >
 > - iOS/iPadOS 17.0 and later
 > - macOS 14.0 and later
+:::column-end:::
+:::row-end:::
 
 ## Configuration
 
@@ -39,7 +45,7 @@ When designing your Apple device update strategy, align with your organization's
 
   This model is ideal for organizations that prioritize rapid patching, regulatory compliance, and minimal IT overhead.
 
-- **Targeted version policy** - offers granular control over which OS version is installed and when. With this model:
+- **Targeted version policy**: offers granular control over which OS version is installed and when. With this model:
 
   - You specify the required OS version and set a precise installation deadline.
   - A help URL can be provided for user assistance.
@@ -81,7 +87,7 @@ When designing your Apple device update strategy, align with your organization's
 
 ## Policy precedence
 
-When both Declarative Device Management (DDM) and Mobile Device Management (MDM) update policies are configured, DDM settings take precedence. If a device receives both DDM and MDM update instructions, the DDM policy will override MDM behavior—potentially rendering MDM update policies ineffective.
+When both Declarative Device Management (DDM) and the deprecated Mobile Device Management (MDM) update policies are configured, DDM settings take precedence. If a device receives both DDM and MDM update instructions, the DDM policy overrides MDM behavior—potentially rendering MDM update policies ineffective.
 
 **iOS/iPadOS precedence order**:
 
@@ -94,25 +100,20 @@ When both Declarative Device Management (DDM) and Mobile Device Management (MDM)
 1. MDM update policies (**Devices** > **Update policies for macOS**)
 1. MDM software updates (**Settings catalog** > **System Updates** > **Software Update**)
 
-> [!TIP]
+> [!WARNING]
 > Avoid configuring conflicting DDM and MDM policies. Doing so may lead to unexpected results or policy enforcement gaps.
 
-## Using the Software Update Settings declarative configuration
+## Software Update Settings
 
-When you configure DDM software updates, you might want to manage aspects of the software update process leading up to the enforcement of an update. Using this configuration, you can:
+When you configure DDM software updates, you might want to manage aspects of the software update process leading up to the enforcement of an update. Using Software Update Settings policies, you can configure various settings that control how users can interact with software updates on their devices. These settings include the ability to:
 
-- Require that an admin or standard user can perform updates on the device
-- Control how users can manually interact with software update settings like automatic download and install or the behavior of Rapid Security Responses
-- Hide updates from users for a specified time period
-- Suppress update notifications up to one hour before the enforcement deadline
+- Require that an admin or standard user can perform updates on the device.
+- Control how users can manually interact with software update settings like automatic download and install or the behavior of Rapid Security Responses.
+- Hide updates from users for a specified time period.
+- Suppress update notifications up to one hour before the enforcement deadline.
 - Control whether users are allowed to update to the latest major update, latest minor update, or are offered both.
 
-Previously in MDM, these settings were spread across multiple payloads such as Restrictions, Managed Settings, and Software Update. As of August 2024, it's recommended to use the DDM-based Software Update Settings configuration to manage updates. To create a Software Update Settings policy, go to the Settings catalog > Declarative Device Management (DDM) > Software Update Settings. More information on these settings is available in the documentation section for the [Software Update Settings declarative configuration](/mem/intune-service/configuration/apple-settings-catalog-configurations).
-
 ## Delay visibility of updates using MDM
-
-> [!NOTE]
-> As of August 2024, it's recommended to use the DDM-based Software Update Settings configuration to manage update settings such as deferrals.
 
 When you configure DDM software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
 
