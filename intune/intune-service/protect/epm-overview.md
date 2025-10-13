@@ -65,6 +65,8 @@ This diagram shows a high level architecture of how the EPM client is triggered,
 
 EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
 
+By default, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user’s profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
+
 When you use Endpoint Privilege Management, there are a few options for elevation behavior:
 
 - **Automatic**: For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
@@ -73,7 +75,17 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
 
   :::image type="content" source="media/epm-overview/epm-user-confirmed-inline.png" alt-text="A screenshot showing the prompt a user receives when they use user confirmed elevation." lightbox="media/epm-overview/epm-user-confirmed-expanded.png":::
 
-- **Elevate as current user**: With this elevation type, files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings, helping to ensure that installers and tools that rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate. Prior to elevation, the user is required to reauthenticate to Windows with valid credentials, and this process supports multifactor authentication (MFA) for enhanced security.
+- **Elevate as Current User**: Use this elevation type for applications that require access to user-specific resources to function correctly, like profile paths, environment variables, or runtime preferences. Unlike elevations that use a virtual account, this mode runs the elevated process under the signed-in user's own account, preserving compatibility with tools and installers that rely on the active user profile. By maintaining the same user identity before and after elevation, this approach ensures consistent and accurate audit trails. It also supports Windows Authentication, requiring the user to reauthenticate with valid credentials before elevation occurs.
+
+  However, because the elevated process inherits the user's full context, this mode introduces a broader attack surface and reduces isolation from user data.
+  
+  Key considerations:
+  - Compatibility need: Use this mode only when virtual account elevation causes application failures.
+  - Scope tightly: Limit elevation rules to trusted binaries and paths to reduce risk.
+  - Security tradeoff: Understand that this mode increases exposure to user-specific data.
+
+  >[!TIP]
+  > When compatibility is not an issue, prefer a method that uses the virtual account elevation for stronger security.
 
 - **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md).
 

@@ -97,9 +97,17 @@ When you configure the *elevation settings* and *elevation rules* policies that 
 
   - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules can also require validation with authentication or business justification. Requiring validation provides an extra layer of protection by making the user acknowledge the elevation.
 
-  - **Elevate as current user**: With this elevation type, files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings, helping to ensure that installers and tools that rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate.
+  - **Elevate as current user**: This type of elevation runs the elevated process under the signed-in user's own account, preserving compatibility with tools and installers that rely on the active user profile. This requirers the user to reauthenticate to Windows with valid credentials using Windows Authentication. This preserves the user's profile paths, environment variables, and personalized settings. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate.
 
-    Prior to elevation, the user is required to reauthenticate to Windows with valid credentials, and this process supports multifactor authentication (MFA) for enhanced security.
+    However, because the elevated process inherits the user's full context, this mode introduces a broader attack surface and reduces isolation from user data.
+  
+    Key considerations:
+    - Compatibility need: Use this mode only when virtual account elevation causes application failures.
+    - Scope tightly: Limit elevation rules to trusted binaries and paths to reduce risk.
+    - Security tradeoff: Understand that this mode increases exposure to user-specific data.
+
+    >[!TIP]
+    > When compatibility is not an issue, prefer a method that uses the virtual account elevation for stronger security.
 
   - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. Deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 

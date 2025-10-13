@@ -44,11 +44,23 @@ Each elevation rule instructs EPM on how to:
   - *Certificate.* File properties can be validated alongside the publisher certificate used to sign the file. Certificates are validated using Windows APIs that check attributes such as trust, certificate expiry, and revocation status.
   - *File properties.* Any other properties specified in the rules must match.
 
-- **Configure the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*.
+- **Configure the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*. With the exception of *Elevate as current user*, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user’s profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
+
   - **Deny**: Deny rules prevent the identified file from being run in an elevated context.
   - **Support approved**: An administrator must approve the [support-required elevation request](../protect/epm-support-approved.md) before the application is allowed to run with elevated privileges.
   - **User confirmed**: A user confirmed elevation always requires the user to select on a confirmation prompt to run the file. The confirmation can only be configured to require a user authentication, a business justification (visible in reporting), or both.
-  - **Elevate as current user**: This type of elevation requires the user to reauthenticate to Windows with valid credentials. The prompt supports multifactor authentication (MFA). Files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings. , helping to ensure that installers and tools that rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate.
+  - **Elevate as current user**: This type of elevation runs the elevated process under the signed-in user's own account, preserving compatibility with tools and installers that rely on the active user profile. This requirers the user to reauthenticate to Windows with valid credentials using Windows Authentication. This preserves the user's profile paths, environment variables, and personalized settings. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate.
+
+    However, because the elevated process inherits the user's full context, this mode introduces a broader attack surface and reduces isolation from user data.
+  
+    Key considerations:
+    - Compatibility need: Use this mode only when virtual account elevation causes application failures.
+    - Scope tightly: Limit elevation rules to trusted binaries and paths to reduce risk.
+    - Security tradeoff: Understand that this mode increases exposure to user-specific data.
+
+    >[!TIP]
+    > When compatibility is not an issue, prefer a method that uses the virtual account elevation for stronger security.
+
   - **Automatic**: An automatic elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
 
 - **Manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the elevated process creates.
