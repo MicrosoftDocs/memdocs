@@ -37,7 +37,6 @@ You can monitor the use of Remote Help from within the Microsoft Intune admin ce
 > - The Recipient ID and Recipient name display "--" for Android Enterprise Dedicated devices, as these devices don't have user affinity.
 > - The use of the Windows "elevation" capability isn't reported in the Remote Help sessions report.
 
-
 These logs persist for 30 days on Microsoft's servers. The content of a session, like screen images or keystrokes, aren't recorded – only metadata is stored.
 
 ## Log files
