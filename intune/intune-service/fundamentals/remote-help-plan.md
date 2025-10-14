@@ -56,34 +56,6 @@ When planning for Remote Help, consider:
 - **Plan for Privacy and Compliance**: Remote Help can raise privacy questions. Assure stakeholders that Remote Help requires user consent or in the case of Android unattended Remote Help, clearly indicates a remote session is active. All sessions are consensual and visibly indicated on the user's screen. No session recordings are stored in the service. These points can be included in your internal IT policies or user guides to address concerns. Unattended access on Android should be used sparingly.
 - **Rollout in Phases**: If possible, deploy Remote Help in a pilot phase. Start with IT or a small department to work out any issues. Gather feedback from both helpers and users. Once confident, expand to the whole organization. A phased approach can prevent overwhelming the helpdesk with unexpected technical issues.
 
-## Remote Help capabilities
-
-The Remote Help app supports the following capabilities in general across the supported platforms.
-
-- **Enable Remote Help for your tenant**: By default, Remote Help isn't enabled for Intune tenants. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
-
-- **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages-for-chat).
-
-- **Use Remote Help with unenrolled devices**: This setting is turned off by default. For Windows and macOS devices, enabling this option allows help to be provided to devices that aren't enrolled in Intune. This setting doesn't apply to devices used by helpers.
-
-- **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
-
-- **Compliance Warnings**: Before a helper connects to a user's noncompliant device, the helper is shown a warning. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
-
-  If the user's device that they're trying to connect to isn't enrolled, the helper sees a prompt that the user's device is unenrolled.
-
-- **Conditional Access**: Administrators can now utilize Conditional Access capability when setting up policies and conditions for Remote Help. For more information on setting up Conditional Access, go to [Setup Conditional Access for Remote Help](remote-help-deploy.md#set-up-conditional-access-for-remote-help).
-
-- **Role-based access control**: Admins can set RBAC rules that determine the scope of a helper's access, such as:
-  - The users who can help others and the range of actions they can do while providing help. For example, who can run elevated privileges while helping.
-  - The users who can only view a device, and who can request full control of the session while assisting others.
-
-- **Monitor active Remote Help sessions, and view details about past sessions**: In the Microsoft Intune admin center, you can view reports that include details about who helped who, on what device, and for how long. You can also find details about active sessions. An administrator can also reference audit log sessions created for Remote Help in Intune under **Tenant Administration** > **Audit Logs**.
-
-  For unenrolled devices, auditing the Remote Help sessions is limited.
-
-- **Web app for sharers** - In situations where the Sharer needs assistance but is unable to install the native application for macOS, the Sharer can use the Web App to share their screen to a helper. This web app provides view only capabilities to the helper, allowing them to guide the user through resolving issues.
-
 ### Helper and client modes
 
 Remote Help clients support different modes based on the combination of the helper app and the sharer app. Windows, macOS, and Android have Remote Help apps that can be installed that enhance functionality. Remote Help apps are sometimes referred to as a native app. Remote Help also supports sharing from devices with reduced capabilities from a web app.
@@ -99,11 +71,11 @@ This table shows the mode support by helper app and sharer app.
 
 | |Helping from:</br>Windows native|Helping from:</br>Windows web|Helping from:</br>macOS web|
 |---|---|---|---|
-|Sharing from:</br>Windows native|✅ View only</br>✅ Full Control</br>✅ Elevation|Unsupported|Unsupported|
-|Sharing from:</br>macOS native|Unsupported|✅ View only</br>✅ Full Control|✅ View only</br>✅ Full Control|
-|Sharing from:</br>Android native|Unsupported|✅ View only</br>✅ Full Control</br>✅ Unattended|✅ View only</br>✅ Full Control</br>✅ Unattended|
-|Sharing from:</br>macOS webapp|Unsupported|✅ View only|✅ View only</br>|
-|Sharing from:</br>Windows webapp|Unsupported|✅ View only|✅ View only</br>|
+|**Sharing from:</br>Windows native**|✅ View only</br>✅ Full Control</br>✅ Elevation|Unsupported|Unsupported|
+|**Sharing from:</br>macOS native**|Unsupported|✅ View only</br>✅ Full Control|✅ View only</br>✅ Full Control|
+|**Sharing from:</br>Android native**|Unsupported|✅ View only</br>✅ Full Control</br>✅ Unattended|✅ View only</br>✅ Full Control</br>✅ Unattended|
+|**Sharing from:</br>macOS webapp**|Unsupported|✅ View only|✅ View only</br>|
+|**Sharing from:</br>Windows webapp**|Unsupported|✅ View only|✅ View only</br>|
 
 For information on deploying the Remote Help apps, see [Deploy Remote Help](remote-help-deploy.md).
 
