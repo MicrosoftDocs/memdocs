@@ -22,12 +22,20 @@ Configure endpoint analytics in Configuration Manager by enabling data upload, t
 
 ::: zone-end
 
+## Prerequisites
+
 **Before you start:** Check the [requirements](index.md#requirements)  to confirm your environment meets prerequisites.
 
-### RBAC requirements
+::: zone-end
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
->
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
 > To configure for endpoint analytics, you need an account with at least one of the following Intune roles:
 >
 > - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
@@ -36,6 +44,9 @@ Configure endpoint analytics in Configuration Manager by enabling data upload, t
 >   - **Endpoint Analytics/Create, Update, Delete** — Manage settings and baselines.
 >   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
 >   - **Device configurations/Create, Read, Assign** — Required to create and assign the data collection policy
+:::column-end:::
+:::row-end:::
+
 
 ::: zone pivot="cm"
 

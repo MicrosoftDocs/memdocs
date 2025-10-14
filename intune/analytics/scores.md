@@ -13,9 +13,18 @@ Endpoint analytics exposes score charts which include information about what aff
 - Baselines
 - Insights and recommendations
 
-### RBAC requirements
+## Prerequisites
 
-> [!div class="checklist"]
+::: zone-end
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
 > To access endpoint analytics reports, you need an account with at least one of the following Intune roles:
 >
 > - [Help Desk Operator][INT-R1]: Grants read permissions to endpoint analytics.
@@ -28,6 +37,8 @@ Endpoint analytics exposes score charts which include information about what aff
 >
 > You can also use an account that has the following Microsoft Entra built-in  roles:
 >   - [Reports Reader][ENT-R3]: Grants read permissions to endpoint analytics.
+:::column-end:::
+:::row-end:::
 
 ## Scores
 

@@ -94,28 +94,40 @@ For more information and troubleshooting proxy configurations, see [Troubleshoot
 :::column-end:::
 :::row-end:::
 
-### Licensing requirements
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/licensing.md)]
 
+:::column-end:::
+:::column span="3":::
 ::: zone pivot="intune"
 
-- Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune-service/fundamentals/licenses.md).
+> Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune-service/fundamentals/licenses.md).
 
 ::: zone-end
 
 ::: zone pivot="cm"
 
-- Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
+> Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 ::: zone-end
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [rbac-requirements](../includes/h3/rbac-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/rbac.md)]
 
-Endpoint analytics includes tasks that require different levels of permissions.
-
-For a detailed breakdown of the required permissions for each task:
-
-- [RBAC requirements for configuring endpoint analytics](configure.md#-role-and-permission-requirements)
-- [RBAC requirements for rewieving endpoint analytics data](scores.md#-role-and-permission-requirements)
+:::column-end:::
+:::column span="3":::
+> Endpoint analytics includes tasks that require different levels of permissions.
+>
+> For a detailed breakdown of the required permissions for each task:
+>
+> - [RBAC requirements for configuring endpoint analytics](configure.md#-role-and-permission-requirements)
+> - [RBAC requirements for rewieving endpoint analytics data](scores.md#-role-and-permission-requirements)
+:::column-end:::
+:::row-end:::
 
 ::: zone pivot="cm"
 
