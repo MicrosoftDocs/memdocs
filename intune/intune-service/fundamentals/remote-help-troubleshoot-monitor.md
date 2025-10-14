@@ -133,6 +133,7 @@ Use the table in this section to troubleshoot common issues with Remote Help on 
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
+For Windows devices, the following are known issues with Remote Help when using the remote launch feature:
 - Notifications for remotely triggering a Remote Help session fail if the *Microsoft Intune Management Service* isn't running.
 - After the user's device is restarted, there's a short delay for the *Microsoft Intune Management Service* to start. Either wait for the *Microsoft Intune Management Service* to start or ask the sharer to open the app and share the code.
 - For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
