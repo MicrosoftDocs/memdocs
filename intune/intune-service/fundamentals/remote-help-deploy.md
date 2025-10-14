@@ -60,48 +60,7 @@ To configure your tenant to support Remote Help, review and complete the followi
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-To protect the privacy of users who may be using the sharer device, helpers should use the minimum level of privilege required to remotely assist the device. Only request an Unattended session if you know that there's no user at the sharer device to accept the remote help session.
-
-The following Intune RBAC permissions manage the use of the Remote Help app. Set each to *Yes* to grant the permission:
-
-- Category: **Remote Help app**
-- Permissions:
-  - **Elevation** : Yes/No
-  - **View screen** : Yes/No
-  - **Take full control** : Yes/No
-  - **Unattended control** : Yes/No
-
-> [!NOTE]
-> If the **Take full control** permission is set to *Yes*, then by default, the user has permission to **View screen**, even if the user's **View screen** permission is set to *No.*
-> If the **Elevation** permission is set to *Yes*, then by default, the user has permission to **View screen** and **Take full control**, even if the user's **View screen** and **Take full control** permission is set to *No.*
-> If the **Unattended control** permission is set to *Yes*, then, by default, the user has permission to **View screen**, **Take full control**, and **Elevation**, even if the user's **View screen**, **Take full control**, and **Elevation** permissions is set to *No.*
-
-- Category: **Remote tasks**
-- Permissions:
-  - **Offer remote assistance** : Yes/No
-
-By default, the built-in **Help Desk Operator** role sets all of these permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
-
-### Task 3: Assign user to roles
-
-After creating the custom roles that you can use to provide different users with Remote Help permissions, proceed to assign users to those roles.
-
-1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration**  > **Roles** >  and select a role that grants Remote Help app permissions.
-
-2. Select **Assignments**  > **Assign** to open **Add Role Assignment**.
-
-3. On the *Basics* page, enter an **Assignment name** and optional **Assignment description**, and then choose **Next**.
-
-4. On the **Admin Groups** page, select the group that contains the user you want to give the permissions to. Choose **Next**.
-
-5. On the **Scope (Groups)** page, choose a group containing the users/devices that a member is allowed to manage. You also can choose all users or all devices. Choose **Next** to continue.
-
-   >[!IMPORTANT]
-   >If a sharer or a sharer's device isn't in the scope of a helper, that helper can't provide assistance. The "All Devices" scope group doesn't include unenrolled devices. Instead, use a user scope group during the assignment process.
-   >
-   > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](role-based-access-control.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
-
-6. On the **Review + Create** page, when you're done, choose **Create**. The new assignment is displayed in the list of assignments.
+By default, the built-in **Help Desk Operator** role inclues all of the required permissions for Remote Help. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on the individual permissions required for Remote Help, see [Plan Remote Help](remote-help-plan.md#role-based-access-control-rbac).
 
 ## Download Remote Help apps
 
