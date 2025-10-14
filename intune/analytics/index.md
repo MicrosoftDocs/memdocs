@@ -22,22 +22,29 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 
 :::image type="content" source="images/ea-overview.png" alt-text="Screenshot of the endpoint analytics overview page" lightbox="images/ea-overview.png" border="false":::
 
-## Requirements
+## Prerequisites
 
-Endpoint analytics has different requirements based on how you manage devices. Review the sections below to ensure your environment meets the necessary prerequisites:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
-[!INCLUDE [platform-requirements](../includes/h3/platform-requirements.md)]
-
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
 > Endpoint analytics supports the following Windows editions:
+>
 > - Pro
 > - Pro Education
 > - Enterprise
 > - Education
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [device-configuration-requirements](../includes/h3/device-configuration-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
 > Endpoint analytics supports devices that are:
 >
 > - Managed by Intune
@@ -48,9 +55,15 @@ Endpoint analytics has different requirements based on how you manage devices. R
 >
 > Devices must also meet the following requirements:
 > - The **Connected User Experiences and Telemetry** service (DiagTrack) must be enabled and running.
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [network-connectivity-requirements](../includes/h3/network-connectivity-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [network-connectivity](../includes/requirements/network-connectivity.md)]
 
+:::column-end:::
+:::column span="3":::
 ::: zone pivot="intune"
 To enroll Intune-managed devices to endpoint analytics, they need to send required functional data to Microsoft public cloud. Ensure the following endpoints are accessible from Intune-managed devices:
 
@@ -78,6 +91,12 @@ If you have co-management enabled, enrolled devices send required functional dat
 ::: zone-end
 
 For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
+:::column-end:::
+:::row-end:::
+
+
+
+
 
 [!INCLUDE [licensing-requirements](../includes/h3/licensing-requirements.md)]
 
