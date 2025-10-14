@@ -29,11 +29,6 @@ Microsoft Intune uses Apple's declarative software update reporting model to pro
 :::column-end:::
 :::row-end:::
 
-<!--
-> [!NOTE]
-> With the availability of the declarative software update report for macOS, the previously available report for macOS devices named *Software updates* is deprecated. This report remains available as *Software updates (deprecated)* when you go to *Devices* in the admin center and select a macOS device. While this report remains available for use in the Intune admin center, it will be removed in a future update.
--->
-
 ## View software update reports
 
 Intune provides several reports to help you monitor and troubleshoot software updates across your Apple device fleet:
@@ -95,12 +90,6 @@ Details available in this report include:
 In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Monitor** > **Apple software update failures**.
 
 The reports include the option to **Refresh** the report view and to **Export** the report details as a comma-separated values (.csv) file.
-
-<!-- Image is pending availability
-The following image is an example of the Apple update failures report for a test tenant:
-
-:::image type="content" source="images/FILE.png" alt-text="Screen capture that shows the Apple software update failures report.":::
--->
 
 # [**Per-device report**](#tab/per-device)
 
