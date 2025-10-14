@@ -1,6 +1,6 @@
 ---
-title: View Software Update Reports for Apple devices
-description: 
+title: View Software Update Reports for Apple Devices
+description: Track Apple device update status in real time with Intune's declarative software update reporting. Learn how Microsoft Intune surfaces update changes directly from managed Apple devices.
 author: paolomatarazzo
 ms.author: paoloma
 ms.date: 10/14/2025
@@ -22,10 +22,10 @@ Microsoft Intune uses Apple's declarative software update reporting model to pro
 [!INCLUDE [platform](../../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
-> This feature applies to the following platforms:
+> Software update reporting for Apple devices in Intune requires the following platforms:
 >
 > - iOS/iPadOS 17.0 and later
-> - macOS 13.0 and later
+> - macOS 14.0 and later
 :::column-end:::
 :::row-end:::
 
@@ -38,13 +38,11 @@ Microsoft Intune uses Apple's declarative software update reporting model to pro
 
 Intune provides several reports to help you monitor and troubleshoot software updates across your Apple device fleet:
 
-- **Summary report**: Shows a high-level view of update status across macOS, iOS, and iPadOS devices, including the most recently available update version and release date.
+- **Summary report**: Shows a high-level view of update status across macOS, iOS, and iPadOS devices, including the most recently available update version and release date.\
+  Intune checks with Apple once per day to identify newly available updates.
 - **Organizational report**: Displays pending and current update details across all managed Apple devices.
 - **Failures report**: Lists update failures across macOS, iOS, and iPadOS devices, including failure reasons and timestamps.
 - **Per-device report**: Focuses on the update status for an individual device.
-
-> [!NOTE]
-> Intune checks with Apple once per day to identify newly available updates.
 
 Select a tab to learn more about each report. 
 
@@ -94,8 +92,7 @@ Details available in this report include:
 - A list of devices with their name, platform, current OS version, pending OS version, and more
 - Details about the failure reason and timestamp of the last failure
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Monitor**.
-1. Select either the report named **iOS update installation failures** or **macOS update installation failures**.
+In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Monitor** > **Apple software update failures**.
 
 The reports include the option to **Refresh** the report view and to **Export** the report details as a comma-separated values (.csv) file.
 

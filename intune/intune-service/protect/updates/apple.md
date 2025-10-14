@@ -26,10 +26,12 @@ This article explains how to configure update policies in Intune using Apple's D
 [!INCLUDE [platform](../../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
-> This feature applies to the following platforms:
+> The configuration of Software Update for Apple devices requires the following platforms:
 >
 > - iOS/iPadOS 17.0 and later
 > - macOS 14.0 and later
+>
+> For more information, see [Software Update](../../configuration/apple-settings-catalog-configurations.md#software-update).
 :::column-end:::
 :::row-end:::
 
@@ -105,7 +107,7 @@ When both DDM and MDM update policies are configured, DDM settings take preceden
 
 ## Software Update Settings
 
-When you configure DDM software updates, you might want to manage aspects of the software update process leading up to the enforcement of an update. Using Software Update Settings policies, you can configure various settings that control how users can interact with software updates on their devices. These settings include the ability to:
+When you configure software updates, you might want to manage aspects of the software update process leading up to the enforcement of an update. Using Software Update Settings policies, you can configure various settings that control how users can interact with software updates on their devices. These settings include the ability to:
 
 - Require that an admin or standard user can perform updates on the device.
 - Control how users can manually interact with software update settings like automatic download and install or the behavior of Rapid Security Responses.
@@ -113,6 +115,9 @@ When you configure DDM software updates, you might want to manage aspects of the
 - Suppress update notifications up to one hour before the enforcement deadline.
 - Control whether users are allowed to update to the latest major update, latest minor update, or are offered both.
 
+For more information about configuring Software Update Settings policies and the available settings, see [Software Update Settings](../../configuration/apple-settings-catalog-configurations.md#software-update-settings).
+
+<!--
 ## Delay visibility of updates using MDM
 
 When you configure DDM software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
@@ -127,8 +132,9 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - Enforced Software Update Non OS Deferred Install Delay (macOS)
 
 :::image type="content" source="images/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune." lightbox="images/settings-catalog-restrictions-delay-updates.png":::
+-->
 
-## Monitor software updates
+## Monitor policy settings deployment
 
 Software update policy settings use the same reporting as other device configuration policies. For more information, see [Monitor device configuration policies](../../configuration/device-profile-monitor.md).
 
@@ -139,7 +145,7 @@ After devices have updated to a later OS version than configured in the policy, 
 
 - [Software updates planning guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
 - [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
-- [Declarative Apple software update reports in Intune](apple-reports.md)
+- [View Software Update Reports for Apple Devices](apple-reports.md)
 
 To learn more about the Apple declarative device management process, see [Installing and enforcing software updates for Apple devices](https://support.apple.com/guide/deployment/installing-and-enforcing-software-updates-depd30715cbb/web) in the Apple documentation.
 
