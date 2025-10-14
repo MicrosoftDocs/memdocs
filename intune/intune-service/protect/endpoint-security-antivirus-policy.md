@@ -152,7 +152,7 @@ The following profiles are supported for devices you manage with Intune:
   >
   > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
-  - Profile: **Microsoft Defender Antivirus** - Manage Antivirus policy settings for Windows devices.
+  - Profile: **Microsoft Defender Antivirus** - [Manage Antivirus policy settings for Windows devices](/defender-endpoint/use-intune-config-manager-microsoft-defender-antivirus).
 
     Defender Antivirus is the next-generation protection component of Microsoft Defender for Endpoint. Next-generation protection brings together technologies like machine learning and cloud infrastructure to protect devices in your enterprise organization.
 
@@ -160,7 +160,7 @@ The following profiles are supported for devices you manage with Intune:
 
     Unlike the antivirus settings in a *Device Restriction profile*, you can use these settings with devices that are co-managed. To use these settings, the [co-management workload slider](/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection must be set to Intune.
 
-  - Profile: **Microsoft Defender Antivirus exclusions** - Manage policy settings for only Antivirus exclusion.
+  - Profile: **Microsoft Defender Antivirus exclusions** - [Manage policy settings for only Antivirus exclusion](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#create-a-new-antivirus-policy-with-exclusions-in-intune).
 
     With this policy, you can manage settings for the following Microsoft Defender Antivirus configuration service providers (CSPs) that define Antivirus exclusions:
 
