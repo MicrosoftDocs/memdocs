@@ -5,4 +5,4 @@ ms-topic: include
 ms.date: 09/9/2025
 ---
 
-:::image type="icon" source="../../media/icons/18px/rbac.svg" border="false"::: **Roles requirements**
+:::image type="icon" source="../../media/icons/admin-center/rbac.svg" border="false"::: **Roles requirements**
