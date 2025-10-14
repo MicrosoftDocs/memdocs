@@ -1,7 +1,7 @@
 ---
 title: Control AI features on Android Enterprise devices
 description: Using Microsoft Intune, you can manage and restrict AI usage on Android devices enrolled in Intune. This guide provides lists the steps in Intune to block AI apps, websites, screen-driven experiences, on-device AI services, and OEM-specific AI features. You can manage Microsoft Copilot, Google Gemini, Samsung Galaxy AI, claude.ai, ChatGPT, and more.
-ms.date: 10/08/2025
+ms.date: 10/13/2025
 ms.topic: how-to
 ms.reviewer: cchristenson
 ms.collection:
@@ -13,7 +13,7 @@ ms.collection:
 
 In Microsoft Intune, you can manage and restrict generative AI usage on Android devices enrolled in Intune. You can block (or allow) AI apps, websites, screen-driven experiences, on-device AI services, and OEM-specific AI features.
 
-This article lists different objectives that block the different AI experiences. Each objective includes the goal, lists the supported enrollment types, and has step-by-step instructions.
+This article lists different ways that AI experiences can be available on Android devices, and how you can use Intune to block these experiences.
 
 When you use the steps in this guide, you can manage and restrict AI experiences on your Android devices.
 
@@ -31,7 +31,6 @@ https://microsoft.sharepoint.com/:w:/r/teams/CTeam/_layouts/15/Doc.aspx?sourcedo
 > [!div class="checklist"]
 > IT admins and security engineers can allow/block generative AI on the following Android enrollment types:
 >
-> - ??Include AOSP? Or is it only Android Enterprise?? [CC - only Android Enterprise, most of these capabilities are not available on AOSP today]
 > - Android Enterprise corporate owned fully managed devices (COBO)
 > - Android Enterprise corporate owned dedicated devices (COSU)
 > - Android Enterprise corporate owned devices with a work profile (COPE)
@@ -51,6 +50,7 @@ To learn more about the different Android enrollment options, see the [Android E
 > To configure the policies, use an account with the following role:
 >
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+> - Custom role perms??
 
 ## Before you begin
 
@@ -62,7 +62,7 @@ To learn more about the different Android enrollment options, see the [Android E
   - [Assign policies in Intune](../../intune-service/configuration/device-profile-assign.md) that target specific users and devices.
 
 - For corporate owned devices with a work profile (COPE) and personally owned devices with a work profile (BYOD), most controls are available only in the work profile. They're not available in the personal profile.
-- The steps in this guide show you how to block AI experiences. If you want to allow specific AI experiences, you can use the same steps but configure them to allow instead of block. [CC: I would leave this out as apps for example are not allowed by default: Most AI experiences are enabled and allowed by default.]
+- The steps in this guide show you how to block AI experiences. If you want to allow specific AI experiences, you can use the same steps but configure them to allow instead of block.
 - When you create a policy and assign it, the devices receive the policy the next time they check in with Intune. To learn more, see [Intune policy refresh intervals](../../intune-service/configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
 ## How AI shows up on Android
@@ -73,12 +73,9 @@ On Android devices, AI is available in several ways:
 - **AI websites** - Users can access AI websites through browser apps, like Microsoft Edge and Chrome.
 - **Screen-driven and Assistant experiences** - OS-integrated features that read on-screen content (like Circle to Search) or provide assistant help are typically installed and available by default.
 - **On-device AI services** - Android can run the on-device **Gemini Nano** foundational model locally using **AICore**. Apps like Messages, Recorder, or GBoard use Gemini Nano to respond to messages, generate summaries, and suggest smart replies.
-
-  In terms of privacy ??, on-device inference is preferred to server-based inference. But, organizations can disable the AICore system service on corporate devices. [CC - on device processing of LLMs is more secure than sending information via an API or something to a remote server and potentially have the data used in model training. We can leave out the first - it's not essential]
-
 - **OEM-specific AI services** - OEMs might implement their own AI capabilities, like Galaxy AI by Samsung.
 
-## Objective - Block AI apps
+## Block AI apps
 
 ✅ **Goal - End users can't install AI apps from the Google Play Store**
 
@@ -118,9 +115,7 @@ With a Block strategy, no apps in the Google Play Store can be downloaded unless
 2. Select the app name > **Properties**.
 3. Make sure **Assignments** is not set to **Required**, not set to **Available for enrolled devices**, or not set to **Available with or without enrollment**.
 
-If all these options aren't set, then the app hasn't been deployed by an Intune policy. It's possible the app was installed manually by the user or through another MDM solution. [CC - I don't think the app could be installed manually by the end user]
-
-??What if it's already been deployed? Then what?? [CC - then we would want to advise them to set Assignments to Uninstall]
+If all these options aren't set, then the app hasn't been deployed by an Intune policy. If any of these options are set, then the app is deployed. In this scenario, you can change the assignment to **Uninstall** to remove it from the devices.
 
 #### Allow strategy
 
@@ -149,8 +144,6 @@ With an Allow strategy, all apps in the Google Play Store can be downloaded.
     2. Select the AI app you want to block > **Sync**.
     3. In **Apps > Android > Android apps**, make sure the app is shown in the list. The sync might take a few minutes.
 
-    ??One app per policy?? [CC: yes, there is an app object (policy) for each app and one app per policy. I don't think you can add multiple apps into one app policy]
-
 3. Blocks specific apps by assigning them for **Uninstall**:
 
     If the apps are already installed on devices, assigning them for **Uninstall** removes them from the devices.
@@ -159,8 +152,6 @@ With an Allow strategy, all apps in the Google Play Store can be downloaded.
     2. Select the AI app you want to uninstall > **Properties**.
     3. Select **Assignments** > **Edit**.
     4. In **Uninstall**, add a group, users, or devices.
-
-    ??One app per policy?? [CC: one app per policy :)]
 
 # [Personally owned devices](#tab/ai-apps-personal)
 
@@ -180,7 +171,7 @@ If all these options aren't set, then the app hasn't been deployed by an Intune 
 
 ---
 
-## Objective - Block AI Websites
+## Block AI Websites
 
 ✅ **Goal - Block AI websites in web browser apps**
 
@@ -225,11 +216,19 @@ Use the following steps to create an app configuration policy that configures yo
     - **Search**: Select **Block access to a list of URLs** > **OK**.
     - **Configuration settings**: Enter the list of URLs to block, like `https://chatgpt.com, https://claude.ai`.
 
+      Some sample AI websites include:
+
+      - `https://chatgpt.com`
+      - `https://claude.ai`
+      - `https://copilot.microsoft.com`
+      - `https://perplexity.ai`
+      - `https://gemini.google.com/`
+
     ??Add all URLs to one key? Should we include a list of possible apps?? [CC: this is a good question, I'm also not sure if they are supposed to be comma separated or how the list of URLs should be added - let me do some research. I think a list of possible apps is a great idea! We should call out that the list isn't comprehensive but I would start with: ChatGPT, Microsoft Copilot (Consumer), Google Gemini, Perplexity AI, Claude (Anthropic)]
 
 5. Select **Next** and continue creating the policy. For step-by-step instructions, see [Add App Configuration Policies for Managed Android Enterprise Devices](../../intune-service/apps/app-configuration-policies-use-android.md).
 
-## Objective - Block Screen-Driven AI Experiences
+## Block Screen-Driven AI Experiences
 
 ✅ **Goal - Block features that can read on-screen content**
 
@@ -364,7 +363,7 @@ To prevent sensitive data from being used by AI apps in the personal profile, yo
 
 ---
 
-## Objective - Disable On-Device AI System App
+## Disable On-Device AI System App
 
 ✅ **Goal - Block Google's local AI processing**
 
@@ -396,7 +395,7 @@ Use the following steps to disable the AICore system app.
 
 6. In **Review + create**, review the values and settings you entered for the app. When you're done, select **Create**.
 
-## Objective - Disable OEM-Specific AI Capabilities
+## Disable OEM-Specific AI Capabilities
 
 ✅ **Goal - Turn off OEM‑provided AI features**
 
