@@ -7,8 +7,7 @@ items:
     href: ../zebra-lifeguard-ota-integration.md
 - name: Apple updates
   items:
-  - name: Managed software updates
-    displayName: ddm
+  - name: Configure software updates
     href: apple.md
   - name: Software update reports
     href: apple-reports.md
