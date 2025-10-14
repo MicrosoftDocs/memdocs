@@ -5,7 +5,7 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 03/06/2025
 ms.topic: reference
-ms.reviewer: gokarthi
+ms.reviewer: mattcall
 ms.collection:
 - M365-identity-device-management
 ---
@@ -26,6 +26,10 @@ Advanced rule editing is also available. You can use common operators, such as `
 This article describes the different [managed device properties](#managed-device-properties), [managed app properties](#managed-app-properties), and [operators](#supported-operators) you can use in your filters, and gives examples.
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
+## Before you begin
+
+- [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Managed device properties
 
@@ -286,8 +290,10 @@ You can use the following device properties in your managed device filter rules:
 
   - Windows
 
-> [!TIP]
-> In Windows PowerShell, use the `Get-WmiObject -Class Win32_OperatingSystem |select operatingsystemSKU` command on a Windows device to return the SKU number.
+> [!NOTE]
+>
+> - In Windows PowerShell, use the `Get-WmiObject -Class Win32_OperatingSystem |select operatingsystemSKU` command on a Windows device to return the SKU number.
+> - [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Managed app properties
 
