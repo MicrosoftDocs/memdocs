@@ -75,6 +75,8 @@ Intune does not support using a cloned image of a computer that is already enrol
 > [!IMPORTANT]
 > - If you're using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Intune admin center, like remote sync, won't work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
 > - Intune does not currently support token roaming functionality between devices. If [FSLogix](/fslogix), or a similar technology, is used to manage Windows user profiles and settings, you must ensure that tokens are not unexpectedly roamed or duplicated across devices. To confirm that you are running a supported version and configuration of FSLogix with token roaming disabled, please see the [FSLogix RoamIdentity Configuration Settings Reference](/fslogix/reference-configuration-settings?tabs=profiles#roamidentity).
+> - Intune does not currently support user scope targeted settings functionality between devices in pooled AVD hostpools with FSLogix. If FSLogix, or a similar technology, is used to manage windows user profiles and settings, you must ensure that the policies are applied as device scope settings to avoid regression during including and or excluding user/s from user scope targeted settings.
+
 
 Windows 10 or Windows 11 Enterprise multi-session VMs are treated as a separate OS edition and some Windows 10 or Windows 11 Enterprise configurations won't be supported for this edition. Using Microsoft Intune doesn't depend on or interfere with Azure Virtual Desktop management of the same VM.
 
