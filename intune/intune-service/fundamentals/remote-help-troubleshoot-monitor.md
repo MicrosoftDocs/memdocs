@@ -58,7 +58,7 @@ Remote Help logs data during installation and during Remote Help sessions, which
 - A session failing to connect (after code entry) with a permission error likely indicates the helper's RBAC scope does not cover that user/device. Verify the scope group includes the target user/device and that the helper has the needed permission (e.g., trying to take full control but their role only allows view).
 - If the session displays a white screen while attempting to connect, verify that all network requirements are properly configured and that no required endpoints are being blocked.
 
-### [Windows](#tab/windows)
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
 - If Remote Help app on Windows won't install or silently fails, ensure the device meets OS requirements (Windows build, etc.) and has TLS 1.2 network connectivity. Also check that the Intune Win32 app detection rule (if used) is correct (incorrect version detection can cause Intune to think the app is already installed or never installed).
 
@@ -86,11 +86,11 @@ Microsoft Edge WebView2 is required to use Remote Help. If you get an error mess
 > [!NOTE]
 > WebView2 should already be installed if your device is running Windows 11 or has Microsoft Edge.
 
-### [macOS](#tab/macos)
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
 - Mac users having trouble should verify they installed the app from Company Portal and approved permissions. If using the web app, note it only allows view access, which might confuse helpers expecting control.
 
-### [Android](#tab/android)
+### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 - On Android, if the device is not visible for Remote Help or the app is not functioning, ensure the device is enrolled as Dedicated. COPE/COBO devices are not currently supported by Remote Help – trying to use it on unsupported enrollment types will not work.
 
@@ -112,20 +112,20 @@ If a Remote Help session for Android is unable to connect, check for the followi
 
 ## Known Issues
 
-### [Windows](#tab/windows)
+### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
 - For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service isn't running.
 - After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30 minutes after restart), or manually start the service through services.msc.
 - For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
 
-### [macOS](#tab/macos)
+### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
 - If the sharer exits from a Remote Help session early, the helper might not be notified for 60+ seconds.
 - If using Edge, the sharer might have to sign in to Edge before starting a session or the device reports as Unenrolled.
 - Verify that your browser is up to date.
 - If you're screen sharing using another application like Teams or recording during the session, it might take longer for the session to connect.
 
-### [Android](#tab/android)
+### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 - On newly enrolled devices, push notifications (needed for Remote Help to receive session initiation requests) may take a while to start working. Wait for 15 minutes and try again later.
 
