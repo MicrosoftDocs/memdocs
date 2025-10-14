@@ -108,8 +108,8 @@ Intune per-device reports provide a software updates view that focuses on a sing
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > select either **iOS/iPadOS** or **macOS**, then select a device.
 1. On the device **Overview** page, expand **Monitor** and then, depending on the type of device you're viewing, select the report:
-  - For iOS and iPadOS, select **iOS software updates**.
-  - For macOS, select **macOS software updates**.
+   - For iOS and iPadOS, select **iOS software updates**.
+   - For macOS, select **macOS software updates**.
 
 In the per-device view, Intune displays the following information about the device's update status as reported by the device:
 
