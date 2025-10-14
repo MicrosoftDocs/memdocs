@@ -26,10 +26,6 @@ Configure endpoint analytics in Configuration Manager by enabling data upload, t
 
 **Before you start:** Check the [requirements](index.md#prerequisites)  to confirm your environment meets prerequisites.
 
-::: zone-end
-:::column-end:::
-:::row-end:::
-
 :::row:::
 :::column span="1":::
 [!INCLUDE [platform](../includes/requirements/rbac.md)]

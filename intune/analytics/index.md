@@ -66,7 +66,7 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 :::column span="3":::
 ::: zone pivot="intune"
 >To enroll Intune-managed devices to endpoint analytics, they need to send required functional data to Microsoft public cloud. Ensure the following endpoints are accessible from Intune-managed devices:
-
+>
 > | Endpoint  | Function  |
 > |-----------|-----------|
 > | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
@@ -76,14 +76,14 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 ::: zone pivot="cm"
 
 >Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they don't need directly access to the Microsoft public cloud. If your environment uses a proxy server, configure the proxy server to allow the following endpoints:
-
+>
 > | Endpoint  | Function  |
 > |-----------|-----------|
 > | `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to endpoint analytics on Configuration Manager Server role. For more information, see [Configure the proxy for a site system server](../configmgr/> core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 > | `https://*.manage.microsoft.com` | Used to synch device collection and devices with endpoint analytics on Configuration Manager Server role only. For more information, see [Configure the proxy for a site system server](../configmgr/core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-
+>
 >If you have co-management enabled, enrolled devices send required functional data directly to Microsoft public cloud. In this case, ensure the following endpoints are accessible from co-managed devices:
-
+>
 > | Endpoint  | Function  |
 > |-----------|-----------|
 > | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
