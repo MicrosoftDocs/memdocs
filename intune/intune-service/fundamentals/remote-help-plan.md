@@ -95,11 +95,15 @@ To use Remote Help, helpers must have the appropriate Role based access control 
 |Remote Help - Take full control|Allows the helper to take full control of the sharer's device.|
 |Remote Help - Elevation|Allows the helper to interact with the user account control prompts on Windows.|
 |Remote Help - Unattended| Allows the helper to connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a fully managed device or as a dedicated device.|
+|Remote Tasks - Offer Remote Assistance|Allows the helper to offer remote assistance to users.|
 
 The following Intune built-in roles include Remote Help permissions:
 
 - School Administrator (View screen, take full control, elevation)
 - Help Desk Operator (View screen, take full control, elevation, unattended)
+
+> [!NOTE]
+> A person needs a combination of the *Remote Tasks - Offer Remote Assistance* permission and at least one of the Remote Help permissions to provide help. The permissions are granted to users in the admin group of a role assignment for the users or devices in the defined scope groups. For more information about Intune role-based access control, see [About role-based access control (RBAC) for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Prerequisites
 
