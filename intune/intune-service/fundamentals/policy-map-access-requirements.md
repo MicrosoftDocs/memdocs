@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 11/02/2023
 ms.topic: reference
-ms.localizationpriority: high
 ms.reviewer: dagerrit
 ms.collection:
 - M365-identity-device-management
@@ -243,8 +242,6 @@ Two compliance policies:
 ## Require managing email profile (required for selective wipe on iOS)
 
 Requiring this setting was never supported for Windows or Android compliance in Basic Mobility and Security.
-
-Windows email was never supported for Windows 10 in Basic Mobility and Security.
 
 For Android, this setting was only supported on Samsung Knox devices in Basic Mobility and Security.
 

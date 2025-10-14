@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Data Warehouse User Entity Timeline
 description: Learn how the Microsoft Intune Data Warehouse represents Users in a timeline.
 ms.date: 10/30/2024

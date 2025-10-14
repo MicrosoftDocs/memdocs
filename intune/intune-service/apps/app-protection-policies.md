@@ -1,16 +1,15 @@
 ---
-title: Create and deploy app protection policies
+title: Create and Deploy App Protection Policies
 description: This article describes how to create and assign Microsoft Intune app protection policies.
 ms.date: 06/12/2025
 ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Protect
 ---
-# How to create and assign app protection policies
+# How to Create and Assign App Protection Policies
 
 Learn how to create and assign Microsoft Intune app protection policies for users of your organization. This article also describes how to make changes to existing policies.
 

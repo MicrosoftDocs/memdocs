@@ -1,29 +1,12 @@
 ---
 title: Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune
 description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, and use device configuration profiles for a PKCS Certificate.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 11/19/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: wicale
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - certificates
@@ -188,7 +171,7 @@ Use a command line to complete these steps:
 
 12. In **Security**:
     1. Add the computer account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
-    1. (Optional but recommended) Remove the domain users group from the list of groups or user names allowed permissions on this template. To remove the group:
+    1. Remove the domain users group from the list of groups or user names allowed permissions on this template. To remove the group:
        1. Select the **Domain Users** group.
        1. Select **Remove**.
        1. Review the other entries under **Groups or user names** to confirm permissions and applicability to your environment.
@@ -368,7 +351,7 @@ Platforms:
 >
 >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
-- **User certificate type**
+- **User certificate type**  
   Format options for the *Subject name format* include two variables: **Common Name (CN)** and **Email (E)**. Email (E) would usually be set with the {{EmailAddress}} variable.
   For example: E={{EmailAddress}}
 
@@ -396,7 +379,7 @@ Platforms:
 
   User attributes aren't supported for devices that don't have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN can't get the user principal name when there isn't a user on the device.
 
-- **Device certificate type**
+- **Device certificate type**  
   Format options for the Subject name format include the following variables:
   - **{{AAD_Device_ID}}**
   - **{{DeviceId}}** - The Intune device ID

@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 08/21/2025
 ms.topic: reference
-ms.localizationpriority: high
 ms.reviewer: angrobe
 ms.collection:
 - M365-identity-device-management
@@ -155,7 +154,7 @@ For Delivery Optimization metadata:
 - `*.dl.delivery.mp.microsoft.com`
 
 > [!TIP]
-> Review dependencies for client-service peer-to-peer solutions that you use to help ensure support for cloud-based management. For example, Windows BranchCache relies on locally available groups that might not be available through Microsoft Entra ID, which is Intune’s identity solution.
+> Review dependencies for client-service peer-to-peer solutions that you use to help ensure support for cloud-based management. For example, Windows BranchCache relies on locally available groups that might not be available through Microsoft Entra ID, which is Intune's identity solution.
 
 #### Windows Push Notification Services (WNS) dependencies
 
@@ -238,6 +237,9 @@ For details, see the following resources:
 - [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints)
 - [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
 
+  > [!NOTE]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 **Win32 content download:**
 
 Win32 content download locations and endpoints are unique per application and are provided by the external publisher. You can find the location for each Win32 Store app using the following command on a test system (you can obtain the [PackageId] for a Store app by referencing the **Package Identifier** property of the app after adding it to Microsoft Intune):
@@ -258,7 +260,7 @@ For details, see the following resource:
 
 ## Migrating device health attestation compliance policies to Microsoft Azure attestation
 
-If a customer enables any of the Windows 10/11 Compliance policy - Device Health settings, then Windows 11 devices begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
+If a customer enables any of the Windows Compliance policy - Device Health settings, then Windows 11 devices begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
 However, Windows 10 and GCCH/DOD environments continue to use the existing Device Health Attestation DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and isn't impacted by this change.
 
 If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they're unable to reach the MAA attestation endpoints for their location.
@@ -321,7 +323,7 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
-If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [PowerShell scripts](../apps/powershell-scripts.md), [Remediations](../fundamentals/remediations.md), [Endpoint analytics](../../analytics/overview.md), [Custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [PowerShell scripts](../apps/powershell-scripts.md), [remediations](../fundamentals/remediations.md), [endpoint analytics](../../analytics/index.md), [custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
 
 Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 

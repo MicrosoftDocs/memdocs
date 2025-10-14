@@ -3,11 +3,9 @@ title: Step 3. Integrate Mobile Threat Defense for App Protection Policy
 description: Step 3. Integrate Microsoft Entra Conditional Access with Microsoft Edge for Business.
 ms.date: 06/12/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: samarti
 ms.custom:
 ms.collection:
-- tier1
 - highpri
 - highseo
 - FocusArea_Apps_AppManagement

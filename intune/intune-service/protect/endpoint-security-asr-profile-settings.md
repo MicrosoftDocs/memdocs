@@ -1,29 +1,11 @@
 ---
-# required metadata
-
 title: Intune endpoint security Attack surface reduction settings | Microsoft Docs
-description: Details about the settings in the endpoint security Attack surface reduction policies in Microsoft Intune. 
-keywords:
+description: Details about the settings in the endpoint security Attack surface reduction policies in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/28/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: mattcall
@@ -35,12 +17,14 @@ View the settings you can configure in profiles for *Attack surface reduction* p
 
 Applies to:
 
-- Windows 11
-- Windows 10
+- Windows
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 Supported platforms and profiles:
 
-- **Windows 10 and later** - Use this platform for policy you deploy to devices managed with Intune.
+- **Windows** - Use this platform for policy you deploy to devices managed with Intune.
 
   - Profile: **App and browser isolation**
   - Profile: **Application control**
@@ -49,7 +33,7 @@ Supported platforms and profiles:
   - Profile: **Exploit protection**
   - Profile: **Web protection (Microsoft Edge Legacy)**
 
-- **Windows 10 and later (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.
+- **Windows (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.
 
   - Profile: **Exploit Protection(ConfigMgr)(preview)**
   - Profile: **Web Protection (ConfigMgr)(preview)**
@@ -62,7 +46,7 @@ Supported platforms and profiles:
 
 ### App and browser isolation profile
 
-> [!NOTE]  
+> [!NOTE]
 > This section details the settings in App and browser isolation profiles created before April 18, 2023. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
@@ -76,17 +60,18 @@ Supported platforms and profiles:
   - **Enabled for Edge** - Application Guard opens unapproved sites in a Hyper-V virtualized browsing container.
   - **Enabled for isolated Windows environments** - Application Guard is turned on for any applications enabled for App Guard within Windows.
   - **Enabled for Edge AND isolated Windows environments** - Application Guard is configured for both scenarios.
-  
+
   > [!NOTE]
   >
   > If you are deploying Application Guard for Microsoft Edge via Intune, **Windows network isolation** policy must be configured as a prerequisite. Network isolation may be configured via various profiles, including **App and broswer isolation** under the **Windows network isolation** setting.
 
   When set to *Enabled for Edge* or *Enabled for Edge AND isolated Windows environments*, the following settings are available, which apply to Edge:
-  
+
   - **Clipboard behavior**  
     CSP: [ClipboardSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)
 
     Choose what copy and paste actions are allowed from the local PC and an Application Guard virtual browser.
+
     - **Not configured** (*default*)
     - **Block copy and paste between PC and browser**
     - **Allow copy and paste from browser to PC only**
@@ -126,26 +111,26 @@ Supported platforms and profiles:
   - **Application Guard allow camera and microphone access**  
     CSP: [AllowCameraMicrophoneRedirection](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowcameramicrophoneredirection)
 
-    - **Not configured** (*default*) - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device.
-    - **Yes** - Applications inside Microsoft Defender Application Guard can access the camera and microphone on the user’s device.
-    - **No** - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device. This is the same behavior as *Not configured*.
+    - **Not configured** (*default*) - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user's device.
+    - **Yes** - Applications inside Microsoft Defender Application Guard can access the camera and microphone on the user's device.
+    - **No** - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user's device. This is the same behavior as *Not configured*.
 
-- **Application guard allow print to local printers**  
+- **Application guard allow print to local printers**
 
   - **Not configured** (*default*)
   - **Yes** - Allow printing to local printers.
 
-- **Application guard allow print to network printers**  
+- **Application guard allow print to network printers**
 
   - **Not configured** (*default*)
   - **Yes** - Allow printing print to network printers.
 
-- **Application guard allow print to PDF**  
+- **Application guard allow print to PDF**
 
   - **Not configured** (*default*)
   - **Yes**- Allow printing print to PDF.
 
-- **Application guard allow print to XPS**  
+- **Application guard allow print to XPS**
 
   - **Not configured** (*default*)
   - **Yes** - - Allow printing print to XPS.
@@ -159,36 +144,36 @@ Supported platforms and profiles:
 
   All entries that are listed in the profile are active. You don't need to select a checkbox for a thumbprint entry to make it active. Instead, use the checkboxes to help you manage the entries that have been added to the profile. For example, you can select the checkbox of one or more certificate thumbprint entries and then **Delete** those entries from the profile with a single action.
 
-- **Windows network isolation policy**  
-  
+- **Windows network isolation policy**
+
   - **Not configured** (*default*)
-  - **Yes** - Configure Windows network isolation policy.  
-  
+  - **Yes** - Configure Windows network isolation policy.
+
   When set to *Yes*, you can configure the following settings:
 
-  - **IP ranges**  
+  - **IP ranges**
     Expand the dropdown, select **Add**, and then specify a *lower address* and then an *upper address*.
 
-  - **Cloud resources**  
+  - **Cloud resources**
     Expand the dropdown, select **Add**, and then specify an *IP address or FQDN* and a *Proxy*.
 
-  - **Network domains**  
+  - **Network domains**
    Expand the dropdown, select **Add**, and then specify *Network domains*.
 
-  - **Proxy servers**  
+  - **Proxy servers**
     Expand the dropdown, select **Add**, and then specify *Proxy servers*.
 
-  - **Internal proxy servers**  
+  - **Internal proxy servers**
     Expand the dropdown, select **Add**, and then specify *Internal proxy servers*.
 
-  - **Neutral resources**  
+  - **Neutral resources**
     Expand the dropdown, select **Add**, and then specify *Neutral resources*.
 
-  - **Disable Auto detection of other enterprise proxy servers**  
+  - **Disable Auto detection of other enterprise proxy servers**
     - **Not configured** (*default*)
     - **Yes** - Disable Auto detection of other enterprise proxy servers.
 
-  - **Disable Auto detection of other enterprise IP ranges**  
+  - **Disable Auto detection of other enterprise IP ranges**
     - **Not configured** (*default*)
     - **Yes** - Disable Auto detection of other enterprise IP ranges.
 
@@ -259,7 +244,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
 
 - **Block Adobe Reader from creating child processes**  
   [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
-  
+
   This ASR rule is controlled via the following GUID: 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c
   - **Not configured** (*default*) - The Windows default is restored, is to not block creation of child processes.
   - **User defined**
@@ -308,7 +293,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Block Office communication apps from creating child processes**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)  
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
   - **Not configured** (*default*) - The Windows default is restored, which is to not block creation of child processes.
@@ -375,7 +360,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
   - **Disable** - This setting is turned off.
 
-- **Use advanced protection against ransomware**  
+- **Use advanced protection against ransomware**
    [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   This ASR rule is controlled via the following GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
@@ -392,7 +377,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Audit mode** - Windows events are raised when untrusted applications access controlled folders, but no blocks are enforced.
   - **Block disk modification** - Only attempts to write to disk sectors are blocked.
   - **Audit disk modification** - Windows events are raised instead of blocking attempts to write to disk sectors.
-  
+
 - **List of additional folders that need to be protected**  
   CSP: [ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders)
 
@@ -412,12 +397,12 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
 
 #### Device Control
 
-> [!NOTE]  
-> This section details the settings found in Device control profiles created before May 23, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.  
+> [!NOTE]
+> This section details the settings found in Device control profiles created before May 23, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 
-- **Allow hardware device installation by device identifiers**  
+- **Allow hardware device installation by device identifiers**
   - **Not configured** *(default)*
   - **Yes** - Windows can install or update any device whose Plug and Play hardware ID or compatible ID appears in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
   - **No**
@@ -432,14 +417,14 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Yes** - Specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
   - **No**
 
-  When set to *Yes* you can configure the following options:  
-  - **Remove matching hardware devices**  
+  When set to *Yes* you can configure the following options:
+  - **Remove matching hardware devices**
     - **Yes**
     - **Not configured** *(default)*
 
   - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-- **Allow hardware device installation by setup class**  
+- **Allow hardware device installation by setup class**
   - **Not configured** *(default)*
   - **Yes** - Windows can install or update device drivers whose device setup class GUIDs appear in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
   - **No**
@@ -454,14 +439,14 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Yes** - Specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
   - **No**
 
-  When set to *Yes* you can configure the following options:  
-  - **Remove matching hardware devices**  
+  When set to *Yes* you can configure the following options:
+  - **Remove matching hardware devices**
     - **Yes**
     - **Not configured** *(default)*
 
   - **Block list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-- **Allow hardware device installation by device instance identifiers**  
+- **Allow hardware device installation by device instance identifiers**
   - **Not configured** *(default)*
   - **Yes** - Windows is allowed to install or update any device whose Plug and Play device instance ID appears in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
   - **No**
@@ -475,8 +460,8 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Yes** - Specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
   - **No**
 
-  When set to *Yes* you can configure the following options:  
-  - **Remove matching hardware devices**  
+  When set to *Yes* you can configure the following options:
+  - **Remove matching hardware devices**
     - **Yes**
     - **Not configured** *(default)*
 
@@ -536,19 +521,19 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   CSP: [Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
 
   - **Not configured** (*default*)
-  - **Yes** - Prevents the device from sending out Bluetooth advertisements.  
+  - **Yes** - Prevents the device from sending out Bluetooth advertisements.
 
 - **Block bluetooth proximal connections**  
   CSP: [Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
   Block users from using Swift Pair and other proximity-based scenarios
 
   - **Not configured** (*default*)
-  - **Yes** - Prevents a device user from using Swift Pair and other proximity-based scenarios.  
+  - **Yes** - Prevents a device user from using Swift Pair and other proximity-based scenarios.
 
   [Bluetooth/AllowPromptedProximalConnections CSP](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Bluetooth allowed services**  
-  CSP: [Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
+  CSP: [Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).
   For more information on the service list, see [ServicesAllowedList usage guide](/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
 
   - **Add** - Specify allowed Bluetooth services and profiles as hex strings, such as `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
@@ -569,7 +554,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
 
 #### Exploit protection
 
-> [!NOTE]  
+> [!NOTE]
 > This section details the settings you can find in Exploit protection profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
@@ -608,13 +593,13 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Not configured** (*default*)
 
 - **Block malicious site access**  
-  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)  
+  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from going to the site.
   - **Not configured** (*default*)
 
 - **Block unverified file download**  
-  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
   - **Yes** - Block users from ignoring the Microsoft Defender SmartScreen Filter warnings and block them from downloading unverified files.
   - **Not configured** (*default*)
@@ -659,14 +644,14 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Allow**
 
 - **Prevent Smart Screen Prompt Override For Files (Device)**  
-  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)  
+  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   - **Not configured** (*default*)
   - **Disabled**
   - **Enabled**
 
 - **Prevent Smart Screen Prompt Override (Device)**  
-  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
   - **Not configured** (*default*)
   - **Disabled**

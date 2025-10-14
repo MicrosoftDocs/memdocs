@@ -1,11 +1,10 @@
 ---
-title: Configure Microsoft Launcher for Android Enterprise with Intune
+title: Configure Microsoft Launcher for Android Enterprise With Intune
 description: Use Intune configuration policies with Microsoft Launcher.
 ms.date: 02/24/2025
 ms.topic: how-to
 ms.reviewer: priyar
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
 ---

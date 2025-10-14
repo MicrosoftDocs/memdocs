@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 02/13/2025
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: dougeby
 ms.collection:
 - M365-identity-device-management
@@ -17,7 +16,7 @@ Intune supports managing virtual machines running Windows Enterprise with certai
 
 ## Enrollment
 
-- We recommend that you don't use Intune to manage on-demand, session-host virtual machines, also known as non-persistent virtual desktop infrastructure (VDI). Each VM must be enrolled when it's created. Also, regularly deleting VMs creates orphaned device records in Intune until they're [cleaned up](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules).
+- We recommend that you don't use Intune to manage on-demand, session-host virtual machines, also known as non-persistent virtual desktop infrastructure (VDI). Each VM must be enrolled when it's created. Also, regularly deleting VMs creates orphaned device records in Intune until they're [cleaned up](../fundamentals/device-cleanup-rules.md).
 
 - Windows Autopilot Self-deploying and pre-provisioning deployment types aren't supported because they require a physical Trusted Platform Module (TPM).
 
@@ -41,7 +40,7 @@ Deallocated virtual machines may contribute to noncompliant device reports becau
 
 ## Retirement
 
-If you only have RDP access, don't use the [Wipe action](../remote-actions/devices-wipe.md#wipe). The Wipe action deletes the virtual machine's RDP settings and prevents you from ever connecting again.
+If you only have RDP access, don't use the [Wipe action](../remote-actions/device-wipe.md). The Wipe action deletes the virtual machine's RDP settings and prevents you from ever connecting again.
 
 ## Limitations
 

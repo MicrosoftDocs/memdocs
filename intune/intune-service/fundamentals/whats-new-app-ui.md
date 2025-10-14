@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 02/20/2025
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: esalter
 ms.collection:
 - M365-identity-device-management
@@ -202,7 +201,7 @@ The Company Portal website's new **Installed Apps** page lists all managed apps 
 ### New view lets app users see all managed apps installed on device <!-- 2352913 -->
 The Company Portal app for Windows now lists all managed apps (both required and available) that are installed on a user's device. Users can also see attempted and pending app installations, and their current statuses. If you haven't made apps required or available to your users, they'll see a message explaining that no company apps have been installed. To see the new view, go to the Company Portal navigation pane and select **Apps** > **Installed Apps**.
 
-![Example screenshot of the Company Portal app for Windows 10, Installed apps page.](./media/whats-new-app-ui/installed-apps-cp-1906.png)
+![Example screenshot of the Company Portal app for Windows, Installed apps page.](./media/whats-new-app-ui/installed-apps-cp-1906.png)
 
 
 ## Week of June 17, 2019
@@ -251,10 +250,10 @@ For updated enrollment steps and screens, see [Enroll iOS device in Intune](../u
 The home page of the Company Portal app for iOS devices has been redesigned. With this change, the home page will better follow iOS UI patterns, and also provide improved discoverability for apps and ebooks.
 
 ## Week of February 19, 2019
-### New App categories screen in the Company Portal app for Windows 10<!-- 3834780 WNready4Review -->
-A new screen called **App categories** has been added to improve the app browsing and selection experience in Company Portal for Windows 10. Users will now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. For more information about installing apps in Company Portal, see [Install and share apps on your device](../user-help/install-apps-cpapp-windows.md).
+### New App categories screen in the Company Portal app for Windows<!-- 3834780 WNready4Review -->
+A new screen called **App categories** has been added to improve the app browsing and selection experience in Company Portal for Windows. Users will now see their apps sorted under categories such as **Featured**, **Education**, and **Productivity**. This change appears in Company Portal versions 10.3.3451.0 and later. For more information about installing apps in Company Portal, see [Install and share apps on your device](../user-help/install-apps-cpapp-windows.md).
 
-![Screenshot of Company Portal for Windows 10, App categories screen.](./media/whats-new-app-ui/1902_CP_app_categories.png)
+![Screenshot of Company Portal for Windows, App categories screen.](./media/whats-new-app-ui/1902_CP_app_categories.png)
 
 ## Week of November 12, 2018
 
@@ -308,8 +307,8 @@ Example screenshot showing the Details view:
 ![Screenshot of the Intune Company Portal app for Windows showing the installed apps in details view.](./media/whats-new-app-ui/details-installed-view-cpapp-1807.png)
 
 ## Week of April 23, 2018
-### Updated navigation view in the Company Portal app for Windows 10 <!-- 1195010 -->
-The Intune Company Portal app for Windows 10 has been updated with the [Fluent Design System's navigation view](/windows/uwp/design/basics/navigation-basics). Along the side of the app, you'll notice a static, vertical list of all top-level pages. Click any link to quickly view and switch between pages. This is the first of several updates you'll see as part of our ongoing effort to create a more adaptive, empathetic, and familiar experience in Intune.
+### Updated navigation view in the Company Portal app for Windows <!-- 1195010 -->
+The Intune Company Portal app for Windows has been updated with the [Fluent Design System's navigation view](/windows/uwp/design/basics/navigation-basics). Along the side of the app, you'll notice a static, vertical list of all top-level pages. Click any link to quickly view and switch between pages. This is the first of several updates you'll see as part of our ongoing effort to create a more adaptive, empathetic, and familiar experience in Intune.
 
 ![Screenshot of the Company Portal app dashboard showing the Fluent Design navigation view](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
 
@@ -332,7 +331,7 @@ You'll also see:
 |![Screenshot shows Company Portal app for i O S / i Pad O S before update, Device Details.](./media/whats-new-app-ui/cp_iosRedesign_before_1803_02.png)|![Screenshot shows Company Portal app for i O S / i Pad O S after update, Devices.](./media/whats-new-app-ui/cp_iosRedesign_after_1803_03.png)|
 
 ### Improvements to the language in the Company Portal app for Windows <!-- 1683758 -->
-We've improved the language in the Company Portal for Windows 10 to be more user-friendly and specific to your company.
+We've improved the language in the Company Portal for Windows to be more user-friendly and specific to your company.
 
 |Before|After|
 |---|---|
@@ -358,9 +357,9 @@ We've updated the Company Portal app for Android to follow Android's [Material D
 
 ## Week of November 27, 2017
 
-### New "Device Categories" step in guided setup for the Company Portal app for Windows 10 <!-- 1335292 -->
+### New "Device Categories" step in guided setup for the Company Portal app for Windows <!-- 1335292 -->
 
-If you've enabled [device group mapping](../enrollment/device-group-mapping.md), the Company Portal app for Windows 10 now walks your users through selecting a device category after enrolling their device.
+If you've enabled [device group mapping](../enrollment/device-group-mapping.md), the Company Portal app for Windows now walks your users through selecting a device category after enrolling their device.
 
 ![Device group mapping category](./media/whats-new-app-ui/w10_cp_category_device_setup_after_1711.png)
 
@@ -386,12 +385,12 @@ We've improved the device setup workflow in the Company Portal app for iOS/iPadO
 
 ## Week of November 6, 2017
 
-### Updates to the Company Portal app for Windows 10 <!--1299474-->
-The Settings page in the Company Portal app for Windows 10 has been updated to make the settings and intended user actions to be more consistent across all settings. It has also been updated to match the layout of other Windows apps.
+### Updates to the Company Portal app for Windows <!--1299474-->
+The Settings page in the Company Portal app for Windows has been updated to make the settings and intended user actions to be more consistent across all settings. It has also been updated to match the layout of other Windows apps.
 
 |Before|After|
 |---|---|
-|![Screenshot shows Settings page in the Company Portal app for Windows 10 before update.](./media/whats-new-app-ui/w10-share-logs.png)|![Screenshot shows Settings page in the Company Portal app for Windows 10 after update.](./media/whats-new-app-ui/w10-share-logs-after-1711.png)|
+|![Screenshot shows Settings page in the Company Portal app for Windows before update.](./media/whats-new-app-ui/w10-share-logs.png)|![Screenshot shows Settings page in the Company Portal app for Windows after update.](./media/whats-new-app-ui/w10-share-logs-after-1711.png)|
 
 
 ### Search improvements to the Company Portal apps and website <!-- 1418189 -->
@@ -492,9 +491,9 @@ Intune Mobile Application Management (MAM) dialog boxes will be updated to a mod
 ![modern interface](./media/whats-new-app-ui/NewUI_Modern_AttachFileHandler.jpg)
 
 
-### Updates to the "Device Details" page on the Company Portal app for Windows 10 <!-- 1287448 -->
+### Updates to the "Device Details" page on the Company Portal app for Windows <!-- 1287448 -->
 
-The Company Portal app for Windows 10 is moving the __Category__ tag from below the title to a property on the __Device Details__ page.
+The Company Portal app for Windows is moving the __Category__ tag from below the title to a property on the __Device Details__ page.
 
 ![The Company Portal app for Windows' "Device Details" screen, which now shows the "Categories" field as a property rather than directly below the title of that screen.](./media/whats-new-app-ui/cp_win10_category_tag_move_after_1708.png)
 
@@ -571,26 +570,26 @@ The device can still be enrolled into full management by tapping on the **action
 
 ### Improvements to app syncing with Windows 10 Creators Update <!--676505-->
 
-The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1709). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app.
+The Company Portal app for Windows will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1709). This will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users will be able to manually initiate a sync from within the app.
 
-![An image of the Windows 10 Company Portal app, where the download of Microsoft Word is in a pending state from the Company Portal's app store.](./media/whats-new-app-ui/w10_download_pending_after_1706.png)
+![An image of the Windows Company Portal app, where the download of Microsoft Word is in a pending state from the Company Portal's app store.](./media/whats-new-app-ui/w10_download_pending_after_1706.png)
 
-![An image of the Windows 10 Company Portal app, with the new automatic syncing state showing with a status message indicating that the device is syncing and attempting to download the app.](./media/whats-new-app-ui/w10_download_pending_syncing_after_1706.png)
+![An image of the Windows Company Portal app, with the new automatic syncing state showing with a status message indicating that the device is syncing and attempting to download the app.](./media/whats-new-app-ui/w10_download_pending_syncing_after_1706.png)
 
-### New guided experience for Windows 10 Company Portal <!---1058938--->
-The Company Portal app for Windows 10 will include a guided Intune walkthrough experience for devices that have not been identified or enrolled. The new experience provides step-by-step instructions that guide the user through registering into Microsoft Entra ID (required for Conditional Access features) and MDM enrollment (required for device management features). The guided experience will be accessible from the Company Portal home page. Users can continue to use the app if they do not complete registration and enrollment, but will experience limited functionality.
+### New guided experience for Windows Company Portal <!---1058938--->
+The Company Portal app for Windows will include a guided Intune walkthrough experience for devices that have not been identified or enrolled. The new experience provides step-by-step instructions that guide the user through registering into Microsoft Entra ID (required for Conditional Access features) and MDM enrollment (required for device management features). The guided experience will be accessible from the Company Portal home page. Users can continue to use the app if they do not complete registration and enrollment, but will experience limited functionality.
 
 This update is only visible on devices running Windows 10 Anniversary Update (build 1607) or higher.
 
-![An image of the Windows 10 Company Portal app landing page, with a status message in the middle in the "devices" list which is telling a user that the device they're on hasn't been set up for corporate use yet, and that the user should select the message to begin setup.](./media/whats-new-app-ui/win10_guided_enroll_select_setup_after_1706.png)
+![An image of the Windows Company Portal app landing page, with a status message in the middle in the "devices" list which is telling a user that the device they're on hasn't been set up for corporate use yet, and that the user should select the message to begin setup.](./media/whats-new-app-ui/win10_guided_enroll_select_setup_after_1706.png)
 
-![An image of the Windows 10 Company Portal app setup page, which is warning the user that they need to add a corporate account to this device, then they can enroll it into management.](./media/whats-new-app-ui/win10_guided_enroll_we_help_setup_after_1706.png)
+![An image of the Windows Company Portal app setup page, which is warning the user that they need to add a corporate account to this device, then they can enroll it into management.](./media/whats-new-app-ui/win10_guided_enroll_we_help_setup_after_1706.png)
 
-![An image of the Windows 10 Company Portal app adds corporate account to this device page, which is telling the user that they will need to go to the Settings app and select "Connect" to complete enrollment. After they do this, the screen tells them that they will need to return to the Company Portal app to complete enrolling.](./media/whats-new-app-ui/win10_guided_enroll_leaving_for_iwp_after_1706.png)
+![An image of the Windows Company Portal app adds corporate account to this device page, which is telling the user that they will need to go to the Settings app and select "Connect" to complete enrollment. After they do this, the screen tells them that they will need to return to the Company Portal app to complete enrolling.](./media/whats-new-app-ui/win10_guided_enroll_leaving_for_iwp_after_1706.png)
 
-![An image of the Windows 10 Company Portal app enroll into management screen, which shows a completed status message saying that the user's device is now enrolled and that they should tap the 'next' button to continue.](./media/whats-new-app-ui/win10_guided_enroll_youre_now_enrolled_after_1706.png)
+![An image of the Windows Company Portal app enroll into management screen, which shows a completed status message saying that the user's device is now enrolled and that they should tap the 'next' button to continue.](./media/whats-new-app-ui/win10_guided_enroll_youre_now_enrolled_after_1706.png)
 
-![An image of the Windows 10 Company Portal app completion screen, letting the user know that they're all set, and that the device is enrolled with a corporate account properly added to it.](./media/whats-new-app-ui/win10_guided_enroll_youre_all_set_after_1706.png)
+![An image of the Windows Company Portal app completion screen, letting the user know that they're all set, and that the device is enrolled with a corporate account properly added to it.](./media/whats-new-app-ui/win10_guided_enroll_youre_all_set_after_1706.png)
 
 ### New menu action to easily remove Company Portal <!--1164569-->
 Based on user feedback, the Company Portal app for Android has added a new menu action to initiate the removal of Company Portal from your device. This action removes the device from Intune management so that the app can be removed from the device by the user.
@@ -627,8 +626,8 @@ The Company Portal is also receiving updated icons for the Android, iOS, and Win
 
 An update to the Android Company Portal app shows a sign-in progress indicator when the user launches or resumes the app. The indicator progresses through new statuses, beginning with "Connecting...", then "Signing in...", then "Checking for security requirements..." before allowing the user to access the app.
 
-### Improved app install status for the Windows 10 Company Portal app <!--676495-->
-The Windows 10 Company Portal app now provides an install progress bar on the app details page. This is supported for modern apps on devices running the Windows 10 Anniversary Update and up.
+### Improved app install status for the Windows Company Portal app <!--676495-->
+The Windows Company Portal app now provides an install progress bar on the app details page. This is supported for modern apps on devices running the Windows 10 Anniversary Update and up.
 
 __Before__
   ![An image of the previous version of the loading screen, where the status simply said 'installing.'](./media/whats-new-app-ui/cp_win10_install_status_before_1704.png)

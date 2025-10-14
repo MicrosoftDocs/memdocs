@@ -1,11 +1,10 @@
 ---
-title: Try Microsoft Intune overview
+title: Try Microsoft Intune Overview
 description: Evaluate Microsoft Intune by stepping through common Intune settings.
 author: nicholasswhite
 ms.author: nwhite
 ms.date: 04/24/2024
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management

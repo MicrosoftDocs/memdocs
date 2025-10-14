@@ -5,8 +5,7 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 03/06/2025
 ms.topic: reference
-ms.localizationpriority: high
-ms.reviewer: gokarthi
+ms.reviewer: mattcall
 ms.collection:
 - M365-identity-device-management
 ---
@@ -287,8 +286,10 @@ You can use the following device properties in your managed device filter rules:
 
   - Windows
 
-> [!TIP]
-> In Windows PowerShell, use the `Get-WmiObject -Class Win32_OperatingSystem |select operatingsystemSKU` command on a Windows device to return the SKU number.
+> [!NOTE]
+>
+> - In Windows PowerShell, use the `Get-WmiObject -Class Win32_OperatingSystem |select operatingsystemSKU` command on a Windows device to return the SKU number.
+> - [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Managed app properties
 

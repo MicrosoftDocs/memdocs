@@ -1,29 +1,9 @@
 ---
-# required metadata
-
 title: Join your cloud-native endpoints to Microsoft Entra
-titleSuffix: Microsoft Intune
 description: When moving to or using cloud-native endpoints, use Microsoft Entra joined endpoints. When your endpoints are joined to Microsoft Entra, you can use Windows Autopilot to provision or get devices ready for organization use. Learn more about the benefits to IT admins and end-users.
-keywords:
-author: MandiOhlinger
-  
-ms.author: mandia
-manager: dougeby
 ms.date: 03/06/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: 
-ms.localizationpriority: high
-ms.assetid: 
-# optional metadata
- 
-#audience:
-#ms.devlang:
 ms.reviewer: ahamil, jasandys, wicale
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
   - intune-scenario
@@ -62,7 +42,7 @@ To join Windows endpoints to Microsoft Entra, you have some options:
 
 - **Use [Windows Autopilot](/autopilot/index)**. Windows Autopilot guides users through the Windows Out of Box Experience (OOBE). When users enter their work or school account, the endpoint joins Microsoft Entra.
 
-  All devices registered with Windows Autopilot are automatically considered organization owned devices. Windows Autopilot is one of the most adopted approaches to get organization devices joined to Microsoft Entra and managed by IT.  
+  All devices registered with Windows Autopilot are automatically considered organization owned devices. Windows Autopilot is one of the most adopted approaches to get organization devices joined to Microsoft Entra and managed by IT.
 
 - **Use Windows Out of Box Experience (OOBE)**. When users enter their work or school account on the device, the endpoint automatically joins Microsoft Entra.
 

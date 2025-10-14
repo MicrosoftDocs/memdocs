@@ -1,5 +1,5 @@
 ---
-title: How to use Microsoft Entra ID to access Intune APIs in Microsoft Graph
+title: How to Use Microsoft Entra ID to Access Intune APIs in Microsoft Graph
 description: Describes steps needed for apps to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph.
 ms.date: 07/31/2025
 ms.topic: reference
@@ -7,7 +7,7 @@ ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 ---
-# How to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph
+# How to Use Microsoft Entra ID to Access the Intune APIs in Microsoft Graph
 
 The [Microsoft Graph API](https://developer.microsoft.com/graph/) now supports Microsoft Intune with specific APIs and permission roles.  The Microsoft Graph API uses Microsoft Entra ID for authentication and access control.
 Access to the Intune APIs in Microsoft Graph requires:
@@ -299,7 +299,7 @@ At this time, all Intune permission scopes require administrator access.  This m
 
 ### <a name="script-rw"></a>DeviceManagementScripts.ReadWrite.All
 
-- **Enable Access** setting: **Read and write Microsoft Intune scripts**
+- **Enable Access** setting: **Read and write Microsoft Intune scripts**\
   Allows the same operations as *DeviceManagementScripts.Read.All*
 
 - Apps can create, update or delete a script, specifically:

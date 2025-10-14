@@ -1,18 +1,17 @@
 ---
-title: How to add macOS line-of-business apps to Microsoft Intune
+title: How to Add macOS Line-of-Business Apps to Microsoft Intune
 description: Learn about how to add macOS line-of-business (LOB) apps to Microsoft Intune.
 ms.date: 06/12/2025
 ms.topic: how-to
 ms.reviewer: arnab
 ms.collection:
-- tier1
 - M365-identity-device-management
 - macOS
 - highpri
 - FocusArea_Apps_LOB
 ---
 
-# How to add macOS line-of-business (LOB) apps to Microsoft Intune
+# How to Add macOS Line-of-Business (LOB) Apps to Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/19/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: royork
 ms.collection:
 - M365-identity-device-management
@@ -110,7 +109,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 Open the guided scenario:
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Troubleshooting + support** > **Guided scenarios** > **Deploy Windows 10 and later in cloud configuration** > **Start**.
+2. Select **Troubleshooting + support** > **Guided scenarios** > **Deploy Windows in cloud configuration** > **Start**.
 3. In **Introduction**, select **Next**.
 
 ## Step 2 - Basics

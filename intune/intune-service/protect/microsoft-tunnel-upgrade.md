@@ -1,27 +1,12 @@
 ---
 title: Upgrade the Microsoft Tunnel Gateway server software
 description: Understand how Microsoft Tunnel Gateway upgrades to new versions of the tunnel software for Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 04/11/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ochukwunyere
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-infrastructure
 ---
@@ -135,7 +120,7 @@ Image hash values:
 
 - **agentImageDigest**:  sha256:24f1b034e1b0f72ceba6b9b351ddfcca3f2f8c26d32028b520e9e666ed6d6b75
 - **serverImageDigest**: sha256:44685069ca08ea6f6781d9d35eff4a616c93fb5aa985b7f05dff4700887b698c
-  
+
 Changes in this release:
 - Minor bug fixes
 
@@ -145,17 +130,17 @@ Image hash values:
 
 - **agentImageDigest**:  sha256:559e8f5576ec1f989211ecbe831bb641eb279f430ec1000eb89ce52d79e98567
 - **serverImageDigest**: sha256:6c235570c7a8741cb6fc95823f04b8163ae11229e9a4b9c170993b03b4e17ddd
-  
+
 Changes in this release:
 - Minor bug fixes
-  
+
 ### July 1, 2025
 
 Image hash values:
 
 - **agentImageDigest**:  sha256:5ded906dbfe63a7920e817939b83ebf38917b3317162438180038ad1455eddae
 - **serverImageDigest**: sha256:9d666fb8d363b978f50978c2cfb427cf6851102cd7db1a1a7e75a50420c22277
-  
+
 Changes in this release:
 - Minor bug fixes
 
@@ -166,7 +151,7 @@ Image hash values:
 
 - **agentImageDigest**:  sha256:cd7be040158264e7dea94ebfb21ccbebd45ae8a1ae7503d9d67f64221fd4a0ef
 - **serverImageDigest**: sha256:fa6972dc84faa56da671c0c4d99aff92fee157883e0688ed48c354221d8c6587
-  
+
 Changes in this release:
 - Minor bug fixes
 
@@ -271,11 +256,11 @@ Image hash values:
 
 - **serverImageDigest**: sha256:6484d311d1bd6cbe55d71306595715bafa6a20a000be6fd6f9e530716cef6c16
 
-Changes in this release:  
+Changes in this release:
 - Add diagnostic tools for host troubleshooting
 - Upgrade Azure Linux image to 2.0.20240829
 
-  
+
 ### August 12, 2024
 
 Image hash values:
@@ -544,7 +529,7 @@ Image hash values:
 
 Changes in this release:
 - Minor bug fixes
-- Advanced setting improvements in Microsoft Tunnel configurations 
+- Advanced setting improvements in Microsoft Tunnel configurations
 - Logging improvements
 
 ### April 27, 2022
@@ -558,8 +543,8 @@ Image hash values:
 Changes in this release:
 - Minor bug fixes
 - Security bug fixes
-- Agent changes for forced cert renewal 
-- ADAL depcrecation, enables MSAL authentication during Agent enrollment 
+- Agent changes for forced cert renewal
+- ADAL depcrecation, enables MSAL authentication during Agent enrollment
 
 ### April 4, 2022
 

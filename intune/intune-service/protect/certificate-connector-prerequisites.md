@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Prerequisites for the Certificate Connector for Microsoft Intune
 description: Review the software and network prerequisites for use of the Certificate Connector for Microsoft Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 10/09/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: wicale
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - certificates
 - sub-certificates
@@ -45,7 +26,7 @@ Requirements for the computer where you install the connector software:
   > The Windows Server must be configured with the Desktop Experience, and for versions 2019 or earlier, the Microsoft Edge browser must be installed manually prior to initiating the connector setup. For more information, see [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) in the Windows Server 2016 documentation.
 
   > [!IMPORTANT]
-  > Strong mapping in the Microsoft Intune Certificate Connector is only supported for Windows Server version 2019 or later. For more information, see [Support tip: Implementing strong mapping in Microsoft Intune certificates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-implementing-strong-mapping-in-microsoft-intune-certificates/4053376).  
+  > Strong mapping in the Microsoft Intune Certificate Connector is only supported for Windows Server version 2019 or later. For more information, see [Support tip: Implementing strong mapping in Microsoft Intune certificates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-implementing-strong-mapping-in-microsoft-intune-certificates/4053376).
 
 - .NET 4.7.2
 

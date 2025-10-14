@@ -1,17 +1,16 @@
 ---
-title: Add Win32 app supersedence
+title: Add Win32 App Supersedence
 description: Learn how to use Win32 app supersedence with Microsoft Intune.
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - FocusArea_Apps_Win32
 ---
 
-# Add Win32 app supersedence
+# Add Win32 App Supersedence
 
 After you [add a Win32 app to Intune](apps-win32-add.md), you can use Intune to create one or more supersedence relationships between apps. In general, supersedence is where you update or replace something. In Intune, supersedence enables you to update and replace existing Win32 apps with newer versions of the same app or an entirely different Win32 app. This article provides an overview of the supersedence feature.
 

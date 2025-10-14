@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Intune endpoint security firewall settings for Configuration Manager devices| Microsoft Docs
 description: Endpoint security firewall policy settings for tenant attached devices you manage with Configuration Manager. You can configure firewall setting after you configure tenant attach for Configuration Manager.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/19/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: laarrizz
@@ -104,68 +87,68 @@ View the Microsoft Windows Firewall settings you can manage with the **Windows F
     CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
     - **Not configured** (*default*)
-    - **True**  
+    - **True**
     - **False** - Connection security rules from the local store are ignored and not enforced.
 
   - **Allow Local Policy Merge (Device)**  
     CSP: [AllowLocalPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - Firewall rules from the local store are ignored and not enforced.
 
   - **Auth Apps Allow User Pref Merge (Device)**  
     CSP: [AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False**
 
   - **Default Inbound Action for Domain Profile (Device)**  
     CSP: [DefaultInboundAction](/windows/client-management/mdm/firewall-csp#defaultinboundaction)
 
-    - **Not configured** (*default*)  
-    - **Allow**  
+    - **Not configured** (*default*)
+    - **Allow**
     - **Block**
 
   - **Default Outbound Action (Device)**  
     CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
 
-    - **Allow**  
+    - **Allow**
     - **Block**
 
   - **Disable Inbound Notifications (Device)**  
     CSP: [DisableInboundNotifications](/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
 
-    - **Not configured** (*default*)  
+    - **Not configured** (*default*)
     - **True** - The firewall won't display a notification to the user when an application is blocked from listening on a port.
     - **False** - The firewall might display a notification to the user when an application is blocked from listening on a port.
 
   - **Disable Stealth Mode (Device)**  
     CSP: [DisableStealthMode](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - The server operates in stealth mode. The firewall rules used to enforce stealth mode are implementation-specific.
 
   - **Disable Unicast Responses To Multicast Broadcast (Device)**  
     CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
-    - **Not configured** (*default*)  
+    - **Not configured** (*default*)
     - **True** - Unicast response to multicast broadcast traffic is blocked.
     - **False**
 
   - **Global Ports Allow User Pref Merge (Device)**  
     CSP: [GlobalPortsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#GlobalPortsAllowUserPrefMerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - Global port firewall rules in the local store are ignored and not enforced.
 
   - **Shielded (Device)**  
     CSP: [Shielded](/windows/client-management/mdm/firewall-csp#shielded)
 
-    - **Not configured** (*default*)  
+    - **Not configured** (*default*)
     - **True** - The server blocks all incoming traffic regardless of other policy settings.
     - **False**
 
@@ -183,69 +166,69 @@ View the Microsoft Windows Firewall settings you can manage with the **Windows F
   - **Allow Local Ipsec Policy Merge (Device)**  
     CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - Connection security rules from the local store are ignored and not enforced.
 
   - **Allow Local Policy Merge (Device)**  
     CSP: [AllowLocalPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - Firewall rules from the local store are ignored and not enforced.
 
   - **Auth Apps Allow User Pref Merge (Device)**  
     CSP: [AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False**
 
   - **Default Inbound Action for Private Profile (Device)**  
     CSP: [DefaultInboundAction](/windows/client-management/mdm/firewall-csp#defaultinboundaction)
 
-    - **Not configured** (*default*)  
-    - **Allow**  
+    - **Not configured** (*default*)
+    - **Allow**
     - **Block**
 
   - **Default Outbound Action (Device)**  
     CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
 
-    - **Allow**  
+    - **Allow**
     - **Block**
 
   - **Disable Inbound Notifications (Device)**  
     CSP: [DisableInboundNotifications](/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
 
-    - **Not configured** (*default*)  
+    - **Not configured** (*default*)
     - **True** - The firewall won't display a notification to the user when an application is blocked from listening on a port.
     - **False** - The firewall might display a notification to the user when an application is blocked from listening on a port.
 
   - **Disable Stealth Mode (Device)**  
     CSP: [DisableStealthMode](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - The server operates in stealth mode. The firewall rules used to enforce stealth mode are implementation-specific.
 
   - **Disable Unicast Responses To Multicast Broadcast (Device)**  
     CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
-    - **Not configured** (*default*)  
+    - **Not configured** (*default*)
     - **True** - Unicast response to multicast broadcast traffic is blocked.
     - **False**
 
   - **Global Ports Allow User Pref Merge (Device)**  
     CSP: [GlobalPortsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#GlobalPortsAllowUserPrefMerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - Global port firewall rules in the local store are ignored and not enforced.
 
   - **Shielded (Device)**  
     CSP: [Shielded](/windows/client-management/mdm/firewall-csp#shielded)
 
-    - **Not configured** (*default*)  
+    - **Not configured** (*default*)
     - **True** - The server blocks all incoming traffic regardless of other policy settings.
     - **False**
 
@@ -263,69 +246,69 @@ View the Microsoft Windows Firewall settings you can manage with the **Windows F
   - **Allow Local Ipsec Policy Merge (Device)**  
     CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - Connection security rules from the local store are ignored and not enforced.
 
   - **Allow Local Policy Merge (Device)**  
     CSP: [AllowLocalPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - Firewall rules from the local store are ignored and not enforced.
 
   - **Auth Apps Allow User Pref Merge (Device)**  
     CSP: [AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False**
 
   - **Default Inbound Action for Public Profile (Device)**  
     CSP: [DefaultInboundAction](/windows/client-management/mdm/firewall-csp#defaultinboundaction)
 
-    - **Not configured** (*default*)  
-    - **Allow**  
+    - **Not configured** (*default*)
+    - **Allow**
     - **Block**
 
   - **Default Outbound Action (Device)**  
     CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
 
-    - **Allow**  
+    - **Allow**
     - **Block**
 
   - **Disable Inbound Notifications (Device)**  
     CSP: [DisableInboundNotifications](/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
 
-    - **Not configured** (*default*)  
+    - **Not configured** (*default*)
     - **True** - The firewall won't display a notification to the user when an application is blocked from listening on a port.
     - **False** - The firewall might display a notification to the user when an application is blocked from listening on a port.
 
   - **Disable Stealth Mode (Device)**  
     CSP: [DisableStealthMode](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - The server operates in stealth mode. The firewall rules used to enforce stealth mode are implementation-specific.
 
   - **Disable Unicast Responses To Multicast Broadcast (Device)**  
     CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
-    - **Not configured** (*default*)  
+    - **Not configured** (*default*)
     - **True** - Unicast response to multicast broadcast traffic is blocked.
     - **False**
 
   - **Global Ports Allow User Pref Merge (Device)**  
     CSP: [GlobalPortsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#GlobalPortsAllowUserPrefMerge)
 
-    - **Not configured** (*default*)  
-    - **True**  
+    - **Not configured** (*default*)
+    - **True**
     - **False** - Global port firewall rules in the local store are ignored and not enforced.
 
   - **Shielded (Device)**  
     CSP: [Shielded](/windows/client-management/mdm/firewall-csp#shielded)
 
-    - **Not configured** (*default*)  
+    - **Not configured** (*default*)
     - **True** - The server blocks all incoming traffic regardless of other policy settings.
     - **False**
 

@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Windows Antivirus policy settings from Microsoft Defender Antivirus for tenant attached devices | Microsoft Docs
 description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows devices managed by Configuration Manager. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune after you configure tenant attach for Configuration Manager.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 09/17/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: mattcall
@@ -38,7 +21,7 @@ View the Microsoft Defender Antivirus settings you can manage with the **Microso
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Not Configured** (*default*) - The setting is restored to the system default.
   - **No** Turns off the Microsoft Active Protection Service.
@@ -88,7 +71,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 - **Turn on real-time protection**  
   CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-  Require Defender on Windows 10/11 desktop devices to use the real-time Monitoring functionality.
+  Require Defender on Windows desktop devices to use the real-time Monitoring functionality.
   - **Not Configured** (*default*) - The setting is restored to the system default
   - **No** Turns off the real-time monitoring service.
   - **Yes** Turns on and runs the real-time monitoring service.
@@ -113,13 +96,13 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 - **Turn on behavior monitoring**  
   CSP: [AllowBehaviorMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
-  By default, Defender on Windows 10/11 desktop devices uses the Behavior Monitoring functionality.
+  By default, Defender on Windows desktop devices uses the Behavior Monitoring functionality.
 
   - **Not Configured** (*default*) - The setting is restored to the system default.
   - **No** Turns off behavior monitoring.
   - **Yes** Turns on real-time behavior monitoring.
 
-- **Allow Intrusion Prevention System**  
+- **Allow Intrusion Prevention System**
 
   Configure Defender to allow or disallow Intrusion Prevention functionality.
 
@@ -170,7 +153,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 
   Specify a number of days from zero to 90 that the system stores quarantined items  before they're automatically removed. A value of zero keeps items in quarantine and does not automatically remove them.
 
-- **Submit Samples Consent**  
+- **Submit Samples Consent**
 
   - **Not Configured** (*default*)
   - **Always prompt**
@@ -188,7 +171,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Enabled** - Detected items are blocked. They will show in history along with other threats.
   - **Audit mode** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
 
-- **Create a system restore point before computers are cleaned**  
+- **Create a system restore point before computers are cleaned**
   - **Not Configured** (*default*)
   - **No**
   - **Yes**
@@ -197,7 +180,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   CSP: [ThreatSeverityDefaultAction](/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
   Specify the action that Defender takes for detected malware based on the malware's threat level.
-  
+
   Defender classifies malware that it detects as one of the following severity levels:
   - **Low threat**
   - **Moderate threat**
@@ -281,18 +264,18 @@ Learn more
   - **Quick scan**
   - **Full scan**
 
-- **Day of week to run a scheduled scan**  
+- **Day of week to run a scheduled scan**
   - **Not Configured** (*default*)
 
-- **Time of day to run a scheduled scan**  
+- **Time of day to run a scheduled scan**
   - **Not Configured** (*default*)
 
-- **Check For Signature Updates Before Running Scan (Device)**  
+- **Check For Signature Updates Before Running Scan (Device)**
   - **Not Configured** (*default*)
   - **No**
   - **Yes**
 
-- **Randomize scheduled scan and security intelligence update start times**  
+- **Randomize scheduled scan and security intelligence update start times**
   -**Not Configured** (*default*)
   -**Yes**
   -**No**
@@ -313,16 +296,16 @@ Learn more
 
   - **Signature Update File Shares Sources (Device)**
 
-- **Security Intelligence Location (Device)**  
+- **Security Intelligence Location (Device)**
 
 ## User experience
 
-- **Block user access to Microsoft Defender app**  
+- **Block user access to Microsoft Defender app**
   - **Not Configured** (*default*)
   - **Not allowed** Prevents users from accessing UI.
   - **Allowed** Lets users access UI.
 
-- **Allow users to view the full History results**  
+- **Allow users to view the full History results**
   - **Not Configured** (*default*)
   - **Yes**
   - **No**

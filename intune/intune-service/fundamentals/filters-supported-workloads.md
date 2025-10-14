@@ -5,8 +5,7 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 07/28/2025
 ms.topic: reference
-ms.localizationpriority: high
-ms.reviewer: gokarthi
+ms.reviewer: mattcall
 ms.collection:
 - M365-identity-device-management
 ---
@@ -298,7 +297,6 @@ You can use filters for some common app policies on the following platforms. For
 | Update rings for Windows | ✅ |
 | &nbsp; | &nbsp; |
 | **Device configuration profile** | &nbsp; |
-| Administrative Templates | ✅ |
 | Custom | ✅ |
 | Derived credential | N/A |
 | Delivery optimization | ✅ |

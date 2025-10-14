@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Android Enterprise security configurations for personally-owned work profiles
-titleSuffix: Microsoft Intune
 description: Review example configurations of basic, enhanced, and high security for devices with Android Enterprise personally-owned work profiles.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/26/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure;
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -43,7 +23,7 @@ For more information on each policy setting, see:
 - [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md) > Personally owned
 
 > [!NOTE]
-> Because of the settings available for personally-owned work profile devices, there's no basic security (level 1) offering. The available settings don't justify a difference between level 1 and level 2. 
+> Because of the settings available for personally-owned work profile devices, there's no basic security (level 1) offering. The available settings don't justify a difference between level 1 and level 2.
 
 Tables in the following sections list only the settings that are included in these examples. Settings not listed in the tables aren't configured.
 
@@ -145,5 +125,5 @@ The level 3 settings include all the policy settings recommended for level 2. Ho
 ## Related articles
 
 [Configure security settings for fully managed devices](android-fully-managed-security-configurations.md)
- 
+
 

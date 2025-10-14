@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: macOS device compliance settings in Microsoft Intune
 description: View the device compliance settings for macOS devices that you can manage with Microsoft Intune compliance policies.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 09/5/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: tycast
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - compliance
 - sub-device-compliance
@@ -50,7 +33,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Device Health
 
-- **Require a system integrity protection**  
+- **Require a system integrity protection**
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Require macOS devices to have [System Integrity Protection](https://support.apple.com/HT204899) (opens Apple's web site) enabled.
 
@@ -72,11 +55,11 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ### Password
 
-- **Require a password to unlock devices**  
+- **Require a password to unlock devices**
   - **Not configured** (*default*)
   - **Require** Users must enter a password before they can access their device.
 
-- **Simple passwords**  
+- **Simple passwords**
   - **Not configured** (*default*) - Users can create passwords simple like **1234** or **1111**.
   - **Block** - Users can't create simple passwords, such as **1234** or **1111**.
 
@@ -106,7 +89,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ### Encryption
 
-- **Require encryption of data storage on device**  
+- **Require encryption of data storage on device**
   - **Not configured** (*default*)
   - **Require** - Use *Require* to encrypt data storage on your devices.
 
@@ -114,15 +97,15 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 Firewall protects devices from unauthorized network access. You can use Firewall to control connections on a per-application basis.
 
-- **Firewall**  
+- **Firewall**
   - **Not configured** (*default*) - This setting leaves the firewall turned off, and network traffic is allowed (not blocked).
   - **Enable** -  Use *Enable* to help protect devices from unauthorized access. Enabling this feature allows you to handle incoming internet connections, and use stealth mode.
 
-- **Incoming connections**  
+- **Incoming connections**
   - **Not configured** (*default*) - Allows incoming connections and sharing services.
   - **Block** - Block all incoming network connections except the connections required for basic internet services, such as DHCP, Bonjour, and IPSec. This setting also blocks all sharing services, including screen sharing, remote access, iTunes music sharing, and more.
 
-- **Stealth Mode**  
+- **Stealth Mode**
   - **Not configured** (*default*) - This setting leaves stealth mode turned off.
   - **Enable** - Turn on stealth mode to prevent devices from responding to probing requests, which can be made my malicious users. When enabled, the device continues to answer incoming requests for authorized apps.
 

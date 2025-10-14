@@ -1,16 +1,15 @@
 ---
-title: Create and assign an app protection policy
+title: Create and Assign an App Protection Policy
 description: In this article, you use Microsoft Intune to create and assign and app protection policy.
 ms.topic: how-to
 ms.date: 02/28/2025
 ms.reviewer: dagerrit
 ms.collection:
-- tier2
 - M365-identity-device-management
 - FocusArea_Apps_Protect
 ---
 
-# Step 9: Create and assign an app protection policy
+# Step 9: Create and Assign an App Protection Policy
 
 In this article, you use Intune to create and assign an app protection policy to a client app on an end user's device. Intune uses app protection policies to confirm that your apps are meeting your organization's data protection requirements.
 

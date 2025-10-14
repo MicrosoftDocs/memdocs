@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Use Windows Update for Business reports for Windows Updates in Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Use Windows Update for Business reports to view data for Windows Updates you deploy with Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 03/04/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: zadvor
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo

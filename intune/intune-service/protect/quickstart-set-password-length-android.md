@@ -1,38 +1,18 @@
 ---
-# required metadata
-
-title: Password compliance policy for Android Enterprise devices
-titleSuffix: Microsoft Intune
+title: Password Compliance Policy for Android Enterprise Devices
 description: In this topic, you will use Microsoft Intune to set the length of the password required for Android Enterprise devices.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 06/07/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-ms.assetid: 81b4fa08-5333-4c54-9f49-8db5f6984ed2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: andreibiswas
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
 - sub-device-compliance
-ms.custom: intune-azure
 ---
 
-# Step 6: Create a password compliance policy for Android Enterprise devices
+# Step 6: Create a Password Compliance Policy for Android Enterprise Devices
 
 In this topic, you'll use Microsoft Intune to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android Enterprise devices.
 
@@ -58,8 +38,8 @@ If you created an Intune Trial subscription, the account that created the subscr
 
 Create a device compliance policy to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android Enterprise devices.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Compliance**. 
-2. On the **Policies** tab, choose **Create policy**.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Compliance**.
+2. On the **Policies** tab, choose **Create policy**.
 3. For **Platform**, select **Android Enterprise**.
 
 4. For **Profile type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
@@ -80,7 +60,7 @@ When you've successfully created the policy, it appears in your list of device c
 
 ## Clean up resources
 
-When no longer needed, delete the policy. To do so, select the compliance policy and click **Delete**.  
+When no longer needed, delete the policy. To do so, select the compliance policy and click **Delete**.
 
 ## Next steps
 

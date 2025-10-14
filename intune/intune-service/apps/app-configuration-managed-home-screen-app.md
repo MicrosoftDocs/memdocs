@@ -1,16 +1,15 @@
 ---
-title: Configure the Microsoft Managed Home Screen app
+title: Configure the Microsoft Managed Home Screen App
 description: Learn how to configure the Microsoft Managed Home Screen app.
 ms.date: 09/05/2025
 ms.topic: how-to
 ms.reviewer: abigailstein
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Android
 ---
 
-# Configure the Microsoft Managed Home Screen app for Android Enterprise
+# Configure the Microsoft Managed Home Screen App for Android Enterprise
 
 The Managed Home Screen app is for corporate-owned Android Enterprise dedicated devices and fully managed, user-affiliated devices that are enrolled in Intune and run in multi-app kiosk mode. For these devices, the Managed Home Screen acts as the launcher for other approved apps to run on top of it. The Managed Home Screen provides IT admins the ability to customize their devices and to restrict the capabilities that the end user can access. For even more details, see [How to setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 

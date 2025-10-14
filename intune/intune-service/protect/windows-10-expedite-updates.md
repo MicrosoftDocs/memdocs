@@ -1,29 +1,13 @@
 ---
-# required metadata
-
 title: Use Intune to expedite Windows quality updates
 description: Use Microsoft Intune policy to expedite the installation of Windows updates on managed devices as soon as possible.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 02/20/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.localizationpriority: high
-ms.subservice: protect
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davguy;bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - sub-updates
 ---

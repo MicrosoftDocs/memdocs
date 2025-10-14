@@ -6,7 +6,6 @@ metadata:
   ms.topic: faq
   ms.collection:
   - M365-identity-device-management
-  - tier2
 
 title: Frequently asked questions about MAM and app protection
 summary: This article provides answers to some frequently asked questions on Intune mobile application management (MAM) and Intune app protection.
@@ -152,7 +151,7 @@ sections:
 
       - question: What is wipe?
         answer: |
-           [Wipe](../remote-actions/devices-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
+           [Wipe](../remote-actions/device-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
             >[!NOTE]
             > Wipe can only be achieved on devices enrolled with Intune mobile device management (MDM).
 

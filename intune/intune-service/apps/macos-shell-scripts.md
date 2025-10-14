@@ -1,16 +1,15 @@
 ---
-title: Use shell scripts on macOS devices in Microsoft Intune | Microsoft Docs
+title: Use Shell Scripts on macOS Devices in Microsoft Intune | Microsoft Docs
 description: Create, assign, monitor, and troubleshoot shell scripts for macOS devices in Microsoft Intune.
 ms.date: 08/08/2024
 ms.topic: how-to
 ms.reviewer: arnab
 ms.collection:
-- tier2
 - M365-identity-device-management
 - macOS
 ---
 
-# Use shell scripts on macOS devices in Intune
+# Use Shell Scripts on macOS Devices in Intune
 
 Use shell scripts to extend device management capabilities in Intune, beyond what is supported by the macOS operating system.
 

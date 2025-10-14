@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/21/2025
 ms.topic: upgrade-and-migration-article
-ms.localizationpriority: high
 ms.reviewer: dougeby
 ms.collection:
 - M365-identity-device-management
@@ -168,7 +167,7 @@ When data is stored on mobile devices, the data should be protected from acciden
 Some sample scenarios:
 
 - A device is lost or stolen, or no longer being used. A user leaves the organization.
-  - In Intune, you can [remove devices by using wipe, retire, or manually unenroll them](../remote-actions/devices-wipe.md). You can also automatically remove devices that haven't checked in with Intune for *x* number of days.
+  - In Intune, you can [remove devices by using wipe, retire, or manually unenroll them](../remote-actions/device-wipe.md). You can also automatically remove devices that haven't checked in with Intune for *x* number of days.
   - At the app level, you can [remove organization data from Intune-managed apps](../apps/apps-selective-wipe.md). A selective wipe is great for personal devices, as it keeps personal data on the device, and only removes organization data.
 
 - On personal devices, you might want to prevent users from copy/paste, taking screenshots, or forwarding emails. [App protection policies](../apps/app-protection-policy.md) can block these features on devices you don't manage.

@@ -1,6 +1,5 @@
 ---
-# required metadata
-title: Intune Data Warehouse Change log
+title: Intune Data Warehouse Change Log
 description: This topic provides a list of changes for the Microsoft Intune Data Warehouse API.
 ms.date: 11/18/2024
 ms.topic: reference
@@ -9,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Change log for the Intune Data Warehouse API
+# Change Log for the Intune Data Warehouse API
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -290,7 +289,7 @@ You can set up an application using Microsoft Entra ID and authenticate to the I
 - An Intune license is no longer required to be assigned to the user when accessing the Intune Data Warehouse (including the API).
 - The Intune role name has been changed from **Reports** to **Intune data warehouse**.
 
-    For more information, see [Microsoft Entra ID and Intune credential requirements](reports-api-url.md#azure-ad-and-intune-credential-requirements).
+    For more information, see [Microsoft Entra ID and Intune credential requirements](reports-api-url.md#microsoft-entra-id-and-intune-credential-requirements).
 
 ### OData query options <!-- 2077711 -->
 

@@ -1,6 +1,5 @@
 ---
 title: Add custom settings to macOS devices in Microsoft Intune
-titleSuffix:
 description: Import custom macOS settings into Microsoft Intune. These settings can create, use, and control custom settings and features on macOS devices. This custom profile can then be assigned or distributed to macOS devices in your organization to create a baseline or standard.
 author: MandiOhlinger
 ms.author: mandia

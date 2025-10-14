@@ -1,27 +1,12 @@
 ---
 title: Prerequisites the Microsoft Tunnel VPN for Microsoft Intune
 description: Review the prerequisites for installation and use of the Microsoft Tunnel Gateway. These include Linux servers, network, and firewall configurations.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 04/15/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ochukwunyere
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-infrastructure
 ---
@@ -61,7 +46,7 @@ Microsoft Tunnel is supported with the following sovereign cloud environments:
 
 - U.S. Government Community Cloud (GCC) High
 
-Microsoft Tunnel isn’t supported on Microsoft Azure operated by 21Vianet.
+Microsoft Tunnel isn't supported on Microsoft Azure operated by 21Vianet.
 
 For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
@@ -86,7 +71,7 @@ Set up a Linux based virtual machine or a physical server on which to install th
   | Ubuntu 22.04           | Docker CE               |                    |
   | Ubuntu 24.04           | Docker CE               |                    |
 
-  > [!IMPORTANT]  
+  > [!IMPORTANT]
   > In April of 2023, Ubuntu will end support for Ubuntu 18.04. With the end of support by Ubuntu, Intune will also end support for Ubuntu 18.04 for use with Microsoft Tunnel. For more information, see [https://wiki.ubuntu.com/Releases](https://wiki.ubuntu.com/Releases).
 
 - **Size the Linux server**: Use the following guidance to meet your expected use:
@@ -145,9 +130,9 @@ Set up a Linux based virtual machine or a physical server on which to install th
   - If you use a TLS certificate that isn't publicly trusted, you must push the entire trust chain to devices using an Intune *Trusted certificate* profile.
 
   - The TLS certificate can be in **PEM** or **pfx** format.
-  
+
   - To support the *TLS certificate revocation* health check, ensure the Online Certificate Status Protocol (OCSP) or certificate revocation list (CRL) address as defined by the TLS certificate is accessible from the server.
-  
+
   - Configure the Tunnel clients certificate with a key that is 2048-bits or larger. We recommend larger keys to help your deployment stay in support for future and evolving SSL/TLS requirements by various SSL/TLS library solutions.
 
     > [!TIP]
@@ -350,7 +335,7 @@ The following considerations can help you configure the Linux server and your en
   Environment="NO_PROXY=127.0.0.1,localhost"
   ```
 
-  > [!NOTE]  
+  > [!NOTE]
   > Microsoft Tunnel doesn't support Microsoft Entra application proxy, or similar proxy solutions.
 
 ### Configure an outbound proxy for Podman
@@ -381,7 +366,7 @@ The following details can help you configure an internal proxy when using Podman
   3. Restart the Tunnel Gateway server: Run `mst-cli server restart`
 
   Be aware that RHEL uses SELinux. Because a proxy that doesn't run on a SELinux port for *http_port_t* can require extra configuration, check on the use of SELinux managed ports for http. To view the configurations, run the following command: `sudo semanage port -l | grep "http_port_t"`
-  
+
   Example of the results of the port check command. In this example, the proxy uses 3128 and isn't listed:
 
   :::image type="content" source="./media/microsoft-tunnel-prerequisites/check-selinux-ports.png" alt-text="Screen shot that displays the results of the port check.":::
@@ -390,7 +375,7 @@ The following details can help you configure an internal proxy when using Podman
   - If your proxy does't run on a SELinux port for **http_port_t** as in the preceding example, you must make extra configurations.
 
     **If your proxy port is not listed for** ***http_port_t***, check if the proxy port is used by another service. Use the *semanage* command to first check the port that your proxy uses and then later if needed, to change it. To check the port your proxy uses, run: `sudo semanage port -l | grep "your proxy port"`
-  
+
     Example of the results of checking for a service that might use the port:
 
     :::image type="content" source="./media/microsoft-tunnel-prerequisites/check-service.png" alt-text="Screen shot that displays the results of the service check.":::
@@ -505,11 +490,11 @@ For more information about this tool, see [Reference for mst-cli](../protect/mic
 
 The readiness tool checks for the presence of the *auditd* package for Linux system auditing. Because *auditd* is optional and not required, the readiness script will return a warning when this package isn't detected.
 
-*Auditd* is installed by default by RHEL 7 and later versions, but might not be installed by default by Ubuntu distributions. When not present you can manually install it on the Linux server. 
+*Auditd* is installed by default by RHEL 7 and later versions, but might not be installed by default by Ubuntu distributions. When not present you can manually install it on the Linux server.
 
 For information on how to manually install this before installing Tunnel server, see [Linux system auditing](#linux-system-auditing) earlier in this article.
 
-To install auditd after installing Microsoft Tunnel, see [Install Linux system auditing after installing the Tunnel server](../protect/microsoft-tunnel-configure.md#install-linux-system-auditing-after-installing-the-tunnel-server) in Configure Micrfosoft Tunnel. 
+To install auditd after installing Microsoft Tunnel, see [Install Linux system auditing after installing the Tunnel server](../protect/microsoft-tunnel-configure.md#install-linux-system-auditing-after-installing-the-tunnel-server) in Configure Micrfosoft Tunnel.
 
 ### Manually load ip_tables
 

@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Create Mobile Threat Defense (MTD) app protection policy with Intune
-titleSuffix: Microsoft Intune
 description: Create Mobile Threat Defense (MTD) app protection policy with Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/20/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: demerson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -84,7 +64,7 @@ Use the procedure to [create an Application protection policy for Windows](../ap
 
   - **Block access**
   - **Wipe data**
-    
+
 - **Assignments**: Assign the policy to groups of users. The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
 
 > [!IMPORTANT]

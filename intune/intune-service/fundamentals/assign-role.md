@@ -5,9 +5,7 @@ author: brenduns
 ms.author: brenduns
 ms.date: 09/23/2025
 ms.topic: article
-ms.localizationpriority: high
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

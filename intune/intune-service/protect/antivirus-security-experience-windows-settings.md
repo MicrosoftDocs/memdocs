@@ -1,29 +1,11 @@
 ---
-# required metadata
-
 title: Antivirus policy settings for Windows Security experience policy for Microsoft Intune | Microsoft Docs
-description: Endpoint security Antivirus policy settings for the Windows Security app in Microsoft Intune 
-keywords:
+description: Endpoint security Antivirus policy settings for the Windows Security app in Microsoft Intune
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/28/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: mattcall
@@ -32,10 +14,11 @@ ms.reviewer: mattcall
 
 # Settings for the Windows Security experience profile in Microsoft Intune
 
-> [!NOTE]  
-> This article details the settings in the  Windows Security experience profile for the *Windows 10 and later* platform for endpoint security Antivirus policy. Beginning on April, 5 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
-View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Windows Security Experience profile for Windows 10 and later in Microsoft Intune.
+> [!NOTE]
+> This article details the settings in the  Windows Security experience profile for the *Windows 10 and later* platform for endpoint security Antivirus policy. Beginning on April, 5 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.
 
 **Windows Security**:
 
@@ -59,7 +42,7 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
     CSP: [HideRansomwareDataRecovery](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-hideransomwaredatarecovery)
 
     This setting is only available when *Hide the Virus and threat protection area in the Windows Security app* is set to *No* or *Not configured*.
-  
+
     - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
     - **Yes** - The ransomware data recovery area in the Windows Security app is hidden from end-users. Ransomware related notifications are suppressed.
     - **No** - Behavior is the same as *Not configured*.
@@ -91,7 +74,7 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The hardware protection area in the Windows Security app is hidden from end-users. Hardware protection-related notifications will be suppressed.
   - **No** - Behavior is the same as *Not configured*.
-  
+
 - **Hide the Device performance and health area in the Windows Security app**  
   CSP: [DisableHealthUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablehealthui)
 
@@ -122,7 +105,7 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
   - **Not configured** (*default*) - The setting returns the client to the default, which is to show the icon.
   - **Yes** - Hide the Windows Security icon from the notification area.
   - **No** - Behavior is the same as *Not configured*.
-  
+
 - **Disable the Clear TPM option in the Windows Security app**  
   CSP: [DisableClearTpmButton](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter)
 

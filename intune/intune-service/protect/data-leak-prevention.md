@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Prevent data leaks on non-managed devices
-titleSuffix: Microsoft Intune
 description: Allow access to corporate data on devices and protect data from data leaks using Microsoft Intune.
-keywords: data protection prevent leaks device M365 Microsoft 365
 ms.author: dougeby
 author: dougeby
-manager: dougeby
 ms.date: 01/02/2018
 ms.topic: archived
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-ms.assetid: b1512c3a-3bbd-4111-a0df-c874a0a335df
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: pchacon
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-data-privacy
 ---

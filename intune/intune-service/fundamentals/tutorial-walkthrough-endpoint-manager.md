@@ -1,11 +1,10 @@
 ---
-title: Tutorial - Walkthrough the Microsoft Intune admin center
+title: Tutorial - Walkthrough the Microsoft Intune Admin Center
 description: In this tutorial, you will tour Microsoft Intune in the Microsoft Intune admin center to better understand how to accomplish tasks.
 author: nicholasswhite
 ms.author: nwhite
 ms.date: 02/04/2025
 ms.topic: tutorial
-ms.localizationpriority: high
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management
@@ -13,7 +12,7 @@ ms.collection:
 - essentials-manage
 ---
 
-# Tutorial: Walkthrough Microsoft Intune admin center
+# Tutorial: Walkthrough Microsoft Intune Admin Center
 
 Microsoft Intune provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. Intune helps you ensure that your company's devices, apps, and data meet your company's security requirements. You have the control to set which requirements need to be checked and what happens when those requirements aren't met. The [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is where you can find the Microsoft Intune service, as well as other device management related settings. Understanding the features available in Intune will help you accomplish various Mobile Device Management (MDM) and Mobile Application Management (MAM) tasks.
 

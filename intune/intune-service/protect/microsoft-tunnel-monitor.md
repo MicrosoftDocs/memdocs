@@ -1,27 +1,12 @@
 ---
 title: Monitor the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Monitor the status of Microsoft Tunnel Gateway, a VPN server that runs on Linux. Microsoft Tunnel enables your Intune managed cloud-based devices to reach your on-premises infrastructure.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 10/14/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ochukwunyere
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-infrastructure
 ---
@@ -93,7 +78,7 @@ Default values for server health metrics:
   - *Healthy* - The TLS certificate isn't revoked.
   - *Warning* - Unable to check if the TLS certificate is revoked. Ensure the endpoints defined in the certificate can be accessed from the Tunnel server.
   - *Unhealthy* - The TLS certificate is revoked.
-  
+
   Plan to replace a revoked TLS certificate.
 
   To learn more about Online Certificate Status Protocol (OCSP), see [Online Certificate Status Protocol](https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol) at wikipedia.org.
@@ -302,7 +287,7 @@ The following are known issues for Microsoft Tunnel.
   \t\t<> main /usr/sbin/mstunnel_monitor Message: NA
   ```
 
-- Server:  
+- Server:
   ```
   Error executing Checkup
   Error details

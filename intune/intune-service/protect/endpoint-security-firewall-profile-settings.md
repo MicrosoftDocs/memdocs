@@ -1,29 +1,11 @@
 ---
-# required metadata
-
 title: Intune endpoint security firewall settings | Microsoft Docs
-description: Endpoint security firewall policy settings for Windows and macOS in Microsoft Intune 
-keywords:
+description: Endpoint security firewall policy settings for Windows and macOS in Microsoft Intune
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/19/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: laarrizz
@@ -36,8 +18,10 @@ View the settings you can configure in profiles for *Firewall* policy in the end
 Applies to:
 
 - macOS
-- Windows 10
-- Windows 11
+- Windows
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!NOTE]
 >
@@ -52,7 +36,7 @@ Supported platforms and profiles:
 - **macOS**:
   - Profile: **macOS firewall**
 
-- **Windows 10 and later**:
+- **Windows**:
   - Profile: **Windows Firewall**
 
 ## macOS firewall profile
@@ -65,7 +49,7 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
 
   - **Not configured** (*default*)
   - **Yes** - Enable the firewall.
-  
+
   When set to *Yes*, you can configure the following settings.
 
   - **Block all incoming connections**
@@ -104,9 +88,9 @@ The following settings are configured as [Endpoint Security policy for Windows F
   CSP: [MdmStore/Global/SaIdleTime](/windows/client-management/mdm/firewall-csp#saidletime)
 
   Specify a time in seconds between 300 and 3600, for how long the security associations are kept after network traffic isn't seen.
-  
+
   If you don't specify any value, the system deletes a security association after it's been idle for 300 seconds.
-  
+
 - **Preshared key encoding**  
   CSP: [MdmStore/Global/PresharedKeyEncoding](/windows/client-management/mdm/firewall-csp#presharedkeyencoding)
 
@@ -116,7 +100,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **None**
   - **UTF8**
 
-- **No exemptions for Firewall IP sec**  
+- **No exemptions for Firewall IP sec**
   - **Not configured** (*default*) - When not configured, you'll have access to the following IP sec exemption settings that you can configure individually.
   - **Yes** - Turn off all Firewall IP sec exemptions. The following settings aren't available to configure.
 
@@ -153,7 +137,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **Attempt**
   - **Require**
 
-- **Require keying modules to only ignore the authentication suites they don’t support**  
+- **Require keying modules to only ignore the authentication suites they don't support**  
   CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](/windows/client-management/mdm/firewall-csp#opportunisticallymatchauthsetperkm)
 
   - **Not configured** (*default*)
@@ -194,7 +178,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - The machine is put into *shielded mode*, which isolates it from the network. All traffic is blocked.
     - **No**
 
-  - **Block unicast responses to multicast broadcasts**  
+  - **Block unicast responses to multicast broadcasts**
       CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow unicast responses.
@@ -207,7 +191,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - User notification is suppressed when an application is blocked by an inbound rule.
     - **No** - User notifications are allowed.
 
-  - **Block outbound connections**  
+  - **Block outbound connections**
 
     *This setting applies to Windows version 1809 and later*.
     CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
@@ -246,7 +230,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - All firewall rules in the local store are ignored.
     - **No** - The firewall rules in the local store are honored.
 
-  - **Ignore connection security rules**
+  - **Ignore connection security rules**  
     CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
@@ -277,7 +261,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - The machine is put into *shielded mode*, which isolates it from the network. All traffic is blocked.
     - **No**
 
-  - **Block unicast responses to multicast broadcasts**  
+  - **Block unicast responses to multicast broadcasts**
       CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow unicast responses.
@@ -290,7 +274,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - User notification is suppressed when an application is blocked by an inbound rule.
     - **No** - User notifications are allowed.
 
-  - **Block outbound connections**  
+  - **Block outbound connections**
 
     *This setting applies to Windows version 1809 and later*.
     CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
@@ -329,7 +313,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - All firewall rules in the local store are ignored.
     - **No** - The firewall rules in the local store are honored.
 
-  - **Ignore connection security rules**
+  - **Ignore connection security rules**  
     CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
@@ -360,7 +344,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - The machine is put into *shielded mode*, which isolates it from the network. All traffic is blocked.
     - **No**
 
-  - **Block unicast responses to multicast broadcasts**  
+  - **Block unicast responses to multicast broadcasts**
       CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow unicast responses.
@@ -373,7 +357,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - User notification is suppressed when an application is blocked by an inbound rule.
     - **No** - User notifications are allowed.
 
-  - **Block outbound connections**  
+  - **Block outbound connections**
 
     *This setting applies to Windows version 1809 and later*.
     CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
@@ -412,7 +396,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **Yes** - All firewall rules in the local store are ignored.
     - **No** - The firewall rules in the local store are honored.
 
-  - **Ignore connection security rules**
+  - **Ignore connection security rules**  
     CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
@@ -433,12 +417,12 @@ The following settings are configured as [Endpoint Security policy for Windows F
 - **Description**  
   Provide a description of the rule.
 
-- **Direction**  
+- **Direction**
   - **Not configured** (*default*) - This rule defaults to outbound traffic.
   - **Out** - This rule applies to outbound traffic.
   - **In** -  This rule applies to inbound traffic.
 
-- **Action**  
+- **Action**
   - **Not configured** (*default*) - The rule defaults to allow traffic.
   - **Blocked** - Traffic is blocked in the *Direction* you've configured.
   - **Allowed** - Traffic is allowed in the *Direction* you've configured.
@@ -488,7 +472,7 @@ Specify the local and remote ports to which this rule applies:
   - **Local area network**
   - **Not configured**
   - **Mobile Broadband** - This option replaces use of the previous entry for Mobile Broadband, which is deprecated and no longer supported.
-  - **[Not Supported] Mobile Broadband** - Do not use this option, which is the original Mobile Broadband option. This option no longer functions correctly. Replace use of this option with the newer version of *Mobile Broadband*.  
+  - **[Not Supported] Mobile Broadband** - Do not use this option, which is the original Mobile Broadband option. This option no longer functions correctly. Replace use of this option with the newer version of *Mobile Broadband*.
 
 - **Authorized users**  
   [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
@@ -504,7 +488,7 @@ Specifies the local and remote addresses to which this rule applies:
   - **Yes** - Support any local address and don't configure an address range.
 
 - **Local address ranges**  
-  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)
 
   Manage local address ranges for this rule. You can:
   - **Add** one or more addresses as a comma-separated list of local addresses that are covered by the rule.
@@ -525,7 +509,7 @@ Specifies the local and remote addresses to which this rule applies:
   - **Yes** - Support any remote address and don't configure an address range.
 
 - **Remote address ranges**  
-  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)
 
   Manage remote address ranges for this rule. You can:
   - **Add** one or more addresses as a comma-separated list of remote addresses that are covered by the rule.

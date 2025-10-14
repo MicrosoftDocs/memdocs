@@ -1,15 +1,14 @@
 ---
-title: How to use Intune in environments without Google Mobile Services
+title: How to Use Intune in Environments Without Google Mobile Services
 description: Learn how to use Intune in environments without Google Mobile Services.
 ms.date: 10/28/2024
 ms.topic: how-to
 ms.reviewer: priyar
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# How to use Intune in environments without Google Mobile Services
+# How to Use Intune in Environments Without Google Mobile Services
 
 Microsoft Intune uses Google Mobile Services (GMS) to communicate with the Microsoft Intune company portal when managing Android devices. In some cases, devices can temporarily or permanently not have access to GMS. For example, a device might ship without GMS, or the device might be connecting to a closed network where GMS isn't available. This document summarizes the differences and limitations you can observe when installing and using Intune to manage Android devices without GMS.
 

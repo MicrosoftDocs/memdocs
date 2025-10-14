@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Use Microsoft Intune policies to manage macOS software updates
 description: Use Microsoft Intune to manage system updates for supervised macOS devices.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 07/23/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-updates
@@ -59,7 +41,7 @@ This feature applies to:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    > [!TIP]  
+    > [!TIP]
     > For more information on managing software updates and the update experience on devices, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/guide/deployment/depafd2fad80/1/web/1.0) at Apple's Platform Deployment site.
 
 2. Select **Devices** > **Update policies for macOS** > **Create profile**.
@@ -68,7 +50,7 @@ This feature applies to:
 
 4. On the **Update policy settings** tab, configure the following options:
 
-   :::image type="content" source="./media/software-updates-macos/macos-update-policy-settings.png" alt-text="Screen capture of the Update policy settings page.":::  
+   :::image type="content" source="./media/software-updates-macos/macos-update-policy-settings.png" alt-text="Screen capture of the Update policy settings page.":::
 
    1. For *Critical*, *Firmware*, *Configuration file*, and *All other updates (OS, built-in apps)*, the following installation actions can be configured:
 
@@ -76,7 +58,7 @@ This feature applies to:
 
       - **Download only**: Download the software update without installing it.
 
-      - **Install immediately**: Download the software update and trigger the restart countdown notification. This action is recommended for userless devices. 
+      - **Install immediately**: Download the software update and trigger the restart countdown notification. This action is recommended for userless devices.
 
       - **Notify only**: Download the software update and notify the user through System Settings.
 
@@ -84,8 +66,8 @@ This feature applies to:
 
         When you configure *Install later* for *All other updates (OS, built-in-apps), the following settings are also available:
 
-        - **Max User Deferrals**:  
-        When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it's installed. The system prompts the user once a day. Available for devices running macOS 12 and later. 
+        - **Max User Deferrals**:
+        When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it's installed. The system prompts the user once a day. Available for devices running macOS 12 and later.
 
         - **Priority**: When the *All other updates* update type is configured to *Install later*, specify *Low* or *High* values for the scheduling priority for downloading & preparing minor OS updates. Available for devices running macOS 12.3 and later.
 
@@ -120,10 +102,10 @@ This feature applies to:
 
    If you don't configure times to start or end, the configuration results in no restriction and updates can be installed at any time.
 
-   > [!TIP]  
+   > [!TIP]
    > You can deploy a settings catalog policy to hide an update from device users for a specified period of time on your supervised macOS devices. For more information, see the following section [Delay visibility of updates](#delay-visibility-of-updates).
 
-   <!-- 
+   <!--
    > You can configure settings in a [Settings Catalog](../protect/software-updates-ios.md#delay-visibility-of-software-updates) policy to hide an update from device users for a period of time on your supervised macOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
    >
    > When you use a device restriction to hide an update, review your software update policies to ensure they won't schedule the installation of the update before that restriction period ends. Software update policies install updates based on their own schedule, regardless of the update being hidden or visible to the device user.
@@ -142,7 +124,7 @@ This feature applies to:
 
 8. On the **Review + create** tab, review the settings, and then select **Create** when ready to save your macOS update policy. Your new policy is displayed in the list of update policies for macOS.
 
-> [!NOTE]  
+> [!NOTE]
 > Apple Mobile Device Management (MDM) doesn't allow you to force a device to install updates by a certain time or date. You can't use Intune software update policies to downgrade the OS version on a device.
 
 ## Delay visibility of updates
@@ -172,7 +154,7 @@ You can edit an existing policy, including changing the restricted times:
 
 3. After introducing a change, select **Review + save** > **Save** to save your edits.
 
-> [!NOTE]  
+> [!NOTE]
 > If the **Start time** and **End time** are both set to 12 AM, Intune doesn't check for restrictions on when to install updates. Any configurations you have for **Select times to prevent update installations** are ignored, and updates can install at any time.
 
 ## Configure more macOS software update settings using the Settings Catalog
