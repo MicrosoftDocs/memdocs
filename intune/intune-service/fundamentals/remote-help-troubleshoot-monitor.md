@@ -65,7 +65,7 @@ Use the table in this section to troubleshoot common issues with Remote Help on 
   | Check if                      | Solution                                           |
   |-----------------------------------|-----------------------------------------------|
   | The device meets the requirements for Remote Help | See [Plan Remote Help](remote-help-plan.md#supported-platforms) for details. |
-  | The device has network access to the required endpoints | See [Network endpoints for Remote Help](remote-help-plan.md#network-endpoints-for-remote-help) for details. |
+  | The device has network access to the required endpoints | See [Network endpoints for Remote Help](remote-help-plan.md#network-considerations) for details. |
   | The Intune Win32 app detection rule (if used) is correct | Incorrect version detection can cause Intune to think the app is already installed or never installed. See [Deploy Remote Help](remote-help-deploy.md) for details. |
   | The device is in *do not disturb* mode | If the device is in *do not disturb* mode, notifications for Remote Help session requests won't be shown. Disable *don't disturb* mode and try again or ask the sharer to check their notifications pane. |
 
