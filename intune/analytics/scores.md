@@ -15,10 +15,6 @@ Endpoint analytics exposes score charts which include information about what aff
 
 ## Prerequisites
 
-::: zone-end
-:::column-end:::
-:::row-end:::
-
 :::row:::
 :::column span="1":::
 [!INCLUDE [platform](../includes/requirements/rbac.md)]
