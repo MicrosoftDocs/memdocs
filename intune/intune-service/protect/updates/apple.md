@@ -24,14 +24,12 @@ This article explains how to configure update policies in Intune using Apple's D
 :::row:::
 :::column span="1":::
 [!INCLUDE [platform-requirements](../../includes/prerequisites/platform-requirements.md)]
----
 :::column-end:::
 :::column span="3":::
 > This feature applies to the following platforms:
 >
 > - iOS/iPadOS 17.0 and later
 > - macOS 14.0 and later
----
 :::column-end:::
 :::row-end:::
 
