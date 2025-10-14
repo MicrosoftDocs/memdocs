@@ -664,7 +664,7 @@ For information about recent changes for Windows Telemetry, see [Changes to Wind
   - **Not configured**: (default): Intune doesn't change or update this setting. No setting is forced. Users choose the level that's submitted. By default, the OS might not share any data.
   - **Diagnostic data off**: Not recommended.
   - **Required**: Sends basic device information, including quality-related data, app compatibility, and other similar data to keep the device secure and up-to-date.
-  - **Enhanced (1903 and earlier)**: Additional insights, including how Windows, Windows Server, System Center, and apps are used, how they perform, advanced reliability data, and data from the **Required** level. For newer devices, the device is set to **Required**.
+  - **Enhanced (1903 and earlier)**: Additional insights, including how Windows, Windows Server, System Center, and apps are used, how they perform, advanced reliability data, and data from the **Required** level. For newer OS versions, the device is set to **Required**.
   - **Optional**: All data necessary to identify and help to fix problems, plus data from the **Required** and **Enhanced** level.
 
   [System/AllowTelemetry CSP](/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
