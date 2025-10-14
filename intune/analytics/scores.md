@@ -13,7 +13,7 @@ Endpoint analytics exposes score charts which include information about what aff
 - Baselines
 - Insights and recommendations
 
-[!INCLUDE [rbac-requirements](../includes/h2/rbac-requirements.md)]
+### RBAC requirements
 
 > [!div class="checklist"]
 > To access endpoint analytics reports, you need an account with at least one of the following Intune roles:

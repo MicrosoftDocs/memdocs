@@ -18,17 +18,17 @@ Configure endpoint analytics in Intune by creating a data collection policy and 
 
 Configure endpoint analytics in Configuration Manager by enabling data upload, turning on data collection for devices. Then, adjust settings in the Intune admin center that define your analytics experience.
 
-**Co-managed devices:** We recommend [using Intune to enroll them into endpoint analytics](?pivots=intune). You don't need to move co-management workloads to Intune for enrollment. When co-management is enabled, enrolled devices send required functional data directly to the Microsoft cloud.
+**Co-managed devices:** We recommend [using Intune for configuration](?pivots=intune). You don't need to shift co-management workloads to Intune. When co-management is enabled, enrolled devices automatically send the required functional data to the Microsoft cloud.
 
 ::: zone-end
 
 **Before you start:** Check the [requirements](index.md#requirements)  to confirm your environment meets prerequisites.
 
-[!INCLUDE [rbac-requirements](../includes/h2/rbac-requirements.md)]
+### RBAC requirements
 
 > [!div class="checklist"]
 >
-> To configure endpoint analytics and enroll devices, you need an account with at least one of the following Intune roles:
+> To configure for endpoint analytics, you need an account with at least one of the following Intune roles:
 >
 > - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
 > - A [custom role][INT-RC] that includes:
@@ -120,13 +120,11 @@ To review the current configuration of endpoint analyticss:
 
 When you share anonymized data and aggregate metrics, your organization helps keep the *All organizations (median)* baseline current.
 
-You can revoke consent to share this data at any time. When you do:
+You can revoke consent to share this data at any time. Before revoking consent, consider the impact on your reports and insights:
 
 - Reports that rely on shared data—such as startup performance insights—are disabled.
 - Existing report data becomes stale immediately, and no new data is added.
 - Historical data remains visible for up to 60 days, after which it's removed.
-
-Before revoking consent, consider the impact on your reports and insights.
 
 To revoke consent:
 
@@ -149,7 +147,7 @@ To create a custom baseline and adjust the regression threshold:
 
 You can create up to 20 baselines per tenant. Delete old baselines when they're no longer needed.
 
-## Enroll devices in endpoint analytics and review collected data
+## Review collected data
 
 After devices receive the data collection policy, they begin sending data to endpoint analytics. The service processes and calculates the data before displaying results. It can take up to **24 hours after a restart** for data to appear in reports.
 

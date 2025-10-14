@@ -94,11 +94,7 @@ For more information and troubleshooting proxy configurations, see [Troubleshoot
 :::column-end:::
 :::row-end:::
 
-
-
-
-
-[!INCLUDE [licensing-requirements](../includes/h3/licensing-requirements.md)]
+### Licensing requirements
 
 ::: zone pivot="intune"
 
@@ -139,8 +135,6 @@ Endpoint analytics organizes insights into reports that highlight performance an
 - Startup performance: Identifies devices with slow boot times and contributing factors.
 - Application reliability: Tracks app crashes and stability trends.
 - Restart frequency: Highlights devices that restart often, signaling potential hardware or software issues.
-- Battery health: Shows battery degradation and charging patterns for portable devices.
-- Recommended software: Suggests apps that improve productivity based on usage patterns.
 
 ## Next Steps
 
