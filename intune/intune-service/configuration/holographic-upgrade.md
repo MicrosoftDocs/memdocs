@@ -3,7 +3,7 @@ title: Upgrade to Windows Holographic for Business in Microsoft Intune
 description: Upgrade HoloLens (first gen) to Windows 10 Holographic for Business using a device configuration profile in Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 04/16/2024
+ms.date: 10/14/2025
 ms.topic: reference
 ms.collection:
 - M365-identity-device-management
@@ -28,6 +28,7 @@ For more information on this feature, see [Upgrade Windows editions or enable S 
 
 ## Before you begin
 
+- [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 - [Create a Windows client edition upgrade and mode switch device configuration profile](edition-upgrade-configure-windows-10.md#create-the-profile).
 - When you create a Windows client edition upgrade and mode switch device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
@@ -41,5 +42,4 @@ For more information on this feature, see [Upgrade Windows editions or enable S 
 ## Related articles
 
 - [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
-
 - Create edition upgrade profiles for [Windows](edition-upgrade-windows-settings.md) devices.

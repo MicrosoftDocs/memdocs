@@ -25,8 +25,8 @@ In Intune, you can bulk activate eSIM codes using the following options:
 
 | Option | Platform support | Description |
 | --- | --- | --- |
-| **Import activation codes using a CSV file <br/> (this article)** | ✅ Windows 11 (**supported, but not recommended**) - [Use an eSIM download server](esim-device-configuration-download-server.md) instead<br/> <br/>✅ Windows 10 <br/>| In an eSIM policy, import one-time-use activation codes. The eSIM hardware uses the activation codes to contact the mobile operator, download the eSIM policy, and configure cellular activation. <br/><br/>Requires individual activation codes given to you by the mobile operator. |
-| **[eSIM download server](esim-device-configuration-download-server.md)** | ✅ Windows 11 (**recommended**) <br/><br/>❌  Windows 10 | In a settings catalog policy, add your mobile operator's download server FQDN. The device contacts the download server, authenticates, and receives eSIM connection info. <br/><br/>No individual activation codes needed. |
+| **Import activation codes using a CSV file <br/> (this article)** | :::image type="icon" source="../../media/icons/tables/check.svg" border="false"::: Windows 11 (**supported, but not recommended**) - [Use an eSIM download server](esim-device-configuration-download-server.md) instead<br/> <br/>:::image type="icon" source="../../media/icons/tables/check.svg" border="false"::: Windows 10 <br/>| In an eSIM policy, import one-time-use activation codes. The eSIM hardware uses the activation codes to contact the mobile operator, download the eSIM policy, and configure cellular activation. <br/><br/>Requires individual activation codes given to you by the mobile operator. |
+| **[eSIM download server](esim-device-configuration-download-server.md)** | :::image type="icon" source="../../media/icons/tables/check.svg" border="false"::: Windows 11 (**recommended**) <br/><br/>:::image type="icon" source="../../media/icons/tables/error.svg" border="false":::  Windows 10 | In a settings catalog policy, add your mobile operator's download server FQDN. The device contacts the download server, authenticates, and receives eSIM connection info. <br/><br/>No individual activation codes needed. |
 
 This article describes how to import the activation codes in bulk, and then deploy these codes to your eSIM-capable devices. This feature is in [public preview](../fundamentals/public-preview.md).
 
@@ -35,16 +35,16 @@ This article describes how to import the activation codes in bulk, and then depl
 
 ## Prerequisites
 
-To deploy eSIM to your devices using Intune, the following are needed:
+To deploy eSIM to your devices using Intune, you need the following prerequisites:
 
-- **eSIM capable devices**, like the Surface LTE. To determine if your Windows device supports eSIM, go to [Use an eSIM to get a cellular data connection on your Windows PC](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). If you're unsure if your devices support eSIM, then you can also contact your device manufacturer.
-- A Windows device
+- **Windows** devices that are enrolled and MDM managed by Intune. For information on the enrollment options for Windows devices, go to [Windows enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
 
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
+- **eSIM capable devices**, like the Surface LTE. To determine if your Windows device supports eSIM, go to [Use an eSIM to get a cellular data connection on your Windows PC](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). If you're unsure if your devices support eSIM, then you can also contact your device manufacturer.
+
 - **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
-- The device must be enrolled and MDM managed by Intune. For information on the enrollment options for Windows devices, go to [Windows enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Deploy eSIM to devices - overview
