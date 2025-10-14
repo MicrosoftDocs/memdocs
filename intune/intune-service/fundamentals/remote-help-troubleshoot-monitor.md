@@ -92,12 +92,11 @@ Microsoft Edge WebView2 is required to use Remote Help. If you get an error mess
 
 ### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
-- On Android, if the device is not visible for Remote Help or the app is not functioning, ensure the device is enrolled as Dedicated. COPE/COBO devices are not currently supported by Remote Help – trying to use it on unsupported enrollment types will not work.
-
 If a Remote Help session for Android is unable to connect, check for the following possibilities:
 
   | Check if                      | Solution                                           |
   |-----------------------------------|-----------------------------------------------|
+  | The device is enrolled in Dedicated mode. | OPE/COBO devices are not currently supported by Remote Help – trying to use it on unsupported enrollment types will not work. |
   | The device has been newly enrolled with Intune. | On newly enrolled devices, push notifications (needed for Remote Help to receive session initiation requests) may take a while to start working. Wait for 15 minutes and try again later.|
   | The Remote Help app isn't installed. | Install the app, see [Deploy Remote Help](remote-help-deploy.md) for details. |
   | All the required permissions have been granted to the Remote Help app. | Review and ensure that all required permissions are granted. See [Plan Remote Help](remote-help-plan.md#prerequisites) for details. |
