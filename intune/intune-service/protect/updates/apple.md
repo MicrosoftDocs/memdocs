@@ -130,12 +130,10 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 
 ## Monitor software updates
 
-To monitor software updates for Apple devices, use the following methods:
+Software update policy settings use the same reporting as other device configuration policies. For more information, see [Monitor device configuration policies](../../configuration/device-profile-monitor.md).
 
-- DDM software updates use the same reporting as device configuration policies. For more information, see [Monitor device configuration policies](../../configuration/device-profile-monitor.md).
-
-  > [!IMPORTANT]
-  > A policy that reports Success only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update. After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
+A policy that reports *Success* only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update.\
+After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
 
 ## Related articles
 

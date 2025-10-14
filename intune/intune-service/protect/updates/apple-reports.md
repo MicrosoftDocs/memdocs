@@ -28,14 +28,22 @@ Available reports include:
 
 To learn more about the Apple declarative device management process, see [Installing and enforcing software updates for Apple devices](https://support.apple.com/guide/deployment/installing-and-enforcing-software-updates-depd30715cbb/web) in the Apple documentation.
 
-Applies to:
+## Prerequisites
 
-- iOS 17 and later
-- iPadOS 17 and later
-- macOS 13 and later
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform-requirements](../../includes/prerequisites/platform-requirements.md)]
+:::column-end:::
+:::column span="3":::
+> This feature applies to the following platforms:
+>
+> - iOS/iPadOS 17.0 and later
+> - macOS 13.0 and later
+:::column-end:::
+:::row-end:::
 
 > [!NOTE]
-> With the availability of the declarative software update report for macOS, the previously available report for macOS devices named Software updates is now deprecated. This report remains available as *Software updates (deprecated)* when you go to *Devices* in the admin center and select a macOS device. While this report remains available for use in the Intune admin center, its being removed in a future update.
+> With the availability of the declarative software update report for macOS, the previously available report for macOS devices named *Software updates* is deprecated. This report remains available as *Software updates (deprecated)* when you go to *Devices* in the admin center and select a macOS device. While this report remains available for use in the Intune admin center, it will be removed in a future update.
 
 ## Per-device software update report
 
