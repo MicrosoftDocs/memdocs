@@ -27,10 +27,6 @@ This article describes the different [managed device properties](#managed-device
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-## Before you begin
-
-- [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
 ## Managed device properties
 
 You can use the following device properties in your managed device filter rules:
