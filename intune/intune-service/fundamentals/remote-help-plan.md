@@ -43,17 +43,17 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 
 When planning for Remote Help, consider:
 
-- **Enforce Least Privilege**: Only grant the minimum Remote Help permissions needed for each support role. Use custom Intune roles if necessary to limit who can take full control or perform unattended sessions 2. For example, level-1 support might get view-only rights, while tier-2 gets full control rights. This principle helps protect user privacy and device integrity.
+- **Enforce Least Privilege**: Only grant the minimum Remote Help permissions needed for each support role. Use custom Intune roles if necessary to limit who can take full control or perform unattended sessions. For example, level-1 support might get view-only rights, while tier-2 gets full control rights. This principle helps protect user privacy and device integrity.
 - **Use Conditional Access for Helpers**: Since helpers have elevated access into user devices, add an extra layer of security. Requiring MFA or compliant device status for helper accounts via Conditional Access is highly recommended. These measures ensure that a compromised helper account can't easily be used maliciously to access devices. Entra ID Conditional Access policies for Remote Help are only supported on Windows and macOS.
 - **Enable Unenrolled Device Support Only If Needed**: Allowing Remote Help on unenrolled devices (Entra registered only) is convenient for supporting personal devices, but it comes with reduced oversight (no device compliance info or limited audit data). Enable that feature thoughtfully and consider limiting which support staff can help unenrolled devices (perhaps via separate roles).
-- **Network and Firewall**: Verify that corporate network policies don't interfere with Remote Help. The app communicates over port 443 to Azure cloud endpoints. If your users are on a corporate network, ensure proxy or SSL inspection doesn't break the connection. If your proxy servers are using SSL inspection, the domains listed for Remote Help should be excluded to avoid issues).
-- **Support for Government Cloud is reduced**: Remote Help is supported in Government Community Cloud (GCC) environments on except in Azure Virtual Desktop (AVD). Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
-- **Cross-Tenant support is not available**: Remember, you can't use Remote Help across different Microsoft Entra tenants.
+- **Network and Firewall**: Verify that corporate network policies don't interfere with Remote Help. The app communicates over port 443 to Azure cloud endpoints. If your users are on a corporate network, ensure proxy or SSL inspection doesn't break the connection. If your proxy servers are using SSL inspection, the domains listed for Remote Help should be excluded to avoid issues. For more information, see [Network endpoints for Remote Help](intune-endpoints.md#remote-help).
+- **Support for Government Cloud is reduced**: Remote Help is supported in Government Community Cloud (GCC) environments except in Azure Virtual Desktop (AVD). Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
+- **Remote Help sharers, helpers and devices must be in the same tenant**: Remote Help's integration with compliance policies and role-based access control (RBAC) requires all participants to be in the same tenant.
   > [!NOTE]
-  > Lack of cross tenant support can affect outsourced helpdesk scenarios. Consider a scenario where your user's (sharers) device belongs to tenant A, but the helper's device belongs to tenant B (in the case where they're using a device issued by their outsourcing organization). As a workaround, consider supplying devices joined to your tenant A to the helpdesk, or consider providing them with access to Windows 365 or AVD devices joined to tenant A.
+  > This can affect outsourced helpdesk scenarios where helpdesk admins are working across tenants. Consider a scenario where your user's (sharers) device belongs to tenant A, but the helper's device belongs to tenant B (in the case where they're using a device issued by their outsourcing organization). As a workaround, consider supplying devices joined to your tenant A to the helpdesk, or consider providing them with access to Windows 365 or AVD devices joined to tenant A.
 - **Combine with Endpoint Analytics**: Use the data from Remote Help sessions to identify common issues. For example, if many sessions show compliance warnings, perhaps improve your device compliance policies. Remote Help's audit logs combined with Intune's Endpoint Analytics might give insights into support trends (like frequently problematic apps or policies).
 - **Keep the Remote Help apps up to date**: On Windows and Mac, new versions bring improvements and required fixes. Microsoft might enforce upgrades for older versions. Use autoupdate on both platforms (Windows Update, Mac via Microsoft AutoUpdate) or regularly push the latest package via Intune after testing. For Android, updates come through the Play Store automatically if you approved the app – monitor that devices are getting the latest version during your regular maintenance windows.
-- **Plan for Privacy and Compliance**: Remote Help can raise privacy questions. Assure stakeholders that Remote Help requires user consent and doesn't give IT silent access by default. All sessions are consensual and visibly indicated on the user's screen. No session recordings are stored in the service. These points can be included in your internal IT policies or user guides to address concerns. Unattended access on Android should be used sparingly.
+- **Plan for Privacy and Compliance**: Remote Help can raise privacy questions. Assure stakeholders that Remote Help requires user consent or in the case of Android unattended Remote Help, clearly indicates a remote session is active. All sessions are consensual and visibly indicated on the user's screen. No session recordings are stored in the service. These points can be included in your internal IT policies or user guides to address concerns. Unattended access on Android should be used sparingly.
 - **Rollout in Phases**: If possible, deploy Remote Help in a pilot phase. Start with IT or a small department to work out any issues. Gather feedback from both helpers and users. Once confident, expand to the whole organization. A phased approach can prevent overwhelming the helpdesk with unexpected technical issues.
 
 ## Remote Help capabilities
@@ -70,7 +70,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 - **Compliance Warnings**: Before a helper connects to a user's noncompliant device, the helper is shown a warning. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
-If the user's device that they're trying to connect to isn't enrolled, the helper sees a prompt that the user's device is unenrolled.
+  If the user's device that they're trying to connect to isn't enrolled, the helper sees a prompt that the user's device is unenrolled.
 
 - **Conditional Access**: Administrators can now utilize Conditional Access capability when setting up policies and conditions for Remote Help. For more information on setting up Conditional Access, go to [Setup Conditional Access for Remote Help](remote-help-deploy.md#set-up-conditional-access-for-remote-help).
 
@@ -97,13 +97,13 @@ These are the different modes:
 
 This table shows the mode support by helper app and sharer app.
 
-|Sharer app|Windows native|Windows web|macOS web|
+| |Helping from:</br>Windows native|Helping from:</br>Windows web|Helping from:</br>macOS web|
 |---|---|---|---|
-|Windows native|✅ View only</br>✅ Full Control</br>✅ Elevation|Unsupported|Unsupported|
-|macOS native|Unsupported|✅ View only</br>✅ Full Control|✅ View only</br>✅ Full Control|
-|Android native|Unsupported|✅ View only</br>✅ Full Control</br>✅ Unattended|✅ View only</br>✅ Full Control</br>✅ Unattended|
-|macOS webapp|Unsupported|✅ View only|✅ View only</br>|
-|Windows webapp|Unsupported|✅ View only|✅ View only</br>|
+|Sharing from:</br>Windows native|✅ View only</br>✅ Full Control</br>✅ Elevation|Unsupported|Unsupported|
+|Sharing from:</br>macOS native|Unsupported|✅ View only</br>✅ Full Control|✅ View only</br>✅ Full Control|
+|Sharing from:</br>Android native|Unsupported|✅ View only</br>✅ Full Control</br>✅ Unattended|✅ View only</br>✅ Full Control</br>✅ Unattended|
+|Sharing from:</br>macOS webapp|Unsupported|✅ View only|✅ View only</br>|
+|Sharing from:</br>Windows webapp|Unsupported|✅ View only|✅ View only</br>|
 
 For information on deploying the Remote Help apps, see [Deploy Remote Help](remote-help-deploy.md).
 
@@ -183,15 +183,15 @@ We don't recommend remotely starting a session to users on Azure virtual desktop
 Remote Help is supported on the following Android Enterprise devices enrolled in dedicated mode:
 
 - Samsung Knox devices
+  - The device must have Samsung Knox. For a list of Knox compatible devices, see [Device Compatibility Knox Solutions](https://www.samsungknox.com/knox-platform/supported-devices) (opens Samsung's website). Samsung devices without Knox work for screen share, but don't work in full control or unattended mode.
 - Zebra devices
   - Running MX version 8.3 or higher
   - Unattended control is only supported on MX version 9.3 and higher
+  - Set up Zebra OEMConfig for your tenant. For more details, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md)
 
 - Set up Managed Google Play for your tenant. For more information, go to [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md)
 - Install the Intune app on devices with a version higher than 5.0.5541.0
 - Devices must NOT have device configuration policy set to block Screen capture
-- Samsung devices only: The device must have Knox. For a list of Knox compatible devices, see [Device Compatibility Knox Solutions](https://www.samsungknox.com/knox-platform/supported-devices) (opens Samsung's website). Samsung devices without Knox work for screen share, but don't work in full control or unattended mode.
-- Zebra devices only: Set up Zebra OEMConfig for your tenant. For more details, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md)
 
 ### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web App**](#tab/webapp)
 

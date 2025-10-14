@@ -46,7 +46,7 @@ Remote Help logs data during installation and during Remote Help sessions, which
 
 ### [Windows](#tab/windows)
 
-**Installation of Remote Help** - When Remote Help installs or uninstalls, the following two logs are created in the device users' Temp folder, for example, `C:\Users\<username>\AppData\Local\Temp`. The \* in the log file name represents a date and time stamp of when the log was created.
+**Installation of Remote Help** - When Remote Help installs or uninstalls, the following two logs are created in the device users' Temp folder, for example, `C:\Users\<username>\AppData\Local\Temp`. The `*` in the log file name represents a date and time stamp of when the log was created.
 
 - Remote_help_*_QuickAssist_Win10_x64.msi.log
 - Remote_help_*.log
@@ -57,7 +57,11 @@ Remote Help logs data during installation and during Remote Help sessions, which
 
 ### [macOS](#tab/macos)
 
+
+
 ### [Android](#tab/android)
+
+---
 
 ## Troubleshoot
 
@@ -132,7 +136,6 @@ If a Remote Help session for Android is unable to connect, check for the followi
 - If using Edge, it may require the sharer to sign in to Edge before starting a session or the device is reported as Unenrolled.
 
 - SSO must be enabled for the tenant to use the Remote Help web app.
-
 
 ## Next steps
 
