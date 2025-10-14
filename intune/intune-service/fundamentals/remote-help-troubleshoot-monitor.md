@@ -60,7 +60,14 @@ Remote Help logs data during installation and during Remote Help sessions, which
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
-- If Remote Help app on Windows won't install or silently fails, ensure the device meets OS requirements (Windows build, etc.) and has TLS 1.2 network connectivity. Also check that the Intune Win32 app detection rule (if used) is correct (incorrect version detection can cause Intune to think the app is already installed or never installed).
+Use the table in this section to troubleshoot common issues with Remote Help on Windows devices.
+
+  | Check if                      | Solution                                           |
+  |-----------------------------------|-----------------------------------------------|
+  | The device meets the requirements for Remote Help | See [Plan Remote Help](remote-help-plan.md#supported-platforms) for details. |
+  | The device has network access to the required endpoints | See [Network endpoints for Remote Help](remote-help-plan.md#network-endpoints-for-remote-help) for details. |
+  | The Intune Win32 app detection rule (if used) is correct | Incorrect version detection can cause Intune to think the app is already installed or never installed. See [Deploy Remote Help](remote-help-deploy.md) for details. |
+  | The device is in *do not disturb* mode | If the device is in *do not disturb* mode, notifications for Remote Help session requests won't be shown. Disable *do not disturb* mode and try again or ask the sharer to check their notifications pane. |
 
 #### Troubleshooting Remote Help on Windows for Edge WebView2
 
@@ -88,11 +95,17 @@ Microsoft Edge WebView2 is required to use Remote Help. If you get an error mess
 
 ### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
-- Mac users having trouble should verify they installed the app from Company Portal and approved permissions. If using the web app, note it only allows view access, which might confuse helpers expecting control.
+Use the table in this section to troubleshoot common issues with Remote Help on macOS devices.
+
+  | Check if                      | Solution                                           |
+  |-----------------------------------|-----------------------------------------------|
+  | Single-sign on is configured and active | If unenrolled devices support isn't enabled, the Entra Enterprise single-sign on extention must be configured and registered for Intune to be able to confirm the device is enrolled. See [Plan Remote Help](remote-help-plan.md#prerequisites) for details. |
+  | The required operating system permissions for *Accessibility* and *Screen sharing* have been allowed | See [Plan Remote Help](remote-help-deploy.md?tabs=macos#configure-remote-help-apps) for details. |
+  | Whether the sharer is using the native Remote Help app or the web app | The web app only allows view access, which might confuse helpers expecting control. |
 
 ### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
-If a Remote Help session for Android is unable to connect, check for the following possibilities:
+Use the table in this section to troubleshoot common issues with Remote Help on Android devices.
 
   | Check if                      | Solution                                           |
   |-----------------------------------|-----------------------------------------------|
@@ -113,8 +126,8 @@ If a Remote Help session for Android is unable to connect, check for the followi
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
-- For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service isn't running.
-- After the user's device is restarted, there's a delay for the service to start. You can either manually wait for the service to start (30 minutes after restart), or manually start the service through services.msc.
+- For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the *Microsoft Intune Management Service* isn't running.
+- After the user's device is restarted, there's a short delay for the *Microsoft Intune Management Service* to start. Either wait for the *Microsoft Intune Management Service* to start or ask the sharer to open the app and share the code.
 - For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
 
 ### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
