@@ -87,6 +87,21 @@ When designing your Apple device update strategy, align with your organization's
 
 ---
 
+## Software Update Settings
+
+When you configure software updates, you might want to manage aspects of the software update process leading up to the enforcement of an update. Using Software Update Settings policies, you can configure various settings that control how users can interact with software updates on their devices. These settings include the ability to:
+
+- Require that an admin or standard user can perform updates on the device.
+- Control how users can manually interact with software update settings like automatic download and install or the behavior of Rapid Security Responses.
+- Hide updates from users for a specified time period.
+- Suppress update notifications up to one hour before the enforcement deadline.
+- Control whether users are allowed to update to the latest major update, latest minor update, or are offered both.
+
+For more information about configuring Software Update Settings policies and the available settings, see [Software Update Settings](../../configuration/apple-settings-catalog-configurations.md#software-update-settings).
+
+<!--
+
+
 ## Policy precedence
 
 When both DDM and MDM update policies are configured, DDM settings take precedence. If a device receives both DDM and MDM update instructions, the DDM policy overrides MDM behavior—potentially rendering MDM update policies ineffective.
@@ -105,19 +120,6 @@ When both DDM and MDM update policies are configured, DDM settings take preceden
 > [!WARNING]
 > Avoid configuring conflicting DDM and MDM policies. Doing so may lead to unexpected results or policy enforcement gaps.
 
-## Software Update Settings
-
-When you configure software updates, you might want to manage aspects of the software update process leading up to the enforcement of an update. Using Software Update Settings policies, you can configure various settings that control how users can interact with software updates on their devices. These settings include the ability to:
-
-- Require that an admin or standard user can perform updates on the device.
-- Control how users can manually interact with software update settings like automatic download and install or the behavior of Rapid Security Responses.
-- Hide updates from users for a specified time period.
-- Suppress update notifications up to one hour before the enforcement deadline.
-- Control whether users are allowed to update to the latest major update, latest minor update, or are offered both.
-
-For more information about configuring Software Update Settings policies and the available settings, see [Software Update Settings](../../configuration/apple-settings-catalog-configurations.md#software-update-settings).
-
-<!--
 ## Delay visibility of updates using MDM
 
 When you configure DDM software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
