@@ -47,7 +47,7 @@ landingContent:
             url: 2409/33926600.md
           - text: KB 34503790 Revised security update for Microsoft Configuration Manager
             url: 2503/34503790.md
-          - text: KB 35360093 CMG security update for Microsoft Configuration Manager
+          - text: KB 35360093 Administration service and CMPivot security update for Microsoft Configuration Manager
             url: 2409/35360093.md
   - title: Configuration Manager 2403
     linkLists:
