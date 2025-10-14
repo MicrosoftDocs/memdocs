@@ -23,7 +23,7 @@ This article explains how to configure update policies in Intune using Apple's D
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform-requirements](../../includes/prerequisites/platform-requirements.md)]
+[!INCLUDE [platform](../../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature applies to the following platforms:
