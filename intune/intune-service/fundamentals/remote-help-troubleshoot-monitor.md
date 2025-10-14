@@ -53,10 +53,15 @@ Remote Help logs data during installation and during Remote Help sessions, which
 
 ## Troubleshoot
 
-- If a helper sees a message "Remote Help isn't enabled for this tenant" or can't start a session, double-check licensing and that the feature was enabled in Tenant Admin. It can take up to 30 minutes (or a few hours in some cases) after assigning licenses for the service to activate.
-- If the "New Remote Assistance Session" option isn't visible for a helper in Intune, ensure the helper's account is in the Intune role with Remote Help permissions and the "Offer remote assistance" permission (or try reassigning the role).
-- A session failing to connect (after code entry) with a permission error likely indicates the helper's RBAC scope doesn't cover that user/device. Verify the scope group includes the target user/device and that the helper has the needed permission (for example, trying to take full control but their role only allows view).
-- If the session displays a white screen while attempting to connect, verify that all network requirements are properly configured and that no required endpoints are being blocked.
+Use the table in this section to troubleshoot common issues with Remote Help.
+
+  | Check if                      | Solution                                           |
+  |-----------------------------------|-----------------------------------------------|
+  | Remote Help is enabled for the tenant | In the Intune admin center, go to **Tenant administration** > **Remote Help** and ensure that Remote Help is enabled. It can take up to 30 minutes (or a few hours in some cases) after assigning licenses for the service to activate. |
+  | The helper and sharer are using supported platforms and versions | See [Plan Remote Help](remote-help-plan.md#supported-platforms) for details. |
+  | The helper has the required permissions | The helper must be assigned to an Intune role with Remote Help permissions and have the "Offer remote assistance" permission. See [Assign Remote Help permissions to helpers](remote-help-plan.md#role-based-access-control-rbac) for details. |
+  | The helper and sharer are signing in with organizational accounts from the same tenant | Both the helper and sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization. |
+  | The helper and sharer have network access to the required endpoints | See [Network endpoints for Remote Help](remote-help-plan.md#network-considerations) for details. |
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
@@ -82,13 +87,13 @@ You might see an error code in a dialog box if you're having trouble installing 
 Use these steps to resolve these issues:
 
 1. Ensure that Microsoft Edge is installed properly and is up to date.
-
+  
   Remote Help uses the Microsoft Edge browser control. If you have problems, the common troubleshooting tips here may help get Remote Help working. Learn more about [Troubleshooting tips for installing and updating Microsoft Edge.](https://support.microsoft.com/microsoft-edge/troubleshooting-tips-for-installing-and-updating-microsoft-edge-a5eceb94-c2b1-dfab-6569-e79d0250317b)
   
   After installing or updating Microsoft Edge, try opening Remote Help again. If Remote Help doesn't run or you get an error message that Microsoft Edge WebView2 isn't installed, go to the next step.
 
 1. Install Microsoft Edge WebView 2
-
+  
   Microsoft Edge WebView2 is required to use Remote Help. If you get an error message that WebView2 isn't installed when you try to open Remote Help, then [download and install Microsoft Edge WebView2](https://developer.microsoft.com/microsoft-edge/webview2/consumer/?form=MA13LH) from the Microsoft website. When WebView2 is installed, try opening Remote Help again.
 
   > [!NOTE]
