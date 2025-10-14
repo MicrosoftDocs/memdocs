@@ -24,7 +24,7 @@ Configure endpoint analytics in Configuration Manager by enabling data upload, t
 
 ## Prerequisites
 
-**Before you start:** Check the [requirements](index.md#requirements)  to confirm your environment meets prerequisites.
+**Before you start:** Check the [requirements](index.md#prerequisites)  to confirm your environment meets prerequisites.
 
 ::: zone-end
 :::column-end:::

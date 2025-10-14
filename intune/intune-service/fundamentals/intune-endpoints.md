@@ -186,7 +186,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 ## Endpoint analytics
 
-For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../../analytics/index.md#-network-and-connectivity-requirements).
+For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../../analytics/index.md#prerequisites).
 
 ## Microsoft Defender for Endpoint
 

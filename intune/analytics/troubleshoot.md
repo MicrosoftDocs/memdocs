@@ -80,8 +80,8 @@ If the overview page shows a startup performance score of zero with a banner sho
 
 First, ensure devices meet the prerequisites:
 
-- [Prerequisites for Intune managed devices](index.md?pivots=intune#requirements)
-- [Prerequisites for Configuration Manager managed devices](index.md?pivots=cm#requirements)
+- [Prerequisites for Intune managed devices](index.md?pivots=intune#prerequisites)
+- [Prerequisites for Configuration Manager managed devices](index.md?pivots=cm#prerequisites)
 
 For Intune or co-managed devices configured with the Intune data collection policy:
 
@@ -101,10 +101,7 @@ For Configuration Manager-managed devices:
 
 ## Proxy server authentication
 
-If your environment uses a proxy server, configure your proxy server to allow the endpoints listed under [network and connectivity requirements](index.md?pivots=intune#-network-and-connectivity-requirements). Depending on how your devices are managed, see the following sections for the required endpoints:
-
-- [Intune-managed devices](index.md?pivots=intune#-network-and-connectivity-requirements)
-- [Configuration Manager-managed devices](index.md?pivots=cm#-network-and-connectivity-requirements)
+If your environment uses a proxy server, configure your proxy server to allow the endpoints listed under [network and connectivity requirements](index.md?pivots=intune#prerequisites).
 
 Ensure that the proxy server doesn't block the data because of authentication. If your proxy doesn't allow devices to send this data, they won't show in endpoint analytics.
 

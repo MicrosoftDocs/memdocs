@@ -11,7 +11,7 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 
 Before contacting Microsoft Support, first review the following articles:
 
-- [Requirements](index.md#requirements)
+- [Prerequisites](index.md#prerequisites)
 - [Troubleshoot endpoint analytics](troubleshoot.md)
 
 ## Help and support

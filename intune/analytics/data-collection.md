@@ -23,7 +23,7 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
 1. Devices send required functional data.
 
-    - For Intune and co-managed devices with the assigned policy, devices send required functional data in near real-time directly to the Microsoft Endpoint Management Service in the Microsoft public cloud where is processed every 24 hours. For more information, see [Network and connectivity requirements](index.md#-network-and-connectivity-requirements).
+    - For Intune and co-managed devices with the assigned policy, devices send required functional data in near real-time directly to the Microsoft Endpoint Management Service in the Microsoft public cloud where is processed every 24 hours. For more information, see [Network and connectivity requirements](index.md#prerequisites).
 
     - For Configuration Manager-managed devices, data flows to the Microsoft Endpoint Management Service through the ConfigMgr [tenant attach](../configmgr/tenant-attach/device-sync-actions.md) connector. Devices don't need direct access to the Microsoft public cloud, but the ConfigMgr connector is cloud attached and requires connection to an Intune tenant. Devices send data to the Configuration Manager Server role every 24 hours, and the connector sends data to the Gateway Service every hour. For more information, see [Tenant attach data collection](../configmgr/tenant-attach/data-collection.md)
 
