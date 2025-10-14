@@ -3,7 +3,7 @@ title: Restrict devices features using policy in Microsoft Intune
 description: Add a device configuration profile to restrict features on Android device administrator, Android Enterprise, AOSP, macOS, iOS, iPadOS, and Windows 10/11 client devices in Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 08/19/2024
+ms.date: 10/14/2025
 ms.topic: how-to
 ms.reviewer: mikedano
 ms.collection:
@@ -12,8 +12,6 @@ ms.collection:
 ---
 
 # Configure device restriction settings in Microsoft Intune
-
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
@@ -52,14 +50,8 @@ This article shows you how to create a device restrictions profile. You can also
         - **iOS/iPadOS**
         - **macOS**
         - **Windows 10 and later**
-        - **Windows 8.1 and later**
 
     - **Profile type**: Select **Device restrictions**. Or, select **Templates** > **Device restrictions**.
-
-      To create a device restrictions profile for Windows Team devices, like Surface Hub, then select **Device restrictions (Windows 10 Team)**.
-
-      > [!IMPORTANT]
-      > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -74,10 +66,7 @@ This article shows you how to create a device restrictions profile. You can also
     - [Android](device-restrictions-android-for-work.md)
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
-    - [Windows 8.1](device-restrictions-windows-8-1.md)
     - [Windows](device-restrictions-windows-10.md)
-    - [Windows 10 Team](device-restrictions-windows-10-teams.md)
-    - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
 8. Select **Next**.
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, like `US-NC IT Team` or `JohnGlenn_ITDepartment`. For information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
