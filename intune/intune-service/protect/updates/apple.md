@@ -30,8 +30,6 @@ This article explains how to configure update policies in Intune using Apple's D
 >
 > - iOS/iPadOS 17.0 and later
 > - macOS 14.0 and later
->
-> For more information, see [Software Update](../../configuration/apple-settings-catalog-configurations.md#software-update).
 :::column-end:::
 :::row-end:::
 
@@ -86,6 +84,8 @@ When designing your Apple device update strategy, align with your organization's
     > Assignment filters are not supported for DDM-based policies.
 
 ---
+
+For more information about configuring Software Update policies and the available settings, see [Software Update](../../configuration/apple-settings-catalog-configurations.md#software-update).
 
 ## Software Update Settings
 
