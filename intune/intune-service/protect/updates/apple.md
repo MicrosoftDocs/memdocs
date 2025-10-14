@@ -141,6 +141,8 @@ After devices have updated to a later OS version than configured in the policy, 
 - [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
 - [Declarative Apple software update reports in Intune](apple-reports.md)
 
+To learn more about the Apple declarative device management process, see [Installing and enforcing software updates for Apple devices](https://support.apple.com/guide/deployment/installing-and-enforcing-software-updates-depd30715cbb/web) in the Apple documentation.
+
 <!--
 ## DDM software updates vs MDM software update policies
 
