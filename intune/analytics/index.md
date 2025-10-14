@@ -71,6 +71,7 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 > |-----------|-----------|
 > | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
 >
+>For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
 ::: zone-end
 
 ::: zone pivot="cm"
@@ -88,8 +89,9 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 > |-----------|-----------|
 > | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
 >
-::: zone-end
 >For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
+::: zone-end
+
 :::column-end:::
 :::row-end:::
 
