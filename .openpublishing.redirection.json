@@ -1,7 +1,11 @@
 {
   "redirections": [
 
-
+    {
+      "source_path": "intune/intune-service/fundamentals/intune-legacy-pc-client.md",
+      "redirect_url": "/intune/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager",
+      "redirect_document_id": false
+    },
     {
       "source_path": "intune/intune-service/copilot/security-copilot-surface-portal.md",
       "redirect_url": "/surface/security-copilot-surface-management-portal",
