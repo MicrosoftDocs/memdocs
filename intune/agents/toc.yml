@@ -1,0 +1,19 @@
+items:
+- name: Security Copilot Agents
+  items:
+  - name: Overview
+    href: index.md
+  - name: Configure an agent in Intune
+    href: configure.md
+  - name: Approver agent
+    items:
+    - name: Use the approver agent
+      href: approver.md
+  - name: Device lifecycle agent
+    items:
+    - name: Use the device lifecycle agent
+      href: device-lifecycle.md
+  - name: Policy agent
+    items:
+    - name: Use the policy agent
+      href: policy.md
