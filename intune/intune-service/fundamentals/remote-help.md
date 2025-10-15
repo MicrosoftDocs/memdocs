@@ -40,6 +40,8 @@ The Remote Help app supports the following capabilities in general across the su
 
   For unenrolled devices, auditing the Remote Help sessions is limited.
 
+- **Web app for sharers** - In situations where the Sharer needs assistance but is unable to install the native application for macOS or Windows, the Sharer can use the Web App to share their screen to a helper. This web app provides view only capabilities to the helper, allowing them to guide the user through resolving issues.
+
 ## Platform-specific capabilities
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
@@ -54,15 +56,16 @@ The Remote Help app supports the following capabilities in general across the su
   
   :::image type="content" source="media/remote-help/remote-help-unenrolled.png" alt-text="A screenshot of the opion to enable unenrolled devices":::
 - **Conditional access support**: You can use Conditional Access policies to control how helpers and sharers access Remote Help. For example, you can require multifactor authentication (MFA) for helpers or restrict access to specific locations or compliant devices.
-- **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages).
+- **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages-for-chat).
+- **Web app for sharers** - In situations where the Sharer needs assistance but is unable to install the native application for macOS, the Sharer can use the Web App to share their screen to a helper. This web app provides view only capabilities to the helper, allowing them to guide the user through resolving issues.
 
 ### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
+- **Conditional access support**: You can use Conditional Access policies to control how helpers and sharers access Remote Help. For example, you can require multifactor authentication (MFA) for helpers or restrict access to specific locations or compliant devices.
+- **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages-for-chat).
 - **Optional support for unenrolled devices**: This setting is turned off by default. For Windows and macOS devices, enabling this option allows help to be provided to devices that aren't enrolled in Intune. This setting doesn't apply to devices used by helpers.
   
   :::image type="content" source="media/remote-help/remote-help-unenrolled.png" alt-text="A screenshot of the opion to enable unenrolled devices":::
-- **Conditional access support**: You can use Conditional Access policies to control how helpers and sharers access Remote Help. For example, you can require multifactor authentication (MFA) for helpers or restrict access to specific locations or compliant devices.
-- **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages).
 
 ### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
