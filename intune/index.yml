@@ -175,7 +175,7 @@ conceptualContent:
           url: ./intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md
         - text: Analyze endpoint performance with Intune cloud attachment
           itemType: how-to-guide
-          url: ./analytics/enroll-configmgr.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json#bkmk_prereq
+          url: ./analytics/configure.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json
         - text: Follow the interactive guide to co-managing workloads
           itemType: how-to-guide
           url: https://www.microsoft.com/microsoft-365/business-insights-ideas/resources/what-is-endpoint-management?slide=15#/SystemConfig?slide=15
