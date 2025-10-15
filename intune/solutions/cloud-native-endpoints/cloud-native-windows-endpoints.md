@@ -103,14 +103,14 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   To assign licenses, go to [Assign Microsoft Intune licenses](../../intune-service/fundamentals/licenses-assign.md).
 
   > [!NOTE]
-  > Both types of licenses are typically included with licensing bundles, like Microsoft 365 E3 (or A3) and higher. View comparisons of M365 licensing [here](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
+  > Both types of licenses are typically included with licensing bundles, like Microsoft 365 E3 (or A3) and higher. View comparisons of Microsoft 365 licensing [here](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
 
 ### Step 3 - Import your test device
 
 To test the cloud-native Windows endpoint, we need to start by getting a virtual machine or physical device ready for testing. The following steps get the device details and upload them into the Windows Autopilot service, which are used later in this article.
 
 > [!NOTE]
-> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Windows Autopilot on your behalf as part of purchasing. There is more information about Windows Autopilot in [Phase 5](#phase-5--deploy-at-scale-with-windows-autopilot).
+> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Windows Autopilot on your behalf as part of purchasing. There's more information about Windows Autopilot in [Phase 5](#phase-5--deploy-at-scale-with-windows-autopilot).
 
 1. Install Windows (preferably 20H2 or later) in a virtual machine or reset physical device so that it's waiting at the OOBE setup screen. For a virtual machine, you can optionally create a checkpoint.
 
@@ -134,7 +134,7 @@ To test the cloud-native Windows endpoint, we need to start by getting a virtual
    - `Get-WindowsAutopilotInfo.ps1 -GroupTag CloudNative -Online`
 
    > [!NOTE]
-   > Group Tags allow you to create dynamic Microsoft Entra groups based on a subset of devices. Group Tags can be set when importing devices or changed later in the Microsoft Intune admin center. We'll use the Group Tag *CloudNative* in Step 4. You can set the tag name to something different for your testing.
+   > Group Tags allow you to create dynamic Microsoft Entra groups based on a subset of devices. Group Tags can be set when importing devices or changed later in the Microsoft Intune admin center. We use the Group Tag *CloudNative* in Step 4. You can set the tag name to something different for your testing.
 
 9. When prompted for credentials, sign in with your Intune Administrator account.
 
@@ -163,7 +163,7 @@ To limit the configurations from this guide to the test devices that you import 
 6. Select **OK** > **Save** > **Create**.
 
 > [!TIP]
-> Dynamic groups take a few minutes to populate after changes occur. In large organizations, it [can take much longer](/entra/identity/users/groups-troubleshooting#troubleshooting-dynamic-memberships-for-groups). After creating a new group, wait a few minutes before you check to confirm the device is now a member of the group.
+> Dynamic groups take a few minutes to populate after changes occur. In large organizations, it [can take longer](/entra/identity/users/groups-troubleshooting#troubleshooting-dynamic-memberships-for-groups). After creating a new group, wait a few minutes before you check to confirm the device is now a member of the group.
 >
 > For more information about dynamic groups for devices, go to [Rules for devices](/entra/identity/users/groups-dynamic-membership#rules-for-devices).
 
@@ -209,7 +209,7 @@ The sync takes several minutes and continues in the background. When the sync is
 
 We've selected a few settings to configure. These settings demonstrate an optimal Microsoft 365 end-user experience on your Windows cloud-native device. These settings are configured using a device configuration settings catalog profile. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../intune-service/configuration/settings-catalog.md).
 
-After you've created the profile and added your settings, assign the profile to the **Autopilot Cloud-Native Windows Endpoints** group created previously.
+After you created the profile and added your settings, assign the profile to the **Autopilot Cloud-Native Windows Endpoints** group created previously.
 
 - **Microsoft Outlook**
   To improve the first run experience for Microsoft Outlook, the following setting automatically configures a profile when Outlook is opened for the first time.
@@ -281,7 +281,7 @@ Some things to check out on your new cloud-native Windows endpoint:
 - Consider testing access from the device to on-premises resources like file shares, printers, and intranet sites.
 
   > [!NOTE]
-  > If you haven't set up [Windows Hello for Business Hybrid](/windows/security/identity-protection/hello-for-business/hello-identity-verification#hybrid-deployments), you might be prompted on Windows Hello logons to enter passwords to access on-premises resources. To continue testing single sign on access you can configure Windows Hello for Business Hybrid or logon to the device with username and password rather than Windows Hello. To do so, select the key shaped icon on the logon screen.
+  > If you haven't set up [Windows Hello for Business Hybrid](/windows/security/identity-protection/hello-for-business/hello-identity-verification#hybrid-deployments), you might be prompted on Windows Hello logons to enter passwords to access on-premises resources. To continue testing single sign on access, you can configure Windows Hello for Business Hybrid or logon to the device with username and password rather than Windows Hello. To do so, select the key shaped icon on the logon screen.
 
 ## Phase 3 – Secure your cloud-native Windows endpoint
 
@@ -308,7 +308,7 @@ In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Poli
 
 - Allow Behavior Monitoring: **Allowed. Turns on real-time behavior monitoring.**
 - Allow Cloud Protection: **Allowed. Turns on Cloud Protection.**
-- Allow Email Scanning : **Allowed. Turns on email scanning.**
+- Allow Email Scanning: **Allowed. Turns on email scanning.**
 - Allow scanning of all downloaded files and attachments: **Allowed.**
 - Allow Realtime Monitoring: **Allowed. Turns on and runs the real-time monitoring service.**
 - Allow Scanning Network Files: **Allowed. Scans network files.**
@@ -329,7 +329,7 @@ In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Poli
 
 [!INCLUDE [graph-explorer-introduction](../../intune-service/includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **_MSLearn_Example_Windows - Defender Antivirus** under **Endpoint Security** > **Antivirus**.
+This creates a policy in your tenant with the name **_MSLearn_Example_Windows - Defender Antivirus** under **Endpoint Security** > **Antivirus**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
@@ -355,7 +355,7 @@ Microsoft Defender Firewall can detect a trusted network using the [NetworkListM
 Using the *domain* network profile allows you to separate firewall rules based on a trusted network, a private network, and a public network. These settings can be applied using a Windows custom profile.
 
 > [!NOTE]
-> Microsoft Entra joined endpoints cannot leverage LDAP to detect a domain connection in the same way that domain-joined endpoints do. Instead, use the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager) to specify a TLS endpoint that when accessible will switch the endpoint to the *domain* firewall profile.
+> Microsoft Entra joined endpoints can't use LDAP to detect a domain connection in the same way that domain-joined endpoints do. Instead, use the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager) to specify a TLS endpoint that when accessible, switches the endpoint to the *domain* firewall profile.
 
 ### BitLocker Encryption
 
@@ -371,7 +371,7 @@ When you configure the following BitLocker settings, they silently enable 128-bi
 **BitLocker**:
 
 - Require Device Encryption: **Enabled**
-- Allow Warning For Other Disk Encryption: **Disabledd**
+- Allow Warning For Other Disk Encryption: **Disabled**
   - Allow Standard User Encryption: **Enabled**
 - Configure Recovery Password Rotation: **Refresh on for Azure AD-joined devices**
 
@@ -383,7 +383,7 @@ When you configure the following BitLocker settings, they silently enable 128-bi
 **Operating System Drives**:
 
 - Enforce drive encryption type on operating system drives: **Enabled**
-  - Select the encryption type: (Device) : **Used Space Only encryption**
+  - Select the encryption type (Device): **Used Space Only encryption**
 - Require additional authentication at startup: **Enabled**
   - Allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive): **False**
   - Configure TPM startup key and PIN: **Allow startup key and PIN with TPM**
@@ -434,7 +434,7 @@ Windows Local Administrator Password Solution (LAPS) is one of the features you 
 > [!IMPORTANT]
 > Windows LAPS assumes that the default local administrator account is enabled, even if it's renamed or if you create another local admin account. Windows LAPS doesn't create or enable any local accounts for you unless you configure [Automatic account management mode](/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode).
 >
-> You need to create or enable any local accounts separately from configuring Windows LAPS. You can script this task or use the Configuration Service Providers (CSP's), such as the [Accounts CSP](/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
+> You need to create or enable any local accounts separately from configuring Windows LAPS. You can script this task or use the Configuration Service Providers (CSPs), such as the [Accounts CSP](/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
 
 1. Make sure your Windows devices have the April 2023 (or later) security update installed.
 
@@ -544,7 +544,7 @@ You can customize and set a standard start and taskbar layout using Intune.
   - For more information about start and taskbar customization, go to [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
   - To create a start and taskbar layout, go to [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
 
-  After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](../../intune-service/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
+  After the layout is created, it can be uploaded to Intune by configuring a [Device Restrictions](../../intune-service/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
 
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
@@ -603,10 +603,10 @@ Windows Device restrictions templates contain many of the settings required to s
 To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > Select **Windows 10 and later** for platform > **Templates** **Device restrictions** for profile type.
 
 - **Desktop background picture URL (Desktop only)**
-  Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You host the file online or reference a file that has been copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization* and configure **Desktop background picture URL (Desktop only)**.
+  Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You host the file online or reference a file that's copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization*, and configure **Desktop background picture URL (Desktop only)**.
 
 - **Require users to connect to a network during device setup**
-  This setting reduces the risk that a device can skip Windows Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *General* and configure **Require users to connect to network during device setup**.
+  This setting reduces the risk that a device can skip Windows Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *General*, and configure **Require users to connect to network during device setup**.
 
   > [!NOTE]
   > The setting becomes effective the next time the device is wiped or reset.
@@ -657,7 +657,7 @@ You can use PowerShell scripts for any settings or customizations that you need 
 
 ### Mapping Network Drives and Printers
 
-Cloud-native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive for Business. If migration isn't possible, consider the use of scripts if necessary.
+Cloud-native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive. If migration isn't possible, consider the use of scripts if necessary.
 
 For personal storage, in [Step 8 - Configure settings for an optimal Microsoft 365 experience](#step-8---configure-settings-for-an-optimal-microsoft-365-experience), we configured OneDrive Known Folder move. For more information, go to [Redirect Known Folders](/onedrive/redirect-known-folders).
 
@@ -686,13 +686,13 @@ Intune supports the deployment of many different Windows application types.
 If you have applications that use MSI, EXE, or script installers, you can deploy all of these applications using *Win32 app management in Microsoft Intune*. Wrapping these installers in the Win32 format provides more flexibility and benefits, including notifications, delivery optimization, dependencies, detection rules, and support for the Enrollment Status Page in Windows Autopilot.
 
 > [!NOTE]
-> To prevent conflicts during installation, we recommend that you stick to using the Windows line-of-business apps or Win32 apps features exclusively. If you have applications that are packaged as `.msi` or `.exe`, those can be converted to Win32 apps (`.intunewin`) by using the *Microsoft Win32 Content Prep Tool*, which is [available from GitHub](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool).
+> To prevent conflicts during installation, we recommend that you stick to using the Windows line-of-business apps or Win32 apps features exclusively. If you have applications that are packaged as `.msi` or `.exe`, then they can be converted to Win32 apps (`.intunewin`) using the *[Microsoft Win32 Content Prep Tool](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool)* available on GitHub.
 
 ## Phase 5 – Deploy at scale with Windows Autopilot
 
 :::image type="content" source="../media/cloud-native-windows-endpoints/phase-5.png" alt-text="Phase 5.":::
 
-Now that you've configured your cloud-native Windows endpoint and provisioned it with Windows Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
+Now that you configured your cloud-native Windows endpoint and provisioned it with Windows Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
 
 - [Overview of Windows Autopilot](/autopilot/overview)
 - [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
@@ -717,5 +717,5 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 - Add [Win32 apps](../../intune-service/apps/apps-win32-app-management.md)
 - [Use certificates for authentication in Intune](../../intune-service/protect/certificates-configure.md)
 - Deploy network profiles, including [VPN](../../intune-service/configuration/vpn-settings-windows-10.md) and [Wi-Fi](../../intune-service/configuration/wi-fi-settings-windows.md)
-- Deploy [Multi-Factor Authentication](/entra/identity/authentication/concept-mfa-howitworks)
+- Deploy [multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks)
 - Security baseline for [Microsoft Edge](../../intune-service/protect/security-baseline-settings-edge.md)

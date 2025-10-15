@@ -31,7 +31,7 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 
 > [!NOTE]
 >
-> - For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune-service/fundamentals/filters-performance-recommendations).
+> - For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/intune/intune-service/fundamentals/filters-performance-recommendations).
 > - For tips on avoiding policy conflicts, see [Avoid policy conflicts](manage-avoid-policy-conflicts.md).
 > - [!INCLUDE [windows-10-support](../../../includes/windows-10-support.md)]
 
@@ -39,7 +39,7 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 
 ✅ Select the best option for grouping
 
-The way you target configuration and apps may depend on many factors and the enrollment type.
+The way you target configuration and apps can depend on many factors and the enrollment type.
 
 ::: zone pivot="windows"
 
@@ -68,7 +68,7 @@ The following table provides guidance about which iOS device grouping options to
 ::: zone-end
 
 > [!TIP]
-> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune-service/fundamentals/filters-performance-recommendations).
+> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/intune/intune-service/fundamentals/filters-performance-recommendations).
 
 ## Create groups and filters
 
@@ -78,8 +78,8 @@ With your enrollment and grouping plan in place, you can create your groups.
 
 ### [Intune](#tab/intune)
 
-- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune-service/fundamentals/filters)
+- [Create groups in Microsoft Entra](/entra/fundamentals/how-to-manage-groups)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/intune/intune-service/fundamentals/filters)
 - [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
 - [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
@@ -89,7 +89,7 @@ With your enrollment and grouping plan in place, you can create your groups.
 - [Create groups in Intune for Education][EDU-1]
 - [Manually add or remove users and devices to an existing assigned group][EDU-2]
 - [Edit dynamic group rules to accommodate for new devices, locations, or school years][EDU-3]
-- [Create Filters](/mem/intune-service/fundamentals/filters)
+- [Create Filters](/intune/intune-service/fundamentals/filters)
 
 ---
 
@@ -119,9 +119,9 @@ This table contains common groups used for devices that are enrolled using Windo
 
 > [!NOTE]
 >
-> - If you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
+> - If you plan to create groups or filters based on enrollmentProfileName, make sure you create the enrollment profile with the name that matches the rules.
 > - If you use Windows Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
-> - On Windows, apps and policies can also be targeted at user groups. However, the majority of apps and policies on Windows devices are device-based. As a result, each user of a Windows device receives device-based apps and policies assigned to any previous user of the device - unless the new user has different configurations for settings previously applied.
+> - On Windows, apps and policies can also be targeted at user groups. However, most apps and policies on Windows devices are device-based. As a result, each user of a Windows device receives device-based apps and policies assigned to any previous user of the device - unless the new user has different configurations for settings previously applied.
 
 ### Provisioning packages
 
@@ -165,7 +165,7 @@ To apply settings as quickly as possible during enrollment without waiting for d
 > If you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
 
 > [!WARNING]
-> Each time an iOS device enrolls it creates a new Entra device object, so *assigned group* memberships aren't maintained afer a device is reset.
+> Each time an iOS device enrolls it creates a new Entra device object, so *assigned group* memberships aren't maintained after a device is reset.
 
 ::: zone-end
 
