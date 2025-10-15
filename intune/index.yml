@@ -228,7 +228,7 @@ additionalContent:
           url: /azure/active-directory/
         # Card
         - title: Windows client docs for IT Pros
-          summary: Evaluate, plan, deploy, secure, and manage devices running Windows 10 and Windows 11.
+          summary: Evaluate, plan, deploy, secure, and manage devices running Windows.
           url: /windows/resources/
         # Card
         - title: Windows 365 docs
