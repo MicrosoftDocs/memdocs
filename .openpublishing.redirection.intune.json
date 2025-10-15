@@ -1857,7 +1857,7 @@
     },
     {
       "source_path": "intune/intune/fundamentals/intune-legacy-pc-client.md",
-      "redirect_url": "/intune/intune-service/fundamentals/intune-legacy-pc-client",
+      "redirect_url": "/intune/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager",
       "redirect_document_id": false
     },
     {
@@ -2857,7 +2857,7 @@
     },
     {
       "source_path": "intune/intune/protect/managed-software-updates-ios-macos.md",
-      "redirect_url": "/intune/intune-service/protect/managed-software-updates-ios-macos",
+      "redirect_url": "/intune/intune-service/protect/updates/apple",
       "redirect_document_id": false
     },
     {
@@ -3147,12 +3147,12 @@
     },
     {
       "source_path": "intune/intune/protect/software-updates-guide-ios-ipados.md",
-      "redirect_url": "/intune/intune-service/protect/software-updates-guide-ios-ipados",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-ios-ipados",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-guide-macos.md",
-      "redirect_url": "/intune/intune-service/protect/software-updates-guide-macos",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-macos",
       "redirect_document_id": false
     },
     {
@@ -3162,12 +3162,12 @@
     },
     {
       "source_path": "intune/intune/protect/software-updates-ios.md",
-      "redirect_url": "/intune/intune-service/protect/software-updates-ios",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-macos.md",
-      "redirect_url": "/intune/intune-service/protect/software-updates-macos",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-macos",
       "redirect_document_id": false
     },
     {
