@@ -350,15 +350,7 @@ For more information on Windows Defender configuration, including Microsoft Defe
 
 Use Endpoint Security in Microsoft Intune to configure the firewall and firewall rules. For more information, go to [Firewall policy for endpoint security in Intune](../../intune-service/protect/endpoint-security-firewall-policy.md).
 
-Microsoft Defender Firewall can detect a trusted network using the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager). And, it can switch to the *domain* firewall profile on endpoints running the following OS versions:
-
-- Windows 11 22H2
-- Windows 11 21H2 with [2022-12 cumulative update](https://support.microsoft.com/topic/december-13-2022-kb5021234-os-build-22000-1335-56a94ce4-7122-447d-98d8-360e95fc0cf9)
-- Windows 10 20H2 or higher with [2022-12 cumulative update](https://support.microsoft.com/topic/december-13-2022-kb5021233-os-builds-19042-2364-19043-2364-19044-2364-and-19045-2364-44e774aa-60c4-4e38-b7e7-c886d210db3b)
-
-> [!IMPORTANT]
-> On October 14, 2025, [Windows 10 is reaching end of support](/lifecycle/announcements/windows-10-end-of-support) and will stop receiving quality and feature updates. After October 14, 2025, Windows 10 becomes an "allowed" version in Intune. Devices running this version can still enroll in Intune and use eligible features, but functionality won't be guaranteed and can vary.
-
+Microsoft Defender Firewall can detect a trusted network using the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager). And, it can switch to the *domain* firewall profile on endpoints running Windows.
 
 Using the *domain* network profile allows you to separate firewall rules based on a trusted network, a private network, and a public network. These settings can be applied using a Windows custom profile.
 
@@ -385,7 +377,7 @@ When you configure the following BitLocker settings, they silently enable 128-bi
 
 **BitLocker Drive Encryption**:
 
-- Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later): **Not Configured**
+- Choose drive encryption method and cipher strength: **Not Configured**
 - Provide the unique identifiers for your organization: **Not Configured**
 
 **Operating System Drives**:
@@ -515,13 +507,7 @@ In this phase, you apply organization-specific settings, apps, and review your o
 
 Microsoft Edge is included on devices that run:
 
-- Windows 11
-- Windows 10 20H2 or later
-- Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update
-
-> [!IMPORTANT]
-> On October 14, 2025, [Windows 10 is reaching end of support](/lifecycle/announcements/windows-10-end-of-support) and will stop receiving quality and feature updates. After October 14, 2025, Windows 10 becomes an "allowed" version in Intune. Devices running this version can still enroll in Intune and use eligible features, but functionality won't be guaranteed and can vary.
-
+- Windows
 
 After users sign in, Microsoft Edge updates automatically. To trigger an update for Microsoft Edge during deployment, you can run the following command:
 
@@ -548,16 +534,20 @@ You can also set other settings for Microsoft Edge using settings catalog profil
 
 You can customize and set a standard start and taskbar layout using Intune.
 
+- **For Windows 11**:
+
+  - To create and apply a Start menu layout, go to [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11).
+  - To create and apply a Taskbar layout, go to [Customize the Taskbar on Windows 11](/windows/configuration/taskbar/configure).
+
 - **For Windows 10**:
+
   - For more information about start and taskbar customization, go to [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
   - To create a start and taskbar layout, go to [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
 
   After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](../../intune-service/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
 
-- **For Windows 11**:
-
-  - To create and apply a Start menu layout, go to [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11).
-  - To create and apply a Taskbar layout, go to [Customize the Taskbar on Windows 11](/windows/configuration/taskbar/configure).
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
 ### Settings catalog
 
@@ -638,11 +628,10 @@ Customers using Microsoft Configuration Manager can deploy connected cache serve
 
 If there's only one user group that needs local administrator access to all Microsoft Entra joined Windows devices, then you can add them to the [Microsoft Entra Joined Device Local Administrator](/entra/identity/role-based-access-control/permissions-reference#microsoft-entra-joined-device-local-administrator).
 
-You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. With Windows 2004 or later, you can meet this requirement by using the following Configuration Service Providers (CSPs).
+You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. You can meet this requirement by using the following Configuration Service Providers (CSPs).
 
-- Ideally use [Local Users and Groups CSP](/windows/client-management/mdm/policy-csp-localusersandgroups), which requires Windows 10 20H2 or later.
-- If you have Windows 10 20H1 (2004) use the [Restricted Groups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) (no update action, only replace).
-- Windows versions prior to Windows 10 20H1 (2004) can't use groups, only individual accounts.
+- [Local Users and Groups CSP](/windows/client-management/mdm/policy-csp-localusersandgroups) (preferred)
+- [Restricted Groups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) (no update action, only replace)
 
 For more information, go to [How to manage the local administrators group on Microsoft Entra joined devices](/entra/identity/devices/assign-local-admin)
 

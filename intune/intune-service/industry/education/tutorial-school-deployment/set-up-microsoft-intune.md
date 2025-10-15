@@ -42,8 +42,8 @@ Before configuring settings with Intune, consider the following prerequisites:
   - As a standalone service
   - As part of [Enterprise Mobility + Security][MSFT-1]
   - As part of a [Microsoft 365 Education subscription][MSFT-2]
-- **Intune for Education device platforms.** Intune for Education can manage devices running a supported version of Windows 10, Windows 11, Windows 11 SE, and iPadOS
-- **Intune device platforms.** Intune can manage devices running a supported version of Windows 10, Windows 11, Windows 11 SE, iOS, iPadOS, macOS, Android, and Linux
+- **Intune for Education device platforms.** Intune for Education can manage devices running a supported version of Windows, Windows 11 SE, and iPadOS
+- **Intune device platforms.** Intune can manage devices running a supported version of Windows, Windows 11 SE, iOS, iPadOS, macOS, Android, and Linux
 - **Network requirements.** Confirm all the required network endpoints can access without SSL inspection or any type of filtering. See [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints) for a list of endpoints.
 
 For more information, see [Intune licensing][MEM-1] and [this comparison sheet][MSFT-3], which includes a table detailing the *Microsoft Modern Work Plan for Education*.
@@ -171,8 +171,8 @@ This table provides the settings most commonly set by customers, but can be cust
 
 | Setting | Common configuration |
 | --- | --- |
-| Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
-| Automatically capture diagnostics when devices experience a failure during the Windows Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
+| Device diagnostics are available for corporate-managed devices running Windows. Diagnostics may include user identifiable information such as user or device name. | Enabled |
+| Automatically capture diagnostics when devices experience a failure during the Windows Autopilot process on Windows. Diagnostics may include user identifiable information such as user or device name. | Enabled |
 
 For more information, see [Collect diagnostics from a Windows device](/mem/intune-service/remote-actions/collect-diagnostics).
 
@@ -262,12 +262,12 @@ With the Intune service configured, you can configure policies and applications 
 
 <!-- Reference links in article -->
 
-[MEM-1]: /mem/intune-service/fundamentals/licenses
-[MEM-2]: /mem/intune-service/enrollment/enrollment-restrictions-set
-[MEM-4]: /mem/intune-service/protect/windows-hello#create-a-windows-hello-for-business-policy
+[MEM-1]: /intune/intune-service/fundamentals/licenses
+[MEM-2]: /intune/intune-service/enrollment/enrollment-restrictions-set
+[MEM-4]: /intune/intune-service/protect/windows-hello#create-a-windows-hello-for-business-policy
 
 [INT-1]: /intune-education/what-is-intune-for-education
 
-[MSFT-1]: https://www.microsoft.com/microsoft-365/enterprise-mobility-security
+[MSFT-1]: https://www.microsoft.com/microsoft-365/microsoft-365-enterprise
 [MSFT-2]: https://www.microsoft.com/licensing/product-licensing/microsoft-365-education
 [MSFT-3]: https://aka.ms/EDU-Plan-Comparison

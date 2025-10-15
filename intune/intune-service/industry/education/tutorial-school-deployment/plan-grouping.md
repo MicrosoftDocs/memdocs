@@ -16,28 +16,24 @@ By organizing devices, students, classrooms, or learning curricula into groups, 
 
 ## Grouping and targeting overview
 
-Intune has four targeting methods:
+Intune has four targeting methods. Organizations typically use a combination of these targeting methods.
 
 | Grouping type | Description | Benefits | Disadvantages |
 | --- | --- | --- | --- |
 | Virtual groups | Created by Intune and allow you to target *All devices* and *All users* | Always up to date automatically | Can only be scoped using filters |
 | Assigned groups | Used when you want to manually add users or devices to a group. | Easily manage unique group membership | Membership are manually maintained |
 | Dynamic groups | Groups based on rules that you create to assign students or devices to groups. | Automates the membership maintenance of those groups | Can take between several minutes to 24 hours to update |
-| Filters | Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned, or dynamic groups |
+| Assignment filters <br/><br/>* Available in the Intune admin center.| Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned, or dynamic groups |
 
-Organizations typically use a combination of these targeting methods.
-
-> [!NOTE]
-> Filters aren't accessible in the Intune for Education admin console but are accessible in the Intune admin console.
-
-Two extra groups are precreated if you use **Microsoft School Data Sync (SDS)**: *All teachers* and *All students*. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
+If you use **Microsoft School Data Sync (SDS)**, two extra groups are precreated - **All teachers** and **All students**. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
 
 Beyond the defaults, groups can be customized to suit various needs. For example, if you have both *Windows 10* and *Windows 11* devices in your school, you can create groups, such as *Windows 10 devices* and *Windows 11 devices*, to assign different policies and applications to them.
 
-> [!TIP]
-> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune-service/fundamentals/filters-performance-recommendations).
+> [!NOTE]
 >
-> For tips on avoiding policy conflicts, see [Avoid policy conflicts](manage-avoid-policy-conflicts.md).
+> - For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune-service/fundamentals/filters-performance-recommendations).
+> - For tips on avoiding policy conflicts, see [Avoid policy conflicts](manage-avoid-policy-conflicts.md).
+> - [!INCLUDE [windows-10-support](../../../includes/windows-10-support.md)]
 
 ## Choose grouping methods
 
