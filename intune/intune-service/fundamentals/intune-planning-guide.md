@@ -96,8 +96,8 @@ Some considerations:
 
   - [Personal/BYOD](../protect/software-updates-guide-personal-byod.md)
   - [Android](../protect/software-updates-guide-android.md)
-  - [iOS/iPadOS](../protect/software-updates-guide-ios-ipados.md)
-  - [macOS](../protect/software-updates-guide-macos.md)
+  - [iOS/iPadOS](../protect/updates/software-updates-guide-ios-ipados.md)
+  - [macOS](../protect/updates/software-updates-guide-macos.md)
 
 - **Determine how users will authenticate to organization resources** from their many devices. For example, you can:
 

@@ -1,7 +1,7 @@
 ---
 title: Connect Intune account to managed Google Play account
 description: Learn how to connect your Intune account to your Managed Google Play account.
-ms.date: 06/12/2025
+ms.date: 10/14/2025
 ms.topic: how-to
 ms.reviewer: grwilson
 ms.collection:
@@ -53,7 +53,7 @@ Complete these steps to enable Android Enterprise management options in Microsof
 
 > [!IMPORTANT]
 > - This account is used to manage the Google Admin account and associated subscriptions, as appropriate. The Microsoft Entra account must have an active mailbox to complete the validation process required by Google.
-> - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add and remove more administrators, if needed, in the Google admin console. Google recommends having at least 2 owners to an enterprise for redundancy.
+> - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add and remove more administrators, if needed, in the Google admin console. Google recommends having at least two owners to an enterprise for redundancy.
 > - If the Microsoft sign-in option is missing, you might need to connect an MX record to the domain you're using for Exchange Online. For information about how to edit your domain's DNS settings, see [Add DNS records to connect your domain](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider).
 
 8. Follow the onscreen prompts to finish creating a Google Admin account.
@@ -61,7 +61,7 @@ Complete these steps to enable Android Enterprise management options in Microsof
 9. When prompted, select **Allow and create account** to allow Microsoft Intune to manage your Android Enterprise devices.
 
 > [!TIP]
-> To choose a scope tag for your managed Google Play apps, go to **Tenant administration** > **Connectors and tokens** > **Managed Google Play** in the Microsoft Intune admin center.  Then select a scope tag to apply to all newly-approved managed Google Play apps. You must have the following permissions to interact with this area in the admin center and to remove the selected scope tag. Tenant admins, or admins who are in charge of giving admin permissions to others, can go to **Tenant Administration** > **Roles** to edit permissions.
+> To choose a scope tag for your managed Google Play apps, go to **Tenant administration** > **Connectors and tokens** > **Managed Google Play** in the Microsoft Intune admin center. Then select a scope tag to apply to all newly-approved managed Google Play apps. You must have the following permissions to interact with this area in the admin center and to remove the selected scope tag. Tenant admins, or admins who are in charge of giving admin permissions to others, can go to **Tenant Administration** > **Roles** to edit permissions.
 >  - Android Sync - Read
    >  - Android Sync – UpdateOnBoarding
 
@@ -79,9 +79,35 @@ You can disconnect the link between Microsoft Intune and Google in the admin cen
 1. Select the **Android** tab.
 1. Under **Prerequisites**, choose **Managed Google Play**.
 1. Select **Disconnect**.
-1. Choose **Yes** to disconnect and unenroll all Android enterprise devices from Intune.
+1. Choose **Yes** to disconnect and unenroll all Android enterprise devices from Intune.  
 
-## Next steps
+
+## Edit managed Google Play organization name  
+
+When you first create a managed Google Play account, you provide a name for your organization to Google. This name appears in the Intune admin center and can also appear on Android devices. For example, on the lock screen it could appear to users as **This device is managed by [organization name]**.  
+
+Complete the steps in this section to edit the name of your organization.   
+
+1. In the **Microsoft Intune admin center**, go to **Devices**.
+1. Select **Android** > **Enrollment** > **Managed Google Play**.
+
+1. Select **Change organization name**. Enter the new name. 
+
+    - Names must be 2–50 characters long. 
+    - These characters are allowed:  
+
+      - Letters: `A–Z` and `a–z`, including accented characters such as `á`, `ñ`, and `ü`      
+
+      - Numbers: `0–9`    
+
+      - `Spaces`    
+
+      - `. , ' - & ( )` 
+    - These special symbols aren't allowed: `@ # $ % ^ * + = | \ / < > { } [ ]` 
+
+1. Select **Change**.   
+
+## Next steps  
 
 After you connect to a managed Google Play account, you can set up Microsoft Intune for these Android Enterprise scenarios:
 - [Personally owned work profile devices](android-work-profile-enroll.md).

@@ -59,7 +59,7 @@ There are three types of certificate profiles:
 
 ## Requirements
 
-To deploy certificate profiles that use SCEP, install the certificate registration point on a site system server. Also install a policy module for NDES, the Configuration Manager Policy Module, on a server that runs Windows Server 2012 R2 or later. This server requires the Active Directory Certificate Services role. It also requires a working NDES that's accessible to the devices that require the certificates. If your devices need to enroll for certificates from the internet, then your NDES server must be accessible from the internet. For example, to safely enable traffic to the NDES server from the internet, you can use [Azure Application Proxy](/azure/active-directory/manage-apps/application-proxy).
+To deploy certificate profiles that use SCEP, install the certificate registration point on a site system server. Also install a policy module for NDES, the Configuration Manager Policy Module, on a server that runs Windows Server 2012 R2 or later. This server requires the Active Directory Certificate Services role. It also requires a working NDES that's accessible to the devices that require the certificates. If your devices need to enroll for certificates from the internet, then your NDES server must be accessible from the internet. For example, to safely enable traffic to the NDES server from the internet, you can use [Azure Application Proxy](/entra/identity/app-proxy/).
 
 PFX certificates also require a certificate registration point. Also specify the certificate authority (CA) for the certificate and the relevant access credentials. You can specify either Microsoft or Entrust as certificate authorities.
 

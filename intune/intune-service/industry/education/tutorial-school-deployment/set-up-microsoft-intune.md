@@ -22,7 +22,7 @@ The Microsoft Intune service can be managed in different ways.
     For more information, see [Intune for Education documentation][INT-1].
 
 > [!TIP]
-> **Intune** and **Intune for Education** both configure the **Intune** service. Changes made in one console will be reflected in the other. However, **Intune for Education** only supports a subset of policies and apps curated to suit simple K-12 scenarios on Windows and iPadOS.
+> **Intune** and **Intune for Education** both configure the **Intune** service. Changes made in one admin center are reflected in the other. However, **Intune for Education** only supports a subset of policies and apps curated to suit simple K-12 scenarios on Windows and iPadOS.
 
 ---
 
@@ -42,9 +42,9 @@ Before configuring settings with Intune, consider the following prerequisites:
   - As a standalone service
   - As part of [Enterprise Mobility + Security][MSFT-1]
   - As part of a [Microsoft 365 Education subscription][MSFT-2]
-- **Intune for Education device platforms.** Intune for Education can manage devices running a supported version of Windows 10, Windows 11, Windows 11 SE, and iPadOS
-- **Intune device platforms.** Intune can manage devices running a supported version of Windows 10, Windows 11, Windows 11 SE, iOS, iPadOS, macOS, Android, and Linux
-- **Network requirements.** Confirm all the required network endpoints can access without SSL inspection or any type of filtering. See [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints) for a list of endpoints.
+- **Intune for Education device platforms.** Intune for Education can manage devices running a supported version of Windows, Windows 11 SE, and iPadOS
+- **Intune device platforms.** Intune can manage devices running a supported version of Windows, Windows 11 SE, iOS, iPadOS, macOS, Android, and Linux
+- **Network requirements.** Confirm all the required network endpoints can access without SSL inspection or any type of filtering. See [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints) for a list of endpoints.
 
 For more information, see [Intune licensing][MEM-1] and [this comparison sheet][MSFT-3], which includes a table detailing the *Microsoft Modern Work Plan for Education*.
 
@@ -77,8 +77,8 @@ For more information, see [Create a device platform restriction][MEM-2].
 
 ✅ Configure optional tenant configuration
 
-- Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](/mem/intune-service/apps/company-portal-app).
-- Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](/mem/intune-service/enrollment/terms-and-conditions-create).
+- Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](/intune/intune-service/apps/company-portal-app).
+- Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](/intune/intune-service/enrollment/terms-and-conditions-create).
 
 ::: zone pivot="windows"
 
@@ -90,25 +90,25 @@ For more information, see [Create a device platform restriction][MEM-2].
 1. Select **Devices** > **Enroll devices** > **Automatic Enrollment**.
 1. Set the **MDM user scope** to **All** or **Some** and select a group if you want to restrict enrollment to certain users.
     > [!IMPORTANT]
-    > The MDM user scope must be set to *All* if provisioning pacakges are used to enroll devices.
+    > The MDM user scope must be set to *All* if provisioning packages are used to enroll devices.
 1. Set **MAM user scope** to **None**.
     :::image type="content" source="./images/intune-windows-enrollment.png" alt-text="A screenshot showing the MDM user scope and MAM user scope." lightbox="./images/intune-windows-enrollment.png":::
 1. Select **Save**.
 
-For more information, see [Enable Windows automatic enrollment](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment).
+For more information, see [Enable Windows automatic enrollment](/intune/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment).
 
 ### Disable Windows Hello for Business
 
 ✅ Disable functionality typically inaccessible to students
 
-Windows Hello for Business is a biometric authentication feature that allows users to sign in to their devices using a PIN, password, or fingerprint. Windows Hello for Business is enabled by default on Windows devices, and to set it up, users must perform for multifactor authentication (MFA). As a result, this feature may not be ideal for students, who may not have MFA enabled.
+Windows Hello for Business is a biometric authentication feature that allows users to sign in to their devices using a PIN, password, or fingerprint. Windows Hello for Business is enabled by default on Windows devices, and to set it up, users must perform for multifactor authentication (MFA). As a result, this feature might not be ideal for students, who don't have MFA enabled.
 
 > [!TIP]
 > **Passwordless for Students**
 >
-> If you're interested in using Windows Hello for Business with students, you may be interested in checking out our guidance on how you can use Temporary Access Pass. For more information, see [Passwordless for Students](/microsoft-365/education/deploy/protect-passwordless-students).
+> If you're interested in using Windows Hello for Business with students, then review our guidance on how you can use Temporary Access Pass. For more information, see [Passwordless for Students](/microsoft-365/education/deploy/protect-passwordless-students).
 
-It's common for Windows Hello for Business to be disabled at the tenant level. Then, a policy can be targted at users or devices that need it. For example, staff and teachers.
+It's common for Windows Hello for Business to be disabled at the tenant level. Then, a policy can be targeted at users or devices that need it. For example, staff and teachers.
 
 To disable Windows Hello for Business at the tenant level:
 
@@ -142,7 +142,7 @@ To enable data collection:
 1. Select **Review + Save**.
 1. Select **Save**.
 
-For more information on data collection, see [Endpoint analytics data collection](/mem/analytics/data-collection).
+For more information on data collection, see [Endpoint analytics data collection](/intune/analytics/data-collection).
 
 ### Configure Windows data
 
@@ -155,9 +155,9 @@ Intune needs permission to collect certain data for Windows update reports on Wi
 1. Under **Windows data** select **On**.
 1. Review the **Windows license verification** section and configure as per your licensing.
     :::image type="content" source="./images/intune-windows-data.png" alt-text="A screenshot showing the configuration of the Intune Windows data settings." lightbox="./images/intune-windows-data.png":::
-1. Click **Save**.
+1. Select **Save**.
 
-For more information, see [Enable use of Windows diagnostic data by Intune](/mem/intune-service/protect/data-enable-windows-data).
+For more information, see [Enable use of Windows diagnostic data by Intune](/intune/intune-service/protect/data-enable-windows-data).
 
 ### Configure Windows device diagnostics
 
@@ -171,10 +171,10 @@ This table provides the settings most commonly set by customers, but can be cust
 
 | Setting | Common configuration |
 | --- | --- |
-| Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
-| Automatically capture diagnostics when devices experience a failure during the Windows Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name. | Enabled |
+| Device diagnostics are available for corporate-managed devices running Windows. Diagnostics can include user identifiable information such as user or device name. | Enabled |
+| Automatically capture diagnostics when devices experience a failure during the Windows Autopilot process on Windows. Diagnostics can include user identifiable information such as user or device name. | Enabled |
 
-For more information, see [Collect diagnostics from a Windows device](/mem/intune-service/remote-actions/collect-diagnostics).
+For more information, see [Collect diagnostics from a Windows device](/intune/intune-service/remote-actions/collect-diagnostics).
 
 ### (Optional) Configure the Enrollment Status Page
 
@@ -185,7 +185,7 @@ The enrollment status page (ESP) displays the provisioning status to people enro
 Additional information:
 
 - [Windows Autopilot Enrollment Status Page](/autopilot/enrollment-status)
-- [Set up the Enrollment Status Page](/mem/intune-service/enrollment/windows-enrollment-status)
+- [Set up the Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status)
 
 This table provides the settings most commonly set by customers, but can be customized to suit your schools needs.
 
@@ -196,7 +196,7 @@ This table provides the settings most commonly set by customers, but can be cust
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Show custom message when time limit or error occurs | Yes |
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Turn on log collection and diagnostics page for end users | Yes |
 | [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Only show page to devices provisioned by out-of-box experience (OOBE) | Yes |
-| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Enrollment Status Page\\Default\\Block device use until required apps are installed if they are assigned to the user/device | *All* or *Selected* with the minimum apps required. <br><br>For example, Microsoft 365 apps or web content filtering softtware |
+| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Enrollment Status Page\\Default\\Block device use until required apps are installed if they're assigned to the user/device | *All* or *Selected* with the minimum apps required. <br><br>For example, Microsoft 365 apps or web content filtering software |
 
 ::: zone-end
 
@@ -206,7 +206,7 @@ This table provides the settings most commonly set by customers, but can be cust
 
 #### [Intune](#tab/intune)
 
-To set up an Apple MDM certificate, see [Get an Apple MDM push certificate](/mem/intune-service/enrollment/apple-mdm-push-certificate-get#steps-to-get-your-certificate).
+To set up an Apple MDM certificate, see [Get an Apple MDM push certificate](/intune/intune-service/enrollment/apple-mdm-push-certificate-get#steps-to-get-your-certificate).
 
 #### [Intune for Education](#tab/intune-for-education)
 
@@ -215,13 +215,13 @@ To set up an Apple MDM certificate in Intune for Education, see [Add an MDM push
 ---
 
 > [!IMPORTANT]
-> The Apple MDM certificate needs to be renewed yearly. Make a note in your calendar to renew the certificate in just under a year from when you add the certificate. You can can view the expiry date in the console at any time.
+> The Apple MDM certificate needs to be renewed yearly. Make a note in your calendar to renew the certificate in just under a year from when you add the certificate. You can view the expiry date in the admin center at any time.
 
 ### Configure Volume Purchase Program (VPP)
 
 #### [Intune](#tab/intune)
 
-To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](/mem/intune-service/apps/vpp-apps-ios).
+To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](/intune/intune-service/apps/vpp-apps-ios).
 
 #### [Intune for Education](#tab/intune-for-education)
 
@@ -230,15 +230,15 @@ To set up an Apple VPP in Intune for Education, see [Configure VPP tokens](/intu
 ---
 
 > [!IMPORTANT]
-> The Apple VPP token needs to be renewed yearly. Make a note in your calendar to renew the token in just under a year from when you add the token. You can can view the expiry date in the console at any time.
+> The Apple VPP token needs to be renewed yearly. Make a note in your calendar to renew the token in just under a year from when you add the token. You can view the expiry date in the admin center at any time.
 
 ### Configure Automated Device Enrollment (ADE)
 
-If you plan to integrate Apple School Manager and use Automated Device Enrollment follow these steps.
+If you plan to integrate Apple School Manager and use Automated Device Enrollment, follow these steps.
 
 #### [Intune](#tab/intune)
 
-To set up an Apple MDM certificate, see [Set up automated device enrollment in Intune](/mem/intune-service/enrollment/device-enrollment-program-enroll-ios).
+To set up an Apple MDM certificate, see [Set up automated device enrollment in Intune](/intune/intune-service/enrollment/device-enrollment-program-enroll-ios).
 
 #### [Intune for Education](#tab/intune-for-education)
 
@@ -247,7 +247,7 @@ To set up an Apple ADE in Intune for Education, see [Configure enrollment progra
 ---
 
 > [!IMPORTANT]
-> The Apple ADE token needs to be renewed yearly. Make a note in your calendar to renew the token in just under a year from when you add the token. You can can view the expiry date in the console at any time.
+> The Apple ADE token needs to be renewed yearly. Make a note in your calendar to renew the token in just under a year from when you add the token. You can view the expiry date in the admin center at any time.
 
 ::: zone-end
 
@@ -255,19 +255,19 @@ To set up an Apple ADE in Intune for Education, see [Configure enrollment progra
 
 ## Next steps
 
-With the Intune service configured, you can configure policies and applications in preparation for the deployment of students' and teachers' devices.
+When the Intune service configured, you can configure policies and applications in preparation for the deployment of students' and teachers' devices.
 
 > [!div class="nextstepaction"]
 > [Next: Configure devices >](configure-devices-overview.md)
 
 <!-- Reference links in article -->
 
-[MEM-1]: /mem/intune-service/fundamentals/licenses
-[MEM-2]: /mem/intune-service/enrollment/enrollment-restrictions-set
-[MEM-4]: /mem/intune-service/protect/windows-hello#create-a-windows-hello-for-business-policy
+[MEM-1]: /intune/intune-service/fundamentals/licenses
+[MEM-2]: /intune/intune-service/enrollment/enrollment-restrictions-set
+[MEM-4]: /intune/intune-service/protect/windows-hello#create-a-windows-hello-for-business-policy
 
 [INT-1]: /intune-education/what-is-intune-for-education
 
-[MSFT-1]: https://www.microsoft.com/microsoft-365/enterprise-mobility-security
+[MSFT-1]: https://www.microsoft.com/microsoft-365/microsoft-365-enterprise
 [MSFT-2]: https://www.microsoft.com/licensing/product-licensing/microsoft-365-education
 [MSFT-3]: https://aka.ms/EDU-Plan-Comparison
