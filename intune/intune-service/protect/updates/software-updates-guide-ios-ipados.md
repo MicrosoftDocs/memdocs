@@ -170,7 +170,7 @@ As an admin, you're comfortable with:
 
 To accomplish these goals, you can use a policy with the following default settings:
 
-:::image type="content" source="images/knowledge-worker-policy-settings.png" alt-text="Screenshot that shows the select version to install and schedule type software update settings for iOS/iPadOS devices in the Microsoft Intune admin center." lightbox=images/knowledge-worker-policy-settings.png":::
+:::image type="content" source="images/knowledge-worker-policy-settings.png" alt-text="Screenshot that shows the select version to install and schedule type software update settings for iOS/iPadOS devices in the Microsoft Intune admin center." lightbox="images/knowledge-worker-policy-settings.png":::
 
 ### Kiosks
 
