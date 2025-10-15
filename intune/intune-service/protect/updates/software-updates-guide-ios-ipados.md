@@ -3,7 +3,7 @@ title: Admin checklist for iOS/iPadOS software updates in Microsoft Intune
 description: Guidance and advice for administrators that create and manage software updated for iOS/iPadOS devices using Microsoft Intune. See sample policy for different industry scenarios, including shared devices, kiosk, manufacturing, and information worker.
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 09/24/2025
+ms.date: 10/14/2025
 audience: ITPro
 ms.topic: how-to
 ms.reviewer: beflamm, ahamil, rogerso
@@ -20,9 +20,18 @@ This article includes an admin checklist to help you get started with software u
 
 For the specific steps to create a software update policy, go to [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md).
 
-This article applies to:
+## Prerequisites
 
-- iOS/iPadOS supervised devices enrolled in Intune
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../../includes/requirements/platform.md)]
+:::column-end:::
+:::column span="3":::
+> The configuration of Software Update for Apple devices requires the following platforms:
+>
+> - iOS/iPadOS 17.0 and later
+:::column-end:::
+:::row-end:::
 
 > [!TIP]
 >
@@ -42,9 +51,7 @@ By default, users receive notifications and/or see the latest updates available 
 When users install their own updates (instead of admins managing the updates), it can disrupt user productivity and business tasks. For example:
 
 - Users can start an update when they want, and might not be able to work while an update is installing.
-
 - Users can apply updates that your organization hasn't approved. This decision can cause issues with application compatibility, changes to the operating system, or changes to the user experience that disrupt device use.
-
 - Users can avoid applying required updates that affect security or app compatibility. This situation can leave the devices at risk and/or prevent the devices from functioning.
 
 ### ✅ Keep automatic updates enabled
