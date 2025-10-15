@@ -9,27 +9,25 @@ ms.topic: overview
 
 :::row:::
     :::column:::
-:::image type="icon" source="icons/approver-agent.svg" border="false":::
 #### Approver agent
-    :::column-end:::
-    :::column:::
-:::image type="icon" source="icons/device-lifecycle-agent.svg" border="false":::
-#### Device lifecycle agent
-    :::column-end:::
-    :::column:::
-:::image type="icon" source="icons/policy-agent.svg" border="false":::
-#### Policy agent
-    :::column-end:::  
-:::row-end:::
 
-:::row:::
-    :::column:::
-#### :::image type="icon" source="icons/approver-agent.svg" border="false"::: Approver agent
+:::image type="icon" source="icons/approver-agent.svg" border="false":::
+
+ipsum consectetuer tincidunt tincidunt magna dolore nonummy diam diam aliquam sed consectetuer elit elit euismod aliquam elit laoreet amet sit amet tincidunt nibh magna erat nibh laoreet sit euismod dolore diam laoreet magna elit nonummy ipsum magna ut consectetuer.
     :::column-end:::
     :::column:::
-#### :::image type="icon" source="icons/device-lifecycle-agent.svg" border="false"::: Device lifecycle agent
+#### Device lifecycle agent
+
+:::image type="icon" source="icons/device-lifecycle-agent.svg" border="false":::
+
+ipsum consectetuer tincidunt tincidunt magna dolore nonummy diam diam aliquam sed consectetuer elit elit euismod aliquam elit laoreet amet sit amet tincidunt nibh magna erat nibh laoreet sit euismod dolore diam laoreet magna elit nonummy ipsum magna ut consectetuer.
+
     :::column-end:::
     :::column:::
-#### :::image type="icon" source="icons/policy-agent.svg" border="false"::: Policy agent
+#### Policy agent
+
+:::image type="icon" source="icons/policy-agent.svg" border="false":::
+
+ipsum consectetuer tincidunt tincidunt magna dolore nonummy diam diam aliquam sed consectetuer elit elit euismod aliquam elit laoreet amet sit amet tincidunt nibh magna erat nibh laoreet sit euismod dolore diam laoreet magna elit nonummy ipsum magna ut consectetuer.
     :::column-end:::  
 :::row-end:::
