@@ -175,9 +175,7 @@ As an admin, you're comfortable with:
 - Downloading and installing updates as soon as the devices check in with Intune
 - Allowing end users to decide when they install updates and reboot their devices to apply the updates
 
-To accomplish these goals, use a policy with the following default settings:
-
-:::image type="content" source="images/knowledge-worker-policy-settings.png" alt-text="Screenshot that shows the select version to install and schedule type software update settings for iOS/iPadOS devices in the Microsoft Intune admin center." lightbox="images/knowledge-worker-policy-settings.png":::
+To accomplish these goals, use a policy that enforces the latest version.
 
 ### Kiosks
 
@@ -205,9 +203,7 @@ You want to deploy the specific iOS/iPadOS version that this LOB app was recentl
 
 You choose an overnight servicing window of 10 hours where updates can be downloaded and applied, before the store opens.
 
-To accomplish this task, create a policy with the following settings:
-
-:::image type="content" source="images/kiosks-policy-settings.png" alt-text="Screenshot that shows the specific version to install and installing the updates on Monday nights for iOS/iPadOS devices in the Microsoft Intune admin center." lightbox="images/kiosks-policy-settings.png":::
+To accomplish this task, create a policy that enforces a targeted version and a specific installation time.
 
 ### Factory machines
 
@@ -229,13 +225,11 @@ You're configuring an update profile for devices on the manufacturing floor at C
 
 These devices run two vendor apps. To remain in a supported configuration, you update both apps infrequently and must run a specific version of the app and OS.
 
-You want to deploy a specific, older iOS/iPadOS version (15) to these devices, as the app vendor doesn't support later releases yet. Since the devices are nearly always in use, you only have a small maintenance window once a week on Sunday.
+You want to deploy a specific, older iOS/iPadOS version (17) to these devices, as the app vendor doesn't support later releases yet. Since the devices are nearly always in use, you only have a small maintenance window once a week on Sunday.
 
 You want to schedule updates during a two hour downtime window overnight on a Sunday.
 
-To accomplish this task, create a policy with the following settings:
-
-:::image type="content" source="images/factory-machines-policy-settings.png" alt-text="Screenshot that shows the specific version to install and installing the updates on Sundays for iOS/iPadOS devices in the Microsoft Intune admin center." lightbox="images/factory-machines-policy-settings.png":::
+To accomplish this task, create a policy that enforces a targeted version and a specific installation time.
 
 ### Shared devices
 
