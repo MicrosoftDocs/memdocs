@@ -1,10 +1,9 @@
 ---
-title: "Admin Guide: Manage macOS Updates with Intune"
-description: Learn how to manage macOS software updates with Microsoft Intune. Create policies, control update timing, and monitor update status for organization-owned devices.
+title: Admin guide and checklist for macOS software updates
+description: Guidance and advice for administrators that create and manage software updates for macOS devices using Microsoft Intune. Use this article to help manage software updates on your organization-owned devices, including how to create policies, manage updates, and review update status.
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 10/15/2025
-audience: ITPro
+ms.date: 07/23/2025
 ms.topic: how-to
 ms.reviewer: beflamm, ahamil, rogerso
 ms.collection:
@@ -20,25 +19,16 @@ Intune has built-in policies that can manage software updates. For macOS devices
 
 Use this article as an admin guide for your enrolled and managed macOS devices. This information can help you manage software updates on your organization-owned devices.
 
-## Prerequisites
+This article applies to:
 
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../../../includes/requirements/platform.md)]
-:::column-end:::
-:::column span="3":::
-> The configuration of Software Update for Apple devices requires the following platforms:
->
-> - macOS 14.0 and later
-:::column-end:::
-:::row-end:::
+- macOS devices enrolled in Intune
 
 > [!TIP]
 >
 > - If your devices are personally owned, then go to the [software updates admin guide for personal devices](../software-updates-guide-personal-byod.md).
 > - [!INCLUDE [Apple MDM software updates deprecation](../../includes/apple-mdm-updates-deprecation.md)]
 
-### Before you begin
+## Before you begin
 
 To install updates faster and avoid delays, make sure the devices are:
 
@@ -46,44 +36,40 @@ To install updates faster and avoid delays, make sure the devices are:
 - Plugged in
 - Connected to Internet
 
-## ✅ Manage updates with policies
+## Manage updates with policies
 
-Microsoft recommends creating policies that update your devices.
+✅ Do create policies that update your devices.
 
 By default, users receive notifications and/or see the latest updates available on their devices (Settings > General > Software Updates). Users can choose to download and install updates whenever they want.
 
-:::row:::
-:::column span="3":::
 They can also change the update behavior using the Automatic Updates feature on the device (Settings > Software Updates):
-:::column-end:::
-:::column span="1":::
-:::image type="content" source="images/default-update-settings-macos-device.png" alt-text="The operating system default update settings and controls on a macOS Apple device.":::
-:::column-end:::
-:::row-end:::
+
+:::image type="content" source="./media/software-updates-guide-macos/default-update-settings-macos-device.png" alt-text="The operating system default update settings and controls on a macOS Apple device.":::
 
 When users install their own updates (instead of admins managing the updates), it can disrupt user productivity and business tasks. For example:
 
 - Users can apply updates that your organization hasn't approved. This situation can cause issues with application compatibility, or changes to the operating system or user experience that disrupt device use.
+
 - Users can avoid applying updates that are required for security or app compatibility reasons. This delay can leave the devices at risk and/or prevent them from being able to function.
+
 - Users can disable checking for new updates entirely.
 
 Because of these potential issues, Microsoft recommends that you evaluate your use case scenarios and deploy policies to manage the update experience to minimize risk and disruption to your business.
 
-## Admin checklist for organization owned devices
+## Admin steps for organization owned devices
 
 To update macOS devices owned by your organization, Microsoft recommends the following features. You can also use these features as a starting point for your own update strategy.
 
-### ✅ Use DDM-managed software updates
+### ✅ Use DDM-managed software updates on macOS 14 and newer
 
-Use Apple's declarative device management (DDM) to install a specific update by an enforced deadline.
+On macOS 14 and newer devices, use Apple's declarative device management (DDM) to install a specific update by an enforced deadline.
 
-DDM is the modern way to manage settings. The independent nature of DDM provides an improved user experience, as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads the update, prepares the device for the installation, and installs the update.
+DDM is the modern way to manage settings. The independent nature of DDM provides an improved user experience, as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads the update, prepares the device for the installation, & installs the update.
 
 Don't use the MDM-based software update policy settings on these devices, as Apple deprecated the MDM policies.
 
-The DDM settings are configurable in the [Intune settings catalog](../../configuration/settings-catalog.md). For more information, go to [Configure update policies for Apple devices](apple.md).
+The DDM settings are configurable in the [Intune settings catalog](../../configuration/settings-catalog.md). For more information, go to [Managed software updates with the settings catalog](apple.md).
 
-<!--
 ### ✅ Use MDM on macOS 13 and older
 
 On macOS versions 13 and older, you can use Apple's MDM settings built-in to Intune. For these devices, you create two policies that work together to manage the update experience. The first policy manages when updates are installed, and the second policy manages how updates are installed.
@@ -132,9 +118,9 @@ With these settings, this policy locks these settings so users can't change them
 
     The following images show the prompts that end users can see when updates are available:
 
-    :::image type="content" source="images/required-managed-update-sample-notification-macos.png" alt-text="The sample notification prompt for a required update on a macOS Apple device.":::
+    :::image type="content" source="./media/software-updates-guide-macos/required-managed-update-sample-notification-macos.png" alt-text="The sample notification prompt for a required update on a macOS Apple device.":::
 
-    :::image type="content" source="images/updates-available-sample-notification-macos.png" alt-text="The sample notification that an update is available on a macOS Apple device.":::
+    :::image type="content" source="./media/software-updates-guide-macos/updates-available-sample-notification-macos.png" alt-text="The sample notification that an update is available on a macOS Apple device.":::
 
 3. If end users use all the deferrals, then the update is force installed. For a forced installation, a restart doesn't prompt the end user, and could result in data loss.
 
@@ -166,11 +152,9 @@ For more information on the settings catalog, including how to create a settings
 
 This policy locks these settings so users can't change them. On the device, the software update settings are greyed out:
 
-:::image type="content" source="images/update-settings-with-settings-catalog-policy-macos.png" alt-text="The software update settings are greyed out after the Intune settings catalog update policy applies to a macOS Apple device.":::
+:::image type="content" source="./media/software-updates-guide-macos/update-settings-with-settings-catalog-policy-macos.png" alt-text="The software update settings are greyed out after the Intune settings catalog update policy applies to a macOS Apple device.":::
 
--->
-
-## ✅ Consider using the Nudge community tool
+### ✅ Consider using the Nudge community tool
 
 This tool is optional, and can help you **manage the end user experience**.
 
@@ -178,15 +162,17 @@ A popular tool within the Microsoft macOS admin community is Nudge. [Nudge is 
 
 When Nudge is configured and deployed, end users see the following sample message when their device is ready to be updated. End users can also choose to update the device or defer the update:
 
-:::image type="content" source="images/nudge-sample-notification-message-macos.png" alt-text="A sample Nudge community tool message when a software update is available a macOS Apple device." lightbox="images/nudge-sample-notification-message-macos.png":::
+:::image type="content" source="./media/software-updates-guide-macos/nudge-sample-notification-message-macos.png" alt-text="A sample Nudge community tool message when a software update is available a macOS Apple device." lightbox="./media/software-updates-guide-macos/nudge-sample-notification-message-macos.png":::
 
 There's also a [sample script and Intune configuration policy](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Apps/Nudge) for Nudge in the Microsoft shell script repository. This script includes everything you need to get started with Nudge. Make sure you update the `.mobileconfig` file with your values.
 
-## ✅ Use built-in reporting for update status
+### ✅ Use built-in reporting for update status
 
-After the update policies are deployed, in the Intune admin center you can use different reports to monitor the update status of your managed Apple devices.
+After the update policies are deployed, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can use the reporting feature to check the status of the updates.
 
-For more information, see [View Software Update Reports for Apple Devices](apple-reports.md).
+For each device, you can see its current state of updates (Devices > macOS > Update policies for macOS):
+
+:::image type="content" source="./media/software-updates-guide-macos/intune-report-device-update-category-status.png" alt-text="Use the built-in reporting to check the update status of a macOS Apple device in the Microsoft Intune admin center." lightbox="./media/software-updates-guide-macos/intune-report-device-update-category-status.png":::
 
 ## Related articles
 
