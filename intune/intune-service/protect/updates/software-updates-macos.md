@@ -31,10 +31,7 @@ By default, devices check in with [Intune about every 8 hours](../../configurati
 
 This feature applies to:
 
-- macOS 12 and later (supervised)
-
-  > [!NOTE]
-  > Before the macOS 12.5 release, devices would download and install more updates before installing the latest update.
+- macOS 12 - macOS 15 (supervised)
 
 ## Configure the policy
 

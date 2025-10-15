@@ -3,7 +3,7 @@ title: Use Microsoft Intune to manage software updates for supervised iOS/iPadOS
 description: Use Microsoft Intune to manage system updates for supervised iOS/iPadOS devices.
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 09/24/2025
+ms.date: 10/15/2025
 ms.topic: how-to
 ms.reviewer: annovich, beflamm
 ms.collection:
@@ -22,8 +22,8 @@ A [supervised device](../../enrollment/device-enrollment-program-enroll-ios.md#w
 
 This feature applies to:
 
-- iOS 10.3 and later (supervised)
-- iPadOS 13.0 and later (supervised)
+- iOS 10.3 - iOS 18 (supervised)
+- iPadOS 13.0 - iPadOS 18 (supervised)
 
 With these MDM-based policies, you can:
 
