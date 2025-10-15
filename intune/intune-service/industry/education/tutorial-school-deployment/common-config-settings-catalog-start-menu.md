@@ -11,19 +11,19 @@ ms.collection:
 
 # Start menu customization
 
-Microsoft Intune and Intune for Education can configure settings for a customized Start menu for Windows 10 and later. This article summarizes the configurations that are most commonly used for student and teacher devices.
+Microsoft Intune and Intune for Education can configure settings for a customized Start menu for Windows. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
 Students can benefit from a Start menu that is customized to provide access to educational tools and resources while restricting distractions. By configuring policy settings, educational institutions can create a focused and conducive learning environment.
 
 > [!NOTE]
-> This is an optional policy
+> This policy is optional.
 
-To learn more, see:
+**To learn more**, see:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune-service/configuration/settings-catalog)
-- [Customize the Start menu and taskbar layout on Windows 10 and later devices](/windows/configuration/start/windows-10-start-layout-options-and-policies)
-- [Customize and export the Start layout](/en-us/windows/configuration/start/customize-and-export-start-layout)
-- [Configure Windows Taskbar](/en-us/windows/configuration/taskbar/?pivots=windows-11)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/intune/intune-service/configuration/settings-catalog)
+- [Customize the Start menu and taskbar layout on Windows devices](/windows/configuration/start/windows-10-start-layout-options-and-policies)
+- [Customize and export the Start layout](/windows/configuration/start/customize-and-export-start-layout)
+- [Configure Windows Taskbar](/windows/configuration/taskbar/?pivots=windows-11)
 
 > [!TIP]
 > When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search field to find the desired policy.
@@ -32,7 +32,7 @@ To learn more, see:
 
 | **Category** | **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|---|
-| Start | **:::no-loc text="Start Layout":::** | A custom XML string | Create and deploy a custom Start menu and taskbar layout. Please refer to articles in the learn more section above. | [:::no-loc text="StartLayout":::](/windows/client-management/mdm/policy-csp-start#startlayout) |
+| Start | **:::no-loc text="Start Layout":::** | A custom XML string | Create and deploy a custom Start menu and taskbar layout. Refer to articles in the previous section in this article. | [:::no-loc text="StartLayout":::](/windows/client-management/mdm/policy-csp-start#startlayout) |
 | Start | **:::no-loc text="Hide App List":::** | None | | [:::no-loc text="Start/HideAppList":::](/windows/client-management/mdm/policy-csp-start#hideapplist) |
 | Start | **:::no-loc text="Hide Change Account Settings":::** | Disabled | | [:::no-loc text="Start/HideChangeAccountSettings":::](/windows/client-management/mdm/policy-csp-start#hidechangeaccountsettings) |
 | Start | **:::no-loc text="Hide Frequently Used Apps":::** | Enabled | | [:::no-loc text="Start/HideFrequentlyUsedApps":::](/windows/client-management/mdm/policy-csp-start#hidefrequentlyusedapps) |
@@ -47,7 +47,7 @@ To learn more, see:
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - Windows - Start menu":::**.
+This creates a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - Windows - Start menu":::**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
