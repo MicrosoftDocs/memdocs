@@ -9,15 +9,27 @@ ms.topic: overview
 
 :::row:::
     :::column:::
-:::image type="icon" source="icons/approver-agent.svg" border="false":::
-### Approver agent
+:::image type="icon" source="icons/approver-agent.svg" border="false" center="true":::
+#### Approver agent
     :::column-end:::
     :::column:::
-:::image type="icon" source="icons/device-lifecycle-agent.svg" border="false":::
-### Device lifecycle agent
+:::image type="icon" source="icons/device-lifecycle-agent.svg" border="false" center="true":::
+#### Device lifecycle agent
     :::column-end:::
     :::column:::
-:::image type="icon" source="icons/policy-agent.svg" border="false":::
-### Policy agent
+:::image type="icon" source="icons/policy-agent.svg" border="false" center="true":::
+#### Policy agent
+    :::column-end:::  
+:::row-end:::
+
+:::row:::
+    :::column:::
+#### :::image type="icon" source="icons/approver-agent.svg" border="false"::: Approver agent
+    :::column-end:::
+    :::column:::
+#### :::image type="icon" source="icons/device-lifecycle-agent.svg" border="false"::: Device lifecycle agent
+    :::column-end:::
+    :::column:::
+#### :::image type="icon" source="icons/policy-agent.svg" border="false"::: Policy agent
     :::column-end:::  
 :::row-end:::
