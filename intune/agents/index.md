@@ -9,15 +9,15 @@ ms.topic: overview
 
 :::row:::
     :::column:::
-:::image type="icon" source="icons/approver-agent.svg" border="false" center="true":::
+:::image type="icon" source="icons/approver-agent.svg" border="false":::
 #### Approver agent
     :::column-end:::
     :::column:::
-:::image type="icon" source="icons/device-lifecycle-agent.svg" border="false" center="true":::
+:::image type="icon" source="icons/device-lifecycle-agent.svg" border="false":::
 #### Device lifecycle agent
     :::column-end:::
     :::column:::
-:::image type="icon" source="icons/policy-agent.svg" border="false" center="true":::
+:::image type="icon" source="icons/policy-agent.svg" border="false":::
 #### Policy agent
     :::column-end:::  
 :::row-end:::
