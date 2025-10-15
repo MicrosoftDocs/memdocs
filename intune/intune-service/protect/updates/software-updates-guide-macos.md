@@ -46,15 +46,20 @@ To install updates faster and avoid delays, make sure the devices are:
 - Plugged in
 - Connected to Internet
 
-## Manage updates with policies
+## ✅ Manage updates with policies
 
-✅ Do create policies that update your devices.
+Microsoft recommends creating policies that update your devices.
 
 By default, users receive notifications and/or see the latest updates available on their devices (Settings > General > Software Updates). Users can choose to download and install updates whenever they want.
 
+:::row:::
+:::column span="3":::
 They can also change the update behavior using the Automatic Updates feature on the device (Settings > Software Updates):
-
+:::column-end:::
+:::column span="1":::
 :::image type="content" source="images/default-update-settings-macos-device.png" alt-text="The operating system default update settings and controls on a macOS Apple device.":::
+:::column-end:::
+:::row-end:::
 
 When users install their own updates (instead of admins managing the updates), it can disrupt user productivity and business tasks. For example:
 
@@ -69,10 +74,6 @@ Because of these potential issues, Microsoft recommends that you evaluate your u
 To update macOS devices owned by your organization, Microsoft recommends the following features. You can also use these features as a starting point for your own update strategy.
 
 ### ✅ Use DDM-managed software updates
-
-<!-- on macOS 14 and newer
-
-On macOS 14 and newer devices,-->
 
 Use Apple's declarative device management (DDM) to install a specific update by an enforced deadline.
 
@@ -183,11 +184,9 @@ There's also a [sample script and Intune configuration policy](https://github.co
 
 ## ✅ Use built-in reporting for update status
 
-After the update policies are deployed, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can use the reporting feature to check the status of the updates.
+After the update policies are deployed, in the Intune admin center you can use different reports to monitor the update status of your managed Apple devices.
 
-For each device, you can see its current state of updates (Devices > macOS > Update policies for macOS):
-
-:::image type="content" source="images/intune-report-device-update-category-status.png" alt-text="Use the built-in reporting to check the update status of a macOS Apple device in the Microsoft Intune admin center." lightbox="images/intune-report-device-update-category-status.png":::
+For more information, see [View Software Update Reports for Apple Devices](apple-reports.md).
 
 ## Related articles
 

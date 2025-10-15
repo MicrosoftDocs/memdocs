@@ -57,7 +57,7 @@ When users install their own updates (instead of admins managing the updates), i
 
 ### ✅ Keep automatic updates enabled
 
-Starting with iOS/iPadOS 12, Apple devices automatically install updates when they're available. By default, this feature is enabled on new devices. **Keep this feature enabled**.
+Apple devices automatically install updates when they're available. By default, this feature is enabled on new devices. **Keep this feature enabled**.
 
 To use this automatic patching and install updates faster, make sure the devices are:
 
@@ -67,9 +67,14 @@ To use this automatic patching and install updates faster, make sure the devices
 
 When the devices are powered on, plugged in, and connected to the Internet, the updates automatically download and install, and the device reboots. If the device doesn't meet these conditions, the updates don't automatically download and install.
 
+:::row:::
+:::column span="3":::
 To keep your devices on the most current version with minimal effort, keep the automatic updates feature enabled:
-
+:::column-end:::
+:::column span="1":::
 :::image type="content" source="images/apple-automatic-update-settings.png" alt-text="Screenshot that shows automatic update settings on iOS/iPadOS Apple devices." lightbox="images/apple-automatic-update-settings.png":::
+:::column-end:::
+:::row-end:::
 
 Automatic updates work together with other update policies, which can provide a positive experience for admins and end users.
 
@@ -82,28 +87,16 @@ Using Intune policies, you can also force users to update their devices:
 #### What you need to know
 
 - If you disable the automatic updates feature, policies can't change it because of an OS limitation. You must manually change the setting on the device or reset and reprovision the device.
-
-- If you configure devices with a PIN, you must enter the PIN to start the software update. Entering the PIN typically isn't an issue for information worker 1:1 devices.
-
+- If you configure devices with a PIN, you must enter the PIN to start the software update. Entering the PIN typically isn't an issue for information worker 1:1 devices.\
   When planning for updates on kiosks, factory floor, or userless scenarios, you might need to adjust your processes to accommodate for the PIN behavior.
 
 ### ✅ Use the built-in settings
 
-<!--
-> [!NOTE]
-> [!INCLUDE [Apple MDM software updates deprecation](../../includes/apple-mdm-updates-deprecation.md)]
-
-To manage updates, Apple provides the following options:
-
-- **Declarative device management (DDM)**
-
-  On iOS/iPadOS 17.0 and later,
--->
-
 Use Apple's declarative device management (DDM) to manage software updates. DDM is the modern way to manage devices with an improved user experience, as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads the update, prepares the device for the installation, and installs the update.
 
-  You can configure the DDM settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, see [Managed software updates with the settings catalog](apple.md).
+The DDM settings are configurable in the [Intune settings catalog](../../configuration/settings-catalog.md). For more information, go to [Configure update policies for Apple devices](apple.md).
 
+<!--
 - **Software update policies**
 
   These MDM policies offer a controlled roll-out of a specific version. You can also force devices on older versions to upgrade. Admins can enter the iOS/iPadOS version to install and schedule the installation.
@@ -117,6 +110,7 @@ Use Apple's declarative device management (DDM) to manage software updates. DDM 
   You can configure these settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, see [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md).
 
 With these features, admins can make sure their Apple devices run a specific software version and can control the release of updates across their devices.
+-->
 
 ### ✅ Create policies that support many time zones
 
@@ -167,9 +161,9 @@ An update strategy and priorities for these devices typically include:
 
 > [!div class="checklist"]
 >
-> * Basic update configuration
-> * The latest most up-to-date version
-> * Automatic updates
+> - Basic update configuration
+> - The latest most up-to-date version
+> - Automatic updates
 
 **Scenario example**:
 
