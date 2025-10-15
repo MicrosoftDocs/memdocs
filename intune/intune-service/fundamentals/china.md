@@ -27,7 +27,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Migrations from public clouds to sovereign clouds aren't supported. Customers interested in moving to Intune operated by 21Vianet must migrate manually.
 - The tenant attach feature (syncing devices to Intune without enrollment to support cloud console scenarios) isn't currently supported.
 - Derived Credentials aren't supported with Intune operated by 21Vianet.
-- Management of Windows 10 is supported by using the modern MDM channel.
+- Management of Windows is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
 - Windows Autopilot and Business Store features aren't currently available. As part of the 2409 Intune service release, we announced support for Windows Autopilot Device Preparation policy in Intune operated by 21Vianet in China cloud. For  more information, see [(What's new in Windows Autopilot device preparation | Microsoft Learn](/autopilot/device-preparation/whats-new#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment)
 - Intune operated by 21Vianet supports the Company Portal for Windows app. Use WinGet to download the Company portal package and dependencies and then deploy as a Line-of-Business app via Intune. [Use the WinGet tool to install and manage applications](/windows/package-manager/winget/).

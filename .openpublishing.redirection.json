@@ -29,6 +29,10 @@
       "source_path": "intune/intune-service/protect/software-updates-reports-apple-declarative-based.md",
       "redirect_url": "/intune/intune-service/protect/updates/apple-reports",
       "redirect_document_id": false
+    },    {
+      "source_path": "intune/intune-service/fundamentals/intune-legacy-pc-client.md",
+      "redirect_url": "/intune/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager",
+      "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/copilot/security-copilot-surface-portal.md",

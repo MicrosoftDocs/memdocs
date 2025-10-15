@@ -3,7 +3,7 @@ title: Windows VPN settings in Microsoft Intune
 description: Learn and read about all the available VPN settings in Microsoft Intune, what they're used for, and what they do. See the traffic rules, Conditional Access, and DNS and proxy settings for Windows 10/11 and Windows Holographic for Business devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 03/26/2024
+ms.date: 10/14/2025
 ms.topic: reference
 ms.reviewer: abalwan
 ms.collection:
