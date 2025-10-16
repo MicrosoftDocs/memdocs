@@ -30,7 +30,7 @@ To view a role in the **Intune admin center**, go to **Tenant administration** >
 - **Assignments**: Select an [assignment for a role](assign-role.md) to view details about it including the groups and scopes that the assignment includes. A role can have multiple assignments, and a user can receive multiple assignments.
 
 > [!NOTE]
-> In June 2021, Intune began supporting [unlicensed admins](../fundamentals/unlicensed-admins.md). User accounts created after this change can administer Intune without an assigned license. Accounts created before this change still require a license to manage Intune.
+> In June 2021, Intune began supporting [unlicensed admins](../fundamentals/unlicensed-admins.md). User accounts created after this change can administer Intune without an assigned license. Accounts created before this change and administrator accounts in a nested security group assigned to a role still require a license to manage Intune.
 
 ### Built-in roles
 
