@@ -79,11 +79,12 @@ There are new settings in the Android settings catalog. To create a new settings
 
   - **General** > **Block Wi-Fi Direct**: If **True**, this setting blocks Wi-Fi Direct. Wi-Fi Direct is a direct, peer-to-peer connection between devices using Wi-Fi frequencies.  If **False**, Intune doesn't change or update this setting. By default, the OS might allow Wi-Fi Direct.
 
-    Applies to:
-
-    - Android Enterprise corporate-owned devices with a work profile (COPE)
-    - Android Enterprise corporate owned fully managed (COBO)
-    - Android Enterprise corporate owned dedicated devices (COSU)
+   > [!div class="checklist"]
+   > Applies to:
+   >
+   > - Android Enterprise corporate-owned devices with a work profile (COPE)
+   > - Android Enterprise corporate owned fully managed (COBO)
+   > - Android Enterprise corporate owned dedicated devices (COSU)
 
 - **Hide organization name**
 
