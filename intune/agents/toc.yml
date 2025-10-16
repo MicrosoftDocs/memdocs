@@ -19,8 +19,10 @@ items:
     items:
     - name: Set up the agent
       href: device-lifecycle-agent-set-up.md
+      displayName: device lifecycle agent
     - name: Use the agent
       href: device-lifecycle-agent-use.md
+      displayName: device lifecycle agent
   - name: Policy agent
     items:
     - name: Set up the agent
