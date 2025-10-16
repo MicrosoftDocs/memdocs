@@ -7,7 +7,28 @@ ms.topic: overview
 
 # Security Copilot agents in Microsoft Intune
 
+<!-- placeholder intro to update-->
+
+Security Copilot agents in Intune are AI-powered assistants designed to streamline and strengthen enterprise security operations. These agents automate critical tasks across endpoint protection, identity management, and threat intelligence, helping IT teams respond swiftly to vulnerabilities, policy gaps, and emerging threats. Each agent is tailored to a specific use case—for example, the Vulnerability Remediation Agent identifies and prioritizes fixes for CVEs affecting Intune-managed devices, while the Conditional Access Optimization Agent proactively scans for coverage gaps in Entra ID policies. By integrating deeply with Microsoft tools like Defender and Entra ID, these agents deliver actionable insights and remediation steps directly within the Intune admin experience.
+
+Built on Microsoft Security Copilot's generative AI and automation capabilities, the agents observe, reason, and act with administrator oversight. They operate within a dedicated "agents" blade in Intune, using role-based access controls to ensure secure execution. Admins can configure agents to advise only or to perform safe changes automatically, with all actions logged for transparency. With prerequisites like Security Copilot licensing and appropriate product subscriptions, these agents can run on-demand or on a schedule, significantly reducing the time and effort required for routine security tasks. Ultimately, Security Copilot agents empower IT professionals to maintain robust security postures with greater speed, consistency, and control.
+
+## Available agents
+
+The following agents are available in Intune:
+
 :::row:::
+    :::column:::
+#### Vulnerability remediation agent
+
+:::image type="icon" source="icons/vulnerability-remediation-agent.svg" border="false":::
+
+The *vulnerability remediation agent* uses Microsoft Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments. 
+
+> [!div class="nextstepaction"]
+> [Learn more](approver-agent-set-up.md)
+    :::column-end:::
+
     :::column:::
 #### Approver agent
 
@@ -16,7 +37,7 @@ ms.topic: overview
 The *approver agent* evaluates the effect of approval requests in Intune and makes recommendations for the actions you can take. 
 
 > [!div class="nextstepaction"]
-> [Get started](approver-agent-set-up.md)
+> [Learn more](approver-agent-set-up.md)
     :::column-end:::
     
     :::column:::
@@ -27,7 +48,7 @@ The *approver agent* evaluates the effect of approval requests in Intune and mak
 The *device lifecycle agent* can find devices that were removed from Intune, but might linger in Microsoft Entra. It provides steps to properly remove them from Entra.
 
 > [!div class="nextstepaction"]
-> [Get started](device-lifecycle-agent-set-up.md)
+> [Learn more](device-lifecycle-agent-set-up.md)
     :::column-end:::
 
     :::column:::
