@@ -60,7 +60,7 @@ To configure your tenant to support Remote Help, review and complete the followi
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-By default, the built-in **Help Desk Operator** role inclues all of the required permissions for Remote Help. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on the individual permissions required for Remote Help, see [Plan Remote Help](remote-help-plan.md#role-based-access-control-rbac).
+By default, the built-in **Help Desk Operator** role includes all of the required permissions for Remote Help. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on the individual permissions required for Remote Help, see [Plan Remote Help](remote-help-plan.md#role-based-access-control-rbac).
 
 ## Download Remote Help apps
 
