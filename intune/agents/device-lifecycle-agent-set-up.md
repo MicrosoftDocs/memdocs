@@ -63,3 +63,35 @@ Workspace: This agent will run in the same preferred workspace you selected for 
 Once started, the agent will immediately run in your tenant. You will not be able to cancel an agent mid-run. When the run finishes, you can choose to remove the agent.
 
 Select **Start agent** to begin the setup process.
+
+## Configure the agent
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > [**Device Lifecycle Agent**].
+
+## Remove the agent
+
+By removing this agent, all associated data generated including suggestions and activities will be deleted. Previously applied suggestions will remain unchanged. This action is permanent and cannot be undone.
+
+
+Select **Remove agent**.
+
+## Use the agent
+
+```agent-prompt
+Find all devices that were removed from Intune but might still exist in Microsoft Entra. Provide steps to properly remove them from Entra.
+```
+
+```agent-response
+Summary
+There are 23 devices that are no longer in Intune but still in other portals. These devices should be removed.
+
+Factors:
+- Users accessing corporate apps without MDM enrollment.
+- Cannot enforce compliance policies or data protection.
+- Personal devices may have corporate data without proper controls.
+- Conditional access limited to user-based policies only.
+```
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
