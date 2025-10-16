@@ -57,3 +57,8 @@ Both corporate-owned and BYOD devices are included.
 Excluded: Shared devices, hybrid Azure AD-joined Windows devices, Teams Phones 
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+
+## Next steps
+
+- [Configure the device lifecycle agent](device-lifecycle-agent-use.md)
+- [Use the device lifecycle agent](device-lifecycle-agent-use.md)

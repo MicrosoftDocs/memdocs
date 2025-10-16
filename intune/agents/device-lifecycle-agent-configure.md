@@ -57,8 +57,20 @@ ms.topic: how-to
  
 ## Configure the agent
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent**.
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**.
+1. Select **Set up Agent** to open the set-up pane.
+1. Review the details to ensure requirements are in place, and then select **Start agent** to close the set-up pane and start the first run of the agent.
 
+The agent runs until it finishes and then displays its results in the Device Lifecycle Agent pane of the admin center.
+
+### Manage devices and the agent 
+
+After the agent completes its initial run, admins can review and manage the Device Lifecycle Agent suggestions in the Intune admin center.
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**.
+  1. By default, the agent page opens to the **Overview** tab. On this tab, admins can view the suggestions of devices to offboard, drill in for more details and remediation steps.
+  1. The second available tab is **Suggestions**, which provides the full list of suggestions of devices to offboard, including the completed suggestions.  
+  1. The other available tab is **Settings**, which provides limited details about the agent's configuration. 
 
 ## Agent action: refresh
 
