@@ -18,11 +18,14 @@ landingContent:
 
   # Card (optional)
   - title: Vulnerability remediation agent
+
     linkLists:
     - linkListType: get-started
       links:
       - text: Overview
         url:  1.md
+    - linkListType: how-to-guide
+      links:
       - text: Configure the agent
         url:  1.md
   
@@ -33,6 +36,8 @@ landingContent:
       links:
       - text: Overview
         url:  1.md
+    - linkListType: how-to-guide
+      links:
       - text: Configure the agent
         url:  1.md
 
@@ -43,6 +48,8 @@ landingContent:
       links:
       - text: Overview
         url:  1.md
+    - linkListType: how-to-guide
+      links:
       - text: Configure the agent
         url:  1.md
 
@@ -54,5 +61,7 @@ landingContent:
       links:
       - text: Overview
         url:  1.md
+    - linkListType: how-to-guide
+      links:
       - text: Configure the agent
         url:  1.md
