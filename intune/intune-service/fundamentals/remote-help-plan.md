@@ -3,7 +3,7 @@ title: Plan for Remote Help with Microsoft Intune
 description: Learn about the requirements and capabilities of Remote Help with Microsoft Intune on Windows, macOS, and Android Enterprise.
 author: lenewsad
 ms.author: lanewsad
-ms.date: 10/01/2025
+ms.date: 10/16/2025
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: karawang
@@ -101,7 +101,7 @@ To use Remote Help, helpers must have the appropriate Role based access control 
 The following Intune built-in roles include Remote Help permissions:
 
 - Help Desk Operator (View screen, take full control, elevation, unattended, Remote Tasks - Offer Remote Assistance, Remote Assistance Connector - Read)
-- - School Administrator (View screen, take full control, elevation,Remote Tasks - Offer Remote Assistance, Remote Assistance Connector - Read)
+- - School Administrator (View screen, take full control, elevation, Remote Tasks - Offer Remote Assistance, Remote Assistance Connector - Read)
 
 > [!NOTE]
 > A person needs a combination of the *Remote Tasks - Offer Remote Assistance* permission, the *Remote Assistance Connector - Read* permission, and at least one of the Remote Help permissions to provide help. The permissions are granted to users in the admin group of a role assignment for the users or devices in the defined scope groups. For more information about Intune role-based access control, see [About role-based access control (RBAC) for Microsoft Intune](../fundamentals/role-based-access-control.md).

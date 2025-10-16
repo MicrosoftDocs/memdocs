@@ -3,7 +3,7 @@ title: Deploy Remote Help with Microsoft Intune
 description: Follow the steps to deploy Remote Help with Microsoft Intune on Windows, macOS, and Android Enterprise.
 author: lenewsad
 ms.author: lanewsad
-ms.date: 10/01/2025
+ms.date: 10/16/2025
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: karawang
@@ -31,11 +31,15 @@ This article describes the steps to deploy Remote Help with Microsoft Intune.
 
 When planning your deployment of Remote Help, consider the following best practices:
 
-- **User Communication and Training**: To drive adoption and effective use, provide documentation or brief training for both your helpdesk and end-users:
-- **Helpdesk Training**: Make sure your support team knows how to initiate sessions. Make them aware of the capabilities like launching a session through the Intune admin center or the Remote Help app, how to generate/enter session codes. Also make them aware of the limitation of not being able help users outside the tenant. Emphasize security practices, like confirming end-user consent on the call before taking control.
-- **End-User Guidance**: Let your users know that a new remote support tool is available. Instruct them on how a support session is initiated – for example, "When you contact the IT helpdesk, they might ask you to open the Remote Help app and share a code, or you might receive a popup notification to allow screen sharing." Reassure them that the tool is secure and only authorized IT can connect, and that they must allow any screen sharing or control.
-- **Security Monitoring**: Keep an eye on the usage to detect any anomalous behavior. For instance, Intune's audit logs and Entra ID sign-in logs show who is signing into Remote Help. Unusual times or unknown helpers should be investigated. Also ensure that when a staff member leaves the support team, they're removed from the Remote Help roles to revoke their ability to use the tool.
-- **Updates and New Features**: Remote Help is evolving. Microsoft might roll out new features (for example, the ability to support more platforms or an improved web helper dashboard). Stay updated via the Intune release notes or tech community blogs. Knowing these updates can help you refine your support process.
+- User communication and training: To drive adoption and effective use, provide documentation or brief training for both your helpdesk and end-users.  
+
+- Helpdesk training: Make sure your support team knows how to initiate sessions. Make them aware of the capabilities like launching a session through the Intune admin center or the Remote Help app, how to generate/enter session codes. Also make them aware of the limitation of not being able help users outside the tenant. Emphasize security practices, like confirming end-user consent on the call before taking control.  
+
+- End-user guidance: Let your users know that a new remote support tool is available. Instruct them on how a support session is initiated – for example, "When you contact the IT helpdesk, they might ask you to open the Remote Help app and share a code, or you might receive a popup notification to allow screen sharing." Reassure them that the tool is secure and only authorized IT can connect, and that they must allow any screen sharing or control.  
+
+- Security monitoring: Keep an eye on the usage to detect any anomalous behavior. For instance, Intune's audit logs and Entra ID sign-in logs show who is signing into Remote Help. Unusual times or unknown helpers should be investigated. Also ensure that when a staff member leaves the support team, they're removed from the Remote Help roles to revoke their ability to use the tool.  
+
+- Updates and new features: Remote Help is evolving. Microsoft might roll out new features (for example, the ability to support more platforms or an improved web helper dashboard). Stay updated via the Intune release notes or tech community blogs. Knowing these updates can help you refine your support process.  
 
 ## Configure Remote Help for your tenant
 
@@ -43,42 +47,42 @@ To configure your tenant to support Remote Help, review and complete the followi
 
 ### Task 1: Enable Remote Help
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote Help**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote Help**.
 
-2. On the **Settings** tab:
-   1. Set **Enable Remote Help** to **Enabled** to allow the use of remote help. By default, this setting is *Disabled*.
-   2. Set **Allow Remote Help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting is *Disabled*.
-   3. Set **Disable chat** to **Yes** to remove the chat functionality in the Remote Help app. By default, chat is enabled and this setting is set to **No**.
+1. On the **Settings** tab:  
+   1. Set **Enable Remote Help** to **Enabled** to allow the use of Remote Help. By default, this setting is disabled.  
+   2. Set **Allow Remote Help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting is disabled.  
+   3. Set **Disable chat** to **Yes** to remove the chat functionality in the Remote Help app. By default, chat is enabled and this setting is set to **No**.  
 
-3. Select **Save**.
+1. Select **Save**.  
 
 > [!NOTE]
-> New licenses or trial licenses could take a while to become active (anywhere between 30 minutes to 8 hours).
-> New Remote Help sessions might continue to indicate Remote Help isn't enabled for the tenant even if Remote Help is enabled.
+> New licenses or trial licenses could take a while to become active, from anywhere between 30 minutes to 8 hours.
+> New Remote Help sessions might continue to indicate Remote Help isn't enabled for the tenant, even if Remote Help is enabled.
 
 ### Task 2: Configure permissions for Remote Help
 
-Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
+Remote Help uses Microsoft Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-By default, the built-in **Help Desk Operator** role inclues all of the required permissions for Remote Help. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on the individual permissions required for Remote Help, see [Plan Remote Help](remote-help-plan.md#role-based-access-control-rbac).
+The built-in **Help Desk Operator** role includes all of the required permissions for Remote Help. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on the individual permissions required for Remote Help, see [Plan Remote Help](remote-help-plan.md#role-based-access-control-rbac).
 
 ## Download Remote Help apps
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
-Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
+Directly download the latest version of Remote Help from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).  
 
-The most recent version of Remote Help is **5.1.1998.0**
+The most recent version of Remote Help is **5.1.1998.0**  
 
 ### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
-Download the latest version of Remote Help directly from Microsoft at [aka.ms/downloadremotehelpmacos](https://aka.ms/downloadremotehelpmacos).
+Directly download the latest version of Remote Help from Microsoft at [aka.ms/downloadremotehelpmacos](https://aka.ms/downloadremotehelpmacos).    
 
 The most recent version of Remote Help is **1.0.2509231**.
 
 ### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
-The Remote Help app for Android is available from the Google Play store at [Remote Help - Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune.remotehelp).
+The Remote Help app for Android is available on the Google Play store. For more information, see [Remote Help - Google Play Apps](https://play.google.com/store/apps/details?id=com.microsoft.intune.remotehelp).  
 
 ---
 
@@ -86,11 +90,11 @@ The Remote Help app for Android is available from the Google Play store at [Remo
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
-Remote Help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a Remote Help session. By default, Remote Help opts users into automatic updates and updates itself when an update is available.
+Remote Help is available as a download from Microsoft and must be installed on each device before that device can be used to participate in a Remote Help session. Remote Help's default behavior opts users into automatic updates and updates itself when an update is available.  
 
-When a new version of Remote Help is required, the app prompts users to update. You can use the same process to download and install Remote Help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
+When a new version of Remote Help is required, the app prompts users to update. To install an updated version, you can use the same process you used before to download and install Remote Help. There's no need to uninstall the previous version before installing the updated version.
 
-- Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-devices).
+- As an Intune admin, you can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-devices).
 - Individual users who have permissions to install apps on their devices can also download and install Remote Help.
 
 > [!NOTE]

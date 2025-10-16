@@ -178,7 +178,7 @@ items:
 
     - name: Remote Help
       items:
-      - name: Remote Help Overview
+      - name: Remote Help overview
         href: ./fundamentals/remote-help.md
       - name: Planning Remote Help
         href: ./fundamentals/remote-help-plan.md

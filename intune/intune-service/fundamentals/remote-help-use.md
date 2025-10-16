@@ -1,9 +1,9 @@
 ---
-title: Using Remote Help on Windows to assist authenticated users.
+title: Using Remote Help on Windows to Assist Authenticated Users 
 description: Use the Remote Help app to provide remote assistance to authenticated users who also run the Remote Help app, and to troubleshoot for frontline workers (FLW).
 author: lenewsad
 ms.author: lanewsad
-ms.date: 04/30/2025
+ms.date: 10/16/2025
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: Karawang
@@ -19,36 +19,36 @@ ms.collection:
 
 [!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
 
-The use of Remote Help depends on whether you're requesting help or providing help. In this page, both scenarios are covered.
+The use of Remote Help depends on whether you're requesting help or providing help. In this article, both scenarios are covered.
 
 ## Get help
 
-To get help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you're the sharer during the session.
+To get help, you must reach out to your support staff to request assistance. You can reach out by way of call, chat, or email, and you're the sharer during the session.  
 
 ### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
-> [!NOTE]
-> The Remote Help app need to be installed on your device. If Remote Help isn't installed, you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](remote-help-deploy.md#install-remote-help-apps) section.
+> [!TIP]
+> The Remote Help app needs to be installed on your device. If Remote Help isn't installed, you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](remote-help-deploy.md#install-remote-help-apps) section.  
 
 **Starting the session:**
 
 1. The helper can initiate a session or you can manually start the Remote Help app and enter a session code provided by the helper.
   > [!NOTE]
-  > If the helper initiates the session from Intune, a notification is sent to your device. Select **Open Remote Help** in the notification to open the Remote Help app and continue. If your computer is in "Do Not Disturb" mode, you might not see the notification. In this case, open the Remote Help app manually to continue or check the notifications center.
-1. Verify the helper's identity by viewing their information including their full name, job title, company, profile picture, and verified domain. You can then choose to *Allow screen sharing or full control* or to *Decline the request*.
+  > If the helper initiates the session from Intune, a notification is sent to your device. Select **Open Remote Help** in the notification to open the Remote Help app and continue. If your computer is in *do not disturb* mode, you might not see the notification. In this case, manually open the Remote Help app to continue or check the notifications center.
+1. Verify the helper's identity by viewing their information, including their full name, job title, company, profile picture, and verified domain. Then choose to **Allow screen sharing or full control** or **Decline the request**.  
 1. The session is established, and the helper can then help in resolving any issues on the device.
 
 **During the session:**
 
 - You can chat with the helper using the chat window in the Remote Help app.
-- Helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
+- Helpers that have the elevation permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
   > [!IMPORTANT]
-  > During a Remote Help session, when a helper has the Elevation permission, the helper can perform elevated actions on the sharer's device. When the sharer ends the Remote Help session, a dialog box warns them that if they continue, they're logged off. If the helper ends the session, the sharer won't be logged off.
-- The helper can request to move from screen sharing to full control if the session started with screen sharing only. You can choose to *Allow full control* or to *Decline the request*.
+  > During a Remote Help session, when a helper has the elevation permission, the helper can perform elevated actions on the sharer's device. When the sharer ends the Remote Help session, a dialog box warns them that if they continue, they're logged off. If the helper ends the session, the sharer isn't logged off.
+- The helper can request to move from screen sharing to full control if the session started with screen sharing only. You can choose to **Allow full control** or to **Decline the request**.
 
 **When the issues are resolved or you're ready to end the session:**
 
-- Both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app.
+- Both the sharer and helper can end the session. To end the session, select **Leave** in the upper-right corner of the Remote Help app. 
 
 ### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
@@ -104,11 +104,11 @@ To request help, you must reach out to your support staff to request assistance,
 **During the session:**
 
 - During an attended screen sharing or full control session, the device displays a floating **End Session** button. This button can be repositioned on the screen. Tap the button to end the session from your device.
-- During an unattended control session, the screen of the device will blocked due to security and privacy reasons, and you are notified if you interact with it. If you interact with the blocked screen, you receive a notification that a helper connected. When the notification is shown, you and the helper won't be able to take any action for 30 seconds. You won't be able to end the session from your device until the helper ends the session.
+- During an unattended control session, the screen of the device is blocked due to security and privacy reasons, and you are notified if you interact with it. If you interact with the blocked screen, you receive a notification that a helper connected. When the notification is shown, you and the helper won't be able to take any action for 30 seconds. You won't be able to end the session from your device until the helper ends the session.
 
 ### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web App**](#tab/webapp)
 
-During a session there are two roles, a helper, and a sharer. The helper obtains the security code, and then provides it to the sharer. After the session is established, the helper can view the Sharer's screen.
+During a session there are two roles, a helper, and a sharer. The helper obtains the security code, and then provides it to the sharer. After the session is established, the helper can view the sharer's screen.
 
 **Starting the session:**
 
