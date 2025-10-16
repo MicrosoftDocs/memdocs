@@ -79,9 +79,9 @@ Policy sets, new to 1910, have the following known issues.
   - Android store app
   - Android line-of-business app
   - Managed Android line-of-business app
-  - Microsoft 365 Apps (Windows 10 and later)
+  - Microsoft 365 Apps
   - Microsoft 365 Apps (macOS)
-  - Microsoft Edge (Windows 10 and later)
+  - Microsoft Edge
   - Microsoft Edge (macOS)
   - Microsoft Defender ATP (macOS)
   - Windows MSI line-of-business app
