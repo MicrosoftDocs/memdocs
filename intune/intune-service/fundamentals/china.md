@@ -3,9 +3,9 @@ title: Intune operated by 21Vianet in China
 description: Intune operated by 21Vianet in China.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 11/25/2024
+ms.date: 10/16/2025
 ms.topic: article
-ms.reviewer: amsaeedi
+ms.reviewer: amsaeedi, acabello
 ms.collection:
 - M365-identity-device-management
 - government
@@ -27,18 +27,21 @@ Because the China services are operated by a partner from inside China, there ar
 - Migrations from public clouds to sovereign clouds aren't supported. Customers interested in moving to Intune operated by 21Vianet must migrate manually.
 - The tenant attach feature (syncing devices to Intune without enrollment to support cloud console scenarios) isn't currently supported.
 - Derived Credentials aren't supported with Intune operated by 21Vianet.
-- Management of Windows is supported by using the modern MDM channel.
+- Windows device management is supported using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
-- Intune operated by 21Vianet doesn't support Business Store.
-- Windows Autopilot features, including Autopilot with co-management arent supported with Intune operated by 21Vianet. [Windows Autopilot Device Preparation](/autopilot/device-preparation/overview) is available on Intune operated by 21Vianet in China cloud. [Compare Autopilot solutiosn](/autopilot/device-preparation/compare)
-- Intune operated by 21Vianet supports the Company Portal for Windows app. Use WinGet to download the Company portal package and dependencies and then deploy as a Line-of-Business app via Intune. [Use the WinGet tool to install and manage applications](/windows/package-manager/winget/).
+- Intune operated by 21Vianet doesn't support [Microsoft Store for Business](/lifecycle/announcements/microsoft-store-for-business-education-retiring).
+- [Windows Autopilot](/autopilot/overview) features, including Autopilot with co-management, aren't supported with Intune operated by 21Vianet. [Windows Autopilot Device Preparation](/autopilot/device-preparation/overview) is available on Intune operated by 21Vianet in China cloud.
+
+  To learn more about the differences, see [Compare Autopilot solutios](/autopilot/device-preparation/compare).
+
+- Intune operated by 21Vianet supports the Company Portal for Windows app. Use WinGet to download the Company portal package and dependencies and then deploy as a Line-of-Business app using Intune. [Use the WinGet tool to install and manage applications](/windows/package-manager/winget/).
 - Microsoft Intune Endpoint Analytics and Log Analytics features aren't currently available.
 - Azure Virtual Desktop Windows multi-session isn't currently supported for 21Vianet.
 - Because Google Mobile Services isn't available in China, customers in Intune operated by 21Vianet can't use features that require Google Mobile Services. These features include:
   - Google Play Protect capabilities such as Play integrity verdict.
   - Managing apps from the Google Play Store.
   - Android Enterprise capabilities. For more information, see this [Google documentation](https://support.google.com/work/android/answer/6270910?hl=en).
-- The Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
+- The Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
 - Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
