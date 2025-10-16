@@ -3,17 +3,31 @@ items:
   items:
   - name: Overview
     href: index.md
+    displayName: security copilot agent
   - name: Configure an agent in Intune
     href: configure.md
+    displayName: security copilot agent
   - name: Approver agent
     items:
-    - name: Use the approver agent
-      href: approver.md
+    - name: Set up the agent
+      href: approver-agent-set-up.md
+      displayName: approver agent
+    - name: Use the agent
+      href: approver-agent-use.md
+      displayName: approver agent
   - name: Device lifecycle agent
     items:
-    - name: Use the device lifecycle agent
-      href: device-lifecycle.md
+    - name: Set up the agent
+      href: device-lifecycle-agent-set-up.md
+      displayName: device lifecycle agent
+    - name: Use the agent
+      href: device-lifecycle-agent-use.md
+      displayName: device lifecycle agent
   - name: Policy agent
     items:
-    - name: Use the policy agent
-      href: policy.md
+    - name: Set up the agent
+      href: policy-agent-set-up.md
+      displayName: policy agent
+    - name: Use the agent
+      href: policy-agent-use.md
+      displayName: policy agent
