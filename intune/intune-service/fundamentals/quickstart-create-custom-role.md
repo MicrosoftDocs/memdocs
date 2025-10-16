@@ -2,10 +2,10 @@
 title: Create and assign a custom role in Intune
 description: Create and assign a custom role for a remote device manager.
 services: microsoft-intune
-author: BrenDuns
+author: brenduns
 ms.author: brenduns
 ms.topic: how-to
-ms.date: 03/26/2019
+ms.date: 10/16/2025
 
 ms.collection:
 - M365-identity-device-management
@@ -13,9 +13,9 @@ ms.collection:
 
 # Step 10: Create and assign a custom role
 
-This article guides you through creating a custom role for Intune role-based access control (RBAC) that has specific permissions for a security operations department, and assign the role to a group of such operators. When you assign Intune RBAC roles and follow the principles of least privilege access, your admins can perform tasks on only those users and devices that they should are empowered to manage. 
+This article guides you through creating a custom role for Intune role-based access control (RBAC) that has specific permissions for a security operations department and assign the role to a group of such operators. When you assign Intune RBAC roles and follow the principles of least privilege access, your admins can perform tasks on only those users and devices that they should are empowered to manage. 
 
-Although Intune includes several built-in RBAC roles that you can use right away, we recommend use of a least-privileged role that can complete the task an administrator is expected to manage. This approach minimizes security risks and operational errors by avoiding over-privileged accounts like Global Administrator or Intune Administrator for routine work.
+Although Intune includes several built-in RBAC roles that you can use right away, we recommend using the least-privileged role that can complete the task an administrator is expected to manage. This approach minimizes security risks and operational errors by avoiding over-privileged accounts like Global Administrator or Intune Administrator for routine work.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
@@ -29,7 +29,7 @@ To complete this evaluation step, you must have a group with at least one user. 
 
 Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) using an account that is assigned the Microsoft Entra role of **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)**.
 
-However, if this is a new trial subscription, sign in with the account that crated the subscription, which is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+However, if this is a new trial subscription, sign in with the account that created the subscription, which is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
 > [!CAUTION]
 > [!INCLUDE [global-admin](../includes/global-admin.md)]
