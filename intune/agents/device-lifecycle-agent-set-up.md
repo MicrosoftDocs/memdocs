@@ -68,7 +68,11 @@ Select **Start agent** to begin the setup process.
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > [**Device Lifecycle Agent**].
 
-## Remove the agent
+## Agent action: run
+
+## Agent action: refresh
+
+## Agent action: remove
 
 By removing this agent, all associated data generated including suggestions and activities will be deleted. Previously applied suggestions will remain unchanged. This action is permanent and cannot be undone.
 
