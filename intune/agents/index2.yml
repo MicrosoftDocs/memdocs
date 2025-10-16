@@ -21,30 +21,38 @@ landingContent:
     linkLists:
     - linkListType: get-started
       links:
-      - text: Vulnerability remediation agent
+      - text: Overview
+        url:  1.md
+      - text: Configure the agent
         url:  1.md
   
     # Card (optional)
-  - title: Vulnerability remediation agent
+  - title: Approver agent
     linkLists:
     - linkListType: get-started
       links:
-      - text: Vulnerability remediation agent
+      - text: Overview
+        url:  1.md
+      - text: Configure the agent
         url:  1.md
 
     # Card (optional)
-  - title: Vulnerability remediation agent
+  - title: Device lifecycle agent
     linkLists:
     - linkListType: get-started
       links:
-      - text: Vulnerability remediation agent
+      - text: Overview
+        url:  1.md
+      - text: Configure the agent
         url:  1.md
 
 
     # Card (optional)
-  - title: Vulnerability remediation agent
+  - title: Policy agent
     linkLists:
     - linkListType: get-started
       links:
-      - text: Vulnerability remediation agent
+      - text: Overview
+        url:  1.md
+      - text: Configure the agent
         url:  1.md
