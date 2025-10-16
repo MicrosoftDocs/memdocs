@@ -70,7 +70,7 @@ To request help, you must reach out to your support staff to request assistance,
 1. When the session connection begins, a trust screen is displayed with the Helpers information including their full name, job title, company, profile picture, and verified domain. At this time, the helper requests a session with Full control of your device or View Only screen sharing. You can either choose to **Allow** or to **Decline** the request.
 1. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone.
    - Select **Don't Allow** as this permission isn't needed for screen sharing.
-     :::image type="content" source="media/remote-help/remote-help-microphone-permission.png" alt-text="An example of the microphone permission prompt highlighting the Don't Allow option.:::
+     :::image type="content" source="media/remote-help/remote-help-microphone-permission.png" alt-text="An example of the microphone permission prompt highlighting the Don't Allow option":::
 1. Select **Share screen** to continue. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
 1. macOS displays a dialogue menu in the top right corner as one of two options:
    - **Green camera icon**: Choose **Screen**, and then move your mouse to select the screen share.
