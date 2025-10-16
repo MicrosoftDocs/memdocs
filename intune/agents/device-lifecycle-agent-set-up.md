@@ -77,18 +77,14 @@ Select **Start agent** to begin the setup process.
 
 ## Configure the agent
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > [**Device Lifecycle Agent**].
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent**.
 
 ## Agent action: run
 
 ## Agent action: refresh
 
-## Agent action: remove
-
-By removing this agent, all associated data generated including suggestions and activities will be deleted. Previously applied suggestions will remain unchanged. This action is permanent and cannot be undone.
-
-
-Select **Remove agent**.
+<!--##remove-->
+[!INCLUDE [remove](includes/remove.md)]
 
 ## Use the agent
 
@@ -106,6 +102,14 @@ Factors:
 - Personal devices may have corporate data without proper controls.
 - Conditional access limited to user-based policies only.
 ```
+
+<!--##renew-->
+
+[!INCLUDE [renew](includes/renew.md)]
+
+## Device Lifecycle Agent logs 
+
+All agent management, create, delete, run, and any permission failures are available in Security Copilot logs. Logging of which devices were offboarded or when a recommended actions were complete aren't available. Instead, use the options to mark a suggestion as complete.  
 
 <!-- admin center links -->
 
