@@ -23,20 +23,17 @@ Your organization will be able to monitor and manage the agent. You should check
 
 :::column-end:::
 :::column span="3":::
-> Endpoint analytics includes tasks that require different levels of permissions.
->
-> For a detailed breakdown of the required permissions for each task:
->
-> - Read Intune audit logs
-> - Read Entra devices
-> 
-> If you want to take action from within the agent, such as to disable devices in Entra, you must have the Disable devices in Entra permission. You don't need this permission to set up, run, or view results from the agent.
+> Intune admin roles: Intune Administrator or Read Only Operator
+> Entra Security Reader
+> For initial setup:
+> - Copilot Owner required for setup
+> For results:
+> - Copilot Contributor 
+> To take action from within the agent, such as to disable devices in Entra, you must have the *Disable devices* in Entra permission. You don't need this permission to set up, run, or view results from the agent.
 
 > Agent identity:
 > The agent will run using the identity of the user who first set up the agent. Agent authentication will expire after 90 days and need to be renewed. Learn more about agent authentication.
 
-> Users
-> Anyone with the required permissions, which can include a custom role or a Security Reader role.
 :::column-end:::
 :::row-end:::
 
@@ -46,11 +43,25 @@ Your organization will be able to monitor and manage the agent. You should check
 
 :::column-end:::
 :::column span="3":::
+> - Microsoft Intune subscription (Plan 1 or equivalent). 
+> - Microsoft Security Copilot access with sufficient security compute units (SCUs). 
+> - Microsoft Entra ID integrated with Intune (Free or P1). 
+> - Optional: Microsoft Defender for Endpoint (Plan 2) for Defender offboarding steps. 
 
 :::column-end:::
 :::row-end:::
 
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/cloud.md)]
 
+:::column-end:::
+:::column span="3":::
+> The agent is supported on the public cloud ony. It isn't supported on government clouds.
+
+:::column-end:::
+:::row-end:::
+ 
 
 Identity 
 
