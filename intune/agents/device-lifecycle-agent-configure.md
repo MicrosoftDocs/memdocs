@@ -18,6 +18,7 @@ ms.topic: how-to
 > :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune admin roles:
 > - Intune Administrator
 > - Read Only Operator
+>
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra admin roles:
 > - Security Reader
 >
