@@ -63,6 +63,6 @@ The *device lifecycle agent* can find devices that were removed from Intune, but
 The *policy agent* translates complex regulatory standards into actionable Intune settings. 
 
 > [!div class="nextstepaction"]
-> [Get started](policy-agent-set-up.md)
+> [Learn more](policy-agent-set-up.md)
     :::column-end:::  
 :::row-end:::

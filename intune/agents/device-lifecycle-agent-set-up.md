@@ -7,13 +7,7 @@ ms.topic: how-to
 
 # Set up the device lifecycle agent
 
-
-Set up the agent to automate and optimize device offboarding in Intune. Security Copilot agents use AI to complete routine tasks and surface insights with some level of autonomy so you can focus on high-value work. 
-
-> [!NOTE]
-> This agent is in preview and currently doesn't take action on your devices.
-
-Your organization will be able to monitor and manage the agent. You should check its output to make sure it's correct and give feedback to help the agent learn and improve. Like all AI, an agent might be wrong sometimes.  
+The Device Lifecycle Agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. Device Lifecycle Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval. 
 
 ## Prerequisites
 
@@ -63,23 +57,67 @@ Your organization will be able to monitor and manage the agent. You should check
 :::row-end:::
  
 
-Identity 
+## Agent identity 
 
-Plugins
-Provides the agent access needed for this agent to run. Learn more about plugins 
-Microsoft Intune
-Microsoft Entra
+By default, the device lifecycle agent runs under the identity and permissions of the admin account that is used to set up the agent.  
 
+The agent behavior is limited to the permissions of the user identity that the agent runs under. 
+
+The agent persistently runs in the identity and permissions of the Intune admin account that is assigned as the agent's identity. 
+
+The agent identity refreshes with each agent run and expires if the agent doesn't run for 90 consecutive days. When the expiration date nears, each Copilot owner and Copilot contributor receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until authentication is renewed. For more information about renewing authentication, see [Renew the agent](#renew-the-agent).  
+
+## Limitations 
+
+- An admin must manually start the agent. Once the agent starts, there are no options to stop or pause it. 
+- Only start the agent from within the Microsoft Intune admin center. 
+- Only the user who sets up the agent can view session details in the Microsoft Security Copilot portal. 
+- No suggestion history across runs. If you re-run the agent, the suggestions from the previous runs will be lost.  
+- One agent instance per tenant/user context. 
+- Only disables Entra ID objects; other remediation steps are instructions for admins. 
+
+## How it works 
+
+Signal Aggregation: Collects device data from Intune and Entra ID. 
+
+Evaluation: Assesses devices using predefined logic and optional custom admin instructions. 
+
+Recommendations: Flags devices for offboarding, with suggested actions and rationale. 
+
+Admin Approval: No changes are made without explicit admin approval. 
+
+Assisted Remediation: Upon approval, Device Lifecycle Agent disables Entra ID objects and guides further steps (e.g., Defender offboarding). 
+
+<!--
 Workspace: This agent will run in the same preferred workspace you selected for Security Copilot.
-Once started, the agent will immediately run in your tenant. You will not be able to cancel an agent mid-run. When the run finishes, you can choose to remove the agent.
+Once started, the agent will immediately run in your tenant. You will not be able to cancel an agent mid-run. When the run finishes, you can choose to [remove the agent](#remove-the-agent).
 
-Select **Start agent** to begin the setup process.
+Select **Start agent** to begin the setup process.-->
+
+
+## Supported Platforms & Scope 
+
+Supports Windows, iOS/iPadOS, macOS, Android, and Linux devices managed by Intune. 
+
+Both corporate-owned and BYOD devices are included. 
+
+Excluded: Shared devices, hybrid Azure AD-joined Windows devices, Teams Phones 
 
 ## Configure the agent
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent**.
 
 ## Agent action: run
+
+To manually run the Device Lifecycle Agent:
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**.
+1. Select **Run**.  
+
+When an agent run starts, the agent runs until it completes its evaluation. It can't be stopped or paused. 
+
+> [!NOTE]
+> Each time the agent runs, it runs under the identity and permissions of the Intune administrator that its been configured to use. 
 
 ## Agent action: refresh
 

@@ -1,11 +1,8 @@
 items:
 - name: Security Copilot Agents
   items:
-  - name: Overview (option 1)
+  - name: Overview
     href: index.md
-    displayName: security copilot agent
-  - name: Overview (option 2)
-    href: index2.yml
     displayName: security copilot agent
   - name: Configure an agent in Intune
     href: configure.md
