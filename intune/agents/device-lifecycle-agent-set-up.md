@@ -17,16 +17,19 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 
 :::column-end:::
 :::column span="3":::
-> Intune admin roles: Intune Administrator or Read Only Operator
-> Entra Security Reader
+> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune admin roles:
+> - Intune Administrator
+> - Read Only Operator
+> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra admin roles:
+> - Security Reader
+>
 > For initial setup:
 > - Copilot Owner required for setup
+>
 > For results:
 > - Copilot Contributor 
+>
 > To take action from within the agent, such as to disable devices in Entra, you must have the *Disable devices* in Entra permission. You don't need this permission to set up, run, or view results from the agent.
-
-> Agent identity:
-> The agent will run using the identity of the user who first set up the agent. Agent authentication will expire after 90 days and need to be renewed. Learn more about agent authentication.
 
 :::column-end:::
 :::row-end:::
@@ -65,7 +68,9 @@ The agent behavior is limited to the permissions of the user identity that the a
 
 The agent persistently runs in the identity and permissions of the Intune admin account that is assigned as the agent's identity. 
 
-The agent identity refreshes with each agent run and expires if the agent doesn't run for 90 consecutive days. When the expiration date nears, each Copilot owner and Copilot contributor receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until authentication is renewed. For more information about renewing authentication, see [Renew the agent](#renew-the-agent).  
+The agent identity refreshes with each agent run and expires if the agent doesn't run for 90 consecutive days. When the expiration date nears, each Copilot owner and Copilot contributor receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until authentication is renewed. For more information about renewing authentication, see [Renew the agent](#renew-the-agent). 
+
+Agent identity: the agent runs using the identity of the user who first set up the agent. Agent authentication expires after 90 days and needs to be renewed. Learn more about agent authentication.
 
 ## Limitations 
 
