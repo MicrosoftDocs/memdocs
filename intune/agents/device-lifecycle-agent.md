@@ -1,0 +1,59 @@
+---
+title: Device lifecycle agent overview
+description: 
+ms.date: 10/15/2025
+ms.topic: overview
+---
+
+# Device lifecycle agent overview
+
+The Device Lifecycle Agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. Device Lifecycle Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval. 
+
+## How it works 
+
+Signal Aggregation: Collects device data from Intune and Entra ID. 
+
+Evaluation: Assesses devices using predefined logic and optional custom admin instructions. 
+
+Recommendations: Flags devices for offboarding, with suggested actions and rationale. 
+
+Admin Approval: No changes are made without explicit admin approval. 
+
+Assisted Remediation: Upon approval, Device Lifecycle Agent disables Entra ID objects and guides further steps (e.g., Defender offboarding). 
+
+<!--
+Workspace: This agent will run in the same preferred workspace you selected for Security Copilot.
+Once started, the agent will immediately run in your tenant. You will not be able to cancel an agent mid-run. When the run finishes, you can choose to [remove the agent](#remove-the-agent).
+
+Select **Start agent** to begin the setup process.-->
+
+## Agent identity 
+
+By default, the device lifecycle agent runs under the identity and permissions of the admin account that is used to set up the agent.  
+
+The agent behavior is limited to the permissions of the user identity that the agent runs under. 
+
+The agent persistently runs in the identity and permissions of the Intune admin account that is assigned as the agent's identity. 
+
+The agent identity refreshes with each agent run and expires if the agent doesn't run for 90 consecutive days. When the expiration date nears, each Copilot owner and Copilot contributor receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until authentication is renewed. For more information about renewing authentication, see [Renew the agent](#renew-the-agent). 
+
+Agent identity: the agent runs using the identity of the user who first set up the agent. Agent authentication expires after 90 days and needs to be renewed. Learn more about agent authentication.
+
+## Limitations 
+
+- An admin must manually start the agent. Once the agent starts, there are no options to stop or pause it. 
+- Only start the agent from within the Microsoft Intune admin center. 
+- Only the user who sets up the agent can view session details in the Microsoft Security Copilot portal. 
+- No suggestion history across runs. If you re-run the agent, the suggestions from the previous runs will be lost.  
+- One agent instance per tenant/user context. 
+- Only disables Entra ID objects; other remediation steps are instructions for admins. 
+
+## Supported Platforms & Scope 
+
+Supports Windows, iOS/iPadOS, macOS, Android, and Linux devices managed by Intune. 
+
+Both corporate-owned and BYOD devices are included. 
+
+Excluded: Shared devices, hybrid Azure AD-joined Windows devices, Teams Phones 
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

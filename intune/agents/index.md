@@ -52,7 +52,7 @@ The *approver agent* evaluates the effect of approval requests in Intune and mak
 The *device lifecycle agent* can find devices that were removed from Intune, but might linger in Microsoft Entra. It provides steps to properly remove them from Entra.
 
 > [!div class="nextstepaction"]
-> [Learn more](device-lifecycle-agent-set-up.md)
+> [Learn more](device-lifecycle-agent.md)
     :::column-end:::
 
     :::column:::

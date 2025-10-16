@@ -17,11 +17,11 @@ items:
       displayName: approver agent
   - name: Device lifecycle agent
     items:
-    - name: Set up the agent
-      href: device-lifecycle-agent-set-up.md
+    - name: Overview
+      href: device-lifecycle-agent.md
       displayName: device lifecycle agent
-    - name: Use the agent
-      href: device-lifecycle-agent-use.md
+    - name: Configure and use the agent
+      href: device-lifecycle-agent-configure.md
       displayName: device lifecycle agent
   - name: Policy agent
     items:
