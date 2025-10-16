@@ -11,7 +11,7 @@ items:
     items:
     - name: Set up the agent
       href: approver-agent-set-up.md
-      displayName: approver agent, test
+      displayName: approver agent
     - name: Use the agent
       href: approver-agent-use.md
       displayName: approver agent
@@ -19,15 +19,13 @@ items:
     items:
     - name: Set up the agent
       href: device-lifecycle-agent-set-up.md
-      displayName: device lifecycle agent
     - name: Use the agent
       href: device-lifecycle-agent-use.md
-      displayName: device lifecycle agent, test
   - name: Policy agent
     items:
     - name: Set up the agent
       href: policy-agent-set-up.md
-      displayName: policy agent, test
+      displayName: policy agent
     - name: Use the agent
       href: policy-agent-use.md
-      displayName: policy agent, test
+      displayName: policy agent
