@@ -1,7 +1,7 @@
 ---
 title: Control AI features on Android Enterprise devices
 description: Using Microsoft Intune, you can manage and restrict AI usage on Android devices enrolled in Intune. This guide provides lists the steps in Intune to block AI apps, websites, screen-driven experiences, on-device AI services, and OEM-specific AI features. You can manage Microsoft Copilot, Google Gemini, Samsung Galaxy AI, claude.ai, ChatGPT, and more.
-ms.date: 10/13/2025
+ms.date: 10/16/2025
 ms.topic: how-to
 ms.reviewer: cchristenson
 ms.collection:
@@ -165,9 +165,9 @@ By default, no apps in the Google Play Store can be downloaded unless explicitly
 2. Select the AI app > **Properties**.
 3. Make sure **Assignments** is not set to **Required**, not set to **Available for enrolled devices**, or not set to **Available with or without enrollment**.
 
-If all these options aren't set, then the app hasn't been deployed by an Intune policy. It's possible the app was installed manually by the user or through another MDM solution.
+If all these options aren't set, then the app hasn't been deployed by an Intune policy.
 
-?? What if it's already been deployed? Then what?? [Then we want to change the assignment to Uninstall]
+It's possible the app was installed manually by the user or through another MDM solution. In this situation, set the assignment to **Uninstall** to remove it from the devices.
 
 ---
 
@@ -210,21 +210,14 @@ Use the following steps to create an app configuration policy that configures yo
     - **Targeted app**: Select the browser app you added, like Edge or Chrome.
 
 3. Select **Next**.
-4. In **Settings**, configure the following properties:
+4. In **Settings** > **Configuration settings format**, select **Enter JSON data**. Enter the list of URLs to block. For example, enter:
 
-    - **Configuration settings**: Select **Use the configuration designer** > **Add**.
-    - **Search**: Select **Block access to a list of URLs** > **OK**.
-    - **Configuration settings**: Enter the list of URLs to block, like `https://chatgpt.com, https://claude.ai`.
-
-      Some sample AI websites include:
-
-      - `https://chatgpt.com`
-      - `https://claude.ai`
-      - `https://copilot.microsoft.com`
-      - `https://perplexity.ai`
-      - `https://gemini.google.com/`
-
-    ??Add all URLs to one key? Should we include a list of possible apps?? [CC: this is a good question, I'm also not sure if they are supposed to be comma separated or how the list of URLs should be added - let me do some research. I think a list of possible apps is a great idea! We should call out that the list isn't comprehensive but I would start with: ChatGPT, Microsoft Copilot (Consumer), Google Gemini, Perplexity AI, Claude (Anthropic)]
+    ```json
+    {
+      "key": "URLBlocklist",
+      "valueStringArray": [ "https://chatgpt.com", "https://claude.ai", "https://copilot.microsoft.com", "https://perplexity.ai", "https://gemini.google.com" ]
+    }
+    ```
 
 5. Select **Next** and continue creating the policy. For step-by-step instructions, see [Add App Configuration Policies for Managed Android Enterprise Devices](../../intune-service/apps/app-configuration-policies-use-android.md).
 
@@ -323,13 +316,11 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
     - **Screen capture (work profile-level)**: Set to **Block**. This setting blocks AI features from accessing on-screen content. End users can't take screenshots in the work profile.
 
-    - **Copy and paste between work and personal profiles**: Set to ??. This setting blocks copy and paste functionality between work and personal profiles. This helps ensure that no data from the work profile leaks into AI apps in the personal profile.
+    - **Copy and paste between work and personal profiles**: By default, this feature is already blocked. If you have a policy that sets it to **Allow**, then ??. If it's changed to Not Configured, is the default value restored??
 
-      - ??There is only Allow and Not Configured?? [CC: you are right! We can leave this one out - the default is block]
+      This setting blocks copy and paste functionality between work and personal profiles. This helps ensure that no data from the work profile leaks into AI apps in the personal profile.
 
-    - **Data sharing between work and personal profiles**: Set to ??. This setting blocks data sharing between work and personal profiles. This helps ensure that no data from the work profile leaks into AI apps in the personal profile.
-
-      ??There is no True option?? [CC: Set to Block sharing between profiles]
+    - **Data sharing between work and personal profiles**: Set to **Block all sharing between profiles**. This setting blocks data sharing between work and personal profiles. This helps ensure that no data from the work profile leaks into AI apps in the personal profile.
 
 6. Expand the **Personal profile** category and configure the following settings:
 
@@ -346,7 +337,7 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
 - Personally owned devices with a work profile (BYOD)
 
-To prevent sensitive data from being used by AI apps in the personal profile, you can configure the following settings. These settings help you manage data flow from the work profile to the personal profile. [CC: these are default configured so maybe they can check that they don't deviate from the default by asking Copilot or looking through previous policies?]
+To prevent sensitive data from being used by AI apps in the personal profile, you can configure the following settings. These settings help you manage data flow from the work profile to the personal profile.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
 2. Enter the following properties:
@@ -356,9 +347,9 @@ To prevent sensitive data from being used by AI apps in the personal profile, yo
 
 3. Select **Create**.
 4. In **Basics**, enter a **Name** for the profile, and select **Next**.
-5. In Configuration settings, expand **Work profile settings** category, and configure the following settings:
+5. In **Configuration settings**, expand **Work profile settings** category. The following settings and their default values help limit AI data leakage. If any of these settings are changed from their default values, you should change them back to the defaults.
 
-    - **Copy and paste between work and personal profiles**: Set to **Block**.  
+    - **Copy and paste between work and personal profiles**: Set to **Block** (default).
     - **Data sharing between work and personal profiles**: Set to **Device Default**. Device Default restricts sharing between work and personal profiles.
 
 ---
