@@ -41,6 +41,9 @@ The *approver agent* evaluates the effect of approval requests in Intune and mak
     :::column-end:::
     
     :::column:::
+:::row-end:::
+
+:::row:::
 #### Device lifecycle agent
 
 :::image type="icon" source="icons/device-lifecycle-agent.svg" border="false":::
