@@ -41,6 +41,7 @@ When planning your deployment of Remote Help, consider the following best practi
 
 - Updates and new features: Remote Help is evolving. Microsoft might roll out new features (for example, the ability to support more platforms or an improved web helper dashboard). Stay updated via the Intune release notes or tech community blogs. Knowing these updates can help you refine your support process.  
 
+
 ## Configure Remote Help for your tenant
 
 To configure your tenant to support Remote Help, review and complete the following tasks. These tasks are important to configure for all Remote Help platforms that are supported.
