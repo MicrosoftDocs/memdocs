@@ -7,6 +7,10 @@ ms.topic: how-to
 
 # Use the device lifecycle agent
 
+This article describes how to use the Device Lifecycle Agent in Microsoft Intune to identify and manage devices that were removed from Intune but might still exist in Microsoft Entra.
+
+Different prompts can be used to get different results from the agent. The article includes sample prompts and responses to illustrate how the agent can assist in offboarding devices.
+
 ## Prerequisites
 
 :::row:::
