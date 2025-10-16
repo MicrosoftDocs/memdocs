@@ -7,17 +7,6 @@ ms.date: 10/16/2025
 
 ## Remove the agent instance
 
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/rbac.md)]
-
-:::column-end:::
-:::column span="3":::
-> To remove an agent instance in Security Copilot, your account must have the *Owner* role.\
-> Accounts with the *Contributor* role can run agents and view results, but they cannot manage or remove agent instances.
-:::column-end:::
-:::row-end:::
-
 Steps to remove an agent instance:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents**.

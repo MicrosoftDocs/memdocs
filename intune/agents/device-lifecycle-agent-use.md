@@ -30,16 +30,6 @@ ms.topic: how-to
 :::column-end:::
 :::row-end:::
 
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../includes/requirements/cloud.md)]
-
-:::column-end:::
-:::column span="3":::
-> The agent is supported on the public cloud ony. It isn't supported on government clouds.
-
-:::column-end:::
-:::row-end:::
 
 ## Agent action: run
 
