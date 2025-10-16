@@ -32,7 +32,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Intune operated by 21Vianet doesn't support [Microsoft Store for Business](/lifecycle/announcements/microsoft-store-for-business-education-retiring).
 - [Windows Autopilot](/autopilot/overview) features, including Autopilot with co-management, aren't supported with Intune operated by 21Vianet. [Windows Autopilot Device Preparation](/autopilot/device-preparation/overview) is available on Intune operated by 21Vianet in China cloud.
 
-  To learn more about the differences, see [Compare Autopilot solutios](/autopilot/device-preparation/compare).
+  To learn more about the differences, see [Compare Autopilot solutions](/autopilot/device-preparation/compare).
 
 - Intune operated by 21Vianet supports the Company Portal for Windows app. Use WinGet to download the Company portal package and dependencies and then deploy as a Line-of-Business app using Intune. [Use the WinGet tool to install and manage applications](/windows/package-manager/winget/).
 - Microsoft Intune Endpoint Analytics and Log Analytics features aren't currently available.
@@ -41,7 +41,7 @@ Because the China services are operated by a partner from inside China, there ar
   - Google Play Protect capabilities such as Play integrity verdict.
   - Managing apps from the Google Play Store.
   - Android Enterprise capabilities. For more information, see this [Google documentation](https://support.google.com/work/android/answer/6270910?hl=en).
-- The Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
+- The Intune Company Portal app for Android uses Google Mobile Services (GMS) to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
 - Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
@@ -70,7 +70,7 @@ With Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, 
 
 The Tenant Administrator role for Intune operated by 21Vianet can request data for data subjects in the following ways:
 
-- Using the Microsoft Entra Admin Center, a Tenant Administrator can permanently delete a data subject from Microsoft Entra ID and related services. For more information, see [Azure Data Subject Requests - Delete](/microsoft-365/compliance/gdpr-dsr-azure#step-5-delete)
+- In the Microsoft Entra admin center, a Tenant Administrator can permanently delete a data subject from Microsoft Entra ID and related services. For more information, see [Azure Data Subject Requests - Delete](/microsoft-365/compliance/gdpr-dsr-azure#step-5-delete)
 - System-generated logs for Microsoft services operated by 21Vianet can be exported by Tenant Administrators using the Data Log Export. For more information, see [Azure Data Subject Requests - Export](/microsoft-365/compliance/gdpr-dsr-azure#step-6-export).
 
 ## Next steps
