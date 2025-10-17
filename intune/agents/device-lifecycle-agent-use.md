@@ -36,15 +36,6 @@ Before you get started, ensure you meet the requirementts listed in the overview
 :::column-end:::
 :::row-end:::
 
-## Manage devices and the agent 
-
-To review and manage the device lifecycle agent suggestions:
-
-1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**.
-  1. By default, the agent page opens to the **Overview** tab. On this tab, admins can view the suggestions of devices to offboard, drill in for more details and remediation steps.
-  1. The second available tab is **Suggestions**, which provides the full list of suggestions of devices to offboard, including the completed suggestions.  
-  1. The other available tab is **Settings**, which provides limited details about the agent's configuration. 
-
 ## Agent action: run
 
 To manually run the Device Lifecycle Agent:
