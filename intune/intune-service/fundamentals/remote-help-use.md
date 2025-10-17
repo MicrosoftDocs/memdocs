@@ -73,7 +73,9 @@ To request help, you must reach out to your support staff to request assistance,
 1. Enter the 8-digit security code provided by the helper. After entering the code, select **Share screen** to continue.  
 1. When the session connection begins, a trust screen is displayed with the helper's information including their full name, job title, company, profile picture, and verified domain. At this time, the helper requests a session with full control of your device or view only-screen sharing. You can either choose to **Allow** or to **Decline** the request.  
 1. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone. Select **Don't Allow** as this permission isn't needed for screen sharing.
+   
      :::image type="content" source="media/remote-help/remote-help-microphone-permission.png" alt-text="An example of the microphone permission prompt highlighting the Don't Allow option":::
+   
 1. Select **Share screen** to continue. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
 1. macOS shows a menu with one of two options:  
    - **Green camera icon**: Choose **Screen**, and then move your mouse to select the screen share.
@@ -99,12 +101,11 @@ To request help, you must reach out to your support staff to request assistance,
 ### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 **Starting the session:**
-
-1. On your device, you see a prompt displaying a request to grant screen share or control of the device with the helpers information including their full name and company.
+On your device, you see a prompt showing a request to grant screen share or control of the device with the helpers information, including their full name and company.
    
-    a. If starting an attended screen sharing or full control session, you must select **Accept** to allow the session to begin. If you don't accept within 5 minutes, the session times out.
+    `. If starting an attended screen sharing or full control session, you must select **Accept** to allow the session to begin. If you don't accept within 5 minutes, the session times out.
    
-    b. If starting an unattended control session, the session will begin automatically after 30 seconds if there's no response.  
+    1. If starting an unattended control session, the session will begin automatically after 30 seconds if there's no response.  
 
 **During the session:**
 
@@ -113,7 +114,7 @@ To request help, you must reach out to your support staff to request assistance,
 
 ### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web App**](#tab/webapp)
 
-During a session there are two roles, a helper, and a sharer. The helper obtains the security code, and then provides it to the sharer. After the session is established, the helper can view the sharer's screen.
+During a session, there are two roles: a helper and a sharer. The helper obtains the security code, and then provides it to the sharer. After the session is established, the helper can view the sharer's screen.
 
 **Starting the session:**
 
@@ -126,7 +127,7 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
 ## Provide help
 
-To provide help, you must reach out to the user who needs assistance. You can reach out through a call, chat, email, and so on, and you're the helper during the session.
+To provide help, you must reach out to the user who needs assistance. You can reach out by phone, chat, or email, and you're the helper during the session.
 
 ### [**Windows from Windows native app**](#tab/windowsnative)
 
@@ -156,7 +157,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    At this time, you can request a session with full control of the sharer's device or choose only screen sharing. If you request full control, the sharer can choose to **Allow full control** or to **Decline the request**.
 
-1. After establishing that the session uses a shared display or full control, Remote Help will display a **Compliance Warning* if the sharer's device fails to meet the conditions of its assigned compliance policies.
+1. After establishing that the session uses a shared display or full control, Remote Help displays a *compliance warning* if the sharer's device fails to meet the conditions of its assigned compliance policies.
 
    During assistance, helpers that have the elevation permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
