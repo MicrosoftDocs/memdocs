@@ -17,10 +17,15 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 
 :::column-end:::
 :::column span="3":::
-> - Microsoft Intune subscription (Plan 1 or equivalent). 
-> - Microsoft Security Copilot access with sufficient security compute units (SCUs). 
-> - Microsoft Entra ID integrated with Intune (Free or P1). 
-> - Optional: Microsoft Defender for Endpoint (Plan 2) for Defender offboarding steps. 
+>To use Security Copilot agents in Microsoft Intune, your organization must meet specific licensing prerequisites.\
+>Required licenses:
+>
+> - Microsoft Intune subscription (Plan 1 or equivalent)
+> - Microsoft Security Copilot access with sufficient security compute units (SCUs)
+>
+> Optional licenses for enhanced functionality:
+>
+> Microsoft Defender for Endpoint (Plan 2), required for Defender offboarding steps
 
 :::column-end:::
 :::row-end:::
@@ -60,8 +65,8 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 :::column span="3":::
 > There are different role requirements depending on the action being taken with the agent. For details, see:
 >
-> - [Use the device lifecycle agent](device-lifecycle-agent-use.md)
 > - [Configure the device lifecycle agent](device-lifecycle-agent-configure.md)
+> - [Use the device lifecycle agent](device-lifecycle-agent-use.md)
 
 :::column-end:::
 :::row-end:::
@@ -84,7 +89,7 @@ Once started, the agent will immediately run in your tenant. You will not be abl
 
 Select **Start agent** to begin the setup process.-->
 
-## Agent identity 
+### Agent identity 
 
 By default, the device lifecycle agent runs under the identity and permissions of the admin account that is used to set up the agent.  
 
@@ -92,7 +97,7 @@ The agent behavior is limited to the permissions of the user identity that the a
 
 The agent persistently runs in the identity and permissions of the Intune admin account that is assigned as the agent's identity. 
 
-The agent identity refreshes with each agent run and expires if the agent doesn't run for 90 consecutive days. When the expiration date nears, each Copilot owner and Copilot contributor receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until authentication is renewed. For more information about renewing authentication, see [Renew the agent](#renew-the-agent). 
+The agent identity refreshes with each agent run and expires if the agent doesn't run for 90 consecutive days. When the expiration date nears, each Copilot owner and Copilot contributor receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until authentication is renewed. For more information about renewing authentication, see [Renew the agent](device-lifecycle-agent-configure.md#renew-the-agent). 
 
 Agent identity: the agent runs using the identity of the user who first set up the agent. Agent authentication expires after 90 days and needs to be renewed. Learn more about agent authentication.
 
@@ -107,7 +112,7 @@ Agent identity: the agent runs using the identity of the user who first set up t
 
 ## Next steps
 
-- [Configure the device lifecycle agent](device-lifecycle-agent-use.md)
+- [Configure the device lifecycle agent](device-lifecycle-agent-configure.md)
 - [Use the device lifecycle agent](device-lifecycle-agent-use.md)
 
 <!--links-->
