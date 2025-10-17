@@ -5,7 +5,7 @@ ms-topic: include
 ms.date: 10/16/2025
 ---
 
-## Remove the agent instance
+### Remove the agent instance
 
 Steps to remove an agent instance:
 
