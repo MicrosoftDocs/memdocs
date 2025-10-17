@@ -84,11 +84,11 @@ This section tracks the current and past run activity of the agent.
 
 # [**Settings**](#tab/settings)
 
-On the Device Lifecycle Agent Settings tab, admins can view the existing details about the current configuration of the agent. You can view details about the agents Identity and tailor the agent outputs to your needs using the optional Custom Instructions field.   
+Use the **Settings** tab to view the agent's current configuration. You can view details about the agent's identity and tailor the agent outputs to your needs using the optional **Instructions** field.
 
 ### Custom instructions 
 
-You can tailor agent recommendations using the optional **Instructions** field. This setting lets you provide a prompt that influences how the agent runs. Common use cases include:
+With the **Instruction** field you can provide a prompt that influences how the agent runs. Common use cases include:
 
 - Including or excluding specific object IDs
 - Setting thresholds for device activity
