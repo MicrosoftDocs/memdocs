@@ -13,17 +13,19 @@ Different prompts can be used to get different results from the agent. The artic
 
 ## Prerequisites
 
+Before you get started, ensure you meet the requirementts listed in the overview article: [Device lifecycle agent overview](device-lifecycle-agent.md). The following additional prerequisite are required to use the agent.
+
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
 
 :::column-end:::
 :::column span="3":::
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune admin roles:
-> - Intune Administrator
+> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
 > - Read Only Operator
 >
-> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra admin roles:
+> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
+> - Intune Administrator
 > - Security Reader
 >
 > For results:
@@ -34,6 +36,14 @@ Different prompts can be used to get different results from the agent. The artic
 :::column-end:::
 :::row-end:::
 
+## Manage devices and the agent 
+
+To review and manage the device lifecycle agent suggestions:
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**.
+  1. By default, the agent page opens to the **Overview** tab. On this tab, admins can view the suggestions of devices to offboard, drill in for more details and remediation steps.
+  1. The second available tab is **Suggestions**, which provides the full list of suggestions of devices to offboard, including the completed suggestions.  
+  1. The other available tab is **Settings**, which provides limited details about the agent's configuration. 
 
 ## Agent action: run
 

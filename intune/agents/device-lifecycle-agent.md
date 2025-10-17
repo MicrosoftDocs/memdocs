@@ -13,6 +13,17 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 
 :::row:::
 :::column span="1":::
+[!INCLUDE [cloud](../includes/requirements/cloud.md)]
+
+:::column-end:::
+:::column span="3":::
+> The agent is supported on the public cloud ony. It isn't supported on government clouds.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
 [!INCLUDE [platform](../includes/requirements/licensing.md)]
 
 :::column-end:::
@@ -25,18 +36,7 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 >
 > Optional licenses for enhanced functionality:
 >
-> Microsoft Defender for Endpoint (Plan 2), required for Defender offboarding steps
-
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-[!INCLUDE [cloud](../includes/requirements/cloud.md)]
-
-:::column-end:::
-:::column span="3":::
-> The agent is supported on the public cloud ony. It isn't supported on government clouds.
+> - Microsoft Defender for Endpoint (Plan 2), required for Defender offboarding steps
 
 :::column-end:::
 :::row-end:::
@@ -50,7 +50,7 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 > The agent supports devices managed by Intune across multiple platforms, including Windows, iOS/iPadOS, macOS, Android, and Linux.\
 > It applies to both corporate-owned and BYOD (bring-your-own-device) scenarios.
 >
-> The agent does not support:
+> The agent doesn'o't support:
 > - Shared devices
 > - Hybrid Entra-joined Windows devices
 > - Microsoft Teams Phones

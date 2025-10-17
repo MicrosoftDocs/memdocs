@@ -7,19 +7,23 @@ ms.topic: how-to
 
 # Configure the device lifecycle agent
 
+This article describes how to configure the device lifecycle agent in Microsoft Intune.
+
 ## Prerequisites
+
+Before you get started, ensure you meet the requirementts listed in the overview article: [Device lifecycle agent overview](device-lifecycle-agent.md). The following additional prerequisite are required to configure the agent.
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
 
 :::column-end:::
 :::column span="3":::
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune admin roles:
-> - Intune Administrator
+> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles)
 >
-> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra admin roles:
+> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
+> - Intune Administrator
 > - Security Reader
 >
 > For initial setup:
@@ -38,14 +42,7 @@ ms.topic: how-to
 
 The agent runs until it finishes and then displays its results in the Device Lifecycle Agent pane of the admin center.
 
-### Manage devices and the agent 
-
-After the agent completes its initial run, admins can review and manage the Device Lifecycle Agent suggestions in the Intune admin center.
-
-1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**.
-  1. By default, the agent page opens to the **Overview** tab. On this tab, admins can view the suggestions of devices to offboard, drill in for more details and remediation steps.
-  1. The second available tab is **Suggestions**, which provides the full list of suggestions of devices to offboard, including the completed suggestions.  
-  1. The other available tab is **Settings**, which provides limited details about the agent's configuration. 
+To learn how to use the agent after it's been configured, see [Use the device lifecycle agent](device-lifecycle-agent-use.md).
 
 ## Agent action: refresh
 
