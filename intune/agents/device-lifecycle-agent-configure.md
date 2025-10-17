@@ -88,13 +88,18 @@ On the Device Lifecycle Agent Settings tab, admins can view the existing details
 
 ### Custom instructions 
 
-You can tailor agent recommendations to your needs using the optional Custom Instructions field. This setting allows you to provide a prompt to the agent as part of its execution. These instructions can be used to: 
-- Include or exclude specific object IDs 
-- Set thresholds for device activity 
+You can tailor agent recommendations using the optional **Instructions** field. This setting lets you provide a prompt that influences how the agent runs. Common use cases include:
 
-A common scenario to consider is if your organization has executive devices that you don't want the agent to suggest offboarding. If the agent runs and sees executive devices which have an identity mismatch, SCUs are consumed to suggest offboarding those devices that aren't necessary. To prevent executive devices from being considered by the agent: Add a custom instruction, based on your needs. 
+- Including or excluding specific object IDs
+- Setting thresholds for device activity
 
-Ex: "Exclude the [example object ID] from agent consideration." 
+For example, if your organization has executive devices that shouldn't be flagged for offboarding, you can use custom instructions to exclude them. Without this, the agent might detect identity mismatches on those devices and consume SCUs to suggest offboarding—even when it's not appropriate. Custom instructions help you prevent that by guiding the agent's logic based on your organizational needs.
+
+Example prompt to exclude a specific object ID:
+
+```agent-prompt
+Exclude the <example object ID> from agent consideration.
+```
 
 ---
 
