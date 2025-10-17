@@ -162,6 +162,9 @@ There are optional Windows updates for higher notification reliability:
 - Windows 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
 - Windows 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
 
+ > [!IMPORTANT]
+ > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 The Intune management extension is required on the sharer's device for the remote launch feature. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information about the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md).  
 
 We don't recommend remotely starting a session to users on Azure virtual desktops. For more information, see [How to provide help on an AVD](remote-help-use.md#provide-help-on-an-avd). 
@@ -209,10 +212,11 @@ Device support is dependent on both the users operating system, and their web br
 
 #### Windows versions  
 
+- Windows 11
+
  > [!IMPORTANT]
  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
-- Windows 
 
 #### Linux versions
 
