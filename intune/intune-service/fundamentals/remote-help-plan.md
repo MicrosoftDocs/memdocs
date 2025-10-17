@@ -109,19 +109,19 @@ To use Remote Help, helpers must have the appropriate role based access control 
 |Remote Help - Take full control|Allows the helper to take full control of the sharer's device.|
 |Remote Help - Elevation|Allows the helper to interact with the user account control prompts on Windows.|
 |Remote Help - Unattended| Allows the helper to connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a fully managed device or as a dedicated device.|
-|Remote Tasks - Offer Remote Assistance| Allows the helper to offer remote assistance to users.|
+|Remote Tasks - Offer remote assistance| Allows the helper to offer remote assistance to users.|
 |Remote Assistance Connector - Read|Required to allow the user to see if Remote Help is configured for the tenant when starting a session.|
 
 The following Intune built-in roles include Remote Help permissions:
 
-- Help Desk Operator (View screen, take full control, elevation, unattended, Remote Tasks - Offer Remote Assistance, Remote Assistance Connector - read)
-- School Administrator (View screen, take full control, elevation, Remote Tasks - Offer Remote Assistance, Remote Assistance Connector - read)
+- Help Desk Operator (View screen, take full control, elevation, unattended, Remote Tasks - Offer remote assistance, Remote Assistance Connector - Read)
+- School Administrator (View screen, take full control, elevation, Remote Tasks - Offer remote assistance, Remote Assistance Connector - Read)
 
 > [!NOTE]
 > A person needs a combination of the *Remote Tasks - Offer Remote Assistance* permission, the *Remote Assistance Connector - read* permission, and at least one of the Remote Help permissions to provide help. The permissions are granted to users in the admin group of a role assignment for the users or devices in the defined scope groups. For more information about Intune role-based access control, see [About role-based access control (RBAC) for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
->[!IMPORTANT]
->If a sharer or a sharer's device isn't in the scope of a helper, that helper can't provide assistance. The *All Devices* scope group doesn't include unenrolled devices. Instead, use a user scope group during the assignment process.
+> [!IMPORTANT]
+> If a sharer or a sharer's device isn't in the scope of a helper, that helper can't provide assistance. The *All Devices* scope group doesn't include unenrolled devices. Instead, use a user scope group during the assignment process.
 >
 > If you select a group to exclude from assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](role-based-access-control.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
 
@@ -129,10 +129,10 @@ The following Intune built-in roles include Remote Help permissions:
 
 Remote Help has the following requirements: 
 
-- [Intune subscription](../fundamentals/licenses.md)
-- [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.
-- [Supported platforms and devices](#supported-platforms)
-- Intune-enrolled devices must be registered with Microsoft Entra.
+- [Intune subscription](../fundamentals/licenses.md).  
+- [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.  
+- [Supported platforms and devices](#supported-platforms).  
+- Intune-enrolled devices must be registered with Microsoft Entra.  
 
 ## Limitations
 Remote Help has the following limitations:  
