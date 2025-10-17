@@ -19,15 +19,12 @@ Before you get started, ensure you meet the requirementts listed in the overview
 
 :::column-end:::
 :::column span="3":::
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
-> - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles)
->
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
 > - Intune Administrator
 > - Security Reader
 >
-> For initial setup:
-> - Copilot Owner required for setup
+> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> - [Copilot owner](/copilot/security/authentication#security-copilot-roles) 
 >
 > To take action from within the agent, such as to disable devices in Entra, you must have the *Disable devices* in Entra permission. You don't need this permission to set up, run, or view results from the agent.
 
