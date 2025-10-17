@@ -103,7 +103,7 @@ To request help, you must reach out to your support staff to request assistance,
 **Starting the session:**
 On your device, you see a prompt showing a request to grant screen share or control of the device with the helpers information, including their full name and company.
    
-    `. If starting an attended screen sharing or full control session, you must select **Accept** to allow the session to begin. If you don't accept within 5 minutes, the session times out.
+    1. If starting an attended screen sharing or full control session, you must select **Accept** to allow the session to begin. If you don't accept within 5 minutes, the session times out.
    
     1. If starting an unattended control session, the session will begin automatically after 30 seconds if there's no response.  
 
