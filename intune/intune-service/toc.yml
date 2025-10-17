@@ -178,19 +178,16 @@ items:
 
     - name: Remote Help
       items:
-      - name: Using Remote Help
+      - name: Remote Help overview
         href: ./fundamentals/remote-help.md
-      - name: Remote Help on Windows
-        href: ./fundamentals/remote-help-windows.md
-      - name: Remote Help on macOS
-        href: ./fundamentals/remote-help-macos.md
-      - name: Remote Help Web App
-        href: ./fundamentals/remote-help-webapp.md
-      - name: Remote Help on Android
-        href: ./fundamentals/remote-help-android.md
-      - name: Troubleshooting Remote Help on Android
-        href: ./fundamentals/remote-help-android-troubleshoot.md
-
+      - name: Planning Remote Help
+        href: ./fundamentals/remote-help-plan.md
+      - name: Deploying Remote Help
+        href: ./fundamentals/remote-help-deploy.md
+      - name: Using Remote Help
+        href: ./fundamentals/remote-help-use.md
+      - name: Troubleshooting Remote Help
+        href: ./fundamentals/remote-help-troubleshoot-monitor.md
     - name: Advanced analytics
       href: ../analytics/advanced/toc.yml
 
