@@ -29,31 +29,6 @@ ms.topic: how-to
 
 :::column-end:::
 :::row-end:::
-
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../includes/requirements/licensing.md)]
-
-:::column-end:::
-:::column span="3":::
-> - Microsoft Intune subscription (Plan 1 or equivalent). 
-> - Microsoft Security Copilot access with sufficient security compute units (SCUs). 
-> - Microsoft Entra ID integrated with Intune (Free or P1). 
-> - Optional: Microsoft Defender for Endpoint (Plan 2) for Defender offboarding steps. 
-
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../includes/requirements/cloud.md)]
-
-:::column-end:::
-:::column span="3":::
-> The agent is supported on the public cloud ony. It isn't supported on government clouds.
-
-:::column-end:::
-:::row-end:::
  
 ## Configure the agent
 

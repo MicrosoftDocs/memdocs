@@ -7,7 +7,64 @@ ms.topic: overview
 
 # Device lifecycle agent overview
 
-The Device Lifecycle Agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. Device Lifecycle Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval. 
+The Device Lifecycle Agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. Device Lifecycle Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval.
+
+## Prerequisites
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/licensing.md)]
+
+:::column-end:::
+:::column span="3":::
+> - Microsoft Intune subscription (Plan 1 or equivalent). 
+> - Microsoft Security Copilot access with sufficient security compute units (SCUs). 
+> - Microsoft Entra ID integrated with Intune (Free or P1). 
+> - Optional: Microsoft Defender for Endpoint (Plan 2) for Defender offboarding steps. 
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [cloud](../includes/requirements/cloud.md)]
+
+:::column-end:::
+:::column span="3":::
+> The agent is supported on the public cloud ony. It isn't supported on government clouds.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+> The agent supports devices managed by Intune across multiple platforms, including Windows, iOS/iPadOS, macOS, Android, and Linux.\
+> It applies to both corporate-owned and BYOD (bring-your-own-device) scenarios.
+>
+> The agent does not support:
+> - Shared devices
+> - Hybrid Entra-joined Windows devices
+> - Microsoft Teams Phones
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+> There are different role requirements depending on the action being taken with the agent. For details, see:
+>
+> - [Use the device lifecycle agent](device-lifecycle-agent-use.md)
+> - [Configure the device lifecycle agent](device-lifecycle-agent-configure.md)
+
+:::column-end:::
+:::row-end:::
 
 ## How it works 
 
@@ -48,17 +105,11 @@ Agent identity: the agent runs using the identity of the user who first set up t
 - One agent instance per tenant/user context. 
 - Only disables Entra ID objects; other remediation steps are instructions for admins. 
 
-## Supported Platforms & Scope 
-
-Supports Windows, iOS/iPadOS, macOS, Android, and Linux devices managed by Intune. 
-
-Both corporate-owned and BYOD devices are included. 
-
-Excluded: Shared devices, hybrid Azure AD-joined Windows devices, Teams Phones 
-
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-
 ## Next steps
 
 - [Configure the device lifecycle agent](device-lifecycle-agent-use.md)
 - [Use the device lifecycle agent](device-lifecycle-agent-use.md)
+
+<!--links-->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
