@@ -131,7 +131,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
    > [!IMPORTANT]
    > The command line options *acceptTerms* and *enableAutoUpdates* are always case sensitive.  
 
-  Leave the rest of the options at their default values and select **Next** to continue.  
+    Leave the rest of the options at their default values and select **Next** to continue.  
 
 1. On the Requirements page, configure the following options to meet your environment requirements, and then select **Next**:
 
@@ -148,8 +148,8 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
    - For **Value**, specify the Remote Help version that you're deploying. For example, **10.0.22467.1000**. See the next note in this article for details on how to get the Remote Help version.
    - Leave **Associated with a 32-bit app on 64-bit clients** set to **No**
 
-> [!NOTE]
-> To get the version of the **RemoteHelp.exe**, install RemoteHelp manually to a machine and run the following PowerShell command: **(Get-Item "$env:ProgramFiles\Remote Help\RemoteHelp.exe").VersionInfo**. From the output, make a note of the FileVersion and use it to specify the *Value* in the detection rule.
+     > [!NOTE]
+     > To get the version of the **RemoteHelp.exe**, install RemoteHelp manually to a machine and run the following PowerShell command: **(Get-Item "$env:ProgramFiles\Remote Help\RemoteHelp.exe").VersionInfo**. From the output, make a note of the FileVersion and use it to specify the *Value* in the detection rule.
 
 1. Proceed to the Assignments page, and then select an applicable device group or device groups that should install the Remote Help app. Remote Help is applicable when targeting groups of devices and not for user groups.
 
@@ -488,10 +488,10 @@ To apply conditional access policies to Remote Help, follow these steps:
 
 1. Navigate to the conditional access policy that you created.  
 2. Select **Target resources**.  
-     1. Select **Resources (formerly cloud apps)** to specify what this policy applies to.
-     2. Select **Exclude**.  
-     3. Select **Select resources**.  
-     4. Under **Select**, check the **RemoteAssistanceService** with the app ID of 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2.  
+   1. Select **Resources (formerly cloud apps)** to specify what this policy applies to.
+   2. Select **Exclude**.  
+   3. Select **Select resources**.  
+   4. Under **Select**, check the **RemoteAssistanceService** with the app ID of 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2.  
 
 ## Next Steps
 
