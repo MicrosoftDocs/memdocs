@@ -1,5 +1,5 @@
 ---
-title: Intune Graph API - Reports and properties | Microsoft Docs
+title: Intune Graph API - Reports and Properties | Microsoft Docs
 description: Learn about Intune reports and properties provided via Graph API.
 author: nicholasswhite
 ms.author: nwhite
@@ -11,7 +11,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Intune reports and properties available using Graph API
+# Intune Reports and Properties Available Using Graph API
 
 Microsoft Intune provides many reports in the Microsoft Intune admin center that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
@@ -2260,7 +2260,7 @@ There are no filters for this report.
 > [!NOTE]
 > To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API allows you to select, to what you receive back.
 >
-> The select parameter accepts column aliases, but the filter parameter doesn’t.
+> The select parameter accepts column aliases, but the filter parameter doesn't.
 >
 > The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` are only exported when they're included in the select parameter. These columns aren't exported by default.
 
@@ -2338,7 +2338,7 @@ You can choose to filter the `DevicesWithInventory` report's output based on the
 - `OwnerType`
 - `PartnerFeaturesBitmask`
 
-The following `ProcessorArchitecture` mappings apply to Windows 10 and later:
+The following `ProcessorArchitecture` mappings apply to Windows:
 - 9 = x64
 - 5 = ARM
 - 12 = ARM64

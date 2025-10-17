@@ -1,7 +1,7 @@
 ---
 title: Enroll Windows devices in Intune
 description: Set up your Windows device in Intune Company Portal to get remote access to work or school.
-ms.date: 06/28/2024
+ms.date: 10/14/2025
 ms.reviewer: madekeva
 ---
 
@@ -25,9 +25,9 @@ You can enroll Windows devices through the Intune Company Portal website or app.
 * Install the app from the [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417).
 * [Sign on to the Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school credentials.
 
-## Enroll Windows 10, version 1607 and later device  
+## Enroll devices  
 
-Use Intune Company Portal to enroll devices running on Windows 10, version 1607 and later, and Windows 11.
+Use Intune Company Portal to enroll devices running on Windows 10, version 1607 and later, and Windows 11.  
 1. Open Company Portal and sign in with your work or school account.
 
 2. On the **Home** screen, select **Next** to set up your device.
@@ -50,27 +50,7 @@ Use Intune Company Portal to enroll devices running on Windows 10, version 1607 
 
 ## Sync device to fix connection problems
 
-After enrolling, if you have trouble accessing work or school things, try syncing your device. For more information about syncing, see [Sync device](sync-your-device-manually-windows.md).
-
-## Enroll Windows 10, version 1511 and earlier device
-Enroll devices running Windows 10, version 1511 and earlier. Company Portal doesn't support these versions, so setup is done in the Settings app.
-
-1. Go to **Start** and open the **Settings** app.
-
-3. Select **Accounts** > **Your account**.
-
-
-    ![Select your account](./media/enroll-windows-10-device/W10-enroll-2-accounts-your-account.png)
-
-5. Select **Add a work or school account**.
-
-
-    ![Select add a work or school account](./media/enroll-windows-10-device/w10-enroll-3-add-work-school-acct.png)
-
-6. Sign in with your work or school credentials.
-
-
-    ![Screenshot of Office 365 sign-in screen for work or school account.](./media/enroll-windows-10-device/W10-enroll-4-sign-in.png)
+After enrolling, if you have trouble accessing work or school things, try syncing your device. For more information about syncing, see [Sync device](sync-your-device-manually-windows.md).  
 
 
 ## Troubleshooting

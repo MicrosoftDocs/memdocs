@@ -63,7 +63,7 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Managed devices/Delete**
->   - Permissions that provide visibility into and access to managed devices in Intune, such as Organization/Read and Managed devices/Read
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ## How to delete a device from the Intune admin center
 

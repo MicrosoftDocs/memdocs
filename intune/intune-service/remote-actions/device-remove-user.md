@@ -26,7 +26,7 @@ The *remove user* remote device action in Microsoft Intune deletes a selected us
 > - [Help Desk Operator][INT-R1]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Manage shared device users**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ## How to remove a user from the Intune admin center
 

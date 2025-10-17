@@ -1,5 +1,5 @@
 ---
-title: Manage transferring data between iOS apps
+title: Manage Transferring Data Between iOS Apps
 description: Understand how to use mobile app management policies in Microsoft Intune to manage data transfers between apps.
 ms.date: 06/12/2025
 ms.topic: how-to
@@ -9,7 +9,7 @@ ms.collection:
 - iOS/iPadOS
 ---
 
-# How to manage data transfer between iOS apps in Microsoft Intune
+# How to Manage Data Transfer Between iOS Apps in Microsoft Intune
 
 To help protect company data, restrict file transfers to only the apps that you manage. You can manage iOS apps in the following ways:
 

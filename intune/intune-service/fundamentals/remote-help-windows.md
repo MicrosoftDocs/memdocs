@@ -55,15 +55,15 @@ To remotely start a session:
 
 - The helper can be on an enrolled or unenrolled device.
 - The sharer's device needs to be an enrolled device with the Intune management extension.
-  - Intune management extension is required for the remote launch feature and that is supported on Windows. Specifically for Windows 10 the OS build needs to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md).    
-
-    > [!IMPORTANT]
-    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  - Intune management extension is required for the remote launch feature and that is supported on Windows. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md).
 
 - Optional Windows updates for higher notification reliability:
 
-   - Win 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
-   - Win 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
+  - Windows 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
+  - Windows 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
+
+    > [!IMPORTANT]
+    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 - We do not recommend remotely starting a session to users on azure virtual desktops. For more information, see [How to provide help on an AVD](#provide-help-on-an-avd)
 
