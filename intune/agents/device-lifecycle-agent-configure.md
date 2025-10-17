@@ -1,11 +1,11 @@
 ---
-title: "Device lifecycle agent: configuration"
+title: Configure the device lifecycle agent
 description: 
 ms.date: 10/15/2025
 ms.topic: how-to
 ---
 
-# Device lifecycle agent: configuration
+# Configure the device lifecycle agent
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ ms.topic: how-to
 :::column-end:::
 :::row-end:::
  
-## Configure the agent
+## Configuration steps
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**.
 1. Select **Set up Agent** to open the set-up pane.
@@ -48,6 +48,10 @@ After the agent completes its initial run, admins can review and manage the Devi
   1. The other available tab is **Settings**, which provides limited details about the agent's configuration. 
 
 ## Agent action: refresh
+
+<!--##renew-->
+
+[!INCLUDE [renew](includes/renew.md)]
 
 <!--##remove-->
 [!INCLUDE [remove](includes/remove.md)]
