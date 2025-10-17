@@ -33,8 +33,8 @@ To get help, you must reach out to your support staff to request assistance. You
 **Starting the session:**  
 
 1. The helper can initiate a session or you can manually start the Remote Help app and enter a session code provided by the helper.
-  > [!NOTE]
-  > If the helper initiates the session from Intune, a notification is sent to your device. Select **Open Remote Help** in the notification to open the Remote Help app and continue. If your computer is in *do not disturb* mode, you might not see the notification. In this case, manually open the Remote Help app to continue or check the notifications center.
+   > [!NOTE]
+   > If the helper initiates the session from Intune, a notification is sent to your device. Select **Open Remote Help** in the notification to open the Remote Help app and continue. If your computer is in *do not disturb* mode, you might not see the notification. In this case, manually open the Remote Help app to continue or check the notifications center.
 1. Verify the helper's identity by viewing their information, including their full name, job title, company, profile picture, and verified domain. Then choose to **Allow screen sharing or full control** or **Decline the request**.  
 1. The session is established, and the helper can then help in resolving any issues on the device.
 
@@ -44,6 +44,7 @@ To get help, you must reach out to your support staff to request assistance. You
 - Helpers that have the elevation permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
   > [!IMPORTANT]
   > During a Remote Help session, when a helper has the elevation permission, the helper can perform elevated actions on the sharer's device. When the sharer ends the Remote Help session, a dialog box warns them that if they continue, they're logged off. If the helper ends the session, the sharer isn't logged off.
+  
 - The helper can request to move from screen sharing to full control if the session started with screen sharing only. You can choose to **Allow full control** or to **Decline the request**.
 
 **When the issues are resolved or you're ready to end the session:**
@@ -62,25 +63,29 @@ To request help, you must reach out to your support staff to request assistance,
 **Starting the session:**
 
 1. Open the Remote Help app on the device by going to **Finder** > **Applications** > **Microsoft Remote Help**.  
-1. When opening Remote Help for the first time, you must allow Remote Help access to control and share your screen. Select each of the required permissions to open Settings and ensure the permission is allowed for Microsoft Remote Help.  
-    1. **Accessibility** (also available to set in **Settings** > **Privacy & Security** > **Accessibility**).  
-    1. **Screen and System Audio Recording**  (also available to set in **Settings** > **Privacy & Security** > **Screen and System Audio Recording**).  
-1. If prompted, sign in with your organization credentials to authenticate. to your organization.
-1. Enter the 8-digit security code provided by the helper. After entering the code, select **Share screen** to continue.
-1. When the session connection begins, a trust screen is displayed with the Helpers information including their full name, job title, company, profile picture, and verified domain. At this time, the helper requests a session with Full control of your device or View Only screen sharing. You can either choose to **Allow** or to **Decline** the request.
-1. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone.
-   - Select **Don't Allow** as this permission isn't needed for screen sharing.
+1. When opening Remote Help for the first time, you must allow Remote Help access to control and share your screen. Select each of the required permissions to open Settings and ensure the permission is allowed for Microsoft Remote Help.
+   
+   1. **Accessibility** (also available to set in **Settings** > **Privacy & Security** > **Accessibility**).
+      
+   1. **Screen and System Audio Recording**  (also available to set in **Settings** > **Privacy & Security** > **Screen and System Audio Recording**).
+      
+1. If prompted, sign in with your work credentials to authenticate to your organization.  
+1. Enter the 8-digit security code provided by the helper. After entering the code, select **Share screen** to continue.  
+1. When the session connection begins, a trust screen is displayed with the helper's information including their full name, job title, company, profile picture, and verified domain. At this time, the helper requests a session with full control of your device or view only-screen sharing. You can either choose to **Allow** or to **Decline** the request.  
+1. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone. Select **Don't Allow** as this permission isn't needed for screen sharing.
+   
      :::image type="content" source="media/remote-help/remote-help-microphone-permission.png" alt-text="An example of the microphone permission prompt highlighting the Don't Allow option":::
+   
 1. Select **Share screen** to continue. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
-1. macOS displays a dialogue menu in the top right corner as one of two options:
+1. macOS shows a menu with one of two options:  
    - **Green camera icon**: Choose **Screen**, and then move your mouse to select the screen share.
 
-   :::image type="content" source="media/remote-help/remote-help-screen-share.png" alt-text="A screenshot of the macOS screen  sharing dialog to allow screen sharing for Microsoft Remote Help":::
-   - **Yellow microphone icon** (if you selected to allow the microphone permission): Select the microphone icon, then to the right of the application name Microsoft Remote Help, select the grey icon, and then **Screen**. Move your cursor to the screen you want to share and select **Share this screen**.
+     :::image type="content" source="media/remote-help/remote-help-screen-share.png" alt-text="A screenshot of the macOS screen  sharing dialog to allow screen sharing for Microsoft Remote Help":::
+   - **Yellow microphone icon** (if you selected to allow the microphone permission): Select the microphone icon. Select the **grey icon**, and then select **Screen**. Move your cursor to the screen you want to share and select **Share this screen**.  
 
-   :::image type="content" source="media/remote-help/remote-help-screen-share-microphone.png" alt-text="A screenshot of the macOS microphone sharing dialog to allow screen sharing for Microsoft Remote Help":::
+     :::image type="content" source="media/remote-help/remote-help-screen-share-microphone.png" alt-text="A screenshot of the macOS microphone sharing dialog to allow screen sharing for Microsoft Remote Help":::
 
-1. After the session is established, the helper can then help in resolving any issues on the device.
+1. After the session is established, the helper can help resolve any issues on the device.
 
 **During the session:**
 
@@ -96,10 +101,11 @@ To request help, you must reach out to your support staff to request assistance,
 ### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 **Starting the session:**
-
-1. On your device, you see a prompt displaying a request to grant screen share or control of the device with the helpers information including their full name and company.
-    a. If starting an attended screen sharing or full control session, you must select **Accept** to allow the session to begin. If you don't accept within 5 minutes, the session times out.
-    b. If starting an unattended control session, the session will begin automatically after 30 seconds if there's no response.
+On your device, you see a prompt showing a request to grant screen share or control of the device with the helpers information, including their full name and company.
+   
+   1. If starting an attended screen sharing or full control session, you must select **Accept** to allow the session to begin. If you don't accept within 5 minutes, the session times out.
+   
+   1. If starting an unattended control session, the session will begin automatically after 30 seconds if there's no response.  
 
 **During the session:**
 
@@ -108,7 +114,7 @@ To request help, you must reach out to your support staff to request assistance,
 
 ### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web App**](#tab/webapp)
 
-During a session there are two roles, a helper, and a sharer. The helper obtains the security code, and then provides it to the sharer. After the session is established, the helper can view the sharer's screen.
+During a session, there are two roles: a helper and a sharer. The helper obtains the security code, and then provides it to the sharer. After the session is established, the helper can view the sharer's screen.
 
 **Starting the session:**
 
@@ -121,7 +127,7 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
 ## Provide help
 
-To provide help, you must reach out to the user who needs assistance. You can reach out through a call, chat, email, and so on, and you're the helper during the session.
+To provide help, you must reach out to the user who needs assistance. You can reach out by phone, chat, or email, and you're the helper during the session.
 
 ### [**Windows from Windows native app**](#tab/windowsnative)
 
@@ -133,30 +139,30 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    2. From the remote actions bar across the top of the device view, select **New remote assistance session** and select **Remote Help**, and then **Continue**.
 
-> [!NOTE]
-> If you're launching the session from the Intune, sign in with the same credentials to the Remote Help app for a successful
-> connection.
+     > [!NOTE]
+     > If you're launching the session from Intune, sign in to the Remote Help app with the same credentials for a successful
+     > connection.
 
 1. A notification is sent to the sharer's device, and you see an update that the notification was successfully sent. Select **Launch Remote Help** to join the session.
 
-   a. If the notification is sent but not received by the user, you can resend the notification by selecting **Retry**.
+   1. If the notification is sent but not received by the user, you can resend the notification by selecting **Retry**.
 
-   b. If the sharer's device isn't online or not connected to the internet, an error message is  displayed.
+   2. If the sharer's device isn't online or not connected to the internet, an error message is  displayed.
 
-   c. If the device that you're trying to connect to is noncompliant, a warning banner is displayed.
+   3. If the device that you're trying to connect to is noncompliant, a warning banner is displayed.
 
 1. When Remote Help opens, you must sign in to authenticate to your organization.
 
-1. After the sharer opens the Remote Help app through the notification, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer sees similar information about you.
+1. After the sharer opens the Remote Help app through the notification, as the helper you see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer sees similar information about you.
 
    At this time, you can request a session with full control of the sharer's device or choose only screen sharing. If you request full control, the sharer can choose to **Allow full control** or to **Decline the request**.
 
-1. After establishing that the session uses a shared display or full control, Remote Help will display a **Compliance Warning* if the sharer's device fails to meet the conditions of its assigned compliance policies.
+1. After establishing that the session uses a shared display or full control, Remote Help displays a *compliance warning* if the sharer's device fails to meet the conditions of its assigned compliance policies.
 
    During assistance, helpers that have the elevation permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-> [!NOTE]
-> When the `EnableSecureCredentialPrompting` policy is enabled, it blocks the elevation process during Remote Help sessions. To allow elevation, disable this policy.  For more information, see [Enable secure credential prompting](/windows/client-management/mdm/policy-csp-admx-credui#enablesecurecredentialprompting).   
+   > [!NOTE]
+   > When the `EnableSecureCredentialPrompting` policy is enabled, it blocks the elevation process during Remote Help sessions. To allow elevation, disable this policy.  For more information, see [Enable secure credential prompting](/windows/client-management/mdm/policy-csp-admx-credui#enablesecurecredentialprompting).   
 
 1. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. If a helper performs elevated actions on a user's device and the sharer ends the session, at the end of the session the sharer is automatically signed out.
 
@@ -204,19 +210,19 @@ If you're trying to help an Azure Virtual Desktop (AVD) that could have multiple
 
 1. To invite a user to a session, provide the user with the security code.
 
- - If the sharer is also using the web app:
-    - Copy and share the session link with the user (the link is limited to View Only) (For example: https://aka.ms/rh?passcode=4060r0gx). The link opens in the user's web browser. You can only request a screen sharing session of the device.
+   - If the sharer is also using the web app:
+     - Copy and share the session link with the user (the link is limited to View Only) (For example: https://aka.ms/rh?passcode=4060r0gx). The link opens in the user's web browser. You can only request a screen sharing session of the device.
 
- - If the sharer is using the macOS application:
-  - Share the eight-character security code with the user. You can request a screen sharing session. View only and full control are supported.  
+   - If the sharer is using the macOS application:
+     - Share the eight-character security code with the user. You can request a screen sharing session. View only and full control are supported.  
 
-1. After the sharer either selects the link or enters the code into Remote Help for macOS, they're joined to the session. If the user isn't already logged in to the application, they're prompted to do so.
+1. After the sharer either selects the link or enters the code into Remote Help for macOS, they're joined to the session. If the user isn't already signed in to the app, they're prompted to do so.
 
 1. At the start of the session, the trust screen is displayed, which shows the other person's full name, job title, company, profile picture, and verified domain.
 
-- Helpers can see information about the sharer.
+   - Helpers can see information about the sharer.
 
-- The sharer can see information about the helper.
+   - The sharer can see information about the helper.
 
 1. The sharer can choose to **Allow** or to **Decline** the request after viewing the trust screen.
 
@@ -262,8 +268,8 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
     c. During an unattended control session, the screen of the device you're connected to is blocked due to security and privacy reasons, and the user is notified if they interact with it. If the user interacts with the blocked screen, they'll receive a notification letting them know that you're currently accessing the device. When the notification is shown, you and the end user won't be able to take any action for 30 seconds when this screen will close.
 
-> [!TIP]
-> We recommend limiting your activities to nonsensitive operations during an unattended control session, even with the screen of the device you're connected to blocked to the end user.  
+      > [!TIP]
+      > We recommend limiting your activities to nonsensitive operations during an unattended control session, even with the screen of the device you're connected to blocked to the end user.  
 
 1. At the end of the session, select **Leave** to end the session from the admin console.
 
