@@ -217,7 +217,7 @@ On macOS, apps that access and control the screen require permission. The defaul
 
 With settings catalog, we can streamline the end users' experience for allowing these permissions.  
 
-You can configure these settings using either the Microsoft Intune adminc center or Microsoft Graph.
+You can configure these settings using either the Microsoft Intune admin center or Microsoft Graph.
 
 #### :::image type="icon" source="../media/icons/intune.svg"::: Intune admin center
 
