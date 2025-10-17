@@ -53,6 +53,7 @@ Runs only one app on the device, such as a web browser or Store app.
 
   - **Auto logon (Windows 10 version 1803 and newer)**: Use on kiosks in public-facing environments that don't require the user to sign in, similar to a guest account. This setting uses the [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
   - **Local user account**: Enter the local (to the device) user account. The account you enter signs in to the kiosk.
+  - **Microsoft Entra user or group (Windows 10 version 1803 and later)**: Select **Add**, and choose Microsoft Entra users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
 
 - **Application type**: Select the application type. Your options:
 

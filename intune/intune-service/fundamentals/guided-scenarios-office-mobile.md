@@ -1,5 +1,5 @@
 ---
-title: Guided scenario - Secure Microsoft Office mobile apps
+title: Guided Scenario - Secure Microsoft Office Mobile Apps
 description: Learn about the guided scenario to deploy secure Microsoft Office mobile apps from the Microsoft 365 Device Management portal.
 author: nicholasswhite
 ms.author: nwhite
@@ -11,7 +11,7 @@ ms.collection:
 - intune-scenario
 ---
 
-# Guided scenario - Secure Microsoft Office mobile apps
+# Guided Scenario - Secure Microsoft Office Mobile Apps
 
 By following this guided scenario in the Device Management portal, you can enable basic Intune app protection on iOS/iPadOS and Android devices.
 

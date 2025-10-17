@@ -84,7 +84,7 @@ For general guidance about Intune app configuration policies, see the following 
 > [!NOTE]
 > For initial testing, use a test group when assigning users and devices in the Assignments section of the configuration policy.
 
-- **Android Enterprise**:
+- **Android Enterprise**:  
   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Jamf Android app configuration policy using the following information when prompted.
 
   1. In the **Jamf Portal**, select the **Add** button under **Configuration settings** format.
@@ -94,9 +94,9 @@ For general guidance about Intune app configuration policies, see the following 
 
   > [!NOTE]
   >
-  > Unlike iOS, you'll need to define a unique Android Enterprise app configuration policy for each Activation Profile. If you don’t require multiple Activation Profiles, you can use a single Android app configuration for all target devices. When creating Activation Profiles in Jamf, be sure to select Microsoft Entra ID under the Associated User configuration to ensure Jamf is able to synchronize the device with Intune via UEM Connect.
+  > Unlike iOS, you'll need to define a unique Android Enterprise app configuration policy for each Activation Profile. If you don't require multiple Activation Profiles, you can use a single Android app configuration for all target devices. When creating Activation Profiles in Jamf, be sure to select Microsoft Entra ID under the Associated User configuration to ensure Jamf is able to synchronize the device with Intune via UEM Connect.
 
-- **iOS**:
+- **iOS**:  
   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Jamf iOS app configuration policy using the following information when prompted.
 
   1. In **Jamf Security Cloud**, navigate to **Devices > Activation profiles** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.
@@ -161,7 +161,7 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 
 ### Trellix Mobile Security app configuration policy
 
-- **Android Enterprise**:
+- **Android Enterprise**:  
   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Trellix Mobile Security Android app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
@@ -172,7 +172,7 @@ Create the iOS app configuration policy as described in the [using iOS app confi
   |  tenantid | string | Copy value from admin console *Manage* page in the Trellix console |
   |  defaultchannel | string | Copy value from admin console *Manage* page in the Trellix console |
 
-- **iOS**:
+- **iOS**:  
   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Trellix Mobile Security iOS app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
@@ -190,6 +190,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 ### Zimperium app configuration policy
 
 - **Android Enterprise**:
+
   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Zimperium Android app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
@@ -200,7 +201,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
   |  tenantid | string | Copy value from admin console *Manage* page in the Zimperium console |
   |  defaultchannel | string | Copy value from admin console *Manage* page in the Zimperium console |
 
-- **iOS**:
+- **iOS**:  
   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Zimperium iOS app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
@@ -292,7 +293,7 @@ Choose the section that corresponds to your MTD provider:
     >
     > See [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-configuration#-configure-client-apps-to-access-app-service) for more details.
 
-  - **Add the Lookout for Work ipa file.**
+  - **Add the Lookout for Work ipa file.**  
     - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../apps/lob-apps-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.
 
 ### Assigning Pradeo
