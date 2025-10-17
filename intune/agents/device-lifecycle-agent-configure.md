@@ -95,10 +95,20 @@ You can tailor agent recommendations using the optional **Instructions** field. 
 
 For example, if your organization has executive devices that shouldn't be flagged for offboarding, you can use custom instructions to exclude them. Without this, the agent might detect identity mismatches on those devices and consume SCUs to suggest offboarding—even when it's not appropriate. Custom instructions help you prevent that by guiding the agent's logic based on your organizational needs.
 
-Example prompt to exclude a specific object ID:
+Examples of custom instructions you can use:
 
 ```agent-prompt
-Exclude the <example object ID> from agent consideration.
+Exclude from all recommendations if device has been inactive in Entra for less than [n] days 
+
+Include in all recommendations if device has been active in Entra more than [n] days ago 
+
+Exclude [device ID] from all recommendations 
+
+Exclude [device ID] from recommendation if retired is true 
+
+Include [device ID] in all recommendations 
+
+Include only [device ID] in recommendations
 ```
 
 ---
