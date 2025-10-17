@@ -24,7 +24,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 - **Enable Remote Help for your tenant**: By default, Remote Help isn't enabled for Intune tenants. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
   
-  :::image type="content" source="media/remote-help/remote-help-enable.png" alt-text="A screenshot of the tenant administration screen where you can enable Remote Help" lightbox="media/remote-help/remote-help-enable-expanded.png":::
+  :::image type="content" source="media/remote-help/remote-help-enable.png" alt-text="A screenshot of the tenant administration screen where you can enable Remote Help." lightbox="media/remote-help/remote-help-enable-expanded.png":::
 
 - **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
   
