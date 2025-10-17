@@ -1506,7 +1506,7 @@ For more information, see:
 - [Remote Help on windows](../fundamentals/remote-help-windows.md)
 - [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
-The Remote Help app for Windows client is updated to version Version 5.1.1998.0 and includes resolution of accessibility issues.
+The Remote Help app for Windows client is updated to version 5.1.1998.0 and includes resolution of accessibility issues.
 
 #### Copilot assistant for device query<!-- 26933762 -->
 
