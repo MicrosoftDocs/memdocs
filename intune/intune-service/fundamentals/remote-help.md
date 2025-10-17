@@ -24,7 +24,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 - **Enable Remote Help for your tenant**: By default, Remote Help isn't enabled for Intune tenants. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
   
-  :::image type="content" source="media/remote-help/remote-help-enable.png" alt-text="A screenshot of the tenant administration screen where you can enable Remote Help" lightbox="media/remote-help/remote-help-enable-expanded.png":::
+  :::image type="content" source="media/remote-help/remote-help-enable.png" alt-text="A screenshot of the tenant administration screen where you can enable Remote Help." lightbox="media/remote-help/remote-help-enable-expanded.png":::
 
 - **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
   
@@ -54,7 +54,7 @@ The Remote Help app supports the following capabilities in general across the su
   :::image type="content" source="media/remote-help/remote-help-windows-remote-launch.png" alt-text="A screenshot of the sharer's computer showing the prompt to start a Remote Help session using the Remote Launch feature.":::
 - **Optional support for unenrolled devices**: This setting is turned off by default. Enabling this option allows help to be provided to devices that aren't enrolled in Intune. This setting doesn't apply to devices used by helpers.
   
-  :::image type="content" source="media/remote-help/remote-help-unenrolled.png" alt-text="A screenshot of the opion to enable unenrolled devices":::
+  :::image type="content" source="media/remote-help/remote-help-unenrolled.png" alt-text="A screenshot of the option to enable unenrolled devices":::
 - **Conditional access support**: You can use Conditional Access policies to control how helpers and sharers access Remote Help. For example, you can require multifactor authentication (MFA) for helpers or restrict access to specific locations or compliant devices.
 - **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages-for-chat).
 - **Web app for sharers** - In situations where the Sharer needs assistance but is unable to install the native application for macOS, the Sharer can use the Web App to share their screen to a helper. This web app provides view only capabilities to the helper, allowing them to guide the user through resolving issues.
