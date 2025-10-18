@@ -1506,6 +1506,8 @@ For more information, see:
 - [Remote Help on windows](../fundamentals/remote-help-windows.md)
 - [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
+The Remote Help app for Windows client is updated to version 5.1.1998.0 and includes resolution of accessibility issues.
+
 #### Copilot assistant for device query<!-- 26933762 -->
 
 You can now use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**. For more information, see [Query with Copilot in device query](../copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
