@@ -350,7 +350,7 @@ The following features on managed devices don't support using filters:
 - Policies for Office apps
 - Policy sets
 - PowerShell scripts for Windows
-- S mode supplemental policies for Windows 10
+- S mode supplemental policies for Windows
 - Shell scripts for macOS
 - Terms and conditions
 - Update policies for iOS/iPadOS
