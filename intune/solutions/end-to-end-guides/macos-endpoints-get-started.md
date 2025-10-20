@@ -192,6 +192,16 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   There are two options for configuring SSO for Mac - [Enterprise SSO plug-in](../../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md) and [Platform SSO](../../intune-service/configuration/platform-sso-macos.md).
 
+  # [Platform SSO](#tab/psso)
+
+  Platform SSO builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
+
+  For more information, go to:
+
+  - [Configure Platform SSO for macOS devices in Microsoft Intune](../../intune-service/configuration/platform-sso-macos.md)
+
+  - [Platform SSO on Apple's web site](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website)
+
   # [Enterprise SSO plug-in](#tab/esso)
 
   The Microsoft Enterprise SSO plug-in for Apple devices provides single sign-on (SSO) for Microsoft Entra accounts on macOS across all applications that support Apple's enterprise single sign-on feature.
@@ -216,16 +226,6 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
     | disable_explicit_app_prompt | Integer | 1 |
 
   For more information on the Enterprise SSO plug-in, including how to create the policy, go to [Configure macOS Enterprise SSO plug-in with Intune](../../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md).
-
-  # [Platform SSO](#tab/psso)
-
-  Platform SSO builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
-
-  For more information, go to:
-
-  - [Configure Platform SSO for macOS devices in Microsoft Intune](../../intune-service/configuration/platform-sso-macos.md)
-
-  - [Platform SSO on Apple's web site](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website)
 
   ---
 
