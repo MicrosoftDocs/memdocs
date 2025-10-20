@@ -1,5 +1,5 @@
 ---
-title: Data protection for Windows MAM
+title: Data Protection for Windows MAM
 description: Enable protected MAM access to org data using Windows MAM.
 ms.date: 10/02/2025
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.collection:
 - highpri
 ---
 
-# Data protection for Windows MAM
+# Data Protection for Windows MAM
 <!-- Use Mobile Application Management on unmanaged Windows  -->
 
 [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]

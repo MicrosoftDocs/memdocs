@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Configure Slack to use Intune for EMM and app configuration
+title: Tutorial - Configure Slack to Use Intune for EMM and App Configuration
 description: In this tutorial you will configure Slack to use Intune for EMM and app configuration.
 ms.date: 06/07/2024
 ms.topic: tutorial
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Tutorial: Configure Slack to use Intune for EMM and app configuration
+# Tutorial: Configure Slack to Use Intune for EMM and App Configuration
 
 Slack is a collaboration app that you can use with Microsoft Intune.
 
@@ -25,7 +25,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 You'll need a test tenant with the following subscriptions for this tutorial:
 
-- Microsoft Entra ID P1 or P2 ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+- Microsoft Entra ID P1 or P2 ([free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn))
 - Intune subscription ([free trial](../fundamentals/free-trial-sign-up.md))
 
 You will also need a [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) plan.

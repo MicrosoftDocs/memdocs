@@ -1,5 +1,5 @@
 ---
-title: Create a group to manage users
+title: Create a Group to Manage Users
 description: In this article, you'll use Microsoft Intune to create a group based on existing users.
 author: nicholasswhite
 ms.author: nwhite
@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Step 3: Create a group to manage users
+# Step 3: Create a Group to Manage Users
 
 In this article, you'll use Intune to create a group based on an existing user. Groups are used to manage your users and control your employees' access to your company resources. These resources can be part of your company's intranet or can be external resources, such as SharePoint sites, SaaS apps, or web apps.
 

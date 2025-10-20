@@ -116,10 +116,10 @@ The full version number identifies a specific release of the app. The number app
 
 The full version number has two components:
 
-- **Version**
+- **Version**  
   The version number is the human-readable release number of the app. This is used by end users to identify different releases of the app.
 
-- **Build Number**
+- **Build Number**  
   The build number is an internal number that can be used in app detection and to programmatically manage the app. The build number refers to an iteration of the app that references changes in the code.
 
 ### Version and build number in Android and iOS
@@ -135,16 +135,16 @@ Build number|CFBundleVersion|PackageVersionCode |This number is used to indicate
 
 #### iOS
 
-- **CFBundleShortVersionString**
+- **CFBundleShortVersionString**  
   Specifies the release version number of the bundle. This number identifies a released version of the app. The number is used by end users to reference the app.
-- **CFBundleVersion**
+- **CFBundleVersion**  
   The build version of the bundle, which identifies an iteration of the bundle. The number may identify a release or unreleased bundle. The number is used for app detection.
 
 #### Android
 
-- **PackageVersionName**
+- **PackageVersionName**  
   The version number shown to users. This attribute can be set as a raw string or as a reference to a string resource. The string has no other purpose than to be displayed to users.
-- **PackageVersionCode**
+- **PackageVersionCode**  
   An internal version number. This number is used only to determine whether one version is more recent than another, with higher numbers indicating more recent versions. This isn't the version
 
 ## Next steps after integration

@@ -31,10 +31,10 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ### Operating System Version
 
-- **Minimum OS version**:
+- **Minimum OS version**:  
   Enter the minimum allowed version. When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. A link with information on how to upgrade is shown. The device user can choose to upgrade their device, and then get access to company resources.
 
-- **Maximum OS version**:
+- **Maximum OS version**:  
   Enter the maximum allowed version. When a device is using an OS version later than the version entered in the rule, access to organization resources is blocked. The device user is asked to contact their IT administrator. The device can't access organizational resources until a rule changes to allow the OS version.
 
 Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Windows 8.1 for Windows, then the device is reported as noncompliant even if the device has Windows 8.1.
@@ -51,14 +51,14 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
   - **Not configured** (*default*) - Users can create simple passwords like **1234** or **1111**.
   - **Block** - Users can't create simple passwords, such as **1234** or **1111**.
 
-- **Minimum password length**:
+- **Minimum password length**:  
   Enter the minimum number of digits or characters that the password must have.
 
   For devices that run Windows and are accessed with a Microsoft account, the compliance policy fails to evaluate correctly if either of the following conditions is true:
   - Minimum password length is greater than eight characters
   - Minimum number of character sets is more than two
 
-- **Password type**:
+- **Password type**:  
   Choose if a password should have only **Numeric** characters, or if there should be a mix of numbers and other characters (**Alphanumeric**).
 
   When set to *Alphanumeric*, the following setting is available.
@@ -77,13 +77,13 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
     - Minimum password length is greater than eight characters
     - Minimum number of character sets is more than two
 
-- **Maximum minutes of inactivity before password is required**:
+- **Maximum minutes of inactivity before password is required**:  
   Enter the idle time before the user must reenter their password.
 
-- **Password expiration (days)**:
+- **Password expiration (days)**:  
   Select the number of days before the password expires, and users must create a new one.
 
-- **Number of previous passwords to prevent reuse**:
+- **Number of previous passwords to prevent reuse**:  
   Enter the number of previously used passwords that can't be used.
 
 ### Encryption
@@ -96,4 +96,4 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
 
 - [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
 - [Monitor your compliance policies](compliance-policy-monitor.md).
-- See the [compliance policy settings for Windows 10/11](compliance-policy-create-windows.md) devices.
+- See the [compliance policy settings for Windows](compliance-policy-create-windows.md) devices.

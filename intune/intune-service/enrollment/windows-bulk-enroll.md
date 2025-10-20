@@ -8,11 +8,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 ---
-# Bulk enrollment for Windows devices
-
-**Applies to**
-- Windows 10
-- Windows 11
+# Bulk enrollment for Windows devices   
 
 Join new Windows devices to Microsoft Entra ID and Intune. To bulk enroll devices for your Microsoft Entra tenant, you create a provisioning package with the Windows Configuration Designer (WCD) app. Applying the provisioning package to corporate-owned devices joins the devices to your Microsoft Entra tenant and enrolls them for Intune management. Once the package is applied, it's ready for your Microsoft Entra users to sign in.
 
@@ -29,9 +25,9 @@ To create a bulk enrollment token, you must have a supported Microsoft Entra rol
 For more information about these roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
 
-## Prerequisites
+## Requirements  
 
-- Devices must be running Windows 11 or Windows 10 Creator update (build 1709) or later.
+- Devices must be running a supported version of Windows.
 - Enable [Windows automatic enrollment](windows-enroll.md#enable-windows-automatic-enrollment).
 - Make sure that the service principal for Microsoft.Azure.SyncFabric (AppID 00000014-0000-0000-c000-000000000000) is present in your Microsoft Entra tenant. In a command line, use the `Get-MgServicePrincipal -Filter "AppId eq '00000014-0000-0000-c000-000000000000'"` command to check for the [service principal](/entra/identity-platform/developer-glossary#service-principal-object). Without the service principal, Windows Configuration Designer can't retrieve the bulk enrollment token, which results in an error.
 
@@ -61,7 +57,7 @@ For more information about these roles, see [Microsoft Entra built-in roles](/en
 
    > [!NOTE]
    > Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Microsoft Entra ID.
-1. Provide your Microsoft Entra credentials to get a bulk token.
+1. Provide your Microsoft Entra credentials to get a bulk token. Make sure you authenticate by way of password or CBA authentication, since other methods of authentication aren't supported by the app for this operation.  
 ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
    > [!NOTE]
@@ -112,4 +108,7 @@ When not using an open network, you must use [device-level certificates](../prot
 
 ### Conditional Access
 
-Conditional Access is available for devices enrolled via bulk enrollment running Windows 11 or Windows 10, version 1803 and later.
+Conditional Access is available for devices enrolled via bulk enrollment running Windows 11 or Windows 10, version 1803 and later.  
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]  

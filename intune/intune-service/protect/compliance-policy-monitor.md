@@ -29,7 +29,7 @@ This article applies to:
 - iOS/iPadOS
 - Linux - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
 - macOS
-- Windows 10 and later
+- Windows 
 
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]

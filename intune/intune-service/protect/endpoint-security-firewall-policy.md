@@ -46,6 +46,8 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 ## Firewall profiles
 
+Find guidance for creating endpoint security profiles at [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy).
+
 ### Devices managed by Intune
 
 **Platform: macOS**:
@@ -87,13 +89,13 @@ The following firewall rule profile settings are available in reusable settings 
 - Remote IP address ranges
 - FQDN definitions and auto-resolution
 
-When you configure a firewall rule to add one or more reusable settings groups, you’ll also configure the rules Action to define how the settings in those groups are used.
+When you configure a firewall rule to add one or more reusable settings groups, you'll also configure the rules Action to define how the settings in those groups are used.
 
 Each rule you add to the profile can include both reusable settings groups and individual settings that are added directly to the rule. However, consider using each rule for either reusable settings groups or to manage settings you add directly to the rule. This separation can help simplify future configurations or changes you might make.
 
 > [!NOTE]
 >
-> Inbound FQDN rules aren’t natively supported. However, it’s possible to use *pre-hydration* scripts to generate inbound IP entries for the rule. For more information, see [Windows Firewall dynamic keywords](/windows/security/operating-system-security/network-security/windows-firewall/dynamic-keywords) in the Windows Firewall documentation.
+> Inbound FQDN rules aren't natively supported. However, it's possible to use *pre-hydration* scripts to generate inbound IP entries for the rule. For more information, see [Windows Firewall dynamic keywords](/windows/security/operating-system-security/network-security/windows-firewall/dynamic-keywords) in the Windows Firewall documentation.
 
 For prerequisites and guidance on configuring reusable groups, and then adding them to this profile, see [Use reusable groups of settings with Intune policies](../protect/reusable-settings-groups.md).
 
@@ -105,7 +107,7 @@ For prerequisites and guidance on configuring reusable groups, and then adding t
 
 Plan for Firewall policies to be applied to a device using only one policy. Use of a single policy instance and policy type helps avoid having two separate policies apply different configurations to the same setting, which creates conflicts. When a conflict exists between two policy instances or types of policy that manage the same setting with different values, the setting isn't sent to the device.
 
-- That form of policy conflict applies to the **Windows Firewall** profile, which can conflict with other Windows Firewall profiles, or a firewall configuration that’s delivered by a different policy type, like device configuration.
+- That form of policy conflict applies to the **Windows Firewall** profile, which can conflict with other Windows Firewall profiles, or a firewall configuration that's delivered by a different policy type, like device configuration.
 
   *Windows Firewall profiles* don't conflict with *Windows Firewall rules* profiles.
 
@@ -153,7 +155,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 
 ### MDM Firewall status for Windows
 
-*This organizational report is also described in [Intune Reports](../fundamentals/reports.md#mdm-firewall-status-for-windows-10-and-later-organizational)*.
+*This organizational report is also described in [Intune Reports](../fundamentals/reports.md#mdm-firewall-status-for-windows-organizational)*.
 
 As an organizational report, this report is available from the **Reports** node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** > **MDM Firewall status for Windows**.
 
@@ -166,9 +168,9 @@ Status details include:
 
 - **Enabled** – The firewall on, and successfully reporting.
 - **Disabled** - The firewall is turned off.
-- **Limited** – The firewall isn’t monitoring all networks, or some rules are turned off.
+- **Limited** – The firewall isn't monitoring all networks, or some rules are turned off.
 - **Temporarily Disabled (default)** – The firewall is temporarily not monitoring all networks
-- **Not applicable** – The device doesn’t support firewall reporting.
+- **Not applicable** – The device doesn't support firewall reporting.
 
 You can filter returns for this report by using one or more of the status detail categories.
 

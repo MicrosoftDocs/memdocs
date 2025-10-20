@@ -1,5 +1,5 @@
 ---
-title: Understand Microsoft Intune management extension
+title: Understand Microsoft Intune Management Extension
 description: Understand Microsoft Intune management extension for Windows.
 ms.date: 10/02/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_Win32
 ---
 
-# Intune management extension for Windows
+# Intune Management Extension for Windows
 
 [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 

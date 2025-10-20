@@ -8,14 +8,12 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Windows Backup for Organizations in Microsoft Intune
-
-*Applies to: Windows 10, Windows 11*
+# Windows Backup for Organizations in Microsoft Intune  
 
  > [!NOTE]
  > This feature is in public preview. For more information on what that means, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
-Enable users to securely sync their settings to the cloud and restore them on new or reimaged devices. Together, Microsoft Intune and Windows Backup for Organizations lets users back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device during enrollment.
+Enable users to securely sync their settings to the cloud and restore them on new or reimaged devices. Together, Microsoft Intune and Windows Backup for Organizations lets users back up your organization's Windows settings and restore them on a Microsoft Entra joined device during enrollment.
 
 Windows Backup for Organizations is a feature that's made up of the [Windows backup and restore settings](/windows/configuration/windows-backup/catalog) and is an option that can:
 
@@ -34,16 +32,19 @@ Windows Backup for Organizations ensures that users have a consistent and person
 * Seamless experience: Smoothly transition from devices running Windows 10 to devices running Windows 11 using saved backups.
 * Enhanced productivity: Minimize downtime and maximize user productivity, whether resetting the device or reimaging, by restoring user settings to their preferred and familiar PC preferences.
 
-## Prerequisites
+## Requirements
 
 To use the backup functionality, devices must be:
 
 * Microsoft Entra hybrid joined or Microsoft Entra joined.
-* Running a currently supported version of either Windows 10 or Windows 11. Supported versions include:
+* Running a currently supported version of Windows. Supported versions include:
   * Windows 10, version 22H2, build 19044.6216 or later
   * Windows 11, version 22H2, build 22621.5768 or later
   * Windows 11, version 23H2, build 22631.5768 or later
   * Windows 11, version 24H2, build 26100.4946 or later   
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 The restore feature is available on devices that meet the following requirements:
 

@@ -112,6 +112,8 @@ Prerequisites to support managing tamper protection with these profiles:
 
 ## Antivirus profiles
 
+Find guidance for creating endpoint security profiles at [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy).
+
 ### Devices managed by Microsoft Intune
 
 The following profiles are supported for devices you manage with Intune:
@@ -140,7 +142,7 @@ The following profiles are supported for devices you manage with Intune:
 
 #### Windows
 
-- Platform: **Windows**
+- Platform: **Windows**  
   Profiles for this platform can be used with devices enrolled with Intune, and devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
   > [!NOTE]
@@ -150,7 +152,7 @@ The following profiles are supported for devices you manage with Intune:
   >
   > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
-  - Profile: **Microsoft Defender Antivirus** - Manage Antivirus policy settings for Windows devices.
+  - Profile: **Microsoft Defender Antivirus** - [Manage Antivirus policy settings for Windows devices](/defender-endpoint/use-intune-config-manager-microsoft-defender-antivirus).
 
     Defender Antivirus is the next-generation protection component of Microsoft Defender for Endpoint. Next-generation protection brings together technologies like machine learning and cloud infrastructure to protect devices in your enterprise organization.
 
@@ -158,7 +160,7 @@ The following profiles are supported for devices you manage with Intune:
 
     Unlike the antivirus settings in a *Device Restriction profile*, you can use these settings with devices that are co-managed. To use these settings, the [co-management workload slider](/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection must be set to Intune.
 
-  - Profile: **Microsoft Defender Antivirus exclusions** - Manage policy settings for only Antivirus exclusion.
+  - Profile: **Microsoft Defender Antivirus exclusions** - [Manage policy settings for only Antivirus exclusion](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus#create-a-new-antivirus-policy-with-exclusions-in-intune).
 
     With this policy, you can manage settings for the following Microsoft Defender Antivirus configuration service providers (CSPs) that define Antivirus exclusions:
 
@@ -191,15 +193,15 @@ The following profiles are supported for devices you manage with Intune:
 
 Some Antivirus policy settings support *policy merge*. Policy merge helps avoid conflicts when multiple policies apply to the same devices and configure the same setting. Intune evaluates the settings that policy merge supports, for each user or device as taken from all applicable policies. Those settings are then merged into a single superset of policy.
 
-For example, you create three separate antivirus policies that define different antivirus file path exclusions. Eventually, all three policies are assigned to the same user. Because the Microsoft Defender file path exclusion CSP supports policy merge, Intune evaluates and combines the file exclusions from all applicable policies for the user. The exclusions are added to a superset and the single list of exclusions is delivered to the users’ device.
+For example, you create three separate antivirus policies that define different antivirus file path exclusions. Eventually, all three policies are assigned to the same user. Because the Microsoft Defender file path exclusion CSP supports policy merge, Intune evaluates and combines the file exclusions from all applicable policies for the user. The exclusions are added to a superset and the single list of exclusions is delivered to the users' device.
 
-When policy merge isn’t supported for a setting, a conflict can occur. Conflicts can result in the user or device not receiving any policy for the setting. For example, policy merge doesn't support the CSP for preventing installation of matching device IDs (*PreventInstallationOfMatchingDeviceIDs*). Configurations for this CSP don’t merge, and are processed separately.
+When policy merge isn't supported for a setting, a conflict can occur. Conflicts can result in the user or device not receiving any policy for the setting. For example, policy merge doesn't support the CSP for preventing installation of matching device IDs (*PreventInstallationOfMatchingDeviceIDs*). Configurations for this CSP don't merge, and are processed separately.
 
 When processed separately, policy conflicts are resolved as follows:
 
 1. The most secure policy applies.
 2. If two policies are equally secure, the last modified policy applies.
-3. If the last modified policy can’t resolve the conflict, no policy is delivered to the device.
+3. If the last modified policy can't resolve the conflict, no policy is delivered to the device.
 
 ### Settings and CSPs that support policy merge
 
@@ -226,7 +228,7 @@ On the **Summary** page, you can [create new policies](../protect/endpoint-secur
 
 ![Summary page of antivirus policy](./media/endpoint-security-antivirus-policy/antivirus-summary.png)
 
-When you select a policy from the list, the *Overview* page for that policy instance opens and displays more information. After selecting a tile from this view, Intune displays additional details for that profile if they’re available.
+When you select a policy from the list, the *Overview* page for that policy instance opens and displays more information. After selecting a tile from this view, Intune displays additional details for that profile if they're available.
 
 ![Overview page of antivirus policy](./media/endpoint-security-antivirus-policy/policy-overview.png)
 

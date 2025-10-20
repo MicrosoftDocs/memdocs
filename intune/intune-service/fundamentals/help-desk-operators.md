@@ -1,5 +1,5 @@
 ---
-title: Help desk troubleshooting dashboard
+title: Help Desk Troubleshooting Dashboard
 description: Help desk staff use the troubleshooting pane to solve users' technical problems.
 author: nicholasswhite
 ms.author: nwhite
@@ -9,7 +9,7 @@ ms.reviewer: jlynn
 ms.collection:
 - M365-identity-device-management
 ---
-# Use the troubleshooting dashboard to help users at your company
+# Use the Troubleshooting Dashboard to Help Users at Your Company
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

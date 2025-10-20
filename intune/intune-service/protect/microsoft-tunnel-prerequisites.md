@@ -46,7 +46,7 @@ Microsoft Tunnel is supported with the following sovereign cloud environments:
 
 - U.S. Government Community Cloud (GCC) High
 
-Microsoft Tunnel isn’t supported on Microsoft Azure operated by 21Vianet.
+Microsoft Tunnel isn't supported on Microsoft Azure operated by 21Vianet.
 
 For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
 
@@ -319,7 +319,7 @@ The following considerations can help you configure the Linux server and your en
 
 - If you use an internal proxy, you might need to configure the Linux host to use your proxy server by using environment variables. To use the variables, edit the **/etc/environment** file on the Linux server, and add the following lines, replacing *address* in each line with the address of your proxy IP *address:port*:
 
-  `http_proxy=address`
+  `http_proxy=address`  
   `https_proxy=address`
 
 - Authenticated proxies aren't supported.
@@ -348,7 +348,7 @@ The following details can help you configure an internal proxy when using Podman
 
 - Podman reads HTTP Proxy information stored in **/etc/profile.d/http_proxy.sh**. If this file doesn't exist on your server, create it. Edit **http_proxy.sh** to add the following two lines. In the following lines, *10.10.10.1:3128* is an example address:port entry. When you add these lines, replace *10.10.10.1:3128* with the values for your proxy IP *address:port*:
 
-  `export HTTP_PROXY=http://10.10.10.1:3128`
+  `export HTTP_PROXY=http://10.10.10.1:3128`  
   `export HTTPS_PROXY=http://10.10.10.1:3128`
 
   If you have access to Red Hat Customer Portal, you can view the knowledge base article associated with this solution. See [Setting up HTTP Proxy variables for Podman - Red Hat Customer Portal](https://access.redhat.com/solutions/3939131).
@@ -360,7 +360,7 @@ The following details can help you configure an internal proxy when using Podman
   1. Modify or create the file **/etc/profile.d/http_proxy.sh** and add the two lines from the previous bullet point.
   2. Edit **/etc/mstunnel/env.sh** and add the following two lines to end of the file. Like the previous lines, replace the example *address:port* value of *10.10.10.1:3128* with the values for your proxy IP *address:port*:
 
-     `HTTP_PROXY=http://10.10.10.1:3128`
+     `HTTP_PROXY=http://10.10.10.1:3128`  
      `HTTPS_PROXY=http://10.10.10.1:3128`
 
   3. Restart the Tunnel Gateway server: Run `mst-cli server restart`

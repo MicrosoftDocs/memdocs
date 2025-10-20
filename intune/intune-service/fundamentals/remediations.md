@@ -1,5 +1,5 @@
 ---
-title: Use Remediations to detect and fix support issues
+title: Use Remediations to Detect and Fix Support Issues
 description: Learn more about Remediations in Microsoft Intune, including what Remediations are and view any prerequisites and licensing requirements. Also, learn how to deploy built-in and custom remediation scripts, and learn how to monitor your scripts.
 ms.date: 09/08/2025
 ms.topic: how-to
@@ -43,21 +43,21 @@ Whether enrolling devices via Intune or Configuration Manager, Remediation scrip
 
 - Devices must be Microsoft Entra joined or Microsoft Entra hybrid joined and meet one of the following conditions:
 
-  - Device is Mobile Device Management (MDM) enrolled in Intune and runs Windows 10 or later Enterprise, Professional, or Education edition.
+  - Device is Mobile Device Management (MDM) enrolled in Intune and runs Windows Enterprise, Professional, or Education edition.
 
     **OR**
 
-  - Device is [co-managed](../../configmgr/comanage/overview.md) running Windows 10, version 1903 or later. Co-managed devices on Windows 10 version 1607 and older need the [Client apps workload](../../configmgr/comanage/workloads.md#client-apps) pointed to Intune.
+  - Device is [co-managed](../../configmgr/comanage/overview.md) running Windows.
 
 ### Licensing
 
 Remediations require users of the devices to have one of the following licenses:
 
-- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 
-- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
 
-- Windows 10/11 Virtual Desktop Access (VDA) per user
+- Windows Virtual Desktop Access (VDA) per user
 
 ### Permissions
 

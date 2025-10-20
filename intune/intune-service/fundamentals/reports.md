@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune reports
+title: Microsoft Intune Reports
 description: Intune provides specific report types with focused views that contain consistent and timely data.
 author: nicholasswhite
 ms.author: nwhite
@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# Intune reports
+# Intune Reports
 
 Microsoft Intune reports allow you to more effectively and proactively monitor the health and activity of endpoints across your organization, and also provides other reporting data across Intune. For example, you'll be able to see reports about device compliance, device health, and device trends. In addition, you can create custom reports to obtain more specific data.
 
@@ -151,7 +151,7 @@ The report generates one row per device that hasn't been assigned a compliance p
 
 ### Settings compliance  (Organizational)
 
-This report displays compliance settings that are deployed to devices, with a count of the devices for each status per setting.  After the report has been generated, the top-level details you’ll see include:
+This report displays compliance settings that are deployed to devices, with a count of the devices for each status per setting.  After the report has been generated, the top-level details you'll see include:
 
 - Setting name
 - Platform
@@ -175,7 +175,7 @@ To generate a report that uses current data:
 > [!NOTE]
 > This report is also known as the **Per policy device compliance status** report.
 
-This report displays a list of compliance policies with a count of devices that are compliant or not compliant to each policy. After the report has been generated, The top-level details you’ll see include:
+This report displays a list of compliance policies with a count of devices that are compliant or not compliant to each policy. After the report has been generated, The top-level details you'll see include:
 
 - Policy name
 - Policy platform
@@ -410,7 +410,7 @@ You can view the **Installation status for macOS devices** report using the foll
 
 A Windows update report, the **Windows 10 and later feature updates** report provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, and other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
 
-For information about how to use this report to resolve update failures, see [Reports for Windows 10 and later feature updates policy](../protect/windows-10-feature-updates.md).
+For information about how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../protect/windows-10-feature-updates.md).
 
 You can view the **Windows 10 and later feature updates** report using the following steps:
 
@@ -544,7 +544,7 @@ Other reports for Microsoft Defender Antivirus include:
 - [Antivirus agent status report](#antivirus-agent-status-report-organizational), an organizational report detailed in this article.
 - [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
 
-### MDM Firewall status for Windows 10 and later (Organizational)
+### MDM Firewall status for Windows (Organizational)
 
 *This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-with-firewall-off) along with the MDM devices running Windows firewall off report, which is only available from within the Endpoint security node.*
 
@@ -559,9 +559,9 @@ Status details include:
 
 - **Enabled** – The firewall on, and successfully reporting.
 - **Disabled** - The firewall is turned off.
-- **Limited** – The firewall isn’t monitoring all networks, or some rules are turned off.
+- **Limited** – The firewall isn't monitoring all networks, or some rules are turned off.
 - **Temporarily Disabled (default)** – The firewall is temporarily not monitoring all networks
-- **Not applicable** – The device doesn’t support firewall reporting.
+- **Not applicable** – The device doesn't support firewall reporting.
 
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Status report](media/intune-reports/firewall-status.png)
@@ -638,7 +638,7 @@ To view the **Device assignment status** report:
 
 ### Per setting status report (Operational)
 
-The **Per setting status** report surfaces the summary of device and user check-ins that are in **Success**, **Conflict**, **Error** states at the granular setting level within the device configuration profile. This report uses the same consistency and performance updates and navigation tools we’ve made available to other reports.
+The **Per setting status** report surfaces the summary of device and user check-ins that are in **Success**, **Conflict**, **Error** states at the granular setting level within the device configuration profile. This report uses the same consistency and performance updates and navigation tools we've made available to other reports.
 
 To view the **Per setting status** report:
 
@@ -700,7 +700,7 @@ To view the **Device configuration** details:
 
 ### Co-management eligibility report (Organizational)
 
-The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Devices must upgrade to Windows 10 and enroll in Microsoft Entra ID before becoming eligible. Some devices (like devices with Windows Server OS) aren't eligible for co-management. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune.
+The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Devices must upgrade to Windows 11 and enroll in Microsoft Entra ID before becoming eligible. Some devices (like devices with Windows Server OS) aren't eligible for co-management. Co-management enables you to concurrently manage Windows devices by using both Configuration Manager and Microsoft Intune.
 
 To see a generated report of device state, you can use the following steps:
 
@@ -715,7 +715,7 @@ For related information, see [What is co-management?](../../configmgr/comanage/o
 
 ### Co-managed workloads report (Organizational)
 
-The **Co-Manage Workloads** report provides a report of devices that are currently co-managed. For each device, the report shows the management authority for the Compliance, Resource Access, Device Configuration, Windows Update client policies, Endpoint Protection, Modern Apps, and Office Apps workloads. The report also aggregates all device workloads to show a summary of total workload management. Co-management enables you to concurrently manage Windows 10 and later devices by using both Configuration Manager and Microsoft Intune.
+The **Co-Manage Workloads** report provides a report of devices that are currently co-managed. For each device, the report shows the management authority for the Compliance, Resource Access, Device Configuration, Windows Update client policies, Endpoint Protection, Modern Apps, and Office Apps workloads. The report also aggregates all device workloads to show a summary of total workload management. Co-management enables you to concurrently manage Windows devices by using both Configuration Manager and Microsoft Intune.
 
 To see a generated report of device state, you can use the following steps:
 

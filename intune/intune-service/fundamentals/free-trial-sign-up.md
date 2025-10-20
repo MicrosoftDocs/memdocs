@@ -1,5 +1,5 @@
 ---
-title: Try Microsoft Intune for free
+title: Try Microsoft Intune for Free
 description: Create a free trial subscription, understand supported configurations and networking requirements, and optionally configure your domain name.
 author: nicholasswhite
 ms.author: nwhite
@@ -11,7 +11,7 @@ ms.collection:
 - highpri
 ---
 
-# Try Microsoft Intune for free
+# Try Microsoft Intune for Free
 
 Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this article, you'll create a free subscription to try Intune in a test environment.
 

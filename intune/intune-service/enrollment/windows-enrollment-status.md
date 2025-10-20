@@ -13,10 +13,6 @@ ms.collection:
 
 # Set up the Enrollment Status Page
 
-**Applies to**
-- Windows 10
-- Windows 11
-
 The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track how far along their device is in the setup process.
 
 The ESP can be deployed during the default out-of-box experience (OOBE) for Microsoft Entra join, and any [Windows Autopilot](/autopilot/index) provisioning scenario.

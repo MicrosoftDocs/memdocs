@@ -37,7 +37,7 @@ landingContent:
         url: device-enrollment-overview-windows.md
     - linkListType: how-to-guide
       links:
-      - text: Enroll Windows 10/11 device
+      - text: Enroll Windows device
         url: enroll-windows-10-device.md
       - text: Install apps for work or school
         url: install-apps-cpapp-windows.md
@@ -128,7 +128,7 @@ landingContent:
         url: set-up-mobile-threat-defense.md
       - text: Turn off USB debugging (Android)
         url: update-device-settings-android.md
-      - text: Turn on Windows Defender (Windows 10/11)
+      - text: Turn on Windows Defender 
         url: update-device-settings-windows.md
     - linkListType: concept
       links:

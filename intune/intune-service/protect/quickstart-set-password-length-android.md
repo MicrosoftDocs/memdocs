@@ -1,5 +1,5 @@
 ---
-title: Password compliance policy for Android Enterprise devices
+title: Password Compliance Policy for Android Enterprise Devices
 description: In this topic, you will use Microsoft Intune to set the length of the password required for Android Enterprise devices.
 author: nicholasswhite
 ms.author: nwhite
@@ -12,7 +12,7 @@ ms.collection:
 - sub-device-compliance
 ---
 
-# Step 6: Create a password compliance policy for Android Enterprise devices
+# Step 6: Create a Password Compliance Policy for Android Enterprise Devices
 
 In this topic, you'll use Microsoft Intune to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android Enterprise devices.
 

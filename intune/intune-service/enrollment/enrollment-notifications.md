@@ -10,10 +10,6 @@ ms.collection:
 
 # Set up enrollment notifications
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-*Applies to: Android, iOS/iPadOS, macOS, Windows 10, Windows 11*
-
 Set up enrollment notifications in Microsoft Intune to notify employees of newly enrolled devices. Enrollment notifications are sent to assigned users via your selected method: email or push notification. Within a notification, you can:
 
 * Add a custom message for the user, with information about how to report an unrecognized device.
@@ -24,8 +20,11 @@ Enrollment notifications are supported on these devices:
 * Android devices in bring-your-own-device (BYOD) scenarios.
 * iOS/iPadOS devices in BYOD scenarios such as device enrollment. However, enrollment notifications aren't supported with user enrollment.
 * macOS devices in BYOD scenarios such as device enrollment.
-* Devices running Windows 10/11, excluding Microsoft Entra hybrid joined devices.
+* Devices running Windows, excluding Microsoft Entra hybrid joined devices.
 * Windows Autopilot devices, excluding userless scenarios such as Windows Autopilot for pre-provisioned deployment.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Example
 The following example image shows what an enrollment notification looks like to a device user.
@@ -33,7 +32,7 @@ The following example image shows what an enrollment notification looks like to 
 > [!div class="mx-imgBorder"]
 > ![Example image of an enrollment notification configured in Intune, notifying the recipient that a device named *Nia's iPhone" was enrolled, and includes HTML elements such as bolded font and a hyperlink, device details, contact information, and privacy statement.](./media/enrollment-notifications/enrollment-notification-message.png)
 
-## Prerequisites
+## Requirements  
 Prior to creating enrollment notifications, you must [configure Microsoft Intune branding and customization settings](../apps/company-portal-app.md) under **Tenant administration** > **Customization**.
 
 Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios, or when provisioning Windows 365 Cloud PCs.
