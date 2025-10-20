@@ -57,6 +57,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
+## Week of October 20, 2025  
+
+### Device management  
+
+#### New client version for Remote Help for macOS <!-- 35620986 -->
+With the new Remote Help client, version 1.0.2510071, Microsoft Intune now supports macOS 26. Earlier versions of the Remote Help client aren't compatible with macOS 26. The app is automatically updated through Microsoft AutoUpdate (MAU) if opted-in, so no action is required from you or your users. The latest client version resolves an issue that previously caused the screen to appear blank on first launch and fail to connect. For more information, see [Use Remote Help with Microsoft Intune](remote-help.md?tabs=macos).  
+
 ## Week of October 13, 2025
 
 ### Device management
