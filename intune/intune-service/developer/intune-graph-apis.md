@@ -299,7 +299,7 @@ At this time, all Intune permission scopes require administrator access.  This m
 
 ### <a name="script-rw"></a>DeviceManagementScripts.ReadWrite.All
 
-- **Enable Access** setting: **Read and write Microsoft Intune scripts**
+- **Enable Access** setting: **Read and write Microsoft Intune scripts**\
   Allows the same operations as *DeviceManagementScripts.Read.All*
 
 - Apps can create, update or delete a script, specifically:

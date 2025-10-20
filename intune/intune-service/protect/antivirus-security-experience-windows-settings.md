@@ -22,14 +22,14 @@ ms.reviewer: mattcall
 
 **Windows Security**:
 
-- **Enable tamper protection to prevent Microsoft Defender being disabled**
+- **Enable tamper protection to prevent Microsoft Defender being disabled**  
   [Prevent changes to security settings with Tamper Protection](https://go.microsoft.com/fwlink/?linkid=2066083)
 
   - **Not configured** (*default*) - When the *Enable* or *Disable* state exists on a client, deploying *Not configured* has no impact on the setting.
   - **Enable** - Enable the Tamper Protection restriction. To change the state from either enabled or disabled, deploy the opposite setting to have effect.
   - **Disable** - Disable the Tamper Protection restrictions. To change the state from either enabled or disabled, deploy the opposite setting to have effect.
 
-  **Hide the Virus and threat protection area in the Windows Security app**
+  **Hide the Virus and threat protection area in the Windows Security app**  
   CSP: [DisableVirusUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablevirusui)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
@@ -38,7 +38,7 @@ ms.reviewer: mattcall
 
   When this setting is configured as *No* or *Not configured*, the following setting is available:
 
-  - **Hide the Ransomware data recovery option in the Windows Security app**
+  - **Hide the Ransomware data recovery option in the Windows Security app**  
     CSP: [HideRansomwareDataRecovery](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-hideransomwaredatarecovery)
 
     This setting is only available when *Hide the Virus and threat protection area in the Windows Security app* is set to *No* or *Not configured*.
@@ -47,49 +47,49 @@ ms.reviewer: mattcall
     - **Yes** - The ransomware data recovery area in the Windows Security app is hidden from end-users. Ransomware related notifications are suppressed.
     - **No** - Behavior is the same as *Not configured*.
 
-- **Hide the Account protection area in the Windows Security app**
+- **Hide the Account protection area in the Windows Security app**  
   CSP: [DisableAccountProtectionUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disableaccountprotectionui)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The account protection area in the Windows Security app is hidden from end-users. Account protection-related notifications are suppressed.
   - **No** - Behavior is the same as *Not configured*.
 
-- **Hide the Firewall and network protection area in the Windows Security app**
+- **Hide the Firewall and network protection area in the Windows Security app**  
   CSP: [DisableNetworkUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablenetworkui)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The firewall and network protection area in the Windows Security are hidden from end-users. Firewall and network protection-related notifications are suppressed.
   - **No** - Behavior is the same as *Not configured*.
 
-- **Hide the App and browser control area in the Windows Security app**
+- **Hide the App and browser control area in the Windows Security app**  
   CSP: [DisableAppBrowserUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disableappbrowserui)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The app and browser control area in the Windows Security is hidden from end-users. App and browser control related notifications are suppressed.
   - **No** - Behavior is the same as *Not configured*.
 
-- **Hide the Device security area in the Windows Security app**
+- **Hide the Device security area in the Windows Security app**  
   CSP: [DisableDeviceSecurityUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disabledevicesecurityui)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The hardware protection area in the Windows Security app is hidden from end-users. Hardware protection-related notifications will be suppressed.
   - **No** - Behavior is the same as *Not configured*.
 
-- **Hide the Device performance and health area in the Windows Security app**
+- **Hide the Device performance and health area in the Windows Security app**  
   CSP: [DisableHealthUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablehealthui)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The device performance and health area in the Windows Security app are hidden from end-users. Device performance and health-related notifications ware suppressed
   - **No** - Behavior is the same as *Not configured*.
 
-- **Hide the Family options area in the Windows Security app**
+- **Hide the Family options area in the Windows Security app**  
   CSP: [DisableFamilyUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablefamilyui)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to allow user access and notifications.
   - **Yes** - The family options area in the Windows Security app is hidden from end-users. Also, notifications related to family options are suppressed.
   - **No** - Behavior is the same as *Not configured*.
 
-- **Windows Security app notifications**
+- **Windows Security app notifications**  
   CSP: [DisableNotifications](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablenotifications)
 
   Use this setting to block Windows Security notifications to your users for all of the preceding feature settings. Alternatively, you can manage the Windows Security app notifications per feature by using the proceeding settings.
@@ -98,7 +98,7 @@ ms.reviewer: mattcall
   - **Block non-critical notification** - Notifications such as scan completions are blocked.
   - **Block all notifications** - Critical and non-critical notifications are blocked for all Windows Security features.
 
-- **Hide the Windows Security icon from the notification area**
+- **Hide the Windows Security icon from the notification area**  
   CSP: [HideWindowsSecurityNotificationAreaControl](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter)
 
   For this setting to take effect, the user needs to either sign out and back in, or reboot the computer.
@@ -106,21 +106,21 @@ ms.reviewer: mattcall
   - **Yes** - Hide the Windows Security icon from the notification area.
   - **No** - Behavior is the same as *Not configured*.
 
-- **Disable the Clear TPM option in the Windows Security app**
+- **Disable the Clear TPM option in the Windows Security app**  
   CSP: [DisableClearTpmButton](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter)
 
   - **Not configured** (*default*) - The setting returns to the client default, which allows access to the button.
   - **Yes** - Disable access to the clear TPM button in the Windows Security app.
   - **No** - Behavior is the same as *Not configured*.
 
-- **Prompt users to update TPM firmware if vulnerability is discovered**
+- **Prompt users to update TPM firmware if vulnerability is discovered**  
   CSP: [DisableTpmFirmwareUpdateWarning](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter)
 
   - **Not configured** (*default*) - The setting returns to the client default, which is to not prompt users.
   - **Yes** - Allow Windows to prompt end-users when a potential vulnerability is found in their TPM firmware. Users are then encouraged to run firmware updates to resolve the vulnerability.
   - **No** - Behavior is the same as *Not configured*.
 
-- **Organization's support contact information**
+- **Organization's support contact information**  
   CSP: [EnableCustomizedToasts](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-enablecustomizedtoasts)
 
   Declare where you would like your IT organization information displayed in the Windows Security app and notifications.

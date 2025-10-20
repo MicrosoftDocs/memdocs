@@ -5,11 +5,10 @@ ms.date: 10/16/2024
 ms.reviewer: priyar
 ---
 
-# Sync enrolled device for Windows 10 or later
+# Sync enrolled device for Windows   
 
 **Applies to**
-- Windows 10
-- Windows 11
+- Windows  
 
 Sync the enrolled device you're using for work to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, you can manually sync the device when you return to get any updates you missed. Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.
 
@@ -20,7 +19,7 @@ This article describes how to start a sync from the:
 * System settings app
 
 ## Sync from Company Portal app for Windows
-Complete these steps to sync a device in the Company Portal app. You can sync devices running Windows 10 with the Creator's Update (1703) or later, and Windows 11.
+Complete these steps to sync a device in the Company Portal app. <!-- checking with PM on this line: You can sync devices running Windows 10 with the Creator's Update (1703) or later, and Windows 11.-->
 
 1. Open the Company Portal app on your device and go to **Settings**.
 
@@ -43,8 +42,8 @@ You can access Company Portal syncing action from the desktop. This way is usefu
 
 3. Select **Sync this device**. The Company Portal app opens and the sync begins.
 
-## Sync from Settings app (Windows 10 or later)
-Sync devices running Windows 10 or later from the system Settings app.
+## Sync from Settings app 
+You can sync devices running a supported version of Windows from the system Settings app.  
 
 1. On your device, select **Start** > **Settings**.
 

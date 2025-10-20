@@ -7,9 +7,8 @@ ms.reviewer: priyar
 
 # Report a device problem for Windows
 
-*Applies to*
-- *Windows 10*
-- *Windows 11*
+**Applies to**
+- Windows 
 
 Export and share management log diagnostics with your support person to troubleshoot an error on your enrolled device. When an error or event occurs on your device, the details of it are recorded and saved to a document called a _diagnostic log_. Diagnostic logs can provide your support team with enough information to diagnose and resolve the error.
 

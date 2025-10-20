@@ -1,5 +1,5 @@
 ---
-title: Validate your app protection policy setup
+title: Validate Your App Protection Policy Setup
 description: Learn how to test that your app protection policy is set up and working correctly in Microsoft Intune.
 ms.date: 01/06/2025
 ms.topic: how-to
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# How to validate your app protection policy setup in Microsoft Intune
+# How to Validate Your App Protection Policy Setup in Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

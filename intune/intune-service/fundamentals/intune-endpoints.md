@@ -237,6 +237,9 @@ For details, see the following resources:
 - [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints)
 - [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
 
+  > [!NOTE]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 **Win32 content download:**
 
 Win32 content download locations and endpoints are unique per application and are provided by the external publisher. You can find the location for each Win32 Store app using the following command on a test system (you can obtain the [PackageId] for a Store app by referencing the **Package Identifier** property of the app after adding it to Microsoft Intune):

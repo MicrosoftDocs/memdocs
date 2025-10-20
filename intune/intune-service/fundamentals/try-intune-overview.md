@@ -1,5 +1,5 @@
 ---
-title: Try Microsoft Intune overview
+title: Try Microsoft Intune Overview
 description: Evaluate Microsoft Intune by stepping through common Intune settings.
 author: nicholasswhite
 ms.author: nwhite
