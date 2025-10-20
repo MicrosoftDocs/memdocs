@@ -56,7 +56,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Send custom notifications**—to send notifications to devices
 >   - The permission **Organization/Update**—to send notifications to groups
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ## How to send custom notifications from the Intune admin center
 

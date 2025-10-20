@@ -1,22 +1,13 @@
 ---
-title: Restart frequency in endpoint analytics
-description: Get details about device restart frequency in endpoint analytics
-ms.date: 04/10/2025
-ms.topic: article
+title: Restart Frequency in Endpoint Analytics
+description: Analyze restart frequency in Microsoft Intune endpoint analytics to identify device reboot patterns, troubleshoot issues, and improve reliability.
+ms.date: 10/09/2025
+ms.topic: concept-article
 ---
 
 # Restart frequency in endpoint analytics
 <!--IN6225459-->
 In endpoint analytics [startup performance](startup-performance.md), we've provided insights into PC boot times, and how to improve the reboot times of poorly performing devices. Reboot frequency can affect a user's experience. A device that reboots daily due to Stop errors results in poor user experience even if the boot times are fast. We've recently added insights into restart frequencies within your organization to help you identify problematic devices.
-
-## Prerequisites
-
-- Devices are enrolled in endpoint analytics.
-  - [Enroll Configuration Manager devices](enroll-configmgr.md)
-  - [Enroll Intune devices](enroll-intune.md)
-  - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
-- Devices meet the endpoint analytics [startup performance](startup-performance.md) requirements.
-- Devices enrolled from Configuration Manager need client version 2006, or later installed
 
 ## Restart categories
 
@@ -35,8 +26,6 @@ Each restart is categorized into one of six categories. They're described as eit
 - **Restart (no update)**: Ideally this category should be close to zero since there shouldn't be a reason to restart a device beyond monthly patching.
 
 The difference between **Shutdown (no update)** and **Restart (no update)** is the user's action. A shutdown or restart doesn't have to be initiated through the start menu, it could be initiated other ways too.
-
-:::image type="content" source="media/shutdown-restart.png" alt-text="Shutdown and restart in the Windows Start menu":::
 
 ## Device performance tab
 
