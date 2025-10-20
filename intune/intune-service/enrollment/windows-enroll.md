@@ -70,12 +70,12 @@ You must have:
    This setting is turned off by default. If you're enforcing Windows MAM for your Entra registered users, enable this setting. This setting applies to:  
     - Users in the **Some** or **All** category in the MDM auto-enrollment configuration.  
     - Entra registered and workplace joined users.  
-    - Users who add their account for the first time via Microsoft Edge or a native app such as Teams.     
-This setting doesn't apply to users adding their account through the Settings flow.   
+    - Users who add their account for the first time via Microsoft Edge or a native app such as Teams.
+   
+   This setting doesn't apply to users adding their account through the Settings flow.   
 
    > [!NOTE]  
-   > This setting is a user experience blocker during the first time sign-in. It doesn't prevent a user from managing their device through other enrollment prompts, such as prompts to manage the device when a user accesses a resource that requires it.   
-
+   > This setting only blocks the MDM enrollment option from users during the Entra account registration flow. Users can still MDM enroll their device through Windows Settings if they are in scope for MDM automatic enrollment, and through prompts they receive when they try to access a resource that requires MDM enrollment.   
 
 1. For **WIP user scope**, select **None**. If the WIP user scope is set to any other value, make sure the selected users aren't a part of the MDM user scope.
 
