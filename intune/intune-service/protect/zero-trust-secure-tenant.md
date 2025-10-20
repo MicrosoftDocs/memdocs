@@ -2,7 +2,7 @@
 title:  Configure Microsoft Intune for increased tenant security
 description:  Secure your tenant with Microsoft Intune to support your Zero Trust journey.
 ms.topic: reference
-ms.date: 10/06/2025
+ms.date: 10/20/2025
 ms.author: brenduns
 author: brenduns
 ms.reviewer: ramical
@@ -14,52 +14,9 @@ ms.collection:
 
 # Configure Microsoft Intune for Zero Trust: Secure tenants (Preview)
 
-
- Microsoft [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) pillars:
-
-
+Protecting your Intune tenant is essential to enforcing Zero Trust principles and maintaining a secure, well-managed environment. These recommendations align with Microsoft’s [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) by limiting blast radius and enforcing least-privilege access through segmented administrative control, secure device onboarding, and policy-driven protections. Together, they help reduce risk, maintain tenant hygiene, and strengthen compliance across platforms.
 
 ## Zero Trust security recommendations
-
-### Local administrator credentials on Windows are protected by Windows LAPS<!-- 24560 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24560](./includes/secure-recommendations/24560.md)]
-
-### Data on Windows is protected by BitLocker encryption<!-- 24550 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24550](./includes/secure-recommendations/24550.md)]
-
-### Authentication on Windows uses Windows Hello for Business<!-- 24551-->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24551](./includes/secure-recommendations/24551.md)]
-
-### Local account usage on Windows is restricted to reduce unauthorized access<!--  24564 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24564](./includes/secure-recommendations/24564.md)]
-
-### FileVault encryption protects data on macOS devices<!-- 24569 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24569](./includes/secure-recommendations/24569.md)]
-
-### Local administrator credentials on macOS are protected during enrollment by macOS LAPS<!--  24561 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24561](./includes/secure-recommendations/24561.md)]
-
-<!-- ### Platform SSO is enforced on macOS to enable phishing-resistant authentication<!-- 24568 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-<!-- [!INCLUDE [24568](./includes/secure-recommendations/24568.md)]-->
-
-### Data on Android is protected by app protection policies<!-- 24549 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24549](./includes/secure-recommendations/24549.md)]
-
-### Data on iOS/iPadOS is protected by app protection policies<!-- 24548 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
-
-## [Protect tenants and isolate production systems](#tab/Protect-tenants-and-isolate-production-systems)
-
-Limit blast radius and enforce least-privilege access by segmenting administrative control and securing device onboarding. 
 
 ### Scope tag configuration is enforced to support delegated administration and least-privilege access<!-- 24555 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
@@ -105,14 +62,6 @@ Limit blast radius and enforce least-privilege access by segmenting administrati
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 <!-- [!INCLUDE [24871](./includes/secure-recommendations/24871.md)]-->
 
-### Conditional Access policies block access from noncompliant devices<!-- 24824 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24824](./includes/secure-recommendations/24824.md)]
-
-### Conditional Access policies block access from unmanaged apps<!-- 24827 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
- [!INCLUDE [24827](./includes/secure-recommendations/24827.md)]
-
 ### Device cleanup rules maintain tenant hygiene by hiding inactive devices<!--  24802 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24802](./includes/secure-recommendations/24802.md)]
@@ -145,42 +94,6 @@ Limit blast radius and enforce least-privilege access by segmenting administrati
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
 
-## [Protect networks](#tab/Protect-networks)
-
-Protect your network perimeter and endpoints through policy-driven controls.
-
-### Windows Firewall policies protect against unauthorized network access<!-- 24540 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24540](./includes/secure-recommendations/24540.md)]
-
-### Attack Surface Reduction rules are applied to Windows devices to prevent exploitation of vulnerable system components<!-- 24574 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24574](./includes/secure-recommendations/24574.md)]
-
-### Defender Antivirus policies protect Windows devices from malware<!-- 24575 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24575](./includes/secure-recommendations/24575.md)]
-
-### macOS Firewall policies protect against unauthorized network access<!-- 24552 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24552](./includes/secure-recommendations/24552.md)]
-
-### Defender Antivirus policies protect macOS devices from malware<!-- 24784 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24784](./includes/secure-recommendations/24784.md)]
-
-### Secure Wi-Fi profiles protect iOS devices from unauthorized network access<!-- 24839 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24839](./includes/secure-recommendations/24839.md)]
-
-### Secure Wi-Fi profiles protect Android devices from unauthorized network access<!-- 24840 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24840](./includes/secure-recommendations/24840.md)]
-
-<!-- ### Secure Wi-Fi profiles are configured to protect macOS connectivity and devices<!-- 24870 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-<!-- [!INCLUDE [24870](./includes/secure-recommendations/24870.md)] -->
----
 
 ## Related content
 
