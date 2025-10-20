@@ -1,7 +1,6 @@
 ---
-title:  Configure Microsoft Intune for increased security
-description:  Learn how to improve your security posture with Microsoft Intune.
-ms.topic: reference
+title:  Configure Microsoft Intune for increased data security
+description: Secure data on devices with Microsoft Intune to support your Zero Trust journey.
 ms.date: 10/06/2025
 ms.author: brenduns
 author: brenduns
@@ -11,37 +10,19 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Configure Microsoft Intune for increased security (Preview)
+# Configure Microsoft Intune for Zero Trust: Secure data on devices (Preview)
 
-The security recommendations in this document are designed to help you improve your organization's security posture by using Microsoft Intune. These recommendations are influenced by accepted industry standards like those developed by NIST, the configuration baselines we use internally at Microsoft, and our experiences with customers. The recommendations in this article for Intune are focused on devices, but guided by the following Microsoft [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) pillars:
 
-- Protect identities and secrets
-- Protect tenants and isolate production systems
-- Protect networks
-- Protect engineering systems
-- Monitor and detect cyberthreats
-- Accelerate response and remediation
+ Microsoft [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) pillars:
 
-> [!TIP]
-> Some organizations might take these recommendations exactly as written, while others might choose to make modifications based on their own business needs.
 
-We recommend that all of the following controls be implemented where licenses are available. These patterns and practices help to provide a secure foundation for other resources built on top of this solution. More controls will be added to this document over time.
 
-## Secure Tenant
+## Zero Trust security recommendations
 
-| Check | Minimum License Requirements  |
-|-------|-------------------------------|
-| [Local administrator credentials on Windows are protected by Windows LAPS](/intune-service/protect/zero-trust-secure-data#local-administrator-credentials-on-windows-are-protected-by-windows-laps) | <ul><li>Microsoft Intune Plan</li></ul> |
-| [Local administrator credentials on macOS are protected during enrollment by macOS LAPS](/intune-service/protect/zero-trust-secure-tenant#local-administrator-credentials-on-macos-are-protected-during-enrollment-by-macos-laps) | Microsoft Intune Plan 1  |
-| [Local account usage on Windows is restricted to reduce unauthorized access](/intune-service/protect/zero-trust-secure-tenant#local-account-usage-on-windows-is-restricted-to-reduce-unauthorized-access) | Microsoft Intune Plan 1 |
-| [Data on Windows is protected by BitLocker encryption](/intune-service/protect/zero-trust-secure-tenant#data-on-windows-is-protected-by-bitlocker-encryption) | Microsoft Intune Plan 1  |
-| [FileVault encryption protects data on macOS devices](/intune-service/protect/zero-trust-secure-tenant#filevault-encryption-protects-data-on-macos-devices) | Microsoft Intune Plan 1  |
-| [Authentication on Windows uses Windows Hello for Business](/intune-service/protect/zero-trust-secure-tenant#authentication-on-windows-uses-windows-hello-for-business) | Microsoft Intune Plan 1  |
-| [Attack Surface Reduction rules are applied to Windows devices to prevent exploitation of vulnerable system components](/intune-service/protect/zero-trust-secure-tenant#attack-surface-reduction-rules-are-applied-to-windows-devices-to-prevent-exploitation-of-vulnerable-system-components) | Microsoft Intune Plan 1 <br> Defender for Endpoint Plan 1  |
-| [Defender Antivirus policies protect Windows devices from malware](/intune-service/protect/zero-trust-secure-tenant#defender-antivirus-policies-protect-windows-devices-from-malware) | Microsoft Intune Plan 1 <br> Defender for Endpoint Plan 1  |
-| [Defender Antivirus policies protect macOS devices from malware](/intune-service/protect/zero-trust-secure-tenant#defender-antivirus-policies-protect-macos-devices-from-malware) | Microsoft Intune Plan 1 <br> Defender for Endpoint Plan 1  |
-| [Windows Firewall policies protect against unauthorized network access](/intune-service/protect/zero-trust-secure-tenant#windows-firewall-policies-protect-against-unauthorized-network-access) | Microsoft Intune Plan 1  |
-| [macOS Firewall policies protect against unauthorized network access](/intune-service/protect/zero-trust-secure-tenant#macos-firewall-policies-protect-against-unauthorized-network-access) | Microsoft Intune Plan 1  |
+
+
+
+
 
 
 ### Local administrator credentials on Windows are protected by Windows LAPS<!-- 24560 -->
