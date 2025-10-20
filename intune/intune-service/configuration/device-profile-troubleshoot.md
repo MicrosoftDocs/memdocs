@@ -29,11 +29,11 @@ This article applies to the following policies:
 
 ## Policy refresh intervals
 
-When a device syncs with Intune, it checks for configuration for the current user/device context, receiving any pending actions, policies and apps assigned to it.
+When a device syncs with Intune, it checks for configuration for the current user or device context, and receives any pending actions, policies, and apps assigned to it.
 
 For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
 
-There are 3 main types of device syncs - change-based, client initiated, and single device.
+There are three main types of device syncs - change-based, client initiated, and single device.
 
 ### Change-based
 
@@ -48,7 +48,7 @@ An offline device, like when it's powered off, or a disconnected device, might n
 
 > [!NOTE]
 >
-> - It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.
+> - It can take more time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.
 > - To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md#intune-dependencies).
 >
 >   - [Windows dependencies](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies)
@@ -57,24 +57,24 @@ An offline device, like when it's powered off, or a disconnected device, might n
 
 ### Client initiated
 
-Thee following client syncs happen in response to a device event or state change, like when a user signs into the device or if the malware status changes:
+The following client syncs happen in response to a device event or state change, like when a user signs into the device or if the malware status changes:
 
-- **Maintenance syncs** - These syncs include a large amount of client-initiated syncs and they occur at predetermined intervals. They can be initiated by the client or service depending on the platform. The estimated check-in schedule for all platforms is about every 8 hours.
+- **Maintenance syncs** - These syncs include a large number of client-initiated syncs and they occur at predetermined intervals. The client or service can initiate the sync, depending on the platform. The estimated check-in schedule for all platforms is about every 8 hours.
 
-  Independent of the client schedule, devices are only allowed 1 maintenance sync every 6.5 hours.
+  Independent of the client schedule, devices are only allowed one maintenance sync every 6.5 hours.
 
-- **Newly enrolled devices** - When devices first enroll, syncs run more frequently to run configuration, compliance, and non-compliance checks. The check-ins are estimated at:
+- **Newly enrolled devices** - When devices first enroll, syncs run more frequently to run configuration, compliance, and noncompliance checks. The check-ins are estimated at:
 
   | Platform | Estimated refresh cycle|
   | --- | --- |
   | Android, AOSP | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
   | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
   | macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
-  | Windows PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+  | Windows | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 
 ### Single device
 
-These check-ins are driven by admins or end users when they run certain actions on a single device:
+Admins or end users initiate these check-ins when they run certain actions on a single device:
 
 - **End-users actions** - Includes actions made by users in the Company Portal website or app, like [checking the compliance status](../user-help/check-status-company-portal-website.md), syncing for policy or profile updates, or [installing apps](../user-help/manage-apps-cpweb.md#available-and-required-apps).
 
@@ -180,7 +180,7 @@ For more information on dynamic groups, go to:
 
 On Windows devices, when trying to sync in the **Settings** app > **Accounts** > **Access work or school**, you might see a `The sync could not be initiated (0x80072f9a)` error.
 
-If the Trusted Platform Module (TPM) was reset to factory settings, then the device must reenrolled to resume syncing. The device's Microsoft Entra identity is stored in the TPM. So, if the ID is removed, then reenrollment is the only way to reestablish the Microsoft Entra identity.
+If the Trusted Platform Module (TPM) was reset to factory settings, then the device must reenroll to resume syncing. The device's Microsoft Entra identity is stored in the TPM. So, if the ID is removed, then reenrollment is the only way to reestablish the Microsoft Entra identity.
 
 ## Related articles
 
