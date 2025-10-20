@@ -58,6 +58,31 @@ You can use RSS to be notified when this page is updated. For more information, 
 -->
 ## Week of October 20, 2025 (Service release 2510)
 
+### Microsoft Intune Suite
+
+#### Support for user account context in Endpoint Privilege Management Elevation Rules<!-- 25617968 -->
+
+Endpoint Privilege Management (EPM) has a new option for elevation rules that runs the elevated file using the user’s context instead of a virtual account. The option is **Elevate as current user**.
+
+With the *Elevate as current user* elevation type, files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings, helping to ensure that installers and tools that rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate. Prior to elevation, the user is required to enter their credentials for Windows Authentication. This process supports multifactor authentication (MFA) for enhanced security.
+
+For more information, see [Use Endpoint Privilege Management with Microsoft Intune](../protect/epm-plan.md#important-concepts-for-endpoint-privilege-management).
+
+####  Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334 -->
+
+You can now use an Endpoint Privilege Management (EPM) dashboard that presents insights about file elevations and trends in your organization and help identify users that might be ready to be moved to run as standard users in place of running with local admin permissions.
+
+Insights provided by the dashboard include:
+
+- Users who have only unmanaged file elevations
+- Users who have both managed and unmanaged file elevations
+- User with only managed elevations
+- Frequently unmanaged elevations
+- Frequently approved by support
+- Frequently denied elevations
+
+For more information about the dashboard and these new insights, see [Overview dashboard](../protect/epm-reports.md#elevation-report-by-user) in Reports for Endpoint Privilege Management.
+
 ### Device configuration
 
 #### System Info property available in properties catalog for device inventory<!-- 30326613 -->
@@ -147,6 +172,21 @@ These functionalities [are now available through declarative device management (
 >
 > - iOS/iPadOS
 > - macOS
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 33926210, 33926415, 34631356, 34631695, 34631844, 34632442  -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Total Triage by CareXM  
+- Intapp by Intapp Inc.  
+- ANDPAD by ANDPAD Inc.  
+- ANDPAD CHAT by ANDPAD Inc.  
+- ANDPAD Inspection by ANDPAD Inc.  
+- ANDPAD Blueprint by ANDPAD Inc.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ### Monitor and troubleshoot
 
