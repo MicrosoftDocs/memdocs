@@ -1,6 +1,7 @@
 ---
 title:  Configure Microsoft Intune for increased data security
 description: Secure data on devices with Microsoft Intune to support your Zero Trust journey.
+ms.topic: reference
 ms.date: 10/20/2025
 ms.author: brenduns
 author: brenduns
