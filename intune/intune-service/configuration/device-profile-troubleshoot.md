@@ -3,7 +3,7 @@ title: Questions with policies and profiles in Microsoft Intune
 description: Common questions, answers, and scenarios with device policies and profiles in Microsoft Intune. Learn more about profile changes not applying to users or devices, how long it takes for new policies to deploy, which settings apply when there are conflicts, what happens when you delete or remove a profile, and more.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 04/28/2025
+ms.date: 10/20/2025
 ms.update-cycle: 180-days
 ms.topic: troubleshooting
 ms.reviewer:
@@ -31,53 +31,54 @@ This article applies to the following policies:
 
 When a device syncs with Intune, it checks for configuration for the current user/device context, receiving any pending actions, policies and apps assigned to it.
 
-There are 3 main types of device syncs:
+For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
 
-**Change-based** - These happen through different actions that trigger a notification for the device to sync. For example, when a policy, profile, or app is assigned (or unassigned), updated, deleted, or when certain behind the scenes changes like Microsoft Entra group membership updates are made. Other changes don't cause an immediate notification to devices, like adding an app as available to your users.
+There are 3 main types of device syncs - change-based, client initiated, and single device.
 
-> [!IMPORTANT]
-> To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md#intune-dependencies).
->
-> - For Windows, see [Windows dependencies](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
-> - For Apple, see [Apple dependencies](../fundamentals/intune-endpoints.md#apple-dependencies).
-> - For Android, see [Android dependencies](../fundamentals/intune-endpoints.md#android-aosp-dependencies).
+### Change-based
 
-Intune notifies online devices to sync with the Intune service. The notification times vary from immediately up to a few hours and also vary between platforms.
+These syncs happen when different actions trigger a notification for the device to sync. For example, a sync triggers when a policy, profile, or app is assigned (or unassigned), updated, or deleted. Or, when changes like Microsoft Entra group membership updates are made. Changes like adding an app as available don't cause an immediate notification to devices.
 
-- On Android devices, [Google Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed).
+Intune notifies online devices to sync with the Intune service. The notification times can vary from immediately up to a few hours. They can also vary between platforms. To learn more, see:
 
-- On iOS devices, [Specific conditions can affect policy refresh intervals](/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy).
+- Android - [Google Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed)
+- iOS/iPadOS  - [Specific conditions can affect policy refresh intervals](/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy)
 
-An offline device, such as a powered off, or a disconnected device, might not receive the notifications. In this case, the device gets the policy or profile on its next sync with Intune.
+An offline device, like when it's powered off, or a disconnected device, might not receive the notifications. In this case, the device gets the policy or profile on its next sync with Intune.
 
 > [!NOTE]
-> It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.
+>
+> - It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.
+> - To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md#intune-dependencies).
+>
+>   - [Windows dependencies](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies)
+>   - [Apple dependencies](../fundamentals/intune-endpoints.md#apple-dependencies)
+>   - [Android dependencies](../fundamentals/intune-endpoints.md#android-aosp-dependencies)
 
+### Client initiated
 
-**Client initiated** - These syncs happen in response to a device event or state change, like a user signing in or if malware status changes. 
+Thee following client syncs happen in response to a device event or state change, like when a user signs into the device or if the malware status changes:
 
-***Maintenance syncs*** - These make a large portion of client-initiated syncs. These check-ins happen at predetermined intervals and can be initiated by the client or service depending on the platform. The estimated check-in schedule is about every 8 hours for all platforms
+- **Maintenance syncs** - These syncs include a large amount of client-initiated syncs and they occur at predetermined intervals. They can be initiated by the client or service depending on the platform. The estimated check-in schedule for all platforms is about every 8 hours.
 
-> [!IMPORTANT]
-> Independent of the client schedule, devices are only allowed 1 maintenance sync every 6.5 hours
+  Independent of the client schedule, devices are only allowed 1 maintenance sync every 6.5 hours.
 
-***Newly enrolled devices*** - When devices first enroll, syncs run more frequently to perform configuration, compliance and non-compliance checks. The check-ins are estimated as follows:
+- **Newly enrolled devices** - When devices first enroll, syncs run more frequently to run configuration, compliance, and non-compliance checks. The check-ins are estimated at:
 
-| Platform | Estimated refresh cycle|
-| --- | --- |
-| Android, AOSP | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
-| iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
-| macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
-| Windows PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+  | Platform | Estimated refresh cycle|
+  | --- | --- |
+  | Android, AOSP | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+  | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
+  | macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
+  | Windows PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 
-**Single device** – These check-ins are driven by admins or end users when they perform certain actions affecting a single device:
+### Single device
 
-***End-users actions*** - in the Company Portal web or app like [checking compliance status](../user-help/check-status-company-portal-website), sync for policy or profile updates or [installing apps](../user-help/manage-apps-cpweb#available-and-required-apps).
+These check-ins are driven by admins or end users when they run certain actions on a single device:
 
-***Admin actions*** -  from the Intune portal affecting a single device, like [device sync](../remote-actions/device-sync.md), [remote lock](../remote-actions/device-remote-lock.md) or [reset passcode](../remote-actions/device-passcode-reset.md). Other actions like [remotely assist users](../fundamentals/remote-help.md) do not cause a device check-in.
+- **End-users actions** - Includes actions made by users in the Company Portal website or app, like [checking the compliance status](../user-help/check-status-company-portal-website.md), syncing for policy or profile updates, or [installing apps](../user-help/manage-apps-cpweb.md#available-and-required-apps).
 
-
-For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
+- **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../remote-actions/device-sync.md), [remote lock](../remote-actions/device-remote-lock.md), or [reset passcode](../remote-actions/device-passcode-reset.md). Other actions like [remotely assist users](../fundamentals/remote-help.md) don't cause a device check-in.
 
 ## Company portal
 
