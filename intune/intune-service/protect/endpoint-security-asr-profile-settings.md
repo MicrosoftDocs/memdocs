@@ -454,7 +454,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   When set to *Yes* you can configure the following options:
   - **Allow list** - Use *Add*, *Import*, and *Export* to manage a list of device identifiers.
 
-- **Block hardware device installation by device instance identifiers**
+- **Block hardware device installation by device instance identifiers**  
   If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
   - **Not configured** *(default)*
   - **Yes** - Specify a list of Plug and Play hardware IDs and compatible IDs for devices that Windows is prevented from installing. This policy takes precedence over any other policy setting that allows Windows to install a device. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.

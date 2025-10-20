@@ -26,7 +26,7 @@ This article shows you how to create the profile, and enable the monitoring.
 
 ## Before you begin
 
-- Endpoint Analytics has its own prerequisites. For more information, including enrollment requirements, see Endpoint Analytics Overview](../../analytics/index.md).
+- Endpoint Analytics has its own prerequisites. For more information, including enrollment requirements, see [Endpoint Analytics Overview](../../analytics/index.md).
 - If you use co-management, then to use this profile, the Device Configuration workload must be in Intune. For more information on these features, go to [What is co-management?](../../configmgr/comanage/overview.md) and [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 

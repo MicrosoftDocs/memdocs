@@ -29,6 +29,8 @@ landingContent:
             url: 2503/33177653.md
           - text: KB 34503790 Revised security update for Microsoft Configuration Manager
             url: 2503/34503790.md
+          - text: KB 32851084 Update rollup for Microsoft Configuration Manager version 2503
+            url: 2503/32851084.md
   - title: Configuration Manager 2409
     linkLists:
       - linkListType: overview
@@ -45,6 +47,8 @@ landingContent:
             url: 2409/33926600.md
           - text: KB 34503790 Revised security update for Microsoft Configuration Manager
             url: 2503/34503790.md
+          - text: KB 35360093 Administration service and CMPivot security update for Microsoft Configuration Manager
+            url: 2409/35360093.md
   - title: Configuration Manager 2403
     linkLists:
       - linkListType: overview
@@ -63,6 +67,8 @@ landingContent:
             url: 2409/33926600.md
           - text: KB 34503790 Revised security update for Microsoft Configuration Manager
             url: 2503/34503790.md
+          - text: KB 35360093 Administration service and CMPivot security update for Microsoft Configuration Manager
+            url: 2409/35360093.md
   - title: Configuration Manager 2309
     linkLists:
       - linkListType: overview
