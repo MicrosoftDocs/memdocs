@@ -5,7 +5,7 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 11/20/2024
 ms.topic: how-to
-ms.reviewer: gokarthi, abalwan
+ms.reviewer: mattcall, abalwan
 ms.collection:
 - M365-identity-device-management
 ---

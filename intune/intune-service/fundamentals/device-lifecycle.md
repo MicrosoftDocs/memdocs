@@ -28,7 +28,6 @@ Here are the types of configuration options that are available:
 
 - [**Device configuration profiles**](../configuration/device-profiles.md). These policies let you configure the features and capabilities of the devices that you manage. For example, you could require the use of a password on Android phones or disable the use of the camera on iPhones.
 - [**Company resource access**](../configuration/device-profiles.md). When you let your users access their work on their personal device, this can present you with challenges. For example, how do you ensure that all devices that need to access company email are configured correctly? How can you ensure that users can access the company network with a VPN connection without having to know complex settings? Intune can help to reduce this burden by automatically configuring the devices that you manage to access common company resources.
-- [**Windows PC management policies (with the Intune client software)**](./intune-legacy-pc-client.md). While enrolling Windows PCs with Intune gives you the most device management capabilities, Intune continues to support managing Windows PCs with the Intune client software. If you need information about some of the tasks that you can perform with PCs, start here.
 
 ## Protect
 
@@ -36,7 +35,6 @@ In the modern IT world, protecting devices from unauthorized access is one of th
 
 - [**Multi-factor authentication**](../enrollment/multi-factor-authentication.md). Adding an extra layer of authentication to user sign-ins can help make devices even more secure. Many devices support multi-factor authentication that requires a second level of authentication, such as a phone call or text message, before users can gain access.
 - [**Windows Hello for Business settings**](../protect/windows-hello.md). Windows Hello for Business is an alternative sign-in method that lets users use a *gesture*—such as a fingerprint or Windows Hello—to sign in without needing a password.
-- [**Policies to protect Windows PCs (with the Intune client software)**](./intune-legacy-pc-client.md). When you manage Windows PCs by using the Intune client software, policies are available that let you control settings for Endpoint Protection, software updates, and Windows Firewall on PCs that you manage.
 
 ## Retire
 
