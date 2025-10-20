@@ -1,13 +1,6 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: bpardi
-ms.reviewer: madakeva
-ms.subservice: autopilot
-ms.service: windows-client
 ms.topic: include
 ms.date: 05/29/2025
-ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:

@@ -1,12 +1,8 @@
 ---
-title: include file
-description: include file
-author: ErikjeMS  
-ms.service: microsoft-intune
+author: ErikjeMS
 ms.topic: include
 ms.date: 06/02/2020
 ms.author: erikje
-ms.custom: include file
 ---
 
 ## Windows Push Notification Services

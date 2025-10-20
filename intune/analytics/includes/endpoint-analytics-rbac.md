@@ -1,11 +1,6 @@
 ---
-author: MandiOhlinger
-ms.author: mandia
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: include
 ms.date: 10/23/2020
-ms.localizationpriority: medium
 ---
 <!--Don't apply H2 in this include file since they are context driven by article. Used in overview.md, enroll-configmgr.md and enroll-intune.md files -->
 

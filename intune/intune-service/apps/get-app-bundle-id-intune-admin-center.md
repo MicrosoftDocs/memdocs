@@ -1,35 +1,14 @@
 ---
-# required metadata
-
-title: Get app bundle ID
+title: Get App Bundle ID
 description: Get the app bundle ID in Microsoft Intune for Android, iOS/iPadOS, macOS, and Windows apps. Use the bundle ID in your app policies, device configuration profiles, enrollment policies, and compliance policies in Microsoft Intune.
-keywords:
-author: MandiOhlinger
-ms.author: mandia
-manager: dougeby
 ms.date: 04/30/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Get the app bundle ID for your policies in Microsoft Intune
+# Get the App Bundle ID for Your Policies in Microsoft Intune
 
 When you add an app to Intune or use the built-in apps, the bundle ID of the app is also added. This bundle ID identifies the app, and you can use the bundle ID in your policies.
 

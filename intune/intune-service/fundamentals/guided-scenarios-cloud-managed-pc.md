@@ -1,30 +1,19 @@
 ---
-title: Guided scenario - Cloud-managed Modern Desktop
-titleSuffix: Microsoft Intune
+title: Guided Scenario - Cloud-Managed Modern Desktop
 description: Learn about the guided scenario to set up and configure a basic Modern Desktop from the Microsoft 365 Device Management portal.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 04/17/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-
 ms.reviewer: dagerrit
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
 ---
 
-# Guided scenario - Cloud-managed Modern Desktop
+# Guided Scenario - Cloud-Managed Modern Desktop
 
-The modern desktop is the state-of-the-art productivity platform for the Information Worker. Microsoft 365 Apps and Windows 10 are the core components of the modern desktop along with the latest security baselines for Windows 10 and Microsoft Defender for Endpoint.
+The modern desktop is the state-of-the-art productivity platform for the Information Worker. Microsoft 365 Apps and Windows are the core components of the modern desktop along with the latest security baselines for Windows and Microsoft Defender for Endpoint.
 
 Managing the modern desktop from the cloud brings the added benefit of internet-wide remote actions. Cloud-management utilizes the in-built Windows Mobile Device Management policies and removes dependencies on local Active Directory group policy.
 
@@ -34,7 +23,7 @@ If you want to evaluate a cloud-managed modern desktop in your own organization,
 
 - [Set the MDM authority to Intune](../fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) - The mobile device management (MDM) authority setting determines how you manage your devices. As an IT admin, you must set an MDM authority before users can enroll devices for management.
 - A Microsoft Intune license (such as Microsoft 365 Business Premium, Microsoft 365 E3,  or Microsoft 365 E5). For more licensing information, see [Microsoft Intune licensing](../fundamentals/licenses.md).
-- Windows 10 1903 device (registered with Windows Autopilot for best end-user experience)
+- Windows device (registered with Windows Autopilot for best end-user experience)
 - Intune administrator permissions required to complete this guided scenario:
   - Device configuration Read, Create, Delete, Assign and Update
   - Enrollment Programs Read device, Read profile, Create profile, Assign profile, Delete profile
@@ -45,14 +34,14 @@ If you want to evaluate a cloud-managed modern desktop in your own organization,
 
 ## Step 1 - Introduction
 
-Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Microsoft 365 Apps. Your device will also be configured for Microsoft Defender for Endpoint, if you choose to [enable this protection in Intune](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity.
+Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows and Microsoft 365 Apps. Your device will also be configured for Microsoft Defender for Endpoint, if you choose to [enable this protection in Intune](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity.
 
 ### What you will need to continue
 
 You must supply your test device and test user in this guided scenario. Make sure you complete the following tasks:
 
 - Set up a test user account in Microsoft Entra ID.
-- Create a test device running Windows 10, version 1903 or later.
+- Create a test device running Windows.
 - (Optional) [Register the test device with Windows Autopilot](/autopilot/add-devices#add-devices).
 - (Optional) Enable [branding to your organization's Microsoft Entra sign-in page](/azure/active-directory/fundamentals/customize-branding).
 
@@ -64,7 +53,7 @@ If you want to add more users or devices to this configuration, add the users an
 
 ## Step 3 - Device
 
-Make sure your device is running Windows 10, version 1903 or later.  The primary user will need to set up the device when they receive it. There are two setup options available to the user.
+Make sure your device is running Windows.  The primary user will need to set up the device when they receive it. There are two setup options available to the user.
 
 ### Option A – Windows Autopilot
 
@@ -72,7 +61,7 @@ Windows Autopilot automates the configuration of new devices so that users can s
 
 ### Option B – Manual device enrollment
 
-Users will manually set up and enroll their new devices in mobile device management. After you complete this scenario, reset the device and give the primary user the enrollment instructions for Windows devices. For more information, see [Join a Windows 10 device to Microsoft Entra ID during the first-run experience](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+Users will manually set up and enroll their new devices in mobile device management. After you complete this scenario, reset the device and give the primary user the enrollment instructions for Windows devices. For more information, see [Join a Windows device to Microsoft Entra ID during the first-run experience](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ## Step 4 - Review + create
 
@@ -93,10 +82,10 @@ The final step allows you to review a summary of the settings you configured. On
         - Set to **Some**. Also add the user group created by this guided scenario.
 3. Follow the appropriate steps on the device to join it to Microsoft Entra ID based on the following:
     - With Windows Autopilot. For more information, see [Windows Autopilot user-driven mode](/windows/deployment/windows-autopilot/user-driven).
-    - Without Windows Autopilot: For more information, see [Join a Windows 10 device to Microsoft Entra ID during the first-run experience](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+    - Without Windows Autopilot: For more information, see [Join a Windows device to Microsoft Entra ID during the first-run experience](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ### What happens when I click Deploy?
-The user and device will be added to new security groups. They'll also be configured with Intune-recommended settings for security and productivity at work or school. After the user joins the device to Microsoft Entra ID, additional apps and settings will be added to the device. To learn more about these additional configurations, see [Quickstart: Enroll your Windows 10 device](../enrollment/quickstart-enroll-windows-device.md).
+The user and device will be added to new security groups. They'll also be configured with Intune-recommended settings for security and productivity at work or school. After the user joins the device to Microsoft Entra ID, additional apps and settings will be added to the device. To learn more about these additional configurations, see [Quickstart: Enroll your Windows device](../enrollment/quickstart-enroll-windows-device.md).
 
 ## Additional information
 
@@ -121,7 +110,7 @@ The guided scenario will also assign the user to the selected Windows Autopilot 
 Once the user joins the device to Microsoft Entra ID, the following configurations will be applied to the device:
 
 1. Microsoft 365 Apps will be automatically installed on the Cloud-managed PC. It includes the applications that you're familiar with, including Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business, and Word. You can use these applications to connect with Microsoft 365 services such as SharePoint Online, Exchange Online, and Skype for Business Online. Microsoft 365 Apps is updated regularly with new features, unlike nonsubscription versions of Office. For a list of new features, see What's new in Microsoft 365.
-2. Windows security baselines will be installed on the Cloud-managed PC. If you have setup Microsoft Defender for Endpoint, the guided scenario will also configure baseline settings for Defender. Defender for Endpoint provides a new post-breach layer of protection to the Windows 10 security stack. With a combination of client technology built into Windows 10 and a robust cloud service, it will help detect threats that have made it past other defenses.
+2. Windows security baselines will be installed on the Cloud-managed PC. If you have setup Microsoft Defender for Endpoint, the guided scenario will also configure baseline settings for Defender. Defender for Endpoint provides a new post-breach layer of protection to the Windows security stack. With a combination of client technology built into Windows and a robust cloud service, it will help detect threats that have made it past other defenses.
 
 ## Next steps
 

@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Questions with policies and profiles in Microsoft Intune
 description: Common questions, answers, and scenarios with device policies and profiles in Microsoft Intune. Learn more about profile changes not applying to users or devices, how long it takes for new policies to deploy, which settings apply when there are conflicts, what happens when you delete or remove a profile, and more.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/28/2025
 ms.update-cycle: 180-days
 ms.topic: troubleshooting
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - msec-ai-copilot
 ---
@@ -58,7 +40,7 @@ There are 4 main types of check-ins:
 | Android, AOSP | About every 8 hours |
 | iOS/iPadOS | About every 8 hours |
 | macOS | About every 8 hours |
-| Windows 10/11 PCs enrolled as devices | About every 8 hours |
+| Windows PCs enrolled as devices | About every 8 hours |
 
 **End user driven check-ins** – These check-ins are driven by end users when they perform certain actions in the Company Portal app like going into  **Devices** > **Check Status** or **Settings** > **Sync** to check for policy or profile updates or selecting an app for download.
 
@@ -68,6 +50,7 @@ There are 4 main types of check-ins:
 
 > [!IMPORTANT]
 > To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md#intune-dependencies).
+>
 > - For Windows, see [Windows dependencies](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
 > - For Apple, see [Apple dependencies](../fundamentals/intune-endpoints.md#apple-dependencies).
 > - For Android, see [Android dependencies](../fundamentals/intune-endpoints.md#android-aosp-dependencies).
@@ -82,7 +65,7 @@ These notification times also vary between platforms.
 An offline device, such as a powered off, or a disconnected device, might not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with Intune.
 
 > [!NOTE]
-> It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.  
+> It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.
 
 Additionally, when devices first enroll, configuration check-ins run more frequently to perform configuration, compliance and non-compliance checks. The check-ins are estimated as follows:
 
@@ -91,7 +74,7 @@ Additionally, when devices first enroll, configuration check-ins run more freque
 | Android, AOSP | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
 | macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
-| Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+| Windows PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
 
 For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
 
@@ -166,7 +149,7 @@ When you delete a profile, or remove a device from a group that's assigned the p
 
 To apply a less restrictive profile, some devices might need to be retired and re-enrolled in to Intune. For example, you might have to retire and re-enroll Android, iOS/iPadOS, and Windows client devices.
 
-## Some settings in a Windows 10/11 profile return "Not Applicable"
+## Some settings in a Windows profile return "Not Applicable"
 
 Some settings on Windows client devices can show as **Not Applicable**. When this situation happens, that specific setting isn't supported on the Windows version or edition running on the device. This message can occur for the following reasons:
 
@@ -195,7 +178,7 @@ For more information on dynamic groups, go to:
 
 On Windows devices, when trying to sync in the **Settings** app > **Accounts** > **Access work or school**, you might see a `The sync could not be initiated (0x80072f9a)` error.
 
-If the Trusted Platform Module (TPM) was reset to factory settings, then the device must reenrolled to resume syncing. The device's Microsoft Entra identity is stored in the TPM. So, if the ID is removed, then reenrollment is the only way to reestablish the Microsoft Entra identity. 
+If the Trusted Platform Module (TPM) was reset to factory settings, then the device must reenrolled to resume syncing. The device's Microsoft Entra identity is stored in the TPM. So, if the ID is removed, then reenrollment is the only way to reestablish the Microsoft Entra identity.
 
 ## Related articles
 

@@ -1,42 +1,27 @@
 ---
-# required metadata
-
 title: Surface Hub Windows 10 Team device restrictions in Microsoft Intune
 description: Add or configure Surface Hub devices settings running Windows 10 Team. Add a wake-up screen, create a maintenance window, use Miracast, and more in Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
-ms.date: 04/15/2024
+ms.date: 10/14/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
 # Windows 10 Team settings to allow or restrict features on Surface Hub devices using Intune
 
-> [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 This article describes some of the Microsoft Intune device restrictions settings that you can configure for Surface Hub devices running [Windows 10 Team](/surface-hub/differences-between-surface-hub-and-windows-10-enterprise).
 
 ## Before you begin
 
 - Create a [Windows 10 Teams device restrictions configuration profile](device-restrictions-configure.md#create-the-profile).
+- [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 ## Apps and experience
 
@@ -47,14 +32,14 @@ These settings use the [SurfaceHub CSP](/windows/client-management/mdm/surfacehu
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **Organizer and time only**: Shows the organizer and time of the meeting.
   - **Organizer, time, and subject (subject hidden for private meetings)**: Shows the organizer, time, and subject of the meeting. The subject is hidden for private meetings.
-- **Welcome screen background image URL**: Enter the URL of a `.png` image. On Windows 10 Team devices, this image shows as the background during user sessions, and on the **Welcome** screen. The image must be in PNG format, and the URL must begin with `https://`.
+- **Welcome screen background image URL**: Enter the URL of a `.png` image. On the Windows devices, this image shows as the background during user sessions, and on the **Welcome** screen. The image must be in PNG format, and the URL must begin with `https://`.
 - **Auto-launch Connect**: **Block** prevents the Connect app from automatically opening when a projection is started. If blocked, users can manually launch the Connect app from the Hub's settings. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Sign-in suggestions**: **Block** disables autofilling the sign-in dialog with invitees from scheduled meetings. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **My meetings and files**: **Block** disables the **My meetings and files** feature in the Start menu. This feature shows the signed-in user's meetings and files from Microsoft 365. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
 ## Azure operational insights
 
-- **Azure Operational Insights**: **Enable** collects, stores, and analyzes log data from Windows 10 Team devices with Azure Operational Insights. Azure Operational Insights is part of the Microsoft Operations Manager suite. Enter the **Workspace ID** and **Workspace Key** to connect to Azure Operational insights.
+- **Azure Operational Insights**: **Enable** collects, stores, and analyzes log data from Windows devices with Azure Operational Insights. Azure Operational Insights is part of the Microsoft Operations Manager suite. Enter the **Workspace ID** and **Workspace Key** to connect to Azure Operational insights.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not collect this data.
 

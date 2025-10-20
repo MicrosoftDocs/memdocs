@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: iOS/iPadOS device compliance security configurations
-titleSuffix: Microsoft Intune
 description: Review example device compliance configurations of basic, enhanced, and high security for iOS devices.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/20/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -63,7 +43,7 @@ The following table lists only configured settings. Settings not listed in the t
 Level 3 is the recommended configuration for both:
 
 - Organizations with large and sophisticated security organizations.
-- Specific users and groups who might be uniquely targeted by adversaries. 
+- Specific users and groups who might be uniquely targeted by adversaries.
 
 Such organizations are typically targeted by well-funded and sophisticated adversaries.
 
@@ -73,7 +53,7 @@ This configuration expands upon level 2 by:
 - Ensuring that the device is compliant by enforcing the most secure Microsoft Defender for Endpoint or mobile threat defense level.
 - Enacting stronger password policies.
 
-The policy settings enforced in level 3 include all the policy settings recommended for level 2. The settings listed in the following table include only those that are added or changed. These settings can have significant impact to users or applications. They enforce a level of security more appropriate for risks facing targeted organizations. 
+The policy settings enforced in level 3 include all the policy settings recommended for level 2. The settings listed in the following table include only those that are added or changed. These settings can have significant impact to users or applications. They enforce a level of security more appropriate for risks facing targeted organizations.
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |

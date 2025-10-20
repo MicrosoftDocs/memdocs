@@ -1,39 +1,21 @@
 ---
-# required metadata
-
-title: Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune
-description: Create and run PowerShell scripts, assign the script policy to Microsoft Entra groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10/11 devices in Microsoft Intune. Read common issues and resolutions. 
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 09/08/2025
+title: Add PowerShell Scripts to Windows Devices in Microsoft Intune
+description: Create and run PowerShell scripts, assign the script policy to Microsoft Entra groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows devices in Microsoft Intune. Read common issues and resolutions.
+ms.date: 10/02/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri
 - FocusArea_Apps_Win32
 ---
 
-# Use PowerShell scripts on Windows 10/11 devices in Intune
+# Use PowerShell Scripts on Windows Devices in Intune
 
-Use the Microsoft Intune management extension to upload PowerShell scripts in Intune. Then, run these scripts on Windows 10 devices. The management extension enhances MDM, and makes it easier to move to modern management.
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+Use the Microsoft Intune management extension to upload PowerShell scripts in Intune. Then, run these scripts on Windows devices. The management extension enhances MDM, and makes it easier to move to modern management.
 
 > [!NOTE]
 > For information about the Intune management extension for Windows, see [Intune management extension for Windows](../apps/intune-management-extension.md).
@@ -46,7 +28,7 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
 
 - The Intune management extension checks after every reboot for any new scripts or changes. After you assign the policy to the Microsoft Entra groups, the PowerShell script runs, and the run results are reported. Once the script executes, it doesn't execute again unless there's a change in the script or policy. If the script fails, the Intune management extension retries the script three times for the next three consecutive Intune management extension check-ins.
 
-- PowerShell scripts assigned to the device run for every new user that signs in, except on multi-session SKUs where user check-in is disabled. 
+- PowerShell scripts assigned to the device run for every new user that signs in, except on multi-session SKUs where user check-in is disabled.
 
 - PowerShell scripts are executed before Win32 apps run. In other words, PowerShell scripts execute first. Then, Win32 apps execute.
 
@@ -73,7 +55,7 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Scripts and remediations** > **Platform scripts** > **Add** > **Windows 10 and later**.
 
-    ![Screenshot that shows creating a new script for a Windows 10 device.](./media/intune-management-extension/create-script-windows.png)
+    ![Screenshot that shows creating a new script for a Windows device.](./media/intune-management-extension/create-script-windows.png)
 
 3. In **Basics**, enter the following properties, and select **Next**:
     - **Name**: Enter a name for the PowerShell script.
@@ -132,7 +114,7 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
 - Check in
 - Run script **ConfigScript01**
 - Script fails (retry count = 2)
-  
+
 **11 AM**
 
 - Check in
@@ -170,13 +152,13 @@ In **PowerShell scripts**, right-click the script, and select **Delete**.
 
   - When the script is assigned to a device
   - If you change the script, upload it, and assign the script to a user or device
-  
+
     > [!TIP]
     > The **Microsoft Intune Management Extension** is a service that runs on the device, just like any other service listed in the Services app (services.msc). After a device reboots, this service might restart, and check for any assigned PowerShell scripts with the Intune service. If the **Microsoft Intune Management Extension** service is set to Manual, then the service might not restart after the device reboots.
 
 - Be sure devices are [joined to Microsoft Entra ID](/azure/active-directory/user-help/user-help-join-device-on-network). Devices that are only [registered](/azure/active-directory/user-help/user-help-register-device-on-network) with your workplace or organization in Microsoft Entra ID don’t receive the scripts.
 - Confirm the Intune management extension is downloaded to `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
-- Scripts don't run on Surface Hubs or Windows 10 in S mode.
+- Scripts don't run on Surface Hubs or Windows in S mode.
 - Review the logs for any errors. See [Intune management extension logs](../apps/intune-management-extension.md#intune-management-extension-logs) (in this article).
 - For possible permission issues, be sure the properties of the PowerShell script are set to `Run this script using the logged on credentials`. Also check that the signed in user has the appropriate permissions to run the script.
 
@@ -193,35 +175,35 @@ In **PowerShell scripts**, right-click the script, and select **Delete**.
 
   - To test script execution without Intune, run the scripts in the System account using the [psexec tool](/sysinternals/downloads/psexec) locally:
 
-    `psexec -i -s`  
+    `psexec -i -s`
 
   - If the script reports that it succeeded, but it didn't actually succeed, then it's possible your antivirus service might be sandboxing AgentExecutor. The following script always reports a failure in Intune. As a test, you can use this script:
-  
+
     ```powershell
     Write-Error -Message "Forced Fail" -Category OperationStopped
-    mkdir "c:\temp" 
+    mkdir "c:\temp"
     echo "Forced Fail" | out-file c:\temp\Fail.txt
     ```
 
     If the script reports a success, look at the `AgentExecutor.log` to confirm the error output. If the script executes, the length should be >2.
 
   - To capture the `.error` and `.output` files, the following snippet executes the script through AgentExecutor to PowerShell x86 (`C:\Windows\SysWOW64\WindowsPowerShell\v1.0`). It keeps the logs for your review. Remember, the Intune Management Extension cleans up the logs after the script executes:
-  
+
     ```powershell
     $scriptPath = read-host "Enter the path to the script file to execute"
     $logFolder = read-host "Enter the path to a folder to output the logs to"
     $outputPath = $logFolder+"\output.output"
     $errorPath =  $logFolder+"\error.error"
     $timeoutPath =  $logFolder+"\timeout.timeout"
-    $timeoutVal = 60000 
+    $timeoutVal = 60000
     $PSFolder = "C:\Windows\SysWOW64\WindowsPowerShell\v1.0"
     $AgentExec = "C:\Program Files (x86)\Microsoft Intune Management Extension\agentexecutor.exe"
     &$AgentExec -powershell  $scriptPath $outputPath $errorPath $timeoutPath $timeoutVal $PSFolder 0 0
     ```
 
-### Issue: Why are scripts running even though Windows is no longer managed? 
+### Issue: Why are scripts running even though Windows is no longer managed?
 
-When a Windows device with assigned scripts is no longer managed, the IME isn't removed immediately. The IME detects that the Windows isn't managed at the next IME check-in (usually every 8 hours) and cancels script-runs. In the meantime, any locally stored scripts could run. When the IME is unable to check in, it retries checking in for up to 24 hours (device-awake time) and then removes itself from the Windows device. 
+When a Windows device with assigned scripts is no longer managed, the IME isn't removed immediately. The IME detects that the Windows isn't managed at the next IME check-in (usually every 8 hours) and cancels script-runs. In the meantime, any locally stored scripts could run. When the IME is unable to check in, it retries checking in for up to 24 hours (device-awake time) and then removes itself from the Windows device.
 
 ## Next steps
 

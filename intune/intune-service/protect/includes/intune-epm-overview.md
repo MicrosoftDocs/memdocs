@@ -1,8 +1,6 @@
 ---
 author: brenduns
 ms.author: brenduns
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.topic: include
 ms.date: 09/03/2025
 ---
@@ -11,5 +9,4 @@ With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization'
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows

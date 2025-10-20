@@ -3,23 +3,10 @@ title: View declarative device management-based software update reports for Appl
 description: Use Microsoft Intune to software updates reports for managed Apple devices based on Apples declarative device management capabilities.
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 08/18/2025
-audience: ITPro
 ms.topic: conceptual
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: beflamm
-ms.suite: ems
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - sub-updates
 ---
@@ -32,7 +19,7 @@ Microsoft Intune’s declarative Apple software update reports for Apple devices
 Available reports include:
 
 - [Per-device software update report](#per-device-software-update-report) - Per-device software update reports are available in the Intune Admin center by going to *Devices* and then selecting an applicable device. Each report view is focused on update status for only the selected device.
-  
+
 - [Apple software update failures](#apple-software-update-failures) - With this operational report, you can view details across your entire managed Apple device fleet. This includes iOS, iPadOS, and macOS devices. Details include why the update failed to install and the timestamp of the last failure.
 
 - [Apple software update report](#apple-software-update-report) - This organizational report displays details about pending and current software update information across your entire managed Apple device fleet. Intune checks with Apple once per day to identify newly available updates.
@@ -47,7 +34,7 @@ Applies to:
 - iPadOS 17 and later
 - macOS 13 and later
 
-> [!NOTE]  
+> [!NOTE]
 > With the availability of the declarative software update report for macOS, the previously available report for macOS devices named Software updates is now deprecated. This report remains available as *Software updates (deprecated)* when you go to *Devices* in the admin center and select a macOS device. While this report remains available for use in the Intune admin center, its being removed in a future update.
 
 ## Per-device software update report
@@ -61,10 +48,10 @@ On the devices *Overview* page, expand *Monitor* and then depending on the type 
 
 In the per-device view, Intune displays the following information about the devices update status as reported by the device:
 
-- Current OS version 
-- Current OS build 
+- Current OS version
+- Current OS build
 - Latest available update for this device
-- Pending OS version 
+- Pending OS version
 - Pending Build Version
 - Install Reason
 - Install State
@@ -76,18 +63,18 @@ The following example is taken from the *macOS software updates* report:
 
 ## Apple software update failures
 
-With the **Apple software update failures** operational report, you can view details for your managed iOS, iPadOS, and macOS device that are reporting update failures. 
+With the **Apple software update failures** operational report, you can view details for your managed iOS, iPadOS, and macOS device that are reporting update failures.
 
 Details available in this report include:
 
 - A list of devices that includes the device name, platform, current OS version, pending OS version, and more.
 - Details include the failure reason and timestamp of last failure.
-- An option to *Refresh* the report view. 
+- An option to *Refresh* the report view.
 - An option to *Export* the report details as a comma-separated values (.csv) file.
 
-To find this report, in the admin center go to *Devices* > *Monitor*, and then select the report’s name to view the report details.  
+To find this report, in the admin center go to *Devices* > *Monitor*, and then select the report’s name to view the report details.
 
-<!-- Image is pending availability 
+<!-- Image is pending availability
 The following image is an example of the Apple update failures report for a test tenant:
 
 :::image type="content" source="./media/software-updates-reports-apple-declarative-based/FILE.png" alt-text="Screen capture that shows the Apple software update failures report.":::
@@ -95,7 +82,7 @@ The following image is an example of the Apple update failures report for a test
 
 ## Apple software update report
 
-As an organizational report, use the **Apple software update report** to view details about current software update status across your fleet of managed iOS, iPadOS, and macOS devices. 
+As an organizational report, use the **Apple software update report** to view details about current software update status across your fleet of managed iOS, iPadOS, and macOS devices.
 
 Details available in this report include:
 
@@ -113,7 +100,7 @@ The following image shows a blank report with no device details available, captu
 
 ## Apple software update summary report
 
-With the Apple software update **Summary** view, you monitor details about pending and current software update status across your fleet of managed iOS, iPadOS, and macOS devices.  
+With the Apple software update **Summary** view, you monitor details about pending and current software update status across your fleet of managed iOS, iPadOS, and macOS devices.
 
 This summary view presents the following for each device platform:
 

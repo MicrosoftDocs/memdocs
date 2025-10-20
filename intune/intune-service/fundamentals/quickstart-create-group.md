@@ -1,36 +1,16 @@
 ---
-# required metadata
-
-title: Create a group to manage users
-titleSuffix: Microsoft Intune
-description: In this article, you use Microsoft Intune to create a group based on existing users.
-keywords:
+title: Create a Group to Manage Users
+description: In this article, you'll use Microsoft Intune to create a group based on existing users.
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
-ms.date: 09/28/2025
+ms.date: 10/29/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid: 723f4b4e-3090-4811-84ff-6af652abea5a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mattcall
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Step 3: Create a group to manage users
+# Step 3: Create a Group to Manage Users
 
 In this article, you use Intune to create a group based on an existing user. Groups are used to manage your users and control your employees' access to your company resources. These resources can be part of your company's intranet or can be external resources, such as SharePoint sites, SaaS apps, or web apps.
 
@@ -52,7 +32,7 @@ Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?link
 
 If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-> [!CAUTION]  
+> [!CAUTION]
 > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Create a group
@@ -63,7 +43,7 @@ You create a group that is used later in this evaluation series. To create a gro
 2. In the **Group type** dropdown box, select **Security**.
 3. In the **Group name** field, enter the name for the new group (for example, **Contoso Testers**).
 4. Add a **Group description** for the group.
-5. Set the **Membership type** to **Assigned**. 
+5. Set the **Membership type** to **Assigned**.
 6. Under **Members**, select the link and add one or more members for the group from the list.
 
     ![Screenshot of creating a group in Microsoft Intune](./media/quickstart-create-group/quickstart-use-groups-01.png)
@@ -82,4 +62,4 @@ In this article, you used Intune to create a group based on an existing user. Fo
 To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 4 - Set up automatic enrollment for Windows 10/11 devices](../enrollment/quickstart-setup-auto-enrollment.md)
+> [Step 4 - Set up automatic enrollment for Windows devices](../enrollment/quickstart-setup-auto-enrollment.md)

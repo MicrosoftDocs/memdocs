@@ -1,12 +1,8 @@
 ---
-title: include file
-description: include file
-author: brenduns  
-ms.service: microsoft-intune
+author: brenduns
 ms.topic: include
 ms.date: 08/19/2024
 ms.author: brenduns
-ms.custom: include file
 ---
 
 #### Firewall
@@ -29,5 +25,7 @@ Manage [Firewall policy settings for Configuration Manager devices](../protect/e
 
 **Supported Configuration Manager device platforms**:
 
-- Windows 11 and later (x86, x64, ARM64)
-- Windows 10 and later (x86, x64, ARM64)
+- Windows (x86, x64, ARM64)
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]

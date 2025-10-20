@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
 description: Use Microsoft Intune to manage firmware updates for supported Zebra devices.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 08/01/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: Jessica Yang
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-updates
@@ -36,7 +18,7 @@ ms.collection:
 
 Microsoft Intune supports/provides integration with Zebra LifeGuard Over-the-Air (LG OTA), so that you can have a single area for managing firmware updates for supported Zebra devices. Zebra LifeGuard Over-the-Air (LG OTA) is a service offered by Zebra Technologies that allows deployment of updates to their Android devices in a hands-free and automated manner.
 
-Microsoft Intune allows you to manage firmware updates for supported Zebra devices directly through the Intune admin center.  
+Microsoft Intune allows you to manage firmware updates for supported Zebra devices directly through the Intune admin center.
 
 Intune manages the creation, management, and monitoring of these deployments through APIs provided by Zebra. Zebra's services and on-device clients handle other complexities (such as evaluating customer entitlements and device compatibility), update hosting, update delivery, and installation.
 
@@ -78,29 +60,29 @@ The following aren't supported in public preview:
 - Graph assignment with inclusions/exclusions
 
 
-## Process overview  
+## Process overview
 
 The process for using LG OTA via Intune is as follows:
 
 1. [Set up Zebra connector](#step-1-set-up-zebra-connector).
-2. [Enroll devices with Zebra LG OTA service](#step-2-enroll-devices-with-zebra-lg-ota-service).  
-    3. [Approve and deploy required apps for your tenant](#2a-approve-and-deploy-required-apps-for-your-tenant).  
-    4. [Create app configuration policy](#2b-create-app-configuration-policy).  
+2. [Enroll devices with Zebra LG OTA service](#step-2-enroll-devices-with-zebra-lg-ota-service).
+    3. [Approve and deploy required apps for your tenant](#2a-approve-and-deploy-required-apps-for-your-tenant).
+    4. [Create app configuration policy](#2b-create-app-configuration-policy).
 5. [Create and assign deployments in Intune](#step-3-create-and-assign-deployments).
 6. [View and manage deployments](#step-4-view-and-manage-deployments).
 
-## Before you start  
+## Before you start
 
 You must enroll devices separately with the Zebra LG OTA service before devices can be updated. We recommend that you identify the devices to use with LG OTA, and create a group containing only those devices, to make the enrollment process easier.
 
 ## Step 1: Set up Zebra Connector
 
-In the Microsoft Intune admin center, you can link Intune and Zebra.  
+In the Microsoft Intune admin center, you can link Intune and Zebra.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Firmware over-the-air update**.
 3. Select **Zebra**. A context panel appears and guides you through the process of setting up your tenant for LG OTA.
-4. Select **Connect** and consent to data sharing with Zebra. The context panel is refreshed, and a temporary authorization link becomes enabled in the context panel.  
+4. Select **Connect** and consent to data sharing with Zebra. The context panel is refreshed, and a temporary authorization link becomes enabled in the context panel.
 5. Select the authorization link and follow the prompts on the Zebra portal to authorize access for Intune.
 
   > [!IMPORTANT]
@@ -149,36 +131,36 @@ For more information, see [Add app configuration policies for managed Android En
 
 #### Policy targeting Zebra Enrollment Manager app
 
-1. Select **Add** and then select **Managed Devices**.  
+1. Select **Add** and then select **Managed Devices**.
 
 2. Complete the fields in the **Basic** tab and select **Next**.
 
 3. In the **Settings** tab, under the **Permissions** section, select **Add** to add the following permission override:
 
-    1. **Permission**: Phone state (read)  
+    1. **Permission**: Phone state (read)
     2. **Permission state**: set to Auto grant
 
 4. In the **Settings** tab, under the **Configuration Settings** section, select **Add** to add the following two configuration settings:
 
-    1. **Action**: Set Configuration value to Claim Device.  
+    1. **Action**: Set Configuration value to Claim Device.
     2. **Claim Device Token**: Paste the enrollment token that you copied in the earlier step into the **Configuration value** field.
 
 5. Assign this configuration policy to all the same devices that you assigned the app earlier.
-6. Navigate through the tabs and complete the fields.  
+6. Navigate through the tabs and complete the fields.
 
 #### Policy targeting Zebra Common Transport Layer app
 
-1. Select **Add** and then select **Managed Devices**.  
-2. Complete the fields in the **Basic** tab and select **Next**.  
-3. In the **Settings** tab, under the **Permissions** section, select **Add** to add the following permission override: 
+1. Select **Add** and then select **Managed Devices**.
+2. Complete the fields in the **Basic** tab and select **Next**.
+3. In the **Settings** tab, under the **Permissions** section, select **Add** to add the following permission override:
 
     1. **Permission**: Phone state (read)
     2. **Permission state**: set to Auto grant
 
 4. Assign this configuration policy to all the same devices that you assigned the app earlier.
-5. Navigate through the tabs and complete the fields.  
+5. Navigate through the tabs and complete the fields.
 
-Wait at least 15 minutes for the required apps and app configuration policy to reach the devices. If needed, use the Intune app on the device to force a sync by navigating to the Intune app > select the **More** menu (**...**), and select **Sync**.  
+Wait at least 15 minutes for the required apps and app configuration policy to reach the devices. If needed, use the Intune app on the device to force a sync by navigating to the Intune app > select the **More** menu (**...**), and select **Sync**.
 
 After synchronization is complete, the devices that support LG OTA will contact Zebra LG OTA service to be enrolled in the LG OTA service and are associated with the  Microsoft Intune/Zebra accounts. You can then deploy firmware updates to these LG OTA enrolled devices.
 
@@ -190,11 +172,11 @@ After synchronization is complete, the devices that support LG OTA will contact 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **By platform** > **Android** > **Manage updates** > **Android FOTA deployments** to create and manage FOTA deployments.
 3. Select **Create deployment**.
-4. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.  
+4. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.
 5. On the **Settings** tab, configure the deployment settings you'd like to use.
 
     > [!NOTE]
-    > Zebra does not support firmware downgrades through LG OTA. Downgrading the operating system on a device causes an Enterprise Reset, wiping all user data and potentially leaving the device in an unmanaged state.  
+    > Zebra does not support firmware downgrades through LG OTA. Downgrading the operating system on a device causes an Enterprise Reset, wiping all user data and potentially leaving the device in an unmanaged state.
     > For more information on available settings, see [Zebra documentation](https://techdocs.zebra.com/lifeguard).
 
     1. In the **Update** area, configure the following options:
@@ -245,7 +227,7 @@ If devices are later removed from an assigned group after the deployment is crea
 
 **Example**
 
-- You have a dynamic group G that contains three TC57 devices A, B, and C. Every time a new TC57 device is enrolled in your tenant, it's automatically added to the dynamic group. A, B, and C devices start off running firmware version v1.  
+- You have a dynamic group G that contains three TC57 devices A, B, and C. Every time a new TC57 device is enrolled in your tenant, it's automatically added to the dynamic group. A, B, and C devices start off running firmware version v1.
 - On January 1, you use Intune and LG OTA to create a deployment that runs as soon as possible, to update devices in G from v1 to v2. All three devices are now on v2.
 - On February 1, a new TC57 device, D, running firmware version v1, is enrolled in the tenant. D is automatically added to the group, and now there are four devices in group G. D isn't part of the January 1 deployment, so if you want to update D to v2, you need create a new deployment assigned to either D or G.
 - On February 15, you create a deployment that runs as soon as possible, to update devices in G to v3. Now, devices A, B, C, and D are all on v3.
@@ -255,26 +237,26 @@ If devices are later removed from an assigned group after the deployment is crea
 
 > [!NOTE]
 > A device can only be part of one deployment at a time.
-> Deployments are only supported for devices, not users. For example, if you assign a deployment to a group containing a device A and a user B who is associated with device B, only device A will receive the deployment.  
+> Deployments are only supported for devices, not users. For example, if you assign a deployment to a group containing a device A and a user B who is associated with device B, only device A will receive the deployment.
 > Assignment filters are not currently supported.
 > Deployments that are assigned to empty groups, or groups containing no eligible devices, will fail.
-> If you assigned to or targeted an empty group, it will fail.  
+> If you assigned to or targeted an empty group, it will fail.
 
 ## Step 4: View and Manage Deployments
 
-After deployments are completed, you can view them from Devices > Android > Android FOTA deployments (Preview).  
+After deployments are completed, you can view them from Devices > Android > Android FOTA deployments (Preview).
 
 Reporting displays information for eligible devices only and is currently refreshed every hour. For example, if you assign a deployment to a group containing non-Zebra devices, or Zebra devices that aren't enrolled with the LG OTA service, those devices aren't included in the Android FOTA deployments reports.
 
-Each deployment displays details related to:  
+Each deployment displays details related to:
 
-- **Deployment status**: The status of the deployment. For more information, see the following table.  
+- **Deployment status**: The status of the deployment. For more information, see the following table.
 
-- **Completed devices**: The number of eligible devices where the update is completed.  
+- **Completed devices**: The number of eligible devices where the update is completed.
 
 - **Failed devices**: The number of devices where the update failed.
 
-- **Total devices**: The total number of eligible devices targeted.  
+- **Total devices**: The total number of eligible devices targeted.
 
 - **Release**: The associated firmware release.
 
@@ -294,7 +276,7 @@ By selecting the **More (…)** menu next to a deployment, or by selecting the d
 
 ### View device level details of a deployment
 
-1. Select a deployment name to view more details.  
+1. Select a deployment name to view more details.
 2. The **Device status** chart shows a breakdown of the status for assigned devices.
 3. Select **View report** to view device-level information, where you can filter by status and view error codes (if applicable).
 4. Each device displays its update status alongside:

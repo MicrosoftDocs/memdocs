@@ -1,32 +1,18 @@
 ---
-# Required metadata
 title: Apple configuration list for Intune settings catalog
 description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Apple devices. This article lists and describes the settings you can configure.
 author: beflamm
 ms.author: beflamm
-manager: laurawi
 ms.topic: reference
 ms.date: 11/13/2024
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-#ROBOTS:
-#audience:
 ms.reviewer: beflamm, mandia
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
 # Apple device configuration list in the Intune settings catalog
 
-This article lists and describes the Apple configurations you can manage using a settings catalog policy in Microsoft Intune. 
+This article lists and describes the Apple configurations you can manage using a settings catalog policy in Microsoft Intune.
 
 This article applies to:
 
@@ -57,14 +43,14 @@ Some settings are available in device configuration templates and in the setting
 
 > [!IMPORTANT]
 > It's recommended to create all new policies using the settings catalog where possible. Some of the existing device configuration templates are no longer being updated. In a future Intune release, they will be migrated to use the settings catalog policy type and the ability to create new templates will be deprecated. These templates include:
-> 
-> - Device features 
-> - Device restrictions 
-> - Endpoint protection (Deprecated) 
+>
+> - Device features
+> - Device restrictions
+> - Endpoint protection (Deprecated)
 > - Extensions (Deprecated)
->   
+>
 > Policies that should still be created using templates include:
-> 
+>
 > - Derived credential
 > - Email
 > - PKCS certificate
@@ -153,13 +139,13 @@ Use the Software Update Settings configuration to defer OS updates and control h
 
 This section is specific to Apple payloads that use the standard MDM channel. A list of these payloads is available at [Review MDM payloads for Apple devices](https://support.apple.com/guide/deployment/dep5370d089/web) on Apple's website.
 
-### FileVault 
+### FileVault
 
 Use FileVault configurations to manage disk encryption on macOS devices. These configurations are located in the **Full Disk Encryption** category of the settings catalog. You can learn more about FileVault using the following documentation:
 
 | Apple Platform Guides | Apple Developer | Apple YAML | Intune documentation
 | -------  | ------- | ------- | ------- |
-| <ul><li>[Introduction to FileVault](https://support.apple.com/guide/deployment/dep82064ec40/web)</li><li>[FileVault payload for Apple devices](https://support.apple.com/guide/deployment/dep32bf53500/web)| <ul><li>[FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault)</li><li>[FDEFileVaultOptions](https://developer.apple.com/documentation/devicemanagement/fdefilevaultoptions)</li><li>[FDERecoveryKeyEscrow](https://developer.apple.com/documentation/devicemanagement/fderecoverykeyescrow)</li></ul>|<ul><li>[FileVault](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.MCX.FileVault2.yaml)</li><li>[FileVault Options](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.MCX(FileVault2).yaml)</li><li>[FileVault Recovery Key Escrow](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.security.FDERecoveryKeyEscrow.yaml)</li></ul> | [Encrypt macOS devices (Microsoft Learn)](../protect/encrypt-devices-filevault.md)| 
+| <ul><li>[Introduction to FileVault](https://support.apple.com/guide/deployment/dep82064ec40/web)</li><li>[FileVault payload for Apple devices](https://support.apple.com/guide/deployment/dep32bf53500/web)| <ul><li>[FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault)</li><li>[FDEFileVaultOptions](https://developer.apple.com/documentation/devicemanagement/fdefilevaultoptions)</li><li>[FDERecoveryKeyEscrow](https://developer.apple.com/documentation/devicemanagement/fderecoverykeyescrow)</li></ul>|<ul><li>[FileVault](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.MCX.FileVault2.yaml)</li><li>[FileVault Options](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.MCX(FileVault2).yaml)</li><li>[FileVault Recovery Key Escrow](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.security.FDERecoveryKeyEscrow.yaml)</li></ul> | [Encrypt macOS devices (Microsoft Learn)](../protect/encrypt-devices-filevault.md)|
 
 **Known issues**
 
@@ -181,8 +167,8 @@ Use FileVault configurations to manage disk encryption on macOS devices. These c
 Use the Firewall configuration to manage the native macOS application firewall. This configuration is located in the **Security** category of the settings catalog. You can learn more about Firewall using the following documentation:
 
 | Apple Platform Guides | Apple Developer | Apple YAML |
-| -------- | ------- | ------- | 
-| <ul><li>[Firewall security in macOS](https://support.apple.com/guide/security/seca0e83763f/web) </li><li>[Firewall payload](https://support.apple.com/guide/deployment/dep8d306275f/web)</li></ul> | [Firewall](https://developer.apple.com/documentation/devicemanagement/firewall) | [Firewall (YAML)](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.security.firewall.yaml) | 
+| -------- | ------- | ------- |
+| <ul><li>[Firewall security in macOS](https://support.apple.com/guide/security/seca0e83763f/web) </li><li>[Firewall payload](https://support.apple.com/guide/deployment/dep8d306275f/web)</li></ul> | [Firewall](https://developer.apple.com/documentation/devicemanagement/firewall) | [Firewall (YAML)](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.security.firewall.yaml) |
 
 **Known issues**
 
@@ -217,8 +203,8 @@ Use the Font payload to configure fonts on devices. This configuration is locate
 Use the System Policy Control payload to configure Gatekeeper settings. This configuration is located in the **System Policy Control** category of the settings catalog. You can learn more about System Policy Control using the following documentation:
 
 | Apple Platform Guides | Apple Developer | Apple YAML |
-| -------- | ------- | ------- | 
-| <ul><li>[Gatekeeper and runtime protection](https://support.apple.com/guide/security/sec5599b66df/web) </li><li>[Security MDM payload](https://support.apple.com/guide/deployment/dep61dc030/web)</li></ul>| [SystemPolicyControl](https://developer.apple.com/documentation/devicemanagement/systempolicycontrol)  | [System Policy Control](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.systempolicy.control.yaml) | 
+| -------- | ------- | ------- |
+| <ul><li>[Gatekeeper and runtime protection](https://support.apple.com/guide/security/sec5599b66df/web) </li><li>[Security MDM payload](https://support.apple.com/guide/deployment/dep61dc030/web)</li></ul>| [SystemPolicyControl](https://developer.apple.com/documentation/devicemanagement/systempolicycontrol)  | [System Policy Control](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.systempolicy.control.yaml) |
 
 **Known issues**
 
@@ -234,7 +220,7 @@ Use the System Policy Control payload to configure Gatekeeper settings. This con
 Use the System Extensions payload to configure system extensions to be automatically loaded or prevent users from approving specific extensions. This configuration is located in the **System Configuration** category of the settings catalog. You can learn more about System Extensions using the following documentation:
 
 | Apple Platform Guides | Apple Developer | Apple YAML |
-| -------- | ------- | ------- | 
+| -------- | ------- | ------- |
 | <ul><li>[System and kernel extensions](https://support.apple.com/guide/deployment/system-and-kernel-extensions-in-macos-depa5fb8376f/web) </li><li> [System Extensions](https://support.apple.com/guide/deployment/dep5d1584ca4/web)</li></ul>| [System Extensions](https://developer.apple.com/documentation/devicemanagement/systemextensions) | [System Extensions](https://github.com/apple/device-management/blob/release/mdm/profiles/com.apple.system-extension-policy.yaml)|
 
 **Known issues**
@@ -246,5 +232,5 @@ Use the System Extensions payload to configure system extensions to be automatic
 | -------- | ------- | ------- |
 | Block User Overrides  | System Configuration > System Extensions | Allow User Overrides |
 | Allowed team identifiers | System Configuration > System Extensions | Allowed Team Identifiers
-| Allowed system extensions | System Configuration > System Extensions | Allowed System Extensions 
+| Allowed system extensions | System Configuration > System Extensions | Allowed System Extensions
 | Allowed system extension types  | System Configuration > System Extensions | Allowed System Extension Types |

@@ -1,43 +1,24 @@
 ---
-title: Audit logs for Microsoft Intune cloud PKI  
-titleSuffix: Microsoft Intune 
-description: Get audit logs for Microsoft cloud public key infrastructure (PKI) activity in the admin center.   
-keywords:
+title: Audit logs for Microsoft Intune cloud PKI
+description: Get audit logs for Microsoft cloud public key infrastructure (PKI) activity in the admin center.
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: wicale  
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-
+ms.reviewer: wicale
 ms.collection:
-- tier1
 - M365-identity-device-management
 - certificates
 - IntuneSuite
 - sub-intune-suite
 ---
-# Microsoft Cloud PKI audit logs  
+# Microsoft Cloud PKI audit logs
 
-This article describes how to access and utilize audit logs for Microsoft Cloud PKI admin actions. *Intune audit logs* are records of actions invoked by Intune administrators and authorized users. Audit logs provide information about who performed what action, when it occurred, and other data points relating to the actions executed. You can use the Microsoft PKI audit logs to monitor the creation, access, deletion, and modification of certification authorities and issued certificates in Intune.  
+This article describes how to access and utilize audit logs for Microsoft Cloud PKI admin actions. *Intune audit logs* are records of actions invoked by Intune administrators and authorized users. Audit logs provide information about who performed what action, when it occurred, and other data points relating to the actions executed. You can use the Microsoft PKI audit logs to monitor the creation, access, deletion, and modification of certification authorities and issued certificates in Intune.
 
-## Available logs  
+## Available logs
 
-Audit logs are available for the following actions on CAs and certificates:  
+Audit logs are available for the following actions on CAs and certificates:
 
 | Audit action | Purpose |
 | -------------------------- | ----------------- |
@@ -50,7 +31,7 @@ Audit logs are available for the following actions on CAs and certificates:
 |RevokeLeafCertAsync CloudCertificationAuthorityLeafCertificate | This action revokes a specific leaf certificate issued by a CA in the Cloud PKI service. |
 |UploadExternallySignedCertificationAuthorityCertificateAsync CloudCertificationAuthority| This action uploads an externally signed CA certificate to an existing CA in Intune Cloud PKI. |
 |ChangeCloudCertificationAuthorityStatusAsync CloudCertificationAuthority| This action changes the status of an existing CA in Intune Cloud PKI. |
-|RevokeCloudCertificationAuthorityCertificateAsync CloudCertificationAuthority | This action revokes the CA certificate of an existing CA in Intune Cloud PKI, which renders it invalid. |  
+|RevokeCloudCertificationAuthorityCertificateAsync CloudCertificationAuthority | This action revokes the CA certificate of an existing CA in Intune Cloud PKI, which renders it invalid. |
 
 ## Prerequisites
 
@@ -60,16 +41,16 @@ To access the audit logs for Intune Cloud PKI, you must have:
 - An Intune service administrator role.
 - An access token for the Microsoft Graph API.
 
-You must also be assigned the following Microsoft Graph API permissions:  
+You must also be assigned the following Microsoft Graph API permissions:
 
 - *DeviceManagementApps.Read.All*
-- *DeviceManagementApps.ReadWrite.All*  
+- *DeviceManagementApps.ReadWrite.All*
 
 ## Access logs
 
 You can access the audit logs for Microsoft Cloud PKI in the Microsoft Intune admin center or through the Microsoft Graph API.
 
-### Microsoft Intune admin center  
+### Microsoft Intune admin center
 
 In the admin center, go to **Tenant Administration** > **Audit Logs**.
 
@@ -81,14 +62,14 @@ The Microsoft Graph API is a unified endpoint that enables you to access data an
 
 2. Use the `$filter` query parameter to filter the audit logs. Available filters include:
    - activityType
-   - activityDateTime  
-   - displayName  
+   - activityDateTime
+   - displayName
    - ID properties
 
-   For example, you can use the following query to filter the audit logs by the Intune Cloud PKI category and the CreateCaAsync action:  
+   For example, you can use the following query to filter the audit logs by the Intune Cloud PKI category and the CreateCaAsync action:
 
-   `GET  https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'Create CloudCertificationAuthority'`  
+   `GET  https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'Create CloudCertificationAuthority'`
 
    As another example, the following query requests audit revocation logs between the dates of January 9 and January 10.
 
-   `GET https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'RevokeLeafCertAsync CloudCertificationAuthorityLeafCertificate' and %20activityDateTime%20gt%202024-01-09T00:00:00Z%20and%20activityDateTime%20le%202024-01-11T00:00:00Z&$orderby=activityDateTime%20desc`  
+   `GET https://graph.microsoft.com/beta/deviceManagement/auditEvents?$filter=activityType eq 'RevokeLeafCertAsync CloudCertificationAuthorityLeafCertificate' and %20activityDateTime%20gt%202024-01-09T00:00:00Z%20and%20activityDateTime%20le%202024-01-11T00:00:00Z&$orderby=activityDateTime%20desc`

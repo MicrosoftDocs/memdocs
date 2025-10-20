@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Network endpoints for Microsoft Intune
-titleSuffix:
 description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 08/21/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: angrobe
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -41,13 +22,13 @@ As a cloud-only service, Intune doesn't require an on-premises infrastructure su
 
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
-> [!NOTE]  
+> [!NOTE]
 > The information in this section also applies to the [Microsoft Intune Certificate Connector](../protect/certificate-connector-prerequisites.md). The connector has the same network requirements as managed devices.
 
 - The endpoints in this article allow access to the ports identified in the following tables.
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net, and graph.microsoft.com.
 
-  > [!NOTE]  
+  > [!NOTE]
   > SSL traffic inspection isn't supported for '\*.manage.microsoft.com', '\*.dm.microsoft.com', or the [Device Health Attestation (DHA) endpoints listed in the compliance section](#migrating-device-health-attestation-compliance-policies-to-microsoft-azure-attestation).
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
@@ -92,10 +73,10 @@ The data columns shown in the tables are:
 
 ### Intune core service
 
-> [!NOTE]  
+> [!NOTE]
 > If the firewall that you're using allows you to create firewall rules using a domain name, then use the `*.manage.microsoft.com` and `manage.microsoft.com` domain. However, if the firewall provider that you're using, doesn't allow you to create a firewall rule using a domain name, we recommend that you use the approved list of all subnets in this section.
 
-> [!NOTE]  
+> [!NOTE]
 > Intune endpoints also use *Azure Front Door* for communicating with the Intune service. The IP ranges for Intune (part of Microsoft Security) are added to the following table.  Intune specific endpoints are referenced in the JSON file by the name `AzureFrontDoor.MicrosoftSecurity`. Refer to the Azure Front Door and Service Tags documentation for the complete list of all services that utilize Azure Front Door and instructions for using the JSON file. [Azure Front Door IP Ranges and Service Tags](https://www.microsoft.com/download/details.aspx?id=56519)
 
 | ID | Desc | Category | ER | Addresses | Ports |
@@ -139,18 +120,14 @@ In this section, the following tables list the Intune dependencies and the ports
 |-----|------|----------|-------|-----------|-------|
 | 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR>`intunecdnpeasd.manage.microsoft.com`<BR>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com)<br> | **TCP:** 443 |
 
-> [!NOTE]  
+> [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store, Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 
 **Android port information** - Depending on how you choose to manage Android devices, you might need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](deployment-guide-enrollment-android.md).
 
 #### Apple dependencies
 
-| ID  | Desc | Category | ER    | Addresses | Ports |
-|-----|------|----------|-------|-----------|-------|
-| 178 | MEM - Apple Dependencies | Default<BR>Required | False | `itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`*.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR> | **TCP:** 80, 443, 5223 |
-
-For more information, see the following resources:
+For information about Apple specific endpoints, see the following resources:
 
 - [Use Apple products on enterprise networks](https://support.apple.com/HT210060)
 - [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944)
@@ -177,7 +154,7 @@ For Delivery Optimization metadata:
 - `*.dl.delivery.mp.microsoft.com`
 
 > [!TIP]
-> Review dependencies for client-service peer-to-peer solutions that you use to help ensure support for cloud-based management. For example, Windows BranchCache relies on locally available groups that might not be available through Microsoft Entra ID, which is Intune’s identity solution.
+> Review dependencies for client-service peer-to-peer solutions that you use to help ensure support for cloud-based management. For example, Windows BranchCache relies on locally available groups that might not be available through Microsoft Entra ID, which is Intune's identity solution.
 
 #### Windows Push Notification Services (WNS) dependencies
 
@@ -220,7 +197,7 @@ For communication between clients and the cloud service:
 
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
-  > [!IMPORTANT]  
+  > [!IMPORTANT]
   > SSL Inspection isn't supported on endpoints required for Microsoft Defender for Endpoint.
 
 ## Microsoft Intune Endpoint Privilege Management
@@ -232,7 +209,7 @@ For communication between clients and the cloud service:
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 - `*.events.data.microsoft.com` - Used by Intune-managed devices to send [optional reporting data](../protect/epm-data-collection.md) to the Intune data collection endpoint.
 
-  > [!IMPORTANT]  
+  > [!IMPORTANT]
   > SSL Inspection isn't supported on endpoints required for Endpoint Privilege Management.
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
@@ -260,6 +237,9 @@ For details, see the following resources:
 - [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints)
 - [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
 
+  > [!NOTE]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 **Win32 content download:**
 
 Win32 content download locations and endpoints are unique per application and are provided by the external publisher. You can find the location for each Win32 Store app using the following command on a test system (you can obtain the [PackageId] for a Store app by referencing the **Package Identifier** property of the app after adding it to Microsoft Intune):
@@ -280,7 +260,7 @@ For details, see the following resource:
 
 ## Migrating device health attestation compliance policies to Microsoft Azure attestation
 
-If a customer enables any of the Windows 10/11 Compliance policy - Device Health settings, then Windows 11 devices begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
+If a customer enables any of the Windows Compliance policy - Device Health settings, then Windows 11 devices begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
 However, Windows 10 and GCCH/DOD environments continue to use the existing Device Health Attestation DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and isn't impacted by this change.
 
 If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they're unable to reach the MAA attestation endpoints for their location.
@@ -343,11 +323,11 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
-If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [PowerShell scripts](../apps/powershell-scripts.md), [Remediations](../fundamentals/remediations.md), [Endpoint analytics](../../analytics/overview.md), [Custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [PowerShell scripts](../apps/powershell-scripts.md), [remediations](../fundamentals/remediations.md), [endpoint analytics](../../analytics/index.md), [custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
 
 Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 
-> [!NOTE]  
+> [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
 |Region | CDN | Port |

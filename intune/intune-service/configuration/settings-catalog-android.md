@@ -1,30 +1,14 @@
 ---
-# required metadata
-
 title: Android configuration list for Intune settings catalog
 description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Android devices. This article lists and describes the settings you can configure.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 09/15/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
 params:
   siblings_only: true
 ms.reviewer: cchristenson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -418,7 +402,7 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
   This feature applies to:
 
   - Android Open Source Project (AOSP) corporate-owned userless devices (shared)
-  - Android Open Source Project (AOSP) corporate-owned user-associated devices (single user)  
+  - Android Open Source Project (AOSP) corporate-owned user-associated devices (single user)
 
 - **Block USB file transfer**: If **True**, this setting prevents users from transferring files over USB. If **False**, Intune doesn't change or update this setting. By default, the OS might allow users to transfer files.
 

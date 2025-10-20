@@ -1,28 +1,9 @@
 ---
-# required metadata
-
 title: Get started with macOS endpoints
-titleSuffix: Microsoft Intune
 description: Microsoft Intune guide to set up and configure macOS devices from setup to creating policies and enrolling devices. You secure your corporate and organization-owned endpoints that are enrolled in Intune, and then deploy at scale with Apple Business Manager or Apple School Manager.
-keywords:
-author: MandiOhlinger
-ms.author: mandia
-manager: dougeby
 ms.date: 07/31/2025
 ms.topic: get-started
-ms.service: microsoft-intune
-ms.subservice: 
-ms.localizationpriority: high
-ms.assetid: 
-# optional metadata
- 
-#audience:
-#ms.devlang:
 ms.reviewer: scbree;rogerso
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
   - highpri
@@ -47,7 +28,7 @@ This article guides you through the end-to-end steps to create and manage your m
 
 ## How to use this guide
 
-This guide has seven phases. Each phase has a set of steps that help build your macOS endpoint configuration and deployment. Each phase builds on the previous phase. 
+This guide has seven phases. Each phase has a set of steps that help build your macOS endpoint configuration and deployment. Each phase builds on the previous phase.
 
 :::image type="content" source="./media/macos-endpoints-get-started/all-steps-overview.png" border="false" alt-text="A diagram that summarizes all the phases to onboard macOS devices, including testing, enrolling, securing, deploying policies, and supporting the devices using Microsoft Intune":::
 
@@ -109,7 +90,7 @@ Specifically:
   For information on configuring Enrollment Restrictions, go to [Set enrollment restrictions in Microsoft Intune](../../intune-service/enrollment/enrollment-restrictions-set.md).
 
 - **Licensing**
-  
+
   Users enrolling macOS devices require a Microsoft Intune or Microsoft Intune for Education license. To assign licenses, go to [Assign Microsoft Intune licenses](../../intune-service/fundamentals/licenses-assign.md). Assign the licenses to the test accounts you created.
 
   > [!NOTE]
@@ -159,7 +140,7 @@ When you use macOS ADE enrollment profiles, we recommend configuring [macOS acco
 macOS devices with user affinity can be targeted for profiles and apps using user or device groups. There are two common options for how organizations dynamically target devices:
 
 - **Option 1 - All devices groups with an assignment filter on enrollmentProfileName**
-  
+
   For critical apps and policies that must apply immediately after enrollment (security settings, restrictions, the Company Portal app), you can assign the policies to the built-in Intune **All Devices** group. Create an assignment filter using the enrollment profile you created in [Step 4 - Add the Apple automated device enrollment token](#step-4---add-the-apple-automated-device-enrollment-token).
 
   Policies and apps targeted to the **All Devices** group apply faster after enrollment than dynamic groups. Not all configuration profiles (like macOS scripts) support filters.
@@ -212,7 +193,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
   There are two options for configuring SSO for Mac - [Enterprise SSO plug-in](../../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md) and [Platform SSO](../../intune-service/configuration/platform-sso-macos.md).
 
   # [Enterprise SSO plug-in](#tab/esso)
-  
+
   The Microsoft Enterprise SSO plug-in for Apple devices provides single sign-on (SSO) for Microsoft Entra accounts on macOS across all applications that support Apple's enterprise single sign-on feature.
 
   To create these policies, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to:
@@ -362,7 +343,7 @@ For more information, go to:
 
 ✅ **Use Microsoft Defender for Endpoint for threat defense**
 
-Microsoft Defender for Endpoint is a mobile threat defense solution that helps protect your devices from security threats. 
+Microsoft Defender for Endpoint is a mobile threat defense solution that helps protect your devices from security threats.
 
 In Intune, you can connect to your Microsoft Defender for Endpoint service, create Intune policies using Microsoft Defender for Endpoint settings, and then deploy the policies to your devices.
 

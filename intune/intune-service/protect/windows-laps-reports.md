@@ -2,27 +2,12 @@
 title: View reports for Windows LAPS policies in Microsoft Intune
 description: Use the Microsoft Intune admin center to view reports and details for Windows Local Administrator Policy Solution (LAPS)  policies.
 
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 07/31/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
 ms.reviewer: laarrizz
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - sub-secure-endpoints
 ---

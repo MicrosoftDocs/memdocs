@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Network access control integration with Microsoft Intune
 description: Network access control (NAC) solutions check enrollment and compliance for devices with Intune. NAC includes certain behaviors and works with Conditional Access. See the steps to get onboarded, and get a list of partner solutions.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 08/21/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
- 
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: sheetg
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - network-access-control
 - sub-infrastructure
@@ -36,7 +17,7 @@ ms.collection:
 Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources.
 
 >[!NOTE]
-> The *compliance retrieval service* was released in July 2021 and replaced the previous Intune NAC service. Microsoft Intune is providing support for the legacy Intune NAC service through March 31, 2024. Our NAC partners are transitioning to the compliance retrieval service and include: 
+> The *compliance retrieval service* was released in July 2021 and replaced the previous Intune NAC service. Microsoft Intune is providing support for the legacy Intune NAC service through March 31, 2024. Our NAC partners are transitioning to the compliance retrieval service and include:
 >
 > - ExtremeCloud Universal ZTNA
 > - Extreme Networks ExtremeCloud IQ-Site Engine version 24.2
@@ -54,7 +35,7 @@ Intune integrates with network access control (NAC) partners to help organizatio
 > - Fortinet FortiNAC 9.4.x
 > - Fortinet FortiNAC-F 7.x and later
 >
-> We will be deprecating the Intune NAC service in the future, so we recommend that you migrate to the compliance retrieval service to avoid service disruption. Contact your NAC solution provider if you have questions about the compliance retrieval service or impact to your tenant. For more information and updates about the compliance retrieval service and NAC partners, see [Microsoft Tech Community: New Microsoft Intune service for network access control](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696). 
+> We will be deprecating the Intune NAC service in the future, so we recommend that you migrate to the compliance retrieval service to avoid service disruption. Contact your NAC solution provider if you have questions about the compliance retrieval service or impact to your tenant. For more information and updates about the compliance retrieval service and NAC partners, see [Microsoft Tech Community: New Microsoft Intune service for network access control](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696).
 
 ## How do Intune and NAC solutions help protect your organization resources?
 
@@ -100,16 +81,16 @@ The following list is an overview on how NAC integration works when integrated w
 
 ## Enable NAC
 
-To enable use of NAC and the compliance retrieval service, reference your NAC product's most recent documentation for enabling NAC integration with Intune. This integration might require you to make changes after you upgrade to a new NAC product or version. 
+To enable use of NAC and the compliance retrieval service, reference your NAC product's most recent documentation for enabling NAC integration with Intune. This integration might require you to make changes after you upgrade to a new NAC product or version.
 
 The compliance retrieval service requires certificate-based authentication and the use of the *Intune device ID* as the subject alternative name of the certificates. For Simple Certificate Enrollment Protocol (SCEP) and Private and public key pair (PKCS) certificates, you can add an attribute of the **URI** type with a value defined by your NAC provider. For example, your NAC provider's instructions might say to include `IntuneDeviceId://{{DeviceID}}`as the **Subject alternative name**.
 
 Other NAC products might require you include a device ID when using NAC with iOS VPN profiles.
 
 > [!TIP]
-> We recommend using certificate-based authentication with the Intune device ID wherever possible. If you're unable to use certificate-based authentication, Intune supports querying devices based on MAC addresses. 
+> We recommend using certificate-based authentication with the Intune device ID wherever possible. If you're unable to use certificate-based authentication, Intune supports querying devices based on MAC addresses.
 
-For more information about certificate profiles, see [Use SCEP certificate profiles with Microsoft Intune](../protect/certificates-profile-scep.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../protect/certificates-pfx-configure.md).  
+For more information about certificate profiles, see [Use SCEP certificate profiles with Microsoft Intune](../protect/certificates-profile-scep.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../protect/certificates-pfx-configure.md).
 
 ## Data shared with NAC partners
 
@@ -140,7 +121,7 @@ Also, the data returned will be limited if:
 ## Next steps
 
 - [Integrate Extreme Networks ExtremeCloud Universal ZTNA](https://documentation.extremenetworks.com/UZTNA/24.1.0/UserGuide/GUID-E325F6BE-1D6C-4523-B21E-024C48353802.shtml)
-- [Integrate Extreme Networks ExtremeCloud with Intune](https://www.extremenetworks.com/products/network-management/extremecloud-iq-site-engine/extremecloud-iq---site-engine) 
+- [Integrate Extreme Networks ExtremeCloud with Intune](https://www.extremenetworks.com/products/network-management/extremecloud-iq-site-engine/extremecloud-iq---site-engine)
 - [Integrate Cisco ISE with Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/UEM-MDM-Server-Integration/b_MDM_UEM_Servers_CiscoISE/chapter.html#task_og1_5zx_cqb)
 - [Integrate Citrix Gateway with Intune](https://docs.citrix.com/en-us/citrix-gateway/current-release/microsoft-intune-integration/configuring-network-access-control-device-check-for-citrix-gateway-virtual-server-for-single-factor-authentication-deployment.html)
 - [Integrate F5 BIG-IP Access Policy Manager with Intune](https://techdocs.f5.com/en-us/edge-client-7-1-8/big-ip-access-policy-manager-edge-client-and-application-configuration-7-1-8/configuring-access-policy-manager-for-mdm-applications.html)

@@ -3,23 +3,10 @@ title: Admin checklist for iOS/iPadOS software updates in Microsoft Intune
 description: Guidance and advice for administrators that create and manage software updated for iOS/iPadOS devices using Microsoft Intune. See sample policy for different industry scenarios, including shared devices, kiosk, manufacturing, and information worker.
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 07/24/2025
-audience: ITPro
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: beflamm, ahamil, rogerso
-ms.suite: ems
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - sub-updates
 ---
@@ -67,7 +54,7 @@ To use this automatic patching and install updates faster, make sure the devices
 
 - Powered on
 - Plugged in
-- Connected to the Internet  
+- Connected to the Internet
 
 When the devices are powered on, plugged in, and connected to the Internet, then the updates automatically download & install, and the device reboots. If the device doesn't meet these conditions, then the updates won't automatically download and install.
 

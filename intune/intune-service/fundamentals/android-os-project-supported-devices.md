@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Android Open Source Project Supported Devices
 description: Lists Android open source project devices (AOSP) supported devices
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 05/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: Priyar
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: get-started
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -37,7 +19,7 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 ## Intune for Android Open Source Supported Devices
 
 > [!NOTE]
-> All the devices listed here support the management capabilities available for Android AOSP platform. For more information on enrollment of Android devices, see: 
+> All the devices listed here support the management capabilities available for Android AOSP platform. For more information on enrollment of Android devices, see:
 > - [Set up Intune enrollment for Android (AOSP) corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
 > - [Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
 

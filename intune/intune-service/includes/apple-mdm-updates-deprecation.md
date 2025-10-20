@@ -1,13 +1,8 @@
 ---
-title: Include file
-description: Include file
 author: MandiOhlinger
-ms.service: microsoft-intune
 ms.topic: include
 ms.date: 07/23/2025
 ms.author: mandia
-ms.custom: include file
-ms.reviewer: beflamm
 ---
 
 <!-- This include file is used in the Apple software updates docs that mention MDM. -->

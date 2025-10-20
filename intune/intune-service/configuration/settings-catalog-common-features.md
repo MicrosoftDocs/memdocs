@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Common tasks and features in the settings catalog
 description: Use the settings catalog in Microsoft Intune to configure common features. You can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browsers, and use built in settings instead of plist files for macOS devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: laarrizz, mayurjadhav, beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -39,8 +22,7 @@ This feature applies to:
 
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Configure Microsoft Edge and Google Chrome
 
@@ -49,8 +31,7 @@ This feature applies to:
 This feature applies to:
 
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome.
 
@@ -66,8 +47,7 @@ For a sample Microsoft Edge scenario, see [Create a Microsoft Edge policy](setti
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 You can create a universal print policy, add printers, and then deploy this printer list to your managed users. When the policy is deployed, it automatically installs the printers you added. Users can see these printers, and select a printer from your list.
 

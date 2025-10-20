@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Use Microsoft Defender for Endpoint in Microsoft Intune
 description: Integrate Microsoft Defender for Endpoint with Microsoft Intune as a Mobile Threat Defense solution.
-keywords:
-author: brenduns 
+author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/28/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
 ms.reviewer: aanavath
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -43,7 +25,7 @@ To get started, implement the following configurations, which are detailed in de
 - **Use a device compliance policy to set the level of risk you want to allow**. Risk levels are reported by Microsoft Defender for Endpoint. Devices that exceed the allowed risk level are identified as noncompliant. See [Create and assign compliance policy to set device risk level](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level) and [Create and assign app protection policy to set device risk level](../protect/advanced-threat-protection-configure.md#create-and-assign-app-protection-policy-to-set-device-risk-level).
 
 - **Use a Conditional Access policy** to block users from accessing corporate resources from devices that are noncompliant. See [Create a Conditional Access policy](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy).
- 
+
 - Take advantage of Microsoft Defender for Endpoints Threat & Vulnerability Management (TVM) and [use Intune security tasks to remediate endpoint weakness identified by TVM](atp-manage-vulnerabilities.md).
 
 - Use [Intune endpoint security policies to manage Microsoft Defender for Endpoint on devices that are not enrolled with Intune](mde-security-integration.md).
@@ -59,12 +41,12 @@ When you integrate Intune with Microsoft Defender for Endpoint, you can take adv
 
   For Intune licensing options, see [Microsoft Intune licensing](../fundamentals/licenses.md).
 
-**Devices managed with Intune**:  
+**Devices managed with Intune**:
 The following platforms are supported for Intune with Microsoft Defender for Endpoint:
 
 - Android
 - iOS/iPadOS
-- Windows 10/11 (Microsoft Entra hybrid joined or Microsoft Entra joined)
+- Windows (Microsoft Entra hybrid joined or Microsoft Entra joined)
 
 ### Microsoft Defender
 
@@ -74,7 +56,7 @@ The following platforms are supported for Intune with Microsoft Defender for End
 
   For Defender for Endpoint licensing options, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) and [How to set up a Microsoft 365 E5 Trial Subscription](/microsoft-365/security/defender/setup-m365deval#enable-microsoft-365-trial-subscription).
 
-  For the list of operating systems and versions supported by Defender for Endpoint, see the Microsoft Defender for Endpoint [requirements](/defender-endpoint/minimum-requirements#hardware-and-software-requirements). 
+  For the list of operating systems and versions supported by Defender for Endpoint, see the Microsoft Defender for Endpoint [requirements](/defender-endpoint/minimum-requirements#hardware-and-software-requirements).
 
 ## Example of using Microsoft Defender for Endpoint with Intune
 

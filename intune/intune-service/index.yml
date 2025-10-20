@@ -1,17 +1,14 @@
 ### YamlMime:Hub
 title: Microsoft Intune documentation
-summary: Official product documentation for Microsoft Intune
+summary: Learn more about Microsoft Intune's unified endpoint management and security solutions.
+brand: azure
 
 metadata:
-  services: service
-  ms.service: microsoft-intune
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
-  manager: dansimp
   ms.date: 02/06/2025
   ms.collection:
-  - tier1
   - essentials-navigation
   ms.custom: intro-hub-or-landing
 
@@ -102,7 +99,7 @@ conceptualContent:
 
   - title: How-to guides
     items:
-   
+
     - title: Set up Intune subscription
       links:
         - url: ./fundamentals/account-sign-up.md
@@ -114,7 +111,7 @@ conceptualContent:
         - url: ./fundamentals/role-based-access-control.md
           itemType: reference
           text: Role-based access control
-        
+
       footerLink:
         text: Browse all Intune subscription articles
         url: ./fundamentals/account-sign-up.md
@@ -132,8 +129,8 @@ conceptualContent:
           text: App configuration policies
       footerLink:
         text: Browse all manage apps articles
-        url: ./apps/app-management.md    
-    
+        url: ./apps/app-management.md
+
     - title: App protection policies
       links:
         - url: ./apps/app-protection-policy.md
@@ -147,7 +144,7 @@ conceptualContent:
           text: Monitor app protection policies
       footerLink:
         text: Browse all apps protection policies articles
-        url: ./apps/app-protection-policy.md   
+        url: ./apps/app-protection-policy.md
 
     - title: Configure security for endpoints
       links:
@@ -171,7 +168,7 @@ conceptualContent:
           text: Create and deploy compliance policies
         - url: ./protect/compliance-use-custom-settings.md
           itemType: concept
-          text: Use custom compliance settings for Linux and Windows 
+          text: Use custom compliance settings for Linux and Windows
         - url: ./protect/conditional-access.md
           itemType: concept
           text: Enforce compliance with Conditional Access
@@ -216,28 +213,28 @@ conceptualContent:
           text: Device enrollment overview
         - url: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
           itemType: concept
-          text: Get started with iOS/iPadOS enrollment           
+          text: Get started with iOS/iPadOS enrollment
         - url: ./enrollment/enrollment-restrictions-set.md
           itemType: concept
-          text: Device enrollment restrictions overview 
+          text: Device enrollment restrictions overview
       footerLink:
         text: Browse all articles in this area
         url: ./fundamentals/deployment-guide-enrollment.md
 
     - title: Initiate remote actions
       links:
-        - url: ./remote-actions/device-management.md
+        - url: ./remote-actions/index.md
           itemType: concept
           text: Remote actions overview
         - url: ./remote-actions/custom-notifications.md
           itemType: how-to-guide
           text: Send custom notifications
-        - url: ./remote-actions/devices-wipe.md
+        - url: ./remote-actions/device-wipe.md
           itemType: how-to-guide
           text: Remove devices
       footerLink:
         text: Browse all articles in this area
-        url: ./remote-actions/device-management.md        
+        url: ./remote-actions/index.md
 
     - title: View reports and monitor status
       links:
@@ -250,7 +247,7 @@ conceptualContent:
       footerLink:
         text: Browse all reporting and monitoring articles
         url: ./fundamentals/reports.md
-    
+
     - title: Microsoft Intune Suite add-ons
       links:
         - url: ./fundamentals/intune-add-ons.md
@@ -262,18 +259,18 @@ conceptualContent:
         - url: ./protect/microsoft-tunnel-mam.md
           itemType: how-to-guide
           text: Microsoft Tunnel for Mobile Application Management
-          
-    - title: Microsoft Endpoint analytics
+
+    - title: Endpoint analytics
       links:
-        - url: ../analytics/overview.md
+        - url: ../analytics/index.md
           itemType: how-to-guide
-          text: Overview of Endpoint analytics
+          text: Overview of endpoint analytics
         - url: ../analytics/scores.md
           itemType: how-to-guide
           text: Scores, baselines and insight
         - url: ../analytics/startup-performance.md
           itemType: how-to-guide
-          text: Reports in Endpoint analytics
+          text: Reports in endpoint analytics
 
     - title: Developer guidance
       links:
@@ -325,7 +322,7 @@ conceptualContent:
       links:
         - url: /troubleshoot/mem/intune/device-enrollment/troubleshoot-device-enrollment-in-intune
           itemType: concept
-          text: Troubleshoot device enrollment     
+          text: Troubleshoot device enrollment
         - url: /troubleshoot/mem/intune/app-management/troubleshoot-app-install
           itemType: concept
           text: Troubleshoot app installation issues
@@ -371,7 +368,7 @@ conceptualContent:
           itemType: reference
           text: US government endpoints for Intune
 
-    
+
 additionalContent:
   sections:
     - title: Related services
@@ -386,7 +383,7 @@ additionalContent:
           url: /windows/resources/
         # Card
         - title: Windows 365 docs
-          summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. 
+          summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users.
           url: /windows-365/
         # Card
         - title: Windows Autopatch docs
@@ -418,7 +415,7 @@ additionalContent:
           url: https://twitter.com/hashtag/msintune
         # Card
         - title: Intune Customer Success
-          summary: Get help on the Intune Customer Success site  
+          summary: Get help on the Intune Customer Success site
           url: https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess
 
   footer: "Have feedback or want to contribute to docs? [See this resource](../use-docs.md)!"

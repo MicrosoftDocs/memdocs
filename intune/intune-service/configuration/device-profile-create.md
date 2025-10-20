@@ -1,32 +1,13 @@
 ---
-# required metadata
-
 title: Configure device configuration profiles in Microsoft Intune
 description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, and add a scope tag. Learn more about applicability rules, and the policy refresh cycle times.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 09/15/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - msec-ai-copilot
@@ -137,7 +118,7 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 
 ---
 
-For example, if you select **Windows 10 and later** for the platform, your options look similar to the following profile:
+For example, if you select Windows for the platform, your options look similar to the following profile:
 
 :::image type="content" source="./media/device-profile-create/windows-create-device-profile.png" alt-text="Screenshot that shows how to create a Windows device configuration policy and profile in Microsoft Intune.":::
 
@@ -151,31 +132,30 @@ For more information about scope tags, and what you can do, go to [Use RBAC and 
 
 Applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
-Applicability rules allow administrators to target devices in a group that meet specific criteria. For example, you create a device restrictions profile that applies to the **All Windows 10/11 devices** group. And, you only want the profile assigned to devices running Windows Enterprise.
+Applicability rules allow administrators to target devices in a group that meet specific criteria. For example, you create a device restrictions profile that applies to the **All Windows devices** group. And, you only want the profile assigned to devices running Windows Enterprise.
 
 To do this task, create an **applicability rule**. These rules are great for the following scenarios:
 
-- You use Windows 10 Education (EDU). At Bellows College, you want to target all Windows 10 EDU devices between RS3 and RS4.
-- You want to target all users in Human Resources at Contoso, but only want Windows 10 Professional or Enterprise devices.
+- At Bellows College, you want to target all Windows devices running Windows 11, version 24H2.
+- You want to target all users in Human Resources at Contoso, but only want Windows Professional or Enterprise devices.
 
 To approach these scenarios, you:
 
-- Create a devices group that includes all devices at Bellows College. In the profile, add an applicability rule so it applies if the OS minimum version is `16299` and the maximum version is `17134`. Assign this profile to the Bellows College devices group.
+- Create a devices group that includes all devices at Bellows College. In the profile, add an applicability rule so it applies if the OS minimum version is `10.0.26100` and the maximum version is `10.0.26200`. Assign this profile to the Bellows College devices group.
 
   When the profile is assigned, it applies to devices between the minimum and maximum versions you enter. For devices that aren't between the minimum and maximum versions you enter, their status shows as **Not applicable**.
 
-- Create a users group that includes all users in Human Resources (HR) at Contoso. In the profile, add an applicability rule so it applies to devices running Windows 10 Professional or Enterprise. Assign this profile to the HR users group.
+- Create a users group that includes all users in Human Resources (HR) at Contoso. In the profile, add an applicability rule so it applies to devices running Windows Professional or Enterprise. Assign this profile to the HR users group.
 
-  When the profile is assigned, it applies to devices running Windows 10 Professional or Enterprise. For devices that aren't running these editions, their status shows as **Not applicable**.
+  When the profile is assigned, it applies to devices running Windows Professional or Enterprise. For devices that aren't running these editions, their status shows as **Not applicable**.
 
-- If there are two profiles with the exact same settings, then the profile without an applicability rule is applied. 
+- If there are two profiles with the exact same settings, then the profile without an applicability rule is applied.
 
-  For example, ProfileA targets the Windows 10 devices group, enables BitLocker, and doesn't have an applicability rule. ProfileB targets the same Windows 10 devices group, enables BitLocker, and has an applicability rule to only apply the profile to Windows 10 Enterprise.
+  For example, ProfileA targets the Windows devices group, enables BitLocker, and doesn't have an applicability rule. ProfileB targets the same Windows devices group, enables BitLocker, and has an applicability rule to only apply the profile to the Windows Enterprise edition.
 
-  When both profiles are assigned, ProfileA is applied because it doesn't have an applicability rule. 
+  When both profiles are assigned, ProfileA is applied because it doesn't have an applicability rule.
 
 When you assign the profile to the groups, the applicability rules act as a filter, and only target the devices that meet your criteria.
 
@@ -185,7 +165,7 @@ Use the following steps to create an applicability rule.
 
 1. In your policy, select **Applicability Rules**. You can choose the **Rule**, and **Property**:
 
-    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Screenshot that shows how to add an applicability rule to a Windows 10 device configuration profile in Microsoft Intune." lightbox="./media/device-profile-create/applicability-rules.png":::
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Screenshot that shows how to add an applicability rule to a Windows device configuration profile in Microsoft Intune." lightbox="./media/device-profile-create/applicability-rules.png":::
 
 2. In **Rule**, choose if you want to include or exclude users or groups. Your options:
 
@@ -217,10 +197,10 @@ When creating profiles, consider the following recommendations:
 
   Some configuration profile examples include:
 
-  **Profile name**: OneDrive configuration profile for all Windows users  
-  **Profile description**: OneDrive profile that includes the minimum and base settings for all Windows 10 users. Created by `user@contoso.com` to prevent users from sharing organizational data to personal OneDrive accounts.
+  **Profile name**: OneDrive configuration profile for all Windows users\
+  **Profile description**: OneDrive profile that includes the minimum and base settings for all Windows users. Created by `user@contoso.com` to prevent users from sharing organizational data to personal OneDrive accounts.
 
-  **Profile name**: VPN profile for all iOS/iPadOS users  
+  **Profile name**: VPN profile for all iOS/iPadOS users\
   **Profile description**: VPN profile that includes the minimum and base settings for all iOS/iPadOS users to connect to Contoso VPN. Created by `user@contoso.com` so users automatically authenticate to VPN, instead of prompting users for their username and password.
 
 - Create your profile by its task, such as configure Microsoft Edge settings, enable Microsoft Defender anti-virus settings, block iOS/iPadOS jailbroken devices, and so on.

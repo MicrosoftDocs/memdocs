@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Monitor Microsoft Defender for Endpoint with Microsoft Intune
 description: Monitor Microsoft Defender for Endpoint with Intune, including device compliance and onboarding status.
-keywords:
-author: brenduns 
+author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 10/10/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
 ms.reviewer: aanavath
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-secure-endpoints
 ---

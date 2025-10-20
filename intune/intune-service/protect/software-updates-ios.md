@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Use Microsoft Intune to manage software updates for supervised iOS/iPadOS devices
 description: Use Microsoft Intune to manage system updates for supervised iOS/iPadOS devices.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 07/23/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: annovich, beflamm
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-updates
@@ -144,12 +126,12 @@ When you use update policies for iOS, you might have need to delay visibility of
 - Prevent users  from updating the OS manually
 - To deploy an older update while preventing users from installing a more recent one
 
-To delay visibility, deploy a device restriction template that configures the following settings:  
+To delay visibility, deploy a device restriction template that configures the following settings:
 
-- **Defer software updates** = **Yes**  
+- **Defer software updates** = **Yes**
   This doesn't affect any scheduled updates. It represents days before software updates are visible to end users after release.
 
-- **Delay default visibility of software updates** = **1** to **90**  
+- **Delay default visibility of software updates** = **1** to **90**
   90 days is the maximum delay that Apple supports.
 
 [Device restriction](../configuration/device-restrictions-configure.md) templates are part of device configuration policies.

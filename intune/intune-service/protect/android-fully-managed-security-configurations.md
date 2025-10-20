@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Android Enterprise security configurations for corporate-owned fully managed profiles
-titleSuffix: Microsoft Intune
 description: Review example configurations of basic, enhanced, and high security for devices with Android Enterprise corporate-owned fully managed profiles.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/26/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure;
+ms.reviewer:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -136,7 +116,7 @@ This configuration expands upon Level 2 by:
 - Ensuring a device is compliant by enforcing the most secure Microsoft Defender for Endpoint or mobile threat defense level.
 - Increasing the minimum operating system version.
 - Enforcing additional device restrictions (like disabling unredacted notifications on lock screen).
-- Requiring apps to always be up-to-date. 
+- Requiring apps to always be up-to-date.
 
 The level 3 settings include all the policy settings recommended for level 2. However, the settings listed in the following sections include only those settings that are added or changed. These settings can have significant impact to users or applications. They enforce a level of security more appropriate for risks facing targeted organizations.
 
@@ -163,4 +143,3 @@ The level 3 settings include all the policy settings recommended for level 2. Ho
 ## Related articles
 
 [Configure security settings for personally-owned devices](android-personally-owned-security-configurations.md)
- 

@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Configure Defender for Endpoint Web protection on Android devices in Microsoft Intune
 description: Use Intune policy to manage Microsoft Defender for Endpoint web protection settings on Android devices managed by Microsoft Intune.
-keywords:
-author: brenduns 
+author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/22/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
 ms.reviewer: aanavath
-
-# optional metadata
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-secure-endpoints
 ---
@@ -44,8 +27,8 @@ With Intune device configuration policy, you can turn off all or part of the web
 
 - **Android Enterprise Fully Managed profile**. Use an app configuration profile and the [configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer) to disable the entire web protection feature or to disable only the use of VPNs.
 
-**The following browsers are supported with Defender loopback VPN:** 
-- Chrome- 
+**The following browsers are supported with Defender loopback VPN:**
+- Chrome-
 - Microsoft Edge
 - Opera
 - Samsung Internet
@@ -55,7 +38,7 @@ With Intune device configuration policy, you can turn off all or part of the web
 - Browser Leopard
 - DuckDuckGo
 - Dolphin
- 
+
 **The following browsers are supported with accessibility service without Defender loopback VPN:**
 - Chrome
 - Edge
@@ -116,7 +99,7 @@ To configure web protection on devices, use the following procedures to create a
 > [!NOTE]
 >
 > You can't disable web protection for the Android Enterprise personally owned work profile if you've configured the [Auto Setup of Always-on VPN device configuration policy](/windows/security/threat-protection/microsoft-defender-atp/android-intune#auto-setup-of-always-on-vpn) on the enrolled devices.
-  
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Apps** > **Configuration** > **Create**, and then select **Managed devices**.
@@ -139,12 +122,12 @@ To configure web protection on devices, use the following procedures to create a
 
    > [!NOTE]
    > Values for Anti-Phishing and VPN should be same either to be 0 to disable or 1 to enable, otherwise both features will automatically be disabled.
-   
+
    > [!NOTE]
    > The **Web Protection** configuration key is deprecated. If you've used this key in the past, complete the previous steps to re-configure the setting by setting the keys **Anti-Phishing** and **VPN** to enable or disable web protection.
-   
+
    Select **Next** to continue.
-   
+
 8. In **Assignments**, specify the groups that receive the profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
 9. In **Review + create**, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
@@ -154,20 +137,20 @@ To configure web protection on devices, use the following procedures to create a
 1. Complete the same configuration steps [described previously](#disable-web-protection-for-the-android-enterprise-personally-owned-work-profile), and add web protection configuration keys **Anti-phishing** and **VPN**. The only difference is the **Profile Type** value. For this value, select **Fully Managed, Dedicated, and Corporate-Owned Work Profile Only**.
 
    - To disable web protection, enter **0** for configuration values **Anti-Phishing** and **VPN** and enter **1** for both configuration values (**Anti-Phishing** and **VPN**) to enable web protection. By default, web protection is enabled.
-      
+
    - To disable only the use of VPN by web protection, enter these configuration values:
       - **0** for **VPN**
-            
+
       - **1** for **Anti-Phishing**
-            
+
    > [!NOTE]
    > For 'Android Enterprise corporate owned work profile' enrollment scenario values for VPN and Anti-Phishing should be same either both 0 to disable or 1 to enable, otherwise both features will automatically be disabled, but for 'Android Enterprise corporate owned fully managed - no work profile' enrollment scenario need not to have the same value for VPN and Anti-Phishing, each feature can work individually.
-   
+
    > [!NOTE]
    > You can't disable VPN for the Android Enterprise Fully Managed profile if you've configured the Auto Setup of Always-on VPN device configuration     policy on the enrolled devices.
-   
+
    Select **Next** to continue.
-   
+
 2. In **Assignments**, specify the groups that receive the profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
 3. In **Review + create**, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you
@@ -181,6 +164,6 @@ To configure web protection on devices, use the following procedures to create a
 - Learn more from the Microsoft Defender for Endpoint documentation:
 
   - [Microsoft Defender for Endpoint Conditional Access](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-    
+
   - [Microsoft Defender for Endpoint risk dashboard](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
-    
+

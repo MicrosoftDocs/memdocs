@@ -1,0 +1,29 @@
+items:
+- name: Advanced Analytics Overview
+  href: ../advanced-analytics.md
+- name: Planning Advanced Analytics
+  href: ../advanced-analytics-plan.md
+- name: Deploying Advanced Analytics
+  href: ../advanced-analytics-deploy.md
+- name: Advanced Analytics Features
+  items:
+  - name: Anomaly detection
+    href: ../anomaly-detection.md
+  - name: Battery health
+    href: ../battery-health.md
+  - name: Device scopes
+    href: ../device-scopes.md
+  - name: Enhanced device timeline
+    href: ../enhanced-device-timeline.md
+  - name: Resource Performance
+    href: ../resource-performance-report.md
+  - name: Device query
+    href: ../device-query.md
+  - name: Device query for multiple devices
+    href: ../device-query-multiple-devices.md
+  - name: Data platform schema
+    href: ../data-platform-schema.md
+- name: Troubleshoot and Monitor
+  items:
+  - name: Advanced Analytics Troubleshooting and Frequently Asked Questions
+    href: ../advanced-analytics-troubleshooting-faqs.md

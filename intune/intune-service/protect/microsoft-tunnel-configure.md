@@ -1,27 +1,12 @@
 ---
 title: Install the Microsoft Tunnel VPN for Microsoft Intune
 description: Install and configure Microsoft Tunnel Gateway on a Linux server to support Intune managed cloud-based devices in connecting to your on-premises infrastructure.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 04/07/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
 ms.reviewer: ochukwunyere
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-infrastructure
 ---
@@ -131,9 +116,9 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
    - Download the tool directly by using a web browser. Go to <https://aka.ms/microsofttunneldownload> to download the file **mstunnel-setup**.
 
    - Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
-   
+
      ![Screen capture for download of installation script](./media/microsoft-tunnel-configure/download-installation-script.png)
-     
+
    - Use a Linux command to download the tunnel software directly. For example, on the server where you'll install the tunnel, you can use **wget** or **curl** to open the link [https://aka.ms/microsofttunneldownload](https://aka.ms/microsofttunneldownload).
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
@@ -212,7 +197,7 @@ After installing the Tunnel Gateway server, you can configure Podman to use the 
 
 1. On the tunnel server, use a command prompt to run the following command to open an editor for the override file for the Microsoft Tunnel service:
 
-   `systemctl edit --force mstunnel_monitor`  
+   `systemctl edit --force mstunnel_monitor`
 
 2. Add the following three lines to the file. Replace each instance of *address* with your proxy DN or address, and then save the file. For example, if the *address* of your proxy is `10.10.10.1`  and available on port `3128`, the first line after [Service] might appear as `Environment=”http_proxy=http//10.10.10.1:3128”` and the following line as `Environment=”https_proxy=http//10.10.10.1:3128”`
 
@@ -262,7 +247,7 @@ Trusted root certificates must be added to the Tunnel containers when:
 
 ## Change the Tunnel Servers VPN session timeout
 
-You can use the Microsoft Graph Beta and PowerShell to change the Tunnel Server VPN session timeout. By default, the Tunnel Server VPN session will persist for an hour. You can set a shorter session timeout by using a Windows machine and PowerShell to change the session timeout. 
+You can use the Microsoft Graph Beta and PowerShell to change the Tunnel Server VPN session timeout. By default, the Tunnel Server VPN session will persist for an hour. You can set a shorter session timeout by using a Windows machine and PowerShell to change the session timeout.
 
 By default, the Tunnel Server VPN session persists for an hour. You can use the Microsoft Graph Beta and PowerShell to set a shorter session timeout of your choice, for example, five or 10 minutes.
 
@@ -273,7 +258,7 @@ Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* 
 
 ### PowerShell commands to change the VPN session timeout
 
-On the Windows machine where you've imported the Graph module, use an admin account to run the following PowerShell commands. 
+On the Windows machine where you've imported the Graph module, use an admin account to run the following PowerShell commands.
 
 In the following PowerShell commands, replace variables, which appear similar to `<id>`, with the intended value surrounded by double quotes. For example, if the *ID* from step 2 is equal to *12345-abcde-67890-fghij*, the command line for step 3 would appear as `Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId "12345-abcde-67890-fghij" | Format-List`
 
@@ -397,23 +382,23 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
      > When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it's crucial to configure the 'On Demand' rules to activate the 'Disconnect on Sleep' setting effectively. Failure to do so results in both the Tunnel VPN and Defender VPN being disconnected when the iOS device enters sleep mode, while the VPN is turned on.
      >
      > However, due to a conflict between how a Single Sign-On (SSO) applications obtain access tokens and how Tunnel VPN on-demand rules work, setting up an on-demand rule to connect to all domains when also using 'Deisconnect on Sleep' is not supported when using SSO.
-     > 
+     >
      > In general, configuring On Demand rules for per-app VPNs is recommended, as it allows apps to initiate VPN connections as needed and ensures that the 'Disconnect on Sleep' setting functions as intended.
-     
-   - **Per-app VPN**:  
+
+   - **Per-app VPN**:
      To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, iOS ignores your split tunneling rules.
 
      For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
 
-   - **On-Demand VPN Rules**:  
+   - **On-Demand VPN Rules**:
      Define on-demand rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses.
 
      For more information, see [Automatic VPN settings](../configuration/vpn-settings-ios.md#automatic-vpn).
 
-   - **Proxy**:  
+   - **Proxy**:
      Configure proxy server details for your environment.
 
-> [!NOTE]  
+> [!NOTE]
 > When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it's crucial to configure the 'On-Demand' rules to activate the 'Disconnect on Sleep' setting effectively. To configure the on-demand rule when configuring the Tunnel VPN profile:
 >
 > 1. On the Configuration setting page, expand the *On-Demand VPN Rules* section.
@@ -519,7 +504,7 @@ When Microsoft Tunnel server is already installed on a Linux server, you can use
 
 Before you start the install procedure, use the following link to download the **mst.rules** file from Microsoft: [https://aka.ms/TunnelAuditdRules](https://aka.ms/TunnelAuditdRules). *(The link downloads a small text file named mst.rules.)*
 
-1. Install the auditd library and plugins. Run the following command on the Linux server: 
+1. Install the auditd library and plugins. Run the following command on the Linux server:
 
    - Ubuntu: `sudo apt install auditd audispd-plugins`
    - RHEL:  `sudo dnf install audit audit-libs audispd-plugins` *(By default, RHEL should already have auditd installed.)*
@@ -634,5 +619,5 @@ To uninstall the product, run **mst-cli uninstall** from the Linux server as roo
 
 ## Related content
 
-[Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)  
+[Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)
 [Monitor Microsoft Tunnel](microsoft-tunnel-monitor.md)

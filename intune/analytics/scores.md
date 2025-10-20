@@ -1,15 +1,8 @@
 ---
 title: Scores, baselines, and insights in Endpoint Analytics
-titleSuffix: Microsoft Intune
 description: Learn about scores, baselines, and insights in Endpoint Analytics
 ms.date: 04/07/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
 ms.topic: article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
 ---
 
 # <a name="bkmk_device"></a> Endpoint analytics scores, baselines, and insights
@@ -44,7 +37,7 @@ Baseline scores are shown on charts as triangle markers. There's a built-in base
 **Insights and recommendations** is a prioritized list to improve your score. The whole list is displayed on the **Overview** page either beside or below the charts depending on the width of your browser window. **Insights and recommendations** are filtered to the subnode's context when you navigate through reports. The recommendation listed with each insight tells you how to increase the score and how many points the score gains when the recommendation is complete.
 
 - Selecting the insight link from **Insights and recommendations** provides you with more information on devices and attributes related to the insight.
-- The `Learn more` link takes you to information about how the metric is scored and the recommended course of action is for the insight.  
+- The `Learn more` link takes you to information about how the metric is scored and the recommended course of action is for the insight.
 
 ## <a name="bkmk_per-device"></a> Per device scores
 <!--IN8462182-->
@@ -81,7 +74,7 @@ Use the **Add filter** option on tables to display items that match your criteri
 
 > [!NOTE]
 > There are currently limitations in the following filters:
-> - The **Disk type** filter doesn't support the value **Unknown**<!--12829141-->. 
+> - The **Disk type** filter doesn't support the value **Unknown**<!--12829141-->.
 > - Filtering on **Startup performance score** from **Overview** > **Device Scores** returns devices with a score of "--". <!--12829158-->
 
 ## Known issues

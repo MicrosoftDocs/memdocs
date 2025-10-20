@@ -1,30 +1,15 @@
 ---
-# required metadata
-
 title: Properties catalog in Microsoft Intune
 description: Configure Properties catalog policy to manage Device Inventory settings on Windows devices you manage with Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 07/09/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ms.reviewer: abbystarr
 ---
+
 # Properties catalog in Microsoft Intune
 
 ## Device inventory
@@ -35,9 +20,10 @@ This article describes how to configure Device Inventory settings as part of an 
 
 This feature applies to:
 
-Windows 11
+- Windows
 
-Windows 10
+> [!NOTE]
+> Device properties are collected automatically for Android and Apple devices.
 
 ## Prerequisites
 
@@ -46,20 +32,6 @@ Windows 10
 - For a user to configure a policy to start collecting inventory data from devices, they must have the Device Configurations **Create** permission and the Organization **Read** permission.
 
 - For a user to view collected data about devices, they must have the Managed Devices **Read** permission.
-
-## Supported platforms
-
->[!NOTE]
-> You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically.
-
-Inventory is currently only supported on devices running Windows 10 and later. Inventory is only supported on the following minimum Windows versions:
-
-- Windows 11, version 24H2
-- Windows 11, version 23H2 (22631.2506 or later) with KB5031455
-- Windows 11, version 22H2 (22621.2215 or later) with KB5029351
-- Windows 11, version 21H2 (22000.2713 or later) with KB5034121
-- Windows 10, version 22H2 (19045.3393 or later) with KB5030211
-- Windows 10, version 21H2 (19044.3393 or later) with KB5030211
 
 ## How to use
 

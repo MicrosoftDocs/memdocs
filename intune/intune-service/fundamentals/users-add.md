@@ -1,33 +1,17 @@
 ---
 title: Add users to Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Learn how to add and managing Microsoft Entra user accounts from within Microsoft Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 03/04/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic, get-started, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
 
-# Add and manage users for Microsoft Intune 
+# Add and manage users for Microsoft Intune
 
 Microsoft Entra ID, part of Microsoft Entra, is the identity service for Microsoft Intune which means user accounts you see in Intune exist in Microsoft Entra. As an administrator with sufficient role-based access control (RBAC) permissions within Microsoft Entra, you can use the Intune admin center to manage Microsoft Entra user account. Those same Entra permissions also enable an admin to manage users from within the Microsoft 365 admin center or directly through the Microsoft Entra admin center.
 
@@ -46,11 +30,11 @@ Before you can use the Intune admin center to manage users, your account must ha
 
 When working with RBAC, Microsoft recommends following the principle of least-permissions by using only accounts that have the minimum required permissions for a task, and **limiting** use and assignment of [privileged](/entra/identity/role-based-access-control/privileged-roles-permissions) administrative roles like the Intune Administrator.
 
-The following Microsoft Entra built-in RBAC role is the least privileged built-in role that includes sufficient permissions to add and manage user accounts: 
+The following Microsoft Entra built-in RBAC role is the least privileged built-in role that includes sufficient permissions to add and manage user accounts:
 
 - [**User Administrator**](/entra/identity/role-based-access-control/permissions-reference#user-administrator) – This role provides permissions sufficient to add and edit user accounts from within the admin centers for Microsoft Intune, Microsoft Entra, and Microsoft 365.
 
-> [!TIP]  
+> [!TIP]
 > The Microsoft Entra *User Administrator* role also provides sufficient permissions to assign licenses to Intune and other products to users. However, license management is a task that can only be managed when using the Microsoft 365 admin center. For more information, see [Assign Intune licenses to users](../fundamentals/licenses-assign.md).
 
 ## Add users to Intune
@@ -72,11 +56,11 @@ The following procedural steps can be used to add individual users to your Intun
 
   You can select **Review + create** to create the new user account using only the Basic information, or you can select **Next: Properties** to complete additional but optional configurations.
 
-3. On the **Properties** tab, configure the following details which are all optional. Values that aren't specified remain blank when the account is created and can be edited later. 
+3. On the **Properties** tab, configure the following details which are all optional. Values that aren't specified remain blank when the account is created and can be edited later.
    - **Identity**:
      - **First name**
      - **Last name**
-     - **User type** - Choose either **Member** or **Guest**. Both user types are internal to your organization. Members are commonly full-time employees in your organization. Guests have an account in your tenant, but have [guest-level privileges](/entra/identity/users/users-restrict-guest-permissions). 
+     - **User type** - Choose either **Member** or **Guest**. Both user types are internal to your organization. Members are commonly full-time employees in your organization. Guests have an account in your tenant, but have [guest-level privileges](/entra/identity/users/users-restrict-guest-permissions).
      - **Authorization info** – When you use Certificate Based Authentication for users, you can use this field to add up to five certificate user IDs. For more information, see [Mapping to the certificateUserIds attribute in Microsoft Entra ID](/entra/identity/authentication/concept-certificate-based-authentication-certificateuserids).
    - **Job information**: Specify job-related information, like the user's job title, department, or manager.
    - **Contact information**: Add contact information for the user.
@@ -85,32 +69,32 @@ The following procedural steps can be used to add individual users to your Intun
 
    Select **Review + create** or continue on to **Next: Assignments**.
 
-4. On the **Assignments** tab you can assign the user to a single administrative unit, and up to 20 groups or Microsoft Entra roles at the time the account is created. You can also configure Assignments after the user is created. 
+4. On the **Assignments** tab you can assign the user to a single administrative unit, and up to 20 groups or Microsoft Entra roles at the time the account is created. You can also configure Assignments after the user is created.
 
-   > [!TIP]  
+   > [!TIP]
    > Some options might not be available to configure based on your accounts level of privilege in Microsoft Entra. For example, if you're assigned only the *User Administrator* role, you can assign users to groups but lack rights to assign an administrative unit or assign the user a Microsoft Entra role. For information about the permissions provided by different roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
-   **To assign a group to the new user**:  
+   **To assign a group to the new user**:
    1. Select **+ Add group**.
-   2. From the menu that appears, choose up to 20 groups from the list and select the **Select** button.  
+   2. From the menu that appears, choose up to 20 groups from the list and select the **Select** button.
    3. Select the **Review** + **create** button.
 
-   **To assign a Microsoft Entra role to the new user**:  
-   When a user requires permissions within Entra, you can use this option to assign them a suitable role. To assign Entra roles to other accounts, your account must have permissions equal to the Microsoft Entra [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator). 
+   **To assign a Microsoft Entra role to the new user**:
+   When a user requires permissions within Entra, you can use this option to assign them a suitable role. To assign Entra roles to other accounts, your account must have permissions equal to the Microsoft Entra [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator).
 
-   > [!TIP]  
+   > [!TIP]
    > Most users you add to Intune won't require a *Microsoft Entra* role assignment. Instead, for the users that manage only Intune, plan to [assign an Intune RBAC role](../fundamentals/assign-role.md) to them after their account is created.
 
    1. Select **+ Add role**.
    2. From the menu that appears, choose up to 20 roles from the list and select the **Select** button.
    3. Select the **Review + create** button.
 
-   **To add an administrative unit to the new user**:  
-   Most users you add to Intune will never require an Administrative Units (AUs), which in Microsoft Entra ID is a powerful way to delegate administrative control over subsets of users, groups, or devices within your organization. 
+   **To add an administrative unit to the new user**:
+   Most users you add to Intune will never require an Administrative Units (AUs), which in Microsoft Entra ID is a powerful way to delegate administrative control over subsets of users, groups, or devices within your organization.
 
    Instead, within Intune you can use [scope tags](../fundamentals/scope-tags.md) and [scope groups](../fundamentals/role-based-access-control.md#about-intune-role-assignments).
 
-   To assign an administrative unit to a user, your account must have permissions equal to the Entra [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator). 
+   To assign an administrative unit to a user, your account must have permissions equal to the Entra [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator).
 
    1. Select **+ Add administrative unit**.
    2. From the menu that appears, select one administrative unit and then the **Select** button.
@@ -118,7 +102,7 @@ The following procedural steps can be used to add individual users to your Intun
 
 5. On the **Review + Create** tab, review the details to be sure the information is correct and details passed validation. Review the details and select the **Create** button if everything looks good.
 
-> [!NOTE]  
+> [!NOTE]
 > You can also invite guest users to your Intune tenant. For more information, see [Add Microsoft Entra B2B collaboration users in the Microsoft Entra admin center](/entra/external-id/add-users-administrator).
 
 ### Add multiple users
@@ -171,8 +155,8 @@ To delete users from Entra, your administrative account must have permissions eq
 
 For related information, see [Bulk delete users in Microsoft Entra ID](/entra/identity/users/users-bulk-delete).
 
-> [!TIP]  
-> As a user with sufficient permissions to manage user accounts, there are some accounts you might not be able to delete. Reasons you can't delete a specific account can include:  
+> [!TIP]
+> As a user with sufficient permissions to manage user accounts, there are some accounts you might not be able to delete. Reasons you can't delete a specific account can include:
 > - Accounts that are synchronized from an on-premises Active Directory.
 > - Accounts that are assigned a higher-privileged Entra role than your account.
 - what resources they can change.

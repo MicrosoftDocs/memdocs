@@ -1,31 +1,11 @@
 ---
-# required metadata
-
 title: FAQ for Microsoft Copilot in Intune
 description: Get answers to common questions when using Copilot in Microsoft Intune, including accessing Copilot, licensing, and more.
-keywords: security copilot, intune, microsoft intune, copilot, faq
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice:
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ankurgoyal, rashok
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - msec-ai-copilot
 ---
@@ -62,7 +42,7 @@ If you're an admin for Intune and have the correct Security Copilot or Microsoft
 
 Security Copilot is scoped to all your embedded services.
 
-If you're an Intune admin or IT admin and only want Intune data, you should use [Copilot in Intune](copilot-intune-overview.md). Its scope is only Intune data, and its capabilities are integrated into the relevant areas of the Intune admin center. 
+If you're an Intune admin or IT admin and only want Intune data, you should use [Copilot in Intune](copilot-intune-overview.md). Its scope is only Intune data, and its capabilities are integrated into the relevant areas of the Intune admin center.
 
 If you're a security admin, you can use [Copilot in Intune](copilot-intune-overview.md) if you only want insights into your Intune data.
 

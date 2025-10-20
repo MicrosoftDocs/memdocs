@@ -5,10 +5,7 @@ zone_pivot_groups: platforms-windows-ios
 ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
-ms.manager: dougeby
 ms.date: 5/2/2024
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Configure applications with Microsoft Intune

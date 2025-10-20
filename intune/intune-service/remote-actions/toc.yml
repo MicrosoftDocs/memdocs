@@ -1,59 +1,69 @@
 items:
-  - name: Remote device actions
-    href: device-management.md
-  - name: Locks and passwords
-    items:
-    - name: Remotely Lock device
-      href: device-remote-lock.md
-    - name: Reset passcode
-      href: device-passcode-reset.md
-  - name: Remove and restart
-    items:
-    - name: Remove devices
-      href: devices-wipe.md
-    - name: Manage Windows Fresh Start
-      href: device-fresh-start.md
-    - name: Restart device
-      href: device-restart.md
-  - name: Apple device actions
-    items:
-    - name: Enable iOS/iPadOS lost mode
-      href: device-lost-mode.md
-    - name: Shutdown macOS and iOS/iPadOS devices
-      href: device-shutdown.md
-    - name: Wipe macOS device
-      href: device-wipe-macos.md
-    - name: Disable Activation Lock
-      href: device-activation-lock-disable.md
-    - name: Update cellular data plan
-      href: update-cellular-data-plan.md
-  - name: User actions
-    items:
-    - name: Sign out current user
-      href: device-logout-user.md
-    - name: Remove user
-      href: device-remove-user.md
-  - name: Other actions
-    items:
-    - name: Remote actions for ChromeOS
-      href: chrome-enterprise-remote-actions.md
-    - name: Locate device
-      href: device-locate.md
-    - name: Rename device
-      href: device-rename.md
-    - name: Send notifications
-      href: custom-notifications.md
-    - name: Synchronize device
-      href: device-sync.md
-    - name: Collect diagnostics
-      href: collect-diagnostics.md
-    - name: Remove apps and configuration
-      href: remove-apps-config.md
-    - name: Pause config refresh
-      href: pause-config-refresh.md
-  - name: Bulk device actions
-    href: bulk-device-actions.md
-  - name: Troubleshooting
-    items:
-    - name: Troubleshoot device actions
-      href: /troubleshoot/mem/intune/troubleshoot-device-actions
+- name: Remote device actions overview
+  href: index.md
+- name: Actions list
+  items:
+  - name: Autopilot Reset
+    href: device-autopilot-reset.md
+  - name: BitLocker key rotation
+    href: device-rotate-bitlocker-keys.md
+  - name: Collect diagnostics
+    href: collect-diagnostics.md
+  - name: Disable Activation Lock
+    href: device-activation-lock-disable.md
+  - name: Delete
+    href: device-delete.md
+  - name: Deprovision
+    href: device-deprovision.md
+  - name: Fresh Start
+    href: device-fresh-start.md
+  - name: Full scan
+    href: device-full-scan.md
+  - name: Locate device
+    href: device-locate.md
+  - name: Logout current user
+    href: device-logout-user.md
+  - name: Lost Mode
+    href: device-lost-mode.md
+  - name: New remote assistance session
+    href: device-remote-assist.md
+  - name: Pause config refresh
+    href: pause-config-refresh.md
+  - name: Play Lost Mode sound
+    href: device-play-lost-mode-sound.md
+  - name: Quick scan
+    href: device-quick-scan.md
+  - name: Remote lock
+    href: device-remote-lock.md
+  - name: Remove apps and configuration
+    href: remove-apps-config.md
+  - name: Remove passcode
+    href: device-remove-passcode.md
+  - name: Remove user
+    href: device-remove-user.md
+  - name: Rename device
+    href: device-rename.md
+  - name: Reset passcode
+    href: device-passcode-reset.md
+  - name: Restart
+    href: device-restart.md
+  - name: Retire
+    href: device-retire.md
+  - name: Rotate local admin password
+    href: device-rotate-local-admin-password.md
+  - name: Rotate FileVault recovery key
+    href: device-rotate-filevault.md
+  - name: Run remediation
+    href: device-run-remediation.md
+  - name: Send custom notifications
+    href: custom-notifications.md
+  - name: Shutdown
+    href: device-shutdown.md
+  - name: Sync
+    href: device-sync.md
+  - name: Update cellular data plan
+    href: update-cellular-data-plan.md
+  - name: Wipe
+    href: device-wipe.md
+- name: Troubleshoot device actions 🔗
+  href: /troubleshoot/mem/intune/troubleshoot-device-actions

@@ -1,30 +1,14 @@
 ---
-# required metadata
-
 title: Device restriction settings for Android in Microsoft Intune
 description: On Android Enterprise or Android for Work devices owned by your organization, you can restrict settings on the device using Microsoft Intune. Allow copy and paste, notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 09/17/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
 params:
   siblings_only: true
 ms.reviewer: cchristenson, arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -42,7 +26,7 @@ This article applies to:
 - Android Enterprise corporate owned fully managed (COBO)
 - Android Enterprise corporate owned dedicated devices (COSU)
 - Android Enterprise personally owned devices with a work profile (BYOD)
-- Android Open Source Project (AOSP) corporate-owned userless devices (shared)  
+- Android Open Source Project (AOSP) corporate-owned userless devices (shared)
 - Android Open Source Project (AOSP) corporate-owned user-associated devices (single user)
 
 ## Before you begin
@@ -115,9 +99,9 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   > [!TIP]
   > The Intune settings catalog > **USB access** setting has more options that you can configure and manage. To learn more, see [Android Intune settings catalog settings list](settings-catalog-android.md#general).
-  
+
 - **External media**: **Block** prevents using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
-- **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.  
+- **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.
 - **Developer settings**: Choose **Allow** to let users access developer settings on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.
 - **Microphone adjustment**: **Block** prevents users from unmuting the microphone and adjusting the microphone volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use and adjust the volume of the microphone on the device.
 - **Factory reset protection emails**: Choose **Google account email addresses**. Enter the email addresses of device administrators that can unlock the device after the device is wiped. Be sure to separate the email addresses with a semi-colon, such as `admin1@gmail.com;admin2@gmail.com`. These emails only apply when a non-user factory reset is run, such as running a factory reset using the recovery menu.
@@ -126,7 +110,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   Factory reset protection (FRP) helps prevent unauthorized access to your device after it's been factory reset. If the device is reset without your permission, in some situations, only the email addresses you enter can unlock the device. When the **Factory reset protection emails** setting is configured, there is different factory reset protection (FRP) behavior:
 
-  | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../remote-actions/devices-wipe.md#wipe) |
+  | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../remote-actions/device-wipe.md) |
   | --- | --- | --- | --- |
   | **Corporate-owned devices with work profile** (COPE) | ✅ factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
   | **Fully managed** (COBO) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
@@ -214,7 +198,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Home button only**: Users can see and select the home button. They can't see or select the overview buttons.
   - **Home and overview buttons**: Users can see and select the home and overview buttons.
 
-    When a device is enrolled and using the Managed Home Screen app, enabling the **Overview** button allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.       
+    When a device is enrolled and using the Managed Home Screen app, enabling the **Overview** button allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.
 
   This setting applies to:
 
@@ -239,15 +223,15 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   This setting applies to:
 
-  - Android 9.0 and newer  
+  - Android 9.0 and newer
 
 ### Dedicated devices
 
 - **Locate device**: **Block** prevents admins from locating lost or stolen devices using a remote action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow locating devices using geolocation.
 
-### Corporate-owned work profile devices  
+### Corporate-owned work profile devices
 
-- **Contact sharing via Bluetooth (work profile-level)**: **Block** prevents users from sharing their work profile contacts with devices over Bluetooth. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share their contacts via Bluetooth.  
+- **Contact sharing via Bluetooth (work profile-level)**: **Block** prevents users from sharing their work profile contacts with devices over Bluetooth. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share their contacts via Bluetooth.
 
 - **Search work contacts and display work contact caller-id in personal profile**: In the personal profile, **Block** prevents users from searching work contacts, and showing work caller ID information.
 
@@ -289,9 +273,9 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-  Learn more about Common Criteria:  
-  - [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org) at commoncriteriaportal.org  
-  - [CommonCriteriaMode](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#commoncriteriamode) in the Android Management API documentation.  
+  Learn more about Common Criteria:
+  - [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org) at commoncriteriaportal.org
+  - [CommonCriteriaMode](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#commoncriteriamode) in the Android Management API documentation.
   - [Knox Deep Dive: Common Criteria Mode](https://www.samsungknox.com/blog/knox-deep-dive-common-criteria-mode) at samsungknox.com
 
 ## Device experience
@@ -328,7 +312,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
 
         > [!NOTE]
         > On fully managed devices, the only selected app that applies is the Managed Home Screen. All other apps are treated as a required app.
-  
+
     - **Multi-app**: Select this option to run many apps. Users can access a limited set of apps on the device. When the device starts, only the apps you add start. You can also add some web links that users can open. When the policy is applied, users see icons for the allowed apps on the home screen.
 
       For multi-app dedicated and fully managed devices, the **Managed Home Screen** app isn't required to be in the configuration profile, but the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
@@ -375,13 +359,13 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
       - **Lock home screen**: **Enable** prevents users from moving app icons and folders. They're locked, and can't be dragged-and-dropped to different places on the grid. When set to **Not configured**, Intune doesn't change or update this setting. By default, users can move these items.
 
       - **Folder icon**: Select the color and shape of the folder icon that's on the Managed Home Screen. Your options:
-        - Not configured 
+        - Not configured
         - Dark theme rectangle
         - Dark theme circle
         - Light theme rectangle
         - Light theme circle
       - **App and Folder icon size**: Select the size of the folder icon that's on the Managed Home Screen. Your options:
-        - Not configured 
+        - Not configured
         - Extra small
         - Small
         - Average
@@ -406,7 +390,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
         - **Floating**: Shows a persistent, floating home button on the device.
 
       - **Leave kiosk mode**: **Enable** allows Administrators to temporarily pause kiosk mode to update the device. To use this feature, the administrator:
-  
+
         1. Continues to select the back button until the **Exit kiosk** button shows.
         2. Selects the **Exit kiosk** button, and enters the **Leave kiosk mode code** PIN.
         3. When finished, select the **Managed Home Screen** app. This step relocks the device into multi-app kiosk mode.
@@ -426,7 +410,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
 
         Modern displays have higher pixel densities and can display equivalent 2K/4K definition images.
 
-      - **Shortcut to settings menu**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still access the **Managed Settings** menu from the top bar. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can select the settings icon to access settings.  
+      - **Shortcut to settings menu**: **Disable** hides the Managed Settings shortcut on the Managed Home Screen. Users can still access the **Managed Settings** menu from the top bar. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the Managed Settings shortcut is shown on devices. Users can select the settings icon to access settings.
 
       - **Quick access to debug menu**: This setting controls how users access the debug menu. Your options:
 
@@ -448,7 +432,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
 
           When left blank, Intune doesn't change or update this setting. By default, all available Wi-Fi networks are allowed.
 
-          **Import** a .csv file that includes a list of valid SSIDs. 
+          **Import** a .csv file that includes a list of valid SSIDs.
 
           **Export** your current list to a .csv file.
 
@@ -523,8 +507,8 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
 
           - **Require user to enter session PIN if screensaver has appeared**: Select **Enable** to require the user to enter their session PIN to resume using the Managed Home Screen after the screensaver shows.
         - **Automatically sign-out of MHS and Shared device mode applications after inactivity**: Select **Enable** to auto sign out of the Managed Home Screen based on inactivity. This setting must be enabled to show the subsettings.
-          - **Number of seconds device is inactive before automatically signing user out​**: Define the period of inactivity, in seconds, before user is automatically signed out from Managed Home Screen. By default, this value is set to 300 seconds. 
-          - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds. 
+          - **Number of seconds device is inactive before automatically signing user out​**: Define the period of inactivity, in seconds, before user is automatically signed out from Managed Home Screen. By default, this value is set to 300 seconds.
+          - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds.
 
       > [!NOTE]
       > Some of the Managed Home Screen settings are available in a device restrictions policy. To view and use all the available settings for the Managed Home Screen, create a [Managed Home Screen app configuration policy](../apps/app-configuration-managed-home-screen-app.md).
@@ -667,14 +651,14 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
 
     - Users get access to all apps in the Google Play store and any private apps added to your organization's Managed Google Play account.
     - Make sure you target any app (private or public) with the uninstall intent that shouldn't be findable or apps installed by users from the Managed Google Play Store.
-    - Users can't use apps that are added to a blocklist (assigned with uninstall intent) on the personal profile of corporate-owned devices with a work profile. 
+    - Users can't use apps that are added to a blocklist (assigned with uninstall intent) on the personal profile of corporate-owned devices with a work profile.
 
     For more information on excluding users and groups from specific apps, go to [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
 
   - When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS:
-  
+
     - Only shows apps in the Managed Google Play store that are approved, apps that are required, and apps that are assigned to the user.
-  
+
 - The following settings are part of the Google's delegated scope feature:
 
   - **Allow other apps to install and manage certificates**: Select **Add** to select existing apps for this permission. You can add multiple apps. The selected apps are granted access to install and manage certificates.
@@ -702,7 +686,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
   - Users need to sign out of an app that is optimized for Shared Device mode. Microsoft apps that are optimized for Shared device mode on Android include Teams and Intune's Managed Home Screen.
   - For apps that aren't optimized for Shared Device mode, deleting application data extends to local app storage only. Data can be left in other areas of the device. User identifying artifacts such as email address and username might be left behind on the app and visible by others.
   - Non-optimized apps that provide support for multiple accounts could exhibit indeterminate behavior and are therefore not recommended.
-  
+
   All non-optimized apps should be thoroughly tested before being used in multi-user scenarios on shared devices to ensure they work as expected. For example, validate your core scenarios in each app, verify that the app signs out properly, and that all data is sufficiently cleared for your organization's needs.
 
 ## Connectivity
@@ -800,11 +784,11 @@ These settings apply to corporate-owned work profiles.
   - Prevents screen captures during personal use
   - Prevents apps from using the system screenshot capabilities.
   - Affects screen sharing.
-  
+
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to get screen captures or screenshots in the personal profile.
 
 - **Allow users to enable app installation from unknown sources in the personal profile**: Select **Allow** so users can install apps from unknown sources in the personal profile. It allows users to install apps from sources other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from installing apps from unknown sources in the personal profile.
-- **Type of restricted apps list**: Select **Allow apps** to create a list of Managed Google Play apps that are allowed and approved to install and run in the personal profile on the device. Select **Blocked apps** to create a list of Managed Google Play apps that are prohibited and prevented from installing and running in the personal profile on the device. When set to **Not configured** (default), Intune doesn't include a list of apps to allow or block.  
+- **Type of restricted apps list**: Select **Allow apps** to create a list of Managed Google Play apps that are allowed and approved to install and run in the personal profile on the device. Select **Blocked apps** to create a list of Managed Google Play apps that are prohibited and prevented from installing and running in the personal profile on the device. When set to **Not configured** (default), Intune doesn't include a list of apps to allow or block.
 
 ## Custom support information
 
@@ -906,7 +890,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 - **Copy and paste between work and personal profiles**: **Block** prevents copy-and-paste between work and personal apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share data using copy-and-paste with apps in the personal profile.
 - **Data sharing between work and personal profiles**: Choose if apps in the work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** option in the Chrome browser app. This setting doesn't apply to copy/paste clipboard behavior. Your options:
   - **Device default**: Sharing from the work profile to the personal profile is blocked. Sharing from the personal profile to the work profile is allowed.
-  - **Apps in work profile can handle sharing request from personal profile**: Enables the built-in Android feature that allows sharing from the personal profile to the work profile. When enabled, a sharing request from an app in the personal profile can share with apps in the work profile. 
+  - **Apps in work profile can handle sharing request from personal profile**: Enables the built-in Android feature that allows sharing from the personal profile to the work profile. When enabled, a sharing request from an app in the personal profile can share with apps in the work profile.
   - **No restrictions on sharing**: Enables sharing across the work profile boundary in both directions. When you select this setting, apps in the work profile can share data with unbadged apps in the personal profile. This setting allows managed apps in the work profile to share with apps on the unmanaged side of the device. So, use this setting carefully.
 
 - **Work profile notifications while device locked**: **Block** prevents window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors from showing on locked devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show notifications.
@@ -1022,7 +1006,7 @@ These password settings apply to the work profile password on personally owned d
   - The device password that unlocks the device
   - The work profile password that allows users to access the work profile
 
-  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign into the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.  
+  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign into the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.
 
   > [!IMPORTANT]
   >
@@ -1180,42 +1164,42 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
 
 ### Device password
 
-- **Required password type**: Require users to use a certain type of password. Your options:  
+- **Required password type**: Require users to use a certain type of password. Your options:
 
-  - **Device default**: To evaluate password compliance, be sure to select a password strength other than **Device default**. If you want to require users to set up a passcode on their devices, configure this setting to a more secure option.  
+  - **Device default**: To evaluate password compliance, be sure to select a password strength other than **Device default**. If you want to require users to set up a passcode on their devices, configure this setting to a more secure option.
 
-  - **Numeric** (default): Password must only be numbers, such as `123456789`. Also enter:  
+  - **Numeric** (default): Password must only be numbers, such as `123456789`. Also enter:
 
-    - **Minimum password length**: Enter the minimum number of digits the password must have, from 4 to 16.  
+    - **Minimum password length**: Enter the minimum number of digits the password must have, from 4 to 16.
 
-  - **Numeric complex**: Doesn't permit repeat or consecutive numbers, such as `1111` or `1234`. Also enter:  
+  - **Numeric complex**: Doesn't permit repeat or consecutive numbers, such as `1111` or `1234`. Also enter:
 
-    - **Minimum password length**: Enter the minimum number of digits or characters a password must have, from 4 to 16.  
+    - **Minimum password length**: Enter the minimum number of digits or characters a password must have, from 4 to 16.
 
-- **Number of sign-in failures before wiping device**: Enter the number of sign-in attempts allowed, from 4 to 11, before the device is wiped. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.  
+- **Number of sign-in failures before wiping device**: Enter the number of sign-in attempts allowed, from 4 to 11, before the device is wiped. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
 
-- **Maximum minutes of inactivity until screen locks**: Enter the maximum length of time, from 1 minute to 1 hour, that devices can be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of inactivity. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.  
+- **Maximum minutes of inactivity until screen locks**: Enter the maximum length of time, from 1 minute to 1 hour, that devices can be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of inactivity. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
 
 > [!NOTE]
 >
->- RealWear devices currently only support device default, numeric, and numeric complex password types.  
+>- RealWear devices currently only support device default, numeric, and numeric complex password types.
 >- The password type **Password required, no restrictions** appears as an option but doesn't currently work on devices, which is a known issue.
 
 ### General
 
-- **Block access to camera**: Prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.  
+- **Block access to camera**: Prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
 
-  Intune only manages access to the device camera. It doesn't have access to pictures or videos.  
+  Intune only manages access to the device camera. It doesn't have access to pictures or videos.
 
-- **Block screen capture**: Prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.  
+- **Block screen capture**: Prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
 
 - **Disable factory reset**: Prevents users from using the factory reset option in the device's settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
 
-- **Block mounting of external media**: Prevents users from using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to connect external media.  
+- **Block mounting of external media**: Prevents users from using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to connect external media.
 
-- **Block USB file transfer**: Prevents users from transferring files over USB. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to transfer files.  
+- **Block USB file transfer**: Prevents users from transferring files over USB. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to transfer files.
 
-- **Block Wi-Fi setting changes**: Prevents users from creating or changing any Wi-Fi configurations. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the Wi-Fi settings on the device.  
+- **Block Wi-Fi setting changes**: Prevents users from creating or changing any Wi-Fi configurations. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the Wi-Fi settings on the device.
 
 - **Disable Bluetooth**: Disables Bluetooth on the device so that users can't pair with other devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might enable Bluetooth on the device.
 
@@ -1230,5 +1214,5 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
 ## Related articles
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- You can also create dedicated device kiosk profiles for [Android](device-restrictions-android.md#kiosk) and [Windows 10](kiosk-settings.md) devices.
+- You can also create dedicated device kiosk profiles for [Android](device-restrictions-android.md#kiosk) and [Windows](kiosk-settings.md) devices.
 - [Configure and troubleshoot Android enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974).

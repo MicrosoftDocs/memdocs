@@ -1,38 +1,16 @@
 ---
-# required metadata
-
-title: Assign apps to groups in Microsoft Intune
-titleSuffix:
+title: Assign Apps to Groups in Microsoft Intune
 description: Learn how to assign an Intune app to groups of users or devices using Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 09/28/2025
+ms.date: 10/29/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Deploy
 ---
 
-# Assign apps to groups with Microsoft Intune
+# Assign Apps to Groups With Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -86,13 +64,13 @@ The following table lists the various options when *assigning* apps to users and
      > - To configure whether a required iOS/iPadOS app is installed as a removable app by end users, you can select the setting under **Install as removable**. 
      > - To configure a way to prevent the iCloud backup of the managed iOS/iPadOS app, you can select on one of the following settings after adding a group assignment - VPN, or Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
 	  >
-     > **For macOS apps only**: 
+     > **For macOS apps only**:
      > - To configure a way to prevent the iCloud backup of the managed macOS app, you can select on one of the following settings after adding a group assignment - VPN, or Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
 	  >
      > **For Android apps only**: 
 	  > - If you deploy an Android app as **Available with or without enrollment**, reporting status is only available on enrolled devices.
      >
-     > **For Available for enrolled devices**: 
+     > **For Available for enrolled devices**:
 	  > - The app is only displayed as available if the user logged into the Company Portal is the primary user who enrolled the device and the app is applicable to the device.
 
 8. To select the groups of users that are affected by this app assignment, select **Included Groups**.
