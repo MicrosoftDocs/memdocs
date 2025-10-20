@@ -48,7 +48,7 @@ Renaming a device can help improve clarity and consistency across your device in
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Set device name**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ## How to rename a device from the Intune admin center
 

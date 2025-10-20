@@ -2260,7 +2260,7 @@ There are no filters for this report.
 > [!NOTE]
 > To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API allows you to select, to what you receive back.
 >
-> The select parameter accepts column aliases, but the filter parameter doesn’t.
+> The select parameter accepts column aliases, but the filter parameter doesn't.
 >
 > The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` are only exported when they're included in the select parameter. These columns aren't exported by default.
 
@@ -2338,7 +2338,7 @@ You can choose to filter the `DevicesWithInventory` report's output based on the
 - `OwnerType`
 - `PartnerFeaturesBitmask`
 
-The following `ProcessorArchitecture` mappings apply to Windows 10 and later:
+The following `ProcessorArchitecture` mappings apply to Windows:
 - 9 = x64
 - 5 = ARM
 - 12 = ARM64

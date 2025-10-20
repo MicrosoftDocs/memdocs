@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/03/2025
+ms.date: 10/13/2025
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -48,7 +48,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ### Support for user account context in Endpoint Privilege Management Elevation Rules<!-- 25617968 -->
 
-Endpoint Privilege Management (EPM) will soon offer a new option for elevation rules: the ability to run elevated applications using the user's context, not just a virtual account. Today, when EPM elevates an app or file, it uses a virtual account for security. While this protects your environment, it can result in elevated apps missing a users personal settings, preferences, and customizations.
+Endpoint Privilege Management (EPM) will soon offer a new option for elevation rules: the ability to run elevated applications using the user's context, not just a virtual account. Today, when EPM elevates an app or file, it uses a virtual account for security. While this feature protects your environment, it can result in elevated apps missing a users personal settings, preferences, and customizations.
 
 With this upcoming change, EPM elevation rules will support changing the user token context. This means that when EPM runs an app with elevated privileges, a users personalized experience like custom file paths, app settings, and preferences can be preserved by the EPM elevation.
 
@@ -180,21 +180,6 @@ You will be able to edit the Managed Google Play organization name directly in t
 ### Configure Windows Backup for Organizations<!--29202026 -->
 
 A new feature called *Windows Backup for Organizations* will be soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).
-
-<!-- *********************************************** -->
-
-## Device management
-
-### Windows 10 support in Intune <!-- 34754868 -->
-
-On October 14, 2025, [Windows 10 is reaching end of support](/lifecycle/announcements/windows-10-end-of-support) and will stop receiving quality and feature updates. After October 14, 2025, Windows 10 becomes an "allowed" version in Intune. Devices running this version can still enroll in Intune and use eligible features, but functionality won't be guaranteed and can vary.
-
-For more information, see [Support statement for Windows 10 in Intune](#update-to-support-statement-for-windows-10-in-intune).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows 10
 
 <!-- *********************************************** -->
 

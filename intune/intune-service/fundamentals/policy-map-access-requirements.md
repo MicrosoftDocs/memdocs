@@ -243,8 +243,6 @@ Two compliance policies:
 
 Requiring this setting was never supported for Windows or Android compliance in Basic Mobility and Security.
 
-Windows email was never supported for Windows 10 in Basic Mobility and Security.
-
 For Android, this setting was only supported on Samsung Knox devices in Basic Mobility and Security.
 
 Intune requires more settings be configured when deploying email that weren't available in device security policies. For more information, see [More settings required by Intune for email profiles](#more-settings-required-by-intune-for-email-profiles).
