@@ -44,19 +44,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-## Microsoft Intune Suite
-
-### Support for user account context in Endpoint Privilege Management Elevation Rules<!-- 25617968 -->
-
-Endpoint Privilege Management (EPM) will soon offer a new option for elevation rules: the ability to run elevated applications using the user's context, not just a virtual account. Today, when EPM elevates an app or file, it uses a virtual account for security. While this feature protects your environment, it can result in elevated apps missing a users personal settings, preferences, and customizations.
-
-With this upcoming change, EPM elevation rules will support changing the user token context. This means that when EPM runs an app with elevated privileges, a users personalized experience like custom file paths, app settings, and preferences can be preserved by the EPM elevation.
-
-For more information, see [Use Endpoint Privilege Management with Microsoft Intune](../protect/epm-overview.md).
-
-### Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334 -->
-
-We're working on a dashboard for Endpoint Privilege Management (EPM) that brings you insights to support having your users run as standard users in place of running with local admin permissions. First, the dashboard will report progress towards a Standard User Status to help you understand when your admin users might be ready to be moved to standard users. The dashboard will also help you understand the file elevation trends in your organization.
+<!-- ## Microsoft Intune Suite -->
 
 <!-- ***********************************************-->
 
@@ -75,7 +63,7 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 ## Device configuration
 
-### New Assist Content Sharing setting in the Android Enterprise settings catalog<!-- 31479342 idready -->
+### New Assist Content Sharing setting in the Android Enterprise settings catalog<!-- 31479342  -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
