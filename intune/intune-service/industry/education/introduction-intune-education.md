@@ -14,8 +14,7 @@ ms.collection:
 
 **Applies to**:
 
-* Windows 10
-* Windows 11
+* Windows
 * iOS/iPadOS
 
 Enable productivity on school devices while protecting your school's data with Microsoft Intune for Education. *Intune for Education* is a cloud-based, mobile device management (MDM) service for schools. In the Intune for Education portal you can focus on school-related settings and devices that belong to staff and students, while also leveraging the capabilities of Microsoft Intune. Use Intune for Education by itself, together with [Microsoft Intune](/mem/intune-service/fundamentals/what-is-intune), and with supported [Microsoft Education tools](https://microsoft.com/education).

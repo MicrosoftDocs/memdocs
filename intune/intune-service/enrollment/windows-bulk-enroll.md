@@ -57,7 +57,7 @@ For more information about these roles, see [Microsoft Entra built-in roles](/en
 
    > [!NOTE]
    > Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Microsoft Entra ID.
-1. Provide your Microsoft Entra credentials to get a bulk token.
+1. Provide your Microsoft Entra credentials to get a bulk token. Make sure you authenticate by way of password or CBA authentication, since other methods of authentication aren't supported by the app for this operation.  
 ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
    > [!NOTE]

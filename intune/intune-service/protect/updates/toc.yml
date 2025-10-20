@@ -5,19 +5,18 @@ items:
     href: ../fota-updates-android.md
   - name: Zebra LG OTA Integration
     href: ../zebra-lifeguard-ota-integration.md
-- name: iOS/iPadOS & macOS updates
+- name: Apple updates
   items:
-  - name: Managed software updates
-    displayName: ddm
-    href: ../managed-software-updates-ios-macos.md
+  - name: Configure software updates
+    href: apple.md
   - name: Software update reports
-    href: ../software-updates-reports-apple-declarative-based.md
-  - name: Update policies
+    href: apple-reports.md
+  - name: Update policies (deprecated)
     items:
-    - name: iOS/iPadOS update policies
-      href: ../software-updates-ios.md
-    - name: macOS update policies
-      href: ../software-updates-macos.md
+    - name: iOS/iPadOS update policies (deprecated)
+      href: software-updates-ios.md
+    - name: macOS update policies (deprecated)
+      href: software-updates-macos.md
 - name: Windows updates
   items:
   - name: Use Windows Update client policies

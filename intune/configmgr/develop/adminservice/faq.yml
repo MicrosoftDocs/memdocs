@@ -52,12 +52,12 @@ sections:
           
           - Control access to the web service with the certificate trust. If a device doesn't trust the certificate chain, a user on that device can't query the administration service.
           
-          - Add additional security layers. For example, [Azure App Proxy](/azure/active-directory/manage-apps/application-proxy).
+          - Add additional security layers. For example, [Azure App Proxy](/entra/identity/app-proxy/).
           
       - question: |
           Can I use it with Conditional Access?
         answer: |
-          Yes, and that configuration is easiest if you use [Azure App Proxy](/azure/active-directory/manage-apps/application-proxy).
+          Yes, and that configuration is easiest if you use [Azure App Proxy](/entra/identity/app-proxy/).
           
   - name: Miscellaneous
     questions:
