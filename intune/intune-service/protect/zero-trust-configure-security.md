@@ -34,7 +34,7 @@ Ensure tenant-level governance, identity, and configuration consistency.
 | Check | Minimum License Requirements  |
 |-------|-------------------------------|
 | [Scope tag configuration is enforced to support delegated administration and least-privilege access](../protect/zero-trust-secure-tenant.md#scope-tag-configuration-is-enforced-to-support-delegated-administration-and-least-privilege-access) | <ul><li>Microsoft Intune Plan 1</li></ul> |
-| [Device enrollment notifications are enforced to ensure user awareness and secure onboarding](../protect/zero-trust-secure-tenant.md.md#device-enrollment-notifications-are-enforced-to-ensure-user-awareness-and-secure-onboarding) | <ul><li>Microsoft Intune Plan 1</li></ul> |
+| [Device enrollment notifications are enforced to ensure user awareness and secure onboarding](../protect/zero-trust-secure-tenant.md#device-enrollment-notifications-are-enforced-to-ensure-user-awareness-and-secure-onboarding) | <ul><li>Microsoft Intune Plan 1</li></ul> |
 | [Windows automatic device enrollment is enforced to eliminate risks from unmanaged endpoints](../protect/zero-trust-secure-tenant.md#windows-automatic-device-enrollment-is-enforced-to-eliminate-risks-from-unmanaged-endpoints) | <ul><li>Microsoft Intune Plan 1</li><li>Microsoft Entra ID P1 *(for Conditional Access)*</li></ul> |
 | [Compliance policies protect Windows devices](../protect/zero-trust-secure-tenant.md#compliance-policies-protect-windows-devices) | <ul><li>Microsoft Intune Plan 1</li></ul> |
 | [Compliance policies protect macOS devices](../protect/zero-trust-secure-tenant.md#compliance-policies-protect-macos-devices) | <ul><li>Microsoft Intune Plan 1</li></ul> |
@@ -52,7 +52,7 @@ Ensure tenant-level governance, identity, and configuration consistency.
 
 For license details, see:
 
-- [Microsoft Intune licensing](../fundamentals/licenses)
+- [Microsoft Intune licensing](../fundamentals/licenses.md)
 - [Microsoft Entra licensing](/entra/fundamentals/licensing)
 
 ## Secure Devices
@@ -61,21 +61,21 @@ Secure endpoints through device configuration and security policies.
 
 | Check | Minimum License Requirements  |
 |-------|-------------------------------|
-| [Local administrator credentials on Windows are protected by Windows LAPS](../protect/zero-trust-secure-data.md#local-administrator-credentials-on-windows-are-protected-by-windows-laps) | <ul><li>Microsoft Intune Plan</li></ul> |
-| [Local administrator credentials on macOS are protected during enrollment by macOS LAPS](../protect/zero-trust-secure-tenant.md#local-administrator-credentials-on-macos-are-protected-during-enrollment-by-macos-laps) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
-| [Local account usage on Windows is restricted to reduce unauthorized access](../protect/zero-trust-secure-tenant.md#local-account-usage-on-windows-is-restricted-to-reduce-unauthorized-access) | <ul><li>Microsoft Intune Plan 1</li></ul> |
-| [Data on Windows is protected by BitLocker encryption](../protect/zero-trust-secure-tenant.md#data-on-windows-is-protected-by-bitlocker-encryption) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
-| [FileVault encryption protects data on macOS devices](../protect/zero-trust-secure-tenant.md#filevault-encryption-protects-data-on-macos-devices) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
-| [Authentication on Windows uses Windows Hello for Business](../protect/zero-trust-secure-tenant.md#authentication-on-windows-uses-windows-hello-for-business) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
-| [Attack Surface Reduction rules are applied to Windows devices to prevent exploitation of vulnerable system components](../protect/zero-trust-secure-tenant.md#attack-surface-reduction-rules-are-applied-to-windows-devices-to-prevent-exploitation-of-vulnerable-system-components) | <ul><li>Microsoft Intune Plan 1</li><li>Defender for Endpoint Plan 1</li></ul> |
-| [Defender Antivirus policies protect Windows devices from malware](../protect/zero-trust-secure-tenant.md#defender-antivirus-policies-protect-windows-devices-from-malware) | <ul><li>Microsoft Intune Plan 1</li><li>Defender for Endpoint Plan 1</li></ul>  |
-| [Defender Antivirus policies protect macOS devices from malware](../protect/zero-trust-secure-tenant.md#defender-antivirus-policies-protect-macos-devices-from-malware) | <ul><li>Microsoft Intune Plan 1</li><li>Defender for Endpoint Plan 1</li></ul>  |
-| [Windows Firewall policies protect against unauthorized network access](../protect/zero-trust-secure-tenant.md#windows-firewall-policies-protect-against-unauthorized-network-access) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
-| [macOS Firewall policies protect against unauthorized network access](../protect/zero-trust-secure-tenant.md#macos-firewall-policies-protect-against-unauthorized-network-access) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
+| [Local administrator credentials on Windows are protected by Windows LAPS](../protect/zero-trust-secure-ddevices.md#local-administrator-credentials-on-windows-are-protected-by-windows-laps) | <ul><li>Microsoft Intune Plan</li></ul> |
+| [Local administrator credentials on macOS are protected during enrollment by macOS LAPS](../protect/zero-trust-secure-devices.md#local-administrator-credentials-on-macos-are-protected-during-enrollment-by-macos-laps) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
+| [Local account usage on Windows is restricted to reduce unauthorized access](../protect/zero-trust-secure-devices.md#local-account-usage-on-windows-is-restricted-to-reduce-unauthorized-access) | <ul><li>Microsoft Intune Plan 1</li></ul> |
+| [Data on Windows is protected by BitLocker encryption](../protect/zero-trust-secure-devices.md#data-on-windows-is-protected-by-bitlocker-encryption) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
+| [FileVault encryption protects data on macOS devices](../protect/zero-trust-secure-devices.md#filevault-encryption-protects-data-on-macos-devices) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
+| [Authentication on Windows uses Windows Hello for Business](../protect/zero-trust-secure-devices.md#authentication-on-windows-uses-windows-hello-for-business) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
+| [Attack Surface Reduction rules are applied to Windows devices to prevent exploitation of vulnerable system components](../protect/zero-trust-secure-devices.md#attack-surface-reduction-rules-are-applied-to-windows-devices-to-prevent-exploitation-of-vulnerable-system-components) | <ul><li>Microsoft Intune Plan 1</li><li>Defender for Endpoint Plan 1</li></ul> |
+| [Defender Antivirus policies protect Windows devices from malware](../protect/zero-trust-secure-devices.md#defender-antivirus-policies-protect-windows-devices-from-malware) | <ul><li>Microsoft Intune Plan 1</li><li>Defender for Endpoint Plan 1</li></ul>  |
+| [Defender Antivirus policies protect macOS devices from malware](../protect/zero-trust-secure-devices.md#defender-antivirus-policies-protect-macos-devices-from-malware) | <ul><li>Microsoft Intune Plan 1</li><li>Defender for Endpoint Plan 1</li></ul>  |
+| [Windows Firewall policies protect against unauthorized network access](../protect/zero-trust-secure-devices.md#windows-firewall-policies-protect-against-unauthorized-network-access) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
+| [macOS Firewall policies protect against unauthorized network access](../protect/zero-trust-secure-devices.md#macos-firewall-policies-protect-against-unauthorized-network-access) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
 
 For license details, see:
 
-- [Microsoft Intune licensing](../fundamentals/licenses)
+- [Microsoft Intune licensing](../fundamentals/licenses.md)
 - [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
 
 ## Secure Data
@@ -93,13 +93,11 @@ Protect data on devices and in transit, and enforce secure access to organizatio
 
 For license details, see:
 
-- [Microsoft Intune licensing](../fundamentals/licenses)
+- [Microsoft Intune licensing](../fundamentals/licenses.md)
 - [Microsoft Entra licensing](/entra/fundamentals/licensing)
 
 ## Related content
 
-- [Deployment guide for Microsoft Intune](../fundamentals/get-started-with-intune)
-- [Protect data and devices with Microsoft Intune](../protect/device-protect)
+- [Deployment guide for Microsoft Intune](../fundamentals/get-started-with-intune.md)
+- [Protect data and devices with Microsoft Intune](../protect/device-protect.md)
 - [Configure Microsoft Entra for increased security (Preview)](/entra/fundamentals/configure-security)
-
-
