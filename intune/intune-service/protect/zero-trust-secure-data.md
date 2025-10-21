@@ -17,7 +17,6 @@ Protecting sensitive data across mobile apps and networks is a key part of a Zer
 
 ## Zero Trust security recommendations
 
-
 ### Data on Android is protected by app protection policies<!-- 24549 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24549](./includes/secure-recommendations/24549.md)]
@@ -33,7 +32,6 @@ Protecting sensitive data across mobile apps and networks is a key part of a Zer
 ### Conditional Access policies block access from noncompliant devices<!-- 24824 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24824](./includes/secure-recommendations/24824.md)]
-
 
 ### Secure Wi-Fi profiles protect iOS devices from unauthorized network access<!-- 24839 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->

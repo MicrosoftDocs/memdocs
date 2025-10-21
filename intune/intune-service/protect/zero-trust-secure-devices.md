@@ -45,6 +45,10 @@ Securing endpoints is a critical part of a Zero Trust strategy. These Intune rec
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24551](./includes/secure-recommendations/24551.md)]
 
+### Attack Surface Reduction rules are applied to Windows devices to prevent exploitation of vulnerable system components<!-- 24574 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
+[!INCLUDE [24574](./includes/secure-recommendations/24574.md)]
+
 ### Defender Antivirus policies protect Windows devices from malware<!-- 24575 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24575](./includes/secure-recommendations/24575.md)]
@@ -53,13 +57,14 @@ Securing endpoints is a critical part of a Zero Trust strategy. These Intune rec
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24784](./includes/secure-recommendations/24784.md)]
 
-### Data on Android is protected by app protection policies<!-- 24549 -->
+### Windows Firewall policies protect against unauthorized network access<!-- 24540 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24549](./includes/secure-recommendations/24549.md)]
+[!INCLUDE [24540](./includes/secure-recommendations/24540.md)]
 
-### Data on iOS/iPadOS is protected by app protection policies<!-- 24548 -->
+### macOS Firewall policies protect against unauthorized network access<!-- 24552 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
+[!INCLUDE [24552](./includes/secure-recommendations/24552.md)]
+
 
 ## Related content
 

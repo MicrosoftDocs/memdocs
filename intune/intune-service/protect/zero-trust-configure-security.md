@@ -61,7 +61,7 @@ Secure endpoints through device configuration and security policies.
 
 | Check | Minimum License Requirements  |
 |-------|-------------------------------|
-| [Local administrator credentials on Windows are protected by Windows LAPS](../protect/zero-trust-secure-ddevices.md#local-administrator-credentials-on-windows-are-protected-by-windows-laps) | <ul><li>Microsoft Intune Plan</li></ul> |
+| [Local administrator credentials on Windows are protected by Windows LAPS](../protect/zero-trust-secure-devices.md#local-administrator-credentials-on-windows-are-protected-by-windows-laps) | <ul><li>Microsoft Intune Plan</li></ul> |
 | [Local administrator credentials on macOS are protected during enrollment by macOS LAPS](../protect/zero-trust-secure-devices.md#local-administrator-credentials-on-macos-are-protected-during-enrollment-by-macos-laps) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
 | [Local account usage on Windows is restricted to reduce unauthorized access](../protect/zero-trust-secure-devices.md#local-account-usage-on-windows-is-restricted-to-reduce-unauthorized-access) | <ul><li>Microsoft Intune Plan 1</li></ul> |
 | [Data on Windows is protected by BitLocker encryption](../protect/zero-trust-secure-devices.md#data-on-windows-is-protected-by-bitlocker-encryption) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
