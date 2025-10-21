@@ -1,7 +1,7 @@
 ---
 title: View enrollment reports
 description: Monitor and troubleshoot issues with enrollment restrictions and enrollment status page assignments.
-ms.date: 06/27/2024
+ms.date: 10/20/2025
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
@@ -36,7 +36,7 @@ Use the enrollment failures report to view enrollment failures for all users or 
     > ![Example image of the enrollment failures report, showing the enrollment failure details for a selected row.](./media/enrollment-restrictions-set/enrollment-failure-report-details-2112.png)
 
 ## Troubleshooting + support page
-Use the enrollment failures report on the Troubleshooting + support page to view enrollment failures for a select user. This report shows every failed enrollment attempt the user encountered along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method. You can also view other data about the user on this page, including all assignments, devices, and app protection statuses they're associated with.
+Use the enrollment failures report on the Troubleshooting + support page to view enrollment failures for a select user. This report shows every failed enrollment attempt the user encountered along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method. You can also view other data about the user on this page, including all assignments, devices, and app protection statuses they're associated with. To see enrollment failures for unlicensed users, select **Filter**, and then choose **User not found or licensed**.  
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Troubleshooting + support**.
 2. Search for the user by name or email address.

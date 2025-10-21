@@ -55,7 +55,7 @@ These remote actions are especially useful in environments where devices are sha
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Play sound to locate lost devices**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ## How to play lost mode sound from the Intune admin center
 

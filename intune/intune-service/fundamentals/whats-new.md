@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/22/2025
+ms.date: 10/23/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -146,6 +146,28 @@ The [settings catalog](../configuration/settings-catalog.md) lists all the setti
 
 Now you can edit the managed Google Play organization name directly in the Microsoft Intune admin center under **Devices** > **Android** > **Enrollment** > **Managed Google Play**. The updated name, which is validated on input, appears in the admin center. It might also appear on Android device lock screens within a message like, *This device is managed by [organization name]*. For more information, see [Connect Intune account to managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
+### Device management
+
+#### Settings catalog supports Windows 11 25H2 settings <!--35412243-->
+
+The release of Windows 11 25H2 includes new policy configuration service providers (CSPs). These settings are available in the [settings catalog](../configuration/settings-catalog-common-features.md) for you to configure.
+
+To learn more, see the [Microsoft Intune Settings Catalog Updated to Support New Windows 11, version 25H2 Settings](https://aka.ms/Intune/Windows25H2-settings) blog post.
+
+To get started with the settings catalog, see:
+
+- [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Common tasks you can complete using the settings catalog](../configuration/settings-catalog-common-features.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+#### New client version for Remote Help for macOS <!-- 35620986 -->
+
+With the new Remote Help client, version 1.0.2510071, Microsoft Intune now supports macOS 26. Earlier versions of the Remote Help client aren't compatible with macOS 26. The app is automatically updated through Microsoft AutoUpdate (MAU) if opted-in, so no action is required from you or your users. The latest client version resolves an issue that previously caused the screen to appear blank on first launch and fail to connect. For more information, see [Use Remote Help with Microsoft Intune](remote-help.md?tabs=macos).
+
 ### Device security
 
 #### Intune to end support for legacy Apple MDM software updates<!-- 33004946 -->
@@ -179,11 +201,11 @@ These functionalities [are now available through declarative device management (
 
 The following protected apps are now available for Microsoft Intune:
 
-- Total Triage by CareXM  
-- Intapp by Intapp Inc.  
-- ANDPAD by ANDPAD Inc.  
-- ANDPAD CHAT by ANDPAD Inc.  
-- ANDPAD Inspection by ANDPAD Inc.  
+- Total Triage by CareXM
+- Intapp by Intapp Inc.
+- ANDPAD by ANDPAD Inc.
+- ANDPAD CHAT by ANDPAD Inc.
+- ANDPAD Inspection by ANDPAD Inc.
 - ANDPAD Blueprint by ANDPAD Inc.
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
@@ -226,7 +248,7 @@ For more information, see [Support statement for Windows 10 in Intune](#update-t
 
 You can now upload a PowerShell script to install Enterprise App Catalog apps as an alternative to using a command line. This option gives you more flexibility when deploying apps.
 
-For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).  
+For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -803,7 +825,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Declarative software update reports for Apple devices<!-- 25207078, 31557946 -->
 
-You can now use several new [software update reports for Apple devices](../protect/software-updates-ios.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
+You can now use several new [software update reports for Apple devices](../protect/updates/apple-reports.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
 
 - A *per-device software update report* - Per-device software update reports are available in the Intune Admin center by going to *Devices* and then selecting an applicable device. In the Devices Overview pane for that device, below Monitor, you see the report listed as **iOS software updates** for iOS or iPadOS devices, and as **macOS software updates** for macOS devices.
 
@@ -1332,6 +1354,356 @@ App protection policies (APP) support Microsoft Edge (v136 or later), OneDrive (
 #### New icon for Microsoft Intune<!-- 29148691 -->
 Microsoft Intune has a new icon. The Intune icon is being updated across platforms and apps associated with Intune, such as the Intune admin center and Intune Company Portal app. The new icon will gradually be implemented over the next few months.
 
+<<<<<<< HEAD
+=======
+## Week of April 21, 2025 (Service release 2504)
+
+### Microsoft Intune Suite
+
+#### Endpoint Privilege Management elevation rule support for file arguments and parameters<!-- 28077130 -->
+
+File elevation rules for Endpoint Privilege Management (EPM) now support [command line file arguments](../protect/epm-elevation-rules.md#use-file-arguments-for-elevation-rules). When an elevation rule is configured to define one or more file arguments, EPM allows that file to run in an elevated request only when one of the defined arguments is used. EPM blocks elevation of the file should a command line argument be used that isn't defined by the elevation rule. Use of file arguments in your file elevation rules can help you refine how and for what intent different files are successfully run in an elevated context by Endpoint Privilege Management.
+
+EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
+
+### App management
+
+#### Relationship viewer available for Intune apps<!-- 17644546 -->
+
+The relationship viewer provides a graphical depiction of the relationships between different applications in the system, including superseding and dependent applications. Admins can find relationship viewer in Intune by selecting **Apps** > **All apps** > *a Win32 app* > **Relationship viewer**. The relationship viewer supports both Win32 apps and Enterprise App Catalog apps. For more information, see [App relationship viewer](../apps/apps-win32-app-management.md#app-relationship-viewer).
+
+#### Apple VPP using new API v2.0<!-- 29567109 -->
+
+Apple recently updated the API for their volume purchase program (VPP), which is used to manage apps and books. Apple's related API is now version 2.0. Version 1.0 is deprecated. To support the Apple updates, Microsoft Intune uses the new API, which is faster and more scalable than the previous version.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
+#### More org data storage service options for Android and iOS apps<!-- 29606862 -->
+
+Intune now provides more storage services options when saving copies of org data using an app protection policy for Android or iOS. In addition to the existing org data storage options, you can also select **iManage** and **Egnyte** as storage options. You must select these services as exemptions from your block list by setting **Save copies of org data** to **Block**, then selecting the allowed storage services next to the **Allow user to save copies to selected services** setting. This setting doesn't apply to all applications.
+
+For more information about data protection using app protection policies, see [iOS app protection policy settings - Data protection](../apps/app-protection-policy-settings-ios.md#data-protection) and [Android app protection policy settings - Data protection](../apps/app-protection-policy-settings-android.md#data-protection).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS
+
+### Device configuration
+
+#### Updated device configuration template for Windows Delivery Optimization<!-- 32411831 -->
+
+The device configuration template for Windows [Delivery Optimization](../configuration/delivery-optimization-windows.md) is updated. The new template uses the settings format in the Settings Catalog. Settings are taken directly from the Windows Configuration Service Providers (CSPs) for Windows Delivery Optimization, as documented by Windows at [Policy CSP – DeliveryOptimization](/windows/client-management/mdm/policy-csp-DeliveryOptimization).
+
+With this change, you can no longer create new versions of the old profile. However, your preexisting instances of the old profile remain available to use.
+
+For more information about this change, see the Intune Customer Success blog at [Support tip: Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-windows-device-configuration-policies-migrating-to-unified-settings-/4189665).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 10
+> - Windows 11
+
+#### New settings available in the Apple settings catalog<!-- 31523569 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There's a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type.
+
+##### macOS
+
+**Login > Login Window**:
+- Show Input Menu
+
+### Android settings in the Settings Catalog <!-- 31524383 -->
+
+The settings catalog supports Android Enterprise and Android Open Source Project (AOSP).
+
+Currently, to configure Android settings, you use the built-in templates. The settings from these templates are also available in the settings catalog. More settings are continually being added.
+
+In the Intune admin center, when you create a device configuration profile, you select the **Profile Type** (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > select your **Platform** > **Profile Type**). All the profile types are moved to **Profile Type** > **Templates**.
+
+This change:
+
+- Is a UI change with no impact on your existing policies - Your existing policies won't change. You can continue to create, edit, and assign these policies the same way.
+- Provides the same UI experience as iOS/iPadOS, macOS, and Windows templates.
+
+In the new settings catalog experience, the management mode associated with the setting is available in the tooltip.
+To get started with settings catalog, see [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise
+> - AOSP
+
+### Device enrollment
+
+#### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
+
+You can use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template is available to configure in the enrollment profile. It can contain a combination of custom text and predefined variables (like device serial number, device type), and for user-affiliated devices, the owner's username. For more information, see:
+
+ - [Android Enterprise corporate-owned devices with work profile](../enrollment/android-corporate-owned-work-profile-enroll.md#create-an-enrollment-profile)
+ - [Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md#create-an-enrollment-profile)
+ - [Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md#step-2-create-new-enrollment-profile)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android
+
+#### Enrollment-time grouping for Android Enterprise corporate devices <!-- 17530981 -->
+
+Now available for Android Enterprise corporate-owned devices, *enrollment time grouping* enables you to assign a static Microsoft Entra group to devices at enrollment time. When a targeted Android device enrolls, it receives all assigned policies, apps, and settings, typically by the time the user lands on the home screen. You can configure one static Microsoft Entra group per enrollment profile under the **Device group** tab in the Microsoft Intune admin center. For more information, see [Enrollment time grouping](../enrollment/enrollment-time-grouping.md).
+
+### Device management
+
+#### Intune ending support for custom profiles for personally owned work profile devices<!-- 27424084 -->
+
+Starting in April 2025, Intune no longer supports custom profiles for Android Enterprise personally owned work profile devices. With this end of support:
+
+- Admins can't create new custom profiles for personally owned work profile devices. However, admins can still view and edit previously created custom profiles.
+
+- Personally owned work profile devices that currently have a custom profile assigned won't experience any immediate change of functionality. Because these profiles are no longer supported, the functionality set by these profiles might change in the future.
+
+- Intune technical support no longer supports custom profiles for personally owned work profile devices.
+
+All custom policies should be replaced with other policy types. Learn more about [Intune ending support for personally owned work profile custom profiles](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414)
+
+### Device security
+
+#### New settings added to the Windows security baseline version 24H2<!-- 32413310 -->
+
+> [!NOTE]
+> Rollout of the new settings for the security baseline is underway, but taking longer than usual. Due to this delay, the new settings might not be available until the week of May 5, 2025.
+
+The most recent Intune security baseline for Windows, version 24H2, is updated to include 15 new settings for managing the Windows Configuration Service Provider (CSP) for [*Lanman Server*](/windows/client-management/mdm/policy-csp-lanmanserver) and [*Lanman Workstation*](/windows/client-management/mdm/policy-csp-lanmanworkstation). These settings were previously unavailable in the baseline due to missing CSP support. The addition of these settings provides better control and configuration options.
+
+This update is an update to an existing baseline version and not a new baseline version. So, the new settings aren't visible in the baselines properties until you edit and save the baseline:
+
+- **Pre-existing baseline instances**:
+Before the new settings are available in a preexisting baseline instance, you must select and then *Edit* that baseline instance. To have the baseline deploy the new settings, you must then *Save* that baseline instance. When the baseline is opened for editing, each of the new settings becomes visible with its default security baseline configuration. Before saving, you can reconfigure one or more of the new settings. Or, make no changes other than to save the current configuration that then uses the baseline defaults for each of the new settings.
+
+- **New baseline instances**:
+When you create a new instance of a Windows security baseline version 24H2, that instance includes the new settings along with all the previously available settings.
+
+Following are the new settings that are added to the version 24H2 baseline, and the baseline default for each:
+[**Lanman Server**](../protect/security-baseline-settings-mdm-all.md?pivots=mdm-24h2#lanman-server)
+- [Audit Client Does Not Support Encryption](/windows/client-management/mdm/policy-csp-lanmanserver#auditclientdoesnotsupportencryption) – Baseline default: *Enabled*
+- [Audit Client Does Not Support Signing](/windows/client-management/mdm/policy-csp-lanmanserver#auditclientdoesnotsupportsigning) – Baseline default: *Enabled*
+- [Audit Insecure Guest Logon](/windows/client-management/mdm/policy-csp-lanmanserver#auditinsecureguestlogon) – Baseline default: *Enabled*
+- [Auth Rate Limiter Delay In Ms](/windows/client-management/mdm/policy-csp-lanmanserver#authratelimiterdelayinms) – Baseline default: *2000*
+- [Enable Auth Rate Limiter](/windows/client-management/mdm/policy-csp-lanmanserver#enableauthratelimiter) – Baseline default: *Enabled*
+- [Max SMB 2 Dialect](/windows/client-management/mdm/policy-csp-lanmanserver#maxsmb2dialect) – Baseline default: *SMB 3.1.1*
+- [Min SMB 2 Dialect](/windows/client-management/mdm/policy-csp-lanmanserver#minsmb2dialect) – Baseline default: *SMB 3.0.0*
+- [Enable Mailslots](/windows/client-management/mdm/policy-csp-lanmanserver#enablemailslots) - Baseline default: *Disabled*
+
+[**Lanman Workstation**](../protect/security-baseline-settings-mdm-all.md?pivots=mdm-24h2#lanman-workstation)
+- [Audit Insecure Guest Logon](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#auditinsecureguestlogon) – Baseline default: *Enabled*
+- [Audit Server Does Not Support Encryption](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#auditserverdoesnotsupportencryption) – Baseline default: *Enabled*
+- [Audit Server Does Not Support Signing](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#auditserverdoesnotsupportsigning) – Baseline default: *Enabled*
+- [Max SMB 2 Dialect](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#maxsmb2dialect) – Baseline default: *SMB 3.1.1*
+- [Min SMB 2 Dialect](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#minsmb2dialect) – Baseline default: *SMB 3.0.0*
+- [Require Encryption](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#requireencryption) – Baseline default: *Disabled*
+- [Enable Mailslots](/windows/client-management/mdm/policy-csp-LanmanWorkstation#enablemailslots) - Baseline default: *Disabled*
+
+For more information, see [Intune security baselines](../protect/security-baselines.md).
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 31436626, 31437166, 31494251 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- FileOrbis for Intune by FileOrbis FZ LLC
+- PagerDuty for Intune by PagerDuty, Inc.
+- Outreach.io by Outreach Corporation
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Tenant administration
+
+#### Updates to Intune admin center home page<!-- 25914324 -->
+
+Microsoft Intune admin center's home page includes more links to interactive demos, documentation, and training. To see these updates, navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+## Week of April 14, 2025
+
+### Device configuration
+
+#### Hotpatch updates for Windows 11 Enterprise are now available<!--27009405 -->
+
+Hotpatch updates for Windows 11 Enterprise, version 24H2 for x64 (AMD/Intel) CPU devices are now available. With hotpatch updates, you can deploy and apply security updates faster to help protect your organization from cyberattacks, while minimizing user disruptions.
+From the Microsoft Intune admin center, navigate to **Devices > Windows updates > Create Windows quality update policy** and toggle it to **Allow**.
+
+**Enroll and prepare**
+The Windows quality update policy can auto-detect if your targeted devices are eligible for hotpatch updates. Devices running Windows 10 and Windows 11, version 23H2 and lower continue to receive the standard monthly security updates, helping ensure that your ecosystem stays protected and productive.
+
+**Maintain robust security with hotpatch updates**
+The general availability of hotpatch technology for Windows clients marks a significant step forward in enhancing security and productivity for Windows 11 Enterprise users.
+Hotpatch updates help ensure that devices are secured more quickly and that users stay productive with minimal disruptions. We encourage organizations to take advantage of this new feature to maintain a robust security posture while minimizing the impact on the user experience. Hotpatch updates are generally available on Intel and AMD-powered devices as of April 2, 2025, with the feature becoming available on Arm64 devices at a later date.
+
+For more information, see:
+
+- [Hotpatch for Windows client now available - Windows IT Pro Blog](https://techcommunity.microsoft.com/blog/windows-itpro-blog/hotpatch-for-windows-client-now-available/4399808)
+
+- [Hotpatch updates](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates)
+- [Hotpatch for client comes to Windows 11 Enterprise](https://techcommunity.microsoft.com/blog/windows-itpro-blog/hotpatch-for-client-comes-to-windows-11-enterprise/4302717)
+
+- [Skilling: Hotpatch on Windows client and server](https://techcommunity.microsoft.com/blog/windows-itpro-blog/skilling-snack-hotpatch-on-windows-client-and-server/4358086)
+
+- [The hottest way to update Windows 11 and Windows Server 2025](https://techcommunity.microsoft.com/event/windowsevents/the-hottest-way-to-update-windows-11-and-windows-server-2025/4376174)
+
+- [Hotpatch release notes](https://support.microsoft.com/help/5048812)
+
+## Week of March 24, 2025
+
+### Device security
+
+### New Microsoft Tunnel readiness check for auditd package<!-- 28148207 -->
+
+The [Microsoft Tunnel readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) now includes a check for the **auditd** package for Linux System Auditing (LSA). The presence of *auditd* is optional and not a required prerequisite by Microsoft Tunnel for the Linux server.
+
+When the mst-readiness tool runs, it now raises a non-blocking warning if the audit package isn't installed. By default, Red Hat Enterprise Linux versions 7 and later install this package by default. Ubuntu versions of Linux currently require this optional package to be installed.
+
+For more information on *auditd* and how to install it on your Microsoft Tunnel server, see [Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#linux-system-auditing).
+
+## Week of March 17, 2025 (Service release 2503)
+
+### Microsoft Intune Suite
+
+#### Endpoint Privilege Management supports ARM 64-bit devices<!-- 28313554 -->
+
+[Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) now supports managing file elevations on devices that run on ARM 64-bit architecture.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+### Device configuration
+
+#### New settings available in the Apple settings catalog <!-- 31056047 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+##### iOS/iPadOS
+
+**Restrictions**:
+- Allow Apple Intelligence Report
+- Allow Default Calling App Modification
+- Allow Default Messaging App Modification
+- Allow Mail Smart Replies
+- Allow Notes Transcription
+- Allow Safari Summary
+
+##### macOS
+
+**Remote Desktop**:
+- Remote Desktop
+
+**Restrictions**:
+- Allow Apple Intelligence Report
+- Allow Mail Smart Replies
+- Allow Notes Transcription
+- Allow Safari Summary
+
+### Device management
+
+#### New settings for Windows LAPS policy<!-- 30287386 -->
+
+Intune policies for [Windows Local Administrator Password Solution (LAPS)](../protect/windows-laps-overview.md) now include several new settings and updates to two previously available settings. [LAPS](/windows-server/identity/laps/laps-overview) is a built-in Windows solution and can help you secure the built-in local administrator account that's present on each Windows device. All the settings that you can manage through Intune LAPS policy are described in the Windows [LAPS CSP](/windows/client-management/mdm/LAPS-csp).
+
+The following new settings are available: *(Each setting name is a link that opens the CSP documentation for that setting.)*
+
+- [Automatic Account Management Enable Account](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementenableaccount)
+- [Automatic Account Management Enabled](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementenabled)
+- [Automatic Account Management Name Or Prefix](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementnameorprefix)
+- [Automatic Account Management Randomize Name](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementrandomizename)
+- [Automatic Account Management Target](/windows/client-management/mdm/laps-csp#policiesautomaticaccountmanagementtarget)
+- [Passphrase Length](/windows/client-management/mdm/laps-csp#policiespassphraselength)
+
+The following settings have new options available:
+
+- [Password Complexity](/windows/client-management/mdm/laps-csp#policiespasswordcomplexity) – The following are new options available for this setting:
+  - Passphrase (long words)
+  - Passphrase (short words)
+  - Passphrase (short words with unique prefixes)
+- [Post Authentication Actions](/windows/client-management/mdm/laps-csp#policiespostauthenticationactions) - The following option is now available for this setting:
+  - Reset the password, log off the managed account, and terminate any remaining processes: upon expiration of the grace period, the managed account password is reset, any interactive logon sessions using the managed account are logged off, and any remaining processes are terminated.
+
+By default, each setting in LAPS policies is set to *Not configured*, which means the addition of these new settings won't change the behavior of your existing policies. To make use of the new settings and options, you can create new profiles or edit your existing profiles.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+#### Configure devices to stay on the latest OS version using declarative device management (DDM)<!-- 28323647 -->
+
+As part of the [Settings Catalog](../configuration/settings-catalog.md), you can now configure devices to automatically update to the latest OS version using DDM. To use these new settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS**for platform > **Settings catalog** for profile type.
+
+**Declarative device management > Software Update Enforce Latest**.
+
+- **Enforce Latest Software Update Version**: If true, devices upgrade to the latest OS version that's available for that device model. This feature uses the Software Update Enforcement configuration and forces devices to restart and install the update after the deadline passes.
+- **Delay In Days**: Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured.
+- **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
+
+Learn more about configuring managed updates through DDM at [Managed software updates](../protect/updates/apple.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
+#### Remote Help supports Azure Virtual Desktop muti-session<!-- 24590822 -->
+
+Remote Help now provides support for multi-session AVD with several users on a single virtual machine. Earlier, Remote Help was supporting Azure Virtual Desktop (AVD) sessions with one user on one virtual machine (VM).
+
+For more information, see:
+
+- [Remote Help](../fundamentals/remote-help.md)
+- [Remote Help on windows](../fundamentals/remote-help-windows.md)
+- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
+
+The Remote Help app for Windows client is updated to version 5.1.1998.0 and includes resolution of accessibility issues.
+
+#### Copilot assistant for device query<!-- 26933762 -->
+
+You can now use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**. For more information, see [Query with Copilot in device query](../copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 31070614, 31093579, 31093668, 31187306 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- FacilyLife by Apleona GmbH (iOS)
+- Intapp 2.0 by Intapp, Inc. (Android)
+- DealCloud by Intapp, Inc. (Android)
+- Lemur Pro for Intune by Critigen LLC (iOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+## Week of March 03, 2025
+
+### Monitor and troubleshoot
+
+#### Updates to the Feature updates report<!--31305861 -->
+
+We're introducing a new **Update Substate** in Service-side data. This substate is displayed in the reports for devices that are invalid in Microsoft Entra and is known as **Not supported**.
+
+For more information, see [Use Windows Update for Business reports for Windows Updates](../protect/windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report)
+
+>>>>>>> 7bccd7e85d9eeb6296e648c3981e0d4e786a6652
 ## What's new archive
 <!-- Past announcements that are older than six months will be moved to the archive -->
 
