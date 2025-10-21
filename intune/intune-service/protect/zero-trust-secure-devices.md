@@ -65,6 +65,21 @@ Securing endpoints is a critical part of a Zero Trust strategy. These Intune rec
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24552](./includes/secure-recommendations/24552.md)]
 
+### Windows Update policies are enforced to reduce risk from unpatched vulnerabilities<!-- 24553 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24553](./includes/secure-recommendations/24553.md)]
+
+### Security baselines are applied to Windows devices to strengthen security posture<!-- 24573 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
+[!INCLUDE [24573](./includes/secure-recommendations/24573.md)]
+
+### Update policies for macOS are enforced to reduce risk from unpatched vulnerabilities<!-- 24690 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24690](./includes/secure-recommendations/24690.md)]
+
+### Update policies for iOS/iPadOS are enforced to reduce risk from unpatched vulnerabilities<!-- 24554 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
 
 ## Related content
 

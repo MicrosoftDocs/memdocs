@@ -45,10 +45,6 @@ Ensure tenant-level governance, identity, and configuration consistency.
 | [Terms and Conditions policies protect access to sensitive data](../protect/zero-trust-secure-tenant.md#terms-and-conditions-policies-protect-access-to-sensitive-data) | <ul><li>Microsoft Intune Plan 1</li></ul> |
 | [Company Portal branding and support settings enhance user experience and trust](../protect/zero-trust-secure-tenant.md#company-portal-branding-and-support-settings-enhance-user-experience-and-trust) | <ul><li>Microsoft Intune Plan 1</li></ul> |
 | [Endpoint Analytics is enabled to help identify risks on Windows devices](../protect/zero-trust-secure-tenant.md#endpoint-analytics-is-enabled-to-help-identify-risks-on-windows-devices) | <ul><li>Microsoft Intune Plan 1</li></ul> |
-| [Windows Update policies are enforced to reduce risk from unpatched vulnerabilities](../protect/zero-trust-secure-tenant.md#windows-update-policies-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
-| [Security baselines are applied to Windows devices to strengthen security posture](../protect/zero-trust-secure-tenant.md#security-baselines-are-applied-to-windows-devices-to-strengthen-security-posture) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
-| [Update policies for macOS are enforced to reduce risk from unpatched vulnerabilities](../protect/zero-trust-secure-tenant.md#update-policies-for-macos-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
-| [Update policies for iOS/iPadOS are enforced to reduce risk from unpatched vulnerabilities](../protect/zero-trust-secure-tenant.md#update-policies-for-iosipados-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
 
 For license details, see:
 
@@ -72,6 +68,10 @@ Secure endpoints through device configuration and security policies.
 | [Defender Antivirus policies protect macOS devices from malware](../protect/zero-trust-secure-devices.md#defender-antivirus-policies-protect-macos-devices-from-malware) | <ul><li>Microsoft Intune Plan 1</li><li>Defender for Endpoint Plan 1</li></ul>  |
 | [Windows Firewall policies protect against unauthorized network access](../protect/zero-trust-secure-devices.md#windows-firewall-policies-protect-against-unauthorized-network-access) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
 | [macOS Firewall policies protect against unauthorized network access](../protect/zero-trust-secure-devices.md#macos-firewall-policies-protect-against-unauthorized-network-access) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
+| [Windows Update policies are enforced to reduce risk from unpatched vulnerabilities](../protect/zero-trust-secure-tenant.md#windows-update-policies-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
+| [Security baselines are applied to Windows devices to strengthen security posture](../protect/zero-trust-secure-tenant.md#security-baselines-are-applied-to-windows-devices-to-strengthen-security-posture) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
+| [Update policies for macOS are enforced to reduce risk from unpatched vulnerabilities](../protect/zero-trust-secure-tenant.md#update-policies-for-macos-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
+| [Update policies for iOS/iPadOS are enforced to reduce risk from unpatched vulnerabilities](../protect/zero-trust-secure-tenant.md#update-policies-for-iosipados-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | <ul><li>Microsoft Intune Plan 1</li></ul>  |
 
 For license details, see:
 
