@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/14/2025
+ms.date: 10/21/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -60,6 +60,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 ## Week of October 20, 2025  
 
 ### Device management  
+
+#### Settings catalog supports Windows 11 25H2 settings <!--35412243-->
+
+The release of Windows 11 25H2 includes new policy configuration service providers (CSPs). These settings are available in the [settings catalog](../configuration/settings-catalog-common-features.md) for you to configure.
+
+To learn more, see the [Microsoft Intune Settings Catalog Updated to Support New Windows 11, version 25H2 Settings](https://aka.ms/Intune/Windows25H2-settings) blog post.
+
+To get started with the settings catalog, see:
+
+- [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Common tasks you can complete using the settings catalog](../configuration/settings-catalog-common-features.md)
+
+Applies to:
+
+- Windows
 
 #### New client version for Remote Help for macOS <!-- 35620986 -->
 With the new Remote Help client, version 1.0.2510071, Microsoft Intune now supports macOS 26. Earlier versions of the Remote Help client aren't compatible with macOS 26. The app is automatically updated through Microsoft AutoUpdate (MAU) if opted-in, so no action is required from you or your users. The latest client version resolves an issue that previously caused the screen to appear blank on first launch and fail to connect. For more information, see [Use Remote Help with Microsoft Intune](remote-help.md?tabs=macos).  
