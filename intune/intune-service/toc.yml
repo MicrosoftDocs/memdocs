@@ -353,11 +353,11 @@ items:
       - name: Configure security recommendations using Zero Trust
         href: ./protect/zero-trust-configure-security.md
       - name: Secure tenants
-        href:./protect/zero-trust-configure-tenant.md
+        href: ./protect/zero-trust-configure-tenant.md
       - name: Secure devices
-        href:./protect/zero-trust-configure-devices.md
+        href: ./protect/zero-trust-configure-devices.md
       - name: Secure data
-        href:./protect/zero-trust-configure-data.md
+        href: ./protect/zero-trust-configure-data.md
 
   - name: Create and deploy Intune policies
     items:
