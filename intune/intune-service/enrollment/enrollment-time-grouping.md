@@ -1,7 +1,7 @@
 ---
 title: Set up enrollment time grouping
 description: Overview and setup of the enrollment time grouping feature in Microsoft Intune.
-ms.date: 04/15/2025
+ms.date: 10/14/2025
 ms.topic: how-to
 ms.reviewer:
 ms.collection:
@@ -13,7 +13,7 @@ ms.collection:
 # Enrollment time grouping in Microsoft Intune
 
 **Applies to:**
-* Windows 11
+* Windows 11  
 * Android
 
 Set up enrollment time grouping to speed up app and policy provisioning during device enrollment. With enrollment time grouping, you can add a Microsoft Entra security group in the enrollment profile so that devices are added to the group during enrollment, rather than after. You can then assign required apps and policy configuration to the group. This preknowledge of the security group that the device will become member of after enrollment enables Intune to deliver the configurations to the device quickly on enrollment, reducing post-enrollment latency and improving time to productivity.
@@ -22,7 +22,7 @@ If you don't configure enrollment time grouping, enrolled devices are grouped ba
 
 This article provides an overview of enrollment time grouping, how to configure it, and feature limitations.
 
-## Prerequisites
+## Requirements  
 
 Enrollment time grouping is supported on devices provisioned via:
 
@@ -75,7 +75,7 @@ After you configure enrollment time grouping in the enrollment profile, you can 
 
     1. **Membership type**: Select **Assigned**.
 
-    1. **Owners**: Select the **No owners selected** link.
+    1. **Owners**: Select the **No owners selected** link.  
 
     1. On the **Add owners** screen that opens, add the Intune Provisioning Client as owner:
 
@@ -118,11 +118,25 @@ After you save the profile, you can return to it at any time to edit group setti
 
 When devices assigned the enrollment profile enroll, they become members of the Microsoft Entra security group and start receiving apps and policies. After the admin or end user completes the initial device setup, they land on the home screen of the device. At this point, all targeted apps and policies should already be on the device or in the process of being installed.
 
-If you remove a device from the group, Microsoft Intune reevaluates policy configurations and forces the device to check in to obtain new configurations.
+If you remove a device from the group, Microsoft Intune reevaluates policy configurations and forces the device to check in to obtain new configurations.  
+
+## Reporting  
+
+To access reporting for enrollment time grouping, go to **Devices** > **Monitor** > **Enrollment time grouping failures**. The available report shows only failures. Specifically, information about devices that failed to become members of a specific static device group during these setup processes:  
+
+- Windows Autopilot preparation provisioning  
+- Android Enterprise fully managed enrollment  
+- Android Enterprise corporate-owned work profile enrollment  
+- Android Enterprise dedicated enrollment  
+
+Recently updated information can take up to 20 minutes to appear in the report. You must have the *Microsoft.Intune/ManagedDevices/Read* RBAC permission to view the report.
+
+> [!IMPORTANT]
+> This report provides awareness about devices that fail to be added to the security groups configured in the enrollment profiles. Failure to join the group during enrollment might cause configuration to change or be removed from the device after enrollment, so we recommend monitoring the report continuously so that you can take the necessary mitigating actions right away. You could, for example, use a custom app that scans the report data on a regular schedule. The app then generates a notification when it finds new devices in the report.  
 
 ## Known issues and limitations
 
-Reporting for enrollment time grouping isn't currently available.
+There are no known issues or limitations with enrollment time grouping. 
 
 ## Troubleshooting
 
