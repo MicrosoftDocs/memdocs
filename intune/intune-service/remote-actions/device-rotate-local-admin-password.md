@@ -51,7 +51,7 @@ For more information, see [Configure support for macOS ADE local account with LA
 >
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Rotate Local Admin Password**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ## How to rotate the local admin password from the Intune admin center
 

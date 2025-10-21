@@ -1,12 +1,8 @@
 ---
-title: Intune data platform schema
-description: Overview of Intune data platform schema.
-author: MandiOhlinger
-ms.date: 07/15/2025
+title: Intune Data Platform Schema
+description: Review the Intune data platform schema for device query and inventory, including supported properties and data types in Microsoft Intune.
+ms.date: 10/09/2025
 ms.topic: reference
-ms.reviewer: Abby Starr
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Intune data platform
@@ -17,9 +13,9 @@ This article goes over the properties supported in the Intune Data Platform. The
 
 Each table (entity) in this page lists the types of queries that are supported with the following information:
 
-- Property: The name of the variable we collect and store.  
-- Type: The data type you can expect to see, such as *string* or *boolean*.  
-- Description: The purpose of the property. 
+- Property: The name of the variable we collect and store.
+- Type: The data type you can expect to see, such as *string* or *boolean*.
+- Description: The purpose of the property.
 - Platform:  The operating systems that support the property.
 
 For entities that include Android data, the following platforms are supported:
@@ -572,7 +568,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | DriverDeviceId(Key) | string (max 256 characters) | Device ID |Windows|
 | FriendlyName | string (max 256 characters) | Such as "Microsoft Device Association Root Enumerator" |Windows|
 | DriverDescription | string (max 256 characters) | Driver description |Windows|
-| DriverVersion | string (max 20 characters) | Driver version |Windows|
+| DriverVersion | string | Driver version |Windows|
 | InfName | string (max 260 characters) | Associated inf file |Windows|
 | Class | string (max 256 characters) | Device/driver class name |Windows|
 | ProviderName | string (max 256 characters) | Driver provider |Windows|
