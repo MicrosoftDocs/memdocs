@@ -104,7 +104,7 @@ For more information, see [Support statement for Windows 10 in Intune](#update-t
 
 You can now upload a PowerShell script to install Enterprise App Catalog apps as an alternative to using a command line. This option gives you more flexibility when deploying apps.
 
-For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).  
+For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -681,7 +681,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Declarative software update reports for Apple devices<!-- 25207078, 31557946 -->
 
-You can now use several new [software update reports for Apple devices](../protect/software-updates-ios.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
+You can now use several new [software update reports for Apple devices](../protect/updates/apple-reports.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
 
 - A *per-device software update report* - Per-device software update reports are available in the Intune Admin center by going to *Devices* and then selecting an applicable device. In the Devices Overview pane for that device, below Monitor, you see the report listed as **iOS software updates** for iOS or iPadOS devices, and as **macOS software updates** for macOS devices.
 
@@ -1510,7 +1510,7 @@ As part of the [Settings Catalog](../configuration/settings-catalog.md), you can
 - **Delay In Days**: Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured.
 - **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
 
-Learn more about configuring managed updates through DDM at [Managed software updates](../protect/managed-software-updates-ios-macos.md).
+Learn more about configuring managed updates through DDM at [Managed software updates](../protect/updates/apple.md).
 
 > [!div class="checklist"]
 > Applies to:

@@ -34,7 +34,7 @@ For more information, see [Windows Autopilot Reset](/autopilot/windows-autopilot
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Wipe**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ### How to use Autopilot reset from the Intune admin center
 

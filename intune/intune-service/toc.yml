@@ -292,10 +292,10 @@ items:
         href: ./protect/software-updates-guide-android.md
       - name: iOS/iPadOS
         displayName: software updates
-        href: ./protect/software-updates-guide-ios-ipados.md
+        href: ./protect/updates/software-updates-guide-ios-ipados.md
       - name: macOS
         displayName: software updates
-        href: ./protect/software-updates-guide-macos.md
+        href: ./protect/updates/software-updates-guide-macos.md
 
   - name: Set up Microsoft Intune
     items:
@@ -1244,8 +1244,8 @@ items:
               displayName: gpo, admx, settings catalog, windows
               href: ./configuration/group-policy-analytics-migrate.md
 
-        - name: Properties catalog
-          displayName: windows
+        - name: Properties catalog (device inventory)
+          displayName: windows, device inventory
           href: ./configuration/properties-catalog.md
         - name: Custom settings & scripts
           items:
@@ -1767,7 +1767,7 @@ items:
         items:
         - name: Get incomplete user enrollment report
           href: ./enrollment/enrollment-report-company-portal-abandon.md
-        - name: View enrollment reports 
+        - name: View enrollment reports
           href: ./enrollment/view-enrollment-reports.md
         - name: Troubleshoot device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune

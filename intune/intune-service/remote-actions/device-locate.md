@@ -85,7 +85,7 @@ Before you can use the locate functionality, you must configure your devices to 
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ## Locate a device
 

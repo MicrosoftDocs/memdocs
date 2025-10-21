@@ -137,7 +137,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
   For more specific information, go to:
 
   - [Endpoint Analytics Overview](../../analytics/index.md)
-  - [Enroll Intune devices into Endpoint analytics](../../analytics/enroll-intune.md)
+  - [Enroll Intune devices into Endpoint analytics](../../analytics/configure.md)
 
 - **[Microsoft 365](/deployoffice/about-microsoft-365-apps)** for end user productivity Office apps, including Outlook, Teams, Sharepoint, OneDrive, and more
 
