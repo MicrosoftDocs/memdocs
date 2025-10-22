@@ -3,7 +3,7 @@ title: Monitor results of your device compliance policies in Microsoft Intune
 description: Use the device compliance dashboard to understand overall device compliance the per policy and per setting device compliance results.
 author: lenewsad
 ms.author: lanewsad
-ms.date: 05/21/2024
+ms.date: 10/22/2025
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
@@ -222,7 +222,7 @@ In Intune, the default compliance policy is evaluated when a calculation is trig
 
 - It happens frequently on new enrollments to ensure users are aware of blocking reasons. The actual frequency depends on the platform and the type of enrollment.
 - It happens periodically to enforce device contact requirements, like the initial user log-on after following the device being offline for a few days.
-- It happens when new compliance information is found during a device sync. This occurs, for example, when you make updates to device properties in compliance policies, such as when you change the operating system version.
+- It happens when new compliance information, such as a change in device properties, is found during a device sync.    
 - It happens when a compliance policy assignment is added, after the next device sync. If a compliance policy assignment is removed, such as with exclusion targeting, the compliance calculation will be triggered with the existing service data. 
 - It happens when a user [checks compliance status](../user-help/check-status-company-portal-website.md) on the Company Portal website or app.
 
