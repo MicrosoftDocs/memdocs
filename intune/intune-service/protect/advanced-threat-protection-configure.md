@@ -51,11 +51,11 @@ Before Intune and Defender for Endpoint can work together, you must set up the s
 
 2. In [**Microsoft Defender** portal](https://security.microsoft.com/):
 
-   1. Use the left-hand pane to scroll down and select **Settings** > **Endpoints**. Then, on the *Endpoints* pane, select **Advanced features**.
+   1. Use the left-hand pane to scroll down and expand **System** > select **Settings** > and then select **Endpoints** in the *Settings* pane.
 
       :::image type="content" source="./media/advanced-threat-protection-configure/defender-console-settings-endpoints.png" alt-text="Screen shot of the Defender console showing the path to Settings and then Endpoints.":::
 
-   2. On the advanced features pane, scroll down to locate the entry for **Microsoft Intune connection** and set the toggle to **On**.
+   2. On the *Endpoints* pane, go to **General** > **Advanced features**, and then scroll down to locate the entry for **Microsoft Intune connection** and set the toggle to **On**.
 
       :::image type="content" source="./media/advanced-threat-protection-configure/atp-security-center-intune-toggle.png" alt-text="Screen shot of the Microsoft Intune connection setting.":::
 
@@ -64,7 +64,7 @@ Before Intune and Defender for Endpoint can work together, you must set up the s
    > [!NOTE]
    > Once the connection is established, the services are expected to sync with each other _at least_ once every 24 hours. The number of days without sync until the connection is considered unresponsive is configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Endpoint security** > **Microsoft Defender for Endpoint** > **Number of days until partner is unresponsive**
 
-3. Return to **Microsoft Defender for Endpoint** page in the Microsoft Intune admin center where you configure aspects of the Defender for Endpoint integration. The Connection status should now display **Enabled**.
+3. Return to **Microsoft Defender for Endpoint** page in the Microsoft Intune admin center where you configure aspects of the Defender for Endpoint integration. The Connection status is now active.
 
    On this page, review each category and the available configurations for platform support and platforms specific options you plan to use, and set those toggles to **On**. You can return later to enable or disable any of these options.
 
