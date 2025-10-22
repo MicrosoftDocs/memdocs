@@ -16,15 +16,15 @@ ms.collection:
 # Use Microsoft Defender for Endpoint to enforce device compliance with Microsoft Intune
 When you integrate Microsoft Defender for Endpoint with Microsoft Intune you can use Intune to enforce device compliance, configure devices to help prevent security breaches, and limit the impact of threats from devices that run Defender for Endpoint.
 
-To get started, implement the following configurations, which are detailed in depth in [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md):
+To get started, implement the following configurations, which are detailed in depth in [Configure Microsoft Defender for Endpoint in Intune](../protect/microsoft-defender-integrate.md):
 
-- **Establish a service-to-service connection between Intune and Microsoft Defender for Endpoint**. This connection lets Microsoft Defender for Endpoint collect data about machine risk from supported devices you manage with Intune. See [Connect Microsoft Defender for Endpoint to Intune](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune).
+- **Establish a service-to-service connection between Intune and Microsoft Defender for Endpoint**. This connection lets Microsoft Defender for Endpoint collect data about machine risk from supported devices you manage with Intune. See [Connect Microsoft Defender for Endpoint to Intune](../protect/microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune).
 
-- **Use an Intune policy to onboard devices with Microsoft Defender for Endpoint**. You onboard devices to configure them to communicate with Microsoft Defender for Endpoint and to provide data that helps assess their risk level. See [Onboard devices](../protect/advanced-threat-protection-configure.md#onboard-devices).
+- **Use an Intune policy to onboard devices with Microsoft Defender for Endpoint**. You onboard devices to configure them to communicate with Microsoft Defender for Endpoint and to provide data that helps assess their risk level. See [Onboard devices](../protect/microsoft-defender-integrate.md#onboard-devices).
 
-- **Use a device compliance policy to set the level of risk you want to allow**. Risk levels are reported by Microsoft Defender for Endpoint. Devices that exceed the allowed risk level are identified as noncompliant. See [Create and assign compliance policy to set device risk level](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level) and [Create and assign app protection policy to set device risk level](../protect/advanced-threat-protection-configure.md#create-and-assign-app-protection-policy-to-set-device-risk-level).
+- **Use a device compliance policy to set the level of risk you want to allow**. Risk levels are reported by Microsoft Defender for Endpoint. Devices that exceed the allowed risk level are identified as noncompliant. See [Create and assign compliance policy to set device risk level](../protect/microsoft-defender-integrate.md#create-and-assign-compliance-policy-to-set-device-risk-level) and [Create and assign app protection policy to set device risk level](../protect/microsoft-defender-integrate.md#create-and-assign-app-protection-policy-to-set-device-risk-level).
 
-- **Use a Conditional Access policy** to block users from accessing corporate resources from devices that are noncompliant. See [Create a Conditional Access policy](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy).
+- **Use a Conditional Access policy** to block users from accessing corporate resources from devices that are noncompliant. See [Create a Conditional Access policy](../protect/microsoft-defender-integrate.md#create-a-conditional-access-policy).
 
 - Take advantage of Microsoft Defender for Endpoints Threat & Vulnerability Management (TVM) and [use Intune security tasks to remediate endpoint weakness identified by TVM](atp-manage-vulnerabilities.md).
 
@@ -77,11 +77,11 @@ You can integrate Microsoft Defender for Endpoint with Microsoft Intune as a Mob
 
 Because you have an Intune device compliance policy to classify devices with a *Medium* or *High* level of risk as noncompliant, the compromised device is classified as noncompliant. This classification allows your Conditional Access policy to kick in and block access from that device to your corporate resources.
 
-For devices that run Android, you can use Intune policy to modify the configuration of Microsoft Defender for Endpoint on Android. For more information, see [Microsoft Defender for Endpoint web protection](../protect/advanced-threat-protection-manage-android.md).
+For devices that run Android, you can use Intune policy to modify the configuration of Microsoft Defender for Endpoint on Android. For more information, see [Microsoft Defender for Endpoint web protection](../protect/microsoft-defender-configure-android.md).
 
 ## Next steps
 
-- To connect Microsoft Defender for Endpoint to Intune, onboard devices, and configure Conditional Access policies, see [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md).
+- To connect Microsoft Defender for Endpoint to Intune, onboard devices, and configure Conditional Access policies, see [Configure Microsoft Defender for Endpoint in Intune](../protect/microsoft-defender-integrate.md).
 
 Learn more from the Intune documentation:
 

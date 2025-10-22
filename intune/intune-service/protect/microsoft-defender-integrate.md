@@ -17,7 +17,7 @@ ms.collection:
 
 Use the information and procedures in this article to connect Microsoft Defender for Endpoint with Intune and to then onboard and configure devices for Defender for Endpoint. Information in this article includes the following general steps:
 
-- **Establish a service-to-service connection between Intune and Microsoft Defender for Endpoint**. This connection enables Intune to interact with Microsoft Defender on devices, including installation (onboarding) and configuration of the Defender for Endpoint client, and integration of machine risk scores from supported devices you manage with Intune. See the [prerequisites](../protect/advanced-threat-protection.md#prerequisites) to use Microsoft Defender for Endpoint with Intune.
+- **Establish a service-to-service connection between Intune and Microsoft Defender for Endpoint**. This connection enables Intune to interact with Microsoft Defender on devices, including installation (onboarding) and configuration of the Defender for Endpoint client, and integration of machine risk scores from supported devices you manage with Intune. See the [prerequisites](../protect/microsoft-defender-with-intune.md#prerequisites) to use Microsoft Defender for Endpoint with Intune.
 - **Onboard devices to Defender for Endpoint**. You onboard devices to configure them to communicate with Microsoft Defender for Endpoint and to provide data that helps assess their risk level. Each platform has separate requirements to onboard to Defender.
 - **Use Intune device compliance policies to set the level of risk you want to allow**. Microsoft Defender for Endpoint reports on the risk level of devices. Devices that exceed the allowed risk level are identified as noncompliant.
 - **Use Conditional Access policy** to block users from accessing corporate resources while using a device that is identified as noncompliant.
@@ -47,24 +47,24 @@ Before Intune and Defender for Endpoint can work together, you must set up the s
    >
    > If the connection is already active, the link to open the Defender portal reads: **Open the Microsoft Defender for Endpoint admin console**.
 
-   :::image type="content" source="./media/advanced-threat-protection-configure/atp-device-compliance-open-microsoft-defender.png" alt-text="Screen shot that shows the patch to open the Microsoft Defender Security Center.":::
+   :::image type="content" source="./media/microsoft-defender-integrate/open-microsoft-defender.png" alt-text="Screen shot that shows the patch to open the Microsoft Defender Security Center.":::
 
 2. In [**Microsoft Defender** portal](https://security.microsoft.com/):
 
-   1. Use the left-hand pane to scroll down and select **Settings** > **Endpoints**. Then, on the *Endpoints* pane, select **Advanced features**.
+   1. Use the left-hand pane to scroll down and expand **System** > select **Settings** > and then select **Endpoints** in the *Settings* pane.
 
-      :::image type="content" source="./media/advanced-threat-protection-configure/defender-console-settings-endpoints.png" alt-text="Screen shot of the Defender console showing the path to Settings and then Endpoints.":::
+      :::image type="content" source="./media/microsoft-defender-integrate/defender-console-settings-endpoints.png" alt-text="Screen shot of the Defender console showing the path to Settings and then Endpoints.":::
 
-   2. On the advanced features pane, scroll down to locate the entry for **Microsoft Intune connection** and set the toggle to **On**.
+   2. On the *Endpoints* pane, go to **General** > **Advanced features**, and then scroll down to locate the entry for **Microsoft Intune connection** and set the toggle to **On**.
 
-      :::image type="content" source="./media/advanced-threat-protection-configure/atp-security-center-intune-toggle.png" alt-text="Screen shot of the Microsoft Intune connection setting.":::
+      :::image type="content" source="./media/microsoft-defender-integrate/intune-connection-toggle.png" alt-text="Screen shot of the Microsoft Intune connection setting.":::
 
    3. Select **Save preferences** to complete the connection between Intune and Defender for Endpoint.
 
    > [!NOTE]
    > Once the connection is established, the services are expected to sync with each other _at least_ once every 24 hours. The number of days without sync until the connection is considered unresponsive is configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Endpoint security** > **Microsoft Defender for Endpoint** > **Number of days until partner is unresponsive**
 
-3. Return to **Microsoft Defender for Endpoint** page in the Microsoft Intune admin center where you configure aspects of the Defender for Endpoint integration. The Connection status should now display **Enabled**.
+3. Return to **Microsoft Defender for Endpoint** page in the Microsoft Intune admin center where you configure aspects of the Defender for Endpoint integration. The Connection status is now active.
 
    On this page, review each category and the available configurations for platform support and platforms specific options you plan to use, and set those toggles to **On**. You can return later to enable or disable any of these options.
 
@@ -128,7 +128,7 @@ With this path, you provide a name for the onboarding policy and select both the
 
 2. On this tab, select **Deploy preconfigured policy**.
 
-   :::image type="content" source="./media/advanced-threat-protection-configure/select-preconfigured-policy.jpg" alt-text="Screen shot that displays the path to the preconfigured policy option.":::
+   :::image type="content" source="./media/microsoft-defender-integrate/select-preconfigured-policy.jpg" alt-text="Screen shot that displays the path to the preconfigured policy option.":::
 
 3. For Platform, select **Windows** for devices managed directly by Intune, or **Windows (ConfigMgr)** for devices managed through the Tenant Attach scenario.  For Profile select **Endpoint detection and response**.
 
@@ -156,7 +156,7 @@ With this path, you can define all aspects of the initial onboarding policy befo
 
    - **[Deprecated] Telemetry Reporting Frequency**: This setting is deprecated and no longer applies to new devices. The setting remains visible in the policy UI for visibility for older policies that had this configured.
 
-   :::image type="content" source="./media/advanced-threat-protection-configure/automatic-package-configuration.png" alt-text="Screen shot of the configuration options for Endpoint Detection and Response.":::
+   :::image type="content" source="./media/microsoft-defender-integrate/automatic-package-configuration.png" alt-text="Screen shot of the configuration options for Endpoint Detection and Response.":::
 
    > [!NOTE]
    >
@@ -191,7 +191,7 @@ After you establish the service-to-service connection between Intune and Microso
 
 Intune doesn't support an automatic onboarding package for Android as it does for Windows devices. For configuration guidance for Intune, see [Overview of Microsoft Defender for Endpoint for Android](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) in the Microsoft Defender for Endpoint documentation for the prerequisites and onboarding instructions for Android.
 
-For devices that run Android, you can also use Intune policy to modify Microsoft Defender for Endpoint on Android. For more information, see [Microsoft Defender for Endpoint web protection](../protect/advanced-threat-protection-manage-android.md).
+For devices that run Android, you can also use Intune policy to modify Microsoft Defender for Endpoint on Android. For more information, see [Microsoft Defender for Endpoint web protection](../protect/microsoft-defender-configure-android.md).
 
 ### Onboard iOS/iPadOS devices
 
@@ -338,8 +338,8 @@ Choose **Select** to save the Grant configuration.
 
 ## Related content
 
-- [Configure Microsoft Defender for Endpoint settings on Android](../protect/advanced-threat-protection-manage-android.md)
-- [Monitor compliance for risk levels](../protect/advanced-threat-protection-monitor.md)
+- [Configure Microsoft Defender for Endpoint settings on Android](../protect/microsoft-defender-configure-android.md)
+- [Monitor compliance for risk levels](../protect/microsoft-defender-monitor.md)
 
 Learn more from the Intune documentation:
 

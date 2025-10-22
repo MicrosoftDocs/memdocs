@@ -259,7 +259,7 @@ For additional information on Microsoft Defender for Endpoint integration in Con
   - **Medium** - The device is evaluated as compliant if existing threats on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be non-compliant.
   - **High** - This option is the least secure, and allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
 
-  To set up Microsoft Defender for Endpoint as your defense threat service, see [Enable Microsoft Defender for Endpoint with Conditional Access](advanced-threat-protection.md).
+  To set up Microsoft Defender for Endpoint as your defense threat service, see [Enable Microsoft Defender for Endpoint with Conditional Access](microsoft-defender-with-intune.md).
 
 ## Windows Subsystem for Linux
 
