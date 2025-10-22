@@ -2687,6 +2687,26 @@
       "source_path": "intune/intune-service/fundamentals/remote-help-webapp.md",
       "redirect_url": "/intune/intune-service/fundamentals/remote-help",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection-configure.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-integrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection-manage-android.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-configure-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection-monitor.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-with-intune",````
+      "redirect_document_id": false
     }
   ]
 }
