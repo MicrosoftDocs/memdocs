@@ -15,7 +15,7 @@ ms.collection:
 
 > [!NOTE]
 >
-> This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md).
+> This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md).
 
 Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
@@ -116,7 +116,7 @@ Learn how to protect access to company resource based on device, network, and ap
 - [CrowdStrike Falcon for Mobile](crowdstrike-falcon-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Jamf Mobile Threat Defense](jamf-mtd-connector.md) - *(Android, iOS/iPadOS)*
 - [Lookout for Work](lookout-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) - *(Android, iOS/iPadOS, Windows)*
+- [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) - *(Android, iOS/iPadOS, Windows)*
 - [Pradeo](pradeo-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [SentinelOne](Sentinelone-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Sophos Mobile](sophos-mtd-connector.md) - *(Android, iOS/iPadOS)*

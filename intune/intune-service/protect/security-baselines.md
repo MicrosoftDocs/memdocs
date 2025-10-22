@@ -83,7 +83,7 @@ The following security baseline instances are available for use with Intune. Use
 -->
 
 - **Microsoft Defender for Endpoint baseline**:  
-  *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites))*.
+  *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender for Endpoint](microsoft-defender-with-intune.md#prerequisites))*.
   - [Version 24H1](security-baseline-settings-defender.md?pivots=mde-v24h1)
   - [Version 6](security-baseline-settings-defender.md?pivots=atp-december-2020)
   - [Version 5](security-baseline-settings-defender.md?pivots=atp-sept-2020)

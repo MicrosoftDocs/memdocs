@@ -835,13 +835,13 @@ items:
         - name: Microsoft Defender for Endpoint
           items:
           - name: Microsoft Defender for Endpoint
-            href: ./protect/advanced-threat-protection.md
+            href: ./protect/microsoft-defender-with-intune.md
           - name: Configure Defender for Endpoint
-            href: ./protect/advanced-threat-protection-configure.md
+            href: ./protect/microsoft-defender-integrate.md
           - name: Android web protection
-            href: ./protect/advanced-threat-protection-manage-android.md
+            href: ./protect/microsoft-defender-configure-android.md
           - name: Monitor Defender for Endpoint
-            href: ./protect/advanced-threat-protection-monitor.md
+            href: ./protect/microsoft-defender-monitor.md
           - name: Microsoft Defender for Endpoint Security settings management
             items:
             - name: Microsoft Defender for Endpoint Security settings management
