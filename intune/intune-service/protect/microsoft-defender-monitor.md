@@ -36,4 +36,4 @@ To view the onboarding status of your Intune-managed devices:
 
 ## Related content
 
-[Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md)
+[Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md)

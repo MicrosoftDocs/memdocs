@@ -42,7 +42,7 @@ Intune leverages other Microsoft services for compliance, including:
 - [Microsoft Purview](/purview/purview): A suite of data governance and compliance tools.
 - [Microsoft Entra ID](/entra/fundamentals/whatis): Identity and access management, formerly known as Azure Active Directory (Azure AD).
 - [Microsoft Purview Compliance Manager](/purview/compliance-manager): Tools for managing compliance across your organization.
-- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md): An enterprise endpoint security platform.
+- [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md): An enterprise endpoint security platform.
 
 ## Microsoft Intune capabilities for compliance
 

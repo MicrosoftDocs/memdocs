@@ -13,7 +13,7 @@ ms.collection:
 
 # Configure Microsoft Defender for Endpoint web protection on Android devices managed by Intune
 
-When you integrate [Microsoft Defender for Endpoint](../protect/advanced-threat-protection-configure.md) with Microsoft Intune, you can use device configuration profiles to modify some Defender for Endpoint settings on Android devices.
+When you integrate [Microsoft Defender for Endpoint](../protect/microsoft-defender-integrate.md) with Microsoft Intune, you can use device configuration profiles to modify some Defender for Endpoint settings on Android devices.
 
 By default, Microsoft Defender for Endpoint for Android includes and enables the Microsoft Defender for Endpoint [Web protection](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) feature that can help to secure devices against web threats and protect users from phishing attacks.
 
@@ -158,7 +158,7 @@ To configure web protection on devices, use the following procedures to create a
 
 ## Next steps
 
-- [Monitor device compliance status for risk levels](../protect/advanced-threat-protection-monitor.md)
+- [Monitor device compliance status for risk levels](../protect/microsoft-defender-monitor.md)
 - [Use security tasks with Defender for Endpoints Vulnerability Management to remediate problems on devices](../protect/atp-manage-vulnerabilities.md)
 
 - Learn more from the Microsoft Defender for Endpoint documentation:
