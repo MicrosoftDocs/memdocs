@@ -2705,7 +2705,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/advanced-threat-protection",
-      "redirect_url": "/intune/intune-service/protect/microsoft-defender-with-intune",````
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-with-intune",
       "redirect_document_id": false
     }
   ]
