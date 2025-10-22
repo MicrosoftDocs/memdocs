@@ -218,13 +218,13 @@ To learn more about conflict resolution for policies, see [Compliance and device
 
 ## How Intune evaluates the default compliance policy
 
-In Intune, the default compliance policy is evaluated when a calculation is triggered. While not every [device sync](../configuration/device-profile-troubleshoot#policy-refresh-intervals) results in a compliance calculation, the following cases will:
+In Intune, the default compliance policy is evaluated when a calculation is triggered. While not every [device sync](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals) results in a compliance calculation, the following cases will:
 
 - It happens frequently on new enrollments to ensure users are aware of blocking reasons. The actual frequency depends on the platform and the type of enrollment.
 - It happens periodically to enforce device contact requirements, like the initial user log-on after following the device being offline for a few days.
-- It happens when new compliance information is found during device sync, like updates to device properties included in compliance policies (like  Operating System version changing).
-- It happens when a compliance policy assignment is added, after the next device sync. If a compliance policy assignment is removed, like with exclusion targeting, compliance calculation will be triggered with existing service data. 
-- It happens when a user [checks compliance status](../user-help/check-status-company-portal-website) on the Company Portal website or app.
+- It happens when new compliance information is found during a device sync. This occurs, for example, when you make updates to device properties in compliance policies, such as when you change the operating system version.
+- It happens when a compliance policy assignment is added, after the next device sync. If a compliance policy assignment is removed, such as with exclusion targeting, the compliance calculation will be triggered with the existing service data. 
+- It happens when a user [checks compliance status](../user-help/check-status-company-portal-website.md) on the Company Portal website or app.
 
 The evaluation process identifies the device as noncompliant if any of the following statements are false.  
 - The device has a compliance policy assigned: At least one applicable compliance policy must be assigned to the device with an applicable setting.
