@@ -128,11 +128,11 @@ When you use a production-ready installation of Configuration Manager current br
 
 These updates include:
 
-- New versions, like version 2303, 2309, or 2403.
+- New versions
 
-- Updates that include new features for your current version.
+- Updates that include new features for your current version
 
-- Hotfixes for your version of Configuration Manager and that all customers should install.
+- Hotfixes for your version of Configuration Manager and that all customers should install
 
     > [!NOTE]
     > In-console hotfixes have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](#bkmk_supersede).
