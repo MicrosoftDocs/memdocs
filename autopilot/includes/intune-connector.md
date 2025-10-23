@@ -104,8 +104,8 @@ Starting with version **6.2504.2001.8**, the updated Intune Connector for Active
 
 1. Once the sign in process completes:
 
-   1. A **The Intune Connector for Active Directory successfully enrolled** confirmation window appears. Select **OK** to close the window.
-   1. An **A Managed Service Account with name "<MSA_name>" was successfully set up** confirmation window appears. The name of the MSA is in the format `msaODJ#####` where **#####** are five random characters. Notate the name of the MSA that was created, and then select **OK** to close the window. The name of the MSA might be needed later to configure the MSA to allow creating computer objects in OUs.
+   1. **The Intune Connector for Active Directory successfully enrolled** confirmation window appears. Select **OK** to close the window.
+   1. **A Managed Service Account with name "<MSA_name>" was successfully set up** confirmation window appears. The name of the MSA is in the format `msaODJ#####` where **#####** are five random characters. Notate the name of the MSA that was created, and then select **OK** to close the window. The name of the MSA might be needed later to configure the MSA to allow creating computer objects in OUs.
 
 1. The **Enrollment** tab shows **Intune Connector for Active Directory is enrolled**. The **Sign In** button is greyed out and **Configure Managed Service Account** is enabled.
 
