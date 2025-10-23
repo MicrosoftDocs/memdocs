@@ -1,6 +1,6 @@
 ---
 ms.topic: include
-ms.date: 05/29/2025
+ms.date: 10/23/2025
 ---
 
 <!-- This file is shared by the following articles:
@@ -11,13 +11,17 @@ windows-autopilot-hybrid.md
 
 Headings are driven by article context. -->
 
-The purpose of the Intune Connector for Active Directory, also known as the Offline Domain Join (ODJ) Connector, is to join computers to an on-premises domain during the Windows Autopilot process. The Intune Connector for Active Directory creates computer objects in a specified Organizational Unit (OU) in Active Directory during the domain join process.
+The **Intune Connector for Active Directory**, also known as the Offline Domain Join (ODJ) Connector, joins computers to an on-premises domain during the Windows Autopilot process. The connector creates computer objects in a specified Organizational Unit (OU) in Active Directory during the domain join process.
 
 > [!IMPORTANT]
->
-> Starting with Intune 2501, Intune uses an updated Intune Connector for Active Directory that strengthens security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts). When the Intune Connector for Active Directory is downloaded from within Intune, the updated Intune Connector for Active Directory is downloaded. The previous legacy Intune Connector for Active Directory is still available for download at [Intune Connector for Active Directory](https://www.microsoft.com/download/details.aspx?id=105392&msockid=3cb707200c316b2c119712450d8b6a5d), but Microsoft recommends using the updated Intune Connector for Active Directory installer going forward. The previous legacy Intune Connector for Active Directory is now deprecated and will stop accepting enrollment requires. If still in use, it needs to be updated to the updated Intune Connector for Active Directory immediately to avoid loss of functionality. For more information, see [Intune Connector for Active Directory with low-privileged account for Windows Autopilot Hybrid Microsoft Entra join deployments](https://aka.ms/Intune-Connector-blog).
->
-> Updating of the Intune Connector for Active Directory to the updated version isn't done automatically. The legacy Intune Connector for Active Directory needs to be manually uninstalled followed by the updated connector manually downloaded and installed. Instructions for the manual uninstall and install process of the Intune Connector for Active Directory are provided in the following sections.
+> Starting with Intune 2501, the Intune Connector for Active Directory is updated and improves security by following least-privilege principles using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts). When you download the connector from Intune, you automatically get the updated version.
+> 
+> The [deprecated legacy connector is still available](https://www.microsoft.com/download/details.aspx?id=105392) and will soon stop accepting enrollment requests. If you still use the legacy connector, update immediately to avoid loss of functionality. For more information, see the [Intune Connector for Active Directory with low-privileged account for Windows Autopilot Hybrid Microsoft Entra join deployments](https://aka.ms/Intune-Connector-blog) blog post.
+> 
+> To update the connector, you must:
+> 
+> 1. Manually uninstall the legacy connector. There isn't an automatic option.
+> 2. Download and install the updated connector (described in this article).
 
 > [!TIP]
 >
@@ -29,11 +33,13 @@ Select the tab that corresponds to the version of the Intune Connector for Activ
 
 ### [:::image type="icon" source="/autopilot/images/icons/software-18.svg"::: **Updated Connector**](#tab/updated-connector)
 
-Before beginning the installation, make sure that all of the [Intune connector for Active Directory server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
+#### Before you begin
 
-> [!TIP]
->
-> It's preferable, but not required, that the administrator installing and configuring the Intune Connector for Active Directory has appropriate domain rights as documented in [Intune Connector for Active Directory requirements](../windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements). This requirement allows the Intune Connector for Active Directory installer and configuration process to properly set permissions for the MSA on the **Computer** container or OUs where computer objects are created. If the administrator doesn't have these permissions, an administrator that does have the appropriate permissions needs to follow the section [Increase the computer account limit in the Organizational Unit (OU)](../windows-autopilot-hybrid.md?tab=updated-connector#increase-the-computer-account-limit-in-the-organizational-unit).
+- Before you install, make sure that all of the [Intune connector for Active Directory server requirements](/autopilot/windows-autopilot-hybrid?tabs=intune-connector-requirements#requirements) are met.
+
+- Microsoft recommends (not required) that the administrator installing and configuring the Intune Connector for Active Directory has the domain rights listed in [Intune Connector for Active Directory requirements](../windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements). These rights allow the Intune Connector for Active Directory installer and configuration process to set permissions for the Managed Service Account (MSA) on the **Computer** container or OUs where computer objects are created.
+
+  If the administrator lacks these permissions, another administrator with the appropriate rights must [Increase the computer account limit in the Organizational Unit (OU)](../windows-autopilot-hybrid.md?tab=updated-connector#increase-the-computer-account-limit-in-the-organizational-unit).
 
 #### Turn off Internet Explorer Enhanced Security Configuration
 
