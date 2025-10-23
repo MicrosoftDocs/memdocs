@@ -3,6 +3,7 @@ title: What is Microsoft Intune Advanced Analytics
 description: Discover what Microsoft Intune Advanced Analytics is, how it extends endpoint analytics with advanced device insights, proactive troubleshooting, and enhanced reporting.
 ms.date: 10/09/2025
 ms.topic: concept-article
+ms.subservice: suite
 ---
 
 # What is Microsoft Intune Advanced Analytics

@@ -3,6 +3,7 @@ title: Deploying Advanced Analytics
 description: Learn how to deploy Microsoft Intune Advanced Analytics, enable advanced analytics features, and integrate endpoint analytics for proactive device management.
 ms.date: 10/09/2025
 ms.topic: concept-article
+ms.subservice: suite
 ---
 
 # Deploying Advanced Analytics
