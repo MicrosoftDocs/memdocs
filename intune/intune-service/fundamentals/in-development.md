@@ -54,6 +54,26 @@ Soon Endpoint Privilege Management (EPM) will support the use of [support approv
 
 ## App management
 
+### More volume options available in Managed Home Screen<!-- 16462284 -->
+
+We're adding more volume control options to the Managed Home Screen (MHS) app for Android Enterprise dedicated and fully managed devices. With this update, you can enable additional controls for call, ring, notification, and alarm volumes, giving users greater flexibility to adjust sound levels based on their needs.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise (dedicated and fully managed devices)
+
+### Reset Managed Google Play store mode to Basic<!-- 33632857 -->
+
+You'll soon be able to reset the Managed Google Play store layout from *Custom* back to *Basic* in the Intune admin center under **Apps** > **All apps** > **Create Managed Google Play app**.
+
+In **Basic** mode, all approved apps are visible to users. In **Custom** mode, newly approved apps must be added to collections. When you reset to Basic, Intune deletes all existing collections. The **Reset to Basic** button appears only when the store is in Custom mode and shows immediate success or failure.
+ 
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android
+
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies will soon provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -66,6 +86,21 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 <!-- *********************************************** -->
 
 ## Device configuration
+
+### Recovery Lock settings catalog settings are available for macOS<!-- 32541429 -->
+
+On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.
+
+In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
+
+  - Set a recovery lock password
+  - Configure a password rotation schedule
+  - Clear a recovery lock password
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
 
 ### New Assist Content Sharing setting in the Android Enterprise settings catalog<!-- 31479342  -->
 
@@ -117,6 +152,51 @@ The screens you can skip during macOS enrollment include:
 ### Configure Windows Backup for Organizations<!--29202026 -->
 
 A new feature called *Windows Backup for Organizations* will be soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).
+
+<!-- *********************************************** -->
+
+## Device management
+
+### New prompts available to explore your Intune data<!-- 33787582 -->
+
+You can use Security Copilot in Intune to explore new prompts related to your data using natural language. Use these new prompts to view data on:
+
+- Users and groups
+- Role based access control (RBAC)
+- Audit logs
+
+When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
+
+Each query returns a Copilot summary to help you understand the results and offers suggestions. With this information, you can also:
+
+- Add devices or users from the results to a group so you can target apps and policies to this group.
+- Filter example queries to find or build requests that match your needs.
+
+To learn more, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+
+### Device Management type assignment filter property supports more Android enrollment options<!-- 33016364 -->
+
+When you create a policy in Intune, you can use [assignment filters](filters.md) to assign a policy based on rules you create. You can create a rule using different [app properties](filters-device-properties.md), like `deviceManagementType`.
+
+The Device Management Type property supports the following Android enrollment options for managed devices:
+
+- Corporate-owned dedicated devices with Entra ID Shared mode
+- Corporate-owned dedicated devices without Entra ID Shared mode
+- Corporate-owned with work profile
+- Corporate-owned fully managed
+- Personal-owned device with a work profile
+- AOSP user-associated devices
+- AOSP userless devices
+
+To learn more about filters and the properties you can currently use, see:
+
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
+- [App and device properties, operators, and rule editing when creating filters in Microsoft Intune](filters-device-properties.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android
 
 <!-- *********************************************** -->
 
