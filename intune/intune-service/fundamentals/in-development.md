@@ -132,7 +132,7 @@ To learn more about this change, see [New onboarding flow to managing Android En
 
 As an IT admin, you'll be able to hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens during Setup Assistant.
 
-The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
+The screens you can skip during iOS/iPadOS enrollment, and the applicable versions include:
 - **App Store** (iOS/iPadOS 14.3+)
 - **Camera button** (iOS/iPadOS 18+)
    - **Web content filtering** (iOS/iPadOS 18.2+)
@@ -151,7 +151,7 @@ The screens you can skip during macOS enrollment include:
 
 ### Configure Windows Backup for Organizations<!--29202026 -->
 
-A new feature called *Windows Backup for Organizations* will be soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).
+A new feature called *Windows Backup for Organizations* will soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).
 
 <!-- *********************************************** -->
 
@@ -214,7 +214,7 @@ As part of Microsoft's ongoing [Secure Future Initiative (SFI)]( https://www.mic
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
-We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices, and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
 
 > [!div class="checklist"]
 > Applies to:
