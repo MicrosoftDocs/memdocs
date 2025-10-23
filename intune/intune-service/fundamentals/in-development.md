@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/13/2025
+ms.date: 10/27/2025
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -44,7 +44,11 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-<!-- ## Microsoft Intune Suite -->
+## Microsoft Intune Suite
+
+### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
+
+Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device’s primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
 
 <!-- ***********************************************-->
 
@@ -82,6 +86,13 @@ There are new settings (**Devices** > **Manage devices** > **Configuration** > *
 
 ## Device enrollment
 
+### New opt-in upgrade to allow existing customers to move from managed Google Play Accounts to Microsoft Entra ID accounts  <!-- 30675087 -->
+
+Microsoft Intune will offer a new opt-in upgrade that allows existing Android Enterprise customers to move from using managed Google Play accounts to using Microsoft Entra ID accounts for Android device management. Customers are eligible if they previously used a managed Google Play account. This better together enterprise (BTE) integration streamlines the onboarding process by eliminating the need for a separate Google account and leveraging your work account. It's not required to switch account types. 
+
+To learn more about this change, see [New onboarding flow to managing Android Enterprise devices with Microsoft Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-onboarding-flow-to-managing-android-enterprise-devices-with-microsoft-intune/4206602).
+
+
 ### New Setup Assistant screens to be generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29611787 -->
 
 As an IT admin, you'll be able to hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens during Setup Assistant.
@@ -110,6 +121,12 @@ A new feature called *Windows Backup for Organizations* will be soon be generall
 <!-- *********************************************** -->
 
 ## Device security
+
+### Microsoft Tunnel for detection and protection for rooted Android devices<!- 30336962 -->
+
+We’re updating Microsoft Tunnel with the capability to detect and block access from rooted Android devices. This update will ensure that only compliant and trustworthy devices can establish secure connections through the Tunnel.
+ 
+This new capability will be available with Microsoft Tunnel for [Mobile Device Management](/intune/intune-service/protect/microsoft-tunnel-overview) (MDM) and for [Mobile Application Management](/intune/intune-service/protect/microsoft-tunnel-mam) (MAM).
 
 ### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
 

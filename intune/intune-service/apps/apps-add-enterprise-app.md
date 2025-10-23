@@ -4,6 +4,7 @@ description: Learn how to add an Enterprise App Catalog app to Microsoft Intune.
 ms.date: 06/17/2025
 ms.topic: how-to
 ms.reviewer: dguilory
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - highpri

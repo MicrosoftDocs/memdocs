@@ -6,6 +6,7 @@ ms.author: brenduns
 ms.date: 10/20/2025
 ms.topic: article
 ms.reviewer: mikedano
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -44,7 +45,7 @@ Each elevation rule instructs EPM on how to:
   - *Certificate.* File properties can be validated alongside the publisher certificate used to sign the file. Certificates are validated using Windows APIs that check attributes such as trust, certificate expiry, and revocation status.
   - *File properties.* Any other properties specified in the rules must match.
 
-- **Configure the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*. With the exception of *Elevate as current user*, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user’s profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
+- **Configure the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*. With the exception of *Elevate as current user*, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user's profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
 
   - **Deny**: Deny rules prevent the identified file from being run in an elevated context.
   - **Support approved**: An administrator must approve the [support-required elevation request](../protect/epm-support-approved.md) before the application is allowed to run with elevated privileges.

@@ -6,6 +6,7 @@ ms.author: brenduns
 ms.date: 10/20/2025
 ms.topic: how-to
 ms.reviewer: mikedano
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -91,7 +92,7 @@ When you configure the *elevation settings* and *elevation rules* policies that 
 
 - **File elevation and elevation types** – EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device. 
 
-With the exception of *Elevate as current user*, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user’s profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
+With the exception of *Elevate as current user*, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user's profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
 
   When you use Endpoint Privilege Management, there are a few options for elevation behavior:
 
