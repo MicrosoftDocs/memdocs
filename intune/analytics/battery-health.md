@@ -3,6 +3,7 @@ title: Battery Health Report in Microsoft Intune Advanced Analytics
 description: Learn how the battery health report in Microsoft Intune Advanced Analytics provides insights into device battery performance, degradation, and proactive replacement strategies.
 ms.date: 10/09/2025
 ms.topic: concept-article
+ms.subservice: suite
 ---
 
 # Battery health

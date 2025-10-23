@@ -3,6 +3,7 @@ title: Plan for Advanced Analytics
 description: Plan Microsoft Intune Advanced Analytics by understanding requirements, prerequisites, and best practices for endpoint analytics and advanced reporting.
 ms.date: 10/09/2025
 ms.topic: concept-article
+ms.subservice: suite
 ---
 
 # Plan for Advanced Analytics
