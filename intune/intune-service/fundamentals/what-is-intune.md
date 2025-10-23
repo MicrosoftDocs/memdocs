@@ -154,8 +154,8 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
   For more specific information, go to:
 
-  - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md)
-  - [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md)
+  - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md)
+  - [Configure Microsoft Defender for Endpoint in Intune](../protect/microsoft-defender-integrate.md)
 
 - **[Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)** for automatic patching of Windows, Microsoft 365 apps for enterprise, Microsoft Edge, and Microsoft Teams
 

@@ -349,7 +349,7 @@ In Intune, you can connect to your Microsoft Defender for Endpoint service, crea
 
 For more information, go to:
 
-- [Configure Microsoft Defender for Endpoint in Intune](../../intune-service/protect/advanced-threat-protection-configure.md)
+- [Configure Microsoft Defender for Endpoint in Intune](../../intune-service/protect/microsoft-defender-integrate.md)
 - [Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune](/microsoft-365/security/defender-endpoint/mac-install-with-intune)
 
 ### Built-in endpoint security
