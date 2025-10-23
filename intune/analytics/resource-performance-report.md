@@ -3,6 +3,7 @@ title: Resource Performance Report in Microsoft Intune Advanced Analytics
 description: Explore the resource performance report in Microsoft Intune Advanced Analytics for CPU and RAM insights, device performance analysis, and proactive endpoint analytics.
 ms.date: 10/09/2025
 ms.topic: concept-article
+ms.subservice: suite
 ---
 
 # Resource Performance report in Microsoft Intune Advanced Analytics
