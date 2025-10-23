@@ -1,7 +1,7 @@
 ---
 title: Review App Protection Policy Logs
 description: This topic describes how to configure Intune app protection policy (APP) logs.
-ms.date: 10/02/2025
+ms.date: 10/23/2025
 ms.topic: troubleshooting
 ms.reviewer: demerson
 ms.collection:
