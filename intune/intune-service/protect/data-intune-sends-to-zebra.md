@@ -5,7 +5,7 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 12/07/2023
 ms.topic: reference
-ms.reviewer: Jessica Yang
+ms.reviewer: jieyan
 ms.collection:
 - M365-identity-device-management
 - privacy
