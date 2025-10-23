@@ -1070,7 +1070,7 @@ This change only applies to new policies that are created in the August 2408 rel
 
 In a future release, the **UTC** text will be removed from the **Target Date Time** setting.
 
-For more information on using the settings catalog to configure software updates, see [Managed software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
+For more information on using the settings catalog to configure software updates, see [Managed software updates with the settings catalog](../protect/updates/apple.md).
 
 Applies to:
 
@@ -1514,7 +1514,7 @@ When you configure a managed software update policy using the settings catalog, 
 - Select a target OS version from a list of updates made available by Apple.
 - Manually enter the target OS version, if needed.
 
-For more information about configuring managed software update profiles in Intune, see [Use the settings catalog to configure managed software updates](../protect/managed-software-updates-ios-macos.md).
+For more information about configuring managed software update profiles in Intune, see [Use the settings catalog to configure managed software updates](../protect/updates/apple.md).
 
 Applies to:
 
@@ -2734,7 +2734,7 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
-For more information about configuring Managed software updates in Intune, see [Use the settings catalog to configure managed software updates](../protect/managed-software-updates-ios-macos.md).
+For more information about configuring Managed software updates in Intune, see [Use the settings catalog to configure managed software updates](../protect/updates/apple.md).
 
 ### Device management
 
@@ -2848,7 +2848,7 @@ For more information and a list of supported variables, see [Create a notificati
 
 #### Updated report visualization for Microsoft Defender for Endpoint connector<!--  24762035  -->
 
-We updated the reporting visualization for the Microsoft Defender for Endpoint connector. This [report visualization](../protect/advanced-threat-protection-configure.md#view-the-count-of-devices-that-are-onboarded-to-microsoft-defender-for-endpoint) displays the count of devices that are onboarded to Defender for Endpoint based on status from the Defender CSP, and visually aligns to other recent report views that use a bar to represent the percentage of devices with different status values.
+We updated the reporting visualization for the Microsoft Defender for Endpoint connector. This [report visualization](../protect/microsoft-defender-integrate.md#view-the-count-of-devices-that-are-onboarded-to-microsoft-defender-for-endpoint) displays the count of devices that are onboarded to Defender for Endpoint based on status from the Defender CSP, and visually aligns to other recent report views that use a bar to represent the percentage of devices with different status values.
 
 ### Device security
 
@@ -3395,7 +3395,7 @@ In the settings catalog, the following declarative software update settings are 
 - **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
 - **Target OS Version**: The target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
-For more information on this feature, see [Manage software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
+For more information on this feature, see [Manage software updates with the settings catalog](../protect/updates/apple.md).
 
 In the settings catalog, the following declarative passcode settings are available at **Declarative device management > Passcode**:
 
@@ -5049,7 +5049,7 @@ macOS software update policies now include the following settings to help manage
 
 - **Priority**: When the *All other updates* update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
 
-For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
+For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/updates/software-updates-macos.md).
 
 Applies to:
 

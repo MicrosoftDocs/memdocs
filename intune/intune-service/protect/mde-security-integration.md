@@ -574,6 +574,6 @@ If you previously had a third-party security tool on the machine and are now man
 
 ## Related content
 
-- [Monitor Defender for Endpoint in Intune](advanced-threat-protection-monitor.md)
+- [Monitor Defender for Endpoint in Intune](microsoft-defender-monitor.md)
 
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.

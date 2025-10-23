@@ -100,7 +100,7 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 - [Endpoint protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
 - [Extensions (macOS)](kernel-extensions-overview-macos.md)
 - [Kiosk](kiosk-settings.md)
-- [Microsoft Defender for Endpoint (Windows)](../protect/advanced-threat-protection.md)
+- [Microsoft Defender for Endpoint (Windows)](../protect/microsoft-defender-with-intune.md)
 - [Mobility Extensions (MX) profile (Android device administrator)](android-zebra-mx-overview.md)
 - [Network boundary (Windows)](network-boundary-windows.md)
 - [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)

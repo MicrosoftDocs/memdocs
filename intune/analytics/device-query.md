@@ -1,11 +1,8 @@
 ---
-title: Device query in Microsoft Intune
-description: Learn how to gain on-demand information about the state of your devices using device query.
-ms.date: 08/01/2024
+title: Device Query in Microsoft Intune
+description: Learn how to use device query in Microsoft Intune to get on-demand device state, run Kusto Query Language (KQL) queries, and troubleshoot devices.
+ms.date: 10/09/2025
 ms.topic: how-to
-ms.reviewer: Elizabeth cox
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Device query
@@ -23,7 +20,7 @@ Device query allows you to quickly gain on-demand information about the state of
   - The Intune Advanced Analytics Add-on
   - Microsoft Intune Suite
 
-- To use Device query on a device, the device must be enrolled in Endpoint Analytics. Learn [how to enroll a device in Endpoint Analytics](enroll-intune.md).
+- To use Device query on a device, the device must be enrolled in endpoint analytics. Learn [how to enroll a device in endpoint analytics](configure.md).
 
 - You can't opt out of cloud notifications (WNS)
 
@@ -52,10 +49,10 @@ For more information on Kusto Query Language, see [Learn more about Kusto Query 
 
 Best practices:
 
-- Consider how device queries can be used to help your L1/L2 engineers quicker resolve support tickets, while minimizing disruption to end users.
+- Consider how device queries can be used to help your L1/L2 engineers quicker resolve support tickets, while minimizing disruption to users.
 - Review support processes and tasks that normally require a remote control session to the end user's device. Check if these can be completed using single device query – for example – checking a running service, checking a registry key value for an application configuration, checking an application version, or reporting on top processes by CPU consumption.
 - Create saved queries for recurring investigations in your ITSM knowledge base, for L1/L2 engineers to quickly access.
-- Update processes to use remote actions for quick issue resolution. Either reboot a device, or run a proactive remediation script to resolve a known issue.
+- Update processes to use remote actions for quick issue resolution. Either reboot a device, or run a remediation script to resolve a known issue.
 
 ## Remote device actions
 
