@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 09/10/2025
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: mikedano
 ms.collection:
 - tier 1

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune App SDK for Android developer integration and testing guide - Multi-Identity
+title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide - Multi-Identity
 description: Understand Multi-Identity when incorporating Intune mobile app management (MAM) into your Android app.
 ms.date: 06/12/2025
 ms.topic: reference

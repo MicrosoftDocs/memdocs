@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 10/10/2024
 ms.topic: how-to
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-infrastructure
@@ -36,7 +35,7 @@ To support using Intune endpoint security policies with Configuration Manager de
   > [!IMPORTANT]
   > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Microsoft Intune Plan 1 subscription). See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
+- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Microsoft Intune Plan 1 subscription). See [Use Microsoft Defender for Endpoint](microsoft-defender-with-intune.md) in the Intune documentation.
 
 ### Configuration Manager version requirements for Intune endpoint security policies
 

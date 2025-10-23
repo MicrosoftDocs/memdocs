@@ -3,7 +3,6 @@ title: Set up Android (AOSP) device management in Intune for corporate-owned use
 description: Set up Intune for corporate-owned user-associated devices built on the Android Open Source Project (AOSP) platform.
 ms.date: 05/15/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: jieyan
 ms.collection:
 - M365-identity-device-management

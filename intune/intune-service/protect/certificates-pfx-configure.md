@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 11/19/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
@@ -352,7 +351,7 @@ Platforms:
 >
 >For more information about this and other changes introduced with Android 12, see the [Android Day Zero Support for Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/android-12-day-zero-support-with-microsoft-endpoint-manager/ba-p/2621665) blog post.
 
-- **User certificate type**
+- **User certificate type**  
   Format options for the *Subject name format* include two variables: **Common Name (CN)** and **Email (E)**. Email (E) would usually be set with the {{EmailAddress}} variable.
   For example: E={{EmailAddress}}
 
@@ -380,7 +379,7 @@ Platforms:
 
   User attributes aren't supported for devices that don't have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN can't get the user principal name when there isn't a user on the device.
 
-- **Device certificate type**
+- **Device certificate type**  
   Format options for the Subject name format include the following variables:
   - **{{AAD_Device_ID}}**
   - **{{DeviceId}}** - The Intune device ID

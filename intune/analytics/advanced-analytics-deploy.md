@@ -1,15 +1,8 @@
 ---
 title: Deploying Advanced Analytics
-titleSuffix: Microsoft Intune
-description: Learn how to deploy Advanced Analytics features
-ms.date: 09/10/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
+description: Learn how to deploy Microsoft Intune Advanced Analytics, enable advanced analytics features, and integrate endpoint analytics for proactive device management.
+ms.date: 10/09/2025
 ms.topic: concept-article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
 ---
 
 # Deploying Advanced Analytics
@@ -27,10 +20,10 @@ When license requirements are met, then Advanced Analytics capabilities are auto
 
 For the extra reports and capabilities on Windows devices:
 
-1. Devices need to be enrolled into Intune and onboarded to Endpoint analytics and meet the [Prerequisites](advanced-analytics-plan.md#prerequisites):
+1. Devices need to be enrolled into Intune and onboarded to endpoint analytics and meet the [Prerequisites](advanced-analytics-plan.md#prerequisites):
 
-    - [Onboard and enroll your Intune-managed devices to Endpoint analytics](enroll-intune.md)
-    - [Onboard and enroll your co-managed devices to Endpoint analytics](enroll-configmgr.md)
+    - [Onboard and enroll your Intune-managed devices to endpoint analytics](configure.md)
+    - [Onboard and enroll your co-managed devices to endpoint analytics](configure.md)
 
 1. For Multi Device query, a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) needs to be configured and deployed.
 
@@ -59,7 +52,7 @@ For more information, go to:
 
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
-- [Enhanced device timeline](enhanced-device-timeline.md)  
+- [Enhanced device timeline](enhanced-device-timeline.md)
 - [Battery health](battery-health.md)
 - [Device query](device-query.md)
 - [Resource Performance report](resource-performance-report.md)

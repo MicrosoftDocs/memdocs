@@ -1,5 +1,5 @@
 ---
-title: Include and exclude app assignments in Microsoft Intune
+title: Include and Exclude App Assignments in Microsoft Intune
 description: Learn how you can use Microsoft Intune to include and exclude app assignments.
 ms.date: 04/17/2024
 ms.topic: how-to
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Include and exclude app assignments in Microsoft Intune
+# Include and Exclude App Assignments in Microsoft Intune
 
 In Intune, you can determine who has access to an app by assigning groups of users to include and exclude. Before you assign groups to the app, you must set the assignment type for an app. The assignment type makes the app available, required, or uninstalls the app.
 

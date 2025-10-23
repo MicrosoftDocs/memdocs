@@ -1,7 +1,7 @@
 ---
 title:  Intune Data Warehouse Collections
 description: The Intune Data Warehouse collections provide details related to the Data Warehouse API.
-ms.date: 11/18/2024
+ms.date: 10/02/2025
 ms.topic: reference
 ms.reviewer: jamiesil
 ms.collection:
@@ -56,7 +56,7 @@ The **appType** entity lists the installation source of an app.
 | 3         | iOS   store app                   | An   iOS store app.                                 |
 | 4         | iOS   LOB app                     | An   iOS line-of-business app.                      |
 | 5         | Managed   iOS store app (MAM)     | An   iOSstore app that is management enabled.       |
-| 6         | Microsoft 365 Apps for enterprise        | The   Microsoft 365 Apps for Windows 10.     |
+| 6         | Microsoft 365 Apps for enterprise        | The   Microsoft 365 Apps for Windows.     |
 | 7         | Web   app                         | A   web app.                                        |
 | 8         | Windows   Phone 8.1 store app     | A   Windows phone 8.1 store app.                    |
 | 9         | Windows   store app               | A   Windows store app.                              |
@@ -397,7 +397,7 @@ The **EnrollmentFailureReason** entity indicates a more detailed reason for a de
 | APNSCertificateExpired           | Apple devices cannot be managed with an expired Apple MDM push certificate.                                                                                                                            |
 
 ## intuneManagementExtensions
-The **intuneManagementExtension** lists the **intuneManagementExtension** health on each Windows 10 device per day. The data is retained for the last 60 days.
+The **intuneManagementExtension** lists the **intuneManagementExtension** health on each Windows device per day. The data is retained for the last 60 days.
 
 |       Property      |                          Description                          | Example |
 |---------------------|---------------------------------------------------------------|---------|

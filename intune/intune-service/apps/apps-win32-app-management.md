@@ -1,9 +1,8 @@
 ---
-title: Win32 app management in Microsoft Intune
+title: Win32 App Management in Microsoft Intune
 description: Learn how to manage Win32 apps with Microsoft Intune. This article provides an overview of the Intune Win32 app delivery and management capabilities.
-ms.date: 06/13/2025
+ms.date: 10/02/2025
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: bryanke
 ai-usage: ai-assisted
 ms.collection:
@@ -13,6 +12,8 @@ ms.collection:
 ---
 
 # Win32 app management in Microsoft Intune
+
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 Microsoft Intune enables Windows Win32 app management. Win32 app management in Intune allows you to install, configure, protect, and monitor your Windows applications on devices at your organization. Win32 apps are deployed using the Microsoft Intune management extension (IME), which is installed automatically when a PowerShell script or a Win32 app is assigned to the user or device using Intune.
 
@@ -62,7 +63,7 @@ After you have [prepared a Win32 app to be uploaded to Intune](apps-win32-prepar
 
 Windows 10 1709 and later clients will download Intune Win32 app content by using the delivery optimization component of Windows. Delivery optimization provides peer-to-peer functionality that's turned on by default.
 
-You can configure Delivery Optimization to download Win32 app content in either background or foreground mode based on assignment. Delivery optimization can be configured using Intune device configuration (or by group policy). For more information, see [Delivery Optimization for Windows 10](/windows/deployment/update/waas-delivery-optimization).
+You can configure Delivery Optimization to download Win32 app content in either background or foreground mode based on assignment. Delivery optimization can be configured using Intune device configuration (or by group policy). For more information, see [Delivery Optimization for Windows](/windows/deployment/update/waas-delivery-optimization).
 
 > [!NOTE]
 > You can also install a Microsoft Connected Cache server on your Configuration Manager distribution points to cache delivery optimization aware content like Intune Win32 app content. For more information, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).

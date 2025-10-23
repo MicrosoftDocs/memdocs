@@ -1,5 +1,5 @@
 ---
-title: Intune Data Warehouse API endpoint
+title: Intune Data Warehouse API Endpoint
 description: This reference topic describes the Microsoft Intune Data Warehouse API URL structure. Filter examples are provided.
 ms.date: 10/30/2024
 ms.topic: reference
@@ -7,7 +7,7 @@ ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 ---
-# Intune Data Warehouse API endpoint
+# Intune Data Warehouse API Endpoint
 
 You can use the Intune Data Warehouse API with an account with specific role-based access controls and Microsoft Entra credentials. You will then authorize your REST client with Microsoft Entra ID using OAuth 2.0. And finally, you will form a meaningful URL to call a data warehouse resource.
 

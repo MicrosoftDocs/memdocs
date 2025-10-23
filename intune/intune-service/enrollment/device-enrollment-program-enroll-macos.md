@@ -3,7 +3,6 @@ title: Set up automated device enrollment (ADE) for macOS
 description: Learn how to enroll corporate-owned Macs into Microsoft Intune with Apple Automated Device Enrollment (ADE).
 ms.date: 07/22/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
@@ -127,8 +126,8 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
 1. On the **Management Settings** page, configure **User Affinity**. *User affinity* determines whether devices enroll with or without an assigned user. Your options:
 
-    * **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Choose this option for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices. Enrolling without user affinity is also referred to as enrolling *userless*.  
-    * **Enroll with User Affinity**: Enroll devices that are associated with an assigned user. Choose this option for work devices that belong to users, and if you want to require users to have the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option. Enrolling with user affinity is also referred to as enrolling with a *user*.  
+    * **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Choose this option for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices. Enrolling without user affinity is also referred to as enrolling *userless*.
+    * **Enroll with User Affinity**: Enroll devices that are associated with an assigned user. Choose this option for work devices that belong to users, and if you want to require users to have the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option. Enrolling with user affinity is also referred to as enrolling with a *user*.
 
       Option 2 requires more configurations. Users must authenticate themselves before enrollment to confirm their identity. Select one of the following authentication methods:
 
@@ -175,7 +174,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
    > [!div class="mx-imgBorder"]
    > ![Image of admin center showing new Account settings section in the macOS automated device enrollment profile.](./media/device-enrollment-program-enroll-macos/macos-account-settings-intune.png)
 
-   The following settings for the local user account are supported on devices running macOS 12 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you're also configuring the local administrator password through this profile, see [local administrator account](../enrollment/macos-laps.md) in the *Setup macOS account configuration with LAPS* article, and then return here.  
+   The following settings for the local user account are supported on devices running macOS 12 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you're also configuring the local administrator password through this profile, see [local administrator account](../enrollment/macos-laps.md) in the *Setup macOS account configuration with LAPS* article, and then return here.
 
    Your options:
 

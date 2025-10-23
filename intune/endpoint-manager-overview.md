@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/20/2024
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: dougeby
 ms.custom:
   - get-started
@@ -172,7 +171,7 @@ For more information, go to:
 - [Endpoint analytics overview](./analytics/index.md)
 - [Endpoint analytics scores, baselines, and insights](./analytics/scores.md)
 - [Tutorial: Walkthrough the Microsoft Intune admin center](./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md)
-- [Quickstart - Enroll Configuration Manager devices](./analytics/enroll-configmgr.md)
+- [Quickstart - Enroll Configuration Manager devices](./analytics/configure.md)
 
 ## Learn more
 

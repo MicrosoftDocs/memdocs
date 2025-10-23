@@ -1,5 +1,5 @@
 ---
-title: Data transfer policy exceptions for apps
+title: Data Transfer Policy Exceptions for Apps
 description: Create exceptions to the Intune App Protection Policy (APP) data transfer policy.
 ms.date: 01/06/2025
 ms.topic: article
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# How to create exceptions to the Intune App Protection Policy (APP) data transfer policy
+# How to Create Exceptions to the Intune App Protection Policy (APP) Data Transfer Policy
 
 As an administrator, you can create exceptions to the Intune App Protection Policy (APP) data transfer policy. An exception allows you to specifically choose which unmanaged apps can transfer data to and from managed apps. Your IT must trust the unmanaged apps that you include in the exception list.
 

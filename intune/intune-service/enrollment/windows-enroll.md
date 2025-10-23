@@ -3,21 +3,13 @@ title: Enable MDM automatic enrollment for Windows | Microsoft Intune
 description: Enable Intune automatic enrollment for Windows devices joining or registering with your Microsoft Entra ID.
 ms.date: 07/25/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
 - highpri
 ---
 
-# Set up automatic enrollment for Windows devices
-
-**Applies to**
-
-- Windows 10
-- Windows 11
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+# Set up automatic enrollment for Windows devices  
 
 Simplify device enrollment by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in Microsoft Entra ID. Enrollment in Intune occurs when:
 
@@ -34,7 +26,7 @@ Automatic enrollment can be used in the following device management and provisio
 
 This article describes how to enable automatic mobile device management (MDM) enrollment for personal and corporate-owned devices.
 
-## Prerequisites
+## Requirements
 
 You must have:
 
@@ -87,7 +79,7 @@ Two-factor authentication is not enabled for automatic enrollment by default. We
 
 The Microsoft Intune user help docs provide conceptual information, tutorials, and how-to guides for employees and students setting up their devices for work. You can point people directly to the Intune docs, or use these articles as guidance when developing and updating your own device management docs.
 
-Users on personal devices running Windows 11 or Windows 10 can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.  For more information, see [Enroll Windows 10/11 devices](../user-help/enroll-windows-10-device.md).
+Users on personal devices running Windows can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.  For more information, see [Enroll Windows devices](../user-help/enroll-windows-10-device.md).
 
 You can also let unlicensed admins sign in to the Intune admin center to help with troubleshooting and support. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
 

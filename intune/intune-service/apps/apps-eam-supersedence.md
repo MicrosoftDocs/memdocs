@@ -1,5 +1,5 @@
 ---
-title: Guided update supersedence for Enterprise App Management
+title: Guided Update Supersedence for Enterprise App Management
 description: Learn how to update an Enterprise App Catalog app using supersedence with Microsoft Intune.
 ms.date: 09/17/2024
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.collection:
 - FocusArea_Apps_EAM
 ---
 
-# Guided update supersedence for Enterprise App Management
+# Guided Update Supersedence for Enterprise App Management
 
 Guided update supersedence for Enterprise App Management allows you to check for updates of Windows (Win32) Enterprise App Catalog apps. You can view an available update for the app and select the option to create a new app with a supersedence relationship for the app it’s updating. Prepopulated attributes are provided when creating the new app.
 

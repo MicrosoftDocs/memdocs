@@ -1,20 +1,24 @@
 ---
-title: Review app protection policy logs
+title: Review App Protection Policy Logs
 description: This topic describes how to configure Intune app protection policy (APP) logs.
-ms.date: 01/06/2025
+ms.date: 10/23/2025
 ms.topic: troubleshooting
 ms.reviewer: demerson
 ms.collection:
 - M365-identity-device-management
 ---
 
-# Review client app protection logs
+# Review Client App Protection Logs
 
 Learn about the settings you can review in the app protection logs. Access logs by enabling Intune Diagnostics on a mobile client.
 
 The process to enable and collect logs varies by platform:
 - **iOS/iPadOS devices** - Use Microsoft Edge for iOS/iPadOS to collect logs. For details, see [Use Microsoft Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
-- **Windows 10/11 devices** - Use *MDMDiag* and event logs. See, [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) in the Windows client management content, and the blog [Troubleshooting Windows 10 Intune Policy Failures](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures).
+## Log files
+
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+- **Windows devices** - Use *MDMDiag* and event logs. See, [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) in the Windows client management content, and the blog [Troubleshooting Windows 10 Intune Policy Failures](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures).
 - **Android devices** - Use Microsoft Edge for Android to collect logs. For details, see [Use Microsoft Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
 
   > [!NOTE]
@@ -55,9 +59,9 @@ The following tables list the App protection policy setting name and supported v
 | ManagedLocations | A value that represents the number of managed storage locations to which the app can save data. <br>1 = OneDrive<br>2 = SharePoint<br>3 = OneDrive & SharePoint<br>4 = Box<br>5 = OneDrive & Box<br>6 = SharePoint & Box<br>7 = OneDrive, SharePoint & Box<br>32 = Local Storage<br>33 = Local Storage & OneDrive<br>34 = Local Storage & SharePoint<br>35 = Local Storage, OneDrive & SharePoint<br>36 = Local Storage & Box<br>37 = Local Storage, OneDrive & Box<br>38 = Local Storage, SharePoint & Box<br>39 = Local Storage, OneDrive, SharePoint & Box<br>128 = Photo Library<br>129 = Photo Library & OneDrive<br>130 = Photo Library & SharePoint<br>131 = Photo Library, OneDrive & SharePoint<br>132 = Photo Library & Box<br>133 = Photo Library, OneDrive & Box<br>134 = Photo Library, SharePoint & Box<br>135 = Photo Library, OneDrive, SharePoint & Box<br>160 = Photo Library, Local Storage<br>161 = Photo Library, Local Storage & OneDrive<br>162 = Photo Library, Local Storage & SharePoint<br>163 = Photo Library, Local Storage, OneDrive & SharePoint<br>164 = Photo Library, Local Storage & Box<br>165 = Photo Library, Local Storage, OneDrive & Box<br>166 = Photo Library, Local Storage, SharePoint & Box<br>167 = Photo Library, Local Storage, OneDrive, SharePoint & Box | **Section**: Data protection<br>**Setting**: Allow user to save copies to selected services |
 | ManagedUniversalLinks | A list of universal links that allow data to be open in the corresponding managed apps | **Section**: Data protection<br>**Setting**: Select managed universal links |
 | MaxPinRetryExceededAction | 0 = Reset PIN<br>1 = Wipe data | **Section**: Conditional launch<br>**Setting**: Max PIN attempts |
-| MaxOsVersion | "0.0" = no maximum OS version<br>anything else = maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Block access |
-| MaxOsVersionWarning | "0.0" = no maximum OS version<br>anything else = maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Warn |
-| MaxOsVersionWipe | "0.0" = no maximum OS version<br>anything else = maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Wipe data |
+| MaxOsVersion |maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Block access |
+| MaxOsVersionWarning | maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Warn |
+| MaxOsVersionWipe | maximum OS version | **Section**: Conditional launch<br>**Setting**: Max OS version with action Wipe data |
 | MinAppVersion | "0.0" = no minimum app version<br>anything else = minimum app version | **Section**: Conditional launch<br>**Setting**: Min app version with action Block access |
 | MinAppVersionWarning | "0.0" = no minimum app version.<br>anything else = minimum app version | **Section**: Conditional launch<br>**Setting**: Min app version with action Warn |
 | MinAppVersionWipe | "0.0" = no minimum OS version<br>anything else = minimum OS version | **Section**: Conditional launch<br>**Setting**: Min app version with action Wipe data |

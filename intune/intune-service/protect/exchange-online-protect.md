@@ -4,7 +4,6 @@ description: Use Microsoft Intune to give employees access to their Microsoft 36
 author: brenduns
 ms.author: brenduns
 ms.date: 11/07/2024
-ms.localizationpriority: medium
 ms.topic: archived
 ms.reviewer: demerson
 ms.collection:

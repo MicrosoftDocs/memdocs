@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 08/19/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -20,7 +19,7 @@ View the settings you can configure in profiles for *Disk Encryption* policy in 
 > [!IMPORTANT]
 > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
-> [!NOTE]  
+> [!NOTE]
 > Beginning on June 19, 2023, the BitLocker profile for Windows was updated to use the settings format as found in the Settings Catalog. The new profile format includes the same settings as the older profile, but due to the new format, settings names in the Intune admin center have updated. With this change you can no longer create new versions of the old profile. Your existing instances of the old profile remain available to use and edit.
 >
 > The settings details in this article apply only to BitLocker profiles created before June 19, 2023.

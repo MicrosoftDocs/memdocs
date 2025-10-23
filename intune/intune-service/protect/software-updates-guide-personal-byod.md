@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 04/07/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ahamil, talima, mandia
 ms.collection:
 - M365-identity-device-management
@@ -29,8 +28,8 @@ This article applies to:
 > If your devices are organization owned, then go to the software updates planning guides for:
 >
 > - [Managed Android devices](software-updates-guide-android.md)
-> - [Supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
-> - [Managed macOS devices](software-updates-guide-macos.md)
+> - [Supervised iOS/iPadOS devices](updates/software-updates-guide-ios-ipados.md)
+> - [Managed macOS devices](updates/software-updates-guide-macos.md)
 
 ## Create enrollment restrictions
 
@@ -99,4 +98,4 @@ For more information on these features, go to:
 ## Related articles
 
 - [Software updates planning guide for managed Android devices](software-updates-guide-android.md)
-- [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
+- [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](updates/software-updates-guide-ios-ipados.md)

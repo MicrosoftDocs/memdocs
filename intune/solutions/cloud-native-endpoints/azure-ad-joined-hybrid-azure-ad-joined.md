@@ -3,7 +3,6 @@ title: Join your cloud-native endpoints to Microsoft Entra
 description: When moving to or using cloud-native endpoints, use Microsoft Entra joined endpoints. When your endpoints are joined to Microsoft Entra, you can use Windows Autopilot to provision or get devices ready for organization use. Learn more about the benefits to IT admins and end-users.
 ms.date: 03/06/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ahamil, jasandys, wicale
 ms.collection:
   - M365-identity-device-management

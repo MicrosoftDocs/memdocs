@@ -1,9 +1,8 @@
 ---
-title: Step 4. Create app configuration policies for Microsoft Edge for Business
+title: Step 4. Create App Configuration Policies for Microsoft Edge for Business
 description: Step 4. Create app configuration policy for Microsoft Edge for Business.
 ms.date: 03/26/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: samarti
 ms.custom:
 ms.collection:
@@ -12,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Step 4. Create app configuration policies for Microsoft Edge for Business
+# Step 4. Create App Configuration Policies for Microsoft Edge for Business
 
 Microsoft Edge for iOS, Android, and Windows supports app settings that allow Microsoft Intune administrators to customize the behavior of the app and implement browser configuration.
 

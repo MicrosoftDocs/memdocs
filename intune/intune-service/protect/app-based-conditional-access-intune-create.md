@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 04/15/2022
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: elocholi
 ms.collection:
 - M365-identity-device-management

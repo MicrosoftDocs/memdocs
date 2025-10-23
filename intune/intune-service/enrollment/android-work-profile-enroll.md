@@ -3,7 +3,6 @@ title: Enroll personal devices in Intune with Android Enterprise work profile ma
 description: Set up Intune for personal devices and bring-your-own-device scenarios using Android Enterprise work profile management.
 ms.date: 10/28/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: grwilso
 ms.collection:
 - M365-identity-device-management

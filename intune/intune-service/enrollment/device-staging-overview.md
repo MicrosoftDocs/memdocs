@@ -3,7 +3,6 @@ title: Device staging overview
 description: An overview of device staging, Android Enterprise token types, and token management in Microsoft Intune.
 ms.date: 06/04/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: grwilson
 ms.collection:
 - M365-identity-device-management

@@ -1,14 +1,13 @@
 ---
-title: PowerShell scripts for Remediations
+title: PowerShell Scripts for Remediations
 description: PowerShell script reference for Remediations.
 ms.date: 04/30/2024
 ms.topic: reference
 author: nicholasswhite
 ms.author: nwhite
-ms.localizationpriority: high
 ---
 
-# PowerShell scripts for Remediations
+# PowerShell Scripts for Remediations
 
 This article includes sample scripts that customers can implement or use as templates to learn how to create their own. Use the information provided here to create script packages for [Remediations](remediations.md).
 

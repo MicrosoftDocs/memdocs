@@ -3,9 +3,8 @@ title: Device features and settings in Microsoft Intune
 description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10/11, BitLocker and Microsoft Defender, and custom device configuration settings in the Microsoft Intune admin center. Use these profiles to manage and protect data and devices in your company.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 04/16/2025
+ms.date: 10/14/2025
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: mikedano
 ms.collection:
 - M365-identity-device-management
@@ -207,13 +206,11 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11 (single app kiosk only)
-- Windows 10
+- Windows
+
+  Windows 11 supports single app kiosk only.
 
 Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
-
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## MX profile (Zebra)
 
@@ -225,7 +222,7 @@ This feature supports:
 
 ## Microsoft Defender for Endpoint
 
-[Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
+[Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
 
 This feature supports:
 
@@ -309,13 +306,14 @@ This feature supports:
 
 ## Update policies
 
-[iOS/iPadOS update policies](../protect/software-updates-ios.md) shows you how to create and assign iOS/iPadOS policies to install software updates on your iOS/iPadOS devices. You can also review the installation status.
+[iOS/iPadOS and macOS managed software updates](../protect/updates/apple.md) shows you how to create and assign policies to install software updates on your iOS/iPadOS and macOS devices. You can also review the installation status.
 
 For update policies on Windows devices, see [Delivery optimization](delivery-optimization-windows.md).
 
 This feature supports:
 
 - iOS/iPadOS
+- macOS
 
 ## VPN
 

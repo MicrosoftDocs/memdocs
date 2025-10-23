@@ -3,9 +3,8 @@ title: Plan and Prepare for Endpoint Privilege Management Deployment
 description: Plan your Endpoint Privilege Management deploying by understanding requirements, fundamentals, and security recommendations.
 author: brenduns
 ms.author: brenduns
-ms.date: 09/10/2025
+ms.date: 10/20/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: mikedano
 ms.collection:
 - tier 1
@@ -90,13 +89,27 @@ When you configure the *elevation settings* and *elevation rules* policies that 
 
 - **Run with elevated access** - A right-click context menu option that appears when EPM is activated on a device. When this option is used, the devices elevation rules policies are checked for a match to determine if, and how, that file can be elevated to run in an administrative context. If there's no applicable elevation rule, then the device uses the default elevation configurations as defined by the elevation settings policy.
 
-- **File elevation and elevation types** – EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
+- **File elevation and elevation types** – EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device. 
+
+With the exception of *Elevate as current user*, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user’s profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
 
   When you use Endpoint Privilege Management, there are a few options for elevation behavior:
 
   - **Automatic**: For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
 
   - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules can also require validation with authentication or business justification. Requiring validation provides an extra layer of protection by making the user acknowledge the elevation.
+
+  - **Elevate as current user**: This type of elevation runs the elevated process under the signed-in user's own account, preserving compatibility with tools and installers that rely on the active user profile. This requires the user to enter their credentials for Windows Authentication. This preserves the user's profile paths, environment variables, and personalized settings. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate.
+
+    However, because the elevated process inherits the user's full context, this mode introduces a broader attack surface and reduces isolation from user data.
+  
+    Key considerations:
+    - Compatibility need: Use this mode only when virtual account elevation causes application failures.
+    - Scope tightly: Limit elevation rules to trusted binaries and paths to reduce risk.
+    - Security tradeoff: Understand that this mode increases exposure to user-specific data.
+
+    >[!TIP]
+    > When compatibility is not an issue, prefer a method that uses the virtual account elevation for stronger security.
 
   - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. Deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
@@ -151,7 +164,7 @@ If a device receives two rules targeting the same application, both rules are co
 - Rules deployed to a user take precedence over rules deployed to a device.
 - Rules with a hash defined are always deemed the most *specific* rule.
 - If more than one rule applies (with no hash defined), the rule with the most defined attributes wins (most *specific*).
-- If applying the proceeding logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved, and then Automatic.
+- If applying the proceeding logic results in more than one rule, the following order determines the elevation behavior: *User confirmed*, *Elevate as current user*, *Support approved*, and then *Automatic*.
 
 > [!NOTE]
 > If a rule doesn't exist for an elevation and that elevation was requested through the *Run with elevated access* right-click context menu, then the *Default Elevation Behavior* is used.

@@ -1,5 +1,5 @@
 ---
-title: Data protection framework using app protection policies
+title: Data Protection Framework Using App Protection Policies
 description: Learn how app protection policies ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled.
 ms.date: 06/12/2025
 ms.topic: article
@@ -9,7 +9,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Data protection framework using app protection policies
+# Data Protection Framework Using App Protection Policies
 
 As more organizations implement mobile device strategies for accessing work or school data, protecting against data leakage becomes paramount. Intune's mobile application management solution for protecting against data leakage is app protection policies. These policies are rules that ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled. For more information, see [App protection policies overview](app-protection-policy.md).
 

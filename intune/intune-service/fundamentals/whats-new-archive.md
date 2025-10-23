@@ -3,7 +3,7 @@ title: What's new in previous months in the Microsoft Intune
 description: Review older announcements from the Intune what's new page
 author: brenduns
 ms.author: brenduns
-ms.date: 08/20/2025
+ms.date: 10/02/2025
 ms.topic: whats-new
 
 ROBOTS: NOINDEX,NOFOLLOW
@@ -1070,7 +1070,7 @@ This change only applies to new policies that are created in the August 2408 rel
 
 In a future release, the **UTC** text will be removed from the **Target Date Time** setting.
 
-For more information on using the settings catalog to configure software updates, see [Managed software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
+For more information on using the settings catalog to configure software updates, see [Managed software updates with the settings catalog](../protect/updates/apple.md).
 
 Applies to:
 
@@ -1431,6 +1431,14 @@ These changes are currently rolling out and will be made available to all Micros
 
 Microsoft Intune now supports corporate device identifiers for devices running Windows 11, version 22H2 and later so that you can identify corporate machines ahead of enrollment. When a device that matches the model, manufacturer, and serial number criteria enrolls, Microsoft Intune marks it as a corporate device and enable the appropriate management capabilities. For more information, see [Add corporate identifiers](../enrollment/corporate-identifiers-add.md).
 
+### Microsoft Intune Suite
+
+#### Remote Help
+
+Version 5.1.1419.0
+
+- Resolve issue where the screen may be blank on first launch.
+
 ## Week of June 17, 2024 (Service release 2406)
 
 ### Microsoft Intune Suite
@@ -1506,7 +1514,7 @@ When you configure a managed software update policy using the settings catalog, 
 - Select a target OS version from a list of updates made available by Apple.
 - Manually enter the target OS version, if needed.
 
-For more information about configuring managed software update profiles in Intune, see [Use the settings catalog to configure managed software updates](../protect/managed-software-updates-ios-macos.md).
+For more information about configuring managed software update profiles in Intune, see [Use the settings catalog to configure managed software updates](../protect/updates/apple.md).
 
 Applies to:
 
@@ -1650,7 +1658,7 @@ Applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 
-For information on the newest version of Remote Help, see the *March 13, 2024* entry for [What's New for Remote Help](../fundamentals/remote-help-windows.md#march-13-2024). For information about Intune endpoints for Remote Help, see [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in *Network endpoints for Microsoft Intune*.
+For information on the newest version of Remote Help, see [Week of March 13, 2024](#week-of-march-13-2024). For information about Intune endpoints for Remote Help, see [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in *Network endpoints for Microsoft Intune*.
 
 ### Device management
 
@@ -2313,6 +2321,22 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
+## Week of March 13, 2024
+
+### Microsoft Intune Suite
+
+#### Remote Help
+
+Version: 5.1.1214.0
+
+- Changed the primary endpoint for Remote Help from https://remoteassistance.support.services.microsoft.com to https://remotehelp.microsoft.com.
+
+  > [!NOTE]
+  > This could cause a breaking change for some organizations that have not yet allowed remotehelp.microsoft.com through their firewall after 5/30/2024.
+
+- Resolved various bugs including an issue with Conditional Access. If a tenant had a **Terms of Use** policy enabled for Office 365, Remote Help wouldn't know how to respond and would instead present an authentication error message to the user.
+- Enabled a shortcut to open context menus with the keyboard shortcut 'Alt + Space'
+
 ## Week of March 3, 2024
 
 ### Device enrollment
@@ -2710,7 +2734,7 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
-For more information about configuring Managed software updates in Intune, see [Use the settings catalog to configure managed software updates](../protect/managed-software-updates-ios-macos.md).
+For more information about configuring Managed software updates in Intune, see [Use the settings catalog to configure managed software updates](../protect/updates/apple.md).
 
 ### Device management
 
@@ -2824,7 +2848,7 @@ For more information and a list of supported variables, see [Create a notificati
 
 #### Updated report visualization for Microsoft Defender for Endpoint connector<!--  24762035  -->
 
-We updated the reporting visualization for the Microsoft Defender for Endpoint connector. This [report visualization](../protect/advanced-threat-protection-configure.md#view-the-count-of-devices-that-are-onboarded-to-microsoft-defender-for-endpoint) displays the count of devices that are onboarded to Defender for Endpoint based on status from the Defender CSP, and visually aligns to other recent report views that use a bar to represent the percentage of devices with different status values.
+We updated the reporting visualization for the Microsoft Defender for Endpoint connector. This [report visualization](../protect/microsoft-defender-integrate.md#view-the-count-of-devices-that-are-onboarded-to-microsoft-defender-for-endpoint) displays the count of devices that are onboarded to Defender for Endpoint based on status from the Defender CSP, and visually aligns to other recent report views that use a bar to represent the percentage of devices with different status values.
 
 ### Device security
 
@@ -3371,7 +3395,7 @@ In the settings catalog, the following declarative software update settings are 
 - **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
 - **Target OS Version**: The target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
-For more information on this feature, see [Manage software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
+For more information on this feature, see [Manage software updates with the settings catalog](../protect/updates/apple.md).
 
 In the settings catalog, the following declarative passcode settings are available at **Declarative device management > Passcode**:
 
@@ -3427,6 +3451,15 @@ For more information about these changes, see the Intune Support Team blog at [h
 #### Intune admin center home page update<!-- 16950040  -->
 
 The Intune admin center home page has been redesigned with a fresh new look and more dynamic content. The **Status** section has been simplified. You can explore Intune related capabilities in the **Spotlight** section. The **Get more out of Intune** section provides links to the Intune community and blog, and Intune customer success. Also, the **Documentation and training** section provides links to **What's New in Intune**, **Feature in development**, and more training. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Home**.
+
+### Microsoft Intune Suite
+
+#### Remote Help
+
+Version: 5.0.1311.0
+
+- Disabled the relaying of system audio from the Sharer device to the Helper device, which caused an echo when both users were using another app to communicate (such as Teams).
+- Added the capability for Helpers that have elevation permissions to also be able to elevate apps on devices where the Sharer is an Administrator.
 
 ## Week of October 16, 2023
 
@@ -3710,6 +3743,14 @@ Applies to:
 For more information, see [Remote Help](remote-help-windows.md).
 
 ## Week of September 4, 2023
+
+### Microsoft Intune Suite
+
+#### Remote Help
+
+Version: 5.0.1045.0
+
+With Remote Launch, the helper can launch Remote Help seamlessly on the helper and sharer's device from Intune by sending a notification to the sharer's device.
 
 ### Device management
 
@@ -4188,6 +4229,14 @@ Eventually, the [older report versions](../protect/compliance-policy-monitor.md#
 
 ## Week of July 10, 2023
 
+### Microsoft Intune Suite
+
+#### Remote Help
+
+Version: 5.0.1045.0
+
+This version of Remote Help provides support for ARM64 devices including the Microsoft Surface Pro X and Parallels Desktop on macOS.
+
 ### App management
 
 #### Updates to app configuration policy reporting<!-- 18098046  -->
@@ -4311,6 +4360,14 @@ Applies to:
 - Windows 11
 
 ## Week of June 19, 2023 (Service release 2306)
+
+### Microsoft Intune Suite
+
+#### Remote Help
+
+Version: 4.2.1424.0
+
+With Remote Help 4.2.1424.0, a new in-session connection mode feature provides users with a way to seamlessly switch between full control and view-only modes during a remote assistance session.
 
 ### App management
 
@@ -4826,7 +4883,7 @@ Administrators can now utilize Conditional Access capability when setting up pol
 For more information, see:
 
 - [Conditional Access](../protect/conditional-access.md)
-- [Remote Help](remote-help-windows.md#setup-conditional-access-for-remote-help)
+- [Remote Help](remote-help-windows.md#set-up-conditional-access-for-remote-help)
 
 ### Device security
 
@@ -4861,6 +4918,16 @@ Applies to:
 
 - Windows 10
 - Windows 11
+
+### Microsoft Intune Suite
+
+#### Remote Help
+
+Version: 4.2.1270.0
+
+This version includes a minor update that enables future functionality.
+
+- Added support for slashes within the Remote Help URI (to enable future functionality)
 
 ## Week of April 17, 2023 (Service release 2304)
 
@@ -4982,7 +5049,7 @@ macOS software update policies now include the following settings to help manage
 
 - **Priority**: When the *All other updates* update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
 
-For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
+For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/updates/software-updates-macos.md).
 
 Applies to:
 
@@ -5122,6 +5189,19 @@ You can now update apps of type **macOS apps (DMG)** deployed using Intune. To e
 
 #### Install required apps during pre-provisioning<!-- 12716381 -->
 A new toggle is available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during the Windows Autopilot pre-provisioning technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user setup time. If there's an app install failure, ESP continues except for the apps specified in the ESP profile. To enable this function, you need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting only appears if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+
+### Microsoft Intune Suite
+
+#### Remote Help
+
+Version: 4.2.1167.0 - Changes in this release:
+
+This release addresses a bug in the Laser Pointer and includes some updates to prepare for future releases.
+
+- Updated product name from **Remote help** to **Remote Help**
+- Updated application description to better localize it for non-US locales
+- Resolved a bug where the app would flash a white screen when launched in dark mode
+- Fixed a bug with the Laser pointer color change
 
 ## Week of March 20, 2023 (Service release 2303)
 

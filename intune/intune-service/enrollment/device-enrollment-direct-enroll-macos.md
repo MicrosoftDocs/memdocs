@@ -3,7 +3,6 @@ title: Use direct enrollment for macOS devices
 description: Deploy and enroll macOS devices in Microsoft Intune using direct enrollment with Apple Configurator.
 ms.date: 04/03/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: scottbreenmsft
 ms.collection:
 - M365-identity-device-management

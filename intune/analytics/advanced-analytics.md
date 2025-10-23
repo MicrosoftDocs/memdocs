@@ -1,15 +1,8 @@
 ---
 title: What is Microsoft Intune Advanced Analytics
-titleSuffix: Microsoft Intune
-description: Learn about Intune Advanced Analytics
-ms.date: 08/01/2024
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
+description: Discover what Microsoft Intune Advanced Analytics is, how it extends endpoint analytics with advanced device insights, proactive troubleshooting, and enhanced reporting.
+ms.date: 10/09/2025
 ms.topic: concept-article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
 ---
 
 # What is Microsoft Intune Advanced Analytics
@@ -22,13 +15,13 @@ Advanced Analytics includes the following features:
 
 - **Anomalies** monitors the health of devices in your organization for user experience and productivity regressions following configuration changes. For more information, see [Anomaly detection](anomaly-detection.md).
 
-   :::image type="content" source="media/advanced-analytics/anomalies-tab.png" lightbox="media/advanced-analytics/anomalies-tab-expanded.png" alt-text="Screenshot of the Anomaly tab in Overview section of Endpoint analytics":::
+   :::image type="content" source="media/advanced-analytics/anomalies-tab.png" lightbox="media/advanced-analytics/anomalies-tab-expanded.png" alt-text="Screenshot of the Anomaly tab in Overview section of endpoint analytics":::
 
 - **Battery health** report helps you understand the battery health of your Windows devices to ensure long battery life and good user experience. For more information, see [Battery health](battery-health.md).
 
    :::image type="content" source="media/advanced-analytics/battery-health.png" lightbox="media/advanced-analytics/battery-health-expanded.png" alt-text="Screenshot of the Battery Health tab in Advanced analytics":::
 
-- **Custom device scopes** allow you to use [Scope tags](../intune-service/fundamentals/scope-tags.md) to slice Endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region. For more information, see [Device scopes](device-scopes.md).
+- **Custom device scopes** allow you to use [Scope tags](../intune-service/fundamentals/scope-tags.md) to slice endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region. For more information, see [Device scopes](device-scopes.md).
 
 - An **Enhanced device timeline** includes more events and lower data latency to assist with troubleshooting device issues. For more information, see [Enhanced device timeline](enhanced-device-timeline.md).
 
@@ -44,9 +37,9 @@ Advanced Analytics includes the following features:
 
 ## Advanced Analytics Reports
 
-Intune Advanced Analytics is automatically integrated into the existing base Endpoint analytics experience in the Intune admin center under **Reports** > **Endpoint analytics**.
+Intune Advanced Analytics is automatically integrated into the existing base endpoint analytics experience in the Intune admin center under **Reports** > **Endpoint analytics**.
 
-When Advanced Analytics is enabled, Endpoint Analytics reports are supplemented with:
+When Advanced Analytics is enabled, endpoint analytics reports are supplemented with:
 
 - [Anomaly detection](anomaly-detection.md)
 - [Battery health](battery-health.md)
@@ -82,7 +75,7 @@ For more information, go to:
 
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
-- [Enhanced device timeline](enhanced-device-timeline.md)  
+- [Enhanced device timeline](enhanced-device-timeline.md)
 - [Battery health](battery-health.md)
 - [Device query](device-query.md)
 - [Resource Performance report](resource-performance-report.md)

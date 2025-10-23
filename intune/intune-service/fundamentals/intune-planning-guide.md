@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/21/2025
 ms.topic: upgrade-and-migration-article
-ms.localizationpriority: high
 ms.reviewer: dougeby
 ms.collection:
 - M365-identity-device-management
@@ -81,7 +80,7 @@ Antivirus, malware scanning, responding to threats, and keep devices up-to-date 
 
 Some considerations:
 
-- **Antivirus (AV) and malware protection are a must**. Intune integrates with [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) and [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect your managed devices, personal devices, and apps.
+- **Antivirus (AV) and malware protection are a must**. Intune integrates with [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) and [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect your managed devices, personal devices, and apps.
 
   [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) includes security features and a [portal](/microsoft-365/security/defender/microsoft-365-security-center-mde) to help monitor, and react to threats.
 
@@ -97,8 +96,8 @@ Some considerations:
 
   - [Personal/BYOD](../protect/software-updates-guide-personal-byod.md)
   - [Android](../protect/software-updates-guide-android.md)
-  - [iOS/iPadOS](../protect/software-updates-guide-ios-ipados.md)
-  - [macOS](../protect/software-updates-guide-macos.md)
+  - [iOS/iPadOS](../protect/updates/software-updates-guide-ios-ipados.md)
+  - [macOS](../protect/updates/software-updates-guide-macos.md)
 
 - **Determine how users will authenticate to organization resources** from their many devices. For example, you can:
 

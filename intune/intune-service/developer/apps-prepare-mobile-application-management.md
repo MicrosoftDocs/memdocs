@@ -1,5 +1,5 @@
 ---
-title: Prepare apps for mobile application management with Microsoft Intune
+title: Prepare Apps for Mobile Application Management With Microsoft Intune
 description: The information in this topic helps you decide when you should use the App wrapping tool and the App SDK to enable your custom line-of-business apps to use the mobile app management policies.
 ms.date: 11/18/2024
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Prepare line-of-business apps for app protection policies
+# Prepare Line-of-Business Apps for App Protection Policies
 
 You can enable your apps to use app protection policies by using either the Intune App Wrapping Tool or the Intune App SDK. Use this information to learn about these two methods and when to use them.
 

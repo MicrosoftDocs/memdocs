@@ -3,7 +3,6 @@ title: Require multifactor authentication for Intune device enrollment
 description: How to require multifactor authentication in Microsoft Entra ID for Intune device enrollment.
 ms.date: 12/11/2024
 ms.topic: how-to
-ms.localizationpriority: high
 
 
 ROBOTS:
@@ -11,15 +10,7 @@ ms.reviewer: damionw
 ms.collection:
 - M365-identity-device-management
 ---
-# Require multifactor authentication for Intune device enrollments
-
-*Applies to*:
- * Android
- * iOS/iPadOS
- * macOS
- * Windows 10
- * Windows 11
-
+# Require multifactor authentication for Intune device enrollments  
 
 You can use Intune together with Microsoft Entra Conditional Access policies to require multifactor authentication (MFA) during device enrollment. If you require MFA, employees and students wanting to enroll devices must first authenticate with a second device and two forms of credentials. MFA requires them to authenticate using two or more of these verification methods:
 
@@ -29,8 +20,20 @@ You can use Intune together with Microsoft Entra Conditional Access policies to 
 
 If a device isn't compliant, the device user is prompted to make the device compliant before enrolling in Microsoft Intune.
 
-## Prerequisites
-To implement this policy, you must assign Microsoft Entra ID P1 or later to users.
+## Requirements  
+
+Multifactor authentication is available for the following platforms:  
+
+ * Android
+ * iOS/iPadOS
+ * macOS
+ * Windows  
+ 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+To implement this policy, you must assign Microsoft Entra ID P1 or later to users. 
+
 
 ## Configure Intune to require multifactor authentication at device enrollment
 

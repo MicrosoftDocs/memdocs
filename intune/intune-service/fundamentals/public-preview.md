@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 02/20/2025
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: scottduf
 ms.collection:
 - M365-identity-device-management

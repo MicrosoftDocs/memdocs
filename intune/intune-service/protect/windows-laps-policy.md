@@ -1,18 +1,17 @@
 ---
-title: Create Intune policies to configure and manage Windows LAPS
+title: Deploy Intune policies to manage Windows LAPS
 description: Create policies to manage the Windows Local Administrator Policy Solution (LAPS) on Windows devices that enrolled with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
 ms.date: 07/22/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: laarrizz
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
 ---
 
-# Manage Windows LAPS policy with Microsoft Intune
+# Deploy Windows LAPS policy with Microsoft Intune
 
 When you're ready to manage the *Windows Local Administrator Password Solution* ([Windows LAPS](/windows-server/identity/laps/laps-overview)) on Windows devices you manage with Microsoft Intune, the information in this article can help you use the Intune admin center to:
 
@@ -46,16 +45,16 @@ Windows LAPS allows for the management of a single local administrator account p
 > [!NOTE]
 > Ensure the [prerequisites](../protect/windows-laps-overview.md#prerequisites) for Intune to support Windows LAPS in your tenant are met before creating policies.
 >
-> Intune's LAPS policies do not create new accounts or passwords. Instead, they manage an account that's already on the device.
+> Intune's LAPS policies don't create new accounts or passwords. Instead, they manage an account that's already on the device.
 
 Configure and assign LAPS policies carefully. The Windows LAPS CSP supports a single configuration for each LAPS setting on a device. Devices that receive multiple Intune policies that include conflicting settings can fail to process policy. Conflicts can also prevent the backup of the managed local admin account and password to your tenants Directory.
 
-To help reduce potential conflicts, we recommend assigning a single LAPS policy to each device through device groups, and not through user groups. While LAPS policy supports user group assignments, they can result in a cycle of changing LAPS configurations each time a different user signs-in to a device. Frequently changing policies can introduce conflicts, a lack of device compliance with requirements, and create confusion around which local admin account from a device is currently being managed.
+To help reduce potential conflicts, we recommend assigning a single LAPS policy to each device through device groups, and not through user groups. While LAPS policy supports user group assignments, they can result in a cycle of changing LAPS configurations each time a different user signs in to a device. Frequently changing policies can introduce conflicts, a lack of device compliance with requirements, and create confusion around which local admin account from a device is currently being managed.
 
 ### Create a LAPS policy
 
   > [!IMPORTANT]
-  > Ensure that you have enabled LAPS in Microsoft Entra, as covered in the [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-microsoft-entra-id) documentation.
+  > Ensure that LAPS is enabled in Microsoft Entra, as covered in the [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-microsoft-entra-id) documentation.
 
 To create or manage LAPS policy, your account must have applicable rights from the **Security baseline** category. By default, these permissions are included in the built-in role *Endpoint Security Manager*. To use custom roles, ensure the custom role includes the rights from the *Security baselines* category. See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -77,7 +76,7 @@ Before you create a policy, you can review details about the available settings 
    :::image type="content" source="./media/windows-laps-policy/specify-the-backup-directory.png" alt-text="Screen shot that shows the options for the Backup Directory setting." lightbox="./media/windows-laps-policy/specify-the-backup-directory.png":::
 
    > [!IMPORTANT]
-   > When configuring a policy, keep in mind that the backup directory type in the policy must be supported by the join type of the device the policy is assigned to. For example, if you set the directory to Active Directory and the device isn't domain joined (but a member of Microsoft Entra), the device can apply the policy settings from Intune without error, but LAPS on the device will not be able to successfully use that configuration to back up the account.
+   > When configuring a policy, keep in mind that the backup directory type in the policy must be supported by the join type of the device the policy is assigned to. For example, if you set the directory to Active Directory and the device isn't domain joined (but a member of Microsoft Entra), the device can apply the policy settings from Intune without error, but LAPS on the device won't be able to successfully use that configuration to back up the account.
 
    After configuring *Backup Directory*, review and configure the available settings to meet your organization's requirements.
 
@@ -138,14 +137,14 @@ For more information, see [Role based access controls for LAPS](../protect/windo
    - **Account name** – The name of the local admin account that was backed up from the device.
    - **Security ID** – The well-known SID for the account that is backed up from the device.
    - **Local admin password** – Obscured by default. If your account has permission, you can select **Show** to reveal the password. You can then use the *Copy* option to copy the password to your clipboard. This information isn't available for devices that back up to an on-premises Active Directory.
-   - **Last password rotation** – In UTC, the date and time that the password was last changed or rotated by policy.
-   - **Next password rotation** – In UTC, the next date and time when the password will be rotated per policy.
+   - **Last password rotation** – In UTC, the date, and time that the password was last changed or rotated by policy.
+   - **Next password rotation** – In UTC, the next date, and time when the password will be rotated per policy.
 
 The following are considerations for viewing a devices account and password information:
 
 - Retrieving (viewing) the password for a local admin account triggers an [audit event](../protect/windows-laps-reports.md#events-and-audit-logs).
 
-- You cannot view password details for the following devices:
+- You can't view password details for the following devices:
 
   - Devices that have their local admin account backed up to an on-premises Active Directory
   - Devices that are set to use Active Directory to back up the account password.

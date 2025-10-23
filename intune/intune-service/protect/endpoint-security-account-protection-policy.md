@@ -3,9 +3,8 @@ title: Manage account protection settings with endpoint security policies in Mic
 description: Use Microsoft Intune endpoint security account protection policies to protect the identity and accounts of users.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/10/2024
+ms.date: 10/01/2025
 ms.topic: article
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -44,9 +43,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 ## Account protection profiles
 
-Platform:
-
-- **Windows**
+To configure account protection profiles, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Endpoint Security** > **Account protection** > **Create Policy***. For *Platform* select **Windows**, and then choose from the following Profiles:
 
 Profiles:
 
@@ -79,7 +76,7 @@ Use the *Local user group membership* profile to manage the users that are membe
 
 ### Configure the profile
 
-This profile manages the local group membership on devices through [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx). The CSP documentation includes more details on how configurations apply, and an FAQ about the use of the CSP.
+Use the *Local user group membership* profile mto manage the local group membership on devices through the Windows [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx). The CSP documentation includes more details on how configurations apply, and an FAQ about the use of the CSP.
 
 When you configure this profile, on the *Configuration settings* page you can create multiple rules to manage which built-in local groups you want to change, the group action to take, and the method to select the users.
 

@@ -88,7 +88,7 @@ Before you can manage Activation Lock, you must configure your devices to allow 
 > - Intune Service Administrator
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Bypass activation lock**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ## How to use disable Activation Lock
 

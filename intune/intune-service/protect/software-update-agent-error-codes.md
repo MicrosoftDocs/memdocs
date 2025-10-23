@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 05/29/2019
 ms.topic: reference
-ms.localizationpriority: medium
 ROBOTS:
 ms.reviewer: mghadial
 ms.collection:

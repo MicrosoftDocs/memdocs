@@ -1,7 +1,7 @@
 ---
-title: Discovered apps
+title: Discovered Apps
 description: Understand details about the detected apps that Intune found on a device.
-ms.date: 07/30/2025
+ms.date: 10/02/2025
 ms.topic: how-to
 ms.reviewer: arnab
 ms.custom:
@@ -9,7 +9,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Intune discovered apps
+# Intune Discovered Apps
 
 Intune **discovered apps** is a list of detected apps on the Intune enrolled devices in your tenant. It acts as a software inventory for your tenant. **Discovered apps** is a separate report from the [app installation](apps-monitor.md) reports. For personal devices, Intune never collects information on applications that are unmanaged. On corporate devices, any app whether it's a managed app or not is collected for this report. The following table shows the expected behavior. In general, the report refreshes every seven days for each device, starting from its enrollment date. This refresh isn't performed weekly for the entire tenant. The only exception to this refresh cycle for the **Discovered apps** report is application information that the Intune Management Extension for Win32 Apps collects every 24 hours.
 
@@ -44,8 +44,8 @@ The following list shows the app platform type. It also shows which apps are mon
 
 | Platform | For personally owned devices | For company-owned devices | Refresh cycle |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10/11 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | Windows Installer apps on the device that appear in add/remove programs | Every 24 hours from device enrollment |
-| Windows 10/11 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every seven days from device enrollment |
+| Windows (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | Windows Installer apps on the device that appear in add/remove programs | Every 24 hours from device enrollment |
+| Windows (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every seven days from device enrollment |
 | Windows 8.1 | Only managed apps | Only managed apps | Every seven days from device enrollment |
 | Windows RT | Only managed apps | Only managed apps | Every seven days from device enrollment |
 | iOS/iPadOS | Only managed apps | All apps installed on the device except system apps | Every seven days from device enrollment |

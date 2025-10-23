@@ -1,6 +1,6 @@
 ---
-title: Settings you can manage with Intune Endpoint Protection profiles for Windows 10/11 devices
-description: View the available settings in Intune endpoint protection profiles for managed Windows 10 and 11 devices.
+title: Settings you can manage with Intune Endpoint Protection profiles for Windows devices
+description: View the available settings in Intune endpoint protection profiles for managed Windows devices.
 author: lenewsad
 ms.author: lanewsad
 ms.date: 11/14/2023
@@ -32,15 +32,15 @@ For Microsoft Edge, Microsoft Defender Application Guard protects your environme
 
 Application Guard is only available for 64-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.
 
-- **Application Guard**
-  **Default**: Not configured
+- **Application Guard**  
+  **Default**: Not configured  
    Application Guard CSP: [Settings/AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
 
   - **Enabled for Edge** - Turns on this feature, which opens untrusted sites in a Hyper-V virtualized browsing container.
   - **Not configured** - Any site (trusted and untrusted) can open on the device.
 
-- **Clipboard behavior**
-  **Default**: Not configured
+- **Clipboard behavior**  
+  **Default**: Not configured  
   Application Guard CSP: [Settings/ClipboardSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)
 
   Choose what copy and paste actions are allowed between the local PC and the Application Guard virtual browser.
@@ -50,9 +50,9 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
   - **Allow copy and paste between PC and browser**
   - **Block copy and paste between PC and browser**
 
-- **Clipboard content**
+- **Clipboard content**  
   This setting is available only when *Clipboard behavior* is set to one of the *allow* settings.
-  **Default**: Not configured
+  **Default**: Not configured  
   Application Guard CSP: [Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)
 
   Select the allowed clipboard content.
@@ -61,51 +61,51 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
   - **Images**
   - **Text and images**
 
-- **External content on enterprise sites**
-  **Default**: Not configured
+- **External content on enterprise sites**  
+  **Default**: Not configured  
   Application Guard CSP: [Settings/BlockNonEnterpriseContent](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#blocknonenterprisecontent)
 
   - **Block** - Block content from unapproved websites from loading.
   - **Not configured** - Non-enterprise sites can open on the device.
 
-- **Print from virtual browser**
-  **Default**: Not configured
+- **Print from virtual browser**  
+  **Default**: Not configured  
   Application Guard CSP: [Settings/PrintingSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#printingsettings)
 
   - **Allow** - Allows the printing of selected content from the virtual browser.
   - **Not configured** Disable all print features.
 
   When you *Allow* printing, you then can configure the following setting:
-  - **Printing type(s)**
+  - **Printing type(s)**  
     Select one or more of the following options:
     - PDF
     - XPS
     - Local printers
     - Network printers
 
-- **Collect logs**
-  **Default**: Not configured
+- **Collect logs**  
+  **Default**: Not configured  
   Application Guard CSP: [Audit/AuditApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#auditapplicationguard)
 
   - **Allow** - Collect logs for events that occur within an Application Guard browsing session.
   - **Not configured** - Don't collect any logs within the browsing session.
 
-- **Retain user-generated browser data**
-  **Default**: Not configured
+- **Retain user-generated browser data**  
+  **Default**: Not configured  
   Application Guard CSP: [Settings/AllowPersistence](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowpersistence)
 
   - **Allow** Save user data (such as passwords, favorites, and cookies) that's created during an Application Guard virtual browsing session.
   - **Not configured** Discard user-downloaded files and data when the device restarts, or when a user signs out.
 
 - **Graphics acceleration**
- **Default**: Not configured
+ **Default**: Not configured  
   Application Guard CSP: [Settings/AllowVirtualGPU](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowvirtualgpu)
 
   - **Enable** - Load graphic-intensive websites and video faster by getting access to a virtual graphics processing unit.
   - **Not configured** Use the device's CPU for graphics; Don't use the virtual graphics processing unit.
 
-- **Download files to host file system**
-  **Default**: Not configured
+- **Download files to host file system**  
+  **Default**: Not configured  
   Application Guard CSP: [Settings/SaveFilesToHost](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#savefilestohost)
 
   - **Enable** - Users can download files from the virtualized browser onto the host operating system.
@@ -117,28 +117,28 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
 
 These settings are applicable to all network types.
 
-- **File Transfer Protocol**
-  **Default**: Not configured
+- **File Transfer Protocol**  
+  **Default**: Not configured  
    Firewall CSP: [MdmStore/Global/DisableStatefulFtp](/windows/client-management/mdm/firewall-csp#disablestatefulftp)
 
   - **Block** - Disable stateful FTP.
   - **Not configured** - The firewall does stateful FTP filtering to allow secondary connections.
 
-- **Security association idle time before deletion**
-  **Default**: *Not configured*
+- **Security association idle time before deletion**  
+  **Default**: *Not configured*  
   Firewall CSP: [MdmStore/Global/SaIdleTime](/windows/client-management/mdm/firewall-csp#saidletime)
 
    Specify an idle time in seconds, after which security associations are deleted.
 
-- **Pre-shared key encoding**
-  **Default**: Not configured
+- **Pre-shared key encoding**  
+  **Default**: Not configured  
   Firewall CSP: [MdmStore/Global/PresharedKeyEncoding](/windows/client-management/mdm/firewall-csp#presharedkeyencoding)
 
   - **Enable** - Encode presheared keys using UTF-8.
   - **Not configured** - Encode presheared keys using the local store value.
 
-- **IPsec exemptions**
-  **Default**: *0 selected*
+- **IPsec exemptions**  
+  **Default**: *0 selected*  
   Firewall CSP: [MdmStore/Global/IPsecExempt](/windows/client-management/mdm/firewall-csp#ipsecexempt)
 
   Select one or more of the following types of traffic to be exempt from IPsec:
@@ -147,8 +147,8 @@ These settings are applicable to all network types.
   - **Router discover IPv6 ICMP type-codes**
   - **Both IPv4 and IPv6 DHCP network traffic**
 
-- **Certificate revocation list verification**
-  **Default**: Not configured
+- **Certificate revocation list verification**  
+  **Default**: Not configured  
   Firewall CSP: [MdmStore/Global/CRLcheck](/windows/client-management/mdm/firewall-csp#crlcheck)
 
   Choose how the device verifies the certificate revocation list. Options include:
@@ -156,15 +156,15 @@ These settings are applicable to all network types.
   - **Fail CRL verification on revoked certificate only**
   - **Fail CRL verification on any error encountered**.
 
-- **Opportunistically match authentication set per keying module**
-  **Default**: Not configured
+- **Opportunistically match authentication set per keying module**  
+  **Default**: Not configured  
   Firewall CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](/windows/client-management/mdm/firewall-csp#opportunisticallymatchauthsetperkm)
 
   - **Enable** Keying modules must ignore only the authentication suites that they don't support.
   - **Not configured**, Keying modules must ignore the entire authentication set if they don't support all of the authentication suites specified in the set.
 
-- **Packet queuing**
-  **Default**: Not configured
+- **Packet queuing**  
+  **Default**: Not configured  
   Firewall CSP: [MdmStore/Global/EnablePacketQueue](/windows/client-management/mdm/firewall-csp#enablepacketqueue)
 
   Specify how software scaling on the receive side is enabled for the encrypted receive and clear text forward for the IPsec tunnel gateway scenario. This setting confirms the packet order is preserved. Options include:
@@ -185,22 +185,22 @@ The following settings are each listed in this article a single time, but all ap
 
 #### General
 
-- **Windows Firewall**
-  **Default**: Not configured
+- **Windows Firewall**  
+  **Default**: Not configured  
   Firewall CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Enable** - Turn on the firewall, and advanced security.
   - **Not configured** Allows all network traffic, regardless of any other policy settings.
 
-- **Stealth mode**
-  **Default**: Not configured
+- **Stealth mode**  
+  **Default**: Not configured  
   Firewall CSP: [DisableStealthMode](/windows/client-management/mdm/firewall-csp#disablestealthmode)
   - **Not configured**
   - **Block** - Firewall is blocked from operating in stealth mode. Blocking stealth mode allows you to also block **IPsec secured packet exemption**.
   - **Allow** - The firewall operates in stealth mode, which helps prevent responses to probing requests.
 
-- **IPsec secured packet exemption with Stealth Mode**
-  **Default**: Not configured
+- **IPsec secured packet exemption with Stealth Mode**  
+  **Default**: Not configured  
   Firewall CSP: [DisableStealthModeIpsecSecuredPacketExemption](/windows/client-management/mdm/firewall-csp#disablestealthmodeipsecsecuredpacketexemption)
 
   This option is ignored if *Stealth mode* is set to *Block*.
@@ -209,16 +209,16 @@ The following settings are each listed in this article a single time, but all ap
   - **Block** - IPSec secured packets don't receive exemptions.
   - **Allow** - Enable exemptions. The firewall's stealth mode MUST NOT prevent the host computer from responding to unsolicited network traffic that is secured by IPsec.
 
-- **Shielded**
-  **Default**: Not configured
+- **Shielded**  
+  **Default**: Not configured  
   Firewall CSP: [Shielded](/windows/client-management/mdm/firewall-csp#shielded)
 
   - **Not configured**
   - **Block** - When the Windows Firewall is on and this setting is set to *Block*, all incoming traffic is blocked, regardless of other policy settings.
   - **Allow** - When set to *Allow*, this setting is turned off - and incoming traffic is allowed based on other policy settings.
 
-- **Unicast responses to multicast broadcasts**
-  **Default**: Not configured
+- **Unicast responses to multicast broadcasts**  
+  **Default**: Not configured  
   Firewall CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
   Typically, you don't want to receive unicast responses to multicast or broadcast messages. These responses can indicate a denial of service (DOS) attack, or an attacker trying to probe a known live computer.
@@ -226,16 +226,16 @@ The following settings are each listed in this article a single time, but all ap
   - **Block** - Disable unicast responses to multicast broadcasts.
   - **Allow** - Allow unicast responses to multicast broadcasts.
 
-- **Inbound notifications**
-  **Default**: Not configured
+- **Inbound notifications**  
+  **Default**: Not configured  
   Firewall CSP: [DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=8725630)
 
   - **Not configured**
   - **Block** - Hide notifications to uses when an app is blocked from listening on a port.
   - **Allow** - Enables this setting, and may show a notification to users when an app is blocked from listening on a port.
 
-- **Default action for outbound connections**
-  **Default**: Not configured
+- **Default action for outbound connections**  
+  **Default**: Not configured  
   Firewall CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
 
   Configure the default action firewall performs on outbound connections. This setting will get applied to Windows version 1809 and above.
@@ -244,8 +244,8 @@ The following settings are each listed in this article a single time, but all ap
   - **Block** - The default firewall action isn't run on outbound traffic unless it's explicitly specified not to block.
   - **Allow** - Default firewall actions run on outbound connections.
 
-- **Default action for inbound connections**
-  **Default**: Not configured
+- **Default action for inbound connections**  
+  **Default**: Not configured  
   Firewall CSP: [DefaultInboundAction](/windows/client-management/mdm/firewall-csp#defaultinboundaction)
 
   - **Not configured**
@@ -254,8 +254,8 @@ The following settings are each listed in this article a single time, but all ap
 
 #### Rule merging
 
-- **Authorized application Windows Firewall rules from the local store**
-  **Default**: Not configured
+- **Authorized application Windows Firewall rules from the local store**  
+  **Default**: Not configured  
   Firewall CSP: [AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
 
   - **Not configured**
@@ -263,24 +263,24 @@ The following settings are each listed in this article a single time, but all ap
   - **Allow** -
    Choose **Enable** Applies firewall rules in the local store so they're recognized and enforced.
 
-- **Global port Windows Firewall rules from the local store**
-  **Default**: Not configured
+- **Global port Windows Firewall rules from the local store**  
+  **Default**: Not configured  
   Firewall CSP: [GlobalPortsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
 
   - **Not configured**
   - **Block** - The global port firewall rules in the local store are ignored and not enforced.
   - **Allow** - Apply global port firewall rules in the local store to be recognized and enforced.
 
-- **Windows Firewall rules from the local store**
-  **Default**: Not configured
+- **Windows Firewall rules from the local store**  
+  **Default**: Not configured  
   Firewall CSP: [AllowLocalPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
 
   - **Not configured**
   - **Block** - Firewall rules from the local store are ignored and not enforced.
   - **Allow** - Apply firewall rules in the local store to be recognized and enforced.
 
-- **IPsec rules from the local store**
-  **Default**: Not configured
+- **IPsec rules from the local store**  
+  **Default**: Not configured  
   Firewall CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
   - **Not configured**
@@ -289,54 +289,54 @@ The following settings are each listed in this article a single time, but all ap
 
 ### Firewall rules
 
-You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-1011-devices).
+You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-devices).
 
 Custom Firewall rules support the following options:
 
 #### General settings
 
-- **Name**
+- **Name**  
   **Default**: *No name*
 
   Specify a friendly name for your rule. This name will appear in the list of rules to help you identify it.
 
-- **Description**
+- **Description**  
   **Default**: *No description*
 
   Provide a description of the rule.
 
-- **Direction**
-  **Default**: Not configured
+- **Direction**  
+  **Default**: Not configured  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/Direction](/windows/client-management/mdm/firewall-csp#direction)
 
   Specify if this rule applies to **Inbound**, or **Outbound** traffic. When set as **Not configured**, the rule automatically applies to Outbound traffic.
 
-- **Action**
-  **Default**: Not configured
+- **Action**  
+  **Default**: Not configured  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/Action](/windows/client-management/mdm/firewall-csp#action), and [FirewallRules/*FirewallRuleName*/Action/Type](/windows/client-management/mdm/firewall-csp#type)
 
   Select from **Allow** or **Block**. When set as **Not configured**, the rule defaults to allow traffic.
 
-- **Network type**
-  **Default**: 0 selected
+- **Network type**  
+  **Default**: 0 selected  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/Profiles](/windows/client-management/mdm/firewall-csp#profiles)
 
   Select up to three types of network types to which this rule belongs. Options include **Domain**, **Private**, and **Public**.  If no network types are selected, the rule applies to all three network types.
 
 #### Application settings
 
-- **Application(s)**
+- **Application(s)**  
   **Default**: All
 
   Control connections for an app or program. Apps and programs can be specified either by *file path*, *package family name*, or *service name*:
 
-  - **Package family name** – Specify a package family name. To find the package family name, use the PowerShell command **Get-AppxPackage**.
+  - **Package family name** – Specify a package family name. To find the package family name, use the PowerShell command **Get-AppxPackage**.  
     Firewall CSP: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](/windows/client-management/mdm/firewall-csp#packagefamilyname)
 
-  - **File path** – You must specify a file path to an app on the client device, which can be an absolute path, or a relative path. For example:  C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.
+  - **File path** – You must specify a file path to an app on the client device, which can be an absolute path, or a relative path. For example:  C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.  
     Firewall CSP: [FirewallRules/*FirewallRuleName*/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
-  - **Windows service** – Specify the Windows service short name if it's a service and not an application that sends or receives traffic. To find the service short name, use the PowerShell command **Get-Service**.
+  - **Windows service** – Specify the Windows service short name if it's a service and not an application that sends or receives traffic. To find the service short name, use the PowerShell command **Get-Service**.  
     Firewall CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   - **All**– *No configurations is required*
@@ -345,8 +345,8 @@ Custom Firewall rules support the following options:
 
 Specify the local and remote addresses to which this rule applies.
 
-- **Local addresses**
-  **Default**: Any address
+- **Local addresses**  
+  **Default**: Any address  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)
 
   Select **Any address** or **Specified address**.
@@ -358,8 +358,8 @@ Specify the local and remote addresses to which this rule applies.
   - An IPv4 address range in the format of "start address - end address" with no spaces included.
   - An IPv6 address range in the format of "start address - end address" with no spaces included.
 
-- **Remote addresses**
-  **Default**: Any address
+- **Remote addresses**  
+  **Default**: Any address  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)
 
   Select **Any address** or **Specified address**.
@@ -385,8 +385,8 @@ Specify the local and remote addresses to which this rule applies.
 
 Specify the local and remote ports to which this rule applies.
 
-- **Protocol**
-  **Default**: Any
+- **Protocol**  
+  **Default**: Any  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
   Select from the following, and complete any required configurations:
   - **All** – No configuration is available.
@@ -400,8 +400,8 @@ Specify the local and remote ports to which this rule applies.
 
 #### Advanced configuration
 
-- **Interface types**
-  **Default**: 0 selected
+- **Interface types**  
+  **Default**: 0 selected  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](/windows/client-management/mdm/firewall-csp#interfacetypes)
 
   Select from the following options:
@@ -409,8 +409,8 @@ Specify the local and remote ports to which this rule applies.
   - **Wireless**
   - **Local area network**
 
-- **Only allow connections from these users**
-  **Default**: All users *(Defaults to all uses when no list is specified)*
+- **Only allow connections from these users**  
+  **Default**: All users *(Defaults to all uses when no list is specified)*  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Specify a list of authorized local users for this rule. A list of authorized users can't be specified if this rule applies to a Windows service.
@@ -419,15 +419,15 @@ Specify the local and remote ports to which this rule applies.
 
 Microsoft Edge must be installed on the device.
 
-- **SmartScreen for apps and files**
-  **Default**: Not configured
+- **SmartScreen for apps and files**  
+  **Default**: Not configured  
    SmartScreen CSP: [SmartScreen/EnableSmartScreenInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
 
   - **Not configured** - Disables use of SmartScreen.
   - **Enable** - Enable Windows SmartScreen for file execution, and running apps. SmartScreen is a cloud-based anti-phishing and anti-malware component.
 
-- **Unverified files execution**
-  **Default**: Not configured
+- **Unverified files execution**  
+  **Default**: Not configured  
    SmartScreen CSP: [SmartScreen/PreventOverrideForFilesInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-preventoverrideforfilesinshell)
 
   - **Not configured** - Disables this feature, and allows end users to run files that haven't been verified.
@@ -437,8 +437,8 @@ Microsoft Edge must be installed on the device.
 
 ### Windows Settings
 
-- **Encrypt devices**
-  **Default**: Not configured
+- **Encrypt devices**  
+  **Default**: Not configured  
   BitLocker CSP: [RequireDeviceEncryption](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
 
   - **Require** - Prompt users to enable device encryption. Depending on the Windows edition and system configuration, users may be asked:
@@ -452,8 +452,8 @@ Microsoft Edge must be installed on the device.
 
 Base settings are universal BitLocker settings for all types of data drives. These settings manage what drive encryption tasks or configuration options the end user can modify across all types of data drives.
 
-- **Warning for other disk encryption**
-  **Default**: Not configured
+- **Warning for other disk encryption**  
+  **Default**: Not configured  
   BitLocker CSP: [AllowWarningForOtherDiskEncryption](/windows/client-management/mdm/bitlocker-csp#allowwarningforotherdiskencryption)
 
   - **Block** - Disable the warning prompt if another disk encryption service is on the device.
@@ -464,9 +464,9 @@ Base settings are universal BitLocker settings for all types of data drives. The
 
   When set to *Block*, you can then configure the following setting:
 
-  - **Allow standard users to enable encryption during Microsoft Entra join**
-    *This setting only applies to Microsoft Entra joined (Azure ADJ) devices, and depends on the previous setting, `Warning for other disk encryption`.*
-    **Default**: Not configured
+  - **Allow standard users to enable encryption during Microsoft Entra join**  
+    *This setting only applies to Microsoft Entra joined (Azure ADJ) devices, and depends on the previous setting, `Warning for other disk encryption`.*  
+    **Default**: Not configured  
     BitLocker CSP: [AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
     - **Allow** - Standard users (non-administrators) can enable BitLocker encryption when signed in.
@@ -475,8 +475,8 @@ Base settings are universal BitLocker settings for all types of data drives. The
   > [!TIP]
   > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must be set to *Allow*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
-- **Configure encryption methods**
-  **Default**: Not configured
+- **Configure encryption methods**  
+  **Default**: Not configured  
   BitLocker CSP: [EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
   - **Enable** - Configure encryption algorithms for operating system, data, and removable drives.
@@ -484,7 +484,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
 
   When set to  *Enable*, you can configure the following settings:
 
-  - **Encryption for operating system drives**
+  - **Encryption for operating system drives**  
     **Default**: XTS-AES 128-bit
 
     Choose the encryption method for operating system drives. We recommend you use the XTS-AES algorithm.
@@ -493,7 +493,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
     - **XTS-AES 128-bit**
     - **XTS-AES 256-bit**
 
-  - **Encryption for fixed data-drives**
+  - **Encryption for fixed data-drives**  
     **Default**: AES-CBC 128-bit
 
     Choose the encryption method for fixed (built-in) data drives. We recommend you use the XTS-AES algorithm.
@@ -502,10 +502,10 @@ Base settings are universal BitLocker settings for all types of data drives. The
     - **XTS-AES 128-bit**
     - **XTS-AES 256-bit**
 
-  - **Encryption for removable data-drives**
+  - **Encryption for removable data-drives**  
     **Default**: AES-CBC 128-bit
 
-    Choose the encryption method for removable data drives. If the removable drive is used with devices that aren't running Windows 10/11, then we recommend you use the AES-CBC algorithm.
+    Choose the encryption method for removable data drives. If the removable drive is used with devices that aren't running Windows, then we recommend you use the AES-CBC algorithm.
     - **AES-CBC 128-bit**
     - **AES-CBC 256-bit**
     - **XTS-AES 128-bit**
@@ -515,8 +515,8 @@ Base settings are universal BitLocker settings for all types of data drives. The
 
 These settings apply specifically to operating system data drives.
 
-- **Additional authentication at startup**
-  **Default**: Not configured
+- **Additional authentication at startup**  
+  **Default**: Not configured  
   BitLocker CSP: [SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
   - **Require** - Configure the authentication requirements for computer startup, including the use of Trusted Platform Module (TPM).
@@ -524,13 +524,13 @@ These settings apply specifically to operating system data drives.
 
   When set to *Require*, you can configure the following settings:
 
-  - **BitLocker with non-compatible TPM chip**
+  - **BitLocker with non-compatible TPM chip**  
     **Default**: Not configured
 
     - **Block** - Disable use of BitLocker when a device doesn't have a compatible TPM chip.
     - **Not configured** - Users can use BitLocker without a compatible TPM chip. BitLocker may require a password or a startup key.
 
-  - **Compatible TPM startup**
+  - **Compatible TPM startup**  
     **Default**: Allow TPM
 
     Configure if TPM is allowed, required, or not allowed.
@@ -539,7 +539,7 @@ These settings apply specifically to operating system data drives.
     - **Do not allow TPM**
     - **Require TPM**
 
-  - **Compatible TPM startup PIN**
+  - **Compatible TPM startup PIN**  
     **Default**: Allow startup PIN with TPM
 
     Choose to allow, not allow, or require using a startup PIN with the TPM chip. Enabling a startup PIN requires interaction from the end user.
@@ -551,7 +551,7 @@ These settings apply specifically to operating system data drives.
     > [!TIP]
     > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
-  - **Compatible TPM startup key**
+  - **Compatible TPM startup key**  
     **Default**: Allow startup key with TPM
 
     Choose to allow, not allow, or require using a startup key with the TPM chip. Enabling a startup key requires interaction from the end user.
@@ -563,7 +563,7 @@ These settings apply specifically to operating system data drives.
     > [!TIP]
     > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup key with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
-  - **Compatible TPM startup key and PIN**
+  - **Compatible TPM startup key and PIN**  
     **Default**: Allow startup key and PIN with TPM
 
     Choose to allow, not allow, or require using a startup key and PIN with the TPM chip. Enabling startup key and PIN requires interaction from the end user.
@@ -574,8 +574,8 @@ These settings apply specifically to operating system data drives.
     > [!TIP]
     > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup key and PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
-- **Minimum PIN Length**
-  **Default**: Not configured
+- **Minimum PIN Length**  
+  **Default**: Not configured  
   BitLocker CSP: [SystemDrivesMinimumPINLength](/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
 
   - **Enable** Configure a minimum length for the TPM startup PIN.
@@ -583,14 +583,14 @@ These settings apply specifically to operating system data drives.
 
   When set to *Enable*, you can configure the following setting:
 
-  - **Minimum characters**
+  - **Minimum characters**  
     **Default**: *Not configured*
     BitLocker CSP: [SystemDrivesMinimumPINLength](/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
 
     Enter the number of characters required for the startup PIN from **4**-**20**.
 
-- **OS drive recovery**
-  **Default**: Not configured
+- **OS drive recovery**  
+  **Default**: Not configured  
   BitLocker CSP: [SystemDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoveryoptions)
 
   - **Enable** - Control how BitLocker-protected operating system drives recover when the required start-up information isn't available.
@@ -598,13 +598,13 @@ These settings apply specifically to operating system data drives.
 
   When set to *Enable*, you can configure the following settings:
 
-  - **Certificate-based data recovery agent**
+  - **Certificate-based data recovery agent**  
     **Default**: Not configured
 
     - **Block** - Prevent use of data recovery agent with BitLocker-protected OS drives.
     - **Not configured** - Allow data recovery agents to be used with BitLocker-protected operating system drives.
 
-  - **User creation of recovery password**
+  - **User creation of recovery password**  
     **Default**: Allow 48-digit recovery password
 
     Choose if users are allowed, required, or not allowed to generate a 48-digit recovery password.
@@ -612,7 +612,7 @@ These settings apply specifically to operating system data drives.
     - **Do not allow 48-digit recovery password**
     - **Require 48-digit recovery password**
 
-  - **User creation of recovery key**
+  - **User creation of recovery key**  
     **Default**: Allow 256-bit recovery key
 
     Choose if users are allowed, required, or not allowed to generate a 256-bit recovery key.
@@ -620,37 +620,37 @@ These settings apply specifically to operating system data drives.
     - **Do not allow 256-bit recovery key**
     - **Require 256-bit recovery key**
 
-  - **Recovery options in the BitLocker setup wizard**
+  - **Recovery options in the BitLocker setup wizard**  
     **Default**: Not configured
 
     - **Block** - Users can't see and change the recovery options. When set to
     - **Not configured** - Users can see and change the recovery options when they turn on BitLocker.
 
-  - **Save BitLocker recovery information to Microsoft Entra ID**
+  - **Save BitLocker recovery information to Microsoft Entra ID**  
     **Default**: Not configured
 
     - **Enable** - Store the BitLocker recovery information to Microsoft Entra ID.
     - **Not configured** - BitLocker recovery information isn't stored in Microsoft Entra ID.
 
-  - **BitLocker recovery Information stored to Microsoft Entra ID**
+  - **BitLocker recovery Information stored to Microsoft Entra ID**  
     **Default**: Backup recovery passwords and key packages
 
     Configure what parts of BitLocker recovery information are stored in Microsoft Entra ID. Choose from:
     - **Backup recovery passwords and key packages**
     - **Backup recovery passwords only**
 
-  - **Client-driven recovery password rotation**
-    **Default**: Not configured
+  - **Client-driven recovery password rotation**  
+    **Default**: Not configured  
     BitLocker CSP: [ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)
 
     This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE).
 
-    - Not configured
+    - Not configured  
     - Key rotation disabled
     - Key rotation enabled for Microsoft Entra joined deices
     - Key rotation enabled for Microsoft Entra ID and Hybrid-joined devices
 
-  - **Store recovery information in Microsoft Entra ID before enabling BitLocker**
+  - **Store recovery information in Microsoft Entra ID before enabling BitLocker**  
     **Default**: Not configured
 
     Prevent users from enabling BitLocker unless the computer successfully backs up the BitLocker recovery information to Microsoft Entra ID.
@@ -658,15 +658,15 @@ These settings apply specifically to operating system data drives.
     - **Require** - Stop users from turning on BitLocker unless the BitLocker recovery information is successfully stored in Microsoft Entra ID.
     - **Not configured** - Users can turn on BitLocker, even if recovery information isn't successfully stored in Microsoft Entra ID.
 
-- **Pre-boot recovery message and URL**
-  **Default**: Not configured
+- **Pre-boot recovery message and URL**  
+  **Default**: Not configured  
   BitLocker CSP: [SystemDrivesRecoveryMessage](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoverymessage)
 
   - **Enable** - Configure the message and URL that display on the pre-boot key recovery screen.
   - **Not configured** - Disable this feature.
 
   When set to *Enable*, you can configure the following setting:
-  - **Pre-boot recovery message**
+  - **Pre-boot recovery message**  
     **Default**: Use default recovery message and URL
 
     Configure how the pre-boot recovery message displays to users. Choose from:
@@ -679,15 +679,15 @@ These settings apply specifically to operating system data drives.
 
 These settings apply specifically to fixed data drives.
 
-- **Write access to fixed data-drive not protected by BitLocker**
-  **Default**: Not configured
+- **Write access to fixed data-drive not protected by BitLocker**  
+  **Default**: Not configured  
   BitLocker CSP: [FixedDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrequireencryption)
 
   - **Block** - Give read-only access to data drives that aren't BitLocker-protected.
   - **Not configured** - By default, read and write access to data drives that aren't encrypted.
 
-- **Fixed drive recovery**
-  **Default**: Not configured
+- **Fixed drive recovery**  
+  **Default**: Not configured  
   BitLocker CSP: [FixedDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrecoveryoptions)
 
   - **Enable** - Control how BitLocker-protected fixed drives recover when the required start-up information isn't available.
@@ -695,13 +695,13 @@ These settings apply specifically to fixed data drives.
 
   When set to *Enable*, you can configure the following settings:
 
-  - **Data recovery agent**
+  - **Data recovery agent**  
     **Default**: Not configured
 
     - **Block** - Prevent use of the data recovery agent with BitLocker-protected fixed drives Policy Editor.
     - **Not configured** - Enables use of data recovery agents with BitLocker-protected fixed drives.
 
-  - **User creation of recovery password**
+  - **User creation of recovery password**  
     **Default**: Allow 48-digit recovery password
 
     Choose if users are allowed, required, or not allowed to generate a 48-digit recovery password.
@@ -709,7 +709,7 @@ These settings apply specifically to fixed data drives.
     - **Do not allow 48-digit recovery password**
     - **Require 48-digit recovery password**
 
-  - **User creation of recovery key**
+  - **User creation of recovery key**  
     **Default**: Allow 256-bit recovery key
 
     Choose if users are allowed, required, or not allowed to generate a 256-bit recovery key.
@@ -717,26 +717,26 @@ These settings apply specifically to fixed data drives.
     - **Do not allow 256-bit recovery key**
     - **Require 256-bit recovery key**
 
-  - **Recovery options in the BitLocker setup wizard**
+  - **Recovery options in the BitLocker setup wizard**  
     **Default**: Not configured
 
     - **Block** - Users can't see and change the recovery options. When set to
     - **Not configured** - Users can see and change the recovery options when they turn on BitLocker.
 
-  - **Save BitLocker recovery information to Microsoft Entra ID**
+  - **Save BitLocker recovery information to Microsoft Entra ID**  
     **Default**: Not configured
 
     - **Enable** - Store the BitLocker recovery information to Microsoft Entra ID.
     - **Not configured** - BitLocker recovery information isn't stored in Microsoft Entra ID.
 
-  - **BitLocker recovery Information stored to Microsoft Entra ID**
+  - **BitLocker recovery Information stored to Microsoft Entra ID**  
     **Default**: Backup recovery passwords and key packages
 
     Configure what parts of BitLocker recovery information are stored in Microsoft Entra ID. Choose from:
     - **Backup recovery passwords and key packages**
     - **Backup recovery passwords only**
 
-  - **Store recovery information in Microsoft Entra ID before enabling BitLocker**
+  - **Store recovery information in Microsoft Entra ID before enabling BitLocker**  
     **Default**: Not configured
 
     Prevent users from enabling BitLocker unless the computer successfully backs up the BitLocker recovery information to Microsoft Entra ID.
@@ -748,8 +748,8 @@ These settings apply specifically to fixed data drives.
 
 These settings apply specifically to removable data drives.
 
-- **Write access to removable data-drive not protected by BitLocker**
-  **Default**: Not configured
+- **Write access to removable data-drive not protected by BitLocker**  
+  **Default**: Not configured  
   BitLocker CSP: [RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
 
   - **Block** - Give read-only access to data drives that aren't BitLocker-protected.
@@ -757,7 +757,7 @@ These settings apply specifically to removable data drives.
 
   When set to *Enable*, you can configure the following setting:
 
-  - **Write access to devices configured in another organization**
+  - **Write access to devices configured in another organization**  
     **Default**: Not configured
 
     - **Block** - Block write access to devices configured in another organization.
@@ -786,13 +786,13 @@ Attack surface reduction rule merge behavior is as follows:
   - Endpoint security > Attack surface reduction policy > **Attack surface reduction rules**
   - Endpoint security > Security baselines > Microsoft Defender for Endpoint Baseline > **Attack Surface Reduction Rules**.
 - Settings that don't have conflicts are added to a superset of policy for the device.
-- When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy. Settings that don’t conflict are added to the superset policy that applies to a device.
+- When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy. Settings that don't conflict are added to the superset policy that applies to a device.
 - Only the configurations for conflicting settings are held back.
 
 **Settings in this profile**:
 
-- **Flag credential stealing from the Windows local security authority subsystem**
-  **Default**: Not configured
+- **Flag credential stealing from the Windows local security authority subsystem**  
+  **Default**: Not configured  
   Rule: [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Help prevent actions and apps that are typically used by exploit-seeking malware to infect machines.
@@ -801,8 +801,8 @@ Attack surface reduction rule merge behavior is as follows:
   - **Enable** - Flag credential stealing from the Windows local security authority subsystem (lsass.exe).
   - **Audit only**
 
-- **Process creation from Adobe Reader (beta)**
-  **Default**: Not configured
+- **Process creation from Adobe Reader (beta)**  
+  **Default**: Not configured  
   Rule: [Block Adobe Reader from creating child processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)
 
   - **Not configured**
@@ -813,40 +813,40 @@ Attack surface reduction rule merge behavior is as follows:
 
 Block Office apps from taking the following actions:
 
-- **Office apps injecting into other processes (no exceptions)**
-  **Default**: Not configured
+- **Office apps injecting into other processes (no exceptions)**  
+  **Default**: Not configured  
   Rule: [Block Office applications from injecting code into other processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)
 
   - **Not configured**
   - **Block** - Block Office apps from injecting into other processes.
   - **Audit only**
 
-- **Office apps/macros creating executable content**
-  **Default**: Not configured
+- **Office apps/macros creating executable content**  
+  **Default**: Not configured  
   Rule: [Block Office applications from creating executable content](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)
 
   - **Not configured**
   - **Block** - Block Office apps and macros from creating executable content.
   - **Audit only**
 
-- **Office apps launching child processes**
-  **Default**: Not configured
+- **Office apps launching child processes**  
+  **Default**: Not configured  
   Rule: [Block all Office applications from creating child processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)
 
   - **Not configured**
   - **Block** - Block Office apps from launching child processes.
   - **Audit only**
 
-- **Win32 imports from Office macro code**
-  **Default**: Not configured
+- **Win32 imports from Office macro code**  
+  **Default**: Not configured  
   Rule: [Block Win32 API calls from Office macros](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)
 
   - **Not configured**
   - **Block** - Block Win32 imports from macro code in Office.
   - **Audit only**
 
-- **Process creation from Office communication products**
-  **Default**: Not configured
+- **Process creation from Office communication products**  
+  **Default**: Not configured  
   Rule: [Block Office communication application from creating child processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)
 
   - **Not configured**
@@ -857,40 +857,40 @@ Block Office apps from taking the following actions:
 
 Block the following to help prevent against script threats:
 
-- **Obfuscated js/vbs/ps/macro code**
-  **Default**: Not configured
+- **Obfuscated js/vbs/ps/macro code**  
+  **Default**: Not configured  
   Rule: [Block execution of potentially obfuscated scripts](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)
 
   - **Not configured**
   - **Block** - Block any obfuscated js/vbs/ps/macro code.
   - **Audit only**
 
-- **js/vbs executing payload downloaded from Internet (no exceptions)**
-  **Default**: Not configured
+- **js/vbs executing payload downloaded from Internet (no exceptions)**  
+  **Default**: Not configured  
   Rule: [Block JavaScript or VBScript from launching downloaded executable content](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
 
   - **Not configured**
   - **Block** - Block js/vbs from executing payload downloaded from Internet.
   - **Audit only**
 
-- **Process creation from PSExec and WMI commands**
-  **Default**: Not configured
+- **Process creation from PSExec and WMI commands**  
+  **Default**: Not configured  
   Rule: [Block process creations originating from PSExec and WMI commands](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)
 
   - **Not configured**
   - **Block** - Block process creations originating from PSExec and WMI commands.
   - **Audit only**
 
-- **Untrusted and unsigned processes that run from USB**
-  **Default**: Not configured
+- **Untrusted and unsigned processes that run from USB**  
+  **Default**: Not configured  
   Rule: [Block untrusted and unsigned processes that run from USB](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)
 
   - **Not configured**
   - **Block** - Block untrusted and unsigned processes that run from USB.
   - **Audit only**
 
-- **Executables that don't meet a prevalence, age, or trusted list criteria**
-  **Default**: Not configured
+- **Executables that don't meet a prevalence, age, or trusted list criteria**  
+  **Default**: Not configured  
   Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
 
   - **Not configured**
@@ -901,8 +901,8 @@ Block the following to help prevent against script threats:
 
 Block the following to help prevent email threats:
 
-- **Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)**
-  **Default**: Not configured
+- **Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)**  
+  **Default**: Not configured  
   Rule: [Block executable content from email client and webmail](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)
 
   - **Not configured**
@@ -911,8 +911,8 @@ Block the following to help prevent email threats:
 
 #### Rules to protect against ransomware
 
-- **Advanced ransomware protection**
-  Default:  Not configured
+- **Advanced ransomware protection**  
+  Default:  Not configured  
   Rule: [Use advanced protection against ransomware](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)
 
   - **Not configured**
@@ -921,7 +921,7 @@ Block the following to help prevent email threats:
 
 #### Attack Surface Reduction exceptions
 
-- **Files and folder to exclude from attack surface reduction rules**
+- **Files and folder to exclude from attack surface reduction rules**  
   Defender CSP: [AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions)
 
   - **Import** a .csv file that contains files and folders to exclude from attack surface reduction rules.
@@ -943,8 +943,8 @@ Block the following to help prevent email threats:
 
 Help [protect valuable data](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) from malicious apps and threats, such as ransomware.
 
-- **Folder protection**
-  **Default**: Not configured
+- **Folder protection**  
+  **Default**: Not configured  
   Defender CSP: [EnableControlledFolderAccess](/windows/client-management/mdm/policy-csp-defender#defender-enablecontrolledfolderaccess)
 
   Protect files and folders from unauthorized changes by unfriendly apps.
@@ -956,13 +956,13 @@ Help [protect valuable data](/windows/security/threat-protection/microsoft-defen
   - **Audit disk modification**
 
   When you select a configuration other than *Not configured*, you can then configure:
-  - **List of apps that have access to protected folders**
+  - **List of apps that have access to protected folders**  
     Defender CSP: [ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications)
 
     - **Import** a .csv file that contains an app list.
     - **Add** apps to this list manually.
 
-  - **List of additional folders that need to be protected**
+  - **List of additional folders that need to be protected**  
     Defender CSP: [ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders)
 
     - **Import** a .csv file that contains a folder list.
@@ -972,8 +972,8 @@ Help [protect valuable data](/windows/security/threat-protection/microsoft-defen
 
 Block outbound connections from any app to IP addresses or domains with low reputations. Network filtering is supported in both Audit and Block mode.
 
-- **Network protection**
-  **Default**: Not configured
+- **Network protection**  
+  **Default**: Not configured  
   Defender CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   The intent of this setting is to protect end users from apps with access to phishing scams, exploit-hosting sites, and malicious content on the Internet. It also prevents third-party browsers from connecting to dangerous sites.
@@ -984,7 +984,7 @@ Block outbound connections from any app to IP addresses or domains with low repu
 
 ### Exploit protection
 
-- **Upload XML**
+- **Upload XML**  
   **Default**: *Not configured*
 
   To use *Exploit protection* to [protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:
@@ -993,8 +993,8 @@ Block outbound connections from any app to IP addresses or domains with low repu
 
   - *Microsoft Defender Security Center UI* - In the Microsoft Defender Security Center, select *App & browser control* and then scroll to the bottom of the resulting screen to find Exploit Protection. First, use the System settings and Program settings tabs to configure mitigation settings. Then, find the Export settings link at the bottom of the screen to export an XML representation of them.
 
-- **User editing of the exploit protection interface**
-  **Default**: Not configured
+- **User editing of the exploit protection interface**  
+  **Default**: Not configured  
   ExploitGuard CSP: [ExploitProtectionSettings](/windows/client-management/mdm/policy-csp-exploitguard)
 
   - **Block** -  Upload an XML file that allows you to configure memory, control flow, and policy restrictions. The settings in the XML file can be used to block an application from exploits.
@@ -1004,8 +1004,8 @@ Block outbound connections from any app to IP addresses or domains with low repu
 
 Choose apps to be audited by or that are trusted to be run by Microsoft Defender Application Control. Windows components and all apps from Windows store are automatically trusted to run.
 
-- **Application control code integrity policies**
-  **Default**: Not configured
+- **Application control code integrity policies**  
+  **Default**: Not configured  
    CSP: [AppLocker CSP](/windows/client-management/mdm/applocker-csp)
 
   - **Enforce** - Choose the application control code integrity policies for your users' devices.
@@ -1023,8 +1023,8 @@ Choose apps to be audited by or that are trusted to be run by Microsoft Defender
 
 Microsoft Defender Credential Guard protects against credential theft attacks. It isolates secrets so that only privileged system software can access them.
 
-- **Credential Guard**
-  **Default**: Disable
+- **Credential Guard**  
+  **Default**: Disable  
   [DeviceGuard CSP](/windows/client-management/mdm/policy-csp-deviceguard)
 
   - **Disable** - Turn off Credential Guard remotely, if it was previously turned on with the **Enabled without UEFI lock** option.​
@@ -1034,13 +1034,16 @@ Microsoft Defender Credential Guard protects against credential theft attacks. I
     > [!NOTE]
     > If you use this setting, and then later want to disable Credential Guard, you must set the Group Policy to **Disabled**. And, physically clear the UEFI configuration information from each computer. As long as the UEFI configuration persists, Credential Guard is enabled.​
 
-  - **Enable without UEFI lock** - Allows Credential Guard to be disabled remotely by using Group Policy. The devices that use this setting must be running Windows 10 version 1511 and newer, or Windows 11.​
+  - **Enable without UEFI lock** - Allows Credential Guard to be disabled remotely by using Group Policy. The devices that use this setting must be running Windows 10 version 1511 and later, or Windows 11.​  
+
+     > [!IMPORTANT]
+     > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
   When you *enable* Credential Guard, the following required features are also enabled:
 
-  - **Virtualization-based Security** (VBS)
+  - **Virtualization-based Security** (VBS)  
     Turns on during the next reboot. Virtualization-based security uses the Windows Hypervisor to provide support for security services.
-  - **Secure Boot with Directory Memory Access**
+  - **Secure Boot with Directory Memory Access**  
     Turns on VBS with Secure Boot and direct memory access (DMA) protections. DMA protections require hardware support, and are only enabled on correctly configured devices.
 
 ## Microsoft Defender Security Center
@@ -1051,8 +1054,8 @@ Microsoft Defender Security Center operates as a separate app or process from ea
 
 Block end-user access to the various areas of the Microsoft Defender Security Center app. Hiding a section also blocks related notifications.
 
-- **Virus and threat protection**
-  **Default**: Not configured
+- **Virus and threat protection**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [DisableVirusUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablevirusui)
 
   Configure if end users can view the Virus and threat protection area in the Microsoft Defender Security Center. Hiding this section will also block all notifications related to Virus and threat protection.
@@ -1060,8 +1063,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Hide**
 
-- **Ransomware protection**
-  **Default**: Not configured
+- **Ransomware protection**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [HideRansomwareDataRecovery](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-hideransomwaredatarecovery)
 
   Configure if end users can view the Ransomware protection area in the Microsoft Defender Security Center. Hiding this section will also block all notifications related to Ransomware protection.
@@ -1069,8 +1072,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Hide**
 
-- **Account protection**
-  **Default**: Not configured
+- **Account protection**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [DisableAccountProtectionUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disableaccountprotectionui)
 
   Configure if end users can view the Account protection area in the Microsoft Defender Security Center. Hiding this section will also block all notifications related to Account protection.
@@ -1078,8 +1081,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Hide**
 
-- **Firewall and network protection**
-  **Default**: Not configured
+- **Firewall and network protection**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [DisableNetworkUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablenetworkui)
 
   Configure if end users can view the Firewall and network protection area in the Microsoft Defender Security center. Hiding this section will also block all notifications related to Firewall and network protection.
@@ -1087,8 +1090,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Hide**
 
-- **App and browser Control**
-  **Default**: Not configured
+- **App and browser Control**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [DisableAppBrowserUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disableappbrowserui)
 
   Configure if end users can view the App and browser control area in the Microsoft Defender Security center. Hiding this section will also block all notifications related to App and browser control.
@@ -1096,8 +1099,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Hide**
 
-- **Hardware protection**
-  **Default**: Not configured
+- **Hardware protection**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [DisableDeviceSecurityUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disabledevicesecurityui)
 
   Configure if end users can view the Hardware protection area in the Microsoft Defender Security Center. Hiding this section will also block all notifications related to Hardware protection.
@@ -1105,8 +1108,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Hide**
 
-- **Device performance and health**
-  **Default**: Not configured
+- **Device performance and health**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [DisableHealthUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablehealthui)
 
   Configure if end users can view the Device performance and health area in the Microsoft Defender Security center. Hiding this section will also block all notifications related to Device performance and health.
@@ -1114,8 +1117,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Hide**
 
-- **Family options**
-  **Default**: Not configured
+- **Family options**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [DisableFamilyUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablefamilyui)
 
   Configure if end users can view the Family options area in the Microsoft Defender Security center. Hiding this section will also block all notifications-related to Family options.
@@ -1123,8 +1126,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Hide**
 
-- **Notifications from the displayed areas of app**
-  **Default**: Not configured
+- **Notifications from the displayed areas of app**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [DisableNotifications](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablenotifications)
 
   Choose which notifications to display to end users. Non-critical notifications include summaries of Microsoft Defender Antivirus activity, including notifications when scans have completed. All other notifications are considered critical.
@@ -1133,8 +1136,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Block non-critical notifications**
   - **Block all notifications**
 
-- **Windows Security Center icon in the system tray**
-  **Default**: Not configured
+- **Windows Security Center icon in the system tray**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [HideWindowsSecurityNotificationAreaControl](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#hidewindowssecuritynotificationareacontrol)
 
   Configure the display of the notification area control. The user needs to either sign out and sign in or reboot the computer for this setting to take effect.
@@ -1142,8 +1145,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Hide**
 
-- **Clear TPM button**
-  **Default**: Not configured
+- **Clear TPM button**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [DisableClearTpmButton](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#disablecleartpmbutton)
 
   Configure the display of the Clear TPM button.
@@ -1151,8 +1154,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Disable**
 
-- **TPM firmware update warning**
-  **Default**: Not configured
+- **TPM firmware update warning**  
+  **Default**: Not configured  
   WindowsDefenderSecurityCenter CSP: [DisableTpmFirmwareUpdateWarning](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#disabletpmfirmwareupdatewarning)
 
   Configure the display of update TPM Firmware when a vulnerable firmware is detected.
@@ -1160,10 +1163,10 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Not configured**
   - **Hide**
 
-- **Tamper Protection**
+- **Tamper Protection**  
   **Default**: Not configured
 
-  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender for Endpoint with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).
+  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender for Endpoint with Intune](microsoft-defender-with-intune.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).
   - **Not configured** - No change is made to device settings.
   - **Enabled** - Tamper Protection is turned on and restrictions are enforced on devices.
   - **Disabled** - Tamper Protection is turned off and restrictions aren't enforced.
@@ -1174,8 +1177,8 @@ Provide IT contact information to appear in the Microsoft Defender Security Cent
 
 You can choose to **Display in app and in notifications**, **Display only in app**, **Display only in notifications**, or **Don't display**. Enter the **IT organization name**, and at least one of the following contact options:
 
-- **IT contact information**
-  **Default**: Don't display
+- **IT contact information**  
+  **Default**: Don't display  
   WindowsDefenderSecurityCenter CSP: [EnableCustomizedToasts](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-enablecustomizedtoasts)
 
   Configure where to display IT contact information to end users.
@@ -1187,37 +1190,37 @@ You can choose to **Display in app and in notifications**, **Display only in app
 
   When configured to display, you can configure the following settings:
 
-  - **IT organization name​**
-    **Default**: *Not configured*
+  - **IT organization name​**  
+    **Default**: *Not configured*  
     WindowsDefenderSecurityCenter CSP: [CompanyName](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-companyname)
 
-  - **IT department phone number or Skype ID**
-    **Default**: *Not configured*
+  - **IT department phone number or Skype ID**  
+    **Default**: *Not configured*  
     WindowsDefenderSecurityCenter CSP: [Phone](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-phone)
 
-  - **IT department email address**
-    **Default**: *Not configured*
+  - **IT department email address**  
+    **Default**: *Not configured*  
     WindowsDefenderSecurityCenter CSP: [Email](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-email)
 
-  - **IT support website URL**
-    **Default**: *Not configured*
+  - **IT support website URL**  
+    **Default**: *Not configured*  
     WindowsDefenderSecurityCenter CSP: [URL](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-url)
 
 ## Local device security options
 
-Use these options to configure the local security settings on Windows 10/11 devices.
+Use these options to configure the local security settings on Windows devices.
 
 ### Accounts
 
-- **Add new Microsoft accounts**
-  **Default**: Not configured
+- **Add new Microsoft accounts**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Accounts_BlockMicrosoftAccounts](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** Prevent users from adding new Microsoft accounts to the device.
   - **Not configured** - Users can use Microsoft accounts on the device.
 
-- **Remote log on without password**
-  **Default**: Not configured
+- **Remote log on without password**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** - Allow only local accounts with blank passwords to sign in using the device's keyboard.
@@ -1225,59 +1228,59 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
 #### Admin
 
-- **Local admin account**
-  **Default**: Not configured
+- **Local admin account**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** Prevent use of a local admin account.
   - **Not configured**
 
-- **Rename admin account**
-  **Default**: *Not configured*
+- **Rename admin account**  
+  **Default**: *Not configured*  
   LocalPoliciesSecurityOptions CSP: [Accounts_RenameAdministratorAccount](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Define a different account name to be associated with the security identifier (SID) for the account "Administrator".
 
 #### Guest
 
-- **Guest account**
-  **Default**: Not configured
+- **Guest account**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** - Prevent use of a Guest account.
   - **Not configured**
 
-- **Rename guest account**
-  **Default**: *Not configured*
+- **Rename guest account**  
+  **Default**: *Not configured*  
   LocalPoliciesSecurityOptions CSP: [Accounts_RenameGuestAccount](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Define a different account name to be associated with the security identifier (SID) for the account "Guest".
 
 ### Devices
 
-- **Undock device without logon**
-  **Default**: Not configured
+- **Undock device without logon**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)
 
   - **Block** - A user must sign in to the device, and receive permission to undock the device.
   - **Not configured** - Users can press a docked portable device's physical eject button to safely undock the device.
 
-- **Install printer drivers for shared printers**
-  **Default**:  Not configured
+- **Install printer drivers for shared printers**  
+  **Default**:  Not configured  
   LocalPoliciesSecurityOptions CSP: [Devices_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Any user can install a printer driver as part of connecting to a shared printer.
   - **Not configured** - Only Administrators can install a printer driver as part of connecting to a shared printer.
 
-- **Restrict CD-ROM access to local active user**
-  **Default**:  Not configured
+- **Restrict CD-ROM access to local active user**  
+  **Default**:  Not configured  
   CSP: [Devices_RestrictCDROMAccessToLocallyLoggedOnUserOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Only the interactively logged-on user can use the CD-ROM media. If this policy is enabled and no one is logged on interactively, then the CD-ROM is accessed over the network.
   - **Not configured** - Anyone has access to the CD-ROM.
 
-- **Format and eject removable media**
-  **Default**: Administrators
+- **Format and eject removable media**  
+  **Default**: Administrators  
   CSP: [Devices_AllowedToFormatAndEjectRemovableMedia](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Define who is allowed to format and eject removable NTFS media:
@@ -1288,21 +1291,21 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
 ### Interactive Logon
 
-- **Minutes of lock screen inactivity until screen saver activates**
-  **Default**: *Not configured*
+- **Minutes of lock screen inactivity until screen saver activates**  
+  **Default**: *Not configured*  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MachineInactivityLimit](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Enter the maximum minutes of inactivity until the screensaver activates. (**0** - **99999**)
 
-- **Require CTRL+ALT+DEL to log on**
-  **Default**: Not configured
+- **Require CTRL+ALT+DEL to log on**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** -  Require users to press CTRL+ALT+DEL before logging on to Windows.
   - **Not configured** - Pressing CTRL+ALT+DEL isn't required for users to sign in.
 
-- **Smart card removal behavior**
-  **Default**: No Action
+- **Smart card removal behavior**  
+  **Default**: No Action  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_SmartCardRemovalBehavior](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Determines what happens when the smart card for a logged-on user is removed from the smart card reader. Your options:
@@ -1314,8 +1317,8 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
 #### Display
 
-- **User information on lock screen**
-  **Default**: Not configured
+- **User information on lock screen**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)
 
   Configure the user information that is displayed when the session is locked. If not configured, user display name, domain, and username are shown.
@@ -1325,82 +1328,82 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **User display name only**
   - **Do not display user information**
 
-- **Hide last signed-in user**
-  **Default**: Not configured
+- **Hide last signed-in user**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayLastSignedIn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - Hide the username.
   - **Not configured** - Show the last username.
 
-- **Hide username at sign-in**
-  **Default**: Not Configured
+- **Hide username at sign-in**  
+  **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayUsernameAtSignIn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - Hide the username.
   - **Not configured** - Show the last username.
 
-- **Logon message title**
-  **Default**: *Not configured*
+- **Logon message title**  
+  **Default**: *Not configured*  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MessageTitleForUsersAttemptingToLogOn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Set the message title for users signing in.
 
-- **Logon message text**
-  **Default**: *Not configured*
+- **Logon message text**  
+  **Default**: *Not configured*  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MessageTextForUsersAttemptingToLogOn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Set the message text for users signing in.
 
 ### Network access and security
 
-- **Anonymous access to Named Pipes and Shares**
-  **Default**: Not configured
+- **Anonymous access to Named Pipes and Shares**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Not configured** - Restrict anonymous access to share and Named Pipe settings. Applies to the settings that can be accessed anonymously.
   - **Block** - Disable this policy, making anonymous access available.
 
-- **Anonymous enumeration of SAM accounts**
-  **Default**: Not configured
+- **Anonymous enumeration of SAM accounts**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Not configured** - Anonymous users can enumerate SAM accounts.
   - **Block** - Prevent anonymous enumeration of SAM accounts.
 
-- **Anonymous enumeration of SAM accounts and shares**
-  **Default**: Not configured
+- **Anonymous enumeration of SAM accounts and shares**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Not configured** - Anonymous users can enumerate the names of domain accounts and network shares.
   - **Block** - Prevent anonymous enumeration of SAM accounts and shares.
 
-- **LAN Manager hash value stored on password change**
-  **Default**: Not configured
+- **LAN Manager hash value stored on password change**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [NetworkSecurity_DoNotStoreLANManagerHashValueOnNextPasswordChange](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Determine if the hash value for passwords is stored the next time the password is changed.
   - **Not configured** - The hash value isn't stored
   - **Block** - The LAN Manager (LM) stores the hash value for the new password.
 
-- **PKU2U authentication requests**
-  **Default**: Not configured
+- **PKU2U authentication requests**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [NetworkSecurity_AllowPKU2UAuthenticationRequests](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Not configured**- Allow PU2U requests.
   - **Block** - Block PKU2U authentication requests to the device.
 
-- **Restrict remote RPC connections to SAM**
-  **Default**: Not configured
+- **Restrict remote RPC connections to SAM**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Not configured** - Use the default security descriptor, which may allow users and groups to make remote RPC calls to the SAM.
   - **Allow** - Deny users and groups from making remote RPC calls to the Security Accounts Manager (SAM), which stores user accounts and passwords. **Allow** also lets you change the default Security Descriptor Definition Language (SDDL) string to explicitly allow or deny users and groups to make these remote calls.
 
-    - **Security descriptor**
+    - **Security descriptor**  
       **Default**: *Not configured*
 
-- **Minimum Session Security For NTLM SSP Based Clients**
-  **Default**: None
+- **Minimum Session Security For NTLM SSP Based Clients**  
+  **Default**: None  
   LocalPoliciesSecurityOptions CSP: [NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedclients)
 
   This security setting allows a server to require the negotiation of 128-bit encryption and/or NTLMv2 session security.
@@ -1410,8 +1413,8 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **Require 128-bit encryption**
   - **NTLMv2 and 128-bit encryption**
 
-- **Minimum Session Security For NTLM SSP Based Server**
-  **Default**: None
+- **Minimum Session Security For NTLM SSP Based Server**  
+  **Default**: None  
   LocalPoliciesSecurityOptions CSP: [NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedservers)
 
   This security setting determines which challenge/response authentication protocol is used for network logons.
@@ -1421,8 +1424,8 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **Require 128-bit encryption**
   - **NTLMv2 and 128-bit encryption**
 
-- **LAN Manager Authentication Level**
-  **Default**: LM and NTLM
+- **LAN Manager Authentication Level**  
+  **Default**: LM and NTLM  
   LocalPoliciesSecurityOptions CSP: [NetworkSecurity_LANManagerAuthenticationLevel](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-lanmanagerauthenticationlevel)
 
   - **LM and NTLM**
@@ -1432,8 +1435,8 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **NTLMv2 and not LM**
   - **NTLMv2 and not LM or NTLM**
 
-- **Insecure Guest Logons**
-  **Default**: Not configured
+- **Insecure Guest Logons**  
+  **Default**: Not configured  
   LanmanWorkstation CSP: [LanmanWorkstation](/windows/client-management/mdm/policy-csp-lanmanworkstation#lanmanworkstation-enableinsecureguestlogons)
 
   If you enable this setting, the SMB client will reject insecure guest logons.
@@ -1443,15 +1446,15 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
 ### Recovery console and shutdown
 
-- **Clear virtual memory pagefile when shutting down**
-  **Default**: Not configured
+- **Clear virtual memory pagefile when shutting down**  
+  **Default**: Not configured  
    LocalPoliciesSecurityOptions CSP: [Shutdown_ClearVirtualMemoryPageFile](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - Clear the virtual memory pagefile when the device is powered down.
   - **Not configured** - Doesn't clear the virtual memory.
 
-- **Shut down without log on**
-  **Default**: Not configured
+- **Shut down without log on**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** - Hide the shutdown option on the Windows sign-in screen. Users must sign in to the device, and then shut down.
@@ -1459,22 +1462,22 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
 ### User account control
 
-- **UIA integrity without secure location**
-  **Default**: Not Configured
+- **UIA integrity without secure location**  
+  **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** - Apps that are in a secure location in the file system will run only with UIAccess integrity.
   - **Not configured** - Enables apps to run with UIAccess integrity, even if the apps aren't in a secure location in the file system.
 
-- **Virtualize file and registry write failures to per-user locations**
-  **Default**: Not Configured
+- **Virtualize file and registry write failures to per-user locations**  
+  **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Applications that write data to protected locations fail.
   - **Not configured** - Application write failures are redirected at run time to defined user locations for the file system and registry.
 
-- **Only elevate executable files that are signed and validated**
-  **Default**: Not Configured
+- **Only elevate executable files that are signed and validated**  
+  **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Enforce the PKI certification path validation for an executable file before it can run.
@@ -1482,8 +1485,8 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
 #### UIA elevation prompt behavior​
 
-- **Elevation prompt for admins**
-  **Default**: Prompt for consent for non-Windows binaries
+- **Elevation prompt for admins**  
+  **Default**: Prompt for consent for non-Windows binaries  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_BehaviorOfTheElevationPromptForAdministrators](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Define the behavior of the elevation prompt for admins in Admin Approval Mode.
@@ -1496,8 +1499,8 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **Prompt for consent for non-Windows binaries**
 
 
-- **Elevation prompt for standard users**
-  **Default**: Prompt for credentials
+- **Elevation prompt for standard users**  
+  **Default**: Prompt for credentials  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Define the behavior of the elevation prompt for standard users.
@@ -1507,22 +1510,22 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **Prompt for credentials on the secure desktop**
   - **Prompt for credentials**
 
-- **Route elevation prompts to user's interactive desktop**
-  **Default**: Not Configured
+- **Route elevation prompts to user's interactive desktop**  
+  **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - All elevation requests to go to the interactive user's desktop rather than the secure desktop. Any prompt behavior policy settings for administrators and standard users are used.
   - **Not configured** - Force all elevation requests go to the secure desktop, regardless of any prompt behavior policy settings for administrators and standard users.
 
-- **Elevated prompt for app installations**
-  **Default**: Not Configured
+- **Elevated prompt for app installations**  
+  **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_DetectApplicationInstallationsAndPromptForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Application installation packages aren't detected or prompted for elevation.
   - **Not configured** - Users are prompted for an administrative user name and password when an application installation package requires elevated privileges.
 
-- **UIA elevation prompt without secure desktop**
-  **Default**: Not Configured
+- **UIA elevation prompt without secure desktop**  
+  **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_AllowUIAccessApplicationsToPromptForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
 - **Enable** - Allow UIAccess apps to prompt for elevation, without using the secure desktop.
@@ -1530,15 +1533,15 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
 #### Admin Approval Mode
 
-- **Admin Approval Mode For Built-in Administrator**
-  **Default**: Not Configured
+- **Admin Approval Mode For Built-in Administrator**  
+  **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_UseAdminApprovalMode](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Allow the built-in Administrator account to use Admin Approval Mode. Any operation that requires elevation of privilege prompts the user to approve the operation.
   - **Not configured** - runs all apps with full admin privileges.
 
-- **Run all admins in Admin Approval Mode**
-  **Default**: Not Configured
+- **Run all admins in Admin Approval Mode**  
+  **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_RunAllAdministratorsInAdminApprovalMode](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled**- Enable Admin Approval Mode.
@@ -1546,24 +1549,24 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
 ### Microsoft Network Client
 
-- **Digitally sign communications (if server agrees)**
-  **Default**: Not configured
+- **Digitally sign communications (if server agrees)**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_DigitallySignCommunicationsIfServerAgrees](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Determines if the SMB client negotiates SMB packet signing.
   - **Block** - The SMB client never negotiates SMB packet signing.
   - **Not configured** - The Microsoft network client asks the server to run SMB packet signing upon session setup. If packet signing is enabled on the server, packet signing is negotiated.
 
-- **Send unencrypted password to third-party SMB servers**
-  **Default**: Not configured
+- **Send unencrypted password to third-party SMB servers**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
 
   - **Block** - The Server Message Block (SMB) redirector can send plaintext passwords to non-Microsoft SMB servers that don't support password encryption during authentication.
   - **Not configured** - Block sending of plaintext passwords. The passwords are encrypted.
 
-- **Digitally sign communications (always)**
-  **Default**: Not configured
+- **Digitally sign communications (always)**  
+  **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_DigitallySignCommunicationsAlways](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - The Microsoft network client doesn't communicate with a Microsoft network server unless that server agrees to SMB packet signing.
@@ -1571,15 +1574,15 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
 ### Microsoft Network Server
 
-- **Digitally sign communications (if client agrees)**
-  **Default**: Not configured
+- **Digitally sign communications (if client agrees)**  
+  **Default**: Not configured  
   CSP: [MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - The Microsoft network server negotiates SMB packet signing as requested by the client. That is, if packet signing is enabled on the client, packet signing is negotiated.
   - **Not configured** - The SMB client never negotiates SMB packet signing.
 
-- **Digitally sign communications (always)**
-  **Default**: Not configured
+- **Digitally sign communications (always)**  
+  **Default**: Not configured  
   CSP: [MicrosoftNetworkServer_DigitallySignCommunicationsAlways](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - The Microsoft network server doesn't communicate with a Microsoft network client unless that client agrees to SMB packet signing.
@@ -1587,16 +1590,16 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
 ## Xbox services
 
-- **Xbox Game Save Task**
-  **Default**: Not configured
+- **Xbox Game Save Task**  
+  **Default**: Not configured  
   CSP: [TaskScheduler/EnableXboxGameSaveTask](/windows/client-management/mdm/policy-csp-taskscheduler#taskscheduler-enablexboxgamesavetask)
 
   This setting determines whether the Xbox Game Save Task is Enabled or Disabled.
   - **Enabled**
   - **Not configured**
 
-- **Xbox Accessory Management Service**
-  **Default**: Manual
+- **Xbox Accessory Management Service**  
+  **Default**: Manual  
   CSP: [SystemServices/ConfigureXboxAccessoryManagementServiceStartupMode](/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxaccessorymanagementservicestartupmode)
 
   This setting determines the Accessory Management Service's start type.
@@ -1604,8 +1607,8 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **Automatic**
   - **Disabled**
 
-- **Xbox Live Auth Manager Service**
-  **Default**: Manual
+- **Xbox Live Auth Manager Service**  
+  **Default**: Manual  
   CSP: [SystemServices/ConfigureXboxLiveAuthManagerServiceStartupMode](/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxliveauthmanagerservicestartupmode)
 
   This setting determines the Live Auth Manager Service's start type.
@@ -1613,8 +1616,8 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **Automatic**
   - **Disabled**
 
-- **Xbox Live Game Save Service**
-  **Default**: Manual
+- **Xbox Live Game Save Service**  
+  **Default**: Manual  
   CSP: [SystemServices/ConfigureXboxLiveGameSaveServiceStartupMode](/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxlivegamesaveservicestartupmode)
 
   This setting determines the Live Game Save Service's start type.
@@ -1622,8 +1625,8 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **Automatic**
   - **Disabled**
 
-- **Xbox Live Networking Service**
-  **Default**: Manual
+- **Xbox Live Networking Service**  
+  **Default**: Manual  
   CSP: [SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode](/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxlivenetworkingservicestartupmode)
 
   This setting determines the Networking Service's start type.

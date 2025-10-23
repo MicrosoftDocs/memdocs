@@ -3,7 +3,6 @@ title: iOS/iPadOS direct enrollment - Apple Configurator-Setup Assistant
 description: Use Apple Configurator to enroll corporate-owned iOS/iPadOS devices with Setup Assistant.
 ms.date: 02/27/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management

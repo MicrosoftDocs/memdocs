@@ -11,7 +11,7 @@ ms.reviewer:
 * Android
 * iOS/iPadOS
 * macOS
-* Windows 10/11
+* Windows 
 
 Sign in to the [Company Portal website](https://portal.manage.microsoft.com) to view and manage apps from your organization.
 

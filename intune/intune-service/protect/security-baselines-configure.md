@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 06/02/2025
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: juidaewo
   - intune-azure
 ms.collection:

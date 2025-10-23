@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 07/29/2021
 ms.topic: how-to
-ms.localizationpriority: high
 ms.collection:
 - M365-identity-device-management
 - certificates

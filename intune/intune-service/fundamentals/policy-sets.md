@@ -1,18 +1,17 @@
 ---
-title: Policy sets
+title: Policy Sets
 description: Use policy sets to group collections of management objects in Microsoft Intune.
 author: nicholasswhite
 ms.author: nwhite
 ms.date: 04/10/2024
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: DaGerrit
 ms.collection:
 - M365-identity-device-management
 - highpri
 ---
 
-# Use policy sets to group collections of management objects
+# Use Policy Sets to Group Collections of Management Objects
 
 Policy sets allow you to create a bundle of references to already existing management entities that need to be identified, targeted, and monitored as a single conceptual unit. A policy set is an assignable collection of apps, policies, and other management objects you've created. Creating a policy set enables you to select many different objects at once, and assign them from a single place. As your organization changes, you can revisit a policy set to add or remove its objects and assignments. You can use a policy set to associate and assign existing objects, such as apps, policies, and VPNs in a single package.
 
@@ -80,9 +79,9 @@ Policy sets, new to 1910, have the following known issues.
   - Android store app
   - Android line-of-business app
   - Managed Android line-of-business app
-  - Microsoft 365 Apps (Windows 10 and later)
+  - Microsoft 365 Apps
   - Microsoft 365 Apps (macOS)
-  - Microsoft Edge (Windows 10 and later)
+  - Microsoft Edge
   - Microsoft Edge (macOS)
   - Microsoft Defender ATP (macOS)
   - Windows MSI line-of-business app

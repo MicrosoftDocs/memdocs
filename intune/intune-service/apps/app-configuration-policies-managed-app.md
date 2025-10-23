@@ -1,5 +1,5 @@
 ---
-title: Configuration policies for Intune App SDK managed apps
+title: Configuration Policies for Intune App SDK Managed Apps
 description: Learn how to configure policies for Intune App SDK managed apps.
 ms.date: 04/28/2025
 ms.topic: how-to
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# App configuration policies for Intune App SDK managed apps
+# App Configuration Policies for Intune App SDK Managed Apps
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

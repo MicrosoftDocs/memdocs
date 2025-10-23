@@ -1,6 +1,6 @@
 ---
 title: Remove your Windows device from Intune management
-description: Disconnect your work or school account from device running Windows 10/11.
+description: Disconnect your work or school account from device running Windows.
 ms.date: 04/30/2024
 ms.reviewer: jieyang
 ---
@@ -8,10 +8,7 @@ ms.reviewer: jieyang
 # Remove your Windows device from management
 
 **Applies to**
-- Windows 10
-- Windows 11
-- Windows 8.1
-- Windows 8.1 RT
+- Windows 
 
 Remove a registered, Windows device from management when you no longer want or need to:
 * Use your device for work or school.
@@ -24,7 +21,7 @@ Make sure to read [What happens if you remove device from Intune](unenroll-your-
 ## What happens if you remove device from Intune
 This section describes how your device and access to work or school will change after you remove your device from Intune.
 
-After you unenroll a device running Windows 11, Windows 10, or Windows 8.1:
+After you unenroll a device running Windows:   
 
 - Your device is removed from Company Portal.
 - You can't install apps from the Company Portal.
@@ -52,8 +49,8 @@ After you unenroll a device running Windows 8.1 RT:
 - Email apps, such as Windows Mail, can't open work email that's stored on your device.
 
 
-## Remove Windows 10/11 devices
-This section describes how to remove a Windows 10/11 device from Intune.
+## Remove Windows devices
+This section describes how to remove a Windows device from Intune.
 
 ### Remove in device Settings app
 1. Open the Settings app.

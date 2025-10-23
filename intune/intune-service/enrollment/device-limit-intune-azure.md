@@ -3,29 +3,24 @@ title: Understand Intune and Microsoft Entra device limit restrictions
 description: Learn the differences between Intune device limit restrictions and Microsoft Entra device limit restrictions.
 ms.date: 10/14/2024
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
 - highpri
 ---
 
-# Understand Intune and Microsoft Entra device limit restrictions
-
-**Applies to**
-
-- Android
-- iOS
-- macOS
-- Windows 10
-- Windows 11
+# Understand Intune and Microsoft Entra device limit restrictions  
 
 There are two ways to limit the number of devices an employee or student can use for work or school. You can:
 
 * Configure device limit restrictions in the Microsoft Intune admin center.
 * Configure a device limit in the Microsoft Entra admin center.
 
-This article provides an overview of each limitation, and describes the device conditions and provisioning scenarios that support them.
+This article provides an overview of each limitation, and describes the device conditions and provisioning scenarios that support them. It applies to:  
+- Android  
+- iOS  
+- macOS  
+- Windows  
 
 ## Intune device limit restrictions
 
@@ -73,12 +68,12 @@ Use the following table to determine the type of limitations you can apply to de
 |iOS and macOS| BYOD: Apple User Enrollment | Yes | Yes | Yes |
 |iOS and macOS| BYOD: Apple Device Enrollment | Yes | Yes | Yes |
 |iOS and macOS| Apple Automated Device Enrollment | Yes | Yes | Yes |
-|Windows 10/11| BYOD: User enrollment | Yes | Yes | Yes |
-|Windows 10/11| Automatic enrollment + group policy | No | No | No |
-|Windows 10/11| Automatic enrollment + device enrollment manager | No | Yes | No |
-|Windows 10/11| Automatic enrollment + bulk device enrollment | No | No | No |
-|Windows 10/11| Windows Autopilot | Yes | Yes | No |
-|Windows 10/11| Co-management with Configuration Manager | No | Yes | No |
+|Windows| BYOD: User enrollment | Yes | Yes | Yes |
+|Windows | Automatic enrollment + group policy | No | No | No |
+|Windows | Automatic enrollment + device enrollment manager | No | Yes | No |
+|Windows | Automatic enrollment + bulk device enrollment | No | No | No |
+|Windows| Windows Autopilot | Yes | Yes | No |
+|Windows| Co-management with Configuration Manager | No | Yes | No |
 
 ## Android and iOS devices
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
@@ -99,7 +94,7 @@ Use the following table to determine the type of limitations you can apply to de
 
 ## Windows devices
 
-### Windows 10/11 example 1
+### Windows example 1
 
 - The Microsoft Entra **Maximum number of devices per user** setting is set to 5.
 - The Intune **Device limit** setting is set to 3.
@@ -107,7 +102,7 @@ Use the following table to determine the type of limitations you can apply to de
 
 **Outcome:** Because the enrollment is provisioned by GPO, the Microsoft Entra device limit doesn't apply. The Intune device limit restriction also doesn't apply.
 
-### Windows 10/11 example 2
+### Windows example 2
 
 - The Microsoft Entra **Maximum number of devices per user** setting is set to 5.
 - The Intune **Device limit** setting is set to 2.

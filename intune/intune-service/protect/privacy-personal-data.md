@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 04/07/2025
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: dougeby
 ms.collection:
 - M365-identity-device-management

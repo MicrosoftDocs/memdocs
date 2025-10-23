@@ -5,7 +5,6 @@ author: dougeby
 ms.author: dougeby
 ms.date: 12/12/2023
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: cacamp
 ms.collection:
 - M365-identity-device-management

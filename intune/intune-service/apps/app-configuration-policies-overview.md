@@ -1,5 +1,5 @@
 ---
-title: App configuration policies for Microsoft Intune
+title: App Configuration Policies for Microsoft Intune
 description: Learn how to use app configuration policies on an iOS/iPadOS or Android device in Microsoft Intune.
 ms.date: 06/12/2025
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.collection:
 - FocusArea_Apps_Configure
 ---
 
-# App configuration policies for Microsoft Intune
+# App Configuration Policies for Microsoft Intune
 
 App configuration policies can help you eliminate app setup problems by letting you assign configuration settings to a policy that is assigned to end-users before they run the app. The settings are then supplied automatically when the app is configured on the end-users device, and end-users don't need to take action. The configuration settings are unique for each app.
 

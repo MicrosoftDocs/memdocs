@@ -1,5 +1,5 @@
 ---
-title: Get data from the Data Warehouse API with a REST client
+title: Get Data From the Data Warehouse API With a REST Client
 description: This topic describes how to retrieve data from the Microsoft Intune Data Warehouse using a RESTful API.
 ms.date: 04/23/2024
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Get data from the Intune Data Warehouse API with a REST client
+# Get Data From the Intune Data Warehouse API With a REST Client
 
 You can access the Intune Data Warehouse data model through RESTful endpoints. To gain access to your data, your client must authorize with Microsoft Entra ID using OAuth 2.0. To enable access, first set up a native app in Azure and grant permissions to the Microsoft Intune API. Your local client gets authorization, and then the client can communicate with the Data Warehouse endpoints through the native app.
 

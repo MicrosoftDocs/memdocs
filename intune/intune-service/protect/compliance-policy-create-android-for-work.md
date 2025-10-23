@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 09/04/2025
 ms.topic: reference
-ms.localizationpriority: medium
 ms.reviewer: abigailstein
 ms.collection:
 - M365-identity-device-management
@@ -70,7 +69,7 @@ This section describes the compliance profile settings available for fully manag
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Block** - Mark rooted devices as noncompliant.
 
-- **Require the device to be at or under the Device Threat Level**
+- **Require the device to be at or under the Device Threat Level**  
   Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
@@ -94,7 +93,7 @@ This section describes the compliance profile settings available for fully manag
   - **Check basic integrity**: Require devices to pass Play's basic integrity check.
   - **Check basic integrity & device integrity**: Require devices to pass Play's basic integrity check and device integrity check.
 
-- **Check strong integrity using hardware-backed security features**
+- **Check strong integrity using hardware-backed security features**  
   Optionally, you can require devices to pass a *strong integrity check*. This setting is only available if you require basic integrity checks or device integrity checks. Your options:
 
   - **Not configured** (*default*)  – This setting isn't evaluated for compliance or noncompliance. Intune assesses the verdict from the basic integrity check by default.
@@ -110,17 +109,17 @@ This section describes the compliance profile settings available for fully manag
 
 Configure the requirements for operating system version.
 
-- **Minimum OS version**
+- **Minimum OS version**  
   When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. Device users see a link with information about how to upgrade their OS. They can upgrade their device, and then access organization resources.
 
   *By default, no version is configured*.
 
-- **Maximum OS version**
+- **Maximum OS version**  
   When a device is using an OS version later than the version in the rule, access to organization resources is blocked. The user is asked to contact their IT administrator. Until a rule is changed to allow the OS version, this device can't access organization resources.
 
   *By default, no version is configured*.
 
-- **Minimum security patch level**
+- **Minimum security patch level**  
   Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the YYYY-MM-DD format.
 
   *By default, no date is configured*.
@@ -131,7 +130,7 @@ Require a password to unlock the device. If you don't configure these settings, 
   - **Not configured** (*default*) -  This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password before they can access their device.
 
-- **Required password type**
+- **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
   - **Device default** - To evaluate password compliance, be sure to select a password strength other than *Device default*. The OS might not require a device password by default, so it's better to select a different password type for greater control and consistency across all devices.
   - **Password required, no restrictions**
@@ -201,7 +200,7 @@ This section describes the compliance profile settings available for personal de
 
 ### Microsoft Defender for Endpoint - *for personally owned work profile*
 
-- **Require the device to be at or under the machine risk score**
+- **Require the device to be at or under the machine risk score**  
   Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
@@ -215,7 +214,7 @@ This section describes the compliance profile settings available for personal de
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Block** - Mark rooted devices as noncompliant.
 
-- **Require the device to be at or under the Device Threat Level**
+- **Require the device to be at or under the Device Threat Level**  
   Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Secured** - This option is the most secure, and means that the device can't have any threats. If the device is detected with any level of threats, it's evaluated as noncompliant.
@@ -244,7 +243,7 @@ This section describes the compliance profile settings available for personal de
   - **Check basic integrity**: Require devices to pass Play's basic integrity check.
   - **Check basic integrity & device integrity**: Require devices to pass Play's basic integrity check and device integrity check.
 
-- **Check strong integrity using hardware-backed security features**
+- **Check strong integrity using hardware-backed security features**  
   Optionally, you can require devices to pass a *strong integrity check*. This setting is only available if you require basic integrity checks or device integrity checks. Your options:
 
   - **Not configured** (*default*)  – This setting isn't evaluated for compliance or noncompliance. Intune evaluates the basic integrity check by default.
@@ -313,7 +312,7 @@ Configure device security requirements for the personally owned work profile.
 
   You don't have to configure this setting for Android Enterprise fully managed devices, dedicated devices, and corporate-owned devices with work profiles, because USB debugging is already disabled.
 
-- **Minimum security patch level**
+- **Minimum security patch level**  
   Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the YYYY-MM-DD format.
 
   *By default, no date is configured*.
@@ -334,19 +333,19 @@ Configure device security requirements for the personally owned work profile.
 >
 The following device security settings apply to all Android devices, except where specified.
 
-- **Number of days until password expires**
+- **Number of days until password expires**  
   Enter the number of days, between 1-365, until the device password must be changed. For example, to require a password change after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
 
-- **Number of previous passwords to prevent reuse**
+- **Number of previous passwords to prevent reuse**  
   Use this setting to restrict users from reusing old passwords. Enter the number of passwords you want to prevent them from reusing, from 1-24. For example, enter `5` so that users can't reuse any of their past 5 passwords. When the value is blank, Intune doesn't change or update this setting.
 
-- **Maximum minutes of inactivity before password is required**
+- **Maximum minutes of inactivity before password is required**  
   Enter the maximum idle time allowed, from 1 minute to 8 hours. After this amount of time, the user must re-enter their password to get back into their device. When you choose **Not configured** (default), this setting isn't evaluated for compliance or noncompliance.
 
 
 The following device security settings apply to devices running Android 12 and later.
 
-- **Password complexity**
+- **Password complexity**  
   Select the password complexity requirements for devices running Android 12 and later. Your options:
 
   - **None** - This setting isn't evaluated for compliance or noncompliance.
@@ -382,7 +381,7 @@ The following device security settings apply to devices running Android 11 and e
 > [!IMPORTANT]
 > Google has deprecated the **Required password type** and **Minimum password length** settings for Android 12 and later. In place of those settings, use the password complexity setting under **Android 12 and later**. If you continue to use the deprecated settings without configuring the password complexity setting, new devices running Android 12 or later will default to *high* password complexity. For more information about this change and how it affects passwords on new and existing devices, see the device security settings for Android 12 and later in this article.
 
-- **Required password type**
+- **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
 
   - **Device default**: To evaluate password compliance, be sure to select a password strength other than *Device default*. The OS might not require a device password by default, so it's better to select a different password type for greater control and consistency across all devices.
@@ -393,31 +392,31 @@ The following device security settings apply to devices running Android 11 and e
   - **At least alphanumeric**: Require uppercase letters, lowercase letters, and numeric characters.
   - **At least alphanumeric with symbols**: Require uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
 
-- **Minimum password length**
+- **Minimum password length**  
     This setting appears for certain password types. Enter the minimum number of characters required, between 4 and 16 characters.
 
 #### Work profile security - *for personally owned work profile*
 Configure password requirements for work profile security. If you don't, the use of a work profile password is optional and left up to users to configure.
 
-- **Require a password to unlock work profile**
+- **Require a password to unlock work profile**  
   Require device users to have a password-protected work profile. Your options:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password to access their work profile.
 
 The following work profile security settings apply to all Android devices.
 
-- **Number of days until password expires**
+- **Number of days until password expires**  
   Enter the number of days, between 1-365, until the work profile password must be changed. For example, to require a password change after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
 
-- **Number of previous passwords to prevent reuse**
+- **Number of previous passwords to prevent reuse**  
   Use this setting to restrict users from reusing old passwords. Enter the number of passwords you want to prevent them from reusing, from 1-24. For example, enter *5* so that users can't reuse any of their past 5 passwords. When the value is blank, Intune doesn't change or update this setting.
 
-- **Maximum minutes of inactivity before password is required**
+- **Maximum minutes of inactivity before password is required**  
   Enter the maximum idle time allowed, from 1 minute to 8 hours. After this amount of time, the user must re-enter their password to get back into their work profile. When you choose **Not configured** (default), this setting isn't evaluated for compliance or noncompliance.
 
 The following work profile security settings apply to devices running Android 12 and later.
 
-- **Password complexity**
+- **Password complexity**  
   Select the password complexity requirement for work profiles on devices running Android 12 and later. Your options:
 
   - **None** - This setting isn't evaluated for compliance or noncompliance.
@@ -453,7 +452,7 @@ These work profile security settings apply to devices running Android 11 and ear
 > [!IMPORTANT]
 > Google has deprecated the **Required password type** and **Minimum password length** settings for Android 12 and later. In place of those settings, use the password complexity setting under **Android 12 and later**. If you continue to use the deprecated settings without configuring the password complexity setting, new devices running Android 12 or later will default to *high* password complexity. For more information about this change and how it affects work profile passwords on new and existing devices, see the work profile security settings for Android 12 and later in this article.
 
-- **Required password type**
+- **Required password type**  
   Require users to use a certain type of password. Your options:
   - **Device default** - To evaluate password compliance, be sure to select a password strength other than *Device default*. The OS might not require a work profile password by default, so it's better to select a different password type for greater control and consistency across all devices.
   - **Low security biometric**: For more information about this password type, see [strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android Developers Blog).

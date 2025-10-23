@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 10/25/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: beflamm; aanavath
 ms.collection:
 - highpri

@@ -1,5 +1,5 @@
 ---
-title: Add a macOS DMG app to Microsoft Intune
+title: Add a macOS DMG App to Microsoft Intune
 description: Add a macOS DMG app to Microsoft Intune.
 ms.date: 07/12/2024
 ms.topic: how-to
@@ -12,7 +12,7 @@ ms.collection:
 - FocusArea_Apps_MacOS
 ---
 
-# Add a macOS DMG app to Microsoft Intune
+# Add a macOS DMG App to Microsoft Intune
 
 Use the information in this article to help you add a macOS DMG app to Microsoft Intune. A DMG app is a disk image file that contains one or more applications within it. Many common applications for macOS are available in DMG format. For more information about how to create a disk image file, see [Apple's website](https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac).
 

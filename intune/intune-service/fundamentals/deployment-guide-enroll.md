@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 4/3/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.collection:
 - M365-identity-device-management
 - highpri

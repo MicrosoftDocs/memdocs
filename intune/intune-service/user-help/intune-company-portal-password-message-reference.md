@@ -8,8 +8,7 @@ ms.reviewer: anuragjain
 # Device password messages in Company Portal
 
  **Applies to**:
- * Windows 10
- * Windows 11
+ * Windows 
  * Android
  * iOS/iPadOS
  * macOS
@@ -19,7 +18,7 @@ This article lists the password-related messages you could receive from Intune C
 Messages in this article are organized by operating system.
 
 ## Windows password messages
-These password-related messages are sent to devices running Windows 10 or later.
+These password-related messages are sent to devices running Windows.
 
 | Message | How to fix |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

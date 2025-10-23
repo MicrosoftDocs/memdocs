@@ -3,9 +3,8 @@ title: Monitor results of your device compliance policies in Microsoft Intune
 description: Use the device compliance dashboard to understand overall device compliance the per policy and per setting device compliance results.
 author: lenewsad
 ms.author: lanewsad
-ms.date: 05/21/2024
+ms.date: 10/22/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ilwu
 ms.collection:
 - M365-identity-device-management
@@ -30,7 +29,7 @@ This article applies to:
 - iOS/iPadOS
 - Linux - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
 - macOS
-- Windows 10 and later
+- Windows 
 
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
@@ -219,7 +218,15 @@ To learn more about conflict resolution for policies, see [Compliance and device
 
 ## How Intune evaluates the default compliance policy
 
-In Intune, the default compliance policy is evaluated for every device on every calculation. The evaluation process identifies the device as noncompliant if any of the following statements are false:
+In Intune, the default compliance policy is evaluated when a calculation is triggered. While not every [device sync](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals) results in a compliance calculation, the following cases will:
+
+- It happens frequently on new enrollments to ensure users are aware of blocking reasons. The actual frequency depends on the platform and the type of enrollment.
+- It happens periodically to enforce device contact requirements, like the initial user log-on after following the device being offline for a few days.
+- It happens when new compliance information, such as a change in device properties, is found during a device sync.    
+- It happens when a compliance policy assignment is added, after the next device sync. If a compliance policy assignment is removed, such as with exclusion targeting, the compliance calculation will be triggered with the existing service data. 
+- It happens when a user [checks compliance status](../user-help/check-status-company-portal-website.md) on the Company Portal website or app.
+
+The evaluation process identifies the device as noncompliant if any of the following statements are false.  
 - The device has a compliance policy assigned: At least one applicable compliance policy must be assigned to the device with an applicable setting.
 - The device is active: The device should remain in contact with Intune. This requires it to be turned on with an internet connection. The default grace period is 30 days.
 - The enrolled user exists: The user that is actively using the device exists and has a valid Intune license.

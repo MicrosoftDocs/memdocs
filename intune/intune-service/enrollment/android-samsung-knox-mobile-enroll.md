@@ -3,7 +3,6 @@ title: Automatically enroll devices with Samsung Knox Mobile Enrollment
 description: Learn how to enroll Android devices in Microsoft Intune with the Knox Mobile Enrollment tool.
 ms.date: 12/01/2023
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: abigailstein
 ms.collection:
 - M365-identity-device-management

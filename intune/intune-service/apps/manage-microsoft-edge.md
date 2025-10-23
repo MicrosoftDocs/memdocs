@@ -1,5 +1,5 @@
 ---
-title: Manage Microsoft Edge on iOS and Android with Intune
+title: Manage Microsoft Edge on iOS and Android With Intune
 description: Use Intune app protection and configuration policies with Microsoft Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place.
 ms.date: 08/27/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_SpecificApp
 ---
 
-# Manage Microsoft Edge on iOS and Android with Intune
+# Manage Microsoft Edge on iOS and Android With Intune
 
 Microsoft Edge for iOS and Android is designed to enable users to browse the web and supports multi-identity. Users can add a work account, and a personal account, for browsing. There's complete separation between the two identities, which is like what is offered in other Microsoft mobile apps.
 
@@ -662,7 +662,7 @@ You can use Microsoft Edge for iOS and Android and [Microsoft Entra application 
 Before you start:
 
 - Set up your internal applications through Microsoft Entra application proxy.
-  - To configure Application Proxy and publish applications, see the [setup documentation](/azure/active-directory/manage-apps/application-proxy).
+  - To configure Application Proxy and publish applications, see the [setup documentation](/entra/identity/app-proxy/).
   - Ensure that the user is assigned to the Microsoft Entra application proxy app, even if the app is configured with Passthrough preauthentication type.
 - The Microsoft Edge for iOS and Android app must have an [Intune app protection policy](app-protection-policy.md) assigned.
 - Microsoft apps must have an app protection policy that has **Restrict web content transfer with other apps** data transfer setting set to **Microsoft Edge**.

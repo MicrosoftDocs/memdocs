@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 09/5/2025
 ms.topic: article
-ms.localizationpriority: medium
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management
@@ -40,16 +39,16 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Device Properties
 
-- **Minimum OS version**
+- **Minimum OS version**  
   A device that doesn't meet the minimum OS version requirement is considered to be noncompliant. The device user can view a link with information on how to upgrade and can choose to upgrade their device. After that, they can access organization resources.
 
-- **Maximum OS version**
+- **Maximum OS version**  
   When a device uses an OS version later than the version in the rule, access to organization resources is blocked. The device user is asked to contact their IT administrator. The device can't access organization resources until a rule changes to allow the OS version.
 
-- **Minimum OS build version**
+- **Minimum OS build version**  
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a minimum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `22E772610a`.
 
-- **Maximum OS build version**
+- **Maximum OS build version**  
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `22E772610a`.
 
 ## System security settings
@@ -64,24 +63,24 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Not configured** (*default*) - Users can create passwords simple like **1234** or **1111**.
   - **Block** - Users can't create simple passwords, such as **1234** or **1111**.
 
-- **Minimum password length**
+- **Minimum password length**  
   Enter the minimum number of digits or characters that the password must have.
 
-- **Password type**
+- **Password type**  
   Choose if a password should have only **Numeric** characters, or if there should be a mix of numbers and other characters (**Alphanumeric**).
 
-- **Number of non-alphanumeric characters in password**
+- **Number of non-alphanumeric characters in password**  
   Enter the minimum number of special characters, such as `&`, `#`, `%`, `!`, and so on, that must be in the password.
 
   Setting a higher number requires the user to create a password that is more complex.
 
-- **Maximum minutes of inactivity before password is required**
+- **Maximum minutes of inactivity before password is required**  
   Enter the idle time before the user must reenter their password.
 
-- **Password expiration (days)**
+- **Password expiration (days)**  
   Select the number of days before the password expires, and they must create a new one.
 
-- **Number of previous passwords to prevent reuse**
+- **Number of previous passwords to prevent reuse**  
   Enter the number of previously used passwords that can't be used.
 
 > [!IMPORTANT]
@@ -114,7 +113,7 @@ Firewall protects devices from unauthorized network access. You can use Firewall
 
 For more information, see [Gatekeeper on macOS](https://support.apple.com/HT202491) (opens Apple's web site).
 
-- **Allow apps downloaded from these locations**
+- **Allow apps downloaded from these locations**  
   Allows supported applications to be installed on your devices from different locations. Your location options:
 
   - **Not configured** (*default*) - The gatekeeper option has no effect on compliance or noncompliance.

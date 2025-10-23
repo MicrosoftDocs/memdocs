@@ -1,14 +1,17 @@
 ---
-
 title: Get support in the Microsoft Intune admin center
 description: Get online and telephone support for Microsoft Intune and other device management cloud services from within the Microsoft Intune admin center.
 author: Smritib17
 ms.author: smbhardwaj
 ms.date: 02/28/2025
 ms.topic: how-to
-ms.localizationpriority: high
 
+#audience:
+#ms.devlang:
 ms.reviewer: hipethe
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
 ms.custom:
 ms.collection:
   - M365-identity-device-management

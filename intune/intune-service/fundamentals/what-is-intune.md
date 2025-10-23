@@ -137,7 +137,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
   For more specific information, go to:
 
   - [Endpoint Analytics Overview](../../analytics/index.md)
-  - [Enroll Intune devices into Endpoint analytics](../../analytics/enroll-intune.md)
+  - [Enroll Intune devices into Endpoint analytics](../../analytics/configure.md)
 
 - **[Microsoft 365](/deployoffice/about-microsoft-365-apps)** for end user productivity Office apps, including Outlook, Teams, Sharepoint, OneDrive, and more
 
@@ -154,8 +154,8 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
   For more specific information, go to:
 
-  - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md)
-  - [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md)
+  - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md)
+  - [Configure Microsoft Defender for Endpoint in Intune](../protect/microsoft-defender-integrate.md)
 
 - **[Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)** for automatic patching of Windows, Microsoft 365 apps for enterprise, Microsoft Edge, and Microsoft Teams
 

@@ -1,119 +1,111 @@
 ---
-title: Properties catalog in Microsoft Intune
-description: Configure Properties catalog policy to manage Device Inventory settings on Windows devices you manage with Intune.
+title: Collect device hardware info with the properties catalog
+description: Use the properties catalog in Microsoft Intune view and collect enhanced device hardware info on Windows devices you manage with Intune. You can collect info like BIOS version, TPM status, disk info, memory details, and network adapter configurations. Use this information to get deeper visibility into your device inventory and troubleshoot issues.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 07/09/2025
+ms.date: 10/20/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.collection:
 - M365-identity-device-management
-ms.reviewer: abbystarr
+ms.reviewer: abbystarr, madisoncooks
 ---
 
-# Properties catalog in Microsoft Intune
+# Use the Intune properties catalog to get device hardware properties
 
-## Device inventory
+In Microsoft Intune, you can use the **properties catalog** to collect and view hardware properties from your managed Windows devices. When you create the policy, you can select specific properties to collect, such as BIOS version, disk information, memory details, and network adapter configurations.
 
-With Intune, you can use Device inventory to collect and view more hardware properties from your managed devices to help you better understand the state of your devices and make business decisions.
+You can use this information to get deeper visibility into your device inventory, including detailed hardware and system information.
 
-This article describes how to configure Device Inventory settings as part of an Intune device configuration profile. After you create a profile, you then assign or deploy that profile to your Windows devices.
+For example, you can:
+
+- Get the BIOS version and TPM status to identify devices that might need firmware updates or aren't compliant with security policies.
+- Identify devices that lack encryption, which might violate security policies.
+- Identify devices that need to be replaced based on hardware properties, like disk size or memory.
+- Detect outdated firmware or hardware that could expose vulnerabilities.
+- Collect battery health information to help monitor device performance and lifespan.
+- Retrieve network adapter configurations to troubleshoot connectivity issues.
+
+This article shows you how to configure a properties catalog policy, view the data collected by the policy,  and lists the available properties. After you create a profile, you then assign or deploy that profile to your Windows devices.
 
 This feature applies to:
 
 - Windows
 
 > [!NOTE]
-> Device properties are collected automatically for Android and Apple devices.
+> On Android and Apple devices, device properties are collected automatically.
 
 ## Prerequisites
 
-- To use Inventory, devices must be corporate owned, Intune managed (includes co-managed), and Microsoft Entra joined.
+[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
 
-- For a user to configure a policy to start collecting inventory data from devices, they must have the Device Configurations **Create** permission and the Organization **Read** permission.
+> [!div class="checklist"]
+> This feature supports the following platforms:
+>
+> - Windows
+> - Devices must be corporate owned, Intune managed (includes co-managed), and Microsoft Entra joined.
 
-- For a user to view collected data about devices, they must have the Managed Devices **Read** permission.
+[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
 
-## How to use
+> [!div class="checklist"]
+> To configure this policy and start collecting inventory data from devices, use an account with at least one of the following roles:
+>
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+> - A [custom role](custom-settings-configure.md) that includes the **Device Configurations** > **Create** permission and the **Organization** > **Read** permission.
+> - For a user to view collected data about devices, they must have the **Managed Devices** > **Read** permission. This permission is included in many built-in roles. For a list, see [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md).
 
-To configure Inventory collection, create a new **Properties Catalog** profile in the Intune admin center. This profile allows you to select which properties you would like to collect from your devices.
+## Create the policy and view the collected data
 
-After the profile is created, you can apply the profile to specific devices in the selected groups.
-
-### Create the profile
+Use the following steps to create a properties catalog profile and assign it to your Windows devices.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**.
 
-3. Enter the following properties:
+3. Enter the following properties and select **Create**:
 
-   - **Platform**: Select **Windows 10 and later**.
-   - **Profile type**: Select **Properties catalog**.
+    - **Platform**: Select **Windows 10 and later**.
+    - **Profile type**: Select **Properties catalog**.
 
-4. Select **Create**.
+4. In **Basics**, enter the following properties and select **Next**:
 
-5. In **Basics**, enter the following properties:
+    - **Name**: Enter a descriptive name for the new profile.
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
-   - **Name**: Enter a descriptive name for the new profile.
-   - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+5. Select **Add properties** and select the properties you want to collect. You can select multiple properties from multiple categories.
 
-6. Select **Next**.
+    There are some required properties that are automatically added. For a list, see [Required properties](#available-and-required-properties) (in this article).
 
-7. Select **Add properties**.Expand out categories to view individual properties and then select which properties you would like to collect from the Properties Picker.
+    Select **Next**.
 
-   When you're done, select **Next**.
+6. Optional. In **Scope (Tags)**, select any scope tags you want to assign to the profile. To learn more about scope tags, see [Use scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-8. On the **Scope (Tags)** page, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
+    Select **Next**.
 
-   Select **Next** to continue.
-
-9. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+7. In **Assignments**, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
-10. On the **Applicability Rules** page, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups.
+8. In **Review + create**, review your settings, and select **Create**.
 
-11. On the **Review + create** page, when you're done, choose **Create**. The profile is created and is shown in the list.
+    When you select create, the profile is assigned to the groups you specified. The profile is also created and is shown in the list.
 
-The next time each device checks in, the policy is applied.
+The next time each device checks in with the Intune service, the policy applies. It can take up to 24 hours for the initial collection of inventory data.
 
 ### View collected data
 
-To view collected inventory information, navigate to **Devices** > **Windows Devices** and select a device.
+Use the following steps to view the collected device inventory information:
 
-Under **Monitor** select **Device Inventory**. Choose a category to view hardware information.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Devices** > **By platform** > **Windows Devices** and select a device.
+3. In **Monitor**, select **Device Inventory**. Select a category to view the hardware information.
 
-After a device syncs with Intune, it can take up to 24 hours for initial harvesting of inventory data.
+## Available and required properties
 
-### Required Properties
+The following properties are available for you to collect. To learn more about the different properties, see [Intune Data Platform Schema](../../analytics/data-platform-schema.md).
 
-Certain **required** properties are automatically collected when you collect any properties in that category.
+# [Available property categories](#tab/available)
 
-The following properties are required:
-
-- **Battery**: Instance Name
-- **Bios Info**: Bios Name, Software Element ID, Software Element State, Target Operating System
-- **Cpu**: Processor ID
-- **Disk Drive**: Drive ID
-- **Encryptable Volume**: Volume ID
-- **Logical Drive**: Drive Identifier
-- **Network Adapter**: Identifier
-- **System Enclosure**: Serial Number
-- **Video Controller**: Identifier
-- **Windows Qfe**: Hot Fix ID
-
-## Known Limitations
-
-Collection of properties can only be stopped (deleted) at the category level.
-
-To stop collecting properties, navigate to the **Properties catalog** profile, and remove collection for every property in a particular category.
-
-Even if a properties policy is deleted, you will still be able to see the last-collected data in Device Inventory for up to 28 days.
-
-## Supported Properties
-
-Inventory supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](../../analytics/data-platform-schema.md).
+When you create the policy, you can select any of the following property categories to collect:
 
 - Battery
 - Bios Info
@@ -126,21 +118,49 @@ Inventory supports the following entities. To learn more about what properties a
 - Os Version
 - Sim Info
 - System Enclosure
+- System Info
 - Time
-- Tpm
+- TPM
 - Video Controller
 - Windows Qfe
 
-## Frequently Asked Questions
+# [Required properties](#tab/required)
 
-### Is Device Inventory different than the Hardware tab for a device?
+When you create the policy, the following **required** properties are automatically collected when you collect any property in that category.
 
-Yes, the **Hardware** tab data and **Device Inventory** data come from different places. We recommend using Device Inventory for the most up-to-date and comprehensive data about your devices. In the future, the data source for **Hardware** tab and Device Inventory will be the same.
+- Battery - Instance Name
+- Bios Info:
+  - Bios Name
+  - Software Element ID
+  - Software Element State
+  - Target Operating System
+- Cpu - Processor ID
+- Disk Drive - Drive ID
+- Encryptable Volume - Volume ID
+- Logical Drive - Drive Identifier
+- Network Adapter - Identifier
+- System Enclosure - Serial Number
+- Video Controller - Identifier
+- Windows QFE - Hot Fix ID
 
-### I'm using Co-management with Tenant Attach and I see the **Resource Explorer** and **Device Inventory** nodes. Which one should I use?
+---
 
-You'll see a **Device Inventory** tab for Intune collected data and a **Resource Explorer** tab for Configuration Manager collected data. Feel free to use the source that best fits your use case. In the future, we recommend using the Intune-based **Device Inventory**.
+## What you need to know
 
-### How can I troubleshoot this feature?
+- Collection of properties can only be stopped (deleted) at the category level. To stop collecting properties, go to the **properties catalog** profile, and remove collection for every property in the category.
 
-Client logs are available at `C:\Program Files\Microsoft Device Inventory Agent\Logs` and logs can also be collected via Collect MDM Diagnostics.
+  If you delete a properties catalog policy, you can see the last-collected data in Device Inventory for up to 28 days.
+
+- When you select a device, you see a **Device Inventory** tab and a **Hardware** tab. They're different and their data comes from different places. We recommend using the properties catalog for the most up-to-date and comprehensive data about your devices.
+
+  In the future, the data source for the **Hardware** and **Device Inventory** tabs will be the same.
+
+- If you use co-management with tenant attach, you see the **Resource Explorer** and **Device Inventory** nodes.
+
+  For Intune collected data, you see a **Device Inventory** tab. For Configuration Manager collected data, you see a **Resource Explorer** tab. Use the source that best fits your use case. In the future, we recommend using the Intune-based **Device Inventory**.
+
+- The client logs are available at `C:\Program Files\Microsoft Device Inventory Agent\Logs`. The logs can also be collected using the [Remote device action: collect diagnostics](../remote-actions/collect-diagnostics.md). You can use these logs to help troubleshoot.
+
+## Related content
+
+- [Intune Data Platform Schema and property info](../../analytics/data-platform-schema.md)

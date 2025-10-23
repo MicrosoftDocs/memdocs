@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/28/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: laarrizz, mayurjadhav, beflamm
 ms.collection:
 - M365-identity-device-management
@@ -67,7 +66,7 @@ This feature applies to:
 
 You can use the settings catalog to configure Apple's declarative device management (DDM) to manage software updates. With DDM, the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
 
-For more information, go to [Managed software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
+For more information, go to [Managed software updates with the settings catalog](../protect/updates/apple.md).
 
 ## Built-in macOS features replacing plist files
 

@@ -3,7 +3,6 @@ title: Back up and restore iOS/iPadOS
 description: Learn about backup and restore scenarios for iOS/iPadOS devices.
 ms.date: 08/28/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
