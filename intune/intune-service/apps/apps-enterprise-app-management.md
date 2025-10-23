@@ -4,6 +4,7 @@ description: Learn about Enterprise App Management and the Enterprise App Catalo
 ms.date: 10/09/2025
 ms.topic: how-to
 ms.reviewer: dguilory
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -136,7 +137,7 @@ No. Enterprise App Catalog apps are directly installed by the Intune management 
 
 ### How do I update my Enterprise App Catalog app?
 
-For applications that don’t update themselves, you can view the upgrades that are available for the Enterprise App Management (EAM) app via supersedence.
+For applications that don't update themselves, you can view the upgrades that are available for the Enterprise App Management (EAM) app via supersedence.
 
 ### After several hours, what can I do if my app continues to show that it isn't ready and that the requested content is still being prepared?
 

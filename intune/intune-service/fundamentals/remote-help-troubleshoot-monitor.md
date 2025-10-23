@@ -7,6 +7,7 @@ ms.date: 10/01/2025
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: Karawang
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - highpri

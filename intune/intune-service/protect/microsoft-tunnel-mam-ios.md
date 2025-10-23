@@ -6,6 +6,7 @@ ms.author: brenduns
 ms.date: 09/09/2025
 ms.topic: how-to
 ms.reviewer: ochukwunyere
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - sub-intune-suite
