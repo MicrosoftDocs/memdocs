@@ -157,7 +157,7 @@ A new feature called *Windows Backup for Organizations* will soon be generally a
 
 ## Device management
 
-### Windows Autopilot device preparation in automatic mode to be available for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps (public preview) <!-- 35518695 -->
+### Windows Autopilot device preparation in automatic mode to be available for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps (public preview)<!-- 35518695 -->
 
 You will be able to use Windows Autopilot device preparation policies in automatic flow to provision Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps. The policy can be included in the Cloud PC provisioning policy and will apply immediately after the Cloud PCs are created to deliver apps and scripts to the device before a user logs in. You'll be able to monitor deployment status in the [Windows Autopilot device preparation deployment report](/autopilot/device-preparation/reporting-monitoring).
 
@@ -214,7 +214,7 @@ To learn more about filters and the properties you can currently use, see:
 
 ## Device security
 
-### Microsoft Tunnel for detection and protection for rooted Android devices<!- 30336962 -->
+### Microsoft Tunnel for detection and protection for rooted Android devices<!-- 30336962 -->
 
 We’re updating Microsoft Tunnel with the capability to detect and block access from rooted Android devices. This update will ensure that only compliant and trustworthy devices can establish secure connections through the Tunnel.
  
