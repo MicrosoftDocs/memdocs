@@ -157,6 +157,18 @@ A new feature called *Windows Backup for Organizations* will soon be generally a
 
 ## Device management
 
+### Windows Autopilot device preparation in automatic mode to be available for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps (public preview) <!-- 35518695 -->
+
+You will be able to use Windows Autopilot device preparation policies in automatic flow to provision Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps. The policy can be included in the Cloud PC provisioning policy and will apply immediately after the Cloud PCs are created to deliver apps and scripts to the device before a user logs in. You'll be able to monitor deployment status in the [Windows Autopilot device preparation deployment report](/autopilot/device-preparation/reporting-monitoring).
+
+For a tutorial, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](/autopilot/device-preparation/tutorial/automatic/automatic-workflow).
+
+For more information, see the following articles:
+
+- [Create provisioning policies for Windows 365 | Microsoft Learn](/windows-365/enterprise/create-provisioning-policy)
+- [Windows 365 Cloud Apps | Microsoft Learn](/windows-365/enterprise/cloud-apps)
+- [Use Autopilot device preparation with Cloud PCs | Microsoft Learn](/windows-365/enterprise/autopilot-device-preparation)
+
 ### New prompts available to explore your Intune data<!-- 33787582 -->
 
 You can use Security Copilot in Intune to explore new prompts related to your data using natural language. Use these new prompts to view data on:
