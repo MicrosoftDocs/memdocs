@@ -30,7 +30,8 @@ The *update cellular data plan* remote action lets you remotely activate an eSIM
 :::column span="1":::
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-
+:::column-end:::
+:::column span="3":::
 > To execute this remote action, at a minimum, use an account that has one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -38,7 +39,8 @@ The *update cellular data plan* remote action lets you remotely activate an eSIM
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Update cellular data plan**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## Remotely update the cellular data plan from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

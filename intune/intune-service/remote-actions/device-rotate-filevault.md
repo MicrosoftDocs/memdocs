@@ -23,6 +23,8 @@ This action is useful when the current key is lost, potentially exposed, or need
 > This remote action supports the following platforms:
 >
 > - macOS (corporate-owned)
+:::column-end:::
+:::row-end:::
 :::row:::
 :::column span="1":::
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
@@ -32,8 +34,8 @@ This action is useful when the current key is lost, potentially exposed, or need
 >
 > - Are encrypted with FileVault using an Intune disk encryption policy.
 > - Have the FileVaultpersonal recovery key escrowed to Intune.
-
-For more information, see Use [FileVault disk encryption for macOS with Intune][LEARN-1].
+>
+> For more information, see Use [FileVault disk encryption for macOS with Intune][LEARN-1].
 
 :::column-end:::
 :::row-end:::
