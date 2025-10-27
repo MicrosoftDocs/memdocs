@@ -25,10 +25,6 @@ Securing endpoints is a critical part of a Zero Trust strategy. These Intune rec
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24561](./includes/secure-recommendations/24561.md)]
 
-<!-- ### Platform SSO is enforced on macOS to enable phishing-resistant authentication<!-- 24568 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-<!-- [!INCLUDE [24568](./includes/secure-recommendations/24568.md)]-->
-
 ### Local account usage on Windows is restricted to reduce unauthorized access<!--  24564 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24564](./includes/secure-recommendations/24564.md)]
