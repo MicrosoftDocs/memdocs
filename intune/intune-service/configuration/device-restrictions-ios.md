@@ -3,7 +3,7 @@ title: iOS/iPadOS device settings in Microsoft Intune | Microsoft Docs
 description: Add, configure, or create settings on iOS/iPadOS devices to restrict features in Microsoft Intune. Create password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 03/17/2025
+ms.date: 10/27/2025
 ms.topic: reference
 ms.reviewer: beflamm, jayeren
 ms.collection:
@@ -630,15 +630,14 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Type of restricted apps list**: Create a list of apps that are approved or prohibited for users. Your options:
 
-- **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow access to apps you assign, and built-in apps.
-- **Prohibited apps**: List the apps (not managed by Intune) that aren't approved for users. Users aren't prevented from installing or running a prohibited app. If a user installs an app from this list, then the device is reported in the **Devices with restricted apps** report ([Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Monitor** > **Devices with restricted apps**).
-- **Approved apps**: List the apps that users are allowed to install. To stay compliant, users must not install other apps. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list. But if they do, it's reported in Intune.
+  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow access to apps you assign, and built-in apps.
+  - **Prohibited apps**: List the apps (not managed by Intune) that aren't approved for users. Users aren't prevented from installing or running a prohibited app. If a user installs an app from this list, then the device is reported in the **Devices with restricted apps** report ([Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Monitor** > **Devices with restricted apps**).
+  - **Approved apps**: List the apps that users are allowed to install. To stay compliant, users must not install other apps. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list. But if they do, it's reported in Intune.
 
   > [!NOTE]
-- When there's a restricted app on the device, this setting reports as **Not compliant**.
+  > - When there's a restricted app on the device, this setting reports as **Not compliant**.
   > - To prevent an app from running or being shown on iOS/iPadOS, create an [Intune settings catalog](settings-catalog.md) policy > **Restrictions** > **Allow Listed App Bundle IDs** or **Blocked App Bundle IDs** settings.
-  > 
-  > - Intune will collect but not store the full app inventory on non-ADE devices.
+  > - Intune collects but doesn't store the full app inventory on all enrollment methods *except* automated device enrollment (ADE). On ADE-enrolled devices, Intune collects and stores the full app inventory.
   
 To add apps to these lists, you can:
 
