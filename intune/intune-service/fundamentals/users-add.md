@@ -112,8 +112,8 @@ You can add Intune users in bulk by uploading a csv file containing the full lis
 **To add multiple users to Intune**:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create users** pane is displayed, which provides an option to **Download** a CVS template you can use.
-3. When your CVS template is ready, use the browse functionality to locate and upload the file. Select **Submit** to begin the import.
+2. Go to **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create users** pane is displayed, which provides an option to **Download** a CSV template you can use.
+3. When your CSV template is ready, use the browse functionality to locate and upload the file. Select **Submit** to begin the import.
 
    For more information about using a csv file to add Intune users, see [Bulk create users in Microsoft Entra ID](/azure/active-directory/enterprise-users/users-bulk-add).
 
@@ -151,8 +151,8 @@ To delete users from Entra, your administrative account must have permissions eq
 **To delete multiple users from Intune**:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Users** > **All users** > **Bulk operations** > **Bulk delete**. The *Bulk delete users* pane is displayed which provides an option to **Download** a CVS template you can use.
-3. When your CVS template is ready, use the browse functionality to locate and upload the file. Select **Submit** to begin deletion.
+2. Go to **Users** > **All users** > **Bulk operations** > **Bulk delete**. The *Bulk delete users* pane is displayed which provides an option to **Download** a CSV template you can use.
+3. When your CSV template is ready, use the browse functionality to locate and upload the file. Select **Submit** to begin deletion.
 
    For related information, see [Bulk delete users in Microsoft Entra ID](/entra/identity/users/users-bulk-delete).
 
