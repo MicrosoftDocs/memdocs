@@ -43,20 +43,24 @@ To use Intune derived credentials, an Intune administrator must configure the te
 a
 - After a device receives the derived credential, the credential is used for authentication and for S/MIME signing and encryption when apps or resource access profiles are configured to require the derived credential.
 
-
-## Requirements
+## Prerequisites
 
 Review the following information before you configure your tenant to use derived credentials.
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
 > Intune supports derived credentials on the following platforms:
 >
 > - Android Enterprise corporate-owned fully managed (COBO) - version 7.0 and above
 > - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS
 > - Windows
+:::column-end:::
+:::row-end:::
 
 ### Supported issuers
 

@@ -22,11 +22,13 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 - Require re-enrollment after the certificate expires.
 - Aren't available for Jamf-managed devices.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
-
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To configure device cleanup rules, use an account with at least one of the following roles:
 >
 > - Intune Service Administrator
@@ -34,6 +36,9 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 >   - The permission **Managed Device Cleanup Rules/Update**
 >   - The permission **Managed Device Cleanup Settings/Update**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
+
 
 ## How to create a device cleanup rule
 
