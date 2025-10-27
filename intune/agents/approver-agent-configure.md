@@ -9,3 +9,15 @@ ms.reviewer:
 ---
 
 # Configure the approver agent
+
+## Prerequisites
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
+:::column-end:::
+:::row-end:::

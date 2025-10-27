@@ -9,3 +9,5 @@ ms.reviewer:
 ---
 
 # Approver agent overview
+
+## How it works

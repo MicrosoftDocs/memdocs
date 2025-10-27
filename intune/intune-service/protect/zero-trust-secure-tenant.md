@@ -30,14 +30,6 @@ Protecting your Intune tenant is essential to enforcing Zero Trust principles an
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24546](./includes/secure-recommendations/24546.md)]
 
-<!-- ### ## Least privilege RBAC roles are assigned in Intune to secure role-based access<!-- 24521 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-<!-- [!INCLUDE [24521](./includes/secure-recommendations/24521.md)]-->
-
-<!-- ### Platform-specific enrollment restrictions are configured to control device onboarding<!-- 24558 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-<!-- [!INCLUDE [24558](./includes/secure-recommendations/24558.md)]-->
-
 ### Compliance policies protect Windows devices<!-- 24541 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24541](./includes/secure-recommendations/24541.md)]
@@ -58,10 +50,6 @@ Protecting your Intune tenant is essential to enforcing Zero Trust principles an
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24543](./includes/secure-recommendations/24543.md)]
 
-<!-- ## Automatic enrollment to Defender is enabled on Android to support threat protection<!-- 24871 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-<!-- [!INCLUDE [24871](./includes/secure-recommendations/24871.md)]-->
-
 ### Device cleanup rules maintain tenant hygiene by hiding inactive devices<!--  24802 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24802](./includes/secure-recommendations/24802.md)]
@@ -77,23 +65,6 @@ Protecting your Intune tenant is essential to enforcing Zero Trust principles an
 ### Endpoint Analytics is enabled to help identify risks on Windows devices<!-- 24576 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24576](./includes/secure-recommendations/24576.md)]
-
-### Windows Update policies are enforced to reduce risk from unpatched vulnerabilities<!-- 24553 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24553](./includes/secure-recommendations/24553.md)]
-
-### Security baselines are applied to Windows devices to strengthen security posture<!-- 24573 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24573](./includes/secure-recommendations/24573.md)]
-
-### Update policies for macOS are enforced to reduce risk from unpatched vulnerabilities<!-- 24690 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24690](./includes/secure-recommendations/24690.md)]
-
-### Update policies for iOS/iPadOS are enforced to reduce risk from unpatched vulnerabilities<!-- 24554 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
-
 
 ## Related content
 

@@ -9,3 +9,5 @@ ms.reviewer:
 ---
 
 # Policy agent overview
+
+## How it works

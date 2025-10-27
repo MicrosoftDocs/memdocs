@@ -74,7 +74,7 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 :::column-end:::
 :::row-end:::
 
-## How it works 
+## How it works
 
 Signal Aggregation: Collects device data from Intune and Entra ID. 
 

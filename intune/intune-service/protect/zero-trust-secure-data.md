@@ -41,11 +41,6 @@ Protecting sensitive data across mobile apps and networks is a key part of a Zer
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24840](./includes/secure-recommendations/24840.md)]
 
-<!-- ### Secure Wi-Fi profiles are configured to protect macOS connectivity and devices<!-- 24870 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-<!-- [!INCLUDE [24870](./includes/secure-recommendations/24870.md)] -->
-
-
 ## Related content
 
 - [Deployment guide for Microsoft Intune](/intune/intune-service/fundamentals/get-started-with-intune)
