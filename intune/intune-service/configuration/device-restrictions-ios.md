@@ -3,7 +3,7 @@ title: iOS/iPadOS device settings in Microsoft Intune | Microsoft Docs
 description: Add, configure, or create settings on iOS/iPadOS devices to restrict features in Microsoft Intune. Create password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 03/17/2025
+ms.date: 10/27/2025
 ms.topic: reference
 ms.reviewer: beflamm, jayeren
 ms.collection:
@@ -637,7 +637,8 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   > [!NOTE]
   > - When there's a restricted app on the device, this setting reports as **Not compliant**.
   > - To prevent an app from running or being shown on iOS/iPadOS, create an [Intune settings catalog](settings-catalog.md) policy > **Restrictions** > **Allow Listed App Bundle IDs** or **Blocked App Bundle IDs** settings.
-
+  > - Intune collects but doesn't store the full app inventory on all enrollment methods *except* automated device enrollment (ADE). On ADE-enrolled devices, Intune collects and stores the full app inventory.
+  
 To add apps to these lists, you can:
 
 - Enter the iTunes App store URL of the app you want. For example, to add the Microsoft Work Folders app, enter `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` or `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`.
