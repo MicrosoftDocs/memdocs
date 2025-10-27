@@ -20,8 +20,6 @@ To learn more about the settings catalog, see [Settings catalog overview](settin
 
 ## Prerequisites
 
-Review the following information before you configure your tenant to use derived credentials.
-
 :::row:::
 :::column span="1":::
 [!INCLUDE [platform](../../includes/requirements/platform.md)]

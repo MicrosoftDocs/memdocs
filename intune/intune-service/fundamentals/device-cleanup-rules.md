@@ -24,8 +24,6 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 
 ## Prerequisites
 
-Review the following information before you configure your tenant to use derived credentials.
-
 :::row:::
 :::column span="1":::
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
