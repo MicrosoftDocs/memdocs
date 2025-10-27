@@ -454,7 +454,7 @@ If you use Microsoft Defender for Endpoint for Microsoft Tunnel but not MTD, the
 
 ### Add app configuration support for Microsoft Defender for Endpoint to a VPN profile for Microsoft Tunnel
 
-Use the following information to configure the custom settings in a VPN profile to configure Microsoft Defender for Endpoint [in place of a separate app configuration profile](advanced-threat-protection-manage-android.md). Available settings vary by platform.
+Use the following information to configure the custom settings in a VPN profile to configure Microsoft Defender for Endpoint [in place of a separate app configuration profile](microsoft-defender-configure-android.md). Available settings vary by platform.
 
 **For Android Enterprise devices**:
 

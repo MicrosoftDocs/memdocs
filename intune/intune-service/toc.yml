@@ -178,19 +178,16 @@ items:
 
     - name: Remote Help
       items:
-      - name: Using Remote Help
+      - name: Remote Help overview
         href: ./fundamentals/remote-help.md
-      - name: Remote Help on Windows
-        href: ./fundamentals/remote-help-windows.md
-      - name: Remote Help on macOS
-        href: ./fundamentals/remote-help-macos.md
-      - name: Remote Help Web App
-        href: ./fundamentals/remote-help-webapp.md
-      - name: Remote Help on Android
-        href: ./fundamentals/remote-help-android.md
-      - name: Troubleshooting Remote Help on Android
-        href: ./fundamentals/remote-help-android-troubleshoot.md
-
+      - name: Planning Remote Help
+        href: ./fundamentals/remote-help-plan.md
+      - name: Deploying Remote Help
+        href: ./fundamentals/remote-help-deploy.md
+      - name: Using Remote Help
+        href: ./fundamentals/remote-help-use.md
+      - name: Troubleshooting Remote Help
+        href: ./fundamentals/remote-help-troubleshoot-monitor.md
     - name: Advanced analytics
       href: ../analytics/advanced/toc.yml
 
@@ -295,10 +292,10 @@ items:
         href: ./protect/software-updates-guide-android.md
       - name: iOS/iPadOS
         displayName: software updates
-        href: ./protect/software-updates-guide-ios-ipados.md
+        href: ./protect/updates/software-updates-guide-ios-ipados.md
       - name: macOS
         displayName: software updates
-        href: ./protect/software-updates-guide-macos.md
+        href: ./protect/updates/software-updates-guide-macos.md
 
   - name: Set up Microsoft Intune
     items:
@@ -355,6 +352,12 @@ items:
       items:
       - name: Configure security recommendations using Zero Trust
         href: ./protect/zero-trust-configure-security.md
+      - name: Secure tenants
+        href: ./protect/zero-trust-secure-tenant.md
+      - name: Secure devices
+        href: ./protect/zero-trust-secure-devices.md
+      - name: Secure data
+        href: ./protect/zero-trust-secure-data.md
 
   - name: Create and deploy Intune policies
     items:
@@ -838,13 +841,13 @@ items:
         - name: Microsoft Defender for Endpoint
           items:
           - name: Microsoft Defender for Endpoint
-            href: ./protect/advanced-threat-protection.md
+            href: ./protect/microsoft-defender-with-intune.md
           - name: Configure Defender for Endpoint
-            href: ./protect/advanced-threat-protection-configure.md
+            href: ./protect/microsoft-defender-integrate.md
           - name: Android web protection
-            href: ./protect/advanced-threat-protection-manage-android.md
+            href: ./protect/microsoft-defender-configure-android.md
           - name: Monitor Defender for Endpoint
-            href: ./protect/advanced-threat-protection-monitor.md
+            href: ./protect/microsoft-defender-monitor.md
           - name: Microsoft Defender for Endpoint Security settings management
             items:
             - name: Microsoft Defender for Endpoint Security settings management
@@ -1247,8 +1250,8 @@ items:
               displayName: gpo, admx, settings catalog, windows
               href: ./configuration/group-policy-analytics-migrate.md
 
-        - name: Properties catalog
-          displayName: windows
+        - name: Properties catalog (device inventory)
+          displayName: windows, device inventory
           href: ./configuration/properties-catalog.md
         - name: Custom settings & scripts
           items:
@@ -1770,7 +1773,7 @@ items:
         items:
         - name: Get incomplete user enrollment report
           href: ./enrollment/enrollment-report-company-portal-abandon.md
-        - name: View enrollment reports 
+        - name: View enrollment reports
           href: ./enrollment/view-enrollment-reports.md
         - name: Troubleshoot device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune

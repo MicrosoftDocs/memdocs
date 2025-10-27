@@ -37,7 +37,7 @@ Chrome Enterprise and the Google Admin console refer to devices in lost mode as 
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permissions **Remote tasks/Enable lost mode**, **Remote tasks/Disable lost mode**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ## How to enable Lost Mode from the Intune admin center
 

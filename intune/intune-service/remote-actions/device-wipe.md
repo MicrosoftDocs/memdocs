@@ -37,7 +37,7 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Wipe**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 ::: zone pivot="macos,android"
 ## Before wiping a device

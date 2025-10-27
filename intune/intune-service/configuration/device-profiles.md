@@ -222,7 +222,7 @@ This feature supports:
 
 ## Microsoft Defender for Endpoint
 
-[Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
+[Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
 
 This feature supports:
 
@@ -306,13 +306,14 @@ This feature supports:
 
 ## Update policies
 
-[iOS/iPadOS update policies](../protect/software-updates-ios.md) shows you how to create and assign iOS/iPadOS policies to install software updates on your iOS/iPadOS devices. You can also review the installation status.
+[iOS/iPadOS and macOS managed software updates](../protect/updates/apple.md) shows you how to create and assign policies to install software updates on your iOS/iPadOS and macOS devices. You can also review the installation status.
 
 For update policies on Windows devices, see [Delivery optimization](delivery-optimization-windows.md).
 
 This feature supports:
 
 - iOS/iPadOS
+- macOS
 
 ## VPN
 
