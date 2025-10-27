@@ -230,6 +230,9 @@ Managed Windows devices that use the Microsoft Store either to acquire, install,
 - `licensing.mp.microsoft.com`
 - `storeedgefd.dsx.mp.microsoft.com`
 
+ > [!IMPORTANT]
+ > SSL Inspection isn't supported on endpoints required for Microsoft Store API.
+
 **Windows Update Agent:**
 
 For details, see the following resources:
