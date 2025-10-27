@@ -39,7 +39,7 @@ For more information about the standard Intune policy check-in frequencies, see 
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row ofremote action icons. Select **Sync**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Sync**.
 1. To confirm, select **Yes**.
 
 ::: zone pivot="ios,android"
