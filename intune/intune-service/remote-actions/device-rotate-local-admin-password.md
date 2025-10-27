@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Rotate local admin password"
 description: Learn how to rotate the local admin password on Windows and macOS devices with Microsoft Intune.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: 2fce401c-16eb-4314-8d26-844d8612f9c5
 ---
@@ -10,49 +10,62 @@ zone_pivot_groups: 2fce401c-16eb-4314-8d26-844d8612f9c5
 
 The *rotate local admin password* remote action in Microsoft Intune lets IT admins manually rotate the password of a device's local administrator account. This helps improve security by refreshing credentials outside the scheduled rotation defined by the Microsoft Local Administrator Password Solution (LAPS). It's especially useful when responding to potential compromise, conducting audits, or resetting access during support scenarios.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
 > - Windows (corporate-owned)
-
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
-
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+:::column-end:::
+:::column span="3":::
 ::: zone pivot="windows"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Are Microsoft Entra joined or Hybrid Entra joined.
 > - Have Windows LAPS configured and actively backing up the local admin password to Microsoft Entra ID.
-
-For more information, see [What is Windows LAPS?][LEARN-1].
+>
+> For more information, see [What is Windows LAPS?][LEARN-1].
 
 ::: zone-end
 
 ::: zone pivot="macos"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - The local admin account must be configured in the ADE profile before enrollment.
-
-For more information, see [Configure support for macOS ADE local account with LAPS][LEARN-2].
+>
+> For more information, see [Configure support for macOS ADE local account with LAPS][LEARN-2].
 
 ::: zone-end
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Rotate Local Admin Password**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## How to rotate the local admin password from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Update Cellular Data Plan"
 description: Learn how to update the cellular data plan for iOS/iPadOS devices that support eSIM with Microsoft Intune.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ms.reviewer: rashok
 ---
@@ -10,18 +10,28 @@ ms.reviewer: rashok
 
 The *update cellular data plan* remote action lets you remotely activate an eSIM cellular plan on supported iOS/iPadOS devices, making it easier to manage connectivity for users without physical SIM cards.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - iOS/iPadOS
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To execute this remote action, at a minimum, use an account that has one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -29,7 +39,8 @@ The *update cellular data plan* remote action lets you remotely activate an eSIM
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Update cellular data plan**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## Remotely update the cellular data plan from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
